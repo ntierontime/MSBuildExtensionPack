@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-16"?>
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Diagrams>
+      <edmx:Diagram DiagramId="5e1b31599195411f8a843fc4dca50a3b" Name="Diagram1">
+        <edmx:EntityTypeShape EntityType="MSBuildExtensionPackModel.Build" Width="1.5" PointX="1" PointY="1" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="MSBuildExtensionPackModel.BuildEventCode" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="MSBuildExtensionPackModel.BuildLog" Width="1.5" PointX="5" PointY="1" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="MSBuildExtensionPackModel.Solution" Width="1.5" PointX="7" PointY="1" IsExpanded="true" />
+        <edmx:AssociationConnector Association="MSBuildExtensionPackModel.FK_Build_Solution" ManuallyRouted="false" />
+        <edmx:AssociationConnector Association="MSBuildExtensionPackModel.FK_BuildLog_Build" ManuallyRouted="false" />
+        <edmx:AssociationConnector Association="MSBuildExtensionPackModel.FK_BuildLog_BuildEventCode" ManuallyRouted="false" />
+      </edmx:Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

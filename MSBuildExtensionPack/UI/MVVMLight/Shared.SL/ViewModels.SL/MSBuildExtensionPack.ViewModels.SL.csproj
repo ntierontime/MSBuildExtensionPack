@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{15F69EEC-2E09-4FF7-8EE1-D7C80804524C}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MSBuildExtensionPack.ViewModels</RootNamespace>
+    <AssemblyName>MSBuildExtensionPack.ViewModels.SL</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="system" />
+    <Reference Include="System.Servicemodel" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
+    <Compile Include="..\..\..\..\UI\MVVMLight\Shared\ViewModels\ExtendedVMBuild.cs">
+      <Link>ExtendedVMBuild.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\UI\MVVMLight\Shared\ViewModels\ExtendedVMBuildEventCode.cs">
+      <Link>ExtendedVMBuildEventCode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\UI\MVVMLight\Shared\ViewModels\ExtendedVMBuildLog.cs">
+      <Link>ExtendedVMBuildLog.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\UI\MVVMLight\Shared\ViewModels\ExtendedVMSolution.cs">
+      <Link>ExtendedVMSolution.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\UI\MVVMLight\Shared\ViewModels\ItemVMBuild.cs">
+      <Link>ItemVMBuild.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\UI\MVVMLight\Shared\ViewModels\ItemVMBuildEventCode.cs">
+      <Link>ItemVMBuildEventCode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\UI\MVVMLight\Shared\ViewModels\ItemVMBuildLog.cs">
+      <Link>ItemVMBuildLog.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\UI\MVVMLight\Shared\ViewModels\ItemVMSolution.cs">
+      <Link>ItemVMSolution.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\UI\MVVMLight\Shared\ViewModels\MainViewModel.cs">
+      <Link>MainViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\UI\MVVMLight\Shared\ViewModels\ViewModelBuild.cs">
+      <Link>ViewModelBuild.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\UI\MVVMLight\Shared\ViewModels\ViewModelBuildEventCode.cs">
+      <Link>ViewModelBuildEventCode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\UI\MVVMLight\Shared\ViewModels\ViewModelBuildLog.cs">
+      <Link>ViewModelBuildLog.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\UI\MVVMLight\Shared\ViewModels\ViewModelSolution.cs">
+      <Link>ViewModelSolution.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\UI\MVVMLight\Shared\ViewModels\ViewModelLocator.cs">
+      <Link>ViewModelLocator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\UI\MVVMLight\Shared\ViewModels\AccountViewModel.cs">
+      <Link>AccountViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\UI\MVVMLight\Shared\ViewModels\LocalizedStrings.cs">
+      <Link>LocalizedStrings.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Core.SL\CommonBLLEntities.SL\MSBuildExtensionPack.CommonBLLEntities.SL.csproj">
+      <Project>{5f243c79-9948-473d-a58c-d6053dd0f433}</Project>
+      <Name>MSBuildExtensionPack.CommonBLLEntities.SL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core.SL\CommonBLLIoC.SL\MSBuildExtensionPack.CommonBLLIoC.SL.csproj">
+      <Project>{ea1c06a1-ff7e-43f7-9515-7a6bc9bc3cce}</Project>
+      <Name>MSBuildExtensionPack.CommonBLLIoC.SL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core.SL\DataSourceEntities.SL\MSBuildExtensionPack.DataSourceEntities.SL.csproj">
+      <Project>{97b6b9ff-1969-440a-b9b5-7a6b07289be6}</Project>
+      <Name>MSBuildExtensionPack.DataSourceEntities.SL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core.SL\EntityContracts.SL\MSBuildExtensionPack.EntityContracts.SL.csproj">
+      <Project>{4e749294-1ff1-4062-b9d7-90500955fac6}</Project>
+      <Name>MSBuildExtensionPack.EntityContracts.SL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.SL\Framework.SL\Framework.SL.csproj">
+      <Project>{11207323-618e-4f75-bd56-2dc591dbc385}</Project>
+      <Name>Framework.SL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.SL\Framework.CommonBLLEntities.SL\Framework.CommonBLLEntities.SL.csproj">
+      <Project>{be40bd78-faeb-4a3e-a4ac-ed9487704506}</Project>
+      <Name>Framework.CommonBLLEntities.SL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.SL\Framework.DataSourceEntities.SL\Framework.DataSourceEntities.SL.csproj">
+      <Project>{0ba23ea0-994c-4ad6-80aa-281697b35b24}</Project>
+      <Name>Framework.DataSourceEntities.SL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.SL\Framework.EntityContracts.SL\Framework.EntityContracts.SL.csproj">
+      <Project>{6d76ed0b-68a6-480f-a001-ebd0cafedad4}</Project>
+      <Name>Framework.EntityContracts.SL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.SL\Framework.Resources.SL\Framework.Resources.SL.csproj">
+      <Project>{30b385f5-e3e1-4879-bb3d-d71b9c1a5e48}</Project>
+      <Name>Framework.Resources.SL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.SL\Framework.ViewModels.SL\Framework.ViewModels.SL.csproj">
+      <Project>{47adf527-6a18-4a18-b537-661a768f2a00}</Project>
+      <Name>Framework.ViewModels.SL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.SL\Framework.WcfClient.SL\Framework.WcfClient.SL.csproj">
+      <Project>{3b2b1c5f-8e65-4985-ac14-2973e07c6a56}</Project>
+      <Name>Framework.WcfClient.SL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.SL\Framework.Xaml.SL\Framework.Xaml.SL.csproj">
+      <Project>{6d1cefe4-19fd-45c7-bee0-81a01f444a6b}</Project>
+      <Name>Framework.Xaml.SL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core.SL\Resources.SL\MSBuildExtensionPack.Resources.SL.csproj">
+      <Project>{ea6eb5b1-15e4-468d-be70-08ead4442c95}</Project>
+      <Name>MSBuildExtensionPack.Resources.SL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Wcf.SL\WcfClientBLL.SL\MSBuildExtensionPack.WcfClientBLL.SL.csproj">
+      <Project>{9281b69a-dbbe-4013-b51d-5244d9bb4c75}</Project>
+      <Name>MSBuildExtensionPack.WcfClientBLL.SL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core.SL\WcfContracts.SL\MSBuildExtensionPack.WcfContracts.SL.csproj">
+      <Project>{f3d1c0f2-1edf-4191-bb33-912ea0dec2a1}</Project>
+      <Name>MSBuildExtensionPack.WcfContracts.SL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="system" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Servicemodel" />
+    <Reference Include="System.Windows" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="GalaSoft.MvvmLight, Version=4.4.32.39769, Culture=neutral, PublicKeyToken=c114982fcf1a3a2e, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\packages\MvvmLightLibs.4.4.32.7\lib\sl50\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=4.4.32.39769, Culture=neutral, PublicKeyToken=e7f91b7703710fe7, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\packages\MvvmLightLibs.4.4.32.7\lib\sl50\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\..\..\..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\..\..\..\..\packages\Ninject.3.0.1.10\lib\sl5\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\packages\MvvmLightLibs.4.4.32.7\lib\sl50\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!--
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+      <!-- For ProjectLinker -->
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="7c4533b0-f75e-4909-8ede-5fac022dd356" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
