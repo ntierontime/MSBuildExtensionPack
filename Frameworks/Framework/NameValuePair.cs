@@ -128,12 +128,125 @@ namespace Framework
     #region class NameValueCollection<T>
 
 
+    [DataContract]
+    public class NameValuePair<T>
+    {
+        #region Constructors
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NameValuePair"/> class.
+        /// </summary>
+        public NameValuePair() { }
+
+        public NameValuePair(
+            T value, string name
+            )
+        {
+            this.Value = value;
+            this.Name = name;
+        }
+
+        #endregion Constructors
+
+        #region Properties
+
+
+        /// <summary>
+        /// Gets or sets the value.
+        /// </summary>
+        /// <value>
+        /// The value.
+        /// </value>
+        [DataMember]
+
+        public T Value { get; set; }
+        /// <summary>
+        /// Gets or sets the name.
+        /// </summary>
+        /// <value>
+        /// The name.
+        /// </value>
+		[DataMember]
+
+        public string Name { get; set; }
+
+        #endregion Properties
+
+        #region ToString()
+
+
+        /// <summary>
+        /// Returns a <see cref="System.String"/> that represents this instance.
+        /// </summary>
+        /// <returns>
+        /// A <see cref="System.String"/> that represents this instance.
+        /// </returns>
+        public override string ToString()
+        {
+            return string.Format("{0}:{1}", this.Value, this.Name);
+        }
+
+        #endregion ToString()
+
+        #region Equals(...)
+
+        /// <summary>
+        /// Determines whether the specified <see cref="System.Object" />, is equal to this instance.
+        /// </summary>
+        /// <param name="obj">The <see cref="System.Object" /> to compare with this instance.</param>
+        /// <returns>
+        ///   <c>true</c> if the specified <see cref="System.Object" /> is equal to this instance; otherwise, <c>false</c>.
+        /// </returns>
+        public override bool Equals(object obj)
+        {
+            try
+            {
+                if (obj is NameValuePair<T>)
+                {
+                    return obj != null && ((NameValuePair<T>)obj).Value.Equals(this.Value);
+                }
+                else if (obj is T)
+                {
+                    return obj != null && ((T)obj).Equals(this.Value);
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Returns a hash code for this instance.
+        /// </summary>
+        /// <returns>
+        /// A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+        /// </returns>
+        public override int GetHashCode()
+        {
+            try
+            {
+                return this.Value.GetHashCode();
+            }
+            catch
+            {
+                return base.GetHashCode();
+            }
+        }
+
+        #endregion Equals(...)
+    }
+
     /// <summary>
     /// Generic NameValueCollection
     /// </summary>
     /// <typeparam name="T">entity class implements <see cref="INameValuePair"/></typeparam>
-	public class NameValueCollection<T> : List<T>, INameValuePairEntityCollection<T>
-        where T : INameValuePair, new()
+	public class NameValueCollection<T, TItem> : List<T>
+        where T : NameValuePair<TItem>, new()
     {
         #region constructors
 
@@ -220,9 +333,9 @@ namespace Framework
         /// </summary>
         /// <param name="name">The name.</param>
         /// <returns>the collection which each item meets criteria, otherwise null</returns>
-        public NameValueCollection<T> GetCollectionByName(string name)
+        public NameValueCollection<T, TItem> GetCollectionByName(string name)
         {
-            NameValueCollection<T> _retval = new NameValueCollection<T>();
+            NameValueCollection<T, TItem> _retval = new NameValueCollection<T, TItem>();
             _retval.AddRange(this.Where(t => t.Name == name));
             return _retval;
         }
@@ -260,7 +373,7 @@ namespace Framework
             /// <returns>true if meets criteria, otherwise false</returns>
             public bool Predicate(T input)
             {
-                return input != null && input.Value == ComparedToValue;
+                return input != null && input.Value.Equals(ComparedToValue);
             }
         }
 
@@ -281,7 +394,7 @@ namespace Framework
         /// <returns>the 1st instance if meets criteria, otherwise null</returns>
         public T GetByValue(string value)
         {
-            return this.Single(t => t.Value == value);
+            return this.Single(t => t.Value.Equals(value));
         }
 
 
@@ -290,10 +403,10 @@ namespace Framework
         /// </summary>
         /// <param name="value">The value.</param>
         /// <returns>the collection which each item meets criteria, otherwise null</returns>
-        public NameValueCollection<T> GetCollectionByValue(string value)
+        public NameValueCollection<T, TItem> GetCollectionByValue(string value)
         {
-            NameValueCollection<T> _retval = new NameValueCollection<T>();
-            _retval.AddRange(this.Where(t => t.Value == value));
+            NameValueCollection<T, TItem> _retval = new NameValueCollection<T, TItem>();
+            _retval.AddRange(this.Where(t => t.Value.Equals(value)));
             return _retval;
         }
 
@@ -306,32 +419,12 @@ namespace Framework
         /// </summary>
         /// <param name="value">The value.</param>
         /// <param name="name">The name.</param>
-        public void Add(string value, string name)
+        public void Add(TItem value, string name)
         {
             T _NewItem = new T();
             _NewItem.Name = name;
             _NewItem.Value = value;
             this.Add(_NewItem);
-        }
-
-        /// <summary>
-        /// Adds the specified value.
-        /// </summary>
-        /// <param name="value">The value.</param>
-        /// <param name="name">The name.</param>
-        public void Add(System.Guid value, string name)
-        {
-            this.Add(value.ToString(), name);
-        }
-
-        /// <summary>
-        /// Adds the specified value.
-        /// </summary>
-        /// <param name="value">The value.</param>
-        /// <param name="name">The name.</param>
-		public void Add(long value, string name)
-        {
-            this.Add(value.ToString(), name);
         }
 
         #endregion Add(value, name)
@@ -346,7 +439,7 @@ namespace Framework
     /// Concrete NameValuePair
     /// </summary>
     [DataContract]
-    public class NameValuePair : INameValuePair
+    public class NameValuePair : NameValuePair<string>
     {
 		#region Constructors
 
@@ -401,57 +494,9 @@ namespace Framework
 
 		#endregion Constructors
 
-		#region Properties
-
-
-        /// <summary>
-        /// Gets or sets the value.
-        /// </summary>
-        /// <value>
-        /// The value.
-        /// </value>
-		[DataMember]
-#if (WINDOWS_PHONE || SILVERLIGHT || XAMARIN || __IOS__ || ANDROID)
-#else
-        [LINQtoCSV.CsvColumn()]
-#endif
-        public string Value { get; set; }
-        /// <summary>
-        /// Gets or sets the name.
-        /// </summary>
-        /// <value>
-        /// The name.
-        /// </value>
-		[DataMember]
-#if (WINDOWS_PHONE || SILVERLIGHT || XAMARIN || __IOS__ || ANDROID)
-#else
-        [LINQtoCSV.CsvColumn()]
-#endif
-        public string Name { get; set; }
-
-		#endregion Properties
-
-		#region ToString()
-
-
-        /// <summary>
-        /// Returns a <see cref="System.String"/> that represents this instance.
-        /// </summary>
-        /// <returns>
-        /// A <see cref="System.String"/> that represents this instance.
-        /// </returns>
-		public override string ToString()
-        {
-            return string.Format("{0}:{1}", this.Value, this.Name);
-        }
-
-		#endregion ToString()
-
 		#region Equals(...)
 		
         /// <summary>
-        /// http://blog.ariankulp.com/2013/07/fixing-selecteditem-must-always-be-set.html
-        /// Fixing SelectedItem must always be set to a valid value
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
@@ -471,6 +516,18 @@ namespace Framework
             catch
             {
                 return false;
+            }
+        }
+
+        public override int GetHashCode()
+        {
+            if (string.IsNullOrWhiteSpace(this.Value))
+            {
+                return base.GetHashCode();
+            }
+            else
+            {
+                return this.Value.GetHashCode();
             }
         }
 
@@ -748,7 +805,7 @@ namespace Framework
     /// <summary>
     /// Concrete NameValueCollection 
     /// </summary>
-	public class NameValueCollection : NameValueCollection<NameValuePair>
+	public class NameValueCollection : NameValueCollection<NameValuePair, string>
     {
         #region constructors
 
@@ -806,7 +863,7 @@ namespace Framework
         {
             get
             {
-                NameValuePair _Item = this.GetByName(name);
+                NameValuePair<string> _Item = this.GetByName(name);
                 if (_Item != null)
                 {
                     return _Item.Value;
@@ -818,11 +875,11 @@ namespace Framework
             }
             set
             {
-                NameValuePair _Item;
+                NameValuePair<string> _Item;
                 
                 if(this.ExistsByName(name))
                 {
-                    _Item= this.GetByName(name);
+                    _Item = this.GetByName(name);
                     _Item.Value = value;
                 }
                 else

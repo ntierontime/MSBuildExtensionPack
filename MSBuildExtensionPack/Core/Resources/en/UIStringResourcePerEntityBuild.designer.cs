@@ -21,7 +21,7 @@ namespace MSBuildExtensionPack.Resources {
     // with the /str option, or rebuild your VS project.
     public class UIStringResourcePerEntityBuild {
         
-        private static ResourceLoader resourceLoader = new ResourceLoader("MSBuildExtensionPack.Resources.WinRT/UIStringResourcePerEntityBuild");
+        private static ResourceLoader resourceLoader = new ResourceLoader("MSBuildExtensionPack.Resources/UIStringResourcePerEntityBuild");
         
         public UIStringResourcePerEntityBuild() {
         }

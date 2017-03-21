@@ -21,11 +21,11 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
 		#region Storage Fields
 
-        public System.Int32 m_Id;
+        System.Int32 m_Id;
 
-        public System.String m_EventCode;
+        System.String m_EventCode;
 
-        public System.String m_Description;
+        System.String m_Description;
 
 
 		#endregion Storage Fields
@@ -209,9 +209,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
 			#region Storage Fields
 
-        public System.Int32 m_Id;
+        System.Int32 m_Id;
 
-        public System.String m_EventCode;
+        System.String m_EventCode;
 
 
 			#endregion Storage Fields

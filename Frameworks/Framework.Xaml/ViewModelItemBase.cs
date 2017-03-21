@@ -9,7 +9,8 @@ using System.ComponentModel;
 
 namespace Framework.Xaml
 {
-    public abstract class ViewModelItemBase<TSearchCriteria, TItem> : Framework.ViewModels.ViewModelItemBase<TSearchCriteria, TItem>, INotifyPropertyChanged
+    public abstract class ViewModelItemBase<TSearchCriteria, TItem> 
+		GalaSoft.MvvmLight.ViewModelBase, Framework.ViewModels.IViewModelItemBase<TSearchCriteria, TItem>
         where TSearchCriteria : class, new()
         where TItem : class, new()
     {
@@ -19,6 +20,9 @@ namespace Framework.Xaml
             : base()
         {
             this.SuppressMVVMLightEventToCommandMessage = false;
+
+			this.Item = new TItem();
+			this.OriginalItem = new TItem();
 
             this.LaunchCopyViewCommand = new RelayCommand<TItem>(LaunchCopyView);
 
@@ -41,6 +45,8 @@ namespace Framework.Xaml
 
             this.LoadItemCommand = new RelayCommand(this.LoadItem);
             this.LoadItemCommandTyped = new RelayCommand<TSearchCriteria>(this.LoadItem);
+
+			this.RaiseItemPropertyChangedEventCommand = new RelayCommand(this.RaiseItemPropertyChangedEvent);
         }
 
         #endregion constructor
@@ -48,7 +54,7 @@ namespace Framework.Xaml
         #region override properties
 
         protected TSearchCriteria m_Criteria;
-        public override TSearchCriteria Criteria
+        public TSearchCriteria Criteria
         {
             get { return m_Criteria; }
             set
@@ -59,7 +65,7 @@ namespace Framework.Xaml
         }
 
         protected TItem m_Item;
-        public override TItem Item
+        public TItem Item
         {
             get { return m_Item; }
             set
@@ -69,36 +75,63 @@ namespace Framework.Xaml
             }
         }
 
-        #endregion override properties
 
-        #region INotifyPropertyChanged Implementation 
-
-        /// <summary>
-        /// Occurs when a property value changes.
-        /// </summary>
-#if (SILVERLIGHT || XAMARIN)
-#elif (NETFX_CORE)
-#else
-        [field: NonSerialized]
-#endif
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// Notifies that <see cref="propertyName" /> has changed.
-        /// </summary>
-        /// <param name="propertyName">Name of the property.</param>
-        protected virtual void RaisePropertyChanged(string propertyName)
+        protected ContentData m_ContentData;
+        public ContentData ContentData
         {
-            if (PropertyChanged != null)
+            get { return m_ContentData; }
+            set
             {
-                PropertyChanged(
-                    this,
-                    new PropertyChangedEventArgs(propertyName)
-                    );
+                m_ContentData = value;
+                RaisePropertyChanged("ContentData");
             }
         }
 
-        #endregion INotifyPropertyChanged Implementation 
+        protected SearchStatus m_SearchStatus;
+        public SearchStatus SearchStatus
+        {
+            get { return m_SearchStatus; }
+            set
+            {
+                m_SearchStatus = value;
+                RaisePropertyChanged("SearchStatus");
+            }
+        }
+
+        protected string m_StatusMessageOfResult;
+        public string StatusMessageOfResult
+        {
+            get { return m_StatusMessageOfResult; }
+            set
+            {
+                m_StatusMessageOfResult = value;
+                RaisePropertyChanged("StatusMessageOfResult");
+            }
+        }
+
+        protected Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus m_StatusOfResult;
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfResult
+        {
+            get { return m_StatusOfResult; }
+            set
+            {
+                m_StatusOfResult = value;
+                RaisePropertyChanged("StatusOfResult");
+            }
+        }
+
+        protected UIActionStatusMessage m_UIActionStatusMessage;
+        public UIActionStatusMessage UIActionStatusMessage
+        {
+            get { return m_UIActionStatusMessage; }
+            set
+            {
+                m_UIActionStatusMessage = value;
+                RaisePropertyChanged("UIActionStatusMessage");
+            }
+        }
+
+        #endregion override properties
 
         public TItem OriginalItem { get; set; }
 
@@ -107,7 +140,7 @@ namespace Framework.Xaml
         protected virtual void PrepareItem(TItem o)
         {
             this.OriginalItem = o;
-            this.Item = o;
+            this.m_Item = o;
         }
 
         #region ViewDetails
@@ -156,7 +189,7 @@ namespace Framework.Xaml
 
         public RelayCommand<TItem> LaunchEditViewCommand { get; protected set; }
 
-        protected void LaunchEditView(TItem o)
+        protected virtual void LaunchEditView(TItem o)
         {
             string viewName = ViewName_Details;
             Framework.UIAction uiAction = Framework.UIAction.Update;
@@ -164,6 +197,8 @@ namespace Framework.Xaml
             PrepareItem(o);
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Launch));
+
+			this.RaiseItemPropertyChangedEvent();
         }
 
         public RelayCommand CloseEditViewCommand { get; protected set; }
@@ -172,7 +207,7 @@ namespace Framework.Xaml
         {
             string viewName = ViewName_Edit;
             Framework.UIAction uiAction = Framework.UIAction.Update;
-
+			this.Cleanup();
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Close));
         }
 
@@ -202,7 +237,7 @@ namespace Framework.Xaml
 
         protected void LaunchCreateView()
         {
-            string viewName = ViewName_SearchResult;
+            string viewName = ViewName_Create;
             Framework.UIAction uiAction = Framework.UIAction.Create;
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Launch));
@@ -334,9 +369,23 @@ namespace Framework.Xaml
         public const string ViewName_Create = "Create";
         public const string ViewName_Delete = "Delete";
         public const string ViewName_Details = "Details";
-        public const string ViewName_SearchResult = "SearchResult";
 
         #endregion ViewNames
+
+        public override void Cleanup()
+        {
+            base.Cleanup();
+            this.m_Item = new TItem();
+            this.OriginalItem = new TItem();
+        }
+
+
+        public RelayCommand RaiseItemPropertyChangedEventCommand { get; protected set; }
+
+        public void RaiseItemPropertyChangedEvent()
+        {
+            this.RaisePropertyChanged("Item");
+        }
     }
 }
 

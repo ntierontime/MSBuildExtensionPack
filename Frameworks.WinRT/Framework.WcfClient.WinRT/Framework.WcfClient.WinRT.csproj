@@ -109,9 +109,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Framework.WinRT\Framework.WinRT.csproj">
-      <Project>{4c24a945-7c5e-42a2-8ef8-983b9d611f30}</Project>
-      <Name>Framework.WinRT</Name>
+    <ProjectReference Include="..\..\Frameworks\Framework\Framework.csproj">
+      <Project>{6d25aa30-c3af-4ae0-b567-0f2653120cdc}</Project>
+      <Name>Framework</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

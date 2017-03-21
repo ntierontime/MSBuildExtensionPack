@@ -37,6 +37,7 @@
     <Compile Include="HtmlChartHelpers.cs" />
     <Compile Include="PagerHelper.cs" />
     <Compile Include="PagerHtmlRenderer.cs" />
+    <Compile Include="UISharedViewModel.cs" />
     <Compile Include="ViewModelBaseWithResultAndUIElement.cs" />
     <Compile Include="ViewModels\MultipleFileUploadModel.cs" />
     <Compile Include="ViewModels\ViewModelItemBase.cs" />

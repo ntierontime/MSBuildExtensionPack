@@ -317,11 +317,6 @@ namespace MSBuildExtensionPack.ViewModels
 
             #endregion Asyncronized wcf method call   
         }
-
-        public  void Cleanup()
-        {
-
-        }
     }
 }
 

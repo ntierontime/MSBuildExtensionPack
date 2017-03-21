@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace MSBuildExtensionPack.AspNetMvc40ViewModel.Common
 {
-	public partial class OrderByLists
+	public class OrderByLists
 	{
 
 		#region 1.1. MSBuildExtensionPack.Build.WPCommonOfBuild

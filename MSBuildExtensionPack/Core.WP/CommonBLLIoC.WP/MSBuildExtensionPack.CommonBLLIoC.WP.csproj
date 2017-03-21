@@ -1,52 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>10.0.20506</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{02E6DE70-C94E-4B3B-B84F-CA49EAC11CC7}</ProjectGuid>
-    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildExtensionPack.CommonBLLIoC</RootNamespace>
     <AssemblyName>MSBuildExtensionPack.CommonBLLIoC.WP</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
-    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
-    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
-    <SilverlightApplication>false</SilverlightApplication>
-    <ValidateXaml>true</ValidateXaml>
-    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>Bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
-    <NoStdLib>true</NoStdLib>
-    <NoConfig>true</NoConfig>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>Bin\Release</OutputPath>
-    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
-    <NoStdLib>true</NoStdLib>
-    <NoConfig>true</NoConfig>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="system" />
-    <Reference Include="mscorlib.Extensions" />
-    <Reference Include="System.Net" />
-    <Reference Include="System.Servicemodel" />
-    <Reference Include="System.Runtime.Serialization" />
-  </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
@@ -64,33 +50,33 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CommonBLLEntities.WP\MSBuildExtensionPack.CommonBLLEntities.WP.csproj">
-      <Project>{6bc66c87-75a1-41fd-96e8-7a8cf5e19ebf}</Project>
-      <Name>MSBuildExtensionPack.CommonBLLEntities.WP</Name>
+    <ProjectReference Include="..\..\Core\CommonBLLEntities\MSBuildExtensionPack.CommonBLLEntities.csproj">
+      <Project>{6a520483-5254-4978-ad53-3147addeffb6}</Project>
+      <Name>MSBuildExtensionPack.CommonBLLEntities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DataSourceEntities.WP\MSBuildExtensionPack.DataSourceEntities.WP.csproj">
-      <Project>{0b24b82b-cce3-4d94-bf66-aba33acedda8}</Project>
-      <Name>MSBuildExtensionPack.DataSourceEntities.WP</Name>
+    <ProjectReference Include="..\..\Core\DataSourceEntities\MSBuildExtensionPack.DataSourceEntities.csproj">
+      <Project>{d0b33cdd-97c7-4d99-a579-8fc566de7153}</Project>
+      <Name>MSBuildExtensionPack.DataSourceEntities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\EntityContracts.WP\MSBuildExtensionPack.EntityContracts.WP.csproj">
-      <Project>{017c70c6-8660-4be1-99ea-3a2483bdfa12}</Project>
-      <Name>MSBuildExtensionPack.EntityContracts.WP</Name>
+    <ProjectReference Include="..\..\Core\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj">
+      <Project>{d79953a8-febc-4b13-9cda-f7675a233481}</Project>
+      <Name>MSBuildExtensionPack.EntityContracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Frameworks.WP\Framework.WP\Framework.WP.csproj">
-      <Project>{e2dff67f-6d25-4de1-b417-b6cda777c29c}</Project>
-      <Name>Framework.WP</Name>
+    <ProjectReference Include="..\..\..\Frameworks\Framework\Framework.csproj">
+      <Project>{6d25aa30-c3af-4ae0-b567-0f2653120cdc}</Project>
+      <Name>Framework</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Frameworks.WP\Framework.CommonBLLEntities.WP\Framework.CommonBLLEntities.WP.csproj">
-      <Project>{33eeba6a-5986-4876-b279-9fbff579e3c1}</Project>
-      <Name>Framework.CommonBLLEntities.WP</Name>
+    <ProjectReference Include="..\..\..\Frameworks\Framework.CommonBLLEntities\Framework.CommonBLLEntities.csproj">
+      <Project>{ba8c8c0b-470a-4d3c-b3da-9e28599799b5}</Project>
+      <Name>Framework.CommonBLLEntities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Frameworks.WP\Framework.DataSourceEntities.WP\Framework.DataSourceEntities.WP.csproj">
-      <Project>{c82389ec-60a5-4132-9f53-32b1abb1e1b7}</Project>
-      <Name>Framework.DataSourceEntities.WP</Name>
+    <ProjectReference Include="..\..\..\Frameworks\Framework.DataSourceEntities\Framework.DataSourceEntities.csproj">
+      <Project>{f85a14d5-64e0-4cfc-88da-27fe9d0dd664}</Project>
+      <Name>Framework.DataSourceEntities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Frameworks.WP\Framework.EntityContracts.WP\Framework.EntityContracts.WP.csproj">
-      <Project>{8c0b505d-4483-4afa-83ad-d72f66d792d3}</Project>
-      <Name>Framework.EntityContracts.WP</Name>
+    <ProjectReference Include="..\..\..\Frameworks\Framework.EntityContracts\Framework.EntityContracts.csproj">
+      <Project>{c3a270de-9727-492e-91e2-f56e7e0e0f83}</Project>
+      <Name>Framework.EntityContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\WcfContracts.WP\MSBuildExtensionPack.WcfContracts.WP.csproj">
       <Project>{63b010fa-fb07-478f-8df1-fde9f829b55e}</Project>
@@ -106,23 +92,7 @@
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
-  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
-  <!--
-  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
-  </Target>
-  -->
-  <ProjectExtensions>
-    <VisualStudio>
-      <!-- For ProjectLinker -->
-      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="6992a9f3-9832-46fd-8c7f-d2bb5777e7d9" />
-    </VisualStudio>
-  </ProjectExtensions>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

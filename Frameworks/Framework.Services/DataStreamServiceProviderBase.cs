@@ -7,17 +7,17 @@ using ClosedXML.Excel;
 
 namespace Framework.Services
 {
-    public abstract class DataStreamServiceProviderBase<TCollection, TItem> : Framework.IDataStreamServiceProviderBase<TCollection, TItem>
+    public abstract class DataStreamServiceProviderBase<TCollection, TItem> : Framework.Services.IDataStreamServiceProviderBase<TCollection, TItem>
         where TCollection : List<TItem>, new()
         where TItem : class, new()
     {
         #region Write to stream
 
-        public Framework.DataStreamServiceResult BuildResult(TCollection input, Framework.DataServiceTypes dataServiceType)
+        public Framework.Services.DataStreamServiceResult BuildResult(TCollection input, Framework.DataServiceTypes dataServiceType)
         {
             if (dataServiceType == Framework.DataServiceTypes.Csv)
             {
-                Framework.DataStreamServiceResult result = new Framework.DataStreamServiceResult
+                Framework.Services.DataStreamServiceResult result = new Framework.Services.DataStreamServiceResult
                 {
                     DataServiceType = dataServiceType,
                     MIMEType = "text/csv",
@@ -28,7 +28,7 @@ namespace Framework.Services
             }
             else if (dataServiceType == Framework.DataServiceTypes.Excel2010)
             {
-                Framework.DataStreamServiceResult result = new Framework.DataStreamServiceResult
+                Framework.Services.DataStreamServiceResult result = new Framework.Services.DataStreamServiceResult
                 {
                     DataServiceType = dataServiceType,
                     MIMEType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
@@ -84,7 +84,7 @@ namespace Framework.Services
 
         #region Read from stream
 
-        public TCollection GetCollectionFromStream(Framework.DataStreamServiceResult input)
+        public TCollection GetCollectionFromStream(Framework.Services.DataStreamServiceResult input)
         {
             TCollection collection;
             if (input.DataServiceType == Framework.DataServiceTypes.Csv)

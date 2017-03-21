@@ -21,15 +21,15 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
 		#region Storage Fields
 
-        public System.Int64 m_Id;
+        System.Int64 m_Id;
 
-        public System.Int32 m_SolutionId;
+        System.Int32 m_SolutionId;
 
-        public System.String m_Name;
+        System.String m_Name;
 
-        public System.String m_Description;
+        System.String m_Description;
 
-        public System.DateTime m_BuildStartTime;
+        System.DateTime m_BuildStartTime;
 
 
 		#endregion Storage Fields
@@ -261,17 +261,17 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
 			#region Storage Fields
 
-        public System.String m_Solution_1_Name;
+        System.String m_Solution_1_Name;
 
-        public System.Int64 m_Id;
+        System.Int64 m_Id;
 
-        public System.Int32 m_SolutionId;
+        System.Int32 m_SolutionId;
 
-        public System.String m_Name;
+        System.String m_Name;
 
-        public System.String m_Description;
+        System.String m_Description;
 
-        public System.DateTime m_BuildStartTime;
+        System.DateTime m_BuildStartTime;
 
 
 			#endregion Storage Fields
@@ -485,11 +485,11 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
 			#region Storage Fields
 
-        public System.Int32 m_SolutionId;
+        System.Int32 m_SolutionId;
 
-        public System.Int64 m_CountPerFK;
+        System.Int64 m_CountPerFK;
 
-        public System.String m_Name;
+        System.String m_Name;
 
 
 			#endregion Storage Fields
@@ -636,9 +636,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
 			#region Storage Fields
 
-        public System.Int64 m_Id;
+        System.Int64 m_Id;
 
-        public System.String m_Name;
+        System.String m_Name;
 
 
 			#endregion Storage Fields
@@ -766,9 +766,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
 			#region Storage Fields
 
-        public System.Int64 m_Id;
+        System.Int64 m_Id;
 
-        public System.String m_Name;
+        System.String m_Name;
 
 
 			#endregion Storage Fields

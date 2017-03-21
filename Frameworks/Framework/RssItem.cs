@@ -79,10 +79,6 @@ namespace Framework
         /// The title.
         /// </value>
         [DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN || __IOS__ || ANDROID)
-#else
-            [LINQtoCSV.CsvColumn()]
-#endif
         public string Title { get; set; }
         /// <summary>
         /// Gets or sets the description.
@@ -91,10 +87,6 @@ namespace Framework
         /// The description.
         /// </value>
         [DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN || __IOS__ || ANDROID)
-#else
-            [LINQtoCSV.CsvColumn()]
-#endif
         public string Description { get; set; }
         /// <summary>
         /// Gets or sets the author.
@@ -103,10 +95,6 @@ namespace Framework
         /// The author.
         /// </value>
         [DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN || __IOS__ || ANDROID)
-#else
-            [LINQtoCSV.CsvColumn()]
-#endif
         public string Author { get; set; }
         /// <summary>
         /// Gets or sets the comments.
@@ -115,10 +103,6 @@ namespace Framework
         /// The comments.
         /// </value>
         [DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN || __IOS__ || ANDROID)
-#else
-            [LINQtoCSV.CsvColumn()]
-#endif
         public string Comments { get; set; }
         /// <summary>
         /// Gets or sets the link.
@@ -127,10 +111,6 @@ namespace Framework
         /// The link.
         /// </value>
         [DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN || __IOS__ || ANDROID)
-#else
-            [LINQtoCSV.CsvColumn()]
-#endif
         public string Link { get; set; }
         /// <summary>
         /// Gets or sets the pub date.
@@ -139,10 +119,6 @@ namespace Framework
         /// The pub date.
         /// </value>
         [DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN || __IOS__ || ANDROID)
-#else
-            [LINQtoCSV.CsvColumn()]
-#endif
         public DateTime PubDate { get; set; }
 
         /// <summary>
@@ -152,10 +128,6 @@ namespace Framework
         /// The identifier in string.
         /// </value>
         [DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN || __IOS__ || ANDROID)
-#else
-            [LINQtoCSV.CsvColumn()]
-#endif
         public string IdentifierInString { get; set; }
         /// <summary>
         /// Gets or sets the name of the created by user.
@@ -164,10 +136,6 @@ namespace Framework
         /// The name of the created by user.
         /// </value>
         [DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN || __IOS__ || ANDROID)
-#else
-            [LINQtoCSV.CsvColumn()]
-#endif
         public System.String CreatedByUserName { get; set; }
         /// <summary>
         /// Gets or sets the created by identifier.
@@ -176,10 +144,6 @@ namespace Framework
         /// The created by identifier.
         /// </value>
         [DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN || __IOS__ || ANDROID)
-#else
-            [LINQtoCSV.CsvColumn(OutputFormat = "D")]
-#endif
         public System.Guid CreatedByIdentifier { get; set; }
         /// <summary>
         /// Gets or sets the date created.
@@ -188,10 +152,6 @@ namespace Framework
         /// The date created.
         /// </value>
         [DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN || __IOS__ || ANDROID)
-#else
-            [LINQtoCSV.CsvColumn()]
-#endif
         public System.DateTime DateCreated { get; set; }
         /// <summary>
         /// Gets or sets the last name of the modified by user.
@@ -200,10 +160,6 @@ namespace Framework
         /// The last name of the modified by user.
         /// </value>
         [DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN || __IOS__ || ANDROID)
-#else
-            [LINQtoCSV.CsvColumn()]
-#endif
         public System.String LastModifiedByUserName { get; set; }
         /// <summary>
         /// Gets or sets the last modified by identifier.
@@ -212,10 +168,6 @@ namespace Framework
         /// The last modified by identifier.
         /// </value>
         [DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN || __IOS__ || ANDROID)
-#else
-            [LINQtoCSV.CsvColumn(OutputFormat = "D")]
-#endif
         public System.Guid LastModifiedByIdentifier { get; set; }
         /// <summary>
         /// Gets or sets the date last modified.
@@ -224,10 +176,6 @@ namespace Framework
         /// The date last modified.
         /// </value>
         [DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN || __IOS__ || ANDROID)
-#else
-            [LINQtoCSV.CsvColumn()]
-#endif
         public System.DateTime DateLastModified { get; set; }
 
 		#endregion properties

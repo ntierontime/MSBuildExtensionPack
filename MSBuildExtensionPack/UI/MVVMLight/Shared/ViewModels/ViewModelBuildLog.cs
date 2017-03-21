@@ -138,13 +138,15 @@ namespace MSBuildExtensionPack.ViewModels
 						}
                         else
                         {
-                            this.m_EntityCollectionDefault.Clear();
+							if(this.m_EntityCollectionDefault.Count > 0)
+								this.m_EntityCollectionDefault.Clear();
                         }
 
 #if WINDOWS_PHONE
                         if (this.IsToClearExistingCollection)
                         {
-                            this.m_EntityCollectionDefault.Clear();
+							if(this.m_EntityCollectionDefault.Count > 0)
+								this.m_EntityCollectionDefault.Clear();
                         }
 #endif
 

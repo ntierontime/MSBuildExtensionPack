@@ -13,7 +13,7 @@ namespace MSBuildExtensionPack.Resources {
     
     public class UIStringResourcePerApp {
         
-        private static ResourceLoader resourceLoader = new ResourceLoader("MSBuildExtensionPack.Resources.WinRT/UIStringResourcePerApp");
+        private static ResourceLoader resourceLoader = new ResourceLoader("MSBuildExtensionPack.Resources/UIStringResourcePerApp");
         
         public UIStringResourcePerApp() {
         }

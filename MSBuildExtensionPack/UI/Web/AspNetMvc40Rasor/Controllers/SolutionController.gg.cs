@@ -163,7 +163,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             {
                 log.Info(string.Format("{0}: Import", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-                Framework.DataStreamServiceResult dataStreamServiceResult = new Framework.DataStreamServiceResult(file.FileName, file.ContentType, file.ContentLength, file.InputStream);
+                Framework.Services.DataStreamServiceResult dataStreamServiceResult = new Framework.Services.DataStreamServiceResult(file.FileName, file.ContentType, file.ContentLength, file.InputStream);
                 dataStreamServiceResult.TempFilePath = Framework.Web.WebFormApplicationApplicationVariables.FileStorageRootFolder;
                 MSBuildExtensionPack.CommonBLL.SolutionDataStreamService dataStreamServiceProvider = new MSBuildExtensionPack.CommonBLL.SolutionDataStreamService();
                 MSBuildExtensionPack.DataSourceEntities.SolutionCollection collection = dataStreamServiceProvider.GetCollectionFromStream(dataStreamServiceResult);

@@ -62,9 +62,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Framework.SL\Framework.SL.csproj">
-      <Project>{11207323-618e-4f75-bd56-2dc591dbc385}</Project>
-      <Name>Framework.SL</Name>
+    <ProjectReference Include="..\..\Frameworks\Framework\Framework.csproj">
+      <Project>{6d25aa30-c3af-4ae0-b567-0f2653120cdc}</Project>
+      <Name>Framework</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

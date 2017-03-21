@@ -101,11 +101,7 @@ namespace Framework.Xaml
 
         #region ViewNames
 
-        public const string ViewName_Edit = "Edit";
-        public const string ViewName_Create = "Create";
-        public const string ViewName_Delete = "Delete";
-        public const string ViewName_Details = "Details";
-        public const string ViewName_SearchResult = "SearchResult";
+		public abstract string ViewName { get; }
 
         #endregion ViewNames
 
@@ -124,7 +120,7 @@ namespace Framework.Xaml
             set
             {
                 m_QueryPagingSetting = value;
-                RaisePropertyChanged("QueryPagingSetting");
+                //RaisePropertyChanged("QueryPagingSetting");
             }
         }
 
@@ -454,7 +450,7 @@ namespace Framework.Xaml
 
         protected void LaunchSearchView()
         {
-            string viewName = ViewName_SearchResult;
+            string viewName = ViewName;
             Framework.UIAction uiAction = Framework.UIAction.Search;
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Launch));
@@ -464,7 +460,7 @@ namespace Framework.Xaml
 
         protected void CloseSearchView()
         {
-            string viewName = ViewName_SearchResult;
+            string viewName = ViewName;
             Framework.UIAction uiAction = Framework.UIAction.Search;
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Close));
@@ -508,11 +504,42 @@ namespace Framework.Xaml
 		
         #region Cleanup()
 
-        public virtual void Cleanup()
+        public override  void Cleanup()
         {
+			base.Cleanup();
         }
 
         #endregion Cleanup()
+
+        #region not implements and not used
+
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfResult
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public string StatusMessageOfResult
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        #endregion not implements and not used
     }
 
     public abstract class ViewModelBaseWithResultAndUIElement<TSearchCriteria, TSearchResultEntityCollection, TSearchResultEntityItem, TSearchResultDataViewCollection, TSearchResultDataViewItem>
@@ -547,6 +574,15 @@ namespace Framework.Xaml
                 RaisePropertyChanged("EntityCollectionDefault");
             }
         }
+				
+        #region Cleanup()
+
+        public override  void Cleanup()
+        {
+			base.Cleanup();
+        }
+
+        #endregion Cleanup()
     }
 }
 

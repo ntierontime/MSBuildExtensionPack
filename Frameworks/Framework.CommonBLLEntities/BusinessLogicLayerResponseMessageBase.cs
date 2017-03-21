@@ -76,7 +76,7 @@ namespace Framework.CommonBLLEntities
         /// <value>
         /// The message in stream.
         /// </value>
-        public Framework.DataStreamServiceResult DataStreamServiceResult { get; set; }
+        public Framework.Services.DataStreamServiceResult DataStreamServiceResult { get; set; }
 
 		#endregion Properties
 
@@ -107,7 +107,7 @@ namespace Framework.CommonBLLEntities
         public static void MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<T, TList>(
             Framework.DataSourceEntities.DataAccessLayerMessageBase<TList> from, BusinessLogicLayerResponseMessageBase<TList> to
             , Framework.DataServiceTypes dataServiceType
-            , Framework.IDataStreamServiceProviderBase<TList, T> dataStreamServiceProvider
+            , Framework.Services.IDataStreamServiceProviderBase<TList, T> dataStreamServiceProvider
             )
             where TList : List<T>, new()
             where T : class, new()
@@ -172,7 +172,7 @@ namespace Framework.CommonBLLEntities
         public static void MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<T, TList>(
             Framework.DataSourceEntities.DataAccessLayerMessageBase<T> from, BusinessLogicLayerResponseMessageBase<TList> to
 			, Framework.DataServiceTypes dataServiceType
-            , Framework.IDataStreamServiceProviderBase<TList, T> dataStreamServiceProvider)
+            , Framework.Services.IDataStreamServiceProviderBase<TList, T> dataStreamServiceProvider)
             where TList: List<T>, new()
             where T : class, new()
         {

@@ -21,13 +21,13 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
 		#region Storage Fields
 
-        public System.Int32 m_Id;
+        System.Int32 m_Id;
 
-        public System.String m_ExternalParentId;
+        System.String m_ExternalParentId;
 
-        public System.String m_Name;
+        System.String m_Name;
 
-        public System.String m_Description;
+        System.String m_Description;
 
 
 		#endregion Storage Fields
@@ -235,9 +235,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
 			#region Storage Fields
 
-        public System.Int32 m_Id;
+        System.Int32 m_Id;
 
-        public System.String m_Name;
+        System.String m_Name;
 
 
 			#endregion Storage Fields

@@ -21,7 +21,7 @@ namespace MSBuildExtensionPack.Resources {
     // with the /str option, or rebuild your VS project.
     public class UIStringResourcePerEntityBuildEventCode {
         
-        private static ResourceLoader resourceLoader = new ResourceLoader("MSBuildExtensionPack.Resources.WinRT/UIStringResourcePerEntityBuildEventCode");
+        private static ResourceLoader resourceLoader = new ResourceLoader("MSBuildExtensionPack.Resources/UIStringResourcePerEntityBuildEventCode");
         
         public UIStringResourcePerEntityBuildEventCode() {
         }

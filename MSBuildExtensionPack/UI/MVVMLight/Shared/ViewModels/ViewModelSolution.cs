@@ -127,13 +127,15 @@ namespace MSBuildExtensionPack.ViewModels
 						}
                         else
                         {
-                            this.m_EntityCollection.Clear();
+							if(this.m_EntityCollection.Count > 0)
+								this.m_EntityCollection.Clear();
                         }
 
 #if WINDOWS_PHONE
                         if (this.IsToClearExistingCollection)
                         {
-                            this.m_EntityCollection.Clear();
+							if(this.m_EntityCollection.Count > 0)
+								this.m_EntityCollection.Clear();
                         }
 #endif
 

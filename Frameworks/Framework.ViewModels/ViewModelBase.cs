@@ -23,6 +23,8 @@ namespace Framework.ViewModels
         public Framework.NameValueCollection ListOfQueryOrderBySettingCollecionInString { get; set; }
         public Framework.NameValueCollection ListOfDataExport { get; set; }
         public Framework.EntityContracts.QueryOrderBySettingCollection QueryOrderBySettingCollection { get; set; }
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfResult { get; set; }
+        public string StatusMessageOfResult { get; set; }
 
         public Framework.ViewModels.IViewModelBase<TSearchCriteria> GetPrimaryInformationEntity()
         {
@@ -158,10 +160,9 @@ namespace Framework.ViewModels
 		public ViewModelBase()
             : base()
         {
-            this.SearchStatus = Framework.EntityContracts.SearchStatus.Unknown;
+            this.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady;
         }
         public TSearchResult Result {get;set;}
-		public Framework.EntityContracts.SearchStatus SearchStatus { get; set; }
     }
 }
 

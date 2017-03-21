@@ -58,9 +58,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Framework.WP\Framework.WP.csproj">
-      <Project>{e2dff67f-6d25-4de1-b417-b6cda777c29c}</Project>
-      <Name>Framework.WP</Name>
+    <ProjectReference Include="..\..\Frameworks\Framework\Framework.csproj">
+      <Project>{6d25aa30-c3af-4ae0-b567-0f2653120cdc}</Project>
+      <Name>Framework</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -52,6 +52,10 @@
       <Project>{6d25aa30-c3af-4ae0-b567-0f2653120cdc}</Project>
       <Name>Framework</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Framework.CommonBLLEntities\Framework.CommonBLLEntities.csproj">
+      <Project>{ba8c8c0b-470a-4d3c-b3da-9e28599799b5}</Project>
+      <Name>Framework.CommonBLLEntities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Framework.EntityContracts\Framework.EntityContracts.csproj">
       <Project>{c3a270de-9727-492e-91e2-f56e7e0e0f83}</Project>
       <Name>Framework.EntityContracts</Name>

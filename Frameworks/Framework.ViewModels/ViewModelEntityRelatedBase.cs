@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Framework.ViewModels
 {
-    public class ViewModelEntityRelatedBase<TMasterEntity, TCriteriaOfMasterEntity, TStatusOfLoadMasterEntity> : IViewModelEntityRelatedBase<TMasterEntity, TCriteriaOfMasterEntity, TStatusOfLoadMasterEntity>
+    public class ViewModelEntityRelatedBase<TMasterEntity, TCriteriaOfMasterEntity> : IViewModelEntityRelatedBase<TMasterEntity, TCriteriaOfMasterEntity>
         where TMasterEntity : class, new()
         where TCriteriaOfMasterEntity : class, new()
     {
@@ -18,22 +18,27 @@ namespace Framework.ViewModels
 
         public TMasterEntity MasterEntity { get; set; }
         public TCriteriaOfMasterEntity CriteriaOfMasterEntity { get; set; }
-		public TStatusOfLoadMasterEntity StatusOfMasterEntity { get; set; }
+		public Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfMasterEntity { get; set; }
 		public string StatusMessageOfMasterEntity { get; set; }
 
 		public Framework.EntityContracts.QueryPagingSetting QueryPagingSetting { get; set; }
         public Framework.EntityContracts.QueryPagingSetting QueryPagingSettingOneRecord { get; set; }
     }
 
-    interface IViewModelEntityRelatedBase<TMasterEntity, TCriteriaOfMasterEntity, TStatusOfLoadMasterEntity>
+    interface IViewModelEntityRelatedBase
+    {
+		Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfMasterEntity { get; set; }
+		string StatusMessageOfMasterEntity { get; set; }
+        Framework.EntityContracts.QueryPagingSetting QueryPagingSetting { get; set; }
+		Framework.EntityContracts.QueryPagingSetting QueryPagingSettingOneRecord { get; set; }
+    }
+
+    interface IViewModelEntityRelatedBase<TMasterEntity, TCriteriaOfMasterEntity>: IViewModelEntityRelatedBase
         where TMasterEntity : class, new()
         where TCriteriaOfMasterEntity : class, new()
     {
         TMasterEntity MasterEntity { get; set; }
 		TCriteriaOfMasterEntity CriteriaOfMasterEntity { get; set; }
-		TStatusOfLoadMasterEntity StatusOfMasterEntity { get; set; }
-		string StatusMessageOfMasterEntity { get; set; }
-        Framework.EntityContracts.QueryPagingSetting QueryPagingSetting { get; set; }
-		Framework.EntityContracts.QueryPagingSetting QueryPagingSettingOneRecord { get; set; }
     }
 }
+
