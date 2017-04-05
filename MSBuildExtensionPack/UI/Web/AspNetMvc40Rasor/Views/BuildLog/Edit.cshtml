@@ -19,7 +19,7 @@
             <div class="panel-body">
 @Html.HiddenFor(model => model.Item.Build_1_Name)@Html.HiddenFor(model => model.Item.Id)  <div class="form-group">
 			@Html.LabelFor(model => model.Item.Solution_1Id, new { @class = "control-label" })
-			@Html.DropDownListFor(model => model.Item.Solution_1Id, (List<SelectListItem>)ViewBag.SelectListOfMSBuildExtensionPack_Solution, MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Please_select_Solution____, new Dictionary<string,Object>{ { "onchange", "FetchBuild_1();" }, { "class", "form-control" } })
+			@Html.DropDownListFor(model => model.Item.Solution_1Id, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Solution, MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Please_select_Solution____, new Dictionary<string,Object>{ { "onchange", "FetchBuild_1();" }, { "class", "form-control" } })
     </div>
 @Html.HiddenFor(model => model.Item.Solution_1_Name)@Html.HiddenFor(model => model.Item.BuildEventCode_1_Name)  <div class="form-group">
 			@Html.LabelFor(model => model.Item.BuildId, new { @class = "control-label" })
@@ -27,7 +27,7 @@
     </div>
   <div class="form-group">
 			@Html.LabelFor(model => model.Item.BuildEventCodeId, new { @class = "control-label" })
-			@Html.DropDownListFor(model => model.Item.BuildEventCodeId, (List<SelectListItem>)ViewBag.SelectListOfMSBuildExtensionPack_BuildEventCode, MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildEventCode.Please_select_BuildEventCode____, new Dictionary<string,Object>{ { "class", "form-control" } })
+			@Html.DropDownListFor(model => model.Item.BuildEventCodeId, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_BuildEventCode, MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildEventCode.Please_select_BuildEventCode____, new Dictionary<string,Object>{ { "class", "form-control" } })
     </div>
   <div class="form-group">
 			@Html.LabelFor(model => model.Item.Message, new { @class = "control-label" })
@@ -67,7 +67,7 @@
 @section Scripts {
     <script type="text/javascript">
         $(document).ready($(function() {
-            $('input[name=EventTime]').datepicker({
+            $('input[name=Item.EventTime]').datepicker({
                 autoclose: true,
                 beforeShowDay: $.noop,
                 calendarWeeks: false,

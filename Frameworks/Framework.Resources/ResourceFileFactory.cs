@@ -12,10 +12,6 @@ namespace Framework.Resources
         {
             return new Framework.Resources.UIStringResource();
         }
-        public static Framework.Resources.UIImageResource GetUIImageResource()
-        {
-            return new Framework.Resources.UIImageResource();
-        }
     }
 }
 

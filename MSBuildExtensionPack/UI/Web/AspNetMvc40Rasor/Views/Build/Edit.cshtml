@@ -19,7 +19,7 @@
             <div class="panel-body">
 @Html.HiddenFor(model => model.Item.Solution_1_Name)@Html.HiddenFor(model => model.Item.Id)  <div class="form-group">
 			@Html.LabelFor(model => model.Item.SolutionId, new { @class = "control-label" })
-			@Html.DropDownListFor(model => model.Item.SolutionId, (List<SelectListItem>)ViewBag.SelectListOfMSBuildExtensionPack_Solution, MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Please_select_Solution____, new Dictionary<string,Object>{ { "class", "form-control" } })
+			@Html.DropDownListFor(model => model.Item.SolutionId, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Solution, MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Please_select_Solution____, new Dictionary<string,Object>{ { "class", "form-control" } })
     </div>
   <div class="form-group">
 			@Html.LabelFor(model => model.Item.Name, new { @class = "control-label" })
@@ -64,7 +64,7 @@
 @section Scripts {
     <script type="text/javascript">
         $(document).ready($(function() {
-            $('input[name=BuildStartTime]').datepicker({
+            $('input[name=Item.BuildStartTime]').datepicker({
                 autoclose: true,
                 beforeShowDay: $.noop,
                 calendarWeeks: false,

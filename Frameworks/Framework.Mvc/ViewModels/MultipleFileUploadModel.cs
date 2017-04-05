@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Framework.Mvc
 {
-    public class MultipleFileUploadModel<TMasterEntity, TCriteriaOfMasterEntity, TStatusOfLoadMasterEntity> : Framework.ViewModels.ViewModelEntityRelatedBase<TMasterEntity, TCriteriaOfMasterEntity, TStatusOfLoadMasterEntity>
+    public class MultipleFileUploadModel<TMasterEntity, TCriteriaOfMasterEntity> : Framework.ViewModels.ViewModelEntityRelatedBase<TMasterEntity, TCriteriaOfMasterEntity>
         where TMasterEntity : class, new()
         where TCriteriaOfMasterEntity : class, new()
     {

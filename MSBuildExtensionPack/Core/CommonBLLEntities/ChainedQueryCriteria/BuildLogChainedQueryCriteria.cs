@@ -12,7 +12,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 	/// <summary>
     /// BusinessLogicLayerChainedQueryCriteria, key=Common
     /// </summary>
-    public partial class BuildLogChainedQueryCriteriaCommon
+    public class BuildLogChainedQueryCriteriaCommon
     {
 		#region constructors
 
@@ -119,7 +119,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		#endregion Propertyies
 	}
 
-	public partial class BuildLogChainedQueryCriteriaCommonFlatten
+	public class BuildLogChainedQueryCriteriaCommonFlatten
     {
 		#region constructors
 
@@ -168,6 +168,21 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		}
 
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="BuildLogChainedQueryCriteriaCommonFlatten"/> class.
+		/// </summary>
+		public BuildLogChainedQueryCriteriaCommonFlatten(BuildLogChainedQueryCriteriaCommon input)
+			: this(
+			input.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1OfCommon.IsToCompare, input.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1OfCommon.ValueToCompare
+			, input.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1OfCommon.IsToCompare, input.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1OfCommon.ValueToCompare
+			, input.BuildLogQueryCriteriaCommon.IdCommonOfBuildEventCode_1OfCommon.IsToCompare, input.BuildLogQueryCriteriaCommon.IdCommonOfBuildEventCode_1OfCommon.ValueToCompare
+			, input.BuildLogQueryCriteriaCommon.EventTimeCommonOftOfCommon.IsToCompare, input.BuildLogQueryCriteriaCommon.EventTimeCommonOftOfCommon.IsToCompareLowerBound, input.BuildLogQueryCriteriaCommon.EventTimeCommonOftOfCommon.LowerBound, input.BuildLogQueryCriteriaCommon.EventTimeCommonOftOfCommon.IsToCompareUpperBound, input.BuildLogQueryCriteriaCommon.EventTimeCommonOftOfCommon.UpperBound
+			, input.BuildLogQueryCriteriaCommon.MessageCommonOftOfCommon.IsToCompare, input.BuildLogQueryCriteriaCommon.MessageCommonOftOfCommon.ValueToBeContained
+			)
+		{
+		}
+
+
 
 		#endregion constructors
 
@@ -188,7 +203,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 	/// <summary>
     /// BusinessLogicLayerChainedQueryCriteria, key=All
     /// </summary>
-    public partial class BuildLogChainedQueryCriteriaAll
+    public class BuildLogChainedQueryCriteriaAll
     {
 		#region constructors
 
@@ -235,7 +250,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		#endregion Propertyies
 	}
 
-	public partial class BuildLogChainedQueryCriteriaAllFlatten
+	public class BuildLogChainedQueryCriteriaAllFlatten
     {
 		#region constructors
 
@@ -264,7 +279,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 	/// <summary>
     /// BusinessLogicLayerChainedQueryCriteria, key=ByFKOnly
     /// </summary>
-    public partial class BuildLogChainedQueryCriteriaByFKOnly
+    public class BuildLogChainedQueryCriteriaByFKOnly
     {
 		#region constructors
 
@@ -354,7 +369,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		#endregion Propertyies
 	}
 
-	public partial class BuildLogChainedQueryCriteriaByFKOnlyFlatten
+	public class BuildLogChainedQueryCriteriaByFKOnlyFlatten
     {
 		#region constructors
 
@@ -390,6 +405,19 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		}
 
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="BuildLogChainedQueryCriteriaByFKOnlyFlatten"/> class.
+		/// </summary>
+		public BuildLogChainedQueryCriteriaByFKOnlyFlatten(BuildLogChainedQueryCriteriaByFKOnly input)
+			: this(
+			input.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1OfByFKOnly.IsToCompare, input.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1OfByFKOnly.ValueToCompare
+			, input.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1OfByFKOnly.IsToCompare, input.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1OfByFKOnly.ValueToCompare
+			, input.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1OfByFKOnly.IsToCompare, input.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1OfByFKOnly.ValueToCompare
+			)
+		{
+		}
+
+
 
 		#endregion constructors
 
@@ -408,7 +436,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 	/// <summary>
     /// BusinessLogicLayerChainedQueryCriteria, key=ByIdentifier
     /// </summary>
-    public partial class BuildLogChainedQueryCriteriaByIdentifier
+    public class BuildLogChainedQueryCriteriaByIdentifier
     {
 		#region constructors
 
@@ -484,7 +512,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		#endregion Propertyies
 	}
 
-	public partial class BuildLogChainedQueryCriteriaByIdentifierFlatten
+	public class BuildLogChainedQueryCriteriaByIdentifierFlatten
     {
 		#region constructors
 
@@ -510,6 +538,17 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		}
 
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="BuildLogChainedQueryCriteriaByIdentifierFlatten"/> class.
+		/// </summary>
+		public BuildLogChainedQueryCriteriaByIdentifierFlatten(BuildLogChainedQueryCriteriaByIdentifier input)
+			: this(
+			input.BuildLogQueryCriteriaByIdentifier.IdByIdentifierOftOfByIdentifier.IsToCompare, input.BuildLogQueryCriteriaByIdentifier.IdByIdentifierOftOfByIdentifier.ValueToCompare
+			)
+		{
+		}
+
+
 
 		#endregion constructors
 
@@ -523,3 +562,4 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 
 
 }
+

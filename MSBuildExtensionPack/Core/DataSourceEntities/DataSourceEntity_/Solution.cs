@@ -12,7 +12,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
     /// Entity class, used across the solution. <see cref="Solution"/>
     /// </summary>
     //[DataContract]
-	public partial class Solution  : Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.ISolution 
+	public partial class Solution  : Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.ISolution
 	{ 
 
 
@@ -230,7 +230,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         /// <summary>
         /// View "KeyInformation" class of <see cref="Solution"/>, used across the solution. 
         /// </summary>
-		public partial class KeyInformation :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.ISolutionIdentifier
+		public partial class KeyInformation :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.ISolutionIdentifier, Framework.EntityContracts.IClone<Solution>
 		{
 
 			#region Storage Fields
@@ -328,6 +328,16 @@ namespace MSBuildExtensionPack.DataSourceEntities
                 return cloned;
             }
 
+            /// <summary>
+            /// Gets the A clone.
+            /// </summary>
+            /// <returns>a new instance with same value</returns>
+            public Default GetACloneWithoutIdentifier()
+            {
+                Default cloned = GetAClone();
+
+                return cloned;
+            }
 
             #endregion Method of Solution.KeyInformation  GetAClone()
 		}
@@ -365,6 +375,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
 
 
+/*
     /// <summary>
     /// a property defined when <see cref="Solution"/> is used in other classes.
     /// </summary>
@@ -378,6 +389,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         /// </value>
 		Solution Solution { get; set; }
 	}
+*/
 
     /// <summary>
     /// message definition, pass single entry, pulled from database, to business logic layer. <see cref="Solution"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>

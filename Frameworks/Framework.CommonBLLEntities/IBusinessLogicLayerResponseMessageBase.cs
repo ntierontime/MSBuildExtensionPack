@@ -12,7 +12,6 @@ namespace Framework.CommonBLLEntities
         string ServerErrorMessage { get; set; }
 
         string GetStatusMessage();
-        string ToString();
     }
 }
 

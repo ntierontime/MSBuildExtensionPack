@@ -8,7 +8,7 @@ namespace Framework.Services
 {
     public static class LinqToExcelHelper
     {
-        public static TCollection Read<TCollection, TItem>(Framework.Services.DataStreamServiceResult file)
+        public static TCollection Read<TCollection, TItem>(Framework.DataStreamServiceResult file)
             where TCollection : List<TItem>, new()
             where TItem : class, new()
         {

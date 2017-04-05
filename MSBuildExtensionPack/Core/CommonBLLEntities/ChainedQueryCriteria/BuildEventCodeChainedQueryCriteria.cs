@@ -12,7 +12,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 	/// <summary>
     /// BusinessLogicLayerChainedQueryCriteria, key=Common
     /// </summary>
-    public partial class BuildEventCodeChainedQueryCriteriaCommon
+    public class BuildEventCodeChainedQueryCriteriaCommon
     {
 		#region constructors
 
@@ -95,7 +95,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		#endregion Propertyies
 	}
 
-	public partial class BuildEventCodeChainedQueryCriteriaCommonFlatten
+	public class BuildEventCodeChainedQueryCriteriaCommonFlatten
     {
 		#region constructors
 
@@ -126,6 +126,18 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		}
 
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaCommonFlatten"/> class.
+		/// </summary>
+		public BuildEventCodeChainedQueryCriteriaCommonFlatten(BuildEventCodeChainedQueryCriteriaCommon input)
+			: this(
+			input.BuildEventCodeQueryCriteriaCommon.EventCodeCommonOftOfCommon.IsToCompare, input.BuildEventCodeQueryCriteriaCommon.EventCodeCommonOftOfCommon.ValueToBeContained
+			, input.BuildEventCodeQueryCriteriaCommon.DescriptionCommonOftOfCommon.IsToCompare, input.BuildEventCodeQueryCriteriaCommon.DescriptionCommonOftOfCommon.ValueToBeContained
+			)
+		{
+		}
+
+
 
 		#endregion constructors
 
@@ -143,7 +155,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 	/// <summary>
     /// BusinessLogicLayerChainedQueryCriteria, key=All
     /// </summary>
-    public partial class BuildEventCodeChainedQueryCriteriaAll
+    public class BuildEventCodeChainedQueryCriteriaAll
     {
 		#region constructors
 
@@ -190,7 +202,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		#endregion Propertyies
 	}
 
-	public partial class BuildEventCodeChainedQueryCriteriaAllFlatten
+	public class BuildEventCodeChainedQueryCriteriaAllFlatten
     {
 		#region constructors
 
@@ -219,7 +231,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 	/// <summary>
     /// BusinessLogicLayerChainedQueryCriteria, key=ByIdentifier
     /// </summary>
-    public partial class BuildEventCodeChainedQueryCriteriaByIdentifier
+    public class BuildEventCodeChainedQueryCriteriaByIdentifier
     {
 		#region constructors
 
@@ -295,7 +307,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		#endregion Propertyies
 	}
 
-	public partial class BuildEventCodeChainedQueryCriteriaByIdentifierFlatten
+	public class BuildEventCodeChainedQueryCriteriaByIdentifierFlatten
     {
 		#region constructors
 
@@ -321,6 +333,17 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		}
 
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaByIdentifierFlatten"/> class.
+		/// </summary>
+		public BuildEventCodeChainedQueryCriteriaByIdentifierFlatten(BuildEventCodeChainedQueryCriteriaByIdentifier input)
+			: this(
+			input.BuildEventCodeQueryCriteriaByIdentifier.IdByIdentifierOftOfByIdentifier.IsToCompare, input.BuildEventCodeQueryCriteriaByIdentifier.IdByIdentifierOftOfByIdentifier.ValueToCompare
+			)
+		{
+		}
+
+
 
 		#endregion constructors
 
@@ -334,3 +357,4 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 
 
 }
+

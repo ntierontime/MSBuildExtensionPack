@@ -5,7 +5,7 @@ using System.Text;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MSBuildExtensionPack.AspNetMvc40ViewModel.Common
+namespace MSBuildExtensionPack.ViewModelData
 {
 	public class OrderByLists
 	{

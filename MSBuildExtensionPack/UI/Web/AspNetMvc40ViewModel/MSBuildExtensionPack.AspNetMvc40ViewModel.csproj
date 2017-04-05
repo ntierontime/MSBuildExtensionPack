@@ -38,7 +38,6 @@
     <Compile Include="BuildEventCodeItemVM.cs" />
     <Compile Include="BuildLogItemVM.cs" />
     <Compile Include="SolutionItemVM.cs" />
-    <Compile Include="Common\OrderByLists.cs" />
     <Compile Include="BuildWorkspaceVM.cs" />
     <Compile Include="BuildEventCodeWorkspaceVM.cs" />
     <Compile Include="BuildLogWorkspaceVM.cs" />

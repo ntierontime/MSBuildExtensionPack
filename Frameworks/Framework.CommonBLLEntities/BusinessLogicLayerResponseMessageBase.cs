@@ -10,7 +10,7 @@ namespace Framework.CommonBLLEntities
     /// base class of all BusinessLogicLayerResponseMessages
     /// </summary>
     /// <typeparam name="TResponse">The type of the response.</typeparam>
-    public class BusinessLogicLayerResponseMessageBase<TResponse>
+    public class BusinessLogicLayerResponseMessageBase<TResponse>: Framework.CommonBLLEntities.IBusinessLogicLayerResponseMessageBase
     {
 
 		#region Constructors
@@ -76,7 +76,7 @@ namespace Framework.CommonBLLEntities
         /// <value>
         /// The message in stream.
         /// </value>
-        public Framework.Services.DataStreamServiceResult DataStreamServiceResult { get; set; }
+        public Framework.DataStreamServiceResult DataStreamServiceResult { get; set; }
 
 		#endregion Properties
 
@@ -323,3 +323,5 @@ namespace Framework.CommonBLLEntities
         YouHaveNoPermissionToDelete,    
 	}
 }
+
+

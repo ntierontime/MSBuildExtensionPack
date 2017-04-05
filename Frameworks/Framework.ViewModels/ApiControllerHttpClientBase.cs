@@ -76,7 +76,7 @@ namespace Framework.ViewModels
         }
 
         public async Task<TViewModel> GetEntityRelated<TViewModel>(string url)
-            where TViewModel : class, Framework.ViewModels.IViewModelEntityRelatedBase, new()
+            where TViewModel : class, Framework.ViewModels.IFramework.ViewModels.ViewModelEntityRelatedBase, new()
         {
             var response = await Client.GetAsync(url);
 
@@ -115,6 +115,38 @@ namespace Framework.ViewModels
                 var content = await response.Content.ReadAsStringAsync();
                 vm.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
                 vm.StatusMessageOfResult = content;
+                return vm;
+            }
+        }
+		
+        public async Task<TViewModel> PostIViewModelEntityRelatedBase<TViewModel>(string url, TViewModel vm)
+            where TViewModel : class, Framework.ViewModels.IFramework.ViewModels.ViewModelEntityRelatedBase, new()
+        {
+            string requestJSON = JsonConvert.SerializeObject(vm, Formatting.Indented, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            var httpContent = new StringContent(requestJSON, System.Text.Encoding.UTF8, "application/json");
+
+            try
+            {
+                var response = await Client.PostAsync(url, httpContent);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    var result = JsonConvert.DeserializeObject<TViewModel>(content);
+                    return result;
+                }
+                else
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    vm.StatusOfMasterEntity = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
+                    vm.StatusMessageOfMasterEntity = content;
+                    return vm;
+                }
+            }
+            catch (Exception ex)
+            {
+                vm.StatusOfMasterEntity = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
+                vm.StatusMessageOfMasterEntity = ex.Message;
                 return vm;
             }
         }
@@ -189,7 +221,4 @@ namespace Framework.ViewModels
         }
     }
 }
-
-
-
 

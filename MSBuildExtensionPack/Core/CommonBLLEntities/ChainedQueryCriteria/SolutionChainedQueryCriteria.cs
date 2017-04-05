@@ -12,7 +12,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 	/// <summary>
     /// BusinessLogicLayerChainedQueryCriteria, key=Common
     /// </summary>
-    public partial class SolutionChainedQueryCriteriaCommon
+    public class SolutionChainedQueryCriteriaCommon
     {
 		#region constructors
 
@@ -102,7 +102,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		#endregion Propertyies
 	}
 
-	public partial class SolutionChainedQueryCriteriaCommonFlatten
+	public class SolutionChainedQueryCriteriaCommonFlatten
     {
 		#region constructors
 
@@ -138,6 +138,19 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		}
 
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="SolutionChainedQueryCriteriaCommonFlatten"/> class.
+		/// </summary>
+		public SolutionChainedQueryCriteriaCommonFlatten(SolutionChainedQueryCriteriaCommon input)
+			: this(
+			input.SolutionQueryCriteriaCommon.ExternalParentIdCommonOftOfCommon.IsToCompare, input.SolutionQueryCriteriaCommon.ExternalParentIdCommonOftOfCommon.ValueToBeContained
+			, input.SolutionQueryCriteriaCommon.NameCommonOftOfCommon.IsToCompare, input.SolutionQueryCriteriaCommon.NameCommonOftOfCommon.ValueToBeContained
+			, input.SolutionQueryCriteriaCommon.DescriptionCommonOftOfCommon.IsToCompare, input.SolutionQueryCriteriaCommon.DescriptionCommonOftOfCommon.ValueToBeContained
+			)
+		{
+		}
+
+
 
 		#endregion constructors
 
@@ -156,7 +169,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 	/// <summary>
     /// BusinessLogicLayerChainedQueryCriteria, key=All
     /// </summary>
-    public partial class SolutionChainedQueryCriteriaAll
+    public class SolutionChainedQueryCriteriaAll
     {
 		#region constructors
 
@@ -203,7 +216,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		#endregion Propertyies
 	}
 
-	public partial class SolutionChainedQueryCriteriaAllFlatten
+	public class SolutionChainedQueryCriteriaAllFlatten
     {
 		#region constructors
 
@@ -232,7 +245,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 	/// <summary>
     /// BusinessLogicLayerChainedQueryCriteria, key=ByIdentifier
     /// </summary>
-    public partial class SolutionChainedQueryCriteriaByIdentifier
+    public class SolutionChainedQueryCriteriaByIdentifier
     {
 		#region constructors
 
@@ -308,7 +321,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		#endregion Propertyies
 	}
 
-	public partial class SolutionChainedQueryCriteriaByIdentifierFlatten
+	public class SolutionChainedQueryCriteriaByIdentifierFlatten
     {
 		#region constructors
 
@@ -334,6 +347,17 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		}
 
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="SolutionChainedQueryCriteriaByIdentifierFlatten"/> class.
+		/// </summary>
+		public SolutionChainedQueryCriteriaByIdentifierFlatten(SolutionChainedQueryCriteriaByIdentifier input)
+			: this(
+			input.SolutionQueryCriteriaByIdentifier.IdByIdentifierOftOfByIdentifier.IsToCompare, input.SolutionQueryCriteriaByIdentifier.IdByIdentifierOftOfByIdentifier.ValueToCompare
+			)
+		{
+		}
+
+
 
 		#endregion constructors
 
@@ -347,3 +371,4 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 
 
 }
+

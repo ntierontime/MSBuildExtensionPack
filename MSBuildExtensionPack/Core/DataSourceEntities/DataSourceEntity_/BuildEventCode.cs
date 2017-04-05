@@ -12,7 +12,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
     /// Entity class, used across the solution. <see cref="BuildEventCode"/>
     /// </summary>
     //[DataContract]
-	public partial class BuildEventCode  : Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IBuildEventCode 
+	public partial class BuildEventCode  : Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IBuildEventCode
 	{ 
 
 
@@ -204,7 +204,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         /// <summary>
         /// View "KeyInformation" class of <see cref="BuildEventCode"/>, used across the solution. 
         /// </summary>
-		public partial class KeyInformation :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IBuildEventCodeIdentifier
+		public partial class KeyInformation :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IBuildEventCodeIdentifier, Framework.EntityContracts.IClone<BuildEventCode>
 		{
 
 			#region Storage Fields
@@ -302,6 +302,16 @@ namespace MSBuildExtensionPack.DataSourceEntities
                 return cloned;
             }
 
+            /// <summary>
+            /// Gets the A clone.
+            /// </summary>
+            /// <returns>a new instance with same value</returns>
+            public Default GetACloneWithoutIdentifier()
+            {
+                Default cloned = GetAClone();
+
+                return cloned;
+            }
 
             #endregion Method of BuildEventCode.KeyInformation  GetAClone()
 		}
@@ -339,6 +349,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
 
 
+/*
     /// <summary>
     /// a property defined when <see cref="BuildEventCode"/> is used in other classes.
     /// </summary>
@@ -352,6 +363,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         /// </value>
 		BuildEventCode BuildEventCode { get; set; }
 	}
+*/
 
     /// <summary>
     /// message definition, pass single entry, pulled from database, to business logic layer. <see cref="BuildEventCode"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>

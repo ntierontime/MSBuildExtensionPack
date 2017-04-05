@@ -24,7 +24,6 @@ namespace Framework.EntityContracts
         /// </summary>
         /// <param name="propertyName">Name of the property.</param>
         /// <param name="direction">The direction.</param>
-#if (NETFX_CORE || XAMARIN)
         public QueryOrderBySetting(
             string propertyName
             , string direction)
@@ -32,15 +31,6 @@ namespace Framework.EntityContracts
             this.PropertyName = propertyName;
             this.Direction = direction;
         }
-#else
-        public QueryOrderBySetting(
-            string propertyName
-            , System.ComponentModel.ListSortDirection direction)
-        {
-            this.PropertyName = propertyName;
-            this.Direction = direction;
-        }
-#endif
 		#endregion constructors
 
 		#region properties
@@ -59,12 +49,7 @@ namespace Framework.EntityContracts
         /// <value>
         /// The direction.
         /// </value>
-#if (NETFX_CORE || XAMARIN)
         public string Direction { get; set; }
-#else
-        public System.ComponentModel.ListSortDirection Direction { get; set; }
-#endif
-
 
 		#endregion properties
 
@@ -100,7 +85,6 @@ namespace Framework.EntityContracts
                         if (string.IsNullOrWhiteSpace(_Splitted1Item) == false)
                         {
                             string[] _Splitted2 = _Splitted1Item.Trim().Split("~".ToCharArray());
-#if (NETFX_CORE || XAMARIN)  
                             if (_Splitted2.Length == 1)
                             {
                                 this.Add(_Splitted2[0], "Ascending");
@@ -118,25 +102,6 @@ namespace Framework.EntityContracts
                                 }
                                 this.Add(_Splitted2[0], _ListSortDirection);
                             }
-#else
-                            if (_Splitted2.Length == 1)
-                            {
-                                this.Add(_Splitted2[0], System.ComponentModel.ListSortDirection.Ascending);
-                            }
-                            else if (_Splitted2.Length > 1)
-                            {
-                                System.ComponentModel.ListSortDirection _ListSortDirection;
-                                if (_Splitted2[1].Trim().ToLower() == "DESC".ToLower())
-                                {
-                                    _ListSortDirection = System.ComponentModel.ListSortDirection.Descending;
-                                }
-                                else
-                                {
-                                    _ListSortDirection = System.ComponentModel.ListSortDirection.Ascending;
-                                }
-                                this.Add(_Splitted2[0], _ListSortDirection);
-                            }
-#endif
                         }
                     }
                 }
@@ -150,21 +115,12 @@ namespace Framework.EntityContracts
         /// </summary>
         /// <param name="propertyName">Name of the property.</param>
         /// <param name="direction">The direction.</param>
-#if (NETFX_CORE || XAMARIN)
         public void Add(
             string propertyName
             , string direction)
         {
             this.Add(new QueryOrderBySetting(propertyName, direction));
         }
-#else
-        public void Add(
-            string propertyName
-            , System.ComponentModel.ListSortDirection direction)
-        {
-            this.Add(new QueryOrderBySetting(propertyName, direction));
-        }
-#endif
 
         /// <summary>
         /// Gets the OrderBy expression.
@@ -185,11 +141,7 @@ namespace Framework.EntityContracts
                 {
                     _SB.Append(",");
                 }
-#if (NETFX_CORE || XAMARIN)
                 _SB.Append(string.Format("{0}{1}", _QueryOrderBySetting.PropertyName, _QueryOrderBySetting.Direction == "Ascending" ? "" : " DESC"));
-#else
-                _SB.Append(string.Format("{0}{1}", _QueryOrderBySetting.PropertyName, _QueryOrderBySetting.Direction == System.ComponentModel.ListSortDirection.Ascending ? "" : " DESC"));
-#endif
             }
 
             return _SB.ToString();

@@ -40,6 +40,7 @@
     <Compile Include="DateTimePeriodHelper.cs" />
     <Compile Include="AssemblyHelper.cs" />
     <Compile Include="DataServiceTypes.cs" />
+    <Compile Include="DataStreamServiceResult.cs" />
     <Compile Include="Models\MenuTreeItem.cs" />
     <Compile Include="NavigationSetting.cs" />
     <Compile Include="PropertyChangedNotifier.cs" />

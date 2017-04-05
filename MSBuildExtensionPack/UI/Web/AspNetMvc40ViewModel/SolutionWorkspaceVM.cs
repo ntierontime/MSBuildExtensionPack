@@ -8,21 +8,64 @@ using System.Web.Mvc;
 namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 {
 
-    public partial class WPCommonOfSolutionVM : Framework.Mvc.ViewModelBaseWithResultAndUIElement<MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommonFlatten, MSBuildExtensionPack.DataSourceEntities.SolutionCollection>
+    public partial class WPCommonOfSolutionVM : MSBuildExtensionPack.ViewModelData.WPCommonOfSolutionVM //Framework.Mvc.ViewModelBaseWithResultAndUIElement<MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommonFlatten, MSBuildExtensionPack.DataSourceEntities.SolutionCollection>
     {
         public WPCommonOfSolutionVM ()
             : base()
         {
         }
 
+
+        public Framework.Mvc.UISharedViewModel UISharedViewModel { get; set; }
+
         public override Framework.NameValueCollection GetDefaultListOfQueryOrderBySettingCollecionInString()
         {
-            return MSBuildExtensionPack.AspNetMvc40ViewModel.Common.OrderByLists.WPCommonOfSolutionVM_GetDefaultListOfQueryOrderBySettingCollecionInString();
+            return MSBuildExtensionPack.ViewModelData.OrderByLists.WPCommonOfSolutionVM_GetDefaultListOfQueryOrderBySettingCollecionInString();
         }
 
         public override void GetDefaultPerViewModel()
         {
 
+
+            this.UISharedViewModel = Framework.Mvc.UISharedViewModel.GetUISharedViewModel(this.ListOfQueryOrderBySettingCollecionInString, this.QueryPagingSetting.PageSizeSelectionList, this.ListOfDataExport);
+        }
+
+        //public override void LoadData()
+        /// <summary>
+        /// Loads the data.
+        /// </summary>
+        public void LoadData(bool isToLoadDropDownlistContent)
+        {
+            if (isToLoadDropDownlistContent)
+            {
+
+            }
+
+            var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfEntityOfCommon(
+                new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(this.Criteria)
+                , this.QueryPagingSetting
+                , this.QueryOrderBySettingCollection);
+
+
+            this.StatusOfResult = searchResult.BusinessLogicLayerResponseStatus;
+
+            if (this.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+            {
+                this.Result = searchResult.Message;
+
+                if (searchResult.QueryPagingResult != null)
+                {
+                    this.QueryPagingSetting.CountOfRecords = searchResult.QueryPagingResult.CountOfRecords;
+                    this.QueryPagingSetting.RecordCountOfCurrentPage = searchResult.QueryPagingResult.RecordCountOfCurrentPage;
+                }
+            }
+            else
+            {
+                this.StatusMessageOfResult = searchResult.GetStatusMessage();
+#if DEBUG
+                this.StatusMessageOfResult = string.Format("{0} {1}", this.StatusMessageOfResult, searchResult.ServerErrorMessage);
+#endif
+            }
         }
     }
 
@@ -30,19 +73,14 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 
 
     public partial class WPEntityRelatedOfSolutionVM 
-		: Framework.ViewModels.ViewModelEntityRelatedBase<MSBuildExtensionPack.DataSourceEntities.Solution, MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier, Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus>
+		: MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfSolutionVM
+		//: Framework.ViewModels.ViewModelEntityRelatedBase<MSBuildExtensionPack.DataSourceEntities.Solution, MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier, Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus>
     {
         public WPEntityRelatedOfSolutionVM(MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier criteriaOfMasterEntity)
             : base(criteriaOfMasterEntity)
         {
-			this.CriteriaOfFK_Build_Solution = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByFKOnly();
-        }
 
-		//FK_Build_Solution
-		public MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByFKOnly CriteriaOfFK_Build_Solution { get; set; }
-		public Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfFK_Build_Solution { get; set; }
-		public string StatusMessageOfFK_Build_Solution { get; set; }
-		public MSBuildExtensionPack.DataSourceEntities.Build.DefaultCollection FK_Build_Solution { get; set; }
+        }
 
         public void LoadData(
 			bool isToLoadFK_Build_Solution = true
@@ -95,6 +133,8 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
             }
         }
 	}
+
+
 
 
 

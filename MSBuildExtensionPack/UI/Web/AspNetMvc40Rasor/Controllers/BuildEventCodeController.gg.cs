@@ -51,24 +51,10 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 
             //viewModel.Criteria.LowerBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundCreatedDateTimeCommonOftOfCommon); viewModel.Criteria.UpperBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundCreatedDateTimeCommonOftOfCommon);
 
-            var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.GetMessageOfEntityOfCommon(
-                new MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommon(viewModel.Criteria)
-                , viewModel.QueryPagingSetting
-                , viewModel.QueryOrderBySettingCollection);
-
-
-            viewModel.StatusOfResult = searchResult.BusinessLogicLayerResponseStatus;
+			viewModel.LoadData(true);
 
             if (viewModel.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-				viewModel.Result = searchResult.Message;
-
-				if (searchResult.QueryPagingResult != null)
-				{
-					viewModel.QueryPagingSetting.CountOfRecords = searchResult.QueryPagingResult.CountOfRecords;
-					viewModel.QueryPagingSetting.RecordCountOfCurrentPage = searchResult.QueryPagingResult.RecordCountOfCurrentPage;
-				}
-
 				TempData[TempDataKey_WPCommonOfBuildEventCode] = viewModel.GetPrimaryInformationEntity();
 				TempData.Keep(TempDataKey_WPCommonOfBuildEventCode); 
 			}
@@ -163,7 +149,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             {
                 log.Info(string.Format("{0}: Import", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-                Framework.Services.DataStreamServiceResult dataStreamServiceResult = new Framework.Services.DataStreamServiceResult(file.FileName, file.ContentType, file.ContentLength, file.InputStream);
+                Framework.DataStreamServiceResult dataStreamServiceResult = new Framework.DataStreamServiceResult(file.FileName, file.ContentType, file.ContentLength, file.InputStream);
                 dataStreamServiceResult.TempFilePath = Framework.Web.WebFormApplicationApplicationVariables.FileStorageRootFolder;
                 MSBuildExtensionPack.CommonBLL.BuildEventCodeDataStreamService dataStreamServiceProvider = new MSBuildExtensionPack.CommonBLL.BuildEventCodeDataStreamService();
                 MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection collection = dataStreamServiceProvider.GetCollectionFromStream(dataStreamServiceResult);
@@ -235,11 +221,11 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildEventCode_AddNew)]
         public ActionResult AddNew()
         {
-
-
             var entity = CreateEmptyEntityOrGetFromTempData(TempDataKey_BuildEventCodeController_Copy);
 
+			Framework.UIAction uiAction = Framework.UIAction.Create;
             MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM vm = MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM.CreateNewViewModel(entity);
+            vm.LoadExtraData(uiAction);
 
             return View(vm);
         } 
@@ -271,7 +257,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             }
             catch(Exception ex)
             {
-                Framework.UIAction uiAction = Framework.UIAction.ViewDetails;
+                Framework.UIAction uiAction = Framework.UIAction.Create;;
                 var entity = CreateEmptyEntityOrGetFromTempData(TempDataKey_BuildEventCodeController_Copy);
                 vm = MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM.CreateNewViewModel(entity);
                 vm.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
@@ -314,8 +300,6 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildEventCode_Edit)]
         public ActionResult Edit(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32 valueToCompareIdByIdentifierOftOfByIdentifier)
         {
-
-
             Framework.UIAction uiAction = Framework.UIAction.Update;
             MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM vm = MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
             vm.ContentData.Title = Framework.Resources.UIStringResource.EditAlternativeText;
@@ -371,7 +355,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         public ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32 valueToCompareIdByIdentifierOftOfByIdentifier)
         {
             Framework.UIAction uiAction = Framework.UIAction.Delete;
-            MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM vm = MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
+            MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM();
+			vm.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
             vm.ContentData.Title = Framework.Resources.UIStringResource.DeleteAlternativeText;
             vm.ContentData.Summary = MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildEventCode.Delete_BuildEventCode;
             return View(vm);

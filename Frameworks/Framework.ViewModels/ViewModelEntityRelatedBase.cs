@@ -25,7 +25,7 @@ namespace Framework.ViewModels
         public Framework.EntityContracts.QueryPagingSetting QueryPagingSettingOneRecord { get; set; }
     }
 
-    interface IViewModelEntityRelatedBase
+    public interface IViewModelEntityRelatedBase
     {
 		Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfMasterEntity { get; set; }
 		string StatusMessageOfMasterEntity { get; set; }
@@ -33,7 +33,7 @@ namespace Framework.ViewModels
 		Framework.EntityContracts.QueryPagingSetting QueryPagingSettingOneRecord { get; set; }
     }
 
-    interface IViewModelEntityRelatedBase<TMasterEntity, TCriteriaOfMasterEntity>: IViewModelEntityRelatedBase
+    public interface IViewModelEntityRelatedBase<TMasterEntity, TCriteriaOfMasterEntity>: IViewModelEntityRelatedBase
         where TMasterEntity : class, new()
         where TCriteriaOfMasterEntity : class, new()
     {

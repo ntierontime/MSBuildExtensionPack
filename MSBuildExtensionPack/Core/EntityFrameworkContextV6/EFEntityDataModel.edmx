@@ -26,8 +26,8 @@
     </Key>
     <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="SolutionId" Type="int" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
-    <Property Name="Description" Type="nvarchar" MaxLength="1500" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="_100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="_1500" />
     <Property Name="BuildStartTime" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="BuildEventCode">
@@ -35,8 +35,8 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="EventCode" Type="nvarchar" Nullable="false" MaxLength="100" />
-    <Property Name="Description" Type="nvarchar" MaxLength="1500" />
+    <Property Name="EventCode" Type="nvarchar" Nullable="false" MaxLength="_100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="_1500" />
   </EntityType>
   <EntityType Name="BuildLog">
     <Key>
@@ -45,7 +45,7 @@
     <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="BuildId" Type="bigint" Nullable="false" />
     <Property Name="BuildEventCodeId" Type="int" Nullable="false" />
-    <Property Name="Message" Type="nvarchar" MaxLength="1500" />
+    <Property Name="Message" Type="nvarchar" MaxLength="_1500" />
     <Property Name="EventTime" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="Solution">
@@ -53,9 +53,9 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="ExternalParentId" Type="nvarchar" MaxLength="100" />
-    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
-    <Property Name="Description" Type="nvarchar" MaxLength="1500" />
+    <Property Name="ExternalParentId" Type="nvarchar" MaxLength="_100" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="_100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="_1500" />
   </EntityType>
   <Association Name="FK_Build_Solution">
     <End Role="Build" Type="MSBuildExtensionPackModel.Store.Solution" Multiplicity="1" />
@@ -121,8 +121,8 @@
     </Key>
     <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="Int32" Name="SolutionId" Nullable="false" />
-    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Description" MaxLength="1500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="_100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="_1500" FixedLength="false" Unicode="false" />
     <Property Type="DateTime" Name="BuildStartTime" Nullable="false" />
     <NavigationProperty Name="Solution" Relationship="MSBuildExtensionPackModel.FK_Build_Solution" FromRole="Solution" ToRole="Build" />
     <NavigationProperty Name="BuildLogs" Relationship="MSBuildExtensionPackModel.FK_BuildLog_Build" FromRole="BuildLog" ToRole="Build" />
@@ -132,8 +132,8 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="EventCode" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Description" MaxLength="1500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EventCode" Nullable="false" MaxLength="_100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="_1500" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="BuildLogs" Relationship="MSBuildExtensionPackModel.FK_BuildLog_BuildEventCode" FromRole="BuildLog" ToRole="BuildEventCode" />
   </EntityType>
   <EntityType Name="BuildLog">
@@ -143,7 +143,7 @@
     <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="Int64" Name="BuildId" Nullable="false" />
     <Property Type="Int32" Name="BuildEventCodeId" Nullable="false" />
-    <Property Type="String" Name="Message" MaxLength="1500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Message" MaxLength="_1500" FixedLength="false" Unicode="false" />
     <Property Type="DateTime" Name="EventTime" Nullable="false" />
     <NavigationProperty Name="Build" Relationship="MSBuildExtensionPackModel.FK_BuildLog_Build" FromRole="Build" ToRole="BuildLog" />
     <NavigationProperty Name="BuildEventCode" Relationship="MSBuildExtensionPackModel.FK_BuildLog_BuildEventCode" FromRole="BuildEventCode" ToRole="BuildLog" />
@@ -153,9 +153,9 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="ExternalParentId" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Description" MaxLength="1500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ExternalParentId" MaxLength="_100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="_100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="_1500" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Builds" Relationship="MSBuildExtensionPackModel.FK_Build_Solution" FromRole="Build" ToRole="Solution" />
   </EntityType>
   <Association Name="FK_Build_Solution">

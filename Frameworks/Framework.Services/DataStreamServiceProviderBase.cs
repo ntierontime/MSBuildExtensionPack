@@ -13,11 +13,11 @@ namespace Framework.Services
     {
         #region Write to stream
 
-        public Framework.Services.DataStreamServiceResult BuildResult(TCollection input, Framework.DataServiceTypes dataServiceType)
+        public Framework.DataStreamServiceResult BuildResult(TCollection input, Framework.DataServiceTypes dataServiceType)
         {
             if (dataServiceType == Framework.DataServiceTypes.Csv)
             {
-                Framework.Services.DataStreamServiceResult result = new Framework.Services.DataStreamServiceResult
+                Framework.DataStreamServiceResult result = new Framework.DataStreamServiceResult
                 {
                     DataServiceType = dataServiceType,
                     MIMEType = "text/csv",
@@ -28,7 +28,7 @@ namespace Framework.Services
             }
             else if (dataServiceType == Framework.DataServiceTypes.Excel2010)
             {
-                Framework.Services.DataStreamServiceResult result = new Framework.Services.DataStreamServiceResult
+                Framework.DataStreamServiceResult result = new Framework.DataStreamServiceResult
                 {
                     DataServiceType = dataServiceType,
                     MIMEType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
@@ -84,7 +84,7 @@ namespace Framework.Services
 
         #region Read from stream
 
-        public TCollection GetCollectionFromStream(Framework.Services.DataStreamServiceResult input)
+        public TCollection GetCollectionFromStream(Framework.DataStreamServiceResult input)
         {
             TCollection collection;
             if (input.DataServiceType == Framework.DataServiceTypes.Csv)

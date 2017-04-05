@@ -8,25 +8,69 @@ using System.Web.Mvc;
 namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 {
 
-    public partial class WPCommonOfBuildVM : Framework.Mvc.ViewModelBaseWithResultAndUIElement<MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaCommonFlatten, MSBuildExtensionPack.DataSourceEntities.Build.DefaultCollection>
+    public partial class WPCommonOfBuildVM : MSBuildExtensionPack.ViewModelData.WPCommonOfBuildVM //Framework.Mvc.ViewModelBaseWithResultAndUIElement<MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaCommonFlatten, MSBuildExtensionPack.DataSourceEntities.Build.DefaultCollection>
     {
         public WPCommonOfBuildVM ()
             : base()
         {
         }
-        public Framework.NameValueCollection NameValueCollectionOfMSBuildExtensionPack_Solution { get; set; }
         public List<SelectListItem> SelectListOfMSBuildExtensionPack_Solution { get; set; }
-	
+
+
+        public Framework.Mvc.UISharedViewModel UISharedViewModel { get; set; }
+
         public override Framework.NameValueCollection GetDefaultListOfQueryOrderBySettingCollecionInString()
         {
-            return MSBuildExtensionPack.AspNetMvc40ViewModel.Common.OrderByLists.WPCommonOfBuildVM_GetDefaultListOfQueryOrderBySettingCollecionInString();
+            return MSBuildExtensionPack.ViewModelData.OrderByLists.WPCommonOfBuildVM_GetDefaultListOfQueryOrderBySettingCollecionInString();
         }
 
         public override void GetDefaultPerViewModel()
         {
-            this.NameValueCollectionOfMSBuildExtensionPack_Solution = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetCollectionOfNameValuePairOfAll(new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(), new Framework.EntityContracts.QueryPagingSetting(-1, -1), null);
-				this.SelectListOfMSBuildExtensionPack_Solution = Framework.Mvc.MvcHelper.BuildListOfSelectListItem(this.NameValueCollectionOfMSBuildExtensionPack_Solution);
-	
+			this.NameValueCollectionOfMSBuildExtensionPack_Solution = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetCollectionOfNameValuePairOfAll(new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(), new Framework.EntityContracts.QueryPagingSetting(-1, -1), null);
+			this.SelectListOfMSBuildExtensionPack_Solution = Framework.Mvc.MvcHelper.BuildListOfSelectListItem(this.NameValueCollectionOfMSBuildExtensionPack_Solution);
+
+
+            this.UISharedViewModel = Framework.Mvc.UISharedViewModel.GetUISharedViewModel(this.ListOfQueryOrderBySettingCollecionInString, this.QueryPagingSetting.PageSizeSelectionList, this.ListOfDataExport);
+        }
+
+        //public override void LoadData()
+        /// <summary>
+        /// Loads the data.
+        /// </summary>
+        public void LoadData(bool isToLoadDropDownlistContent)
+        {
+            if (isToLoadDropDownlistContent)
+            {
+			this.NameValueCollectionOfMSBuildExtensionPack_Solution = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetCollectionOfNameValuePairOfAll(new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(), new Framework.EntityContracts.QueryPagingSetting(-1, -1), null);
+			this.SelectListOfMSBuildExtensionPack_Solution = Framework.Mvc.MvcHelper.BuildListOfSelectListItem(this.NameValueCollectionOfMSBuildExtensionPack_Solution);
+
+            }
+
+            var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCBuild.GetMessageOfDefaultOfCommon(
+                new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaCommon(this.Criteria)
+                , this.QueryPagingSetting
+                , this.QueryOrderBySettingCollection);
+
+
+            this.StatusOfResult = searchResult.BusinessLogicLayerResponseStatus;
+
+            if (this.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+            {
+                this.Result = searchResult.Message;
+
+                if (searchResult.QueryPagingResult != null)
+                {
+                    this.QueryPagingSetting.CountOfRecords = searchResult.QueryPagingResult.CountOfRecords;
+                    this.QueryPagingSetting.RecordCountOfCurrentPage = searchResult.QueryPagingResult.RecordCountOfCurrentPage;
+                }
+            }
+            else
+            {
+                this.StatusMessageOfResult = searchResult.GetStatusMessage();
+#if DEBUG
+                this.StatusMessageOfResult = string.Format("{0} {1}", this.StatusMessageOfResult, searchResult.ServerErrorMessage);
+#endif
+            }
         }
     }
 
@@ -34,25 +78,14 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 
 
     public partial class WPEntityRelatedOfBuildVM 
-		: Framework.ViewModels.ViewModelEntityRelatedBase<MSBuildExtensionPack.DataSourceEntities.Build.Default, MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier, Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus>
+		: MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfBuildVM
+		//: Framework.ViewModels.ViewModelEntityRelatedBase<MSBuildExtensionPack.DataSourceEntities.Build.Default, MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier, Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus>
     {
         public WPEntityRelatedOfBuildVM(MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier criteriaOfMasterEntity)
             : base(criteriaOfMasterEntity)
         {
-			this.CriteriaOfFK_BuildLog_Build = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly();
-			this.CriteriaOfSolution_1 = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier();
-        }
 
-		//FK_BuildLog_Build
-		public MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly CriteriaOfFK_BuildLog_Build { get; set; }
-		public Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfFK_BuildLog_Build { get; set; }
-		public string StatusMessageOfFK_BuildLog_Build { get; set; }
-		public MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection FK_BuildLog_Build { get; set; }
-		//Solution_1
-		public MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier CriteriaOfSolution_1 { get; set; }
-		public Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfSolution_1 { get; set; }
-		public string StatusMessageOfSolution_1 { get; set; }
-		public MSBuildExtensionPack.DataSourceEntities.Solution.KeyInformation Solution_1 { get; set; }
+        }
 
         public void LoadData(
 			bool isToLoadFK_BuildLog_Build = true
@@ -179,6 +212,61 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
         }
     }
 
+
+
+
+
+    public partial class WPUpdateNameOnlyOfBuildVM 
+		: MSBuildExtensionPack.ViewModelData.WPUpdateNameOnlyOfBuildVM
+		//: Framework.ViewModels.ViewModelEntityRelatedBase<MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest, MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier>
+    {
+		public WPUpdateNameOnlyOfBuildVM ()
+            : base(new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier())
+        {
+        }
+
+        public WPUpdateNameOnlyOfBuildVM(MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier criteriaOfMasterEntity)
+            : base(criteriaOfMasterEntity)
+        {
+		}
+
+        public void LoadData()
+        {
+            // 1. master on accessory part - Aside UIWorkspaceItemSetting
+			var masterEntityResult = MSBuildExtensionPack.CommonBLLIoC.IoCBuild.GetMessageOfUpdateNameRequestOfByIdentifier(this.CriteriaOfMasterEntity, this.QueryPagingSettingOneRecord, null);
+
+            this.StatusOfMasterEntity = masterEntityResult.BusinessLogicLayerResponseStatus;
+
+            if (masterEntityResult.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+            {
+                this.MasterEntity = masterEntityResult.Message[0];
+				this.StatusOfMasterEntity = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady;
+				this.StatusMessageOfMasterEntity = MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuild.UpdateNameOnly_Description;
+            }
+            else
+            {
+                this.StatusMessageOfMasterEntity = masterEntityResult.GetStatusMessage();
+#if DEBUG
+                this.StatusMessageOfMasterEntity = string.Format("{0} {1}", this.StatusMessageOfMasterEntity, masterEntityResult.ServerErrorMessage);
+#endif
+            }
+        }
+        public void SaveData()
+        {
+            var request = new MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedUpdateNameOnly();
+            request.Critieria = this.MasterEntity;
+            var response = MSBuildExtensionPack.CommonBLLIoC.IoCBuild.UpdateNameOnly(request);
+            this.StatusOfMasterEntity = response.BusinessLogicLayerResponseStatus;
+            if (this.StatusOfMasterEntity == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+            {
+                this.StatusMessageOfMasterEntity = MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuild.UpdateNameOnly_Success; // Success
+            }
+            else
+            {
+                this.StatusMessageOfMasterEntity = MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuild.UpdateNameOnly_Failed; // failed
+            }
+        }
+    }
 
 
 

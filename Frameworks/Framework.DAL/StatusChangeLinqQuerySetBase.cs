@@ -61,7 +61,7 @@ namespace Framework.DAL
         public Dictionary<short, IQueryable<T>> LinqQuerySet { get; set; }
 
     }
-
+/*
     /// <summary>
     ///  ??
     /// </summary>
@@ -196,4 +196,7 @@ namespace Framework.DAL
 		#endregion TResult RunQuery()
 
     }
+*/
 }
+
+

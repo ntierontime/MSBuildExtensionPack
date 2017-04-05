@@ -51,24 +51,10 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 			viewModel.Criteria.LowerBoundEventTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundEventTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundEventTimeCommonOftOfCommon); viewModel.Criteria.UpperBoundEventTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundEventTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundEventTimeCommonOftOfCommon);
             //viewModel.Criteria.LowerBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundCreatedDateTimeCommonOftOfCommon); viewModel.Criteria.UpperBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundCreatedDateTimeCommonOftOfCommon);
 
-            var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfDefaultOfCommon(
-                new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon(viewModel.Criteria)
-                , viewModel.QueryPagingSetting
-                , viewModel.QueryOrderBySettingCollection);
-
-
-            viewModel.StatusOfResult = searchResult.BusinessLogicLayerResponseStatus;
+			viewModel.LoadData(true);
 
             if (viewModel.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-				viewModel.Result = searchResult.Message;
-
-				if (searchResult.QueryPagingResult != null)
-				{
-					viewModel.QueryPagingSetting.CountOfRecords = searchResult.QueryPagingResult.CountOfRecords;
-					viewModel.QueryPagingSetting.RecordCountOfCurrentPage = searchResult.QueryPagingResult.RecordCountOfCurrentPage;
-				}
-
 				TempData[TempDataKey_WPCommonOfBuildLog] = viewModel.GetPrimaryInformationEntity();
 				TempData.Keep(TempDataKey_WPCommonOfBuildLog); 
 			}
@@ -163,7 +149,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             {
                 log.Info(string.Format("{0}: Import", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-                Framework.Services.DataStreamServiceResult dataStreamServiceResult = new Framework.Services.DataStreamServiceResult(file.FileName, file.ContentType, file.ContentLength, file.InputStream);
+                Framework.DataStreamServiceResult dataStreamServiceResult = new Framework.DataStreamServiceResult(file.FileName, file.ContentType, file.ContentLength, file.InputStream);
                 dataStreamServiceResult.TempFilePath = Framework.Web.WebFormApplicationApplicationVariables.FileStorageRootFolder;
                 MSBuildExtensionPack.CommonBLL.BuildLogDataStreamService.Default dataStreamServiceProvider = new MSBuildExtensionPack.CommonBLL.BuildLogDataStreamService.Default();
                 MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection collection = dataStreamServiceProvider.GetCollectionFromStream(dataStreamServiceResult);
@@ -236,16 +222,11 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_AddNew)]
         public ActionResult AddNew()
         {
-            Framework.NameValueCollection nameValueCollectionOfMSBuildExtensionPack_Solution = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetCollectionOfNameValuePairOfAll(new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(), new Framework.EntityContracts.QueryPagingSetting(), null);
-			ViewBag.SelectListOfMSBuildExtensionPack_Solution = Framework.Mvc.MvcHelper.BuildListOfSelectListItem(nameValueCollectionOfMSBuildExtensionPack_Solution);
-
-            Framework.NameValueCollection nameValueCollectionOfMSBuildExtensionPack_BuildEventCode = MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.GetCollectionOfNameValuePairOfAll(new MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaAll(), new Framework.EntityContracts.QueryPagingSetting(), null);
-			ViewBag.SelectListOfMSBuildExtensionPack_BuildEventCode = Framework.Mvc.MvcHelper.BuildListOfSelectListItem(nameValueCollectionOfMSBuildExtensionPack_BuildEventCode);
-
-
             var entity = CreateEmptyEntityOrGetFromTempData(TempDataKey_BuildLogController_Copy);
 
+			Framework.UIAction uiAction = Framework.UIAction.Create;
             MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM vm = MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM.CreateNewViewModel(entity);
+            vm.LoadExtraData(uiAction);
 
             return View(vm);
         } 
@@ -277,7 +258,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             }
             catch(Exception ex)
             {
-                Framework.UIAction uiAction = Framework.UIAction.ViewDetails;
+                Framework.UIAction uiAction = Framework.UIAction.Create;;
                 var entity = CreateEmptyEntityOrGetFromTempData(TempDataKey_BuildLogController_Copy);
                 vm = MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM.CreateNewViewModel(entity);
                 vm.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
@@ -320,13 +301,6 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Edit)]
         public ActionResult Edit(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier)
         {
-            Framework.NameValueCollection nameValueCollectionOfMSBuildExtensionPack_Solution = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetCollectionOfNameValuePairOfAll(new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(), new Framework.EntityContracts.QueryPagingSetting(), null);
-			ViewBag.SelectListOfMSBuildExtensionPack_Solution = Framework.Mvc.MvcHelper.BuildListOfSelectListItem(nameValueCollectionOfMSBuildExtensionPack_Solution);
-
-            Framework.NameValueCollection nameValueCollectionOfMSBuildExtensionPack_BuildEventCode = MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.GetCollectionOfNameValuePairOfAll(new MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaAll(), new Framework.EntityContracts.QueryPagingSetting(), null);
-			ViewBag.SelectListOfMSBuildExtensionPack_BuildEventCode = Framework.Mvc.MvcHelper.BuildListOfSelectListItem(nameValueCollectionOfMSBuildExtensionPack_BuildEventCode);
-
-
             Framework.UIAction uiAction = Framework.UIAction.Update;
             MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM vm = MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
             vm.ContentData.Title = Framework.Resources.UIStringResource.EditAlternativeText;
@@ -382,7 +356,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         public ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier)
         {
             Framework.UIAction uiAction = Framework.UIAction.Delete;
-            MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM vm = MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
+            MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM();
+			vm.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
             vm.ContentData.Title = Framework.Resources.UIStringResource.DeleteAlternativeText;
             vm.ContentData.Summary = MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog.Delete_BuildLog;
             return View(vm);

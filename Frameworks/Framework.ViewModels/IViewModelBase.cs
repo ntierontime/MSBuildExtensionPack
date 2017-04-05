@@ -14,7 +14,9 @@ namespace Framework.ViewModels
         string QueryOrderBySettingCollecionInString { get; set; }
         Framework.NameValueCollection GetDefaultListOfQueryOrderBySettingCollecionInString();
         Framework.EntityContracts.QueryPagingSetting GetDefaultQueryPagingSetting();
-    }
+
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfResult { get; set; }
+        string StatusMessageOfResult { get; set; }    }
 
     public interface IViewModelBase<TSearchCriteria>: IViewModelBase
 		where TSearchCriteria : class, new()
@@ -28,8 +30,6 @@ namespace Framework.ViewModels
      where TSearchCriteria : class, new()
     {
         TSearchResult Result { get; set; }
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfResult { get; set; }
-        string StatusMessageOfResult { get; set; }
     }
 }
 

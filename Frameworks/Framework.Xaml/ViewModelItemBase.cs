@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using GalaSoft.MvvmLight.CommandWpf;
+using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -363,14 +363,10 @@ namespace Framework.Xaml
 
         #endregion string EntityName
 
-        #region ViewNames
-
         public const string ViewName_Edit = "Edit";
         public const string ViewName_Create = "Create";
         public const string ViewName_Delete = "Delete";
         public const string ViewName_Details = "Details";
-
-        #endregion ViewNames
 
         public override void Cleanup()
         {

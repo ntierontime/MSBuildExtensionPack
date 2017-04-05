@@ -12,7 +12,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 	/// <summary>
     /// BusinessLogicLayerChainedQueryCriteria, key=Common
     /// </summary>
-    public partial class BuildChainedQueryCriteriaCommon
+    public class BuildChainedQueryCriteriaCommon
     {
 		#region constructors
 
@@ -112,7 +112,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		#endregion Propertyies
 	}
 
-	public partial class BuildChainedQueryCriteriaCommonFlatten
+	public class BuildChainedQueryCriteriaCommonFlatten
     {
 		#region constructors
 
@@ -156,6 +156,20 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		}
 
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="BuildChainedQueryCriteriaCommonFlatten"/> class.
+		/// </summary>
+		public BuildChainedQueryCriteriaCommonFlatten(BuildChainedQueryCriteriaCommon input)
+			: this(
+			input.BuildQueryCriteriaCommon.IdCommonOfSolution_1OfCommon.IsToCompare, input.BuildQueryCriteriaCommon.IdCommonOfSolution_1OfCommon.ValueToCompare
+			, input.BuildQueryCriteriaCommon.BuildStartTimeCommonOftOfCommon.IsToCompare, input.BuildQueryCriteriaCommon.BuildStartTimeCommonOftOfCommon.IsToCompareLowerBound, input.BuildQueryCriteriaCommon.BuildStartTimeCommonOftOfCommon.LowerBound, input.BuildQueryCriteriaCommon.BuildStartTimeCommonOftOfCommon.IsToCompareUpperBound, input.BuildQueryCriteriaCommon.BuildStartTimeCommonOftOfCommon.UpperBound
+			, input.BuildQueryCriteriaCommon.NameCommonOftOfCommon.IsToCompare, input.BuildQueryCriteriaCommon.NameCommonOftOfCommon.ValueToBeContained
+			, input.BuildQueryCriteriaCommon.DescriptionCommonOftOfCommon.IsToCompare, input.BuildQueryCriteriaCommon.DescriptionCommonOftOfCommon.ValueToBeContained
+			)
+		{
+		}
+
+
 
 		#endregion constructors
 
@@ -175,7 +189,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 	/// <summary>
     /// BusinessLogicLayerChainedQueryCriteria, key=All
     /// </summary>
-    public partial class BuildChainedQueryCriteriaAll
+    public class BuildChainedQueryCriteriaAll
     {
 		#region constructors
 
@@ -222,7 +236,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		#endregion Propertyies
 	}
 
-	public partial class BuildChainedQueryCriteriaAllFlatten
+	public class BuildChainedQueryCriteriaAllFlatten
     {
 		#region constructors
 
@@ -251,7 +265,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 	/// <summary>
     /// BusinessLogicLayerChainedQueryCriteria, key=ByFKOnly
     /// </summary>
-    public partial class BuildChainedQueryCriteriaByFKOnly
+    public class BuildChainedQueryCriteriaByFKOnly
     {
 		#region constructors
 
@@ -327,7 +341,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		#endregion Propertyies
 	}
 
-	public partial class BuildChainedQueryCriteriaByFKOnlyFlatten
+	public class BuildChainedQueryCriteriaByFKOnlyFlatten
     {
 		#region constructors
 
@@ -353,6 +367,17 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		}
 
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="BuildChainedQueryCriteriaByFKOnlyFlatten"/> class.
+		/// </summary>
+		public BuildChainedQueryCriteriaByFKOnlyFlatten(BuildChainedQueryCriteriaByFKOnly input)
+			: this(
+			input.BuildQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1OfByFKOnly.IsToCompare, input.BuildQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1OfByFKOnly.ValueToCompare
+			)
+		{
+		}
+
+
 
 		#endregion constructors
 
@@ -369,7 +394,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 	/// <summary>
     /// BusinessLogicLayerChainedQueryCriteria, key=ByIdentifier
     /// </summary>
-    public partial class BuildChainedQueryCriteriaByIdentifier
+    public class BuildChainedQueryCriteriaByIdentifier
     {
 		#region constructors
 
@@ -445,7 +470,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		#endregion Propertyies
 	}
 
-	public partial class BuildChainedQueryCriteriaByIdentifierFlatten
+	public class BuildChainedQueryCriteriaByIdentifierFlatten
     {
 		#region constructors
 
@@ -471,6 +496,17 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		}
 
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="BuildChainedQueryCriteriaByIdentifierFlatten"/> class.
+		/// </summary>
+		public BuildChainedQueryCriteriaByIdentifierFlatten(BuildChainedQueryCriteriaByIdentifier input)
+			: this(
+			input.BuildQueryCriteriaByIdentifier.IdByIdentifierOftOfByIdentifier.IsToCompare, input.BuildQueryCriteriaByIdentifier.IdByIdentifierOftOfByIdentifier.ValueToCompare
+			)
+		{
+		}
+
+
 
 		#endregion constructors
 
@@ -484,3 +520,4 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 
 
 }
+

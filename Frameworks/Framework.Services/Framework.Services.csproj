@@ -35,7 +35,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <Compile Include="BinaryFileHelper.cs" />
-    <Compile Include="DataStreamServiceResult.cs" />
     <Compile Include="IDataStreamServiceProviderBase.cs" />
     <Compile Include="ClosedXmlHelper.cs" />
     <Compile Include="DataStreamServiceProviderBase.cs" />

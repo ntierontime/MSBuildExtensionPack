@@ -8,21 +8,64 @@ using System.Web.Mvc;
 namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 {
 
-    public partial class WPCommonOfBuildEventCodeVM : Framework.Mvc.ViewModelBaseWithResultAndUIElement<MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommonFlatten, MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection>
+    public partial class WPCommonOfBuildEventCodeVM : MSBuildExtensionPack.ViewModelData.WPCommonOfBuildEventCodeVM //Framework.Mvc.ViewModelBaseWithResultAndUIElement<MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommonFlatten, MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection>
     {
         public WPCommonOfBuildEventCodeVM ()
             : base()
         {
         }
 
+
+        public Framework.Mvc.UISharedViewModel UISharedViewModel { get; set; }
+
         public override Framework.NameValueCollection GetDefaultListOfQueryOrderBySettingCollecionInString()
         {
-            return MSBuildExtensionPack.AspNetMvc40ViewModel.Common.OrderByLists.WPCommonOfBuildEventCodeVM_GetDefaultListOfQueryOrderBySettingCollecionInString();
+            return MSBuildExtensionPack.ViewModelData.OrderByLists.WPCommonOfBuildEventCodeVM_GetDefaultListOfQueryOrderBySettingCollecionInString();
         }
 
         public override void GetDefaultPerViewModel()
         {
 
+
+            this.UISharedViewModel = Framework.Mvc.UISharedViewModel.GetUISharedViewModel(this.ListOfQueryOrderBySettingCollecionInString, this.QueryPagingSetting.PageSizeSelectionList, this.ListOfDataExport);
+        }
+
+        //public override void LoadData()
+        /// <summary>
+        /// Loads the data.
+        /// </summary>
+        public void LoadData(bool isToLoadDropDownlistContent)
+        {
+            if (isToLoadDropDownlistContent)
+            {
+
+            }
+
+            var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.GetMessageOfEntityOfCommon(
+                new MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommon(this.Criteria)
+                , this.QueryPagingSetting
+                , this.QueryOrderBySettingCollection);
+
+
+            this.StatusOfResult = searchResult.BusinessLogicLayerResponseStatus;
+
+            if (this.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+            {
+                this.Result = searchResult.Message;
+
+                if (searchResult.QueryPagingResult != null)
+                {
+                    this.QueryPagingSetting.CountOfRecords = searchResult.QueryPagingResult.CountOfRecords;
+                    this.QueryPagingSetting.RecordCountOfCurrentPage = searchResult.QueryPagingResult.RecordCountOfCurrentPage;
+                }
+            }
+            else
+            {
+                this.StatusMessageOfResult = searchResult.GetStatusMessage();
+#if DEBUG
+                this.StatusMessageOfResult = string.Format("{0} {1}", this.StatusMessageOfResult, searchResult.ServerErrorMessage);
+#endif
+            }
         }
     }
 
@@ -30,19 +73,14 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 
 
     public partial class WPEntityRelatedOfBuildEventCodeVM 
-		: Framework.ViewModels.ViewModelEntityRelatedBase<MSBuildExtensionPack.DataSourceEntities.BuildEventCode, MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaByIdentifier, Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus>
+		: MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfBuildEventCodeVM
+		//: Framework.ViewModels.ViewModelEntityRelatedBase<MSBuildExtensionPack.DataSourceEntities.BuildEventCode, MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaByIdentifier, Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus>
     {
         public WPEntityRelatedOfBuildEventCodeVM(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaByIdentifier criteriaOfMasterEntity)
             : base(criteriaOfMasterEntity)
         {
-			this.CriteriaOfFK_BuildLog_BuildEventCode = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly();
-        }
 
-		//FK_BuildLog_BuildEventCode
-		public MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly CriteriaOfFK_BuildLog_BuildEventCode { get; set; }
-		public Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfFK_BuildLog_BuildEventCode { get; set; }
-		public string StatusMessageOfFK_BuildLog_BuildEventCode { get; set; }
-		public MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection FK_BuildLog_BuildEventCode { get; set; }
+        }
 
         public void LoadData(
 			bool isToLoadFK_BuildLog_BuildEventCode = true
@@ -95,6 +133,8 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
             }
         }
 	}
+
+
 
 
 

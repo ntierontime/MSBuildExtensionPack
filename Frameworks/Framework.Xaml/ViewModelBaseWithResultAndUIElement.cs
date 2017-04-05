@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using GalaSoft.MvvmLight.CommandWpf;
+using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
 using System.Collections.ObjectModel;
 
@@ -29,11 +29,6 @@ namespace Framework.Xaml
 			this.CloseSearchViewCommand = new RelayCommand(this.CloseSearchView);
 			this.SearchCommand = new RelayCommand(this.Search, this.CanSearch);
 
-#if WINDOWS_PHONE
-
-            this.InfinityScrollingSearchCommand = new RelayCommand(this.InfinityScrollingSearch);
-
-#endif
             PopulateAllUIElements(this, 1);
 
             this.PaginationFirstPageCommand = new RelayCommand(PaginationFirstPage, CanPaginationFirstPage);
@@ -58,6 +53,7 @@ namespace Framework.Xaml
 
         /// <summary>
         /// Gets or sets the DataSourceEntities list.
+		/// should investigate whether can remove RaisePropertyChanged
         /// </summary>
         /// <value>The DataSourceEntities list.</value>
         public ObservableCollection<TSearchResultEntityItem> EntityCollection
@@ -75,6 +71,7 @@ namespace Framework.Xaml
         #region SearchStatus
 
         public Framework.EntityContracts.SearchStatus m_SearchStatus;
+		// should investigate whether can remove RaisePropertyChanged
         public Framework.EntityContracts.SearchStatus SearchStatus 
         { 
             get
@@ -119,8 +116,11 @@ namespace Framework.Xaml
             get { return m_QueryPagingSetting; }
             set
             {
-                m_QueryPagingSetting = value;
-                //RaisePropertyChanged("QueryPagingSetting");
+				if (m_QueryPagingSetting != value)
+				{
+					m_QueryPagingSetting = value;
+					//RaisePropertyChanged("QueryPagingSetting");
+				}
             }
         }
 
@@ -481,30 +481,10 @@ namespace Framework.Xaml
         #endregion Search
 
 		public Framework.EntityContracts.ContentData ContentData { get; set; }
-
-#if (WINDOWS_PHONE)
-
-        #region InfinityScrollingSearch
-
-        protected bool IsToClearExistingCollection { get; set; }
-
-        public RelayCommand InfinityScrollingSearchCommand { get; protected set; }
-        /// <summary>
-        /// GetCollectionOfEntityOfCommon
-        /// </summary>
-        protected void InfinityScrollingSearch()
-        {
-            IsToClearExistingCollection = false;
-            this.Search();
-        }
-
-        #endregion InfinityScrollingSearch
-
-#endif
 		
         #region Cleanup()
 
-        public override  void Cleanup()
+        public override void Cleanup()
         {
 			base.Cleanup();
         }
@@ -563,6 +543,7 @@ namespace Framework.Xaml
 
         /// <summary>
         /// Gets or sets the Default DataView Item list.
+		/// should investigate whether can remove RaisePropertyChanged
         /// </summary>
         /// <value>The Default DataView Item list.</value>
         public ObservableCollection<TSearchResultDataViewItem> EntityCollectionDefault
