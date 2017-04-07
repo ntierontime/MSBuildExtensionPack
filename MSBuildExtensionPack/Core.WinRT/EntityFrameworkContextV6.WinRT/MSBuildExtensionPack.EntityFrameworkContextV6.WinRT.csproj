@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CFA533A1-4E1B-436F-BAED-F74F588234CC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MSBuildExtensionPack.EntityFrameworkContext</RootNamespace>
+    <AssemblyName>MSBuildExtensionPack.EntityFrameworkContextV6.WinRT</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
+    <None Include="..\..\Core\EntityFrameworkContextV6\App.config">
+      <Link>App.config</Link>
+    </None>
+    <Compile Include="..\..\Core\EntityFrameworkContextV6\EFEntityDataModel.edmx.designer.cs">
+      <Link>EFEntityDataModel.edmx.designer.cs</Link>
+      <DependentUpon>EFEntityDataModel.edmx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\..\Core\EntityFrameworkContextV6\EFEntityDataModel.Companion.cs">
+      <Link>EFEntityDataModel.Companion.cs</Link>
+    </Compile>
+    <None Include="..\..\Core\EntityFrameworkContextV6\EFEntityDataModel.Context.tt">
+      <Link>EFEntityDataModel.Context.tt</Link>
+    </None>
+    <Compile Include="..\..\Core\EntityFrameworkContextV6\EFEntityDataModel.Context.cs">
+      <Link>EFEntityDataModel.Context.cs</Link>
+      <DependentUpon>EFEntityDataModel.Context.tt</DependentUpon>
+      <SubType>RESXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\..\Core\EntityFrameworkContextV6\EFEntityDataModel.Generated.cs">
+      <Link>EFEntityDataModel.Generated.cs</Link>
+    </Compile>
+    <None Include="..\..\Core\EntityFrameworkContextV6\EFEntityDataModel.txt">
+      <Link>EFEntityDataModel.txt</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj">
+      <Project>{d79953a8-febc-4b13-9cda-f7675a233481}</Project>
+      <Name>MSBuildExtensionPack.EntityContracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

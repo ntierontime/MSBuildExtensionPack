@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6447B72B-D73B-47EC-A08D-EB8D947F6878}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MSBuildExtensionPack.AspNetMvc40ApiController</RootNamespace>
+    <AssemblyName>MSBuildExtensionPack.AspNetMvc40ApiController.WinRT</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
+    <Compile Include="..\..\..\UI\Web\AspNetMvc40ApiController\ApiControllers\BuildApiController.cs">
+      <Link>ApiControllers\BuildApiController.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\UI\Web\AspNetMvc40ApiController\ApiControllers\BuildEventCodeApiController.cs">
+      <Link>ApiControllers\BuildEventCodeApiController.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\UI\Web\AspNetMvc40ApiController\ApiControllers\BuildLogApiController.cs">
+      <Link>ApiControllers\BuildLogApiController.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\UI\Web\AspNetMvc40ApiController\ApiControllers\SolutionApiController.cs">
+      <Link>ApiControllers\SolutionApiController.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AspNetMvc40ViewModel.WinRT\MSBuildExtensionPack.AspNetMvc40ViewModel.WinRT.csproj">
+      <Project>{613adf25-effa-4082-aca6-98158a242298}</Project>
+      <Name>MSBuildExtensionPack.AspNetMvc40ViewModel.WinRT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core.WinRT\CommonBLL.WinRT\MSBuildExtensionPack.CommonBLL.WinRT.csproj">
+      <Project>{99d9dd5b-53e0-4698-83fa-5c2da885ac0f}</Project>
+      <Name>MSBuildExtensionPack.CommonBLL.WinRT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\CommonBLLEntities\MSBuildExtensionPack.CommonBLLEntities.csproj">
+      <Project>{6a520483-5254-4978-ad53-3147addeffb6}</Project>
+      <Name>MSBuildExtensionPack.CommonBLLEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core.WinRT\CommonBLLIoC.WinRT\MSBuildExtensionPack.CommonBLLIoC.WinRT.csproj">
+      <Project>{fe18e143-9dca-4d2c-9810-f53accc903d1}</Project>
+      <Name>MSBuildExtensionPack.CommonBLLIoC.WinRT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\DataSourceEntities\MSBuildExtensionPack.DataSourceEntities.csproj">
+      <Project>{d0b33cdd-97c7-4d99-a579-8fc566de7153}</Project>
+      <Name>MSBuildExtensionPack.DataSourceEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj">
+      <Project>{d79953a8-febc-4b13-9cda-f7675a233481}</Project>
+      <Name>MSBuildExtensionPack.EntityContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework\Framework.csproj">
+      <Project>{6d25aa30-c3af-4ae0-b567-0f2653120cdc}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks.WinRT\Framework.Charting.WinRT\Framework.Charting.WinRT.csproj">
+      <Project>{d6e0fe90-aba2-4437-b2b5-48c101861b1e}</Project>
+      <Name>Framework.Charting.WinRT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework.CommonBLLEntities\Framework.CommonBLLEntities.csproj">
+      <Project>{ba8c8c0b-470a-4d3c-b3da-9e28599799b5}</Project>
+      <Name>Framework.CommonBLLEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework.DataSourceEntities\Framework.DataSourceEntities.csproj">
+      <Project>{f85a14d5-64e0-4cfc-88da-27fe9d0dd664}</Project>
+      <Name>Framework.DataSourceEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework.EntityContracts\Framework.EntityContracts.csproj">
+      <Project>{c3a270de-9727-492e-91e2-f56e7e0e0f83}</Project>
+      <Name>Framework.EntityContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks.WinRT\Framework.Mvc.WinRT\Framework.Mvc.WinRT.csproj">
+      <Project>{c2268a27-905f-43f4-b85d-cbb7e2e297bd}</Project>
+      <Name>Framework.Mvc.WinRT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework.Resources\Framework.Resources.csproj">
+      <Project>{c72b898b-b53b-42d5-9f4f-673f84bb485b}</Project>
+      <Name>Framework.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks.WinRT\Framework.Services.WinRT\Framework.Services.WinRT.csproj">
+      <Project>{12ac86bb-a7d3-4fd0-b2c1-8da72ff622aa}</Project>
+      <Name>Framework.Services.WinRT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework.ViewModels\Framework.ViewModels.csproj">
+      <Project>{2cc97c32-9ffa-4da4-a6c0-83f300404ec3}</Project>
+      <Name>Framework.ViewModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks.WinRT\Framework.Web.WinRT\Framework.Web.WinRT.csproj">
+      <Project>{76e4c201-ddc1-4f96-a718-598f76b9da86}</Project>
+      <Name>Framework.Web.WinRT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Resources\MSBuildExtensionPack.Resources.csproj">
+      <Project>{42681747-107b-487b-9ea2-ce46754682fd}</Project>
+      <Name>MSBuildExtensionPack.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core.WinRT\WcfContracts.WinRT\MSBuildExtensionPack.WcfContracts.WinRT.csproj">
+      <Project>{61516eae-03ec-409e-a3b0-6fa9086f1000}</Project>
+      <Name>MSBuildExtensionPack.WcfContracts.WinRT</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

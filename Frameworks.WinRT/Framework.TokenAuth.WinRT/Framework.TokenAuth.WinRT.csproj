@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{22D14D84-71B8-46E6-A873-04436E6CCC9F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Framework.TokenAuth</RootNamespace>
+    <AssemblyName>Framework.TokenAuth.WinRT</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
+    <Compile Include="..\..\Frameworks\Framework.TokenAuth\App_Start\WebApiConfig.cs">
+      <Link>App_Start\WebApiConfig.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.TokenAuth\AuthContext.cs">
+      <Link>AuthContext.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.TokenAuth\AuthRepository.cs">
+      <Link>AuthRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.TokenAuth\Controllers\AccountController.cs">
+      <Link>Controllers\AccountController.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.TokenAuth\Controllers\RefreshTokensController.cs">
+      <Link>Controllers\RefreshTokensController.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.TokenAuth\Entities\Client.cs">
+      <Link>Entities\Client.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.TokenAuth\Entities\RefreshToken.cs">
+      <Link>Entities\RefreshToken.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.TokenAuth\Helper.cs">
+      <Link>Helper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.TokenAuth\Migrations\201407121205456_AddClientsAndRefreshTokenTables.cs">
+      <Link>Migrations\201407121205456_AddClientsAndRefreshTokenTables.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.TokenAuth\Migrations\Configuration.cs">
+      <Link>Migrations\Configuration.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.TokenAuth\Models\Enums.cs">
+      <Link>Models\Enums.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.TokenAuth\Models\ExternalLoginModels.cs">
+      <Link>Models\ExternalLoginModels.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.TokenAuth\Models\UserModel.cs">
+      <Link>Models\UserModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.TokenAuth\Providers\FacebookAuthProvider.cs">
+      <Link>Providers\FacebookAuthProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.TokenAuth\Providers\GoogleAuthProvider.cs">
+      <Link>Providers\GoogleAuthProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.TokenAuth\Providers\SimpleAuthorizationServerProvider.cs">
+      <Link>Providers\SimpleAuthorizationServerProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.TokenAuth\Providers\SimpleRefreshTokenProvider.cs">
+      <Link>Providers\SimpleRefreshTokenProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.TokenAuth\Results\ChallengeResult.cs">
+      <Link>Results\ChallengeResult.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.TokenAuth\Startup.cs">
+      <Link>Startup.cs</Link>
+    </Compile>
+    <None Include="..\..\Frameworks\Framework.TokenAuth\Web.config">
+      <Link>Web.config</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Frameworks\Framework\Framework.csproj">
+      <Project>{6d25aa30-c3af-4ae0-b567-0f2653120cdc}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Frameworks\Framework.Resources\Framework.Resources.csproj">
+      <Project>{c72b898b-b53b-42d5-9f4f-673f84bb485b}</Project>
+      <Name>Framework.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

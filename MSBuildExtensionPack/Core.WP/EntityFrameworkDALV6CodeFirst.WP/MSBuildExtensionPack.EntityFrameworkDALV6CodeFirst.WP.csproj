@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FFF26F79-E658-426D-BDE7-375D6938F3D0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MSBuildExtensionPack.EntityFrameworkDAL</RootNamespace>
+    <AssemblyName>MSBuildExtensionPack.EntityFrameworkDALV6CodeFirst.WP</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
+    <Compile Include="..\..\Core\EntityFrameworkDALV6CodeFirst\BuildRepository.cs">
+      <Link>BuildRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs">
+      <Link>BuildEventCodeRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityFrameworkDALV6CodeFirst\BuildLogRepository.cs">
+      <Link>BuildLogRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityFrameworkDALV6CodeFirst\SolutionRepository.cs">
+      <Link>SolutionRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityFrameworkDALV6CodeFirst\EFDataAccessLayerFactory.cs">
+      <Link>EFDataAccessLayerFactory.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\DataSourceEntities\MSBuildExtensionPack.DataSourceEntities.csproj">
+      <Project>{d0b33cdd-97c7-4d99-a579-8fc566de7153}</Project>
+      <Name>MSBuildExtensionPack.DataSourceEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj">
+      <Project>{d79953a8-febc-4b13-9cda-f7675a233481}</Project>
+      <Name>MSBuildExtensionPack.EntityContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityFrameworkContextV6CodeFirst.WP\MSBuildExtensionPack.EntityFrameworkContextV6CodeFirst.WP.csproj">
+      <Project>{20bc9864-4b26-4c4f-98a4-1b3273cf7a4d}</Project>
+      <Name>MSBuildExtensionPack.EntityFrameworkContextV6CodeFirst.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks\Framework\Framework.csproj">
+      <Project>{6d25aa30-c3af-4ae0-b567-0f2653120cdc}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks\Framework.DAL\Framework.DAL.csproj">
+      <Project>{525678c4-fdc1-4a5d-9d8a-d7e78309335f}</Project>
+      <Name>Framework.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks\Framework.DataSourceEntities\Framework.DataSourceEntities.csproj">
+      <Project>{f85a14d5-64e0-4cfc-88da-27fe9d0dd664}</Project>
+      <Name>Framework.DataSourceEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks\Framework.EntityContracts\Framework.EntityContracts.csproj">
+      <Project>{c3a270de-9727-492e-91e2-f56e7e0e0f83}</Project>
+      <Name>Framework.EntityContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks.WP\Framework.LinqDAL.WP\Framework.LinqDAL.WP.csproj">
+      <Project>{3692974e-c928-4c01-9dde-e471b13f931a}</Project>
+      <Name>Framework.LinqDAL.WP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
