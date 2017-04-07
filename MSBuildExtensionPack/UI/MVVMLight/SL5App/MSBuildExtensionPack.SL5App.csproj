@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -199,10 +199,6 @@
     <ProjectReference Include="..\..\..\..\Frameworks.SL\Framework.Xaml.SL\Framework.Xaml.SL.csproj">
       <Project>{6d1cefe4-19fd-45c7-bee0-81a01f444a6b}</Project>
       <Name>Framework.Xaml.SL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Shared.SL\ViewModels.SL\MSBuildExtensionPack.ViewModels.SL.csproj">
-      <Project>{15f69eec-2e09-4ff7-8ee1-d7c80804524c}</Project>
-      <Name>MSBuildExtensionPack.ViewModels.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core\Resources\MSBuildExtensionPack.Resources.csproj">
       <Project>{42681747-107b-487b-9ea2-ce46754682fd}</Project>
