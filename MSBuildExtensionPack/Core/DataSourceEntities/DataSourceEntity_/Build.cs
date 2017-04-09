@@ -256,7 +256,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         /// <summary>
         /// View "Default" class of <see cref="Build"/>, used across the solution. 
         /// </summary>
-		public partial class Default :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IBuild, Framework.EntityContracts.IClone<Build>
+		public partial class Default :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IBuild, Framework.EntityContracts.IClone<Default>
 		{
 
 			#region Storage Fields
@@ -490,7 +490,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         /// <summary>
         /// View "DefaultGroupedDataView" class of <see cref="Build"/>, used across the solution. 
         /// </summary>
-		public partial class DefaultGroupedDataView :Framework.PropertyChangedNotifier, Framework.EntityContracts.IClone<Build>
+		public partial class DefaultGroupedDataView :Framework.PropertyChangedNotifier, Framework.EntityContracts.IClone<DefaultGroupedDataView>
 		{
 
 			#region Storage Fields
@@ -613,9 +613,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             /// Gets the A clone.
             /// </summary>
             /// <returns>a new instance with same value</returns>
-            public Default GetACloneWithoutIdentifier()
+            public DefaultGroupedDataView GetACloneWithoutIdentifier()
             {
-                Default cloned = GetAClone();
+                DefaultGroupedDataView cloned = GetAClone();
 
                 return cloned;
             }
@@ -651,7 +651,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         /// <summary>
         /// View "UpdateNameRequest" class of <see cref="Build"/>, used across the solution. 
         /// </summary>
-		public partial class UpdateNameRequest :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IBuildIdentifier, Framework.EntityContracts.IClone<Build>
+		public partial class UpdateNameRequest :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IBuildIdentifier, Framework.EntityContracts.IClone<UpdateNameRequest>
 		{
 
 			#region Storage Fields
@@ -753,9 +753,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             /// Gets the A clone.
             /// </summary>
             /// <returns>a new instance with same value</returns>
-            public Default GetACloneWithoutIdentifier()
+            public UpdateNameRequest GetACloneWithoutIdentifier()
             {
-                Default cloned = GetAClone();
+                UpdateNameRequest cloned = GetAClone();
 
                 return cloned;
             }
@@ -791,7 +791,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         /// <summary>
         /// View "KeyInformation" class of <see cref="Build"/>, used across the solution. 
         /// </summary>
-		public partial class KeyInformation :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IBuildIdentifier, Framework.EntityContracts.IClone<Build>
+		public partial class KeyInformation :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IBuildIdentifier, Framework.EntityContracts.IClone<KeyInformation>
 		{
 
 			#region Storage Fields
@@ -893,9 +893,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             /// Gets the A clone.
             /// </summary>
             /// <returns>a new instance with same value</returns>
-            public Default GetACloneWithoutIdentifier()
+            public KeyInformation GetACloneWithoutIdentifier()
             {
-                Default cloned = GetAClone();
+                KeyInformation cloned = GetAClone();
 
                 return cloned;
             }

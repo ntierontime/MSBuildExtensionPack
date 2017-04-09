@@ -161,10 +161,10 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		/// </summary>
 		public BuildChainedQueryCriteriaCommonFlatten(BuildChainedQueryCriteriaCommon input)
 			: this(
-			input.BuildQueryCriteriaCommon.IdCommonOfSolution_1OfCommon.IsToCompare, input.BuildQueryCriteriaCommon.IdCommonOfSolution_1OfCommon.ValueToCompare
-			, input.BuildQueryCriteriaCommon.BuildStartTimeCommonOftOfCommon.IsToCompare, input.BuildQueryCriteriaCommon.BuildStartTimeCommonOftOfCommon.IsToCompareLowerBound, input.BuildQueryCriteriaCommon.BuildStartTimeCommonOftOfCommon.LowerBound, input.BuildQueryCriteriaCommon.BuildStartTimeCommonOftOfCommon.IsToCompareUpperBound, input.BuildQueryCriteriaCommon.BuildStartTimeCommonOftOfCommon.UpperBound
-			, input.BuildQueryCriteriaCommon.NameCommonOftOfCommon.IsToCompare, input.BuildQueryCriteriaCommon.NameCommonOftOfCommon.ValueToBeContained
-			, input.BuildQueryCriteriaCommon.DescriptionCommonOftOfCommon.IsToCompare, input.BuildQueryCriteriaCommon.DescriptionCommonOftOfCommon.ValueToBeContained
+			input.BuildQueryCriteriaCommon.IdCommonOfSolution_1.IsToCompare, input.BuildQueryCriteriaCommon.IdCommonOfSolution_1.ValueToCompare
+			, input.BuildQueryCriteriaCommon.BuildStartTimeCommonOft.IsToCompare, input.BuildQueryCriteriaCommon.BuildStartTimeCommonOft.IsToCompareLowerBound, input.BuildQueryCriteriaCommon.BuildStartTimeCommonOft.LowerBound, input.BuildQueryCriteriaCommon.BuildStartTimeCommonOft.IsToCompareUpperBound, input.BuildQueryCriteriaCommon.BuildStartTimeCommonOft.UpperBound
+			, input.BuildQueryCriteriaCommon.NameCommonOft.IsToCompare, input.BuildQueryCriteriaCommon.NameCommonOft.ValueToBeContained
+			, input.BuildQueryCriteriaCommon.DescriptionCommonOft.IsToCompare, input.BuildQueryCriteriaCommon.DescriptionCommonOft.ValueToBeContained
 			)
 		{
 		}
@@ -372,7 +372,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		/// </summary>
 		public BuildChainedQueryCriteriaByFKOnlyFlatten(BuildChainedQueryCriteriaByFKOnly input)
 			: this(
-			input.BuildQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1OfByFKOnly.IsToCompare, input.BuildQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1OfByFKOnly.ValueToCompare
+			input.BuildQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1.IsToCompare, input.BuildQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1.ValueToCompare
 			)
 		{
 		}
@@ -501,7 +501,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		/// </summary>
 		public BuildChainedQueryCriteriaByIdentifierFlatten(BuildChainedQueryCriteriaByIdentifier input)
 			: this(
-			input.BuildQueryCriteriaByIdentifier.IdByIdentifierOftOfByIdentifier.IsToCompare, input.BuildQueryCriteriaByIdentifier.IdByIdentifierOftOfByIdentifier.ValueToCompare
+			input.BuildQueryCriteriaByIdentifier.IdByIdentifierOft.IsToCompare, input.BuildQueryCriteriaByIdentifier.IdByIdentifierOft.ValueToCompare
 			)
 		{
 		}

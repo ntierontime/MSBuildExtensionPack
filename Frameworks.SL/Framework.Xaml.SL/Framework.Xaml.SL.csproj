@@ -1,38 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{6D1CEFE4-19FD-45C7-BEE0-81A01F444A6B}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Framework.Xaml</RootNamespace>
     <AssemblyName>Framework.Xaml.SL</AssemblyName>
-    <DefaultLanguage>en-US</DefaultLanguage>
-    <FileAlignment>512</FileAlignment>
-    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="system" />
+    <Reference Include="System.Servicemodel" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
@@ -74,25 +92,25 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Frameworks\Framework\Framework.csproj">
-      <Project>{6d25aa30-c3af-4ae0-b567-0f2653120cdc}</Project>
-      <Name>Framework</Name>
+    <ProjectReference Include="..\Framework.SL\Framework.SL.csproj">
+      <Project>{0dd33ac6-4e92-4064-ba63-575a5e17ccd1}</Project>
+      <Name>Framework.SL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Frameworks\Framework.CommonBLLEntities\Framework.CommonBLLEntities.csproj">
-      <Project>{ba8c8c0b-470a-4d3c-b3da-9e28599799b5}</Project>
-      <Name>Framework.CommonBLLEntities</Name>
+    <ProjectReference Include="..\Framework.CommonBLLEntities.SL\Framework.CommonBLLEntities.SL.csproj">
+      <Project>{62b42eee-8d2e-4e46-8e64-d5ffdb149675}</Project>
+      <Name>Framework.CommonBLLEntities.SL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Frameworks\Framework.EntityContracts\Framework.EntityContracts.csproj">
-      <Project>{c3a270de-9727-492e-91e2-f56e7e0e0f83}</Project>
-      <Name>Framework.EntityContracts</Name>
+    <ProjectReference Include="..\Framework.EntityContracts.SL\Framework.EntityContracts.SL.csproj">
+      <Project>{1cfcc473-996d-4b3a-a067-cd9aeb5228cf}</Project>
+      <Name>Framework.EntityContracts.SL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Frameworks\Framework.Resources\Framework.Resources.csproj">
-      <Project>{c72b898b-b53b-42d5-9f4f-673f84bb485b}</Project>
-      <Name>Framework.Resources</Name>
+    <ProjectReference Include="..\Framework.Resources.SL\Framework.Resources.SL.csproj">
+      <Project>{79dd4d4a-ee86-42b3-aca4-a3ff478cef5b}</Project>
+      <Name>Framework.Resources.SL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Frameworks\Framework.ViewModels\Framework.ViewModels.csproj">
-      <Project>{2cc97c32-9ffa-4da4-a6c0-83f300404ec3}</Project>
-      <Name>Framework.ViewModels</Name>
+    <ProjectReference Include="..\Framework.ViewModels.SL\Framework.ViewModels.SL.csproj">
+      <Project>{da4e702c-dd7a-435a-b55e-dfe1206d4cdb}</Project>
+      <Name>Framework.ViewModels.SL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -117,7 +135,25 @@
       <HintPath>..\..\packages\MvvmLightLibs.4.4.32.7\lib\sl50\System.Windows.Interactivity.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!--
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+      <!-- For ProjectLinker -->
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="e5302713-0022-4657-85d8-9620818071df" />
+    </VisualStudio>
+  </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

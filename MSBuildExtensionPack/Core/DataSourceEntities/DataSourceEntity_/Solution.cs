@@ -230,7 +230,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         /// <summary>
         /// View "KeyInformation" class of <see cref="Solution"/>, used across the solution. 
         /// </summary>
-		public partial class KeyInformation :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.ISolutionIdentifier, Framework.EntityContracts.IClone<Solution>
+		public partial class KeyInformation :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.ISolutionIdentifier, Framework.EntityContracts.IClone<KeyInformation>
 		{
 
 			#region Storage Fields
@@ -332,9 +332,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             /// Gets the A clone.
             /// </summary>
             /// <returns>a new instance with same value</returns>
-            public Default GetACloneWithoutIdentifier()
+            public KeyInformation GetACloneWithoutIdentifier()
             {
-                Default cloned = GetAClone();
+                KeyInformation cloned = GetAClone();
 
                 return cloned;
             }

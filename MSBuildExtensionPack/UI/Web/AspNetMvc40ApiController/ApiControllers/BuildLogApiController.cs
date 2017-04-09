@@ -275,7 +275,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers.ApiContro
             System.Int64 id)
         {
             MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM();
-            retval.Load(true, true, id, Framework.UIAction.ViewDetails);
+            retval.Load(true, id, Framework.UIAction.ViewDetails);
             return retval;
         }
 

@@ -143,9 +143,9 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		/// </summary>
 		public SolutionChainedQueryCriteriaCommonFlatten(SolutionChainedQueryCriteriaCommon input)
 			: this(
-			input.SolutionQueryCriteriaCommon.ExternalParentIdCommonOftOfCommon.IsToCompare, input.SolutionQueryCriteriaCommon.ExternalParentIdCommonOftOfCommon.ValueToBeContained
-			, input.SolutionQueryCriteriaCommon.NameCommonOftOfCommon.IsToCompare, input.SolutionQueryCriteriaCommon.NameCommonOftOfCommon.ValueToBeContained
-			, input.SolutionQueryCriteriaCommon.DescriptionCommonOftOfCommon.IsToCompare, input.SolutionQueryCriteriaCommon.DescriptionCommonOftOfCommon.ValueToBeContained
+			input.SolutionQueryCriteriaCommon.ExternalParentIdCommonOft.IsToCompare, input.SolutionQueryCriteriaCommon.ExternalParentIdCommonOft.ValueToBeContained
+			, input.SolutionQueryCriteriaCommon.NameCommonOft.IsToCompare, input.SolutionQueryCriteriaCommon.NameCommonOft.ValueToBeContained
+			, input.SolutionQueryCriteriaCommon.DescriptionCommonOft.IsToCompare, input.SolutionQueryCriteriaCommon.DescriptionCommonOft.ValueToBeContained
 			)
 		{
 		}
@@ -352,7 +352,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		/// </summary>
 		public SolutionChainedQueryCriteriaByIdentifierFlatten(SolutionChainedQueryCriteriaByIdentifier input)
 			: this(
-			input.SolutionQueryCriteriaByIdentifier.IdByIdentifierOftOfByIdentifier.IsToCompare, input.SolutionQueryCriteriaByIdentifier.IdByIdentifierOftOfByIdentifier.ValueToCompare
+			input.SolutionQueryCriteriaByIdentifier.IdByIdentifierOft.IsToCompare, input.SolutionQueryCriteriaByIdentifier.IdByIdentifierOft.ValueToCompare
 			)
 		{
 		}

@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using System.Web.Mvc.Ajax;
 using MSBuildExtensionPack.AspNetMvc40ViewModel;
 using Framework.EntityContracts;
+using Framework.Mvc;
 using UrlStringsAlias = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.UrlStrings;
 
 namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
@@ -58,13 +59,13 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 				TempData[TempDataKey_WPCommonOfBuildEventCode] = viewModel.GetPrimaryInformationEntity();
 				TempData.Keep(TempDataKey_WPCommonOfBuildEventCode); 
 			}
-            else
-            {
-                viewModel.StatusMessageOfResult = searchResult.GetStatusMessage();
-#if DEBUG
-                viewModel.StatusMessageOfResult = string.Format("{0} {1}", viewModel.StatusMessageOfResult, searchResult.ServerErrorMessage);
-#endif
-            }
+//            else
+//            {
+//                viewModel.StatusMessageOfResult = searchResult.GetStatusMessage();
+//#if DEBUG
+//                viewModel.StatusMessageOfResult = string.Format("{0} {1}", viewModel.StatusMessageOfResult, searchResult.ServerErrorMessage);
+//#endif
+//            }
 
 			if (viewModel.Result != null)
             {
@@ -202,7 +203,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         public ActionResult Details(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32 valueToCompareIdByIdentifierOftOfByIdentifier)
         {
             Framework.UIAction uiAction = Framework.UIAction.ViewDetails;
-            MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM vm = MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
+            MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM();
+			vm.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
             vm.ContentData.Title = Framework.Resources.UIStringResource.DetailsAlternativeText;
             vm.ContentData.Summary = MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildEventCode.Details_BuildEventCode;
 
@@ -257,7 +259,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             }
             catch(Exception ex)
             {
-                Framework.UIAction uiAction = Framework.UIAction.Create;;
+                Framework.UIAction uiAction = Framework.UIAction.Create;
                 var entity = CreateEmptyEntityOrGetFromTempData(TempDataKey_BuildEventCodeController_Copy);
                 vm = MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM.CreateNewViewModel(entity);
                 vm.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
@@ -301,7 +303,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         public ActionResult Edit(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32 valueToCompareIdByIdentifierOftOfByIdentifier)
         {
             Framework.UIAction uiAction = Framework.UIAction.Update;
-            MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM vm = MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
+            MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM();
+			vm.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
             vm.ContentData.Title = Framework.Resources.UIStringResource.EditAlternativeText;
             vm.ContentData.Summary = MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildEventCode.Edit_BuildEventCode;
 

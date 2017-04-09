@@ -314,7 +314,7 @@ namespace Framework
         /// <returns>true if meets criteria, otherwise false</returns>
 		public bool ExistsByName(string name)
         {
-            return this.Count(t => t.Name == name) > 0;
+            return this.Any(t => t.Name == name);
         }
 
 
@@ -384,7 +384,7 @@ namespace Framework
         /// <returns>true if meets criteria, otherwise false</returns>
         public bool ExistsByValue(string value)
         {
-            return this.Count(t => t.Value == value) > 0;
+            return this.Any(t => t.Value.Equals(value));
         }
 
         /// <summary>

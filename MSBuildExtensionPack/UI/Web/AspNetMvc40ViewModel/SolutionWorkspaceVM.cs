@@ -8,7 +8,7 @@ using System.Web.Mvc;
 namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 {
 
-    public partial class WPCommonOfSolutionVM : MSBuildExtensionPack.ViewModelData.WPCommonOfSolutionVM //Framework.Mvc.ViewModelBaseWithResultAndUIElement<MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommonFlatten, MSBuildExtensionPack.DataSourceEntities.SolutionCollection>
+    public partial class WPCommonOfSolutionVM : MSBuildExtensionPack.ViewModelData.WPCommonOfSolutionVM 
     {
         public WPCommonOfSolutionVM ()
             : base()
@@ -133,7 +133,6 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
             }
         }
 	}
-
 
 
 

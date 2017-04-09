@@ -10,7 +10,7 @@ using System.ComponentModel;
 namespace Framework.Xaml
 {
     public abstract class ViewModelItemBase<TSearchCriteria, TItem> 
-		GalaSoft.MvvmLight.ViewModelBase, Framework.ViewModels.IViewModelItemBase<TSearchCriteria, TItem>
+		: GalaSoft.MvvmLight.ViewModelBase, Framework.ViewModels.IViewModelItemBase<TSearchCriteria, TItem>
         where TSearchCriteria : class, new()
         where TItem : class, new()
     {
@@ -76,8 +76,8 @@ namespace Framework.Xaml
         }
 
 
-        protected ContentData m_ContentData;
-        public ContentData ContentData
+        protected Framework.EntityContracts.ContentData m_ContentData;
+        public Framework.EntityContracts.ContentData ContentData
         {
             get { return m_ContentData; }
             set
@@ -87,8 +87,8 @@ namespace Framework.Xaml
             }
         }
 
-        protected SearchStatus m_SearchStatus;
-        public SearchStatus SearchStatus
+        protected Framework.EntityContracts.SearchStatus m_SearchStatus;
+        public Framework.EntityContracts.SearchStatus SearchStatus
         {
             get { return m_SearchStatus; }
             set
@@ -120,8 +120,8 @@ namespace Framework.Xaml
             }
         }
 
-        protected UIActionStatusMessage m_UIActionStatusMessage;
-        public UIActionStatusMessage UIActionStatusMessage
+        protected Framework.UIActionStatusMessage m_UIActionStatusMessage;
+        public Framework.UIActionStatusMessage UIActionStatusMessage
         {
             get { return m_UIActionStatusMessage; }
             set

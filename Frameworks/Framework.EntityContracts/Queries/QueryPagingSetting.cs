@@ -35,7 +35,7 @@ namespace Framework.EntityContracts
 
             this.PageSizeSelectionList.Add("10", "10");
             this.PageSizeSelectionList.Add("20", "20");
-            this.PageSizeSelectionList.Add("50, "50");
+            this.PageSizeSelectionList.Add("50", "50");
             this.PageSizeSelectionList.Add("100", "100");
 
         }
@@ -288,6 +288,11 @@ namespace Framework.EntityContracts
         public override string ToString()
         {
             return GetPagingInformationString();
+        }
+
+        public static QueryPagingSetting GetDefault()
+        {
+            return new QueryPagingSetting(1, 10);
         }
     }
 }

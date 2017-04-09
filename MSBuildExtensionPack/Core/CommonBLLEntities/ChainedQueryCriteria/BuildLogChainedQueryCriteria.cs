@@ -173,11 +173,11 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		/// </summary>
 		public BuildLogChainedQueryCriteriaCommonFlatten(BuildLogChainedQueryCriteriaCommon input)
 			: this(
-			input.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1OfCommon.IsToCompare, input.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1OfCommon.ValueToCompare
-			, input.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1OfCommon.IsToCompare, input.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1OfCommon.ValueToCompare
-			, input.BuildLogQueryCriteriaCommon.IdCommonOfBuildEventCode_1OfCommon.IsToCompare, input.BuildLogQueryCriteriaCommon.IdCommonOfBuildEventCode_1OfCommon.ValueToCompare
-			, input.BuildLogQueryCriteriaCommon.EventTimeCommonOftOfCommon.IsToCompare, input.BuildLogQueryCriteriaCommon.EventTimeCommonOftOfCommon.IsToCompareLowerBound, input.BuildLogQueryCriteriaCommon.EventTimeCommonOftOfCommon.LowerBound, input.BuildLogQueryCriteriaCommon.EventTimeCommonOftOfCommon.IsToCompareUpperBound, input.BuildLogQueryCriteriaCommon.EventTimeCommonOftOfCommon.UpperBound
-			, input.BuildLogQueryCriteriaCommon.MessageCommonOftOfCommon.IsToCompare, input.BuildLogQueryCriteriaCommon.MessageCommonOftOfCommon.ValueToBeContained
+			input.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.IsToCompare, input.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.ValueToCompare
+			, input.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.IsToCompare, input.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.ValueToCompare
+			, input.BuildLogQueryCriteriaCommon.IdCommonOfBuildEventCode_1.IsToCompare, input.BuildLogQueryCriteriaCommon.IdCommonOfBuildEventCode_1.ValueToCompare
+			, input.BuildLogQueryCriteriaCommon.EventTimeCommonOft.IsToCompare, input.BuildLogQueryCriteriaCommon.EventTimeCommonOft.IsToCompareLowerBound, input.BuildLogQueryCriteriaCommon.EventTimeCommonOft.LowerBound, input.BuildLogQueryCriteriaCommon.EventTimeCommonOft.IsToCompareUpperBound, input.BuildLogQueryCriteriaCommon.EventTimeCommonOft.UpperBound
+			, input.BuildLogQueryCriteriaCommon.MessageCommonOft.IsToCompare, input.BuildLogQueryCriteriaCommon.MessageCommonOft.ValueToBeContained
 			)
 		{
 		}
@@ -410,9 +410,9 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		/// </summary>
 		public BuildLogChainedQueryCriteriaByFKOnlyFlatten(BuildLogChainedQueryCriteriaByFKOnly input)
 			: this(
-			input.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1OfByFKOnly.IsToCompare, input.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1OfByFKOnly.ValueToCompare
-			, input.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1OfByFKOnly.IsToCompare, input.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1OfByFKOnly.ValueToCompare
-			, input.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1OfByFKOnly.IsToCompare, input.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1OfByFKOnly.ValueToCompare
+			input.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1.IsToCompare, input.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1.ValueToCompare
+			, input.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1.IsToCompare, input.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1.ValueToCompare
+			, input.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1.IsToCompare, input.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1.ValueToCompare
 			)
 		{
 		}
@@ -543,7 +543,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		/// </summary>
 		public BuildLogChainedQueryCriteriaByIdentifierFlatten(BuildLogChainedQueryCriteriaByIdentifier input)
 			: this(
-			input.BuildLogQueryCriteriaByIdentifier.IdByIdentifierOftOfByIdentifier.IsToCompare, input.BuildLogQueryCriteriaByIdentifier.IdByIdentifierOftOfByIdentifier.ValueToCompare
+			input.BuildLogQueryCriteriaByIdentifier.IdByIdentifierOft.IsToCompare, input.BuildLogQueryCriteriaByIdentifier.IdByIdentifierOft.ValueToCompare
 			)
 		{
 		}

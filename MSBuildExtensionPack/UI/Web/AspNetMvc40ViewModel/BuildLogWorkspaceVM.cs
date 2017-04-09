@@ -8,7 +8,7 @@ using System.Web.Mvc;
 namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 {
 
-    public partial class WPCommonOfBuildLogVM : MSBuildExtensionPack.ViewModelData.WPCommonOfBuildLogVM //Framework.Mvc.ViewModelBaseWithResultAndUIElement<MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommonFlatten, MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection>
+    public partial class WPCommonOfBuildLogVM : MSBuildExtensionPack.ViewModelData.WPCommonOfBuildLogVM 
     {
         public WPCommonOfBuildLogVM ()
             : base()
@@ -188,7 +188,6 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
             }
         }
 	}
-
 
 
 

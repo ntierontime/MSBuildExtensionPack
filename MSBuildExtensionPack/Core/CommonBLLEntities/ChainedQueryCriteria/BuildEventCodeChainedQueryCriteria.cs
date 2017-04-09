@@ -131,8 +131,8 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		/// </summary>
 		public BuildEventCodeChainedQueryCriteriaCommonFlatten(BuildEventCodeChainedQueryCriteriaCommon input)
 			: this(
-			input.BuildEventCodeQueryCriteriaCommon.EventCodeCommonOftOfCommon.IsToCompare, input.BuildEventCodeQueryCriteriaCommon.EventCodeCommonOftOfCommon.ValueToBeContained
-			, input.BuildEventCodeQueryCriteriaCommon.DescriptionCommonOftOfCommon.IsToCompare, input.BuildEventCodeQueryCriteriaCommon.DescriptionCommonOftOfCommon.ValueToBeContained
+			input.BuildEventCodeQueryCriteriaCommon.EventCodeCommonOft.IsToCompare, input.BuildEventCodeQueryCriteriaCommon.EventCodeCommonOft.ValueToBeContained
+			, input.BuildEventCodeQueryCriteriaCommon.DescriptionCommonOft.IsToCompare, input.BuildEventCodeQueryCriteriaCommon.DescriptionCommonOft.ValueToBeContained
 			)
 		{
 		}
@@ -338,7 +338,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 		/// </summary>
 		public BuildEventCodeChainedQueryCriteriaByIdentifierFlatten(BuildEventCodeChainedQueryCriteriaByIdentifier input)
 			: this(
-			input.BuildEventCodeQueryCriteriaByIdentifier.IdByIdentifierOftOfByIdentifier.IsToCompare, input.BuildEventCodeQueryCriteriaByIdentifier.IdByIdentifierOftOfByIdentifier.ValueToCompare
+			input.BuildEventCodeQueryCriteriaByIdentifier.IdByIdentifierOft.IsToCompare, input.BuildEventCodeQueryCriteriaByIdentifier.IdByIdentifierOft.ValueToCompare
 			)
 		{
 		}

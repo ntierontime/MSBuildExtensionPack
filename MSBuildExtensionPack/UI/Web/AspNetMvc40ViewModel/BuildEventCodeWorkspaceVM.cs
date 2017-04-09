@@ -8,7 +8,7 @@ using System.Web.Mvc;
 namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 {
 
-    public partial class WPCommonOfBuildEventCodeVM : MSBuildExtensionPack.ViewModelData.WPCommonOfBuildEventCodeVM //Framework.Mvc.ViewModelBaseWithResultAndUIElement<MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommonFlatten, MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection>
+    public partial class WPCommonOfBuildEventCodeVM : MSBuildExtensionPack.ViewModelData.WPCommonOfBuildEventCodeVM 
     {
         public WPCommonOfBuildEventCodeVM ()
             : base()
@@ -133,7 +133,6 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
             }
         }
 	}
-
 
 
 

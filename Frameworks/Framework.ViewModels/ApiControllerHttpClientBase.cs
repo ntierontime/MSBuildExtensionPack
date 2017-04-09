@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -76,7 +77,7 @@ namespace Framework.ViewModels
         }
 
         public async Task<TViewModel> GetEntityRelated<TViewModel>(string url)
-            where TViewModel : class, Framework.ViewModels.IFramework.ViewModels.ViewModelEntityRelatedBase, new()
+            where TViewModel : class, Framework.ViewModels.IViewModelEntityRelatedBase, new()
         {
             var response = await Client.GetAsync(url);
 
@@ -120,7 +121,7 @@ namespace Framework.ViewModels
         }
 		
         public async Task<TViewModel> PostIViewModelEntityRelatedBase<TViewModel>(string url, TViewModel vm)
-            where TViewModel : class, Framework.ViewModels.IFramework.ViewModels.ViewModelEntityRelatedBase, new()
+            where TViewModel : class, Framework.ViewModels.IViewModelEntityRelatedBase, new()
         {
             string requestJSON = JsonConvert.SerializeObject(vm, Formatting.Indented, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
             var httpContent = new StringContent(requestJSON, System.Text.Encoding.UTF8, "application/json");

@@ -206,7 +206,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers.ApiContro
             System.Int32 id)
         {
             MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM();
-            retval.Load(true, true, id, Framework.UIAction.ViewDetails);
+            retval.Load(true, id, Framework.UIAction.ViewDetails);
             return retval;
         }
 

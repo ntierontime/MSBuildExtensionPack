@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E4F06862-5CCD-4526-A165-CA0981EE272E}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MSBuildExtensionPack.CommonBLLEntities</RootNamespace>
+    <AssemblyName>MSBuildExtensionPack.CommonBLLEntities.WP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="system" />
+    <Reference Include="mscorlib.Extensions" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Servicemodel" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
+    <Compile Include="..\..\Core\CommonBLLEntities\ChainedQueryCriteria\BuildChainedQueryCriteria.cs">
+      <Link>ChainedQueryCriteria\BuildChainedQueryCriteria.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\ChainedQueryCriteria\BuildEventCodeChainedQueryCriteria.cs">
+      <Link>ChainedQueryCriteria\BuildEventCodeChainedQueryCriteria.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\ChainedQueryCriteria\BuildLogChainedQueryCriteria.cs">
+      <Link>ChainedQueryCriteria\BuildLogChainedQueryCriteria.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\ChainedQueryCriteria\SolutionChainedQueryCriteria.cs">
+      <Link>ChainedQueryCriteria\SolutionChainedQueryCriteria.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\QueryCriteria\BuildQueryCriteria.cs">
+      <Link>QueryCriteria\BuildQueryCriteria.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\QueryCriteria\BuildEventCodeQueryCriteria.cs">
+      <Link>QueryCriteria\BuildEventCodeQueryCriteria.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\QueryCriteria\BuildLogQueryCriteria.cs">
+      <Link>QueryCriteria\BuildLogQueryCriteria.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\QueryCriteria\SolutionQueryCriteria.cs">
+      <Link>QueryCriteria\SolutionQueryCriteria.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesBuiltIn\BuildRequestMessageBuiltIn.cs">
+      <Link>RequestMessagesBuiltIn\BuildRequestMessageBuiltIn.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesBuiltIn\BuildEventCodeRequestMessageBuiltIn.cs">
+      <Link>RequestMessagesBuiltIn\BuildEventCodeRequestMessageBuiltIn.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesBuiltIn\BuildLogRequestMessageBuiltIn.cs">
+      <Link>RequestMessagesBuiltIn\BuildLogRequestMessageBuiltIn.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesBuiltIn\SolutionRequestMessageBuiltIn.cs">
+      <Link>RequestMessagesBuiltIn\SolutionRequestMessageBuiltIn.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesUserDefined\BuildRequestMessageUserDefined.cs">
+      <Link>RequestMessagesUserDefined\BuildRequestMessageUserDefined.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesUserDefined\BuildEventCodeRequestMessageUserDefined.cs">
+      <Link>RequestMessagesUserDefined\BuildEventCodeRequestMessageUserDefined.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesUserDefined\BuildLogRequestMessageUserDefined.cs">
+      <Link>RequestMessagesUserDefined\BuildLogRequestMessageUserDefined.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesUserDefined\SolutionRequestMessageUserDefined.cs">
+      <Link>RequestMessagesUserDefined\SolutionRequestMessageUserDefined.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesBuiltIn\BuildResponseMessageBuiltIn.cs">
+      <Link>ResponseMessagesBuiltIn\BuildResponseMessageBuiltIn.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesBuiltIn\BuildEventCodeResponseMessageBuiltIn.cs">
+      <Link>ResponseMessagesBuiltIn\BuildEventCodeResponseMessageBuiltIn.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesBuiltIn\BuildLogResponseMessageBuiltIn.cs">
+      <Link>ResponseMessagesBuiltIn\BuildLogResponseMessageBuiltIn.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesBuiltIn\SolutionResponseMessageBuiltIn.cs">
+      <Link>ResponseMessagesBuiltIn\SolutionResponseMessageBuiltIn.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesUserDefined\BuildResponseMessageUserDefined.cs">
+      <Link>ResponseMessagesUserDefined\BuildResponseMessageUserDefined.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesUserDefined\BuildEventCodeResponseMessageUserDefined.cs">
+      <Link>ResponseMessagesUserDefined\BuildEventCodeResponseMessageUserDefined.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesUserDefined\BuildLogResponseMessageUserDefined.cs">
+      <Link>ResponseMessagesUserDefined\BuildLogResponseMessageUserDefined.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesUserDefined\SolutionResponseMessageUserDefined.cs">
+      <Link>ResponseMessagesUserDefined\SolutionResponseMessageUserDefined.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataSourceEntities.WP\MSBuildExtensionPack.DataSourceEntities.WP.csproj">
+      <Project>{2cc8ad62-352c-4a19-bb6f-2a222a437b2e}</Project>
+      <Name>MSBuildExtensionPack.DataSourceEntities.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityContracts.WP\MSBuildExtensionPack.EntityContracts.WP.csproj">
+      <Project>{e11a2079-b89e-491a-83ad-aa08fb4c80e2}</Project>
+      <Name>MSBuildExtensionPack.EntityContracts.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks.WP\Framework.WP\Framework.WP.csproj">
+      <Project>{f6ffbd00-82e3-4f6e-9529-076cbe1e8341}</Project>
+      <Name>Framework.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks.WP\Framework.CommonBLLEntities.WP\Framework.CommonBLLEntities.WP.csproj">
+      <Project>{161b385a-d7c8-4798-b0dc-78bfaeea1565}</Project>
+      <Name>Framework.CommonBLLEntities.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks.WP\Framework.DataSourceEntities.WP\Framework.DataSourceEntities.WP.csproj">
+      <Project>{1509bb3e-0c7f-4f24-a1a4-0a3c1b8b7895}</Project>
+      <Name>Framework.DataSourceEntities.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks.WP\Framework.EntityContracts.WP\Framework.EntityContracts.WP.csproj">
+      <Project>{5cc0e119-1365-4124-a18d-795e34439e3e}</Project>
+      <Name>Framework.EntityContracts.WP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib.Extensions" />
+    <Reference Include="system" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Servicemodel" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!--
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <!-- For ProjectLinker -->
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="6a520483-5254-4978-ad53-3147addeffb6" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
