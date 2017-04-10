@@ -50,6 +50,7 @@
     <Compile Include="ViewModelLocator.cs" />
     <Compile Include="AccountViewModel.cs" />
     <Compile Include="LocalizedStrings.cs" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Core\CommonBLLEntities\MSBuildExtensionPack.CommonBLLEntities.csproj">
@@ -92,10 +93,6 @@
       <Project>{2cc97c32-9ffa-4da4-a6c0-83f300404ec3}</Project>
       <Name>Framework.ViewModels</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\Frameworks\Framework.WcfClient\Framework.WcfClient.csproj">
-      <Project>{3ac70e9c-5e33-44af-8319-2e4f68da86cb}</Project>
-      <Name>Framework.WcfClient</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\..\..\Frameworks\Framework.Xaml\Framework.Xaml.csproj">
       <Project>{e5302713-0022-4657-85d8-9620818071df}</Project>
       <Name>Framework.Xaml</Name>
@@ -114,6 +111,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <PropertyGroup>

@@ -410,10 +410,6 @@
       <Project>{2cc97c32-9ffa-4da4-a6c0-83f300404ec3}</Project>
       <Name>Framework.ViewModels</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Frameworks\Framework.WcfClient\Framework.WcfClient.csproj">
-      <Project>{3ac70e9c-5e33-44af-8319-2e4f68da86cb}</Project>
-      <Name>Framework.WcfClient</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\..\Frameworks\Framework.Xaml\Framework.Xaml.csproj">
       <Project>{e5302713-0022-4657-85d8-9620818071df}</Project>
       <Name>Framework.Xaml</Name>

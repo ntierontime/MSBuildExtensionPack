@@ -35,15 +35,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <Compile Include="ResourceFileFactory.cs" />
-    <EmbeddedResource Include="UIImageResource.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>UIImageResource.designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <Compile Include="UIImageResource.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UIImageResource.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="UIStringResource.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>UIStringResource.designer.cs</LastGenOutput>
@@ -55,8 +46,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
+    <Reference Include="System" />
   </ItemGroup>
   <PropertyGroup>
     <PostBuildEvent>rem copy $(TargetPath) $(SolutionDir)BuiltResults\*.* /y</PostBuildEvent>

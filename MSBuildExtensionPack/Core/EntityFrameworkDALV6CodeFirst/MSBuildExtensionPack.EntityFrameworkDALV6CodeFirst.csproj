@@ -39,6 +39,68 @@
     <Compile Include="BuildLogRepository.cs" />
     <Compile Include="SolutionRepository.cs" />
     <Compile Include="EFDataAccessLayerFactory.cs" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinqKit.Core, Version=1.1.9.0, Culture=neutral, PublicKeyToken=bc217f8844052a91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\LinqKit.Core.1.1.9.0\lib\net45\LinqKit.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Frameworks\Framework.DAL\Framework.DAL.csproj">
+      <Project>{525678c4-fdc1-4a5d-9d8a-d7e78309335f}</Project>
+      <Name>Framework.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks\Framework.DataSourceEntities\Framework.DataSourceEntities.csproj">
+      <Project>{f85a14d5-64e0-4cfc-88da-27fe9d0dd664}</Project>
+      <Name>Framework.DataSourceEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks\Framework.EntityContracts\Framework.EntityContracts.csproj">
+      <Project>{c3a270de-9727-492e-91e2-f56e7e0e0f83}</Project>
+      <Name>Framework.EntityContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks\Framework\Framework.csproj">
+      <Project>{6d25aa30-c3af-4ae0-b567-0f2653120cdc}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DALContracts\MSBuildExtensionPack.DALContracts.csproj">
+      <Project>{54d13c75-9e50-4ed3-b265-9fc6819ea35e}</Project>
+      <Name>MSBuildExtensionPack.DALContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataSourceEntities\MSBuildExtensionPack.DataSourceEntities.csproj">
+      <Project>{d0b33cdd-97c7-4d99-a579-8fc566de7153}</Project>
+      <Name>MSBuildExtensionPack.DataSourceEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj">
+      <Project>{d79953a8-febc-4b13-9cda-f7675a233481}</Project>
+      <Name>MSBuildExtensionPack.EntityContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityFrameworkContextV6CodeFirst\MSBuildExtensionPack.EntityFrameworkContextV6CodeFirst.csproj">
+      <Project>{41282156-28f5-4bc3-b10e-35eaac542577}</Project>
+      <Name>MSBuildExtensionPack.EntityFrameworkContextV6CodeFirst</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <PostBuildEvent>rem copy $(TargetPath) $(SolutionDir)BuiltResults\*.* /y</PostBuildEvent>

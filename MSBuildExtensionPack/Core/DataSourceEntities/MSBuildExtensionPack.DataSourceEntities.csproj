@@ -52,6 +52,34 @@
     <Compile Include="DataSourceQueryCriteriaByEntityReferences\BuildQueryCriteriaByEntityReference.cs" />
     <Compile Include="DataSourceQueryCriteriaByEntityReferences\BuildLogQueryCriteriaByEntityReference.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Frameworks\Framework.DataSourceEntities\Framework.DataSourceEntities.csproj">
+      <Project>{f85a14d5-64e0-4cfc-88da-27fe9d0dd664}</Project>
+      <Name>Framework.DataSourceEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks\Framework.EntityContracts\Framework.EntityContracts.csproj">
+      <Project>{c3a270de-9727-492e-91e2-f56e7e0e0f83}</Project>
+      <Name>Framework.EntityContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks\Framework\Framework.csproj">
+      <Project>{6d25aa30-c3af-4ae0-b567-0f2653120cdc}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj">
+      <Project>{d79953a8-febc-4b13-9cda-f7675a233481}</Project>
+      <Name>MSBuildExtensionPack.EntityContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Resources\MSBuildExtensionPack.Resources.csproj">
+      <Project>{42681747-107b-487b-9ea2-ce46754682fd}</Project>
+      <Name>MSBuildExtensionPack.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
   <PropertyGroup>
     <PostBuildEvent>rem copy $(TargetPath) $(SolutionDir)BuiltResults\*.* /y</PostBuildEvent>
   </PropertyGroup>
