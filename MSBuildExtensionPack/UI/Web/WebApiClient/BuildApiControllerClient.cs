@@ -317,6 +317,9 @@ namespace MSBuildExtensionPack.WebApiClient
             var response = await Client.GetAsync(url);
 
             return response;
-        }   
+        }
+
+
+        #endregion EntityUpdateActionSetting - UpdateNameOnly
     }
 }
