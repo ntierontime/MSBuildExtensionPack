@@ -11,6 +11,7 @@ namespace Framework.ViewModels
 {
     public abstract class ApiControllerHttpClientBase
     {
+        public const string WebApiRootUrlAppSettingName = "WebApiRootUrl";
         /// <summary>
         /// Gets or sets the root path.
         /// </summary>
@@ -29,9 +30,26 @@ namespace Framework.ViewModels
             this.RootPath = rootPath;
         }
 
-        public string GetHttpRequestUrl(string actionName, string parameters)
+        public string GetHttpRequestUrl(string actionName, Dictionary<string, string> parameters)
         {
-            return GetHttpRequestUrl(RootPath, ControllerName, actionName, parameters);
+            List<string> parametersInList = new List<string>();
+            foreach (var kvPair in parameters)
+            {
+                parametersInList.Add(string.Format("{0}={1}"));
+            }
+            string parametersInString = String.Join("&", parametersInList);
+
+            return GetHttpRequestUrl(RootPath, ControllerName, actionName, parametersInString);
+        }
+
+        //public string GetHttpRequestUrl(string actionName, string parameters)
+        //{
+        //    return GetHttpRequestUrl(RootPath, ControllerName, actionName, parameters);
+        //}
+
+        public string GetHttpRequestUrl(string actionName)
+        {
+            return GetHttpRequestUrl(RootPath, ControllerName, actionName, null);
         }
 
         public static string GetHttpRequestUrl(string rootPath, string controllerName, string actionName, string parameters)
@@ -53,6 +71,23 @@ namespace Framework.ViewModels
                 retval.Append(parameters.TrimStart('?').TrimEnd('/'));
             }
             return retval.ToString();
+        }
+
+        public async Task<TResponse> Get<TResponse>(string url)
+            where TResponse : class, new()
+        {
+            var response = await Client.GetAsync(url);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                var result = JsonConvert.DeserializeObject<TResponse>(content);
+                return result;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public async Task<TViewModel> GetItemViewModel<TViewModel>(string url)
@@ -100,26 +135,35 @@ namespace Framework.ViewModels
         public async Task<TViewModel> Post<TViewModel>(string url, TViewModel vm)
             where TViewModel : class, Framework.ViewModels.IViewModelBase, new()
         {
-            string requestJSON = JsonConvert.SerializeObject(vm);
+            string requestJSON = JsonConvert.SerializeObject(vm, Formatting.Indented, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
             var httpContent = new StringContent(requestJSON, System.Text.Encoding.UTF8, "application/json");
 
-            var response = await Client.PostAsync(url, httpContent);
+            try
+            {
+                var response = await Client.PostAsync(url, httpContent);
 
-            if (response.IsSuccessStatusCode)
-            {
-                var content = await response.Content.ReadAsStringAsync();
-                var result = JsonConvert.DeserializeObject<TViewModel>(content);
-                return result;
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    var result = JsonConvert.DeserializeObject<TViewModel>(content);
+                    return result;
+                }
+                else
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    vm.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
+                    vm.StatusMessageOfResult = content;
+                    return vm;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                var content = await response.Content.ReadAsStringAsync();
                 vm.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
-                vm.StatusMessageOfResult = content;
+                vm.StatusMessageOfResult = ex.Message;
                 return vm;
             }
         }
-		
+
         public async Task<TViewModel> PostIViewModelEntityRelatedBase<TViewModel>(string url, TViewModel vm)
             where TViewModel : class, Framework.ViewModels.IViewModelEntityRelatedBase, new()
         {
@@ -222,4 +266,5 @@ namespace Framework.ViewModels
         }
     }
 }
+
 

@@ -171,7 +171,7 @@ namespace MSBuildExtensionPack.WebApiClient
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        public Framework.NameValueCollection GetCollectionOfNameValuePairOfAll(
+        public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfAll(
 			int currentIndex
 			, int pageSize
 			, string queryOrderByExpression
@@ -207,7 +207,7 @@ namespace MSBuildExtensionPack.WebApiClient
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        public Framework.NameValueCollection GetCollectionOfNameValuePairOfByFKOnly(
+        public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfByFKOnly(
 			bool isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, System.Int64 valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
 			, bool isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, System.Int32 valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
 			, bool isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, System.Int32 valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly

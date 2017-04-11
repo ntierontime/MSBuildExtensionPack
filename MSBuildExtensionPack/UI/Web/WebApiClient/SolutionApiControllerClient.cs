@@ -171,7 +171,7 @@ namespace MSBuildExtensionPack.WebApiClient
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        public Framework.NameValueCollection GetCollectionOfNameValuePairOfAll(
+        public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfAll(
 			int currentIndex
 			, int pageSize
 			, string queryOrderByExpression
