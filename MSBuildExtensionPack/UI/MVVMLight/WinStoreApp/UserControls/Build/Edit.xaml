@@ -9,12 +9,12 @@
     xmlns:wrtb="using:WinRtBehaviors"
     xmlns:w8lnb="using:Win8nl.Behaviors"
     xmlns:WinRTDatePicker="using:WinRTDatePicker"
-    xmlns:vm="using:MSBuildExtensionPack.ViewModels"
+    xmlns:vm="using:MSBuildExtensionPack.MVVMLightViewModels"
     xmlns:fresx="using:Framework.Resources"
     xmlns:eresx="using:MSBuildExtensionPack.Resources"
     xmlns:fvm="using:Framework.Xaml"
     mc:Ignorable="d">
-    <Grid DataContext="{Binding MSBuildExtensionPack_ViewModels_ViewModelBuild_Static.CurrentInEditingDefault, Source={StaticResource Locator}}">
+    <Grid DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_ViewModelBuild_Static.CurrentInEditingDefault, Source={StaticResource Locator}}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition   Width="150" />
             <ColumnDefinition   Width="*" MaxWidth="750"/>

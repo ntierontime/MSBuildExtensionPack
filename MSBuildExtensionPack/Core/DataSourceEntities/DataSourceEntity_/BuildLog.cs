@@ -12,7 +12,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
     /// Entity class, used across the solution. <see cref="BuildLog"/>
     /// </summary>
     //[DataContract]
-	public partial class BuildLog  : Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IBuildLog 
+	public partial class BuildLog  : Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IBuildLog
 	{ 
 
 
@@ -21,15 +21,15 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
 		#region Storage Fields
 
-        public System.Int64 m_Id;
+        System.Int64 m_Id;
 
-        public System.Int64 m_BuildId;
+        System.Int64 m_BuildId;
 
-        public System.Int32 m_BuildEventCodeId;
+        System.Int32 m_BuildEventCodeId;
 
-        public System.String m_Message;
+        System.String m_Message;
 
-        public System.DateTime m_EventTime;
+        System.DateTime m_EventTime;
 
 
 		#endregion Storage Fields
@@ -258,25 +258,25 @@ namespace MSBuildExtensionPack.DataSourceEntities
 		public partial class Default :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IBuildLog, Framework.EntityContracts.IClone<Default>
 		{
 
-            #region Storage Fields
+			#region Storage Fields
 
-        public System.String m_Build_1_Name;
+        System.String m_Build_1_Name;
 
-        public System.Int64 m_Id;
+        System.Int64 m_Id;
 
-        public System.Int32 m_Solution_1Id;
+        System.Int32 m_Solution_1Id;
 
-        public System.String m_Solution_1_Name;
+        System.String m_Solution_1_Name;
 
-        public System.String m_BuildEventCode_1_Name;
+        System.String m_BuildEventCode_1_Name;
 
-        public System.Int64 m_BuildId;
+        System.Int64 m_BuildId;
 
-        public System.Int32 m_BuildEventCodeId;
+        System.Int32 m_BuildEventCodeId;
 
-        public System.String m_Message;
+        System.String m_Message;
 
-        public System.DateTime m_EventTime;
+        System.DateTime m_EventTime;
 
 
 			#endregion Storage Fields
@@ -289,15 +289,15 @@ namespace MSBuildExtensionPack.DataSourceEntities
 			/// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IBuildLog"/></param>
 			public Default()
 			{
-				this.m_Build_1_Name = null;
-				this.m_Id = default(long);
-				this.m_Solution_1Id = default(int);
-				this.m_Solution_1_Name = null;
-				this.m_BuildEventCode_1_Name = null;
-				this.m_BuildId = default(long);
-				this.m_BuildEventCodeId = default(int);
-				this.m_Message = null;
-				this.m_EventTime = DateTime.Now;
+				this.Build_1_Name = null;
+				this.Id = default(long);
+				this.Solution_1Id = default(int);
+				this.Solution_1_Name = null;
+				this.BuildEventCode_1_Name = null;
+				this.BuildId = default(long);
+				this.BuildEventCodeId = default(int);
+				this.Message = null;
+				this.EventTime = DateTime.Now;
 			}
 			/*
 			/// <summary>
@@ -329,9 +329,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             set
             {
                 m_Build_1_Name = value;
-                    //RaisePropertyChanged("Build_1_Name");
-                }
+                RaisePropertyChanged("Build_1_Name");
             }
+        }
 
 					[DataMember]
 #if (WINDOWS_PHONE || XAMARIN)
@@ -349,9 +349,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             set
             {
                 m_Id = value;
-                    //RaisePropertyChanged("Id");
-                }
+                RaisePropertyChanged("Id");
             }
+        }
 
 					[DataMember]
 #if (WINDOWS_PHONE || XAMARIN)
@@ -368,9 +368,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             set
             {
                 m_Solution_1Id = value;
-                    //RaisePropertyChanged("Solution_1Id");
-                }
+                RaisePropertyChanged("Solution_1Id");
             }
+        }
 
 					[DataMember]
 #if (WINDOWS_PHONE || XAMARIN)
@@ -387,9 +387,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             set
             {
                 m_Solution_1_Name = value;
-                    //RaisePropertyChanged("Solution_1_Name");
-                }
+                RaisePropertyChanged("Solution_1_Name");
             }
+        }
 
 					[DataMember]
 #if (WINDOWS_PHONE || XAMARIN)
@@ -406,9 +406,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             set
             {
                 m_BuildEventCode_1_Name = value;
-                    //RaisePropertyChanged("BuildEventCode_1_Name");
-                }
+                RaisePropertyChanged("BuildEventCode_1_Name");
             }
+        }
 
 					[DataMember]
 #if (WINDOWS_PHONE || XAMARIN)
@@ -425,7 +425,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
             set
             {
                 m_BuildId = value;
-                //RaisePropertyChanged("BuildId");
+                RaisePropertyChanged("BuildId");
             }
         }
 
@@ -444,9 +444,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             set
             {
                 m_BuildEventCodeId = value;
-                    //RaisePropertyChanged("BuildEventCodeId");
-                }
+                RaisePropertyChanged("BuildEventCodeId");
             }
+        }
 
 					[DataMember]
 #if (WINDOWS_PHONE || XAMARIN)
@@ -464,9 +464,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             set
             {
                 m_Message = value;
-                    //RaisePropertyChanged("Message");
-                }
+                RaisePropertyChanged("Message");
             }
+        }
 
 					[DataMember]
 #if (WINDOWS_PHONE || XAMARIN)
@@ -484,12 +484,12 @@ namespace MSBuildExtensionPack.DataSourceEntities
             set
             {
                 m_EventTime = value;
-                    //RaisePropertyChanged("EventTime");
-                }
+                RaisePropertyChanged("EventTime");
             }
+        }
 
 
-            #endregion properties
+			#endregion properties
 
             #region Method of BuildLog.Default  GetAClone()
 
@@ -501,15 +501,15 @@ namespace MSBuildExtensionPack.DataSourceEntities
             {
                 Default cloned = new Default();
 
-                cloned.m_Build_1_Name = m_Build_1_Name;
-                cloned.m_Id = m_Id;
-                cloned.m_Solution_1Id = m_Solution_1Id;
-                cloned.m_Solution_1_Name = m_Solution_1_Name;
-                cloned.m_BuildEventCode_1_Name = m_BuildEventCode_1_Name;
-                cloned.m_BuildId = m_BuildId;
-                cloned.m_BuildEventCodeId = m_BuildEventCodeId;
-                cloned.m_Message = m_Message;
-                cloned.m_EventTime = m_EventTime;
+			cloned.m_Build_1_Name = m_Build_1_Name;
+			cloned.m_Id = m_Id;
+			cloned.m_Solution_1Id = m_Solution_1Id;
+			cloned.m_Solution_1_Name = m_Solution_1_Name;
+			cloned.m_BuildEventCode_1_Name = m_BuildEventCode_1_Name;
+			cloned.m_BuildId = m_BuildId;
+			cloned.m_BuildEventCodeId = m_BuildEventCodeId;
+			cloned.m_Message = m_Message;
+			cloned.m_EventTime = m_EventTime;
 
                 return cloned;
             }
@@ -520,24 +520,13 @@ namespace MSBuildExtensionPack.DataSourceEntities
             /// <returns>a new instance with same value</returns>
             public Default GetACloneWithoutIdentifier()
             {
-                Default cloned = new Default();
-
-                cloned.m_Build_1_Name = m_Build_1_Name;
-                cloned.m_Id = default(long);
-                cloned.m_Solution_1Id = m_Solution_1Id;
-                cloned.m_Solution_1_Name = m_Solution_1_Name;
-                cloned.m_BuildEventCode_1_Name = m_BuildEventCode_1_Name;
-                cloned.m_BuildId = m_BuildId;
-                cloned.m_BuildEventCodeId = m_BuildEventCodeId;
-                cloned.m_Message = m_Message;
-                cloned.m_EventTime = m_EventTime;
+                Default cloned = GetAClone();
 
                 return cloned;
             }
 
-
             #endregion Method of BuildLog.Default  GetAClone()
-        }
+		}
 
         /// <summary>
         /// View "Default" class of <see cref="BuildLog"/>, used across the solution. 
@@ -567,20 +556,20 @@ namespace MSBuildExtensionPack.DataSourceEntities
         /// <summary>
         /// View "DefaultGroupedDataView" class of <see cref="BuildLog"/>, used across the solution. 
         /// </summary>
-		public partial class DefaultGroupedDataView :Framework.PropertyChangedNotifier
+		public partial class DefaultGroupedDataView :Framework.PropertyChangedNotifier, Framework.EntityContracts.IClone<DefaultGroupedDataView>
 		{
 
 			#region Storage Fields
 
-        public System.Int64 m_BuildId;
+        System.Int64 m_BuildId;
 
-        public System.Int32 m_BuildEventCodeId;
+        System.Int32 m_BuildEventCodeId;
 
-        public System.Int64 m_CountPerFK;
+        System.Int64 m_CountPerFK;
 
-        public System.String m_Name;
+        System.String m_Name;
 
-        public System.Int32 m_Solution_1Id;
+        System.Int32 m_Solution_1Id;
 
 
 			#endregion Storage Fields
@@ -733,6 +722,16 @@ namespace MSBuildExtensionPack.DataSourceEntities
                 return cloned;
             }
 
+            /// <summary>
+            /// Gets the A clone.
+            /// </summary>
+            /// <returns>a new instance with same value</returns>
+            public DefaultGroupedDataView GetACloneWithoutIdentifier()
+            {
+                DefaultGroupedDataView cloned = GetAClone();
+
+                return cloned;
+            }
 
             #endregion Method of BuildLog.DefaultGroupedDataView  GetAClone()
 		}
@@ -765,14 +764,14 @@ namespace MSBuildExtensionPack.DataSourceEntities
         /// <summary>
         /// View "KeyInformation" class of <see cref="BuildLog"/>, used across the solution. 
         /// </summary>
-		public partial class KeyInformation :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IBuildLogIdentifier
+		public partial class KeyInformation :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IBuildLogIdentifier, Framework.EntityContracts.IClone<KeyInformation>
 		{
 
 			#region Storage Fields
 
-        public System.Int64 m_Id;
+        System.Int64 m_Id;
 
-        public System.Int32 m_BuildEventCodeId;
+        System.Int32 m_BuildEventCodeId;
 
 
 			#endregion Storage Fields
@@ -861,6 +860,16 @@ namespace MSBuildExtensionPack.DataSourceEntities
                 return cloned;
             }
 
+            /// <summary>
+            /// Gets the A clone.
+            /// </summary>
+            /// <returns>a new instance with same value</returns>
+            public KeyInformation GetACloneWithoutIdentifier()
+            {
+                KeyInformation cloned = GetAClone();
+
+                return cloned;
+            }
 
             #endregion Method of BuildLog.KeyInformation  GetAClone()
 		}
@@ -898,6 +907,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
 
 
+/*
     /// <summary>
     /// a property defined when <see cref="BuildLog"/> is used in other classes.
     /// </summary>
@@ -911,6 +921,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         /// </value>
 		BuildLog BuildLog { get; set; }
 	}
+*/
 
     /// <summary>
     /// message definition, pass single entry, pulled from database, to business logic layer. <see cref="BuildLog"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>

@@ -10,7 +10,7 @@
     xmlns:i="using:Windows.UI.Interactivity"
     xmlns:wrtb="using:WinRtBehaviors"
     xmlns:w8lnb="using:Win8nl.Behaviors"
-    xmlns:vm="using:MSBuildExtensionPack.ViewModels"
+    xmlns:vm="using:MSBuildExtensionPack.MVVMLightViewModels"
     xmlns:fresx="using:Framework.Resources"
     xmlns:eresx="using:MSBuildExtensionPack.Resources"
     xmlns:fvm="using:Framework.Xaml"
@@ -31,8 +31,8 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}" Grid.Column="0"/>
-            <Button x:Name="editButton" Style="{StaticResource EditButtonStyle}" Grid.Column="1"  Command="{Binding MSBuildExtensionPack_ViewModels_ViewModelBuildLog_Static.LaunchEditViewCommand, Source={StaticResource Locator}}"/>
-            <Button x:Name="deleteButton" Style="{StaticResource DeleteButtonStyle}" Grid.Column="2"  Command="{Binding MSBuildExtensionPack_ViewModels_ViewModelBuildLog_Static.LaunchDeleteViewCommand, Source={StaticResource Locator}}"/>
+            <Button x:Name="editButton" Style="{StaticResource EditButtonStyle}" Grid.Column="1"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ViewModelBuildLog_Static.LaunchEditViewCommand, Source={StaticResource Locator}}"/>
+            <Button x:Name="deleteButton" Style="{StaticResource DeleteButtonStyle}" Grid.Column="2"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ViewModelBuildLog_Static.LaunchDeleteViewCommand, Source={StaticResource Locator}}"/>
             <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}" Grid.Column="3"/>
         </Grid>
         <VisualStateManager.VisualStateGroups>

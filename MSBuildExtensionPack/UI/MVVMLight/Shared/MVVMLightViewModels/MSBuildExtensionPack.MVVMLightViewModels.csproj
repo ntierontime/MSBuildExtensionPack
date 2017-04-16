@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AEBA199A-084C-4FFC-B215-D080E50C81DF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MSBuildExtensionPack.MVVMLightViewModels</RootNamespace>
+    <AssemblyName>MSBuildExtensionPack.MVVMLightViewModels</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
+    <Compile Include="ExtendedVMBuild.cs" />
+    <Compile Include="ExtendedVMBuildEventCode.cs" />
+    <Compile Include="ExtendedVMBuildLog.cs" />
+    <Compile Include="ExtendedVMSolution.cs" />
+    <Compile Include="ItemVMBuild.cs" />
+    <Compile Include="ItemVMBuildEventCode.cs" />
+    <Compile Include="ItemVMBuildLog.cs" />
+    <Compile Include="ItemVMSolution.cs" />
+    <Compile Include="MainViewModel.cs" />
+    <Compile Include="ViewModelBuild.cs" />
+    <Compile Include="ViewModelBuildEventCode.cs" />
+    <Compile Include="ViewModelBuildLog.cs" />
+    <Compile Include="ViewModelSolution.cs" />
+    <Compile Include="ViewModelLocator.cs" />
+    <Compile Include="AccountViewModel.cs" />
+    <Compile Include="LocalizedStrings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Core\CommonBLLEntities\MSBuildExtensionPack.CommonBLLEntities.csproj">
+      <Project>{6a520483-5254-4978-ad53-3147addeffb6}</Project>
+      <Name>MSBuildExtensionPack.CommonBLLEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core\CommonBLLIoC\MSBuildExtensionPack.CommonBLLIoC.csproj">
+      <Project>{6992a9f3-9832-46fd-8c7f-d2bb5777e7d9}</Project>
+      <Name>MSBuildExtensionPack.CommonBLLIoC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core\DataSourceEntities\MSBuildExtensionPack.DataSourceEntities.csproj">
+      <Project>{d0b33cdd-97c7-4d99-a579-8fc566de7153}</Project>
+      <Name>MSBuildExtensionPack.DataSourceEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj">
+      <Project>{d79953a8-febc-4b13-9cda-f7675a233481}</Project>
+      <Name>MSBuildExtensionPack.EntityContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks\Framework\Framework.csproj">
+      <Project>{6d25aa30-c3af-4ae0-b567-0f2653120cdc}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks\Framework.CommonBLLEntities\Framework.CommonBLLEntities.csproj">
+      <Project>{ba8c8c0b-470a-4d3c-b3da-9e28599799b5}</Project>
+      <Name>Framework.CommonBLLEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks\Framework.DataSourceEntities\Framework.DataSourceEntities.csproj">
+      <Project>{f85a14d5-64e0-4cfc-88da-27fe9d0dd664}</Project>
+      <Name>Framework.DataSourceEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks\Framework.EntityContracts\Framework.EntityContracts.csproj">
+      <Project>{c3a270de-9727-492e-91e2-f56e7e0e0f83}</Project>
+      <Name>Framework.EntityContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks\Framework.Resources\Framework.Resources.csproj">
+      <Project>{c72b898b-b53b-42d5-9f4f-673f84bb485b}</Project>
+      <Name>Framework.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks\Framework.ViewModels\Framework.ViewModels.csproj">
+      <Project>{2cc97c32-9ffa-4da4-a6c0-83f300404ec3}</Project>
+      <Name>Framework.ViewModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks\Framework.Xaml\Framework.Xaml.csproj">
+      <Project>{e5302713-0022-4657-85d8-9620818071df}</Project>
+      <Name>Framework.Xaml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core\Resources\MSBuildExtensionPack.Resources.csproj">
+      <Project>{42681747-107b-487b-9ea2-ce46754682fd}</Project>
+      <Name>MSBuildExtensionPack.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core\ViewModelData\MSBuildExtensionPack.ViewModelData.csproj">
+      <Project>{59622778-b13c-464e-98f7-ea662653af27}</Project>
+      <Name>MSBuildExtensionPack.ViewModelData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core\WcfContracts\MSBuildExtensionPack.WcfContracts.csproj">
+      <Project>{3ff07bef-ff15-47ee-9bf2-107623976ca5}</Project>
+      <Name>MSBuildExtensionPack.WcfContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Web\WebApiClient\MSBuildExtensionPack.WebApiClient.csproj">
+      <Project>{c126ea08-56e0-4aa7-85d3-1fe40fed592d}</Project>
+      <Name>MSBuildExtensionPack.WebApiClient</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.3.0.19026, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\packages\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.3.0.19032, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\packages\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.3.0.19032, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\packages\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\packages\MvvmLightLibs.5.3.0.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>rem copy $(TargetPath) $(SolutionDir)BuiltResults\*.* /y</PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!--
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  -->
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

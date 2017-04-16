@@ -74,7 +74,7 @@ namespace Framework.ViewModels
         }
 
         public async Task<TResponse> Get<TResponse>(string url)
-            where TResponse : class, new()
+            where TResponse: class, new()
         {
             var response = await Client.GetAsync(url);
 
@@ -156,7 +156,7 @@ namespace Framework.ViewModels
                     return vm;
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 vm.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
                 vm.StatusMessageOfResult = ex.Message;
@@ -266,5 +266,7 @@ namespace Framework.ViewModels
         }
     }
 }
+
+
 
 

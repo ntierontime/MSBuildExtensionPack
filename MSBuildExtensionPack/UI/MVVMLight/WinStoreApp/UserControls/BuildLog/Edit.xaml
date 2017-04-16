@@ -9,12 +9,12 @@
     xmlns:wrtb="using:WinRtBehaviors"
     xmlns:w8lnb="using:Win8nl.Behaviors"
     xmlns:WinRTDatePicker="using:WinRTDatePicker"
-    xmlns:vm="using:MSBuildExtensionPack.ViewModels"
+    xmlns:vm="using:MSBuildExtensionPack.MVVMLightViewModels"
     xmlns:fresx="using:Framework.Resources"
     xmlns:eresx="using:MSBuildExtensionPack.Resources"
     xmlns:fvm="using:Framework.Xaml"
     mc:Ignorable="d">
-    <Grid DataContext="{Binding MSBuildExtensionPack_ViewModels_ViewModelBuildLog_Static.CurrentInEditingDefault, Source={StaticResource Locator}}">
+    <Grid DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_ViewModelBuildLog_Static.CurrentInEditingDefault, Source={StaticResource Locator}}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition   Width="150" />
             <ColumnDefinition   Width="*" MaxWidth="750"/>
@@ -40,7 +40,7 @@
 		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.BuildEventCode_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
 		<TextBlock Text="{Binding Path=BuildEventCode_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="4" />
 		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.BuildId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
-		<ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="5" ItemsSource="{Binding Path=MSBuildExtensionPack_ViewModels_WPCommonOfBuildLogVM.DropDownContentsOfBuild_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=BuildId, Mode=TwoWay}" />
+		<ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="5" ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM.DropDownContentsOfBuild_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=BuildId, Mode=TwoWay}" />
 		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.BuildEventCodeId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="6" />
 		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Message, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="7" />
 		<TextBox Text="{Binding Path=Message, Mode=TwoWay}" Grid.Column="1" Grid.Row="7" fvm:TextBoxUpdateSourceBehaviour.BindingSource="Message" />

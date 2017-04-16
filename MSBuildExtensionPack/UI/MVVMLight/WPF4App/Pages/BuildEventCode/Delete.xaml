@@ -6,7 +6,7 @@
         xmlns:cmd="http://www.galasoft.ch/mvvmlight"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
-		xmlns:vm="clr-namespace:MSBuildExtensionPack.ViewModels;assembly=MSBuildExtensionPack.ViewModels"
+		xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels"
 		xmlns:BuildEventCode="clr-namespace:MSBuildExtensionPack.WPF4App.UserControls.BuildEventCode"
         Title="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildEventCode.BuildEventCode_Delete, Source={StaticResource LocalizedStrings}}"
         >
@@ -18,13 +18,13 @@
         <ToolBarTray Grid.Row="0" Style="{StaticResource ToolBarTrayStyle}">
             <ToolBar>
                 <TextBlock VerticalAlignment="Center" Text="{Binding Path=Framework_Resources_UIStringResource.Warning_Areyousureyouwanttodeletethis, Source={StaticResource LocalizedStrings}}" />
-                <Button     Name="DeleteOutter" Command="{Binding MSBuildExtensionPack_ViewModels_ItemVMBuildEventCode.DeleteCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.DeleteAlternativeText, Source={StaticResource LocalizedStrings}}">
+                <Button     Name="DeleteOutter" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode.DeleteCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.DeleteAlternativeText, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>
                         <iconPacks:PackIconMaterial Kind="Delete" HorizontalAlignment="Center" />
                         <TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.DeleteAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
                     </StackPanel>
                 </Button>
-                <Button     Name="Close" Command="{Binding MSBuildExtensionPack_ViewModels_ItemVMBuildEventCode.CloseDeleteViewCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.BackAlternativeText, Source={StaticResource LocalizedStrings}}">
+                <Button     Name="Close" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode.CloseDeleteViewCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.BackAlternativeText, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>
                         <iconPacks:PackIconEntypo Kind="Back" HorizontalAlignment="Center" />
                         <TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.BackAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>

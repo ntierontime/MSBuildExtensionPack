@@ -59,13 +59,13 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 				TempData[TempDataKey_WPCommonOfBuild] = viewModel.GetPrimaryInformationEntity();
 				TempData.Keep(TempDataKey_WPCommonOfBuild); 
 			}
-    //            else
-    //            {
-    //                viewModel.StatusMessageOfResult = searchResult.GetStatusMessage();
-    //#if DEBUG
-    //                viewModel.StatusMessageOfResult = string.Format("{0} {1}", viewModel.StatusMessageOfResult, searchResult.ServerErrorMessage);
-    //#endif
-    //            }
+//            else
+//            {
+//                viewModel.StatusMessageOfResult = searchResult.GetStatusMessage();
+//#if DEBUG
+//                viewModel.StatusMessageOfResult = string.Format("{0} {1}", viewModel.StatusMessageOfResult, searchResult.ServerErrorMessage);
+//#endif
+//            }
 
 			if (viewModel.Result != null)
             {

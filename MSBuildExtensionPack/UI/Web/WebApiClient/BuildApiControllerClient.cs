@@ -6,7 +6,6 @@ using Framework.EntityContracts;
 using Framework.ViewModels;
 using System.Threading.Tasks;
 using System.Net.Http;
-using Newtonsoft.Json;
 
 namespace MSBuildExtensionPack.WebApiClient
 {
@@ -159,6 +158,7 @@ namespace MSBuildExtensionPack.WebApiClient
         #endregion batch insert, update and delete in an entity collection
 
 
+
         #region Query Methods Of NameValuePair of All per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         public const string ActionName_GetCollectionOfNameValuePairOfAll = "GetCollectionOfNameValuePairOfAll";
@@ -171,7 +171,7 @@ namespace MSBuildExtensionPack.WebApiClient
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfAll(
+        public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfAllAsync(
 			int currentIndex
 			, int pageSize
 			, string queryOrderByExpression
@@ -190,6 +190,8 @@ namespace MSBuildExtensionPack.WebApiClient
         #endregion Query Methods Of NameValuePair of All per value type
 
 
+
+
         #region Query Methods Of NameValuePair of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         public const string ActionName_GetCollectionOfNameValuePairOfByFKOnly = "GetCollectionOfNameValuePairOfByFKOnly";
@@ -203,7 +205,7 @@ namespace MSBuildExtensionPack.WebApiClient
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfByFKOnly(
+        public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfByFKOnlyAsync(
 			bool isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, System.Int32 valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
 			, int currentIndex
 			, int pageSize
@@ -221,6 +223,9 @@ namespace MSBuildExtensionPack.WebApiClient
 		}
 
         #endregion Query Methods Of NameValuePair of ByFKOnly per value type
+
+
+
 
 
         public const string ActionName_GetBuildItemVM = "GetBuildItemVM";
@@ -241,6 +246,9 @@ namespace MSBuildExtensionPack.WebApiClient
 
 
 
+
+
+
             public const string ActionName_GetWPCommonOfBuildVM = "GetWPCommonOfBuildVM";
         /// <summary>
         /// Gets the wp common of build log vm.
@@ -249,13 +257,16 @@ namespace MSBuildExtensionPack.WebApiClient
         /// </summary>
         /// <param name="vm">The vm.</param>
         /// <returns></returns>
-        public async Task<MSBuildExtensionPack.ViewModelData.WPCommonOfBuildVM> GetWPCommonOfBuildVM(
+        public async Task<MSBuildExtensionPack.ViewModelData.WPCommonOfBuildVM> GetWPCommonOfBuildVMAsync(
             MSBuildExtensionPack.ViewModelData.WPCommonOfBuildVM vm)
         {
             string url = GetHttpRequestUrl(ActionName_GetWPCommonOfBuildVM);
 
             return await Post<MSBuildExtensionPack.ViewModelData.WPCommonOfBuildVM>(url, vm);
         }
+
+
+
 
         public const string ActionName_GetWPEntityRelatedOfBuildVM = "GetWPEntityRelatedOfBuildVM";
         /// <summary>
@@ -272,6 +283,9 @@ namespace MSBuildExtensionPack.WebApiClient
 
             return await GetEntityRelated<MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfBuildVM>(url);
         }
+
+
+
 
 		#region EntityUpdateActionSetting - UpdateNameOnly
 
@@ -304,6 +318,9 @@ namespace MSBuildExtensionPack.WebApiClient
             return await PostIViewModelEntityRelatedBase<MSBuildExtensionPack.ViewModelData.WPUpdateNameOnlyOfBuildVM>(url, vm);
         }
 
+		#endregion EntityUpdateActionSetting - UpdateNameOnly
+
+
 
         public const string ActionName_HeartBeat = "HeartBeat";
         /// <summary>
@@ -317,9 +334,7 @@ namespace MSBuildExtensionPack.WebApiClient
             var response = await Client.GetAsync(url);
 
             return response;
-        }
-
-
-        #endregion EntityUpdateActionSetting - UpdateNameOnly
+        }   
     }
 }
+

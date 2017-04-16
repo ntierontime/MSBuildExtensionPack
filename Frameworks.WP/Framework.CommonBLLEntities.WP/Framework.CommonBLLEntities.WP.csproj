@@ -98,10 +98,6 @@
       <Project>{4b698fa6-ead4-4c33-8932-e70b12012362}</Project>
       <Name>Framework.Resources.WP</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Framework.Services.WP\Framework.Services.WP.csproj">
-      <Project>{108eaa81-0d48-4ab3-92c1-b1ec636ef4d9}</Project>
-      <Name>Framework.Services.WP</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib.Extensions" />

@@ -61,7 +61,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 			}
 //            else
 //            {
-//                viewModel.StatusMessageOfResult = viewModel.Result.get.GetStatusMessage();
+//                viewModel.StatusMessageOfResult = searchResult.GetStatusMessage();
 //#if DEBUG
 //                viewModel.StatusMessageOfResult = string.Format("{0} {1}", viewModel.StatusMessageOfResult, searchResult.ServerErrorMessage);
 //#endif

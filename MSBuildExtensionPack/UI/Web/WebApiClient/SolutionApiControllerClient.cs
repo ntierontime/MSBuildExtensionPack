@@ -6,7 +6,6 @@ using Framework.EntityContracts;
 using Framework.ViewModels;
 using System.Threading.Tasks;
 using System.Net.Http;
-using Newtonsoft.Json;
 
 namespace MSBuildExtensionPack.WebApiClient
 {
@@ -159,6 +158,7 @@ namespace MSBuildExtensionPack.WebApiClient
         #endregion batch insert, update and delete in an entity collection
 
 
+
         #region Query Methods Of NameValuePair of All per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         public const string ActionName_GetCollectionOfNameValuePairOfAll = "GetCollectionOfNameValuePairOfAll";
@@ -171,7 +171,7 @@ namespace MSBuildExtensionPack.WebApiClient
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfAll(
+        public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfAllAsync(
 			int currentIndex
 			, int pageSize
 			, string queryOrderByExpression
@@ -188,6 +188,9 @@ namespace MSBuildExtensionPack.WebApiClient
 		}
 
         #endregion Query Methods Of NameValuePair of All per value type
+
+
+
 
 
         public const string ActionName_GetSolutionItemVM = "GetSolutionItemVM";
@@ -208,6 +211,9 @@ namespace MSBuildExtensionPack.WebApiClient
 
 
 
+
+
+
             public const string ActionName_GetWPCommonOfSolutionVM = "GetWPCommonOfSolutionVM";
         /// <summary>
         /// Gets the wp common of build log vm.
@@ -216,13 +222,16 @@ namespace MSBuildExtensionPack.WebApiClient
         /// </summary>
         /// <param name="vm">The vm.</param>
         /// <returns></returns>
-        public async Task<MSBuildExtensionPack.ViewModelData.WPCommonOfSolutionVM> GetWPCommonOfSolutionVM(
+        public async Task<MSBuildExtensionPack.ViewModelData.WPCommonOfSolutionVM> GetWPCommonOfSolutionVMAsync(
             MSBuildExtensionPack.ViewModelData.WPCommonOfSolutionVM vm)
         {
             string url = GetHttpRequestUrl(ActionName_GetWPCommonOfSolutionVM);
 
             return await Post<MSBuildExtensionPack.ViewModelData.WPCommonOfSolutionVM>(url, vm);
         }
+
+
+
 
         public const string ActionName_GetWPEntityRelatedOfSolutionVM = "GetWPEntityRelatedOfSolutionVM";
         /// <summary>
@@ -241,6 +250,9 @@ namespace MSBuildExtensionPack.WebApiClient
         }
 
 
+
+
+
         public const string ActionName_HeartBeat = "HeartBeat";
         /// <summary>
         /// Hearts the beat asynchronous.
@@ -256,3 +268,4 @@ namespace MSBuildExtensionPack.WebApiClient
         }   
     }
 }
+

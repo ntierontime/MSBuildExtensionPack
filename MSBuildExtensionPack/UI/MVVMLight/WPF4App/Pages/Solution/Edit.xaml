@@ -6,7 +6,7 @@
         xmlns:cmd="http://www.galasoft.ch/mvvmlight"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
-		xmlns:vm="clr-namespace:MSBuildExtensionPack.ViewModels;assembly=MSBuildExtensionPack.ViewModels"
+		xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels"
 		xmlns:Solution="clr-namespace:MSBuildExtensionPack.WPF4App.UserControls.Solution"
         Title="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntitySolution.Solution_Edit, Source={StaticResource LocalizedStrings}}"
         >
@@ -17,19 +17,19 @@
         </Grid.RowDefinitions>
         <ToolBarTray Grid.Row="0" Style="{StaticResource ToolBarTrayStyle}">
             <ToolBar>
-                <Button     Name="Update" Command="{Binding MSBuildExtensionPack_ViewModels_ItemVMSolution.SaveCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.SaveAlternativeText, Source={StaticResource LocalizedStrings}}">
+                <Button     Name="Update" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution.SaveCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.SaveAlternativeText, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>
                         <iconPacks:PackIconFontAwesome Kind="Check" HorizontalAlignment="Center" />
                         <TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.SaveAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
                     </StackPanel>
                 </Button>
-                <Button     Name="Refresh" Command="{Binding MSBuildExtensionPack_ViewModels_ItemVMSolution.RefreshCurrentItemCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.RefreshAlternativeText, Source={StaticResource LocalizedStrings}}">
+                <Button     Name="Refresh" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution.RefreshCurrentItemCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.RefreshAlternativeText, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>
                         <iconPacks:PackIconFontAwesome Kind="Refresh" HorizontalAlignment="Center" />
                         <TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.RefreshAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
                     </StackPanel>
                 </Button>
-                <Button     Name="Close" Command="{Binding MSBuildExtensionPack_ViewModels_ItemVMSolution.CloseEditViewCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.BackAlternativeText, Source={StaticResource LocalizedStrings}}">
+                <Button     Name="Close" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution.CloseEditViewCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.BackAlternativeText, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>
                         <iconPacks:PackIconEntypo Kind="Back" HorizontalAlignment="Center" />
                         <TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.BackAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>

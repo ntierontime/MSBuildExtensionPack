@@ -60,17 +60,14 @@
     <Compile Include="..\..\Frameworks\Framework.Xaml\BindingUtility.cs">
       <Link>BindingUtility.cs</Link>
     </Compile>
-    <Compile Include="..\..\Frameworks\Framework.Xaml\BooleanToOnOffConverter.cs">
-      <Link>BooleanToOnOffConverter.cs</Link>
+    <Compile Include="..\..\Frameworks\Framework.Xaml\IDispatcherHelperWrapper.cs">
+      <Link>IDispatcherHelperWrapper.cs</Link>
     </Compile>
     <Compile Include="..\..\Frameworks\Framework.Xaml\InfiniteListBox.cs">
       <Link>InfiniteListBox.cs</Link>
     </Compile>
     <Compile Include="..\..\Frameworks\Framework.Xaml\LayoutAwarePage.cs">
       <Link>LayoutAwarePage.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.Xaml\NameValuePairToIntegerConverter.cs">
-      <Link>NameValuePairToIntegerConverter.cs</Link>
     </Compile>
     <Compile Include="..\..\Frameworks\Framework.Xaml\RichTextColumns.cs">
       <Link>RichTextColumns.cs</Link>
@@ -83,9 +80,6 @@
     </Compile>
     <Compile Include="..\..\Frameworks\Framework.Xaml\ViewModelItemBase.cs">
       <Link>ViewModelItemBase.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.Xaml\BooleanNegationConverter.cs">
-      <Link>BooleanNegationConverter.cs</Link>
     </Compile>
     <Compile Include="..\..\Frameworks\Framework.Xaml\MenuTreeItem.cs">
       <Link>MenuTreeItem.cs</Link>

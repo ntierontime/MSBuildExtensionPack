@@ -30,8 +30,8 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}" Grid.Column="0"/>
-            <Button x:Name="searchButton" Style="{StaticResource SearchButtonStyle}" Grid.Column="1" Command="{Binding MSBuildExtensionPack_ViewModels_WPCommonOfBuildLogCollectionVM_Static.SearchCommand, Source={StaticResource Locator}}" />
-            <Button x:Name="addNewButton" Style="{StaticResource AddNewButtonStyle}" Grid.Column="2"  Command="{Binding MSBuildExtensionPack_ViewModels_WPCommonOfBuildLogVM_Static.LaunchCreateViewCommand, Source={StaticResource Locator}}"/>
+            <Button x:Name="searchButton" Style="{StaticResource SearchButtonStyle}" Grid.Column="1" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogCollectionVM_Static.SearchCommand, Source={StaticResource Locator}}" />
+            <Button x:Name="addNewButton" Style="{StaticResource AddNewButtonStyle}" Grid.Column="2"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM_Static.LaunchCreateViewCommand, Source={StaticResource Locator}}"/>
             <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}" Grid.Column="3"/>
         </Grid>
         <VisualStateManager.VisualStateGroups>

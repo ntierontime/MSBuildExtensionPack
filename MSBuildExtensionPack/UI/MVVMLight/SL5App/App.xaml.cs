@@ -30,7 +30,7 @@ namespace MSBuildExtensionPack.SL5App
 
         private void Application_Exit(object sender, EventArgs e)
         {
-            MSBuildExtensionPack.ViewModels.ViewModelLocator.Cleanup();
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.Cleanup();
         }
 
         private void Application_UnhandledException(object sender, ApplicationUnhandledExceptionEventArgs e)

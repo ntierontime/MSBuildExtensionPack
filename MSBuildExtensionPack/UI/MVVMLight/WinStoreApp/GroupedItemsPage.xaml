@@ -9,7 +9,7 @@
     xmlns:i="using:Windows.UI.Interactivity"
     xmlns:wrtb="using:WinRtBehaviors"
     xmlns:w8lnb="using:Win8nl.Behaviors"
-	xmlns:vm="using:MSBuildExtensionPack.ViewModels"
+	xmlns:vm="using:MSBuildExtensionPack.MVVMLightViewModels"
     xmlns:fresx="using:Framework.Resources"
 	xmlns:eresx="using:MSBuildExtensionPack.Resources"
     xmlns:fvm="using:Framework.Xaml"

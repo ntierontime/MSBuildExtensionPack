@@ -7,7 +7,7 @@
            xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
 	       xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras"
 	       xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
-		   xmlns:vm="clr-namespace:MSBuildExtensionPack.ViewModels;assembly=MSBuildExtensionPack.ViewModels.SL"
+		   xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.SL"
 		   mc:Ignorable="d"
 		   xmlns:my="clr-namespace:MSBuildExtensionPack.SL5App.UserControls"
 		   Title="Workspace of Common">
@@ -17,7 +17,7 @@
             <RowDefinition Height="Auto"  />
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Horizontal">
-            <Button Name="Search" Command="{Binding MSBuildExtensionPack_ViewModels_WPCommonOfBuildEventCodeVM_Static.SearchCommand, Source={StaticResource Locator}}" Width="75" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" >
+            <Button Name="Search" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM_Static.SearchCommand, Source={StaticResource Locator}}" Width="75" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" >
 				<StackPanel>
 					<TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.SearchAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
                 </StackPanel>

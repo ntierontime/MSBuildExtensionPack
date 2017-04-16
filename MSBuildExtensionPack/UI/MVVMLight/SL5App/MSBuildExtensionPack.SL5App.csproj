@@ -192,29 +192,25 @@
       <Project>{79dd4d4a-ee86-42b3-aca4-a3ff478cef5b}</Project>
       <Name>Framework.Resources.SL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Frameworks.SL\Framework.WcfClient.SL\Framework.WcfClient.SL.csproj">
-      <Project>{3b2b1c5f-8e65-4985-ac14-2973e07c6a56}</Project>
-      <Name>Framework.WcfClient.SL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\..\Frameworks.SL\Framework.Xaml.SL\Framework.Xaml.SL.csproj">
       <Project>{6d1cefe4-19fd-45c7-bee0-81a01f444a6b}</Project>
       <Name>Framework.Xaml.SL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Shared.SL\ViewModels.SL\MSBuildExtensionPack.ViewModels.SL.csproj">
-      <Project>{15f69eec-2e09-4ff7-8ee1-d7c80804524c}</Project>
-      <Name>MSBuildExtensionPack.ViewModels.SL</Name>
+    <ProjectReference Include="..\Shared.SL\MVVMLightViewModels.SL\MSBuildExtensionPack.MVVMLightViewModels.SL.csproj">
+      <Project>{c41ab179-4308-428e-9231-3cf75527bfad}</Project>
+      <Name>MSBuildExtensionPack.MVVMLightViewModels.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core.SL\Resources.SL\MSBuildExtensionPack.Resources.SL.csproj">
       <Project>{132b0fdb-8be6-4028-8cc8-a691110d6b6f}</Project>
       <Name>MSBuildExtensionPack.Resources.SL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Wcf.SL\WcfClientBLL.SL\MSBuildExtensionPack.WcfClientBLL.SL.csproj">
-      <Project>{9281b69a-dbbe-4013-b51d-5244d9bb4c75}</Project>
-      <Name>MSBuildExtensionPack.WcfClientBLL.SL</Name>
+    <ProjectReference Include="..\..\..\Core.SL\ViewModelData.SL\MSBuildExtensionPack.ViewModelData.SL.csproj">
+      <Project>{e6e09401-a51c-41da-8450-1b446c34667f}</Project>
+      <Name>MSBuildExtensionPack.ViewModelData.SL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Core.SL\WcfContracts.SL\MSBuildExtensionPack.WcfContracts.SL.csproj">
-      <Project>{f3d1c0f2-1edf-4191-bb33-912ea0dec2a1}</Project>
-      <Name>MSBuildExtensionPack.WcfContracts.SL</Name>
+    <ProjectReference Include="..\..\Web.SL\WebApiClient.SL\MSBuildExtensionPack.WebApiClient.SL.csproj">
+      <Project>{59fbe7b6-830b-4387-8eb6-b1681572d116}</Project>
+      <Name>MSBuildExtensionPack.WebApiClient.SL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
