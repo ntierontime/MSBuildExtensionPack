@@ -147,7 +147,7 @@ namespace Framework.Xaml
 
         public RelayCommand<TItem> LaunchDetailsViewCommand { get; protected set; }
 
-        protected void LaunchDetailsView(TItem o)
+        protected virtual void LaunchDetailsView(TItem o)
         {
             string viewName = ViewName_Details;
             Framework.UIAction uiAction = Framework.UIAction.ViewDetails;
