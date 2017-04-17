@@ -294,7 +294,7 @@ namespace MSBuildExtensionPack.WebApiClient
 
             parameters.Add("currentIndex", currentIndex.ToString());
             parameters.Add("pageSize", pageSize.ToString());
-            parameters.Add("queryOrderByExpression", queryOrderByExpression.ToString());
+            parameters.Add("queryOrderByExpression", queryOrderByExpression);
 
 			string url = GetHttpRequestUrl(ActionName_GetCollectionOfNameValuePairOfAll, parameters);
             return await Get<Framework.NameValueCollection>(url);
@@ -310,7 +310,7 @@ namespace MSBuildExtensionPack.WebApiClient
 
             parameters.Add("currentIndex", currentIndex.ToString());
             parameters.Add("pageSize", pageSize.ToString());
-            parameters.Add("queryOrderByExpression", queryOrderByExpression.ToString());
+            parameters.Add("queryOrderByExpression", queryOrderByExpression);
 
             string url = GetHttpRequestUrl(ActionName_GetCollectionOfNameValuePairOfAll, parameters);
 
@@ -354,7 +354,7 @@ namespace MSBuildExtensionPack.WebApiClient
 			parameters.Add("isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly", isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly.ToString()); parameters.Add("valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly", valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly.ToString());
             parameters.Add("currentIndex", currentIndex.ToString());
             parameters.Add("pageSize", pageSize.ToString());
-            parameters.Add("queryOrderByExpression", queryOrderByExpression.ToString());
+            parameters.Add("queryOrderByExpression", queryOrderByExpression);
 
 			string url = GetHttpRequestUrl(ActionName_GetCollectionOfNameValuePairOfByFKOnly, parameters);
             return await Get<Framework.NameValueCollection>(url);
@@ -375,7 +375,7 @@ namespace MSBuildExtensionPack.WebApiClient
             parameters.Add("isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly", isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly.ToString()); parameters.Add("valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly", valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly.ToString());
             parameters.Add("currentIndex", currentIndex.ToString());
             parameters.Add("pageSize", pageSize.ToString());
-            parameters.Add("queryOrderByExpression", queryOrderByExpression.ToString());
+            parameters.Add("queryOrderByExpression", queryOrderByExpression);
 
             string url = GetHttpRequestUrl(ActionName_GetCollectionOfNameValuePairOfByFKOnly, parameters);
 

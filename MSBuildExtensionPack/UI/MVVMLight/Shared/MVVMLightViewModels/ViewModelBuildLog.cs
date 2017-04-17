@@ -112,7 +112,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
                 var client = new MSBuildExtensionPack.WebApiClient.BuildLogApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
 
-                var result = Task.Run(() => client.GetWPCommonOfBuildLogVMSync(vmData)).Result;
+                var result = Task.Run(() => client.GetWPCommonOfBuildLogVMAsync(vmData)).Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
 

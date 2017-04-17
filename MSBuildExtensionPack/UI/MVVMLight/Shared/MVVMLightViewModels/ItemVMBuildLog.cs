@@ -6,6 +6,7 @@ using System.Text;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
+using System.Threading.Tasks;
 
 namespace MSBuildExtensionPack.MVVMLightViewModels
 {
@@ -53,7 +54,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             {
                 var client = new MSBuildExtensionPack.WebApiClient.BuildLogApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
 
-                var resultVMData = client.InsertEntitySync(MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(this.Item));
+                var resultVMData = Task.Run(() => client.InsertEntityAsync(MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(this.Item))).Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
@@ -82,7 +83,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             {
                 var client = new MSBuildExtensionPack.WebApiClient.BuildLogApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
 
-                var resultVMData = client.DeleteEntitySync(MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(this.Item));
+                var resultVMData = Task.Run(() => client.DeleteEntitySync(MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(this.Item))).Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
@@ -127,7 +128,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
                 var client = new MSBuildExtensionPack.WebApiClient.BuildLogApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
 
-                var resultVMData = client.UpdateEntitySync(MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(this.Item));
+                var resultVMData = Task.Run(() => client.UpdateEntitySync(MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(this.Item))).Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
@@ -171,7 +172,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             {
                 var client = new MSBuildExtensionPack.WebApiClient.BuildLogApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
 
-                var resultVMData = client.GetBuildLogItemVMSync(identifier.Id);
+                var resultVMData = Task.Run(() => client.GetBuildLogItemVMSync(identifier.Id)).Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()

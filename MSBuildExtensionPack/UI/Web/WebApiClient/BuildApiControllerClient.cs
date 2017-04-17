@@ -181,7 +181,7 @@ namespace MSBuildExtensionPack.WebApiClient
 
             parameters.Add("currentIndex", currentIndex.ToString());
             parameters.Add("pageSize", pageSize.ToString());
-            parameters.Add("queryOrderByExpression", queryOrderByExpression.ToString());
+            parameters.Add("queryOrderByExpression", queryOrderByExpression);
 
 			string url = GetHttpRequestUrl(ActionName_GetCollectionOfNameValuePairOfAll, parameters);
             return await Get<Framework.NameValueCollection>(url);
@@ -216,7 +216,7 @@ namespace MSBuildExtensionPack.WebApiClient
 			parameters.Add("isToCompareIdByFKOnlyOfSolution_1OfByFKOnly", isToCompareIdByFKOnlyOfSolution_1OfByFKOnly.ToString()); parameters.Add("valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly", valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly.ToString());
             parameters.Add("currentIndex", currentIndex.ToString());
             parameters.Add("pageSize", pageSize.ToString());
-            parameters.Add("queryOrderByExpression", queryOrderByExpression.ToString());
+            parameters.Add("queryOrderByExpression", queryOrderByExpression);
 
 			string url = GetHttpRequestUrl(ActionName_GetCollectionOfNameValuePairOfByFKOnly, parameters);
             return await Get<Framework.NameValueCollection>(url);

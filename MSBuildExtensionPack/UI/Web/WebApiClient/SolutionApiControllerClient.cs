@@ -181,7 +181,7 @@ namespace MSBuildExtensionPack.WebApiClient
 
             parameters.Add("currentIndex", currentIndex.ToString());
             parameters.Add("pageSize", pageSize.ToString());
-            parameters.Add("queryOrderByExpression", queryOrderByExpression.ToString());
+            parameters.Add("queryOrderByExpression", queryOrderByExpression);
 
 			string url = GetHttpRequestUrl(ActionName_GetCollectionOfNameValuePairOfAll, parameters);
             return await Get<Framework.NameValueCollection>(url);

@@ -35,7 +35,7 @@ namespace Framework.ViewModels
             List<string> parametersInList = new List<string>();
             foreach (var kvPair in parameters)
             {
-                parametersInList.Add(string.Format("{0}={1}"));
+                parametersInList.Add(string.Format("{0}={1}", kvPair.Key, kvPair.Value));
             }
             string parametersInString = String.Join("&", parametersInList);
 
