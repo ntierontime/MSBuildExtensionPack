@@ -59,7 +59,7 @@
                         <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.GetDropDownContentsOfSolution_1Command, Source={StaticResource Locator}}" PassEventArgsToCommand="True"></cmd:EventToCommand>
                     </i:EventTrigger>
                     <i:EventTrigger EventName="SelectionChanged">
-                        <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.GetDropDownContentsOfSolution_1SelectionChangedCommand, Source={StaticResource Locator}}" PassEventArgsToCommand="false" CommandParameter="{}"></cmd:EventToCommand>
+                        <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.GetDropDownContentsOfSolution_1SelectionChangedCommand, Source={StaticResource Locator}}" PassEventArgsToCommand="false" CommandParameter="{Binding ElementName=ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon, Path=SelectedItem}"></cmd:EventToCommand>
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
 </ComboBox>
