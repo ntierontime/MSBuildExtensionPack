@@ -74,7 +74,28 @@
 </i:Interaction.Triggers>-->
             <ListView.View>
 <GridView ColumnHeaderToolTip="BuildLog" AllowsColumnReorder="true">
-  					<GridViewColumn Width="140">
+                    <GridViewColumn>
+                        <GridViewColumnHeader/>
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <WrapPanel>
+                                    <Button     Name="Edit" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog.LaunchEditViewCommand, Source={StaticResource Locator}}" ToolTip="{Binding Path=Framework_Resources_UIStringResource.EditAlternativeText, Source={StaticResource LocalizedStrings}}" CommandParameter="{Binding}" >
+                                        <StackPanel>
+                                            <iconPacks:PackIconModern Kind="Edit" />
+                                            <!--<TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.EditAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>-->
+                                        </StackPanel>
+                                    </Button>
+                                    <Button     Name="Details" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog.LaunchDetailsViewCommand, Source={StaticResource Locator}}" ToolTip="{Binding Path=Framework_Resources_UIStringResource.DetailsAlternativeText, Source={StaticResource LocalizedStrings}}" CommandParameter="{Binding}" >
+                                        <StackPanel>
+                                            <iconPacks:PackIconOcticons Kind="Briefcase" />
+                                            <!--<TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.DetailsAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>-->
+                                        </StackPanel>
+                                    </Button>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Width="140">
 						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Build_1_Name, Source={StaticResource LocalizedStrings}}" Tag="Build_1_Name" />
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
