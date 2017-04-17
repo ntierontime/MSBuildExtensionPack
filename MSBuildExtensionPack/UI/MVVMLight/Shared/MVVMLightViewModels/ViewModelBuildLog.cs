@@ -1,8 +1,9 @@
 using System;
 using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.CommandWpf;
 using GalaSoft.MvvmLight.Messaging;
+using System.Threading.Tasks;
 
 namespace MSBuildExtensionPack.MVVMLightViewModels
 {
@@ -19,7 +20,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
     /// <para>
     /// See http://www.galasoft.ch/mvvm/getstarted
     /// </para>
-    /// </summary>
+    /// </summary>WPCommonOfBuildLogVM
     public class WPCommonOfBuildLogVM
         : Framework.Xaml.ViewModelBaseWithResultAndUIElement<MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon, MSBuildExtensionPack.DataSourceEntities.BuildLogCollection, MSBuildExtensionPack.DataSourceEntities.BuildLog, MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection, MSBuildExtensionPack.DataSourceEntities.BuildLog.Default>
     {
@@ -111,8 +112,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
                 var client = new MSBuildExtensionPack.WebApiClient.BuildLogApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
 
-                var resultVMData = client.GetWPCommonOfBuildLogVMAsync(vmData);
-                var result = resultVMData.Result;
+                var result = Task.Run(() => client.GetWPCommonOfBuildLogVMSync(vmData)).Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
 
@@ -138,9 +138,9 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                             }
                         }
 
-                        this.QueryPagingSetting = resultVMData.Result.QueryPagingSetting;
+                        this.QueryPagingSetting = result.QueryPagingSetting;
                         this.OriginalQueryOrderBySettingCollecionInString = this.QueryOrderBySettingCollecionInString;
-                        this.QueryOrderBySettingCollection = resultVMData.Result.QueryOrderBySettingCollection;
+                        this.QueryOrderBySettingCollection = result.QueryOrderBySettingCollection;
                     }
                     else
                     {
@@ -155,6 +155,11 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         }
 
         #endregion Implement abstract Search
+
+        public void SearchForUnitTest()
+        {
+            this.Search();
+        }
 
         public override Framework.NameValueCollection GetDefaultListOfQueryOrderBySettingCollecionInString()
         {

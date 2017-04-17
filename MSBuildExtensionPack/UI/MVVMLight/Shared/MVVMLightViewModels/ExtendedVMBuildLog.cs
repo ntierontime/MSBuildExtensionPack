@@ -105,17 +105,19 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             {
                 var client = new MSBuildExtensionPack.WebApiClient.BuildEventCodeApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
 
-                var resultVMData = client.GetCollectionOfNameValuePairOfAllAsync(0, 0, null);
+                var result = Task.Run(() => client.GetCollectionOfNameValuePairOfAllAsync(0, 0, null)).Result;
 
-                var result = resultVMData.Result;
+                //var resultVMData = client.GetCollectionOfNameValuePairOfAllAsync(0, 0, null);
+
+                //var result = resultVMData.Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
                 {
                     this.DropDownContentsOfBuildEventCode_1.Clear();
-                    if (resultVMData.Result != null)
+                    if (result != null)
                     {
-                        foreach (var item in resultVMData.Result)
+                        foreach (var item in result)
                         {
                             int value;
                             if (int.TryParse(item.Value, out value))
@@ -182,18 +184,18 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             try
             {
                 var client = new MSBuildExtensionPack.WebApiClient.SolutionApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
+                var result = Task.Run(() => client.GetCollectionOfNameValuePairOfAllAsync(0, 0, null)).Result;
+                //var resultVMData = client.GetCollectionOfNameValuePairOfAllAsync(0, 0, null);
 
-                var resultVMData = client.GetCollectionOfNameValuePairOfAllAsync(0, 0, null);
-
-                var result = resultVMData.Result;
+                //var result = resultVMData.Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
                 {
                     this.DropDownContentsOfSolution_1.Clear();
-                    if (resultVMData.Result != null)
+                    if (result != null)
                     {
-                        foreach (var item in resultVMData.Result)
+                        foreach (var item in result)
                         {
                             int value;
                             if (int.TryParse(item.Value, out value))
@@ -251,18 +253,18 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             try
             {
                 var client = new MSBuildExtensionPack.WebApiClient.BuildApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
+                var result = Task.Run(() => client.GetCollectionOfNameValuePairOfByFKOnlyAsync(true, input.Value, -1, -1, null)).Result;
+                //var resultVMData = client.GetCollectionOfNameValuePairOfByFKOnlyAsync(true, input.Value, -1, -1, null);
 
-                var resultVMData = client.GetCollectionOfNameValuePairOfByFKOnlyAsync(true, input.Value, -1, -1, null);
-
-                var result = resultVMData.Result;
+                //var result = resultVMData.Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
                 {
                     this.DropDownContentsOfBuild_1.Clear();
-                    if (resultVMData.Result != null)
+                    if (result != null)
                     {
-                        foreach (var item in resultVMData.Result)
+                        foreach (var item in result)
                         {
                             int value;
                             if (int.TryParse(item.Value, out value))
