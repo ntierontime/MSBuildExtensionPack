@@ -66,7 +66,7 @@
 <CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon" Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="4" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.IsToCompare}" />
             <ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfBuild_1OfCommon" ToolTip="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuild.Build, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="4" ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfBuild_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.ValueToCompare}" />
         </Grid>
-        <ListView Name="V_Common" Width="600" Margin="12,12,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollectionDefault}" SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog.Item, Mode=TwoWay, Source={StaticResource Locator}}">
+        <ListView Name="V_Common" Width="600" Margin="12,12,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollectionDefault}">
   <!--<i:Interaction.Triggers>
   <i:EventTrigger EventName="SelectionChanged">
                     <cmd:EventToCommand Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog.SelectionChangedCommand, Source={StaticResource Locator}}" PassEventArgsToCommand="True" />
@@ -136,8 +136,10 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Grid>
-									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Solution_1_Name}" ToolTip="" />
-									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Solution_1_Name}" ToolTip="" />
+                                    <Button Style="{StaticResource LinkButton}" Content="{Binding Path=Solution_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.LaunchSolution_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+
+                                    <!--<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Solution_1_Name}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Solution_1_Name}" ToolTip="" />-->
 									<!-- You can un-comment to enable editing in list -->
 									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Solution_1_Name}" />-->
                                 </Grid>
@@ -148,8 +150,9 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Grid>
-									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=BuildEventCode_1_Name}" ToolTip="" />
-									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=BuildEventCode_1_Name}" ToolTip="" />
+                                    <Button Style="{StaticResource LinkButton}" Content="{Binding Path=BuildEventCode_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.LaunchBuildEventCode_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+                                    <!--<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=BuildEventCode_1_Name}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=BuildEventCode_1_Name}" ToolTip="" />-->
 									<!-- You can un-comment to enable editing in list -->
 									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=BuildEventCode_1_Name}" />-->
                                 </Grid>
@@ -172,8 +175,9 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Grid>
-									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=BuildEventCodeId}" ToolTip="" />
-									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=BuildEventCodeId}" ToolTip="" />
+                                    <Button Style="{StaticResource LinkButton}" Content="{Binding Path=Solution_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.LaunchBuildEventCode_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+                                    <!--<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=BuildEventCodeId}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=BuildEventCodeId}" ToolTip="" />-->
 									<!-- You can un-comment to enable editing in list -->
 									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=BuildEventCodeId}" />-->
                                 </Grid>
