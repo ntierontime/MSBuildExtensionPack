@@ -8,7 +8,7 @@
         xmlns:cmd="http://www.galasoft.ch/mvvmlight"
 		xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels"
 		xmlns:my="clr-namespace:MSBuildExtensionPack.WPF4App.UserControls"
-        Title="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerApp.Title, Mode=OneWay, Source={StaticResource LocalizedStrings}}"
+        Title="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerApp.Application_Title, Mode=OneWay, Source={StaticResource LocalizedStrings}}"
 		WindowState="Normal"
         DataContext="{Binding Main, Source={StaticResource Locator}}">
     <Window.Resources>

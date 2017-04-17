@@ -23,7 +23,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Grid.Column="0" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM, Source={StaticResource Locator}}" HorizontalAlignment="Stretch" Height="{Binding ElementName=LayoutRoot, Path=ActualHeight}">
+        <Grid Grid.Row="0" Grid.Column="0" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM, Source={StaticResource Locator}}" HorizontalAlignment="Stretch">
 <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="160" />
                 <ColumnDefinition Width="*" />
@@ -45,33 +45,34 @@
 <DatePicker Name="ID_DatePicker_Search_upperBoundEventTimeCommonOftOfCommon" ToolTip="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundEventTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Center" SelectedDate="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.UpperBound}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" />
 </WrapPanel>
 <CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfBuildEventCode_1OfCommon" Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuildEventCode_1OfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuildEventCode_1OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuildEventCode_1.IsToCompare}" />
-<ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfBuildEventCode_1OfCommon" ToolTip="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildEventCode.BuildLog, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="2" ItemsSource="{Binding Path=DropDownContentsOfBuildEventCode_1}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuildEventCode_1.ValueToCompare}">
+            <ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfBuildEventCode_1OfCommon" ToolTip="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildEventCode.BuildEventCode, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="2" ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfBuildEventCode_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuildEventCode_1.ValueToCompare}">
                   <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Loaded">
-                        <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=GetDropDownContentsOfBuildEventCode_1Command}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+                        <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.GetDropDownContentsOfBuildEventCode_1Command, Source={StaticResource Locator}}" PassEventArgsToCommand="True"></cmd:EventToCommand>
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
 </ComboBox>
 <CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon" Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="3" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.IsToCompare}" />
-<ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon" ToolTip="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntitySolution.Build, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="3" ItemsSource="{Binding Path=DropDownContentsOfSolution_1}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.ValueToCompare}">
+            <ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon" ToolTip="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntitySolution.Solution, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="3" ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfSolution_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.ValueToCompare}">
                   <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Loaded">
-                        <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=GetDropDownContentsOfSolution_1Command}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+                        <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.GetDropDownContentsOfSolution_1Command, Source={StaticResource Locator}}" PassEventArgsToCommand="True"></cmd:EventToCommand>
                     </i:EventTrigger>
                     <i:EventTrigger EventName="SelectionChanged">
-                        <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=GetDropDownContentsOfSolution_1SelectionChangedCommand}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+                        <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.GetDropDownContentsOfSolution_1SelectionChangedCommand, Source={StaticResource Locator}}" PassEventArgsToCommand="True"></cmd:EventToCommand>
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
 </ComboBox>
 <CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon" Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="4" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.IsToCompare}" />
-<ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfBuild_1OfCommon" ToolTip="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuild.BuildLog, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="4" ItemsSource="{Binding Path=DropDownContentsOfBuild_1}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.ValueToCompare}" />
+            <ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfBuild_1OfCommon" ToolTip="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuild.Build, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="4" ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfBuild_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.ValueToCompare}" />
         </Grid>
-<ListView Name="V_Common" Width="600" Margin="12,12,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollectionDefault}" SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM.CurrentDefault, Mode=TwoWay, Source={StaticResource Locator}}">
-  <i:Interaction.Triggers>
+        <ListView Name="V_Common" Width="600" Margin="12,12,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollectionDefault}" SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog.Item, Mode=TwoWay, Source={StaticResource Locator}}">
+  <!--<i:Interaction.Triggers>
   <i:EventTrigger EventName="SelectionChanged">
-    <cmd:EventToCommand Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM.SelectionChangedCommand, Source={StaticResource Locator}}" PassEventArgsToCommand="True" />
+                    <cmd:EventToCommand Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog.SelectionChangedCommand, Source={StaticResource Locator}}" PassEventArgsToCommand="True" />
   </i:EventTrigger>
-</i:Interaction.Triggers>            <ListView.View>
+</i:Interaction.Triggers>-->
+            <ListView.View>
 <GridView ColumnHeaderToolTip="BuildLog" AllowsColumnReorder="true">
   					<GridViewColumn Width="140">
 						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Build_1_Name, Source={StaticResource LocalizedStrings}}" Tag="Build_1_Name" />

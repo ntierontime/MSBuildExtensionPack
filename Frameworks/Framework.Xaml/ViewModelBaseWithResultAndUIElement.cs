@@ -493,31 +493,9 @@ namespace Framework.Xaml
 
         #region not implements and not used
 
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfResult
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfResult { get; set; }
 
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public string StatusMessageOfResult
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public string StatusMessageOfResult { get; set; }
 
         #endregion not implements and not used
     }
