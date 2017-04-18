@@ -283,7 +283,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         protected void LaunchBuild_1DetailsView(MSBuildExtensionPack.DataSourceEntities.BuildLog.Default item)
         {
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild_Static.LoadItem(new MSBuildExtensionPack.DataSourceEntities.BuildIdentifier(item.BuildId));
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild_Static.LaunchDetailsViewCommand.Execute(null);
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild_Static.LaunchDetailsViewCommand.Execute(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild_Static.Item);
         }
 
 
@@ -292,7 +292,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         protected void LaunchSolution_1DetailsView(MSBuildExtensionPack.DataSourceEntities.BuildLog.Default item)
         {
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution_Static.LoadItem(new MSBuildExtensionPack.DataSourceEntities.SolutionIdentifier(item.Solution_1Id));
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution_Static.LaunchDetailsViewCommand.Execute(null);
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution_Static.LaunchDetailsViewCommand.Execute(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution_Static.Item);
         }
 
 
@@ -301,7 +301,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         protected void LaunchBuildEventCode_1DetailsView(MSBuildExtensionPack.DataSourceEntities.BuildLog.Default item)
         {
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode_Static.LoadItem(new MSBuildExtensionPack.DataSourceEntities.BuildEventCodeIdentifier(item.BuildEventCodeId));
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode_Static.LaunchDetailsViewCommand.Execute(null);
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode_Static.LaunchDetailsViewCommand.Execute(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode_Static.Item);
         }
 
 

@@ -6,6 +6,7 @@ using System.Text;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
+using System.Threading.Tasks;
 
 namespace MSBuildExtensionPack.MVVMLightViewModels
 {
@@ -164,16 +165,22 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             try
             {
                 var client = new MSBuildExtensionPack.WebApiClient.SolutionApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-
-                var resultVMData = client.GetSolutionItemVMAsync(identifier.Id);
-                var result = resultVMData.Result;
+                var result = Task.Run(() => client.GetSolutionItemVMAsync(identifier.Id)).Result;
+                this.StatusOfResult = result.StatusOfResult;
+                //this.StatusMessageOfResult = result.StatusMessageOfResult;
+                //if (result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK || result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
+                //{
+                //    this.Item = result.Item;
+                //    if (!this.SuppressMVVMLightEventToCommandMessage)
+                //        Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
+                //}
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
                 {
                     this.StatusOfResult = result.StatusOfResult;
                     this.StatusMessageOfResult = result.StatusMessageOfResult;
-                    if (result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+                    if (result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK || result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
                     {
                         this.Item = result.Item;
                         if (!this.SuppressMVVMLightEventToCommandMessage)
