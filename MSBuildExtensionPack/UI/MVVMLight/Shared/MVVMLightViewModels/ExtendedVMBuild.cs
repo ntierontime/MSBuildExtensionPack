@@ -93,18 +93,17 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             try
             {
                 var client = new MSBuildExtensionPack.WebApiClient.SolutionApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-
-                var resultVMData = client.GetCollectionOfNameValuePairOfAllAsync(0, 0, null);
-
-                var result = resultVMData.Result;
+                var result = Task.Run(() => client.GetCollectionOfNameValuePairOfAllAsync(-1, -1, null)).Result;
+                //var resultVMData = client.GetCollectionOfNameValuePairOfAllAsync(0, 0, null);
+                //var result = resultVMData.Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
                 {
                     this.DropDownContentsOfSolution_1.Clear();
-                    if (resultVMData.Result != null)
+                    if (result != null)
                     {
-                        foreach (var item in resultVMData.Result)
+                        foreach (var item in result)
                         {
                             int value;
                             if (int.TryParse(item.Value, out value))

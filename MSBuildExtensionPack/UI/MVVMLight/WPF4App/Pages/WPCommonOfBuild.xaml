@@ -88,6 +88,6 @@
                 </ComboBox>
             </ToolBar>
         </ToolBarTray>
-<my:UCCommonOfBuild x:Name="UCCommonOfBuild1" Grid.Row="1" HorizontalAlignment="Stretch" Height="{Binding ElementName=LayoutRoot, Path=ActualHeight}" />
+<my:UCCommonOfBuild x:Name="UCCommonOfBuild1" Grid.Row="1" HorizontalAlignment="Stretch" />
 	</Grid>
 </Page>

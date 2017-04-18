@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.Http;
 using Framework.EntityContracts;
 
-namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers.ApiControllers
+namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
 {
     /// <summary>
 
@@ -352,16 +352,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers.ApiContro
         #endregion EntityUpdateActionSetting - UpdateNameOnlyVM
 
 
-        /// <summary>
-        /// Gets entity related view model of MSBuildExtensionPack.Build: HearBeat.
-        /// http://[host]/api/BuildApi/HearBeat?
-        /// </summary>
-        /// <returns></returns>
-        [HttpGet, ActionName("HeartBeat")]
-        public bool HeartBeat()
-        {
-            return true;
-        }
+
     }
 }
 

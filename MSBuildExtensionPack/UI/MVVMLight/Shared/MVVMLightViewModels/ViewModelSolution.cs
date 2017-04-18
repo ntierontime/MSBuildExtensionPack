@@ -110,9 +110,10 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 vmData.QueryOrderBySettingCollection = this.QueryOrderBySettingCollection;
 
                 var client = new MSBuildExtensionPack.WebApiClient.SolutionApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
+				var result = Task.Run(() => client.GetWPCommonOfSolutionVMAsync(vmData)).Result;
 
-                var resultVMData = client.GetWPCommonOfSolutionVMAsync(vmData);
-                var result = resultVMData.Result;
+                //var resultVMData = client.GetWPCommonOfSolutionVMAsync(vmData);
+                //var result = resultVMData.Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
 
@@ -138,9 +139,9 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                             }
                         }
 
-                        this.QueryPagingSetting = resultVMData.Result.QueryPagingSetting;
+                        this.QueryPagingSetting = result.QueryPagingSetting;
                         this.OriginalQueryOrderBySettingCollecionInString = this.QueryOrderBySettingCollecionInString;
-                        this.QueryOrderBySettingCollection = resultVMData.Result.QueryOrderBySettingCollection;
+                        this.QueryOrderBySettingCollection = result.QueryOrderBySettingCollection;
                     }
                     else
                     {

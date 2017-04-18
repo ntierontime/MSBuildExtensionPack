@@ -62,6 +62,9 @@
     <Compile Include="..\..\Frameworks\Framework\DataStreamServiceResult.cs">
       <Link>DataStreamServiceResult.cs</Link>
     </Compile>
+    <Compile Include="..\..\Frameworks\Framework\IDataStreamServiceProviderBase.cs">
+      <Link>IDataStreamServiceProviderBase.cs</Link>
+    </Compile>
     <Compile Include="..\..\Frameworks\Framework\Models\MenuTreeItem.cs">
       <Link>Models\MenuTreeItem.cs</Link>
     </Compile>

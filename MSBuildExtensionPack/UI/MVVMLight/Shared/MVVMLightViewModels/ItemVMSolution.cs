@@ -52,9 +52,10 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             try
             {
                 var client = new MSBuildExtensionPack.WebApiClient.SolutionApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
+				var result = Task.Run(() => client.InsertEntityAsync(MSBuildExtensionPack.EntityContracts.ISolutionHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution, MSBuildExtensionPack.DataSourceEntities.Solution>(this.Item))).Result;
 
-                var resultVMData = client.InsertEntityAsync(MSBuildExtensionPack.EntityContracts.ISolutionHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution, MSBuildExtensionPack.DataSourceEntities.Solution>(this.Item));
-                var result = resultVMData.Result;
+                //var resultVMData = client.InsertEntityAsync(MSBuildExtensionPack.EntityContracts.ISolutionHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution, MSBuildExtensionPack.DataSourceEntities.Solution>(this.Item));
+                //var result = resultVMData.Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
@@ -82,9 +83,10 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             try
             {
                 var client = new MSBuildExtensionPack.WebApiClient.SolutionApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
+				var result = Task.Run(() => client.DeleteEntityAsync(MSBuildExtensionPack.EntityContracts.ISolutionHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution, MSBuildExtensionPack.DataSourceEntities.Solution>(this.Item))).Result;
 
-                var resultVMData = client.DeleteEntityAsync(MSBuildExtensionPack.EntityContracts.ISolutionHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution, MSBuildExtensionPack.DataSourceEntities.Solution>(this.Item));
-                var result = resultVMData.Result;
+                //var resultVMData = client.DeleteEntityAsync(MSBuildExtensionPack.EntityContracts.ISolutionHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution, MSBuildExtensionPack.DataSourceEntities.Solution>(this.Item));
+                //var result = resultVMData.Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
@@ -119,9 +121,10 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
 
                 var client = new MSBuildExtensionPack.WebApiClient.SolutionApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
+				var result = Task.Run(() => client.UpdateEntityAsync(MSBuildExtensionPack.EntityContracts.ISolutionHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution, MSBuildExtensionPack.DataSourceEntities.Solution>(this.Item))).Result;
 
-                var resultVMData = client.UpdateEntityAsync(MSBuildExtensionPack.EntityContracts.ISolutionHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution, MSBuildExtensionPack.DataSourceEntities.Solution>(this.Item));
-                var result = resultVMData.Result;
+                //var resultVMData = client.UpdateEntityAsync(MSBuildExtensionPack.EntityContracts.ISolutionHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution, MSBuildExtensionPack.DataSourceEntities.Solution>(this.Item));
+                //var result = resultVMData.Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
@@ -164,9 +167,10 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             try
             {
                 var client = new MSBuildExtensionPack.WebApiClient.SolutionApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
+				var result = Task.Run(() => client.GetSolutionItemVMAsync(identifier.Id)).Result;
 
-                var resultVMData = client.GetSolutionItemVMAsync(identifier.Id);
-                var result = resultVMData.Result;
+                //var resultVMData = client.GetSolutionItemVMAsync(identifier.Id);
+                //var result = resultVMData.Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
@@ -185,6 +189,15 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             {
                 Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
             }
+        }
+
+        protected override void LaunchDetailsView(MSBuildExtensionPack.DataSourceEntities.Solution o)
+        {
+            base.LaunchDetailsView(o);
+
+
+
+
         }
 
         protected override void LaunchEditView(MSBuildExtensionPack.DataSourceEntities.Solution o)

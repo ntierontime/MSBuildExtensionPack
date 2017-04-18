@@ -107,7 +107,7 @@ namespace Framework.CommonBLLEntities
         public static void MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<T, TList>(
             Framework.DataSourceEntities.DataAccessLayerMessageBase<TList> from, BusinessLogicLayerResponseMessageBase<TList> to
             , Framework.DataServiceTypes dataServiceType
-            , Framework.Services.IDataStreamServiceProviderBase<TList, T> dataStreamServiceProvider
+            , Framework.IDataStreamServiceProviderBase<TList, T> dataStreamServiceProvider
             )
             where TList : List<T>, new()
             where T : class, new()
@@ -172,7 +172,7 @@ namespace Framework.CommonBLLEntities
         public static void MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<T, TList>(
             Framework.DataSourceEntities.DataAccessLayerMessageBase<T> from, BusinessLogicLayerResponseMessageBase<TList> to
 			, Framework.DataServiceTypes dataServiceType
-            , Framework.Services.IDataStreamServiceProviderBase<TList, T> dataStreamServiceProvider)
+            , Framework.IDataStreamServiceProviderBase<TList, T> dataStreamServiceProvider)
             where TList: List<T>, new()
             where T : class, new()
         {

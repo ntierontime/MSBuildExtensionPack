@@ -1,9 +1,8 @@
 using System;
 using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.CommandWpf;
+using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
-using System.Threading.Tasks;
 
 namespace MSBuildExtensionPack.MVVMLightViewModels
 {
@@ -20,7 +19,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
     /// <para>
     /// See http://www.galasoft.ch/mvvm/getstarted
     /// </para>
-    /// </summary>WPCommonOfBuildLogVM
+    /// </summary>
     public class WPCommonOfBuildLogVM
         : Framework.Xaml.ViewModelBaseWithResultAndUIElement<MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon, MSBuildExtensionPack.DataSourceEntities.BuildLogCollection, MSBuildExtensionPack.DataSourceEntities.BuildLog, MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection, MSBuildExtensionPack.DataSourceEntities.BuildLog.Default>
     {
@@ -111,8 +110,10 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 vmData.QueryOrderBySettingCollection = this.QueryOrderBySettingCollection;
 
                 var client = new MSBuildExtensionPack.WebApiClient.BuildLogApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
+				var result = Task.Run(() => client.GetWPCommonOfBuildLogVMAsync(vmData)).Result;
 
-                var result = Task.Run(() => client.GetWPCommonOfBuildLogVMAsync(vmData)).Result;
+                //var resultVMData = client.GetWPCommonOfBuildLogVMAsync(vmData);
+                //var result = resultVMData.Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
 
@@ -155,11 +156,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         }
 
         #endregion Implement abstract Search
-
-        public void SearchForUnitTest()
-        {
-            this.Search();
-        }
 
         public override Framework.NameValueCollection GetDefaultListOfQueryOrderBySettingCollecionInString()
         {

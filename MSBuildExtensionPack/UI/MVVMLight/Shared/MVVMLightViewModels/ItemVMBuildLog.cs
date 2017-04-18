@@ -6,8 +6,6 @@ using System.Text;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
-using System.Threading.Tasks;
-using MSBuildExtensionPack.DataSourceEntities;
 
 namespace MSBuildExtensionPack.MVVMLightViewModels
 {
@@ -54,13 +52,15 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             try
             {
                 var client = new MSBuildExtensionPack.WebApiClient.BuildLogApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
+				var result = Task.Run(() => client.InsertEntityAsync(MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(this.Item))).Result;
 
-                var resultVMData = Task.Run(() => client.InsertEntityAsync(MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(this.Item))).Result;
+                //var resultVMData = client.InsertEntityAsync(MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(this.Item));
+                //var result = resultVMData.Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
                 {
-                    if (resultVMData.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+                    if (result.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
                     {
                         if (!this.SuppressMVVMLightEventToCommandMessage)
                             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
@@ -83,13 +83,15 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             try
             {
                 var client = new MSBuildExtensionPack.WebApiClient.BuildLogApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
+				var result = Task.Run(() => client.DeleteEntityAsync(MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(this.Item))).Result;
 
-                var resultVMData = Task.Run(() => client.DeleteEntitySync(MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(this.Item))).Result;
+                //var resultVMData = client.DeleteEntityAsync(MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(this.Item));
+                //var result = resultVMData.Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
                 {
-                    if (resultVMData.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+                    if (result.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
                     {
                         if (!this.SuppressMVVMLightEventToCommandMessage)
                             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
@@ -128,13 +130,15 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
 
                 var client = new MSBuildExtensionPack.WebApiClient.BuildLogApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
+				var result = Task.Run(() => client.UpdateEntityAsync(MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(this.Item))).Result;
 
-                var resultVMData = Task.Run(() => client.UpdateEntitySync(MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(this.Item))).Result;
+                //var resultVMData = client.UpdateEntityAsync(MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(this.Item));
+                //var result = resultVMData.Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
                 {
-                    if (resultVMData.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+                    if (result.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
                     {
                         if (!this.SuppressMVVMLightEventToCommandMessage)
                             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
@@ -172,17 +176,19 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             try
             {
                 var client = new MSBuildExtensionPack.WebApiClient.BuildLogApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
+				var result = Task.Run(() => client.GetBuildLogItemVMAsync(identifier.Id)).Result;
 
-                var resultVMData = Task.Run(() => client.GetBuildLogItemVMSync(identifier.Id)).Result;
+                //var resultVMData = client.GetBuildLogItemVMAsync(identifier.Id);
+                //var result = resultVMData.Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
                 {
-                    this.StatusOfResult = resultVMData.StatusOfResult;
-                    this.StatusMessageOfResult = resultVMData.StatusMessageOfResult;
-                    if (resultVMData.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+                    this.StatusOfResult = result.StatusOfResult;
+                    this.StatusMessageOfResult = result.StatusMessageOfResult;
+                    if (result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
                     {
-                        this.Item = resultVMData.Item;
+                        this.Item = result.Item;
                         if (!this.SuppressMVVMLightEventToCommandMessage)
                             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
                     }
@@ -192,6 +198,27 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             {
                 Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
             }
+        }
+
+        protected override void LaunchDetailsView(MSBuildExtensionPack.DataSourceEntities.BuildLog.Default o)
+        {
+            base.LaunchDetailsView(o);
+
+
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfBuild_1(new Framework.NameValuePair<int>(o.Solution_1Id, o.Solution_1_Name));
+
+
+
+
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfSolution_1SelectedItem = new Framework.NameValuePair<System.Int32>(o.Solution_1Id, o.Solution_1_Name);
+
+
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfBuild_1SelectedItem = new Framework.NameValuePair<System.Int64>(o.BuildId, o.Build_1_Name);
+
+
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfBuildEventCode_1SelectedItem = new Framework.NameValuePair<System.Int32>(o.BuildEventCodeId, o.BuildEventCode_1_Name);
+
+
         }
 
         protected override void LaunchEditView(MSBuildExtensionPack.DataSourceEntities.BuildLog.Default o)
@@ -212,25 +239,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfBuildEventCode_1SelectedItem = new Framework.NameValuePair<System.Int32>(o.BuildEventCodeId, o.BuildEventCode_1_Name);
 
-
-        }
-
-        protected override void LaunchDetailsView(BuildLog.Default o)
-        {
-            base.LaunchDetailsView(o);
-
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfBuild_1(new Framework.NameValuePair<int>(o.Solution_1Id, o.Solution_1_Name));
-
-
-
-
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfSolution_1SelectedItem = new Framework.NameValuePair<System.Int32>(o.Solution_1Id, o.Solution_1_Name);
-
-
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfBuild_1SelectedItem = new Framework.NameValuePair<System.Int64>(o.BuildId, o.Build_1_Name);
-
-
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfBuildEventCode_1SelectedItem = new Framework.NameValuePair<System.Int32>(o.BuildEventCodeId, o.BuildEventCode_1_Name);
 
         }
 

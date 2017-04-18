@@ -7,7 +7,7 @@ using ClosedXML.Excel;
 
 namespace Framework.Services
 {
-    public abstract class DataStreamServiceProviderBase<TCollection, TItem> : Framework.Services.IDataStreamServiceProviderBase<TCollection, TItem>
+    public abstract class DataStreamServiceProviderBase<TCollection, TItem> : Framework.IDataStreamServiceProviderBase<TCollection, TItem>
         where TCollection : List<TItem>, new()
         where TItem : class, new()
     {

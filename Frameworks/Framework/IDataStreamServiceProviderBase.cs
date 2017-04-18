@@ -1,5 +1,5 @@
 using System;
-namespace Framework.Services
+namespace Framework
 {
     public interface IDataStreamServiceProviderBase<TCollection, TItem>
         where TCollection : System.Collections.Generic.List<TItem>
