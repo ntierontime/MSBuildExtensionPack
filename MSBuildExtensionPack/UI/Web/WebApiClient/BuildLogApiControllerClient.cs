@@ -146,7 +146,7 @@ namespace MSBuildExtensionPack.WebApiClient
         {
             string url = GetHttpRequestUrl(ActionName_DeleteEntity);
 
-            return Task.Run(() => Post<MSBuildExtensionPack.DataSourceEntities.BuildLog, MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn>(url, input)).Result;
+            return Task.Run(() => Put<MSBuildExtensionPack.DataSourceEntities.BuildLog, MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn>(url, input)).Result;
         }
 
         #endregion insert, update and delete in an entity -- Sync
