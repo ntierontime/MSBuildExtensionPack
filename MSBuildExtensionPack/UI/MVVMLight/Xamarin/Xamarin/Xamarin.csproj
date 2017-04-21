@@ -12,7 +12,7 @@
     <AssemblyName>Xamarin</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -69,6 +69,64 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.WP\Framework.CommonBLLEntities.WP\Framework.CommonBLLEntities.WP.csproj">
+      <Project>{161b385a-d7c8-4798-b0dc-78bfaeea1565}</Project>
+      <Name>Framework.CommonBLLEntities.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.WP\Framework.DAL.WP\Framework.DAL.WP.csproj">
+      <Project>{708a55c4-276f-4054-9ee4-2daf95787a2f}</Project>
+      <Name>Framework.DAL.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.WP\Framework.DataSourceEntities.WP\Framework.DataSourceEntities.WP.csproj">
+      <Project>{1509bb3e-0c7f-4f24-a1a4-0a3c1b8b7895}</Project>
+      <Name>Framework.DataSourceEntities.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.WP\Framework.EntityContracts.WP\Framework.EntityContracts.WP.csproj">
+      <Project>{5cc0e119-1365-4124-a18d-795e34439e3e}</Project>
+      <Name>Framework.EntityContracts.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.WP\Framework.Resources.WP\Framework.Resources.WP.csproj">
+      <Project>{4b698fa6-ead4-4c33-8932-e70b12012362}</Project>
+      <Name>Framework.Resources.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.WP\Framework.ViewModels.WP\Framework.ViewModels.WP.csproj">
+      <Project>{ed228277-08b6-48a6-a15c-554cf5c0ad1e}</Project>
+      <Name>Framework.ViewModels.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.WP\Framework.Xaml.WP\Framework.Xaml.WP.csproj">
+      <Project>{2a0eaddf-c8ec-4992-84cd-3b699a0dfcb8}</Project>
+      <Name>Framework.Xaml.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core.WP\CommonBLLEntities.WP\MSBuildExtensionPack.CommonBLLEntities.WP.csproj">
+      <Project>{e4f06862-5ccd-4526-a165-ca0981ee272e}</Project>
+      <Name>MSBuildExtensionPack.CommonBLLEntities.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core.WP\DataSourceEntities.WP\MSBuildExtensionPack.DataSourceEntities.WP.csproj">
+      <Project>{2cc8ad62-352c-4a19-bb6f-2a222a437b2e}</Project>
+      <Name>MSBuildExtensionPack.DataSourceEntities.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core.WP\EntityContracts.WP\MSBuildExtensionPack.EntityContracts.WP.csproj">
+      <Project>{e11a2079-b89e-491a-83ad-aa08fb4c80e2}</Project>
+      <Name>MSBuildExtensionPack.EntityContracts.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core.WP\Resources.WP\MSBuildExtensionPack.Resources.WP.csproj">
+      <Project>{39f3f14e-4dcc-42cb-8cba-fe84726b9683}</Project>
+      <Name>MSBuildExtensionPack.Resources.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core.WP\ViewModelData.WP\MSBuildExtensionPack.ViewModelData.WP.csproj">
+      <Project>{9ffccced-8fef-4c9e-a906-fb79eed79546}</Project>
+      <Name>MSBuildExtensionPack.ViewModelData.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Web.WP\WebApiClient.WP\MSBuildExtensionPack.WebApiClient.WP.csproj">
+      <Project>{c5c63b40-51e7-4317-8ffa-008a5dee3ad7}</Project>
+      <Name>MSBuildExtensionPack.WebApiClient.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared.WP\MVVMLightViewModels.WP\MSBuildExtensionPack.MVVMLightViewModels.WP.csproj">
+      <Project>{20692ffc-b6aa-48b2-bdb1-447417019772}</Project>
+      <Name>MSBuildExtensionPack.MVVMLightViewModels.WP</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\..\..\..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\..\..\..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
