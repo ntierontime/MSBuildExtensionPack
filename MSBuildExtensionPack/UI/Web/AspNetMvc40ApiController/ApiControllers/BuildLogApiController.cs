@@ -52,7 +52,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers.ApiContro
         /// delete an entity of <see cref=" MSBuildExtensionPack.DataSourceEntities.BuildLog"/> by identifier.
         /// </summary>
         /// <param name="identifier">input identifier of an entity</param>
-        [HttpDelete, ActionName("DeleteByIdentifierEntity")]
+        [HttpPost, ActionName("DeleteByIdentifierEntity")]
         public MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn DeleteByIdentifierEntity(
             MSBuildExtensionPack.DataSourceEntities.BuildLogIdentifier identifier)
         {
@@ -65,7 +65,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers.ApiContro
         /// delete an entity of <see cref=" MSBuildExtensionPack.DataSourceEntities.BuildLog"/> using .net value types.
         /// </summary>
         /// <param name="input">input entity</param>
-        [HttpDelete, ActionName("DeleteEntity")]
+        [HttpPost, ActionName("DeleteEntity")]
         public MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn DeleteEntity(
             MSBuildExtensionPack.DataSourceEntities.BuildLog input)
         {

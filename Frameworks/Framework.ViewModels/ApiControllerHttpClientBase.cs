@@ -283,6 +283,8 @@ namespace Framework.ViewModels
         public async Task<TResponse> Delete<TResponse>(string url)
             where TResponse : class, Framework.CommonBLLEntities.IBusinessLogicLayerResponseMessageBase, new()
         {
+
+
             var response = await Client.DeleteAsync(url);
 
             if (response.IsSuccessStatusCode)

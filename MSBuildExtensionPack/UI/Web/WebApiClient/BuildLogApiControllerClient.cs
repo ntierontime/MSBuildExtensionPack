@@ -118,7 +118,7 @@ namespace MSBuildExtensionPack.WebApiClient
         public MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn UpdateEntitySync(
             MSBuildExtensionPack.DataSourceEntities.BuildLog input)
         {
-            string url = GetHttpRequestUrl(ActionName_InsertEntity);
+            string url = GetHttpRequestUrl(ActionName_UpdateEntity);
 
             return Task.Run(() => Put<MSBuildExtensionPack.DataSourceEntities.BuildLog, MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn>(url, input)).Result;
         }
@@ -133,7 +133,7 @@ namespace MSBuildExtensionPack.WebApiClient
         {
             string url = GetHttpRequestUrl(ActionName_DeleteByIdentifierEntity);
 
-            return Task.Run(() => Post<MSBuildExtensionPack.DataSourceEntities.BuildLogIdentifier, MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn>(url, identifier)).Result;
+            return Task.Run(() => Put<MSBuildExtensionPack.DataSourceEntities.BuildLogIdentifier, MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn>(url, identifier)).Result;
         }
 
         /// <summary>
@@ -144,7 +144,7 @@ namespace MSBuildExtensionPack.WebApiClient
         public MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn DeleteEntitySync(
             MSBuildExtensionPack.DataSourceEntities.BuildLog input)
         {
-            string url = GetHttpRequestUrl(ActionName_InsertEntity);
+            string url = GetHttpRequestUrl(ActionName_DeleteEntity);
 
             return Task.Run(() => Post<MSBuildExtensionPack.DataSourceEntities.BuildLog, MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn>(url, input)).Result;
         }

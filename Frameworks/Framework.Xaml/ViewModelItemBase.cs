@@ -139,8 +139,11 @@ namespace Framework.Xaml
 
         protected virtual void PrepareItem(TItem o)
         {
-            this.OriginalItem = o;
-            this.m_Item = o;
+            if (o != null)
+            {
+                this.OriginalItem = o;
+                this.m_Item = o;
+            }
         }
 
         #region ViewDetails
@@ -173,9 +176,9 @@ namespace Framework.Xaml
 
         public RelayCommand<TItem> LaunchCopyViewCommand { get; protected set; }
 
-        protected void LaunchCopyView(TItem o)
+        protected virtual void LaunchCopyView(TItem o)
         {
-            string viewName = ViewName_Details;
+            string  viewName = ViewName_Details;
             Framework.UIAction uiAction = Framework.UIAction.Copy;
 
             PrepareItem(o);

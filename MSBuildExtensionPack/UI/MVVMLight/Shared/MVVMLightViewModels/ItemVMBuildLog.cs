@@ -194,9 +194,9 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
         }
 
-        protected override void LaunchEditView(MSBuildExtensionPack.DataSourceEntities.BuildLog.Default o)
+        protected override void LaunchEditView(MSBuildExtensionPack.DataSourceEntities.BuildLog.Default oo)
         {
-            base.LaunchEditView(o);
+            BuildLog.Default o = oo == null ? this.Item.GetACloneWithoutIdentifier() : oo.GetACloneWithoutIdentifier();
 
 
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfBuild_1(new Framework.NameValuePair<int>(o.Solution_1Id, o.Solution_1_Name));
@@ -213,11 +213,12 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfBuildEventCode_1SelectedItem = new Framework.NameValuePair<System.Int32>(o.BuildEventCodeId, o.BuildEventCode_1_Name);
 
 
+            base.LaunchEditView(o);
         }
 
-        protected override void LaunchDetailsView(BuildLog.Default o)
+        protected override void LaunchDetailsView(BuildLog.Default oo)
         {
-            base.LaunchDetailsView(o);
+            BuildLog.Default o = oo == null ? this.Item.GetACloneWithoutIdentifier() : oo.GetACloneWithoutIdentifier();
 
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfBuild_1(new Framework.NameValuePair<int>(o.Solution_1Id, o.Solution_1_Name));
 
@@ -232,6 +233,27 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfBuildEventCode_1SelectedItem = new Framework.NameValuePair<System.Int32>(o.BuildEventCodeId, o.BuildEventCode_1_Name);
 
+            base.LaunchDetailsView(o);
+        }
+
+        protected override void LaunchCopyView(BuildLog.Default oo)
+        {
+            BuildLog.Default o = oo == null ? this.Item.GetACloneWithoutIdentifier() : oo.GetACloneWithoutIdentifier();
+
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfBuild_1(new Framework.NameValuePair<int>(o.Solution_1Id, o.Solution_1_Name));
+
+
+
+
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfSolution_1SelectedItem = new Framework.NameValuePair<System.Int32>(o.Solution_1Id, o.Solution_1_Name);
+
+
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfBuild_1SelectedItem = new Framework.NameValuePair<System.Int64>(o.BuildId, o.Build_1_Name);
+
+
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfBuildEventCode_1SelectedItem = new Framework.NameValuePair<System.Int32>(o.BuildEventCodeId, o.BuildEventCode_1_Name);
+
+            base.LaunchCopyView(o);
         }
 
         #region Cleanup()
