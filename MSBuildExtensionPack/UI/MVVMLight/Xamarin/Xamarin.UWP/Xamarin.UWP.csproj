@@ -153,7 +153,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Xamarin\Xamarin.csproj">
-      <Project>{d2ccbcec-d7c6-4aa3-9e63-a6c066bdc778}</Project>
+      <Project>{3d0a320c-0553-4bee-8913-df92f5effd4c}</Project>
       <Name>Xamarin</Name>
     </ProjectReference>
   </ItemGroup>
