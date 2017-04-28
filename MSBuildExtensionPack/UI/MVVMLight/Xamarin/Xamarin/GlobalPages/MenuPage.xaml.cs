@@ -8,6 +8,7 @@ namespace Xamarin {
 		public MenuPage() {
 			BindingContext = new MenuPageViewModel();
 			Title = "Menu";
+            
 			InitializeComponent();
 		}
 	}

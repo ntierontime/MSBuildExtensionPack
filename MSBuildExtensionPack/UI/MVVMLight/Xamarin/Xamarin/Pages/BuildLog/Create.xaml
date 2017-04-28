@@ -16,7 +16,7 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="edit" Order="Primary">
             <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource"                             iOS="edit.png"                             Android="ic_action_edit.png"                             WinPhone="Images/edit.png" />
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="edit.png" Android="ic_action_edit.png" WinPhone="Images/edit.png" />
             </ToolbarItem.Icon>
         </ToolbarItem>
 

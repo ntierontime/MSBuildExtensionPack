@@ -3,6 +3,11 @@
 	<ContentPage.Padding>
 		<OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
 	</ContentPage.Padding>
+    <ContentPage.Icon>
+        <OnPlatform x:TypeArguments="FileImageSource"
+
+                            WinPhone="Images/ApplicationBar.Minus.png" />
+    </ContentPage.Icon>
 	<ContentPage.Content>
 		<StackLayout BackgroundColor="Gray">
 			<Button Text="Home" TextColor="White" BackgroundColor="Green" Command="{Binding GoHomeCommand}" />
