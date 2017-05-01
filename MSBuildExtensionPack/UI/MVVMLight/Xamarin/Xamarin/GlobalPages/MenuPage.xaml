@@ -6,7 +6,7 @@
     <ContentPage.Icon>
         <OnPlatform x:TypeArguments="FileImageSource"
 
-                            WinPhone="Images/ApplicationBar.Minus.png" />
+                            WinPhone="Assets/LockScreenLogo.scale-100.png" />
     </ContentPage.Icon>
 	<ContentPage.Content>
 		<StackLayout BackgroundColor="Gray">

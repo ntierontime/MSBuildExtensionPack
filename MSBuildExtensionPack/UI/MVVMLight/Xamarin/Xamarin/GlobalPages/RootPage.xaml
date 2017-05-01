@@ -4,4 +4,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:Xamarin" 
     x:Class="Xamarin.RootPage">
+    <MasterDetailPage.Icon>
+        <OnPlatform x:TypeArguments="FileImageSource"
+
+                            WinPhone="Assets/LockScreenLogo.scale-100.png" />
+    </MasterDetailPage.Icon>    
 </MasterDetailPage>
