@@ -1,0 +1,99 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".txt" #>
+<#
+    string sqlDateTypeListInString =
+@"char(n)
+varchar(n)
+varchar(max)
+text
+nchar
+nvarchar
+nvarchar(max)
+ntext
+bit
+binary(n)
+varbinary
+varbinary(max)
+image
+tinyint
+smallint
+int
+bigint
+decimal(p,s)
+numeric(p,s)
+smallmoney
+money
+float(n)
+real
+datetime
+datetime2
+smalldatetime
+date
+time
+datetimeoffset
+timestamp
+sql_variant
+uniqueidentifier
+xml
+cursor
+table
+";
+    string[] excluded = new string[] { "varchar(n)", "nvarchar", "varbinary", "datetimeoffset", "sql_variant", "timestamp", "xml", "cursor", "table", };
+    var strReader = new System.IO.StringReader(sqlDateTypeListInString);
+    Dictionary<string, string> dictionary = new Dictionary<string, string>();
+    string aLine = null;
+    while (true)
+    {
+        aLine = strReader.ReadLine();
+        if (aLine != null)
+        {
+            var aLineTrimmed = aLine.Trim();
+            if (!string.IsNullOrWhiteSpace(aLineTrimmed) && !excluded.Contains(aLineTrimmed))
+            {
+                var firstCharToUpper = aLineTrimmed[0].ToString().ToUpper() + aLineTrimmed.Substring(1);
+                firstCharToUpper = firstCharToUpper.Replace("(n)", "").Replace("(max)", "").Replace("(p,s)", "");
+                var withRealType = aLineTrimmed.Replace("(n)", "(10)").Replace("(p,s)", "(10,2)");
+                dictionary.Add(firstCharToUpper, withRealType);
+            }
+        }
+        else
+        {
+            break;
+        }
+    }
+
+    
+#>
+/****** Object:  Table [dbo].[Organization]    Script Date: 5/2/2017 3:15:57 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+DROP TABLE [dbo].[Organization]
+GO
+CREATE TABLE [dbo].[Organization](
+	[Id] [bigint] IDENTITY(1,1) NOT NULL,
+	[Name] [varbinary](50) NOT NULL,
+	[IsSystemBuiltIn] [bit] NOT NULL,
+	[UniqueIdentifier] [uniqueidentifier] NOT NULL,
+	[CreatedDateTime] [datetime] NOT NULL,
+<#
+foreach(var item in dictionary)
+{
+#>
+	[<#= item.Key #>Column] <#= item.Value #> NOT NULL,
+<#
+}
+#>
+ CONSTRAINT [PK_Organization] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO

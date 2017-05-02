@@ -1,0 +1,47 @@
+﻿/****** Object:  Table [dbo].[Organization]    Script Date: 5/2/2017 3:15:57 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+DROP TABLE [dbo].[Organization]
+GO
+CREATE TABLE [dbo].[Organization](
+	[Id] [bigint] IDENTITY(1,1) NOT NULL,
+	[Name] [varbinary](50) NOT NULL,
+	[IsSystemBuiltIn] [bit] NOT NULL,
+	[UniqueIdentifier] [uniqueidentifier] NOT NULL,
+	[CreatedDateTime] [datetime] NOT NULL,
+	[CharColumn] char(10) NOT NULL,
+	[VarcharColumn] varchar(max) NOT NULL,
+	[TextColumn] text NOT NULL,
+	[NcharColumn] nchar NOT NULL,
+	[NvarcharColumn] nvarchar(max) NOT NULL,
+	[NtextColumn] ntext NOT NULL,
+	[BitColumn] bit NOT NULL,
+	[BinaryColumn] binary(10) NOT NULL,
+	[VarbinaryColumn] varbinary(max) NOT NULL,
+	[ImageColumn] image NOT NULL,
+	[TinyintColumn] tinyint NOT NULL,
+	[SmallintColumn] smallint NOT NULL,
+	[IntColumn] int NOT NULL,
+	[BigintColumn] bigint NOT NULL,
+	[DecimalColumn] decimal(10,2) NOT NULL,
+	[NumericColumn] numeric(10,2) NOT NULL,
+	[SmallmoneyColumn] smallmoney NOT NULL,
+	[MoneyColumn] money NOT NULL,
+	[FloatColumn] float(10) NOT NULL,
+	[RealColumn] real NOT NULL,
+	[DatetimeColumn] datetime NOT NULL,
+	[Datetime2Column] datetime2 NOT NULL,
+	[SmalldatetimeColumn] smalldatetime NOT NULL,
+	[DateColumn] date NOT NULL,
+	[TimeColumn] time NOT NULL,
+	[UniqueidentifierColumn] uniqueidentifier NOT NULL,
+ CONSTRAINT [PK_Organization] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO

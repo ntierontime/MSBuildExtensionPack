@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -34,7 +34,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
@@ -43,6 +42,8 @@
     </Compile>
     <EmbeddedResource Include="..\..\Core\Resources\UIStringResourcePerApp.resx">
       <Link>UIStringResourcePerApp.resx</Link>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UIStringResourcePerApp.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Compile Include="..\..\Core\Resources\UIStringResourcePerApp.designer.cs">
       <Link>UIStringResourcePerApp.designer.cs</Link>
@@ -51,6 +52,8 @@
     </Compile>
     <EmbeddedResource Include="..\..\Core\Resources\UIStringResourcePerEntityBuild.resx">
       <Link>UIStringResourcePerEntityBuild.resx</Link>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UIStringResourcePerEntityBuild.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Compile Include="..\..\Core\Resources\UIStringResourcePerEntityBuild.designer.cs">
       <Link>UIStringResourcePerEntityBuild.designer.cs</Link>
@@ -59,6 +62,8 @@
     </Compile>
     <EmbeddedResource Include="..\..\Core\Resources\UIStringResourcePerEntityBuildEventCode.resx">
       <Link>UIStringResourcePerEntityBuildEventCode.resx</Link>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UIStringResourcePerEntityBuildEventCode.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Compile Include="..\..\Core\Resources\UIStringResourcePerEntityBuildEventCode.designer.cs">
       <Link>UIStringResourcePerEntityBuildEventCode.designer.cs</Link>
@@ -67,6 +72,8 @@
     </Compile>
     <EmbeddedResource Include="..\..\Core\Resources\UIStringResourcePerEntityBuildLog.resx">
       <Link>UIStringResourcePerEntityBuildLog.resx</Link>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UIStringResourcePerEntityBuildLog.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Compile Include="..\..\Core\Resources\UIStringResourcePerEntityBuildLog.designer.cs">
       <Link>UIStringResourcePerEntityBuildLog.designer.cs</Link>
@@ -75,6 +82,8 @@
     </Compile>
     <EmbeddedResource Include="..\..\Core\Resources\UIStringResourcePerEntitySolution.resx">
       <Link>UIStringResourcePerEntitySolution.resx</Link>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UIStringResourcePerEntitySolution.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Compile Include="..\..\Core\Resources\UIStringResourcePerEntitySolution.designer.cs">
       <Link>UIStringResourcePerEntitySolution.designer.cs</Link>
@@ -100,7 +109,6 @@
   -->
   <ProjectExtensions>
     <VisualStudio>
-      <!-- For ProjectLinker -->
       <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="42681747-107b-487b-9ea2-ce46754682fd" />
     </VisualStudio>
   </ProjectExtensions>

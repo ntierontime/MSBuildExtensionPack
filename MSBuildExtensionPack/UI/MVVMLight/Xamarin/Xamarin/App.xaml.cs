@@ -26,7 +26,20 @@ namespace Xamarin {
 			RootPage.Master = menuPage;
 			RootPage.Detail = NavigationPage;
 			MainPage = RootPage;
-		}
+
+            if (Device.RuntimePlatform.ToLower() == Platforms.iOS.ToString().ToLower() || Device.RuntimePlatform.ToLower() == Platforms.Android.ToString().ToLower())
+            {
+                // determine the correct, supported .NET culture
+                var ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
+                Framework.Resources.UIStringResource.Culture = ci; // set the RESX for resource localization
+                MSBuildExtensionPack.Resources.UIStringResourcePerApp.Culture = ci; // set the RESX for resource localization
+                MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuild.Culture = ci; // set the RESX for resource localization
+                MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildEventCode.Culture = ci; // set the RESX for resource localization
+                MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog.Culture = ci; // set the RESX for resource localization
+                MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Culture = ci; // set the RESX for resource localization
+                DependencyService.Get<ILocalize>().SetLocale(ci); // set the Thread for locale-aware methods
+            }
+        }
 
 		protected override void OnStart() {
 			// Handle when your app starts

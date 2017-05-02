@@ -41,7 +41,8 @@
     </Compile>
     <EmbeddedResource Include="..\..\Frameworks\Framework.Resources\UIStringResource.resx">
       <Link>UIStringResource.resx</Link>
-      <LastGenOutput>UIStringResource1.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UIStringResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Compile Include="..\..\Frameworks\Framework.Resources\UIStringResource.designer.cs">
       <Link>UIStringResource.designer.cs</Link>

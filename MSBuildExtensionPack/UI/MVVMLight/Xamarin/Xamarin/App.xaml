@@ -2,15 +2,15 @@
 <Application 
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels"
+    xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.WP"
     x:Class="Xamarin.App">
     <Application.Resources>
         <ResourceDictionary x:Name="appMain">
             <vm:ViewModelLocator x:Key="Locator" />
             <vm:LocalizedStrings x:Key="LocalizedStrings" />
-            <ResourceDictionary.MergedDictionaries>
+            <!--<ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="AppResourceDictionary.xaml" />
-            </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary.MergedDictionaries>-->
         </ResourceDictionary>
     </Application.Resources>
 </Application>
