@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using GalaSoft.MvvmLight.Threading;
 
 namespace Xamarin.Droid
 {
@@ -19,7 +20,13 @@ namespace Xamarin.Droid
 
             base.OnCreate(bundle);
 
+            Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<Framework.Xaml.IDispatcherHelperWrapper, MSBuildExtensionPack.WPF4App.DispatcherHelperWrapper>();
+            DispatcherHelper.Initialize();
+
             global::Xamarin.Forms.Forms.Init(this, bundle);
+
+            //PCLAppConfig.ConfigurationManager.Initialise(PCLAppConfig.FileSystemStream.PortableStream.Current);
+
             LoadApplication(new App());
         }
     }

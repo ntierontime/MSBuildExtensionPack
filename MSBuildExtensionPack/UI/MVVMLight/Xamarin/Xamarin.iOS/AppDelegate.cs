@@ -4,6 +4,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using GalaSoft.MvvmLight.Threading;
 
 namespace Xamarin.iOS
 {
@@ -22,7 +23,11 @@ namespace Xamarin.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<Framework.Xaml.IDispatcherHelperWrapper, MSBuildExtensionPack.WPF4App.DispatcherHelperWrapper>();
+            DispatcherHelper.Initialize(app);
+
             global::Xamarin.Forms.Forms.Init();
+            //PCLAppConfig.ConfigurationManager.Initialise(PCLAppConfig.FileSystemStream.PortableStream.Current);
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

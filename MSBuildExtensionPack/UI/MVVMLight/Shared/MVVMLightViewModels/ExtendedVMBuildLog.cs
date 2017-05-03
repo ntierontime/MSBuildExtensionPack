@@ -197,6 +197,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                             }
                         }
                     }
+                    RaisePropertyChanged("DropDownContentsOfSolution_1");
                 });
             }
             catch (Exception ex)

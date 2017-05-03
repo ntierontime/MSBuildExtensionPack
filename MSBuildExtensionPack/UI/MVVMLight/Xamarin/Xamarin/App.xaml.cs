@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System.Reflection;
+using Xamarin.Forms;
 
 namespace Xamarin {
 	public partial class App : Application {
@@ -20,7 +21,12 @@ namespace Xamarin {
 
 		public App() {
 			InitializeComponent();
-			var menuPage = new MenuPage();
+
+            Assembly assembly = typeof(App).GetTypeInfo().Assembly;
+            PCLAppConfig.ConfigurationManager.Initialise(assembly.GetManifestResourceStream("Xamarin.ResourceApp.config"));
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl = PCLAppConfig.ConfigurationManager.AppSettings[Framework.ViewModels.ApiControllerHttpClientBase.WebApiRootUrlAppSettingName];
+
+            var menuPage = new MenuPage();
 			NavigationPage = new NavigationPage(new HomePage());
 			RootPage = new RootPage();
 			RootPage.Master = menuPage;

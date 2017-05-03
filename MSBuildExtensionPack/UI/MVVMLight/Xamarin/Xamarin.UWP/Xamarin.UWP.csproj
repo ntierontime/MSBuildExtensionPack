@@ -96,6 +96,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DispatcherHelperWrapper.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -155,6 +156,14 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.WP\Framework.WP\Framework.WP.csproj">
+      <Project>{f6ffbd00-82e3-4f6e-9529-076cbe1e8341}</Project>
+      <Name>Framework.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.WP\Framework.Xaml.WP\Framework.Xaml.WP.csproj">
+      <Project>{2a0eaddf-c8ec-4992-84cd-3b699a0dfcb8}</Project>
+      <Name>Framework.Xaml.WP</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Xamarin\Xamarin.csproj">
       <Project>{3d0a320c-0553-4bee-8913-df92f5effd4c}</Project>
       <Name>Xamarin</Name>
