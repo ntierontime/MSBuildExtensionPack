@@ -40,6 +40,26 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         public ItemVMBuildLog()
 			: base()
         {
+            MessengerInstance.Register<Framework.UISelectedItemChangedMessage>(this, message => {
+                if(message.SourceTypeFullName == EntityName)
+                {
+                    if (message.SourcePropertyName == MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMBuildLog.PropertyName_DropDownContentsOfBuildEventCode_1SelectedItem)
+                    {
+                        var selectedItem = (Framework.NameValuePair<System.Int32>)message.SelectedItem;
+                        this.Item.BuildEventCodeId = selectedItem.Value;
+                    }
+                    else if (message.SourcePropertyName == MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMBuildLog.PropertyName_DropDownContentsOfBuild_1SelectedItem)
+                    {
+                        var selectedItem = (Framework.NameValuePair<System.Int64>)message.SelectedItem;
+                        this.Item.BuildId = selectedItem.Value;
+                    }
+                    else if (message.SourcePropertyName == MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMBuildLog.PropertyName_DropDownContentsOfSolution_1SelectedItem)
+                    {
+                        var selectedItem = (Framework.NameValuePair<System.Int32>)message.SelectedItem;
+                        this.Item.Solution_1Id = selectedItem.Value;
+                    }
+                }
+            });
         }
 
         #endregion Constructor

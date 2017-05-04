@@ -6,6 +6,10 @@ using Xamarin.Forms;
 
 namespace Framework.Xamariner.Controls
 {
+    /// <summary>
+    /// https://github.com/Oceanware/XamarinFormsBindablePicker/blob/master/XamarinFormsBindablePicker/XamarinFormsBindablePicker/Controls/BindablePicker.cs
+    /// </summary>
+    /// <seealso cref="Xamarin.Forms.Picker" />
     public class BindablePicker : Picker
     {
 

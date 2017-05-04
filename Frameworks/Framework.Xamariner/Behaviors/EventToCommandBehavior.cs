@@ -5,7 +5,11 @@ using Xamarin.Forms;
 
 namespace Framework.Xamariner
 {
-	public class EventToCommandBehavior : BehaviorBase<View>
+    /// <summary>
+    /// https://developer.xamarin.com/guides/xamarin-forms/application-fundamentals/behaviors/reusable/event-to-command-behavior/
+    /// </summary>
+    /// <seealso cref="Framework.Xamariner.BehaviorBase{Xamarin.Forms.View}" />
+    public class EventToCommandBehavior : BehaviorBase<View>
 	{
 		Delegate eventHandler;
 

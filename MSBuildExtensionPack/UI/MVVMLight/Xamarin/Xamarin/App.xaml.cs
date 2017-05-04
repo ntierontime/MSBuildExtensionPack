@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using Framework.Xamariner.Globalization;
+using System.Reflection;
 using Xamarin.Forms;
 
 namespace Xamarin {

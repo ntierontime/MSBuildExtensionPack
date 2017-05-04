@@ -38,6 +38,9 @@
     <Compile Include="..\..\Frameworks\Framework\IDataStreamServiceProviderBase.cs">
       <Link>IDataStreamServiceProviderBase.cs</Link>
     </Compile>
+    <Compile Include="..\..\Frameworks\Framework\UISelectedItemChangedMessage.cs">
+      <Link>UISelectedItemChangedMessage.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="..\..\Frameworks\Framework\BinaryRelated\BinaryFile.cs">
       <Link>BinaryRelated\BinaryFile.cs</Link>
@@ -121,7 +124,7 @@
   -->
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="6d25aa30-c3af-4ae0-b567-0f2653120cdc" />
+      <UserProperties ProjectLinkReference="6d25aa30-c3af-4ae0-b567-0f2653120cdc" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

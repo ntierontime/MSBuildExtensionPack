@@ -12,6 +12,20 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 {
     public class ExtendedVMBuildLog: GalaSoft.MvvmLight.ViewModelBase
     {
+        #region override string EntityName
+
+        public const string EntityName_Static = "MSBuildExtensionPack.BuildLog";
+
+        public string EntityName
+        {
+            get
+            {
+                return EntityName_Static;
+            }
+        }
+
+        #endregion override string EntityName
+
         #region constructor
 
         public ExtendedVMBuildLog()
@@ -69,6 +83,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 }
 
                 this.m_DropDownContentsOfBuildEventCode_1SelectedItem = value;
+                MessengerInstance.Send<Framework.UISelectedItemChangedMessage>(new Framework.UISelectedItemChangedMessage(EntityName, PropertyName_DropDownContentsOfBuildEventCode_1SelectedItem, value));
                 RaisePropertyChanged(PropertyName_DropDownContentsOfBuildEventCode_1SelectedItem);
             }
         }
@@ -146,6 +161,8 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
                 this.m_DropDownContentsOfSolution_1SelectedItem = value;
                 RaisePropertyChanged(PropertyName_DropDownContentsOfSolution_1SelectedItem);
+                MessengerInstance.Send<Framework.UISelectedItemChangedMessage>(new Framework.UISelectedItemChangedMessage(EntityName, PropertyName_DropDownContentsOfSolution_1SelectedItem, value));
+                GetDropDownContentsOfBuild_1(value);
             }
         }
 
@@ -223,6 +240,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 }
 
                 this.m_DropDownContentsOfBuild_1SelectedItem = value;
+                MessengerInstance.Send<Framework.UISelectedItemChangedMessage>(new Framework.UISelectedItemChangedMessage(EntityName, PropertyName_DropDownContentsOfBuild_1SelectedItem, value));
                 RaisePropertyChanged(PropertyName_DropDownContentsOfBuild_1SelectedItem);
             }
         }
