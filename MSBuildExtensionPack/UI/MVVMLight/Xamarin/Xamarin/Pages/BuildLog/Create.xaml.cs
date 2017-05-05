@@ -23,5 +23,16 @@ namespace Xamarin.Pages.BuildLog
         {
             base.OnAppearing();
         }
+
+        private void FocusDatePicker(DatePicker obj)
+        {
+            obj.Focus();
+        }
+        private void SetDateOfBirth()
+        {
+            //DateOfBirth = SelectedDOB;
+        }
     }
 }
+
+// http://stackoverflow.com/questions/37477860/datepicker-how-to-popup-datepicker-when-click-on-edittext-using-c-sharp-xamarin

@@ -10,31 +10,54 @@
     <ContentPage.Content>
         <StackLayout Padding="10,0">
             <Label Text="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-            <Entry Placeholder="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution}" Keyboard="Numeric" Text="{Binding Path=Id}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+            <Entry Placeholder="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution}" Keyboard="Numeric" Text="{Binding Path=Id, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
             <Label Text="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-            <Entry Placeholder="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution}" Keyboard="Numeric"  Text="{Binding Path=Id}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+            <Entry Placeholder="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution}" Keyboard="Numeric"  Text="{Binding Path=Id, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
             <!-- for integer or decimal
             <Slider Value="{Binding Blue, Mode=TwoWay}" />
             <Label Text="{Binding Blue, StringFormat='Blue = {0:F2}'}" />
             -->
             <Label Text="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
 
+            <Entry Placeholder="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution}" Text="2012-01-01" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+            <Image Source="button.png" WidthRequest="39">
+            </Image>
+            <DatePicker x:Name="DOBPicker" IsEnabled="True" IsVisible="True" Format="F" Date="{Binding Path=EventTime}" />
+            <TimePicker x:Name="StartTime" Format="F" Time="{Binding Path=EventTime}"/>
+
+            <Label Text="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Switch VerticalOptions="Center" HorizontalOptions="Center" IsToggled="True" />
+            <!--<Switch VerticalOptions="Center" HorizontalOptions="Center" IsToggled="{Binding Path=PropertyName}" />-->
+
             <xac:BindablePicker 
                 DisplayMemberPath="Name"
                 ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfSolution_1, Source={StaticResource Locator}}"
                 SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfSolution_1SelectedItem, Source={StaticResource Locator}}"
+                HorizontalOptions="FillAndExpand"
                 >
             </xac:BindablePicker>
             <xac:BindablePicker 
                 DisplayMemberPath="Name"
                 ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfBuild_1, Source={StaticResource Locator}}"
                 SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfBuild_1SelectedItem, Source={StaticResource Locator}}"
+                HorizontalOptions="FillAndExpand"
                 >
             </xac:BindablePicker>
 
-            <Button Text = "Click Me!" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
-            <Switch VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
-            <Slider VerticalOptions="CenterAndExpand" />
+            <Entry Placeholder="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution}" Keyboard="Numeric"  Text="{Binding Path=Id}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+            <Slider VerticalOptions="Center" Value="{Binding Path=Id}" Minimum="0" Maximum="100"  HorizontalOptions="FillAndExpand"/>
+            <Stepper Value="{Binding Path=Id}" Minimum="0" Maximum="100" Increment="5" />
+            <Button Text = "{i18n:Translate Text=Description, ResourceId=Framework.Resources.SaveAlternativeText}" VerticalOptions="Center"  HorizontalOptions="FillAndExpand" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog.AddCommand, Source={StaticResource Locator}}" />
         </StackLayout>
     </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="{i18n:Translate Text=Description, ResourceId=Framework.Resources.SaveAlternativeText}" Order="Primary">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource"
+                            iOS="edit.png"
+                            Android="ic_action_edit.png"
+                            WinPhone="Images/edit.png" />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
 </ContentPage>
