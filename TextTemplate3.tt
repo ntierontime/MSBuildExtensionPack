@@ -78,6 +78,7 @@ DROP TABLE [dbo].[Organization]
 GO
 CREATE TABLE [dbo].[Organization](
 	[Id] [bigint] IDENTITY(1,1) NOT NULL,
+	[ParentId] [bigint] NOT NULL,
 	[Name] [varbinary](50) NOT NULL,
 	[IsSystemBuiltIn] [bit] NOT NULL,
 	[UniqueIdentifier] [uniqueidentifier] NOT NULL,
@@ -96,4 +97,40 @@ foreach(var item in dictionary)
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
+GO
+
+
+INSERT INTO [dbo].[Organization]
+	([ParentId],[Name],[IsSystemBuiltIn],[UniqueIdentifier],[CreatedDateTime]
+	,[CharColumn],[VarcharColumn],[TextColumn],[NcharColumn],[NvarcharColumn]
+	,[NtextColumn],[BitColumn]--,[BinaryColumn],[VarbinaryColumn],[ImageColumn]
+	,[TinyintColumn],[SmallintColumn],[IntColumn],[BigintColumn],[DecimalColumn]
+	,[NumericColumn],[SmallmoneyColumn],[MoneyColumn],[FloatColumn],[RealColumn]
+	,[DatetimeColumn],[Datetime2Column],[SmalldatetimeColumn],[DateColumn],[TimeColumn]
+	,[UniqueidentifierColumn])
+     VALUES
+	(1,'Root',1,'39EB6948-A6F6-4E41-9E77-86EDA515D95C',GETDATE()
+	,'1','2','3','4','5'
+	,'6',1--,null,null,null
+    ,1,2,3,4,5.5
+	,6.6,7.7,8.8,9.9,10.10
+	,GETDATE(),GETDATE(),GETDATE(),GETDATE(),GETDATE()
+	,'39EB6948-A6F6-4E41-9E77-86EDA515D95C')
+GO
+
+ALTER TABLE [Organization]
+ADD CONSTRAINT FK_Organization_ParentId FOREIGN KEY (ParentId)
+    REFERENCES [Organization](Id);
+GO
+
+ALTER TABLE Solution
+ADD [OrganizationId] BIGINT;
+
+GO
+
+UPDATE Solution SET OrganizationId=1
+
+ALTER TABLE Solution
+ADD CONSTRAINT FK_Solution_OrganizationId FOREIGN KEY (OrganizationId)
+    REFERENCES [Organization](Id);
 GO

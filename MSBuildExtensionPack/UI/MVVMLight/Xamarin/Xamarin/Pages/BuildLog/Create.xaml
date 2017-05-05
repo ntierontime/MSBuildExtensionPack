@@ -3,8 +3,6 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.WP"
-    xmlns:b="clr-namespace:Xamarin.Behaviors;assembly=Xamarin.Behaviors"
-    xmlns:xa="clr-namespace:Framework.Xamariner;assembly=Framework.Xamariner"
     xmlns:xac="clr-namespace:Framework.Xamariner.Controls;assembly=Framework.Xamariner"
     xmlns:i18n="clr-namespace:Xamarin"
     x:Class="Xamarin.Pages.BuildLog.Create">
@@ -20,31 +18,20 @@
             <Label Text="{Binding Blue, StringFormat='Blue = {0:F2}'}" />
             -->
             <Label Text="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+
             <xac:BindablePicker 
-                ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfSolution_1, Source={StaticResource Locator}, UpdateSourceEventName=DropDownContentsOfSolution_1 }"
-                SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfSolution_1SelectedItem, Source={StaticResource Locator}}"
-                x:Name="ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon" 
                 DisplayMemberPath="Name"
+                ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfSolution_1, Source={StaticResource Locator}}"
+                SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfSolution_1SelectedItem, Source={StaticResource Locator}}"
                 >
-                <!--<xac:BindablePicker.Behaviors>
-                    <xa:EventToCommandBehavior 
-                        EventName="SelectedIndexChanged" 
-                        Command="{Binding Mode=OneWay, Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.GetDropDownContentsOfSolution_1SelectionChangedCommand, Source={StaticResource Locator}}" 
-                        CommandParameter="{Binding SelectedItem , Source={x:Reference ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon}}"
-                        />
-                </xac:BindablePicker.Behaviors>-->
             </xac:BindablePicker>
-            <!--<Picker ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfSolution_1, Source={StaticResource Locator}}"
-                    SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfSolution_1SelectedItem, Source={StaticResource Locator}}"
-                    x:Name="ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon" 
-                    >
-                <Picker.Behaviors>
-                    <xa:EventToCommandBehavior 
-                        EventName="SelectedIndexChanged" 
-                        Command="{Binding Mode=OneWay, Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.GetDropDownContentsOfSolution_1SelectionChangedCommand, Source={StaticResource Locator}}" 
-                        CommandParameter="{Binding Source=ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon, Path=SelectedItem}"/>
-                </Picker.Behaviors>
-            </Picker>-->
+            <xac:BindablePicker 
+                DisplayMemberPath="Name"
+                ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfBuild_1, Source={StaticResource Locator}}"
+                SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfBuild_1SelectedItem, Source={StaticResource Locator}}"
+                >
+            </xac:BindablePicker>
+
             <Button Text = "Click Me!" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
             <Switch VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
             <Slider VerticalOptions="CenterAndExpand" />
