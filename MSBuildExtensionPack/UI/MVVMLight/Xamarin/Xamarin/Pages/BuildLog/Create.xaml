@@ -47,11 +47,11 @@
             <Entry Placeholder="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution}" Keyboard="Numeric"  Text="{Binding Path=Id}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
             <Slider VerticalOptions="Center" Value="{Binding Path=Id}" Minimum="0" Maximum="100"  HorizontalOptions="FillAndExpand"/>
             <Stepper Value="{Binding Path=Id}" Minimum="0" Maximum="100" Increment="5" />
-            <Button Text = "{i18n:Translate Text=Description, ResourceId=Framework.Resources.SaveAlternativeText}" VerticalOptions="Center"  HorizontalOptions="FillAndExpand" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog.AddCommand, Source={StaticResource Locator}}" />
+            <Button Text = "{i18n:Translate Text=SaveAlternativeText, ResourceId=Framework.Resources.UIStringResource}" VerticalOptions="Center"  HorizontalOptions="FillAndExpand" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog.AddCommand, Source={StaticResource Locator}}" />
         </StackLayout>
     </ContentPage.Content>
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="{i18n:Translate Text=Description, ResourceId=Framework.Resources.SaveAlternativeText}" Order="Primary">
+        <ToolbarItem Text="{i18n:Translate Text=SaveAlternativeText, ResourceId=Framework.Resources.UIStringResource}" Order="Primary">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource"
                             iOS="edit.png"

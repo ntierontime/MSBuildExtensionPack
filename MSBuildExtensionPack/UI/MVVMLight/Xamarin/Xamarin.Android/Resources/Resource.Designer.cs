@@ -42,6 +42,7 @@ namespace Xamarin.Droid
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Animation.design_fab_out = global::Xamarin.Droid.Resource.Animation.design_fab_out;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Animation.design_snackbar_in = global::Xamarin.Droid.Resource.Animation.design_snackbar_in;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Animation.design_snackbar_out = global::Xamarin.Droid.Resource.Animation.design_snackbar_out;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.MediaRouteControllerWindowBackground = global::Xamarin.Droid.Resource.Attribute.MediaRouteControllerWindowBackground;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.actionBarDivider = global::Xamarin.Droid.Resource.Attribute.actionBarDivider;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.actionBarItemBackground = global::Xamarin.Droid.Resource.Attribute.actionBarItemBackground;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.actionBarPopupTheme = global::Xamarin.Droid.Resource.Attribute.actionBarPopupTheme;
@@ -226,9 +227,21 @@ namespace Xamarin.Droid
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.maxButtonHeight = global::Xamarin.Droid.Resource.Attribute.maxButtonHeight;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.measureWithLargestChild = global::Xamarin.Droid.Resource.Attribute.measureWithLargestChild;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.mediaRouteAudioTrackDrawable = global::Xamarin.Droid.Resource.Attribute.mediaRouteAudioTrackDrawable;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.mediaRouteBluetoothIconDrawable = global::Xamarin.Droid.Resource.Attribute.mediaRouteBluetoothIconDrawable;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.mediaRouteButtonStyle = global::Xamarin.Droid.Resource.Attribute.mediaRouteButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.mediaRouteCastDrawable = global::Xamarin.Droid.Resource.Attribute.mediaRouteCastDrawable;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.mediaRouteChooserPrimaryTextStyle = global::Xamarin.Droid.Resource.Attribute.mediaRouteChooserPrimaryTextStyle;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.mediaRouteChooserSecondaryTextStyle = global::Xamarin.Droid.Resource.Attribute.mediaRouteChooserSecondaryTextStyle;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.mediaRouteCloseDrawable = global::Xamarin.Droid.Resource.Attribute.mediaRouteCloseDrawable;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.mediaRouteCollapseGroupDrawable = global::Xamarin.Droid.Resource.Attribute.mediaRouteCollapseGroupDrawable;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.mediaRouteConnectingDrawable = global::Xamarin.Droid.Resource.Attribute.mediaRouteConnectingDrawable;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.mediaRouteControllerPrimaryTextStyle = global::Xamarin.Droid.Resource.Attribute.mediaRouteControllerPrimaryTextStyle;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.mediaRouteControllerSecondaryTextStyle = global::Xamarin.Droid.Resource.Attribute.mediaRouteControllerSecondaryTextStyle;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.mediaRouteControllerTitleTextStyle = global::Xamarin.Droid.Resource.Attribute.mediaRouteControllerTitleTextStyle;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.mediaRouteDefaultIconDrawable = global::Xamarin.Droid.Resource.Attribute.mediaRouteDefaultIconDrawable;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.mediaRouteExpandGroupDrawable = global::Xamarin.Droid.Resource.Attribute.mediaRouteExpandGroupDrawable;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.mediaRouteOffDrawable = global::Xamarin.Droid.Resource.Attribute.mediaRouteOffDrawable;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.mediaRouteOnDrawable = global::Xamarin.Droid.Resource.Attribute.mediaRouteOnDrawable;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.mediaRoutePauseDrawable = global::Xamarin.Droid.Resource.Attribute.mediaRoutePauseDrawable;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.mediaRoutePlayDrawable = global::Xamarin.Droid.Resource.Attribute.mediaRoutePlayDrawable;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable = global::Xamarin.Droid.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable;
@@ -346,8 +359,11 @@ namespace Xamarin.Droid
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.windowMinWidthMinor = global::Xamarin.Droid.Resource.Attribute.windowMinWidthMinor;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Attribute.windowNoTitle = global::Xamarin.Droid.Resource.Attribute.windowNoTitle;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Boolean.abc_action_bar_embed_tabs = global::Xamarin.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Boolean.abc_action_bar_embed_tabs_pre_jb = global::Xamarin.Droid.Resource.Boolean.abc_action_bar_embed_tabs_pre_jb;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Boolean.abc_action_bar_expanded_action_views_exclusive = global::Xamarin.Droid.Resource.Boolean.abc_action_bar_expanded_action_views_exclusive;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Boolean.abc_allow_stacked_button_bar = global::Xamarin.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::Xamarin.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Boolean.abc_config_allowActionMenuItemTextWithIcon = global::Xamarin.Droid.Resource.Boolean.abc_config_allowActionMenuItemTextWithIcon;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Boolean.abc_config_closeDialogWhenTouchOutside = global::Xamarin.Droid.Resource.Boolean.abc_config_closeDialogWhenTouchOutside;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent = global::Xamarin.Droid.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Color.abc_background_cache_hint_selector_material_dark = global::Xamarin.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
@@ -400,6 +416,8 @@ namespace Xamarin.Droid
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Color.foreground_material_light = global::Xamarin.Droid.Resource.Color.foreground_material_light;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Color.highlighted_text_material_dark = global::Xamarin.Droid.Resource.Color.highlighted_text_material_dark;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Color.highlighted_text_material_light = global::Xamarin.Droid.Resource.Color.highlighted_text_material_light;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Color.hint_foreground_material_dark = global::Xamarin.Droid.Resource.Color.hint_foreground_material_dark;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Color.hint_foreground_material_light = global::Xamarin.Droid.Resource.Color.hint_foreground_material_light;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Color.material_blue_grey_800 = global::Xamarin.Droid.Resource.Color.material_blue_grey_800;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Color.material_blue_grey_900 = global::Xamarin.Droid.Resource.Color.material_blue_grey_900;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Color.material_blue_grey_950 = global::Xamarin.Droid.Resource.Color.material_blue_grey_950;
@@ -460,6 +478,7 @@ namespace Xamarin.Droid
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Dimension.abc_dialog_fixed_height_minor = global::Xamarin.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Dimension.abc_dialog_fixed_width_major = global::Xamarin.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Dimension.abc_dialog_fixed_width_minor = global::Xamarin.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Dimension.abc_dialog_list_padding_vertical_material = global::Xamarin.Droid.Resource.Dimension.abc_dialog_list_padding_vertical_material;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Dimension.abc_dialog_min_width_major = global::Xamarin.Droid.Resource.Dimension.abc_dialog_min_width_major;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Dimension.abc_dialog_min_width_minor = global::Xamarin.Droid.Resource.Dimension.abc_dialog_min_width_minor;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Dimension.abc_dialog_padding_material = global::Xamarin.Droid.Resource.Dimension.abc_dialog_padding_material;
@@ -476,6 +495,7 @@ namespace Xamarin.Droid
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Dimension.abc_list_item_padding_horizontal_material = global::Xamarin.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Dimension.abc_panel_menu_list_width = global::Xamarin.Droid.Resource.Dimension.abc_panel_menu_list_width;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Dimension.abc_search_view_preferred_width = global::Xamarin.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Dimension.abc_search_view_text_min_width = global::Xamarin.Droid.Resource.Dimension.abc_search_view_text_min_width;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Dimension.abc_seekbar_track_background_height_material = global::Xamarin.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Dimension.abc_seekbar_track_progress_height_material = global::Xamarin.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Dimension.abc_select_dialog_padding_start_material = global::Xamarin.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
@@ -502,6 +522,7 @@ namespace Xamarin.Droid
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Dimension.cardview_default_radius = global::Xamarin.Droid.Resource.Dimension.cardview_default_radius;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Dimension.design_appbar_elevation = global::Xamarin.Droid.Resource.Dimension.design_appbar_elevation;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Dimension.design_bottom_sheet_modal_elevation = global::Xamarin.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Dimension.design_bottom_sheet_modal_peek_height = global::Xamarin.Droid.Resource.Dimension.design_bottom_sheet_modal_peek_height;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Dimension.design_fab_border_width = global::Xamarin.Droid.Resource.Dimension.design_fab_border_width;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Dimension.design_fab_elevation = global::Xamarin.Droid.Resource.Dimension.design_fab_elevation;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Dimension.design_fab_image_size = global::Xamarin.Droid.Resource.Dimension.design_fab_image_size;
@@ -556,23 +577,33 @@ namespace Xamarin.Droid
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_btn_radio_material = global::Xamarin.Droid.Resource.Drawable.abc_btn_radio_material;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::Xamarin.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::Xamarin.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_btn_rating_star_off_mtrl_alpha = global::Xamarin.Droid.Resource.Drawable.abc_btn_rating_star_off_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_btn_rating_star_on_mtrl_alpha = global::Xamarin.Droid.Resource.Drawable.abc_btn_rating_star_on_mtrl_alpha;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::Xamarin.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::Xamarin.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_cab_background_internal_bg = global::Xamarin.Droid.Resource.Drawable.abc_cab_background_internal_bg;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_cab_background_top_material = global::Xamarin.Droid.Resource.Drawable.abc_cab_background_top_material;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::Xamarin.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_control_background_material = global::Xamarin.Droid.Resource.Drawable.abc_control_background_material;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_dialog_material_background_dark = global::Xamarin.Droid.Resource.Drawable.abc_dialog_material_background_dark;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_dialog_material_background_light = global::Xamarin.Droid.Resource.Drawable.abc_dialog_material_background_light;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_edit_text_material = global::Xamarin.Droid.Resource.Drawable.abc_edit_text_material;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_ic_ab_back_mtrl_am_alpha = global::Xamarin.Droid.Resource.Drawable.abc_ic_ab_back_mtrl_am_alpha;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_ic_clear_mtrl_alpha = global::Xamarin.Droid.Resource.Drawable.abc_ic_clear_mtrl_alpha;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::Xamarin.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_ic_go_search_api_mtrl_alpha = global::Xamarin.Droid.Resource.Drawable.abc_ic_go_search_api_mtrl_alpha;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::Xamarin.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::Xamarin.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_ic_menu_moreoverflow_mtrl_alpha = global::Xamarin.Droid.Resource.Drawable.abc_ic_menu_moreoverflow_mtrl_alpha;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::Xamarin.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::Xamarin.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::Xamarin.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_ic_search_api_mtrl_alpha = global::Xamarin.Droid.Resource.Drawable.abc_ic_search_api_mtrl_alpha;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_ic_star_black_16dp = global::Xamarin.Droid.Resource.Drawable.abc_ic_star_black_16dp;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_ic_star_black_36dp = global::Xamarin.Droid.Resource.Drawable.abc_ic_star_black_36dp;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_ic_star_half_black_16dp = global::Xamarin.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_ic_star_half_black_36dp = global::Xamarin.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_ic_voice_search_api_mtrl_alpha = global::Xamarin.Droid.Resource.Drawable.abc_ic_voice_search_api_mtrl_alpha;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_item_background_holo_dark = global::Xamarin.Droid.Resource.Drawable.abc_item_background_holo_dark;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_item_background_holo_light = global::Xamarin.Droid.Resource.Drawable.abc_item_background_holo_light;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_list_divider_mtrl_alpha = global::Xamarin.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
@@ -588,6 +619,7 @@ namespace Xamarin.Droid
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_list_selector_holo_light = global::Xamarin.Droid.Resource.Drawable.abc_list_selector_holo_light;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::Xamarin.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_popup_background_mtrl_mult = global::Xamarin.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_ratingbar_full_material = global::Xamarin.Droid.Resource.Drawable.abc_ratingbar_full_material;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_ratingbar_indicator_material = global::Xamarin.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_ratingbar_small_material = global::Xamarin.Droid.Resource.Drawable.abc_ratingbar_small_material;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::Xamarin.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
@@ -611,9 +643,89 @@ namespace Xamarin.Droid
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.abc_textfield_search_material = global::Xamarin.Droid.Resource.Drawable.abc_textfield_search_material;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.design_fab_background = global::Xamarin.Droid.Resource.Drawable.design_fab_background;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.design_snackbar_background = global::Xamarin.Droid.Resource.Drawable.design_snackbar_background;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_audiotrack = global::Xamarin.Droid.Resource.Drawable.ic_audiotrack;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_audiotrack_light = global::Xamarin.Droid.Resource.Drawable.ic_audiotrack_light;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_bluetooth_grey = global::Xamarin.Droid.Resource.Drawable.ic_bluetooth_grey;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_bluetooth_white = global::Xamarin.Droid.Resource.Drawable.ic_bluetooth_white;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_cast_dark = global::Xamarin.Droid.Resource.Drawable.ic_cast_dark;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_cast_disabled_light = global::Xamarin.Droid.Resource.Drawable.ic_cast_disabled_light;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_cast_grey = global::Xamarin.Droid.Resource.Drawable.ic_cast_grey;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_cast_light = global::Xamarin.Droid.Resource.Drawable.ic_cast_light;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_cast_off_light = global::Xamarin.Droid.Resource.Drawable.ic_cast_off_light;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_cast_on_0_light = global::Xamarin.Droid.Resource.Drawable.ic_cast_on_0_light;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_cast_on_1_light = global::Xamarin.Droid.Resource.Drawable.ic_cast_on_1_light;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_cast_on_2_light = global::Xamarin.Droid.Resource.Drawable.ic_cast_on_2_light;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_cast_on_light = global::Xamarin.Droid.Resource.Drawable.ic_cast_on_light;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_cast_white = global::Xamarin.Droid.Resource.Drawable.ic_cast_white;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_close_dark = global::Xamarin.Droid.Resource.Drawable.ic_close_dark;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_close_light = global::Xamarin.Droid.Resource.Drawable.ic_close_light;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_collapse = global::Xamarin.Droid.Resource.Drawable.ic_collapse;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_collapse_00000 = global::Xamarin.Droid.Resource.Drawable.ic_collapse_00000;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_collapse_00001 = global::Xamarin.Droid.Resource.Drawable.ic_collapse_00001;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_collapse_00002 = global::Xamarin.Droid.Resource.Drawable.ic_collapse_00002;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_collapse_00003 = global::Xamarin.Droid.Resource.Drawable.ic_collapse_00003;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_collapse_00004 = global::Xamarin.Droid.Resource.Drawable.ic_collapse_00004;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_collapse_00005 = global::Xamarin.Droid.Resource.Drawable.ic_collapse_00005;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_collapse_00006 = global::Xamarin.Droid.Resource.Drawable.ic_collapse_00006;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_collapse_00007 = global::Xamarin.Droid.Resource.Drawable.ic_collapse_00007;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_collapse_00008 = global::Xamarin.Droid.Resource.Drawable.ic_collapse_00008;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_collapse_00009 = global::Xamarin.Droid.Resource.Drawable.ic_collapse_00009;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_collapse_00010 = global::Xamarin.Droid.Resource.Drawable.ic_collapse_00010;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_collapse_00011 = global::Xamarin.Droid.Resource.Drawable.ic_collapse_00011;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_collapse_00012 = global::Xamarin.Droid.Resource.Drawable.ic_collapse_00012;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_collapse_00013 = global::Xamarin.Droid.Resource.Drawable.ic_collapse_00013;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_collapse_00014 = global::Xamarin.Droid.Resource.Drawable.ic_collapse_00014;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_collapse_00015 = global::Xamarin.Droid.Resource.Drawable.ic_collapse_00015;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_expand = global::Xamarin.Droid.Resource.Drawable.ic_expand;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_expand_00000 = global::Xamarin.Droid.Resource.Drawable.ic_expand_00000;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_expand_00001 = global::Xamarin.Droid.Resource.Drawable.ic_expand_00001;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_expand_00002 = global::Xamarin.Droid.Resource.Drawable.ic_expand_00002;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_expand_00003 = global::Xamarin.Droid.Resource.Drawable.ic_expand_00003;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_expand_00004 = global::Xamarin.Droid.Resource.Drawable.ic_expand_00004;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_expand_00005 = global::Xamarin.Droid.Resource.Drawable.ic_expand_00005;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_expand_00006 = global::Xamarin.Droid.Resource.Drawable.ic_expand_00006;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_expand_00007 = global::Xamarin.Droid.Resource.Drawable.ic_expand_00007;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_expand_00008 = global::Xamarin.Droid.Resource.Drawable.ic_expand_00008;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_expand_00009 = global::Xamarin.Droid.Resource.Drawable.ic_expand_00009;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_expand_00010 = global::Xamarin.Droid.Resource.Drawable.ic_expand_00010;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_expand_00011 = global::Xamarin.Droid.Resource.Drawable.ic_expand_00011;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_expand_00012 = global::Xamarin.Droid.Resource.Drawable.ic_expand_00012;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_expand_00013 = global::Xamarin.Droid.Resource.Drawable.ic_expand_00013;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_expand_00014 = global::Xamarin.Droid.Resource.Drawable.ic_expand_00014;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_expand_00015 = global::Xamarin.Droid.Resource.Drawable.ic_expand_00015;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_media_pause = global::Xamarin.Droid.Resource.Drawable.ic_media_pause;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_media_play = global::Xamarin.Droid.Resource.Drawable.ic_media_play;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_media_route_disabled_mono_dark = global::Xamarin.Droid.Resource.Drawable.ic_media_route_disabled_mono_dark;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_media_route_off_mono_dark = global::Xamarin.Droid.Resource.Drawable.ic_media_route_off_mono_dark;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_media_route_on_0_mono_dark = global::Xamarin.Droid.Resource.Drawable.ic_media_route_on_0_mono_dark;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_media_route_on_1_mono_dark = global::Xamarin.Droid.Resource.Drawable.ic_media_route_on_1_mono_dark;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_media_route_on_2_mono_dark = global::Xamarin.Droid.Resource.Drawable.ic_media_route_on_2_mono_dark;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_media_route_on_mono_dark = global::Xamarin.Droid.Resource.Drawable.ic_media_route_on_mono_dark;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_pause_dark = global::Xamarin.Droid.Resource.Drawable.ic_pause_dark;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_pause_light = global::Xamarin.Droid.Resource.Drawable.ic_pause_light;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_play_dark = global::Xamarin.Droid.Resource.Drawable.ic_play_dark;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_play_light = global::Xamarin.Droid.Resource.Drawable.ic_play_light;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_speaker_dark = global::Xamarin.Droid.Resource.Drawable.ic_speaker_dark;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_speaker_group_dark = global::Xamarin.Droid.Resource.Drawable.ic_speaker_group_dark;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_speaker_group_light = global::Xamarin.Droid.Resource.Drawable.ic_speaker_group_light;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_speaker_light = global::Xamarin.Droid.Resource.Drawable.ic_speaker_light;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_tv_dark = global::Xamarin.Droid.Resource.Drawable.ic_tv_dark;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.ic_tv_light = global::Xamarin.Droid.Resource.Drawable.ic_tv_light;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.mr_dialog_material_background_dark = global::Xamarin.Droid.Resource.Drawable.mr_dialog_material_background_dark;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.mr_dialog_material_background_light = global::Xamarin.Droid.Resource.Drawable.mr_dialog_material_background_light;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.mr_ic_audiotrack_light = global::Xamarin.Droid.Resource.Drawable.mr_ic_audiotrack_light;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.mr_ic_cast_dark = global::Xamarin.Droid.Resource.Drawable.mr_ic_cast_dark;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.mr_ic_cast_light = global::Xamarin.Droid.Resource.Drawable.mr_ic_cast_light;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.mr_ic_close_dark = global::Xamarin.Droid.Resource.Drawable.mr_ic_close_dark;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.mr_ic_close_light = global::Xamarin.Droid.Resource.Drawable.mr_ic_close_light;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.mr_ic_media_route_connecting_mono_dark = global::Xamarin.Droid.Resource.Drawable.mr_ic_media_route_connecting_mono_dark;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.mr_ic_media_route_connecting_mono_light = global::Xamarin.Droid.Resource.Drawable.mr_ic_media_route_connecting_mono_light;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.mr_ic_media_route_mono_dark = global::Xamarin.Droid.Resource.Drawable.mr_ic_media_route_mono_dark;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.mr_ic_media_route_mono_light = global::Xamarin.Droid.Resource.Drawable.mr_ic_media_route_mono_light;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.mr_ic_pause_dark = global::Xamarin.Droid.Resource.Drawable.mr_ic_pause_dark;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.mr_ic_pause_light = global::Xamarin.Droid.Resource.Drawable.mr_ic_pause_light;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.mr_ic_play_dark = global::Xamarin.Droid.Resource.Drawable.mr_ic_play_dark;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.mr_ic_play_light = global::Xamarin.Droid.Resource.Drawable.mr_ic_play_light;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Drawable.notification_template_icon_bg = global::Xamarin.Droid.Resource.Drawable.notification_template_icon_bg;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Id.action0 = global::Xamarin.Droid.Resource.Id.action0;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Id.action_bar = global::Xamarin.Droid.Resource.Id.action_bar;
@@ -769,6 +881,7 @@ namespace Xamarin.Droid
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Id.wrap_content = global::Xamarin.Droid.Resource.Id.wrap_content;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Integer.abc_config_activityDefaultDur = global::Xamarin.Droid.Resource.Integer.abc_config_activityDefaultDur;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Integer.abc_config_activityShortDur = global::Xamarin.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Integer.abc_max_action_buttons = global::Xamarin.Droid.Resource.Integer.abc_max_action_buttons;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Integer.bottom_sheet_slide_duration = global::Xamarin.Droid.Resource.Integer.bottom_sheet_slide_duration;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Integer.cancel_button_image_alpha = global::Xamarin.Droid.Resource.Integer.cancel_button_image_alpha;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Integer.design_snackbar_text_max_lines = global::Xamarin.Droid.Resource.Integer.design_snackbar_text_max_lines;
@@ -825,6 +938,7 @@ namespace Xamarin.Droid
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Layout.notification_media_cancel_action = global::Xamarin.Droid.Resource.Layout.notification_media_cancel_action;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Layout.notification_template_big_media = global::Xamarin.Droid.Resource.Layout.notification_template_big_media;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Layout.notification_template_big_media_narrow = global::Xamarin.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Layout.notification_template_lines = global::Xamarin.Droid.Resource.Layout.notification_template_lines;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Layout.notification_template_media = global::Xamarin.Droid.Resource.Layout.notification_template_media;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Layout.notification_template_part_chronometer = global::Xamarin.Droid.Resource.Layout.notification_template_part_chronometer;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Layout.notification_template_part_time = global::Xamarin.Droid.Resource.Layout.notification_template_part_time;
@@ -1223,6 +1337,23 @@ namespace Xamarin.Droid
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Style.Widget_Design_Snackbar = global::Xamarin.Droid.Resource.Style.Widget_Design_Snackbar;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Style.Widget_Design_TabLayout = global::Xamarin.Droid.Resource.Style.Widget_Design_TabLayout;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Style.Widget_Design_TextInputLayout = global::Xamarin.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Style.Widget_MediaRouter_ChooserText = global::Xamarin.Droid.Resource.Style.Widget_MediaRouter_ChooserText;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Style.Widget_MediaRouter_ChooserText_Primary = global::Xamarin.Droid.Resource.Style.Widget_MediaRouter_ChooserText_Primary;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Style.Widget_MediaRouter_ChooserText_Primary_Dark = global::Xamarin.Droid.Resource.Style.Widget_MediaRouter_ChooserText_Primary_Dark;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Style.Widget_MediaRouter_ChooserText_Primary_Light = global::Xamarin.Droid.Resource.Style.Widget_MediaRouter_ChooserText_Primary_Light;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Style.Widget_MediaRouter_ChooserText_Secondary = global::Xamarin.Droid.Resource.Style.Widget_MediaRouter_ChooserText_Secondary;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Style.Widget_MediaRouter_ChooserText_Secondary_Dark = global::Xamarin.Droid.Resource.Style.Widget_MediaRouter_ChooserText_Secondary_Dark;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Style.Widget_MediaRouter_ChooserText_Secondary_Light = global::Xamarin.Droid.Resource.Style.Widget_MediaRouter_ChooserText_Secondary_Light;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Style.Widget_MediaRouter_ControllerText = global::Xamarin.Droid.Resource.Style.Widget_MediaRouter_ControllerText;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Style.Widget_MediaRouter_ControllerText_Primary = global::Xamarin.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Primary;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Style.Widget_MediaRouter_ControllerText_Primary_Dark = global::Xamarin.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Primary_Dark;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Style.Widget_MediaRouter_ControllerText_Primary_Light = global::Xamarin.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Primary_Light;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Style.Widget_MediaRouter_ControllerText_Secondary = global::Xamarin.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Secondary;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Style.Widget_MediaRouter_ControllerText_Secondary_Dark = global::Xamarin.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Secondary_Dark;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Style.Widget_MediaRouter_ControllerText_Secondary_Light = global::Xamarin.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Secondary_Light;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Style.Widget_MediaRouter_ControllerText_Title = global::Xamarin.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Title;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Style.Widget_MediaRouter_ControllerText_Title_Dark = global::Xamarin.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Title_Dark;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Style.Widget_MediaRouter_ControllerText_Title_Light = global::Xamarin.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Title_Light;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton = global::Xamarin.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Style.Widget_MediaRouter_MediaRouteButton = global::Xamarin.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.ActionBar = global::Xamarin.Droid.Resource.Styleable.ActionBar;
@@ -1279,6 +1410,9 @@ namespace Xamarin.Droid
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.AppBarLayout_android_background = global::Xamarin.Droid.Resource.Styleable.AppBarLayout_android_background;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.AppBarLayout_elevation = global::Xamarin.Droid.Resource.Styleable.AppBarLayout_elevation;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.AppBarLayout_expanded = global::Xamarin.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.AppBarLayout_LayoutParams = global::Xamarin.Droid.Resource.Styleable.AppBarLayout_LayoutParams;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.AppBarLayout_LayoutParams_layout_scrollFlags = global::Xamarin.Droid.Resource.Styleable.AppBarLayout_LayoutParams_layout_scrollFlags;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.AppBarLayout_LayoutParams_layout_scrollInterpolator = global::Xamarin.Droid.Resource.Styleable.AppBarLayout_LayoutParams_layout_scrollInterpolator;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.AppCompatImageView = global::Xamarin.Droid.Resource.Styleable.AppCompatImageView;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.AppCompatImageView_android_src = global::Xamarin.Droid.Resource.Styleable.AppCompatImageView_android_src;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.AppCompatImageView_srcCompat = global::Xamarin.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
@@ -1398,6 +1532,9 @@ namespace Xamarin.Droid
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::Xamarin.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::Xamarin.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.AppCompatTheme_windowNoTitle = global::Xamarin.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.BottomSheetBehavior_Params = global::Xamarin.Droid.Resource.Styleable.BottomSheetBehavior_Params;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.BottomSheetBehavior_Params_behavior_hideable = global::Xamarin.Droid.Resource.Styleable.BottomSheetBehavior_Params_behavior_hideable;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.BottomSheetBehavior_Params_behavior_peekHeight = global::Xamarin.Droid.Resource.Styleable.BottomSheetBehavior_Params_behavior_peekHeight;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.ButtonBarLayout = global::Xamarin.Droid.Resource.Styleable.ButtonBarLayout;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.ButtonBarLayout_allowStacking = global::Xamarin.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.CardView = global::Xamarin.Droid.Resource.Styleable.CardView;
@@ -1414,6 +1551,9 @@ namespace Xamarin.Droid
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.CardView_contentPaddingLeft = global::Xamarin.Droid.Resource.Styleable.CardView_contentPaddingLeft;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.CardView_contentPaddingRight = global::Xamarin.Droid.Resource.Styleable.CardView_contentPaddingRight;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.CardView_contentPaddingTop = global::Xamarin.Droid.Resource.Styleable.CardView_contentPaddingTop;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.CollapsingAppBarLayout_LayoutParams = global::Xamarin.Droid.Resource.Styleable.CollapsingAppBarLayout_LayoutParams;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.CollapsingAppBarLayout_LayoutParams_layout_collapseMode = global::Xamarin.Droid.Resource.Styleable.CollapsingAppBarLayout_LayoutParams_layout_collapseMode;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.CollapsingAppBarLayout_LayoutParams_layout_collapseParallaxMultiplier = global::Xamarin.Droid.Resource.Styleable.CollapsingAppBarLayout_LayoutParams_layout_collapseParallaxMultiplier;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.CollapsingToolbarLayout = global::Xamarin.Droid.Resource.Styleable.CollapsingToolbarLayout;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::Xamarin.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::Xamarin.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
@@ -1436,6 +1576,12 @@ namespace Xamarin.Droid
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.CoordinatorLayout = global::Xamarin.Droid.Resource.Styleable.CoordinatorLayout;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.CoordinatorLayout_keylines = global::Xamarin.Droid.Resource.Styleable.CoordinatorLayout_keylines;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::Xamarin.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.CoordinatorLayout_LayoutParams = global::Xamarin.Droid.Resource.Styleable.CoordinatorLayout_LayoutParams;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.CoordinatorLayout_LayoutParams_android_layout_gravity = global::Xamarin.Droid.Resource.Styleable.CoordinatorLayout_LayoutParams_android_layout_gravity;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.CoordinatorLayout_LayoutParams_layout_anchor = global::Xamarin.Droid.Resource.Styleable.CoordinatorLayout_LayoutParams_layout_anchor;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.CoordinatorLayout_LayoutParams_layout_anchorGravity = global::Xamarin.Droid.Resource.Styleable.CoordinatorLayout_LayoutParams_layout_anchorGravity;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.CoordinatorLayout_LayoutParams_layout_behavior = global::Xamarin.Droid.Resource.Styleable.CoordinatorLayout_LayoutParams_layout_behavior;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.CoordinatorLayout_LayoutParams_layout_keyline = global::Xamarin.Droid.Resource.Styleable.CoordinatorLayout_LayoutParams_layout_keyline;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.DesignTheme = global::Xamarin.Droid.Resource.Styleable.DesignTheme;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::Xamarin.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.DesignTheme_bottomSheetStyle = global::Xamarin.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle;
@@ -1542,6 +1688,8 @@ namespace Xamarin.Droid
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.RecyclerView_stackFromEnd = global::Xamarin.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.ScrimInsetsFrameLayout = global::Xamarin.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::Xamarin.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.ScrollingViewBehavior_Params = global::Xamarin.Droid.Resource.Styleable.ScrollingViewBehavior_Params;
+			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.ScrollingViewBehavior_Params_behavior_overlapTop = global::Xamarin.Droid.Resource.Styleable.ScrollingViewBehavior_Params_behavior_overlapTop;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.SearchView = global::Xamarin.Droid.Resource.Styleable.SearchView;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.SearchView_android_focusable = global::Xamarin.Droid.Resource.Styleable.SearchView_android_focusable;
 			global::PCLAppConfig.FileSystemStream.Android.Resource.Styleable.SearchView_android_imeOptions = global::Xamarin.Droid.Resource.Styleable.SearchView_android_imeOptions;
@@ -3820,26 +3968,8 @@ namespace Xamarin.Droid
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
-			// aapt resource value: 0x7f02010d
-			public const int avd_hide_password_1 = 2130837773;
-			
-			// aapt resource value: 0x7f02010e
-			public const int avd_hide_password_2 = 2130837774;
-			
-			// aapt resource value: 0x7f02010f
-			public const int avd_hide_password_3 = 2130837775;
-			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
-			
-			// aapt resource value: 0x7f020110
-			public const int avd_show_password_1 = 2130837776;
-			
-			// aapt resource value: 0x7f020111
-			public const int avd_show_password_2 = 2130837777;
-			
-			// aapt resource value: 0x7f020112
-			public const int avd_show_password_3 = 2130837778;
 			
 			// aapt resource value: 0x7f020055
 			public const int design_bottom_navigation_item_background = 2130837589;
