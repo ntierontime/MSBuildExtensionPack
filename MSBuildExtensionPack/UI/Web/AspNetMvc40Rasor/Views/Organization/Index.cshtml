@@ -1,0 +1,21 @@
+@using UrlStringsAlias = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.UrlStrings;
+@{
+    ViewBag.Title = MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Organization;
+}
+@section featured {
+    <h2>@ViewBag.Title</h2>
+    <h4>@ViewBag.Message</h4>
+	<p>@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Organization</p>
+}
+<div class="row">
+	<div class="col-md-12">
+		<ol>
+			<li>@Html.ActionLink(Framework.Resources.UIStringResource.AddNewAlternativeText, UrlStringsAlias.ActionName_Organization_AddNew)</li>
+			<li>@Html.ActionLink(Framework.Resources.UIStringResource.DeleteAlternativeText, UrlStringsAlias.ActionName_Organization_Delete) - Please add parameters to load this page </li>
+			<li>@Html.ActionLink(Framework.Resources.UIStringResource.EditAlternativeText, UrlStringsAlias.ActionName_Organization_Edit) - Please add parameters to load this page </li>
+			<li>@Html.ActionLink(Framework.Resources.UIStringResource.DetailsAlternativeText, UrlStringsAlias.ActionName_Organization_Details) - Please add parameters to load this page </li>
+			<li>@Html.ActionLink(MSBuildExtensionPack.Resources.UIStringResourcePerApp.Common_of_MSBuildExtensionPack_Organization, UrlStringsAlias.ActionName_Organization_WPCommonOfOrganization)</li>
+			<li>@Html.ActionLink(MSBuildExtensionPack.Resources.UIStringResourcePerApp.EntityRelated_of_MSBuildExtensionPack_Organization, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization)</li>
+		</ol>
+	</div>
+</div>

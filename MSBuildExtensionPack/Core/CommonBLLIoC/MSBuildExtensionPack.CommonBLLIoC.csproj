@@ -37,6 +37,7 @@
     <Compile Include="IoCBuild.cs" />
     <Compile Include="IoCBuildEventCode.cs" />
     <Compile Include="IoCBuildLog.cs" />
+    <Compile Include="IoCOrganization.cs" />
     <Compile Include="IoCSolution.cs" />
   </ItemGroup>
   <ItemGroup>

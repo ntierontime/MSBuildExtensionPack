@@ -34,6 +34,13 @@ namespace MSBuildExtensionPack.WcfWebApp
         }
 
 
+        public Rss20FeedFormatter GetOrganization()
+        {
+            SyndicationFeed feed = MSBuildExtensionPack.CommonBLL.SyndicationFeedFacade.GetOrganization();
+            return new Rss20FeedFormatter(feed);
+        }
+
+
         public Rss20FeedFormatter GetSolution()
         {
             SyndicationFeed feed = MSBuildExtensionPack.CommonBLL.SyndicationFeedFacade.GetSolution();

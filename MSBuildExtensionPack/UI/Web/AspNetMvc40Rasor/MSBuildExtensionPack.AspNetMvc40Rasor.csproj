@@ -52,6 +52,11 @@
       <DependentUpon>BuildLogController.cs</DependentUpon>
       <SubType>GeneratedCSharpCode</SubType>
     </Compile>
+    <Compile Include="Controllers\OrganizationController.cs" />
+    <Compile Include="Controllers\OrganizationController.gg.cs">
+      <DependentUpon>OrganizationController.cs</DependentUpon>
+      <SubType>GeneratedCSharpCode</SubType>
+    </Compile>
     <Compile Include="Controllers\SolutionController.cs" />
     <Compile Include="Controllers\SolutionController.gg.cs">
       <DependentUpon>SolutionController.cs</DependentUpon>
@@ -71,18 +76,22 @@
     <Content Include="Views\Build\AddNew.cshtml" />
     <Content Include="Views\BuildEventCode\AddNew.cshtml" />
     <Content Include="Views\BuildLog\AddNew.cshtml" />
+    <Content Include="Views\Organization\AddNew.cshtml" />
     <Content Include="Views\Solution\AddNew.cshtml" />
     <Content Include="Views\Build\Delete.cshtml" />
     <Content Include="Views\BuildEventCode\Delete.cshtml" />
     <Content Include="Views\BuildLog\Delete.cshtml" />
+    <Content Include="Views\Organization\Delete.cshtml" />
     <Content Include="Views\Solution\Delete.cshtml" />
     <Content Include="Views\Build\Details.cshtml" />
     <Content Include="Views\BuildEventCode\Details.cshtml" />
     <Content Include="Views\BuildLog\Details.cshtml" />
+    <Content Include="Views\Organization\Details.cshtml" />
     <Content Include="Views\Solution\Details.cshtml" />
     <Content Include="Views\Build\Edit.cshtml" />
     <Content Include="Views\BuildEventCode\Edit.cshtml" />
     <Content Include="Views\BuildLog\Edit.cshtml" />
+    <Content Include="Views\Organization\Edit.cshtml" />
     <Content Include="Views\Solution\Edit.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
@@ -90,10 +99,12 @@
     <Content Include="Views\Build\Import.cshtml" />
     <Content Include="Views\BuildEventCode\Import.cshtml" />
     <Content Include="Views\BuildLog\Import.cshtml" />
+    <Content Include="Views\Organization\Import.cshtml" />
     <Content Include="Views\Solution\Import.cshtml" />
     <Content Include="Views\Build\Index.cshtml" />
     <Content Include="Views\BuildEventCode\Index.cshtml" />
     <Content Include="Views\BuildLog\Index.cshtml" />
+    <Content Include="Views\Organization\Index.cshtml" />
     <Content Include="Views\Solution\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
@@ -129,6 +140,8 @@
     <Content Include="Views\BuildEventCode\WPEntityRelatedOfBuildEventCode.cshtml" />
     <Content Include="Views\BuildLog\WPCommonOfBuildLog.cshtml" />
     <Content Include="Views\BuildLog\WPEntityRelatedOfBuildLog.cshtml" />
+    <Content Include="Views\Organization\WPCommonOfOrganization.cshtml" />
+    <Content Include="Views\Organization\WPEntityRelatedOfOrganization.cshtml" />
     <Content Include="Views\Solution\WPCommonOfSolution.cshtml" />
     <Content Include="Views\Solution\WPEntityRelatedOfSolution.cshtml" />
   </ItemGroup>

@@ -2,14 +2,17 @@
 <edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <edmx:Diagrams>
-      <edmx:Diagram DiagramId="a88aaa7c4c2e485284383c3b8e4f629a" Name="Diagram1">
+      <edmx:Diagram DiagramId="3076257c9b974bc2a9c3d1fa0d3f2186" Name="Diagram1">
         <edmx:EntityTypeShape EntityType="MSBuildExtensionPackModel.Build" Width="1.5" PointX="1" PointY="1" IsExpanded="true" />
         <edmx:EntityTypeShape EntityType="MSBuildExtensionPackModel.BuildEventCode" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <edmx:EntityTypeShape EntityType="MSBuildExtensionPackModel.BuildLog" Width="1.5" PointX="5" PointY="1" IsExpanded="true" />
-        <edmx:EntityTypeShape EntityType="MSBuildExtensionPackModel.Solution" Width="1.5" PointX="7" PointY="1" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="MSBuildExtensionPackModel.Organization" Width="1.5" PointX="7" PointY="1" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="MSBuildExtensionPackModel.Solution" Width="1.5" PointX="9" PointY="1" IsExpanded="true" />
         <edmx:AssociationConnector Association="MSBuildExtensionPackModel.FK_Build_Solution" ManuallyRouted="false" />
         <edmx:AssociationConnector Association="MSBuildExtensionPackModel.FK_BuildLog_Build" ManuallyRouted="false" />
         <edmx:AssociationConnector Association="MSBuildExtensionPackModel.FK_BuildLog_BuildEventCode" ManuallyRouted="false" />
+        <edmx:AssociationConnector Association="MSBuildExtensionPackModel.FK_Organization_ParentId" ManuallyRouted="false" />
+        <edmx:AssociationConnector Association="MSBuildExtensionPackModel.FK_Solution_OrganizationId" ManuallyRouted="false" />
       </edmx:Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -59,6 +59,9 @@
     <Compile Include="..\..\..\..\UI\MVVMLight\Shared\MVVMLightViewModels\ExtendedVMBuildLog.cs">
       <Link>ExtendedVMBuildLog.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\..\UI\MVVMLight\Shared\MVVMLightViewModels\ExtendedVMOrganization.cs">
+      <Link>ExtendedVMOrganization.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\..\UI\MVVMLight\Shared\MVVMLightViewModels\ExtendedVMSolution.cs">
       <Link>ExtendedVMSolution.cs</Link>
     </Compile>
@@ -70,6 +73,9 @@
     </Compile>
     <Compile Include="..\..\..\..\UI\MVVMLight\Shared\MVVMLightViewModels\ItemVMBuildLog.cs">
       <Link>ItemVMBuildLog.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\UI\MVVMLight\Shared\MVVMLightViewModels\ItemVMOrganization.cs">
+      <Link>ItemVMOrganization.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\UI\MVVMLight\Shared\MVVMLightViewModels\ItemVMSolution.cs">
       <Link>ItemVMSolution.cs</Link>
@@ -85,6 +91,9 @@
     </Compile>
     <Compile Include="..\..\..\..\UI\MVVMLight\Shared\MVVMLightViewModels\ViewModelBuildLog.cs">
       <Link>ViewModelBuildLog.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\UI\MVVMLight\Shared\MVVMLightViewModels\ViewModelOrganization.cs">
+      <Link>ViewModelOrganization.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\UI\MVVMLight\Shared\MVVMLightViewModels\ViewModelSolution.cs">
       <Link>ViewModelSolution.cs</Link>

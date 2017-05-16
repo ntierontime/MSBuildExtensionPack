@@ -34,10 +34,11 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Compile Include="ApiControllers\BuildApiController.cs" />
-    <Compile Include="ApiControllers\BuildEventCodeApiController.cs" />
-    <Compile Include="ApiControllers\BuildLogApiController.cs" />
-    <Compile Include="ApiControllers\SolutionApiController.cs" />
+    <Compile Include="BuildApiController.cs" />
+    <Compile Include="BuildEventCodeApiController.cs" />
+    <Compile Include="BuildLogApiController.cs" />
+    <Compile Include="OrganizationApiController.cs" />
+    <Compile Include="SolutionApiController.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AspNetMvc40ViewModel\MSBuildExtensionPack.AspNetMvc40ViewModel.csproj">

@@ -95,6 +95,7 @@
     <Content Include="WcfMarkupBuild.svc" />
     <Content Include="WcfMarkupBuildEventCode.svc" />
     <Content Include="WcfMarkupBuildLog.svc" />
+    <Content Include="WcfMarkupOrganization.svc" />
     <Content Include="WcfMarkupSolution.svc" />
     <Content Include="Atom10Feeds.svc" />
     <Compile Include="Atom10Feeds.svc.cs">

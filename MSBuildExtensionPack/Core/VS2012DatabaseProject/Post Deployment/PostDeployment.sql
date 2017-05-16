@@ -17,6 +17,7 @@ DECLARE @BuildDate Datetime2 = GETDATE()
 IF ('$(SqlCmdVar_LoadSystemInitilizationData)' = 'True')
 BEGIN
 		:r .\SystemInitializationData\InitBuildEventCode.sql
+		:r .\SystemInitializationData\InitOrganization.sql
 		:r .\SystemInitializationData\InitSolution.sql
 		:r .\SystemInitializationData\InitBuild.sql
 		:r .\SystemInitializationData\InitBuildLog.sql
@@ -25,6 +26,7 @@ END
 IF ('$(SqlCmdVar_DumpTestData)' = 'True')
 BEGIN
 		:r .\SystemInitializationData\InitBuildEventCode.sql
+		:r .\SystemInitializationData\InitOrganization.sql
 		:r .\SystemInitializationData\InitSolution.sql
 		:r .\SystemInitializationData\InitBuild.sql
 		:r .\SystemInitializationData\InitBuildLog.sql

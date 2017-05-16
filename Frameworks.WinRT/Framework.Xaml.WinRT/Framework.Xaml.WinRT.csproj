@@ -125,9 +125,6 @@
     <Compile Include="..\..\Frameworks\Framework.Xaml\ViewModelBaseWithResultAndUIElement.cs">
       <Link>ViewModelBaseWithResultAndUIElement.cs</Link>
     </Compile>
-    <Compile Include="..\..\Frameworks\Framework.Xaml\ViewModelItemBase.cs">
-      <Link>ViewModelItemBase.cs</Link>
-    </Compile>
     <Compile Include="..\..\Frameworks\Framework.Xaml\MenuTreeItem.cs">
       <Link>MenuTreeItem.cs</Link>
     </Compile>

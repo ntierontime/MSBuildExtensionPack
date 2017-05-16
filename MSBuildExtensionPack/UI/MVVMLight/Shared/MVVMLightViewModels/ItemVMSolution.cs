@@ -6,6 +6,7 @@ using System.Text;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
+using System.Threading.Tasks;
 
 namespace MSBuildExtensionPack.MVVMLightViewModels
 {
@@ -14,7 +15,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
     /// See http://www.galasoft.ch/mvvm/getstarted
     /// </summary>
     public partial class ItemVMSolution
-		: Framework.Xaml.ViewModelItemBase<MSBuildExtensionPack.DataSourceEntities.SolutionIdentifier, MSBuildExtensionPack.DataSourceEntities.Solution>
+		: MSBuildExtensionPack.WPF4App.DispatcherHelperWrapper<MSBuildExtensionPack.DataSourceEntities.SolutionIdentifier, MSBuildExtensionPack.DataSourceEntities.Solution.Default>
     {
 		#region override string EntityName
 	    
@@ -52,10 +53,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             try
             {
                 var client = new MSBuildExtensionPack.WebApiClient.SolutionApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-				var result = Task.Run(() => client.InsertEntityAsync(MSBuildExtensionPack.EntityContracts.ISolutionHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution, MSBuildExtensionPack.DataSourceEntities.Solution>(this.Item))).Result;
-
-                //var resultVMData = client.InsertEntityAsync(MSBuildExtensionPack.EntityContracts.ISolutionHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution, MSBuildExtensionPack.DataSourceEntities.Solution>(this.Item));
-                //var result = resultVMData.Result;
+				var result = Task.Run(() => client.InsertEntityAsync(MSBuildExtensionPack.EntityContracts.ISolutionHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution.Default, MSBuildExtensionPack.DataSourceEntities.Solution>(this.Item))).Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
@@ -83,10 +81,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             try
             {
                 var client = new MSBuildExtensionPack.WebApiClient.SolutionApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-				var result = Task.Run(() => client.DeleteEntityAsync(MSBuildExtensionPack.EntityContracts.ISolutionHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution, MSBuildExtensionPack.DataSourceEntities.Solution>(this.Item))).Result;
-
-                //var resultVMData = client.DeleteEntityAsync(MSBuildExtensionPack.EntityContracts.ISolutionHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution, MSBuildExtensionPack.DataSourceEntities.Solution>(this.Item));
-                //var result = resultVMData.Result;
+				var result = Task.Run(() => client.DeleteEntityAsync(MSBuildExtensionPack.EntityContracts.ISolutionHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution.Default, MSBuildExtensionPack.DataSourceEntities.Solution>(this.Item))).Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
@@ -119,12 +114,15 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             try
             {
 
+                this.Item.Organization_2Id = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.DropDownContentsOfOrganization_2SelectedItem.Value;
+
+
+                this.Item.OrganizationId = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.DropDownContentsOfOrganization_1SelectedItem.Value;
+
+
 
                 var client = new MSBuildExtensionPack.WebApiClient.SolutionApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-				var result = Task.Run(() => client.UpdateEntityAsync(MSBuildExtensionPack.EntityContracts.ISolutionHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution, MSBuildExtensionPack.DataSourceEntities.Solution>(this.Item))).Result;
-
-                //var resultVMData = client.UpdateEntityAsync(MSBuildExtensionPack.EntityContracts.ISolutionHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution, MSBuildExtensionPack.DataSourceEntities.Solution>(this.Item));
-                //var result = resultVMData.Result;
+				var result = Task.Run(() => client.UpdateEntityAsync(MSBuildExtensionPack.EntityContracts.ISolutionHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution.Default, MSBuildExtensionPack.DataSourceEntities.Solution>(this.Item))).Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
@@ -142,9 +140,9 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
         }
 
-        public override void ReLoadItem(MSBuildExtensionPack.DataSourceEntities.Solution o)
+        public override void ReLoadItem(MSBuildExtensionPack.DataSourceEntities.Solution.Default o)
         {
-            var identifier = MSBuildExtensionPack.EntityContracts.ISolutionIdentifierHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution, MSBuildExtensionPack.DataSourceEntities.SolutionIdentifier>(o);
+            var identifier = MSBuildExtensionPack.EntityContracts.ISolutionIdentifierHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution.Default, MSBuildExtensionPack.DataSourceEntities.SolutionIdentifier>(o);
             this.LoadItem(identifier);
         }
 
@@ -169,9 +167,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 var client = new MSBuildExtensionPack.WebApiClient.SolutionApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
 				var result = Task.Run(() => client.GetSolutionItemVMAsync(identifier.Id)).Result;
 
-                //var resultVMData = client.GetSolutionItemVMAsync(identifier.Id);
-                //var result = resultVMData.Result;
-
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
                 {
@@ -191,22 +186,62 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
         }
 
-        protected override void LaunchDetailsView(MSBuildExtensionPack.DataSourceEntities.Solution o)
+        protected override void LaunchDetailsView(MSBuildExtensionPack.DataSourceEntities.Solution.Default o)
         {
             base.LaunchDetailsView(o);
 
 
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.GetDropDownContentsOfOrganization_1(new Framework.NameValuePair<int>(o.Organization_2Id, o.Organization_2_Name));
+
+
+
+
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.DropDownContentsOfOrganization_2SelectedItem = new Framework.NameValuePair<System.Int64>(o.Organization_2Id, o.Organization_2_Name);
+
+
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.DropDownContentsOfOrganization_1SelectedItem = new Framework.NameValuePair<System.Nullable<System.Int64>>(o.OrganizationId, o.Organization_1_Name);
 
 
         }
 
-        protected override void LaunchEditView(MSBuildExtensionPack.DataSourceEntities.Solution o)
+        protected override void LaunchEditView(MSBuildExtensionPack.DataSourceEntities.Solution.Default oo)
         {
+			var o = oo == null ? this.Item.GetACloneWithoutIdentifier() : oo.GetACloneWithoutIdentifier();
+
+
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.GetDropDownContentsOfOrganization_1(new Framework.NameValuePair<int>(o.Organization_2Id, o.Organization_2_Name));
+
+
+
+
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.DropDownContentsOfOrganization_2SelectedItem = new Framework.NameValuePair<System.Int64>(o.Organization_2Id, o.Organization_2_Name);
+
+
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.DropDownContentsOfOrganization_1SelectedItem = new Framework.NameValuePair<System.Nullable<System.Int64>>(o.OrganizationId, o.Organization_1_Name);
+
+
+
             base.LaunchEditView(o);
+        }
+
+        protected override void LaunchCopyView(MSBuildExtensionPack.DataSourceEntities.Solution.Default oo)
+        {
+			var o = oo == null ? this.Item.GetACloneWithoutIdentifier() : oo.GetACloneWithoutIdentifier();
+
+
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.GetDropDownContentsOfOrganization_1(new Framework.NameValuePair<int>(o.Organization_2Id, o.Organization_2_Name));
 
 
 
 
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.DropDownContentsOfOrganization_2SelectedItem = new Framework.NameValuePair<System.Int64>(o.Organization_2Id, o.Organization_2_Name);
+
+
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.DropDownContentsOfOrganization_1SelectedItem = new Framework.NameValuePair<System.Nullable<System.Int64>>(o.OrganizationId, o.Organization_1_Name);
+
+
+
+            base.LaunchCopyView(o);
         }
 
         #region Cleanup()

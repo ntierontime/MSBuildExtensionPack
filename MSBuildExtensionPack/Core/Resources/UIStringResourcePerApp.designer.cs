@@ -10,7 +10,7 @@
 
 namespace MSBuildExtensionPack.Resources {
     using System;
-    
+    using System.Reflection;
     
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
@@ -39,7 +39,7 @@ namespace MSBuildExtensionPack.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MSBuildExtensionPack.Resources.UIStringResourcePerApp", typeof(UIStringResourcePerApp).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MSBuildExtensionPack.Resources.UIStringResourcePerApp", typeof(UIStringResourcePerApp).GetTypeInfo().Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -277,6 +277,66 @@ namespace MSBuildExtensionPack.Resources {
         public static string ToolTip_Of_EntityRelated_of_MSBuildExtensionPack_BuildLog {
             get {
                 return ResourceManager.GetString("ToolTip_Of_EntityRelated_of_MSBuildExtensionPack_BuildLog", resourceCulture);
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description Of Common of MSBuildExtensionPack.Organization"".
+        /// </summary>
+        public static string Description_Of_Common_of_MSBuildExtensionPack_Organization {
+            get {
+                return ResourceManager.GetString("Description_Of_Common_of_MSBuildExtensionPack_Organization", resourceCulture);
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Common of MSBuildExtensionPack.Organization"".
+        /// </summary>
+        public static string Common_of_MSBuildExtensionPack_Organization {
+            get {
+                return ResourceManager.GetString("Common_of_MSBuildExtensionPack_Organization", resourceCulture);
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "ToolTip Of Common of MSBuildExtensionPack.Organization"".
+        /// </summary>
+        public static string ToolTip_Of_Common_of_MSBuildExtensionPack_Organization {
+            get {
+                return ResourceManager.GetString("ToolTip_Of_Common_of_MSBuildExtensionPack_Organization", resourceCulture);
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description Of EntityRelated of MSBuildExtensionPack.Organization"".
+        /// </summary>
+        public static string Description_Of_EntityRelated_of_MSBuildExtensionPack_Organization {
+            get {
+                return ResourceManager.GetString("Description_Of_EntityRelated_of_MSBuildExtensionPack_Organization", resourceCulture);
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "EntityRelated of MSBuildExtensionPack.Organization"".
+        /// </summary>
+        public static string EntityRelated_of_MSBuildExtensionPack_Organization {
+            get {
+                return ResourceManager.GetString("EntityRelated_of_MSBuildExtensionPack_Organization", resourceCulture);
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "ToolTip Of EntityRelated of MSBuildExtensionPack.Organization"".
+        /// </summary>
+        public static string ToolTip_Of_EntityRelated_of_MSBuildExtensionPack_Organization {
+            get {
+                return ResourceManager.GetString("ToolTip_Of_EntityRelated_of_MSBuildExtensionPack_Organization", resourceCulture);
             }
         }
 

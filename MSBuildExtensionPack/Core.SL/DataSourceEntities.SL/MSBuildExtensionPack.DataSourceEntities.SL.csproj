@@ -63,6 +63,9 @@
     <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntity_\BuildLog.cs">
       <Link>DataSourceEntity_\BuildLog.cs</Link>
     </Compile>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntity_\Organization.cs">
+      <Link>DataSourceEntity_\Organization.cs</Link>
+    </Compile>
     <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntity_\Solution.cs">
       <Link>DataSourceEntity_\Solution.cs</Link>
     </Compile>
@@ -74,6 +77,9 @@
     </Compile>
     <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntity_\BuildLogCollection.cs">
       <Link>DataSourceEntity_\BuildLogCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntity_\OrganizationCollection.cs">
+      <Link>DataSourceEntity_\OrganizationCollection.cs</Link>
     </Compile>
     <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntity_\SolutionCollection.cs">
       <Link>DataSourceEntity_\SolutionCollection.cs</Link>
@@ -87,6 +93,9 @@
     <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntityHelpers\BuildLogHelper.cs">
       <Link>DataSourceEntityHelpers\BuildLogHelper.cs</Link>
     </Compile>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntityHelpers\OrganizationHelper.cs">
+      <Link>DataSourceEntityHelpers\OrganizationHelper.cs</Link>
+    </Compile>
     <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntityHelpers\SolutionHelper.cs">
       <Link>DataSourceEntityHelpers\SolutionHelper.cs</Link>
     </Compile>
@@ -99,6 +108,9 @@
     <Compile Include="..\..\Core\DataSourceEntities\DataSourceIdentifiers\BuildLogIdentifier.cs">
       <Link>DataSourceIdentifiers\BuildLogIdentifier.cs</Link>
     </Compile>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceIdentifiers\OrganizationIdentifier.cs">
+      <Link>DataSourceIdentifiers\OrganizationIdentifier.cs</Link>
+    </Compile>
     <Compile Include="..\..\Core\DataSourceEntities\DataSourceIdentifiers\SolutionIdentifier.cs">
       <Link>DataSourceIdentifiers\SolutionIdentifier.cs</Link>
     </Compile>
@@ -107,6 +119,15 @@
     </Compile>
     <Compile Include="..\..\Core\DataSourceEntities\DataSourceQueryCriteriaByEntityReferences\BuildLogQueryCriteriaByEntityReference.cs">
       <Link>DataSourceQueryCriteriaByEntityReferences\BuildLogQueryCriteriaByEntityReference.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceQueryCriteriaByEntityReferences\OrganizationQueryCriteriaByEntityReference.cs">
+      <Link>DataSourceQueryCriteriaByEntityReferences\OrganizationQueryCriteriaByEntityReference.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceQueryCriteriaByEntityReferences\SolutionQueryCriteriaByEntityReference.cs">
+      <Link>DataSourceQueryCriteriaByEntityReferences\SolutionQueryCriteriaByEntityReference.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceQueryCriteriaByUniqueConstraints\OrganizationQueryCriteriaByUniqueConstraint.cs">
+      <Link>DataSourceQueryCriteriaByUniqueConstraints\OrganizationQueryCriteriaByUniqueConstraint.cs</Link>
     </Compile>
   </ItemGroup>
   <ItemGroup>

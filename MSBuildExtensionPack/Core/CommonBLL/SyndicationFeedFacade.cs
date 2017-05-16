@@ -120,6 +120,43 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
 
+        public static SyndicationFeed GetOrganization()
+        {
+            string urlOfList = string.Format("{0}{1}/{2}", Framework.Web.WebFormApplicationApplicationVariables.WebAppRootUrl, "Organization", "WPCommonOfOrganization");
+
+            SyndicationFeed feed = new SyndicationFeed(MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Rss_Title_of_Organization, MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Rss_Description_of_Organization, new Uri(urlOfList));
+            //feed.Authors.Add(new SyndicationPerson(MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.));
+            //feed.Categories.Add(new SyndicationCategory(MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.));
+
+            MSBuildExtensionPack.CommonBLL.OrganizationService instance = new MSBuildExtensionPack.CommonBLL.OrganizationService();
+
+            var request = new MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll();
+            request.QueryPagingSetting = new Framework.EntityContracts.QueryPagingSetting(1, 10);
+            request.QueryOrderBySettingCollection = new Framework.EntityContracts.QueryOrderBySettingCollection("LastModifiedDateTime:DESC");
+            var fromDataSource = instance.GetCollectionOfRssItemOfAll(request);
+
+            List<SyndicationItem> items = new List<SyndicationItem>();
+            if (fromDataSource.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+            {
+                foreach (var datasourceItem in fromDataSource.Message)
+                {
+		            //string urlOfEntityRelated = string.Format("{0}{1}/{2}?{3}", MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.HomeOwner, "Organization", "WPEntityRelatedOfOrganization", "{Query String Parameters}");
+                    SyndicationItem item1 = new SyndicationItem(
+                        datasourceItem.Title, 
+                        datasourceItem.Description, 
+                        new Uri(urlOfList), // should be urlOfEntityRelated, should enter query string parameters
+                        datasourceItem.IdentifierInString, 
+                        datasourceItem.PubDate);
+
+                    items.Add(item1);
+                }
+            }
+
+            feed.Items = items;
+            return feed;
+        }
+
+
         public static SyndicationFeed GetSolution()
         {
             string urlOfList = string.Format("{0}{1}/{2}", Framework.Web.WebFormApplicationApplicationVariables.WebAppRootUrl, "Solution", "WPCommonOfSolution");

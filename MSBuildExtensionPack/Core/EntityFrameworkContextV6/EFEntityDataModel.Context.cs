@@ -38,10 +38,41 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
 
 
 
+        public DbSet<Organization> Organizations { get; set; }
+
+
+
         public DbSet<Solution> Solutions { get; set; }
 
 
 
+
+
+		#region GetAscendantOfParentIdOfMSBuildExtensionPack_Organization && GetDescendantOfParentIdOfMSBuildExtensionPack_Organization 
+
+        public virtual ObjectResult<RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization> GetAscendantOfParentIdOfMSBuildExtensionPack_Organization(
+			System.Int64 Id
+			)
+        {
+			var IdParameter = new ObjectParameter("Id", Id);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization>(
+                "GetAscendantOfParentIdOfMSBuildExtensionPack_Organization"
+				,IdParameter
+				);
+        }
+
+        public virtual ObjectResult<RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization> GetDescendantOfParentIdOfMSBuildExtensionPack_Organization(
+			System.Int64 Id
+			)
+        {
+			var IdParameter = new ObjectParameter("Id", Id);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization>(
+                "GetDescendantOfParentIdOfMSBuildExtensionPack_Organization"
+				, IdParameter
+				);
+        }
+
+		#endregion GetAscendantOfParentIdOfMSBuildExtensionPack_Organization && GetDescendantOfParentIdOfMSBuildExtensionPack_Organization 
 
 
     }

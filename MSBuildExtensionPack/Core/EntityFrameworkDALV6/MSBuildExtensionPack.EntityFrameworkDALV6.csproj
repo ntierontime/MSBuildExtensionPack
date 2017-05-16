@@ -37,6 +37,7 @@
     <Compile Include="BuildRepository.cs" />
     <Compile Include="BuildEventCodeRepository.cs" />
     <Compile Include="BuildLogRepository.cs" />
+    <Compile Include="OrganizationRepository.cs" />
     <Compile Include="SolutionRepository.cs" />
     <Compile Include="EFDataAccessLayerFactory.cs" />
   </ItemGroup>

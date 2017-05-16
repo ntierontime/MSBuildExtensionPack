@@ -20,6 +20,9 @@ namespace MSBuildExtensionPack.DALContracts
 //		, TDALContractOfBuildLog, TCollectionOfBuildLog, TOfBuildLog, TIdentifierOfBuildLog
 
 
+//		, TDALContractOfOrganization, TCollectionOfOrganization, TOfOrganization, TIdentifierOfOrganization
+
+
 //		, TDALContractOfSolution, TCollectionOfSolution, TOfSolution, TIdentifierOfSolution
 
 
@@ -42,6 +45,12 @@ namespace MSBuildExtensionPack.DALContracts
 //            where TCollectionOfBuildLog : IList<TOfBuildLog>, new()
 //            where TOfBuildLog : MSBuildExtensionPack.EntityContracts.IBuildLog, new()
 //            where TIdentifierOfBuildLog : MSBuildExtensionPack.EntityContracts.IBuildLogIdentifier, new()
+
+
+//            where TDALContractOfOrganization : IOrganizationRepository<TCollectionOfOrganization, TOfOrganization, TIdentifierOfOrganization>
+//            where TCollectionOfOrganization : IList<TOfOrganization>, new()
+//            where TOfOrganization : MSBuildExtensionPack.EntityContracts.IOrganization, new()
+//            where TIdentifierOfOrganization : MSBuildExtensionPack.EntityContracts.IOrganizationIdentifier, new()
 
 
 //            where TDALContractOfSolution : ISolutionRepository<TCollectionOfSolution, TOfSolution, TIdentifierOfSolution>
@@ -74,6 +83,14 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>one instance of data access layer class</returns>
         //TDALContractOfBuildLog CreateDALInstanceOfBuildLog();
 		MSBuildExtensionPack.DALContracts.IBuildLogRepository CreateDALInstanceOfBuildLog();
+
+
+        /// <summary>
+        /// Creates the DAL instance of MSBuildExtensionPack.DALContracts.IOrganizationRepository for entity TDALContractOfOrganization .
+        /// </summary>
+        /// <returns>one instance of data access layer class</returns>
+        //TDALContractOfOrganization CreateDALInstanceOfOrganization();
+		MSBuildExtensionPack.DALContracts.IOrganizationRepository CreateDALInstanceOfOrganization();
 
 
         /// <summary>

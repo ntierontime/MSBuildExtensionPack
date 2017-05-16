@@ -71,6 +71,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UIStringResourcePerEntityBuildLog.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UIStringResourcePerEntityOrganization.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UIStringResourcePerEntityOrganization.designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="UIStringResourcePerEntityOrganization.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UIStringResourcePerEntityOrganization.resx</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="UIStringResourcePerEntitySolution.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>UIStringResourcePerEntitySolution.designer.cs</LastGenOutput>

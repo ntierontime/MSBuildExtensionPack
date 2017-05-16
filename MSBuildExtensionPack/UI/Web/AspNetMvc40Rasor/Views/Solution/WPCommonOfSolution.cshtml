@@ -70,6 +70,18 @@
 </div>
 @Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedExternalParentIdCommonOftOfCommon, new { @class = "form-control" })
 </div>
+<div class="form-group">
+<div class="checkbox checkbox-info">
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareIdCommonOfOrganization_2OfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon</label>
+</div>
+@Html.DropDownListFor(model => model.Criteria.ValueToCompareIdCommonOfOrganization_2OfCommon, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Organization, MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" }, { "onchange", "FetchOrganization_1();" } })
+</div>
+<div class="form-group">
+<div class="checkbox checkbox-info">
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareIdCommonOfOrganization_1OfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_1OfCommon</label>
+</div>
+@Html.DropDownListFor(model => model.Criteria.ValueToCompareIdCommonOfOrganization_1OfCommon, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfvalueToCompareIdCommonOfOrganization_1OfCommon,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedvalueToCompareIdCommonOfOrganization_1OfCommon", MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Please_select_Organization____) } })
+</div>
                     <div class="form-group form-inline">
                         <label class="control-label">Items per page : </label>
                         @Html.DropDownListFor(model => model.QueryPagingSetting.PageSize, Model.UISharedViewModel.SelectListOfPageSize, new Dictionary<string, Object> { { "class", "form-control" }, { "onchange", "this.form.submit();" } })
@@ -120,9 +132,15 @@
 <table id="MasterDataControl1" name="MasterDataControl1" class="table table-hover table-bordered table-striped">
 <thead>
  <tr><th  class="hidden-xs visible-sm"></th>
-<th >@MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.ExternalParentId</th>
-<th >@MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Name</th>
-<th >@MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Description</th>
+<th >@MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Organization_1_UniqueIdentifier</th>
+<th >@MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Organization_1_UniqueidentifierColumn</th>
+<th >@MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Organization_1_Name</th>
+<th  class="hidden-xs visible-smvisible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Organization_2_UniqueIdentifier</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Organization_2_UniqueidentifierColumn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Organization_2_Name</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.ExternalParentId</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Name</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Description</th>
 <th  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"></th></tr>
 </thead>
 <tbody>
@@ -133,6 +151,12 @@
         {
 			index++;
 <tr><td  class="hidden-xs visible-sm"></td>
+<td >@Html.DisplayFor(modelItem => item.Organization_1_UniqueIdentifier)</td>
+<td >@Html.DisplayFor(modelItem => item.Organization_1_UniqueidentifierColumn)</td>
+<td >@Html.ActionLink(item.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.OrganizationId, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1_UniqueidentifierColumn }, null)</td>
+<td >@Html.DisplayFor(modelItem => item.Organization_2_UniqueIdentifier)</td>
+<td >@Html.DisplayFor(modelItem => item.Organization_2_UniqueidentifierColumn)</td>
+<td >@Html.ActionLink(item.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2_UniqueidentifierColumn }, null)</td>
 <td >@Html.DisplayFor(modelItem => item.ExternalParentId)</td>
 <td >@Html.DisplayFor(modelItem => item.Name)</td>
 <td >@Html.DisplayFor(modelItem => item.Description)</td>
@@ -161,7 +185,7 @@
             <div class="pull-right">
     @if (Model.Result != null)
     {
-        var pagedResult = (PagedList.StaticPagedList<MSBuildExtensionPack.DataSourceEntities.Solution>)ViewBag.StaticPagedResult;
+        var pagedResult = (PagedList.StaticPagedList<MSBuildExtensionPack.DataSourceEntities.Solution.Default>)ViewBag.StaticPagedResult;
         <text>
             @Html.PagedListPager(pagedResult, currentPage => Url.Action(UrlStringsAlias.ActionName_Solution_WPCommonOfSolution, new { currentPage = currentPage }), PagedList.Mvc.PagedListRenderOptions.OnlyShowFivePagesAtATime)
         </text>
@@ -211,11 +235,40 @@
                 wrapper: "li",
             });
         }));
+        function FetchOrganization_1() {
+			var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $("#Criteria_ValueToCompareIdCommonOfOrganization_1OfCommon").val();
+			var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $("#Criteria_ValueToCompareIdCommonOfOrganization_2OfCommon").val();
+            var url = "/api/OrganizationApi/GetCollectionOfNameValuePairOfByFKOnly";
+            var params = BuildCriteriaForFetchOrganization_1(selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly);
+            if(selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
+            {
+                $.getJSON(url, params, function (data) {
+                    objVM.selectListOfvalueToCompareIdCommonOfOrganization_1OfCommon(data);
+                    if(0 != @(Model.Criteria.ValueToCompareIdCommonOfOrganization_1OfCommon.HasValue ? Model.Criteria.ValueToCompareIdCommonOfOrganization_1OfCommon.Value : default(System.Int64)))
+                    {
+                        objVM.selectedvalueToCompareIdCommonOfOrganization_1OfCommon(@Model.Criteria.ValueToCompareIdCommonOfOrganization_1OfCommon);
+                    }
+                });
+            }
+        }
+        function BuildCriteriaForFetchOrganization_1(selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly) {
+            var params = {
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: true,
+                valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly,
+                currentIndex: -1,
+                pageSize: -1,
+                queryOrderByExpression: null
+            };
+            return params;
+        }
         //cascaded dropdownlist by knockoutjs
         function CascadingDDLViewModel() {
             var self = this;
+            self.selectListOfvalueToCompareIdCommonOfOrganization_1OfCommon = ko.observableArray([]);
+            self.selectedvalueToCompareIdCommonOfOrganization_1OfCommon = ko.observable();
         }
         var objVM = new CascadingDDLViewModel();
         ko.applyBindings(objVM);
+$("#Criteria_ValueToCompareValueToCompareIdCommonOfOrganization_2OfCommon").change();
     </script>
 }

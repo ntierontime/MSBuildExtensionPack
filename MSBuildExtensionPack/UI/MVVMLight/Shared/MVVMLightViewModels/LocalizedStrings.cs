@@ -61,6 +61,15 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         /// </value>
         public MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog { get { return m_MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog; } }
 
+        private static MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization m_MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization = MSBuildExtensionPack.Resources.ResourceFileFactory.GetUIStringResourcePerEntityOrganization();
+        /// <summary>
+        /// Gets the UI component resource file of string per entity - MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.
+        /// </summary>
+        /// <value>
+        /// The UI component resource file of string per entity - MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.
+        /// </value>
+        public MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization { get { return m_MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization; } }
+
         private static MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution m_MSBuildExtensionPack_Resources_UIStringResourcePerEntitySolution = MSBuildExtensionPack.Resources.ResourceFileFactory.GetUIStringResourcePerEntitySolution();
         /// <summary>
         /// Gets the UI component resource file of string per entity - MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.

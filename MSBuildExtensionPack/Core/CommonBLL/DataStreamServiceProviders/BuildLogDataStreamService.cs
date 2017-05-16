@@ -76,6 +76,30 @@ namespace MSBuildExtensionPack.CommonBLL
             worksheet.Cell(cellKey).Value = "Solution_1_Name";
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = "Organization_1_UniqueidentifierColumn";
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = "Organization_1_UniqueIdentifier";
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = "Organization_1Id";
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = "Organization_1_Name";
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = "Organization_2_UniqueidentifierColumn";
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = "Organization_2Id";
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = "Organization_2_UniqueIdentifier";
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = "Organization_2_Name";
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = "BuildEventCode_1_Name";
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
@@ -109,6 +133,30 @@ namespace MSBuildExtensionPack.CommonBLL
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.Solution_1_Name;
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = dataItem.Organization_1_UniqueidentifierColumn;
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = dataItem.Organization_1_UniqueIdentifier;
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = dataItem.Organization_1Id;
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = dataItem.Organization_1_Name;
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = dataItem.Organization_2_UniqueidentifierColumn;
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = dataItem.Organization_2Id;
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = dataItem.Organization_2_UniqueIdentifier;
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = dataItem.Organization_2_Name;
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.BuildEventCode_1_Name;
@@ -154,6 +202,12 @@ namespace MSBuildExtensionPack.CommonBLL
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = "Solution_1Id";
 
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = "Organization_1Id";
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = "Organization_2Id";
+
 
 			}
 
@@ -176,6 +230,12 @@ namespace MSBuildExtensionPack.CommonBLL
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.Solution_1Id;
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = dataItem.Organization_1Id;
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = dataItem.Organization_2Id;
 
 
 			}

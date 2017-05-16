@@ -37,6 +37,7 @@
     <Compile Include="IBuildRepository.cs" />
     <Compile Include="IBuildEventCodeRepository.cs" />
     <Compile Include="IBuildLogRepository.cs" />
+    <Compile Include="IOrganizationRepository.cs" />
     <Compile Include="ISolutionRepository.cs" />
     <Compile Include="DataAccessLayerFactoryContract.cs" />
   </ItemGroup>

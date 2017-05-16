@@ -8,7 +8,7 @@
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
 		xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels"
 		xmlns:BuildLog="clr-namespace:MSBuildExtensionPack.WPF4App.UserControls.BuildLog"
-        Title="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.BuildLog_Delete, Source={StaticResource LocalizedStrings}}"
+        Title="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Delete_BuildLog, Source={StaticResource LocalizedStrings}}"
         >
     <Grid>
         <Grid.RowDefinitions>

@@ -69,7 +69,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 
 			if (viewModel.Result != null)
             {
-                ViewBag.StaticPagedResult = new PagedList.StaticPagedList<MSBuildExtensionPack.DataSourceEntities.Solution>(viewModel.Result, viewModel.QueryPagingSetting.CurrentPage, viewModel.QueryPagingSetting.PageSize, viewModel.QueryPagingSetting.CountOfRecords);
+                ViewBag.StaticPagedResult = new PagedList.StaticPagedList<MSBuildExtensionPack.DataSourceEntities.Solution.Default>(viewModel.Result, viewModel.QueryPagingSetting.CurrentPage, viewModel.QueryPagingSetting.PageSize, viewModel.QueryPagingSetting.CountOfRecords);
             }
 
 			viewModel.ContentData.Title = MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Solution;
@@ -93,7 +93,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             {
                 vmFromTempData = (Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommonFlatten>)TempData[TempDataKey_WPCommonOfSolution];
 
-	            var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfEntityOfCommon(
+	            var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfDefaultOfCommon(
 		            new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(vmFromTempData.Criteria)
                     , new Framework.EntityContracts.QueryPagingSetting(-1, -1)
                     , new Framework.EntityContracts.QueryOrderBySettingCollection(vmFromTempData.QueryOrderBySettingCollecionInString)
@@ -145,19 +145,20 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Solution_Import)]
         public ActionResult Import(HttpPostedFileBase file)
         {
-			ViewBag.FileFormat = "Id,ExternalParentId,Name,Description";
+			ViewBag.FileFormat = "Organization_1_UniqueIdentifier,Organization_1_UniqueidentifierColumn,Organization_1_Name,Id,Organization_2Id,Organization_2_UniqueIdentifier,Organization_2_UniqueidentifierColumn,Organization_2_Name,ExternalParentId,Name,Description,OrganizationId";
             if (file != null && file.ContentLength > 0 && !string.IsNullOrWhiteSpace(file.FileName))
             {
                 log.Info(string.Format("{0}: Import", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
                 Framework.DataStreamServiceResult dataStreamServiceResult = new Framework.DataStreamServiceResult(file.FileName, file.ContentType, file.ContentLength, file.InputStream);
                 dataStreamServiceResult.TempFilePath = Framework.Web.WebFormApplicationApplicationVariables.FileStorageRootFolder;
-                MSBuildExtensionPack.CommonBLL.SolutionDataStreamService dataStreamServiceProvider = new MSBuildExtensionPack.CommonBLL.SolutionDataStreamService();
-                MSBuildExtensionPack.DataSourceEntities.SolutionCollection collection = dataStreamServiceProvider.GetCollectionFromStream(dataStreamServiceResult);
+                MSBuildExtensionPack.CommonBLL.SolutionDataStreamService.Default dataStreamServiceProvider = new MSBuildExtensionPack.CommonBLL.SolutionDataStreamService.Default();
+                MSBuildExtensionPack.DataSourceEntities.Solution.DefaultCollection collection = dataStreamServiceProvider.GetCollectionFromStream(dataStreamServiceResult);
 
                 if (collection != null)
                 {
-					MSBuildExtensionPack.DataSourceEntities.SolutionCollection resultCollection = collection;
+					MSBuildExtensionPack.DataSourceEntities.SolutionCollection resultCollection = new MSBuildExtensionPack.DataSourceEntities.SolutionCollection();
+					MSBuildExtensionPack.EntityContracts.ISolutionHelper.CopyCollection<MSBuildExtensionPack.DataSourceEntities.Solution.DefaultCollection, MSBuildExtensionPack.DataSourceEntities.SolutionCollection, MSBuildExtensionPack.DataSourceEntities.Solution.Default, MSBuildExtensionPack.DataSourceEntities.Solution>(collection, resultCollection);
                     var result = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.BatchInsert(resultCollection);
 					ViewBag.Message = Framework.Resources.UIStringResource.Data_Import_Success;
                 }
@@ -245,7 +246,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             {
                 log.Info(string.Format("{0}: AddNew", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-				MSBuildExtensionPack.DataSourceEntities.Solution entity = vm.Item;
+				MSBuildExtensionPack.DataSourceEntities.Solution entity = MSBuildExtensionPack.EntityContracts.ISolutionHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution.Default, MSBuildExtensionPack.DataSourceEntities.Solution>(vm.Item);
 
                 var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.InsertEntity(entity);
 
@@ -278,8 +279,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Solution_Copy)]
         public ActionResult Copy(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32 valueToCompareIdByIdentifierOftOfByIdentifier)
         {
-            MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn _Response =
-                MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfEntityOfByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
+            MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.Default _Response =
+                MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfDefaultOfByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
 
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -324,7 +325,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             {
                 log.Info(string.Format("{0}: Edit", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-				MSBuildExtensionPack.DataSourceEntities.Solution entity = vm.Item;
+				MSBuildExtensionPack.DataSourceEntities.Solution entity = MSBuildExtensionPack.EntityContracts.ISolutionHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution.Default, MSBuildExtensionPack.DataSourceEntities.Solution>(vm.Item);
                 var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.UpdateEntity(entity);
 
 
@@ -380,7 +381,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 				var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.ExistsOfEntityOfByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
 				if (_Response)
                 {
-					MSBuildExtensionPack.DataSourceEntities.Solution entity = vm.Item;
+					MSBuildExtensionPack.DataSourceEntities.Solution entity = MSBuildExtensionPack.EntityContracts.ISolutionHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution.Default, MSBuildExtensionPack.DataSourceEntities.Solution>(vm.Item);
                     MSBuildExtensionPack.CommonBLLIoC.IoCSolution.DeleteEntity(entity);
 					log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Ended.ToString()));
                 }
@@ -422,24 +423,24 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 
 		#endregion GoBackList()
 
-        private MSBuildExtensionPack.DataSourceEntities.Solution CreateEmptyEntityOrGetFromTempData(string tempDataKey_SolutionController_Copy)
+        private MSBuildExtensionPack.DataSourceEntities.Solution.Default CreateEmptyEntityOrGetFromTempData(string tempDataKey_SolutionController_Copy)
         {
-            MSBuildExtensionPack.DataSourceEntities.Solution entity;
+            MSBuildExtensionPack.DataSourceEntities.Solution.Default entity;
             if (TempData.ContainsKey(tempDataKey_SolutionController_Copy) && TempData[tempDataKey_SolutionController_Copy] != null)
             {
                 try
                 {
-                    entity = (MSBuildExtensionPack.DataSourceEntities.Solution)TempData[tempDataKey_SolutionController_Copy];
+                    entity = (MSBuildExtensionPack.DataSourceEntities.Solution.Default)TempData[tempDataKey_SolutionController_Copy];
                     TempData.Keep(tempDataKey_SolutionController_Copy);
                 }
                 catch
                 {
-                    entity = new MSBuildExtensionPack.DataSourceEntities.Solution();
+                    entity = new MSBuildExtensionPack.DataSourceEntities.Solution.Default();
                 }
             }
             else
             {
-                entity = new MSBuildExtensionPack.DataSourceEntities.Solution();
+                entity = new MSBuildExtensionPack.DataSourceEntities.Solution.Default();
             }
 
             return entity;

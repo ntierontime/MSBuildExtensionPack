@@ -16,6 +16,11 @@
     mc:Ignorable="d" >
     <Grid>
     <Grid HorizontalAlignment="Stretch">
+        <i:Interaction.Triggers>
+            <i:EventTrigger EventName="Loaded">
+                <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM.SearchCommand, Source={StaticResource Locator}}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+            </i:EventTrigger>
+        </i:Interaction.Triggers>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -26,6 +31,8 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
+				<RowDefinition Height="30" />
+				<RowDefinition Height="30" />
 				<RowDefinition Height="30" />
 				<RowDefinition Height="30" />
 				<RowDefinition Height="30" />
@@ -45,15 +52,27 @@
                   <w8lnb:EventToBoundCommandBehavior Event="Loaded" Command="{Binding Path=GetDropDownContentsOfBuildEventCode_1Command}" />
                 </wrtb:Interaction.Behaviors>
 </ComboBox>
-<CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon" Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="5" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.IsToCompare, Mode=TwoWay}" />
-<ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="5" ItemsSource="{Binding Path=DropDownContentsOfSolution_1}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.ValueToCompare, Mode=TwoWay}">
+<CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon" Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="5" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_2.IsToCompare, Mode=TwoWay}" />
+<ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfOrganization_2OfCommon" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="5" ItemsSource="{Binding Path=DropDownContentsOfOrganization_2}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_2.ValueToCompare, Mode=TwoWay}">
                   <wrtb:Interaction.Behaviors>
-                  <w8lnb:EventToBoundCommandBehavior Event="Loaded" Command="{Binding Path=GetDropDownContentsOfSolution_1Command}" />
+                  <w8lnb:EventToBoundCommandBehavior Event="Loaded" Command="{Binding Path=GetDropDownContentsOfOrganization_2Command}" />
+                  <w8lnb:EventToBoundCommandBehavior Event="SelectionChanged" Command="{Binding Path=GetDropDownContentsOfOrganization_2SelectionChangedCommand}" />
+                </wrtb:Interaction.Behaviors>
+</ComboBox>
+<CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfOrganization_1OfCommon" Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_1OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="6" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_1.IsToCompare, Mode=TwoWay}" />
+<ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfOrganization_1OfCommon" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="6" ItemsSource="{Binding Path=DropDownContentsOfOrganization_1}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_1.ValueToCompare, Mode=TwoWay}">
+                  <wrtb:Interaction.Behaviors>
+                  <w8lnb:EventToBoundCommandBehavior Event="SelectionChanged" Command="{Binding Path=GetDropDownContentsOfOrganization_1SelectionChangedCommand}" />
+                </wrtb:Interaction.Behaviors>
+</ComboBox>
+<CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon" Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="7" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.IsToCompare, Mode=TwoWay}" />
+<ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="7" ItemsSource="{Binding Path=DropDownContentsOfSolution_1}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.ValueToCompare, Mode=TwoWay}">
+                  <wrtb:Interaction.Behaviors>
                   <w8lnb:EventToBoundCommandBehavior Event="SelectionChanged" Command="{Binding Path=GetDropDownContentsOfSolution_1SelectionChangedCommand}" />
                 </wrtb:Interaction.Behaviors>
 </ComboBox>
-<CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon" Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="6" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.IsToCompare, Mode=TwoWay}" />
-<ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfBuild_1OfCommon" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="6" ItemsSource="{Binding Path=DropDownContentsOfBuild_1}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.ValueToCompare, Mode=TwoWay}" />
+<CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon" Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="8" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.IsToCompare, Mode=TwoWay}" />
+<ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfBuild_1OfCommon" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="8" ItemsSource="{Binding Path=DropDownContentsOfBuild_1}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.ValueToCompare, Mode=TwoWay}" />
         </Grid>
 <ListView Name="V_Common" Width="600" Margin="12,12,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogCollectionVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollectionDefault}" SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM.CurrentDefault, Mode=TwoWay, Source={StaticResource Locator}}">
   <wrtb:Interaction.Behaviors>
@@ -76,6 +95,14 @@
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto"  />
                             </Grid.RowDefinitions>
 <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Build_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="0" />
@@ -86,16 +113,32 @@
 <TextBlock Text="{Binding Path=Solution_1Id, Mode=TwoWay}" Grid.Column="1" Grid.Row="2" />
 <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Solution_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="3" />
 <TextBlock Text="{Binding Path=Solution_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="3" />
-<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.BuildEventCode_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
-<TextBlock Text="{Binding Path=BuildEventCode_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="4" />
-<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.BuildId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
-<TextBlock Text="{Binding Path=BuildId, Mode=TwoWay}" Grid.Column="1" Grid.Row="5" />
-<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.BuildEventCodeId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="6" />
-<TextBlock Text="{Binding Path=BuildEventCodeId, Mode=TwoWay}" Grid.Column="1" Grid.Row="6" />
-<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Message, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="7" />
-<TextBlock Text="{Binding Path=Message, Mode=TwoWay}" Grid.Column="1" Grid.Row="7" />
-<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.EventTime, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="8" />
-<TextBlock Text="{Binding Path=EventTime, Mode=TwoWay}" Grid.Column="1" Grid.Row="8" />
+<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Organization_1_UniqueidentifierColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
+<TextBlock Text="{Binding Path=Organization_1_UniqueidentifierColumn, Mode=TwoWay}" Grid.Column="1" Grid.Row="4" />
+<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Organization_1_UniqueIdentifier, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
+<TextBlock Text="{Binding Path=Organization_1_UniqueIdentifier, Mode=TwoWay}" Grid.Column="1" Grid.Row="5" />
+<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Organization_1Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="6" />
+<TextBlock Text="{Binding Path=Organization_1Id, Mode=TwoWay}" Grid.Column="1" Grid.Row="6" />
+<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Organization_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="7" />
+<TextBlock Text="{Binding Path=Organization_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="7" />
+<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Organization_2_UniqueidentifierColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="8" />
+<TextBlock Text="{Binding Path=Organization_2_UniqueidentifierColumn, Mode=TwoWay}" Grid.Column="1" Grid.Row="8" />
+<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Organization_2Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="9" />
+<TextBlock Text="{Binding Path=Organization_2Id, Mode=TwoWay}" Grid.Column="1" Grid.Row="9" />
+<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Organization_2_UniqueIdentifier, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="10" />
+<TextBlock Text="{Binding Path=Organization_2_UniqueIdentifier, Mode=TwoWay}" Grid.Column="1" Grid.Row="10" />
+<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Organization_2_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="11" />
+<TextBlock Text="{Binding Path=Organization_2_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="11" />
+<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.BuildEventCode_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="12" />
+<TextBlock Text="{Binding Path=BuildEventCode_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="12" />
+<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.BuildId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="13" />
+<TextBlock Text="{Binding Path=BuildId, Mode=TwoWay}" Grid.Column="1" Grid.Row="13" />
+<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.BuildEventCodeId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="14" />
+<TextBlock Text="{Binding Path=BuildEventCodeId, Mode=TwoWay}" Grid.Column="1" Grid.Row="14" />
+<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Message, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="15" />
+<TextBlock Text="{Binding Path=Message, Mode=TwoWay}" Grid.Column="1" Grid.Row="15" />
+<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.EventTime, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="16" />
+<TextBlock Text="{Binding Path=EventTime, Mode=TwoWay}" Grid.Column="1" Grid.Row="16" />
                         </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>

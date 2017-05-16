@@ -341,6 +341,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         internal IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildLog> _GetQueryOfEntityOfCommon(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -352,6 +354,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 					from t in this.LinqContext.BuildLogs
 					join Build_1 in this.LinqContext.Builds on t.BuildId equals Build_1.Id
 					join Solution_1 in this.LinqContext.Solutions on Build_1.SolutionId equals Solution_1.Id
+					join Organization_1 in this.LinqContext.Organizations on Solution_1.OrganizationId equals Organization_1.Id
+					join Organization_2 in this.LinqContext.Organizations on Organization_1.ParentId equals Organization_2.Id
 					join BuildEventCode_1 in this.LinqContext.BuildEventCodes on t.BuildEventCodeId equals BuildEventCode_1.Id
 					where
 						(
@@ -359,6 +363,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 							(criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon.IsToCompare && Build_1.Id == criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon.ValueToCompare)
 							&&
 							(criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon.IsToCompare && Solution_1.Id == criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon.ValueToCompare)
+							&&
+							(criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon.IsToCompare && Organization_1.Id == criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon.ValueToCompare)
+							&&
+							(criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon.IsToCompare && Organization_2.Id == criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon.ValueToCompare)
 							&&
 							(criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon.IsToCompare && BuildEventCode_1.Id == criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon.ValueToCompare)
 							&&
@@ -404,6 +412,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         private bool _ExistsOfEntityOfCommon(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -415,6 +425,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             int _Count = _GetCountOfEntityOfCommon(
 				criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 				,criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 				,criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 				,criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 				,criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -445,6 +457,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         private int _GetCountOfEntityOfCommon(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -457,6 +471,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildLog> _Query = _GetQueryOfEntityOfCommon(
 				criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 				,criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 				,criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 				,criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 				,criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -494,6 +510,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfCommon(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -509,6 +527,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 int _retval = _GetCountOfEntityOfCommon(
 				criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 				,criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 				,criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 				,criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 				,criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -550,6 +570,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfCommon(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -565,6 +587,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _retval = _ExistsOfEntityOfCommon(
 				criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 				,criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 				,criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 				,criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 				,criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -604,6 +628,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildLog GetSingleOfEntityOfCommon(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -617,6 +643,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _Exists = _ExistsOfEntityOfCommon(
 				criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 				,criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 				,criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 				,criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 				,criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -630,6 +658,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildLog> _Query = _GetQueryOfEntityOfCommon(
 				criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 				,criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 				,criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 				,criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 				,criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -678,6 +708,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildLog GetCollectionOfEntityOfCommon(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -694,6 +726,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _Exists = _ExistsOfEntityOfCommon(
 				criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 				,criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 				,criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 				,criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 				,criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -707,6 +741,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildLog> _Query = _GetQueryOfEntityOfCommon(
 				criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 				,criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 				,criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 				,criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 				,criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -772,6 +808,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         internal IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default> _GetQueryOfDefaultOfCommon(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -783,6 +821,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 					from t in this.LinqContext.BuildLogs
 					join Build_1 in this.LinqContext.Builds on t.BuildId equals Build_1.Id
 					join Solution_1 in this.LinqContext.Solutions on Build_1.SolutionId equals Solution_1.Id
+					join Organization_1 in this.LinqContext.Organizations on Solution_1.OrganizationId equals Organization_1.Id
+					join Organization_2 in this.LinqContext.Organizations on Organization_1.ParentId equals Organization_2.Id
 					join BuildEventCode_1 in this.LinqContext.BuildEventCodes on t.BuildEventCodeId equals BuildEventCode_1.Id
 					where
 						(
@@ -790,6 +830,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 							(criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon.IsToCompare && Build_1.Id == criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon.ValueToCompare)
 							&&
 							(criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon.IsToCompare && Solution_1.Id == criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon.ValueToCompare)
+							&&
+							(criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon.IsToCompare && Organization_1.Id == criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon.ValueToCompare)
+							&&
+							(criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon.IsToCompare && Organization_2.Id == criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon.ValueToCompare)
 							&&
 							(criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon.IsToCompare && BuildEventCode_1.Id == criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon.ValueToCompare)
 							&&
@@ -800,7 +844,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 							(criteriaOfMessageOftOfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfMessageOftOfCommonOfCommonOfCommon.IsToCompare && t.Message.Contains(criteriaOfMessageOftOfCommonOfCommonOfCommon.ValueToBeContained))
 							)
 						)
-					select new MSBuildExtensionPack.DataSourceEntities.BuildLog.Default { Id = t.Id, BuildId = t.BuildId, BuildEventCodeId = t.BuildEventCodeId, Message = t.Message, EventTime = t.EventTime, Build_1_Name = Build_1.Name, Solution_1_Name = Solution_1.Name, Solution_1Id = Solution_1.Id, BuildEventCode_1_Name = BuildEventCode_1.EventCode } into vD2
+					select new MSBuildExtensionPack.DataSourceEntities.BuildLog.Default { Id = t.Id, BuildId = t.BuildId, BuildEventCodeId = t.BuildEventCodeId, Message = t.Message, EventTime = t.EventTime, Build_1_Name = Build_1.Name, Solution_1_Name = Solution_1.Name, Solution_1Id = Solution_1.Id, Organization_1_Name = Organization_1.Name, Organization_1Id = Organization_1.Id, Organization_1_UniqueIdentifier = Organization_1.UniqueIdentifier, Organization_1_UniqueidentifierColumn = Organization_1.UniqueidentifierColumn, Organization_2_Name = Organization_2.Name, Organization_2Id = Organization_2.Id, Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_UniqueidentifierColumn = Organization_2.UniqueidentifierColumn, BuildEventCode_1_Name = BuildEventCode_1.EventCode } into vD2
 					select vD2
 				);
 			var _retval = _ResultFromDataSource;
@@ -835,6 +879,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         private bool _ExistsOfDefaultOfCommon(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -846,6 +892,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             int _Count = _GetCountOfDefaultOfCommon(
 				criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 				,criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 				,criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 				,criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 				,criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -876,6 +924,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         private int _GetCountOfDefaultOfCommon(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -888,6 +938,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default> _Query = _GetQueryOfDefaultOfCommon(
 				criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 				,criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 				,criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 				,criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 				,criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -925,6 +977,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultOfCommon(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -940,6 +994,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 int _retval = _GetCountOfDefaultOfCommon(
 				criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 				,criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 				,criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 				,criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 				,criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -981,6 +1037,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultOfCommon(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -996,6 +1054,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _retval = _ExistsOfDefaultOfCommon(
 				criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 				,criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 				,criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 				,criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 				,criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -1035,6 +1095,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public MSBuildExtensionPack.DataSourceEntities.BuildLog.DataAccessLayerMessageOfDefault GetSingleOfDefaultOfCommon(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -1048,6 +1110,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _Exists = _ExistsOfDefaultOfCommon(
 				criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 				,criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 				,criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 				,criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 				,criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -1061,6 +1125,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default> _Query = _GetQueryOfDefaultOfCommon(
 				criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 				,criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 				,criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 				,criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 				,criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -1109,6 +1175,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public MSBuildExtensionPack.DataSourceEntities.BuildLog.DataAccessLayerMessageOfDefaultCollection GetCollectionOfDefaultOfCommon(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -1125,6 +1193,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _Exists = _ExistsOfDefaultOfCommon(
 				criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 				,criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 				,criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 				,criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 				,criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -1138,6 +1208,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default> _Query = _GetQueryOfDefaultOfCommon(
 				criteriaOfIdOfBuild_1OfCommonOfCommonOfCommon
 				,criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+				,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 				,criteriaOfIdOfBuildEventCode_1OfCommonOfCommonOfCommon
 				,criteriaOfEventTimeOftOfCommonOfCommonOfCommon
 				,criteriaOfMessageOftOfCommonOfCommonOfCommon
@@ -1209,6 +1281,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 					from t in this.LinqContext.BuildLogs
 					join Build_1 in this.LinqContext.Builds on t.BuildId equals Build_1.Id
 					join Solution_1 in this.LinqContext.Solutions on Build_1.SolutionId equals Solution_1.Id
+					join Organization_1 in this.LinqContext.Organizations on Solution_1.OrganizationId equals Organization_1.Id
+					join Organization_2 in this.LinqContext.Organizations on Organization_1.ParentId equals Organization_2.Id
 					join BuildEventCode_1 in this.LinqContext.BuildEventCodes on t.BuildEventCodeId equals BuildEventCode_1.Id
 					select new MSBuildExtensionPack.DataSourceEntities.BuildLog { Id = t.Id, BuildId = t.BuildId, BuildEventCodeId = t.BuildEventCodeId, Message = t.Message, EventTime = t.EventTime } into x
 					select x
@@ -1549,6 +1623,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 					from t in this.LinqContext.BuildLogs
 					join Build_1 in this.LinqContext.Builds on t.BuildId equals Build_1.Id
 					join Solution_1 in this.LinqContext.Solutions on Build_1.SolutionId equals Solution_1.Id
+					join Organization_1 in this.LinqContext.Organizations on Solution_1.OrganizationId equals Organization_1.Id
+					join Organization_2 in this.LinqContext.Organizations on Organization_1.ParentId equals Organization_2.Id
 					join BuildEventCode_1 in this.LinqContext.BuildEventCodes on t.BuildEventCodeId equals BuildEventCode_1.Id
 					let _Value = System.Data.Entity.SqlServer.SqlFunctions.StringConvert((double)t.Id).Trim()
 					select new Framework.NameValuePair { Name = t.Message, Value = _Value } into vD0
@@ -1890,6 +1966,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 					from t in this.LinqContext.BuildLogs
 					join Build_1 in this.LinqContext.Builds on t.BuildId equals Build_1.Id
 					join Solution_1 in this.LinqContext.Solutions on Build_1.SolutionId equals Solution_1.Id
+					join Organization_1 in this.LinqContext.Organizations on Solution_1.OrganizationId equals Organization_1.Id
+					join Organization_2 in this.LinqContext.Organizations on Organization_1.ParentId equals Organization_2.Id
 					join BuildEventCode_1 in this.LinqContext.BuildEventCodes on t.BuildEventCodeId equals BuildEventCode_1.Id
 					let _IdentifierInString = System.Data.Entity.SqlServer.SqlFunctions.StringConvert((double)t.Id).Trim()
 					select new Framework.RssItem { Title = t.Message, Description = t.Message, PubDate = t.EventTime, IdentifierInString = _IdentifierInString } into vD1
@@ -2225,6 +2303,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         internal IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildLog> _GetQueryOfEntityOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
 			)
@@ -2234,6 +2314,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 					from t in this.LinqContext.BuildLogs
 					join Build_1 in this.LinqContext.Builds on t.BuildId equals Build_1.Id
 					join Solution_1 in this.LinqContext.Solutions on Build_1.SolutionId equals Solution_1.Id
+					join Organization_1 in this.LinqContext.Organizations on Solution_1.OrganizationId equals Organization_1.Id
+					join Organization_2 in this.LinqContext.Organizations on Organization_1.ParentId equals Organization_2.Id
 					join BuildEventCode_1 in this.LinqContext.BuildEventCodes on t.BuildEventCodeId equals BuildEventCode_1.Id
 					where
 						(
@@ -2241,6 +2323,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 							(criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Build_1.Id == criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
 							&&
 							(criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Solution_1.Id == criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
+							&&
+							(criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_1.Id == criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
+							&&
+							(criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_2.Id == criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
 							&&
 							(criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && BuildEventCode_1.Id == criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
 							)
@@ -2280,6 +2366,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         private bool _ExistsOfEntityOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
@@ -2289,6 +2377,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             int _Count = _GetCountOfEntityOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,currentIndex
 				,pageSize
@@ -2317,6 +2407,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         private int _GetCountOfEntityOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
@@ -2327,6 +2419,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildLog> _Query = _GetQueryOfEntityOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,queryOrderBySettingCollection
 			);
@@ -2362,6 +2456,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
@@ -2375,6 +2471,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 int _retval = _GetCountOfEntityOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,currentIndex
 				,pageSize
@@ -2414,6 +2512,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
@@ -2427,6 +2527,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _retval = _ExistsOfEntityOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,currentIndex
 				,pageSize
@@ -2464,6 +2566,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildLog GetSingleOfEntityOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
 			)
@@ -2475,6 +2579,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _Exists = _ExistsOfEntityOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,-1
 				,-1
@@ -2486,6 +2592,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildLog> _Query = _GetQueryOfEntityOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,queryOrderBySettingCollection
 			);
@@ -2532,6 +2640,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildLog GetCollectionOfEntityOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
@@ -2546,6 +2656,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _Exists = _ExistsOfEntityOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,currentIndex
 				,pageSize
@@ -2557,6 +2669,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildLog> _Query = _GetQueryOfEntityOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,queryOrderBySettingCollection
 			);
@@ -2620,6 +2734,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         internal IQueryable<Framework.NameValuePair> _GetQueryOfNameValuePairOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
 			)
@@ -2629,6 +2745,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 					from t in this.LinqContext.BuildLogs
 					join Build_1 in this.LinqContext.Builds on t.BuildId equals Build_1.Id
 					join Solution_1 in this.LinqContext.Solutions on Build_1.SolutionId equals Solution_1.Id
+					join Organization_1 in this.LinqContext.Organizations on Solution_1.OrganizationId equals Organization_1.Id
+					join Organization_2 in this.LinqContext.Organizations on Organization_1.ParentId equals Organization_2.Id
 					join BuildEventCode_1 in this.LinqContext.BuildEventCodes on t.BuildEventCodeId equals BuildEventCode_1.Id
 					where
 						(
@@ -2636,6 +2754,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 							(criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Build_1.Id == criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
 							&&
 							(criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Solution_1.Id == criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
+							&&
+							(criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_1.Id == criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
+							&&
+							(criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_2.Id == criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
 							&&
 							(criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && BuildEventCode_1.Id == criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
 							)
@@ -2676,6 +2798,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         private bool _ExistsOfNameValuePairOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
@@ -2685,6 +2809,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             int _Count = _GetCountOfNameValuePairOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,currentIndex
 				,pageSize
@@ -2713,6 +2839,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         private int _GetCountOfNameValuePairOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
@@ -2723,6 +2851,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,queryOrderBySettingCollection
 			);
@@ -2758,6 +2888,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfNameValuePairOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
@@ -2771,6 +2903,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 int _retval = _GetCountOfNameValuePairOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,currentIndex
 				,pageSize
@@ -2810,6 +2944,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfNameValuePairOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
@@ -2823,6 +2959,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _retval = _ExistsOfNameValuePairOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,currentIndex
 				,pageSize
@@ -2860,6 +2998,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity GetSingleOfNameValuePairOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
 			)
@@ -2871,6 +3011,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _Exists = _ExistsOfNameValuePairOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,-1
 				,-1
@@ -2882,6 +3024,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,queryOrderBySettingCollection
 			);
@@ -2928,6 +3072,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection GetCollectionOfNameValuePairOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
@@ -2942,6 +3088,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _Exists = _ExistsOfNameValuePairOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,currentIndex
 				,pageSize
@@ -2953,6 +3101,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,queryOrderBySettingCollection
 			);
@@ -3016,6 +3166,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         internal IQueryable<Framework.RssItem> _GetQueryOfRssItemOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
 			)
@@ -3025,6 +3177,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 					from t in this.LinqContext.BuildLogs
 					join Build_1 in this.LinqContext.Builds on t.BuildId equals Build_1.Id
 					join Solution_1 in this.LinqContext.Solutions on Build_1.SolutionId equals Solution_1.Id
+					join Organization_1 in this.LinqContext.Organizations on Solution_1.OrganizationId equals Organization_1.Id
+					join Organization_2 in this.LinqContext.Organizations on Organization_1.ParentId equals Organization_2.Id
 					join BuildEventCode_1 in this.LinqContext.BuildEventCodes on t.BuildEventCodeId equals BuildEventCode_1.Id
 					where
 						(
@@ -3032,6 +3186,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 							(criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Build_1.Id == criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
 							&&
 							(criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Solution_1.Id == criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
+							&&
+							(criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_1.Id == criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
+							&&
+							(criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_2.Id == criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
 							&&
 							(criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && BuildEventCode_1.Id == criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
 							)
@@ -3072,6 +3230,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         private bool _ExistsOfRssItemOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
@@ -3081,6 +3241,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             int _Count = _GetCountOfRssItemOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,currentIndex
 				,pageSize
@@ -3109,6 +3271,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         private int _GetCountOfRssItemOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
@@ -3119,6 +3283,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             IQueryable<Framework.RssItem> _Query = _GetQueryOfRssItemOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,queryOrderBySettingCollection
 			);
@@ -3154,6 +3320,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfRssItemOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
@@ -3167,6 +3335,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 int _retval = _GetCountOfRssItemOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,currentIndex
 				,pageSize
@@ -3206,6 +3376,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfRssItemOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
@@ -3219,6 +3391,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _retval = _ExistsOfRssItemOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,currentIndex
 				,pageSize
@@ -3256,6 +3430,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public Framework.DataSourceEntities.DataAccessLayerMessageRssItem GetSingleOfRssItemOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
 			)
@@ -3267,6 +3443,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _Exists = _ExistsOfRssItemOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,-1
 				,-1
@@ -3278,6 +3456,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     IQueryable<Framework.RssItem> _Query = _GetQueryOfRssItemOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,queryOrderBySettingCollection
 			);
@@ -3324,6 +3504,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection GetCollectionOfRssItemOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
@@ -3338,6 +3520,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _Exists = _ExistsOfRssItemOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,currentIndex
 				,pageSize
@@ -3349,6 +3533,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     IQueryable<Framework.RssItem> _Query = _GetQueryOfRssItemOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,queryOrderBySettingCollection
 			);
@@ -3412,6 +3598,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         internal IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default> _GetQueryOfDefaultOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
 			)
@@ -3421,6 +3609,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 					from t in this.LinqContext.BuildLogs
 					join Build_1 in this.LinqContext.Builds on t.BuildId equals Build_1.Id
 					join Solution_1 in this.LinqContext.Solutions on Build_1.SolutionId equals Solution_1.Id
+					join Organization_1 in this.LinqContext.Organizations on Solution_1.OrganizationId equals Organization_1.Id
+					join Organization_2 in this.LinqContext.Organizations on Organization_1.ParentId equals Organization_2.Id
 					join BuildEventCode_1 in this.LinqContext.BuildEventCodes on t.BuildEventCodeId equals BuildEventCode_1.Id
 					where
 						(
@@ -3429,10 +3619,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 							&&
 							(criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Solution_1.Id == criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
 							&&
+							(criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_1.Id == criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
+							&&
+							(criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_2.Id == criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
+							&&
 							(criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && BuildEventCode_1.Id == criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
 							)
 						)
-					select new MSBuildExtensionPack.DataSourceEntities.BuildLog.Default { Id = t.Id, BuildId = t.BuildId, BuildEventCodeId = t.BuildEventCodeId, Message = t.Message, EventTime = t.EventTime, Build_1_Name = Build_1.Name, Solution_1_Name = Solution_1.Name, Solution_1Id = Solution_1.Id, BuildEventCode_1_Name = BuildEventCode_1.EventCode } into vD2
+					select new MSBuildExtensionPack.DataSourceEntities.BuildLog.Default { Id = t.Id, BuildId = t.BuildId, BuildEventCodeId = t.BuildEventCodeId, Message = t.Message, EventTime = t.EventTime, Build_1_Name = Build_1.Name, Solution_1_Name = Solution_1.Name, Solution_1Id = Solution_1.Id, Organization_1_Name = Organization_1.Name, Organization_1Id = Organization_1.Id, Organization_1_UniqueIdentifier = Organization_1.UniqueIdentifier, Organization_1_UniqueidentifierColumn = Organization_1.UniqueidentifierColumn, Organization_2_Name = Organization_2.Name, Organization_2Id = Organization_2.Id, Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_UniqueidentifierColumn = Organization_2.UniqueidentifierColumn, BuildEventCode_1_Name = BuildEventCode_1.EventCode } into vD2
 					select vD2
 				);
 			var _retval = _ResultFromDataSource;
@@ -3467,6 +3661,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         private bool _ExistsOfDefaultOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
@@ -3476,6 +3672,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             int _Count = _GetCountOfDefaultOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,currentIndex
 				,pageSize
@@ -3504,6 +3702,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         private int _GetCountOfDefaultOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
@@ -3514,6 +3714,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default> _Query = _GetQueryOfDefaultOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,queryOrderBySettingCollection
 			);
@@ -3549,6 +3751,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
@@ -3562,6 +3766,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 int _retval = _GetCountOfDefaultOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,currentIndex
 				,pageSize
@@ -3601,6 +3807,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
@@ -3614,6 +3822,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _retval = _ExistsOfDefaultOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,currentIndex
 				,pageSize
@@ -3651,6 +3861,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public MSBuildExtensionPack.DataSourceEntities.BuildLog.DataAccessLayerMessageOfDefault GetSingleOfDefaultOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
 			)
@@ -3662,6 +3874,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _Exists = _ExistsOfDefaultOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,-1
 				,-1
@@ -3673,6 +3887,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default> _Query = _GetQueryOfDefaultOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,queryOrderBySettingCollection
 			);
@@ -3719,6 +3935,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public MSBuildExtensionPack.DataSourceEntities.BuildLog.DataAccessLayerMessageOfDefaultCollection GetCollectionOfDefaultOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
@@ -3733,6 +3951,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _Exists = _ExistsOfDefaultOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,currentIndex
 				,pageSize
@@ -3744,6 +3964,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default> _Query = _GetQueryOfDefaultOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,queryOrderBySettingCollection
 			);
@@ -3807,6 +4029,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         internal IEnumerable<MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataView> _GetQueryOfDefaultGroupedDataViewOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
 			)
@@ -3816,6 +4040,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 					from t in this.LinqContext.BuildLogs
 					join Build_1 in this.LinqContext.Builds on t.BuildId equals Build_1.Id
 					join Solution_1 in this.LinqContext.Solutions on Build_1.SolutionId equals Solution_1.Id
+					join Organization_1 in this.LinqContext.Organizations on Solution_1.OrganizationId equals Organization_1.Id
+					join Organization_2 in this.LinqContext.Organizations on Organization_1.ParentId equals Organization_2.Id
 					join BuildEventCode_1 in this.LinqContext.BuildEventCodes on t.BuildEventCodeId equals BuildEventCode_1.Id
 					where
 						(
@@ -3824,12 +4050,16 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 							&&
 							(criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Solution_1.Id == criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
 							&&
+							(criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_1.Id == criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
+							&&
+							(criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_2.Id == criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
+							&&
 							(criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && BuildEventCode_1.Id == criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
 							)
 						)
-					group t by new { BuildId = t.BuildId, BuildEventCodeId = t.BuildEventCodeId, Solution_1Id = Solution_1.Id, Name = string.Format("{0} - {1} - {2}", Build_1.Name, Solution_1.ExternalParentId, BuildEventCode_1.EventCode) } into tG
+					group t by new { BuildId = t.BuildId, BuildEventCodeId = t.BuildEventCodeId, Solution_1Id = Solution_1.Id, Organization_1Id = Organization_1.Id, Organization_2Id = Organization_2.Id, Name = string.Format("{0} - {1} - {2} - {3} - {4}", Build_1.Name, Solution_1.ExternalParentId, Organization_1.Name, Organization_2.Name, BuildEventCode_1.EventCode) } into tG
 					let _CountPerFK = tG.Count()
-					select new MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataView { BuildId = tG.Key.BuildId, BuildEventCodeId = tG.Key.BuildEventCodeId, Solution_1Id = tG.Key.Solution_1Id, CountPerFK = _CountPerFK, Name = tG.Key.Name } into vD3
+					select new MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataView { BuildId = tG.Key.BuildId, BuildEventCodeId = tG.Key.BuildEventCodeId, Solution_1Id = tG.Key.Solution_1Id, Organization_1Id = tG.Key.Organization_1Id, Organization_2Id = tG.Key.Organization_2Id, CountPerFK = _CountPerFK, Name = tG.Key.Name } into vD3
 					select vD3
 				);
 			var _retval = _ResultFromDataSource;
@@ -3864,6 +4094,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         private bool _ExistsOfDefaultGroupedDataViewOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
@@ -3873,6 +4105,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             int _Count = _GetCountOfDefaultGroupedDataViewOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,currentIndex
 				,pageSize
@@ -3901,6 +4135,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         private int _GetCountOfDefaultGroupedDataViewOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
@@ -3911,6 +4147,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             IEnumerable<MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataView> _Query = _GetQueryOfDefaultGroupedDataViewOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,queryOrderBySettingCollection
 			);
@@ -3946,6 +4184,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultGroupedDataViewOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
@@ -3959,6 +4199,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 int _retval = _GetCountOfDefaultGroupedDataViewOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,currentIndex
 				,pageSize
@@ -3998,6 +4240,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultGroupedDataViewOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
@@ -4011,6 +4255,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _retval = _ExistsOfDefaultGroupedDataViewOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,currentIndex
 				,pageSize
@@ -4048,6 +4294,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public MSBuildExtensionPack.DataSourceEntities.BuildLog.DataAccessLayerMessageOfDefaultGroupedDataView GetSingleOfDefaultGroupedDataViewOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
 			)
@@ -4059,6 +4307,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _Exists = _ExistsOfDefaultGroupedDataViewOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,-1
 				,-1
@@ -4070,6 +4320,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     IEnumerable<MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataView> _Query = _GetQueryOfDefaultGroupedDataViewOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,queryOrderBySettingCollection
 			);
@@ -4116,6 +4368,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public MSBuildExtensionPack.DataSourceEntities.BuildLog.DataAccessLayerMessageOfDefaultGroupedDataViewCollection GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
@@ -4130,6 +4384,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _Exists = _ExistsOfDefaultGroupedDataViewOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,currentIndex
 				,pageSize
@@ -4141,6 +4397,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     IEnumerable<MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataView> _Query = _GetQueryOfDefaultGroupedDataViewOfByFKOnly(
 				criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+				,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
 				,queryOrderBySettingCollection
 			);
@@ -4211,6 +4469,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 					from t in this.LinqContext.BuildLogs
 					join Build_1 in this.LinqContext.Builds on t.BuildId equals Build_1.Id
 					join Solution_1 in this.LinqContext.Solutions on Build_1.SolutionId equals Solution_1.Id
+					join Organization_1 in this.LinqContext.Organizations on Solution_1.OrganizationId equals Organization_1.Id
+					join Organization_2 in this.LinqContext.Organizations on Organization_1.ParentId equals Organization_2.Id
 					join BuildEventCode_1 in this.LinqContext.BuildEventCodes on t.BuildEventCodeId equals BuildEventCode_1.Id
 					where
 						(
@@ -4572,6 +4832,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 					from t in this.LinqContext.BuildLogs
 					join Build_1 in this.LinqContext.Builds on t.BuildId equals Build_1.Id
 					join Solution_1 in this.LinqContext.Solutions on Build_1.SolutionId equals Solution_1.Id
+					join Organization_1 in this.LinqContext.Organizations on Solution_1.OrganizationId equals Organization_1.Id
+					join Organization_2 in this.LinqContext.Organizations on Organization_1.ParentId equals Organization_2.Id
 					join BuildEventCode_1 in this.LinqContext.BuildEventCodes on t.BuildEventCodeId equals BuildEventCode_1.Id
 					where
 						(
@@ -4579,7 +4841,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 							(criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.IsToCompare == false || criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.IsToCompare && t.Id == criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.ValueToCompare)
 							)
 						)
-					select new MSBuildExtensionPack.DataSourceEntities.BuildLog.Default { Id = t.Id, BuildId = t.BuildId, BuildEventCodeId = t.BuildEventCodeId, Message = t.Message, EventTime = t.EventTime, Build_1_Name = Build_1.Name, Solution_1_Name = Solution_1.Name, Solution_1Id = Solution_1.Id, BuildEventCode_1_Name = BuildEventCode_1.EventCode } into vD2
+					select new MSBuildExtensionPack.DataSourceEntities.BuildLog.Default { Id = t.Id, BuildId = t.BuildId, BuildEventCodeId = t.BuildEventCodeId, Message = t.Message, EventTime = t.EventTime, Build_1_Name = Build_1.Name, Solution_1_Name = Solution_1.Name, Solution_1Id = Solution_1.Id, Organization_1_Name = Organization_1.Name, Organization_1Id = Organization_1.Id, Organization_1_UniqueIdentifier = Organization_1.UniqueIdentifier, Organization_1_UniqueidentifierColumn = Organization_1.UniqueidentifierColumn, Organization_2_Name = Organization_2.Name, Organization_2Id = Organization_2.Id, Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_UniqueidentifierColumn = Organization_2.UniqueidentifierColumn, BuildEventCode_1_Name = BuildEventCode_1.EventCode } into vD2
 					select vD2
 				);
 			var _retval = _ResultFromDataSource;
@@ -4933,6 +5195,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 					from t in this.LinqContext.BuildLogs
 					join Build_1 in this.LinqContext.Builds on t.BuildId equals Build_1.Id
 					join Solution_1 in this.LinqContext.Solutions on Build_1.SolutionId equals Solution_1.Id
+					join Organization_1 in this.LinqContext.Organizations on Solution_1.OrganizationId equals Organization_1.Id
+					join Organization_2 in this.LinqContext.Organizations on Organization_1.ParentId equals Organization_2.Id
 					join BuildEventCode_1 in this.LinqContext.BuildEventCodes on t.BuildEventCodeId equals BuildEventCode_1.Id
 					where
 						(

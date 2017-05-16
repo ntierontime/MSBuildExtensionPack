@@ -37,21 +37,28 @@
     <Compile Include="Contracts\IBuild.cs" />
     <Compile Include="Contracts\IBuildEventCode.cs" />
     <Compile Include="Contracts\IBuildLog.cs" />
+    <Compile Include="Contracts\IOrganization.cs" />
     <Compile Include="Contracts\ISolution.cs" />
     <Compile Include="EntityContractHelpers\IBuildHelper.cs" />
     <Compile Include="EntityContractHelpers\IBuildEventCodeHelper.cs" />
     <Compile Include="EntityContractHelpers\IBuildLogHelper.cs" />
+    <Compile Include="EntityContractHelpers\IOrganizationHelper.cs" />
     <Compile Include="EntityContractHelpers\ISolutionHelper.cs" />
     <Compile Include="IdentifierContracts\IBuildIdentifier.cs" />
     <Compile Include="IdentifierContracts\IBuildEventCodeIdentifier.cs" />
     <Compile Include="IdentifierContracts\IBuildLogIdentifier.cs" />
+    <Compile Include="IdentifierContracts\IOrganizationIdentifier.cs" />
     <Compile Include="IdentifierContracts\ISolutionIdentifier.cs" />
     <Compile Include="IdentifierContractHelpers\IBuildIdentifierHelper.cs" />
     <Compile Include="IdentifierContractHelpers\IBuildEventCodeIdentifierHelper.cs" />
     <Compile Include="IdentifierContractHelpers\IBuildLogIdentifierHelper.cs" />
+    <Compile Include="IdentifierContractHelpers\IOrganizationIdentifierHelper.cs" />
     <Compile Include="IdentifierContractHelpers\ISolutionIdentifierHelper.cs" />
     <Compile Include="QueryCriteriaByEntityReferenceContracts\IQueryCriteriaBuildByFKs.cs" />
     <Compile Include="QueryCriteriaByEntityReferenceContracts\IQueryCriteriaBuildLogByFKs.cs" />
+    <Compile Include="QueryCriteriaByEntityReferenceContracts\IQueryCriteriaOrganizationByFKs.cs" />
+    <Compile Include="QueryCriteriaByEntityReferenceContracts\IQueryCriteriaSolutionByFKs.cs" />
+    <Compile Include="Queries\OrganizationPredicateByUniqueConstraint.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Frameworks\Framework\Framework.csproj">

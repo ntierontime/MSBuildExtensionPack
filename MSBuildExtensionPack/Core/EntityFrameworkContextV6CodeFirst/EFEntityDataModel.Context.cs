@@ -33,6 +33,10 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
 
 
 
+        public DbSet<Organization> Organizations { get; set; }
+
+
+
         public DbSet<Solution> Solutions { get; set; }
 
 
@@ -82,7 +86,55 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
 			#endregion #1.3 MSBuildExtensionPack.BuildLog
 
 
-			#region #1.4 MSBuildExtensionPack.Solution
+			#region #1.4 MSBuildExtensionPack.Organization
+
+			// A. Foreign Keys, tables referenced to this table
+			// A.1. Organization_ParentIds - Parent
+            modelBuilder.Entity<Organization>()
+                .HasMany(e => e.Organization_ParentIds)
+                .WithRequired(e => e.Parent)
+				.HasForeignKey(e => e.ParentId)
+                .WillCascadeOnDelete(false);
+
+			// A.2. Solutions - Organization
+            modelBuilder.Entity<Organization>()
+                .HasMany(e => e.Solutions)
+                .WithRequired(e => e.Organization)
+				.HasForeignKey(e => e.OrganizationId)
+                .WillCascadeOnDelete(false);
+
+
+			// B. Special Type Property
+			// B.1. CharColumn -- Char(10) -- System.String
+            modelBuilder.Entity<Organization>()
+                .Property(e => e.CharColumn)
+                .IsFixedLength();
+
+			// B.2. NcharColumn -- NChar(1) -- System.String
+            modelBuilder.Entity<Organization>()
+                .Property(e => e.NcharColumn)
+                .IsFixedLength();
+
+			// B.3. DecimalColumn -- Decimal(10,2) -- System.Decimal
+            modelBuilder.Entity<Organization>()
+                .Property(e => e.DecimalColumn)
+                .HasPrecision(10, 2);
+
+			// B.4. NumericColumn -- Decimal(10,2) -- System.Decimal
+            modelBuilder.Entity<Organization>()
+                .Property(e => e.NumericColumn)
+                .HasPrecision(10, 2);
+
+			// B.5. MoneyColumn -- Money -- System.Decimal
+            modelBuilder.Entity<Organization>()
+                .Property(e => e.MoneyColumn)
+                .HasPrecision(19, 4);
+
+
+			#endregion #1.4 MSBuildExtensionPack.Organization
+
+
+			#region #1.5 MSBuildExtensionPack.Solution
 
 			// A. Foreign Keys, tables referenced to this table
 			// A.1. Builds - Solution
@@ -95,10 +147,37 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
 
 			// B. Special Type Property
 
-			#endregion #1.4 MSBuildExtensionPack.Solution
+			#endregion #1.5 MSBuildExtensionPack.Solution
 
 
         }
+
+
+		#region GetAscendantOfParentIdOfMSBuildExtensionPack_Organization && GetDescendantOfParentIdOfMSBuildExtensionPack_Organization 
+
+        public virtual ObjectResult<RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization> GetAscendantOfParentIdOfMSBuildExtensionPack_Organization(
+			System.Int64 Id
+			)
+        {
+			var IdParameter = new ObjectParameter("Id", Id);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization>(
+                "GetAscendantOfParentIdOfMSBuildExtensionPack_Organization"
+				,IdParameter
+				);
+        }
+
+        public virtual ObjectResult<RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization> GetDescendantOfParentIdOfMSBuildExtensionPack_Organization(
+			System.Int64 Id
+			)
+        {
+			var IdParameter = new ObjectParameter("Id", Id);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization>(
+                "GetDescendantOfParentIdOfMSBuildExtensionPack_Organization"
+				, IdParameter
+				);
+        }
+
+		#endregion GetAscendantOfParentIdOfMSBuildExtensionPack_Organization && GetDescendantOfParentIdOfMSBuildExtensionPack_Organization 
 
 
     }

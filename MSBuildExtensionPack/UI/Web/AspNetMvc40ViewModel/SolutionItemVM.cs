@@ -15,7 +15,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 
         #endregion log4net
 
-
+				public List<SelectListItem> SelectListOfMSBuildExtensionPack_Organization { get; set; }
 
         public void Load(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32 valueToCompareIdByIdentifierOftOfByIdentifier
             , Framework.UIAction uiAction)
@@ -24,8 +24,8 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
             {
                 log.Info(string.Format("{0}: Details", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-                MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn _Response =
-                    MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfEntityOfByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier && valueToCompareIdByIdentifierOftOfByIdentifier != default(System.Int32), valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
+                MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.Default _Response =
+                    MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfDefaultOfByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier && valueToCompareIdByIdentifierOftOfByIdentifier != default(System.Int32), valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
 
                 if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK || _Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
                 {
@@ -51,7 +51,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
             }
         }
 
-        public static SolutionItemVM CreateNewViewModel(MSBuildExtensionPack.DataSourceEntities.Solution entity)
+        public static SolutionItemVM CreateNewViewModel(MSBuildExtensionPack.DataSourceEntities.Solution.Default entity)
         {
             Framework.UIAction uiAction = Framework.UIAction.Create;
             SolutionItemVM vm = new SolutionItemVM();
@@ -69,6 +69,8 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
         {
             if (uiAction != Framework.UIAction.ViewDetails)
             {
+				this.NameValueCollectionOfMSBuildExtensionPack_Organization = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairOfAll(new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(), new Framework.EntityContracts.QueryPagingSetting(), null);
+                this.SelectListOfMSBuildExtensionPack_Organization = Framework.Mvc.MvcHelper.BuildListOfSelectListItem(this.NameValueCollectionOfMSBuildExtensionPack_Organization);
 
             }
         }

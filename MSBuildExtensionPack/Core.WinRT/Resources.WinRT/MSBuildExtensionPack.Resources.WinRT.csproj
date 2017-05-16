@@ -136,6 +136,14 @@
       <DependentUpon>UIStringResourcePerEntityBuildLog.resw</DependentUpon>
       <SubType>RESXCodeBehind</SubType>
     </Compile>
+    <PRIResource Include="..\..\Core\Resources\en\UIStringResourcePerEntityOrganization.resw">
+      <Link>en\UIStringResourcePerEntityOrganization.resw</Link>
+    </PRIResource>
+    <Compile Include="..\..\Core\Resources\en\UIStringResourcePerEntityOrganization.designer.cs">
+      <Link>en\UIStringResourcePerEntityOrganization.designer.cs</Link>
+      <DependentUpon>UIStringResourcePerEntityOrganization.resw</DependentUpon>
+      <SubType>RESXCodeBehind</SubType>
+    </Compile>
     <PRIResource Include="..\..\Core\Resources\en\UIStringResourcePerEntitySolution.resw">
       <Link>en\UIStringResourcePerEntitySolution.resw</Link>
     </PRIResource>

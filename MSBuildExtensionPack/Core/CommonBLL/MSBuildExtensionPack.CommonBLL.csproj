@@ -37,15 +37,18 @@
     <Compile Include="Services\BuildService.cs" />
     <Compile Include="Services\BuildEventCodeService.cs" />
     <Compile Include="Services\BuildLogService.cs" />
+    <Compile Include="Services\OrganizationService.cs" />
     <Compile Include="Services\SolutionService.cs" />
     <Compile Include="BusinessLogicLayerFactory.cs" />
     <Compile Include="ChartingService\BuildChartBuilder.cs" />
     <Compile Include="ChartingService\BuildEventCodeChartBuilder.cs" />
     <Compile Include="ChartingService\BuildLogChartBuilder.cs" />
+    <Compile Include="ChartingService\OrganizationChartBuilder.cs" />
     <Compile Include="ChartingService\SolutionChartBuilder.cs" />
     <Compile Include="DataStreamServiceProviders\BuildDataStreamService.cs" />
     <Compile Include="DataStreamServiceProviders\BuildEventCodeDataStreamService.cs" />
     <Compile Include="DataStreamServiceProviders\BuildLogDataStreamService.cs" />
+    <Compile Include="DataStreamServiceProviders\OrganizationDataStreamService.cs" />
     <Compile Include="DataStreamServiceProviders\SolutionDataStreamService.cs" />
     <Compile Include="SyndicationFeedFacade.cs" />
   </ItemGroup>

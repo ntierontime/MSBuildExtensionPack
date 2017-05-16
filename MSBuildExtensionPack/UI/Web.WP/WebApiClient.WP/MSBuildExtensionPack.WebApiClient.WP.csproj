@@ -59,6 +59,9 @@
     <Compile Include="..\..\..\UI\Web\WebApiClient\BuildLogApiControllerClient.cs">
       <Link>BuildLogApiControllerClient.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\UI\Web\WebApiClient\OrganizationApiControllerClient.cs">
+      <Link>OrganizationApiControllerClient.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\UI\Web\WebApiClient\SolutionApiControllerClient.cs">
       <Link>SolutionApiControllerClient.cs</Link>
     </Compile>

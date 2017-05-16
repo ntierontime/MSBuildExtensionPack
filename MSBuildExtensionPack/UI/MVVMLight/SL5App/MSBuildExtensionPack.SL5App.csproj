@@ -123,6 +123,13 @@
     <Compile Include="Pages\WPCommonOfBuildLog.xaml.cs">
       <DependentUpon>WPCommonOfBuildLog.xaml</DependentUpon>
     </Compile>
+    <Page Include="Pages\WPCommonOfOrganization.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Pages\WPCommonOfOrganization.xaml.cs">
+      <DependentUpon>WPCommonOfOrganization.xaml</DependentUpon>
+    </Compile>
     <Page Include="Pages\WPCommonOfSolution.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -150,6 +157,13 @@
     </Page>
     <Compile Include="UserControls\UCCommonOfBuildLog.xaml.cs">
       <DependentUpon>UCCommonOfBuildLog.xaml</DependentUpon>
+    </Compile>
+    <Page Include="UserControls\UCCommonOfOrganization.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="UserControls\UCCommonOfOrganization.xaml.cs">
+      <DependentUpon>UCCommonOfOrganization.xaml</DependentUpon>
     </Compile>
     <Page Include="UserControls\UCCommonOfSolution.xaml">
       <Generator>MSBuild:Compile</Generator>

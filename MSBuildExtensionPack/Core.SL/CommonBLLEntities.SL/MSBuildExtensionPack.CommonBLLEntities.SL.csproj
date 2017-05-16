@@ -63,6 +63,9 @@
     <Compile Include="..\..\Core\CommonBLLEntities\ChainedQueryCriteria\BuildLogChainedQueryCriteria.cs">
       <Link>ChainedQueryCriteria\BuildLogChainedQueryCriteria.cs</Link>
     </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\ChainedQueryCriteria\OrganizationChainedQueryCriteria.cs">
+      <Link>ChainedQueryCriteria\OrganizationChainedQueryCriteria.cs</Link>
+    </Compile>
     <Compile Include="..\..\Core\CommonBLLEntities\ChainedQueryCriteria\SolutionChainedQueryCriteria.cs">
       <Link>ChainedQueryCriteria\SolutionChainedQueryCriteria.cs</Link>
     </Compile>
@@ -74,6 +77,9 @@
     </Compile>
     <Compile Include="..\..\Core\CommonBLLEntities\QueryCriteria\BuildLogQueryCriteria.cs">
       <Link>QueryCriteria\BuildLogQueryCriteria.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\QueryCriteria\OrganizationQueryCriteria.cs">
+      <Link>QueryCriteria\OrganizationQueryCriteria.cs</Link>
     </Compile>
     <Compile Include="..\..\Core\CommonBLLEntities\QueryCriteria\SolutionQueryCriteria.cs">
       <Link>QueryCriteria\SolutionQueryCriteria.cs</Link>
@@ -87,6 +93,9 @@
     <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesBuiltIn\BuildLogRequestMessageBuiltIn.cs">
       <Link>RequestMessagesBuiltIn\BuildLogRequestMessageBuiltIn.cs</Link>
     </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesBuiltIn\OrganizationRequestMessageBuiltIn.cs">
+      <Link>RequestMessagesBuiltIn\OrganizationRequestMessageBuiltIn.cs</Link>
+    </Compile>
     <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesBuiltIn\SolutionRequestMessageBuiltIn.cs">
       <Link>RequestMessagesBuiltIn\SolutionRequestMessageBuiltIn.cs</Link>
     </Compile>
@@ -98,6 +107,9 @@
     </Compile>
     <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesUserDefined\BuildLogRequestMessageUserDefined.cs">
       <Link>RequestMessagesUserDefined\BuildLogRequestMessageUserDefined.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesUserDefined\OrganizationRequestMessageUserDefined.cs">
+      <Link>RequestMessagesUserDefined\OrganizationRequestMessageUserDefined.cs</Link>
     </Compile>
     <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesUserDefined\SolutionRequestMessageUserDefined.cs">
       <Link>RequestMessagesUserDefined\SolutionRequestMessageUserDefined.cs</Link>
@@ -111,6 +123,9 @@
     <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesBuiltIn\BuildLogResponseMessageBuiltIn.cs">
       <Link>ResponseMessagesBuiltIn\BuildLogResponseMessageBuiltIn.cs</Link>
     </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesBuiltIn\OrganizationResponseMessageBuiltIn.cs">
+      <Link>ResponseMessagesBuiltIn\OrganizationResponseMessageBuiltIn.cs</Link>
+    </Compile>
     <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesBuiltIn\SolutionResponseMessageBuiltIn.cs">
       <Link>ResponseMessagesBuiltIn\SolutionResponseMessageBuiltIn.cs</Link>
     </Compile>
@@ -122,6 +137,9 @@
     </Compile>
     <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesUserDefined\BuildLogResponseMessageUserDefined.cs">
       <Link>ResponseMessagesUserDefined\BuildLogResponseMessageUserDefined.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesUserDefined\OrganizationResponseMessageUserDefined.cs">
+      <Link>ResponseMessagesUserDefined\OrganizationResponseMessageUserDefined.cs</Link>
     </Compile>
     <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesUserDefined\SolutionResponseMessageUserDefined.cs">
       <Link>ResponseMessagesUserDefined\SolutionResponseMessageUserDefined.cs</Link>

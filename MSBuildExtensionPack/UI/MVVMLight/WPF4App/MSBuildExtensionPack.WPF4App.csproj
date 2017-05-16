@@ -77,6 +77,13 @@
     <Compile Include="Pages\BuildLog\Create.xaml.cs">
       <DependentUpon>Create.xaml</DependentUpon>
     </Compile>
+    <Page Include="Pages\Organization\Create.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Pages\Organization\Create.xaml.cs">
+      <DependentUpon>Create.xaml</DependentUpon>
+    </Compile>
     <Page Include="Pages\Solution\Create.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -103,6 +110,13 @@
       <SubType>Designer</SubType>
     </Page>
     <Compile Include="Pages\BuildLog\Delete.xaml.cs">
+      <DependentUpon>Delete.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Pages\Organization\Delete.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Pages\Organization\Delete.xaml.cs">
       <DependentUpon>Delete.xaml</DependentUpon>
     </Compile>
     <Page Include="Pages\Solution\Delete.xaml">
@@ -133,6 +147,13 @@
     <Compile Include="Pages\BuildLog\Details.xaml.cs">
       <DependentUpon>Details.xaml</DependentUpon>
     </Compile>
+    <Page Include="Pages\Organization\Details.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Pages\Organization\Details.xaml.cs">
+      <DependentUpon>Details.xaml</DependentUpon>
+    </Compile>
     <Page Include="Pages\Solution\Details.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -159,6 +180,13 @@
       <SubType>Designer</SubType>
     </Page>
     <Compile Include="Pages\BuildLog\Edit.xaml.cs">
+      <DependentUpon>Edit.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Pages\Organization\Edit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Pages\Organization\Edit.xaml.cs">
       <DependentUpon>Edit.xaml</DependentUpon>
     </Compile>
     <Page Include="Pages\Solution\Edit.xaml">
@@ -189,6 +217,13 @@
     <Compile Include="UserControls\BuildLog\Create.xaml.cs">
       <DependentUpon>Create.xaml</DependentUpon>
     </Compile>
+    <Page Include="UserControls\Organization\Create.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="UserControls\Organization\Create.xaml.cs">
+      <DependentUpon>Create.xaml</DependentUpon>
+    </Compile>
     <Page Include="UserControls\Solution\Create.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -215,6 +250,13 @@
       <SubType>Designer</SubType>
     </Page>
     <Compile Include="UserControls\BuildLog\Delete.xaml.cs">
+      <DependentUpon>Delete.xaml</DependentUpon>
+    </Compile>
+    <Page Include="UserControls\Organization\Delete.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="UserControls\Organization\Delete.xaml.cs">
       <DependentUpon>Delete.xaml</DependentUpon>
     </Compile>
     <Page Include="UserControls\Solution\Delete.xaml">
@@ -245,6 +287,13 @@
     <Compile Include="UserControls\BuildLog\Details.xaml.cs">
       <DependentUpon>Details.xaml</DependentUpon>
     </Compile>
+    <Page Include="UserControls\Organization\Details.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="UserControls\Organization\Details.xaml.cs">
+      <DependentUpon>Details.xaml</DependentUpon>
+    </Compile>
     <Page Include="UserControls\Solution\Details.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -273,6 +322,13 @@
     <Compile Include="UserControls\BuildLog\Edit.xaml.cs">
       <DependentUpon>Edit.xaml</DependentUpon>
     </Compile>
+    <Page Include="UserControls\Organization\Edit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="UserControls\Organization\Edit.xaml.cs">
+      <DependentUpon>Edit.xaml</DependentUpon>
+    </Compile>
     <Page Include="UserControls\Solution\Edit.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -287,6 +343,14 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DispatcherHelperWrapper.cs" />
+    <Compile Include="DispatcherHelperWrapper.cs" />
+    <Compile Include="DispatcherHelperWrapper.cs" />
+    <Compile Include="DispatcherHelperWrapper.cs" />
+    <Compile Include="DispatcherHelperWrapper.cs" />
+    <Compile Include="DispatcherHelperWrapper.cs" />
+    <Compile Include="DispatcherHelperWrapper.cs" />
+    <Compile Include="DispatcherHelperWrapper.cs" />
     <Compile Include="DispatcherHelperWrapper.cs" />
     <None Include="app.config" />
     <Page Include="AppResourceDictionary.xaml">
@@ -339,6 +403,13 @@
     <Compile Include="Pages\WPCommonOfBuildLog.xaml.cs">
       <DependentUpon>WPCommonOfBuildLog.xaml</DependentUpon>
     </Compile>
+    <Page Include="Pages\WPCommonOfOrganization.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Pages\WPCommonOfOrganization.xaml.cs">
+      <DependentUpon>WPCommonOfOrganization.xaml</DependentUpon>
+    </Compile>
     <Page Include="Pages\WPCommonOfSolution.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -366,6 +437,13 @@
     </Page>
     <Compile Include="UserControls\UCCommonOfBuildLog.xaml.cs">
       <DependentUpon>UCCommonOfBuildLog.xaml</DependentUpon>
+    </Compile>
+    <Page Include="UserControls\UCCommonOfOrganization.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="UserControls\UCCommonOfOrganization.xaml.cs">
+      <DependentUpon>UCCommonOfOrganization.xaml</DependentUpon>
     </Compile>
     <Page Include="UserControls\UCCommonOfSolution.xaml">
       <Generator>MSBuild:Compile</Generator>

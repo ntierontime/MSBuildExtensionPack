@@ -40,6 +40,7 @@
     <Compile Include="Build.cs" />
     <Compile Include="BuildEventCode.cs" />
     <Compile Include="BuildLog.cs" />
+    <Compile Include="Organization.cs" />
     <Compile Include="Solution.cs" />
     <Compile Include="EFEntityDataModel.StoredProcedure.cs" />
   </ItemGroup>

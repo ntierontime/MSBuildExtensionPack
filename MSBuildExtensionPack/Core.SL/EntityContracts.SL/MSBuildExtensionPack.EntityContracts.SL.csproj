@@ -63,6 +63,9 @@
     <Compile Include="..\..\Core\EntityContracts\Contracts\IBuildLog.cs">
       <Link>Contracts\IBuildLog.cs</Link>
     </Compile>
+    <Compile Include="..\..\Core\EntityContracts\Contracts\IOrganization.cs">
+      <Link>Contracts\IOrganization.cs</Link>
+    </Compile>
     <Compile Include="..\..\Core\EntityContracts\Contracts\ISolution.cs">
       <Link>Contracts\ISolution.cs</Link>
     </Compile>
@@ -74,6 +77,9 @@
     </Compile>
     <Compile Include="..\..\Core\EntityContracts\EntityContractHelpers\IBuildLogHelper.cs">
       <Link>EntityContractHelpers\IBuildLogHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\EntityContractHelpers\IOrganizationHelper.cs">
+      <Link>EntityContractHelpers\IOrganizationHelper.cs</Link>
     </Compile>
     <Compile Include="..\..\Core\EntityContracts\EntityContractHelpers\ISolutionHelper.cs">
       <Link>EntityContractHelpers\ISolutionHelper.cs</Link>
@@ -87,6 +93,9 @@
     <Compile Include="..\..\Core\EntityContracts\IdentifierContracts\IBuildLogIdentifier.cs">
       <Link>IdentifierContracts\IBuildLogIdentifier.cs</Link>
     </Compile>
+    <Compile Include="..\..\Core\EntityContracts\IdentifierContracts\IOrganizationIdentifier.cs">
+      <Link>IdentifierContracts\IOrganizationIdentifier.cs</Link>
+    </Compile>
     <Compile Include="..\..\Core\EntityContracts\IdentifierContracts\ISolutionIdentifier.cs">
       <Link>IdentifierContracts\ISolutionIdentifier.cs</Link>
     </Compile>
@@ -99,6 +108,9 @@
     <Compile Include="..\..\Core\EntityContracts\IdentifierContractHelpers\IBuildLogIdentifierHelper.cs">
       <Link>IdentifierContractHelpers\IBuildLogIdentifierHelper.cs</Link>
     </Compile>
+    <Compile Include="..\..\Core\EntityContracts\IdentifierContractHelpers\IOrganizationIdentifierHelper.cs">
+      <Link>IdentifierContractHelpers\IOrganizationIdentifierHelper.cs</Link>
+    </Compile>
     <Compile Include="..\..\Core\EntityContracts\IdentifierContractHelpers\ISolutionIdentifierHelper.cs">
       <Link>IdentifierContractHelpers\ISolutionIdentifierHelper.cs</Link>
     </Compile>
@@ -107,6 +119,15 @@
     </Compile>
     <Compile Include="..\..\Core\EntityContracts\QueryCriteriaByEntityReferenceContracts\IQueryCriteriaBuildLogByFKs.cs">
       <Link>QueryCriteriaByEntityReferenceContracts\IQueryCriteriaBuildLogByFKs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\QueryCriteriaByEntityReferenceContracts\IQueryCriteriaOrganizationByFKs.cs">
+      <Link>QueryCriteriaByEntityReferenceContracts\IQueryCriteriaOrganizationByFKs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\QueryCriteriaByEntityReferenceContracts\IQueryCriteriaSolutionByFKs.cs">
+      <Link>QueryCriteriaByEntityReferenceContracts\IQueryCriteriaSolutionByFKs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\Queries\OrganizationPredicateByUniqueConstraint.cs">
+      <Link>Queries\OrganizationPredicateByUniqueConstraint.cs</Link>
     </Compile>
   </ItemGroup>
   <ItemGroup>

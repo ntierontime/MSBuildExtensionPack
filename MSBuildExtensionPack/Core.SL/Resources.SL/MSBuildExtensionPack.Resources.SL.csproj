@@ -89,6 +89,14 @@
       <DependentUpon>UIStringResourcePerEntityBuildLog.resx</DependentUpon>
       <SubType>RESXCodeBehind</SubType>
     </Compile>
+    <EmbeddedResource Include="..\..\Core\Resources\UIStringResourcePerEntityOrganization.resx">
+      <Link>UIStringResourcePerEntityOrganization.resx</Link>
+    </EmbeddedResource>
+    <Compile Include="..\..\Core\Resources\UIStringResourcePerEntityOrganization.designer.cs">
+      <Link>UIStringResourcePerEntityOrganization.designer.cs</Link>
+      <DependentUpon>UIStringResourcePerEntityOrganization.resx</DependentUpon>
+      <SubType>RESXCodeBehind</SubType>
+    </Compile>
     <EmbeddedResource Include="..\..\Core\Resources\UIStringResourcePerEntitySolution.resx">
       <Link>UIStringResourcePerEntitySolution.resx</Link>
     </EmbeddedResource>

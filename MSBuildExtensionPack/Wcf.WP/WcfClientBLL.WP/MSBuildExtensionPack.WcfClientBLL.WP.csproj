@@ -62,6 +62,9 @@
     <Compile Include="..\..\Wcf\WcfClientBLL\WcfClientEntityBuildLog.cs">
       <Link>WcfClientEntityBuildLog.cs</Link>
     </Compile>
+    <Compile Include="..\..\Wcf\WcfClientBLL\WcfClientEntityOrganization.cs">
+      <Link>WcfClientEntityOrganization.cs</Link>
+    </Compile>
     <Compile Include="..\..\Wcf\WcfClientBLL\WcfClientEntitySolution.cs">
       <Link>WcfClientEntitySolution.cs</Link>
     </Compile>
@@ -73,6 +76,9 @@
     </Compile>
     <Compile Include="..\..\Wcf\WcfClientBLL\WcfClientEntityAsynBuildLog.cs">
       <Link>WcfClientEntityAsynBuildLog.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Wcf\WcfClientBLL\WcfClientEntityAsynOrganization.cs">
+      <Link>WcfClientEntityAsynOrganization.cs</Link>
     </Compile>
     <Compile Include="..\..\Wcf\WcfClientBLL\WcfClientEntityAsynSolution.cs">
       <Link>WcfClientEntityAsynSolution.cs</Link>

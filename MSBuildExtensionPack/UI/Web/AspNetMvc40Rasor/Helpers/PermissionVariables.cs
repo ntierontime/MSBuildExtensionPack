@@ -95,33 +95,61 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
 
 		#endregion 3. BuildLog
 
-		#region 4. Solution
+		#region 4. Organization
 
 
-		// 4.1. Solution.WPCommonOfSolution
+		// 4.1. Organization.WPCommonOfOrganization
+        public const string PermissionName_Organization_WPCommonOfOrganization = null;// "; // "Organization_WPCommonOfOrganization";
+		// 4.2. Organization.WPCommonOfOrganization_Export
+        public const string PermissionName_Organization_WPCommonOfOrganization_Export = null;// "; // "Organization_WPCommonOfOrganization_Export";
+		// 4.3. Organization.WPEntityRelatedOfOrganization
+        public const string PermissionName_Organization_WPEntityRelatedOfOrganization = null;// "; // "Organization_WPEntityRelatedOfOrganization";
+		// 4.4. Organization.Import
+        public const string PermissionName_Organization_Import = null;// "; // "Organization_Import";
+		// 4.5. Organization.Index
+        public const string PermissionName_Organization_Index = null;// "; // "Organization_Index";
+		// 4.6. Organization.Details
+        public const string PermissionName_Organization_Details = null;// "; // "Organization_Details";
+		// 4.7. Organization.AddNew
+        public const string PermissionName_Organization_AddNew = null;// "; // "Organization_AddNew";
+		// 4.8. Organization.Copy
+        public const string PermissionName_Organization_Copy = null;// "; // "Organization_Copy";
+		// 4.9. Organization.Edit
+        public const string PermissionName_Organization_Edit = null;// "; // "Organization_Edit";
+		// 4.10. Organization.Delete
+        public const string PermissionName_Organization_Delete = null;// "; // "Organization_Delete";
+		// 4.11. Organization.GoBackList
+        public const string PermissionName_Organization_GoBackList = null;// "; // "Organization_GoBackList";
+
+		#endregion 4. Organization
+
+		#region 5. Solution
+
+
+		// 5.1. Solution.WPCommonOfSolution
         public const string PermissionName_Solution_WPCommonOfSolution = null;// "; // "Solution_WPCommonOfSolution";
-		// 4.2. Solution.WPCommonOfSolution_Export
+		// 5.2. Solution.WPCommonOfSolution_Export
         public const string PermissionName_Solution_WPCommonOfSolution_Export = null;// "; // "Solution_WPCommonOfSolution_Export";
-		// 4.3. Solution.WPEntityRelatedOfSolution
+		// 5.3. Solution.WPEntityRelatedOfSolution
         public const string PermissionName_Solution_WPEntityRelatedOfSolution = null;// "; // "Solution_WPEntityRelatedOfSolution";
-		// 4.4. Solution.Import
+		// 5.4. Solution.Import
         public const string PermissionName_Solution_Import = null;// "; // "Solution_Import";
-		// 4.5. Solution.Index
+		// 5.5. Solution.Index
         public const string PermissionName_Solution_Index = null;// "; // "Solution_Index";
-		// 4.6. Solution.Details
+		// 5.6. Solution.Details
         public const string PermissionName_Solution_Details = null;// "; // "Solution_Details";
-		// 4.7. Solution.AddNew
+		// 5.7. Solution.AddNew
         public const string PermissionName_Solution_AddNew = null;// "; // "Solution_AddNew";
-		// 4.8. Solution.Copy
+		// 5.8. Solution.Copy
         public const string PermissionName_Solution_Copy = null;// "; // "Solution_Copy";
-		// 4.9. Solution.Edit
+		// 5.9. Solution.Edit
         public const string PermissionName_Solution_Edit = null;// "; // "Solution_Edit";
-		// 4.10. Solution.Delete
+		// 5.10. Solution.Delete
         public const string PermissionName_Solution_Delete = null;// "; // "Solution_Delete";
-		// 4.11. Solution.GoBackList
+		// 5.11. Solution.GoBackList
         public const string PermissionName_Solution_GoBackList = null;// "; // "Solution_GoBackList";
 
-		#endregion 4. Solution
+		#endregion 5. Solution
 
 
     }

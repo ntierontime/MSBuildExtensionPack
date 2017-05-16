@@ -16,6 +16,11 @@
     mc:Ignorable="d" >
     <Grid>
     <Grid HorizontalAlignment="Stretch">
+        <i:Interaction.Triggers>
+            <i:EventTrigger EventName="Loaded">
+                <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM.SearchCommand, Source={StaticResource Locator}}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+            </i:EventTrigger>
+        </i:Interaction.Triggers>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />

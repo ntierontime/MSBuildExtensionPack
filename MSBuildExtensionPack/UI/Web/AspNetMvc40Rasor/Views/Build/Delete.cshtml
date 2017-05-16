@@ -23,7 +23,19 @@
 @Html.ActionLink(Model.Item.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.SolutionId }, null)
         </div>
     </div>
-@Html.HiddenFor(model => model.Item.Id)@Html.HiddenFor(model => model.Item.SolutionId)  <div class="form-group">
+@Html.HiddenFor(model => model.Item.Id)@Html.HiddenFor(model => model.Item.Organization_1Id)@Html.HiddenFor(model => model.Item.Organization_1_UniqueIdentifier)@Html.HiddenFor(model => model.Item.Organization_1_UniqueidentifierColumn)  <div class="form-group">
+			@Html.LabelFor(model => model.Item.Organization_1_Name, new { @class = "control-label" })
+        <div class="form-control">
+@Html.ActionLink(Model.Item.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Organization_1Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Organization_1_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Organization_1_UniqueidentifierColumn }, null)
+        </div>
+    </div>
+@Html.HiddenFor(model => model.Item.Organization_2Id)@Html.HiddenFor(model => model.Item.Organization_2_UniqueIdentifier)@Html.HiddenFor(model => model.Item.Organization_2_UniqueidentifierColumn)  <div class="form-group">
+			@Html.LabelFor(model => model.Item.Organization_2_Name, new { @class = "control-label" })
+        <div class="form-control">
+@Html.ActionLink(Model.Item.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Organization_2Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Organization_2_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Organization_2_UniqueidentifierColumn }, null)
+        </div>
+    </div>
+@Html.HiddenFor(model => model.Item.SolutionId)  <div class="form-group">
 			@Html.LabelFor(model => model.Item.Name, new { @class = "control-label" })
         <div class="form-control">
 			@Html.DisplayFor(model => model.Item.Name)

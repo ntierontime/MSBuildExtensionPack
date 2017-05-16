@@ -56,6 +56,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>		
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfCommon(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfBuildStartTimeOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
@@ -83,6 +85,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfCommon(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfBuildStartTimeOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
@@ -108,6 +112,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>result message with single entity</returns>
         MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuild GetSingleOfEntityOfCommon(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfBuildStartTimeOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
@@ -133,6 +139,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>result message with entity collection</returns>
         MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuild GetCollectionOfEntityOfCommon(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfBuildStartTimeOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
@@ -166,6 +174,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>		
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultOfCommon(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfBuildStartTimeOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
@@ -193,6 +203,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultOfCommon(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfBuildStartTimeOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
@@ -218,6 +230,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>result message with single entity</returns>
         MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfDefault GetSingleOfDefaultOfCommon(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfBuildStartTimeOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
@@ -243,6 +257,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>result message with entity collection</returns>
         MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfDefaultCollection GetCollectionOfDefaultOfCommon(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfBuildStartTimeOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
 			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
@@ -558,6 +574,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>		
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -582,6 +600,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -604,6 +624,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>result message with single entity</returns>
         MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuild GetSingleOfEntityOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
 			);
 
@@ -626,6 +648,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>result message with entity collection</returns>
         MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuild GetCollectionOfEntityOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -656,6 +680,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>		
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfNameValuePairOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -680,6 +706,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfNameValuePairOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -702,6 +730,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>result message with single entity</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity GetSingleOfNameValuePairOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
 			);
 
@@ -724,6 +754,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>result message with entity collection</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection GetCollectionOfNameValuePairOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -754,6 +786,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>		
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfRssItemOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -778,6 +812,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfRssItemOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -800,6 +836,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>result message with single entity</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageRssItem GetSingleOfRssItemOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
 			);
 
@@ -822,6 +860,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>result message with entity collection</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection GetCollectionOfRssItemOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -852,6 +892,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>		
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -876,6 +918,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -898,6 +942,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>result message with single entity</returns>
         MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfDefault GetSingleOfDefaultOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
 			);
 
@@ -920,6 +966,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>result message with entity collection</returns>
         MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfDefaultCollection GetCollectionOfDefaultOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -950,6 +998,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>		
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultGroupedDataViewOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -974,6 +1024,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultGroupedDataViewOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -996,6 +1048,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>result message with single entity</returns>
         MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfDefaultGroupedDataView GetSingleOfDefaultGroupedDataViewOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
 			);
 
@@ -1018,6 +1072,8 @@ namespace MSBuildExtensionPack.DALContracts
         /// <returns>result message with entity collection</returns>
         MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfDefaultGroupedDataViewCollection GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
 			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+			,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
 			,int currentIndex
 			,int pageSize
 			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection

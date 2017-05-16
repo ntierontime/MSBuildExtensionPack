@@ -25,6 +25,11 @@
 					  maxBufferSize="65536" maxReceivedMessageSize="65536" textEncoding="utf-8" />
 
 
+                <binding name="BasicHttpBinding_WcfClientEntityAsynOrganization"  closeTimeout="00:01:00"
+					  openTimeout="00:01:00" receiveTimeout="00:10:00" sendTimeout="00:01:00"
+					  maxBufferSize="65536" maxReceivedMessageSize="65536" textEncoding="utf-8" />
+
+
                 <binding name="BasicHttpBinding_WcfClientEntityAsynSolution"  closeTimeout="00:01:00"
 					  openTimeout="00:01:00" receiveTimeout="00:10:00" sendTimeout="00:01:00"
 					  maxBufferSize="65536" maxReceivedMessageSize="65536" textEncoding="utf-8" />
@@ -59,6 +64,13 @@
                 bindingConfiguration="BasicHttpBinding_WcfClientEntityAsynBuildLog"
                 contract="MSBuildExtensionPack.WcfContracts.IBuildLogServiceAsyn"
                 name="BasicHttpBinding_WcfClientEntityAsynBuildLog" />
+
+
+            <endpoint address="http://localhost:10805/WcfMarkupOrganization.svc" 
+                binding="basicHttpBinding"
+                bindingConfiguration="BasicHttpBinding_WcfClientEntityAsynOrganization"
+                contract="MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn"
+                name="BasicHttpBinding_WcfClientEntityAsynOrganization" />
 
 
             <endpoint address="http://localhost:10805/WcfMarkupSolution.svc" 

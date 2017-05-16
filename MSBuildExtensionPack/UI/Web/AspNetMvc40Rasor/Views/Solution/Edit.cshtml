@@ -17,7 +17,11 @@
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
             <div class="panel-body">
-@Html.HiddenFor(model => model.Item.Id)  <div class="form-group">
+@Html.HiddenFor(model => model.Item.Organization_1_UniqueIdentifier)@Html.HiddenFor(model => model.Item.Organization_1_UniqueidentifierColumn)@Html.HiddenFor(model => model.Item.Organization_1_Name)@Html.HiddenFor(model => model.Item.Id)  <div class="form-group">
+			@Html.LabelFor(model => model.Item.Organization_2Id, new { @class = "control-label" })
+			@Html.DropDownListFor(model => model.Item.Organization_2Id, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Organization, MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "onchange", "FetchOrganization_1();" }, { "class", "form-control" } })
+    </div>
+@Html.HiddenFor(model => model.Item.Organization_2_UniqueIdentifier)@Html.HiddenFor(model => model.Item.Organization_2_UniqueidentifierColumn)@Html.HiddenFor(model => model.Item.Organization_2_Name)  <div class="form-group">
 			@Html.LabelFor(model => model.Item.ExternalParentId, new { @class = "control-label" })
 			@Html.TextBoxFor(model => model.Item.ExternalParentId, new { @class = "form-control" })
 			@Html.ValidationMessageFor(model => model.Item.ExternalParentId, null, new { @class = "text-danger" })
@@ -31,6 +35,10 @@
 			@Html.LabelFor(model => model.Item.Description, new { @class = "control-label" })
 			@Html.TextBoxFor(model => model.Item.Description, new { @class = "form-control" })
 			@Html.ValidationMessageFor(model => model.Item.Description, null, new { @class = "text-danger" })
+    </div>
+  <div class="form-group">
+			@Html.LabelFor(model => model.Item.OrganizationId, new { @class = "control-label" })
+			@Html.DropDownListFor(model => model.Item.OrganizationId, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfOrganizationId,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedOrganizationId", MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Please_select_Organization____) } })
     </div>
             </div>
 			<div class="panel-footer nopadding">
@@ -98,11 +106,37 @@
                 wrapper: "li",
             });
         }));
+        function FetchOrganization_1() {
+var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $("#Item_Organization_1_UniqueIdentifier").val();
+var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $("#Item_Organization_2Id").val();
+            var url = "/api/OrganizationApi/GetCollectionOfNameValuePairOfByFKOnly";
+            var params = BuildCriteriaForFetchOrganization_1(selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly);
+            if(selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
+            {
+                $.getJSON(url, params, function (data) {
+                    objVM.selectListOfOrganizationId(data);
+                    objVM.selectedOrganizationId(@Model.Item.OrganizationId);
+                });
+            }
+        }
+        function BuildCriteriaForFetchOrganization_1(selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly) {
+            var params = {
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: true,
+                valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly,
+                currentIndex: -1,
+                pageSize: -1,
+                queryOrderByExpression: null
+            };
+            return params;
+        }
         //cascaded dropdownlist by knockoutjs
         function CascadingDDLViewModel() {
             var self = this;
+            self.selectListOfOrganizationId = ko.observableArray([]);
+            self.selectedOrganizationId = ko.observable();
         }
         var objVM = new CascadingDDLViewModel();
         ko.applyBindings(objVM);
+$("#Item_Organization_2Id").change();
     </script>
 }

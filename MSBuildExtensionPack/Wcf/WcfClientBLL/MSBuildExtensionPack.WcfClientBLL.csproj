@@ -38,10 +38,12 @@
     <Compile Include="WcfClientEntityBuild.cs" />
     <Compile Include="WcfClientEntityBuildEventCode.cs" />
     <Compile Include="WcfClientEntityBuildLog.cs" />
+    <Compile Include="WcfClientEntityOrganization.cs" />
     <Compile Include="WcfClientEntitySolution.cs" />
     <Compile Include="WcfClientEntityAsynBuild.cs" />
     <Compile Include="WcfClientEntityAsynBuildEventCode.cs" />
     <Compile Include="WcfClientEntityAsynBuildLog.cs" />
+    <Compile Include="WcfClientEntityAsynOrganization.cs" />
     <Compile Include="WcfClientEntityAsynSolution.cs" />
     <Compile Include="WcfClientFactory.cs" />
   </ItemGroup>

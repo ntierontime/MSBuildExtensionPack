@@ -37,21 +37,28 @@
     <Compile Include="DataSourceEntity_\Build.cs" />
     <Compile Include="DataSourceEntity_\BuildEventCode.cs" />
     <Compile Include="DataSourceEntity_\BuildLog.cs" />
+    <Compile Include="DataSourceEntity_\Organization.cs" />
     <Compile Include="DataSourceEntity_\Solution.cs" />
     <Compile Include="DataSourceEntity_\BuildCollection.cs" />
     <Compile Include="DataSourceEntity_\BuildEventCodeCollection.cs" />
     <Compile Include="DataSourceEntity_\BuildLogCollection.cs" />
+    <Compile Include="DataSourceEntity_\OrganizationCollection.cs" />
     <Compile Include="DataSourceEntity_\SolutionCollection.cs" />
     <Compile Include="DataSourceEntityHelpers\BuildHelper.cs" />
     <Compile Include="DataSourceEntityHelpers\BuildEventCodeHelper.cs" />
     <Compile Include="DataSourceEntityHelpers\BuildLogHelper.cs" />
+    <Compile Include="DataSourceEntityHelpers\OrganizationHelper.cs" />
     <Compile Include="DataSourceEntityHelpers\SolutionHelper.cs" />
     <Compile Include="DataSourceIdentifiers\BuildIdentifier.cs" />
     <Compile Include="DataSourceIdentifiers\BuildEventCodeIdentifier.cs" />
     <Compile Include="DataSourceIdentifiers\BuildLogIdentifier.cs" />
+    <Compile Include="DataSourceIdentifiers\OrganizationIdentifier.cs" />
     <Compile Include="DataSourceIdentifiers\SolutionIdentifier.cs" />
     <Compile Include="DataSourceQueryCriteriaByEntityReferences\BuildQueryCriteriaByEntityReference.cs" />
     <Compile Include="DataSourceQueryCriteriaByEntityReferences\BuildLogQueryCriteriaByEntityReference.cs" />
+    <Compile Include="DataSourceQueryCriteriaByEntityReferences\OrganizationQueryCriteriaByEntityReference.cs" />
+    <Compile Include="DataSourceQueryCriteriaByEntityReferences\SolutionQueryCriteriaByEntityReference.cs" />
+    <Compile Include="DataSourceQueryCriteriaByUniqueConstraints\OrganizationQueryCriteriaByUniqueConstraint.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj">

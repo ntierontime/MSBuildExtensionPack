@@ -14,7 +14,7 @@ namespace MSBuildExtensionPack.ViewModelData
 
         #endregion log4net
 
-            public Framework.NameValueCollection NameValueCollectionOfMSBuildExtensionPack_Solution { get; set; }
+            public Framework.NameValueCollection NameValueCollectionOfMSBuildExtensionPack_Organization { get; set; }
 
 	}
 }

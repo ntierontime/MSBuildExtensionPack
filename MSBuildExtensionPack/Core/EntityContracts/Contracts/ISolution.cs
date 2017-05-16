@@ -9,6 +9,9 @@ namespace MSBuildExtensionPack.EntityContracts
 	public partial interface ISolution : ISolutionIdentifier
 	{ 
 
+        System.Nullable<System.Int64> OrganizationId { get; set; }
+
+
         System.String ExternalParentId { get; set; }
 
 

@@ -62,6 +62,9 @@
     <Compile Include="..\..\Core\WcfContracts\IBuildLogService.cs">
       <Link>IBuildLogService.cs</Link>
     </Compile>
+    <Compile Include="..\..\Core\WcfContracts\IOrganizationService.cs">
+      <Link>IOrganizationService.cs</Link>
+    </Compile>
     <Compile Include="..\..\Core\WcfContracts\ISolutionService.cs">
       <Link>ISolutionService.cs</Link>
     </Compile>
@@ -73,6 +76,9 @@
     </Compile>
     <Compile Include="..\..\Core\WcfContracts\IBuildLogServiceAsyn.cs">
       <Link>IBuildLogServiceAsyn.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\WcfContracts\IOrganizationServiceAsyn.cs">
+      <Link>IOrganizationServiceAsyn.cs</Link>
     </Compile>
     <Compile Include="..\..\Core\WcfContracts\ISolutionServiceAsyn.cs">
       <Link>ISolutionServiceAsyn.cs</Link>

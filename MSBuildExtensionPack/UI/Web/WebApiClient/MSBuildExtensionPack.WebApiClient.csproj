@@ -37,6 +37,7 @@
     <Compile Include="BuildApiControllerClient.cs" />
     <Compile Include="BuildEventCodeApiControllerClient.cs" />
     <Compile Include="BuildLogApiControllerClient.cs" />
+    <Compile Include="OrganizationApiControllerClient.cs" />
     <Compile Include="SolutionApiControllerClient.cs" />
   </ItemGroup>
   <ItemGroup>

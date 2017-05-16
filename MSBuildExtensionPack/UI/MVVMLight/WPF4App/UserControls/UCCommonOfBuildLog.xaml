@@ -19,6 +19,11 @@
         </ResourceDictionary>
     </UserControl.Resources>
     <Grid HorizontalAlignment="Stretch">
+        <i:Interaction.Triggers>
+            <i:EventTrigger EventName="Loaded">
+                <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM.SearchCommand, Source={StaticResource Locator}}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+            </i:EventTrigger>
+        </i:Interaction.Triggers>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -29,6 +34,8 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
+				<RowDefinition Height="30" />
+				<RowDefinition Height="30" />
 				<RowDefinition Height="30" />
 				<RowDefinition Height="30" />
 				<RowDefinition Height="30" />
@@ -52,19 +59,35 @@
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
 </ComboBox>
-<CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon" Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="3" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.IsToCompare}" />
-<ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon" ToolTip="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntitySolution.Build, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="3" ItemsSource="{Binding Path=DropDownContentsOfSolution_1}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.ValueToCompare}">
+<CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon" Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="3" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_2.IsToCompare}" />
+<ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfOrganization_2OfCommon" ToolTip="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.Organization, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="3" ItemsSource="{Binding Path=DropDownContentsOfOrganization_2}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_2.ValueToCompare}">
                   <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Loaded">
-                        <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=GetDropDownContentsOfSolution_1Command}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+                        <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=GetDropDownContentsOfOrganization_2Command}" PassEventArgsToCommand="True"></cmd:EventToCommand>
                     </i:EventTrigger>
+                    <i:EventTrigger EventName="SelectionChanged">
+                        <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=GetDropDownContentsOfOrganization_2SelectionChangedCommand}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+</ComboBox>
+<CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfOrganization_1OfCommon" Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_1OfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_1OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="4" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_1.IsToCompare}" />
+<ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfOrganization_1OfCommon" ToolTip="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.Organization, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="4" ItemsSource="{Binding Path=DropDownContentsOfOrganization_1}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_1.ValueToCompare}">
+                  <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="SelectionChanged">
+                        <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=GetDropDownContentsOfOrganization_1SelectionChangedCommand}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+</ComboBox>
+<CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon" Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="5" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.IsToCompare}" />
+<ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon" ToolTip="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntitySolution.Build, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="5" ItemsSource="{Binding Path=DropDownContentsOfSolution_1}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.ValueToCompare}">
+                  <i:Interaction.Triggers>
                     <i:EventTrigger EventName="SelectionChanged">
                         <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=GetDropDownContentsOfSolution_1SelectionChangedCommand}" PassEventArgsToCommand="True"></cmd:EventToCommand>
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
 </ComboBox>
-<CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon" Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="4" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.IsToCompare}" />
-<ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfBuild_1OfCommon" ToolTip="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuild.BuildLog, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="4" ItemsSource="{Binding Path=DropDownContentsOfBuild_1}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.ValueToCompare}" />
+<CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon" Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="6" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.IsToCompare}" />
+<ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfBuild_1OfCommon" ToolTip="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuild.BuildLog, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="6" ItemsSource="{Binding Path=DropDownContentsOfBuild_1}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.ValueToCompare}" />
         </Grid>
 <ListView Name="V_Common" Width="600" Margin="12,12,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollectionDefault}" SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM.CurrentDefault, Mode=TwoWay, Source={StaticResource Locator}}">
   <i:Interaction.Triggers>
@@ -118,6 +141,102 @@
 									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Solution_1_Name}" ToolTip="" />
 									<!-- You can un-comment to enable editing in list -->
 									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Solution_1_Name}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Organization_1_UniqueidentifierColumn, Source={StaticResource LocalizedStrings}}" Tag="Organization_1_UniqueidentifierColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_1_UniqueidentifierColumn}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_1_UniqueidentifierColumn}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Organization_1_UniqueidentifierColumn}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Organization_1_UniqueIdentifier, Source={StaticResource LocalizedStrings}}" Tag="Organization_1_UniqueIdentifier" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_1_UniqueIdentifier}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_1_UniqueIdentifier}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Organization_1_UniqueIdentifier}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Organization_1Id, Source={StaticResource LocalizedStrings}}" Tag="Organization_1Id" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_1Id}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_1Id}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Organization_1Id}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Organization_1_Name, Source={StaticResource LocalizedStrings}}" Tag="Organization_1_Name" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_1_Name}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_1_Name}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Organization_1_Name}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Organization_2_UniqueidentifierColumn, Source={StaticResource LocalizedStrings}}" Tag="Organization_2_UniqueidentifierColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_2_UniqueidentifierColumn}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_2_UniqueidentifierColumn}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Organization_2_UniqueidentifierColumn}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Organization_2Id, Source={StaticResource LocalizedStrings}}" Tag="Organization_2Id" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_2Id}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_2Id}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Organization_2Id}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Organization_2_UniqueIdentifier, Source={StaticResource LocalizedStrings}}" Tag="Organization_2_UniqueIdentifier" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_2_UniqueIdentifier}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_2_UniqueIdentifier}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Organization_2_UniqueIdentifier}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Organization_2_Name, Source={StaticResource LocalizedStrings}}" Tag="Organization_2_Name" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_2_Name}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_2_Name}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Organization_2_Name}" />-->
                                 </Grid>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>

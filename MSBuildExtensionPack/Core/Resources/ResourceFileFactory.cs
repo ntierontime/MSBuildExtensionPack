@@ -32,6 +32,12 @@ namespace MSBuildExtensionPack.Resources
         }
 
 
+        public static MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization GetUIStringResourcePerEntityOrganization()
+        {
+            return new MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization();
+        }
+
+
         public static MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution GetUIStringResourcePerEntitySolution()
         {
             return new MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution();

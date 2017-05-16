@@ -184,6 +184,24 @@
   <data name="ToolTip_Of_EntityRelated_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
     <value>ToolTip Of EntityRelated of MSBuildExtensionPack.BuildLog</value>
   </data>
+  <data name="Description_Of_Common_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Description Of Common of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Common_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Common of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="ToolTip_Of_Common_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>ToolTip Of Common of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Description_Of_EntityRelated_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Description Of EntityRelated of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="EntityRelated_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>EntityRelated of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="ToolTip_Of_EntityRelated_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>ToolTip Of EntityRelated of MSBuildExtensionPack.Organization</value>
+  </data>
   <data name="Description_Of_Common_of_MSBuildExtensionPack_Solution" xml:space="preserve">
     <value>Description Of Common of MSBuildExtensionPack.Solution</value>
   </data>

@@ -59,6 +59,17 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
 
         /// <summary>
+        /// method to create an data access layer class instance of <see cref="MSBuildExtensionPack.DALContracts.IOrganizationRepository"/>
+        /// </summary>
+        /// <returns>a new instance of <see cref="MSBuildExtensionPack.DALContracts.IOrganizationRepository"/>.</returns>
+        public MSBuildExtensionPack.DALContracts.IOrganizationRepository CreateDALInstanceOfOrganization()
+        {
+            return new MSBuildExtensionPack.EntityFrameworkDAL.OrganizationRepository(new MSBuildExtensionPack.EntityFrameworkContext.MSBuildExtensionPackEntities());
+        }
+
+
+
+        /// <summary>
         /// method to create an data access layer class instance of <see cref="MSBuildExtensionPack.DALContracts.ISolutionRepository"/>
         /// </summary>
         /// <returns>a new instance of <see cref="MSBuildExtensionPack.DALContracts.ISolutionRepository"/>.</returns>

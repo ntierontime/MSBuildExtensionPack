@@ -64,6 +64,7 @@
     <Build Include="dbo\Tables\Build.sql" />
     <Build Include="dbo\Tables\BuildEventCode.sql" />
     <Build Include="dbo\Tables\BuildLog.sql" />
+    <Build Include="dbo\Tables\Organization.sql" />
     <Build Include="dbo\Tables\Solution.sql" />
     <PostDeploy Include="Post Deployment\PostDeployment.sql" />
     <None Include="Post Deployment\PostDeployment_DisableCheckContraints.sql" />
@@ -71,10 +72,12 @@
     <None Include="Post Deployment\SystemInitializationData\InitBuild.sql" />
     <None Include="Post Deployment\SystemInitializationData\InitBuildEventCode.sql" />
     <None Include="Post Deployment\SystemInitializationData\InitBuildLog.sql" />
+    <None Include="Post Deployment\SystemInitializationData\InitOrganization.sql" />
     <None Include="Post Deployment\SystemInitializationData\InitSolution.sql" />
     <None Include="Post Deployment\TestData\DumpTestDataBuild.sql" />
     <None Include="Post Deployment\TestData\DumpTestDataBuildEventCode.sql" />
     <None Include="Post Deployment\TestData\DumpTestDataBuildLog.sql" />
+    <None Include="Post Deployment\TestData\DumpTestDataOrganization.sql" />
     <None Include="Post Deployment\TestData\DumpTestDataSolution.sql" />
     <PreDeploy Include="Pre Deployment\PreDeployment.sql" />
     <Content Include="Publish Profles\Localhost.publish.xml" />

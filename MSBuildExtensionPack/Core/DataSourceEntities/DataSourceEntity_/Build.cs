@@ -265,6 +265,22 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         System.Int64 m_Id;
 
+        System.Int64 m_Organization_1Id;
+
+        System.Guid m_Organization_1_UniqueIdentifier;
+
+        System.Guid m_Organization_1_UniqueidentifierColumn;
+
+        System.String m_Organization_1_Name;
+
+        System.Int64 m_Organization_2Id;
+
+        System.Guid m_Organization_2_UniqueIdentifier;
+
+        System.Guid m_Organization_2_UniqueidentifierColumn;
+
+        System.String m_Organization_2_Name;
+
         System.Int32 m_SolutionId;
 
         System.String m_Name;
@@ -286,6 +302,14 @@ namespace MSBuildExtensionPack.DataSourceEntities
 			{
 				this.Solution_1_Name = null;
 				this.Id = default(long);
+				this.Organization_1Id = default(long);
+				this.Organization_1_UniqueIdentifier = new Guid();
+				this.Organization_1_UniqueidentifierColumn = new Guid();
+				this.Organization_1_Name = null;
+				this.Organization_2Id = default(long);
+				this.Organization_2_UniqueIdentifier = new Guid();
+				this.Organization_2_UniqueidentifierColumn = new Guid();
+				this.Organization_2_Name = null;
 				this.SolutionId = default(int);
 				this.Name = null;
 				this.Description = null;
@@ -342,6 +366,158 @@ namespace MSBuildExtensionPack.DataSourceEntities
             {
                 m_Id = value;
                 RaisePropertyChanged("Id");
+            }
+        }
+
+					[DataMember]
+#if (WINDOWS_PHONE || XAMARIN)
+
+#else
+		[Display(Name = "Organization_1Id", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuild))]
+#endif
+        public System.Int64 Organization_1Id
+        {
+            get
+            {
+                return m_Organization_1Id;
+            }
+            set
+            {
+                m_Organization_1Id = value;
+                RaisePropertyChanged("Organization_1Id");
+            }
+        }
+
+					[DataMember]
+#if (WINDOWS_PHONE || XAMARIN)
+
+#else
+		[Display(Name = "Organization_1_UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuild))]
+#endif
+        public System.Guid Organization_1_UniqueIdentifier
+        {
+            get
+            {
+                return m_Organization_1_UniqueIdentifier;
+            }
+            set
+            {
+                m_Organization_1_UniqueIdentifier = value;
+                RaisePropertyChanged("Organization_1_UniqueIdentifier");
+            }
+        }
+
+					[DataMember]
+#if (WINDOWS_PHONE || XAMARIN)
+
+#else
+		[Display(Name = "Organization_1_UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuild))]
+#endif
+        public System.Guid Organization_1_UniqueidentifierColumn
+        {
+            get
+            {
+                return m_Organization_1_UniqueidentifierColumn;
+            }
+            set
+            {
+                m_Organization_1_UniqueidentifierColumn = value;
+                RaisePropertyChanged("Organization_1_UniqueidentifierColumn");
+            }
+        }
+
+					[DataMember]
+#if (WINDOWS_PHONE || XAMARIN)
+
+#else
+		[Display(Name = "Organization_1_Name", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuild))]
+#endif
+        public System.String Organization_1_Name
+        {
+            get
+            {
+                return m_Organization_1_Name;
+            }
+            set
+            {
+                m_Organization_1_Name = value;
+                RaisePropertyChanged("Organization_1_Name");
+            }
+        }
+
+					[DataMember]
+#if (WINDOWS_PHONE || XAMARIN)
+
+#else
+		[Display(Name = "Organization_2Id", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuild))]
+#endif
+        public System.Int64 Organization_2Id
+        {
+            get
+            {
+                return m_Organization_2Id;
+            }
+            set
+            {
+                m_Organization_2Id = value;
+                RaisePropertyChanged("Organization_2Id");
+            }
+        }
+
+					[DataMember]
+#if (WINDOWS_PHONE || XAMARIN)
+
+#else
+		[Display(Name = "Organization_2_UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuild))]
+#endif
+        public System.Guid Organization_2_UniqueIdentifier
+        {
+            get
+            {
+                return m_Organization_2_UniqueIdentifier;
+            }
+            set
+            {
+                m_Organization_2_UniqueIdentifier = value;
+                RaisePropertyChanged("Organization_2_UniqueIdentifier");
+            }
+        }
+
+					[DataMember]
+#if (WINDOWS_PHONE || XAMARIN)
+
+#else
+		[Display(Name = "Organization_2_UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuild))]
+#endif
+        public System.Guid Organization_2_UniqueidentifierColumn
+        {
+            get
+            {
+                return m_Organization_2_UniqueidentifierColumn;
+            }
+            set
+            {
+                m_Organization_2_UniqueidentifierColumn = value;
+                RaisePropertyChanged("Organization_2_UniqueidentifierColumn");
+            }
+        }
+
+					[DataMember]
+#if (WINDOWS_PHONE || XAMARIN)
+
+#else
+		[Display(Name = "Organization_2_Name", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuild))]
+#endif
+        public System.String Organization_2_Name
+        {
+            get
+            {
+                return m_Organization_2_Name;
+            }
+            set
+            {
+                m_Organization_2_Name = value;
+                RaisePropertyChanged("Organization_2_Name");
             }
         }
 
@@ -440,6 +616,14 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
 			cloned.m_Solution_1_Name = m_Solution_1_Name;
 			cloned.m_Id = m_Id;
+			cloned.m_Organization_1Id = m_Organization_1Id;
+			cloned.m_Organization_1_UniqueIdentifier = m_Organization_1_UniqueIdentifier;
+			cloned.m_Organization_1_UniqueidentifierColumn = m_Organization_1_UniqueidentifierColumn;
+			cloned.m_Organization_1_Name = m_Organization_1_Name;
+			cloned.m_Organization_2Id = m_Organization_2Id;
+			cloned.m_Organization_2_UniqueIdentifier = m_Organization_2_UniqueIdentifier;
+			cloned.m_Organization_2_UniqueidentifierColumn = m_Organization_2_UniqueidentifierColumn;
+			cloned.m_Organization_2_Name = m_Organization_2_Name;
 			cloned.m_SolutionId = m_SolutionId;
 			cloned.m_Name = m_Name;
 			cloned.m_Description = m_Description;
@@ -497,9 +681,13 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         System.Int32 m_SolutionId;
 
+        System.Int64 m_Organization_1Id;
+
         System.Int64 m_CountPerFK;
 
         System.String m_Name;
+
+        System.Int64 m_Organization_2Id;
 
 
 			#endregion Storage Fields
@@ -513,8 +701,10 @@ namespace MSBuildExtensionPack.DataSourceEntities
 			public DefaultGroupedDataView()
 			{
 				this.SolutionId = default(int);
+				this.Organization_1Id = default(long);
 				this.CountPerFK = default(long);
 				this.Name = null;
+				this.Organization_2Id = default(long);
 			}
 			/*
 			/// <summary>
@@ -548,6 +738,25 @@ namespace MSBuildExtensionPack.DataSourceEntities
             {
                 m_SolutionId = value;
                 RaisePropertyChanged("SolutionId");
+            }
+        }
+
+					[DataMember]
+#if (WINDOWS_PHONE || XAMARIN)
+
+#else
+		[Display(Name = "Organization_1Id", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuild))]
+#endif
+        public System.Int64 Organization_1Id
+        {
+            get
+            {
+                return m_Organization_1Id;
+            }
+            set
+            {
+                m_Organization_1Id = value;
+                RaisePropertyChanged("Organization_1Id");
             }
         }
 
@@ -589,6 +798,25 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
+					[DataMember]
+#if (WINDOWS_PHONE || XAMARIN)
+
+#else
+		[Display(Name = "Organization_2Id", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuild))]
+#endif
+        public System.Int64 Organization_2Id
+        {
+            get
+            {
+                return m_Organization_2Id;
+            }
+            set
+            {
+                m_Organization_2Id = value;
+                RaisePropertyChanged("Organization_2Id");
+            }
+        }
+
 
 			#endregion properties
 
@@ -603,8 +831,10 @@ namespace MSBuildExtensionPack.DataSourceEntities
                 DefaultGroupedDataView cloned = new DefaultGroupedDataView();
 
 			cloned.m_SolutionId = m_SolutionId;
+			cloned.m_Organization_1Id = m_Organization_1Id;
 			cloned.m_CountPerFK = m_CountPerFK;
 			cloned.m_Name = m_Name;
+			cloned.m_Organization_2Id = m_Organization_2Id;
 
                 return cloned;
             }

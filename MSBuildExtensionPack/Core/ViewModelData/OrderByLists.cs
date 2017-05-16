@@ -45,17 +45,31 @@ namespace MSBuildExtensionPack.ViewModelData
 
 
 
-		#region 4.1. MSBuildExtensionPack.Solution.WPCommonOfSolution
+		#region 4.1. MSBuildExtensionPack.Organization.WPCommonOfOrganization
+
+        public static Framework.NameValueCollection WPCommonOfOrganizationVM_GetDefaultListOfQueryOrderBySettingCollecionInString()
+        {
+            Framework.NameValueCollection list = new Framework.NameValueCollection();
+            list.Add("Organization_2_Name~ASC", "Organization_2_Name A-Z");
+				list.Add("Organization_2_Name~DESC", "Organization_2_Name Z-A");
+            return list;
+        }
+
+		#endregion 4.1. MSBuildExtensionPack.Organization.WPCommonOfOrganization
+
+
+
+		#region 5.1. MSBuildExtensionPack.Solution.WPCommonOfSolution
 
         public static Framework.NameValueCollection WPCommonOfSolutionVM_GetDefaultListOfQueryOrderBySettingCollecionInString()
         {
             Framework.NameValueCollection list = new Framework.NameValueCollection();
-            list.Add("ExternalParentId~ASC", "ExternalParentId A-Z");
-				list.Add("ExternalParentId~DESC", "ExternalParentId Z-A");
+            list.Add("Organization_1_Name~ASC", "Organization_1_Name A-Z");
+				list.Add("Organization_1_Name~DESC", "Organization_1_Name Z-A");
             return list;
         }
 
-		#endregion 4.1. MSBuildExtensionPack.Solution.WPCommonOfSolution
+		#endregion 5.1. MSBuildExtensionPack.Solution.WPCommonOfSolution
 
 
 

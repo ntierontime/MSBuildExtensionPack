@@ -1,0 +1,126 @@
+<UserControl
+    x:Class="MSBuildExtensionPack.WinStoreApp.UserControls.Organization.Edit"
+    xmlns:local="using:MSBuildExtensionPack.WinStoreApp.UserControls.Organization"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="using:Windows.UI.Interactivity"
+    xmlns:wrtb="using:WinRtBehaviors"
+    xmlns:w8lnb="using:Win8nl.Behaviors"
+    xmlns:WinRTDatePicker="using:WinRTDatePicker"
+    xmlns:vm="using:MSBuildExtensionPack.MVVMLightViewModels"
+    xmlns:fresx="using:Framework.Resources"
+    xmlns:eresx="using:MSBuildExtensionPack.Resources"
+    xmlns:fvm="using:Framework.Xaml"
+    mc:Ignorable="d">
+    <Grid DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_ViewModelOrganization_Static.CurrentInEditingDefault, Source={StaticResource Locator}}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition   Width="150" />
+            <ColumnDefinition   Width="*" MaxWidth="750"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+        </Grid.RowDefinitions>
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.Organization_2_UniqueidentifierColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="0" />
+		<TextBlock Text="{Binding Path=Organization_2_UniqueidentifierColumn, Mode=TwoWay}" Grid.Column="1" Grid.Row="0" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.Organization_2_UniqueIdentifier, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="1" />
+		<TextBlock Text="{Binding Path=Organization_2_UniqueIdentifier, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.Organization_2_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="2" />
+		<TextBlock Text="{Binding Path=Organization_2_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="2" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="3" />
+		<TextBlock Text="{Binding Path=Id, Mode=TwoWay}" Grid.Column="1" Grid.Row="3" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.ParentId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
+		<TextBox Text="{Binding Path=Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="5" fvm:TextBoxUpdateSourceBehaviour.BindingSource="Name" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="6" />
+		<CheckBox Grid.Column="1" Grid.Row="6" IsChecked="{Binding Path=IsSystemBuiltIn, Mode=TwoWay}" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.UniqueIdentifier, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="7" />
+		<TextBox Text="{Binding Path=UniqueIdentifier, Mode=TwoWay}" Grid.Column="1" Grid.Row="7" fvm:TextBoxUpdateSourceBehaviour.BindingSource="UniqueIdentifier" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.CreatedDateTime, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="8" />
+		<TextBlock Text="{Binding Path=CreatedDateTime, Mode=TwoWay}" Grid.Column="1" Grid.Row="8" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.CharColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="9" />
+		<TextBox Text="{Binding Path=CharColumn, Mode=TwoWay}" Grid.Column="1" Grid.Row="9" fvm:TextBoxUpdateSourceBehaviour.BindingSource="CharColumn" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.VarcharColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="10" />
+		<TextBox Text="{Binding Path=VarcharColumn, Mode=TwoWay}" Grid.Column="1" Grid.Row="10" fvm:TextBoxUpdateSourceBehaviour.BindingSource="VarcharColumn" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.TextColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="11" />
+		<TextBox Text="{Binding Path=TextColumn, Mode=TwoWay}" Grid.Column="1" Grid.Row="11" fvm:TextBoxUpdateSourceBehaviour.BindingSource="TextColumn" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.NcharColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="12" />
+		<TextBox Text="{Binding Path=NcharColumn, Mode=TwoWay}" Grid.Column="1" Grid.Row="12" fvm:TextBoxUpdateSourceBehaviour.BindingSource="NcharColumn" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.NvarcharColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="13" />
+		<TextBox Text="{Binding Path=NvarcharColumn, Mode=TwoWay}" Grid.Column="1" Grid.Row="13" fvm:TextBoxUpdateSourceBehaviour.BindingSource="NvarcharColumn" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.NtextColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="14" />
+		<TextBox Text="{Binding Path=NtextColumn, Mode=TwoWay}" Grid.Column="1" Grid.Row="14" fvm:TextBoxUpdateSourceBehaviour.BindingSource="NtextColumn" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="15" />
+		<CheckBox Grid.Column="1" Grid.Row="15" IsChecked="{Binding Path=BitColumn, Mode=TwoWay}" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.BinaryColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="16" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.VarbinaryColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="17" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.ImageColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="18" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.TinyintColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="19" />
+		<TextBox Text="{Binding Path=TinyintColumn, Mode=TwoWay}" Grid.Column="1" Grid.Row="19" fvm:TextBoxUpdateSourceBehaviour.BindingSource="TinyintColumn" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.SmallintColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="20" />
+		<TextBox Text="{Binding Path=SmallintColumn, Mode=TwoWay}" Grid.Column="1" Grid.Row="20" fvm:TextBoxUpdateSourceBehaviour.BindingSource="SmallintColumn" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.IntColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="21" />
+		<TextBox Text="{Binding Path=IntColumn, Mode=TwoWay}" Grid.Column="1" Grid.Row="21" fvm:TextBoxUpdateSourceBehaviour.BindingSource="IntColumn" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.BigintColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="22" />
+		<TextBox Text="{Binding Path=BigintColumn, Mode=TwoWay}" Grid.Column="1" Grid.Row="22" fvm:TextBoxUpdateSourceBehaviour.BindingSource="BigintColumn" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.DecimalColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="23" />
+		<TextBox Text="{Binding Path=DecimalColumn, Mode=TwoWay}" Grid.Column="1" Grid.Row="23" fvm:TextBoxUpdateSourceBehaviour.BindingSource="DecimalColumn" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.NumericColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="24" />
+		<TextBox Text="{Binding Path=NumericColumn, Mode=TwoWay}" Grid.Column="1" Grid.Row="24" fvm:TextBoxUpdateSourceBehaviour.BindingSource="NumericColumn" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.SmallmoneyColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="25" />
+		<TextBox Text="{Binding Path=SmallmoneyColumn, Mode=TwoWay}" Grid.Column="1" Grid.Row="25" fvm:TextBoxUpdateSourceBehaviour.BindingSource="SmallmoneyColumn" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.MoneyColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="26" />
+		<TextBox Text="{Binding Path=MoneyColumn, Mode=TwoWay}" Grid.Column="1" Grid.Row="26" fvm:TextBoxUpdateSourceBehaviour.BindingSource="MoneyColumn" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.FloatColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="27" />
+		<TextBox Text="{Binding Path=FloatColumn, Mode=TwoWay}" Grid.Column="1" Grid.Row="27" fvm:TextBoxUpdateSourceBehaviour.BindingSource="FloatColumn" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.RealColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="28" />
+		<TextBox Text="{Binding Path=RealColumn, Mode=TwoWay}" Grid.Column="1" Grid.Row="28" fvm:TextBoxUpdateSourceBehaviour.BindingSource="RealColumn" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.DatetimeColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="29" />
+		<WinRTDatePicker:DatePicker Grid.Column="1" Grid.Row="29" SelectedDate="{Binding Path=DatetimeColumn, Mode=TwoWay}" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.Datetime2Column, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="30" />
+		<WinRTDatePicker:DatePicker Grid.Column="1" Grid.Row="30" SelectedDate="{Binding Path=Datetime2Column, Mode=TwoWay}" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.SmalldatetimeColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="31" />
+		<WinRTDatePicker:DatePicker Grid.Column="1" Grid.Row="31" SelectedDate="{Binding Path=SmalldatetimeColumn, Mode=TwoWay}" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.DateColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="32" />
+		<WinRTDatePicker:DatePicker Grid.Column="1" Grid.Row="32" SelectedDate="{Binding Path=DateColumn, Mode=TwoWay}" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.TimeColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="33" />
+		<TextBox Text="{Binding Path=TimeColumn, Mode=TwoWay}" Grid.Column="1" Grid.Row="33" fvm:TextBoxUpdateSourceBehaviour.BindingSource="TimeColumn" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityOrganization.UniqueidentifierColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="34" />
+		<TextBox Text="{Binding Path=UniqueidentifierColumn, Mode=TwoWay}" Grid.Column="1" Grid.Row="34" fvm:TextBoxUpdateSourceBehaviour.BindingSource="UniqueidentifierColumn" />
+    </Grid>
+</UserControl>

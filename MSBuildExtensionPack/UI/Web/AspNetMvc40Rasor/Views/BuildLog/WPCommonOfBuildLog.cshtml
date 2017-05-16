@@ -79,9 +79,21 @@
 </div>
 <div class="form-group">
 <div class="checkbox checkbox-info">
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareIdCommonOfOrganization_2OfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon</label>
+</div>
+@Html.DropDownListFor(model => model.Criteria.ValueToCompareIdCommonOfOrganization_2OfCommon, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Organization, MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" }, { "onchange", "FetchOrganization_1();" } })
+</div>
+<div class="form-group">
+<div class="checkbox checkbox-info">
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareIdCommonOfOrganization_1OfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_1OfCommon</label>
+</div>
+@Html.DropDownListFor(model => model.Criteria.ValueToCompareIdCommonOfOrganization_1OfCommon, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" }, { "onchange", "FetchSolution_1();" }, { "data-bind", string.Format(@"options:selectListOfvalueToCompareIdCommonOfOrganization_1OfCommon,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedvalueToCompareIdCommonOfOrganization_1OfCommon", MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Please_select_Organization____) } })
+</div>
+<div class="form-group">
+<div class="checkbox checkbox-info">
 @Html.CheckBoxFor(model=>model.Criteria.IsToCompareIdCommonOfSolution_1OfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon</label>
 </div>
-@Html.DropDownListFor(model => model.Criteria.ValueToCompareIdCommonOfSolution_1OfCommon, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Solution, MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Please_select_Solution____, new Dictionary<string,Object>{ { "class", "form-control" }, { "onchange", "FetchBuild_1();" } })
+@Html.DropDownListFor(model => model.Criteria.ValueToCompareIdCommonOfSolution_1OfCommon, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Please_select_Solution____, new Dictionary<string,Object>{ { "class", "form-control" }, { "onchange", "FetchBuild_1();" }, { "data-bind", string.Format(@"options:selectListOfvalueToCompareIdCommonOfSolution_1OfCommon,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedvalueToCompareIdCommonOfSolution_1OfCommon", MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Please_select_Solution____) } })
 </div>
 <div class="form-group">
 <div class="checkbox checkbox-info">
@@ -141,8 +153,14 @@
  <tr><th  class="hidden-xs visible-sm"></th>
 <th >@MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog.Build_1_Name</th>
 <th >@MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog.Solution_1_Name</th>
-<th >@MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog.BuildEventCode_1_Name</th>
-<th  class="hidden-xs visible-smvisible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog.Message</th>
+<th >@MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog.Organization_1_UniqueidentifierColumn</th>
+<th  class="hidden-xs visible-smvisible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog.Organization_1_UniqueIdentifier</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog.Organization_1_Name</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog.Organization_2_UniqueidentifierColumn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog.Organization_2_UniqueIdentifier</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog.Organization_2_Name</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog.BuildEventCode_1_Name</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog.Message</th>
 <th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog.EventTime</th>
 <th  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"></th></tr>
 </thead>
@@ -156,6 +174,12 @@
 <tr><td  class="hidden-xs visible-sm"></td>
 <td >@Html.ActionLink(item.Build_1_Name, UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.BuildId }, null)</td>
 <td >@Html.ActionLink(item.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Solution_1Id }, null)</td>
+<td >@Html.DisplayFor(modelItem => item.Organization_1_UniqueidentifierColumn)</td>
+<td >@Html.DisplayFor(modelItem => item.Organization_1_UniqueIdentifier)</td>
+<td >@Html.ActionLink(item.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1_UniqueidentifierColumn }, null)</td>
+<td >@Html.DisplayFor(modelItem => item.Organization_2_UniqueidentifierColumn)</td>
+<td >@Html.DisplayFor(modelItem => item.Organization_2_UniqueIdentifier)</td>
+<td >@Html.ActionLink(item.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2_UniqueidentifierColumn }, null)</td>
 <td >@Html.ActionLink(item.BuildEventCode_1_Name, UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.BuildEventCodeId }, null)</td>
 <td >@Html.DisplayFor(modelItem => item.Message)</td>
 <td >@Html.DisplayFor(modelItem => item.EventTime)</td>
@@ -338,11 +362,67 @@
                 wrapper: "li",
             });
         }));
+        function FetchOrganization_1() {
+			var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $("#Criteria_ValueToCompareIdCommonOfOrganization_1OfCommon").val();
+			var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $("#Criteria_ValueToCompareIdCommonOfOrganization_2OfCommon").val();
+            var url = "/api/OrganizationApi/GetCollectionOfNameValuePairOfByFKOnly";
+            var params = BuildCriteriaForFetchOrganization_1(selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly);
+            if(selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
+            {
+                $.getJSON(url, params, function (data) {
+                    objVM.selectListOfvalueToCompareIdCommonOfOrganization_1OfCommon(data);
+                    if(0 != @(Model.Criteria.ValueToCompareIdCommonOfOrganization_1OfCommon.HasValue ? Model.Criteria.ValueToCompareIdCommonOfOrganization_1OfCommon.Value : default(System.Int64)))
+                    {
+                        objVM.selectedvalueToCompareIdCommonOfOrganization_1OfCommon(@Model.Criteria.ValueToCompareIdCommonOfOrganization_1OfCommon);
+                    }
+                });
+            }
+        }
+        function BuildCriteriaForFetchOrganization_1(selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly) {
+            var params = {
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: true,
+                valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly,
+                currentIndex: -1,
+                pageSize: -1,
+                queryOrderByExpression: null
+            };
+            return params;
+        }
+        function FetchSolution_1() {
+			var selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly = $("#Criteria_ValueToCompareIdCommonOfOrganization_1OfCommon").val();
+			var selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly = $("#Criteria_ValueToCompareIdCommonOfOrganization_2OfCommon").val();
+            var url = "/api/SolutionApi/GetCollectionOfNameValuePairOfByFKOnly";
+            var params = BuildCriteriaForFetchSolution_1(selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly,selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly);
+            if(selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly && selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
+            {
+                $.getJSON(url, params, function (data) {
+                    objVM.selectListOfvalueToCompareIdCommonOfSolution_1OfCommon(data);
+                    if(0 != @(Model.Criteria.ValueToCompareIdCommonOfSolution_1OfCommon.HasValue ? Model.Criteria.ValueToCompareIdCommonOfSolution_1OfCommon.Value : default(System.Int32)))
+                    {
+                        objVM.selectedvalueToCompareIdCommonOfSolution_1OfCommon(@Model.Criteria.ValueToCompareIdCommonOfSolution_1OfCommon);
+                    }
+                });
+            }
+        }
+        function BuildCriteriaForFetchSolution_1(selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly,selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly) {
+            var params = {
+                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly: true,
+                valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly,
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: true,
+                valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly,
+                currentIndex: -1,
+                pageSize: -1,
+                queryOrderByExpression: null
+            };
+            return params;
+        }
         function FetchBuild_1() {
 			var selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly = $("#Criteria_ValueToCompareIdCommonOfSolution_1OfCommon").val();
+			var selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly = $("#Criteria_ValueToCompareIdCommonOfOrganization_1OfCommon").val();
+			var selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly = $("#Criteria_ValueToCompareIdCommonOfOrganization_2OfCommon").val();
             var url = "/api/BuildApi/GetCollectionOfNameValuePairOfByFKOnly";
-            var params = BuildCriteriaForFetchBuild_1(selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly);
-            if(selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
+            var params = BuildCriteriaForFetchBuild_1(selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly,selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly,selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly);
+            if(selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly && selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly && selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
             {
                 $.getJSON(url, params, function (data) {
                     objVM.selectListOfvalueToCompareIdCommonOfBuild_1OfCommon(data);
@@ -353,10 +433,14 @@
                 });
             }
         }
-        function BuildCriteriaForFetchBuild_1(selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly) {
+        function BuildCriteriaForFetchBuild_1(selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly,selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly,selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly) {
             var params = {
                 isToCompareIdByFKOnlyOfSolution_1OfByFKOnly: true,
                 valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly,
+                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly: true,
+                valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly,
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: true,
+                valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly,
                 currentIndex: -1,
                 pageSize: -1,
                 queryOrderByExpression: null
@@ -366,11 +450,15 @@
         //cascaded dropdownlist by knockoutjs
         function CascadingDDLViewModel() {
             var self = this;
+            self.selectListOfvalueToCompareIdCommonOfOrganization_1OfCommon = ko.observableArray([]);
+            self.selectedvalueToCompareIdCommonOfOrganization_1OfCommon = ko.observable();
+            self.selectListOfvalueToCompareIdCommonOfSolution_1OfCommon = ko.observableArray([]);
+            self.selectedvalueToCompareIdCommonOfSolution_1OfCommon = ko.observable();
             self.selectListOfvalueToCompareIdCommonOfBuild_1OfCommon = ko.observableArray([]);
             self.selectedvalueToCompareIdCommonOfBuild_1OfCommon = ko.observable();
         }
         var objVM = new CascadingDDLViewModel();
         ko.applyBindings(objVM);
-$("#Criteria_ValueToCompareValueToCompareIdCommonOfSolution_1OfCommon").change();
+$("#Criteria_ValueToCompareValueToCompareIdCommonOfOrganization_2OfCommon").change();
     </script>
 }

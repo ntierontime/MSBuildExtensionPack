@@ -62,6 +62,9 @@
     <Compile Include="..\..\Core\ViewModelData\BuildLogItemVM.cs">
       <Link>BuildLogItemVM.cs</Link>
     </Compile>
+    <Compile Include="..\..\Core\ViewModelData\OrganizationItemVM.cs">
+      <Link>OrganizationItemVM.cs</Link>
+    </Compile>
     <Compile Include="..\..\Core\ViewModelData\SolutionItemVM.cs">
       <Link>SolutionItemVM.cs</Link>
     </Compile>
@@ -73,6 +76,9 @@
     </Compile>
     <Compile Include="..\..\Core\ViewModelData\BuildLogWorkspaceVM.cs">
       <Link>BuildLogWorkspaceVM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\ViewModelData\OrganizationWorkspaceVM.cs">
+      <Link>OrganizationWorkspaceVM.cs</Link>
     </Compile>
     <Compile Include="..\..\Core\ViewModelData\SolutionWorkspaceVM.cs">
       <Link>SolutionWorkspaceVM.cs</Link>

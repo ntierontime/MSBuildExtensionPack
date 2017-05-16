@@ -50,6 +50,18 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
 
         /// <summary>
+        /// Creates the BLL instance of entity <see cref="MSBuildExtensionPack.Organization"/> tables for change notification.
+        /// </summary>
+        /// <param name="businessLogicLayerContext">The business logic layer context.</param>
+        /// <returns>Instance of MSBuildExtensionPack.WcfContracts.IOrganizationService</returns>
+        public MSBuildExtensionPack.WcfContracts.IOrganizationService CreateBLLInstanceOfEntityOrganization(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
+		{
+			return new MSBuildExtensionPack.WcfClientBLL.WcfClientEntityOrganization();
+		}
+
+
+
+        /// <summary>
         /// Creates the BLL instance of entity <see cref="MSBuildExtensionPack.Solution"/> tables for change notification.
         /// </summary>
         /// <param name="businessLogicLayerContext">The business logic layer context.</param>
@@ -91,6 +103,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
         public const string Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynBuildLog = "http://localhost:10805/WcfMarkupBuildLog.svc";    
 
 
+        public const string Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynOrganization = "http://localhost:10805/WcfMarkupOrganization.svc";    
+
+
         public const string Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynSolution = "http://localhost:10805/WcfMarkupSolution.svc";    
 
 
@@ -104,6 +119,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
 
         public const string Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynBuildLog = "http://localhost:10805/WcfMarkupBuildLog.svc";    
+
+
+        public const string Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynOrganization = "http://localhost:10805/WcfMarkupOrganization.svc";    
 
 
         public const string Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynSolution = "http://localhost:10805/WcfMarkupSolution.svc";    
@@ -159,6 +177,23 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return new MSBuildExtensionPack.WcfClientBLL.WcfClientEntityAsynBuildLog(new System.ServiceModel.BasicHttpBinding(), new System.ServiceModel.EndpointAddress(Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynBuildLog));
 #else
 			return new MSBuildExtensionPack.WcfClientBLL.WcfClientEntityAsynBuildLog();
+#endif
+		}
+
+
+
+        /// <summary>
+        /// Creates the BLL instance of entity <see cref="MSBuildExtensionPack.Organization"/> tables for change notification.
+        /// </summary>
+        /// <param name="businessLogicLayerContext">The business logic layer context.</param>
+        /// <returns>Instance of MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn</returns>
+        public MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn CreateBLLInstanceOfEntityOrganization(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
+		{
+#if NETFX_CORE
+// for WinRT/NETFX_CORE release, because no app.config file, initialize WcfClient with Url
+            return new MSBuildExtensionPack.WcfClientBLL.WcfClientEntityAsynOrganization(new System.ServiceModel.BasicHttpBinding(), new System.ServiceModel.EndpointAddress(Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynOrganization));
+#else
+			return new MSBuildExtensionPack.WcfClientBLL.WcfClientEntityAsynOrganization();
 #endif
 		}
 

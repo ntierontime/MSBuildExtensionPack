@@ -17,6 +17,11 @@
         </ResourceDictionary>
     </UserControl.Resources>
     <Grid HorizontalAlignment="Stretch">
+        <i:Interaction.Triggers>
+            <i:EventTrigger EventName="Loaded">
+                <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM.SearchCommand, Source={StaticResource Locator}}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+            </i:EventTrigger>
+        </i:Interaction.Triggers>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -30,6 +35,8 @@
 				<RowDefinition Height="30" />
 				<RowDefinition Height="30" />
 				<RowDefinition Height="30" />
+				<RowDefinition Height="30" />
+				<RowDefinition Height="30" />
 				<RowDefinition Height="30" />            </Grid.RowDefinitions>
 <CheckBox Name="ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" IsChecked="{Binding Path=Criteria.SolutionQueryCriteriaCommon.DescriptionCommonOft.IsToCompare, Mode=TwoWay}" />
 <TextBox Name="ID_TextBox_Search_valueToBeContainedDescriptionCommonOftOfCommon" Text="{Binding Path=Criteria.SolutionQueryCriteriaCommon.DescriptionCommonOft.ValueToBeContained, Mode=TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0" />
@@ -37,8 +44,21 @@
 <TextBox Name="ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon" Text="{Binding Path=Criteria.SolutionQueryCriteriaCommon.NameCommonOft.ValueToBeContained, Mode=TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" />
 <CheckBox Name="ID_CheckBox_Search_isToCompareExternalParentIdCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareExternalParentIdCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2" IsChecked="{Binding Path=Criteria.SolutionQueryCriteriaCommon.ExternalParentIdCommonOft.IsToCompare, Mode=TwoWay}" />
 <TextBox Name="ID_TextBox_Search_valueToBeContainedExternalParentIdCommonOftOfCommon" Text="{Binding Path=Criteria.SolutionQueryCriteriaCommon.ExternalParentIdCommonOft.ValueToBeContained, Mode=TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" />
+<CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon" Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="3" IsChecked="{Binding Path=Criteria.SolutionQueryCriteriaCommon.IdCommonOfOrganization_2.IsToCompare, Mode=TwoWay}" />
+<ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfOrganization_2OfCommon" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="3" ItemsSource="{Binding Path=DropDownContentsOfOrganization_2}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.SolutionQueryCriteriaCommon.IdCommonOfOrganization_2.ValueToCompare, Mode=TwoWay}">
+                  <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Loaded">
+                        <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=GetDropDownContentsOfOrganization_2Command}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="SelectionChanged">
+                        <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=GetDropDownContentsOfOrganization_2SelectionChangedCommand}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+</ComboBox>
+<CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfOrganization_1OfCommon" Content="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_1OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="4" IsChecked="{Binding Path=Criteria.SolutionQueryCriteriaCommon.IdCommonOfOrganization_1.IsToCompare, Mode=TwoWay}" />
+<ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfOrganization_1OfCommon" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="4" ItemsSource="{Binding Path=DropDownContentsOfOrganization_1}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.SolutionQueryCriteriaCommon.IdCommonOfOrganization_1.ValueToCompare, Mode=TwoWay}" />
         </Grid>
-<slsdk:DataGrid Grid.Row="1" Height="100" HorizontalAlignment="Stretch" Name="V_Common" VerticalAlignment="Top" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM_Static, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollection}" SelectedItem="{Binding Path=Current}">
+<slsdk:DataGrid Grid.Row="1" Height="100" HorizontalAlignment="Stretch" Name="V_Common" VerticalAlignment="Top" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM_Static, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollectionDefault}" SelectedItem="{Binding Path=CurrentDefault}">
             </slsdk:DataGrid>
     </Grid>
 </UserControl>

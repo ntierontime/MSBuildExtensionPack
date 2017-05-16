@@ -38,10 +38,12 @@
     <Compile Include="IBuildService.cs" />
     <Compile Include="IBuildEventCodeService.cs" />
     <Compile Include="IBuildLogService.cs" />
+    <Compile Include="IOrganizationService.cs" />
     <Compile Include="ISolutionService.cs" />
     <Compile Include="IBuildServiceAsyn.cs" />
     <Compile Include="IBuildEventCodeServiceAsyn.cs" />
     <Compile Include="IBuildLogServiceAsyn.cs" />
+    <Compile Include="IOrganizationServiceAsyn.cs" />
     <Compile Include="ISolutionServiceAsyn.cs" />
     <Compile Include="WcfServiceResolver.cs" />
   </ItemGroup>

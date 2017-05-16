@@ -133,7 +133,7 @@ System.String title, System.String description, System.DateTime pubDate, System.
         /// </summary>
         /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.Build.Default"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.Build.Default CreateDefault(
-System.Int64 id, System.Int32 solutionId, System.String name, System.String description, System.DateTime buildStartTime, System.String solution_1_Name
+System.Int64 id, System.Int32 solutionId, System.String name, System.String description, System.DateTime buildStartTime, System.String solution_1_Name, System.String organization_1_Name, System.Int64 organization_1Id, System.Guid organization_1_UniqueIdentifier, System.Guid organization_1_UniqueidentifierColumn, System.String organization_2_Name, System.Int64 organization_2Id, System.Guid organization_2_UniqueIdentifier, System.Guid organization_2_UniqueidentifierColumn
 			)
         {
             MSBuildExtensionPack.DataSourceEntities.Build.Default _retval = new MSBuildExtensionPack.DataSourceEntities.Build.Default();
@@ -143,6 +143,14 @@ System.Int64 id, System.Int32 solutionId, System.String name, System.String desc
 				_retval.Description = description;
 				_retval.BuildStartTime = buildStartTime;
 				_retval.Solution_1_Name = solution_1_Name;
+				_retval.Organization_1_Name = organization_1_Name;
+				_retval.Organization_1Id = organization_1Id;
+				_retval.Organization_1_UniqueIdentifier = organization_1_UniqueIdentifier;
+				_retval.Organization_1_UniqueidentifierColumn = organization_1_UniqueidentifierColumn;
+				_retval.Organization_2_Name = organization_2_Name;
+				_retval.Organization_2Id = organization_2Id;
+				_retval.Organization_2_UniqueIdentifier = organization_2_UniqueIdentifier;
+				_retval.Organization_2_UniqueidentifierColumn = organization_2_UniqueidentifierColumn;
             return _retval;
         }
 
@@ -156,11 +164,13 @@ System.Int64 id, System.Int32 solutionId, System.String name, System.String desc
         /// </summary>
         /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.Build.DefaultGroupedDataView"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.Build.DefaultGroupedDataView CreateDefaultGroupedDataView(
-System.Int32 solutionId, System.Int64 countPerFK, System.String name
+System.Int32 solutionId, System.Int64 organization_1Id, System.Int64 organization_2Id, System.Int64 countPerFK, System.String name
 			)
         {
             MSBuildExtensionPack.DataSourceEntities.Build.DefaultGroupedDataView _retval = new MSBuildExtensionPack.DataSourceEntities.Build.DefaultGroupedDataView();
 				_retval.SolutionId = solutionId;
+				_retval.Organization_1Id = organization_1Id;
+				_retval.Organization_2Id = organization_2Id;
 				_retval.CountPerFK = countPerFK;
 				_retval.Name = name;
             return _retval;
