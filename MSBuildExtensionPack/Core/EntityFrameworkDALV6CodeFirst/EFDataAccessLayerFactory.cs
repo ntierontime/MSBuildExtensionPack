@@ -90,3 +90,4 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
     {
     }
 }
+

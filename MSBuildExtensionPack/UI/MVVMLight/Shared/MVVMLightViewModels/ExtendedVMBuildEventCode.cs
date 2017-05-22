@@ -12,29 +12,17 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 {
     public class ExtendedVMBuildEventCode: GalaSoft.MvvmLight.ViewModelBase
     {
-        #region constructor
+        public const string EntityName_Static = "MSBuildExtensionPack.BuildEventCode";
+
+        public string EntityName { get { return EntityName_Static; } }
 
         public ExtendedVMBuildEventCode()
 			: base()
         {
 
-
-            #region Commands for LinkedButton in List
-
-
-
-            #endregion Commands for LinkedButton in List
         }
 
-        #endregion constructor
 
-
-
-        #region LinkButton Command to Details of referenced entities
-
-
-
-        #endregion LinkButton Command to Details of referenced entities
 
         public override void Cleanup()
         {

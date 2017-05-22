@@ -15,7 +15,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
     /// See http://www.galasoft.ch/mvvm/getstarted
     /// </summary>
     public partial class ItemVMOrganization
-		: MSBuildExtensionPack.WPF4App.DispatcherHelperWrapper<MSBuildExtensionPack.DataSourceEntities.OrganizationIdentifier, MSBuildExtensionPack.DataSourceEntities.Organization.Default>
+		: Framework.Xaml.ViewModelItemBase<MSBuildExtensionPack.DataSourceEntities.OrganizationIdentifier, MSBuildExtensionPack.DataSourceEntities.Organization.Default>
     {
 		#region override string EntityName
 	    

@@ -64,3 +64,4 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
 
 
 }
+

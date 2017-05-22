@@ -365,7 +365,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
             System.Int64 id)
         {
             MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM();
-            retval.Load(true, id, Framework.UIAction.ViewDetails);
+            retval.Load(true, id, false, default(System.Guid), false, default(System.Guid), Framework.UIAction.ViewDetails);
             return retval;
         }
 
@@ -413,7 +413,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         public MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfOrganizationVM GetWPEntityRelatedOfOrganizationVM(
             System.Int64 id)
         {
-            MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfOrganizationVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfOrganizationVM(new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(true, id));
+            MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfOrganizationVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfOrganizationVM(new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(true, id, false, default(System.Guid), false, default(System.Guid)));
             retval.LoadData();
             return retval;
         }

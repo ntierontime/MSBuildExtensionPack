@@ -11,7 +11,7 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    using System.Data.Entity.Core.Objects;
+	using System.Data.Entity.Core.Objects;
 
     public partial class MSBuildExtensionPackEntities : DbContext
     {

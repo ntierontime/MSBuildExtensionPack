@@ -103,3 +103,4 @@ namespace MSBuildExtensionPack.DALContracts
 
 	}
 }
+

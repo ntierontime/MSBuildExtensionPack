@@ -15,7 +15,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
     /// See http://www.galasoft.ch/mvvm/getstarted
     /// </summary>
     public partial class ItemVMSolution
-		: MSBuildExtensionPack.WPF4App.DispatcherHelperWrapper<MSBuildExtensionPack.DataSourceEntities.SolutionIdentifier, MSBuildExtensionPack.DataSourceEntities.Solution.Default>
+		: Framework.Xaml.ViewModelItemBase<MSBuildExtensionPack.DataSourceEntities.SolutionIdentifier, MSBuildExtensionPack.DataSourceEntities.Solution.Default>
     {
 		#region override string EntityName
 	    

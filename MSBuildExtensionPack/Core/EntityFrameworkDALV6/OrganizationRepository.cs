@@ -10033,9 +10033,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
 
 
-
-
-
 		#region GetAscendantOfParentIdOfMSBuildExtensionPack_Organization && GetDescendantOfParentIdOfMSBuildExtensionPack_Organization 
 
         /// <summary>
@@ -10087,11 +10084,5 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
 
 	}
-
-
-
-
-
-	
 }
 

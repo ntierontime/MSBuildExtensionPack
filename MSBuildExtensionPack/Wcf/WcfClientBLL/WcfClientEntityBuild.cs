@@ -887,3 +887,4 @@ namespace MSBuildExtensionPack.WcfClientBLL
 #endif
 	}
 }
+

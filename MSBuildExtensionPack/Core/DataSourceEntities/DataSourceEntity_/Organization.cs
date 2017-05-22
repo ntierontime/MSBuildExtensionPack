@@ -948,6 +948,12 @@ namespace MSBuildExtensionPack.DataSourceEntities
             return MSBuildExtensionPack.EntityContracts.IOrganizationHelper.Clone<Organization, Organization>(this);
         }
 
+		public Organization GetACloneWithoutIdentifier()
+        {
+			var cloned = GetAClone();
+
+            return cloned;
+		}
 
 		#endregion Method of Organization GetAClone()
 

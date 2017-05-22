@@ -36,6 +36,7 @@
     <None Include="packages.config" />
     <Compile Include="BinaryRelated\BinaryFile.cs" />
     <Compile Include="DateTimePeriodHelper.cs" />
+    <Compile Include="UISelectedItemChangedMessage.cs" />
     <Compile Include="AssemblyHelper.cs" />
     <Compile Include="DataServiceTypes.cs" />
     <Compile Include="DataStreamServiceResult.cs" />

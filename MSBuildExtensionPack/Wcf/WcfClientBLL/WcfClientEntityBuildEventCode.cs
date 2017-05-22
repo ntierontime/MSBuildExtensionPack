@@ -469,3 +469,4 @@ namespace MSBuildExtensionPack.WcfClientBLL
 #endif
 	}
 }
+

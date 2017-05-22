@@ -2,13 +2,21 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+//using LinqToLdap;
+//using LinqToLdap.Mapping;
+//using LinqToLdap.Mapping.PropertyMappings;
+//using LinqToLdap.Mapping.PropertyMappingBuilders;
+//using LINQtoCSV;
+//using LinqToLdap.Collections;
+//using System.DirectoryServices.Protocols;
+//using System.Diagnostics;
 
 namespace MSBuildExtensionPack.DataSourceEntities
 {
     /// <summary>
     /// provides some common methods/actions/stubs. 
     /// </summary>
-    public static partial class BuildEventCodeHelper
+    public static class BuildEventCodeHelper
     {
 		#region CreateEntity(...)
 
@@ -145,3 +153,5 @@ System.Int32 id, System.String eventCode
 	}
 
 }
+
+

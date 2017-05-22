@@ -2,13 +2,21 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+//using LinqToLdap;
+//using LinqToLdap.Mapping;
+//using LinqToLdap.Mapping.PropertyMappings;
+//using LinqToLdap.Mapping.PropertyMappingBuilders;
+//using LINQtoCSV;
+//using LinqToLdap.Collections;
+//using System.DirectoryServices.Protocols;
+//using System.Diagnostics;
 
 namespace MSBuildExtensionPack.DataSourceEntities
 {
     /// <summary>
     /// provides some common methods/actions/stubs. 
     /// </summary>
-    public static partial class OrganizationHelper
+    public static class OrganizationHelper
     {
 		#region CreateEntity(...)
 
@@ -30,6 +38,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
 			,System.String nvarcharColumn
 			,System.String ntextColumn
 			,System.Boolean bitColumn
+			,System.Byte[] binaryColumn
+			,System.Byte[] varbinaryColumn
+			,System.Byte[] imageColumn
 			,System.Byte tinyintColumn
 			,System.Int16 smallintColumn
 			,System.Int32 intColumn
@@ -62,6 +73,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
 				,nvarcharColumn
 				,ntextColumn
 				,bitColumn
+				,binaryColumn
+				,varbinaryColumn
+				,imageColumn
 				,tinyintColumn
 				,smallintColumn
 				,intColumn
@@ -349,3 +363,5 @@ System.Int64 id, System.String name, System.Boolean isSystemBuiltIn, System.Bool
 	}
 
 }
+
+

@@ -247,6 +247,12 @@ namespace MSBuildExtensionPack.DataSourceEntities
             return MSBuildExtensionPack.EntityContracts.IBuildHelper.Clone<Build, Build>(this);
         }
 
+		public Build GetACloneWithoutIdentifier()
+        {
+			var cloned = GetAClone();
+
+            return cloned;
+		}
 
 		#endregion Method of Build GetAClone()
 

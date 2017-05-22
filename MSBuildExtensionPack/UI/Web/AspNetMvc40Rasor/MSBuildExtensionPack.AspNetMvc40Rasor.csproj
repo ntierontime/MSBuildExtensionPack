@@ -133,6 +133,8 @@
     <Compile Include="Helpers\WebAuthorizationAttribute.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <None Include="Web.config" />
+    <None Include="Logging.config" />
+    <None Include="Logging.config" />
     <Content Include="Views\Build\WPCommonOfBuild.cshtml" />
     <Content Include="Views\Build\WPEntityRelatedOfBuild.cshtml" />
     <Content Include="Views\Build\WPUpdateNameOnlyOfBuild.cshtml" />

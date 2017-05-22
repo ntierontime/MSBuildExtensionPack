@@ -378,7 +378,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             try
             {
                 log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Started.ToString()));
-				var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.ExistsOfEntityOfByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
+				var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.ExistsOfDefaultOfByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
 				if (_Response)
                 {
 					MSBuildExtensionPack.DataSourceEntities.Solution entity = MSBuildExtensionPack.EntityContracts.ISolutionHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution.Default, MSBuildExtensionPack.DataSourceEntities.Solution>(vm.Item);

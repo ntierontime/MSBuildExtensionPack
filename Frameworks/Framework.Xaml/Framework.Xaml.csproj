@@ -42,6 +42,7 @@
     <Compile Include="RichTextColumns.cs" />
     <Compile Include="SuspensionManager.cs" />
     <Compile Include="ViewModelBaseWithResultAndUIElement.cs" />
+    <Compile Include="ViewModelItemBase.cs" />
     <Compile Include="MenuTreeItem.cs" />
   </ItemGroup>
   <ItemGroup>

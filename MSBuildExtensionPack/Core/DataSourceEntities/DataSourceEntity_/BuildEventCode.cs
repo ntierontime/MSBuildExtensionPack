@@ -195,6 +195,12 @@ namespace MSBuildExtensionPack.DataSourceEntities
             return MSBuildExtensionPack.EntityContracts.IBuildEventCodeHelper.Clone<BuildEventCode, BuildEventCode>(this);
         }
 
+		public BuildEventCode GetACloneWithoutIdentifier()
+        {
+			var cloned = GetAClone();
+
+            return cloned;
+		}
 
 		#endregion Method of BuildEventCode GetAClone()
 

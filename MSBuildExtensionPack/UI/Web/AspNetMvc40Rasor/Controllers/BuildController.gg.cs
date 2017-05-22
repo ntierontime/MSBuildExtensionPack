@@ -403,7 +403,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             try
             {
                 log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Started.ToString()));
-				var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCBuild.ExistsOfEntityOfByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
+				var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCBuild.ExistsOfDefaultOfByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
 				if (_Response)
                 {
 					MSBuildExtensionPack.DataSourceEntities.Build entity = MSBuildExtensionPack.EntityContracts.IBuildHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Build.Default, MSBuildExtensionPack.DataSourceEntities.Build>(vm.Item);

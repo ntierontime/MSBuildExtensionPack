@@ -5665,9 +5665,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
 
 
-
-
-
         #region UpdateNameOnly
 
         /// <summary>
@@ -5720,11 +5717,5 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
 
 	}
-
-
-
-
-
-	
 }
 

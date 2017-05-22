@@ -347,11 +347,6 @@
     <Compile Include="DispatcherHelperWrapper.cs" />
     <Compile Include="DispatcherHelperWrapper.cs" />
     <Compile Include="DispatcherHelperWrapper.cs" />
-    <Compile Include="DispatcherHelperWrapper.cs" />
-    <Compile Include="DispatcherHelperWrapper.cs" />
-    <Compile Include="DispatcherHelperWrapper.cs" />
-    <Compile Include="DispatcherHelperWrapper.cs" />
-    <Compile Include="DispatcherHelperWrapper.cs" />
     <None Include="app.config" />
     <Page Include="AppResourceDictionary.xaml">
       <Generator>MSBuild:Compile</Generator>

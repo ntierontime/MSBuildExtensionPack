@@ -246,6 +246,12 @@ namespace MSBuildExtensionPack.DataSourceEntities
             return MSBuildExtensionPack.EntityContracts.ISolutionHelper.Clone<Solution, Solution>(this);
         }
 
+		public Solution GetACloneWithoutIdentifier()
+        {
+			var cloned = GetAClone();
+
+            return cloned;
+		}
 
 		#endregion Method of Solution GetAClone()
 

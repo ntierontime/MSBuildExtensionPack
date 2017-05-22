@@ -12,38 +12,40 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 {
     public class ExtendedVMOrganization: GalaSoft.MvvmLight.ViewModelBase
     {
-        #region constructor
+        public const string EntityName_Static = "MSBuildExtensionPack.Organization";
+
+        public string EntityName { get { return EntityName_Static; } }
 
         public ExtendedVMOrganization()
 			: base()
         {
 
-		#region Commands for Cascading ComboBox
+			// 1.1. Organization_2 LaunchOrganization_2DetailsView and its command
+			this.LaunchOrganization_2DetailsViewCommand = new RelayCommand<MSBuildExtensionPack.DataSourceEntities.Organization.Default>(this.LaunchOrganization_2DetailsView);
 
-            this.GetDropDownContentsOfOrganization_2Command = new RelayCommand(this.GetDropDownContentsOfOrganization_2);
-
-
-		#endregion Commands for Cascading ComboBox
-
+			// 1.2. Organization_2 GetDropDownContentsOfOrganization_2SelectionChanged and its command
+			this.GetDropDownContentsOfOrganization_2Command = new RelayCommand(this.GetDropDownContentsOfOrganization_2);
 
 
-            #region Commands for LinkedButton in List
-
-
-            this.LaunchOrganization_2DetailsViewCommand = new RelayCommand<MSBuildExtensionPack.DataSourceEntities.Organization.Default>(this.LaunchOrganization_2DetailsView);
-
-
-
-            #endregion Commands for LinkedButton in List
         }
 
-        #endregion constructor
 
 
-		#region Commands for Cascading ComboBox
+		#region 1. Organization_2
+
+		// 1.1. Organization_2 LaunchOrganization_2DetailsView and its command
+
+        public RelayCommand<MSBuildExtensionPack.DataSourceEntities.Organization.Default> LaunchOrganization_2DetailsViewCommand { get; protected set; }
+        protected void LaunchOrganization_2DetailsView(MSBuildExtensionPack.DataSourceEntities.Organization.Default item)
+        {
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization_Static.LoadItem(new MSBuildExtensionPack.DataSourceEntities.OrganizationIdentifier(item.ParentId));
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization_Static.LaunchDetailsViewCommand.Execute(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization_Static.Item);
+        }
+
+
+		// 1.2. Organization_2 DropDownContentsOfOrganization_2 and its commands
 
         public Framework.NameValuePair<System.Int64> m_DropDownContentsOfOrganization_2SelectedItem;
-        
         public Framework.NameValuePair<System.Int64> DropDownContentsOfOrganization_2SelectedItem 
         {
             get
@@ -58,6 +60,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 }
 
                 this.m_DropDownContentsOfOrganization_2SelectedItem = value;
+                MessengerInstance.Send<Framework.UISelectedItemChangedMessage>(new Framework.UISelectedItemChangedMessage(EntityName, PropertyName_DropDownContentsOfOrganization_2SelectedItem, value));
                 RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_2SelectedItem);
             }
         }
@@ -65,9 +68,8 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         public const string PropertyName_DropDownContentsOfOrganization_2SelectedItem = "DropDownContentsOfOrganization_2_1SelectedItem";
         public const string PropertyName_DropDownContentsOfOrganization_2 = "DropDownContentsOfOrganization_2";
 
-        public List<Framework.NameValuePair<System.Int64>> m_DropDownContentsOfOrganization_2 = new List<Framework.NameValuePair<System.Int64>>();
-
-        public List<Framework.NameValuePair<System.Int64>> DropDownContentsOfOrganization_2
+        public ObservableCollection<Framework.NameValuePair<System.Int64>> m_DropDownContentsOfOrganization_2 = new ObservableCollection<Framework.NameValuePair<System.Int64>>();
+        public ObservableCollection<Framework.NameValuePair<System.Int64>> DropDownContentsOfOrganization_2
         {
             get
             {
@@ -114,28 +116,13 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
             catch (Exception ex)
             {
-                Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuild.EntityName_Static, PropertyName_DropDownContentsOfOrganization_2, Framework.UIAction.Search, Framework.UIActionStatus.Failed, ex.Message));
+                Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName_Static, PropertyName_DropDownContentsOfOrganization_2, Framework.UIAction.Search, Framework.UIActionStatus.Failed, ex.Message));
             }
         }
 
-		#endregion Commands for Cascading ComboBox
+		#endregion 1. Organization_2
 
 
-
-        #region LinkButton Command to Details of referenced entities
-
-
-        public RelayCommand<MSBuildExtensionPack.DataSourceEntities.Organization.Default> LaunchOrganization_2DetailsViewCommand { get; protected set; }
-
-        protected void LaunchOrganization_2DetailsView(MSBuildExtensionPack.DataSourceEntities.Organization.Default item)
-        {
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization_Static.LoadItem(new MSBuildExtensionPack.DataSourceEntities.OrganizationIdentifier(item.ParentId));
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization_Static.LaunchDetailsViewCommand.Execute(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization_Static.Item);
-        }
-
-
-
-        #endregion LinkButton Command to Details of referenced entities
 
         public override void Cleanup()
         {
