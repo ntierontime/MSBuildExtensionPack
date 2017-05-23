@@ -194,10 +194,10 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             base.LaunchDetailsView(o);
 
 
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild_Static.GetDropDownContentsOfSolution_1(new Framework.NameValuePair<int>(o.Organization_1Id, o.Organization_1_Name));
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild_Static.GetDropDownContentsOfSolution_1(new Framework.NameValuePair<long>(o.Organization_1Id, o.Organization_1_Name));
 
 
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild_Static.GetDropDownContentsOfOrganization_1(new Framework.NameValuePair<int>(o.Organization_2Id, o.Organization_2_Name));
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild_Static.GetDropDownContentsOfOrganization_1(new Framework.NameValuePair<long>(o.Organization_2Id, o.Organization_2_Name));
 
 
 
@@ -218,10 +218,10 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 			var o = oo == null ? this.Item.GetACloneWithoutIdentifier() : oo.GetACloneWithoutIdentifier();
 
 
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild_Static.GetDropDownContentsOfSolution_1(new Framework.NameValuePair<int>(o.Organization_1Id, o.Organization_1_Name));
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild_Static.GetDropDownContentsOfSolution_1(new Framework.NameValuePair<long>(o.Organization_1Id, o.Organization_1_Name));
 
 
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild_Static.GetDropDownContentsOfOrganization_1(new Framework.NameValuePair<int>(o.Organization_2Id, o.Organization_2_Name));
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild_Static.GetDropDownContentsOfOrganization_1(new Framework.NameValuePair<long>(o.Organization_2Id, o.Organization_2_Name));
 
 
 
@@ -244,10 +244,10 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 			var o = oo == null ? this.Item.GetACloneWithoutIdentifier() : oo.GetACloneWithoutIdentifier();
 
 
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild_Static.GetDropDownContentsOfSolution_1(new Framework.NameValuePair<int>(o.Organization_1Id, o.Organization_1_Name));
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild_Static.GetDropDownContentsOfSolution_1(new Framework.NameValuePair<long>(o.Organization_1Id, o.Organization_1_Name));
 
 
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild_Static.GetDropDownContentsOfOrganization_1(new Framework.NameValuePair<int>(o.Organization_2Id, o.Organization_2_Name));
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild_Static.GetDropDownContentsOfOrganization_1(new Framework.NameValuePair<long>(o.Organization_2Id, o.Organization_2_Name));
 
 
 

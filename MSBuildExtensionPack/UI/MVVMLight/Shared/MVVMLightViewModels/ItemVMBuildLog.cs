@@ -203,10 +203,10 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfBuild_1(new Framework.NameValuePair<int>(o.Solution_1Id, o.Solution_1_Name));
 
 
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfSolution_1(new Framework.NameValuePair<int>(o.Organization_1Id, o.Organization_1_Name));
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfSolution_1(new Framework.NameValuePair<long>(o.Organization_1Id, o.Organization_1_Name));
 
 
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfOrganization_1(new Framework.NameValuePair<int>(o.Organization_2Id, o.Organization_2_Name));
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfOrganization_1(new Framework.NameValuePair<long>(o.Organization_2Id, o.Organization_2_Name));
 
 
 
@@ -236,10 +236,10 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfBuild_1(new Framework.NameValuePair<int>(o.Solution_1Id, o.Solution_1_Name));
 
 
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfSolution_1(new Framework.NameValuePair<int>(o.Organization_1Id, o.Organization_1_Name));
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfSolution_1(new Framework.NameValuePair<long>(o.Organization_1Id, o.Organization_1_Name));
 
 
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfOrganization_1(new Framework.NameValuePair<int>(o.Organization_2Id, o.Organization_2_Name));
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfOrganization_1(new Framework.NameValuePair<long>(o.Organization_2Id, o.Organization_2_Name));
 
 
 
@@ -271,10 +271,10 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfBuild_1(new Framework.NameValuePair<int>(o.Solution_1Id, o.Solution_1_Name));
 
 
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfSolution_1(new Framework.NameValuePair<int>(o.Organization_1Id, o.Organization_1_Name));
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfSolution_1(new Framework.NameValuePair<long>(o.Organization_1Id, o.Organization_1_Name));
 
 
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfOrganization_1(new Framework.NameValuePair<int>(o.Organization_2Id, o.Organization_2_Name));
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfOrganization_1(new Framework.NameValuePair<long>(o.Organization_2Id, o.Organization_2_Name));
 
 
 
