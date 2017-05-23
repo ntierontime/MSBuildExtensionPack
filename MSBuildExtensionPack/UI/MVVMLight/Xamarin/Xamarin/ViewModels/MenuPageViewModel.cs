@@ -8,11 +8,12 @@ namespace Xamarin {
 		public ICommand GoHomeCommand { get; set; }
 		public ICommand GoSecondCommand { get; set; }
         public ICommand GoBuildLogCreateCommand { get; set; }
+        public ICommand GoLaunchBuildEventCodeSearchCommand { get; set; }
         public MenuPageViewModel() {
 			GoHomeCommand = new Command(GoHome);
 			GoSecondCommand = new Command(GoSecond);
             GoBuildLogCreateCommand = new Command(GoBuildLogCreate);
-
+            GoLaunchBuildEventCodeSearchCommand = new Command(GoLaunchBuildEventCodeSearch);
         }
 
         void GoHome(object obj)
@@ -33,6 +34,12 @@ namespace Xamarin {
             App.MenuIsPresented = false;
         }
 
+        void GoLaunchBuildEventCodeSearch(object obj)
+        {
+            App.NavigationPage.Navigation.PushAsync(new Xamarin.Pages.WPCommonOfBuildEventCode());
+            App.MenuIsPresented = false;
+        }
+        
     }
 }
 

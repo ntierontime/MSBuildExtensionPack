@@ -17,6 +17,7 @@
 			<Button Text="Home" TextColor="White" BackgroundColor="Green" Command="{Binding GoHomeCommand}" />
             <Button Text="Second Page" TextColor="White" BackgroundColor="Navy" Command="{Binding GoSecondCommand}" />
             <Button Text="Create BuildLog" TextColor="White" BackgroundColor="Yellow" Command="{Binding GoBuildLogCreateCommand}" />
+            <Button Text="Create BuildEventCode" TextColor="White" BackgroundColor="Red" Command="{Binding GoLaunchBuildEventCodeSearchCommand}" />
         </StackLayout>
 	</ContentPage.Content>
 </ContentPage>
