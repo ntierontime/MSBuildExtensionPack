@@ -42,7 +42,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         public RelayCommand<MSBuildExtensionPack.DataSourceEntities.Solution.Default> LaunchOrganization_1DetailsViewCommand { get; protected set; }
         protected void LaunchOrganization_1DetailsView(MSBuildExtensionPack.DataSourceEntities.Solution.Default item)
         {
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization_Static.LoadItem(new MSBuildExtensionPack.DataSourceEntities.OrganizationIdentifier(item.OrganizationId.Value));
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization_Static.LoadItem(new MSBuildExtensionPack.DataSourceEntities.OrganizationIdentifier(item.OrganizationId.HasValue ? item.OrganizationId.Value : default(System.Int64)));
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization_Static.LaunchDetailsViewCommand.Execute(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization_Static.Item);
         }
 
