@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{26B6AFF9-193A-4BA1-9906-A074FB18B0BF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MSBuildExtensionPack.ViewModelData</RootNamespace>
+    <AssemblyName>MSBuildExtensionPack.ViewModelData.WP</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
+    <Compile Include="..\..\Core\ViewModelData\OrderByLists.cs">
+      <Link>OrderByLists.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\ViewModelData\BuildItemVM.cs">
+      <Link>BuildItemVM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\ViewModelData\BuildEventCodeItemVM.cs">
+      <Link>BuildEventCodeItemVM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\ViewModelData\BuildLogItemVM.cs">
+      <Link>BuildLogItemVM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\ViewModelData\OrganizationItemVM.cs">
+      <Link>OrganizationItemVM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\ViewModelData\SolutionItemVM.cs">
+      <Link>SolutionItemVM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\ViewModelData\BuildWorkspaceVM.cs">
+      <Link>BuildWorkspaceVM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\ViewModelData\BuildEventCodeWorkspaceVM.cs">
+      <Link>BuildEventCodeWorkspaceVM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\ViewModelData\BuildLogWorkspaceVM.cs">
+      <Link>BuildLogWorkspaceVM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\ViewModelData\OrganizationWorkspaceVM.cs">
+      <Link>OrganizationWorkspaceVM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\ViewModelData\SolutionWorkspaceVM.cs">
+      <Link>SolutionWorkspaceVM.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonBLLEntities.WP\MSBuildExtensionPack.CommonBLLEntities.WP.csproj">
+      <Project>{e89e47ee-3563-4dc2-999b-299eaa993137}</Project>
+      <Name>MSBuildExtensionPack.CommonBLLEntities.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataSourceEntities.WP\MSBuildExtensionPack.DataSourceEntities.WP.csproj">
+      <Project>{8d68aacf-b475-4591-ba3f-e9e31f8c80c1}</Project>
+      <Name>MSBuildExtensionPack.DataSourceEntities.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityContracts.WP\MSBuildExtensionPack.EntityContracts.WP.csproj">
+      <Project>{d6114ddc-aa54-4488-8a7e-e39899ccf00c}</Project>
+      <Name>MSBuildExtensionPack.EntityContracts.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks.WP\Framework.WP\Framework.WP.csproj">
+      <Project>{50db8a42-8f10-4eca-b79f-a5064f77743b}</Project>
+      <Name>Framework.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks.WP\Framework.CommonBLLEntities.WP\Framework.CommonBLLEntities.WP.csproj">
+      <Project>{160a6ef5-b57b-4bf6-8f66-3010bcfe299f}</Project>
+      <Name>Framework.CommonBLLEntities.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks.WP\Framework.DataSourceEntities.WP\Framework.DataSourceEntities.WP.csproj">
+      <Project>{a6702d3f-644a-4a92-ac01-61007693b058}</Project>
+      <Name>Framework.DataSourceEntities.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks.WP\Framework.EntityContracts.WP\Framework.EntityContracts.WP.csproj">
+      <Project>{f81463c7-beed-47a1-88eb-7c130483dc83}</Project>
+      <Name>Framework.EntityContracts.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks.WP\Framework.Resources.WP\Framework.Resources.WP.csproj">
+      <Project>{51ae7423-f40a-4146-b604-0726442ac1e2}</Project>
+      <Name>Framework.Resources.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks.WP\Framework.ViewModels.WP\Framework.ViewModels.WP.csproj">
+      <Project>{affa24cc-0901-4d15-8842-91b374cb7ee3}</Project>
+      <Name>Framework.ViewModels.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Resources.WP\MSBuildExtensionPack.Resources.WP.csproj">
+      <Project>{fffb3077-fd30-4e2b-bd9e-4e6b4b582432}</Project>
+      <Name>MSBuildExtensionPack.Resources.WP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

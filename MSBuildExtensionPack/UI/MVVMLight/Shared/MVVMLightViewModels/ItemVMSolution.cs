@@ -199,7 +199,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.DropDownContentsOfOrganization_2SelectedItem = new Framework.NameValuePair<System.Int64>(o.Organization_2Id, o.Organization_2_Name);
 
 
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.DropDownContentsOfOrganization_1SelectedItem = new Framework.NameValuePair<System.Int64>(o.OrganizationId.Value, o.Organization_1_Name);
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.DropDownContentsOfOrganization_1SelectedItem = new Framework.NameValuePair<System.Int64>(o.OrganizationId.HasValue ? o.OrganizationId.Value : default(System.Int64), o.Organization_1_Name);
 
 
         }
@@ -217,7 +217,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.DropDownContentsOfOrganization_2SelectedItem = new Framework.NameValuePair<System.Int64>(o.Organization_2Id, o.Organization_2_Name);
 
 
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.DropDownContentsOfOrganization_1SelectedItem = new Framework.NameValuePair<System.Int64>(o.OrganizationId.Value, o.Organization_1_Name);
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.DropDownContentsOfOrganization_1SelectedItem = new Framework.NameValuePair<System.Int64>(o.OrganizationId.HasValue ? o.OrganizationId.Value : default(System.Int64), o.Organization_1_Name);
 
 
 
@@ -237,7 +237,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.DropDownContentsOfOrganization_2SelectedItem = new Framework.NameValuePair<System.Int64>(o.Organization_2Id, o.Organization_2_Name);
 
 
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.DropDownContentsOfOrganization_1SelectedItem = new Framework.NameValuePair<System.Int64>(o.OrganizationId.Value, o.Organization_1_Name);
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.DropDownContentsOfOrganization_1SelectedItem = new Framework.NameValuePair<System.Int64>(o.OrganizationId.HasValue ? o.OrganizationId.Value : default(System.Int64), o.Organization_1_Name);
 
 
 
