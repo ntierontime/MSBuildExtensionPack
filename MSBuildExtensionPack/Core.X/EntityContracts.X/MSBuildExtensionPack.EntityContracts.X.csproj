@@ -36,6 +36,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
+    <None Include="map.2.B.3.vsd" />
+    <Content Include="map.2.B.3.vsd.png" />
     <Compile Include="..\..\Core\EntityContracts\Contracts\IBuild.cs">
       <Link>Contracts\IBuild.cs</Link>
     </Compile>

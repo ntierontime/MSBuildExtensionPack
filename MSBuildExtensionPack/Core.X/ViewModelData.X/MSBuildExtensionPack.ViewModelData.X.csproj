@@ -36,6 +36,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
+    <None Include="map.2.B.2.vsd" />
+    <Content Include="map.2.B.2.vsd.png" />
     <Compile Include="..\..\Core\ViewModelData\OrderByLists.cs">
       <Link>OrderByLists.cs</Link>
     </Compile>

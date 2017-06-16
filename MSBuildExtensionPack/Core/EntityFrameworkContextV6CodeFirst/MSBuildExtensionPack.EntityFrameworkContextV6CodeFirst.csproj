@@ -43,6 +43,8 @@
     <Compile Include="Organization.cs" />
     <Compile Include="Solution.cs" />
     <Compile Include="EFEntityDataModel.StoredProcedure.cs" />
+    <None Include="map.2.A.1.vsd" />
+    <Content Include="map.2.A.1.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj">

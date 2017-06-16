@@ -39,6 +39,8 @@
     <Compile Include="DataStreamServiceProviderBase.cs" />
     <Compile Include="LinqToCsvHelper.cs" />
     <Compile Include="LinqToExcelHelper.cs" />
+    <None Include="map.1.A.2.vsd" />
+    <Content Include="map.1.A.2.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Framework\Framework.csproj">

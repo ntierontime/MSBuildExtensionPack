@@ -89,6 +89,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UIStringResourcePerEntitySolution.resx</DependentUpon>
     </Compile>
+    <None Include="map.2.A.2.vsd" />
+    <Content Include="map.2.A.2.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Frameworks\Framework\Framework.csproj">

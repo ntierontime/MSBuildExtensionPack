@@ -46,6 +46,8 @@
     <Compile Include="WcfClientEntityAsynOrganization.cs" />
     <Compile Include="WcfClientEntityAsynSolution.cs" />
     <Compile Include="WcfClientFactory.cs" />
+    <None Include="map.2.A.3.vsd" />
+    <Content Include="map.2.A.3.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\CommonBLLEntities\MSBuildExtensionPack.CommonBLLEntities.csproj">

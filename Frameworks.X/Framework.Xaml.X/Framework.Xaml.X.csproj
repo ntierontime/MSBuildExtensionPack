@@ -36,6 +36,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
+    <None Include="map.1.D.1.vsd" />
+    <Content Include="map.1.D.1.vsd.png" />
     <Compile Include="..\..\Frameworks\Framework.Xaml\TextBoxUpdateSourceBehaviour.cs">
       <Link>TextBoxUpdateSourceBehaviour.cs</Link>
     </Compile>

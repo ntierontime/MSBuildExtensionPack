@@ -36,6 +36,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
+    <None Include="map.1.A.3.vsd" />
+    <Content Include="map.1.A.3.vsd.png" />
     <Compile Include="..\..\Frameworks\Framework.ViewModels\IViewModelBase.cs">
       <Link>IViewModelBase.cs</Link>
     </Compile>

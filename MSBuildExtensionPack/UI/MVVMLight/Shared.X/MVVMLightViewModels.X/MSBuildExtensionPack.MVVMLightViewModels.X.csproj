@@ -36,6 +36,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
+    <None Include="map.2.D.1.vsd" />
+    <Content Include="map.2.D.1.vsd.png" />
     <Compile Include="..\..\..\..\UI\MVVMLight\Shared\MVVMLightViewModels\ExtendedVMBuild.cs">
       <Link>ExtendedVMBuild.cs</Link>
     </Compile>

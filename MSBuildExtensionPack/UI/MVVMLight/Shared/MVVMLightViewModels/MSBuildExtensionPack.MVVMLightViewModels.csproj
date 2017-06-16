@@ -53,6 +53,8 @@
     <Compile Include="ViewModelLocator.cs" />
     <Compile Include="AccountViewModel.cs" />
     <Compile Include="LocalizedStrings.cs" />
+    <None Include="map.2.D.1.vsd" />
+    <Content Include="map.2.D.1.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Core\CommonBLLEntities\MSBuildExtensionPack.CommonBLLEntities.csproj">

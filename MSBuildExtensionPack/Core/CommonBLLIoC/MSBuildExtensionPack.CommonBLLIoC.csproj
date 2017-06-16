@@ -39,6 +39,8 @@
     <Compile Include="IoCBuildLog.cs" />
     <Compile Include="IoCOrganization.cs" />
     <Compile Include="IoCSolution.cs" />
+    <None Include="map.2.C.2.vsd" />
+    <Content Include="map.2.C.2.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommonBLLEntities\MSBuildExtensionPack.CommonBLLEntities.csproj">

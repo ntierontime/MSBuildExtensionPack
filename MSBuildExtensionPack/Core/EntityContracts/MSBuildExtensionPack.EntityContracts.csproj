@@ -59,6 +59,8 @@
     <Compile Include="QueryCriteriaByEntityReferenceContracts\IQueryCriteriaOrganizationByFKs.cs" />
     <Compile Include="QueryCriteriaByEntityReferenceContracts\IQueryCriteriaSolutionByFKs.cs" />
     <Compile Include="Queries\OrganizationPredicateByUniqueConstraint.cs" />
+    <None Include="map.2.B.3.vsd" />
+    <Content Include="map.2.B.3.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Frameworks\Framework\Framework.csproj">

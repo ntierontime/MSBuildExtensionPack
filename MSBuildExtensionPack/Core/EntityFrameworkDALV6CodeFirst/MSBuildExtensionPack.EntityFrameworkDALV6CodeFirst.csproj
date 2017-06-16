@@ -40,6 +40,8 @@
     <Compile Include="OrganizationRepository.cs" />
     <Compile Include="SolutionRepository.cs" />
     <Compile Include="EFDataAccessLayerFactory.cs" />
+    <None Include="map.2.A.1.vsd" />
+    <Content Include="map.2.A.1.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DALContracts\MSBuildExtensionPack.DALContracts.csproj">

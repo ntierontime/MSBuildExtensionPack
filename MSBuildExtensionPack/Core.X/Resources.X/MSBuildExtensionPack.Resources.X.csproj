@@ -36,6 +36,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
+    <None Include="map.2.A.2.vsd" />
+    <Content Include="map.2.A.2.vsd.png" />
     <Compile Include="..\..\Core\Resources\ResourceFileFactory.cs">
       <Link>ResourceFileFactory.cs</Link>
     </Compile>

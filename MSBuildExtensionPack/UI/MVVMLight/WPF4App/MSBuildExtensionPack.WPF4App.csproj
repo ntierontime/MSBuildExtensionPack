@@ -444,6 +444,13 @@
     <Compile Include="UserControls\UCCommonOfSolution.xaml.cs">
       <DependentUpon>UCCommonOfSolution.xaml</DependentUpon>
     </Compile>
+    <None Include="map.2.D.2.vsd" />
+    <Content Include="map.2.D.2.vsd.png" />
+    <None Include="Resources\Entypo.ttf" />
+    <None Include="Resources\Entypo-license.txt" />
+    <None Include="Resources\Icons.xaml" />
+    <None Include="Resources\IconsNonShared.xaml" />
+    <None Include="Resources\WindowsIcons-license.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Core\CommonBLLEntities\MSBuildExtensionPack.CommonBLLEntities.csproj">

@@ -57,6 +57,8 @@
     <Compile Include="PagingPageSizeOption.cs" />
     <Compile Include="RssItem.cs" />
     <Compile Include="Common\Singleton.cs" />
+    <None Include="map.1.A.1.vsd" />
+    <Content Include="map.1.A.1.vsd.png" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
