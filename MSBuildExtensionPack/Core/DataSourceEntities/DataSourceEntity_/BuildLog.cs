@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
+using Framework.DataSourceEntities;
 #if (WINDOWS_PHONE || XAMARIN)
 #else
 using System.ComponentModel.DataAnnotations;
@@ -537,7 +538,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 		}
 
         /// <summary>
-        /// message definition of "Default", pass single entry, from database, to business logic layer. <see cref="BuildLog"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
+        /// message definition of "Default", pass single entry, from database, to business logic layer. <see cref="BuildLog"/> and <see cref="DataAccessLayerMessageBase{T}"/>
         /// </summary>
 		public class DataAccessLayerMessageOfDefault
 			: Framework.DataSourceEntities.DataAccessLayerMessageBase<Default>
@@ -545,7 +546,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 		}
 
         /// <summary>
-        /// message definition of "Default", pass a collection of instances, from database, to business logic layer. <see cref="BuildLog"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
+        /// message definition of "Default", pass a collection of instances, from database, to business logic layer. <see cref="BuildLog"/> and <see cref="DataAccessLayerMessageBase{T}"/>
         /// </summary>
 		public class DataAccessLayerMessageOfDefaultCollection
 			: Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultCollection>
@@ -745,7 +746,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 		}
 
         /// <summary>
-        /// message definition of "DefaultGroupedDataView", pass single entry, from database, to business logic layer. <see cref="BuildLog"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
+        /// message definition of "DefaultGroupedDataView", pass single entry, from database, to business logic layer. <see cref="BuildLog"/> and <see cref="DataAccessLayerMessageBase{T}"/>
         /// </summary>
 		public class DataAccessLayerMessageOfDefaultGroupedDataView
 			: Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultGroupedDataView>
@@ -753,7 +754,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 		}
 
         /// <summary>
-        /// message definition of "DefaultGroupedDataView", pass a collection of instances, from database, to business logic layer. <see cref="BuildLog"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
+        /// message definition of "DefaultGroupedDataView", pass a collection of instances, from database, to business logic layer. <see cref="BuildLog"/> and <see cref="DataAccessLayerMessageBase{T}"/>
         /// </summary>
 		public class DataAccessLayerMessageOfDefaultGroupedDataViewCollection
 			: Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultGroupedDataViewCollection>
@@ -883,7 +884,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 		}
 
         /// <summary>
-        /// message definition of "KeyInformation", pass single entry, from database, to business logic layer. <see cref="BuildLog"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
+        /// message definition of "KeyInformation", pass single entry, from database, to business logic layer. <see cref="BuildLog"/> and <see cref="DataAccessLayerMessageBase{T}"/>
         /// </summary>
 		public class DataAccessLayerMessageOfKeyInformation
 			: Framework.DataSourceEntities.DataAccessLayerMessageBase<KeyInformation>
@@ -891,7 +892,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 		}
 
         /// <summary>
-        /// message definition of "KeyInformation", pass a collection of instances, from database, to business logic layer. <see cref="BuildLog"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
+        /// message definition of "KeyInformation", pass a collection of instances, from database, to business logic layer. <see cref="BuildLog"/> and <see cref="DataAccessLayerMessageBase{T}"/>
         /// </summary>
 		public class DataAccessLayerMessageOfKeyInformationCollection
 			: Framework.DataSourceEntities.DataAccessLayerMessageBase<KeyInformationCollection>
@@ -924,7 +925,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 */
 
     /// <summary>
-    /// message definition, pass single entry, pulled from database, to business logic layer. <see cref="BuildLog"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
+    /// message definition, pass single entry, pulled from database, to business logic layer. <see cref="BuildLog"/> and <see cref="DataAccessLayerMessageBase{T}"/>
     /// </summary>
     public class DataAccessLayerMessageOfEntityBuildLog
         : Framework.DataSourceEntities.DataAccessLayerMessageBase<BuildLog>
