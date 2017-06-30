@@ -3,23 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Xamarin.Pages.WPCommonOfBuildLog">
 
-	<ListView x:Name="V_Common" ItemsSource="{Binding EntityCollectionDefault}">
+	<ListView x:Name="V_Common" ItemsSource="{Binding EntityCollectionDefault}" SeparatorVisibility="Default" SeparatorColor="White" RowHeight="150" >
 		<ListView.ItemTemplate>
 			<DataTemplate>
 				<ViewCell>
-					<StackLayout BackgroundColor="#eee"
-                        Orientation="Vertical">
-						<StackLayout Orientation="Horizontal">
-							<Label Text="{Binding BuildId}" Style="{StaticResource Heading}"  />
-							<Label Text="{Binding EventTime}" Style="{StaticResource SubHeading}"/>
-							<Label Text="{Binding EventTime}" Style="{StaticResource SubHeading}"/>
-							<Label Text="{Binding EventTime}" Style="{StaticResource SubHeading}"/>
-							<Label Text="{Binding EventTime}" Style="{StaticResource SubHeading}"/>
-							<Label Text="{Binding EventTime}" Style="{StaticResource SubHeading}"/>
-						</StackLayout>
+					<StackLayout Orientation="Vertical">
+						<Label Text="{Binding BuildId}" />
+						<Label Text="{Binding EventTime}"/>
+						<Label Text="{Binding EventTime}"/>
+						<Label Text="{Binding EventTime}"/>
+						<Label Text="{Binding EventTime}"/>
+						<Label Text="{Binding EventTime}"/>
+						<Label Text="{Binding EventTime}"/>
 					</StackLayout>
 				</ViewCell>
 			</DataTemplate>
 		</ListView.ItemTemplate>
+		<ListView.Header>
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Header"
+        TextColor="Olive"
+        BackgroundColor="Red" />
+			</StackLayout>
+		</ListView.Header>
+		<ListView.Footer>
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Footer"
+        TextColor="Gray"
+        BackgroundColor="Blue" />
+			</StackLayout>
+		</ListView.Footer>
 	</ListView>
 </ContentPage>

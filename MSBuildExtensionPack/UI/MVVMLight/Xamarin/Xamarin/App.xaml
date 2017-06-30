@@ -8,16 +8,7 @@
 		<ResourceDictionary x:Name="appMain">
 			<vm:ViewModelLocator x:Key="Locator" />
 			<vm:LocalizedStrings x:Key="LocalizedStrings" />
-			<Style x:Key="Heading" TargetType="Label">
-				<Setter Property="FontSize" Value="18" />
-				<Setter Property="TextColor" Value="AntiqueWhite" />
-				<Setter Property="BackgroundColor" Value="Blue" />
-			</Style>
-			<Style x:Key="SubHeading" TargetType="Label">
-				<Setter Property="FontSize" Value="12" />
-				<Setter Property="TextColor" Value="AntiqueWhite" />
-				<Setter Property="BackgroundColor" Value="Blue" />
-			</Style>
+
 		</ResourceDictionary>
 	</Application.Resources>
 </Application>
