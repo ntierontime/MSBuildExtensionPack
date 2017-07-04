@@ -119,7 +119,6 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <None Include="packages.config" />
-    <None Include="Xamarin_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\LockScreenLogo.scale-100.png" />

@@ -20,7 +20,7 @@ namespace Xamarin.Droid
 
             base.OnCreate(bundle);
 
-            Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<Framework.Xaml.IDispatcherHelperWrapper, MSBuildExtensionPack.WPF4App.DispatcherHelperWrapper>();
+            Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<Framework.Xaml.IDispatcherHelperWrapper, Xamarin.Droid.DispatcherHelperWrapper>();
             DispatcherHelper.Initialize();
 
             global::Xamarin.Forms.Forms.Init(this, bundle);

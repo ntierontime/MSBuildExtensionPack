@@ -93,7 +93,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.ObjectModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
     <Reference Include="Xamarin.Android.Support.Animated.Vector.Drawable, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -175,6 +174,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DispatcherHelperWrapper.cs" />
+    <Compile Include="Localize.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -233,6 +233,10 @@
     <ProjectReference Include="..\..\..\..\..\Frameworks.WP\Framework.Xaml.WP\Framework.Xaml.WP.csproj">
       <Project>{2a0eaddf-c8ec-4992-84cd-3b699a0dfcb8}</Project>
       <Name>Framework.Xaml.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks\Framework.Xamariner\Framework.Xamariner.csproj">
+      <Project>{67F9D3A8-F71E-4428-913F-C37AE82CDB24}</Project>
+      <Name>Framework.Xamariner</Name>
     </ProjectReference>
     <ProjectReference Include="..\Xamarin\Xamarin.csproj">
       <Project>{3d0a320c-0553-4bee-8913-df92f5effd4c}</Project>

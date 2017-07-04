@@ -23,19 +23,28 @@ namespace Framework.Xamariner.Globalization
     /// http://www.apache.org/licenses/LICENSE-2.0
     /// Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
     /// </remarks>
-    public interface ILocalize
+    public enum Platforms
     {
-		///	<summary>
-		/// This method must evaluate platform-specific locale settings
-		/// and convert them (when necessary) to a valid .NET locale.
-		/// </summary>
-		CultureInfo GetCurrentCultureInfo ();
-
-		/// <summary>
-		/// CurrentCulture and CurrentUICulture must be set in the platform project, 
-		/// because the Thread object can't be accessed in a PCL.
-		/// </summary>
-		void SetLocale (CultureInfo ci);
-	}
+        //
+        // Summary:
+        //     (Unused) Indicates that Forms is running on an undefined platform.
+        Other = 0,
+        //
+        // Summary:
+        //     Indicates that Forms is running on an Apple iOS OS.
+        iOS = 1,
+        //
+        // Summary:
+        //     Indicates that Forms is running on a Google Android OS.
+        Android = 2,
+        //
+        // Summary:
+        //     Indicates that Forms is running on a Microsoft WinPhone OS.
+        WinPhone = 3,
+        //
+        // Summary:
+        //     Indicates that forms is running on the Windows platform.
+        Windows = 4
+    }
 }
 

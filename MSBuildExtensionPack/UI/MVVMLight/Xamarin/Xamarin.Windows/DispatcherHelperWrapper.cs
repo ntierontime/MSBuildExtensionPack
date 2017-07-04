@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MSBuildExtensionPack.WPF4App
+namespace Xamarin.Windows
 {
     public class DispatcherHelperWrapper : Framework.Xaml.IDispatcherHelperWrapper
     {

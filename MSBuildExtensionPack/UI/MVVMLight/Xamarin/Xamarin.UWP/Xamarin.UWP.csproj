@@ -106,7 +106,6 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="Xamarin.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\edit.png" />

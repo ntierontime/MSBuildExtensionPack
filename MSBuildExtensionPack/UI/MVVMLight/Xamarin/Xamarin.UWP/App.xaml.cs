@@ -59,7 +59,7 @@ namespace Xamarin.UWP
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
-                Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<Framework.Xaml.IDispatcherHelperWrapper, MSBuildExtensionPack.WPF4App.DispatcherHelperWrapper>();
+                Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<Framework.Xaml.IDispatcherHelperWrapper, Xamarin.UWP.DispatcherHelperWrapper>();
                 DispatcherHelper.Initialize();
 
                 Xamarin.Forms.Forms.Init(e);

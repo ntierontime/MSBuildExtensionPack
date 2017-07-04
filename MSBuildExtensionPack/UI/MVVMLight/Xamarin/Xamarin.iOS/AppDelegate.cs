@@ -23,7 +23,7 @@ namespace Xamarin.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<Framework.Xaml.IDispatcherHelperWrapper, MSBuildExtensionPack.WPF4App.DispatcherHelperWrapper>();
+            Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<Framework.Xaml.IDispatcherHelperWrapper, Xamarin.iOS.DispatcherHelperWrapper>();
             DispatcherHelper.Initialize(app);
 
             global::Xamarin.Forms.Forms.Init();

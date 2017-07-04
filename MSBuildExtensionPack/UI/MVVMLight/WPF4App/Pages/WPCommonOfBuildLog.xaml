@@ -11,6 +11,7 @@
         mc:Ignorable="d"
         xmlns:my="clr-namespace:MSBuildExtensionPack.WPF4App.UserControls"
 		Title="Workspace of Common"
+        DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM, Source={StaticResource Locator}}"
 		>
 	<Grid>
         <Grid.RowDefinitions>
@@ -18,7 +19,7 @@
 			<RowDefinition Height="Auto"  />
 		</Grid.RowDefinitions>
         <ToolBarTray DockPanel.Dock="Top" Grid.Row="0" Style="{StaticResource ToolBarTrayStyle}">
-            <ToolBar DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM, Source={StaticResource Locator}}">
+            <ToolBar>
                 <Button     Name="Search" Command="{Binding SearchCommand}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.SearchAlternativeText, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>
                         <Rectangle Width="20" Height="20" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}">
