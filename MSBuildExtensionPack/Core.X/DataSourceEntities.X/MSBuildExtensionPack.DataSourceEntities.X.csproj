@@ -135,9 +135,9 @@
       <Project>{81863781-aa71-4530-a59c-04d2153ddd30}</Project>
       <Name>Framework.EntityContracts.X</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Resources.X\MSBuildExtensionPack.Resources.X.csproj">
-      <Project>{f3afc236-ae5e-4549-9c5c-08c10c4c9271}</Project>
-      <Name>MSBuildExtensionPack.Resources.X</Name>
+    <ProjectReference Include="..\Resx.X\MSBuildExtensionPack.Resx.X.csproj">
+      <Project>{4e3e985c-7d38-40f5-81e4-92fac3e9357a}</Project>
+      <Name>MSBuildExtensionPack.Resx.X</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

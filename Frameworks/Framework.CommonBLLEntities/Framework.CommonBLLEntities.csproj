@@ -60,9 +60,9 @@
       <Project>{c3a270de-9727-492e-91e2-f56e7e0e0f83}</Project>
       <Name>Framework.EntityContracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Framework.Resources\Framework.Resources.csproj">
+    <ProjectReference Include="..\Framework.Resx\Framework.Resx.csproj">
       <Project>{c72b898b-b53b-42d5-9f4f-673f84bb485b}</Project>
-      <Name>Framework.Resources</Name>
+      <Name>Framework.Resx</Name>
     </ProjectReference>
     <ProjectReference Include="..\Framework.Services\Framework.Services.csproj">
       <Project>{3ef91dc7-12c9-47f3-bb18-ad3d85d1b624}</Project>

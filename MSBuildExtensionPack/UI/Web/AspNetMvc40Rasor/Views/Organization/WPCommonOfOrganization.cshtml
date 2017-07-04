@@ -18,32 +18,32 @@
         {
             <div class="panel panel-default">
                 <div class="panel-heading clearfix">
-                    <h3 style="display: inline;">@Framework.Resources.UIStringResource.Common_Filter</h3>
+                    <h3 style="display: inline;">@Framework.Resx.UIStringResource.Common_Filter</h3>
                 </div>
                 <div class="panel-footer nopadding">
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-    <button class="btn btn-default" role="button" type="submit" name="SearchToolBarUp" title="@Framework.Resources.UIStringResource.SearchAlternativeText">
+    <button class="btn btn-default" role="button" type="submit" name="SearchToolBarUp" title="@Framework.Resx.UIStringResource.SearchAlternativeText">
         <span class="glyphicon glyphicon-search"></span>
     </button>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_AddNew, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="AddNewToolBarUp" title="@Framework.Resources.UIStringResource.AddNewAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_AddNew, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="AddNewToolBarUp" title="@Framework.Resx.UIStringResource.AddNewAlternativeText">
 		<span class="glyphicon glyphicon-plus"></span>
 	</a>
 </div>
 <div class="btn-group">
-	<a href="location.href='@Url.Action(UrlStringsAlias.ActionName_Organization_WPCommonOfOrganization_Export, UrlStringsAlias.ControllerName_Organization, new RouteValueDictionary { { "dataServiceType", "Csv" } })'" class="btn btn-default" role="button" type="button" name="ExportToolBarUp" title="@Framework.Resources.UIStringResource.ExportAlternativeText">
+	<a href="location.href='@Url.Action(UrlStringsAlias.ActionName_Organization_WPCommonOfOrganization_Export, UrlStringsAlias.ControllerName_Organization, new RouteValueDictionary { { "dataServiceType", "Csv" } })'" class="btn btn-default" role="button" type="button" name="ExportToolBarUp" title="@Framework.Resx.UIStringResource.ExportAlternativeText">
         <span class="glyphicon glyphicon-export"></span>
     </a>
 </div>
 <div class="btn-group">
-	<a href="location.href='@Url.Action(UrlStringsAlias.ActionName_Organization_WPCommonOfOrganization_Export, UrlStringsAlias.ControllerName_Organization, new RouteValueDictionary { { "dataServiceType", "Excel2010" } })'" class="btn btn-default" role="button" type="button" name="ExportToExcelToolBarUp" title="@Framework.Resources.UIStringResource.ExportToExcelAlternativeText">
+	<a href="location.href='@Url.Action(UrlStringsAlias.ActionName_Organization_WPCommonOfOrganization_Export, UrlStringsAlias.ControllerName_Organization, new RouteValueDictionary { { "dataServiceType", "Excel2010" } })'" class="btn btn-default" role="button" type="button" name="ExportToExcelToolBarUp" title="@Framework.Resx.UIStringResource.ExportToExcelAlternativeText">
         <span class="glyphicon glyphicon-export"></span>
     </a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Import, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="ImportToolBarUp" title="@Framework.Resources.UIStringResource.ImportAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Import, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="ImportToolBarUp" title="@Framework.Resx.UIStringResource.ImportAlternativeText">
 		<span class="glyphicon glyphicon-import"></span>
 	</a>
 </div>
@@ -54,132 +54,132 @@
 </div>
 <div class="form-group">
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareNtextColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareNtextColumnCommonOftOfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareNtextColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareNtextColumnCommonOftOfCommon</label>
 </div>
 @Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedNtextColumnCommonOftOfCommon, new { @class = "form-control" })
 </div>
 <div class="form-group">
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareNvarcharColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareNvarcharColumnCommonOftOfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareNvarcharColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareNvarcharColumnCommonOftOfCommon</label>
 </div>
 @Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedNvarcharColumnCommonOftOfCommon, new { @class = "form-control" })
 </div>
 <div class="form-group">
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareNcharColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareNcharColumnCommonOftOfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareNcharColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareNcharColumnCommonOftOfCommon</label>
 </div>
 @Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedNcharColumnCommonOftOfCommon, new { @class = "form-control" })
 </div>
 <div class="form-group">
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareTextColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareTextColumnCommonOftOfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareTextColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareTextColumnCommonOftOfCommon</label>
 </div>
 @Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedTextColumnCommonOftOfCommon, new { @class = "form-control" })
 </div>
 <div class="form-group">
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareVarcharColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareVarcharColumnCommonOftOfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareVarcharColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareVarcharColumnCommonOftOfCommon</label>
 </div>
 @Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedVarcharColumnCommonOftOfCommon, new { @class = "form-control" })
 </div>
 <div class="form-group">
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareCharColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareCharColumnCommonOftOfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareCharColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareCharColumnCommonOftOfCommon</label>
 </div>
 @Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedCharColumnCommonOftOfCommon, new { @class = "form-control" })
 </div>
 <div class="form-group">
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareNameCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareNameCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon</label>
 </div>
 @Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedNameCommonOftOfCommon, new { @class = "form-control" })
 </div>
 <div class="form-group">
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareDateColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareDateColumnCommonOftOfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareDateColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareDateColumnCommonOftOfCommon</label>
 </div><input type="text" rangepickername="datefilter" value="" class="form-control" />
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareLowerBoundDateColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDateColumnCommonOftOfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareLowerBoundDateColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDateColumnCommonOftOfCommon</label>
 </div>
 @Html.TextBox("lowerBoundDateColumnCommonOftOfCommon", Model.Criteria.LowerBoundDateColumnCommonOftOfCommon.ToString(), new { @readonly = "readonly", @class = "form-control" })
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareUpperBoundDateColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDateColumnCommonOftOfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareUpperBoundDateColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDateColumnCommonOftOfCommon</label>
 </div>
 @Html.TextBox("upperBoundDateColumnCommonOftOfCommon", Model.Criteria.UpperBoundDateColumnCommonOftOfCommon.ToString(), new { @readonly = "readonly", @class = "form-control" })
 </div>
 <div class="form-group">
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareSmalldatetimeColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareSmalldatetimeColumnCommonOftOfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareSmalldatetimeColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareSmalldatetimeColumnCommonOftOfCommon</label>
 </div><input type="text" rangepickername="datefilter" value="" class="form-control" />
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon</label>
 </div>
 @Html.TextBox("lowerBoundSmalldatetimeColumnCommonOftOfCommon", Model.Criteria.LowerBoundSmalldatetimeColumnCommonOftOfCommon.ToString(), new { @readonly = "readonly", @class = "form-control" })
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon</label>
 </div>
 @Html.TextBox("upperBoundSmalldatetimeColumnCommonOftOfCommon", Model.Criteria.UpperBoundSmalldatetimeColumnCommonOftOfCommon.ToString(), new { @readonly = "readonly", @class = "form-control" })
 </div>
 <div class="form-group">
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareDatetime2ColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareDatetime2ColumnCommonOftOfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareDatetime2ColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareDatetime2ColumnCommonOftOfCommon</label>
 </div><input type="text" rangepickername="datefilter" value="" class="form-control" />
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon</label>
 </div>
 @Html.TextBox("lowerBoundDatetime2ColumnCommonOftOfCommon", Model.Criteria.LowerBoundDatetime2ColumnCommonOftOfCommon.ToString(), new { @readonly = "readonly", @class = "form-control" })
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon</label>
 </div>
 @Html.TextBox("upperBoundDatetime2ColumnCommonOftOfCommon", Model.Criteria.UpperBoundDatetime2ColumnCommonOftOfCommon.ToString(), new { @readonly = "readonly", @class = "form-control" })
 </div>
 <div class="form-group">
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareDatetimeColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareDatetimeColumnCommonOftOfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareDatetimeColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareDatetimeColumnCommonOftOfCommon</label>
 </div><input type="text" rangepickername="datefilter" value="" class="form-control" />
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareLowerBoundDatetimeColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetimeColumnCommonOftOfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareLowerBoundDatetimeColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetimeColumnCommonOftOfCommon</label>
 </div>
 @Html.TextBox("lowerBoundDatetimeColumnCommonOftOfCommon", Model.Criteria.LowerBoundDatetimeColumnCommonOftOfCommon.ToString(), new { @readonly = "readonly", @class = "form-control" })
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareUpperBoundDatetimeColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetimeColumnCommonOftOfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareUpperBoundDatetimeColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetimeColumnCommonOftOfCommon</label>
 </div>
 @Html.TextBox("upperBoundDatetimeColumnCommonOftOfCommon", Model.Criteria.UpperBoundDatetimeColumnCommonOftOfCommon.ToString(), new { @readonly = "readonly", @class = "form-control" })
 </div>
 <div class="form-group">
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareBitColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareBitColumnCommonOftOfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareBitColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareBitColumnCommonOftOfCommon</label>
 </div>
 <div class="form-control checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.ValueToCompareBitColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.ValueToCompare_ID_CheckBox_Search_valueToCompareBitColumnCommonOftOfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.ValueToCompareBitColumnCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.ValueToCompare_ID_CheckBox_Search_valueToCompareBitColumnCommonOftOfCommon</label>
 </div>
 </div>
 <div class="form-group">
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareCreatedDateTimeCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareCreatedDateTimeCommonOftOfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareCreatedDateTimeCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareCreatedDateTimeCommonOftOfCommon</label>
 </div><input type="text" rangepickername="datefilter" value="" class="form-control" />
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon</label>
 </div>
 @Html.TextBox("lowerBoundCreatedDateTimeCommonOftOfCommon", Model.Criteria.LowerBoundCreatedDateTimeCommonOftOfCommon.ToString(), new { @readonly = "readonly", @class = "form-control" })
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon</label>
 </div>
 @Html.TextBox("upperBoundCreatedDateTimeCommonOftOfCommon", Model.Criteria.UpperBoundCreatedDateTimeCommonOftOfCommon.ToString(), new { @readonly = "readonly", @class = "form-control" })
 </div>
 <div class="form-group">
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareIsSystemBuiltInCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInCommonOftOfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareIsSystemBuiltInCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInCommonOftOfCommon</label>
 </div>
 <div class="form-control checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.ValueToCompareIsSystemBuiltInCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.ValueToCompare_ID_CheckBox_Search_valueToCompareIsSystemBuiltInCommonOftOfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.ValueToCompareIsSystemBuiltInCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.ValueToCompare_ID_CheckBox_Search_valueToCompareIsSystemBuiltInCommonOftOfCommon</label>
 </div>
 </div>
 <div class="form-group">
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareIdCommonOfOrganization_2OfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon</label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareIdCommonOfOrganization_2OfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon</label>
 </div>
-@Html.DropDownListFor(model => model.Criteria.ValueToCompareIdCommonOfOrganization_2OfCommon, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Organization, MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" } })
+@Html.DropDownListFor(model => model.Criteria.ValueToCompareIdCommonOfOrganization_2OfCommon, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Organization, MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" } })
 </div>
                     <div class="form-group form-inline">
                         <label class="control-label">Items per page : </label>
@@ -193,27 +193,27 @@
                 <div class="panel-footer nopadding">
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-    <button class="btn btn-default" role="button" type="submit" name="SearchToolBarBottom" title="@Framework.Resources.UIStringResource.SearchAlternativeText">
+    <button class="btn btn-default" role="button" type="submit" name="SearchToolBarBottom" title="@Framework.Resx.UIStringResource.SearchAlternativeText">
         <span class="glyphicon glyphicon-search"></span>
     </button>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_AddNew, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="AddNewToolBarBottom" title="@Framework.Resources.UIStringResource.AddNewAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_AddNew, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="AddNewToolBarBottom" title="@Framework.Resx.UIStringResource.AddNewAlternativeText">
 		<span class="glyphicon glyphicon-plus"></span>
 	</a>
 </div>
 <div class="btn-group">
-	<a href="location.href='@Url.Action(UrlStringsAlias.ActionName_Organization_WPCommonOfOrganization_Export, UrlStringsAlias.ControllerName_Organization, new RouteValueDictionary { { "dataServiceType", "Csv" } })'" class="btn btn-default" role="button" type="button" name="ExportToolBarBottom" title="@Framework.Resources.UIStringResource.ExportAlternativeText">
+	<a href="location.href='@Url.Action(UrlStringsAlias.ActionName_Organization_WPCommonOfOrganization_Export, UrlStringsAlias.ControllerName_Organization, new RouteValueDictionary { { "dataServiceType", "Csv" } })'" class="btn btn-default" role="button" type="button" name="ExportToolBarBottom" title="@Framework.Resx.UIStringResource.ExportAlternativeText">
         <span class="glyphicon glyphicon-export"></span>
     </a>
 </div>
 <div class="btn-group">
-	<a href="location.href='@Url.Action(UrlStringsAlias.ActionName_Organization_WPCommonOfOrganization_Export, UrlStringsAlias.ControllerName_Organization, new RouteValueDictionary { { "dataServiceType", "Excel2010" } })'" class="btn btn-default" role="button" type="button" name="ExportToExcelToolBarBottom" title="@Framework.Resources.UIStringResource.ExportToExcelAlternativeText">
+	<a href="location.href='@Url.Action(UrlStringsAlias.ActionName_Organization_WPCommonOfOrganization_Export, UrlStringsAlias.ControllerName_Organization, new RouteValueDictionary { { "dataServiceType", "Excel2010" } })'" class="btn btn-default" role="button" type="button" name="ExportToExcelToolBarBottom" title="@Framework.Resx.UIStringResource.ExportToExcelAlternativeText">
         <span class="glyphicon glyphicon-export"></span>
     </a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Import, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="ImportToolBarBottom" title="@Framework.Resources.UIStringResource.ImportAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Import, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="ImportToolBarBottom" title="@Framework.Resx.UIStringResource.ImportAlternativeText">
 		<span class="glyphicon glyphicon-import"></span>
 	</a>
 </div>
@@ -225,45 +225,45 @@
  <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9 nopadding">
         <div class="panel panel-default">
             <div class="panel-heading clearfix">
-                <h3 style="display: inline;">@Html.ActionLink(MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Organization, "WPCommonOfOrganization", "Organization")
+                <h3 style="display: inline;">@Html.ActionLink(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Organization, "WPCommonOfOrganization", "Organization")
             </div>
             <div class="table-responsive">
 <table id="MasterDataControl1" name="MasterDataControl1" class="table table-hover table-bordered table-striped">
 <thead>
  <tr><th  class="hidden-xs visible-sm"></th>
-<th >@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Organization_2_UniqueidentifierColumn</th>
-<th >@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Organization_2_UniqueIdentifier</th>
-<th >@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Organization_2_Name</th>
-<th  class="hidden-xs visible-smvisible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Name</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IsSystemBuiltIn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.UniqueIdentifier</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.CreatedDateTime</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.CharColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.VarcharColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.TextColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.NcharColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.NvarcharColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.NtextColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.BitColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.BinaryColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.VarbinaryColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.ImageColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.TinyintColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.SmallintColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.IntColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.BigintColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.DecimalColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.NumericColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.SmallmoneyColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.MoneyColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.FloatColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.RealColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.DatetimeColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Datetime2Column</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.SmalldatetimeColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.DateColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.TimeColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.UniqueidentifierColumn</th>
+<th >@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Organization_2_UniqueidentifierColumn</th>
+<th >@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Organization_2_UniqueIdentifier</th>
+<th >@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Organization_2_Name</th>
+<th  class="hidden-xs visible-smvisible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Name</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsSystemBuiltIn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.UniqueIdentifier</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.CreatedDateTime</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.CharColumn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.VarcharColumn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.TextColumn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.NcharColumn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.NvarcharColumn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.NtextColumn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.BitColumn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.BinaryColumn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.VarbinaryColumn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.ImageColumn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.TinyintColumn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.SmallintColumn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IntColumn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.BigintColumn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.DecimalColumn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.NumericColumn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.SmallmoneyColumn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.MoneyColumn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.FloatColumn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.RealColumn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.DatetimeColumn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Datetime2Column</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.SmalldatetimeColumn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.DateColumn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.TimeColumn</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.UniqueidentifierColumn</th>
 <th  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"></th></tr>
 </thead>
 <tbody>
@@ -309,12 +309,12 @@
 <td >@Html.DisplayFor(modelItem => item.UniqueidentifierColumn)</td>
 <td  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetailsAlternativeText">
 		<span class="glyphicon glyphicon-briefcase"></span>
 	</a>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Edit, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="EditToolBarRightInList" title="@Framework.Resources.UIStringResource.EditAlternativeText">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Edit, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="EditToolBarRightInList" title="@Framework.Resx.UIStringResource.EditAlternativeText">
         <span class="glyphicon glyphicon-edit"></span>
     </a>
 </div>

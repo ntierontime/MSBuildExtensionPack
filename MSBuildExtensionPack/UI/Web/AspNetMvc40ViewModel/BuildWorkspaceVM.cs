@@ -230,7 +230,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
             {
                 this.MasterEntity = masterEntityResult.Message[0];
 				this.StatusOfMasterEntity = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady;
-				this.StatusMessageOfMasterEntity = MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuild.UpdateNameOnly_Description;
+				this.StatusMessageOfMasterEntity = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.UpdateNameOnly_Description;
             }
             else
             {
@@ -248,11 +248,11 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
             this.StatusOfMasterEntity = response.BusinessLogicLayerResponseStatus;
             if (this.StatusOfMasterEntity == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                this.StatusMessageOfMasterEntity = MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuild.UpdateNameOnly_Success; // Success
+                this.StatusMessageOfMasterEntity = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.UpdateNameOnly_Success; // Success
             }
             else
             {
-                this.StatusMessageOfMasterEntity = MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuild.UpdateNameOnly_Failed; // failed
+                this.StatusMessageOfMasterEntity = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.UpdateNameOnly_Failed; // failed
             }
         }
     }

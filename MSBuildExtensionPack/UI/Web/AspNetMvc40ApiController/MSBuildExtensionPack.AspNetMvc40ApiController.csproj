@@ -95,9 +95,9 @@
       <Project>{e45a004f-fbef-445c-9607-fbc89d6d4590}</Project>
       <Name>Framework.Mvc</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Frameworks\Framework.Resources\Framework.Resources.csproj">
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework.Resx\Framework.Resx.csproj">
       <Project>{c72b898b-b53b-42d5-9f4f-673f84bb485b}</Project>
-      <Name>Framework.Resources</Name>
+      <Name>Framework.Resx</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\Frameworks\Framework.Services\Framework.Services.csproj">
       <Project>{3ef91dc7-12c9-47f3-bb18-ad3d85d1b624}</Project>
@@ -111,9 +111,9 @@
       <Project>{950b9cdb-9286-4a1a-8d88-1df6954a45e3}</Project>
       <Name>Framework.Web</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Core\Resources\MSBuildExtensionPack.Resources.csproj">
-      <Project>{42681747-107b-487b-9ea2-ce46754682fd}</Project>
-      <Name>MSBuildExtensionPack.Resources</Name>
+    <ProjectReference Include="..\..\..\Core\Resx\MSBuildExtensionPack.Resx.csproj">
+      <Project>{fd138435-0f7c-4b72-b9d3-987e7fe69f80}</Project>
+      <Name>MSBuildExtensionPack.Resx</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core\ViewModelData\MSBuildExtensionPack.ViewModelData.csproj">
       <Project>{59622778-b13c-464e-98f7-ea662653af27}</Project>

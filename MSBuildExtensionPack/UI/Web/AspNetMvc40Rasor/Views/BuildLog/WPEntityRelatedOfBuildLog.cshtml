@@ -21,34 +21,34 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 style="display: inline;">
-                @MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog.BuildLog
+                @MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.BuildLog
             </h3>
 		</div>
 @if (Model.StatusOfMasterEntity == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
 { // Item
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Edit, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="EditToolBarUp" title="@Framework.Resources.UIStringResource.EditAlternativeText">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Edit, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="EditToolBarUp" title="@Framework.Resx.UIStringResource.EditAlternativeText">
         <span class="glyphicon glyphicon-edit"></span>
     </a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_AddNew, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="AddNewToolBarUp" title="@Framework.Resources.UIStringResource.AddNewAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_AddNew, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="AddNewToolBarUp" title="@Framework.Resx.UIStringResource.AddNewAlternativeText">
 		<span class="glyphicon glyphicon-plus"></span>
 	</a>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Copy, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="CopyToolBarUp" title="@Framework.Resources.UIStringResource.CopyAlternativeText">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Copy, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="CopyToolBarUp" title="@Framework.Resx.UIStringResource.CopyAlternativeText">
         <span class="glyphicon glyphicon-copy"></span>
     </a>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Details, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="DetailsToolBarUp" title="@Framework.Resources.UIStringResource.DetailsAlternativeText">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Details, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="DetailsToolBarUp" title="@Framework.Resx.UIStringResource.DetailsAlternativeText">
         <span class="glyphicon glyphicon-file"></span>
     </a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Index, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resources.UIStringResource.GotoSearchAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Index, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearchAlternativeText">
 		<span class="glyphicon glyphicon-search"></span>
 	</a>
 </div>
@@ -137,17 +137,17 @@
 {
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_AddNew, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="AddNewToolBarUp" title="@Framework.Resources.UIStringResource.AddNewAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_AddNew, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="AddNewToolBarUp" title="@Framework.Resx.UIStringResource.AddNewAlternativeText">
 		<span class="glyphicon glyphicon-plus"></span>
 	</a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPEntityRelatedOfBuildLog, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPEntityRelatedOfBuildLog, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetailsAlternativeText">
 		<span class="glyphicon glyphicon-briefcase"></span>
 	</a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Index, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resources.UIStringResource.GotoSearchAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Index, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearchAlternativeText">
 		<span class="glyphicon glyphicon-search"></span>
 	</a>
 </div>
@@ -162,7 +162,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 style="display: inline;">
-                <a data-toggle="collapse" href="#collapseBuild_1">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuild.Build</a>
+                <a data-toggle="collapse" href="#collapseBuild_1">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Build</a>
             </h3>
         </div>
         <div id="collapseBuild_1" class="panel-collapse collapse">
@@ -170,12 +170,12 @@
 { // Item
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Build_Index, UrlStringsAlias.ControllerName_Build)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resources.UIStringResource.GotoSearchAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Build_Index, UrlStringsAlias.ControllerName_Build)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearchAlternativeText">
 		<span class="glyphicon glyphicon-search"></span>
 	</a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Build_1.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Build_1.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetailsAlternativeText">
 		<span class="glyphicon glyphicon-briefcase"></span>
 	</a>
 </div>
@@ -199,12 +199,12 @@
 {
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Build_Index, UrlStringsAlias.ControllerName_Build)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resources.UIStringResource.GotoSearchAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Build_Index, UrlStringsAlias.ControllerName_Build)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearchAlternativeText">
 		<span class="glyphicon glyphicon-search"></span>
 	</a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Build_1.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Build_1.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetailsAlternativeText">
 		<span class="glyphicon glyphicon-briefcase"></span>
 	</a>
 </div>
@@ -220,7 +220,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 style="display: inline;">
-                <a data-toggle="collapse" href="#collapseSolution_2">@MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Solution</a>
+                <a data-toggle="collapse" href="#collapseSolution_2">@MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Solution</a>
             </h3>
         </div>
         <div id="collapseSolution_2" class="panel-collapse collapse">
@@ -228,12 +228,12 @@
 { // Item
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Solution_Index, UrlStringsAlias.ControllerName_Solution)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resources.UIStringResource.GotoSearchAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Solution_Index, UrlStringsAlias.ControllerName_Solution)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearchAlternativeText">
 		<span class="glyphicon glyphicon-search"></span>
 	</a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Solution_1.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Solution_1.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetailsAlternativeText">
 		<span class="glyphicon glyphicon-briefcase"></span>
 	</a>
 </div>
@@ -257,12 +257,12 @@
 {
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Solution_Index, UrlStringsAlias.ControllerName_Solution)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resources.UIStringResource.GotoSearchAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Solution_Index, UrlStringsAlias.ControllerName_Solution)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearchAlternativeText">
 		<span class="glyphicon glyphicon-search"></span>
 	</a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Solution_1.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Solution_1.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetailsAlternativeText">
 		<span class="glyphicon glyphicon-briefcase"></span>
 	</a>
 </div>
@@ -278,7 +278,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 style="display: inline;">
-                <a data-toggle="collapse" href="#collapseOrganization_3">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Organization</a>
+                <a data-toggle="collapse" href="#collapseOrganization_3">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Organization</a>
             </h3>
         </div>
         <div id="collapseOrganization_3" class="panel-collapse collapse">
@@ -286,12 +286,12 @@
 { // Item
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Index, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resources.UIStringResource.GotoSearchAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Index, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearchAlternativeText">
 		<span class="glyphicon glyphicon-search"></span>
 	</a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_1.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_1.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_1.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_1.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_1.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_1.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetailsAlternativeText">
 		<span class="glyphicon glyphicon-briefcase"></span>
 	</a>
 </div>
@@ -339,12 +339,12 @@
 {
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Index, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resources.UIStringResource.GotoSearchAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Index, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearchAlternativeText">
 		<span class="glyphicon glyphicon-search"></span>
 	</a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_1.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_1.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_1.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_1.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_1.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_1.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetailsAlternativeText">
 		<span class="glyphicon glyphicon-briefcase"></span>
 	</a>
 </div>
@@ -360,7 +360,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 style="display: inline;">
-                <a data-toggle="collapse" href="#collapseOrganization_4">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Organization</a>
+                <a data-toggle="collapse" href="#collapseOrganization_4">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Organization</a>
             </h3>
         </div>
         <div id="collapseOrganization_4" class="panel-collapse collapse">
@@ -368,12 +368,12 @@
 { // Item
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Index, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resources.UIStringResource.GotoSearchAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Index, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearchAlternativeText">
 		<span class="glyphicon glyphicon-search"></span>
 	</a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetailsAlternativeText">
 		<span class="glyphicon glyphicon-briefcase"></span>
 	</a>
 </div>
@@ -421,12 +421,12 @@
 {
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Index, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resources.UIStringResource.GotoSearchAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Index, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearchAlternativeText">
 		<span class="glyphicon glyphicon-search"></span>
 	</a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetailsAlternativeText">
 		<span class="glyphicon glyphicon-briefcase"></span>
 	</a>
 </div>
@@ -442,7 +442,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 style="display: inline;">
-                <a data-toggle="collapse" href="#collapseBuildEventCode_5">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildEventCode.BuildEventCode</a>
+                <a data-toggle="collapse" href="#collapseBuildEventCode_5">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.BuildEventCode</a>
             </h3>
         </div>
         <div id="collapseBuildEventCode_5" class="panel-collapse collapse">
@@ -450,12 +450,12 @@
 { // Item
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_Index, UrlStringsAlias.ControllerName_BuildEventCode)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resources.UIStringResource.GotoSearchAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_Index, UrlStringsAlias.ControllerName_BuildEventCode)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearchAlternativeText">
 		<span class="glyphicon glyphicon-search"></span>
 	</a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.BuildEventCode_1.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.BuildEventCode_1.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetailsAlternativeText">
 		<span class="glyphicon glyphicon-briefcase"></span>
 	</a>
 </div>
@@ -479,12 +479,12 @@
 {
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_Index, UrlStringsAlias.ControllerName_BuildEventCode)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resources.UIStringResource.GotoSearchAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_Index, UrlStringsAlias.ControllerName_BuildEventCode)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearchAlternativeText">
 		<span class="glyphicon glyphicon-search"></span>
 	</a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.BuildEventCode_1.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.BuildEventCode_1.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetailsAlternativeText">
 		<span class="glyphicon glyphicon-briefcase"></span>
 	</a>
 </div>

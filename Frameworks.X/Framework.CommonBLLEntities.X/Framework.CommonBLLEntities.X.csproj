@@ -82,9 +82,9 @@
       <Project>{81863781-aa71-4530-a59c-04d2153ddd30}</Project>
       <Name>Framework.EntityContracts.X</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Framework.Resources.X\Framework.Resources.X.csproj">
-      <Project>{dea601b6-a706-4eef-813a-eca44e67ca3d}</Project>
-      <Name>Framework.Resources.X</Name>
+    <ProjectReference Include="..\Framework.Resx.X\Framework.Resx.X.csproj">
+      <Project>{f1e49e74-fec1-43f1-9013-3c17cdff28b4}</Project>
+      <Name>Framework.Resx.X</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

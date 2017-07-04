@@ -42,7 +42,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             }
 
             // If we got this far, something failed, redisplay form
-            ModelState.AddModelError("", Framework.Resources.UIStringResource.Account_LogIn_FailureText);
+            ModelState.AddModelError("", Framework.Resx.UIStringResource.Account_LogIn_FailureText);
             return View(model);
         }
 
@@ -129,9 +129,9 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         public ActionResult Manage(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
-                message == ManageMessageId.ChangePasswordSuccess ? Framework.Resources.UIStringResource.Account_ChangePasswordSuccess
-                : message == ManageMessageId.SetPasswordSuccess ? Framework.Resources.UIStringResource.Account_SetPasswordSuccess
-                : message == ManageMessageId.RemoveLoginSuccess ? Framework.Resources.UIStringResource.Account_SetPasswordSuccess
+                message == ManageMessageId.ChangePasswordSuccess ? Framework.Resx.UIStringResource.Account_ChangePasswordSuccess
+                : message == ManageMessageId.SetPasswordSuccess ? Framework.Resx.UIStringResource.Account_SetPasswordSuccess
+                : message == ManageMessageId.RemoveLoginSuccess ? Framework.Resx.UIStringResource.Account_SetPasswordSuccess
                 : "";
             ViewBag.HasLocalPassword = OAuthWebSecurity.HasLocalAccount(WebSecurity.GetUserId(User.Identity.Name));
             ViewBag.ReturnUrl = Url.Action("Manage");
@@ -169,7 +169,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
                     }
                     else
                     {
-                        ModelState.AddModelError("", Framework.Resources.UIStringResource.Account_LogIn_FailureText);
+                        ModelState.AddModelError("", Framework.Resx.UIStringResource.Account_LogIn_FailureText);
                     }
                 }
             }
@@ -281,7 +281,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
                     }
                     else
                     {
-                        ModelState.AddModelError("UserName", Framework.Resources.UIStringResource.Account_CreateNewUserWizard_ThisUserNameIsNotAvailableLabelText);
+                        ModelState.AddModelError("UserName", Framework.Resx.UIStringResource.Account_CreateNewUserWizard_ThisUserNameIsNotAvailableLabelText);
                     }
                 }
             }
@@ -373,34 +373,34 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             switch (createStatus)
             {
                 case MembershipCreateStatus.DuplicateUserName:
-                    return Framework.Resources.UIStringResource.Account_CreateNewUserWizard_ThisUserNameIsNotAvailableLabelText;
+                    return Framework.Resx.UIStringResource.Account_CreateNewUserWizard_ThisUserNameIsNotAvailableLabelText;
 
                 case MembershipCreateStatus.DuplicateEmail:
-                    return Framework.Resources.UIStringResource.Account_CreateNewUserWizard_DuiplicateEmail;
+                    return Framework.Resx.UIStringResource.Account_CreateNewUserWizard_DuiplicateEmail;
 
                 case MembershipCreateStatus.InvalidPassword:
-                    return Framework.Resources.UIStringResource.Account_CreateNewUserWizard_InvalidPassword;
+                    return Framework.Resx.UIStringResource.Account_CreateNewUserWizard_InvalidPassword;
 
                 case MembershipCreateStatus.InvalidEmail:
-                    return Framework.Resources.UIStringResource.Account_CreateNewUserWizard_InvalidEmail;
+                    return Framework.Resx.UIStringResource.Account_CreateNewUserWizard_InvalidEmail;
 
                 case MembershipCreateStatus.InvalidAnswer:
-                    return Framework.Resources.UIStringResource.Account_CreateNewUserWizard_InvalidAnswer;
+                    return Framework.Resx.UIStringResource.Account_CreateNewUserWizard_InvalidAnswer;
 
                 case MembershipCreateStatus.InvalidQuestion:
-                    return Framework.Resources.UIStringResource.Account_CreateNewUserWizard_InvalidQuestion;
+                    return Framework.Resx.UIStringResource.Account_CreateNewUserWizard_InvalidQuestion;
 
                 case MembershipCreateStatus.InvalidUserName:
-                    return Framework.Resources.UIStringResource.Account_CreateNewUserWizard_InvalidUserName;
+                    return Framework.Resx.UIStringResource.Account_CreateNewUserWizard_InvalidUserName;
 
                 case MembershipCreateStatus.ProviderError:
-                    return Framework.Resources.UIStringResource.Account_CreateNewUserWizard_ProviderError;
+                    return Framework.Resx.UIStringResource.Account_CreateNewUserWizard_ProviderError;
 
                 case MembershipCreateStatus.UserRejected:
-                    return Framework.Resources.UIStringResource.Account_CreateNewUserWizard_UserRejected;
+                    return Framework.Resx.UIStringResource.Account_CreateNewUserWizard_UserRejected;
 
                 default:
-                    return Framework.Resources.UIStringResource.Account_CreateNewUserWizard_UnknownError;
+                    return Framework.Resx.UIStringResource.Account_CreateNewUserWizard_UnknownError;
             }
         }
         #endregion

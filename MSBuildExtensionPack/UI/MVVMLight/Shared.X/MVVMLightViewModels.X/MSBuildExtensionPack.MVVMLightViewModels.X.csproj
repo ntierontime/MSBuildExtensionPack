@@ -125,9 +125,9 @@
       <Project>{81863781-aa71-4530-a59c-04d2153ddd30}</Project>
       <Name>Framework.EntityContracts.X</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\Frameworks.X\Framework.Resources.X\Framework.Resources.X.csproj">
-      <Project>{dea601b6-a706-4eef-813a-eca44e67ca3d}</Project>
-      <Name>Framework.Resources.X</Name>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.X\Framework.Resx.X\Framework.Resx.X.csproj">
+      <Project>{f1e49e74-fec1-43f1-9013-3c17cdff28b4}</Project>
+      <Name>Framework.Resx.X</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\..\Frameworks.X\Framework.ViewModels.X\Framework.ViewModels.X.csproj">
       <Project>{9ebb2439-1a6e-4d2f-b8bb-f09a1e76293e}</Project>
@@ -137,9 +137,9 @@
       <Project>{3f42d127-aaa5-4810-b593-8f2a426bce05}</Project>
       <Name>Framework.Xaml.X</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Core.X\Resources.X\MSBuildExtensionPack.Resources.X.csproj">
-      <Project>{f3afc236-ae5e-4549-9c5c-08c10c4c9271}</Project>
-      <Name>MSBuildExtensionPack.Resources.X</Name>
+    <ProjectReference Include="..\..\..\..\Core.X\Resx.X\MSBuildExtensionPack.Resx.X.csproj">
+      <Project>{4e3e985c-7d38-40f5-81e4-92fac3e9357a}</Project>
+      <Name>MSBuildExtensionPack.Resx.X</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\Core.X\ViewModelData.X\MSBuildExtensionPack.ViewModelData.X.csproj">
       <Project>{d1609968-bd0d-4112-a3f7-fd48ec7fc7a4}</Project>

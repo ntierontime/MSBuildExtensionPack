@@ -76,8 +76,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
                 ViewBag.StaticPagedResult = new PagedList.StaticPagedList<MSBuildExtensionPack.DataSourceEntities.Organization.Default>(viewModel.Result, viewModel.QueryPagingSetting.CurrentPage, viewModel.QueryPagingSetting.PageSize, viewModel.QueryPagingSetting.CountOfRecords);
             }
 
-			viewModel.ContentData.Title = MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Organization;
-            viewModel.ContentData.Summary = MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Description;
+			viewModel.ContentData.Title = MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Organization;
+            viewModel.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Description;
 
             return View(viewModel);
         }
@@ -164,11 +164,11 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 					MSBuildExtensionPack.DataSourceEntities.OrganizationCollection resultCollection = new MSBuildExtensionPack.DataSourceEntities.OrganizationCollection();
 					MSBuildExtensionPack.EntityContracts.IOrganizationHelper.CopyCollection<MSBuildExtensionPack.DataSourceEntities.Organization.DefaultCollection, MSBuildExtensionPack.DataSourceEntities.OrganizationCollection, MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization>(collection, resultCollection);
                     var result = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.BatchInsert(resultCollection);
-					ViewBag.Message = Framework.Resources.UIStringResource.Data_Import_Success;
+					ViewBag.Message = Framework.Resx.UIStringResource.Data_Import_Success;
                 }
                 else
                 {
-                    ViewBag.Message = Framework.Resources.UIStringResource.Data_Import_NoRecordInSourceFile;
+                    ViewBag.Message = Framework.Resx.UIStringResource.Data_Import_NoRecordInSourceFile;
                 }
 
                 log.Info(string.Format("{0}: Import", Framework.LoggingOptions.UI_Process_Ended.ToString()));
@@ -210,8 +210,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             Framework.UIAction uiAction = Framework.UIAction.ViewDetails;
             MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM();
 			vm.Load(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, uiAction);
-            vm.ContentData.Title = Framework.Resources.UIStringResource.DetailsAlternativeText;
-            vm.ContentData.Summary = MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Details_Organization;
+            vm.ContentData.Title = Framework.Resx.UIStringResource.DetailsAlternativeText;
+            vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Details_Organization;
 
             return View(vm);
         }
@@ -310,8 +310,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             Framework.UIAction uiAction = Framework.UIAction.Update;
             MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM();
 			vm.Load(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, uiAction);
-            vm.ContentData.Title = Framework.Resources.UIStringResource.EditAlternativeText;
-            vm.ContentData.Summary = MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Edit_Organization;
+            vm.ContentData.Title = Framework.Resx.UIStringResource.EditAlternativeText;
+            vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Edit_Organization;
 
             return View(vm);
         }
@@ -339,8 +339,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             catch(Exception ex)
             {
                 Framework.UIAction uiAction = Framework.UIAction.Update;
-                vm.ContentData.Title = Framework.Resources.UIStringResource.EditAlternativeText;
-                vm.ContentData.Summary = MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Edit_Organization;
+                vm.ContentData.Title = Framework.Resx.UIStringResource.EditAlternativeText;
+                vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Edit_Organization;
                 vm.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
                 vm.StatusMessageOfResult = ex.Message;
                 vm.UIActionStatusMessage = new Framework.UIActionStatusMessage(typeof(MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM).FullName, uiAction.ToString(), uiAction, Framework.UIActionStatus.Failed);
@@ -365,8 +365,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             Framework.UIAction uiAction = Framework.UIAction.Delete;
             MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM();
 			vm.Load(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, uiAction);
-            vm.ContentData.Title = Framework.Resources.UIStringResource.DeleteAlternativeText;
-            vm.ContentData.Summary = MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Delete_Organization;
+            vm.ContentData.Title = Framework.Resx.UIStringResource.DeleteAlternativeText;
+            vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Delete_Organization;
             return View(vm);
         }
 		
@@ -399,8 +399,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             catch (Exception ex)
             {
                 Framework.UIAction uiAction = Framework.UIAction.Delete;
-                vm.ContentData.Title = Framework.Resources.UIStringResource.DeleteAlternativeText;
-                vm.ContentData.Summary = MSBuildExtensionPack.Resources.UIStringResourcePerEntityOrganization.Delete_Organization;
+                vm.ContentData.Title = Framework.Resx.UIStringResource.DeleteAlternativeText;
+                vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Delete_Organization;
                 vm.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
                 vm.StatusMessageOfResult = ex.Message;
                 vm.UIActionStatusMessage = new Framework.UIActionStatusMessage(typeof(MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM).FullName, uiAction.ToString(), uiAction, Framework.UIActionStatus.Failed);

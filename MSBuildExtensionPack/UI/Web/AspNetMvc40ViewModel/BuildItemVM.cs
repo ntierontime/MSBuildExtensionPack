@@ -55,8 +55,8 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
         {
             Framework.UIAction uiAction = Framework.UIAction.Create;
             BuildItemVM vm = new BuildItemVM();
-            vm.ContentData.Title = Framework.Resources.UIStringResource.AddNewAlternativeText;
-            vm.ContentData.Summary = MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuild.AddNew_Build;
+            vm.ContentData.Title = Framework.Resx.UIStringResource.AddNewAlternativeText;
+            vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.AddNew_Build;
 			vm.LoadExtraData(uiAction);
 
             vm.Item = entity;

@@ -93,8 +93,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="Id_is_required")]
+		[Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="Id_is_required")]
 #endif
         public System.Int64 Id
         {
@@ -113,8 +113,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "BuildId", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="BuildId_is_required")]
+		[Display(Name = "BuildId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="BuildId_is_required")]
 #endif
         public System.Int64 BuildId
         {
@@ -133,8 +133,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "BuildEventCodeId", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="BuildEventCodeId_is_required")]
+		[Display(Name = "BuildEventCodeId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="BuildEventCodeId_is_required")]
 #endif
         public System.Int32 BuildEventCodeId
         {
@@ -153,8 +153,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "Message", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
-		[StringLengthAttribute(1500, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="The_length_of_Message_should_be_0_to_1500")]
+		[Display(Name = "Message", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
+		[StringLengthAttribute(1500, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="The_length_of_Message_should_be_0_to_1500")]
 #endif
         public System.String Message
         {
@@ -173,8 +173,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "EventTime", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="EventTime_is_required")]
+		[Display(Name = "EventTime", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="EventTime_is_required")]
 #endif
         public System.DateTime EventTime
         {
@@ -348,7 +348,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "Build_1_Name", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
+		[Display(Name = "Build_1_Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
 #endif
         public System.String Build_1_Name
         {
@@ -367,8 +367,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="Id_is_required")]
+		[Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="Id_is_required")]
 #endif
         public System.Int64 Id
         {
@@ -387,7 +387,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "Solution_1Id", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
+		[Display(Name = "Solution_1Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
 #endif
         public System.Int32 Solution_1Id
         {
@@ -406,7 +406,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "Solution_1_Name", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
+		[Display(Name = "Solution_1_Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
 #endif
         public System.String Solution_1_Name
         {
@@ -425,7 +425,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "Organization_1_UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
+		[Display(Name = "Organization_1_UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
 #endif
         public System.Guid Organization_1_UniqueidentifierColumn
         {
@@ -444,7 +444,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "Organization_1_UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
+		[Display(Name = "Organization_1_UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
 #endif
         public System.Guid Organization_1_UniqueIdentifier
         {
@@ -463,7 +463,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "Organization_1Id", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
+		[Display(Name = "Organization_1Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
 #endif
         public System.Int64 Organization_1Id
         {
@@ -482,7 +482,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "Organization_1_Name", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
+		[Display(Name = "Organization_1_Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
 #endif
         public System.String Organization_1_Name
         {
@@ -501,7 +501,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "Organization_2_UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
+		[Display(Name = "Organization_2_UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
 #endif
         public System.Guid Organization_2_UniqueidentifierColumn
         {
@@ -520,7 +520,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "Organization_2Id", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
+		[Display(Name = "Organization_2Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
 #endif
         public System.Int64 Organization_2Id
         {
@@ -539,7 +539,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "Organization_2_UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
+		[Display(Name = "Organization_2_UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
 #endif
         public System.Guid Organization_2_UniqueIdentifier
         {
@@ -558,7 +558,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "Organization_2_Name", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
+		[Display(Name = "Organization_2_Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
 #endif
         public System.String Organization_2_Name
         {
@@ -577,7 +577,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "BuildEventCode_1_Name", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
+		[Display(Name = "BuildEventCode_1_Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
 #endif
         public System.String BuildEventCode_1_Name
         {
@@ -596,7 +596,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "BuildId", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
+		[Display(Name = "BuildId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
 #endif
         public System.Int64 BuildId
         {
@@ -615,7 +615,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "BuildEventCodeId", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
+		[Display(Name = "BuildEventCodeId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
 #endif
         public System.Int32 BuildEventCodeId
         {
@@ -634,8 +634,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "Message", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
-		[StringLengthAttribute(1500, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="The_length_of_Message_should_be_0_to_1500")]
+		[Display(Name = "Message", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
+		[StringLengthAttribute(1500, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="The_length_of_Message_should_be_0_to_1500")]
 #endif
         public System.String Message
         {
@@ -654,8 +654,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "EventTime", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="EventTime_is_required")]
+		[Display(Name = "EventTime", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="EventTime_is_required")]
 #endif
         public System.DateTime EventTime
         {
@@ -803,8 +803,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "BuildId", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="BuildId_is_required")]
+		[Display(Name = "BuildId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="BuildId_is_required")]
 #endif
         public System.Int64 BuildId
         {
@@ -823,8 +823,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "BuildEventCodeId", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="BuildEventCodeId_is_required")]
+		[Display(Name = "BuildEventCodeId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="BuildEventCodeId_is_required")]
 #endif
         public System.Int32 BuildEventCodeId
         {
@@ -843,7 +843,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "CountPerFK", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
+		[Display(Name = "CountPerFK", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
 #endif
         public System.Int64 CountPerFK
         {
@@ -862,7 +862,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
+		[Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
 #endif
         public System.String Name
         {
@@ -881,7 +881,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "Solution_1Id", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
+		[Display(Name = "Solution_1Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
 #endif
         public System.Int32 Solution_1Id
         {
@@ -900,7 +900,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "Organization_1Id", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
+		[Display(Name = "Organization_1Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
 #endif
         public System.Int64 Organization_1Id
         {
@@ -919,7 +919,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "Organization_2Id", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
+		[Display(Name = "Organization_2Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
 #endif
         public System.Int64 Organization_2Id
         {
@@ -1042,8 +1042,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="Id_is_required")]
+		[Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="Id_is_required")]
 #endif
         public System.Int64 Id
         {
@@ -1062,7 +1062,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 #if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "BuildEventCodeId", ResourceType = typeof(MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog))]
+		[Display(Name = "BuildEventCodeId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
 #endif
         public System.Int32 BuildEventCodeId
         {

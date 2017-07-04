@@ -446,11 +446,14 @@
     </Compile>
     <None Include="map.2.D.2.vsd" />
     <Content Include="map.2.D.2.vsd.png" />
-    <None Include="Resources\Entypo.ttf" />
-    <None Include="Resources\Entypo-license.txt" />
-    <None Include="Resources\Icons.xaml" />
-    <None Include="Resources\IconsNonShared.xaml" />
-    <None Include="Resources\WindowsIcons-license.txt" />
+    <Page Include="Resources\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\IconsNonShared.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Core\CommonBLLEntities\MSBuildExtensionPack.CommonBLLEntities.csproj">
@@ -481,9 +484,9 @@
       <Project>{c3a270de-9727-492e-91e2-f56e7e0e0f83}</Project>
       <Name>Framework.EntityContracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Frameworks\Framework.Resources\Framework.Resources.csproj">
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework.Resx\Framework.Resx.csproj">
       <Project>{c72b898b-b53b-42d5-9f4f-673f84bb485b}</Project>
-      <Name>Framework.Resources</Name>
+      <Name>Framework.Resx</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\Frameworks\Framework.ViewModels\Framework.ViewModels.csproj">
       <Project>{2cc97c32-9ffa-4da4-a6c0-83f300404ec3}</Project>
@@ -497,9 +500,9 @@
       <Project>{aeba199a-084c-4ffc-b215-d080e50c81df}</Project>
       <Name>MSBuildExtensionPack.MVVMLightViewModels</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Core\Resources\MSBuildExtensionPack.Resources.csproj">
-      <Project>{42681747-107b-487b-9ea2-ce46754682fd}</Project>
-      <Name>MSBuildExtensionPack.Resources</Name>
+    <ProjectReference Include="..\..\..\Core\Resx\MSBuildExtensionPack.Resx.csproj">
+      <Project>{fd138435-0f7c-4b72-b9d3-987e7fe69f80}</Project>
+      <Name>MSBuildExtensionPack.Resx</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core\ViewModelData\MSBuildExtensionPack.ViewModelData.csproj">
       <Project>{59622778-b13c-464e-98f7-ea662653af27}</Project>

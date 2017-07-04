@@ -82,7 +82,7 @@ namespace Framework.CommonBLLEntities
 
         public string GetStatusMessage()
         {
-            return Framework.Resources.UIStringResource.ResourceManager.GetString(this.BusinessLogicLayerResponseStatus.ToString());
+            return Framework.Resx.UIStringResource.ResourceManager.GetString(this.BusinessLogicLayerResponseStatus.ToString());
         }
 
         public override string ToString()

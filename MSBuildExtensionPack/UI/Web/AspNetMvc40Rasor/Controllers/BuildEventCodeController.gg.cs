@@ -72,8 +72,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
                 ViewBag.StaticPagedResult = new PagedList.StaticPagedList<MSBuildExtensionPack.DataSourceEntities.BuildEventCode>(viewModel.Result, viewModel.QueryPagingSetting.CurrentPage, viewModel.QueryPagingSetting.PageSize, viewModel.QueryPagingSetting.CountOfRecords);
             }
 
-			viewModel.ContentData.Title = MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildEventCode.BuildEventCode;
-            viewModel.ContentData.Summary = MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildEventCode.Description;
+			viewModel.ContentData.Title = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.BuildEventCode;
+            viewModel.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.Description;
 
             return View(viewModel);
         }
@@ -159,11 +159,11 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
                 {
 					MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection resultCollection = collection;
                     var result = MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.BatchInsert(resultCollection);
-					ViewBag.Message = Framework.Resources.UIStringResource.Data_Import_Success;
+					ViewBag.Message = Framework.Resx.UIStringResource.Data_Import_Success;
                 }
                 else
                 {
-                    ViewBag.Message = Framework.Resources.UIStringResource.Data_Import_NoRecordInSourceFile;
+                    ViewBag.Message = Framework.Resx.UIStringResource.Data_Import_NoRecordInSourceFile;
                 }
 
                 log.Info(string.Format("{0}: Import", Framework.LoggingOptions.UI_Process_Ended.ToString()));
@@ -205,8 +205,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             Framework.UIAction uiAction = Framework.UIAction.ViewDetails;
             MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM();
 			vm.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
-            vm.ContentData.Title = Framework.Resources.UIStringResource.DetailsAlternativeText;
-            vm.ContentData.Summary = MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildEventCode.Details_BuildEventCode;
+            vm.ContentData.Title = Framework.Resx.UIStringResource.DetailsAlternativeText;
+            vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.Details_BuildEventCode;
 
             return View(vm);
         }
@@ -305,8 +305,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             Framework.UIAction uiAction = Framework.UIAction.Update;
             MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM();
 			vm.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
-            vm.ContentData.Title = Framework.Resources.UIStringResource.EditAlternativeText;
-            vm.ContentData.Summary = MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildEventCode.Edit_BuildEventCode;
+            vm.ContentData.Title = Framework.Resx.UIStringResource.EditAlternativeText;
+            vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.Edit_BuildEventCode;
 
             return View(vm);
         }
@@ -334,8 +334,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             catch(Exception ex)
             {
                 Framework.UIAction uiAction = Framework.UIAction.Update;
-                vm.ContentData.Title = Framework.Resources.UIStringResource.EditAlternativeText;
-                vm.ContentData.Summary = MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildEventCode.Edit_BuildEventCode;
+                vm.ContentData.Title = Framework.Resx.UIStringResource.EditAlternativeText;
+                vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.Edit_BuildEventCode;
                 vm.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
                 vm.StatusMessageOfResult = ex.Message;
                 vm.UIActionStatusMessage = new Framework.UIActionStatusMessage(typeof(MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM).FullName, uiAction.ToString(), uiAction, Framework.UIActionStatus.Failed);
@@ -360,8 +360,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             Framework.UIAction uiAction = Framework.UIAction.Delete;
             MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM();
 			vm.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
-            vm.ContentData.Title = Framework.Resources.UIStringResource.DeleteAlternativeText;
-            vm.ContentData.Summary = MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildEventCode.Delete_BuildEventCode;
+            vm.ContentData.Title = Framework.Resx.UIStringResource.DeleteAlternativeText;
+            vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.Delete_BuildEventCode;
             return View(vm);
         }
 		
@@ -394,8 +394,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             catch (Exception ex)
             {
                 Framework.UIAction uiAction = Framework.UIAction.Delete;
-                vm.ContentData.Title = Framework.Resources.UIStringResource.DeleteAlternativeText;
-                vm.ContentData.Summary = MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildEventCode.Delete_BuildEventCode;
+                vm.ContentData.Title = Framework.Resx.UIStringResource.DeleteAlternativeText;
+                vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.Delete_BuildEventCode;
                 vm.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
                 vm.StatusMessageOfResult = ex.Message;
                 vm.UIActionStatusMessage = new Framework.UIActionStatusMessage(typeof(MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM).FullName, uiAction.ToString(), uiAction, Framework.UIActionStatus.Failed);

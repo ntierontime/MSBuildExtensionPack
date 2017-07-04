@@ -72,8 +72,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
                 ViewBag.StaticPagedResult = new PagedList.StaticPagedList<MSBuildExtensionPack.DataSourceEntities.Solution.Default>(viewModel.Result, viewModel.QueryPagingSetting.CurrentPage, viewModel.QueryPagingSetting.PageSize, viewModel.QueryPagingSetting.CountOfRecords);
             }
 
-			viewModel.ContentData.Title = MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Solution;
-            viewModel.ContentData.Summary = MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Description;
+			viewModel.ContentData.Title = MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Solution;
+            viewModel.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Description;
 
             return View(viewModel);
         }
@@ -160,11 +160,11 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 					MSBuildExtensionPack.DataSourceEntities.SolutionCollection resultCollection = new MSBuildExtensionPack.DataSourceEntities.SolutionCollection();
 					MSBuildExtensionPack.EntityContracts.ISolutionHelper.CopyCollection<MSBuildExtensionPack.DataSourceEntities.Solution.DefaultCollection, MSBuildExtensionPack.DataSourceEntities.SolutionCollection, MSBuildExtensionPack.DataSourceEntities.Solution.Default, MSBuildExtensionPack.DataSourceEntities.Solution>(collection, resultCollection);
                     var result = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.BatchInsert(resultCollection);
-					ViewBag.Message = Framework.Resources.UIStringResource.Data_Import_Success;
+					ViewBag.Message = Framework.Resx.UIStringResource.Data_Import_Success;
                 }
                 else
                 {
-                    ViewBag.Message = Framework.Resources.UIStringResource.Data_Import_NoRecordInSourceFile;
+                    ViewBag.Message = Framework.Resx.UIStringResource.Data_Import_NoRecordInSourceFile;
                 }
 
                 log.Info(string.Format("{0}: Import", Framework.LoggingOptions.UI_Process_Ended.ToString()));
@@ -206,8 +206,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             Framework.UIAction uiAction = Framework.UIAction.ViewDetails;
             MSBuildExtensionPack.AspNetMvc40ViewModel.SolutionItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.SolutionItemVM();
 			vm.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
-            vm.ContentData.Title = Framework.Resources.UIStringResource.DetailsAlternativeText;
-            vm.ContentData.Summary = MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Details_Solution;
+            vm.ContentData.Title = Framework.Resx.UIStringResource.DetailsAlternativeText;
+            vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Details_Solution;
 
             return View(vm);
         }
@@ -306,8 +306,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             Framework.UIAction uiAction = Framework.UIAction.Update;
             MSBuildExtensionPack.AspNetMvc40ViewModel.SolutionItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.SolutionItemVM();
 			vm.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
-            vm.ContentData.Title = Framework.Resources.UIStringResource.EditAlternativeText;
-            vm.ContentData.Summary = MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Edit_Solution;
+            vm.ContentData.Title = Framework.Resx.UIStringResource.EditAlternativeText;
+            vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Edit_Solution;
 
             return View(vm);
         }
@@ -335,8 +335,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             catch(Exception ex)
             {
                 Framework.UIAction uiAction = Framework.UIAction.Update;
-                vm.ContentData.Title = Framework.Resources.UIStringResource.EditAlternativeText;
-                vm.ContentData.Summary = MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Edit_Solution;
+                vm.ContentData.Title = Framework.Resx.UIStringResource.EditAlternativeText;
+                vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Edit_Solution;
                 vm.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
                 vm.StatusMessageOfResult = ex.Message;
                 vm.UIActionStatusMessage = new Framework.UIActionStatusMessage(typeof(MSBuildExtensionPack.AspNetMvc40ViewModel.SolutionItemVM).FullName, uiAction.ToString(), uiAction, Framework.UIActionStatus.Failed);
@@ -361,8 +361,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             Framework.UIAction uiAction = Framework.UIAction.Delete;
             MSBuildExtensionPack.AspNetMvc40ViewModel.SolutionItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.SolutionItemVM();
 			vm.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
-            vm.ContentData.Title = Framework.Resources.UIStringResource.DeleteAlternativeText;
-            vm.ContentData.Summary = MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Delete_Solution;
+            vm.ContentData.Title = Framework.Resx.UIStringResource.DeleteAlternativeText;
+            vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Delete_Solution;
             return View(vm);
         }
 		
@@ -395,8 +395,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             catch (Exception ex)
             {
                 Framework.UIAction uiAction = Framework.UIAction.Delete;
-                vm.ContentData.Title = Framework.Resources.UIStringResource.DeleteAlternativeText;
-                vm.ContentData.Summary = MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Delete_Solution;
+                vm.ContentData.Title = Framework.Resx.UIStringResource.DeleteAlternativeText;
+                vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Delete_Solution;
                 vm.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
                 vm.StatusMessageOfResult = ex.Message;
                 vm.UIActionStatusMessage = new Framework.UIActionStatusMessage(typeof(MSBuildExtensionPack.AspNetMvc40ViewModel.SolutionItemVM).FullName, uiAction.ToString(), uiAction, Framework.UIActionStatus.Failed);

@@ -103,9 +103,9 @@
       <Project>{950b9cdb-9286-4a1a-8d88-1df6954a45e3}</Project>
       <Name>Framework.Web</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Resources\MSBuildExtensionPack.Resources.csproj">
-      <Project>{42681747-107b-487b-9ea2-ce46754682fd}</Project>
-      <Name>MSBuildExtensionPack.Resources</Name>
+    <ProjectReference Include="..\Resx\MSBuildExtensionPack.Resx.csproj">
+      <Project>{fd138435-0f7c-4b72-b9d3-987e7fe69f80}</Project>
+      <Name>MSBuildExtensionPack.Resx</Name>
     </ProjectReference>
     <ProjectReference Include="..\WcfContracts\MSBuildExtensionPack.WcfContracts.csproj">
       <Project>{3ff07bef-ff15-47ee-9bf2-107623976ca5}</Project>
