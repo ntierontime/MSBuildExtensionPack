@@ -47,6 +47,17 @@ namespace MSBuildExtensionPack.CommonBLL
 
 
         /// <summary>
+        /// Creates the BLL instance of entity <see cref="MSBuildExtensionPack.Organization"/> tables for change notification.
+        /// </summary>
+        /// <param name="businessLogicLayerContext">The business logic layer context.</param>
+        /// <returns>Instance of OrganizationService</returns>
+        public MSBuildExtensionPack.WcfContracts.IOrganizationService CreateBLLInstanceOfEntityOrganization(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
+        {
+            return new OrganizationService(businessLogicLayerContext);
+        }
+
+
+        /// <summary>
         /// Creates the BLL instance of entity <see cref="MSBuildExtensionPack.Solution"/> tables for change notification.
         /// </summary>
         /// <param name="businessLogicLayerContext">The business logic layer context.</param>

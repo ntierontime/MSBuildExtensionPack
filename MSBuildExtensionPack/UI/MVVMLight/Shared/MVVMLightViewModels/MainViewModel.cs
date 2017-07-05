@@ -25,7 +25,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         {
             get
             {
-                return Framework.Resources.UIStringResource.Common_WelcomeToNTIERONTIME;
+                return Framework.Resx.UIStringResource.Common_WelcomeToNTIERONTIME;
             }
         }
 

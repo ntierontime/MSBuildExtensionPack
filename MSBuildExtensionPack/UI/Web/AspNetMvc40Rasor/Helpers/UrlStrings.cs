@@ -4,7 +4,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
     {
 		public const string AreaName = "AreaName";
 		public const string AreaNamespace = "MSBuildExtensionPack.AspNetMvc40Rasor.Helpers";
-        public const string AreaRouteConstraint = "Build|BuildEventCode|BuildLog|Solution";
+        public const string AreaRouteConstraint = "Build|BuildEventCode|BuildLog|Organization|Solution";
 
 		#region 1. Controller names
 
@@ -15,6 +15,9 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
 
 
 		public const string ControllerName_BuildLog = "BuildLog";
+
+
+		public const string ControllerName_Organization = "Organization";
 
 
 		public const string ControllerName_Solution = "Solution";
@@ -36,6 +39,10 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
 		public const string ActionName_BuildLog_WPCommonOfBuildLog_Export = "WPCommonOfBuildLog_Export";
 
 
+		public const string ActionName_Organization_WPCommonOfOrganization = "WPCommonOfOrganization";
+		public const string ActionName_Organization_WPCommonOfOrganization_Export = "WPCommonOfOrganization_Export";
+
+
 		public const string ActionName_Solution_WPCommonOfSolution = "WPCommonOfSolution";
 		public const string ActionName_Solution_WPCommonOfSolution_Export = "WPCommonOfSolution_Export";
 
@@ -51,6 +58,9 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
 
 
 		public const string ActionName_BuildLog_WPEntityRelatedOfBuildLog = "WPEntityRelatedOfBuildLog";
+
+
+		public const string ActionName_Organization_WPEntityRelatedOfOrganization = "WPEntityRelatedOfOrganization";
 
 
 		public const string ActionName_Solution_WPEntityRelatedOfSolution = "WPEntityRelatedOfSolution";
@@ -99,6 +109,16 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
 		public const string ActionName_BuildLog_Edit = "Edit";
 		public const string ActionName_BuildLog_Delete = "Delete";
 		public const string ActionName_BuildLog_GoBackList = "GoBackList";
+
+
+		public const string ActionName_Organization_Import = "Import";
+		public const string ActionName_Organization_Index = "Index";
+		public const string ActionName_Organization_Details = "Details";
+		public const string ActionName_Organization_AddNew = "AddNew";
+		public const string ActionName_Organization_Copy = "Copy";
+		public const string ActionName_Organization_Edit = "Edit";
+		public const string ActionName_Organization_Delete = "Delete";
+		public const string ActionName_Organization_GoBackList = "GoBackList";
 
 
 		public const string ActionName_Solution_Import = "Import";

@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
+using System.Threading.Tasks;
 
 namespace MSBuildExtensionPack.MVVMLightViewModels
 {
@@ -110,9 +111,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 vmData.QueryOrderBySettingCollection = this.QueryOrderBySettingCollection;
 
                 var client = new MSBuildExtensionPack.WebApiClient.BuildApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-
-                var resultVMData = client.GetWPCommonOfBuildVMAsync(vmData);
-                var result = resultVMData.Result;
+				var result = Task.Run(() => client.GetWPCommonOfBuildVMAsync(vmData)).Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
 
@@ -138,9 +137,9 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                             }
                         }
 
-                        this.QueryPagingSetting = resultVMData.Result.QueryPagingSetting;
+                        this.QueryPagingSetting = result.QueryPagingSetting;
                         this.OriginalQueryOrderBySettingCollecionInString = this.QueryOrderBySettingCollecionInString;
-                        this.QueryOrderBySettingCollection = resultVMData.Result.QueryOrderBySettingCollection;
+                        this.QueryOrderBySettingCollection = result.QueryOrderBySettingCollection;
                     }
                     else
                     {

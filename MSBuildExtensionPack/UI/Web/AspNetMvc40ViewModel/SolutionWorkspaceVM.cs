@@ -14,6 +14,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
             : base()
         {
         }
+        public List<SelectListItem> SelectListOfMSBuildExtensionPack_Organization { get; set; }
 
 
         public Framework.Mvc.UISharedViewModel UISharedViewModel { get; set; }
@@ -25,6 +26,8 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 
         public override void GetDefaultPerViewModel()
         {
+			this.NameValueCollectionOfMSBuildExtensionPack_Organization = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairOfAll(new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(), new Framework.EntityContracts.QueryPagingSetting(-1, -1), null);
+			this.SelectListOfMSBuildExtensionPack_Organization = Framework.Mvc.MvcHelper.BuildListOfSelectListItem(this.NameValueCollectionOfMSBuildExtensionPack_Organization);
 
 
             this.UISharedViewModel = Framework.Mvc.UISharedViewModel.GetUISharedViewModel(this.ListOfQueryOrderBySettingCollecionInString, this.QueryPagingSetting.PageSizeSelectionList, this.ListOfDataExport);
@@ -38,10 +41,12 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
         {
             if (isToLoadDropDownlistContent)
             {
+			this.NameValueCollectionOfMSBuildExtensionPack_Organization = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairOfAll(new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(), new Framework.EntityContracts.QueryPagingSetting(-1, -1), null);
+			this.SelectListOfMSBuildExtensionPack_Organization = Framework.Mvc.MvcHelper.BuildListOfSelectListItem(this.NameValueCollectionOfMSBuildExtensionPack_Organization);
 
             }
 
-            var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfEntityOfCommon(
+            var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfDefaultOfCommon(
                 new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(this.Criteria)
                 , this.QueryPagingSetting
                 , this.QueryOrderBySettingCollection);
@@ -74,7 +79,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 
     public partial class WPEntityRelatedOfSolutionVM 
 		: MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfSolutionVM
-		//: Framework.ViewModels.ViewModelEntityRelatedBase<MSBuildExtensionPack.DataSourceEntities.Solution, MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier, Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus>
+		//: Framework.ViewModels.ViewModelEntityRelatedBase<MSBuildExtensionPack.DataSourceEntities.Solution.Default, MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier, Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus>
     {
         public WPEntityRelatedOfSolutionVM(MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier criteriaOfMasterEntity)
             : base(criteriaOfMasterEntity)
@@ -84,10 +89,12 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 
         public void LoadData(
 			bool isToLoadFK_Build_Solution = true
+			, bool isToLoadOrganization_1 = true
+			, bool isToLoadOrganization_2 = true
 			)
         {
             // 1. master on accessory part - Aside UIWorkspaceItemSetting
-			var masterEntityResult = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfEntityOfByIdentifier(this.CriteriaOfMasterEntity, this.QueryPagingSettingOneRecord, null);
+			var masterEntityResult = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfDefaultOfByIdentifier(this.CriteriaOfMasterEntity, this.QueryPagingSettingOneRecord, null);
 
             this.StatusOfMasterEntity = masterEntityResult.BusinessLogicLayerResponseStatus;
 
@@ -96,6 +103,45 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
                 this.MasterEntity = masterEntityResult.Message[0];
 
 				// 2. accessory part - Aside UIWorkspaceItemSetting
+							// MSBuildExtensionPack.CommonBLLIoC.IoCOrganization
+				if(isToLoadOrganization_1)
+				{
+					this.CriteriaOfOrganization_1.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft.IsToCompare = true;
+					this.CriteriaOfOrganization_1.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft.ValueToCompare = this.MasterEntity.OrganizationId.HasValue ? this.MasterEntity.OrganizationId.Value : default(System.Int64);
+					var resultOrganization_1 = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfKeyInformationOfByIdentifier(this.CriteriaOfOrganization_1, this.QueryPagingSettingOneRecord, null);
+					this.StatusOfOrganization_1 = resultOrganization_1.BusinessLogicLayerResponseStatus;
+					if (resultOrganization_1.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+					{
+						this.Organization_1 = resultOrganization_1.Message[0];
+					}
+					else
+					{
+						this.StatusMessageOfOrganization_1 = resultOrganization_1.GetStatusMessage();
+	#if DEBUG
+						this.StatusMessageOfOrganization_1 = string.Format("MSBuildExtensionPack.CommonBLLIoC.IoCOrganization GetMessageOfKeyInformationOfByIdentifier", this.StatusMessageOfOrganization_1, resultOrganization_1.ServerErrorMessage);
+	#endif
+					}
+				}
+
+							// MSBuildExtensionPack.CommonBLLIoC.IoCOrganization
+				if(isToLoadOrganization_2)
+				{
+					this.CriteriaOfOrganization_2.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft.IsToCompare = true;
+					this.CriteriaOfOrganization_2.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft.ValueToCompare = this.MasterEntity.Organization_2Id;
+					var resultOrganization_2 = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfKeyInformationOfByIdentifier(this.CriteriaOfOrganization_2, this.QueryPagingSettingOneRecord, null);
+					this.StatusOfOrganization_2 = resultOrganization_2.BusinessLogicLayerResponseStatus;
+					if (resultOrganization_2.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+					{
+						this.Organization_2 = resultOrganization_2.Message[0];
+					}
+					else
+					{
+						this.StatusMessageOfOrganization_2 = resultOrganization_2.GetStatusMessage();
+	#if DEBUG
+						this.StatusMessageOfOrganization_2 = string.Format("MSBuildExtensionPack.CommonBLLIoC.IoCOrganization GetMessageOfKeyInformationOfByIdentifier", this.StatusMessageOfOrganization_2, resultOrganization_2.ServerErrorMessage);
+	#endif
+					}
+				}
 
 
 				// 3. Major part - Article UIWorkspaceItemSetting - EntityReference/FK downtree

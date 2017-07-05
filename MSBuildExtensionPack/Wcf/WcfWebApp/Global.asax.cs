@@ -37,9 +37,6 @@ namespace MSBuildExtensionPack.WcfWebApp
 			log.Info(Framework.LoggingOptions.Session_Started.ToString());
 
             Framework.CommonBLLEntities.BusinessLogicLayerMemberShip _BusinessLogicLayerMemberShip = new Framework.CommonBLLEntities.BusinessLogicLayerMemberShip();
-            //Framework.Web.WebFormApplicationSessionVariables.BusinessLogicLayerContext = new Framework.CommonBLLEntities.BusinessLogicLayerContext(
-            //    _BusinessLogicLayerMemberShip 
-            //    , MSBuildExtensionPack.LinqDAL.LinqToSqlDataAccessLayerFactorySingleton.Instance);
             List<Framework.CommonBLLEntities.BusinessLogicLayerContextSetting> _BusinessLogicLayerContextSettingCollection = new List<Framework.CommonBLLEntities.BusinessLogicLayerContextSetting>();
             _BusinessLogicLayerContextSettingCollection.Add(new Framework.CommonBLLEntities.BusinessLogicLayerContextSetting(
 				"MSBuildExtensionPack"

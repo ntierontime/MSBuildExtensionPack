@@ -178,7 +178,7 @@ namespace Framework.Xaml
 
         protected virtual void LaunchCopyView(TItem o)
         {
-            string  viewName = ViewName_Details;
+            string viewName = ViewName_Details;
             Framework.UIAction uiAction = Framework.UIAction.Copy;
 
             PrepareItem(o);

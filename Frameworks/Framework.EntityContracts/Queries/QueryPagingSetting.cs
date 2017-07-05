@@ -256,12 +256,12 @@ namespace Framework.EntityContracts
         {
             if (this.RecordCountOfCurrentPage == 0)
             {
-                return string.Format(Framework.Resources.UIStringResource.Pagination_NoData);
+                return string.Format(Framework.Resx.UIStringResource.Pagination_NoData);
             }
             else
             {
                 
-                return string.Format(Framework.Resources.UIStringResource.Pagination_PagingInformation, this.RecordCountOfCurrentPage, this.CurrentIndex + 1, this.EndIndex, this.CountOfRecords, this.CountOfPages, this.CurrentPage);
+                return string.Format(Framework.Resx.UIStringResource.Pagination_PagingInformation, this.RecordCountOfCurrentPage, this.CurrentIndex + 1, this.EndIndex, this.CountOfRecords, this.CountOfPages, this.CurrentPage);
             }
         }
 

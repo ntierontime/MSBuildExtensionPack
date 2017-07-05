@@ -18,6 +18,7 @@ INSERT INTO [dbo].[Solution]
 		,[ExternalParentId]
 		,[Name]
 		,[Description]
+		,[OrganizationId]
 )
 VALUES
 (
@@ -25,6 +26,7 @@ VALUES
 		,""
 		,""
 		,""
+		,0
 )
 
 

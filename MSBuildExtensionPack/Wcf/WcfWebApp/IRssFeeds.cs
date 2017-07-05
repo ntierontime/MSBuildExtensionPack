@@ -34,6 +34,12 @@ namespace MSBuildExtensionPack.WcfWebApp
 
         [OperationContract]
         [WebGet]
+        Rss20FeedFormatter GetOrganization();
+
+
+
+        [OperationContract]
+        [WebGet]
         Rss20FeedFormatter GetSolution();
 
 

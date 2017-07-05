@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD3F8DE3-CF0F-4187-915C-B5D9F76C2D67}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Framework.CommonBLLEntities</RootNamespace>
+    <AssemblyName>Framework.CommonBLLEntities.X</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
+    <None Include="map.1.B.3.vsd" />
+    <Content Include="map.1.B.3.vsd.png" />
+    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerContext.cs">
+      <Link>BusinessLogicLayerContext.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerContextContainerCommon.cs">
+      <Link>BusinessLogicLayerContextContainerCommon.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerContextSetting.cs">
+      <Link>BusinessLogicLayerContextSetting.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerMemberShipContract.cs">
+      <Link>BusinessLogicLayerMemberShipContract.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerRequestMessageBase.cs">
+      <Link>BusinessLogicLayerRequestMessageBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerRequestTypes.cs">
+      <Link>BusinessLogicLayerRequestTypes.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerResponseMessageBase.cs">
+      <Link>BusinessLogicLayerResponseMessageBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\IBusinessLogicLayerResponseMessageBase.cs">
+      <Link>IBusinessLogicLayerResponseMessageBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\IBusinessLogicLayerContextContainer.cs">
+      <Link>IBusinessLogicLayerContextContainer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\SessionVariablesCommon.cs">
+      <Link>SessionVariablesCommon.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework.X\Framework.X.csproj">
+      <Project>{cab19f30-0455-443c-b7a3-ba943aaa9d15}</Project>
+      <Name>Framework.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.DataSourceEntities.X\Framework.DataSourceEntities.X.csproj">
+      <Project>{b9131050-fd8e-404d-a135-11e210cdd438}</Project>
+      <Name>Framework.DataSourceEntities.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.EntityContracts.X\Framework.EntityContracts.X.csproj">
+      <Project>{81863781-aa71-4530-a59c-04d2153ddd30}</Project>
+      <Name>Framework.EntityContracts.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.Resx.X\Framework.Resx.X.csproj">
+      <Project>{f1e49e74-fec1-43f1-9013-3c17cdff28b4}</Project>
+      <Name>Framework.Resx.X</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

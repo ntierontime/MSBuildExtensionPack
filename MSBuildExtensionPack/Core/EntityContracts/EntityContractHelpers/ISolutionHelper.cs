@@ -27,6 +27,7 @@ namespace MSBuildExtensionPack.EntityContracts
 			to.ExternalParentId = from.ExternalParentId;
 			to.Name = from.Name;
 			to.Description = from.Description;
+			to.OrganizationId = from.OrganizationId;
         } 
 
 
@@ -54,6 +55,7 @@ namespace MSBuildExtensionPack.EntityContracts
 			_retval = _retval && to.ExternalParentId == from.ExternalParentId;
 			_retval = _retval && to.Name == from.Name;
 			_retval = _retval && to.Description == from.Description;
+			_retval = _retval && to.OrganizationId == from.OrganizationId;
 			return _retval;
         }
 
@@ -73,7 +75,7 @@ namespace MSBuildExtensionPack.EntityContracts
         }
 
 
-		static string m_Format = "Id:{0};ExternalParentId:{1};Name:{2};Description:{3};";
+		static string m_Format = "Id:{0};ExternalParentId:{1};Name:{2};Description:{3};OrganizationId:{4};";
         /// <summary>
         /// Returns a <see cref="System.String"/> that represents this instance.
         /// </summary>
@@ -90,6 +92,7 @@ namespace MSBuildExtensionPack.EntityContracts
 				, input.ExternalParentId
 				, input.Name
 				, input.Description
+				, input.OrganizationId
 				);
         }
 
@@ -154,6 +157,9 @@ namespace MSBuildExtensionPack.EntityContracts
             T _retval = new T();
 
 
+
+
+            _retval.OrganizationId = 1;
 
 
             return _retval;

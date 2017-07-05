@@ -34,6 +34,12 @@ namespace MSBuildExtensionPack.WcfWebApp
 
         [OperationContract]
         [WebGet]
+        Atom10FeedFormatter GetOrganization();
+
+
+
+        [OperationContract]
+        [WebGet]
         Atom10FeedFormatter GetSolution();
 
 

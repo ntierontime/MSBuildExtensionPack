@@ -1,5 +1,5 @@
 @{
-    ViewBag.Title = Framework.Resources.UIStringResource.Home_TitleText;
+    ViewBag.Title = Framework.Resx.UIStringResource.Home_TitleText;
 }
 @section featured {
     <section class="featured">
@@ -8,7 +8,7 @@
                 <h1>@ViewBag.Title.</h1>
                 <h2>@ViewBag.Message</h2>
             </hgroup>
-            <p>@Framework.Resources.UIStringResource.Home_TitleText
+            <p>@Framework.Resx.UIStringResource.Home_TitleText
             </p>
         </div>
     </section>
@@ -29,6 +29,11 @@
 	<ol>
 		<li><a href="~/BuildLog/WPCommonOfBuildLog" >WPCommonOfBuildLog</a></li>
 		<li><a href="~/BuildLog/WPEntityRelatedOfBuildLog" >WPEntityRelatedOfBuildLog</a></li>
+	</ol>
+	<h2>MSBuildExtensionPack.Organization</h2>
+	<ol>
+		<li><a href="~/Organization/WPCommonOfOrganization" >WPCommonOfOrganization</a></li>
+		<li><a href="~/Organization/WPEntityRelatedOfOrganization" >WPEntityRelatedOfOrganization</a></li>
 	</ol>
 	<h2>MSBuildExtensionPack.Solution</h2>
 	<ol>

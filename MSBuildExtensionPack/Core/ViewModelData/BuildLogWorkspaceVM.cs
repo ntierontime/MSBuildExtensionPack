@@ -14,7 +14,7 @@ namespace MSBuildExtensionPack.ViewModelData
         {
         }
 
-            public Framework.NameValueCollection NameValueCollectionOfMSBuildExtensionPack_Solution { get; set; }
+            public Framework.NameValueCollection NameValueCollectionOfMSBuildExtensionPack_Organization { get; set; }
 
             public Framework.NameValueCollection NameValueCollectionOfMSBuildExtensionPack_BuildEventCode { get; set; }
 
@@ -40,6 +40,8 @@ namespace MSBuildExtensionPack.ViewModelData
         {
 			this.CriteriaOfBuild_1 = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier();
 			this.CriteriaOfSolution_1 = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier();
+			this.CriteriaOfOrganization_1 = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier();
+			this.CriteriaOfOrganization_2 = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier();
 			this.CriteriaOfBuildEventCode_1 = new MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaByIdentifier();
         }
 
@@ -53,7 +55,17 @@ namespace MSBuildExtensionPack.ViewModelData
 		public Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfSolution_1 { get; set; }
 		public string StatusMessageOfSolution_1 { get; set; }
 		public MSBuildExtensionPack.DataSourceEntities.Solution.KeyInformation Solution_1 { get; set; }
-		//4. BuildEventCode_1
+		//4. Organization_1
+		public MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier CriteriaOfOrganization_1 { get; set; }
+		public Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfOrganization_1 { get; set; }
+		public string StatusMessageOfOrganization_1 { get; set; }
+		public MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation Organization_1 { get; set; }
+		//5. Organization_2
+		public MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier CriteriaOfOrganization_2 { get; set; }
+		public Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfOrganization_2 { get; set; }
+		public string StatusMessageOfOrganization_2 { get; set; }
+		public MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation Organization_2 { get; set; }
+		//6. BuildEventCode_1
 		public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaByIdentifier CriteriaOfBuildEventCode_1 { get; set; }
 		public Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfBuildEventCode_1 { get; set; }
 		public string StatusMessageOfBuildEventCode_1 { get; set; }

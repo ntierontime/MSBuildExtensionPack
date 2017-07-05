@@ -63,13 +63,13 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         /// </summary>
         private void Logon()
         {
-            Framework.WcfClient.AuthenticationServiceAsynClient _AuthenticationServiceAsynClient = new Framework.WcfClient.AuthenticationServiceAsynClient();
-            _AuthenticationServiceAsynClient.LoginCompleted += new System.EventHandler<Framework.WcfClient.LoginCompletedEventArgs>(_AuthenticationServiceAsynClient_LoginCompleted);
+            var_AuthenticationServiceAsynClient = new ??();
+            _AuthenticationServiceAsynClient.LoginCompleted += new System.EventHandler<??.LoginCompletedEventArgs>(_AuthenticationServiceAsynClient_LoginCompleted);
             _AuthenticationServiceAsynClient.LoginAsync(this.m_LogOnModel.UserName, this.m_LogOnModel.Password, null, false);
             
         }
 
-        void _AuthenticationServiceAsynClient_LoginCompleted(object sender, Framework.WcfClient.LoginCompletedEventArgs e)
+        void _AuthenticationServiceAsynClient_LoginCompleted(object sender, ??.LoginCompletedEventArgs e)
         {
             IsLoggedOn = e.Result;
         }

@@ -30,6 +30,10 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
         [StringLength(1500)]
         public System.String Description { get; set; }
 
+        public System.Nullable<System.Int64> OrganizationId { get; set; }
+
+
+        public Organization Organization { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
 		public ICollection<Build> Builds { get; set; }

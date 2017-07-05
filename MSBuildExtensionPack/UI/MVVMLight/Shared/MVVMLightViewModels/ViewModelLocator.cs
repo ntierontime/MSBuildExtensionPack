@@ -292,7 +292,59 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
 
 
-        #region MVVMViewModel #1.4: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfSolutionVM
+        #region MVVMViewModel #1.4: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfOrganizationVM
+
+        private static MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfOrganizationVM m_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM;
+        public static MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfOrganizationVM MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM_Static
+        {
+            get
+            {
+                if (m_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM == null)
+                {
+                    CreateMSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM();
+                }
+
+                return m_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM;
+            }
+        }
+
+        public MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfOrganizationVM MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM
+        {
+            get
+            {
+                return MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM_Static;
+            }
+        }
+
+        /// <summary>
+        /// Provides a deterministic way to delete the MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM property.
+        /// </summary>
+        public static void Clear_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM()
+        {
+            if (m_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM != null)
+            {
+                m_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM.Cleanup();
+                m_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM = null;
+            }
+        }
+
+        /// <summary>
+        /// Provides a deterministic way to create the MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM property.
+        /// </summary>
+        public static void CreateMSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM()
+        {
+            if (m_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM == null)
+            {
+                m_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM = new MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfOrganizationVM();
+            }
+        }
+
+        #endregion MVVMViewModel: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfOrganizationVM
+
+
+
+
+        #region MVVMViewModel #1.5: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfSolutionVM
 
         private static MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfSolutionVM m_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM;
         public static MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfSolutionVM MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM_Static
@@ -502,7 +554,59 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
 
 
-        #region MVVMViewModel #2.4: MSBuildExtensionPack.MVVMLightViewModels.ItemVMSolution
+        #region MVVMViewModel #2.4: MSBuildExtensionPack.MVVMLightViewModels.ItemVMOrganization
+
+        private static MSBuildExtensionPack.MVVMLightViewModels.ItemVMOrganization m_MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization;
+        public static MSBuildExtensionPack.MVVMLightViewModels.ItemVMOrganization MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization_Static
+        {
+            get
+            {
+                if (m_MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization == null)
+                {
+                    CreateMSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization();
+                }
+
+                return m_MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization;
+            }
+        }
+
+        public MSBuildExtensionPack.MVVMLightViewModels.ItemVMOrganization MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization
+        {
+            get
+            {
+                return MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization_Static;
+            }
+        }
+
+        /// <summary>
+        /// Provides a deterministic way to delete the MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization property.
+        /// </summary>
+        public static void Clear_MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization()
+        {
+            if (m_MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization != null)
+            {
+                m_MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization.Cleanup();
+                m_MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization = null;
+            }
+        }
+
+        /// <summary>
+        /// Provides a deterministic way to create the MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization property.
+        /// </summary>
+        public static void CreateMSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization()
+        {
+            if (m_MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization == null)
+            {
+                m_MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization = new MSBuildExtensionPack.MVVMLightViewModels.ItemVMOrganization();
+            }
+        }
+
+        #endregion MVVMViewModel: MSBuildExtensionPack.MVVMLightViewModels.ItemVMOrganization
+
+
+
+
+        #region MVVMViewModel #2.5: MSBuildExtensionPack.MVVMLightViewModels.ItemVMSolution
 
         private static MSBuildExtensionPack.MVVMLightViewModels.ItemVMSolution m_MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution;
         public static MSBuildExtensionPack.MVVMLightViewModels.ItemVMSolution MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution_Static
@@ -712,7 +816,59 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
 
 
-        #region MVVMViewModel #3.4: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMSolution
+        #region MVVMViewModel #3.4: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMOrganization
+
+        private static MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMOrganization m_MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization;
+        public static MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMOrganization MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization_Static
+        {
+            get
+            {
+                if (m_MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization == null)
+                {
+                    CreateMSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization();
+                }
+
+                return m_MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization;
+            }
+        }
+
+        public MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMOrganization MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization
+        {
+            get
+            {
+                return MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization_Static;
+            }
+        }
+
+        /// <summary>
+        /// Provides a deterministic way to delete the MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization property.
+        /// </summary>
+        public static void Clear_MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization()
+        {
+            if (m_MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization != null)
+            {
+                m_MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization.Cleanup();
+                m_MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization = null;
+            }
+        }
+
+        /// <summary>
+        /// Provides a deterministic way to create the MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization property.
+        /// </summary>
+        public static void CreateMSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization()
+        {
+            if (m_MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization == null)
+            {
+                m_MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization = new MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMOrganization();
+            }
+        }
+
+        #endregion MVVMViewModel: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMOrganization
+
+
+
+
+        #region MVVMViewModel #3.5: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMSolution
 
         private static MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMSolution m_MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution;
         public static MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMSolution MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static
@@ -783,7 +939,11 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 			Clear_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM();
 
 
-			// #1.4: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfSolutionVM
+			// #1.4: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfOrganizationVM
+			Clear_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM();
+
+
+			// #1.5: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfSolutionVM
 			Clear_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM();
 
 
@@ -801,7 +961,11 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             Clear_MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog();
 
 
-			// #2.4: MSBuildExtensionPack.MVVMLightViewModels.ItemVMSolution
+			// #2.4: MSBuildExtensionPack.MVVMLightViewModels.ItemVMOrganization
+            Clear_MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization();
+
+
+			// #2.5: MSBuildExtensionPack.MVVMLightViewModels.ItemVMSolution
             Clear_MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution();
 
 
@@ -819,7 +983,11 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             Clear_MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog();
 
 
-			// #3.4: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMSolution
+			// #3.4: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMOrganization
+            Clear_MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization();
+
+
+			// #3.5: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMSolution
             Clear_MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution();
 
 

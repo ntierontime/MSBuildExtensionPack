@@ -34,6 +34,13 @@ namespace MSBuildExtensionPack.WcfWebApp
         }
 
 
+        public Atom10FeedFormatter GetOrganization()
+        {
+            SyndicationFeed feed = MSBuildExtensionPack.CommonBLL.SyndicationFeedFacade.GetOrganization();
+            return new Atom10FeedFormatter(feed);
+        }
+
+
         public Atom10FeedFormatter GetSolution()
         {
             SyndicationFeed feed = MSBuildExtensionPack.CommonBLL.SyndicationFeedFacade.GetSolution();

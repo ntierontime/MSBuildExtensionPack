@@ -41,6 +41,17 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
 
 
 
+	#region partial class Organization
+
+    public partial class Organization : MSBuildExtensionPack.EntityContracts.IOrganization
+    {
+
+    }
+	
+	#endregion partial class Organization
+
+
+
 	#region partial class Solution
 
     public partial class Solution : MSBuildExtensionPack.EntityContracts.ISolution
@@ -53,3 +64,4 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
 
 
 }
+

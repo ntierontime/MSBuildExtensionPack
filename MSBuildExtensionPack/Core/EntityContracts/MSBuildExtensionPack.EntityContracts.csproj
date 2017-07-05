@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -33,24 +33,34 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
     <Compile Include="Contracts\IBuild.cs" />
     <Compile Include="Contracts\IBuildEventCode.cs" />
     <Compile Include="Contracts\IBuildLog.cs" />
+    <Compile Include="Contracts\IOrganization.cs" />
     <Compile Include="Contracts\ISolution.cs" />
     <Compile Include="EntityContractHelpers\IBuildHelper.cs" />
     <Compile Include="EntityContractHelpers\IBuildEventCodeHelper.cs" />
     <Compile Include="EntityContractHelpers\IBuildLogHelper.cs" />
+    <Compile Include="EntityContractHelpers\IOrganizationHelper.cs" />
     <Compile Include="EntityContractHelpers\ISolutionHelper.cs" />
     <Compile Include="IdentifierContracts\IBuildIdentifier.cs" />
     <Compile Include="IdentifierContracts\IBuildEventCodeIdentifier.cs" />
     <Compile Include="IdentifierContracts\IBuildLogIdentifier.cs" />
+    <Compile Include="IdentifierContracts\IOrganizationIdentifier.cs" />
     <Compile Include="IdentifierContracts\ISolutionIdentifier.cs" />
     <Compile Include="IdentifierContractHelpers\IBuildIdentifierHelper.cs" />
     <Compile Include="IdentifierContractHelpers\IBuildEventCodeIdentifierHelper.cs" />
     <Compile Include="IdentifierContractHelpers\IBuildLogIdentifierHelper.cs" />
+    <Compile Include="IdentifierContractHelpers\IOrganizationIdentifierHelper.cs" />
     <Compile Include="IdentifierContractHelpers\ISolutionIdentifierHelper.cs" />
     <Compile Include="QueryCriteriaByEntityReferenceContracts\IQueryCriteriaBuildByFKs.cs" />
     <Compile Include="QueryCriteriaByEntityReferenceContracts\IQueryCriteriaBuildLogByFKs.cs" />
+    <Compile Include="QueryCriteriaByEntityReferenceContracts\IQueryCriteriaOrganizationByFKs.cs" />
+    <Compile Include="QueryCriteriaByEntityReferenceContracts\IQueryCriteriaSolutionByFKs.cs" />
+    <Compile Include="Queries\OrganizationPredicateByUniqueConstraint.cs" />
+    <None Include="map.2.B.3.vsd" />
+    <Content Include="map.2.B.3.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Frameworks\Framework\Framework.csproj">

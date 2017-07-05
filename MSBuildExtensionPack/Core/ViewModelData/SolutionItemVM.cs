@@ -6,7 +6,7 @@ using System.Text;
 
 namespace MSBuildExtensionPack.ViewModelData
 {
-    public partial class SolutionItemVM : Framework.ViewModels.ViewModelItemBase<MSBuildExtensionPack.DataSourceEntities.SolutionIdentifier, MSBuildExtensionPack.DataSourceEntities.Solution>
+    public partial class SolutionItemVM : Framework.ViewModels.ViewModelItemBase<MSBuildExtensionPack.DataSourceEntities.SolutionIdentifier, MSBuildExtensionPack.DataSourceEntities.Solution.Default>
     {
         #region log4net
 
@@ -14,6 +14,7 @@ namespace MSBuildExtensionPack.ViewModelData
 
         #endregion log4net
 
+            public Framework.NameValueCollection NameValueCollectionOfMSBuildExtensionPack_Organization { get; set; }
 
 	}
 }

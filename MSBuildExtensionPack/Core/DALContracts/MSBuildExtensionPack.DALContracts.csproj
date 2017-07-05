@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -33,11 +33,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
     <Compile Include="IBuildRepository.cs" />
     <Compile Include="IBuildEventCodeRepository.cs" />
     <Compile Include="IBuildLogRepository.cs" />
+    <Compile Include="IOrganizationRepository.cs" />
     <Compile Include="ISolutionRepository.cs" />
     <Compile Include="DataAccessLayerFactoryContract.cs" />
+    <None Include="map.2.A.1.vsd" />
+    <Content Include="map.2.A.1.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataSourceEntities\MSBuildExtensionPack.DataSourceEntities.csproj">

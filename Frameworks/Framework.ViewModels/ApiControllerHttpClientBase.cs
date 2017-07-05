@@ -164,42 +164,6 @@ namespace Framework.ViewModels
             }
         }
 
-
-        public TViewModel PostSync<TViewModel>(string url, TViewModel vm)
-            where TViewModel : class, Framework.ViewModels.IViewModelBase, new()
-        {
-            string requestJSON = JsonConvert.SerializeObject(vm, Formatting.Indented, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
-            var httpContent = new StringContent(requestJSON, System.Text.Encoding.UTF8, "application/json");
-
-            try
-            {
-                var response = Client.PostAsync(url, httpContent);
-                response.RunSynchronously();
-                
-                if (response.IsCompleted && response.Result.IsSuccessStatusCode)
-                {
-                    var content = response.Result.Content.ReadAsStringAsync();
-                    content.RunSynchronously();
-                    var result = JsonConvert.DeserializeObject<TViewModel>(content.Result);
-                    return result;
-                }
-                else
-                {
-                    var content = response.Result.Content.ReadAsStringAsync();
-                    content.RunSynchronously();
-                    vm.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
-                    vm.StatusMessageOfResult = content.Result;
-                    return vm;
-                }
-            }
-            catch (Exception ex)
-            {
-                vm.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
-                vm.StatusMessageOfResult = ex.Message;
-                return vm;
-            }
-        }
-
         public async Task<TViewModel> PostIViewModelEntityRelatedBase<TViewModel>(string url, TViewModel vm)
             where TViewModel : class, Framework.ViewModels.IViewModelEntityRelatedBase, new()
         {
@@ -283,8 +247,6 @@ namespace Framework.ViewModels
         public async Task<TResponse> Delete<TResponse>(string url)
             where TResponse : class, Framework.CommonBLLEntities.IBusinessLogicLayerResponseMessageBase, new()
         {
-
-
             var response = await Client.DeleteAsync(url);
 
             if (response.IsSuccessStatusCode)

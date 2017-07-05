@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
+using System.Threading.Tasks;
 
 namespace MSBuildExtensionPack.MVVMLightViewModels
 {
@@ -21,7 +22,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
     /// </para>
     /// </summary>
     public class WPCommonOfSolutionVM
-        : Framework.Xaml.ViewModelBaseWithResultAndUIElement<MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon, MSBuildExtensionPack.DataSourceEntities.SolutionCollection, MSBuildExtensionPack.DataSourceEntities.Solution>
+        : Framework.Xaml.ViewModelBaseWithResultAndUIElement<MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon, MSBuildExtensionPack.DataSourceEntities.SolutionCollection, MSBuildExtensionPack.DataSourceEntities.Solution, MSBuildExtensionPack.DataSourceEntities.Solution.DefaultCollection, MSBuildExtensionPack.DataSourceEntities.Solution.Default>
     {
         #region override string EntityName and ViewName
 
@@ -54,7 +55,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         /// </summary>
         public WPCommonOfSolutionVM()
         {
-            this.EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Solution>();
+            this.EntityCollectionDefault = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Solution.Default>();
 
             ////if (IsInDesignMode)
             ////{
@@ -80,7 +81,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
 
-            this.m_EntityCollection.Clear();
+            this.m_EntityCollectionDefault.Clear();
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
         }
@@ -110,9 +111,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 vmData.QueryOrderBySettingCollection = this.QueryOrderBySettingCollection;
 
                 var client = new MSBuildExtensionPack.WebApiClient.SolutionApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-
-                var resultVMData = client.GetWPCommonOfSolutionVMAsync(vmData);
-                var result = resultVMData.Result;
+				var result = Task.Run(() => client.GetWPCommonOfSolutionVMAsync(vmData)).Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
 
@@ -121,26 +120,26 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                     this.StatusOfResult = result.StatusOfResult;
                     if (result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
                     {
-                        if (this.m_EntityCollection == null)
+                        if (this.m_EntityCollectionDefault == null)
                         {
-                            this.m_EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Solution>();
+                            this.m_EntityCollectionDefault = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Solution.Default>();
                         }
                         else
                         {
-                            this.m_EntityCollection.Clear();
+                            this.m_EntityCollectionDefault.Clear();
                         }
 
                         if (result.Result != null)
                         {
                             foreach (var item in result.Result)
                             {
-                                this.m_EntityCollection.Add(item);
+                                this.m_EntityCollectionDefault.Add(item);
                             }
                         }
 
-                        this.QueryPagingSetting = resultVMData.Result.QueryPagingSetting;
+                        this.QueryPagingSetting = result.QueryPagingSetting;
                         this.OriginalQueryOrderBySettingCollecionInString = this.QueryOrderBySettingCollecionInString;
-                        this.QueryOrderBySettingCollection = resultVMData.Result.QueryOrderBySettingCollection;
+                        this.QueryOrderBySettingCollection = result.QueryOrderBySettingCollection;
                     }
                     else
                     {
@@ -159,8 +158,8 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         public override Framework.NameValueCollection GetDefaultListOfQueryOrderBySettingCollecionInString()
         {
             Framework.NameValueCollection list = new Framework.NameValueCollection();
-            list.Add("ExternalParentId~ASC", "ExternalParentId A-Z");
-					list.Add("ExternalParentId~DESC", "ExternalParentId Z-A");
+            list.Add("Organization_1_Name~ASC", "Organization_1_Name A-Z");
+					list.Add("Organization_1_Name~DESC", "Organization_1_Name Z-A");
             return list;
         }
     }

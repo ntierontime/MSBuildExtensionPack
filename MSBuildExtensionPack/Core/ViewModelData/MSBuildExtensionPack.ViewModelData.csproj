@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -33,15 +33,20 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
     <Compile Include="OrderByLists.cs" />
     <Compile Include="BuildItemVM.cs" />
     <Compile Include="BuildEventCodeItemVM.cs" />
     <Compile Include="BuildLogItemVM.cs" />
+    <Compile Include="OrganizationItemVM.cs" />
     <Compile Include="SolutionItemVM.cs" />
     <Compile Include="BuildWorkspaceVM.cs" />
     <Compile Include="BuildEventCodeWorkspaceVM.cs" />
     <Compile Include="BuildLogWorkspaceVM.cs" />
+    <Compile Include="OrganizationWorkspaceVM.cs" />
     <Compile Include="SolutionWorkspaceVM.cs" />
+    <None Include="map.2.B.2.vsd" />
+    <Content Include="map.2.B.2.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommonBLLEntities\MSBuildExtensionPack.CommonBLLEntities.csproj">
@@ -72,17 +77,17 @@
       <Project>{c3a270de-9727-492e-91e2-f56e7e0e0f83}</Project>
       <Name>Framework.EntityContracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Frameworks\Framework.Resources\Framework.Resources.csproj">
+    <ProjectReference Include="..\..\..\Frameworks\Framework.Resx\Framework.Resx.csproj">
       <Project>{c72b898b-b53b-42d5-9f4f-673f84bb485b}</Project>
-      <Name>Framework.Resources</Name>
+      <Name>Framework.Resx</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks\Framework.ViewModels\Framework.ViewModels.csproj">
       <Project>{2cc97c32-9ffa-4da4-a6c0-83f300404ec3}</Project>
       <Name>Framework.ViewModels</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Resources\MSBuildExtensionPack.Resources.csproj">
-      <Project>{42681747-107b-487b-9ea2-ce46754682fd}</Project>
-      <Name>MSBuildExtensionPack.Resources</Name>
+    <ProjectReference Include="..\Resx\MSBuildExtensionPack.Resx.csproj">
+      <Project>{fd138435-0f7c-4b72-b9d3-987e7fe69f80}</Project>
+      <Name>MSBuildExtensionPack.Resx</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

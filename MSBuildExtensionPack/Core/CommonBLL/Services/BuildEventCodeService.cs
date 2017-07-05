@@ -7,8 +7,7 @@ namespace MSBuildExtensionPack.CommonBLL
 {
     /// <summary>
     ///  inherit WcfService contract which will take advantage of .Net Wcf,
-    ///  consume BusinessLogicLayerMemberShip
-    ///  utilize LinqDataAccessLayer class 
+    ///  consume BusinessLogicLayerMemberShip -- should be removed
     ///  provides Single/Batch Insert/Update/Delete
     ///  query methods based on BusinessLogicLayerRequestMessage, convert data access message to business logic layer response message
     ///  this BLL class targets at entity <see cref="MSBuildExtensionPack.BuildEventCode"/>
@@ -1033,8 +1032,6 @@ namespace MSBuildExtensionPack.CommonBLL
 
 
 		#endregion GetAscendantAndDescendant
-
-
 
 
 	}

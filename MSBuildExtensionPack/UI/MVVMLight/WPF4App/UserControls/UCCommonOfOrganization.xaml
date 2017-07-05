@@ -1,0 +1,562 @@
+<UserControl x:Class="MSBuildExtensionPack.WPF4App.UserControls.UCCommonOfOrganization"
+			 xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:cmd="http://www.galasoft.ch/mvvmlight"
+			 xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+			 xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+			 xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+			 xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels"
+             mc:Ignorable="d" >
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../AppResourceDictionary.xaml" />
+                <ResourceDictionary Source="../Skins/MainSkin.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid HorizontalAlignment="Stretch">
+        <i:Interaction.Triggers>
+            <i:EventTrigger EventName="Loaded">
+                <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM.SearchCommand, Source={StaticResource Locator}}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+            </i:EventTrigger>
+        </i:Interaction.Triggers>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM, Source={StaticResource Locator}}" HorizontalAlignment="Stretch">
+<Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+				<RowDefinition Height="30" />
+				<RowDefinition Height="30" />
+				<RowDefinition Height="30" />
+				<RowDefinition Height="30" />
+				<RowDefinition Height="30" />
+				<RowDefinition Height="30" />
+				<RowDefinition Height="30" />
+				<RowDefinition Height="30" />
+				<RowDefinition Height="30" />
+				<RowDefinition Height="30" />
+				<RowDefinition Height="30" />
+				<RowDefinition Height="30" />
+				<RowDefinition Height="30" />
+				<RowDefinition Height="30" />
+				<RowDefinition Height="30" />
+				<RowDefinition Height="30" />            </Grid.RowDefinitions>
+<CheckBox Name="ID_CheckBox_Search_isToCompareNtextColumnCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareNtextColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNtextColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft.IsToCompare}" />
+<TextBox Name="ID_TextBox_Search_valueToBeContainedNtextColumnCommonOftOfCommon" Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft.ValueToBeContained}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNtextColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0" />
+<CheckBox Name="ID_CheckBox_Search_isToCompareNvarcharColumnCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareNvarcharColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNvarcharColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.NvarcharColumnCommonOft.IsToCompare}" />
+<TextBox Name="ID_TextBox_Search_valueToBeContainedNvarcharColumnCommonOftOfCommon" Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.NvarcharColumnCommonOft.ValueToBeContained}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNvarcharColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" />
+<CheckBox Name="ID_CheckBox_Search_isToCompareNcharColumnCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareNcharColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNcharColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.NcharColumnCommonOft.IsToCompare}" />
+<TextBox Name="ID_TextBox_Search_valueToBeContainedNcharColumnCommonOftOfCommon" Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.NcharColumnCommonOft.ValueToBeContained}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNcharColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" />
+<CheckBox Name="ID_CheckBox_Search_isToCompareTextColumnCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareTextColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareTextColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="3" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.TextColumnCommonOft.IsToCompare}" />
+<TextBox Name="ID_TextBox_Search_valueToBeContainedTextColumnCommonOftOfCommon" Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.TextColumnCommonOft.ValueToBeContained}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedTextColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="3" />
+<CheckBox Name="ID_CheckBox_Search_isToCompareVarcharColumnCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareVarcharColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareVarcharColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="4" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.VarcharColumnCommonOft.IsToCompare}" />
+<TextBox Name="ID_TextBox_Search_valueToBeContainedVarcharColumnCommonOftOfCommon" Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.VarcharColumnCommonOft.ValueToBeContained}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedVarcharColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="4" />
+<CheckBox Name="ID_CheckBox_Search_isToCompareCharColumnCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareCharColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareCharColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="5" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.CharColumnCommonOft.IsToCompare}" />
+<TextBox Name="ID_TextBox_Search_valueToBeContainedCharColumnCommonOftOfCommon" Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.CharColumnCommonOft.ValueToBeContained}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedCharColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="5" />
+<CheckBox Name="ID_CheckBox_Search_isToCompareNameCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="6" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.NameCommonOft.IsToCompare}" />
+<TextBox Name="ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon" Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.NameCommonOft.ValueToBeContained}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="6" />
+<CheckBox Name="ID_CheckBox_Search_isToCompareDateColumnCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareDateColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareDateColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="7" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.IsToCompare}" />
+<WrapPanel Grid.Column="1" Grid.Row="7" HorizontalAlignment="Stretch">
+<CheckBox Name="ID_CheckBox_Search_isToCompareLowerBoundDateColumnCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDateColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDateColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.IsToCompareLowerBound}" />
+<DatePicker Name="ID_DatePicker_Search_lowerBoundDateColumnCommonOftOfCommon" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundDateColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Center" SelectedDate="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.LowerBound}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" />
+<CheckBox Name="ID_CheckBox_Search_isToCompareUpperBoundDateColumnCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDateColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDateColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.IsToCompareUpperBound}" />
+<DatePicker Name="ID_DatePicker_Search_upperBoundDateColumnCommonOftOfCommon" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundDateColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Center" SelectedDate="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.UpperBound}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" />
+</WrapPanel>
+<CheckBox Name="ID_CheckBox_Search_isToCompareSmalldatetimeColumnCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareSmalldatetimeColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareSmalldatetimeColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="8" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.IsToCompare}" />
+<WrapPanel Grid.Column="1" Grid.Row="8" HorizontalAlignment="Stretch">
+<CheckBox Name="ID_CheckBox_Search_isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.IsToCompareLowerBound}" />
+<DatePicker Name="ID_DatePicker_Search_lowerBoundSmalldatetimeColumnCommonOftOfCommon" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundSmalldatetimeColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Center" SelectedDate="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.LowerBound}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" />
+<CheckBox Name="ID_CheckBox_Search_isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.IsToCompareUpperBound}" />
+<DatePicker Name="ID_DatePicker_Search_upperBoundSmalldatetimeColumnCommonOftOfCommon" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundSmalldatetimeColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Center" SelectedDate="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.UpperBound}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" />
+</WrapPanel>
+<CheckBox Name="ID_CheckBox_Search_isToCompareDatetime2ColumnCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareDatetime2ColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareDatetime2ColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="9" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.IsToCompare}" />
+<WrapPanel Grid.Column="1" Grid.Row="9" HorizontalAlignment="Stretch">
+<CheckBox Name="ID_CheckBox_Search_isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.IsToCompareLowerBound}" />
+<DatePicker Name="ID_DatePicker_Search_lowerBoundDatetime2ColumnCommonOftOfCommon" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundDatetime2ColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Center" SelectedDate="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.LowerBound}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" />
+<CheckBox Name="ID_CheckBox_Search_isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.IsToCompareUpperBound}" />
+<DatePicker Name="ID_DatePicker_Search_upperBoundDatetime2ColumnCommonOftOfCommon" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundDatetime2ColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Center" SelectedDate="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.UpperBound}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" />
+</WrapPanel>
+<CheckBox Name="ID_CheckBox_Search_isToCompareDatetimeColumnCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareDatetimeColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareDatetimeColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="10" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.IsToCompare}" />
+<WrapPanel Grid.Column="1" Grid.Row="10" HorizontalAlignment="Stretch">
+<CheckBox Name="ID_CheckBox_Search_isToCompareLowerBoundDatetimeColumnCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.IsToCompareLowerBound}" />
+<DatePicker Name="ID_DatePicker_Search_lowerBoundDatetimeColumnCommonOftOfCommon" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundDatetimeColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Center" SelectedDate="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.LowerBound}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" />
+<CheckBox Name="ID_CheckBox_Search_isToCompareUpperBoundDatetimeColumnCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.IsToCompareUpperBound}" />
+<DatePicker Name="ID_DatePicker_Search_upperBoundDatetimeColumnCommonOftOfCommon" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundDatetimeColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Center" SelectedDate="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.UpperBound}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" />
+</WrapPanel>
+<CheckBox Name="ID_CheckBox_Search_isToCompareBitColumnCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareBitColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareBitColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="11" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.BitColumnCommonOft.IsToCompare}" />
+<CheckBox Name="ID_CheckBox_Search_valueToCompareBitColumnCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.ValueToCompare_ID_CheckBox_Search_valueToCompareBitColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_ValueToCompare_ID_CheckBox_Search_valueToCompareBitColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Grid.Row="11" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.BitColumnCommonOft.ValueToCompare}" />
+<CheckBox Name="ID_CheckBox_Search_isToCompareCreatedDateTimeCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareCreatedDateTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareCreatedDateTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="12" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.IsToCompare}" />
+<WrapPanel Grid.Column="1" Grid.Row="12" HorizontalAlignment="Stretch">
+<CheckBox Name="ID_CheckBox_Search_isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.IsToCompareLowerBound}" />
+<DatePicker Name="ID_DatePicker_Search_lowerBoundCreatedDateTimeCommonOftOfCommon" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundCreatedDateTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Center" SelectedDate="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.LowerBound}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" />
+<CheckBox Name="ID_CheckBox_Search_isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.IsToCompareUpperBound}" />
+<DatePicker Name="ID_DatePicker_Search_upperBoundCreatedDateTimeCommonOftOfCommon" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundCreatedDateTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Center" SelectedDate="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.UpperBound}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" />
+</WrapPanel>
+<CheckBox Name="ID_CheckBox_Search_isToCompareIsSystemBuiltInCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="13" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.IsSystemBuiltInCommonOft.IsToCompare}" />
+<CheckBox Name="ID_CheckBox_Search_valueToCompareIsSystemBuiltInCommonOftOfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.ValueToCompare_ID_CheckBox_Search_valueToCompareIsSystemBuiltInCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_ValueToCompare_ID_CheckBox_Search_valueToCompareIsSystemBuiltInCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Grid.Row="13" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.IsSystemBuiltInCommonOft.ValueToCompare}" />
+<CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="14" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2.IsToCompare}" />
+<ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfOrganization_2OfCommon" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Organization, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="14" ItemsSource="{Binding Path=DropDownContentsOfOrganization_2}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2.ValueToCompare}">
+                  <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Loaded">
+                        <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=GetDropDownContentsOfOrganization_2Command}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+</ComboBox>
+        </Grid>
+<ListView Name="V_Common" Width="600" Margin="12,12,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollectionDefault}" SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM.CurrentDefault, Mode=TwoWay, Source={StaticResource Locator}}">
+  <i:Interaction.Triggers>
+  <i:EventTrigger EventName="SelectionChanged">
+    <cmd:EventToCommand Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM.SelectionChangedCommand, Source={StaticResource Locator}}" PassEventArgsToCommand="True" />
+  </i:EventTrigger>
+</i:Interaction.Triggers>            <ListView.View>
+				<GridView ColumnHeaderToolTip="BuildLog" AllowsColumnReorder="true">
+					<GridViewColumn>
+                        <GridViewColumnHeader/>
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+<WrapPanel>
+				<!-- TO-DO: START it is regular details page, to be replaced by full details -->
+                <Button     Name="Details" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganizationLog.LaunchDetailsViewCommand, Source={StaticResource Locator}}" ToolTip="{Binding Path=Framework_Resx_UIStringResource.DetailsAlternativeText, Source={StaticResource LocalizedStrings}}" CommandParameter="{Binding}" >
+                    <StackPanel>
+                        <iconPacks:PackIconOcticons Kind="Briefcase" />
+                        <!--<TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.DetailsAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>-->
+                    </StackPanel>
+                </Button>
+				<!-- TO-DO: END it is regular details page, to be replaced by full details -->
+                <Button     Name="Edit" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization.LaunchEditViewCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.EditAlternativeText, Source={StaticResource LocalizedStrings}}">
+                    <StackPanel>
+                        <iconPacks:PackIconModern Kind="Edit" />
+                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.EditAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    </StackPanel>
+                </Button>
+</WrapPanel>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Id, Source={StaticResource LocalizedStrings}}" Tag="Id" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Id}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Id}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Id}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+							<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Organization_2_Name, Source={StaticResource LocalizedStrings}}" Tag="Organization_2_Name" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Button Style="{StaticResource LinkButton}" Content="{Binding Path=Organization_2_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization.LaunchOrganization_2DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+                                    <!--<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_2_Name}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_2_Name}" ToolTip="" />-->
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Organization_2_Name}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Name, Source={StaticResource LocalizedStrings}}" Tag="Name" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Name}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Name}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Name}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" Tag="IsSystemBuiltIn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<CheckBox Style="{StaticResource GridBlockStyle}" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=IsSystemBuiltIn}" IsEnabled="False" />
+									<CheckBox Style="{StaticResource GridEditStyle}" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=IsSystemBuiltIn}" />
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.UniqueIdentifier, Source={StaticResource LocalizedStrings}}" Tag="UniqueIdentifier" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=UniqueIdentifier}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=UniqueIdentifier}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=UniqueIdentifier}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.CreatedDateTime, Source={StaticResource LocalizedStrings}}" Tag="CreatedDateTime" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=CreatedDateTime}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=CreatedDateTime}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=CreatedDateTime}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.CharColumn, Source={StaticResource LocalizedStrings}}" Tag="CharColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=CharColumn}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=CharColumn}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=CharColumn}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.VarcharColumn, Source={StaticResource LocalizedStrings}}" Tag="VarcharColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=VarcharColumn}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=VarcharColumn}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=VarcharColumn}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.TextColumn, Source={StaticResource LocalizedStrings}}" Tag="TextColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=TextColumn}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=TextColumn}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=TextColumn}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.NcharColumn, Source={StaticResource LocalizedStrings}}" Tag="NcharColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=NcharColumn}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=NcharColumn}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=NcharColumn}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.NvarcharColumn, Source={StaticResource LocalizedStrings}}" Tag="NvarcharColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=NvarcharColumn}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=NvarcharColumn}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=NvarcharColumn}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.NtextColumn, Source={StaticResource LocalizedStrings}}" Tag="NtextColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=NtextColumn}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=NtextColumn}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=NtextColumn}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" Tag="BitColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<CheckBox Style="{StaticResource GridBlockStyle}" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=BitColumn}" IsEnabled="False" />
+									<CheckBox Style="{StaticResource GridEditStyle}" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=BitColumn}" />
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BinaryColumn, Source={StaticResource LocalizedStrings}}" Tag="BinaryColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=BinaryColumn}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=BinaryColumn}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=BinaryColumn}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.VarbinaryColumn, Source={StaticResource LocalizedStrings}}" Tag="VarbinaryColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=VarbinaryColumn}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=VarbinaryColumn}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=VarbinaryColumn}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.ImageColumn, Source={StaticResource LocalizedStrings}}" Tag="ImageColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=ImageColumn}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=ImageColumn}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=ImageColumn}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.TinyintColumn, Source={StaticResource LocalizedStrings}}" Tag="TinyintColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=TinyintColumn}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=TinyintColumn}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=TinyintColumn}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.SmallintColumn, Source={StaticResource LocalizedStrings}}" Tag="SmallintColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=SmallintColumn}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=SmallintColumn}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=SmallintColumn}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IntColumn, Source={StaticResource LocalizedStrings}}" Tag="IntColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=IntColumn}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=IntColumn}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=IntColumn}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BigintColumn, Source={StaticResource LocalizedStrings}}" Tag="BigintColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=BigintColumn}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=BigintColumn}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=BigintColumn}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.DecimalColumn, Source={StaticResource LocalizedStrings}}" Tag="DecimalColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=DecimalColumn}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=DecimalColumn}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=DecimalColumn}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.NumericColumn, Source={StaticResource LocalizedStrings}}" Tag="NumericColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=NumericColumn}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=NumericColumn}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=NumericColumn}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.SmallmoneyColumn, Source={StaticResource LocalizedStrings}}" Tag="SmallmoneyColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=SmallmoneyColumn}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=SmallmoneyColumn}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=SmallmoneyColumn}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.MoneyColumn, Source={StaticResource LocalizedStrings}}" Tag="MoneyColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=MoneyColumn}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=MoneyColumn}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=MoneyColumn}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.FloatColumn, Source={StaticResource LocalizedStrings}}" Tag="FloatColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=FloatColumn}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=FloatColumn}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=FloatColumn}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.RealColumn, Source={StaticResource LocalizedStrings}}" Tag="RealColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=RealColumn}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=RealColumn}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=RealColumn}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.DatetimeColumn, Source={StaticResource LocalizedStrings}}" Tag="DatetimeColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=DatetimeColumn}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=DatetimeColumn}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=DatetimeColumn}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Datetime2Column, Source={StaticResource LocalizedStrings}}" Tag="Datetime2Column" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Datetime2Column}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Datetime2Column}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Datetime2Column}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.SmalldatetimeColumn, Source={StaticResource LocalizedStrings}}" Tag="SmalldatetimeColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=SmalldatetimeColumn}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=SmalldatetimeColumn}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=SmalldatetimeColumn}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.DateColumn, Source={StaticResource LocalizedStrings}}" Tag="DateColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=DateColumn}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=DateColumn}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=DateColumn}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.TimeColumn, Source={StaticResource LocalizedStrings}}" Tag="TimeColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=TimeColumn}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=TimeColumn}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=TimeColumn}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.UniqueidentifierColumn, Source={StaticResource LocalizedStrings}}" Tag="UniqueidentifierColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=UniqueidentifierColumn}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=UniqueidentifierColumn}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=UniqueidentifierColumn}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+				</GridView>
+            </ListView.View>
+</ListView>
+    </Grid>
+</UserControl>

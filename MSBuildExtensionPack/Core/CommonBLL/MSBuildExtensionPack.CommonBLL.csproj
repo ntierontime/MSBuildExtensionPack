@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -33,20 +33,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
     <Compile Include="Services\BuildService.cs" />
     <Compile Include="Services\BuildEventCodeService.cs" />
     <Compile Include="Services\BuildLogService.cs" />
+    <Compile Include="Services\OrganizationService.cs" />
     <Compile Include="Services\SolutionService.cs" />
     <Compile Include="BusinessLogicLayerFactory.cs" />
     <Compile Include="ChartingService\BuildChartBuilder.cs" />
     <Compile Include="ChartingService\BuildEventCodeChartBuilder.cs" />
     <Compile Include="ChartingService\BuildLogChartBuilder.cs" />
+    <Compile Include="ChartingService\OrganizationChartBuilder.cs" />
     <Compile Include="ChartingService\SolutionChartBuilder.cs" />
     <Compile Include="DataStreamServiceProviders\BuildDataStreamService.cs" />
     <Compile Include="DataStreamServiceProviders\BuildEventCodeDataStreamService.cs" />
     <Compile Include="DataStreamServiceProviders\BuildLogDataStreamService.cs" />
+    <Compile Include="DataStreamServiceProviders\OrganizationDataStreamService.cs" />
     <Compile Include="DataStreamServiceProviders\SolutionDataStreamService.cs" />
     <Compile Include="SyndicationFeedFacade.cs" />
+    <None Include="map.2.B.2.vsd" />
+    <Content Include="map.2.B.2.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommonBLLEntities\MSBuildExtensionPack.CommonBLLEntities.csproj">
@@ -97,14 +103,19 @@
       <Project>{950b9cdb-9286-4a1a-8d88-1df6954a45e3}</Project>
       <Name>Framework.Web</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Resources\MSBuildExtensionPack.Resources.csproj">
-      <Project>{42681747-107b-487b-9ea2-ce46754682fd}</Project>
-      <Name>MSBuildExtensionPack.Resources</Name>
+    <ProjectReference Include="..\Resx\MSBuildExtensionPack.Resx.csproj">
+      <Project>{fd138435-0f7c-4b72-b9d3-987e7fe69f80}</Project>
+      <Name>MSBuildExtensionPack.Resx</Name>
     </ProjectReference>
     <ProjectReference Include="..\WcfContracts\MSBuildExtensionPack.WcfContracts.csproj">
       <Project>{3ff07bef-ff15-47ee-9bf2-107623976ca5}</Project>
       <Name>MSBuildExtensionPack.WcfContracts</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.ServiceModel" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ClosedXML, Version=0.87.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
@@ -119,12 +130,6 @@
       <HintPath>..\..\..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System" />
-    <Reference Include="System.ServiceModel" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <PropertyGroup>
     <PostBuildEvent>rem copy $(TargetPath) $(SolutionDir)BuiltResults\*.* /y</PostBuildEvent>
