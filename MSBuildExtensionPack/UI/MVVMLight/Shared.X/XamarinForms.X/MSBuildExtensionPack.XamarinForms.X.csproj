@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -65,9 +65,8 @@
     <Compile Include="GlobalPages\RootPage.xaml.cs">
       <DependentUpon>RootPage.xaml</DependentUpon>
     </Compile>
-    <None Include="ResourceApp.config" />
+    <EmbeddedResource Include="ResourceApp.config" />
     <Compile Include="TranslateExtension.cs" />
-    <None Include="app.config" />
     <Compile Include="ViewModels\MenuPageViewModel.cs" />
     <None Include="map.2.D.1.vsd" />
     <Content Include="map.2.D.1.vsd.png" />
