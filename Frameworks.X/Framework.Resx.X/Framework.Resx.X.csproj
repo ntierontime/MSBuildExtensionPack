@@ -37,7 +37,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <None Include="map.1.A.2.vsd" />
-    <Content Include="map.1.A.2.vsd.png" />
+    <None Include="map.1.A.2.vsd.png" />
     <Content Include="Images\AddNew.png" />
     <Content Include="Images\Attachment.png" />
     <Content Include="Images\Back.png" />

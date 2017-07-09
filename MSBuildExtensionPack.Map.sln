@@ -66,10 +66,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.IOSApp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.UWPApp", "MSBuildExtensionPack\UI\MVVMLight\UWPApp\MSBuildExtensionPack.UWPApp.csproj", "{F8BBED73-DF22-4DEE-9D16-7B4AF8785D11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.Windows81App", "MSBuildExtensionPack\UI\MVVMLight\Windows81App\MSBuildExtensionPack.Windows81App.csproj", "{8783423B-1B53-45BB-BE36-FB5F4E698C51}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.WP81App", "MSBuildExtensionPack\UI\MVVMLight\WP81App\MSBuildExtensionPack.WP81App.csproj", "{23436489-61C3-4588-A178-1DC2715592E4}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.Resx", "MSBuildExtensionPack\Core\Resx\MSBuildExtensionPack.Resx.csproj", "{FD138435-0F7C-4B72-B9D3-987E7FE69F80}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.ViewModelData", "MSBuildExtensionPack\Core\ViewModelData\MSBuildExtensionPack.ViewModelData.csproj", "{59622778-B13C-464E-98F7-EA662653AF27}"
@@ -302,14 +298,6 @@ Global
 		{F8BBED73-DF22-4DEE-9D16-7B4AF8785D11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8BBED73-DF22-4DEE-9D16-7B4AF8785D11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8BBED73-DF22-4DEE-9D16-7B4AF8785D11}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8783423B-1B53-45BB-BE36-FB5F4E698C51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8783423B-1B53-45BB-BE36-FB5F4E698C51}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8783423B-1B53-45BB-BE36-FB5F4E698C51}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8783423B-1B53-45BB-BE36-FB5F4E698C51}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{23436489-61C3-4588-A178-1DC2715592E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{23436489-61C3-4588-A178-1DC2715592E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{23436489-61C3-4588-A178-1DC2715592E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{23436489-61C3-4588-A178-1DC2715592E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD138435-0F7C-4B72-B9D3-987E7FE69F80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FD138435-0F7C-4B72-B9D3-987E7FE69F80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD138435-0F7C-4B72-B9D3-987E7FE69F80}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -457,8 +445,6 @@ Global
 		{85a9ac9f-142b-4f94-b5aa-35fbcc53c7e7} = {81b8a46d-eb62-4dd2-8b85-6094b2d5ffc9}
 		{d5323f30-7193-4287-b93f-58115e095b1c} = {81b8a46d-eb62-4dd2-8b85-6094b2d5ffc9}
 		{f8bbed73-df22-4dee-9d16-7b4af8785d11} = {81b8a46d-eb62-4dd2-8b85-6094b2d5ffc9}
-		{8783423b-1b53-45bb-be36-fb5f4e698c51} = {81b8a46d-eb62-4dd2-8b85-6094b2d5ffc9}
-		{23436489-61c3-4588-a178-1dc2715592e4} = {81b8a46d-eb62-4dd2-8b85-6094b2d5ffc9}
 
     EndGlobal
 

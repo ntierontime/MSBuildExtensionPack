@@ -94,7 +94,7 @@
     <Compile Include="DispatcherHelperWrapper.cs" />
     <Compile Include="Main.cs" />
     <None Include="map.2.D.2.vsd" />
-    <BundleResource Include="map.2.D.2.vsd.png" />
+    <None Include="map.2.D.2.vsd.png" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <ITunesArtwork Include="iTunesArtwork" />

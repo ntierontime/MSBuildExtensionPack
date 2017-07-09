@@ -41,7 +41,7 @@
     <Compile Include="ISolutionRepository.cs" />
     <Compile Include="DataAccessLayerFactoryContract.cs" />
     <None Include="map.2.A.1.vsd" />
-    <Content Include="map.2.A.1.vsd.png" />
+    <None Include="map.2.A.1.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataSourceEntities\MSBuildExtensionPack.DataSourceEntities.csproj">

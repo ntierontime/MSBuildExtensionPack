@@ -90,7 +90,6 @@
     </ApplicationDefinition>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="DispatcherHelperWrapper.cs" />
     <Page Include="MainPage.xaml">
@@ -99,7 +98,6 @@
     </Page>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>

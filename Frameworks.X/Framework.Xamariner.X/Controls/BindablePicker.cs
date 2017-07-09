@@ -4,7 +4,7 @@ using System.Collections.Specialized;
 using System.Reflection;
 using Xamarin.Forms;
 
-namespace Framework.Xamariner
+namespace Framework.Xamariner.Controls
 {
     // License Url: https://github.com/Oceanware/XamarinFormsBindablePicker/blob/master/LICENSE
     /*

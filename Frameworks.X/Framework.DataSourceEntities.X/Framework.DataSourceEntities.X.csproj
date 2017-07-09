@@ -37,7 +37,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <None Include="map.1.B.3.vsd" />
-    <Content Include="map.1.B.3.vsd.png" />
+    <None Include="map.1.B.3.vsd.png" />
     <Compile Include="..\..\Frameworks\Framework.DataSourceEntities\DataAccessLayerMessageBase.cs">
       <Link>DataAccessLayerMessageBase.cs</Link>
     </Compile>

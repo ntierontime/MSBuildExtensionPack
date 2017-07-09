@@ -52,7 +52,7 @@
     <Compile Include="DataStreamServiceProviders\SolutionDataStreamService.cs" />
     <Compile Include="SyndicationFeedFacade.cs" />
     <None Include="map.2.B.2.vsd" />
-    <Content Include="map.2.B.2.vsd.png" />
+    <None Include="map.2.B.2.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommonBLLEntities\MSBuildExtensionPack.CommonBLLEntities.csproj">

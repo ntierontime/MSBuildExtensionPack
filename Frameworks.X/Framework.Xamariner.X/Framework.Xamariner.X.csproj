@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Framework.Xamariner</RootNamespace>
-    <AssemblyName>Framework.Xamariner</AssemblyName>
+    <AssemblyName>Framework.Xamariner.X</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -43,7 +43,7 @@
     <Compile Include="Globalization\PlatformCulture.cs" />
     <Compile Include="Globalization\Platforms.cs" />
     <None Include="map.1.D.1.vsd" />
-    <Content Include="map.1.D.1.vsd.png" />
+    <None Include="map.1.D.1.vsd.png" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

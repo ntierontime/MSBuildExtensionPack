@@ -37,7 +37,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <None Include="map.2.B.2.vsd" />
-    <Content Include="map.2.B.2.vsd.png" />
+    <None Include="map.2.B.2.vsd.png" />
     <Compile Include="..\..\..\UI\Web\WebApiClient\BuildApiControllerClient.cs">
       <Link>BuildApiControllerClient.cs</Link>
     </Compile>
