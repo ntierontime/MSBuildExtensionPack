@@ -129,9 +129,9 @@
       <Project>{3c6a61c1-2044-4fde-8729-5917787d58aa}</Project>
       <Name>MSBuildExtensionPack.MVVMLightViewModels.X</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Shared.X\XamarinForms.X\MSBuildExtensionPack.XamarinForms.X.csproj">
-      <Project>{50add8ca-3e38-4596-a759-e4bbb25080f8}</Project>
-      <Name>MSBuildExtensionPack.XamarinForms.X</Name>
+    <ProjectReference Include="..\Shared\XamarinForms\MSBuildExtensionPack.XamarinForms.csproj">
+      <Project>{db0ef865-b139-4d47-b6a1-66d9633dda08}</Project>
+      <Name>MSBuildExtensionPack.XamarinForms</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core.X\Resx.X\MSBuildExtensionPack.Resx.X.csproj">
       <Project>{4e3e985c-7d38-40f5-81e4-92fac3e9357a}</Project>
