@@ -2018,6 +2018,8 @@ Global
 		{F8BBED73-DF22-4DEE-9D16-7B4AF8785D11}.Debug|iPhone.ActiveCfg = Debug|x86
 		{F8BBED73-DF22-4DEE-9D16-7B4AF8785D11}.Debug|iPhoneSimulator.ActiveCfg = Debug|x86
 		{F8BBED73-DF22-4DEE-9D16-7B4AF8785D11}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{F8BBED73-DF22-4DEE-9D16-7B4AF8785D11}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{F8BBED73-DF22-4DEE-9D16-7B4AF8785D11}.Debug|Mixed Platforms.Deploy.0 = Debug|x86
 		{F8BBED73-DF22-4DEE-9D16-7B4AF8785D11}.Debug|x64.ActiveCfg = Debug|x64
 		{F8BBED73-DF22-4DEE-9D16-7B4AF8785D11}.Debug|x64.Build.0 = Debug|x64
 		{F8BBED73-DF22-4DEE-9D16-7B4AF8785D11}.Debug|x64.Deploy.0 = Debug|x64

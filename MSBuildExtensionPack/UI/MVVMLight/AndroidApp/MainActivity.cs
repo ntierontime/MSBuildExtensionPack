@@ -15,7 +15,11 @@ namespace MSBuildExtensionPack.AndroidApp
     {
         protected override void OnCreate(Bundle bundle)
         {
-            TabLayoutResource = Resource.Layout.Tabbar;
+			Plugin.Iconize.Iconize.With(new Plugin.Iconize.Fonts.FontAwesomeModule())
+					  .With(new Plugin.Iconize.Fonts.MaterialModule())
+					  .With(new Plugin.Iconize.Fonts.MeteoconsModule())
+					  .With(new Plugin.Iconize.Fonts.TypiconsModule());
+			TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
@@ -25,10 +29,11 @@ namespace MSBuildExtensionPack.AndroidApp
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
-            //PCLAppConfig.ConfigurationManager.Initialise(PCLAppConfig.FileSystemStream.PortableStream.Current);
+			FormsPlugin.Iconize.Droid.IconControls.Init(Resource.Id.toolbar, Resource.Id.sliding_tabs);
+			//PCLAppConfig.ConfigurationManager.Initialise(PCLAppConfig.FileSystemStream.PortableStream.Current);
 
-            LoadApplication(new MSBuildExtensionPack.XamarinForms.App());
+			LoadApplication(new MSBuildExtensionPack.XamarinForms.App());
         }
-    }
+	}
 }
 

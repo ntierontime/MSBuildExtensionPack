@@ -3,12 +3,16 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.X"
+	xmlns:iconize="clr-namespace:FormsPlugin.Iconize;assembly=FormsPlugin.Iconize"
     x:Class="MSBuildExtensionPack.XamarinForms.GlobalPages.HomePage">
     <ContentPage.Icon>
         <OnPlatform x:TypeArguments="FileImageSource"
 			WinPhone="Assets/LockScreenLogo.scale-100.png" />
     </ContentPage.Icon>
 	<ContentPage.Content>
-		<Label Text="Home Page" VerticalOptions="Center" HorizontalOptions="Center" />
+		<StackLayout Orientation="Horizontal">
+			<Label Text="Home Page" VerticalOptions="Center" HorizontalOptions="Center" />
+			<iconize:IconLabel FontSize="20" Text="ep-500px" TextColor="Green" VerticalTextAlignment="Center" />
+		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
