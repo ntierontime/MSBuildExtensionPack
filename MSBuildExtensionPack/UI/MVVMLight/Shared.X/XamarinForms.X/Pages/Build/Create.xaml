@@ -5,6 +5,7 @@
     xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.X"
 	xmlns:xac="clr-namespace:Framework.Xamariner.Controls;assembly=Framework.Xamariner.X"
     xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
+    xmlns:iconize="clr-namespace:FormsPlugin.Iconize;assembly=FormsPlugin.Iconize"
     x:Class="MSBuildExtensionPack.XamarinForms.Pages.Build.Create">
     <ContentPage.Content>
 		<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
@@ -43,6 +44,4 @@
         <TimePicker Format="F" Time="{Binding Path=BuildStartTime}"/>
 		</StackLayout>
     </ContentPage.Content>
-    <ContentPage.ToolbarItems>
-    </ContentPage.ToolbarItems>
 </ContentPage>

@@ -9,11 +9,11 @@ namespace MSBuildExtensionPack.XamarinForms.GlobalPages {
 	public partial class HomePage : ContentPage {
 		public HomePage() {
 			InitializeComponent();
-			//Closing += (s, e) => MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.Cleanup();
+            //Closing += (s, e) => MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.Cleanup();
 
-			// The MVVM Light Messenger In-Depth: http://msdn.microsoft.com/en-us/magazine/dn745866.aspx
-
-			InitializeMainMenuTree();
+            // The MVVM Light Messenger In-Depth: http://msdn.microsoft.com/en-us/magazine/dn745866.aspx
+            
+            InitializeMainMenuTree();
 
             InitializeNavigationSettingCollectionInMainViewModel();
 
@@ -35,18 +35,23 @@ namespace MSBuildExtensionPack.XamarinForms.GlobalPages {
                                 MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.IsBusy = false;
                             }
 
-                            //if (navigationSetting.NextUIAction == Framework.UIAction.GoBack)
-                            //{
-                            //    _mainFrame.GoBack();
-                            //}
-                            //else if (navigationSetting.NextUIAction == Framework.UIAction.Navigate)
-                            //{
-                            //    _mainFrame.Navigate(new Uri(navigationSetting.TargetUrl, UriKind.Relative));
-                            //}
+                            if (navigationSetting.NextUIAction == Framework.UIAction.GoBack)
+                            {
+                                            //_mainFrame.GoBack();
+                            }
+                            else if (navigationSetting.NextUIAction == Framework.UIAction.Navigate)
+                            {
+                                var page = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.GetPageInstanceSingleton(navigationSetting.TargetPageType);
+
+                                if (page != null)
+                                {
+                                    App.NavigationPage.Navigation.PushAsync((ContentPage)page);
+                                }
+                            }
                         }
                     }
                 });
-		}
+        }
 
         private static void InitializeMainMenuTree()
         {
@@ -82,7 +87,10 @@ namespace MSBuildExtensionPack.XamarinForms.GlobalPages {
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuild.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuild.ViewName_Edit, Framework.UIAction.Update,  Framework.UIActionStatus.Close, Framework.UIAction.GoBack, null, null);
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuild.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuild.ViewName_Delete, Framework.UIAction.Delete,  Framework.UIActionStatus.Close, Framework.UIAction.GoBack, null, null);
 
-			// TODO: removed 5 lines
+            // TODO: removed 5 lines
+
+            // TODO: new added
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuild.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuild.ViewName_Create, Framework.UIAction.Create, Framework.UIActionStatus.Launch, Framework.UIAction.Navigate, "/Pages/Build/Create.xaml", typeof(MSBuildExtensionPack.XamarinForms.Pages.Build.Create));
 
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuild.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuild.ViewName_Details, Framework.UIAction.Copy,  Framework.UIActionStatus.Launch, Framework.UIAction.Navigate, "/Pages/Build/Create.xaml", typeof(MSBuildExtensionPack.XamarinForms.Pages.Build.Create));
 

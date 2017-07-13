@@ -1,5 +1,7 @@
+using FormsPlugin.Iconize;
 using System.Reflection;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
 
 namespace MSBuildExtensionPack.XamarinForms {
 	public partial class App : Application {
@@ -28,10 +30,12 @@ namespace MSBuildExtensionPack.XamarinForms {
 
             var menuPage = new MSBuildExtensionPack.XamarinForms.GlobalPages.MenuPage();
 			NavigationPage = new NavigationPage(new MSBuildExtensionPack.XamarinForms.GlobalPages.HomePage());
-			RootPage = new MSBuildExtensionPack.XamarinForms.GlobalPages.RootPage();
-			RootPage.Master = menuPage;
-			RootPage.Detail = NavigationPage;
-			MainPage = RootPage;
+            
+   //         RootPage = new MSBuildExtensionPack.XamarinForms.GlobalPages.RootPage();
+			//RootPage.Master = menuPage;
+			//RootPage.Detail = NavigationPage;
+			//MainPage = new IconNavigationPage(RootPage);
+            MainPage = new IconNavigationPage(new MSBuildExtensionPack.XamarinForms.GlobalPages.HomePage());
 
             if (Device.RuntimePlatform.ToLower() == Framework.Xamariner.Platforms.iOS.ToString().ToLower() || Device.RuntimePlatform.ToLower() == Framework.Xamariner.Platforms.Android.ToString().ToLower())
             {

@@ -3,6 +3,9 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.X"
+	xmlns:xac="clr-namespace:Framework.Xamariner.Controls;assembly=Framework.Xamariner.X"
+    xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
+	xmlns:iconize="clr-namespace:FormsPlugin.Iconize;assembly=FormsPlugin.Iconize"
     x:Class="MSBuildExtensionPack.XamarinForms.GlobalPages.MenuPage">
 	<ContentPage.Padding>
 		<OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
@@ -13,7 +16,15 @@
     </ContentPage.Icon>
 	<ContentPage.Content>
 		<StackLayout BackgroundColor="Gray">
-			<Button Text="Home" TextColor="White" BackgroundColor="Green" Command="{Binding GoHomeCommand}" />
+            <Button Text="Home" TextColor="White" BackgroundColor="Green" Command="{Binding GoHomeCommand}" />
+            <Button Text="{i18n:Translate Text=Build, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" TextColor="White" BackgroundColor="Green" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchCreateViewCommand, Source={StaticResource Locator}}" />
         </StackLayout>
 	</ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <iconize:IconToolbarItem Icon="ep-500px" />
+        <iconize:IconToolbarItem Icon="ep-500px" IconColor="Red" />
+        <!--<ToolbarItem Text="Add" Priority="0" Order="Secondary"  />
+        <ToolbarItem Text="Cancel" Priority="1" Order="Secondary"  />-->
+    </ContentPage.ToolbarItems>
 </ContentPage>
+    
