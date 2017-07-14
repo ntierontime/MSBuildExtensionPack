@@ -5,16 +5,9 @@
     xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.X"
 	xmlns:xac="clr-namespace:Framework.Xamariner.Controls;assembly=Framework.Xamariner.X"
     xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
-	xmlns:iconize="clr-namespace:FormsPlugin.Iconize;assembly=FormsPlugin.Iconize"
     x:Class="MSBuildExtensionPack.XamarinForms.GlobalPages.RootPage">
     <MasterDetailPage.Icon>
         <OnPlatform x:TypeArguments="FileImageSource"
 			WinPhone="Assets/LockScreenLogo.scale-100.png" />
     </MasterDetailPage.Icon>
-    <ContentPage.ToolbarItems>
-        <iconize:IconToolbarItem Icon="ep-500px" />
-        <iconize:IconToolbarItem Icon="ep-500px" IconColor="Red" />
-        <!--<ToolbarItem Text="Add" Priority="0" Order="Secondary"  />
-        <ToolbarItem Text="Cancel" Priority="1" Order="Secondary"  />-->
-    </ContentPage.ToolbarItems>
 </MasterDetailPage>

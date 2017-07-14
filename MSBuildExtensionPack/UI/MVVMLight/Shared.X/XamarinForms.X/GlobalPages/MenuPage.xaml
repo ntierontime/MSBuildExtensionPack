@@ -5,7 +5,6 @@
     xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.X"
 	xmlns:xac="clr-namespace:Framework.Xamariner.Controls;assembly=Framework.Xamariner.X"
     xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
-	xmlns:iconize="clr-namespace:FormsPlugin.Iconize;assembly=FormsPlugin.Iconize"
     x:Class="MSBuildExtensionPack.XamarinForms.GlobalPages.MenuPage">
 	<ContentPage.Padding>
 		<OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
@@ -21,10 +20,13 @@
         </StackLayout>
 	</ContentPage.Content>
     <ContentPage.ToolbarItems>
-        <iconize:IconToolbarItem Icon="ep-500px" />
-        <iconize:IconToolbarItem Icon="ep-500px" IconColor="Red" />
-        <!--<ToolbarItem Text="Add" Priority="0" Order="Secondary"  />
-        <ToolbarItem Text="Cancel" Priority="1" Order="Secondary"  />-->
+        <ToolbarItem      Name="Icon"                     Priority="1" 
+                         Order="1">
+            <ToolbarItem.Icon>
+            <OnPlatform x:TypeArguments="FileImageSource" 
+			WinPhone="Assets/LockScreenLogo.scale-100.png" />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
     </ContentPage.ToolbarItems>
 </ContentPage>
     

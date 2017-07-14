@@ -23,18 +23,11 @@ namespace MSBuildExtensionPack.IOSApp
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-			Plugin.Iconize.Iconize.With(new Plugin.Iconize.Fonts.FontAwesomeModule())
-					  .With(new Plugin.Iconize.Fonts.MaterialModule())
-					  .With(new Plugin.Iconize.Fonts.MeteoconsModule())
-					  .With(new Plugin.Iconize.Fonts.TypiconsModule());
-
 			Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<Framework.Xaml.IDispatcherHelperWrapper, MSBuildExtensionPack.IOSApp.DispatcherHelperWrapper>();
             DispatcherHelper.Initialize(app);
 
             global::Xamarin.Forms.Forms.Init();
 			//PCLAppConfig.ConfigurationManager.Initialise(PCLAppConfig.FileSystemStream.PortableStream.Current);
-
-			FormsPlugin.Iconize.iOS.IconControls.Init();
 
 			LoadApplication(new MSBuildExtensionPack.XamarinForms.App());
 

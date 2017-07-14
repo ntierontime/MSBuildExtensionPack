@@ -190,54 +190,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="FormsPlugin.Iconize">
-      <HintPath>..\..\..\..\packages\Xam.FormsPlugin.Iconize.1.0.10\lib\Xamarin.iOS10\FormsPlugin.Iconize.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="FormsPlugin.Iconize.iOS">
-      <HintPath>..\..\..\..\packages\Xam.FormsPlugin.Iconize.1.0.10\lib\Xamarin.iOS10\FormsPlugin.Iconize.iOS.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Plugin.Iconize">
-      <HintPath>..\..\..\..\packages\Xam.Plugin.Iconize.1.0.10\lib\Xamarin.iOS10\Plugin.Iconize.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Plugin.Iconize.EntypoPlus.iOS">
-      <HintPath>..\..\..\..\packages\Xam.Plugin.Iconize.EntypoPlus.1.0.10\lib\Xamarin.iOS10\Plugin.Iconize.EntypoPlus.iOS.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Plugin.Iconize.FontAwesome.iOS">
-      <HintPath>..\..\..\..\packages\Xam.Plugin.Iconize.FontAwesome.1.0.10\lib\Xamarin.iOS10\Plugin.Iconize.FontAwesome.iOS.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Plugin.Iconize.Ionicons.iOS">
-      <HintPath>..\..\..\..\packages\Xam.Plugin.Iconize.Ionicons.1.0.10\lib\Xamarin.iOS10\Plugin.Iconize.Ionicons.iOS.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Plugin.Iconize.iOS">
-      <HintPath>..\..\..\..\packages\Xam.Plugin.Iconize.1.0.10\lib\Xamarin.iOS10\Plugin.Iconize.iOS.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Plugin.Iconize.Material.iOS">
-      <HintPath>..\..\..\..\packages\Xam.Plugin.Iconize.Material.1.0.10\lib\Xamarin.iOS10\Plugin.Iconize.Material.iOS.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Plugin.Iconize.Meteocons.iOS">
-      <HintPath>..\..\..\..\packages\Xam.Plugin.Iconize.Meteocons.1.0.10\lib\Xamarin.iOS10\Plugin.Iconize.Meteocons.iOS.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Plugin.Iconize.SimpleLineIcons.iOS">
-      <HintPath>..\..\..\..\packages\Xam.Plugin.Iconize.SimpleLineIcons.1.0.10\lib\Xamarin.iOS10\Plugin.Iconize.SimpleLineIcons.iOS.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Plugin.Iconize.Typicons.iOS">
-      <HintPath>..\..\..\..\packages\Xam.Plugin.Iconize.Typicons.1.0.10\lib\Xamarin.iOS10\Plugin.Iconize.Typicons.iOS.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Plugin.Iconize.WeatherIcons.iOS">
-      <HintPath>..\..\..\..\packages\Xam.Plugin.Iconize.WeatherIcons.1.0.10\lib\Xamarin.iOS10\Plugin.Iconize.WeatherIcons.iOS.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml" />

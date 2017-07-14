@@ -147,60 +147,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="FormsPlugin.Iconize">
-      <HintPath>..\..\..\..\packages\Xam.FormsPlugin.Iconize.1.0.10\lib\MonoAndroid10\FormsPlugin.Iconize.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="FormsPlugin.Iconize.Droid">
-      <HintPath>..\..\..\..\packages\Xam.FormsPlugin.Iconize.1.0.10\lib\MonoAndroid10\FormsPlugin.Iconize.Droid.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="FormsViewGroup">
       <HintPath>..\..\..\..\packages\Xamarin.Forms.2.3.4.247\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
-    <Reference Include="Plugin.Iconize">
-      <HintPath>..\..\..\..\packages\Xam.Plugin.Iconize.1.0.10\lib\MonoAndroid10\Plugin.Iconize.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Plugin.Iconize.Droid">
-      <HintPath>..\..\..\..\packages\Xam.Plugin.Iconize.1.0.10\lib\MonoAndroid10\Plugin.Iconize.Droid.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Plugin.Iconize.EntypoPlus.Droid">
-      <HintPath>..\..\..\..\packages\Xam.Plugin.Iconize.EntypoPlus.1.0.10\lib\MonoAndroid10\Plugin.Iconize.EntypoPlus.Droid.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Plugin.Iconize.FontAwesome.Droid">
-      <HintPath>..\..\..\..\packages\Xam.Plugin.Iconize.FontAwesome.1.0.10\lib\MonoAndroid10\Plugin.Iconize.FontAwesome.Droid.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Plugin.Iconize.Ionicons.Droid">
-      <HintPath>..\..\..\..\packages\Xam.Plugin.Iconize.Ionicons.1.0.10\lib\MonoAndroid10\Plugin.Iconize.Ionicons.Droid.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Plugin.Iconize.Material.Droid">
-      <HintPath>..\..\..\..\packages\Xam.Plugin.Iconize.Material.1.0.10\lib\MonoAndroid10\Plugin.Iconize.Material.Droid.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Plugin.Iconize.Meteocons.Droid">
-      <HintPath>..\..\..\..\packages\Xam.Plugin.Iconize.Meteocons.1.0.10\lib\MonoAndroid10\Plugin.Iconize.Meteocons.Droid.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Plugin.Iconize.SimpleLineIcons.Droid">
-      <HintPath>..\..\..\..\packages\Xam.Plugin.Iconize.SimpleLineIcons.1.0.10\lib\MonoAndroid10\Plugin.Iconize.SimpleLineIcons.Droid.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Plugin.Iconize.Typicons.Droid">
-      <HintPath>..\..\..\..\packages\Xam.Plugin.Iconize.Typicons.1.0.10\lib\MonoAndroid10\Plugin.Iconize.Typicons.Droid.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Plugin.Iconize.WeatherIcons.Droid">
-      <HintPath>..\..\..\..\packages\Xam.Plugin.Iconize.WeatherIcons.1.0.10\lib\MonoAndroid10\Plugin.Iconize.WeatherIcons.Droid.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.ObjectModel" />
