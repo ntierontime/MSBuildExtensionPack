@@ -44,4 +44,21 @@
         <TimePicker Format="F" Time="{Binding Path=BuildStartTime}"/>
 		</StackLayout>
     </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" Priority="0" Text="Save" >
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="configure.png" Android="configure.png" WinPhone="Assets/ApplicationBar.Save.png" />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem Order="Primary" Priority="1" Text="Refresh" >
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="configure.png" Android="configure.png" WinPhone="Assets/ApplicationBar.Refresh.png" />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem Order="Primary" Priority="2" Text="Go Back" >
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="configure.png" Android="configure.png" WinPhone="Assets/ApplicationBar.Back.png" />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>    
 </ContentPage>
