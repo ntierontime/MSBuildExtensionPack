@@ -21,6 +21,7 @@ namespace MSBuildExtensionPack.XamarinForms.GlobalPages {
                 this,
                 message =>
                 {
+                    
                     if (MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Exists(t => t.SourceTypeFullName == message.SourceTypeFullName && t.SenderView == message.SenderView && t.UIAction == message.UIAction && t.UIActionStatus == message.UIActionStatus))
                     {
                         var navigationSetting = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.FirstOrDefault(t => t.SourceTypeFullName == message.SourceTypeFullName && t.SenderView == message.SenderView && t.UIAction == message.UIAction && t.UIActionStatus == message.UIActionStatus);
@@ -46,6 +47,8 @@ namespace MSBuildExtensionPack.XamarinForms.GlobalPages {
                                 if (page != null)
                                 {
                                     App.NavigationPage.Navigation.PushAsync((ContentPage)page);
+                                    //TODO: important.
+                                    App.MenuIsPresented = false;
                                 }
                             }
                         }
