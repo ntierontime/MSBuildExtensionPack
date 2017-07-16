@@ -5,7 +5,8 @@
     xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.X"
 	xmlns:xac="clr-namespace:Framework.Xamariner.Controls;assembly=Framework.Xamariner.X"
     xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
-    x:Class="MSBuildExtensionPack.XamarinForms.GlobalPages.MenuPage">
+    x:Class="MSBuildExtensionPack.XamarinForms.GlobalPages.MenuPage"
+    Title="Menu">
 	<ContentPage.Padding>
 		<OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
 	</ContentPage.Padding>

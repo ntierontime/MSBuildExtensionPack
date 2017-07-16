@@ -6,7 +6,8 @@
 	xmlns:xac="clr-namespace:Framework.Xamariner.Controls;assembly=Framework.Xamariner.X"
     xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
     xmlns:iconize="clr-namespace:FormsPlugin.Iconize;assembly=FormsPlugin.Iconize"
-    x:Class="MSBuildExtensionPack.XamarinForms.Pages.Build.Create">
+    x:Class="MSBuildExtensionPack.XamarinForms.Pages.Build.Create"
+    Title="Create">
     <ContentPage.Content>
 		<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
 			<Label Text="{i18n:Translate Text=Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
@@ -19,7 +20,14 @@
                 HorizontalOptions="FillAndExpand"
                 >
             </xac:BindablePicker>
-		<Label Text="{i18n:Translate Text=Organization_2Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Picker
+                ItemDisplayBinding="{Binding Name}"
+                ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfOrganization_1, Source={StaticResource Locator}}"
+                SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfOrganization_1SelectedItem, Source={StaticResource Locator}}"
+                HorizontalOptions="FillAndExpand"
+                >
+            </Picker>
+            <Label Text="{i18n:Translate Text=Organization_2Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
             <xac:BindablePicker
                 DisplayMemberPath="Name"
                 ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfOrganization_2, Source={StaticResource Locator}}"
@@ -27,15 +35,31 @@
                 HorizontalOptions="FillAndExpand"
                 >
             </xac:BindablePicker>
-		<Label Text="{i18n:Translate Text=SolutionId, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+
+            <Picker 
+                ItemDisplayBinding="{Binding Name}"
+                ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfOrganization_2, Source={StaticResource Locator}}"
+                SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfOrganization_2SelectedItem, Source={StaticResource Locator}}"
+                HorizontalOptions="FillAndExpand"
+                >
+            </Picker>
+
+            <Label Text="{i18n:Translate Text=SolutionId, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
             <xac:BindablePicker
                 DisplayMemberPath="Name"
-                ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.DropDownContentsOfSolution_1, Source={StaticResource Locator}}"
-                SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.DropDownContentsOfSolution_1SelectedItem, Source={StaticResource Locator}}"
+                ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfSolution_1, Source={StaticResource Locator}}"
+                SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfSolution_1SelectedItem, Source={StaticResource Locator}}"
                 HorizontalOptions="FillAndExpand"
                 >
             </xac:BindablePicker>
-		<Label Text="{i18n:Translate Text=Name, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Picker
+                ItemDisplayBinding="{Binding Name}"
+                ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfSolution_1, Source={StaticResource Locator}}"
+                SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfSolution_1SelectedItem, Source={StaticResource Locator}}"
+                HorizontalOptions="FillAndExpand"
+                >
+            </Picker>
+            <Label Text="{i18n:Translate Text=Name, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
         <Entry Placeholder="{i18n:Translate Text=Name, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" Text="{Binding Path=Name, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
 		<Label Text="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
         <Entry Placeholder="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" Text="{Binding Path=Description, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
@@ -45,20 +69,20 @@
 		</StackLayout>
     </ContentPage.Content>
     <ContentPage.ToolbarItems>
-        <ToolbarItem Order="Primary" Priority="0" Text="Save" >
+        <ToolbarItem Name="Save" Order="Primary" Priority="0" Text="Save" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.AddCommand, Source={StaticResource Locator}}">
             <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource" iOS="configure.png" Android="configure.png" WinPhone="Assets/ApplicationBar.Save.png" />
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Save.png" Android="Assets/Save.png" WinPhone="Assets/Save.png" />
             </ToolbarItem.Icon>
         </ToolbarItem>
-        <ToolbarItem Order="Primary" Priority="1" Text="Refresh" >
+        <ToolbarItem Name="Refresh" Order="Primary" Priority="1" Text="Refresh">
             <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource" iOS="configure.png" Android="configure.png" WinPhone="Assets/ApplicationBar.Refresh.png" />
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Refresh.png" Android="Assets/Refresh.png" WinPhone="Assets/Refresh.png"  />
             </ToolbarItem.Icon>
         </ToolbarItem>
-        <ToolbarItem Order="Primary" Priority="2" Text="Go Back" >
+        <ToolbarItem Name="Back" Order="Primary" Priority="2" Text="Go Back">
             <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource" iOS="configure.png" Android="configure.png" WinPhone="Assets/ApplicationBar.Back.png" />
-            </ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Back.png" Android="Assets/Back.png" WinPhone="Assets/Back.png"  />
+            </ToolbarItem.Icon>            
         </ToolbarItem>
     </ContentPage.ToolbarItems>    
 </ContentPage>

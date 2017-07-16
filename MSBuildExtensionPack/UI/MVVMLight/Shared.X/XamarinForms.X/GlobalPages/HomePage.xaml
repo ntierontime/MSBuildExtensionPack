@@ -5,7 +5,8 @@
     xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.X"
 	xmlns:xac="clr-namespace:Framework.Xamariner.Controls;assembly=Framework.Xamariner.X"
     xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
-    x:Class="MSBuildExtensionPack.XamarinForms.GlobalPages.HomePage">
+    x:Class="MSBuildExtensionPack.XamarinForms.GlobalPages.HomePage"
+    Title="Home">
     <ContentPage.Icon>
         <OnPlatform x:TypeArguments="FileImageSource"
 			WinPhone="Assets/LockScreenLogo.scale-100.png" />
@@ -15,4 +16,11 @@
 			<Label Text="Home Page" VerticalOptions="Center" HorizontalOptions="Center" />
 		</StackLayout>
 	</ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Home" Order="Secondary" Priority="0" Text="Home">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="configure.png" Android="configure.png" WinPhone="Assets/Save.png" />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>    
 </ContentPage>

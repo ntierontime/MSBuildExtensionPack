@@ -5,7 +5,8 @@
     xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.X"
 	xmlns:xac="clr-namespace:Framework.Xamariner.Controls;assembly=Framework.Xamariner.X"
     xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
-    x:Class="MSBuildExtensionPack.XamarinForms.GlobalPages.RootPage">
+    x:Class="MSBuildExtensionPack.XamarinForms.GlobalPages.RootPage"
+    Title="Root">
     <MasterDetailPage.Icon>
         <OnPlatform x:TypeArguments="FileImageSource"
 			WinPhone="Assets/LockScreenLogo.scale-100.png" />
