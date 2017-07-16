@@ -27,5 +27,25 @@
 		</StackLayout>
     </ContentPage.Content>
     <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Save" Order="Primary" Text="{i18n:Translate Text=EditAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchEditViewCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/edit.png" Android="Assets/edit.png" WinPhone="Assets/edit.png" />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem Name="Copy" Order="Primary" Text="{i18n:Translate Text=CopyAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchCopyViewCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Copy.png" Android="Assets/Copy.png" WinPhone="Assets/Copy.png"/>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem Name="Delete" Order="Primary" Text="{i18n:Translate Text=DeleteAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchDeleteViewCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Delete.png" Android="Assets/Delete.png" WinPhone="Assets/Delete.png"/>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem Name="Back" Order="Primary" Text="{i18n:Translate Text=BackAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.CloseDetailsViewCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Back.png" Android="Assets/Back.png" WinPhone="Assets/Back.png"  />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
     </ContentPage.ToolbarItems>
 </ContentPage>
