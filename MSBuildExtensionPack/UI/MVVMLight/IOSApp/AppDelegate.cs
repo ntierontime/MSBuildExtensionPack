@@ -23,13 +23,12 @@ namespace MSBuildExtensionPack.IOSApp
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-			Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<Framework.Xaml.IDispatcherHelperWrapper, MSBuildExtensionPack.IOSApp.DispatcherHelperWrapper>();
+            Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<Framework.Xaml.IDispatcherHelperWrapper, MSBuildExtensionPack.IOSApp.DispatcherHelperWrapper>();
             DispatcherHelper.Initialize(app);
 
             global::Xamarin.Forms.Forms.Init();
-			//PCLAppConfig.ConfigurationManager.Initialise(PCLAppConfig.FileSystemStream.PortableStream.Current);
-
-			LoadApplication(new MSBuildExtensionPack.XamarinForms.App());
+            //PCLAppConfig.ConfigurationManager.Initialise(PCLAppConfig.FileSystemStream.PortableStream.Current);
+            LoadApplication(new MSBuildExtensionPack.XamarinForms.App());
 
             return base.FinishedLaunching(app, options);
         }

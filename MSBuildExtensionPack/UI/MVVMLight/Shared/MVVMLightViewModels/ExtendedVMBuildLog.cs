@@ -123,7 +123,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                                 this.DropDownContentsOfBuild_1.Add(new Framework.NameValuePair<System.Int64>(value, item.Name));
                             }
                         }
-                        RaisePropertyChanged("DropDownContentsOfBuild_1");
                     }
                 });
             }
@@ -343,16 +342,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             {
                 return this.m_DropDownContentsOfOrganization_2;
             }
-            set
-            {
-                if (this.m_DropDownContentsOfOrganization_2 == value)
-                {
-                    return;
-                }
-
-                this.m_DropDownContentsOfOrganization_2 = value;
-                RaisePropertyChanged("DropDownContentsOfOrganization_2");
-            }
         }
 
         public RelayCommand<Framework.NameValuePair<System.Int64>> GetDropDownContentsOfOrganization_2SelectionChangedCommand { get; private set; }
@@ -435,16 +424,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             get
             {
                 return this.m_DropDownContentsOfBuildEventCode_1;
-            }
-            set
-            {
-                if (this.m_DropDownContentsOfBuildEventCode_1 == value)
-                {
-                    return;
-                }
-
-                this.m_DropDownContentsOfBuildEventCode_1 = value;
-                RaisePropertyChanged("DropDownContentsOfBuildEventCode_1");
             }
         }
 

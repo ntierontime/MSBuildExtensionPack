@@ -3,19 +3,35 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.X"
-	xmlns:xac="clr-namespace:Framework.Xamariner.Controls;assembly=Framework.Xamariner.X"
     xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
-    x:Class="MSBuildExtensionPack.XamarinForms.Pages.BuildEventCode.Edit">
+    x:Class="MSBuildExtensionPack.XamarinForms.Pages.BuildEventCode.Edit"
+	Title="{i18n:Translate Text=Edit_Build, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}">
     <ContentPage.Content>
-		<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-			<Label Text="{i18n:Translate Text=Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-		<Label Text="{Binding Path=Id, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-		<Label Text="{i18n:Translate Text=EventCode, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-        <Entry Placeholder="{i18n:Translate Text=EventCode, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" Text="{Binding Path=EventCode, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
-		<Label Text="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-        <Entry Placeholder="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" Text="{Binding Path=Description, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
-		</StackLayout>
+		<ScrollView>
+			<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+				<Label Text="{i18n:Translate Text=Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+			<Label Text="{Binding Path=Id, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+			<Label Text="{i18n:Translate Text=EventCode, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+		   <Entry Placeholder="{i18n:Translate Text=EventCode, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" Text="{Binding Path=EventCode, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+			<Label Text="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+		   <Entry Placeholder="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" Text="{Binding Path=Description, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+			</StackLayout>
+		</ScrollView>
     </ContentPage.Content>
-    <ContentPage.ToolbarItems>
-    </ContentPage.ToolbarItems>
-</ContentPage>
+	<ContentPage.ToolbarItems>
+        <ToolbarItem Name="Save" Order="Primary" Text="{i18n:Translate Text=SaveAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode.SaveCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Save.png" Android="Assets/Save.png" WinPhone="Assets/Save.png" />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem Name="Refresh" Order="Primary" Text="{i18n:Translate Text=RefreshAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode.RefreshCurrentItemCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Refresh.png" Android="Assets/Refresh.png" WinPhone="Assets/Refresh.png"/>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem Name="Back" Order="Primary" Text="{i18n:Translate Text=BackAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode.CloseViewCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Back.png" Android="Assets/Back.png" WinPhone="Assets/Back.png"  />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+	</ContentPage.ToolbarItems>

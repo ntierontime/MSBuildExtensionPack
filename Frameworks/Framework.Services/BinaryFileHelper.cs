@@ -15,10 +15,10 @@ namespace Framework.Services
 
 		#region fields and properties
 
-        /// <summary>
-        /// Name in appsetting section in app.config or web.config
-        /// </summary>
-        static string AppConfigName_RootFolder = "FileRelativeRootFolder";
+        ///// <summary>
+        ///// Name in appsetting section in app.config or web.config
+        ///// </summary>
+        //static string AppConfigName_RootFolder = "FileRelativeRootFolder";
         /// <summary>
         /// Gets or sets the root folder.
         /// </summary>
@@ -150,9 +150,6 @@ namespace Framework.Services
             return _retval;
         }                  
 
-#if (WINDOWS_PHONE || XAMARIN)
-#elif NETFX_CORE
-#else
         /// <summary>
         /// Loads the binary in file system.
         /// </summary>
@@ -252,8 +249,6 @@ namespace Framework.Services
 
             return _retval;
         }
-
-#endif
 
         #region BuildCSharpName(string input)
 

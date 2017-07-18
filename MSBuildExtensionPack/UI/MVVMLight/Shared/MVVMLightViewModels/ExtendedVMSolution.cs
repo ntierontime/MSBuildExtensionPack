@@ -102,7 +102,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                                 this.DropDownContentsOfOrganization_1.Add(new Framework.NameValuePair<System.Int64>(value, item.Name));
                             }
                         }
-                        RaisePropertyChanged("DropDownContentsOfOrganization_1");
                     }
                 });
             }
@@ -159,16 +158,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             get
             {
                 return this.m_DropDownContentsOfOrganization_2;
-            }
-            set
-            {
-                if (this.m_DropDownContentsOfOrganization_2 == value)
-                {
-                    return;
-                }
-
-                this.m_DropDownContentsOfOrganization_2 = value;
-                RaisePropertyChanged("DropDownContentsOfOrganization_2");
             }
         }
 

@@ -1,10 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
-#if (WINDOWS_PHONE || XAMARIN)
-#else
 using System.ComponentModel.DataAnnotations;
-#endif
 
 namespace MSBuildExtensionPack.DataSourceEntities
 {
@@ -252,13 +249,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
 		#region properties
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Id_is_required")]
-#endif
-        public System.Int64 Id
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Id_is_required")]        public System.Int64 Id
         {
             get
             {
@@ -272,13 +264,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "ParentId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="ParentId_is_required")]
-#endif
-        public System.Int64 ParentId
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="ParentId_is_required")]        public System.Int64 ParentId
         {
             get
             {
@@ -292,14 +279,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
 		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Name_is_required")]
-		[StringLengthAttribute(50, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_50")]
-#endif
-        public System.String Name
+		[StringLengthAttribute(50, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_50")]        public System.String Name
         {
             get
             {
@@ -313,13 +295,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "IsSystemBuiltIn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="IsSystemBuiltIn_is_required")]
-#endif
-        public System.Boolean IsSystemBuiltIn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="IsSystemBuiltIn_is_required")]        public System.Boolean IsSystemBuiltIn
         {
             get
             {
@@ -333,13 +310,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="UniqueIdentifier_is_required")]
-#endif
-        public System.Guid UniqueIdentifier
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="UniqueIdentifier_is_required")]        public System.Guid UniqueIdentifier
         {
             get
             {
@@ -353,13 +325,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "CreatedDateTime", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="CreatedDateTime_is_required")]
-#endif
-        public System.DateTime CreatedDateTime
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="CreatedDateTime_is_required")]        public System.DateTime CreatedDateTime
         {
             get
             {
@@ -373,14 +340,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "CharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
 		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="CharColumn_is_required")]
-		[StringLengthAttribute(10, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_CharColumn_should_be_0_to_10")]
-#endif
-        public System.String CharColumn
+		[StringLengthAttribute(10, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_CharColumn_should_be_0_to_10")]        public System.String CharColumn
         {
             get
             {
@@ -394,13 +356,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "VarcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="VarcharColumn_is_required")]
-#endif
-        public System.String VarcharColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="VarcharColumn_is_required")]        public System.String VarcharColumn
         {
             get
             {
@@ -414,13 +371,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "TextColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="TextColumn_is_required")]
-#endif
-        public System.String TextColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="TextColumn_is_required")]        public System.String TextColumn
         {
             get
             {
@@ -434,14 +386,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "NcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
 		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NcharColumn_is_required")]
-		[StringLengthAttribute(1, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_NcharColumn_should_be_0_to_1")]
-#endif
-        public System.String NcharColumn
+		[StringLengthAttribute(1, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_NcharColumn_should_be_0_to_1")]        public System.String NcharColumn
         {
             get
             {
@@ -455,13 +402,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "NvarcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NvarcharColumn_is_required")]
-#endif
-        public System.String NvarcharColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NvarcharColumn_is_required")]        public System.String NvarcharColumn
         {
             get
             {
@@ -475,13 +417,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "NtextColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NtextColumn_is_required")]
-#endif
-        public System.String NtextColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NtextColumn_is_required")]        public System.String NtextColumn
         {
             get
             {
@@ -495,13 +432,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "BitColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="BitColumn_is_required")]
-#endif
-        public System.Boolean BitColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="BitColumn_is_required")]        public System.Boolean BitColumn
         {
             get
             {
@@ -515,12 +447,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "BinaryColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Byte[] BinaryColumn
+		[Display(Name = "BinaryColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Byte[] BinaryColumn
         {
             get
             {
@@ -534,12 +461,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "VarbinaryColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Byte[] VarbinaryColumn
+		[Display(Name = "VarbinaryColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Byte[] VarbinaryColumn
         {
             get
             {
@@ -553,12 +475,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "ImageColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Byte[] ImageColumn
+		[Display(Name = "ImageColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Byte[] ImageColumn
         {
             get
             {
@@ -572,13 +489,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "TinyintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="TinyintColumn_is_required")]
-#endif
-        public System.Byte TinyintColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="TinyintColumn_is_required")]        public System.Byte TinyintColumn
         {
             get
             {
@@ -592,13 +504,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "SmallintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="SmallintColumn_is_required")]
-#endif
-        public System.Int16 SmallintColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="SmallintColumn_is_required")]        public System.Int16 SmallintColumn
         {
             get
             {
@@ -612,13 +519,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "IntColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="IntColumn_is_required")]
-#endif
-        public System.Int32 IntColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="IntColumn_is_required")]        public System.Int32 IntColumn
         {
             get
             {
@@ -632,13 +534,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "BigintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="BigintColumn_is_required")]
-#endif
-        public System.Int64 BigintColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="BigintColumn_is_required")]        public System.Int64 BigintColumn
         {
             get
             {
@@ -652,13 +549,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "DecimalColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="DecimalColumn_is_required")]
-#endif
-        public System.Decimal DecimalColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="DecimalColumn_is_required")]        public System.Decimal DecimalColumn
         {
             get
             {
@@ -672,13 +564,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "NumericColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NumericColumn_is_required")]
-#endif
-        public System.Decimal NumericColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NumericColumn_is_required")]        public System.Decimal NumericColumn
         {
             get
             {
@@ -692,13 +579,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "SmallmoneyColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="SmallmoneyColumn_is_required")]
-#endif
-        public System.Decimal SmallmoneyColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="SmallmoneyColumn_is_required")]        public System.Decimal SmallmoneyColumn
         {
             get
             {
@@ -712,13 +594,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "MoneyColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="MoneyColumn_is_required")]
-#endif
-        public System.Decimal MoneyColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="MoneyColumn_is_required")]        public System.Decimal MoneyColumn
         {
             get
             {
@@ -732,13 +609,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "FloatColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="FloatColumn_is_required")]
-#endif
-        public System.Single FloatColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="FloatColumn_is_required")]        public System.Single FloatColumn
         {
             get
             {
@@ -752,13 +624,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "RealColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="RealColumn_is_required")]
-#endif
-        public System.Single RealColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="RealColumn_is_required")]        public System.Single RealColumn
         {
             get
             {
@@ -772,13 +639,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "DatetimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="DatetimeColumn_is_required")]
-#endif
-        public System.DateTime DatetimeColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="DatetimeColumn_is_required")]        public System.DateTime DatetimeColumn
         {
             get
             {
@@ -792,13 +654,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "Datetime2Column", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Datetime2Column_is_required")]
-#endif
-        public System.DateTime Datetime2Column
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Datetime2Column_is_required")]        public System.DateTime Datetime2Column
         {
             get
             {
@@ -812,13 +669,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "SmalldatetimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="SmalldatetimeColumn_is_required")]
-#endif
-        public System.DateTime SmalldatetimeColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="SmalldatetimeColumn_is_required")]        public System.DateTime SmalldatetimeColumn
         {
             get
             {
@@ -832,13 +684,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "DateColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="DateColumn_is_required")]
-#endif
-        public System.DateTime DateColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="DateColumn_is_required")]        public System.DateTime DateColumn
         {
             get
             {
@@ -852,13 +699,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "TimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="TimeColumn_is_required")]
-#endif
-        public System.TimeSpan TimeColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="TimeColumn_is_required")]        public System.TimeSpan TimeColumn
         {
             get
             {
@@ -872,13 +714,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="UniqueidentifierColumn_is_required")]
-#endif
-        public System.Guid UniqueidentifierColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="UniqueidentifierColumn_is_required")]        public System.Guid UniqueidentifierColumn
         {
             get
             {
@@ -1101,12 +938,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 			#region properties
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "Organization_2_UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Guid Organization_2_UniqueidentifierColumn
+		[Display(Name = "Organization_2_UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Guid Organization_2_UniqueidentifierColumn
         {
             get
             {
@@ -1120,12 +952,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "Organization_2_UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Guid Organization_2_UniqueIdentifier
+		[Display(Name = "Organization_2_UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Guid Organization_2_UniqueIdentifier
         {
             get
             {
@@ -1139,12 +966,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "Organization_2_Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.String Organization_2_Name
+		[Display(Name = "Organization_2_Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.String Organization_2_Name
         {
             get
             {
@@ -1158,13 +980,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Id_is_required")]
-#endif
-        public System.Int64 Id
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Id_is_required")]        public System.Int64 Id
         {
             get
             {
@@ -1178,12 +995,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "ParentId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Int64 ParentId
+		[Display(Name = "ParentId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Int64 ParentId
         {
             get
             {
@@ -1197,14 +1009,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
 		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Name_is_required")]
-		[StringLengthAttribute(50, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_50")]
-#endif
-        public System.String Name
+		[StringLengthAttribute(50, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_50")]        public System.String Name
         {
             get
             {
@@ -1218,13 +1025,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "IsSystemBuiltIn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="IsSystemBuiltIn_is_required")]
-#endif
-        public System.Boolean IsSystemBuiltIn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="IsSystemBuiltIn_is_required")]        public System.Boolean IsSystemBuiltIn
         {
             get
             {
@@ -1238,13 +1040,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="UniqueIdentifier_is_required")]
-#endif
-        public System.Guid UniqueIdentifier
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="UniqueIdentifier_is_required")]        public System.Guid UniqueIdentifier
         {
             get
             {
@@ -1258,13 +1055,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "CreatedDateTime", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="CreatedDateTime_is_required")]
-#endif
-        public System.DateTime CreatedDateTime
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="CreatedDateTime_is_required")]        public System.DateTime CreatedDateTime
         {
             get
             {
@@ -1278,14 +1070,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "CharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
 		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="CharColumn_is_required")]
-		[StringLengthAttribute(10, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_CharColumn_should_be_0_to_10")]
-#endif
-        public System.String CharColumn
+		[StringLengthAttribute(10, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_CharColumn_should_be_0_to_10")]        public System.String CharColumn
         {
             get
             {
@@ -1299,13 +1086,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "VarcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="VarcharColumn_is_required")]
-#endif
-        public System.String VarcharColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="VarcharColumn_is_required")]        public System.String VarcharColumn
         {
             get
             {
@@ -1319,13 +1101,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "TextColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="TextColumn_is_required")]
-#endif
-        public System.String TextColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="TextColumn_is_required")]        public System.String TextColumn
         {
             get
             {
@@ -1339,14 +1116,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "NcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
 		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NcharColumn_is_required")]
-		[StringLengthAttribute(1, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_NcharColumn_should_be_0_to_1")]
-#endif
-        public System.String NcharColumn
+		[StringLengthAttribute(1, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_NcharColumn_should_be_0_to_1")]        public System.String NcharColumn
         {
             get
             {
@@ -1360,13 +1132,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "NvarcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NvarcharColumn_is_required")]
-#endif
-        public System.String NvarcharColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NvarcharColumn_is_required")]        public System.String NvarcharColumn
         {
             get
             {
@@ -1380,13 +1147,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "NtextColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NtextColumn_is_required")]
-#endif
-        public System.String NtextColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NtextColumn_is_required")]        public System.String NtextColumn
         {
             get
             {
@@ -1400,13 +1162,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "BitColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="BitColumn_is_required")]
-#endif
-        public System.Boolean BitColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="BitColumn_is_required")]        public System.Boolean BitColumn
         {
             get
             {
@@ -1420,12 +1177,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "BinaryColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Byte[] BinaryColumn
+		[Display(Name = "BinaryColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Byte[] BinaryColumn
         {
             get
             {
@@ -1439,12 +1191,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "VarbinaryColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Byte[] VarbinaryColumn
+		[Display(Name = "VarbinaryColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Byte[] VarbinaryColumn
         {
             get
             {
@@ -1458,12 +1205,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "ImageColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Byte[] ImageColumn
+		[Display(Name = "ImageColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Byte[] ImageColumn
         {
             get
             {
@@ -1477,13 +1219,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "TinyintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="TinyintColumn_is_required")]
-#endif
-        public System.Byte TinyintColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="TinyintColumn_is_required")]        public System.Byte TinyintColumn
         {
             get
             {
@@ -1497,13 +1234,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "SmallintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="SmallintColumn_is_required")]
-#endif
-        public System.Int16 SmallintColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="SmallintColumn_is_required")]        public System.Int16 SmallintColumn
         {
             get
             {
@@ -1517,13 +1249,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "IntColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="IntColumn_is_required")]
-#endif
-        public System.Int32 IntColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="IntColumn_is_required")]        public System.Int32 IntColumn
         {
             get
             {
@@ -1537,13 +1264,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "BigintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="BigintColumn_is_required")]
-#endif
-        public System.Int64 BigintColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="BigintColumn_is_required")]        public System.Int64 BigintColumn
         {
             get
             {
@@ -1557,13 +1279,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "DecimalColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="DecimalColumn_is_required")]
-#endif
-        public System.Decimal DecimalColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="DecimalColumn_is_required")]        public System.Decimal DecimalColumn
         {
             get
             {
@@ -1577,13 +1294,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "NumericColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NumericColumn_is_required")]
-#endif
-        public System.Decimal NumericColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NumericColumn_is_required")]        public System.Decimal NumericColumn
         {
             get
             {
@@ -1597,13 +1309,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "SmallmoneyColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="SmallmoneyColumn_is_required")]
-#endif
-        public System.Decimal SmallmoneyColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="SmallmoneyColumn_is_required")]        public System.Decimal SmallmoneyColumn
         {
             get
             {
@@ -1617,13 +1324,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "MoneyColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="MoneyColumn_is_required")]
-#endif
-        public System.Decimal MoneyColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="MoneyColumn_is_required")]        public System.Decimal MoneyColumn
         {
             get
             {
@@ -1637,13 +1339,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "FloatColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="FloatColumn_is_required")]
-#endif
-        public System.Single FloatColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="FloatColumn_is_required")]        public System.Single FloatColumn
         {
             get
             {
@@ -1657,13 +1354,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "RealColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="RealColumn_is_required")]
-#endif
-        public System.Single RealColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="RealColumn_is_required")]        public System.Single RealColumn
         {
             get
             {
@@ -1677,13 +1369,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "DatetimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="DatetimeColumn_is_required")]
-#endif
-        public System.DateTime DatetimeColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="DatetimeColumn_is_required")]        public System.DateTime DatetimeColumn
         {
             get
             {
@@ -1697,13 +1384,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "Datetime2Column", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Datetime2Column_is_required")]
-#endif
-        public System.DateTime Datetime2Column
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Datetime2Column_is_required")]        public System.DateTime Datetime2Column
         {
             get
             {
@@ -1717,13 +1399,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "SmalldatetimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="SmalldatetimeColumn_is_required")]
-#endif
-        public System.DateTime SmalldatetimeColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="SmalldatetimeColumn_is_required")]        public System.DateTime SmalldatetimeColumn
         {
             get
             {
@@ -1737,13 +1414,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "DateColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="DateColumn_is_required")]
-#endif
-        public System.DateTime DateColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="DateColumn_is_required")]        public System.DateTime DateColumn
         {
             get
             {
@@ -1757,13 +1429,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "TimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="TimeColumn_is_required")]
-#endif
-        public System.TimeSpan TimeColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="TimeColumn_is_required")]        public System.TimeSpan TimeColumn
         {
             get
             {
@@ -1777,13 +1444,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="UniqueidentifierColumn_is_required")]
-#endif
-        public System.Guid UniqueidentifierColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="UniqueidentifierColumn_is_required")]        public System.Guid UniqueidentifierColumn
         {
             get
             {
@@ -2022,12 +1684,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 			#region properties
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Int64 Id
+		[Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Int64 Id
         {
             get
             {
@@ -2041,12 +1698,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "RecursivePath__", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.String RecursivePath__
+		[Display(Name = "RecursivePath__", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.String RecursivePath__
         {
             get
             {
@@ -2060,12 +1712,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "ParentId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Int64 ParentId
+		[Display(Name = "ParentId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Int64 ParentId
         {
             get
             {
@@ -2079,12 +1726,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.String Name
+		[Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.String Name
         {
             get
             {
@@ -2098,12 +1740,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "IsSystemBuiltIn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Boolean IsSystemBuiltIn
+		[Display(Name = "IsSystemBuiltIn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Boolean IsSystemBuiltIn
         {
             get
             {
@@ -2117,12 +1754,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Guid UniqueIdentifier
+		[Display(Name = "UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Guid UniqueIdentifier
         {
             get
             {
@@ -2136,12 +1768,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "CreatedDateTime", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.DateTime CreatedDateTime
+		[Display(Name = "CreatedDateTime", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.DateTime CreatedDateTime
         {
             get
             {
@@ -2155,12 +1782,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "CharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.String CharColumn
+		[Display(Name = "CharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.String CharColumn
         {
             get
             {
@@ -2174,12 +1796,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "VarcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.String VarcharColumn
+		[Display(Name = "VarcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.String VarcharColumn
         {
             get
             {
@@ -2193,12 +1810,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "TextColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.String TextColumn
+		[Display(Name = "TextColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.String TextColumn
         {
             get
             {
@@ -2212,12 +1824,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "NcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.String NcharColumn
+		[Display(Name = "NcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.String NcharColumn
         {
             get
             {
@@ -2231,12 +1838,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "NvarcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.String NvarcharColumn
+		[Display(Name = "NvarcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.String NvarcharColumn
         {
             get
             {
@@ -2250,12 +1852,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "NtextColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.String NtextColumn
+		[Display(Name = "NtextColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.String NtextColumn
         {
             get
             {
@@ -2269,12 +1866,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "BitColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Boolean BitColumn
+		[Display(Name = "BitColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Boolean BitColumn
         {
             get
             {
@@ -2288,12 +1880,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "BinaryColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Byte[] BinaryColumn
+		[Display(Name = "BinaryColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Byte[] BinaryColumn
         {
             get
             {
@@ -2307,12 +1894,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "VarbinaryColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Byte[] VarbinaryColumn
+		[Display(Name = "VarbinaryColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Byte[] VarbinaryColumn
         {
             get
             {
@@ -2326,12 +1908,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "ImageColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Byte[] ImageColumn
+		[Display(Name = "ImageColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Byte[] ImageColumn
         {
             get
             {
@@ -2345,12 +1922,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "TinyintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Byte TinyintColumn
+		[Display(Name = "TinyintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Byte TinyintColumn
         {
             get
             {
@@ -2364,12 +1936,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "SmallintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Int16 SmallintColumn
+		[Display(Name = "SmallintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Int16 SmallintColumn
         {
             get
             {
@@ -2383,12 +1950,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "IntColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Int32 IntColumn
+		[Display(Name = "IntColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Int32 IntColumn
         {
             get
             {
@@ -2402,12 +1964,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "BigintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Int64 BigintColumn
+		[Display(Name = "BigintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Int64 BigintColumn
         {
             get
             {
@@ -2421,12 +1978,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "DecimalColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Decimal DecimalColumn
+		[Display(Name = "DecimalColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Decimal DecimalColumn
         {
             get
             {
@@ -2440,12 +1992,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "NumericColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Decimal NumericColumn
+		[Display(Name = "NumericColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Decimal NumericColumn
         {
             get
             {
@@ -2459,12 +2006,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "SmallmoneyColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Decimal SmallmoneyColumn
+		[Display(Name = "SmallmoneyColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Decimal SmallmoneyColumn
         {
             get
             {
@@ -2478,12 +2020,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "MoneyColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Decimal MoneyColumn
+		[Display(Name = "MoneyColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Decimal MoneyColumn
         {
             get
             {
@@ -2497,12 +2034,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "FloatColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Single FloatColumn
+		[Display(Name = "FloatColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Single FloatColumn
         {
             get
             {
@@ -2516,12 +2048,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "RealColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Single RealColumn
+		[Display(Name = "RealColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Single RealColumn
         {
             get
             {
@@ -2535,12 +2062,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "DatetimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.DateTime DatetimeColumn
+		[Display(Name = "DatetimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.DateTime DatetimeColumn
         {
             get
             {
@@ -2554,12 +2076,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "Datetime2Column", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.DateTime Datetime2Column
+		[Display(Name = "Datetime2Column", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.DateTime Datetime2Column
         {
             get
             {
@@ -2573,12 +2090,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "SmalldatetimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.DateTime SmalldatetimeColumn
+		[Display(Name = "SmalldatetimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.DateTime SmalldatetimeColumn
         {
             get
             {
@@ -2592,12 +2104,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "DateColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.DateTime DateColumn
+		[Display(Name = "DateColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.DateTime DateColumn
         {
             get
             {
@@ -2611,12 +2118,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "TimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.TimeSpan TimeColumn
+		[Display(Name = "TimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.TimeSpan TimeColumn
         {
             get
             {
@@ -2630,12 +2132,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Guid UniqueidentifierColumn
+		[Display(Name = "UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Guid UniqueidentifierColumn
         {
             get
             {
@@ -2782,13 +2279,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
 			#region properties
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "ParentId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="ParentId_is_required")]
-#endif
-        public System.Int64 ParentId
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="ParentId_is_required")]        public System.Int64 ParentId
         {
             get
             {
@@ -2802,12 +2294,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "CountPerFK", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Int64 CountPerFK
+		[Display(Name = "CountPerFK", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Int64 CountPerFK
         {
             get
             {
@@ -2821,12 +2308,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.String Name
+		[Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.String Name
         {
             get
             {
@@ -2952,13 +2434,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
 			#region properties
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Id_is_required")]
-#endif
-        public System.Int64 Id
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Id_is_required")]        public System.Int64 Id
         {
             get
             {
@@ -2972,14 +2449,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
 		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Name_is_required")]
-		[StringLengthAttribute(50, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_50")]
-#endif
-        public System.String Name
+		[StringLengthAttribute(50, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_50")]        public System.String Name
         {
             get
             {
@@ -2993,13 +2465,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "IsSystemBuiltIn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="IsSystemBuiltIn_is_required")]
-#endif
-        public System.Boolean IsSystemBuiltIn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="IsSystemBuiltIn_is_required")]        public System.Boolean IsSystemBuiltIn
         {
             get
             {
@@ -3013,13 +2480,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="UniqueIdentifier_is_required")]
-#endif
-        public System.Guid UniqueIdentifier
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="UniqueIdentifier_is_required")]        public System.Guid UniqueIdentifier
         {
             get
             {
@@ -3033,13 +2495,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "BitColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="BitColumn_is_required")]
-#endif
-        public System.Boolean BitColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="BitColumn_is_required")]        public System.Boolean BitColumn
         {
             get
             {
@@ -3053,13 +2510,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="UniqueidentifierColumn_is_required")]
-#endif
-        public System.Guid UniqueidentifierColumn
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="UniqueidentifierColumn_is_required")]        public System.Guid UniqueidentifierColumn
         {
             get
             {

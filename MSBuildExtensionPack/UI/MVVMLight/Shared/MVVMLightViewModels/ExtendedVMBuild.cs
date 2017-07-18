@@ -109,7 +109,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                                 this.DropDownContentsOfSolution_1.Add(new Framework.NameValuePair<System.Int32>(value, item.Name));
                             }
                         }
-                        //RaisePropertyChanged("DropDownContentsOfSolution_1");
                     }
                 });
             }
@@ -248,16 +247,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             {
                 return this.m_DropDownContentsOfOrganization_2;
             }
-            //set
-            //{
-            //    if (this.m_DropDownContentsOfOrganization_2 == value)
-            //    {
-            //        return;
-            //    }
-
-            //    this.m_DropDownContentsOfOrganization_2 = value;
-            //    RaisePropertyChanged("DropDownContentsOfOrganization_2");
-            //}
         }
 
         public RelayCommand<Framework.NameValuePair<System.Int64>> GetDropDownContentsOfOrganization_2SelectionChangedCommand { get; private set; }

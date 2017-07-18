@@ -16,7 +16,6 @@ namespace MSBuildExtensionPack.XamarinForms.Pages.Build
         {
             InitializeComponent();
             BindingContext = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild_Static.Item;
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild_Static.GetDropDownContentsOfOrganization_2();
         }
     }
 }

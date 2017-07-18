@@ -1,6 +1,4 @@
-using GalaSoft.MvvmLight.Messaging;
 using System;
-using System.Linq;
 using System.Collections.Generic;
 using Xamarin.Forms;
 
@@ -10,7 +8,7 @@ namespace MSBuildExtensionPack.XamarinForms.GlobalPages {
 			BindingContext = new MSBuildExtensionPack.XamarinForms.MenuPageViewModel();
 			Title = Framework.Resx.UIStringResource.Menu;
 			InitializeComponent();
-        }
+		}
 	}
 }
 

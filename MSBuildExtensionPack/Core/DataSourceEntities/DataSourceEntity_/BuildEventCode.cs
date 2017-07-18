@@ -1,10 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
-#if (WINDOWS_PHONE || XAMARIN)
-#else
 using System.ComponentModel.DataAnnotations;
-#endif
 
 namespace MSBuildExtensionPack.DataSourceEntities
 {
@@ -78,13 +75,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
 		#region properties
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode), ErrorMessageResourceName="Id_is_required")]
-#endif
-        public System.Int32 Id
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode), ErrorMessageResourceName="Id_is_required")]        public System.Int32 Id
         {
             get
             {
@@ -98,14 +90,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "EventCode", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode))]
 		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode), ErrorMessageResourceName="EventCode_is_required")]
-		[StringLengthAttribute(100, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode), ErrorMessageResourceName="The_length_of_EventCode_should_be_0_to_100")]
-#endif
-        public System.String EventCode
+		[StringLengthAttribute(100, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode), ErrorMessageResourceName="The_length_of_EventCode_should_be_0_to_100")]        public System.String EventCode
         {
             get
             {
@@ -119,13 +106,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "Description", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode))]
-		[StringLengthAttribute(1500, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode), ErrorMessageResourceName="The_length_of_Description_should_be_0_to_1500")]
-#endif
-        public System.String Description
+		[StringLengthAttribute(1500, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode), ErrorMessageResourceName="The_length_of_Description_should_be_0_to_1500")]        public System.String Description
         {
             get
             {
@@ -249,13 +231,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
 			#region properties
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode), ErrorMessageResourceName="Id_is_required")]
-#endif
-        public System.Int32 Id
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode), ErrorMessageResourceName="Id_is_required")]        public System.Int32 Id
         {
             get
             {
@@ -269,14 +246,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
 		[Display(Name = "EventCode", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode))]
 		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode), ErrorMessageResourceName="EventCode_is_required")]
-		[StringLengthAttribute(100, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode), ErrorMessageResourceName="The_length_of_EventCode_should_be_0_to_100")]
-#endif
-        public System.String EventCode
+		[StringLengthAttribute(100, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode), ErrorMessageResourceName="The_length_of_EventCode_should_be_0_to_100")]        public System.String EventCode
         {
             get
             {

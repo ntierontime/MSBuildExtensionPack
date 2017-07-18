@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Concurrent;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
@@ -20,16 +18,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
     /// </summary>
     public class MainViewModel : ViewModelBase
     {
-        /// <summary>
-        /// Gets or sets the page instance singleton.
-        /// For Xamarin.Forms
-        /// Not for WPF
-        /// </summary>
-        /// <value>
-        /// The page instance singleton.
-        /// </value>
-        ConcurrentDictionary<Type, object> PageInstanceSingleton { get; set; }
-
 		public bool QuitConfirmationEnabled { get; set; }
         public bool IsBusy { get; set; }
 
@@ -105,30 +93,13 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
             //#endregion 3. Initialize MenuItemSelectedCommand
 
-            PageInstanceSingleton = new ConcurrentDictionary<Type, object>();
-
-            this.IsBusy = false;
-        }
-
-        public object GetPageInstanceSingleton(Type pageType)
-        {
-            if(PageInstanceSingleton.ContainsKey(pageType))
-                return PageInstanceSingleton[pageType];
-
-            try
-            {
-                return Activator.CreateInstance(pageType);
-            }
-            catch
-            {
-                return null;
-            }
+			this.IsBusy = false;
         }
 
         //public override void Cleanup()
         //{
         //    // Clean up if needed
-        //
+		//
         //    base.Cleanup();
         //}
     }

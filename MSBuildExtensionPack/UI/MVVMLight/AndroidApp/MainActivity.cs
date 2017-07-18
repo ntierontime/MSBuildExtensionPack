@@ -15,7 +15,7 @@ namespace MSBuildExtensionPack.AndroidApp
     {
         protected override void OnCreate(Bundle bundle)
         {
-			TabLayoutResource = Resource.Layout.Tabbar;
+            TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
@@ -25,10 +25,10 @@ namespace MSBuildExtensionPack.AndroidApp
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
-			//PCLAppConfig.ConfigurationManager.Initialise(PCLAppConfig.FileSystemStream.PortableStream.Current);
+            //PCLAppConfig.ConfigurationManager.Initialise(PCLAppConfig.FileSystemStream.PortableStream.Current);
 
-			LoadApplication(new MSBuildExtensionPack.XamarinForms.App());
+            LoadApplication(new MSBuildExtensionPack.XamarinForms.App());
         }
-	}
+    }
 }
 
