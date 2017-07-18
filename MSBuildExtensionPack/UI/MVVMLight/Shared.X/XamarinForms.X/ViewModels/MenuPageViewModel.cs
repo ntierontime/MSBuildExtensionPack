@@ -54,3 +54,8 @@ namespace MSBuildExtensionPack.XamarinForms {
 	}
 }
 
+// https://github.com/srkrathore/AccordionEx
+// https://www.codeproject.com/Articles/1088093/Simple-Accordion-User-Control-in-Xamarin-Forms
+// https://github.com/Kimserey/AccordionView/blob/master/README.md
+// https://github.com/alexrainman/CarouselView
+// 
