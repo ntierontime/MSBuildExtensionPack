@@ -6,9 +6,8 @@
     <ContentPage.Content>
 		<ScrollView>
 			<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-				<!--<Switch IsToggled="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.MessageCommonOft.IsToCompare}" />-->
 				<Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareMessageCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-				<Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedMessageCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" Text="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.MessageCommonOft.ValueToBeContained}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+				<Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedMessageCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" Text="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.MessageCommonOft.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
 
 				<Switch IsToggled="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.IsToCompare}" />
 				<Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareEventTimeCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />

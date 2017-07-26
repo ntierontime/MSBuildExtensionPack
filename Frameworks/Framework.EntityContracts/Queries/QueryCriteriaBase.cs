@@ -1009,15 +1009,16 @@ namespace Framework.EntityContracts
         {
         }
 
-        #endregion constructors
+		#endregion constructors
 
-		
-        #region special constructors
-        
-        /// <summary>
-        /// Initializes a new instance of the <see cref="QuerySystemDateTimeRangeCriteria"/> class.
-        /// </summary>
-        public QuerySystemDateTimeRangeCriteria(
+		public PreDefinedDateTimeRanges PreDefinedDateTimeRange { get; set; }
+
+		#region special constructors
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="QuerySystemDateTimeRangeCriteria"/> class.
+		/// </summary>
+		public QuerySystemDateTimeRangeCriteria(
             DateTime? lowerBoundNullable
             , Framework.EntityContracts.Queries.DateTimeUnit dateTimeUnitOfInterval
             , System.Int32 interval)
