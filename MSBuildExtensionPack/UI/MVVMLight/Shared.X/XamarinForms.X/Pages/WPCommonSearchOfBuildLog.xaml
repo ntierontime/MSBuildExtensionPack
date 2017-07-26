@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
              x:Class="MSBuildExtensionPack.XamarinForms.Pages.WPCommonSearchOfBuildLog">
     <ContentPage.Content>
 		<ScrollView>
 			<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-				<Switch IsToggled="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.MessageCommonOft.IsToCompare}" />
+				<!--<Switch IsToggled="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.MessageCommonOft.IsToCompare}" />-->
 				<Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareMessageCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
 				<Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedMessageCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" Text="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.MessageCommonOft.ValueToBeContained}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
 
