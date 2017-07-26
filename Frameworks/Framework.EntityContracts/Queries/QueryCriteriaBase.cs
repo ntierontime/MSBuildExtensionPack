@@ -48,7 +48,7 @@ namespace Framework.EntityContracts
     /// for all concrete Query Critieria classes which process equals predicate
     /// </summary>
     /// <typeparam name="T">.Net value type</typeparam>
-    public class QueryEqualsCriteriaBase<T> : QueryCriteriaBase<T>
+    public abstract class QueryEqualsCriteriaBase<T> : QueryCriteriaBase<T>
     {
         /// <summary>
         /// Gets or sets the value to compare.
@@ -58,10 +58,12 @@ namespace Framework.EntityContracts
         /// </value>
         public T ValueToCompare { get; set; }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="QueryEqualsCriteriaBase&lt;T&gt;"/> class.
-        /// </summary>
-        public QueryEqualsCriteriaBase()
+		public abstract T NullableValueToCompare { get; set; }
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="QueryEqualsCriteriaBase&lt;T&gt;"/> class.
+		/// </summary>
+		public QueryEqualsCriteriaBase()
         {
         }
 
@@ -105,10 +107,39 @@ namespace Framework.EntityContracts
 		#endregion override string ToString()
     }
 
-    /// <summary>
-    /// concrete class for Boolean of QueryEqualsCriteriaBase&lt;T&gt;
-    /// </summary>
-    public class QuerySystemBooleanEqualsCriteria : QueryEqualsCriteriaBase<System.Boolean?>
+	public class QueryEqualsCriteriaBaseNullable<T> : QueryEqualsCriteriaBase<T?>
+		where T : struct
+	{
+		public QueryEqualsCriteriaBaseNullable()
+		{
+		}
+
+		public QueryEqualsCriteriaBaseNullable(bool isToCompare, T? valueToCompare)
+            : base(isToCompare, valueToCompare)
+        {
+			//this.IsToCompare = IsToCompare;
+			this.ValueToCompare = valueToCompare;
+		}
+
+		public override T? NullableValueToCompare
+		{
+			get { return ValueToCompare; }
+
+			set
+			{
+				if (!value.Equals(ValueToCompare))
+				{
+					ValueToCompare = value;
+					IsToCompare = value.HasValue;
+				}
+			}
+		}
+	}
+
+	/// <summary>
+	/// concrete class for Boolean of QueryEqualsCriteriaBase&lt;T&gt;
+	/// </summary>
+	public class QuerySystemBooleanEqualsCriteria : QueryEqualsCriteriaBaseNullable<System.Boolean>
     {
 		#region constructors
 
@@ -134,7 +165,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for Byte of QueryEqualsCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemByteEqualsCriteria : QueryEqualsCriteriaBase<System.Byte?>
+    public class QuerySystemByteEqualsCriteria : QueryEqualsCriteriaBaseNullable<System.Byte>
     {
 		#region constructors
 
@@ -160,7 +191,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for Char of QueryEqualsCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemCharEqualsCriteria : QueryEqualsCriteriaBase<System.Char?>
+    public class QuerySystemCharEqualsCriteria : QueryEqualsCriteriaBaseNullable<System.Char>
     {
 		#region constructors
 
@@ -186,7 +217,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for DateTime of QueryEqualsCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemDateTimeEqualsCriteria : QueryEqualsCriteriaBase<System.DateTime?>
+    public class QuerySystemDateTimeEqualsCriteria : QueryEqualsCriteriaBaseNullable<System.DateTime>
     {
 		#region constructors
 
@@ -212,7 +243,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for DateTimeOffset of QueryEqualsCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemDateTimeOffsetEqualsCriteria : QueryEqualsCriteriaBase<System.DateTimeOffset?>
+    public class QuerySystemDateTimeOffsetEqualsCriteria : QueryEqualsCriteriaBaseNullable<System.DateTimeOffset>
     {
 		#region constructors
 
@@ -238,7 +269,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for Decimal of QueryEqualsCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemDecimalEqualsCriteria : QueryEqualsCriteriaBase<System.Decimal?>
+    public class QuerySystemDecimalEqualsCriteria : QueryEqualsCriteriaBaseNullable<System.Decimal>
     {
 		#region constructors
 
@@ -264,7 +295,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for Double of QueryEqualsCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemDoubleEqualsCriteria : QueryEqualsCriteriaBase<System.Double?>
+    public class QuerySystemDoubleEqualsCriteria : QueryEqualsCriteriaBaseNullable<System.Double>
     {
 		#region constructors
 
@@ -290,7 +321,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for Guid of QueryEqualsCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemGuidEqualsCriteria : QueryEqualsCriteriaBase<System.Guid?>
+    public class QuerySystemGuidEqualsCriteria : QueryEqualsCriteriaBaseNullable<System.Guid>
     {
 		#region constructors
 
@@ -316,7 +347,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for Int16 of QueryEqualsCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemInt16EqualsCriteria : QueryEqualsCriteriaBase<System.Int16?>
+    public class QuerySystemInt16EqualsCriteria : QueryEqualsCriteriaBaseNullable<System.Int16>
     {
 		#region constructors
 
@@ -342,7 +373,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for Int32 of QueryEqualsCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemInt32EqualsCriteria : QueryEqualsCriteriaBase<System.Int32?>
+    public class QuerySystemInt32EqualsCriteria : QueryEqualsCriteriaBaseNullable<System.Int32>
     {
 		#region constructors
 
@@ -368,7 +399,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for Int64 of QueryEqualsCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemInt64EqualsCriteria : QueryEqualsCriteriaBase<System.Int64?>
+    public class QuerySystemInt64EqualsCriteria : QueryEqualsCriteriaBaseNullable<System.Int64>
     {
 		#region constructors
 
@@ -394,7 +425,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for SByte of QueryEqualsCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemSByteEqualsCriteria : QueryEqualsCriteriaBase<System.SByte?>
+    public class QuerySystemSByteEqualsCriteria : QueryEqualsCriteriaBaseNullable<System.SByte>
     {
         #region constructors
 
@@ -420,7 +451,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for Single of QueryEqualsCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemSingleEqualsCriteria : QueryEqualsCriteriaBase<System.Single?>
+    public class QuerySystemSingleEqualsCriteria : QueryEqualsCriteriaBaseNullable<System.Single>
     {
 		#region constructors
 
@@ -443,62 +474,76 @@ namespace Framework.EntityContracts
 		#endregion constructors
     }
 
-    /// <summary>
-    /// concrete class for String of QueryEqualsCriteriaBase&lt;T&gt;
-    /// </summary>
-    public class QuerySystemStringEqualsCriteria : QueryEqualsCriteriaBase<System.String>
-    {
+	/// <summary>
+	/// concrete class for String of QueryEqualsCriteriaBase&lt;T&gt;
+	/// </summary>
+	public class QuerySystemStringEqualsCriteria : QueryEqualsCriteriaBase<System.String>
+	{
 		#region constructors
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="QuerySystemStringEqualsCriteria"/> class.
-        /// </summary>
-        public QuerySystemStringEqualsCriteria()
-        {
-        }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="QuerySystemStringEqualsCriteria"/> class.
-        /// </summary>
-        /// <param name="isToCompare">if set to <c>true</c> [is to compare].</param>
-        /// <param name="valueToCompare">The value to compare.</param>
-        public QuerySystemStringEqualsCriteria(bool isToCompare, System.String valueToCompare)
+		/// <summary>
+		/// Initializes a new instance of the <see cref="QuerySystemStringEqualsCriteria"/> class.
+		/// </summary>
+		public QuerySystemStringEqualsCriteria()
+		{
+		}
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="QuerySystemStringEqualsCriteria"/> class.
+		/// </summary>
+		/// <param name="isToCompare">if set to <c>true</c> [is to compare].</param>
+		/// <param name="valueToCompare">The value to compare.</param>
+		public QuerySystemStringEqualsCriteria(bool isToCompare, System.String valueToCompare)
 			: base(isToCompare, valueToCompare)
-        {
-        }
+		{
+		}
 
 		#endregion constructors
-    }
 
-    /// <summary>
-    /// concrete class for TimeSpan of QueryEqualsCriteriaBase&lt;T&gt;
-    /// </summary>
-    public class QuerySystemTimeSpanEqualsCriteria : QueryEqualsCriteriaBase<System.TimeSpan?>
-    {
+
+		public override string NullableValueToCompare
+		{
+			get { return ValueToCompare; }
+
+			set
+			{
+				ValueToCompare = value;
+				IsToCompare = string.IsNullOrWhiteSpace(ValueToCompare);
+			}
+		}
+	}
+
+	/// <summary>
+	/// concrete class for TimeSpan of QueryEqualsCriteriaBase&lt;T&gt;
+	/// </summary>
+	public class QuerySystemTimeSpanEqualsCriteria : QueryEqualsCriteriaBaseNullable<System.TimeSpan>
+	{
 		#region constructors
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="QuerySystemTimeSpanEqualsCriteria"/> class.
-        /// </summary>
-        public QuerySystemTimeSpanEqualsCriteria()
-        {
-        }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="QuerySystemTimeSpanEqualsCriteria"/> class.
-        /// </summary>
-        /// <param name="isToCompare">if set to <c>true</c> [is to compare].</param>
-        /// <param name="valueToCompare">The value to compare.</param>
-        public QuerySystemTimeSpanEqualsCriteria(bool isToCompare, System.TimeSpan? valueToCompare)
+		/// <summary>
+		/// Initializes a new instance of the <see cref="QuerySystemTimeSpanEqualsCriteria"/> class.
+		/// </summary>
+		public QuerySystemTimeSpanEqualsCriteria()
+		{
+		}
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="QuerySystemTimeSpanEqualsCriteria"/> class.
+		/// </summary>
+		/// <param name="isToCompare">if set to <c>true</c> [is to compare].</param>
+		/// <param name="valueToCompare">The value to compare.</param>
+		public QuerySystemTimeSpanEqualsCriteria(bool isToCompare, System.TimeSpan? valueToCompare)
 			: base(isToCompare, valueToCompare)
-        {
-        }
+		{
+		}
 
 		#endregion constructors
-    }
+	}
 
-    /// <summary>
+	/// <summary>
     /// concrete class for UInt16 of QueryEqualsCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemUInt16EqualsCriteria : QueryEqualsCriteriaBase<System.UInt16?>
+    public class QuerySystemUInt16EqualsCriteria : QueryEqualsCriteriaBaseNullable<System.UInt16>
     {
 		#region constructors
 
@@ -524,12 +569,12 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for UInt32 of QueryEqualsCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemUInt32EqualsCriteria : QueryEqualsCriteriaBase<System.UInt32?>
+    public class QuerySystemUInt32EqualsCriteria : QueryEqualsCriteriaBaseNullable<System.UInt32>
     {
 		#region constructors
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="QuerySystemUInt32EqualsCriteria"/> class.
+        /// Initializes a new instance of the <see cref="QuerySystemUInt32EqualsCriteria"/> class
         /// </summary>
         public QuerySystemUInt32EqualsCriteria()
         {
@@ -550,7 +595,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for UInt64 of QueryEqualsCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemUInt64EqualsCriteria : QueryEqualsCriteriaBase<System.UInt64?>
+    public class QuerySystemUInt64EqualsCriteria : QueryEqualsCriteriaBaseNullable<System.UInt64>
     {
 		#region constructors
 
@@ -576,7 +621,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for Enum of QueryEqualsCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemEnumEqualsCriteria : QueryEqualsCriteriaBase<System.Enum>
+    public class QuerySystemEnumEqualsCriteria : QueryEqualsCriteriaBase<Enum>
     {
 		#region constructors
 
@@ -596,8 +641,21 @@ namespace Framework.EntityContracts
         {
         }
 
+		public override Enum NullableValueToCompare
+		{
+			get
+			{
+				throw new NotImplementedException();
+			}
+
+			set
+			{
+				throw new NotImplementedException();
+			}
+		}
+
 		#endregion constructors
-    }
+	}
 		
     #endregion Equals Criterias
 
@@ -652,10 +710,13 @@ namespace Framework.EntityContracts
         /// </value>
         public T UpperBound { get; set; }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="QueryRangeCriteriaBase&lt;T&gt;"/> class.
-        /// </summary>
-        public QueryRangeCriteriaBase()
+		public abstract T NullableLowerBound { get; set; }
+		public abstract T NullableUpperBound { get; set; }
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="QueryRangeCriteriaBase&lt;T&gt;"/> class.
+		/// </summary>
+		public QueryRangeCriteriaBase()
         {
         }
 
@@ -743,10 +804,81 @@ namespace Framework.EntityContracts
 
     }
 
-    /// <summary>
-    /// concrete class for Byte of QueryRangeCriteriaBase&lt;T&gt;
-    /// </summary>
-    public class QuerySystemByteRangeCriteria : QueryRangeCriteriaBase<System.Byte?>
+	public abstract class QueryRangeCriteriaBaseNullable<T> : QueryRangeCriteriaBase<T?>
+		where T : struct
+	{
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="QueryRangeCriteriaBase&lt;T&gt;"/> class.
+		/// </summary>
+		public QueryRangeCriteriaBaseNullable()
+		{
+		}
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="QueryRangeCriteriaBase&lt;T&gt;"/> class.
+		/// </summary>
+		/// <param name="isToCompare">if set to <c>true</c> [is to compare].</param>
+		/// <param name="lowerBound">The lower bound.</param>
+		/// <param name="upperBound">The upper bound.</param>
+		public QueryRangeCriteriaBaseNullable(bool isToCompare, T? lowerBound, T? upperBound)
+            : base(isToCompare, isToCompare, lowerBound, isToCompare, upperBound)
+        {
+		}
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="QueryRangeCriteriaBase&lt;T&gt;"/> class.
+		/// </summary>
+		/// <param name="isToCompare">if set to <c>true</c> [is to compare].</param>
+		/// <param name="isToCompareLowerBound">if set to <c>true</c> [is to compare lower bound].</param>
+		/// <param name="lowerBound">The lower bound.</param>
+		/// <param name="isToCompareUpperBound">if set to <c>true</c> [is to compare upper bound].</param>
+		/// <param name="upperBound">The upper bound.</param>
+		public QueryRangeCriteriaBaseNullable(bool isToCompare, bool isToCompareLowerBound, T? lowerBound, bool isToCompareUpperBound, T? upperBound)
+            : base(isToCompare, isToCompareLowerBound, lowerBound, isToCompareUpperBound, upperBound)
+        {
+			//this.IsToCompare = isToCompare;
+			this.IsToCompareLowerBound = isToCompareLowerBound;
+			this.IsToCompareUpperBound = isToCompareUpperBound;
+			this.LowerBound = lowerBound;
+			this.UpperBound = upperBound;
+			this.IsToIncludeLowerBound = true;
+			this.IsToIncludeUpperBound = false;
+		}
+
+		/// <summary>
+		/// Gets or sets the nullable lower bound.
+		/// </summary>
+		/// <value>
+		/// The nullable lower bound.
+		/// </value>
+		public override T? NullableLowerBound
+		{
+			get { return LowerBound; }
+			set
+			{
+				LowerBound = value;
+				IsToCompareLowerBound = value.HasValue;
+				IsToCompare = IsToCompareLowerBound || IsToCompareUpperBound;
+			}
+		}
+
+		public override T? NullableUpperBound
+		{
+			get { return UpperBound; }
+			set
+			{
+				UpperBound = value;
+				IsToCompareUpperBound = value.HasValue;
+				IsToCompare = IsToCompareLowerBound || IsToCompareUpperBound;
+			}
+		}
+	}
+
+	/// <summary>
+	/// concrete class for Byte of QueryRangeCriteriaBase&lt;T&gt;
+	/// </summary>
+	public class QuerySystemByteRangeCriteria : QueryRangeCriteriaBaseNullable<System.Byte>
     {
         #region constructors
 
@@ -796,7 +928,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for Char of QueryRangeCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemCharRangeCriteria : QueryRangeCriteriaBase<System.Char?>
+    public class QuerySystemCharRangeCriteria : QueryRangeCriteriaBaseNullable<System.Char>
     {
         #region constructors
 
@@ -844,7 +976,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for Byte of QueryRangeCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemDateTimeRangeCriteria : QueryRangeCriteriaBase<System.DateTime?>
+    public class QuerySystemDateTimeRangeCriteria : QueryRangeCriteriaBaseNullable<System.DateTime>
     {
         #region constructors
 
@@ -1118,7 +1250,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for Byte of QueryRangeCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemDateTimeOffsetRangeCriteria : QueryRangeCriteriaBase<System.DateTimeOffset?>
+    public class QuerySystemDateTimeOffsetRangeCriteria : QueryRangeCriteriaBaseNullable<System.DateTimeOffset>
     {
         #region constructors
 
@@ -1166,7 +1298,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for Byte of QueryRangeCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemDecimalRangeCriteria : QueryRangeCriteriaBase<System.Decimal?>
+    public class QuerySystemDecimalRangeCriteria : QueryRangeCriteriaBaseNullable<System.Decimal>
     {
         #region constructors
 
@@ -1213,7 +1345,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for Byte of QueryRangeCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemDoubleRangeCriteria : QueryRangeCriteriaBase<System.Double?>
+    public class QuerySystemDoubleRangeCriteria : QueryRangeCriteriaBaseNullable<System.Double>
     {
         #region constructors
 
@@ -1261,7 +1393,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for Byte of QueryRangeCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemInt16RangeCriteria : QueryRangeCriteriaBase<System.Int16?>
+    public class QuerySystemInt16RangeCriteria : QueryRangeCriteriaBaseNullable<System.Int16>
     {
         #region constructors
 
@@ -1309,7 +1441,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for Byte of QueryRangeCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemInt32RangeCriteria : QueryRangeCriteriaBase<System.Int32?>
+    public class QuerySystemInt32RangeCriteria : QueryRangeCriteriaBaseNullable<System.Int32>
     {
         #region constructors
 
@@ -1357,7 +1489,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for Byte of QueryRangeCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemInt64RangeCriteria : QueryRangeCriteriaBase<System.Int64?>
+    public class QuerySystemInt64RangeCriteria : QueryRangeCriteriaBaseNullable<System.Int64>
     {
         #region constructors
 
@@ -1405,7 +1537,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for Byte of QueryRangeCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemSByteRangeCriteria : QueryRangeCriteriaBase<System.SByte?>
+    public class QuerySystemSByteRangeCriteria : QueryRangeCriteriaBaseNullable<System.SByte>
     {
         #region constructors
 
@@ -1453,7 +1585,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for Byte of QueryRangeCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemSingleRangeCriteria : QueryRangeCriteriaBase<System.Single?>
+    public class QuerySystemSingleRangeCriteria : QueryRangeCriteriaBaseNullable<System.Single>
     {
         #region constructors
 
@@ -1534,22 +1666,52 @@ namespace Framework.EntityContracts
         {
         }
 
-        #endregion constructors
+		#endregion constructors
 
-        #region _Predicate method toberemoved
+		public override string NullableLowerBound
+		{
+			get
+			{
+				return LowerBound;
+			}
 
-        //public override bool _Predicate(System.String input)
-        //{
-        //    return (this.IsToCompare == false) || (this.IsToCompare == true && input.CompareTo(this.LowerBound) > 0 && input.CompareTo(this.UpperBound) < 0);
-        //}
+			set
+			{
+				LowerBound = value;
+				IsToCompareLowerBound = !string.IsNullOrWhiteSpace(value);
+				IsToCompare = IsToCompareLowerBound || IsToCompareUpperBound;
+			}
+		}
 
-        #endregion _Predicate method
-    }
+		public override string NullableUpperBound
+		{
+			get
+			{
+				return UpperBound;
+			}
+
+			set
+			{
+				UpperBound = value;
+				IsToCompareUpperBound = !string.IsNullOrWhiteSpace(value);
+				IsToCompare = IsToCompareLowerBound || IsToCompareUpperBound;
+			}
+		}
+
+		#region _Predicate method toberemoved
+
+		//public override bool _Predicate(System.String input)
+		//{
+		//    return (this.IsToCompare == false) || (this.IsToCompare == true && input.CompareTo(this.LowerBound) > 0 && input.CompareTo(this.UpperBound) < 0);
+		//}
+
+		#endregion _Predicate method
+	}
 
     /// <summary>
     /// concrete class for TimeSpan of QueryRangeCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemTimeSpanRangeCriteria : QueryRangeCriteriaBase<System.TimeSpan?>
+    public class QuerySystemTimeSpanRangeCriteria : QueryRangeCriteriaBaseNullable<System.TimeSpan>
     {
         #region constructors
 
@@ -1597,7 +1759,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for UInt16 of QueryRangeCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemUInt16RangeCriteria : QueryRangeCriteriaBase<System.UInt16?>
+    public class QuerySystemUInt16RangeCriteria : QueryRangeCriteriaBaseNullable<System.UInt16>
     {
         #region constructors
 
@@ -1645,7 +1807,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for UInt32 of QueryRangeCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemUInt32RangeCriteria : QueryRangeCriteriaBase<System.UInt32?>
+    public class QuerySystemUInt32RangeCriteria : QueryRangeCriteriaBaseNullable<System.UInt32>
     {
         #region constructors
 
@@ -1693,7 +1855,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// concrete class for UInt64 of QueryRangeCriteriaBase&lt;T&gt;
     /// </summary>
-    public class QuerySystemUInt64RangeCriteria : QueryRangeCriteriaBase<System.UInt64?>
+    public class QuerySystemUInt64RangeCriteria : QueryRangeCriteriaBaseNullable<System.UInt64>
     {
         #region constructors
 
@@ -2426,12 +2588,14 @@ namespace Framework.EntityContracts
         /// </value>
         public T ValueToBeContained { get; set; }
 
-        #region constructors
+		public abstract T NullableValueToBeContained { get; set; }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="QueryContainsCriteriaBase&lt;T&gt;"/> class.
-        /// </summary>
-        public QueryContainsCriteriaBase()
+		#region constructors
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="QueryContainsCriteriaBase&lt;T&gt;"/> class.
+		/// </summary>
+		public QueryContainsCriteriaBase()
         {
         }
         /// <summary>
@@ -2472,58 +2636,23 @@ namespace Framework.EntityContracts
         {
         }
 
-        #endregion constructors toberemoved
+		#endregion constructors toberemoved
+		public override string NullableValueToBeContained
+		{
+			get { return ValueToBeContained; }
 
-        //public override bool _Predicate(string input)
-        //{
-        //    return (this.IsToCompare == false) || (this.IsToCompare == true && this.ValueToBeContained.Contains(input));
-        //}
-    }
+			set
+			{
+				ValueToBeContained = value;
+				IsToCompare = !string.IsNullOrWhiteSpace(value);
+			}
+		}
+
+		//public override bool _Predicate(string input)
+		//{
+		//    return (this.IsToCompare == false) || (this.IsToCompare == true && this.ValueToBeContained.Contains(input));
+		//}
+	}
 
     #endregion string contains criteria
-
-    #region QueryPredicates -- to-be-removed
-
-    ///// <summary>
-    ///// ??
-    ///// </summary>
-    ///// <typeparam name="TCriteria">The type of the criteria.</typeparam>
-    ///// <typeparam name="TInput">is the Entity Type</typeparam>
-    //[Obsolete("The original purpose is the utilize LinqKit predicate builder, retired.")]
-    //public abstract class QueryPredicateBase<TCriteria, TInput>
-    //{
-    //    /// <summary>
-    //    /// Gets or sets the criteria.
-    //    /// </summary>
-    //    /// <value>
-    //    /// The criteria.
-    //    /// </value>
-    //    public TCriteria Criteria {get;set;}
-
-    //    /// <summary>
-    //    /// Initializes a new instance of the <see cref="QueryPredicateBase&lt;TCriteria, TInput&gt;"/> class.
-    //    /// </summary>
-    //    public QueryPredicateBase()
-    //    {
-    //    }
-
-    //    /// <summary>
-    //    /// Initializes a new instance of the <see cref="QueryPredicateBase&lt;TCriteria, TInput&gt;"/> class.
-    //    /// </summary>
-    //    /// <param name="criteria">The criteria.</param>
-    //    public QueryPredicateBase(TCriteria criteria)
-    //    {
-    //        this.Criteria = criteria;
-    //    }
-
-    //    /// <summary>
-    //    /// Predicates the specified input.
-    //    /// </summary>
-    //    /// <param name="input">The input.</param>
-    //    /// <returns>true if meets criteria, otherwise false</returns>
-    //    public abstract bool Predicate(TInput input);
-    //}
-
-     #endregion QueryPredicates
-
 }
