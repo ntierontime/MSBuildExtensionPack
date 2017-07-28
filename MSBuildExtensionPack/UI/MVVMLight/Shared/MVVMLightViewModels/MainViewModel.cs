@@ -73,6 +73,9 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         public Framework.NavigationSettingCollection NavigationSettingCollection { get; set; }
 
+        public Framework.NameValueCollection PreDefinedDateTimeRangeList { get; }
+        public Framework.NameValueCollection PredefinedBooleanSelectedValueList { get; }
+
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
@@ -107,6 +110,9 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             //#endregion 3. Initialize MenuItemSelectedCommand
 
             PageInstanceSingleton = new ConcurrentDictionary<Type, object>();
+
+            this.PreDefinedDateTimeRangeList = Framework.EntityContracts.QuerySystemDateTimeRangeCriteria.GetList(null);
+            this.PredefinedBooleanSelectedValueList = Framework.EntityContracts.QuerySystemBooleanEqualsCriteria.GetList(null);
 
             this.IsBusy = false;
         }

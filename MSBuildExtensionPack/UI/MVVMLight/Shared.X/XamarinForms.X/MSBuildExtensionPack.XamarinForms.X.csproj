@@ -36,6 +36,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Globallization\EnumToNameValuePairConverter.cs" />
+    <Compile Include="Globallization\EnumToStringConverter.cs" />
     <Compile Include="Pages\WPCommonOfBuildLog.xaml.cs">
       <DependentUpon>WPCommonOfBuildLog.xaml</DependentUpon>
     </Compile>
@@ -214,7 +216,7 @@
     </Compile>
     <EmbeddedResource Include="ResourceApp.config">
     </EmbeddedResource>
-    <Compile Include="TranslateExtension.cs" />
+    <Compile Include="Globallization\TranslateExtension.cs" />
     <None Include="app.config" />
     <Compile Include="ViewModels\MenuPageViewModel.cs" />
     <None Include="map.2.D.1.vsd" />

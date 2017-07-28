@@ -37,7 +37,24 @@ namespace Framework.EntityContracts
         /// 	<c>true</c> if this instance is to compare; otherwise, <c>false</c>.
         /// </value>
         public bool IsToCompare { get; set; }
-        //public abstract bool _Predicate(T input);
+
+        protected static Framework.NameValueCollection GetListWithLocalizedResource(string resourcePrefix, Type type)
+        {
+            string format = "{0}_{2}";
+            var results = new Framework.NameValueCollection();
+            var prefix = string.IsNullOrWhiteSpace(resourcePrefix) ? type.Name : resourcePrefix;
+            foreach (var name in Enum.GetNames(type))
+            {
+                string resourceName = string.Format(format, prefix, null, name);
+                string resourceString = Framework.Resx.UIStringResource.PreDefinedDateTimeRanges_Unknown;
+                //results.Add(name, Framework.Resx.UIStringResource.ResourceManager.GetString(resourceName));
+                results.Add(name, resourceString);
+
+            }
+
+            return results;
+        }
+
     }
 
     #endregion QueryCriterias
@@ -136,12 +153,12 @@ namespace Framework.EntityContracts
 		}
 	}
 
-	/// <summary>
-	/// concrete class for Boolean of QueryEqualsCriteriaBase&lt;T&gt;
-	/// </summary>
-	public class QuerySystemBooleanEqualsCriteria : QueryEqualsCriteriaBaseNullable<System.Boolean>
+    /// <summary>
+    /// concrete class for Boolean of QueryEqualsCriteriaBase&lt;T&gt;
+    /// </summary>
+    public class QuerySystemBooleanEqualsCriteria : QueryEqualsCriteriaBaseNullable<System.Boolean>
     {
-		#region constructors
+        #region constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="QuerySystemBooleanEqualsCriteria"/> class.
@@ -155,11 +172,32 @@ namespace Framework.EntityContracts
         /// <param name="isToCompare">if set to <c>true</c> [is to compare].</param>
         /// <param name="valueToCompare">if set to <c>true</c> [value to compare].</param>
         public QuerySystemBooleanEqualsCriteria(bool isToCompare, System.Boolean? valueToCompare)
-			: base(isToCompare, valueToCompare)
+            : base(isToCompare, valueToCompare)
         {
         }
 
-		#endregion constructors
+        #endregion constructors
+
+        Framework.EntityContracts.PredefinedBooleanSelectedValues m_PredefinedBooleanSelectedValue;
+        public Framework.EntityContracts.PredefinedBooleanSelectedValues PredefinedBooleanSelectedValue
+        {
+            get
+            {
+                return m_PredefinedBooleanSelectedValue;
+            }
+            set
+            {
+                m_PredefinedBooleanSelectedValue = value;
+                IsToCompare = m_PredefinedBooleanSelectedValue != Framework.EntityContracts.PredefinedBooleanSelectedValues.All;
+                ValueToCompare = m_PredefinedBooleanSelectedValue == Framework.EntityContracts.PredefinedBooleanSelectedValues.True;
+            }
+        }
+
+        public static Framework.NameValueCollection GetList(string resourcePrefix)
+        {
+            Type type = typeof(Framework.EntityContracts.PredefinedBooleanSelectedValues);
+            return GetListWithLocalizedResource(resourcePrefix, type);
+        }
     }
 
     /// <summary>
@@ -1009,16 +1047,189 @@ namespace Framework.EntityContracts
         {
         }
 
-		#endregion constructors
+        #endregion constructors
 
-		public PreDefinedDateTimeRanges PreDefinedDateTimeRange { get; set; }
+        PreDefinedDateTimeRanges m_PreDefinedDateTimeRange;
 
-		#region special constructors
+        public PreDefinedDateTimeRanges PreDefinedDateTimeRange
+        {
+            get
+            {
+                return m_PreDefinedDateTimeRange;
+            }
+            set
+            {
+                m_PreDefinedDateTimeRange = value;
+                var calculated = GetBounds(value);
+                LowerBound = calculated.LowerBound;
+                UpperBound = calculated.UpperBound;
+            }
+        }
 
-		/// <summary>
-		/// Initializes a new instance of the <see cref="QuerySystemDateTimeRangeCriteria"/> class.
-		/// </summary>
-		public QuerySystemDateTimeRangeCriteria(
+        public static QuerySystemDateTimeRangeCriteria GetBounds(PreDefinedDateTimeRanges preDefinedDateTimeRange)
+        {
+            if (preDefinedDateTimeRange == PreDefinedDateTimeRanges.Custom)
+            {
+                var lowerBound = DateTime.Now;
+                var upperBound = DateTime.Now;
+                return new QuerySystemDateTimeRangeCriteria(true, lowerBound, upperBound);
+            }
+            else if (preDefinedDateTimeRange == PreDefinedDateTimeRanges.LastTenYears)
+            // include this year + 10 years
+            {
+                var lowerBound = DateTime.Now.AddYears(-10);
+                lowerBound = new DateTime(lowerBound.Year, 1, 1);
+                var upperBound = DateTime.Now;
+                return new QuerySystemDateTimeRangeCriteria(true, lowerBound, upperBound);
+            }
+            else if (preDefinedDateTimeRange == PreDefinedDateTimeRanges.LastFiveYears)
+            // include this year + 5 years
+            {
+                var lowerBound = DateTime.Now.AddYears(-5);
+                lowerBound = new DateTime(lowerBound.Year, 1, 1);
+                var upperBound = DateTime.Now;
+                return new QuerySystemDateTimeRangeCriteria(true, lowerBound, upperBound);
+            }
+            else if (preDefinedDateTimeRange == PreDefinedDateTimeRanges.LastYear)
+            // include this year + 1 year
+            {
+                var lowerBound = DateTime.Now.AddYears(-1);
+                lowerBound = new DateTime(lowerBound.Year, 1, 1);
+                var upperBound = DateTime.Now;
+                return new QuerySystemDateTimeRangeCriteria(true, lowerBound, upperBound);
+            }
+            else if (preDefinedDateTimeRange == PreDefinedDateTimeRanges.LastSixMonths)
+            // include this month + 6 month
+            {
+                var lowerBound = DateTime.Now.AddMonths(-6);
+                lowerBound = new DateTime(lowerBound.Year, lowerBound.Month, 1);
+                var upperBound = DateTime.Now;
+                return new QuerySystemDateTimeRangeCriteria(true, lowerBound, upperBound);
+            }
+            else if (preDefinedDateTimeRange == PreDefinedDateTimeRanges.LastThreeMonths)
+            // include this month + 3 month
+            {
+                var lowerBound = DateTime.Now.AddMonths(-3);
+                lowerBound = new DateTime(lowerBound.Year, lowerBound.Month, 1);
+                var upperBound = DateTime.Now;
+                return new QuerySystemDateTimeRangeCriteria(true, lowerBound, upperBound);
+            }
+            else if (preDefinedDateTimeRange == PreDefinedDateTimeRanges.LastMonth)
+                // include this month + 1 month
+            {
+                var lowerBound = DateTime.Now.AddMonths(-1);
+                lowerBound = new DateTime(lowerBound.Year, lowerBound.Month, 1);
+                var upperBound = DateTime.Now;
+                return new QuerySystemDateTimeRangeCriteria(true, lowerBound, upperBound);
+            }
+            else if (preDefinedDateTimeRange == PreDefinedDateTimeRanges.LastWeek)
+                // include this week + 1 week
+            {
+                var lowerBound = DateTime.Now.AddDays(-7);
+                lowerBound = lowerBound.AddDays(-(int)lowerBound.DayOfWeek);// starting from Sunday
+                lowerBound = new DateTime(lowerBound.Year, lowerBound.Month, 1);
+                var upperBound = lowerBound.AddDays(7);
+                return new QuerySystemDateTimeRangeCriteria(true, lowerBound, upperBound);
+            }
+            else if (preDefinedDateTimeRange == PreDefinedDateTimeRanges.Yesterday)
+                // exclude today
+            {
+                var lowerBound = DateTime.Now.AddDays(-1);
+                lowerBound = new DateTime(lowerBound.Year, lowerBound.Month, lowerBound.Day, 0, 0, 0);
+                var upperBound = lowerBound.AddDays(1);
+                return new QuerySystemDateTimeRangeCriteria(true, lowerBound, upperBound);
+            }
+            else if (preDefinedDateTimeRange == PreDefinedDateTimeRanges.ThisYear)
+            {
+                var lowerBound = new DateTime(DateTime.Now.Year, 1, 1);
+                var upperBound = lowerBound.AddYears(1);
+                return new QuerySystemDateTimeRangeCriteria(true, lowerBound, upperBound);
+            }
+            else if (preDefinedDateTimeRange == PreDefinedDateTimeRanges.ThisMonth)
+            {
+                var lowerBound = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+                var upperBound = lowerBound.AddMonths(1);
+                return new QuerySystemDateTimeRangeCriteria(true, lowerBound, upperBound);
+            }
+            else if (preDefinedDateTimeRange == PreDefinedDateTimeRanges.ThisWeek)
+            {
+                var lowerBound = DateTime.Now.AddDays(-(int)DateTime.Now.DayOfWeek);
+                var upperBound = lowerBound.AddDays(7);
+                return new QuerySystemDateTimeRangeCriteria(true, lowerBound, upperBound);
+            }
+            else if (preDefinedDateTimeRange == PreDefinedDateTimeRanges.Today)
+            {
+                var lowerBound = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+                var upperBound = lowerBound.AddDays(1);
+                return new QuerySystemDateTimeRangeCriteria(true, lowerBound, upperBound);
+            }
+            else if (preDefinedDateTimeRange == PreDefinedDateTimeRanges.Tomorrow)
+            // exclude today
+            {
+                var lowerBound = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day).AddDays(1);
+                var upperBound = lowerBound.AddDays(1);
+                return new QuerySystemDateTimeRangeCriteria(true, lowerBound, upperBound);
+            }
+            else if (preDefinedDateTimeRange == PreDefinedDateTimeRanges.NextWeek)
+            // exclude this week
+            {
+                var lowerBound = DateTime.Now.AddDays(-(int)DateTime.Now.DayOfWeek).AddDays(7);
+                var upperBound = lowerBound.AddDays(7);
+                return new QuerySystemDateTimeRangeCriteria(true, lowerBound, upperBound);
+            }
+            else if (preDefinedDateTimeRange == PreDefinedDateTimeRanges.NextMonth)
+            // exclude this month
+            {
+                var lowerBound = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1).AddMonths(1);
+                var upperBound = lowerBound.AddMonths(1);
+                return new QuerySystemDateTimeRangeCriteria(true, lowerBound, upperBound);
+            }
+            else if (preDefinedDateTimeRange == PreDefinedDateTimeRanges.NextThreeMonths)
+            // exclude this month
+            {
+                var lowerBound = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1).AddMonths(1);
+                var upperBound = lowerBound.AddMonths(3);
+                return new QuerySystemDateTimeRangeCriteria(true, lowerBound, upperBound);
+            }
+            else if (preDefinedDateTimeRange == PreDefinedDateTimeRanges.NextSixMonths)
+            // exclude this month
+            {
+                var lowerBound = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1).AddMonths(1);
+                var upperBound = lowerBound.AddMonths(6);
+                return new QuerySystemDateTimeRangeCriteria(true, lowerBound, upperBound);
+            }
+            else if (preDefinedDateTimeRange == PreDefinedDateTimeRanges.NextYear)
+            // exclude this year
+            {
+                var lowerBound = new DateTime(DateTime.Now.Year, 1, 1).AddYears(1);
+                var upperBound = lowerBound.AddYears(1);
+                return new QuerySystemDateTimeRangeCriteria(true, lowerBound, upperBound);
+            }
+            else if (preDefinedDateTimeRange == PreDefinedDateTimeRanges.NextFiveYears)
+            // exclude this year
+            {
+                var lowerBound = new DateTime(DateTime.Now.Year, 1, 1).AddYears(1);
+                var upperBound = lowerBound.AddYears(5);
+                return new QuerySystemDateTimeRangeCriteria(true, lowerBound, upperBound);
+            }
+            else if (preDefinedDateTimeRange == PreDefinedDateTimeRanges.NextTenYears)
+            // exclude this year
+            {
+                var lowerBound = new DateTime(DateTime.Now.Year, 1, 1).AddYears(1);
+                var upperBound = lowerBound.AddYears(10);
+                return new QuerySystemDateTimeRangeCriteria(true, lowerBound, upperBound);
+            }
+
+            return new QuerySystemDateTimeRangeCriteria(false, null, null);
+
+        }
+
+        #region special constructors
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="QuerySystemDateTimeRangeCriteria"/> class.
+        /// </summary>
+        public QuerySystemDateTimeRangeCriteria(
             DateTime? lowerBoundNullable
             , Framework.EntityContracts.Queries.DateTimeUnit dateTimeUnitOfInterval
             , System.Int32 interval)
@@ -1085,16 +1296,6 @@ namespace Framework.EntityContracts
         }
 
         #endregion special constructors
-
-        #region _Predicate method toberemoved
-
-        //public override bool _Predicate(System.DateTime input)
-        //{
-        //    return (this.IsToCompare == false) || (this.IsToCompare == true && input > this.LowerBound && input < this.UpperBound);
-        //}
-
-        #endregion _Predicate method
-
 
         #region Get...RangeOf(DateTime dateTime)
 
@@ -1186,7 +1387,6 @@ namespace Framework.EntityContracts
         }
 
         #endregion Get...Of(DateTime dateTime)
-
 		
         #region Predicate(DateTime input)
 
@@ -1246,6 +1446,12 @@ namespace Framework.EntityContracts
         }
 
         #endregion CalculateConsecutiveDistributionCriteria(...)
+
+        public static Framework.NameValueCollection GetList(string resourcePrefix)
+        {
+            Type type = typeof(Framework.EntityContracts.PreDefinedDateTimeRanges);
+            return GetListWithLocalizedResource(resourcePrefix, type);
+        }
     }
 
     /// <summary>
@@ -2648,11 +2854,6 @@ namespace Framework.EntityContracts
 				IsToCompare = !string.IsNullOrWhiteSpace(value);
 			}
 		}
-
-		//public override bool _Predicate(string input)
-		//{
-		//    return (this.IsToCompare == false) || (this.IsToCompare == true && this.ValueToBeContained.Contains(input));
-		//}
 	}
 
     #endregion string contains criteria

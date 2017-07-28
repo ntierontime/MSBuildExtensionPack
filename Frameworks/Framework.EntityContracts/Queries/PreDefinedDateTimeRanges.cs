@@ -11,7 +11,7 @@ namespace Framework.EntityContracts
 	/// </summary>
 	public enum PreDefinedDateTimeRanges
 	{
-		Unknow,
+		Unknown,
 		Custom,
 		LastTenYears,
 		LastFiveYears,
