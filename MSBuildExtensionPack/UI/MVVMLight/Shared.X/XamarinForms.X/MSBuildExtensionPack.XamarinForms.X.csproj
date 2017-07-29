@@ -36,8 +36,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Globallization\EnumToNameValuePairConverter.cs" />
-    <Compile Include="Globallization\EnumToStringConverter.cs" />
     <Compile Include="Pages\WPCommonOfBuildLog.xaml.cs">
       <DependentUpon>WPCommonOfBuildLog.xaml</DependentUpon>
     </Compile>

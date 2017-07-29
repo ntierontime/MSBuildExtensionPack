@@ -45,7 +45,10 @@ namespace MSBuildExtensionPack.XamarinForms.GlobalPages
                             }
                             else if (navigationSetting.NextUIAction == Framework.UIAction.Navigate)
                             {
+                                //App.NavigationPage.Navigation.PushAsync(new MSBuildExtensionPack.XamarinForms.Pages.BuildLog.Create());
                                 App.NavigationPage.Navigation.PushAsync(new MSBuildExtensionPack.XamarinForms.Pages.WPCommonSearchOfBuildLog());
+
+                                App.MenuIsPresented = false;
                                 //var page = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.GetPageInstanceSingleton(navigationSetting.TargetPageType);
 
                                 //if (page != null)

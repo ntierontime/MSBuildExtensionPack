@@ -50,14 +50,17 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
 			// 5.2. BuildEventCode_1 GetDropDownContentsOfBuildEventCode_1SelectionChanged and its command
 			this.GetDropDownContentsOfBuildEventCode_1Command = new RelayCommand(this.GetDropDownContentsOfBuildEventCode_1);
-
-
         }
 
+        public void InitializeTopLevelDropDownListContents()
+        {
+            this.GetDropDownContentsOfOrganization_2Command.Execute(null);
+            this.GetDropDownContentsOfBuildEventCode_1Command.Execute(null);
+        }
 
-		#region 1. Build_1
-					
-		// 1.1. Build_1 LaunchBuild_1DetailsView and its command
+        #region 1. Build_1
+
+        // 1.1. Build_1 LaunchBuild_1DetailsView and its command
 
         public RelayCommand<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default> LaunchBuild_1DetailsViewCommand { get; protected set; }
         protected void LaunchBuild_1DetailsView(MSBuildExtensionPack.DataSourceEntities.BuildLog.Default item)

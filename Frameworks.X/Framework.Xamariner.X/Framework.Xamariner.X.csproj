@@ -38,6 +38,8 @@
   <ItemGroup>
     <Compile Include="Controls\Accordion.cs" />
     <Compile Include="Converters\EnumerateToNameValuePairExtension.cs" />
+    <Compile Include="Converters\EnumToNameValuePairConverter.cs" />
+    <Compile Include="Converters\EnumToStringConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <Compile Include="Behaviors\BehaviorBase.cs" />

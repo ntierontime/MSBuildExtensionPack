@@ -7,27 +7,24 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 
 
-namespace MSBuildExtensionPack.XamarinForms
+namespace Framework.Xamariner
 {
-    public sealed class EnumToNameValuePairConverter : IValueConverter
+    public sealed class EnumToStringConverter : IValueConverter
     {
-        const string format = "{0}_{2}";
-
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             if (value == null)
             { return null; }
-            var prefix = parameter == null ? targetType.Name : parameter.ToString();
-            return new Framework.NameValuePair(value.ToString(), Framework.Resx.UIStringResource.ResourceManager.GetString(string.Format(format, prefix, null, value.ToString())));
+            return value.ToString();
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
+            string str = (string)value;
 
             try
             {
-                var originalValue = (Framework.NameValuePair)value;
-                return Enum.Parse(targetType, originalValue.Value);
+                return Enum.Parse(targetType, str);
             }
             catch
             {
