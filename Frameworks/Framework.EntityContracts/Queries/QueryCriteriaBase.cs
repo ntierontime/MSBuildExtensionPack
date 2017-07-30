@@ -1041,7 +1041,7 @@ namespace Framework.EntityContracts
         /// <param name="lowerBound">The lower bound.</param>
         /// <param name="isToCompareUpperBound">if set to <c>true</c> [is to compare upper bound].</param>
         /// <param name="upperBound">The upper bound.</param>
-        public QuerySystemDateTimeRangeCriteria(bool isToCompare, bool isToCompareLowerBound, System.DateTime lowerBound, bool isToCompareUpperBound, System.DateTime upperBound)
+        public QuerySystemDateTimeRangeCriteria(bool isToCompare, bool isToCompareLowerBound, System.DateTime? lowerBound, bool isToCompareUpperBound, System.DateTime? upperBound)
             : base(isToCompare, isToCompare, lowerBound, isToCompare, upperBound)
         {
         }
@@ -2864,3 +2864,4 @@ namespace Framework.EntityContracts
 
     #endregion string contains criteria
 }
+

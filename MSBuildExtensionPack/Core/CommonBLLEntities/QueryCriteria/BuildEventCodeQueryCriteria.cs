@@ -130,7 +130,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="isToCompareIdByIdentifierOft">will compare/filter IdByIdentifierOft property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIdByIdentifierOft">value to compare/filter with IdByIdentifierOft property/field/column</param>
 		public BuildEventCodeQueryCriteriaByIdentifier(
-			bool isToCompareIdByIdentifierOft, System.Int32 valueToCompareIdByIdentifierOft
+			bool isToCompareIdByIdentifierOft, System.Int32? valueToCompareIdByIdentifierOft
 			)
 			: this(
 				new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOft, valueToCompareIdByIdentifierOft)

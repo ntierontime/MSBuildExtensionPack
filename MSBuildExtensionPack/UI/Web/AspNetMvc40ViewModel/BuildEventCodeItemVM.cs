@@ -17,7 +17,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 
 
 
-        public void Load(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32 valueToCompareIdByIdentifierOftOfByIdentifier
+        public void Load(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
             , Framework.UIAction uiAction)
         {
             try

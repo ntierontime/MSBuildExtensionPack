@@ -72,12 +72,12 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="isToCompareMessageCommonOft">will compare/filter MessageCommonOft property/field/column if true, otherwise false</param>
         /// <param name="valueToBeContainedMessageCommonOft">value to compare/filter with MessageCommonOft property/field/column</param>
 		public BuildLogQueryCriteriaCommon(
-			bool isToCompareIdCommonOfBuild_1, System.Int64 valueToCompareIdCommonOfBuild_1
-			, bool isToCompareIdCommonOfSolution_1, System.Int32 valueToCompareIdCommonOfSolution_1
-			, bool isToCompareIdCommonOfOrganization_1, System.Int64 valueToCompareIdCommonOfOrganization_1
-			, bool isToCompareIdCommonOfOrganization_2, System.Int64 valueToCompareIdCommonOfOrganization_2
-			, bool isToCompareIdCommonOfBuildEventCode_1, System.Int32 valueToCompareIdCommonOfBuildEventCode_1
-			, bool isToCompareEventTimeCommonOft, bool isToCompareLowerBoundEventTimeCommonOft, System.DateTime lowerBoundEventTimeCommonOft, bool isToCompareUpperBoundEventTimeCommonOft, System.DateTime upperBoundEventTimeCommonOft
+			bool isToCompareIdCommonOfBuild_1, System.Int64? valueToCompareIdCommonOfBuild_1
+			, bool isToCompareIdCommonOfSolution_1, System.Int32? valueToCompareIdCommonOfSolution_1
+			, bool isToCompareIdCommonOfOrganization_1, System.Int64? valueToCompareIdCommonOfOrganization_1
+			, bool isToCompareIdCommonOfOrganization_2, System.Int64? valueToCompareIdCommonOfOrganization_2
+			, bool isToCompareIdCommonOfBuildEventCode_1, System.Int32? valueToCompareIdCommonOfBuildEventCode_1
+			, bool isToCompareEventTimeCommonOft, bool isToCompareLowerBoundEventTimeCommonOft, System.DateTime? lowerBoundEventTimeCommonOft, bool isToCompareUpperBoundEventTimeCommonOft, System.DateTime? upperBoundEventTimeCommonOft
 			, bool isToCompareMessageCommonOft, System.String valueToBeContainedMessageCommonOft
 			)
 			: this(
@@ -213,11 +213,11 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="isToCompareIdByFKOnlyOfBuildEventCode_1">will compare/filter IdByFKOnlyOfBuildEventCode_1 property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIdByFKOnlyOfBuildEventCode_1">value to compare/filter with IdByFKOnlyOfBuildEventCode_1 property/field/column</param>
 		public BuildLogQueryCriteriaByFKOnly(
-			bool isToCompareIdByFKOnlyOfBuild_1, System.Int64 valueToCompareIdByFKOnlyOfBuild_1
-			, bool isToCompareIdByFKOnlyOfSolution_1, System.Int32 valueToCompareIdByFKOnlyOfSolution_1
-			, bool isToCompareIdByFKOnlyOfOrganization_1, System.Int64 valueToCompareIdByFKOnlyOfOrganization_1
-			, bool isToCompareIdByFKOnlyOfOrganization_2, System.Int64 valueToCompareIdByFKOnlyOfOrganization_2
-			, bool isToCompareIdByFKOnlyOfBuildEventCode_1, System.Int32 valueToCompareIdByFKOnlyOfBuildEventCode_1
+			bool isToCompareIdByFKOnlyOfBuild_1, System.Int64? valueToCompareIdByFKOnlyOfBuild_1
+			, bool isToCompareIdByFKOnlyOfSolution_1, System.Int32? valueToCompareIdByFKOnlyOfSolution_1
+			, bool isToCompareIdByFKOnlyOfOrganization_1, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1
+			, bool isToCompareIdByFKOnlyOfOrganization_2, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2
+			, bool isToCompareIdByFKOnlyOfBuildEventCode_1, System.Int32? valueToCompareIdByFKOnlyOfBuildEventCode_1
 			)
 			: this(
 				new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1, valueToCompareIdByFKOnlyOfBuild_1)
@@ -295,7 +295,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="isToCompareIdByIdentifierOft">will compare/filter IdByIdentifierOft property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIdByIdentifierOft">value to compare/filter with IdByIdentifierOft property/field/column</param>
 		public BuildLogQueryCriteriaByIdentifier(
-			bool isToCompareIdByIdentifierOft, System.Int64 valueToCompareIdByIdentifierOft
+			bool isToCompareIdByIdentifierOft, System.Int64? valueToCompareIdByIdentifierOft
 			)
 			: this(
 				new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOft, valueToCompareIdByIdentifierOft)

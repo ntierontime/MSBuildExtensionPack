@@ -17,7 +17,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 
 				public List<SelectListItem> SelectListOfMSBuildExtensionPack_Organization { get; set; }
 
-        public void Load(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier
+        public void Load(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier
             , Framework.UIAction uiAction)
         {
             try

@@ -124,14 +124,14 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="isToCompareNtextColumnCommonOft">will compare/filter NtextColumnCommonOft property/field/column if true, otherwise false</param>
         /// <param name="valueToBeContainedNtextColumnCommonOft">value to compare/filter with NtextColumnCommonOft property/field/column</param>
 		public OrganizationQueryCriteriaCommon(
-			bool isToCompareIdCommonOfOrganization_2, System.Int64 valueToCompareIdCommonOfOrganization_2
-			, bool isToCompareIsSystemBuiltInCommonOft, System.Boolean valueToCompareIsSystemBuiltInCommonOft
-			, bool isToCompareCreatedDateTimeCommonOft, bool isToCompareLowerBoundCreatedDateTimeCommonOft, System.DateTime lowerBoundCreatedDateTimeCommonOft, bool isToCompareUpperBoundCreatedDateTimeCommonOft, System.DateTime upperBoundCreatedDateTimeCommonOft
-			, bool isToCompareBitColumnCommonOft, System.Boolean valueToCompareBitColumnCommonOft
-			, bool isToCompareDatetimeColumnCommonOft, bool isToCompareLowerBoundDatetimeColumnCommonOft, System.DateTime lowerBoundDatetimeColumnCommonOft, bool isToCompareUpperBoundDatetimeColumnCommonOft, System.DateTime upperBoundDatetimeColumnCommonOft
-			, bool isToCompareDatetime2ColumnCommonOft, bool isToCompareLowerBoundDatetime2ColumnCommonOft, System.DateTime lowerBoundDatetime2ColumnCommonOft, bool isToCompareUpperBoundDatetime2ColumnCommonOft, System.DateTime upperBoundDatetime2ColumnCommonOft
-			, bool isToCompareSmalldatetimeColumnCommonOft, bool isToCompareLowerBoundSmalldatetimeColumnCommonOft, System.DateTime lowerBoundSmalldatetimeColumnCommonOft, bool isToCompareUpperBoundSmalldatetimeColumnCommonOft, System.DateTime upperBoundSmalldatetimeColumnCommonOft
-			, bool isToCompareDateColumnCommonOft, bool isToCompareLowerBoundDateColumnCommonOft, System.DateTime lowerBoundDateColumnCommonOft, bool isToCompareUpperBoundDateColumnCommonOft, System.DateTime upperBoundDateColumnCommonOft
+			bool isToCompareIdCommonOfOrganization_2, System.Int64? valueToCompareIdCommonOfOrganization_2
+			, bool isToCompareIsSystemBuiltInCommonOft, System.Boolean? valueToCompareIsSystemBuiltInCommonOft
+			, bool isToCompareCreatedDateTimeCommonOft, bool isToCompareLowerBoundCreatedDateTimeCommonOft, System.DateTime? lowerBoundCreatedDateTimeCommonOft, bool isToCompareUpperBoundCreatedDateTimeCommonOft, System.DateTime? upperBoundCreatedDateTimeCommonOft
+			, bool isToCompareBitColumnCommonOft, System.Boolean? valueToCompareBitColumnCommonOft
+			, bool isToCompareDatetimeColumnCommonOft, bool isToCompareLowerBoundDatetimeColumnCommonOft, System.DateTime? lowerBoundDatetimeColumnCommonOft, bool isToCompareUpperBoundDatetimeColumnCommonOft, System.DateTime? upperBoundDatetimeColumnCommonOft
+			, bool isToCompareDatetime2ColumnCommonOft, bool isToCompareLowerBoundDatetime2ColumnCommonOft, System.DateTime? lowerBoundDatetime2ColumnCommonOft, bool isToCompareUpperBoundDatetime2ColumnCommonOft, System.DateTime? upperBoundDatetime2ColumnCommonOft
+			, bool isToCompareSmalldatetimeColumnCommonOft, bool isToCompareLowerBoundSmalldatetimeColumnCommonOft, System.DateTime? lowerBoundSmalldatetimeColumnCommonOft, bool isToCompareUpperBoundSmalldatetimeColumnCommonOft, System.DateTime? upperBoundSmalldatetimeColumnCommonOft
+			, bool isToCompareDateColumnCommonOft, bool isToCompareLowerBoundDateColumnCommonOft, System.DateTime? lowerBoundDateColumnCommonOft, bool isToCompareUpperBoundDateColumnCommonOft, System.DateTime? upperBoundDateColumnCommonOft
 			, bool isToCompareNameCommonOft, System.String valueToBeContainedNameCommonOft
 			, bool isToCompareCharColumnCommonOft, System.String valueToBeContainedCharColumnCommonOft
 			, bool isToCompareVarcharColumnCommonOft, System.String valueToBeContainedVarcharColumnCommonOft
@@ -301,7 +301,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="isToCompareIdByFKOnlyOfOrganization_2">will compare/filter IdByFKOnlyOfOrganization_2 property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIdByFKOnlyOfOrganization_2">value to compare/filter with IdByFKOnlyOfOrganization_2 property/field/column</param>
 		public OrganizationQueryCriteriaByFKOnly(
-			bool isToCompareIdByFKOnlyOfOrganization_2, System.Int64 valueToCompareIdByFKOnlyOfOrganization_2
+			bool isToCompareIdByFKOnlyOfOrganization_2, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2
 			)
 			: this(
 				new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2, valueToCompareIdByFKOnlyOfOrganization_2)
@@ -355,7 +355,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="isToCompareIdByIdentifierOft">will compare/filter IdByIdentifierOft property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIdByIdentifierOft">value to compare/filter with IdByIdentifierOft property/field/column</param>
 		public OrganizationQueryCriteriaByIdentifier(
-			bool isToCompareIdByIdentifierOft, System.Int64 valueToCompareIdByIdentifierOft
+			bool isToCompareIdByIdentifierOft, System.Int64? valueToCompareIdByIdentifierOft
 			)
 			: this(
 				new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOft, valueToCompareIdByIdentifierOft)
@@ -409,7 +409,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft">will compare/filter UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft">value to compare/filter with UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft property/field/column</param>
 		public OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
-			bool isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft, System.Guid valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft
+			bool isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft, System.Guid? valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft
 			)
 			: this(
 				new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft)
@@ -463,7 +463,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft">will compare/filter UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft">value to compare/filter with UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft property/field/column</param>
 		public OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-			bool isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft, System.Guid valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft
+			bool isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft, System.Guid? valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft
 			)
 			: this(
 				new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft)
@@ -527,9 +527,9 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOft">will compare/filter UniqueidentifierColumnIdentifierAndUniqueConstraintOft property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOft">value to compare/filter with UniqueidentifierColumnIdentifierAndUniqueConstraintOft property/field/column</param>
 		public OrganizationQueryCriteriaIdentifierAndUniqueConstraint(
-			bool isToCompareIdIdentifierAndUniqueConstraintOft, System.Int64 valueToCompareIdIdentifierAndUniqueConstraintOft
-			, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOft, System.Guid valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOft
-			, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOft, System.Guid valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOft
+			bool isToCompareIdIdentifierAndUniqueConstraintOft, System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOft
+			, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOft, System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOft
+			, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOft, System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOft
 			)
 			: this(
 				new QuerySystemInt64EqualsCriteria(isToCompareIdIdentifierAndUniqueConstraintOft, valueToCompareIdIdentifierAndUniqueConstraintOft)
@@ -685,15 +685,15 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="isToCompareNtextColumnUniqueConstraintsWithCommonOft">will compare/filter NtextColumnUniqueConstraintsWithCommonOft property/field/column if true, otherwise false</param>
         /// <param name="valueToBeContainedNtextColumnUniqueConstraintsWithCommonOft">value to compare/filter with NtextColumnUniqueConstraintsWithCommonOft property/field/column</param>
 		public OrganizationQueryCriteriaUniqueConstraintsWithCommon(
-			bool isToCompareUniqueIdentifierUniqueConstraintsWithCommonOfOrganization_2, System.Guid valueToCompareUniqueIdentifierUniqueConstraintsWithCommonOfOrganization_2
-			, bool isToCompareUniqueidentifierColumnUniqueConstraintsWithCommonOfOrganization_2, System.Guid valueToCompareUniqueidentifierColumnUniqueConstraintsWithCommonOfOrganization_2
-			, bool isToCompareIsSystemBuiltInUniqueConstraintsWithCommonOft, System.Boolean valueToCompareIsSystemBuiltInUniqueConstraintsWithCommonOft
-			, bool isToCompareCreatedDateTimeUniqueConstraintsWithCommonOft, bool isToCompareLowerBoundCreatedDateTimeUniqueConstraintsWithCommonOft, System.DateTime lowerBoundCreatedDateTimeUniqueConstraintsWithCommonOft, bool isToCompareUpperBoundCreatedDateTimeUniqueConstraintsWithCommonOft, System.DateTime upperBoundCreatedDateTimeUniqueConstraintsWithCommonOft
-			, bool isToCompareBitColumnUniqueConstraintsWithCommonOft, System.Boolean valueToCompareBitColumnUniqueConstraintsWithCommonOft
-			, bool isToCompareDatetimeColumnUniqueConstraintsWithCommonOft, bool isToCompareLowerBoundDatetimeColumnUniqueConstraintsWithCommonOft, System.DateTime lowerBoundDatetimeColumnUniqueConstraintsWithCommonOft, bool isToCompareUpperBoundDatetimeColumnUniqueConstraintsWithCommonOft, System.DateTime upperBoundDatetimeColumnUniqueConstraintsWithCommonOft
-			, bool isToCompareDatetime2ColumnUniqueConstraintsWithCommonOft, bool isToCompareLowerBoundDatetime2ColumnUniqueConstraintsWithCommonOft, System.DateTime lowerBoundDatetime2ColumnUniqueConstraintsWithCommonOft, bool isToCompareUpperBoundDatetime2ColumnUniqueConstraintsWithCommonOft, System.DateTime upperBoundDatetime2ColumnUniqueConstraintsWithCommonOft
-			, bool isToCompareSmalldatetimeColumnUniqueConstraintsWithCommonOft, bool isToCompareLowerBoundSmalldatetimeColumnUniqueConstraintsWithCommonOft, System.DateTime lowerBoundSmalldatetimeColumnUniqueConstraintsWithCommonOft, bool isToCompareUpperBoundSmalldatetimeColumnUniqueConstraintsWithCommonOft, System.DateTime upperBoundSmalldatetimeColumnUniqueConstraintsWithCommonOft
-			, bool isToCompareDateColumnUniqueConstraintsWithCommonOft, bool isToCompareLowerBoundDateColumnUniqueConstraintsWithCommonOft, System.DateTime lowerBoundDateColumnUniqueConstraintsWithCommonOft, bool isToCompareUpperBoundDateColumnUniqueConstraintsWithCommonOft, System.DateTime upperBoundDateColumnUniqueConstraintsWithCommonOft
+			bool isToCompareUniqueIdentifierUniqueConstraintsWithCommonOfOrganization_2, System.Guid? valueToCompareUniqueIdentifierUniqueConstraintsWithCommonOfOrganization_2
+			, bool isToCompareUniqueidentifierColumnUniqueConstraintsWithCommonOfOrganization_2, System.Guid? valueToCompareUniqueidentifierColumnUniqueConstraintsWithCommonOfOrganization_2
+			, bool isToCompareIsSystemBuiltInUniqueConstraintsWithCommonOft, System.Boolean? valueToCompareIsSystemBuiltInUniqueConstraintsWithCommonOft
+			, bool isToCompareCreatedDateTimeUniqueConstraintsWithCommonOft, bool isToCompareLowerBoundCreatedDateTimeUniqueConstraintsWithCommonOft, System.DateTime? lowerBoundCreatedDateTimeUniqueConstraintsWithCommonOft, bool isToCompareUpperBoundCreatedDateTimeUniqueConstraintsWithCommonOft, System.DateTime? upperBoundCreatedDateTimeUniqueConstraintsWithCommonOft
+			, bool isToCompareBitColumnUniqueConstraintsWithCommonOft, System.Boolean? valueToCompareBitColumnUniqueConstraintsWithCommonOft
+			, bool isToCompareDatetimeColumnUniqueConstraintsWithCommonOft, bool isToCompareLowerBoundDatetimeColumnUniqueConstraintsWithCommonOft, System.DateTime? lowerBoundDatetimeColumnUniqueConstraintsWithCommonOft, bool isToCompareUpperBoundDatetimeColumnUniqueConstraintsWithCommonOft, System.DateTime? upperBoundDatetimeColumnUniqueConstraintsWithCommonOft
+			, bool isToCompareDatetime2ColumnUniqueConstraintsWithCommonOft, bool isToCompareLowerBoundDatetime2ColumnUniqueConstraintsWithCommonOft, System.DateTime? lowerBoundDatetime2ColumnUniqueConstraintsWithCommonOft, bool isToCompareUpperBoundDatetime2ColumnUniqueConstraintsWithCommonOft, System.DateTime? upperBoundDatetime2ColumnUniqueConstraintsWithCommonOft
+			, bool isToCompareSmalldatetimeColumnUniqueConstraintsWithCommonOft, bool isToCompareLowerBoundSmalldatetimeColumnUniqueConstraintsWithCommonOft, System.DateTime? lowerBoundSmalldatetimeColumnUniqueConstraintsWithCommonOft, bool isToCompareUpperBoundSmalldatetimeColumnUniqueConstraintsWithCommonOft, System.DateTime? upperBoundSmalldatetimeColumnUniqueConstraintsWithCommonOft
+			, bool isToCompareDateColumnUniqueConstraintsWithCommonOft, bool isToCompareLowerBoundDateColumnUniqueConstraintsWithCommonOft, System.DateTime? lowerBoundDateColumnUniqueConstraintsWithCommonOft, bool isToCompareUpperBoundDateColumnUniqueConstraintsWithCommonOft, System.DateTime? upperBoundDateColumnUniqueConstraintsWithCommonOft
 			, bool isToCompareNameUniqueConstraintsWithCommonOft, System.String valueToBeContainedNameUniqueConstraintsWithCommonOft
 			, bool isToCompareCharColumnUniqueConstraintsWithCommonOft, System.String valueToBeContainedCharColumnUniqueConstraintsWithCommonOft
 			, bool isToCompareVarcharColumnUniqueConstraintsWithCommonOft, System.String valueToBeContainedVarcharColumnUniqueConstraintsWithCommonOft

@@ -24,6 +24,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
 			// 1.2. Organization_2 GetDropDownContentsOfOrganization_2SelectionChanged and its command
 			this.GetDropDownContentsOfOrganization_2Command = new RelayCommand(this.GetDropDownContentsOfOrganization_2);
+			this.GetDropDownContentsOfOrganization_2Command.Execute(null);
 
 
         }

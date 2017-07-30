@@ -59,8 +59,8 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="isToCompareDescriptionCommonOft">will compare/filter DescriptionCommonOft property/field/column if true, otherwise false</param>
         /// <param name="valueToBeContainedDescriptionCommonOft">value to compare/filter with DescriptionCommonOft property/field/column</param>
 		public SolutionQueryCriteriaCommon(
-			bool isToCompareIdCommonOfOrganization_1, System.Int64 valueToCompareIdCommonOfOrganization_1
-			, bool isToCompareIdCommonOfOrganization_2, System.Int64 valueToCompareIdCommonOfOrganization_2
+			bool isToCompareIdCommonOfOrganization_1, System.Int64? valueToCompareIdCommonOfOrganization_1
+			, bool isToCompareIdCommonOfOrganization_2, System.Int64? valueToCompareIdCommonOfOrganization_2
 			, bool isToCompareExternalParentIdCommonOft, System.String valueToBeContainedExternalParentIdCommonOft
 			, bool isToCompareNameCommonOft, System.String valueToBeContainedNameCommonOft
 			, bool isToCompareDescriptionCommonOft, System.String valueToBeContainedDescriptionCommonOft
@@ -171,8 +171,8 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="isToCompareIdByFKOnlyOfOrganization_2">will compare/filter IdByFKOnlyOfOrganization_2 property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIdByFKOnlyOfOrganization_2">value to compare/filter with IdByFKOnlyOfOrganization_2 property/field/column</param>
 		public SolutionQueryCriteriaByFKOnly(
-			bool isToCompareIdByFKOnlyOfOrganization_1, System.Int64 valueToCompareIdByFKOnlyOfOrganization_1
-			, bool isToCompareIdByFKOnlyOfOrganization_2, System.Int64 valueToCompareIdByFKOnlyOfOrganization_2
+			bool isToCompareIdByFKOnlyOfOrganization_1, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1
+			, bool isToCompareIdByFKOnlyOfOrganization_2, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2
 			)
 			: this(
 				new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1, valueToCompareIdByFKOnlyOfOrganization_1)
@@ -232,7 +232,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="isToCompareIdByIdentifierOft">will compare/filter IdByIdentifierOft property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIdByIdentifierOft">value to compare/filter with IdByIdentifierOft property/field/column</param>
 		public SolutionQueryCriteriaByIdentifier(
-			bool isToCompareIdByIdentifierOft, System.Int32 valueToCompareIdByIdentifierOft
+			bool isToCompareIdByIdentifierOft, System.Int32? valueToCompareIdByIdentifierOft
 			)
 			: this(
 				new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOft, valueToCompareIdByIdentifierOft)

@@ -55,11 +55,10 @@ namespace MSBuildExtensionPack.XamarinForms
         readonly CultureInfo ci = null;
 
 		public TranslateExtension() {
-            ci = DependencyService.Get<Framework.Xamariner.ILocalize>().GetCurrentCultureInfo();
-            //if (Device.RuntimePlatform.ToLower() == Framework.Xamariner.Platforms.iOS.ToString().ToLower() || Device.RuntimePlatform.ToLower() == Framework.Xamariner.Platforms.Android.ToString().ToLower())
-            //{
-            //    ci = DependencyService.Get<Framework.Xamariner.ILocalize>().GetCurrentCultureInfo();
-            //}
+            if (Device.RuntimePlatform.ToLower() == Framework.Xamariner.Platforms.iOS.ToString().ToLower() || Device.RuntimePlatform.ToLower() == Framework.Xamariner.Platforms.Android.ToString().ToLower())
+            {
+                ci = DependencyService.Get<Framework.Xamariner.ILocalize>().GetCurrentCultureInfo();
+            }
 		}
 
 		public string ResourceId { get; set; }
