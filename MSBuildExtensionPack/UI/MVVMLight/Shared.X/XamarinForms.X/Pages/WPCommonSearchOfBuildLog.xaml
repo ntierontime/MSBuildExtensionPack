@@ -18,10 +18,28 @@
                     SelectedItem="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.PreDefinedDateTimeRange, Converter={StaticResource EnumToNameValuePairConverter}}"
                     HorizontalOptions="FillAndExpand">
                 </Picker>
-                <DatePicker IsEnabled="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.IsCustomEditor}" IsVisible="True" Format="F" Date="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.LowerBound}" />
-                <DatePicker IsEnabled="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.IsCustomEditor}" IsVisible="True" Format="F" Date="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.UpperBound}" />
-                
-                <!--<Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareEventTimeCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+				<StackLayout Orientation="Horizontal">
+					<Label Text="{i18n:Translate Text=From, ResourceId=Framework.Resx.UIStringResource}" FontSize="Small"  VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
+					<DatePicker IsEnabled="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.IsCustomEditor}" IsVisible="True" Format="F" Date="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.LowerBound}" HorizontalOptions="EndAndExpand" />
+				</StackLayout>
+				<StackLayout Orientation="Horizontal">
+					<Label Text="{i18n:Translate Text=To, ResourceId=Framework.Resx.UIStringResource}" FontSize="Small"  VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
+					<DatePicker IsEnabled="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.IsCustomEditor}" IsVisible="True" Format="F" Date="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.UpperBound}" HorizontalOptions="EndAndExpand" />
+				</StackLayout>
+
+				<Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareEventTimeCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+				<StackLayout Orientation="Horizontal">
+					<Label Text="{i18n:Translate Text=From, ResourceId=Framework.Resx.UIStringResource}" FontSize="Small"  VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
+					<Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedMessageCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" Text="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.MessageCommonOft.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+					<Stepper Increment="1" HorizontalOptions="End"/>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal">
+					<Label Text="{i18n:Translate Text=To, ResourceId=Framework.Resx.UIStringResource}" FontSize="Small"  VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
+					<Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedMessageCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" Text="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.MessageCommonOft.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+					<Stepper Increment="1" HorizontalOptions="End"/>
+				</StackLayout>
+				
+				<!--<Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareEventTimeCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
                 <Picker
                     ItemDisplayBinding="{Binding Name}"
                     ItemsSource="{Binding Path=Main.PredefinedBooleanSelectedValueList, Source={StaticResource Locator}}"
