@@ -12,6 +12,10 @@ namespace MSBuildExtensionPack.XamarinForms.Pages
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class WPCommonSearchOfBuildLog : ContentPage
 	{
+		/// <summary>
+		/// Initializes a new instance of the <see cref="WPCommonSearchOfBuildLog"/> class.
+		/// http://motzcod.es/post/94643411707/enhancing-xamarinforms-listview-with-grouping
+		/// </summary>
 		public WPCommonSearchOfBuildLog()
 		{
 			InitializeComponent();
