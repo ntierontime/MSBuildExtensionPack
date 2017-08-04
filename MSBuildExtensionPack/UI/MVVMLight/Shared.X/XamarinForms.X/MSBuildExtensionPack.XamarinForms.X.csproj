@@ -39,6 +39,9 @@
     <Compile Include="Pages\WPCommonOfBuildLog.xaml.cs">
       <DependentUpon>WPCommonOfBuildLog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\WPCommonResultOfBuildLog.xaml.cs">
+      <DependentUpon>WPCommonResultOfBuildLog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\WPCommonSearchOfBuildLog.xaml.cs">
       <DependentUpon>WPCommonSearchOfBuildLog.xaml</DependentUpon>
     </Compile>
@@ -340,6 +343,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\WPCommonSearchOfBuildLog.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\WPCommonResultOfBuildLog.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
