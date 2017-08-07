@@ -11,22 +11,22 @@
 			<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
 				<Label Text="{i18n:Translate Text=Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
 			<Label Text="{Binding Path=Id, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=Solution_1Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Button Text="{Binding Path=Solution_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.LaunchSolution_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
-			<Label Text="{i18n:Translate Text=Organization_1Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Button Text="{Binding Path=Organization_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.LaunchOrganization_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+			<Label Text="{i18n:Translate Text=EventTime, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+		    <DatePicker IsVisible="True" Format="F" Date="{Binding Path=EventTime, Mode=OneWay}" IsEnabled="False" />
+	     <TimePicker Format="F" Time="{Binding Path=EventTime, Mode=OneWay}" IsEnabled="False" />
+			<Label Text="{Binding Path=EventTime, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
 			<Label Text="{i18n:Translate Text=Organization_2Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
 			<Button Text="{Binding Path=Organization_2_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization.LaunchOrganization_2DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+			<Label Text="{i18n:Translate Text=Organization_1Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+			<Button Text="{Binding Path=Organization_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.LaunchOrganization_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+			<Label Text="{i18n:Translate Text=Solution_1Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+			<Button Text="{Binding Path=Solution_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.LaunchSolution_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
 			<Label Text="{i18n:Translate Text=BuildId, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
 			<Button Text="{Binding Path=BuildId}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.LaunchBuild_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
 			<Label Text="{i18n:Translate Text=BuildEventCodeId, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
 			<Button Text="{Binding Path=BuildEventCode_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.LaunchBuildEventCode_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
 			<Label Text="{i18n:Translate Text=Message, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
 			<Label Text="{Binding Path=Message, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=EventTime, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-		    <DatePicker IsVisible="True" Format="F" Date="{Binding Path=EventTime, Mode=OneWay}" IsEnabled="False" />
-	     <TimePicker Format="F" Time="{Binding Path=EventTime, Mode=OneWay}" IsEnabled="False" />
-			<Label Text="{Binding Path=EventTime, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
 			</StackLayout>
 		</ScrollView>
     </ContentPage.Content>

@@ -36,12 +36,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Pages\WPCommonOfBuildLog.xaml.cs">
-      <DependentUpon>WPCommonOfBuildLog.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\WPCommonResultOfBuildLog.xaml.cs">
-      <DependentUpon>WPCommonResultOfBuildLog.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\WPCommonResultViewOfBuild.xaml.cs">
       <DependentUpon>WPCommonResultViewOfBuild.xaml</DependentUpon>
     </Compile>
@@ -56,9 +50,6 @@
     </Compile>
     <Compile Include="Pages\WPCommonResultViewOfSolution.xaml.cs">
       <DependentUpon>WPCommonResultViewOfSolution.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\WPCommonSearchOfBuildLog.xaml.cs">
-      <DependentUpon>WPCommonSearchOfBuildLog.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\WPCommonSearchViewOfBuild.xaml.cs">
       <DependentUpon>WPCommonSearchViewOfBuild.xaml</DependentUpon>
@@ -364,24 +355,6 @@
       <HintPath>..\..\..\..\..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
       <Private>True</Private>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Pages\WPCommonOfBuildLog.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Pages\WPCommonSearchOfBuildLog.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Pages\WPCommonResultOfBuildLog.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\WPCommonResultViewOfBuild.xaml">

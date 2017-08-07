@@ -28,19 +28,19 @@
         </Grid.RowDefinitions>
 		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="1" />
 		<TextBlock Text="{Binding Path=Id, Mode=OneWay}" Grid.Column="1" Grid.Row="1" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.Solution_1Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="2" />
-		<Button Style="{StaticResource LinkButton}" Content="{Binding Path=Solution_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.LaunchSolution_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.Organization_1Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="3" />
-		<Button Style="{StaticResource LinkButton}" Content="{Binding Path=Organization_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.LaunchOrganization_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.Organization_2Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.EventTime, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="2" />
+		<DatePicker HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" SelectedDate="{Binding Path=EventTime, Mode=OneWay}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" IsEnabled="False" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.Organization_2Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="3" />
 		<Button Style="{StaticResource LinkButton}" Content="{Binding Path=Organization_2_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization.LaunchOrganization_2DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.BuildId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.Organization_1Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
+		<Button Style="{StaticResource LinkButton}" Content="{Binding Path=Organization_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.LaunchOrganization_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.Solution_1Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
+		<Button Style="{StaticResource LinkButton}" Content="{Binding Path=Solution_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.LaunchSolution_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.BuildId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="6" />
 			<Button Style="{StaticResource LinkButton}" Content="{Binding Path=BuildId}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.LaunchBuild_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.BuildEventCodeId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="6" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.BuildEventCodeId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="7" />
 		<Button Style="{StaticResource LinkButton}" Content="{Binding Path=BuildEventCode_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.LaunchBuildEventCode_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.Message, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="7" />
-		<TextBlock Text="{Binding Path=Message, Mode=OneWay}" Grid.Column="1" Grid.Row="7" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.EventTime, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="8" />
-		<DatePicker HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="8" SelectedDate="{Binding Path=EventTime, Mode=OneWay}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" IsEnabled="False" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.Message, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="8" />
+		<TextBlock Text="{Binding Path=Message, Mode=OneWay}" Grid.Column="1" Grid.Row="8" />
     </Grid>
 </UserControl>

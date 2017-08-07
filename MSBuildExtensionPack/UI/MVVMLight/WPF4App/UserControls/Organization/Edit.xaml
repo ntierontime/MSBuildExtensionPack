@@ -52,28 +52,28 @@
         </Grid.RowDefinitions>
 		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="1" />
 		<TextBlock Text="{Binding Path=Id, Mode=OneWay}" Grid.Column="1" Grid.Row="1" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.ParentId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="2" />
-        <ComboBox ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Organization_2_Name, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="2" ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization.DropDownContentsOfBuild_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=ParentId}" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="3" />
-		<TextBox Text="{Binding Path=Name, Mode=OneWay}" Grid.Column="1" Grid.Row="3" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.CreatedDateTime, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="2" />
+		<DatePicker HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" SelectedDate="{Binding Path=CreatedDateTime, Mode=OneWay}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" IsEnabled="False" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.ParentId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="3" />
+        <ComboBox ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Organization_2_Name, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="3" ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization.DropDownContentsOfBuild_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=ParentId}" />
 		<CheckBox Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Grid.Row="4" IsChecked="{Binding Path=IsSystemBuiltIn}" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.UniqueIdentifier, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
-		<TextBox Text="{Binding Path=UniqueIdentifier, Mode=OneWay}" Grid.Column="1" Grid.Row="5" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.CreatedDateTime, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="6" />
-		<DatePicker HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="6" SelectedDate="{Binding Path=CreatedDateTime, Mode=OneWay}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" IsEnabled="False" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.CharColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="7" />
-		<TextBox Text="{Binding Path=CharColumn, Mode=OneWay}" Grid.Column="1" Grid.Row="7" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.VarcharColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="8" />
-		<TextBox Text="{Binding Path=VarcharColumn, Mode=OneWay}" Grid.Column="1" Grid.Row="8" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.TextColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="9" />
-		<TextBox Text="{Binding Path=TextColumn, Mode=OneWay}" Grid.Column="1" Grid.Row="9" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.NcharColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="10" />
-		<TextBox Text="{Binding Path=NcharColumn, Mode=OneWay}" Grid.Column="1" Grid.Row="10" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.NvarcharColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="11" />
-		<TextBox Text="{Binding Path=NvarcharColumn, Mode=OneWay}" Grid.Column="1" Grid.Row="11" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.NtextColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="12" />
-		<TextBox Text="{Binding Path=NtextColumn, Mode=OneWay}" Grid.Column="1" Grid.Row="12" />
-		<CheckBox Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Grid.Row="13" IsChecked="{Binding Path=BitColumn}" />
+		<CheckBox Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Grid.Row="5" IsChecked="{Binding Path=BitColumn}" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="6" />
+		<TextBox Text="{Binding Path=Name, Mode=OneWay}" Grid.Column="1" Grid.Row="6" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.UniqueIdentifier, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="7" />
+		<TextBox Text="{Binding Path=UniqueIdentifier, Mode=OneWay}" Grid.Column="1" Grid.Row="7" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.CharColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="8" />
+		<TextBox Text="{Binding Path=CharColumn, Mode=OneWay}" Grid.Column="1" Grid.Row="8" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.VarcharColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="9" />
+		<TextBox Text="{Binding Path=VarcharColumn, Mode=OneWay}" Grid.Column="1" Grid.Row="9" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.TextColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="10" />
+		<TextBox Text="{Binding Path=TextColumn, Mode=OneWay}" Grid.Column="1" Grid.Row="10" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.NcharColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="11" />
+		<TextBox Text="{Binding Path=NcharColumn, Mode=OneWay}" Grid.Column="1" Grid.Row="11" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.NvarcharColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="12" />
+		<TextBox Text="{Binding Path=NvarcharColumn, Mode=OneWay}" Grid.Column="1" Grid.Row="12" />
+		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.NtextColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="13" />
+		<TextBox Text="{Binding Path=NtextColumn, Mode=OneWay}" Grid.Column="1" Grid.Row="13" />
 		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BinaryColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="14" />
 		<TextBox Text="{Binding Path=BinaryColumn, Mode=OneWay}" Grid.Column="1" Grid.Row="14" />
 		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.VarbinaryColumn, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="15" />

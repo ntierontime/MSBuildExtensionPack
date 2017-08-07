@@ -155,6 +155,19 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
 					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.CreatedDateTime, Source={StaticResource LocalizedStrings}}" Tag="CreatedDateTime" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=CreatedDateTime}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=CreatedDateTime}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=CreatedDateTime}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
 							<GridViewColumn Width="140">
 						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Organization_2_Name, Source={StaticResource LocalizedStrings}}" Tag="Organization_2_Name" />
                         <GridViewColumn.CellTemplate>
@@ -165,6 +178,28 @@
 									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_2_Name}" ToolTip="" />-->
 									<!-- You can un-comment to enable editing in list -->
 									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Organization_2_Name}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" Tag="IsSystemBuiltIn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<CheckBox Style="{StaticResource GridBlockStyle}" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=IsSystemBuiltIn}" IsEnabled="False" />
+									<CheckBox Style="{StaticResource GridEditStyle}" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=IsSystemBuiltIn}" />
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" Tag="BitColumn" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+									<CheckBox Style="{StaticResource GridBlockStyle}" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=BitColumn}" IsEnabled="False" />
+									<CheckBox Style="{StaticResource GridEditStyle}" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=BitColumn}" />
                                 </Grid>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -183,17 +218,6 @@
                         </GridViewColumn.CellTemplate>
 					</GridViewColumn>
 					<GridViewColumn Width="140">
-						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" Tag="IsSystemBuiltIn" />
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <Grid>
-									<CheckBox Style="{StaticResource GridBlockStyle}" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=IsSystemBuiltIn}" IsEnabled="False" />
-									<CheckBox Style="{StaticResource GridEditStyle}" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=IsSystemBuiltIn}" />
-                                </Grid>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-					</GridViewColumn>
-					<GridViewColumn Width="140">
 						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.UniqueIdentifier, Source={StaticResource LocalizedStrings}}" Tag="UniqueIdentifier" />
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
@@ -202,19 +226,6 @@
 									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=UniqueIdentifier}" ToolTip="" />
 									<!-- You can un-comment to enable editing in list -->
 									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=UniqueIdentifier}" />-->
-                                </Grid>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-					</GridViewColumn>
-					<GridViewColumn Width="140">
-						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.CreatedDateTime, Source={StaticResource LocalizedStrings}}" Tag="CreatedDateTime" />
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <Grid>
-									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=CreatedDateTime}" ToolTip="" />
-									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=CreatedDateTime}" ToolTip="" />
-									<!-- You can un-comment to enable editing in list -->
-									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=CreatedDateTime}" />-->
                                 </Grid>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -293,17 +304,6 @@
 									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=NtextColumn}" ToolTip="" />
 									<!-- You can un-comment to enable editing in list -->
 									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=NtextColumn}" />-->
-                                </Grid>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-					</GridViewColumn>
-					<GridViewColumn Width="140">
-						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" Tag="BitColumn" />
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <Grid>
-									<CheckBox Style="{StaticResource GridBlockStyle}" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=BitColumn}" IsEnabled="False" />
-									<CheckBox Style="{StaticResource GridEditStyle}" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=BitColumn}" />
                                 </Grid>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>

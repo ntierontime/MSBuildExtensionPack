@@ -18,12 +18,6 @@
                 SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.DropDownContentsOfOrganization_2SelectedItem, Source={StaticResource Locator}}"
                 HorizontalOptions="FillAndExpand">
             </Picker>
-			<Label Text="{i18n:Translate Text=ExternalParentId, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-		   <Entry Placeholder="{i18n:Translate Text=ExternalParentId, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" Text="{Binding Path=ExternalParentId, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
-			<Label Text="{i18n:Translate Text=Name, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-		   <Entry Placeholder="{i18n:Translate Text=Name, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" Text="{Binding Path=Name, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
-			<Label Text="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-		   <Entry Placeholder="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" Text="{Binding Path=Description, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
 			<Label Text="{i18n:Translate Text=OrganizationId, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
             <Picker
                 ItemDisplayBinding="{Binding Name}"
@@ -32,6 +26,12 @@
                 HorizontalOptions="FillAndExpand"
                 >
             </Picker>
+			<Label Text="{i18n:Translate Text=ExternalParentId, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+		   <Entry Placeholder="{i18n:Translate Text=ExternalParentId, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" Text="{Binding Path=ExternalParentId, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+			<Label Text="{i18n:Translate Text=Name, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+		   <Entry Placeholder="{i18n:Translate Text=Name, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" Text="{Binding Path=Name, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+			<Label Text="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+		   <Entry Placeholder="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" Text="{Binding Path=Description, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
 			</StackLayout>
 		</ScrollView>
     </ContentPage.Content>

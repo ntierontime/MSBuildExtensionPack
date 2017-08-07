@@ -133,15 +133,28 @@
                         </GridViewColumn.CellTemplate>
 					</GridViewColumn>
 					<GridViewColumn Width="140">
-						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.Solution_1_Name, Source={StaticResource LocalizedStrings}}" Tag="Solution_1_Name" />
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.EventTime, Source={StaticResource LocalizedStrings}}" Tag="EventTime" />
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Grid>
-                                    <Button Style="{StaticResource LinkButton}" Content="{Binding Path=Solution_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.LaunchSolution_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
-                                    <!--<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Solution_1_Name}" ToolTip="" />
-									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Solution_1_Name}" ToolTip="" />-->
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=EventTime}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=EventTime}" ToolTip="" />
 									<!-- You can un-comment to enable editing in list -->
-									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Solution_1_Name}" />-->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=EventTime}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="140">
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.Organization_2_Name, Source={StaticResource LocalizedStrings}}" Tag="Organization_2_Name" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Button Style="{StaticResource LinkButton}" Content="{Binding Path=Organization_2_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.LaunchOrganization_2DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+                                    <!--<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_2_Name}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_2_Name}" ToolTip="" />-->
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Organization_2_Name}" />-->
                                 </Grid>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -161,15 +174,15 @@
                         </GridViewColumn.CellTemplate>
 					</GridViewColumn>
 					<GridViewColumn Width="140">
-						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.Organization_2_Name, Source={StaticResource LocalizedStrings}}" Tag="Organization_2_Name" />
+						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.Solution_1_Name, Source={StaticResource LocalizedStrings}}" Tag="Solution_1_Name" />
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Grid>
-                                    <Button Style="{StaticResource LinkButton}" Content="{Binding Path=Organization_2_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.LaunchOrganization_2DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
-                                    <!--<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_2_Name}" ToolTip="" />
-									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_2_Name}" ToolTip="" />-->
+                                    <Button Style="{StaticResource LinkButton}" Content="{Binding Path=Solution_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.LaunchSolution_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+                                    <!--<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Solution_1_Name}" ToolTip="" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Solution_1_Name}" ToolTip="" />-->
 									<!-- You can un-comment to enable editing in list -->
-									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Organization_2_Name}" />-->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Solution_1_Name}" />-->
                                 </Grid>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -211,19 +224,6 @@
 									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Message}" ToolTip="" />
 									<!-- You can un-comment to enable editing in list -->
 									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Message}" />-->
-                                </Grid>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-					</GridViewColumn>
-					<GridViewColumn Width="140">
-						<GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.EventTime, Source={StaticResource LocalizedStrings}}" Tag="EventTime" />
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <Grid>
-									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=EventTime}" ToolTip="" />
-									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=EventTime}" ToolTip="" />
-									<!-- You can un-comment to enable editing in list -->
-									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=EventTime}" />-->
                                 </Grid>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>

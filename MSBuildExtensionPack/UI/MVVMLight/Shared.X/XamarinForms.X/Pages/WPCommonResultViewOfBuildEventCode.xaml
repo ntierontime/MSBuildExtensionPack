@@ -14,9 +14,9 @@
 			<Label Text="{i18n:Translate Text=Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
 			<Label Text="{Binding Path=Id, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
 			<Label Text="{i18n:Translate Text=EventCode, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-		   <Entry Placeholder="{i18n:Translate Text=EventCode, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" Text="{Binding Path=EventCode, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+			<Label Text="{Binding Path=EventCode, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
 			<Label Text="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-		   <Entry Placeholder="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" Text="{Binding Path=Description, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+			<Label Text="{Binding Path=Description, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
                         </StackLayout>
                     </StackLayout>
                 </ViewCell>

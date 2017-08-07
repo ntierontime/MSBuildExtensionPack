@@ -11,18 +11,21 @@
 			<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
 				<Label Text="{i18n:Translate Text=Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
 			<Label Text="{Binding Path=Id, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=Organization_1Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-            <Picker
-                ItemDisplayBinding="{Binding Name}"
-                ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfOrganization_1, Source={StaticResource Locator}}"
-                SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfOrganization_1SelectedItem, Source={StaticResource Locator}}"
-                HorizontalOptions="FillAndExpand">
-            </Picker>
+			<Label Text="{i18n:Translate Text=BuildStartTime, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+			<DatePicker IsEnabled="True" IsVisible="True" Format="F" Date="{Binding Path=BuildStartTime}" />
+		   <TimePicker Format="F" Time="{Binding Path=BuildStartTime}"/>
 			<Label Text="{i18n:Translate Text=Organization_2Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
             <Picker
                 ItemDisplayBinding="{Binding Name}"
                 ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfOrganization_2, Source={StaticResource Locator}}"
                 SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfOrganization_2SelectedItem, Source={StaticResource Locator}}"
+                HorizontalOptions="FillAndExpand">
+            </Picker>
+			<Label Text="{i18n:Translate Text=Organization_1Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Picker
+                ItemDisplayBinding="{Binding Name}"
+                ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfOrganization_1, Source={StaticResource Locator}}"
+                SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfOrganization_1SelectedItem, Source={StaticResource Locator}}"
                 HorizontalOptions="FillAndExpand">
             </Picker>
 			<Label Text="{i18n:Translate Text=SolutionId, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
@@ -37,9 +40,6 @@
 		   <Entry Placeholder="{i18n:Translate Text=Name, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" Text="{Binding Path=Name, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
 			<Label Text="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
 		   <Entry Placeholder="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" Text="{Binding Path=Description, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
-			<Label Text="{i18n:Translate Text=BuildStartTime, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<DatePicker IsEnabled="True" IsVisible="True" Format="F" Date="{Binding Path=BuildStartTime}" />
-		   <TimePicker Format="F" Time="{Binding Path=BuildStartTime}"/>
 			</StackLayout>
 		</ScrollView>
     </ContentPage.Content>
