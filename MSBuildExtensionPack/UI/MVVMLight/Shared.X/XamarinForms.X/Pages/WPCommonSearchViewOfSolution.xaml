@@ -5,7 +5,9 @@
              xmlns:fxr="clr-namespace:Framework.Xamariner;assembly=Framework.Xamariner.X"
              xmlns:fe="clr-namespace:Framework.EntityContracts;assembly=Framework.EntityContracts.X"
              x:Class="MSBuildExtensionPack.XamarinForms.Pages.WPCommonSearchViewOfSolution">
-                 <Label Text="{i18n:Translate Text=ID_DropDownList_Search_valueToCompareIdCommonOfOrganization_1OfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+    <StackLayout Orientation="Vertical">
+
+        <Label Text="{i18n:Translate Text=ID_DropDownList_Search_valueToCompareIdCommonOfOrganization_1OfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
                 <Picker
                     ItemDisplayBinding="{Binding Name}"
                     ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.DropDownContentsOfOrganization_1, Source={StaticResource Locator}}"
@@ -25,4 +27,5 @@
                 <Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" Text="{Binding Path=Criteria.SolutionQueryCriteriaCommon.NameCommonOft.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
 				<Label Text="{i18n:Translate Text=ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
                 <Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedDescriptionCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" Text="{Binding Path=Criteria.SolutionQueryCriteriaCommon.DescriptionCommonOft.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+    </StackLayout>
 </ContentPage>

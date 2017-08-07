@@ -5,6 +5,7 @@
              xmlns:fxr="clr-namespace:Framework.Xamariner;assembly=Framework.Xamariner.X"
              xmlns:fe="clr-namespace:Framework.EntityContracts;assembly=Framework.EntityContracts.X"
              x:Class="MSBuildExtensionPack.XamarinForms.Pages.WPCommonSearchViewOfBuildLog">
+    <StackLayout Orientation="Vertical">
                  <Label Text="{i18n:Translate Text=ID_DropDownList_Search_valueToCompareIdCommonOfBuild_1OfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
                 <Picker
                     ItemDisplayBinding="{Binding Name}"
@@ -57,4 +58,5 @@
 				</StackLayout>
 				<Label Text="{i18n:Translate Text=ID_CheckBox_Search_isToCompareMessageCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
                 <Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedMessageCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" Text="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.MessageCommonOft.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+    </StackLayout>
 </ContentPage>

@@ -27,7 +27,9 @@ namespace Framework.Xaml
 
 			this.LaunchSearchViewCommand = new RelayCommand(this.LaunchSearchView);
 			this.CloseSearchViewCommand = new RelayCommand(this.CloseSearchView);
-			this.SearchCommand = new RelayCommand(this.Search, this.CanSearch);
+            this.LaunchResultViewCommand = new RelayCommand(this.LaunchResultView);
+            this.CloseResultViewCommand = new RelayCommand(this.CloseResultView);
+            this.SearchCommand = new RelayCommand(this.Search, this.CanSearch);
 
             PopulateAllUIElements(this, 1);
 
@@ -480,7 +482,31 @@ namespace Framework.Xaml
 
         #endregion Search
 
-		public Framework.EntityContracts.ContentData ContentData { get; set; }
+        #region Search Result
+
+        public RelayCommand LaunchResultViewCommand { get; protected set; }
+
+        protected void LaunchResultView()
+        {
+            string viewName = ViewName;
+            Framework.UIAction uiAction = Framework.UIAction.SearchResult;
+
+            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Launch));
+        }
+
+        public RelayCommand CloseResultViewCommand { get; protected set; }
+
+        protected void CloseResultView()
+        {
+            string viewName = ViewName;
+            Framework.UIAction uiAction = Framework.UIAction.SearchResult;
+
+            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Close));
+        }
+
+        #endregion Search Result
+
+        public Framework.EntityContracts.ContentData ContentData { get; set; }
 		
         #region Cleanup()
 

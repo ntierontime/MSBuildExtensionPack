@@ -35,5 +35,13 @@ namespace Framework
         ClearResult,
 		
         Copy,
+
+
+        /// <summary>
+        /// The search result
+        /// for Xamarin only
+        /// </summary>
+        SearchResult,
+
     }
 }

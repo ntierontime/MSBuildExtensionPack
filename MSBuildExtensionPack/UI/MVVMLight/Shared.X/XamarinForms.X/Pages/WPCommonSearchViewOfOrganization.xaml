@@ -5,6 +5,7 @@
              xmlns:fxr="clr-namespace:Framework.Xamariner;assembly=Framework.Xamariner.X"
              xmlns:fe="clr-namespace:Framework.EntityContracts;assembly=Framework.EntityContracts.X"
              x:Class="MSBuildExtensionPack.XamarinForms.Pages.WPCommonSearchViewOfOrganization">
+    <StackLayout Orientation="Vertical">
                  <Label Text="{i18n:Translate Text=ID_DropDownList_Search_valueToCompareIdCommonOfOrganization_2OfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
                 <Picker
                     ItemDisplayBinding="{Binding Name}"
@@ -115,4 +116,5 @@
                 <Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNvarcharColumnCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.NvarcharColumnCommonOft.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
 				<Label Text="{i18n:Translate Text=ID_CheckBox_Search_isToCompareNtextColumnCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
                 <Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNtextColumnCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+    </StackLayout>
 </ContentPage>
