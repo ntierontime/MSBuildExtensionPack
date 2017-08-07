@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
+             xmlns:fxr="clr-namespace:Framework.Xamariner;assembly=Framework.Xamariner.X"
+             xmlns:fe="clr-namespace:Framework.EntityContracts;assembly=Framework.EntityContracts.X"
+             x:Class="MSBuildExtensionPack.XamarinForms.Pages.WPCommonResultViewOfSolution">
+	<ListView x:Name="ResultView" ItemsSource="{Binding Path=EntityCollectionDefault}">
+		<ListView.ItemTemplate>
+			<DataTemplate>
+                <ViewCell>
+                    <StackLayout BackgroundColor="#eee" Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
+			<Label Text="{i18n:Translate Text=Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+			<Label Text="{Binding Path=Id, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+			<Label Text="{i18n:Translate Text=Organization_2Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Picker
+                ItemDisplayBinding="{Binding Name}"
+                ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.DropDownContentsOfOrganization_2, Source={StaticResource Locator}}"
+                SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.DropDownContentsOfOrganization_2SelectedItem, Source={StaticResource Locator}}"
+                HorizontalOptions="FillAndExpand">
+            </Picker>
+			<Label Text="{i18n:Translate Text=ExternalParentId, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+		   <Entry Placeholder="{i18n:Translate Text=ExternalParentId, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" Text="{Binding Path=ExternalParentId, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+			<Label Text="{i18n:Translate Text=Name, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+		   <Entry Placeholder="{i18n:Translate Text=Name, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" Text="{Binding Path=Name, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+			<Label Text="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+		   <Entry Placeholder="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" Text="{Binding Path=Description, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+			<Label Text="{i18n:Translate Text=OrganizationId, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Picker
+                ItemDisplayBinding="{Binding Name}"
+                ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.DropDownContentsOfOrganization_1, Source={StaticResource Locator}}"
+                SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.DropDownContentsOfOrganization_1SelectedItem, Source={StaticResource Locator}}"
+                HorizontalOptions="FillAndExpand"
+                >
+            </Picker>
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+			</DataTemplate>
+		</ListView.ItemTemplate>
+	</ListView>
+</ContentPage>

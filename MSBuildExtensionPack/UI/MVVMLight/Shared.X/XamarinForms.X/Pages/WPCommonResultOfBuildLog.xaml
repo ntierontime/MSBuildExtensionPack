@@ -5,8 +5,17 @@
 	<ListView x:Name="EmployeeView" ItemsSource="{Binding Path=EntityCollectionDefault}">
 		<ListView.ItemTemplate>
 			<DataTemplate>
-				<TextCell Text="{Binding Path=Build_1_Name}" />
-
+                <ViewCell>
+                    <StackLayout BackgroundColor="#eee"
+                        Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Organization_2_Name}" />
+                            <Label Text="{Binding Organization_1_Name}" />
+                            <Label Text="{Binding Solution_1_Name}" />
+                            <Label Text="{Binding Build_1_Name}" />
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
 			</DataTemplate>
 		</ListView.ItemTemplate>
 	</ListView>
