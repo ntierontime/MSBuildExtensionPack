@@ -15,7 +15,11 @@
 	<ContentPage.Content>
 		<StackLayout BackgroundColor="Gray">
 			<Button Text="Home" TextColor="White" BackgroundColor="Green" Command="{Binding GoHomeCommand}" />
-            <Button Text="{i18n:Translate Text=Build, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" TextColor="White" BackgroundColor="Green" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchCreateViewCommand, Source={StaticResource Locator}}" />
+            <Label Text="{i18n:Translate Text=BuildLog, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="StartAndExpand" BackgroundColor="Blue" />
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Search" TextColor="White" BackgroundColor="Green" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM.LaunchSearchViewCommand, Source={StaticResource Locator}}" />
+                <Button Text="Search" TextColor="White" BackgroundColor="Green" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM.LaunchResultViewCommand, Source={StaticResource Locator}}" />
+            </StackLayout>
         </StackLayout>
 	</ContentPage.Content>
 </ContentPage>

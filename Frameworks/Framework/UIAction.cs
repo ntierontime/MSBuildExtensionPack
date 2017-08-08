@@ -42,6 +42,5 @@ namespace Framework
         /// for Xamarin only
         /// </summary>
         SearchResult,
-
     }
 }

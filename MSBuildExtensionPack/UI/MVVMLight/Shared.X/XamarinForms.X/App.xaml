@@ -6,19 +6,26 @@
     xmlns:fxr="clr-namespace:Framework.Xamariner;assembly=Framework.Xamariner.X"
     x:Class="MSBuildExtensionPack.XamarinForms.App">
     <Application.Resources>
-		<ResourceDictionary x:Name="appMain">
-			<vm:ViewModelLocator x:Key="Locator" />
+        <ResourceDictionary x:Name="appMain">
+            <vm:ViewModelLocator x:Key="Locator" />
             <fxr:EnumToNameValuePairConverter x:Key="EnumToNameValuePairConverter" />
-			<Style x:Key="Heading" TargetType="Label">
-				<Setter Property="FontSize" Value="18" />
-				<Setter Property="TextColor" Value="AntiqueWhite" />
-				<Setter Property="BackgroundColor" Value="Blue" />
-			</Style>
-			<Style x:Key="SubHeading" TargetType="Label">
-				<Setter Property="FontSize" Value="12" />
-				<Setter Property="TextColor" Value="AntiqueWhite" />
-				<Setter Property="BackgroundColor" Value="Blue" />
-			</Style>
-		</ResourceDictionary>
-	</Application.Resources>
+            <Style x:Key="Heading" TargetType="Label">
+                <Setter Property="FontSize" Value="48" />
+                <Setter Property="TextColor" Value="AntiqueWhite" />
+                <Setter Property="BackgroundColor" Value="Blue" />
+            </Style>
+            <Style x:Key="SubHeading" TargetType="Label">
+                <Setter Property="FontSize" Value="42" />
+                <Setter Property="TextColor" Value="AntiqueWhite" />
+                <Setter Property="BackgroundColor" Value="Blue" />
+            </Style>
+            <Style x:Key="FormViewLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="TextColor" Value="AntiqueWhite" />
+                <Setter Property="BackgroundColor" Value="Blue" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>
