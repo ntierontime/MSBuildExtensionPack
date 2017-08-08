@@ -24,8 +24,13 @@ namespace MSBuildExtensionPack.XamarinForms.GlobalPages
                 this,
                 message =>
                 {
+					var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
 
-                    if (MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Exists(t => t.SourceTypeFullName == message.SourceTypeFullName && t.SenderView == message.SenderView && t.UIAction == message.UIAction && t.UIActionStatus == message.UIActionStatus))
+					dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
+					{
+
+					
+					if (MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Exists(t => t.SourceTypeFullName == message.SourceTypeFullName && t.SenderView == message.SenderView && t.UIAction == message.UIAction && t.UIActionStatus == message.UIActionStatus))
                     {
                         var navigationSetting = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.FirstOrDefault(t => t.SourceTypeFullName == message.SourceTypeFullName && t.SenderView == message.SenderView && t.UIAction == message.UIAction && t.UIActionStatus == message.UIActionStatus);
                         if (navigationSetting != null)
@@ -45,22 +50,25 @@ namespace MSBuildExtensionPack.XamarinForms.GlobalPages
                             }
                             else if (navigationSetting.NextUIAction == Framework.UIAction.Navigate)
                             {
-                                //App.NavigationPage.Navigation.PushAsync(new MSBuildExtensionPack.XamarinForms.Pages.BuildLog.Create());
-                                App.NavigationPage.Navigation.PushAsync(new MSBuildExtensionPack.XamarinForms.Pages.WPCommonResultViewOfBuildLog());
+								//App.NavigationPage.Navigation.PushAsync(new MSBuildExtensionPack.XamarinForms.Pages.BuildLog.Create());
+								//App.NavigationPage.Navigation.PushAsync(new MSBuildExtensionPack.XamarinForms.Pages.WPCommonResultViewOfBuildLog());
 
-                                App.MenuIsPresented = false;
-                                //var page = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.GetPageInstanceSingleton(navigationSetting.TargetPageType);
+								//App.MenuIsPresented = false;
+								var page = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.GetPageInstanceSingleton(navigationSetting.TargetPageType);
 
-                                //if (page != null)
-                                //{
-                                //    App.NavigationPage.Navigation.PushAsync((ContentPage)page);
-                                //    //TODO: important.
-                                //    App.MenuIsPresented = false;
-                                //}
-                            }
+								if (page != null)
+								{
+										App.NavigationPage.Navigation.PopAsync();
+										App.NavigationPage.Navigation.PushAsync((ContentPage)page);
+									
+									//TODO: important.
+										App.MenuIsPresented = false;
+								}
+							}
                         }
                     }
-                });
+					});
+				});
         }
 
         private static void InitializeMainMenuTree()
@@ -81,8 +89,8 @@ namespace MSBuildExtensionPack.XamarinForms.GlobalPages
         {
             #region Workspaces with MasterTypeFullName
 
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildVM.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildVM.ViewName_Static, Framework.UIAction.SearchResult, Framework.UIActionStatus.Launch, Framework.UIAction.Navigate, "/Pages/WPCommonOfBuild.xaml", typeof(MSBuildExtensionPack.XamarinForms.Pages.WPCommonResultViewOfBuildLog));
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildVM.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildVM.ViewName_Static, Framework.UIAction.Search, Framework.UIActionStatus.Launch, Framework.UIAction.Navigate, "/Pages/WPCommonOfBuild.xaml", typeof(MSBuildExtensionPack.XamarinForms.Pages.WPCommonSearchViewOfBuildLog));
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildLogVM.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildLogVM.ViewName_Static, Framework.UIAction.SearchResult, Framework.UIActionStatus.Launch, Framework.UIAction.Navigate, "/Pages/WPCommonResultViewOfBuildLog.xaml", typeof(MSBuildExtensionPack.XamarinForms.Pages.WPCommonResultViewOfBuildLog));
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildLogVM.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildLogVM.ViewName_Static, Framework.UIAction.Search, Framework.UIActionStatus.Launch, Framework.UIAction.Navigate, "/Pages/WPCommonSearchViewOfBuildLog.xaml", typeof(MSBuildExtensionPack.XamarinForms.Pages.WPCommonSearchViewOfBuildLog));
             //MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildEventCodeVM.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildEventCodeVM.ViewName_Static, Framework.UIAction.Search,  Framework.UIActionStatus.Launch, Framework.UIAction.Navigate, "/Pages/WPCommonOfBuildEventCode.xaml", typeof(MSBuildExtensionPack.XamarinForms.Pages.WPCommonOfBuildEventCode));
             //MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildLogVM.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildLogVM.ViewName_Static, Framework.UIAction.Search,  Framework.UIActionStatus.Launch, Framework.UIAction.Navigate, "/Pages/WPCommonOfBuildLog.xaml", typeof(MSBuildExtensionPack.XamarinForms.Pages.WPCommonOfBuildLog));
             //MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfOrganizationVM.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfOrganizationVM.ViewName_Static, Framework.UIAction.Search,  Framework.UIActionStatus.Launch, Framework.UIAction.Navigate, "/Pages/WPCommonOfOrganization.xaml", typeof(MSBuildExtensionPack.XamarinForms.Pages.WPCommonOfOrganization));
