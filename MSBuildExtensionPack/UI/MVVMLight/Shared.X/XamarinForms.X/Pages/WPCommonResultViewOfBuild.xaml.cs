@@ -22,6 +22,8 @@ namespace MSBuildExtensionPack.XamarinForms.Pages
 
 		BindingContext = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM_Static;
 
+		MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM_Static.SearchCommand.Execute(null);
+
 
 
 

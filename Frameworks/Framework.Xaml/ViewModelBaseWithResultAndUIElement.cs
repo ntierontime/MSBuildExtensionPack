@@ -489,7 +489,7 @@ namespace Framework.Xaml
         protected void LaunchResultView()
         {
             string viewName = ViewName;
-            Framework.UIAction uiAction = Framework.UIAction.SearchResult;
+            Framework.UIAction uiAction = Framework.UIAction.Result;
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Launch));
         }
@@ -499,7 +499,7 @@ namespace Framework.Xaml
         protected void CloseResultView()
         {
             string viewName = ViewName;
-            Framework.UIAction uiAction = Framework.UIAction.SearchResult;
+            Framework.UIAction uiAction = Framework.UIAction.Result;
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Close));
         }

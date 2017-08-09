@@ -10,7 +10,6 @@
 			<DataTemplate>
                 <ViewCell>
                     <StackLayout BackgroundColor="#eee" Orientation="Vertical">
-                        <StackLayout Orientation="Horizontal">
 			<Label Text="{i18n:Translate Text=Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
 			<Label Text="{Binding Path=Id, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
 			<Label Text="{i18n:Translate Text=CreatedDateTime, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
@@ -83,7 +82,6 @@
 			<Label Text="{Binding Path=TimeColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
 			<Label Text="{i18n:Translate Text=UniqueidentifierColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
 			<Label Text="{Binding Path=UniqueidentifierColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-                        </StackLayout>
                     </StackLayout>
                 </ViewCell>
 			</DataTemplate>

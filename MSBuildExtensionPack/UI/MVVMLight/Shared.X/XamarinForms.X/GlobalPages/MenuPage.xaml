@@ -3,7 +3,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.X"
-    xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
+	xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
     x:Class="MSBuildExtensionPack.XamarinForms.GlobalPages.MenuPage">
 	<ContentPage.Padding>
 		<OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
@@ -15,11 +15,46 @@
 	<ContentPage.Content>
 		<StackLayout BackgroundColor="Gray">
 			<Button Text="Home" TextColor="White" BackgroundColor="Green" Command="{Binding GoHomeCommand}" />
-            <Label Text="{i18n:Translate Text=BuildLog, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="StartAndExpand" BackgroundColor="Blue" />
-            <StackLayout Orientation="Horizontal">
-                <Button Text="Search" TextColor="White" BackgroundColor="Green" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM.LaunchSearchViewCommand, Source={StaticResource Locator}}" />
-                <Button Text="Search Result" TextColor="White" BackgroundColor="Green" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM.LaunchResultViewCommand, Source={StaticResource Locator}}" />
-            </StackLayout>
+			<StackLayout Orientation="Horizontal" >
+				<Label Text="{i18n:Translate Text=Build, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" HorizontalOptions="Start"  BackgroundColor="Blue" WidthRequest="150" />
+				<Button Text="Search" TextColor="White" BackgroundColor="Green" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM.LaunchSearchViewCommand, Source={StaticResource Locator}}" HorizontalOptions="FillAndExpand" />
+			</StackLayout>
+			<StackLayout Orientation="Horizontal" >
+				<Label Text="{i18n:Translate Text=Build, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" HorizontalOptions="Start"  BackgroundColor="Blue" WidthRequest="150" />
+				<Button Text="Result" TextColor="White" BackgroundColor="Green" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM.LaunchResultViewCommand, Source={StaticResource Locator}}" HorizontalOptions="FillAndExpand" />
+			</StackLayout>
+			<StackLayout Orientation="Horizontal" >
+				<Label Text="{i18n:Translate Text=BuildEventCode, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" HorizontalOptions="Start"  BackgroundColor="Blue" WidthRequest="150" />
+				<Button Text="Search" TextColor="White" BackgroundColor="Green" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM.LaunchSearchViewCommand, Source={StaticResource Locator}}" HorizontalOptions="FillAndExpand" />
+			</StackLayout>
+			<StackLayout Orientation="Horizontal" >
+				<Label Text="{i18n:Translate Text=BuildEventCode, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" HorizontalOptions="Start"  BackgroundColor="Blue" WidthRequest="150" />
+				<Button Text="Result" TextColor="White" BackgroundColor="Green" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM.LaunchResultViewCommand, Source={StaticResource Locator}}" HorizontalOptions="FillAndExpand" />
+			</StackLayout>
+			<StackLayout Orientation="Horizontal" >
+				<Label Text="{i18n:Translate Text=BuildLog, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" HorizontalOptions="Start"  BackgroundColor="Blue" WidthRequest="150" />
+				<Button Text="Search" TextColor="White" BackgroundColor="Green" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM.LaunchSearchViewCommand, Source={StaticResource Locator}}" HorizontalOptions="FillAndExpand" />
+			</StackLayout>
+			<StackLayout Orientation="Horizontal" >
+				<Label Text="{i18n:Translate Text=BuildLog, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" HorizontalOptions="Start"  BackgroundColor="Blue" WidthRequest="150" />
+				<Button Text="Result" TextColor="White" BackgroundColor="Green" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM.LaunchResultViewCommand, Source={StaticResource Locator}}" HorizontalOptions="FillAndExpand" />
+			</StackLayout>
+			<StackLayout Orientation="Horizontal" >
+				<Label Text="{i18n:Translate Text=Organization, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" HorizontalOptions="Start"  BackgroundColor="Blue" WidthRequest="150" />
+				<Button Text="Search" TextColor="White" BackgroundColor="Green" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM.LaunchSearchViewCommand, Source={StaticResource Locator}}" HorizontalOptions="FillAndExpand" />
+			</StackLayout>
+			<StackLayout Orientation="Horizontal" >
+				<Label Text="{i18n:Translate Text=Organization, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" HorizontalOptions="Start"  BackgroundColor="Blue" WidthRequest="150" />
+				<Button Text="Result" TextColor="White" BackgroundColor="Green" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM.LaunchResultViewCommand, Source={StaticResource Locator}}" HorizontalOptions="FillAndExpand" />
+			</StackLayout>
+			<StackLayout Orientation="Horizontal" >
+				<Label Text="{i18n:Translate Text=Solution, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" HorizontalOptions="Start"  BackgroundColor="Blue" WidthRequest="150" />
+				<Button Text="Search" TextColor="White" BackgroundColor="Green" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM.LaunchSearchViewCommand, Source={StaticResource Locator}}" HorizontalOptions="FillAndExpand" />
+			</StackLayout>
+			<StackLayout Orientation="Horizontal" >
+				<Label Text="{i18n:Translate Text=Solution, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" HorizontalOptions="Start"  BackgroundColor="Blue" WidthRequest="150" />
+				<Button Text="Result" TextColor="White" BackgroundColor="Green" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM.LaunchResultViewCommand, Source={StaticResource Locator}}" HorizontalOptions="FillAndExpand" />
+			</StackLayout>
         </StackLayout>
 	</ContentPage.Content>
 </ContentPage>
