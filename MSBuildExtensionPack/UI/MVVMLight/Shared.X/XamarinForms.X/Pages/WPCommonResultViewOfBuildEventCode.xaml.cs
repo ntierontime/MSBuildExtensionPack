@@ -11,6 +11,11 @@ namespace MSBuildExtensionPack.XamarinForms.Pages
 {
     /// <summary>
     /// Interaction logic for WPCommonResultViewOfBuildEventCode.xaml
+    /// https://github.com/shribits/ListViewPagingAndCaching
+    /// http://motzcod.es/post/107620279512/load-more-items-at-end-of-listview-in
+    /// https://stackoverflow.com/questions/43102069/xamarin-forms-listview-load-more
+    /// https://forums.xamarin.com/discussion/83427/xamarin-forms-recycled-listview-with-infinite-scrolling
+    /// https://github.com/rasmuschristensen/SimpleListViewInfiniteScrolling
     /// </summary>
 	[XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class WPCommonResultViewOfBuildEventCode : ContentPage

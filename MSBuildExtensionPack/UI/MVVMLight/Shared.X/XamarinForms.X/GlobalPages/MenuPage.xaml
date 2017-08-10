@@ -15,11 +15,13 @@
 	<ContentPage.Content>
 		<StackLayout BackgroundColor="Gray">
 			<Button Text="Home" TextColor="White" BackgroundColor="Green" Command="{Binding GoHomeCommand}" />
-			<StackLayout Orientation="Horizontal" >
-				<Label Text="{i18n:Translate Text=Build, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" HorizontalOptions="Start"  BackgroundColor="Blue" WidthRequest="150" />
-				<Button Text="Search" TextColor="White" BackgroundColor="Green" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM.LaunchSearchViewCommand, Source={StaticResource Locator}}" HorizontalOptions="FillAndExpand" />
-			</StackLayout>
-			<StackLayout Orientation="Horizontal" >
+            <Frame OutlineColor="Yellow" Padding="1">
+			    <StackLayout Orientation="Horizontal" >
+				    <Label Text="{i18n:Translate Text=Build, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" HorizontalOptions="Start"  BackgroundColor="LightGray"  WidthRequest="150" HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
+				    <Button Text="Search" TextColor="White" BackgroundColor="Green" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM.LaunchSearchViewCommand, Source={StaticResource Locator}}" HorizontalOptions="FillAndExpand" />
+			    </StackLayout>
+            </Frame>
+            <StackLayout Orientation="Horizontal" >
 				<Label Text="{i18n:Translate Text=Build, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" HorizontalOptions="Start"  BackgroundColor="Blue" WidthRequest="150" />
 				<Button Text="Result" TextColor="White" BackgroundColor="Green" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM.LaunchResultViewCommand, Source={StaticResource Locator}}" HorizontalOptions="FillAndExpand" />
 			</StackLayout>
