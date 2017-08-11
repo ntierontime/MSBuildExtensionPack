@@ -38,12 +38,12 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem x:Name="Search" Order="Primary" Text="{i18n:Translate Text=SearchAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM.LaunchSearchViewCommand, Source={StaticResource Locator}}">
             <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Search.png" Android="Assets/Search.png" WinPhone="Assets/Search.png" />
+				<OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Checkbox_Checked.png" Android="Assets/Checkbox_Checked.png" WinPhone="Assets/Checkbox_Checked.png" />
             </ToolbarItem.Icon>
         </ToolbarItem>
         <ToolbarItem x:Name="AddNew" Order="Primary" Text="{i18n:Translate Text=AddNewAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchCreateViewCommand, Source={StaticResource Locator}}">
             <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/AddNew.png" Android="Assets/AddNew.png" WinPhone="Assets/AddNew.png" />
+				<OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/AddNew.png" Android="Assets/AddNew.png" WinPhone="Assets/AddNew.png" />
             </ToolbarItem.Icon>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
