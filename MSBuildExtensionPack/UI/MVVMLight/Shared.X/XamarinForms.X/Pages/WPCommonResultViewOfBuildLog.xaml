@@ -38,7 +38,7 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem x:Name="Search" Order="Primary" Text="{i18n:Translate Text=SearchAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM.LaunchSearchViewCommand, Source={StaticResource Locator}}">
             <ToolbarItem.Icon>
-				<OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Checkbox_Checked.png" Android="Assets/Checkbox_Checked.png" WinPhone="Assets/Checkbox_Checked.png" />
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/SearchFind.png" Android="Assets/SearchFind.png" WinPhone="Assets/SearchFind.png" />
             </ToolbarItem.Icon>
         </ToolbarItem>
         <ToolbarItem x:Name="AddNew" Order="Primary" Text="{i18n:Translate Text=AddNewAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchCreateViewCommand, Source={StaticResource Locator}}">
