@@ -20,8 +20,8 @@ namespace MSBuildExtensionPack.AndroidApp
 
             base.OnCreate(bundle);
 
+            //DispatcherHelper.Initialize();
             Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<Framework.Xaml.IDispatcherHelperWrapper, MSBuildExtensionPack.AndroidApp.DispatcherHelperWrapper>();
-            DispatcherHelper.Initialize();
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
 

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace MSBuildExtensionPack.AndroidApp
 {
@@ -11,7 +12,7 @@ namespace MSBuildExtensionPack.AndroidApp
     {
         public void CheckBeginInvokeOnUI(Action action)
         {
-            DispatcherHelper.CheckBeginInvokeOnUI(action);
+            Device.BeginInvokeOnMainThread(action);
         }
 
         public void Initialize()

@@ -88,9 +88,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         #endregion ClearSearchResult
 
-        #region Implement abstract Search
-
-        protected override void Search()
+        protected override void DoSearch()
         {
             this.SearchStatus = Framework.EntityContracts.SearchStatus.Searching;
 
@@ -100,18 +98,13 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
             try
             {
-                if (this.QueryPagingSetting != null && this.QueryPagingSetting.CurrentPage == 0)
-                {
-                    this.QueryPagingSetting.CurrentPage = 1;
-                }
-
                 var vmData = new MSBuildExtensionPack.ViewModelData.WPCommonOfBuildEventCodeVM();
                 vmData.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommonFlatten(this.Criteria);
                 vmData.QueryPagingSetting = this.QueryPagingSetting;
                 vmData.QueryOrderBySettingCollection = this.QueryOrderBySettingCollection;
 
                 var client = new MSBuildExtensionPack.WebApiClient.BuildEventCodeApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-				var result = Task.Run(() => client.GetWPCommonOfBuildEventCodeVMAsync(vmData)).Result;
+                var result = Task.Run(() => client.GetWPCommonOfBuildEventCodeVMAsync(vmData)).Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
 
@@ -126,7 +119,10 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                         }
                         else
                         {
-                            this.m_EntityCollection.Clear();
+                            if (isToClearExistingResult)
+                            {
+                                this.m_EntityCollection.Clear();
+                            }
                         }
 
                         if (result.Result != null)
@@ -152,8 +148,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
             }
         }
-
-        #endregion Implement abstract Search
 
         public override Framework.NameValueCollection GetDefaultListOfQueryOrderBySettingCollecionInString()
         {

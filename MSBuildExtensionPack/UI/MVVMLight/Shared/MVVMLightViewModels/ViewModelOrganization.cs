@@ -88,73 +88,71 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         #endregion ClearSearchResult
 
-        #region Implement abstract Search
+        //    protected override void Search()
+        //    {
+        //        this.SearchStatus = Framework.EntityContracts.SearchStatus.Searching;
 
-        protected override void Search()
+        //        string viewName = ViewName;
+        //        Framework.UIAction uiAction = Framework.UIAction.Search;
+        //        Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
+
+        //        try
+        //        {
+        //            if (this.QueryPagingSetting != null && this.QueryPagingSetting.CurrentPage == 0)
+        //            {
+        //                this.QueryPagingSetting.CurrentPage = 1;
+        //            }
+
+        //            var vmData = new MSBuildExtensionPack.ViewModelData.WPCommonOfOrganizationVM();
+        //            vmData.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommonFlatten(this.Criteria);
+        //            vmData.QueryPagingSetting = this.QueryPagingSetting;
+        //            vmData.QueryOrderBySettingCollection = this.QueryOrderBySettingCollection;
+
+        //            var client = new MSBuildExtensionPack.WebApiClient.OrganizationApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
+        //var result = Task.Run(() => client.GetWPCommonOfOrganizationVMAsync(vmData)).Result;
+
+        //            var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
+
+        //            dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
+        //            {
+        //                this.StatusOfResult = result.StatusOfResult;
+        //                if (result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+        //                {
+        //                    if (this.m_EntityCollectionDefault == null)
+        //                    {
+        //                        this.m_EntityCollectionDefault = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Organization.Default>();
+        //                    }
+        //                    else
+        //                    {
+        //                        this.m_EntityCollectionDefault.Clear();
+        //                    }
+
+        //                    if (result.Result != null)
+        //                    {
+        //                        foreach (var item in result.Result)
+        //                        {
+        //                            this.m_EntityCollectionDefault.Add(item);
+        //                        }
+        //                    }
+
+        //                    this.QueryPagingSetting = result.QueryPagingSetting;
+        //                    this.OriginalQueryOrderBySettingCollecionInString = this.QueryOrderBySettingCollecionInString;
+        //                    this.QueryOrderBySettingCollection = result.QueryOrderBySettingCollection;
+        //                }
+        //                else
+        //                {
+        //                    this.StatusMessageOfResult = result.StatusMessageOfResult;
+        //                }
+        //            });
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
+        //        }
+        //    }
+        protected override void DoSearch()
         {
-            this.SearchStatus = Framework.EntityContracts.SearchStatus.Searching;
-
-            string viewName = ViewName;
-            Framework.UIAction uiAction = Framework.UIAction.Search;
-            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
-
-            try
-            {
-                if (this.QueryPagingSetting != null && this.QueryPagingSetting.CurrentPage == 0)
-                {
-                    this.QueryPagingSetting.CurrentPage = 1;
-                }
-
-                var vmData = new MSBuildExtensionPack.ViewModelData.WPCommonOfOrganizationVM();
-                vmData.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommonFlatten(this.Criteria);
-                vmData.QueryPagingSetting = this.QueryPagingSetting;
-                vmData.QueryOrderBySettingCollection = this.QueryOrderBySettingCollection;
-
-                var client = new MSBuildExtensionPack.WebApiClient.OrganizationApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-				var result = Task.Run(() => client.GetWPCommonOfOrganizationVMAsync(vmData)).Result;
-
-                var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
-
-                dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
-                {
-                    this.StatusOfResult = result.StatusOfResult;
-                    if (result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
-                    {
-                        if (this.m_EntityCollectionDefault == null)
-                        {
-                            this.m_EntityCollectionDefault = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Organization.Default>();
-                        }
-                        else
-                        {
-                            this.m_EntityCollectionDefault.Clear();
-                        }
-
-                        if (result.Result != null)
-                        {
-                            foreach (var item in result.Result)
-                            {
-                                this.m_EntityCollectionDefault.Add(item);
-                            }
-                        }
-
-                        this.QueryPagingSetting = result.QueryPagingSetting;
-                        this.OriginalQueryOrderBySettingCollecionInString = this.QueryOrderBySettingCollecionInString;
-                        this.QueryOrderBySettingCollection = result.QueryOrderBySettingCollection;
-                    }
-                    else
-                    {
-                        this.StatusMessageOfResult = result.StatusMessageOfResult;
-                    }
-                });
-            }
-            catch (Exception ex)
-            {
-                Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
-            }
         }
-
-        #endregion Implement abstract Search
-
         public override Framework.NameValueCollection GetDefaultListOfQueryOrderBySettingCollecionInString()
         {
             Framework.NameValueCollection list = new Framework.NameValueCollection();

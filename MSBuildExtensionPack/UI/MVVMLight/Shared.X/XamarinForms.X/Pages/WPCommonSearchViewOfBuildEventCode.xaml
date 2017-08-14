@@ -5,10 +5,24 @@
              xmlns:fxr="clr-namespace:Framework.Xamariner;assembly=Framework.Xamariner.X"
              xmlns:fe="clr-namespace:Framework.EntityContracts;assembly=Framework.EntityContracts.X"
              x:Class="MSBuildExtensionPack.XamarinForms.Pages.WPCommonSearchViewOfBuildEventCode">
-	<StackLayout>
+    <ContentPage.Content>
+        <StackLayout>
  				<Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareEventCodeCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
                 <Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedEventCodeCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" Text="{Binding Path=Criteria.BuildEventCodeQueryCriteriaCommon.EventCodeCommonOft.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
 				<Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
                 <Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedDescriptionCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" Text="{Binding Path=Criteria.BuildEventCodeQueryCriteriaCommon.DescriptionCommonOft.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
 	</StackLayout>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="Search" Order="Primary" Text="{i18n:Translate Text=SearchAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM.LaunchResultViewCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Search.png" Android="Assets/Search.png" WinPhone="Assets/Search.png" />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem x:Name="AddNew" Order="Primary" Text="{i18n:Translate Text=AddNewAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchCreateViewCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/AddNew.png" Android="Assets/AddNew.png" WinPhone="Assets/AddNew.png" />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
 </ContentPage>

@@ -30,6 +30,7 @@ namespace Framework.Xaml
             this.LaunchResultViewCommand = new RelayCommand(this.LaunchResultView);
             this.CloseResultViewCommand = new RelayCommand(this.CloseResultView);
             this.SearchCommand = new RelayCommand(this.Search, this.CanSearch);
+            this.LoadMoreCommand = new RelayCommand(this.LoadMore, this.CanSearch);
 
             PopulateAllUIElements(this, 1);
 
@@ -157,7 +158,7 @@ namespace Framework.Xaml
         protected void PaginationFirstPage()
         {
             this.QueryPagingSetting.CurrentPage = 1;
-            this.Search();
+            this.DoSearch();
         }
 
         protected bool CanPaginationFirstPage()
@@ -170,7 +171,7 @@ namespace Framework.Xaml
         protected void PaginationPreviousPage()
         {
             this.QueryPagingSetting.CurrentPage -= 1;
-            this.Search();
+            this.DoSearch();
         }
 
         protected bool CanPaginationPreviousPage()
@@ -183,7 +184,7 @@ namespace Framework.Xaml
         protected void PaginationNextPage()
         {
             this.QueryPagingSetting.CurrentPage += 1;
-            this.Search();
+            this.DoSearch();
         }
 
         protected bool CanPaginationNextPage()
@@ -196,7 +197,7 @@ namespace Framework.Xaml
         protected void PaginationLastPage()
         {
             this.QueryPagingSetting.CurrentPage = this.QueryPagingSetting.CountOfPages;
-            this.Search();
+            this.DoSearch();
         }
 
         protected bool CanPaginationLastPage()
@@ -434,7 +435,7 @@ namespace Framework.Xaml
 
         #endregion ClearSearchResult
 
-        #region Search
+        protected bool isToClearExistingResult = false;
 
         protected TSearchCriteria m_Criteria;
 
@@ -473,14 +474,43 @@ namespace Framework.Xaml
         /// <summary>
         /// GetCollectionOfEntityOfCommon
         /// </summary>
-        protected abstract void Search();
+        protected void Search()
+        {
+            if (this.QueryPagingSetting != null && this.QueryPagingSetting.CurrentPage == 0)
+            {
+                this.QueryPagingSetting.CurrentPage = 1;
+            }
+
+             isToClearExistingResult = true;
+            DoSearch();
+        }
 
         protected bool CanSearch()
         {
             return true; // !(this.SearchStatus == Framework.EntityContracts.SearchStatus.Searching);
         }
 
-        #endregion Search
+        public RelayCommand LoadMoreCommand { get; protected set; }
+
+        protected void LoadMore()
+        {
+            if (this.QueryPagingSetting.CurrentPage == 0)
+            {
+                this.QueryPagingSetting.CurrentPage = 1;
+            }
+            else
+            {
+                PaginationNextPage();
+            }
+
+            if (!this.QueryPagingSetting.IsCurrentPageIsLastPage)
+            {
+                isToClearExistingResult = false;
+                DoSearch();
+            }
+        }
+
+        protected abstract void DoSearch();
 
         #region Search Result
 
