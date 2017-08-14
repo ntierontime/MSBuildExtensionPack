@@ -5,20 +5,41 @@
              xmlns:fxr="clr-namespace:Framework.Xamariner;assembly=Framework.Xamariner.X"
              xmlns:fe="clr-namespace:Framework.EntityContracts;assembly=Framework.EntityContracts.X"
              x:Class="MSBuildExtensionPack.XamarinForms.Pages.WPCommonResultViewOfBuildEventCode">
-	<ListView x:Name="ResultView" ItemsSource="{Binding Path=EntityCollection}">
-		<ListView.ItemTemplate>
-			<DataTemplate>
-                <ViewCell>
-                    <StackLayout BackgroundColor="#eee" Orientation="Vertical">
-			<Label Text="{i18n:Translate Text=Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=Id, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=EventCode, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=EventCode, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=Description, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-                    </StackLayout>
-                </ViewCell>
-			</DataTemplate>
-		</ListView.ItemTemplate>
-	</ListView>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="ResultView" ItemsSource="{Binding Path=EntityCollection}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame OutlineColor="Yellow" Padding="1">
+                                <StackLayout BackgroundColor="#eee" Orientation="Vertical">
+                                    <Label Text="{i18n:Translate Text=Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+                                    <Label Text="{Binding Path=Id, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                                    <Label Text="{i18n:Translate Text=EventCode, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+                                    <Label Text="{Binding Path=EventCode, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                                    <Label Text="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+                                    <Label Text="{Binding Path=Description, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.Footer>
+                    <Button Text="{i18n:Translate Text=LoadMoreAlternativeText, ResourceId=Framework.Resx.UIStringResource}"  Command="{Binding Path=LoadMoreCommand}" />
+                </ListView.Footer>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="Search" Order="Primary" Text="{i18n:Translate Text=SearchAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM.LaunchSearchViewCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/SearchFind.png" Android="Assets/SearchFind.png" WinPhone="Assets/SearchFind.png" />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem x:Name="AddNew" Order="Primary" Text="{i18n:Translate Text=AddNewAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchCreateViewCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/AddNew.png" Android="Assets/AddNew.png" WinPhone="Assets/AddNew.png" />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
 </ContentPage>

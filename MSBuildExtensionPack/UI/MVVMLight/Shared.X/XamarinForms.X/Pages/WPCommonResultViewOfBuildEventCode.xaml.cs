@@ -28,6 +28,13 @@ namespace MSBuildExtensionPack.XamarinForms.Pages
 		BindingContext = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM_Static;
 
 		MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM_Static.LoadMoreCommand.Execute(null);
+            //this.ResultView.ItemAppearing += (object sender, ItemVisibilityEventArgs e) => {
+            //    var viewCellDetails = e.Item as MSBuildExtensionPack.DataSourceEntities.BuildEventCode;
+            //    if (viewCellDetails == MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM_Static.EntityCollection[MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM_Static.EntityCollection.Count - 1])
+            //    {
+            //        MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM_Static.LoadMoreCommand.Execute(null);
+            //    }
+            //};
         }
     }
 }
