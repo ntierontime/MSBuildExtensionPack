@@ -17,12 +17,14 @@ namespace MSBuildExtensionPack.AndroidApp
 
         public void Initialize()
         {
-            DispatcherHelper.Initialize();
+			throw new NotImplementedException();
+			//DispatcherHelper.Initialize();
         }
 
         public void Reset()
         {
-            DispatcherHelper.Reset();
+			throw new NotImplementedException();
+			//DispatcherHelper.Reset();
 
         }
     }

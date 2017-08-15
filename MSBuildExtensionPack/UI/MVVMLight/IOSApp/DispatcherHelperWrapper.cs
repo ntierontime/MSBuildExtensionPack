@@ -4,26 +4,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace MSBuildExtensionPack.IOSApp
 {
     public class DispatcherHelperWrapper : Framework.Xaml.IDispatcherHelperWrapper
     {
-        public void CheckBeginInvokeOnUI(Action action)
-        {
-            DispatcherHelper.CheckBeginInvokeOnUI(action);
-        }
+		public void CheckBeginInvokeOnUI(Action action)
+		{
+			Device.BeginInvokeOnMainThread(action);
+			//DispatcherHelper.CheckBeginInvokeOnUI(action);
+		}
 
-        public void Initialize()
-        {
-            throw new NotImplementedException();
-        }
+		public void Initialize()
+		{
+			throw new NotImplementedException();
+			//DispatcherHelper.Initialize();
+		}
 
-        public void Reset()
-        {
-            DispatcherHelper.Reset();
-
-        }
-    }
+		public void Reset()
+		{
+			throw new NotImplementedException();
+			//DispatcherHelper.Reset();
+		}
+	}
 }
 

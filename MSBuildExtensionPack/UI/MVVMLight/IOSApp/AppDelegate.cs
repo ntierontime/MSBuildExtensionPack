@@ -24,7 +24,7 @@ namespace MSBuildExtensionPack.IOSApp
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<Framework.Xaml.IDispatcherHelperWrapper, MSBuildExtensionPack.IOSApp.DispatcherHelperWrapper>();
-            DispatcherHelper.Initialize(app);
+            //DispatcherHelper.Initialize(app);
 
             global::Xamarin.Forms.Forms.Init();
             //PCLAppConfig.ConfigurationManager.Initialise(PCLAppConfig.FileSystemStream.PortableStream.Current);
