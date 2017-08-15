@@ -30,7 +30,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         /// </value>
         ConcurrentDictionary<Type, object> PageInstanceSingleton { get; set; }
 
-		public bool QuitConfirmationEnabled { get; set; }
+        public bool QuitConfirmationEnabled { get; set; }
         public bool IsBusy { get; set; }
 
         public string Welcome
@@ -44,12 +44,12 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         public Framework.Xaml.MenuTreeItem MainMenuTree { get; set; }
 
         public Framework.MenuTreeItem m_SelectedMenuTreeItem;
-        public Framework.MenuTreeItem SelectedMenuTreeItem { 
+        public Framework.MenuTreeItem SelectedMenuTreeItem {
             get
             {
                 return this.m_SelectedMenuTreeItem;
             }
-            set 
+            set
             {
                 this.m_SelectedMenuTreeItem = value;
                 RaisePropertyChanged("SelectedMenuTreeItem");
@@ -63,7 +63,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(this.SelectedMenuTreeItem.SourceTypeFullName, this.SelectedMenuTreeItem.SenderView, this.SelectedMenuTreeItem.UIAction, this.SelectedMenuTreeItem.UIActionStatus));
         }
 
-		
         public RelayCommand<Framework.MenuTreeItem> MenuItemSelectedCommandTyped { get; private set; }
         public void MenuItemSelectedTyped(Framework.MenuTreeItem selectedMenuTreeItem)
         {
@@ -89,11 +88,11 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 // Code runs "for real"
             }
 
-			//#region 1. Initialize Menu
+            //#region 1. Initialize Menu
 
-			this.MainMenuTree = new Framework.Xaml.MenuTreeItem();
+            this.MainMenuTree = new Framework.Xaml.MenuTreeItem();
 
-			//#endregion 1. Initialize Menu
+            //#endregion 1. Initialize Menu
 
             //#region 2. Initialize NavigationSettingCollection
 
@@ -136,7 +135,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         //public override void Cleanup()
         //{
         //    // Clean up if needed
-		//
+        //
         //    base.Cleanup();
         //}
     }

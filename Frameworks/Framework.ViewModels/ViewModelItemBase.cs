@@ -19,7 +19,7 @@ namespace Framework.ViewModels
         {
             this.SearchStatus = Framework.EntityContracts.SearchStatus.Unknown;
             this.ContentData = new Framework.EntityContracts.ContentData();
-			this.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady;
+            this.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady;
             this.UIActionStatusMessage = new Framework.UIActionStatusMessage();
         }
 
@@ -30,7 +30,7 @@ namespace Framework.ViewModels
         public Framework.EntityContracts.SearchStatus SearchStatus { get; set; }
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfResult { get; set; }
         public string StatusMessageOfResult { get; set; }
-        public Framework.UIActionStatusMessage UIActionStatusMessage { get; set; }		
+        public Framework.UIActionStatusMessage UIActionStatusMessage { get; set; }
     }
 }
 

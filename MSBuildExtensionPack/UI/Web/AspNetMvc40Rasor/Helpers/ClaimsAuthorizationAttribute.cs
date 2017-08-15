@@ -11,7 +11,7 @@ using System.Web;
 namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
 {
     /// <summary>
-	///
+    ///
     /// </summary>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true, Inherited = true)]
     public partial class ClaimsAuthorizationAttribute : AuthorizeAttribute
@@ -30,7 +30,6 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
         {
             _claimsArray = SetStringCollection(claimsString, out _claimsString);
         }
-
 
         protected override bool AuthorizeCore(HttpContextBase httpContext)
         {
@@ -64,7 +63,6 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
             return null;
         }
 
-
         protected string[] SetStringCollection(string newValue, out string standardizedString)
         {
             standardizedString = null;
@@ -85,7 +83,6 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
             return stringList;
         }
 
-
         protected IEnumerable<Claim> GetClaims(HttpContextBase httpContext, string claimType)
         {
             ClaimsPrincipal principal = httpContext.User as ClaimsPrincipal;
@@ -96,6 +93,6 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
 
             return principal.FindAll(c => c.Type.Equals(claimType, StringComparison.OrdinalIgnoreCase));
         }
-	}
+    }
 }
 

@@ -7,7 +7,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
     {
         #region constructor
 
-		/// <summary>
+        /// <summary>
         /// Initializes a new instance of the <see cref="LocalizedStrings"/> class.
         /// </summary>
         public LocalizedStrings()
@@ -79,9 +79,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         /// </value>
         public MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution { get { return m_MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution; } }
 
-
         #endregion UIComponentResourceFile_String per entity
     }
 }
-
 

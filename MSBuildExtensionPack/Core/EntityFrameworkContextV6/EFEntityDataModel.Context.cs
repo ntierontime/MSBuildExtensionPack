@@ -11,7 +11,7 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-	using System.Data.Entity.Core.Objects;
+    using System.Data.Entity.Core.Objects;
 
     public partial class MSBuildExtensionPackEntities : DbContext
     {
@@ -19,61 +19,47 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
             : base("name=MSBuildExtensionPackEntities")
         {
         }
-    
+
         //protected override void OnModelCreating(DbModelBuilder modelBuilder)
         //{
         //    throw new UnintentionalCodeFirstException();
         //}
-    
 
         public DbSet<Build> Builds { get; set; }
 
-
-
         public DbSet<BuildEventCode> BuildEventCodes { get; set; }
-
-
 
         public DbSet<BuildLog> BuildLogs { get; set; }
 
-
-
         public DbSet<Organization> Organizations { get; set; }
-
-
 
         public DbSet<Solution> Solutions { get; set; }
 
-
-
-
-
-		#region GetAscendantOfParentIdOfMSBuildExtensionPack_Organization && GetDescendantOfParentIdOfMSBuildExtensionPack_Organization 
+        #region GetAscendantOfParentIdOfMSBuildExtensionPack_Organization && GetDescendantOfParentIdOfMSBuildExtensionPack_Organization
 
         public virtual ObjectResult<RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization> GetAscendantOfParentIdOfMSBuildExtensionPack_Organization(
-			System.Int64 Id
-			)
+            System.Int64 Id
+            )
         {
-			var IdParameter = new ObjectParameter("Id", Id);
+            var IdParameter = new ObjectParameter("Id", Id);
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization>(
                 "GetAscendantOfParentIdOfMSBuildExtensionPack_Organization"
-				,IdParameter
-				);
+                ,IdParameter
+                );
         }
 
         public virtual ObjectResult<RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization> GetDescendantOfParentIdOfMSBuildExtensionPack_Organization(
-			System.Int64 Id
-			)
+            System.Int64 Id
+            )
         {
-			var IdParameter = new ObjectParameter("Id", Id);
+            var IdParameter = new ObjectParameter("Id", Id);
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization>(
                 "GetDescendantOfParentIdOfMSBuildExtensionPack_Organization"
-				, IdParameter
-				);
+                , IdParameter
+                );
         }
 
-		#endregion GetAscendantOfParentIdOfMSBuildExtensionPack_Organization && GetDescendantOfParentIdOfMSBuildExtensionPack_Organization 
-
+        #endregion GetAscendantOfParentIdOfMSBuildExtensionPack_Organization && GetDescendantOfParentIdOfMSBuildExtensionPack_Organization
 
     }
 }

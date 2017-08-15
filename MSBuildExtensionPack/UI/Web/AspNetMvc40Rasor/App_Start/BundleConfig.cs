@@ -12,7 +12,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor
 
             bundles.Add(new ScriptBundle("~/bundles/js").Include(
                         "~/Scripts/jquery-{version}.js"
-						, "~/Scripts/moment-with-locales.js"
+                        , "~/Scripts/moment-with-locales.js"
                         , "~/Scripts/jquery.validate.js"
                         , "~/Scripts/jquery.validate.unobtrusive.js"
                         //, "~/Scripts/jquery.unobtrusive-ajax.js"

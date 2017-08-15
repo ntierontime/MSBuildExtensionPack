@@ -17,23 +17,21 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
     /// </summary>
     public partial class BuildLogController : Controller
     {
-		#region log4net
+        #region log4net
 
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-		#endregion log4net
+        #endregion log4net
 
-		#region Workspace Controller Methods : there are 1 workspace(s)
+        #region Workspace Controller Methods : there are 1 workspace(s)
 
-
-		
-		public const string TempDataKey_WPCommonOfBuildLog = "TempDataKey_WPCommonOfBuildLog";
+        public const string TempDataKey_WPCommonOfBuildLog = "TempDataKey_WPCommonOfBuildLog";
         /// <summary>
         /// Controller Method of View WPCommonOfBuildLog : Description Of Common of MSBuildExtensionPack.BuildLog
         /// </summary>
         /// <returns></returns>
-		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_WPCommonOfBuildLog)]
-		public ActionResult WPCommonOfBuildLog(int currentPage = 1 ,string lowerBoundEventTimeCommonOftOfCommon = null, string upperBoundEventTimeCommonOftOfCommon = null, WPCommonOfBuildLogVM viewModel = null)
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_WPCommonOfBuildLog)]
+        public ActionResult WPCommonOfBuildLog(int currentPage = 1 ,string lowerBoundEventTimeCommonOftOfCommon = null, string upperBoundEventTimeCommonOftOfCommon = null, WPCommonOfBuildLogVM viewModel = null)
         {
             log.Info(string.Format("{0}: WPCommonOfBuildLog", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
@@ -49,16 +47,16 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 
             viewModel.PopulateAllUIElements(vmFromTempData, currentPage);
 
-			viewModel.Criteria.LowerBoundEventTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundEventTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundEventTimeCommonOftOfCommon); viewModel.Criteria.UpperBoundEventTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundEventTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundEventTimeCommonOftOfCommon);
+            viewModel.Criteria.LowerBoundEventTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundEventTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundEventTimeCommonOftOfCommon); viewModel.Criteria.UpperBoundEventTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundEventTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundEventTimeCommonOftOfCommon);
             //viewModel.Criteria.LowerBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundCreatedDateTimeCommonOftOfCommon); viewModel.Criteria.UpperBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundCreatedDateTimeCommonOftOfCommon);
 
-			viewModel.LoadData(true);
+            viewModel.LoadData(true);
 
             if (viewModel.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-				TempData[TempDataKey_WPCommonOfBuildLog] = viewModel.GetPrimaryInformationEntity();
-				TempData.Keep(TempDataKey_WPCommonOfBuildLog); 
-			}
+                TempData[TempDataKey_WPCommonOfBuildLog] = viewModel.GetPrimaryInformationEntity();
+                TempData.Keep(TempDataKey_WPCommonOfBuildLog);
+            }
 //            else
 //            {
 //                viewModel.StatusMessageOfResult = searchResult.GetStatusMessage();
@@ -67,12 +65,12 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 //#endif
 //            }
 
-			if (viewModel.Result != null)
+            if (viewModel.Result != null)
             {
                 ViewBag.StaticPagedResult = new PagedList.StaticPagedList<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default>(viewModel.Result, viewModel.QueryPagingSetting.CurrentPage, viewModel.QueryPagingSetting.PageSize, viewModel.QueryPagingSetting.CountOfRecords);
             }
 
-			viewModel.ContentData.Title = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.BuildLog;
+            viewModel.ContentData.Title = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.BuildLog;
             viewModel.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Description;
 
             return View(viewModel);
@@ -83,7 +81,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <param name="dataServiceType">Type of the data service.</param>
         /// <returns></returns>
-		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_WPCommonOfBuildLog)]
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_WPCommonOfBuildLog)]
         public ActionResult WPCommonOfBuildLog_Export(Framework.DataServiceTypes dataServiceType)
         {
             log.Info(string.Format("{0}: WPCommonOfBuildLog_Export", Framework.LoggingOptions.UI_Process_Started.ToString()));
@@ -93,16 +91,16 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             {
                 vmFromTempData = (Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommonFlatten>)TempData[TempDataKey_WPCommonOfBuildLog];
 
-	            var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfDefaultOfCommon(
-		            new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon(vmFromTempData.Criteria)
+                var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfDefaultOfCommon(
+                    new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon(vmFromTempData.Criteria)
                     , new Framework.EntityContracts.QueryPagingSetting(-1, -1)
                     , new Framework.EntityContracts.QueryOrderBySettingCollection(vmFromTempData.QueryOrderBySettingCollecionInString)
-					, dataServiceType);
+                    , dataServiceType);
 
                 var result = searchResult.DataStreamServiceResult;
 
-				TempData[TempDataKey_WPCommonOfBuildLog] = vmFromTempData.GetPrimaryInformationEntity();
-				TempData.Keep(TempDataKey_WPCommonOfBuildLog); 
+                TempData[TempDataKey_WPCommonOfBuildLog] = vmFromTempData.GetPrimaryInformationEntity();
+                TempData.Keep(TempDataKey_WPCommonOfBuildLog);
 
                 return File(result.Result, result.MIMEType, string.Format("WPCommonOfBuildLog_Export{0}{1}", result.DataServiceType, result.FileExtension));
             }
@@ -110,18 +108,13 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             return null;
         }
 
-
-
-
-
-		#endregion Workspace Controller Methods : there are 1 workspace(s)
-		
+        #endregion Workspace Controller Methods : there are 1 workspace(s)
 
         /// <summary>
         /// Display one entity and all related entities if any, either single item or a list, based on foreign keys
         /// </summary>
         /// <returns></returns>
-		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_WPEntityRelatedOfBuildLog)]
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_WPEntityRelatedOfBuildLog)]
         public ActionResult WPEntityRelatedOfBuildLog(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
         {
             MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildLogVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildLogVM(new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
@@ -130,22 +123,17 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             return View(vm);
         }
 
-
-
-
-
-
-		#region Import()
+        #region Import()
 
         /// <summary>
         /// Imports a list of entity from csv or excel file
         /// </summary>
         /// <param name="file">The file.</param>
         /// <returns></returns>
-		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Import)]
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Import)]
         public ActionResult Import(HttpPostedFileBase file)
         {
-			ViewBag.FileFormat = "Build_1_Name,Id,Solution_1Id,Solution_1_Name,Organization_1_UniqueidentifierColumn,Organization_1_UniqueIdentifier,Organization_1Id,Organization_1_Name,Organization_2_UniqueidentifierColumn,Organization_2Id,Organization_2_UniqueIdentifier,Organization_2_Name,BuildEventCode_1_Name,BuildId,BuildEventCodeId,Message,EventTime";
+            ViewBag.FileFormat = "Build_1_Name,Id,Solution_1Id,Solution_1_Name,Organization_1_UniqueidentifierColumn,Organization_1_UniqueIdentifier,Organization_1Id,Organization_1_Name,Organization_2_UniqueidentifierColumn,Organization_2Id,Organization_2_UniqueIdentifier,Organization_2_Name,BuildEventCode_1_Name,BuildId,BuildEventCodeId,Message,EventTime";
             if (file != null && file.ContentLength > 0 && !string.IsNullOrWhiteSpace(file.FileName))
             {
                 log.Info(string.Format("{0}: Import", Framework.LoggingOptions.UI_Process_Started.ToString()));
@@ -157,10 +145,10 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 
                 if (collection != null)
                 {
-					MSBuildExtensionPack.DataSourceEntities.BuildLogCollection resultCollection = new MSBuildExtensionPack.DataSourceEntities.BuildLogCollection();
-					MSBuildExtensionPack.EntityContracts.IBuildLogHelper.CopyCollection<MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection, MSBuildExtensionPack.DataSourceEntities.BuildLogCollection, MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(collection, resultCollection);
+                    MSBuildExtensionPack.DataSourceEntities.BuildLogCollection resultCollection = new MSBuildExtensionPack.DataSourceEntities.BuildLogCollection();
+                    MSBuildExtensionPack.EntityContracts.IBuildLogHelper.CopyCollection<MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection, MSBuildExtensionPack.DataSourceEntities.BuildLogCollection, MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(collection, resultCollection);
                     var result = MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.BatchInsert(resultCollection);
-					ViewBag.Message = Framework.Resx.UIStringResource.Data_Import_Success;
+                    ViewBag.Message = Framework.Resx.UIStringResource.Data_Import_Success;
                 }
                 else
                 {
@@ -178,81 +166,79 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             }
         }
 
-		#endregion Import()
+        #endregion Import()
 
-		#region Index()
+        #region Index()
 
         /// <summary>
         /// default page, redirect to "WPCommonBuildLog".
         /// </summary>
-		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Index)]
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Index)]
         public ActionResult Index()
         {
             return RedirectToAction("WPCommonOfBuildLog");
         }
 
-		#endregion Index()
+        #endregion Index()
 
-		#region ActionResult Details(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
+        #region ActionResult Details(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
 
         /// <summary>
         /// GET method of details page, based on identifier or unique constraint, this entity only, no related entities.
         /// GET: /BuildLog/Details/5
         /// </summary>
         /// <returns></returns>
-		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Details)]
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Details)]
         public ActionResult Details(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
         {
             Framework.UIAction uiAction = Framework.UIAction.ViewDetails;
             MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM();
-			vm.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
+            vm.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
             vm.ContentData.Title = Framework.Resx.UIStringResource.DetailsAlternativeText;
             vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Details_BuildLog;
 
             return View(vm);
         }
 
-		#endregion ActionResult Details(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
+        #endregion ActionResult Details(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
 
-		#region ActionResult AddNew()
+        #region ActionResult AddNew()
 
-		/// <summary>
+        /// <summary>
         /// GET method of Adds the new <see cref="MSBuildExtensionPack.BuildLog"/>.
-        /// GET: /BuildLog/AddNew 
+        /// GET: /BuildLog/AddNew
         /// </summary>
         /// <returns></returns>
-		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_AddNew)]
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_AddNew)]
         public ActionResult AddNew()
         {
             var entity = CreateEmptyEntityOrGetFromTempData(TempDataKey_BuildLogController_Copy);
 
-			Framework.UIAction uiAction = Framework.UIAction.Create;
+            Framework.UIAction uiAction = Framework.UIAction.Create;
             MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM vm = MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM.CreateNewViewModel(entity);
             vm.LoadExtraData(uiAction);
 
             return View(vm);
-        } 
+        }
 
         /// <summary>
         /// Post method of Adds the new <see cref="MSBuildExtensionPack.BuildLog"/>.
-        /// POST: /BuildLog/AddNew 
+        /// POST: /BuildLog/AddNew
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_AddNew)]
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_AddNew)]
         public ActionResult AddNew(MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM vm)
         {
-			try
+            try
             {
                 log.Info(string.Format("{0}: AddNew", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-				MSBuildExtensionPack.DataSourceEntities.BuildLog entity = MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(vm.Item);
+                MSBuildExtensionPack.DataSourceEntities.BuildLog entity = MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(vm.Item);
 
                 var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.InsertEntity(entity);
 
-
-
-				TempData[TempDataKey_BuildLogController_Copy] = null;
+                TempData[TempDataKey_BuildLogController_Copy] = null;
                 TempData.Remove(TempDataKey_BuildLogController_Copy);
                 log.Info(string.Format("{0}: Insert", Framework.LoggingOptions.UI_Process_Ended.ToString()));
 
@@ -270,13 +256,13 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
                 return View(vm);
             }
         }
-        
+
         public const string TempDataKey_BuildLogController_Copy = "TempDataKey_BuildLogController_Copy";
         /// <summary>
         /// Copies current <see cref="MSBuildExtensionPack.BuildLog"/>, without identifier
         /// </summary>
         /// <returns></returns>
-		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Copy)]
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Copy)]
         public ActionResult Copy(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response =
@@ -289,23 +275,23 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             }
 
             return RedirectToAction("AddNew");
-        } 
+        }
 
-		#endregion ActionResult AddNew()
+        #endregion ActionResult AddNew()
 
-		#region ActionResult Edit(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
+        #region ActionResult Edit(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
 
         /// <summary>
         /// GET method of editing page of <see cref="MSBuildExtensionPack.BuildLog"/>.
         /// GET: /BuildLog/Edit/5
         /// </summary>
         /// <returns></returns>
-		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Edit)]
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Edit)]
         public ActionResult Edit(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
         {
             Framework.UIAction uiAction = Framework.UIAction.Update;
             MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM();
-			vm.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
+            vm.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
             vm.ContentData.Title = Framework.Resx.UIStringResource.EditAlternativeText;
             vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Edit_BuildLog;
 
@@ -318,16 +304,15 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Edit)]
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Edit)]
         public ActionResult Edit(MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM vm)
         {
-		    try
+            try
             {
                 log.Info(string.Format("{0}: Edit", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-				MSBuildExtensionPack.DataSourceEntities.BuildLog entity = MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(vm.Item);
+                MSBuildExtensionPack.DataSourceEntities.BuildLog entity = MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(vm.Item);
                 var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.UpdateEntity(entity);
-
 
                 log.Info(string.Format("{0}: Edit", Framework.LoggingOptions.UI_Process_Ended.ToString()));
                 return RedirectToAction(UrlStringsAlias.ActionName_BuildLog_Index);
@@ -346,49 +331,49 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             }
         }
 
-		#endregion ActionResult Edit(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
+        #endregion ActionResult Edit(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
 
-		#region ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
+        #region ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
 
         /// <summary>
         /// GET method of delete page of <see cref="MSBuildExtensionPack.BuildLog"/>
         /// GET: /BuildLog/Delete/5
         /// </summary>
         /// <returns></returns>
-		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Delete)]
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Delete)]
         public ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
         {
             Framework.UIAction uiAction = Framework.UIAction.Delete;
             MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM();
-			vm.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
+            vm.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
             vm.ContentData.Title = Framework.Resx.UIStringResource.DeleteAlternativeText;
             vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Delete_BuildLog;
             return View(vm);
         }
-		
+
         /// <summary>
         /// POST method of delete page of <see cref="MSBuildExtensionPack.BuildLog"/>
         /// POST: /BuildLog/Delete/5
         /// </summary>
         /// <returns></returns>
-		[HttpPost]
-		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Delete)]
+        [HttpPost]
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Delete)]
         public ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier, MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM vm, FormCollection collection)
         {
             try
             {
                 log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Started.ToString()));
-				var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.ExistsOfDefaultOfByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
-				if (_Response)
+                var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.ExistsOfDefaultOfByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
+                if (_Response)
                 {
-					MSBuildExtensionPack.DataSourceEntities.BuildLog entity = MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(vm.Item);
+                    MSBuildExtensionPack.DataSourceEntities.BuildLog entity = MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(vm.Item);
                     MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.DeleteEntity(entity);
-					log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Ended.ToString()));
+                    log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Ended.ToString()));
                 }
-				else
-				{
-					log.Warn(string.Format("{0}: Delete, Entity not exists",  Framework.LoggingOptions.UI_Process_Ended.ToString()));
-				}
+                else
+                {
+                    log.Warn(string.Format("{0}: Delete, Entity not exists",  Framework.LoggingOptions.UI_Process_Ended.ToString()));
+                }
 
                 return RedirectToAction("UrlStringsAlias.ActionName_BuildLog_Index");
             }
@@ -403,25 +388,23 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
                 log.Error(string.Format("{0}: {1}, {2}, {3}", uiAction, Framework.LoggingOptions.UI_Process_Failed.ToString(), vm.StatusOfResult, vm.StatusMessageOfResult));
 
                 return View(vm);
-            } 
+            }
         }
 
-		#endregion ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
-		
-		#region Binary Columns
+        #endregion ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
 
-
+        #region Binary Columns
 
         #endregion Binary Columns
 
-		#region GoBackList()
+        #region GoBackList()
 
         public ActionResult GoBackList()
         {
             return RedirectToAction(UrlStringsAlias.ActionName_BuildLog_Index);
         }
 
-		#endregion GoBackList()
+        #endregion GoBackList()
 
         private MSBuildExtensionPack.DataSourceEntities.BuildLog.Default CreateEmptyEntityOrGetFromTempData(string tempDataKey_BuildLogController_Copy)
         {

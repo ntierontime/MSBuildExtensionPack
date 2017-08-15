@@ -6,8 +6,8 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-	[Table("dbo.BuildEventCode")]
-    public partial class BuildEventCode 
+    [Table("dbo.BuildEventCode")]
+    public partial class BuildEventCode
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public BuildEventCode ()
@@ -27,11 +27,8 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
         [StringLength(1500)]
         public System.String Description { get; set; }
 
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-		public ICollection<BuildLog> BuildLogs { get; set; }
-
-
+        public ICollection<BuildLog> BuildLogs { get; set; }
 
     }
 }

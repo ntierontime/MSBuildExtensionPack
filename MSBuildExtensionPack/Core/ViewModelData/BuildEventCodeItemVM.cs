@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-
 namespace MSBuildExtensionPack.ViewModelData
 {
     public partial class BuildEventCodeItemVM : Framework.ViewModels.ViewModelItemBase<MSBuildExtensionPack.DataSourceEntities.BuildEventCodeIdentifier, MSBuildExtensionPack.DataSourceEntities.BuildEventCode>
@@ -14,7 +13,6 @@ namespace MSBuildExtensionPack.ViewModelData
 
         #endregion log4net
 
-
-	}
+    }
 }
 

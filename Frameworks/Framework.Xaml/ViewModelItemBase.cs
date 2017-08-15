@@ -9,8 +9,8 @@ using System.ComponentModel;
 
 namespace Framework.Xaml
 {
-    public abstract class ViewModelItemBase<TSearchCriteria, TItem> 
-		: GalaSoft.MvvmLight.ViewModelBase, Framework.ViewModels.IViewModelItemBase<TSearchCriteria, TItem>
+    public abstract class ViewModelItemBase<TSearchCriteria, TItem>
+        : GalaSoft.MvvmLight.ViewModelBase, Framework.ViewModels.IViewModelItemBase<TSearchCriteria, TItem>
         where TSearchCriteria : class, new()
         where TItem : class, new()
     {
@@ -21,8 +21,8 @@ namespace Framework.Xaml
         {
             this.SuppressMVVMLightEventToCommandMessage = false;
 
-			this.Item = new TItem();
-			this.OriginalItem = new TItem();
+            this.Item = new TItem();
+            this.OriginalItem = new TItem();
 
             this.LaunchCopyViewCommand = new RelayCommand<TItem>(LaunchCopyView);
 
@@ -46,7 +46,7 @@ namespace Framework.Xaml
             this.LoadItemCommand = new RelayCommand(this.LoadItem);
             this.LoadItemCommandTyped = new RelayCommand<TSearchCriteria>(this.LoadItem);
 
-			this.RaiseItemPropertyChangedEventCommand = new RelayCommand(this.RaiseItemPropertyChangedEvent);
+            this.RaiseItemPropertyChangedEventCommand = new RelayCommand(this.RaiseItemPropertyChangedEvent);
         }
 
         #endregion constructor
@@ -74,7 +74,6 @@ namespace Framework.Xaml
                 RaisePropertyChanged("Item");
             }
         }
-
 
         protected Framework.EntityContracts.ContentData m_ContentData;
         public Framework.EntityContracts.ContentData ContentData
@@ -156,7 +155,7 @@ namespace Framework.Xaml
             Framework.UIAction uiAction = Framework.UIAction.ViewDetails;
 
             PrepareItem(o);
-			
+
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Launch));
         }
 
@@ -201,7 +200,7 @@ namespace Framework.Xaml
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Launch));
 
-			this.RaiseItemPropertyChangedEvent();
+            this.RaiseItemPropertyChangedEvent();
         }
 
         public RelayCommand CloseEditViewCommand { get; protected set; }
@@ -210,7 +209,7 @@ namespace Framework.Xaml
         {
             string viewName = ViewName_Edit;
             Framework.UIAction uiAction = Framework.UIAction.Update;
-			this.Cleanup();
+            this.Cleanup();
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Close));
         }
 
@@ -225,7 +224,7 @@ namespace Framework.Xaml
         /// Determines whether you can save Entity
         /// </summary>
         /// <returns>
-        /// 	<c>true</c> if you can; otherwise, <c>false</c>.
+        ///     <c>true</c> if you can; otherwise, <c>false</c>.
         /// </returns>
         protected virtual bool CanSave()
         {
@@ -267,7 +266,7 @@ namespace Framework.Xaml
         /// Determines whether you can create
         /// </summary>
         /// <returns>
-        /// 	<c>true</c> if you can; otherwise, <c>false</c>.
+        ///     <c>true</c> if you can; otherwise, <c>false</c>.
         /// </returns>
         protected bool CanAdd()
         {
@@ -311,7 +310,7 @@ namespace Framework.Xaml
         /// Determines whether you can delete an Entity
         /// </summary>
         /// <returns>
-        /// 	<c>true</c> if you can; otherwise, <c>false</c>.
+        ///     <c>true</c> if you can; otherwise, <c>false</c>.
         /// </returns>
         protected virtual bool CanDelete()
         {
@@ -320,12 +319,10 @@ namespace Framework.Xaml
 
         #endregion Delete
 
-
         #region LoadItem
 
         public RelayCommand LoadItemCommand { get; protected set; }
         public RelayCommand<TSearchCriteria> LoadItemCommandTyped { get; protected set; }
-
 
         public virtual void LoadItem()
         {
@@ -333,7 +330,6 @@ namespace Framework.Xaml
         }
 
         public abstract void LoadItem(TSearchCriteria identifier);
-
 
         public abstract void ReLoadItem(TItem o);
 
@@ -377,7 +373,6 @@ namespace Framework.Xaml
             this.m_Item = new TItem();
             this.OriginalItem = new TItem();
         }
-
 
         public RelayCommand RaiseItemPropertyChangedEventCommand { get; protected set; }
 

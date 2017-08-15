@@ -6,29 +6,29 @@ namespace MSBuildExtensionPack.DataSourceEntities
     /// <summary>
     /// table/entity identifier, inherit from entity interface, <see cref="MSBuildExtensionPack.EntityContracts.IBuildIdentifier"/>
     /// </summary>
-	public partial class BuildIdentifier 
-		: MSBuildExtensionPack.EntityContracts.IBuildIdentifier
-	{ 
+    public partial class BuildIdentifier
+        : MSBuildExtensionPack.EntityContracts.IBuildIdentifier
+    {
 
-		#region constructors
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BuildIdentifier"/> class.
-        /// </summary>
-		public BuildIdentifier ()
-		{
-		}
+        #region constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildIdentifier"/> class.
         /// </summary>
-		public BuildIdentifier (
+        public BuildIdentifier ()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BuildIdentifier"/> class.
+        /// </summary>
+        public BuildIdentifier (
 System.Int64 id)
-		{
+        {
 
-			this.Id=id;
+            this.Id=id;
 
-		}
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildIdentifier"/> class.
@@ -38,19 +38,17 @@ System.Int64 id)
             MSBuildExtensionPack.EntityContracts.IBuildIdentifierHelper.Copy<MSBuildExtensionPack.EntityContracts.IBuildIdentifier, BuildIdentifier>(item, this);
         }
 
-		#endregion constructors
+        #endregion constructors
 
-		#region properties
-
+        #region properties
 
         public System.Int64 Id { get; set; }
 
-
-		#endregion properties
+        #endregion properties
 
         #region override methods
-		
-		/// <summary>
+
+        /// <summary>
         /// Returns a <see cref="System.String"/> that represents this instance, using ToString method in entity contract helper in EntityContract project
         /// </summary>
         /// <returns>
@@ -82,7 +80,7 @@ System.Int64 id)
         /// Returns a hash code for this instance.
         /// </summary>
         /// <returns>
-        /// A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+        /// A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         /// </returns>
         public override int GetHashCode()
         {
@@ -91,7 +89,7 @@ System.Int64 id)
 
         #endregion override methods
 
-		#region Method of BuildIdentifier GetAClone()
+        #region Method of BuildIdentifier GetAClone()
 
         /// <summary>
         /// Gets the A clone, using clone method in entity contract helper in EntityContract project.
@@ -102,9 +100,8 @@ System.Int64 id)
             return MSBuildExtensionPack.EntityContracts.IBuildIdentifierHelper.Clone<BuildIdentifier, BuildIdentifier>(this);
         }
 
-
-		#endregion Method of BuildIdentifier GetAClone()
-	}
+        #endregion Method of BuildIdentifier GetAClone()
+    }
 
     /// <summary>
     ///  a property defined when <see cref="WithIdentifierContractBuild"/> is used in other classes.

@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MSBuildExtensionPack.CommonBLL
 {
-    public static class SyndicationFeedFacade 
+    public static class SyndicationFeedFacade
     {
 
         public static SyndicationFeed GetBuild()
@@ -29,12 +29,12 @@ namespace MSBuildExtensionPack.CommonBLL
             {
                 foreach (var datasourceItem in fromDataSource.Message)
                 {
-		            //string urlOfEntityRelated = string.Format("{0}{1}/{2}?{3}", MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.HomeOwner, "Build", "WPEntityRelatedOfBuild", "{Query String Parameters}");
+                    //string urlOfEntityRelated = string.Format("{0}{1}/{2}?{3}", MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.HomeOwner, "Build", "WPEntityRelatedOfBuild", "{Query String Parameters}");
                     SyndicationItem item1 = new SyndicationItem(
-                        datasourceItem.Title, 
-                        datasourceItem.Description, 
+                        datasourceItem.Title,
+                        datasourceItem.Description,
                         new Uri(urlOfList), // should be urlOfEntityRelated, should enter query string parameters
-                        datasourceItem.IdentifierInString, 
+                        datasourceItem.IdentifierInString,
                         datasourceItem.PubDate);
 
                     items.Add(item1);
@@ -44,7 +44,6 @@ namespace MSBuildExtensionPack.CommonBLL
             feed.Items = items;
             return feed;
         }
-
 
         public static SyndicationFeed GetBuildEventCode()
         {
@@ -66,12 +65,12 @@ namespace MSBuildExtensionPack.CommonBLL
             {
                 foreach (var datasourceItem in fromDataSource.Message)
                 {
-		            //string urlOfEntityRelated = string.Format("{0}{1}/{2}?{3}", MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.HomeOwner, "BuildEventCode", "WPEntityRelatedOfBuildEventCode", "{Query String Parameters}");
+                    //string urlOfEntityRelated = string.Format("{0}{1}/{2}?{3}", MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.HomeOwner, "BuildEventCode", "WPEntityRelatedOfBuildEventCode", "{Query String Parameters}");
                     SyndicationItem item1 = new SyndicationItem(
-                        datasourceItem.Title, 
-                        datasourceItem.Description, 
+                        datasourceItem.Title,
+                        datasourceItem.Description,
                         new Uri(urlOfList), // should be urlOfEntityRelated, should enter query string parameters
-                        datasourceItem.IdentifierInString, 
+                        datasourceItem.IdentifierInString,
                         datasourceItem.PubDate);
 
                     items.Add(item1);
@@ -81,7 +80,6 @@ namespace MSBuildExtensionPack.CommonBLL
             feed.Items = items;
             return feed;
         }
-
 
         public static SyndicationFeed GetBuildLog()
         {
@@ -103,12 +101,12 @@ namespace MSBuildExtensionPack.CommonBLL
             {
                 foreach (var datasourceItem in fromDataSource.Message)
                 {
-		            //string urlOfEntityRelated = string.Format("{0}{1}/{2}?{3}", MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.HomeOwner, "BuildLog", "WPEntityRelatedOfBuildLog", "{Query String Parameters}");
+                    //string urlOfEntityRelated = string.Format("{0}{1}/{2}?{3}", MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.HomeOwner, "BuildLog", "WPEntityRelatedOfBuildLog", "{Query String Parameters}");
                     SyndicationItem item1 = new SyndicationItem(
-                        datasourceItem.Title, 
-                        datasourceItem.Description, 
+                        datasourceItem.Title,
+                        datasourceItem.Description,
                         new Uri(urlOfList), // should be urlOfEntityRelated, should enter query string parameters
-                        datasourceItem.IdentifierInString, 
+                        datasourceItem.IdentifierInString,
                         datasourceItem.PubDate);
 
                     items.Add(item1);
@@ -118,7 +116,6 @@ namespace MSBuildExtensionPack.CommonBLL
             feed.Items = items;
             return feed;
         }
-
 
         public static SyndicationFeed GetOrganization()
         {
@@ -140,12 +137,12 @@ namespace MSBuildExtensionPack.CommonBLL
             {
                 foreach (var datasourceItem in fromDataSource.Message)
                 {
-		            //string urlOfEntityRelated = string.Format("{0}{1}/{2}?{3}", MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.HomeOwner, "Organization", "WPEntityRelatedOfOrganization", "{Query String Parameters}");
+                    //string urlOfEntityRelated = string.Format("{0}{1}/{2}?{3}", MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.HomeOwner, "Organization", "WPEntityRelatedOfOrganization", "{Query String Parameters}");
                     SyndicationItem item1 = new SyndicationItem(
-                        datasourceItem.Title, 
-                        datasourceItem.Description, 
+                        datasourceItem.Title,
+                        datasourceItem.Description,
                         new Uri(urlOfList), // should be urlOfEntityRelated, should enter query string parameters
-                        datasourceItem.IdentifierInString, 
+                        datasourceItem.IdentifierInString,
                         datasourceItem.PubDate);
 
                     items.Add(item1);
@@ -155,7 +152,6 @@ namespace MSBuildExtensionPack.CommonBLL
             feed.Items = items;
             return feed;
         }
-
 
         public static SyndicationFeed GetSolution()
         {
@@ -177,12 +173,12 @@ namespace MSBuildExtensionPack.CommonBLL
             {
                 foreach (var datasourceItem in fromDataSource.Message)
                 {
-		            //string urlOfEntityRelated = string.Format("{0}{1}/{2}?{3}", MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.HomeOwner, "Solution", "WPEntityRelatedOfSolution", "{Query String Parameters}");
+                    //string urlOfEntityRelated = string.Format("{0}{1}/{2}?{3}", MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.HomeOwner, "Solution", "WPEntityRelatedOfSolution", "{Query String Parameters}");
                     SyndicationItem item1 = new SyndicationItem(
-                        datasourceItem.Title, 
-                        datasourceItem.Description, 
+                        datasourceItem.Title,
+                        datasourceItem.Description,
                         new Uri(urlOfList), // should be urlOfEntityRelated, should enter query string parameters
-                        datasourceItem.IdentifierInString, 
+                        datasourceItem.IdentifierInString,
                         datasourceItem.PubDate);
 
                     items.Add(item1);
@@ -192,7 +188,6 @@ namespace MSBuildExtensionPack.CommonBLL
             feed.Items = items;
             return feed;
         }
-
 
     }
 }

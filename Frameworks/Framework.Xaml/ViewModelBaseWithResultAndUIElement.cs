@@ -19,14 +19,14 @@ namespace Framework.Xaml
         public ViewModelBaseWithResultAndUIElement()
             : base()
         {
-			//this.ContentData = new Framework.EntityContracts.ContentData();
+            //this.ContentData = new Framework.EntityContracts.ContentData();
 
             this.ClearSearchResultCommand = new RelayCommand(ClearSearchResult, CanClearSearchResult);
-            
-			this.Criteria = new TSearchCriteria();
 
-			this.LaunchSearchViewCommand = new RelayCommand(this.LaunchSearchView);
-			this.CloseSearchViewCommand = new RelayCommand(this.CloseSearchView);
+            this.Criteria = new TSearchCriteria();
+
+            this.LaunchSearchViewCommand = new RelayCommand(this.LaunchSearchView);
+            this.CloseSearchViewCommand = new RelayCommand(this.CloseSearchView);
             this.LaunchResultViewCommand = new RelayCommand(this.LaunchResultView);
             this.CloseResultViewCommand = new RelayCommand(this.CloseResultView);
             this.SearchCommand = new RelayCommand(this.Search, this.CanSearch);
@@ -39,7 +39,7 @@ namespace Framework.Xaml
             this.PaginationNextPageCommand = new RelayCommand(PaginationNextPage, CanPaginationNextPage);
             this.PaginationLastPageCommand = new RelayCommand(PaginationLastPage, CanPaginationLastPage);
 
-			SuppressMVVMLightEventToCommandMessage = false;
+            SuppressMVVMLightEventToCommandMessage = false;
         }
 
         #endregion constructor
@@ -56,7 +56,7 @@ namespace Framework.Xaml
 
         /// <summary>
         /// Gets or sets the DataSourceEntities list.
-		/// should investigate whether can remove RaisePropertyChanged
+        /// should investigate whether can remove RaisePropertyChanged
         /// </summary>
         /// <value>The DataSourceEntities list.</value>
         public ObservableCollection<TSearchResultEntityItem> EntityCollection
@@ -74,13 +74,13 @@ namespace Framework.Xaml
         #region SearchStatus
 
         public Framework.EntityContracts.SearchStatus m_SearchStatus;
-		// should investigate whether can remove RaisePropertyChanged
-        public Framework.EntityContracts.SearchStatus SearchStatus 
-        { 
+        // should investigate whether can remove RaisePropertyChanged
+        public Framework.EntityContracts.SearchStatus SearchStatus
+        {
             get
             {
                 return this.m_SearchStatus;
-            } 
+            }
             set
             {
                 if(this.m_SearchStatus != value)
@@ -101,7 +101,7 @@ namespace Framework.Xaml
 
         #region ViewNames
 
-		public abstract string ViewName { get; }
+        public abstract string ViewName { get; }
 
         #endregion ViewNames
 
@@ -119,11 +119,11 @@ namespace Framework.Xaml
             get { return m_QueryPagingSetting; }
             set
             {
-				if (m_QueryPagingSetting != value)
-				{
-					m_QueryPagingSetting = value;
-					//RaisePropertyChanged("QueryPagingSetting");
-				}
+                if (m_QueryPagingSetting != value)
+                {
+                    m_QueryPagingSetting = value;
+                    //RaisePropertyChanged("QueryPagingSetting");
+                }
             }
         }
 
@@ -209,7 +209,6 @@ namespace Framework.Xaml
 
         #region QueryOrderBySettingCollection
 
-
         protected string m_QueryOrderBySettingCollecionInString;
 
         public string QueryOrderBySettingCollecionInString
@@ -255,7 +254,7 @@ namespace Framework.Xaml
         public Framework.NameValueCollection ListOfQueryOrderBySettingCollecionInString { get; set; }
 
         protected Framework.EntityContracts.QueryOrderBySettingCollection m_QueryOrderBySettingCollection;
-		/// <summary>
+        /// <summary>
         /// Gets or sets the query order by setting collection.
         /// </summary>
         /// <value>
@@ -426,7 +425,7 @@ namespace Framework.Xaml
         /// Determines whether you can clear search result
         /// </summary>
         /// <returns>
-        /// 	<c>true</c> if you can; otherwise, <c>false</c>.
+        ///     <c>true</c> if you can; otherwise, <c>false</c>.
         /// </returns>
         protected bool CanClearSearchResult()
         {
@@ -471,9 +470,6 @@ namespace Framework.Xaml
 
         public RelayCommand SearchCommand { get; protected set; }
 
-        /// <summary>
-        /// GetCollectionOfEntityOfCommon
-        /// </summary>
         protected void Search()
         {
             if (this.QueryPagingSetting != null && this.QueryPagingSetting.CurrentPage == 0)
@@ -497,16 +493,13 @@ namespace Framework.Xaml
             if (this.QueryPagingSetting.CurrentPage == 0)
             {
                 this.QueryPagingSetting.CurrentPage = 1;
+                isToClearExistingResult = true;
+                DoSearch();
             }
             else
             {
-                PaginationNextPage();
-            }
-
-            if (!this.QueryPagingSetting.IsCurrentPageIsLastPage)
-            {
                 isToClearExistingResult = false;
-                DoSearch();
+                PaginationNextPage();
             }
         }
 
@@ -518,6 +511,7 @@ namespace Framework.Xaml
 
         protected void LaunchResultView()
         {
+            this.QueryPagingSetting.CurrentPage = 0; // to re-do search when switch to ResultView Page
             string viewName = ViewName;
             Framework.UIAction uiAction = Framework.UIAction.Result;
 
@@ -537,12 +531,12 @@ namespace Framework.Xaml
         #endregion Search Result
 
         public Framework.EntityContracts.ContentData ContentData { get; set; }
-		
+
         #region Cleanup()
 
         public override void Cleanup()
         {
-			base.Cleanup();
+            base.Cleanup();
         }
 
         #endregion Cleanup()
@@ -577,7 +571,7 @@ namespace Framework.Xaml
 
         /// <summary>
         /// Gets or sets the Default DataView Item list.
-		/// should investigate whether can remove RaisePropertyChanged
+        /// should investigate whether can remove RaisePropertyChanged
         /// </summary>
         /// <value>The Default DataView Item list.</value>
         public ObservableCollection<TSearchResultDataViewItem> EntityCollectionDefault
@@ -589,12 +583,12 @@ namespace Framework.Xaml
                 RaisePropertyChanged("EntityCollectionDefault");
             }
         }
-				
+
         #region Cleanup()
 
         public override  void Cleanup()
         {
-			base.Cleanup();
+            base.Cleanup();
         }
 
         #endregion Cleanup()

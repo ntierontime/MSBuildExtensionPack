@@ -16,35 +16,31 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         public string EntityName { get { return EntityName_Static; } }
 
         public ExtendedVMBuild()
-			: base()
+            : base()
         {
 
-			// 1.1. Solution_1 LaunchSolution_1DetailsView and its command
-			this.LaunchSolution_1DetailsViewCommand = new RelayCommand<MSBuildExtensionPack.DataSourceEntities.Build.Default>(this.LaunchSolution_1DetailsView);
+            // 1.1. Solution_1 LaunchSolution_1DetailsView and its command
+            this.LaunchSolution_1DetailsViewCommand = new RelayCommand<MSBuildExtensionPack.DataSourceEntities.Build.Default>(this.LaunchSolution_1DetailsView);
 
+            // 2.1. Organization_1 LaunchOrganization_1DetailsView and its command
+            this.LaunchOrganization_1DetailsViewCommand = new RelayCommand<MSBuildExtensionPack.DataSourceEntities.Build.Default>(this.LaunchOrganization_1DetailsView);
 
-			// 2.1. Organization_1 LaunchOrganization_1DetailsView and its command
-			this.LaunchOrganization_1DetailsViewCommand = new RelayCommand<MSBuildExtensionPack.DataSourceEntities.Build.Default>(this.LaunchOrganization_1DetailsView);
-
-			// 2.2. Organization_1 GetDropDownContentsOfOrganization_1SelectionChanged and its command
+            // 2.2. Organization_1 GetDropDownContentsOfOrganization_1SelectionChanged and its command
             this.GetDropDownContentsOfOrganization_1SelectionChangedCommand = new RelayCommand<Framework.NameValuePair<System.Int64>>(this.GetDropDownContentsOfSolution_1);
 
+            // 3.1. Organization_2 LaunchOrganization_2DetailsView and its command
+            this.LaunchOrganization_2DetailsViewCommand = new RelayCommand<MSBuildExtensionPack.DataSourceEntities.Build.Default>(this.LaunchOrganization_2DetailsView);
 
-			// 3.1. Organization_2 LaunchOrganization_2DetailsView and its command
-			this.LaunchOrganization_2DetailsViewCommand = new RelayCommand<MSBuildExtensionPack.DataSourceEntities.Build.Default>(this.LaunchOrganization_2DetailsView);
-
-			// 3.2. Organization_2 GetDropDownContentsOfOrganization_2SelectionChanged and its command
-			this.GetDropDownContentsOfOrganization_2Command = new RelayCommand(this.GetDropDownContentsOfOrganization_2);
+            // 3.2. Organization_2 GetDropDownContentsOfOrganization_2SelectionChanged and its command
+            this.GetDropDownContentsOfOrganization_2Command = new RelayCommand(this.GetDropDownContentsOfOrganization_2);
             this.GetDropDownContentsOfOrganization_2SelectionChangedCommand = new RelayCommand<Framework.NameValuePair<System.Int64>>(this.GetDropDownContentsOfOrganization_1);
-			this.GetDropDownContentsOfOrganization_2Command.Execute(null);
-
+            this.GetDropDownContentsOfOrganization_2Command.Execute(null);
 
         }
 
+        #region 1. Solution_1
 
-		#region 1. Solution_1
-					
-		// 1.1. Solution_1 LaunchSolution_1DetailsView and its command
+        // 1.1. Solution_1 LaunchSolution_1DetailsView and its command
 
         public RelayCommand<MSBuildExtensionPack.DataSourceEntities.Build.Default> LaunchSolution_1DetailsViewCommand { get; protected set; }
         protected void LaunchSolution_1DetailsView(MSBuildExtensionPack.DataSourceEntities.Build.Default item)
@@ -53,11 +49,10 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution_Static.LaunchDetailsViewCommand.Execute(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution_Static.Item);
         }
 
+        // 1.2. Solution_1 DropDownContentsOfSolution_1 and its commands
 
-		// 1.2. Solution_1 DropDownContentsOfSolution_1 and its commands
-
-		public Framework.NameValuePair<System.Int32> m_DropDownContentsOfSolution_1SelectedItem;
-        public Framework.NameValuePair<System.Int32> DropDownContentsOfSolution_1SelectedItem 
+        public Framework.NameValuePair<System.Int32> m_DropDownContentsOfSolution_1SelectedItem;
+        public Framework.NameValuePair<System.Int32> DropDownContentsOfSolution_1SelectedItem
         {
             get
             {
@@ -119,12 +114,11 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
         }
 
-		#endregion 1. Solution_1
+        #endregion 1. Solution_1
 
+        #region 2. Organization_1
 
-		#region 2. Organization_1
-
-		// 2.1. Organization_1 LaunchOrganization_1DetailsView and its command
+        // 2.1. Organization_1 LaunchOrganization_1DetailsView and its command
 
         public RelayCommand<MSBuildExtensionPack.DataSourceEntities.Build.Default> LaunchOrganization_1DetailsViewCommand { get; protected set; }
         protected void LaunchOrganization_1DetailsView(MSBuildExtensionPack.DataSourceEntities.Build.Default item)
@@ -133,10 +127,10 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization_Static.LaunchDetailsViewCommand.Execute(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization_Static.Item);
         }
 
-		// 2.2. Organization_1 DropDownContentsOfOrganization_1 and its commands
+        // 2.2. Organization_1 DropDownContentsOfOrganization_1 and its commands
 
         public Framework.NameValuePair<System.Int64> m_DropDownContentsOfOrganization_1SelectedItem;
-        public Framework.NameValuePair<System.Int64> DropDownContentsOfOrganization_1SelectedItem 
+        public Framework.NameValuePair<System.Int64> DropDownContentsOfOrganization_1SelectedItem
         {
             get
             {
@@ -151,7 +145,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
                 this.m_DropDownContentsOfOrganization_1SelectedItem = value;
                 MessengerInstance.Send<Framework.UISelectedItemChangedMessage>(new Framework.UISelectedItemChangedMessage(EntityName, PropertyName_DropDownContentsOfOrganization_1SelectedItem, value));
-				GetDropDownContentsOfSolution_1(value);
+                GetDropDownContentsOfSolution_1(value);
                 RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_1SelectedItem);
             }
         }
@@ -200,12 +194,11 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
         }
 
-		#endregion 2. Organization_1
+        #endregion 2. Organization_1
 
+        #region 3. Organization_2
 
-		#region 3. Organization_2
-
-		// 3.1. Organization_2 LaunchOrganization_2DetailsView and its command
+        // 3.1. Organization_2 LaunchOrganization_2DetailsView and its command
 
         public RelayCommand<MSBuildExtensionPack.DataSourceEntities.Build.Default> LaunchOrganization_2DetailsViewCommand { get; protected set; }
         protected void LaunchOrganization_2DetailsView(MSBuildExtensionPack.DataSourceEntities.Build.Default item)
@@ -214,11 +207,10 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization_Static.LaunchDetailsViewCommand.Execute(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization_Static.Item);
         }
 
-
-		// 3.2. Organization_2 DropDownContentsOfOrganization_2 and its commands
+        // 3.2. Organization_2 DropDownContentsOfOrganization_2 and its commands
 
         public Framework.NameValuePair<System.Int64> m_DropDownContentsOfOrganization_2SelectedItem;
-        public Framework.NameValuePair<System.Int64> DropDownContentsOfOrganization_2SelectedItem 
+        public Framework.NameValuePair<System.Int64> DropDownContentsOfOrganization_2SelectedItem
         {
             get
             {
@@ -233,7 +225,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
                 this.m_DropDownContentsOfOrganization_2SelectedItem = value;
                 MessengerInstance.Send<Framework.UISelectedItemChangedMessage>(new Framework.UISelectedItemChangedMessage(EntityName, PropertyName_DropDownContentsOfOrganization_2SelectedItem, value));
-				GetDropDownContentsOfOrganization_1(value);
+                GetDropDownContentsOfOrganization_1(value);
                 RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_2SelectedItem);
             }
         }
@@ -283,9 +275,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
         }
 
-		#endregion 3. Organization_2
-
-
+        #endregion 3. Organization_2
 
         public override void Cleanup()
         {

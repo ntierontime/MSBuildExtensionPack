@@ -12,10 +12,9 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
     using System;
     using System.Collections.Generic;
 
+    #region class RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization
 
-	#region class RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization
-
-	public partial class RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization
+    public partial class RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization
     {
         public System.Int64 Id { get; set; }
         public System.Int64 ParentId { get; set; }
@@ -50,11 +49,10 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
         public System.TimeSpan TimeColumn { get; set; }
         public System.Guid UniqueidentifierColumn { get; set; }
 
-		public string RecursivePath__ { get; set; }
-	}
+        public string RecursivePath__ { get; set; }
+    }
 
-	#endregion class RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization
-
+    #endregion class RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization
 
 }
 

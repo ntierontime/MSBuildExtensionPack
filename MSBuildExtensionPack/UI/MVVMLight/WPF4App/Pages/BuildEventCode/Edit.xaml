@@ -6,8 +6,8 @@
         xmlns:cmd="http://www.galasoft.ch/mvvmlight"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
-		xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels"
-		xmlns:BuildEventCode="clr-namespace:MSBuildExtensionPack.WPF4App.UserControls.BuildEventCode"
+        xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels"
+        xmlns:BuildEventCode="clr-namespace:MSBuildExtensionPack.WPF4App.UserControls.BuildEventCode"
         Title="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildEventCode.Edit_BuildEventCode, Source={StaticResource LocalizedStrings}}"
         >
     <Grid>

@@ -5,30 +5,30 @@
     xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.X"
     xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
     x:Class="MSBuildExtensionPack.XamarinForms.Pages.Build.Create"
-	Title="{i18n:Translate Text=AddNew_Build, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}">
+    Title="{i18n:Translate Text=AddNew_Build, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}">
     <ContentPage.Content>
-		<ScrollView>
-			<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-				<Label Text="{i18n:Translate Text=Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=Id, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=BuildStartTime, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<DatePicker IsEnabled="True" IsVisible="True" Format="F" Date="{Binding Path=BuildStartTime}" />
-		   <TimePicker Format="F" Time="{Binding Path=BuildStartTime}"/>
-			<Label Text="{i18n:Translate Text=Organization_2Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+        <ScrollView>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Label Text="{i18n:Translate Text=Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=Id, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=BuildStartTime, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <DatePicker IsEnabled="True" IsVisible="True" Format="F" Date="{Binding Path=BuildStartTime}" />
+           <TimePicker Format="F" Time="{Binding Path=BuildStartTime}"/>
+            <Label Text="{i18n:Translate Text=Organization_2Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
             <Picker
                 ItemDisplayBinding="{Binding Name}"
                 ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfOrganization_2, Source={StaticResource Locator}}"
                 SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfOrganization_2SelectedItem, Source={StaticResource Locator}}"
                 HorizontalOptions="FillAndExpand">
             </Picker>
-			<Label Text="{i18n:Translate Text=Organization_1Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{i18n:Translate Text=Organization_1Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
             <Picker
                 ItemDisplayBinding="{Binding Name}"
                 ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfOrganization_1, Source={StaticResource Locator}}"
                 SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfOrganization_1SelectedItem, Source={StaticResource Locator}}"
                 HorizontalOptions="FillAndExpand">
             </Picker>
-			<Label Text="{i18n:Translate Text=SolutionId, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{i18n:Translate Text=SolutionId, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
             <Picker
                 ItemDisplayBinding="{Binding Name}"
                 ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfSolution_1, Source={StaticResource Locator}}"
@@ -36,28 +36,23 @@
                 HorizontalOptions="FillAndExpand"
                 >
             </Picker>
-			<Label Text="{i18n:Translate Text=Name, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-		   <Entry Placeholder="{i18n:Translate Text=Name, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" Text="{Binding Path=Name, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
-			<Label Text="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-		   <Entry Placeholder="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" Text="{Binding Path=Description, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
-			</StackLayout>
-		</ScrollView>
+            <Label Text="{i18n:Translate Text=Name, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+           <Entry Placeholder="{i18n:Translate Text=Name, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" Text="{Binding Path=Name, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+            <Label Text="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+           <Entry Placeholder="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" Text="{Binding Path=Description, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
-	<ContentPage.ToolbarItems>
-        <ToolbarItem Name="Save" Order="Primary" Text="{i18n:Translate Text=SaveAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.AddCommand, Source={StaticResource Locator}}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="Add" Order="Primary" Text="{i18n:Translate Text=SaveAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.AddCommand, Source={StaticResource Locator}}">
             <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Plus.png" Android="Assets/Plus.png" WinPhone="Assets/Plus.png" />
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Add.png" Android="Assets/Add.png" WinPhone="Assets/Add.png" />
             </ToolbarItem.Icon>
         </ToolbarItem>
-        <ToolbarItem Name="Refresh" Order="Primary" Text="{i18n:Translate Text=RefreshAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.RefreshCurrentItemCommand, Source={StaticResource Locator}}">
+        <ToolbarItem x:Name="Refresh" Order="Primary" Text="{i18n:Translate Text=RefreshAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.RefreshCurrentItemCommand, Source={StaticResource Locator}}">
             <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Refresh.png" Android="Assets/Refresh.png" WinPhone="Assets/Refresh.png"/>
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Reload.png" Android="Assets/Reload.png" WinPhone="Assets/Reload.png"/>
             </ToolbarItem.Icon>
         </ToolbarItem>
-        <ToolbarItem Name="Back" Order="Primary" Text="{i18n:Translate Text=BackAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.CloseViewCommand, Source={StaticResource Locator}}">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Back.png" Android="Assets/Back.png" WinPhone="Assets/Back.png"  />
-            </ToolbarItem.Icon>
-        </ToolbarItem>
-	</ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>
 </ContentPage>

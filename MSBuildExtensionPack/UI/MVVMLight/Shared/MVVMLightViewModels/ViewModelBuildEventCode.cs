@@ -153,12 +153,10 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         {
             Framework.NameValueCollection list = new Framework.NameValueCollection();
             list.Add("EventCode~ASC", "EventCode A-Z");
-					list.Add("EventCode~DESC", "EventCode Z-A");
+                    list.Add("EventCode~DESC", "EventCode Z-A");
             return list;
         }
     }
 
-
 }
-
 

@@ -5,12 +5,12 @@ using System.Runtime.Serialization;
 namespace MSBuildExtensionPack.EntityContracts
 {
     /// <summary>
-    /// provides common methods/actions/stubs on an entity. 
+    /// provides common methods/actions/stubs on an entity.
     /// </summary>
-	public static partial class IBuildEventCodeHelper
-	{
+    public static partial class IBuildEventCodeHelper
+    {
 
-		#region Copy<...>(...), Equals<...>(...), Clone<...>(...), ToString<...>(...), 
+        #region Copy<...>(...), Equals<...>(...), Clone<...>(...), ToString<...>(...),
 
         /// <summary>
         /// Copies the specified from.
@@ -23,18 +23,14 @@ namespace MSBuildExtensionPack.EntityContracts
             where T1 : IBuildEventCode
             where T2 : IBuildEventCode
         {
-			to.Id = from.Id;
-			to.EventCode = from.EventCode;
-			to.Description = from.Description;
-        } 
+            to.Id = from.Id;
+            to.EventCode = from.EventCode;
+            to.Description = from.Description;
+        }
 
+        #region special copy
 
-		#region special copy
-
-
-
-
-		#endregion special copy
+        #endregion special copy
 
         /// <summary>
         /// Equals the specified from.
@@ -48,11 +44,11 @@ namespace MSBuildExtensionPack.EntityContracts
             where T1 : IBuildEventCode
             where T2 : IBuildEventCode
         {
-			bool _retval = true;
-			_retval = _retval && to.Id == from.Id;
-			_retval = _retval && to.EventCode == from.EventCode;
-			_retval = _retval && to.Description == from.Description;
-			return _retval;
+            bool _retval = true;
+            _retval = _retval && to.Id == from.Id;
+            _retval = _retval && to.EventCode == from.EventCode;
+            _retval = _retval && to.Description == from.Description;
+            return _retval;
         }
 
         /// <summary>
@@ -70,8 +66,7 @@ namespace MSBuildExtensionPack.EntityContracts
             return _retval;
         }
 
-
-		static string m_Format = "Id:{0};EventCode:{1};Description:{2};";
+        static string m_Format = "Id:{0};EventCode:{1};Description:{2};";
         /// <summary>
         /// Returns a <see cref="System.String"/> that represents this instance.
         /// </summary>
@@ -84,15 +79,15 @@ namespace MSBuildExtensionPack.EntityContracts
             where T : IBuildEventCode
         {
             return string.Format(m_Format
-				, input.Id
-				, input.EventCode
-				, input.Description
-				);
+                , input.Id
+                , input.EventCode
+                , input.Description
+                );
         }
 
-		#endregion Copy<...>(...), Equals<...>(...), Clone<...>(...), ToString<...>(...), 
+        #endregion Copy<...>(...), Equals<...>(...), Clone<...>(...), ToString<...>(...),
 
-		#region CopyCollection<...>(...), CloneCollection<...>(...)
+        #region CopyCollection<...>(...), CloneCollection<...>(...)
 
         /// <summary>
         /// Copies the collection.
@@ -134,9 +129,9 @@ namespace MSBuildExtensionPack.EntityContracts
             T2Collection _retval = new T2Collection();
             CopyCollection<T1Collection, T2Collection, T1, T2>(from, _retval);
             return _retval;
-        } 
+        }
 
-		#endregion CopyCollection<...>(...), CloneCollection<...>(...)
+        #endregion CopyCollection<...>(...), CloneCollection<...>(...)
 
         #region GetDefaultValue<T>()
 
@@ -150,17 +145,12 @@ namespace MSBuildExtensionPack.EntityContracts
         {
             T _retval = new T();
 
-
-
-
             return _retval;
         }
 
         #endregion GetDefaultValue<T>()
 
         #region NameValuePair related method
-
-
 
         /// <summary>
         /// Builds the name of name value pair.
@@ -173,7 +163,6 @@ namespace MSBuildExtensionPack.EntityContracts
         {
             return string.Format("{0}", input.EventCode);
         }
-
 
         /// <summary>
         /// Builds the name value pair.
@@ -188,15 +177,12 @@ namespace MSBuildExtensionPack.EntityContracts
             return _retval;
         }
 
-
-
         #endregion NameValuePair related method
 
-		#region Binary In File System,  BuildPhysicalFileFullPathOfProperty...<T>(T input)
+        #region Binary In File System,  BuildPhysicalFileFullPathOfProperty...<T>(T input)
 
+        #endregion Binary In File System,  BuildPhysicalFileFullPathOfProperty...<T>(T input)
 
-		#endregion Binary In File System,  BuildPhysicalFileFullPathOfProperty...<T>(T input)
-
-	}
+    }
 }
 

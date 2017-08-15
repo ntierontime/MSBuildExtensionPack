@@ -25,5 +25,5 @@ namespace MSBuildExtensionPack.WPF4App.UserControls.Organization
             InitializeComponent();
         }
     }
-}	
+}
 

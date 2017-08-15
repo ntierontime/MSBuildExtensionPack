@@ -14,11 +14,11 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
     /// </summary>
     public partial class BuildApiController : ApiController
     {
-		#region log4net
+        #region log4net
 
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-		#endregion log4net
+        #endregion log4net
 
         #region insert, update and delete in an entity
 
@@ -26,7 +26,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// Inserts an entity of <see cref=" MSBuildExtensionPack.DataSourceEntities.Build"/>.
         /// </summary>
         /// <param name="input">input entity</param>
-		[HttpPost, ActionName("InsertEntity")]
+        [HttpPost, ActionName("InsertEntity")]
         public MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn InsertEntity(
             MSBuildExtensionPack.DataSourceEntities.Build input)
         {
@@ -78,17 +78,17 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
 
         #region delete using .Net value types
 
-		/// <summary>
+        /// <summary>
         /// delete an entity of <see cref=" MSBuildExtensionPack.DataSourceEntities.Build"/> by identifier using .net value types.
         /// </summary>
         /// <param name="id">property value of System.Int64</param>
-		[HttpDelete, ActionName("DeleteByIdentifier")]
+        [HttpDelete, ActionName("DeleteByIdentifier")]
         public MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn DeleteByIdentifier(
-			System.Int64 id
-			)
+            System.Int64 id
+            )
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn responseMessage = MSBuildExtensionPack.CommonBLLIoC.IoCBuild.DeleteByIdentifierEntity(new MSBuildExtensionPack.DataSourceEntities.BuildIdentifier(
-				id));
+                id));
 
             return responseMessage;
         }
@@ -105,48 +105,46 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         {
             Task<MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn> resultTask = Task.Factory.StartNew<MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn>(() =>
             {
-				MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn responseMessage = MSBuildExtensionPack.CommonBLLIoC.IoCBuild.BatchUpdate(input);
+                MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn responseMessage = MSBuildExtensionPack.CommonBLLIoC.IoCBuild.BatchUpdate(input);
 
-				return responseMessage;
+                return responseMessage;
             });
             return await resultTask;
         }
 
-		/// <summary>
+        /// <summary>
         /// batch insert a collection of <see cref=" MSBuildExtensionPack.DataSourceEntities.Build"/>.
         /// </summary>
         /// <param name="input">The input collection.</param>
-		[HttpPost, ActionName("BatchInsert")]
+        [HttpPost, ActionName("BatchInsert")]
         public async Task<MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn> BatchInsert(MSBuildExtensionPack.DataSourceEntities.BuildCollection input)
         {
             Task<MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn> resultTask = Task.Factory.StartNew<MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn>(() =>
             {
-				MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn responseMessage = MSBuildExtensionPack.CommonBLLIoC.IoCBuild.BatchInsert(input);
+                MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn responseMessage = MSBuildExtensionPack.CommonBLLIoC.IoCBuild.BatchInsert(input);
 
-				return responseMessage;
+                return responseMessage;
             });
             return await resultTask;
         }
 
-		/// <summary>
+        /// <summary>
         /// batch delete a collection of <see cref=" MSBuildExtensionPack.DataSourceEntities.Build"/>.
         /// </summary>
         /// <param name="input">The input collection.</param>
-		[HttpDelete, ActionName("BatchDelete")]
+        [HttpDelete, ActionName("BatchDelete")]
         public async Task<MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn> BatchDelete(MSBuildExtensionPack.DataSourceEntities.BuildCollection input)
         {
             Task<MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn> resultTask = Task.Factory.StartNew<MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn>(() =>
             {
-				MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn responseMessage = MSBuildExtensionPack.CommonBLLIoC.IoCBuild.BatchDelete(input);
+                MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn responseMessage = MSBuildExtensionPack.CommonBLLIoC.IoCBuild.BatchDelete(input);
 
-				return responseMessage;
+                return responseMessage;
             });
             return await resultTask;
         }
 
         #endregion batch insert, update and delete in an entity collection
-
-
 
         #region Query Methods Of NameValuePair of All per critieria, queryPagingSetting and queryOrderBySettingCollection
 
@@ -158,17 +156,17 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-		[HttpGet, ActionName("GetCollectionOfNameValuePairOfAll")]
+        [HttpGet, ActionName("GetCollectionOfNameValuePairOfAll")]
         public Framework.NameValueCollection GetCollectionOfNameValuePairOfAll(
-			int currentIndex
-			, int pageSize
-			, string queryOrderByExpression
-			)
+            int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
         {
-			return MSBuildExtensionPack.CommonBLLIoC.IoCBuild.GetCollectionOfNameValuePairOfAll(				currentIndex
-				, pageSize
-				, queryOrderByExpression);
-		}
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuild.GetCollectionOfNameValuePairOfAll(                currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
 
         /// <summary>
         /// Gets message of the collection of entity of common.
@@ -178,22 +176,19 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
-		[HttpGet, ActionName("GetMessageOfNameValuePairOfAll")]
+        [HttpGet, ActionName("GetMessageOfNameValuePairOfAll")]
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfAll(
-			int currentIndex
-			, int pageSize
-			, string queryOrderByExpression		)
+            int currentIndex
+            , int pageSize
+            , string queryOrderByExpression        )
 
         {
-			return MSBuildExtensionPack.CommonBLLIoC.IoCBuild.GetMessageOfNameValuePairOfAll(				currentIndex
-				, pageSize
-				, queryOrderByExpression);
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuild.GetMessageOfNameValuePairOfAll(                currentIndex
+                , pageSize
+                , queryOrderByExpression);
         }
 
         #endregion Query Methods Of NameValuePair of All per value type
-
-
-
 
         #region Query Methods Of NameValuePair of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
 
@@ -210,23 +205,23 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-		[HttpGet, ActionName("GetCollectionOfNameValuePairOfByFKOnly")]
+        [HttpGet, ActionName("GetCollectionOfNameValuePairOfByFKOnly")]
         public Framework.NameValueCollection GetCollectionOfNameValuePairOfByFKOnly(
-			bool isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, System.Int32? valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
-			, bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-			, bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
-			, int currentIndex
-			, int pageSize
-			, string queryOrderByExpression
-			)
+            bool isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, System.Int32? valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+            , bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
         {
-			return MSBuildExtensionPack.CommonBLLIoC.IoCBuild.GetCollectionOfNameValuePairOfByFKOnly(				isToCompareIdByFKOnlyOfSolution_1OfByFKOnly && valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly != default(System.Int32), valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
-				, isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly && valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly != default(System.Int64), valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-				, isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly && valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly != default(System.Int64), valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
-				, currentIndex
-				, pageSize
-				, queryOrderByExpression);
-		}
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuild.GetCollectionOfNameValuePairOfByFKOnly(                isToCompareIdByFKOnlyOfSolution_1OfByFKOnly && valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly != default(System.Int32), valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly && valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly != default(System.Int64), valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly && valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly != default(System.Int64), valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
 
         /// <summary>
         /// Gets message of the collection of entity of common.
@@ -241,29 +236,25 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
-		[HttpGet, ActionName("GetMessageOfNameValuePairOfByFKOnly")]
+        [HttpGet, ActionName("GetMessageOfNameValuePairOfByFKOnly")]
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfByFKOnly(
-			bool isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, System.Int32? valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
-			, bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-			, bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
-			, int currentIndex
-			, int pageSize
-			, string queryOrderByExpression		)
+            bool isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, System.Int32? valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+            , bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression        )
 
         {
-			return MSBuildExtensionPack.CommonBLLIoC.IoCBuild.GetMessageOfNameValuePairOfByFKOnly(				isToCompareIdByFKOnlyOfSolution_1OfByFKOnly && valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly != default(System.Int32), valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
-				, isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly && valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly != default(System.Int64), valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-				, isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly && valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly != default(System.Int64), valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
-				, currentIndex
-				, pageSize
-				, queryOrderByExpression);
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuild.GetMessageOfNameValuePairOfByFKOnly(                isToCompareIdByFKOnlyOfSolution_1OfByFKOnly && valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly != default(System.Int32), valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly && valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly != default(System.Int64), valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly && valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly != default(System.Int64), valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression);
         }
 
         #endregion Query Methods Of NameValuePair of ByFKOnly per value type
-
-
-
-
 
         /// <summary>
         /// Gets the Item View Model of MSBuildExtensionPack.Build.
@@ -271,16 +262,13 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-		public MSBuildExtensionPack.ViewModelData.BuildItemVM GetBuildItemVM(
+        public MSBuildExtensionPack.ViewModelData.BuildItemVM GetBuildItemVM(
             System.Int64 id)
         {
             MSBuildExtensionPack.AspNetMvc40ViewModel.BuildItemVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.BuildItemVM();
             retval.Load(true, id, Framework.UIAction.ViewDetails);
             return retval;
         }
-
-
-
 
         /// <summary>
         /// Gets the Wrapper View Model of MSBuildExtensionPack.Build: WPCommonOfBuildVM.
@@ -311,9 +299,6 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
             return retval;
         }
 
-
-
-
         /// <summary>
         /// Gets entity related view model of MSBuildExtensionPack.Build: WPEntityRelatedOfBuildVM.
         /// http://[host]/api/BuildApi/GetWPEntityRelatedOfBuildVM?
@@ -328,17 +313,14 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
             return retval;
         }
 
-
-
-
-		#region EntityUpdateActionSetting - UpdateNameOnly
+        #region EntityUpdateActionSetting - UpdateNameOnly
 
         /// <summary>
         /// Gets UpdateNameOnly view model of MSBuildExtensionPack.Build: WPUpdateNameOnlyOfBuild.
         /// http://[host]/api/BuildApi/WPUpdateNameOnlyOfBuildVM?
         /// </summary>
         /// <returns></returns>
-		[HttpGet, ActionName("GetWPUpdateNameOnlyOfBuildVM")]
+        [HttpGet, ActionName("GetWPUpdateNameOnlyOfBuildVM")]
         public MSBuildExtensionPack.ViewModelData.WPUpdateNameOnlyOfBuildVM GetWPUpdateNameOnlyOfBuildVM(
             System.Int64 id
             )
@@ -366,9 +348,6 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         }
 
         #endregion EntityUpdateActionSetting - UpdateNameOnlyVM
-
-
-
 
         /// <summary>
         /// HearBeat.

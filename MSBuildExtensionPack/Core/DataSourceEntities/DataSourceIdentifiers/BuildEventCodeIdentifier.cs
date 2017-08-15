@@ -6,29 +6,29 @@ namespace MSBuildExtensionPack.DataSourceEntities
     /// <summary>
     /// table/entity identifier, inherit from entity interface, <see cref="MSBuildExtensionPack.EntityContracts.IBuildEventCodeIdentifier"/>
     /// </summary>
-	public partial class BuildEventCodeIdentifier 
-		: MSBuildExtensionPack.EntityContracts.IBuildEventCodeIdentifier
-	{ 
+    public partial class BuildEventCodeIdentifier
+        : MSBuildExtensionPack.EntityContracts.IBuildEventCodeIdentifier
+    {
 
-		#region constructors
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BuildEventCodeIdentifier"/> class.
-        /// </summary>
-		public BuildEventCodeIdentifier ()
-		{
-		}
+        #region constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildEventCodeIdentifier"/> class.
         /// </summary>
-		public BuildEventCodeIdentifier (
+        public BuildEventCodeIdentifier ()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BuildEventCodeIdentifier"/> class.
+        /// </summary>
+        public BuildEventCodeIdentifier (
 System.Int32 id)
-		{
+        {
 
-			this.Id=id;
+            this.Id=id;
 
-		}
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildEventCodeIdentifier"/> class.
@@ -38,19 +38,17 @@ System.Int32 id)
             MSBuildExtensionPack.EntityContracts.IBuildEventCodeIdentifierHelper.Copy<MSBuildExtensionPack.EntityContracts.IBuildEventCodeIdentifier, BuildEventCodeIdentifier>(item, this);
         }
 
-		#endregion constructors
+        #endregion constructors
 
-		#region properties
-
+        #region properties
 
         public System.Int32 Id { get; set; }
 
-
-		#endregion properties
+        #endregion properties
 
         #region override methods
-		
-		/// <summary>
+
+        /// <summary>
         /// Returns a <see cref="System.String"/> that represents this instance, using ToString method in entity contract helper in EntityContract project
         /// </summary>
         /// <returns>
@@ -82,7 +80,7 @@ System.Int32 id)
         /// Returns a hash code for this instance.
         /// </summary>
         /// <returns>
-        /// A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+        /// A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         /// </returns>
         public override int GetHashCode()
         {
@@ -91,7 +89,7 @@ System.Int32 id)
 
         #endregion override methods
 
-		#region Method of BuildEventCodeIdentifier GetAClone()
+        #region Method of BuildEventCodeIdentifier GetAClone()
 
         /// <summary>
         /// Gets the A clone, using clone method in entity contract helper in EntityContract project.
@@ -102,9 +100,8 @@ System.Int32 id)
             return MSBuildExtensionPack.EntityContracts.IBuildEventCodeIdentifierHelper.Clone<BuildEventCodeIdentifier, BuildEventCodeIdentifier>(this);
         }
 
-
-		#endregion Method of BuildEventCodeIdentifier GetAClone()
-	}
+        #endregion Method of BuildEventCodeIdentifier GetAClone()
+    }
 
     /// <summary>
     ///  a property defined when <see cref="WithIdentifierContractBuildEventCode"/> is used in other classes.

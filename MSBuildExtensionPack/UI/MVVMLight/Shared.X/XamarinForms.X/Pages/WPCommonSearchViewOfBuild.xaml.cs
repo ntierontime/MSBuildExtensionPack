@@ -12,39 +12,14 @@ namespace MSBuildExtensionPack.XamarinForms.Pages
     /// <summary>
     /// Interaction logic for WPCommonSearchViewOfBuild.xaml
     /// </summary>
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class WPCommonSearchViewOfBuild : ContentPage
     {
         public WPCommonSearchViewOfBuild()
         {
             InitializeComponent();
 
-
-		BindingContext = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM_Static;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        BindingContext = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM_Static;
 
         }
     }

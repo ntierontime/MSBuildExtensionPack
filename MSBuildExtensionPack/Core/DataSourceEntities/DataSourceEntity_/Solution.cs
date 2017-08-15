@@ -9,14 +9,10 @@ namespace MSBuildExtensionPack.DataSourceEntities
     /// Entity class, used across the solution. <see cref="Solution"/>
     /// </summary>
     //[DataContract]
-	public partial class Solution  : Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.ISolution
-	{ 
+    public partial class Solution  : Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.ISolution
+    {
 
-
-
-
-
-		#region Storage Fields
+        #region Storage Fields
 
         System.Int32 m_Id;
 
@@ -28,26 +24,22 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         System.Nullable<System.Int64> m_OrganizationId;
 
+        #endregion Storage Fields
 
-		#endregion Storage Fields
-
-
-    
-
-		#region constructors
+        #region constructors
 
         /// <summary>
         /// default constructor
         /// Initializes a new instance of the <see cref=" Solution"/> class.
         /// </summary>
-		public Solution()
-		{
-			this.Id = default(int);
-			this.ExternalParentId = null;
-			this.Name = null;
-			this.Description = null;
-			this.OrganizationId = default(long);
-		}
+        public Solution()
+        {
+            this.Id = default(int);
+            this.ExternalParentId = null;
+            this.Name = null;
+            this.Description = null;
+            this.OrganizationId = default(long);
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref=" Solution"/> class with .Net value type parameters.
@@ -57,20 +49,20 @@ namespace MSBuildExtensionPack.DataSourceEntities
         /// <param name="name">property value of Name</param>
         /// <param name="description">property value of Description</param>
         /// <param name="organizationId">property value of OrganizationId</param>
-		public Solution(
-			System.Int32 id
-			,System.String externalParentId
-			,System.String name
-			,System.String description
-			,System.Nullable<System.Int64> organizationId
-			)
-		{
-			this.m_Id = id;
-			this.m_ExternalParentId = externalParentId;
-			this.m_Name = name;
-			this.m_Description = description;
-			this.m_OrganizationId = organizationId;
-		}
+        public Solution(
+            System.Int32 id
+            ,System.String externalParentId
+            ,System.String name
+            ,System.String description
+            ,System.Nullable<System.Int64> organizationId
+            )
+        {
+            this.m_Id = id;
+            this.m_ExternalParentId = externalParentId;
+            this.m_Name = name;
+            this.m_Description = description;
+            this.m_OrganizationId = organizationId;
+        }
 
         /// <summary>
         /// Initializes/clone a new instance of the <see cref=" Solution"/> class.
@@ -81,14 +73,13 @@ namespace MSBuildExtensionPack.DataSourceEntities
             MSBuildExtensionPack.EntityContracts.ISolutionHelper.Copy<MSBuildExtensionPack.EntityContracts.ISolution, Solution>(item, this);
         }
 
+        #endregion constructors
 
-		#endregion constructors
+        #region properties
 
-		#region properties
-
-				[DataMember]
-		[Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution), ErrorMessageResourceName="Id_is_required")]        public System.Int32 Id
+                [DataMember]
+        [Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution), ErrorMessageResourceName="Id_is_required")]        public System.Int32 Id
         {
             get
             {
@@ -101,9 +92,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-		[Display(Name = "ExternalParentId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]
-		[StringLengthAttribute(100, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution), ErrorMessageResourceName="The_length_of_ExternalParentId_should_be_0_to_100")]        public System.String ExternalParentId
+                [DataMember]
+        [Display(Name = "ExternalParentId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]
+        [StringLengthAttribute(100, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution), ErrorMessageResourceName="The_length_of_ExternalParentId_should_be_0_to_100")]        public System.String ExternalParentId
         {
             get
             {
@@ -116,10 +107,10 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-		[Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution), ErrorMessageResourceName="Name_is_required")]
-		[StringLengthAttribute(100, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_100")]        public System.String Name
+                [DataMember]
+        [Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution), ErrorMessageResourceName="Name_is_required")]
+        [StringLengthAttribute(100, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_100")]        public System.String Name
         {
             get
             {
@@ -132,9 +123,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-		[Display(Name = "Description", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]
-		[StringLengthAttribute(1500, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution), ErrorMessageResourceName="The_length_of_Description_should_be_0_to_1500")]        public System.String Description
+                [DataMember]
+        [Display(Name = "Description", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]
+        [StringLengthAttribute(1500, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution), ErrorMessageResourceName="The_length_of_Description_should_be_0_to_1500")]        public System.String Description
         {
             get
             {
@@ -147,8 +138,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-		[Display(Name = "OrganizationId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.Nullable<System.Int64> OrganizationId
+                [DataMember]
+        [Display(Name = "OrganizationId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.Nullable<System.Int64> OrganizationId
         {
             get
             {
@@ -161,8 +152,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-
-		#endregion properties
+        #endregion properties
 
         #region override methods
 
@@ -198,7 +188,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         /// Returns a hash code for this instance.
         /// </summary>
         /// <returns>
-        /// A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+        /// A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         /// </returns>
         public override int GetHashCode()
         {
@@ -207,7 +197,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         #endregion override methods
 
-		#region Method of Solution GetAClone()
+        #region Method of Solution GetAClone()
 
         /// <summary>
         /// Gets the A clone.
@@ -218,25 +208,24 @@ namespace MSBuildExtensionPack.DataSourceEntities
             return MSBuildExtensionPack.EntityContracts.ISolutionHelper.Clone<Solution, Solution>(this);
         }
 
-		public Solution GetACloneWithoutIdentifier()
+        public Solution GetACloneWithoutIdentifier()
         {
-			var cloned = GetAClone();
+            var cloned = GetAClone();
 
             return cloned;
-		}
+        }
 
-		#endregion Method of Solution GetAClone()
+        #endregion Method of Solution GetAClone()
 
-		#region Nested Views classes and their collection classes 3
-
+        #region Nested Views classes and their collection classes 3
 
         /// <summary>
-        /// View "Default" class of <see cref="Solution"/>, used across the solution. 
+        /// View "Default" class of <see cref="Solution"/>, used across the solution.
         /// </summary>
-		public partial class Default :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.ISolution, Framework.EntityContracts.IClone<Default>
-		{
+        public partial class Default :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.ISolution, Framework.EntityContracts.IClone<Default>
+        {
 
-			#region Storage Fields
+            #region Storage Fields
 
         System.Guid m_Organization_1_UniqueIdentifier;
 
@@ -262,47 +251,45 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         System.Nullable<System.Int64> m_OrganizationId;
 
+            #endregion Storage Fields
 
-			#endregion Storage Fields
+            #region Constructors
 
-			#region Constructors
+            /// <summary>
+            /// Initializes/clone a new instance of the <see cref=" Solution"/> class.
+            /// </summary>
+            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.ISolution"/></param>
+            public Default()
+            {
+                this.Organization_1_UniqueIdentifier = new Guid();
+                this.Organization_1_UniqueidentifierColumn = new Guid();
+                this.Organization_1_Name = null;
+                this.Id = default(int);
+                this.Organization_2Id = default(long);
+                this.Organization_2_UniqueIdentifier = new Guid();
+                this.Organization_2_UniqueidentifierColumn = new Guid();
+                this.Organization_2_Name = null;
+                this.ExternalParentId = null;
+                this.Name = null;
+                this.Description = null;
+                this.OrganizationId = default(long);
+            }
+            /*
+            /// <summary>
+            /// Initializes/clone a new instance of the <see cref=" Solution"/> class.
+            /// </summary>
+            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.ISolution"/></param>
+            public Default(MSBuildExtensionPack.EntityContracts.ISolution item)
+            {
+                MSBuildExtensionPack.EntityContracts.ISolutionHelper.Copy<MSBuildExtensionPack.EntityContracts.ISolution, Default>(item, this);
+            }
+            */
+            #endregion Constructors
 
-			/// <summary>
-			/// Initializes/clone a new instance of the <see cref=" Solution"/> class.
-			/// </summary>
-			/// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.ISolution"/></param>
-			public Default()
-			{
-				this.Organization_1_UniqueIdentifier = new Guid();
-				this.Organization_1_UniqueidentifierColumn = new Guid();
-				this.Organization_1_Name = null;
-				this.Id = default(int);
-				this.Organization_2Id = default(long);
-				this.Organization_2_UniqueIdentifier = new Guid();
-				this.Organization_2_UniqueidentifierColumn = new Guid();
-				this.Organization_2_Name = null;
-				this.ExternalParentId = null;
-				this.Name = null;
-				this.Description = null;
-				this.OrganizationId = default(long);
-			}
-			/*
-			/// <summary>
-			/// Initializes/clone a new instance of the <see cref=" Solution"/> class.
-			/// </summary>
-			/// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.ISolution"/></param>
-			public Default(MSBuildExtensionPack.EntityContracts.ISolution item)
-			{
-				MSBuildExtensionPack.EntityContracts.ISolutionHelper.Copy<MSBuildExtensionPack.EntityContracts.ISolution, Default>(item, this);
-			}
-			*/
-			#endregion Constructors
+            #region properties
 
-
-			#region properties
-
-					[DataMember]
-		[Display(Name = "Organization_1_UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.Guid Organization_1_UniqueIdentifier
+                    [DataMember]
+        [Display(Name = "Organization_1_UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.Guid Organization_1_UniqueIdentifier
         {
             get
             {
@@ -315,8 +302,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-		[Display(Name = "Organization_1_UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.Guid Organization_1_UniqueidentifierColumn
+                    [DataMember]
+        [Display(Name = "Organization_1_UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.Guid Organization_1_UniqueidentifierColumn
         {
             get
             {
@@ -329,8 +316,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-		[Display(Name = "Organization_1_Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.String Organization_1_Name
+                    [DataMember]
+        [Display(Name = "Organization_1_Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.String Organization_1_Name
         {
             get
             {
@@ -343,9 +330,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-		[Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution), ErrorMessageResourceName="Id_is_required")]        public System.Int32 Id
+                    [DataMember]
+        [Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution), ErrorMessageResourceName="Id_is_required")]        public System.Int32 Id
         {
             get
             {
@@ -358,8 +345,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-		[Display(Name = "Organization_2Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.Int64 Organization_2Id
+                    [DataMember]
+        [Display(Name = "Organization_2Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.Int64 Organization_2Id
         {
             get
             {
@@ -372,8 +359,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-		[Display(Name = "Organization_2_UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.Guid Organization_2_UniqueIdentifier
+                    [DataMember]
+        [Display(Name = "Organization_2_UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.Guid Organization_2_UniqueIdentifier
         {
             get
             {
@@ -386,8 +373,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-		[Display(Name = "Organization_2_UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.Guid Organization_2_UniqueidentifierColumn
+                    [DataMember]
+        [Display(Name = "Organization_2_UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.Guid Organization_2_UniqueidentifierColumn
         {
             get
             {
@@ -400,8 +387,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-		[Display(Name = "Organization_2_Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.String Organization_2_Name
+                    [DataMember]
+        [Display(Name = "Organization_2_Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.String Organization_2_Name
         {
             get
             {
@@ -414,9 +401,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-		[Display(Name = "ExternalParentId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]
-		[StringLengthAttribute(100, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution), ErrorMessageResourceName="The_length_of_ExternalParentId_should_be_0_to_100")]        public System.String ExternalParentId
+                    [DataMember]
+        [Display(Name = "ExternalParentId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]
+        [StringLengthAttribute(100, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution), ErrorMessageResourceName="The_length_of_ExternalParentId_should_be_0_to_100")]        public System.String ExternalParentId
         {
             get
             {
@@ -429,10 +416,10 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-		[Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution), ErrorMessageResourceName="Name_is_required")]
-		[StringLengthAttribute(100, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_100")]        public System.String Name
+                    [DataMember]
+        [Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution), ErrorMessageResourceName="Name_is_required")]
+        [StringLengthAttribute(100, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_100")]        public System.String Name
         {
             get
             {
@@ -445,9 +432,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-		[Display(Name = "Description", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]
-		[StringLengthAttribute(1500, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution), ErrorMessageResourceName="The_length_of_Description_should_be_0_to_1500")]        public System.String Description
+                    [DataMember]
+        [Display(Name = "Description", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]
+        [StringLengthAttribute(1500, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution), ErrorMessageResourceName="The_length_of_Description_should_be_0_to_1500")]        public System.String Description
         {
             get
             {
@@ -460,8 +447,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-		[Display(Name = "OrganizationId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.Nullable<System.Int64> OrganizationId
+                    [DataMember]
+        [Display(Name = "OrganizationId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.Nullable<System.Int64> OrganizationId
         {
             get
             {
@@ -474,8 +461,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-
-			#endregion properties
+            #endregion properties
 
             #region Method of Solution.Default  GetAClone()
 
@@ -487,18 +473,18 @@ namespace MSBuildExtensionPack.DataSourceEntities
             {
                 Default cloned = new Default();
 
-			cloned.m_Organization_1_UniqueIdentifier = m_Organization_1_UniqueIdentifier;
-			cloned.m_Organization_1_UniqueidentifierColumn = m_Organization_1_UniqueidentifierColumn;
-			cloned.m_Organization_1_Name = m_Organization_1_Name;
-			cloned.m_Id = m_Id;
-			cloned.m_Organization_2Id = m_Organization_2Id;
-			cloned.m_Organization_2_UniqueIdentifier = m_Organization_2_UniqueIdentifier;
-			cloned.m_Organization_2_UniqueidentifierColumn = m_Organization_2_UniqueidentifierColumn;
-			cloned.m_Organization_2_Name = m_Organization_2_Name;
-			cloned.m_ExternalParentId = m_ExternalParentId;
-			cloned.m_Name = m_Name;
-			cloned.m_Description = m_Description;
-			cloned.m_OrganizationId = m_OrganizationId;
+            cloned.m_Organization_1_UniqueIdentifier = m_Organization_1_UniqueIdentifier;
+            cloned.m_Organization_1_UniqueidentifierColumn = m_Organization_1_UniqueidentifierColumn;
+            cloned.m_Organization_1_Name = m_Organization_1_Name;
+            cloned.m_Id = m_Id;
+            cloned.m_Organization_2Id = m_Organization_2Id;
+            cloned.m_Organization_2_UniqueIdentifier = m_Organization_2_UniqueIdentifier;
+            cloned.m_Organization_2_UniqueidentifierColumn = m_Organization_2_UniqueidentifierColumn;
+            cloned.m_Organization_2_Name = m_Organization_2_Name;
+            cloned.m_ExternalParentId = m_ExternalParentId;
+            cloned.m_Name = m_Name;
+            cloned.m_Description = m_Description;
+            cloned.m_OrganizationId = m_OrganizationId;
 
                 return cloned;
             }
@@ -515,40 +501,39 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
 
             #endregion Method of Solution.Default  GetAClone()
-		}
+        }
 
         /// <summary>
-        /// View "Default" class of <see cref="Solution"/>, used across the solution. 
+        /// View "Default" class of <see cref="Solution"/>, used across the solution.
         /// </summary>
-		public partial class DefaultCollection
-			:  List<Default>
-		{ 
-		}
+        public partial class DefaultCollection
+            :  List<Default>
+        {
+        }
 
         /// <summary>
         /// message definition of "Default", pass single entry, from database, to business logic layer. <see cref="Solution"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
         /// </summary>
-		public class DataAccessLayerMessageOfDefault
-			: Framework.DataSourceEntities.DataAccessLayerMessageBase<Default>
-		{
-		}
+        public class DataAccessLayerMessageOfDefault
+            : Framework.DataSourceEntities.DataAccessLayerMessageBase<Default>
+        {
+        }
 
         /// <summary>
         /// message definition of "Default", pass a collection of instances, from database, to business logic layer. <see cref="Solution"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
         /// </summary>
-		public class DataAccessLayerMessageOfDefaultCollection
-			: Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultCollection>
-		{
-		}
-
+        public class DataAccessLayerMessageOfDefaultCollection
+            : Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultCollection>
+        {
+        }
 
         /// <summary>
-        /// View "DefaultGroupedDataView" class of <see cref="Solution"/>, used across the solution. 
+        /// View "DefaultGroupedDataView" class of <see cref="Solution"/>, used across the solution.
         /// </summary>
-		public partial class DefaultGroupedDataView :Framework.PropertyChangedNotifier, Framework.EntityContracts.IClone<DefaultGroupedDataView>
-		{
+        public partial class DefaultGroupedDataView :Framework.PropertyChangedNotifier, Framework.EntityContracts.IClone<DefaultGroupedDataView>
+        {
 
-			#region Storage Fields
+            #region Storage Fields
 
         System.Nullable<System.Int64> m_OrganizationId;
 
@@ -558,39 +543,37 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         System.String m_Name;
 
+            #endregion Storage Fields
 
-			#endregion Storage Fields
+            #region Constructors
 
-			#region Constructors
+            /// <summary>
+            /// Initializes/clone a new instance of the <see cref=" Solution"/> class.
+            /// </summary>
+            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.ISolution"/></param>
+            public DefaultGroupedDataView()
+            {
+                this.OrganizationId = default(long);
+                this.Organization_2Id = default(long);
+                this.CountPerFK = default(long);
+                this.Name = null;
+            }
+            /*
+            /// <summary>
+            /// Initializes/clone a new instance of the <see cref=" Solution"/> class.
+            /// </summary>
+            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.ISolution"/></param>
+            public DefaultGroupedDataView(MSBuildExtensionPack.EntityContracts.ISolution item)
+            {
+                MSBuildExtensionPack.EntityContracts.ISolutionHelper.Copy<MSBuildExtensionPack.EntityContracts.ISolution, DefaultGroupedDataView>(item, this);
+            }
+            */
+            #endregion Constructors
 
-			/// <summary>
-			/// Initializes/clone a new instance of the <see cref=" Solution"/> class.
-			/// </summary>
-			/// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.ISolution"/></param>
-			public DefaultGroupedDataView()
-			{
-				this.OrganizationId = default(long);
-				this.Organization_2Id = default(long);
-				this.CountPerFK = default(long);
-				this.Name = null;
-			}
-			/*
-			/// <summary>
-			/// Initializes/clone a new instance of the <see cref=" Solution"/> class.
-			/// </summary>
-			/// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.ISolution"/></param>
-			public DefaultGroupedDataView(MSBuildExtensionPack.EntityContracts.ISolution item)
-			{
-				MSBuildExtensionPack.EntityContracts.ISolutionHelper.Copy<MSBuildExtensionPack.EntityContracts.ISolution, DefaultGroupedDataView>(item, this);
-			}
-			*/
-			#endregion Constructors
+            #region properties
 
-
-			#region properties
-
-					[DataMember]
-		[Display(Name = "OrganizationId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.Nullable<System.Int64> OrganizationId
+                    [DataMember]
+        [Display(Name = "OrganizationId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.Nullable<System.Int64> OrganizationId
         {
             get
             {
@@ -603,8 +586,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-		[Display(Name = "Organization_2Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.Int64 Organization_2Id
+                    [DataMember]
+        [Display(Name = "Organization_2Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.Int64 Organization_2Id
         {
             get
             {
@@ -617,8 +600,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-		[Display(Name = "CountPerFK", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.Int64 CountPerFK
+                    [DataMember]
+        [Display(Name = "CountPerFK", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.Int64 CountPerFK
         {
             get
             {
@@ -631,8 +614,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-		[Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.String Name
+                    [DataMember]
+        [Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.String Name
         {
             get
             {
@@ -645,8 +628,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-
-			#endregion properties
+            #endregion properties
 
             #region Method of Solution.DefaultGroupedDataView  GetAClone()
 
@@ -658,10 +640,10 @@ namespace MSBuildExtensionPack.DataSourceEntities
             {
                 DefaultGroupedDataView cloned = new DefaultGroupedDataView();
 
-			cloned.m_OrganizationId = m_OrganizationId;
-			cloned.m_Organization_2Id = m_Organization_2Id;
-			cloned.m_CountPerFK = m_CountPerFK;
-			cloned.m_Name = m_Name;
+            cloned.m_OrganizationId = m_OrganizationId;
+            cloned.m_Organization_2Id = m_Organization_2Id;
+            cloned.m_CountPerFK = m_CountPerFK;
+            cloned.m_Name = m_Name;
 
                 return cloned;
             }
@@ -678,77 +660,74 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
 
             #endregion Method of Solution.DefaultGroupedDataView  GetAClone()
-		}
+        }
 
         /// <summary>
-        /// View "DefaultGroupedDataView" class of <see cref="Solution"/>, used across the solution. 
+        /// View "DefaultGroupedDataView" class of <see cref="Solution"/>, used across the solution.
         /// </summary>
-		public partial class DefaultGroupedDataViewCollection
-			:  List<DefaultGroupedDataView>
-		{ 
-		}
+        public partial class DefaultGroupedDataViewCollection
+            :  List<DefaultGroupedDataView>
+        {
+        }
 
         /// <summary>
         /// message definition of "DefaultGroupedDataView", pass single entry, from database, to business logic layer. <see cref="Solution"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
         /// </summary>
-		public class DataAccessLayerMessageOfDefaultGroupedDataView
-			: Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultGroupedDataView>
-		{
-		}
+        public class DataAccessLayerMessageOfDefaultGroupedDataView
+            : Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultGroupedDataView>
+        {
+        }
 
         /// <summary>
         /// message definition of "DefaultGroupedDataView", pass a collection of instances, from database, to business logic layer. <see cref="Solution"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
         /// </summary>
-		public class DataAccessLayerMessageOfDefaultGroupedDataViewCollection
-			: Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultGroupedDataViewCollection>
-		{
-		}
-
+        public class DataAccessLayerMessageOfDefaultGroupedDataViewCollection
+            : Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultGroupedDataViewCollection>
+        {
+        }
 
         /// <summary>
-        /// View "KeyInformation" class of <see cref="Solution"/>, used across the solution. 
+        /// View "KeyInformation" class of <see cref="Solution"/>, used across the solution.
         /// </summary>
-		public partial class KeyInformation :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.ISolutionIdentifier, Framework.EntityContracts.IClone<KeyInformation>
-		{
+        public partial class KeyInformation :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.ISolutionIdentifier, Framework.EntityContracts.IClone<KeyInformation>
+        {
 
-			#region Storage Fields
+            #region Storage Fields
 
         System.Int32 m_Id;
 
         System.String m_Name;
 
+            #endregion Storage Fields
 
-			#endregion Storage Fields
+            #region Constructors
 
-			#region Constructors
+            /// <summary>
+            /// Initializes/clone a new instance of the <see cref=" Solution"/> class.
+            /// </summary>
+            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.ISolution"/></param>
+            public KeyInformation()
+            {
+                this.Id = default(int);
+                this.Name = null;
+            }
+            /*
+            /// <summary>
+            /// Initializes/clone a new instance of the <see cref=" Solution"/> class.
+            /// </summary>
+            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.ISolution"/></param>
+            public KeyInformation(MSBuildExtensionPack.EntityContracts.ISolution item)
+            {
+                MSBuildExtensionPack.EntityContracts.ISolutionHelper.Copy<MSBuildExtensionPack.EntityContracts.ISolution, KeyInformation>(item, this);
+            }
+            */
+            #endregion Constructors
 
-			/// <summary>
-			/// Initializes/clone a new instance of the <see cref=" Solution"/> class.
-			/// </summary>
-			/// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.ISolution"/></param>
-			public KeyInformation()
-			{
-				this.Id = default(int);
-				this.Name = null;
-			}
-			/*
-			/// <summary>
-			/// Initializes/clone a new instance of the <see cref=" Solution"/> class.
-			/// </summary>
-			/// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.ISolution"/></param>
-			public KeyInformation(MSBuildExtensionPack.EntityContracts.ISolution item)
-			{
-				MSBuildExtensionPack.EntityContracts.ISolutionHelper.Copy<MSBuildExtensionPack.EntityContracts.ISolution, KeyInformation>(item, this);
-			}
-			*/
-			#endregion Constructors
+            #region properties
 
-
-			#region properties
-
-					[DataMember]
-		[Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution), ErrorMessageResourceName="Id_is_required")]        public System.Int32 Id
+                    [DataMember]
+        [Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution), ErrorMessageResourceName="Id_is_required")]        public System.Int32 Id
         {
             get
             {
@@ -761,10 +740,10 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-		[Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution), ErrorMessageResourceName="Name_is_required")]
-		[StringLengthAttribute(100, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_100")]        public System.String Name
+                    [DataMember]
+        [Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution), ErrorMessageResourceName="Name_is_required")]
+        [StringLengthAttribute(100, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_100")]        public System.String Name
         {
             get
             {
@@ -777,8 +756,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-
-			#endregion properties
+            #endregion properties
 
             #region Method of Solution.KeyInformation  GetAClone()
 
@@ -790,8 +768,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             {
                 KeyInformation cloned = new KeyInformation();
 
-			cloned.m_Id = m_Id;
-			cloned.m_Name = m_Name;
+            cloned.m_Id = m_Id;
+            cloned.m_Name = m_Name;
 
                 return cloned;
             }
@@ -808,55 +786,50 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
 
             #endregion Method of Solution.KeyInformation  GetAClone()
-		}
+        }
 
         /// <summary>
-        /// View "KeyInformation" class of <see cref="Solution"/>, used across the solution. 
+        /// View "KeyInformation" class of <see cref="Solution"/>, used across the solution.
         /// </summary>
-		public partial class KeyInformationCollection
-			:  List<KeyInformation>
-		{ 
-		}
+        public partial class KeyInformationCollection
+            :  List<KeyInformation>
+        {
+        }
 
         /// <summary>
         /// message definition of "KeyInformation", pass single entry, from database, to business logic layer. <see cref="Solution"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
         /// </summary>
-		public class DataAccessLayerMessageOfKeyInformation
-			: Framework.DataSourceEntities.DataAccessLayerMessageBase<KeyInformation>
-		{
-		}
+        public class DataAccessLayerMessageOfKeyInformation
+            : Framework.DataSourceEntities.DataAccessLayerMessageBase<KeyInformation>
+        {
+        }
 
         /// <summary>
         /// message definition of "KeyInformation", pass a collection of instances, from database, to business logic layer. <see cref="Solution"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
         /// </summary>
-		public class DataAccessLayerMessageOfKeyInformationCollection
-			: Framework.DataSourceEntities.DataAccessLayerMessageBase<KeyInformationCollection>
-		{
-		}
+        public class DataAccessLayerMessageOfKeyInformationCollection
+            : Framework.DataSourceEntities.DataAccessLayerMessageBase<KeyInformationCollection>
+        {
+        }
 
+        #endregion Nested Views classes and their collection classes 3
 
-
-
-		#endregion Nested Views classes and their collection classes 3
-
-	}
-
-
+    }
 
 /*
     /// <summary>
     /// a property defined when <see cref="Solution"/> is used in other classes.
     /// </summary>
-	public interface WithEntityContractSolution
-	{ 
+    public interface WithEntityContractSolution
+    {
         /// <summary>
         /// Gets or sets Solution.
         /// </summary>
         /// <value>
         /// The Solution
         /// </value>
-		Solution Solution { get; set; }
-	}
+        Solution Solution { get; set; }
+    }
 */
 
     /// <summary>

@@ -20,7 +20,7 @@ namespace MSBuildExtensionPack.XamarinForms
     /// You should always test all the locales implemented in your application.
     /// Sample apps built using the Xamarin.Forms framework.
     /// You exclude the 'Extension' suffix when using in Xaml markup
-    /// 
+    ///
     /// License
     /// The Apache License 2.0 applies to all samples in this repository.
     /// Copyright 2011 Xamarin Inc
@@ -31,46 +31,40 @@ namespace MSBuildExtensionPack.XamarinForms
     /// </summary>
     /// <seealso cref="Xamarin.Forms.Xaml.IMarkupExtension" />
     [ContentProperty ("Text")]
-	public class TranslateExtension : IMarkupExtension
-	{
+    public class TranslateExtension : IMarkupExtension
+    {
         public const string ResourceId_UIStringResource = "Framework.Resx.UIStringResource";
         public const string ResourceId_UIStringResourcePerApp = "MSBuildExtensionPack.Resx.UIStringResourcePerApp";
 
-
         public const string ResourceId_UIStringResourcePerEntityBuild = "MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild";
-
 
         public const string ResourceId_UIStringResourcePerEntityBuildEventCode = "MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode";
 
-
         public const string ResourceId_UIStringResourcePerEntityBuildLog = "MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog";
-
 
         public const string ResourceId_UIStringResourcePerEntityOrganization = "MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization";
 
-
         public const string ResourceId_UIStringResourcePerEntitySolution = "MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution";
-
 
         readonly CultureInfo ci = null;
 
-		public TranslateExtension() {
-			ci = DependencyService.Get<Framework.Xamariner.ILocalize>().GetCurrentCultureInfo();
+        public TranslateExtension() {
+            ci = DependencyService.Get<Framework.Xamariner.ILocalize>().GetCurrentCultureInfo();
             //if (Device.RuntimePlatform.ToLower() == Framework.Xamariner.Platforms.iOS.ToString().ToLower() || Device.RuntimePlatform.ToLower() == Framework.Xamariner.Platforms.Android.ToString().ToLower())
             //{
             //    ci = DependencyService.Get<Framework.Xamariner.ILocalize>().GetCurrentCultureInfo();
             //}
-		}
+        }
 
-		public string ResourceId { get; set; }
+        public string ResourceId { get; set; }
         public string Text { get; set; }
 
         public object ProvideValue (IServiceProvider serviceProvider)
-		{
-			if (Text == null)
-				return "";
+        {
+            if (Text == null)
+                return "";
 
-			ResourceManager temp = GetResourceManager(ResourceId);
+            ResourceManager temp = GetResourceManager(ResourceId);
 
             if (temp != null)
             {
@@ -93,7 +87,7 @@ namespace MSBuildExtensionPack.XamarinForms
                         String.Format("Key '{0}' was not found in resources '{1}' for culture '{2}'.", Text, ResourceId, ci.Name),
                         "Text");
 #else
-				translation = Text; // HACK: returns the key, which GETS DISPLAYED TO THE USER
+                translation = Text; // HACK: returns the key, which GETS DISPLAYED TO THE USER
 #endif
                 }
                 return translation;
@@ -102,7 +96,7 @@ namespace MSBuildExtensionPack.XamarinForms
             {
                 return this.Text;
             }
-		}
+        }
 
         public ResourceManager GetResourceManager(string resourceId)
         {

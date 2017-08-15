@@ -11,23 +11,19 @@ namespace MSBuildExtensionPack.XamarinForms.Pages
 {
     /// <summary>
     /// Interaction logic for WPCommonResultViewOfBuildEventCode.xaml
-    /// https://github.com/shribits/ListViewPagingAndCaching
-    /// http://motzcod.es/post/107620279512/load-more-items-at-end-of-listview-in
-    /// https://stackoverflow.com/questions/43102069/xamarin-forms-listview-load-more
-    /// https://forums.xamarin.com/discussion/83427/xamarin-forms-recycled-listview-with-infinite-scrolling
-    /// https://github.com/rasmuschristensen/SimpleListViewInfiniteScrolling
     /// </summary>
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class WPCommonResultViewOfBuildEventCode : ContentPage
     {
         public WPCommonResultViewOfBuildEventCode()
         {
             InitializeComponent();
 
+        BindingContext = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM_Static;
 
-		BindingContext = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM_Static;
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM_Static.LoadMoreCommand.Execute(null);
 
-		MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM_Static.LoadMoreCommand.Execute(null);
+            //TODO: The following code can replace the "Load More" button. ItemAppearing event is not working properly in UWP, but working in Android emulator/Windows phone emulator, IOs not tested.
             //this.ResultView.ItemAppearing += (object sender, ItemVisibilityEventArgs e) => {
             //    var viewCellDetails = e.Item as MSBuildExtensionPack.DataSourceEntities.BuildEventCode;
             //    if (viewCellDetails == MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM_Static.EntityCollection[MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM_Static.EntityCollection.Count - 1])
@@ -35,6 +31,8 @@ namespace MSBuildExtensionPack.XamarinForms.Pages
             //        MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM_Static.LoadMoreCommand.Execute(null);
             //    }
             //};
+
         }
     }
 }
+

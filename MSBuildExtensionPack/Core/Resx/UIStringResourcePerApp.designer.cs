@@ -11,7 +11,7 @@
 namespace MSBuildExtensionPack.Resx {
     using System;
     using System.Reflection;
-    
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -23,15 +23,15 @@ namespace MSBuildExtensionPack.Resx {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class UIStringResourcePerApp {
-        
+
         private static global::System.Resources.ResourceManager resourceMan;
-        
+
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
+
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         public UIStringResourcePerApp() {
         }
-        
+
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -45,7 +45,7 @@ namespace MSBuildExtensionPack.Resx {
                 return resourceMan;
             }
         }
-        
+
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
@@ -60,7 +60,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "MSBuildExtensionPack"".
         /// </summary>
@@ -69,7 +68,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Application_Title", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Description Of Common of MSBuildExtensionPack.Build"".
@@ -80,7 +78,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Common of MSBuildExtensionPack.Build"".
         /// </summary>
@@ -89,7 +86,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Common_of_MSBuildExtensionPack_Build", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "ToolTip Of Common of MSBuildExtensionPack.Build"".
@@ -100,7 +96,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Description Of EntityRelated of MSBuildExtensionPack.Build"".
         /// </summary>
@@ -109,7 +104,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Description_Of_EntityRelated_of_MSBuildExtensionPack_Build", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "EntityRelated of MSBuildExtensionPack.Build"".
@@ -120,7 +114,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "ToolTip Of EntityRelated of MSBuildExtensionPack.Build"".
         /// </summary>
@@ -129,7 +122,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("ToolTip_Of_EntityRelated_of_MSBuildExtensionPack_Build", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Description Of CommonSearchView of MSBuildExtensionPack.Build"".
@@ -140,7 +132,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "CommonSearchView of MSBuildExtensionPack.Build"".
         /// </summary>
@@ -149,7 +140,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("CommonSearchView_of_MSBuildExtensionPack_Build", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "ToolTip Of CommonSearchView of MSBuildExtensionPack.Build"".
@@ -160,7 +150,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Description Of CommonResultView of MSBuildExtensionPack.Build"".
         /// </summary>
@@ -169,7 +158,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Description_Of_CommonResultView_of_MSBuildExtensionPack_Build", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "CommonResultView of MSBuildExtensionPack.Build"".
@@ -180,7 +168,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "ToolTip Of CommonResultView of MSBuildExtensionPack.Build"".
         /// </summary>
@@ -189,7 +176,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("ToolTip_Of_CommonResultView_of_MSBuildExtensionPack_Build", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Description Of UpdateNameOnly of MSBuildExtensionPack.Build"".
@@ -200,7 +186,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "UpdateNameOnly of MSBuildExtensionPack.Build"".
         /// </summary>
@@ -209,7 +194,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("UpdateNameOnly_of_MSBuildExtensionPack_Build", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "ToolTip Of UpdateNameOnly of MSBuildExtensionPack.Build"".
@@ -220,7 +204,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Description Of Common of MSBuildExtensionPack.BuildEventCode"".
         /// </summary>
@@ -229,7 +212,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Description_Of_Common_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Common of MSBuildExtensionPack.BuildEventCode"".
@@ -240,7 +222,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "ToolTip Of Common of MSBuildExtensionPack.BuildEventCode"".
         /// </summary>
@@ -249,7 +230,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("ToolTip_Of_Common_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Description Of EntityRelated of MSBuildExtensionPack.BuildEventCode"".
@@ -260,7 +240,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "EntityRelated of MSBuildExtensionPack.BuildEventCode"".
         /// </summary>
@@ -269,7 +248,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("EntityRelated_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "ToolTip Of EntityRelated of MSBuildExtensionPack.BuildEventCode"".
@@ -280,7 +258,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Description Of CommonSearchView of MSBuildExtensionPack.BuildEventCode"".
         /// </summary>
@@ -289,7 +266,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Description_Of_CommonSearchView_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "CommonSearchView of MSBuildExtensionPack.BuildEventCode"".
@@ -300,7 +276,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "ToolTip Of CommonSearchView of MSBuildExtensionPack.BuildEventCode"".
         /// </summary>
@@ -309,7 +284,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("ToolTip_Of_CommonSearchView_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Description Of CommonResultView of MSBuildExtensionPack.BuildEventCode"".
@@ -320,7 +294,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "CommonResultView of MSBuildExtensionPack.BuildEventCode"".
         /// </summary>
@@ -329,7 +302,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("CommonResultView_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "ToolTip Of CommonResultView of MSBuildExtensionPack.BuildEventCode"".
@@ -340,7 +312,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Description Of Common of MSBuildExtensionPack.BuildLog"".
         /// </summary>
@@ -349,7 +320,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Description_Of_Common_of_MSBuildExtensionPack_BuildLog", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Common of MSBuildExtensionPack.BuildLog"".
@@ -360,7 +330,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "ToolTip Of Common of MSBuildExtensionPack.BuildLog"".
         /// </summary>
@@ -369,7 +338,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("ToolTip_Of_Common_of_MSBuildExtensionPack_BuildLog", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Description Of EntityRelated of MSBuildExtensionPack.BuildLog"".
@@ -380,7 +348,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "EntityRelated of MSBuildExtensionPack.BuildLog"".
         /// </summary>
@@ -389,7 +356,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("EntityRelated_of_MSBuildExtensionPack_BuildLog", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "ToolTip Of EntityRelated of MSBuildExtensionPack.BuildLog"".
@@ -400,7 +366,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Description Of CommonSearchView of MSBuildExtensionPack.BuildLog"".
         /// </summary>
@@ -409,7 +374,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Description_Of_CommonSearchView_of_MSBuildExtensionPack_BuildLog", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "CommonSearchView of MSBuildExtensionPack.BuildLog"".
@@ -420,7 +384,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "ToolTip Of CommonSearchView of MSBuildExtensionPack.BuildLog"".
         /// </summary>
@@ -429,7 +392,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("ToolTip_Of_CommonSearchView_of_MSBuildExtensionPack_BuildLog", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Description Of CommonResultView of MSBuildExtensionPack.BuildLog"".
@@ -440,7 +402,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "CommonResultView of MSBuildExtensionPack.BuildLog"".
         /// </summary>
@@ -449,7 +410,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("CommonResultView_of_MSBuildExtensionPack_BuildLog", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "ToolTip Of CommonResultView of MSBuildExtensionPack.BuildLog"".
@@ -460,7 +420,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Description Of Common of MSBuildExtensionPack.Organization"".
         /// </summary>
@@ -469,7 +428,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Description_Of_Common_of_MSBuildExtensionPack_Organization", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Common of MSBuildExtensionPack.Organization"".
@@ -480,7 +438,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "ToolTip Of Common of MSBuildExtensionPack.Organization"".
         /// </summary>
@@ -489,7 +446,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("ToolTip_Of_Common_of_MSBuildExtensionPack_Organization", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Description Of EntityRelated of MSBuildExtensionPack.Organization"".
@@ -500,7 +456,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "EntityRelated of MSBuildExtensionPack.Organization"".
         /// </summary>
@@ -509,7 +464,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("EntityRelated_of_MSBuildExtensionPack_Organization", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "ToolTip Of EntityRelated of MSBuildExtensionPack.Organization"".
@@ -520,7 +474,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Description Of CommonSearchView of MSBuildExtensionPack.Organization"".
         /// </summary>
@@ -529,7 +482,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Description_Of_CommonSearchView_of_MSBuildExtensionPack_Organization", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "CommonSearchView of MSBuildExtensionPack.Organization"".
@@ -540,7 +492,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "ToolTip Of CommonSearchView of MSBuildExtensionPack.Organization"".
         /// </summary>
@@ -549,7 +500,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("ToolTip_Of_CommonSearchView_of_MSBuildExtensionPack_Organization", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Description Of CommonResultView of MSBuildExtensionPack.Organization"".
@@ -560,7 +510,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "CommonResultView of MSBuildExtensionPack.Organization"".
         /// </summary>
@@ -569,7 +518,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("CommonResultView_of_MSBuildExtensionPack_Organization", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "ToolTip Of CommonResultView of MSBuildExtensionPack.Organization"".
@@ -580,7 +528,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Description Of Common of MSBuildExtensionPack.Solution"".
         /// </summary>
@@ -589,7 +536,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Description_Of_Common_of_MSBuildExtensionPack_Solution", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Common of MSBuildExtensionPack.Solution"".
@@ -600,7 +546,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "ToolTip Of Common of MSBuildExtensionPack.Solution"".
         /// </summary>
@@ -609,7 +554,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("ToolTip_Of_Common_of_MSBuildExtensionPack_Solution", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Description Of EntityRelated of MSBuildExtensionPack.Solution"".
@@ -620,7 +564,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "EntityRelated of MSBuildExtensionPack.Solution"".
         /// </summary>
@@ -629,7 +572,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("EntityRelated_of_MSBuildExtensionPack_Solution", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "ToolTip Of EntityRelated of MSBuildExtensionPack.Solution"".
@@ -640,7 +582,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Description Of CommonSearchView of MSBuildExtensionPack.Solution"".
         /// </summary>
@@ -649,7 +590,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Description_Of_CommonSearchView_of_MSBuildExtensionPack_Solution", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "CommonSearchView of MSBuildExtensionPack.Solution"".
@@ -660,7 +600,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "ToolTip Of CommonSearchView of MSBuildExtensionPack.Solution"".
         /// </summary>
@@ -669,7 +608,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("ToolTip_Of_CommonSearchView_of_MSBuildExtensionPack_Solution", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Description Of CommonResultView of MSBuildExtensionPack.Solution"".
@@ -680,7 +618,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "CommonResultView of MSBuildExtensionPack.Solution"".
         /// </summary>
@@ -690,7 +627,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "ToolTip Of CommonResultView of MSBuildExtensionPack.Solution"".
         /// </summary>
@@ -699,7 +635,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("ToolTip_Of_CommonResultView_of_MSBuildExtensionPack_Solution", resourceCulture);
             }
         }
-
 
     }
 }

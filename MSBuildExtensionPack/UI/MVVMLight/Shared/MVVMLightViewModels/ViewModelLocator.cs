@@ -4,12 +4,12 @@
       <vm:ViewModelLocatorTemplate xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels"
                                    x:Key="Locator" />
   </Application.Resources>
-  
+
   In the View:
   DataContext="{Binding Source={StaticResource Locator}, Path=ViewModelName}"
-  
+
   OR (WPF only):
-  
+
   xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels"
   DataContext="{Binding Source={x:Static vm:ViewModelLocatorTemplate.ViewModelNameStatic}}"
 */
@@ -55,7 +55,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
     /// </summary>
     public class ViewModelLocator
     {
-		public static string WebApiRootUrl { get; set; }
+        public static string WebApiRootUrl { get; set; }
 
         #region constructors
 
@@ -134,8 +134,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         #endregion MSBuildExtensionPack.MVVMLightViewModels.MainViewModel
 
-
-
         #region MVVMViewModel #1.1: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildVM
 
         private static MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildVM m_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM;
@@ -184,9 +182,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         }
 
         #endregion MVVMViewModel: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildVM
-
-
-
 
         #region MVVMViewModel #1.2: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildEventCodeVM
 
@@ -237,9 +232,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         #endregion MVVMViewModel: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildEventCodeVM
 
-
-
-
         #region MVVMViewModel #1.3: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildLogVM
 
         private static MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildLogVM m_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM;
@@ -288,9 +280,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         }
 
         #endregion MVVMViewModel: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildLogVM
-
-
-
 
         #region MVVMViewModel #1.4: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfOrganizationVM
 
@@ -341,9 +330,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         #endregion MVVMViewModel: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfOrganizationVM
 
-
-
-
         #region MVVMViewModel #1.5: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfSolutionVM
 
         private static MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfSolutionVM m_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM;
@@ -392,11 +378,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         }
 
         #endregion MVVMViewModel: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfSolutionVM
-
-
-
-
-
 
         #region MVVMViewModel #2.1: MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuild
 
@@ -447,9 +428,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         #endregion MVVMViewModel: MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuild
 
-
-
-
         #region MVVMViewModel #2.2: MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuildEventCode
 
         private static MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuildEventCode m_MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode;
@@ -498,9 +476,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         }
 
         #endregion MVVMViewModel: MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuildEventCode
-
-
-
 
         #region MVVMViewModel #2.3: MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuildLog
 
@@ -551,9 +526,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         #endregion MVVMViewModel: MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuildLog
 
-
-
-
         #region MVVMViewModel #2.4: MSBuildExtensionPack.MVVMLightViewModels.ItemVMOrganization
 
         private static MSBuildExtensionPack.MVVMLightViewModels.ItemVMOrganization m_MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization;
@@ -602,9 +574,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         }
 
         #endregion MVVMViewModel: MSBuildExtensionPack.MVVMLightViewModels.ItemVMOrganization
-
-
-
 
         #region MVVMViewModel #2.5: MSBuildExtensionPack.MVVMLightViewModels.ItemVMSolution
 
@@ -655,11 +624,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         #endregion MVVMViewModel: MSBuildExtensionPack.MVVMLightViewModels.ItemVMSolution
 
-
-
-
-
-
         #region MVVMViewModel #3.1: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMBuild
 
         private static MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMBuild m_MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild;
@@ -708,9 +672,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         }
 
         #endregion MVVMViewModel: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMBuild
-
-
-
 
         #region MVVMViewModel #3.2: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMBuildEventCode
 
@@ -761,9 +722,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         #endregion MVVMViewModel: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMBuildEventCode
 
-
-
-
         #region MVVMViewModel #3.3: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMBuildLog
 
         private static MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMBuildLog m_MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog;
@@ -812,9 +770,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         }
 
         #endregion MVVMViewModel: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMBuildLog
-
-
-
 
         #region MVVMViewModel #3.4: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMOrganization
 
@@ -865,9 +820,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         #endregion MVVMViewModel: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMOrganization
 
-
-
-
         #region MVVMViewModel #3.5: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMSolution
 
         private static MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMSolution m_MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution;
@@ -917,82 +869,58 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         #endregion MVVMViewModel: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMSolution
 
-
-
-
         /// <summary>
         /// Cleans up all the resources.
         /// </summary>
         public static void Cleanup()
         {
 
+            // #1.1: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildVM
+            Clear_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM();
 
-			// #1.1: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildVM
-			Clear_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM();
+            // #1.2: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildEventCodeVM
+            Clear_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM();
 
+            // #1.3: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildLogVM
+            Clear_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM();
 
-			// #1.2: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildEventCodeVM
-			Clear_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM();
+            // #1.4: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfOrganizationVM
+            Clear_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM();
 
+            // #1.5: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfSolutionVM
+            Clear_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM();
 
-			// #1.3: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildLogVM
-			Clear_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM();
-
-
-			// #1.4: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfOrganizationVM
-			Clear_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM();
-
-
-			// #1.5: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfSolutionVM
-			Clear_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM();
-
-
-
-
-			// #2.1: MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuild
+            // #2.1: MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuild
             Clear_MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild();
 
-
-			// #2.2: MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuildEventCode
+            // #2.2: MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuildEventCode
             Clear_MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode();
 
-
-			// #2.3: MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuildLog
+            // #2.3: MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuildLog
             Clear_MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog();
 
-
-			// #2.4: MSBuildExtensionPack.MVVMLightViewModels.ItemVMOrganization
+            // #2.4: MSBuildExtensionPack.MVVMLightViewModels.ItemVMOrganization
             Clear_MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization();
 
-
-			// #2.5: MSBuildExtensionPack.MVVMLightViewModels.ItemVMSolution
+            // #2.5: MSBuildExtensionPack.MVVMLightViewModels.ItemVMSolution
             Clear_MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution();
 
-
-
-
-			// #3.1: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMBuild
+            // #3.1: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMBuild
             Clear_MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild();
 
-
-			// #3.2: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMBuildEventCode
+            // #3.2: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMBuildEventCode
             Clear_MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildEventCode();
 
-
-			// #3.3: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMBuildLog
+            // #3.3: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMBuildLog
             Clear_MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog();
 
-
-			// #3.4: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMOrganization
+            // #3.4: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMOrganization
             Clear_MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization();
 
-
-			// #3.5: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMSolution
+            // #3.5: MSBuildExtensionPack.MVVMLightViewModels.ExtendedVMSolution
             Clear_MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution();
 
-
-
-			// #4. ClearMain -- CleanUp
+            // #4. ClearMain -- CleanUp
             ClearMain();
         }
     }

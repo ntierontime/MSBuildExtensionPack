@@ -6,29 +6,29 @@ namespace MSBuildExtensionPack.DataSourceEntities
     /// <summary>
     /// table/entity identifier, inherit from entity interface, <see cref="MSBuildExtensionPack.EntityContracts.IOrganizationIdentifier"/>
     /// </summary>
-	public partial class OrganizationIdentifier 
-		: MSBuildExtensionPack.EntityContracts.IOrganizationIdentifier
-	{ 
+    public partial class OrganizationIdentifier
+        : MSBuildExtensionPack.EntityContracts.IOrganizationIdentifier
+    {
 
-		#region constructors
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="OrganizationIdentifier"/> class.
-        /// </summary>
-		public OrganizationIdentifier ()
-		{
-		}
+        #region constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="OrganizationIdentifier"/> class.
         /// </summary>
-		public OrganizationIdentifier (
+        public OrganizationIdentifier ()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrganizationIdentifier"/> class.
+        /// </summary>
+        public OrganizationIdentifier (
 System.Int64 id)
-		{
+        {
 
-			this.Id=id;
+            this.Id=id;
 
-		}
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="OrganizationIdentifier"/> class.
@@ -38,19 +38,17 @@ System.Int64 id)
             MSBuildExtensionPack.EntityContracts.IOrganizationIdentifierHelper.Copy<MSBuildExtensionPack.EntityContracts.IOrganizationIdentifier, OrganizationIdentifier>(item, this);
         }
 
-		#endregion constructors
+        #endregion constructors
 
-		#region properties
-
+        #region properties
 
         public System.Int64 Id { get; set; }
 
-
-		#endregion properties
+        #endregion properties
 
         #region override methods
-		
-		/// <summary>
+
+        /// <summary>
         /// Returns a <see cref="System.String"/> that represents this instance, using ToString method in entity contract helper in EntityContract project
         /// </summary>
         /// <returns>
@@ -82,7 +80,7 @@ System.Int64 id)
         /// Returns a hash code for this instance.
         /// </summary>
         /// <returns>
-        /// A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+        /// A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         /// </returns>
         public override int GetHashCode()
         {
@@ -91,7 +89,7 @@ System.Int64 id)
 
         #endregion override methods
 
-		#region Method of OrganizationIdentifier GetAClone()
+        #region Method of OrganizationIdentifier GetAClone()
 
         /// <summary>
         /// Gets the A clone, using clone method in entity contract helper in EntityContract project.
@@ -102,9 +100,8 @@ System.Int64 id)
             return MSBuildExtensionPack.EntityContracts.IOrganizationIdentifierHelper.Clone<OrganizationIdentifier, OrganizationIdentifier>(this);
         }
 
-
-		#endregion Method of OrganizationIdentifier GetAClone()
-	}
+        #endregion Method of OrganizationIdentifier GetAClone()
+    }
 
     /// <summary>
     ///  a property defined when <see cref="WithIdentifierContractOrganization"/> is used in other classes.

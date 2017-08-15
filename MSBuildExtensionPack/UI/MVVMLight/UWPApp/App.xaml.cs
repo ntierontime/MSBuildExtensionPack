@@ -112,4 +112,3 @@ namespace MSBuildExtensionPack.UWPApp
     }
 }
 
-

@@ -1,90 +1,111 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
+             xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
              xmlns:fxr="clr-namespace:Framework.Xamariner;assembly=Framework.Xamariner.X"
              xmlns:fe="clr-namespace:Framework.EntityContracts;assembly=Framework.EntityContracts.X"
              x:Class="MSBuildExtensionPack.XamarinForms.Pages.WPCommonResultViewOfOrganization">
-	<ListView x:Name="ResultView" ItemsSource="{Binding Path=EntityCollectionDefault}">
-		<ListView.ItemTemplate>
-			<DataTemplate>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="ResultView" ItemsSource="{Binding Path=EntityCollectionDefault}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
                 <ViewCell>
-                    <StackLayout BackgroundColor="#eee" Orientation="Vertical">
-			<Label Text="{i18n:Translate Text=Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=Id, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=CreatedDateTime, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-		    <DatePicker IsVisible="True" Format="F" Date="{Binding Path=CreatedDateTime, Mode=OneWay}" IsEnabled="False" />
-	     <TimePicker Format="F" Time="{Binding Path=CreatedDateTime, Mode=OneWay}" IsEnabled="False" />
-			<Label Text="{Binding Path=CreatedDateTime, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=ParentId, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Button Text="{Binding Path=Organization_2_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization.LaunchOrganization_2DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
-		   <Switch VerticalOptions="Center" HorizontalOptions="Center" IsToggled="{Binding Path=IsSystemBuiltIn, Mode=OneWay}" IsEnabled="False" />
-		   <Switch VerticalOptions="Center" HorizontalOptions="Center" IsToggled="{Binding Path=BitColumn, Mode=OneWay}" IsEnabled="False" />
-			<Label Text="{i18n:Translate Text=Name, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=Name, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=UniqueIdentifier, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=UniqueIdentifier, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=CharColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=CharColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=VarcharColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=VarcharColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=TextColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=TextColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=NcharColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=NcharColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=NvarcharColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=NvarcharColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=NtextColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=NtextColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=BinaryColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=BinaryColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=VarbinaryColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=VarbinaryColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=ImageColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=ImageColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=TinyintColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=TinyintColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=SmallintColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=SmallintColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=IntColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=IntColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=BigintColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=BigintColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=DecimalColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=DecimalColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=NumericColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=NumericColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=SmallmoneyColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=SmallmoneyColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=MoneyColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=MoneyColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=FloatColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=FloatColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=RealColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=RealColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=DatetimeColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-		    <DatePicker IsVisible="True" Format="F" Date="{Binding Path=DatetimeColumn, Mode=OneWay}" IsEnabled="False" />
-	     <TimePicker Format="F" Time="{Binding Path=DatetimeColumn, Mode=OneWay}" IsEnabled="False" />
-			<Label Text="{Binding Path=DatetimeColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=Datetime2Column, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-		    <DatePicker IsVisible="True" Format="F" Date="{Binding Path=Datetime2Column, Mode=OneWay}" IsEnabled="False" />
-	     <TimePicker Format="F" Time="{Binding Path=Datetime2Column, Mode=OneWay}" IsEnabled="False" />
-			<Label Text="{Binding Path=Datetime2Column, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=SmalldatetimeColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-		    <DatePicker IsVisible="True" Format="F" Date="{Binding Path=SmalldatetimeColumn, Mode=OneWay}" IsEnabled="False" />
-	     <TimePicker Format="F" Time="{Binding Path=SmalldatetimeColumn, Mode=OneWay}" IsEnabled="False" />
-			<Label Text="{Binding Path=SmalldatetimeColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=DateColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-		    <DatePicker IsVisible="True" Format="F" Date="{Binding Path=DateColumn, Mode=OneWay}" IsEnabled="False" />
-	     <TimePicker Format="F" Time="{Binding Path=DateColumn, Mode=OneWay}" IsEnabled="False" />
-			<Label Text="{Binding Path=DateColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=TimeColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=TimeColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=UniqueidentifierColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=UniqueidentifierColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-                    </StackLayout>
+                    <Frame OutlineColor="Yellow" Padding="1">
+                        <StackLayout BackgroundColor="#eee" Orientation="Vertical">
+            <Label Text="{i18n:Translate Text=Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=Id, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=CreatedDateTime, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <DatePicker IsVisible="True" Format="F" Date="{Binding Path=CreatedDateTime, Mode=OneWay}" IsEnabled="False" />
+         <TimePicker Format="F" Time="{Binding Path=CreatedDateTime, Mode=OneWay}" IsEnabled="False" />
+            <Label Text="{Binding Path=CreatedDateTime, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=ParentId, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Button Text="{Binding Path=Organization_2_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization.LaunchOrganization_2DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+           <Switch VerticalOptions="Center" HorizontalOptions="Center" IsToggled="{Binding Path=IsSystemBuiltIn, Mode=OneWay}" IsEnabled="False" />
+           <Switch VerticalOptions="Center" HorizontalOptions="Center" IsToggled="{Binding Path=BitColumn, Mode=OneWay}" IsEnabled="False" />
+            <Label Text="{i18n:Translate Text=Name, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=Name, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=UniqueIdentifier, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=UniqueIdentifier, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=CharColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=CharColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=VarcharColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=VarcharColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=TextColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=TextColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=NcharColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=NcharColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=NvarcharColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=NvarcharColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=NtextColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=NtextColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=BinaryColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=BinaryColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=VarbinaryColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=VarbinaryColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=ImageColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=ImageColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=TinyintColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=TinyintColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=SmallintColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=SmallintColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=IntColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=IntColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=BigintColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=BigintColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=DecimalColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=DecimalColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=NumericColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=NumericColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=SmallmoneyColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=SmallmoneyColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=MoneyColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=MoneyColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=FloatColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=FloatColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=RealColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=RealColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=DatetimeColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <DatePicker IsVisible="True" Format="F" Date="{Binding Path=DatetimeColumn, Mode=OneWay}" IsEnabled="False" />
+         <TimePicker Format="F" Time="{Binding Path=DatetimeColumn, Mode=OneWay}" IsEnabled="False" />
+            <Label Text="{Binding Path=DatetimeColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=Datetime2Column, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <DatePicker IsVisible="True" Format="F" Date="{Binding Path=Datetime2Column, Mode=OneWay}" IsEnabled="False" />
+         <TimePicker Format="F" Time="{Binding Path=Datetime2Column, Mode=OneWay}" IsEnabled="False" />
+            <Label Text="{Binding Path=Datetime2Column, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=SmalldatetimeColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <DatePicker IsVisible="True" Format="F" Date="{Binding Path=SmalldatetimeColumn, Mode=OneWay}" IsEnabled="False" />
+         <TimePicker Format="F" Time="{Binding Path=SmalldatetimeColumn, Mode=OneWay}" IsEnabled="False" />
+            <Label Text="{Binding Path=SmalldatetimeColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=DateColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <DatePicker IsVisible="True" Format="F" Date="{Binding Path=DateColumn, Mode=OneWay}" IsEnabled="False" />
+         <TimePicker Format="F" Time="{Binding Path=DateColumn, Mode=OneWay}" IsEnabled="False" />
+            <Label Text="{Binding Path=DateColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=TimeColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=TimeColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=UniqueidentifierColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=UniqueidentifierColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                        </StackLayout>
+                    </Frame>
                 </ViewCell>
-			</DataTemplate>
-		</ListView.ItemTemplate>
-	</ListView>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+                <ListView.Footer>
+                    <Button Text="{i18n:Translate Text=LoadMoreAlternativeText, ResourceId=Framework.Resx.UIStringResource}"  Command="{Binding Path=LoadMoreCommand}" />
+                </ListView.Footer>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="Search" Order="Primary" Text="{i18n:Translate Text=SearchAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization.LaunchSearchViewCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Search.png" Android="Assets/Search.png" WinPhone="Assets/Search.png" />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem x:Name="Add" Order="Primary" Text="{i18n:Translate Text=SaveAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization.AddCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Add.png" Android="Assets/Add.png" WinPhone="Assets/Add.png" />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
 </ContentPage>

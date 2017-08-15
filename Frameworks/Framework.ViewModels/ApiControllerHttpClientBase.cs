@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace Framework.ViewModels
@@ -19,7 +18,7 @@ namespace Framework.ViewModels
         /// <value>
         /// The root path.
         /// </value>
-        /// 
+        ///
         string RootPath { get; set; }
 
         public abstract string ControllerName { get; }
@@ -141,23 +140,16 @@ namespace Framework.ViewModels
 
             try
             {
-                //Client.Timeout = TimeSpan.FromSeconds(30);
-                //var _cancelTokenSource = new CancellationTokenSource();
-                //var _cancelToken = _cancelTokenSource.Token;
-
-                //var response = await Client.PostAsync(url, httpContent, _cancelToken).ConfigureAwait(false);
                 var response = await Client.PostAsync(url, httpContent);
 
                 if (response.IsSuccessStatusCode)
                 {
-                    //var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
                     var content = await response.Content.ReadAsStringAsync();
                     var result = JsonConvert.DeserializeObject<TViewModel>(content);
                     return result;
                 }
                 else
                 {
-                    //var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
                     var content = await response.Content.ReadAsStringAsync();
                     vm.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
                     vm.StatusMessageOfResult = content;
@@ -274,7 +266,4 @@ namespace Framework.ViewModels
         }
     }
 }
-
-
-
 

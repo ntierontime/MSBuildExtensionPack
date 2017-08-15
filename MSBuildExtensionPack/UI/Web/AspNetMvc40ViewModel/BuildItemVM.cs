@@ -15,7 +15,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 
         #endregion log4net
 
-				public List<SelectListItem> SelectListOfMSBuildExtensionPack_Organization { get; set; }
+                public List<SelectListItem> SelectListOfMSBuildExtensionPack_Organization { get; set; }
 
         public void Load(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier
             , Framework.UIAction uiAction)
@@ -32,7 +32,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
                     this.Item = _Response.Message[0];
                     this.UIActionStatusMessage = new Framework.UIActionStatusMessage(typeof(BuildItemVM).FullName, uiAction.ToString(), uiAction, Framework.UIActionStatus.Launch);
                     log.Info(string.Format("{0}: {1}", uiAction, Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
-					this.LoadExtraData(uiAction);
+                    this.LoadExtraData(uiAction);
                 }
                 else
                 {
@@ -57,7 +57,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
             BuildItemVM vm = new BuildItemVM();
             vm.ContentData.Title = Framework.Resx.UIStringResource.AddNewAlternativeText;
             vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.AddNew_Build;
-			vm.LoadExtraData(uiAction);
+            vm.LoadExtraData(uiAction);
 
             vm.Item = entity;
             vm.UIActionStatusMessage = new Framework.UIActionStatusMessage(typeof(BuildItemVM).FullName, uiAction.ToString(), uiAction, Framework.UIActionStatus.Launch);
@@ -69,11 +69,11 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
         {
             if (uiAction != Framework.UIAction.ViewDetails)
             {
-				this.NameValueCollectionOfMSBuildExtensionPack_Organization = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairOfAll(new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(), new Framework.EntityContracts.QueryPagingSetting(), null);
+                this.NameValueCollectionOfMSBuildExtensionPack_Organization = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairOfAll(new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(), new Framework.EntityContracts.QueryPagingSetting(), null);
                 this.SelectListOfMSBuildExtensionPack_Organization = Framework.Mvc.MvcHelper.BuildListOfSelectListItem(this.NameValueCollectionOfMSBuildExtensionPack_Organization);
 
             }
         }
-	}
+    }
 }
 

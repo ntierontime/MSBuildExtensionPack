@@ -11,11 +11,11 @@ using Framework.EntityContracts;
 namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 {
     /// <summary>
-	/// Developer code is here
+    /// Developer code is here
     /// </summary>
     public partial class OrganizationController
     {
-		
+
     }
 }
 

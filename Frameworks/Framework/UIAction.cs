@@ -11,7 +11,7 @@ namespace Framework
     public enum UIAction
     {
         Unknown,
-        
+
         ViewDetails,
 
         Navigate,
@@ -33,9 +33,8 @@ namespace Framework
         SelectionChanged,
 
         ClearResult,
-		
-        Copy,
 
+        Copy,
 
         /// <summary>
         /// The search result
@@ -44,3 +43,4 @@ namespace Framework
         Result,
     }
 }
+

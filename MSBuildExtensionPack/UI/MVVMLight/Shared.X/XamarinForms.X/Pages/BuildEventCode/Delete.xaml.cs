@@ -15,7 +15,7 @@ namespace MSBuildExtensionPack.XamarinForms.Pages.BuildEventCode
         public Delete()
         {
             InitializeComponent();
-			BindingContext = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode_Static.Item;
+            BindingContext = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode_Static.Item;
         }
     }
 }

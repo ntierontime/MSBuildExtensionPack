@@ -15,7 +15,7 @@ namespace Framework.Xamariner
     ///   http://www.csharp-examples.net/culture-names/
     /// You should always test all the locales implemented in your application.
     /// Sample apps built using the Xamarin.Forms framework.
-    /// 
+    ///
     /// License
     /// The Apache License 2.0 applies to all samples in this repository.
     /// Copyright 2011 Xamarin Inc
@@ -25,17 +25,17 @@ namespace Framework.Xamariner
     /// </remarks>
     public interface ILocalize
     {
-		///	<summary>
-		/// This method must evaluate platform-specific locale settings
-		/// and convert them (when necessary) to a valid .NET locale.
-		/// </summary>
-		CultureInfo GetCurrentCultureInfo ();
+        ///    <summary>
+        /// This method must evaluate platform-specific locale settings
+        /// and convert them (when necessary) to a valid .NET locale.
+        /// </summary>
+        CultureInfo GetCurrentCultureInfo ();
 
-		/// <summary>
-		/// CurrentCulture and CurrentUICulture must be set in the platform project, 
-		/// because the Thread object can't be accessed in a PCL.
-		/// </summary>
-		void SetLocale (CultureInfo ci);
-	}
+        /// <summary>
+        /// CurrentCulture and CurrentUICulture must be set in the platform project,
+        /// because the Thread object can't be accessed in a PCL.
+        /// </summary>
+        void SetLocale (CultureInfo ci);
+    }
 }
 

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-
 namespace MSBuildExtensionPack.ViewModelData
 {
     public partial class BuildLogItemVM : Framework.ViewModels.ViewModelItemBase<MSBuildExtensionPack.DataSourceEntities.BuildLogIdentifier, MSBuildExtensionPack.DataSourceEntities.BuildLog.Default>
@@ -18,6 +17,6 @@ namespace MSBuildExtensionPack.ViewModelData
 
             public Framework.NameValueCollection NameValueCollectionOfMSBuildExtensionPack_BuildEventCode { get; set; }
 
-	}
+    }
 }
 

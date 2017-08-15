@@ -8,10 +8,9 @@ namespace MSBuildExtensionPack.CommonBLL
     /// <summary>
     /// is to factory class to create instances of business layer classes
     /// </summary>
-	public partial class BusinessLogicLayerFactory : MSBuildExtensionPack.WcfContracts.IBusinessLogicLayerFactory
+    public partial class BusinessLogicLayerFactory : MSBuildExtensionPack.WcfContracts.IBusinessLogicLayerFactory
     {
         #region Entity related
-
 
         /// <summary>
         /// Creates the BLL instance of entity <see cref="MSBuildExtensionPack.Build"/> tables for change notification.
@@ -23,7 +22,6 @@ namespace MSBuildExtensionPack.CommonBLL
             return new BuildService(businessLogicLayerContext);
         }
 
-
         /// <summary>
         /// Creates the BLL instance of entity <see cref="MSBuildExtensionPack.BuildEventCode"/> tables for change notification.
         /// </summary>
@@ -33,7 +31,6 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             return new BuildEventCodeService(businessLogicLayerContext);
         }
-
 
         /// <summary>
         /// Creates the BLL instance of entity <see cref="MSBuildExtensionPack.BuildLog"/> tables for change notification.
@@ -45,7 +42,6 @@ namespace MSBuildExtensionPack.CommonBLL
             return new BuildLogService(businessLogicLayerContext);
         }
 
-
         /// <summary>
         /// Creates the BLL instance of entity <see cref="MSBuildExtensionPack.Organization"/> tables for change notification.
         /// </summary>
@@ -56,7 +52,6 @@ namespace MSBuildExtensionPack.CommonBLL
             return new OrganizationService(businessLogicLayerContext);
         }
 
-
         /// <summary>
         /// Creates the BLL instance of entity <see cref="MSBuildExtensionPack.Solution"/> tables for change notification.
         /// </summary>
@@ -66,8 +61,6 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             return new SolutionService(businessLogicLayerContext);
         }
-
-
 
         #endregion Entity related
     }

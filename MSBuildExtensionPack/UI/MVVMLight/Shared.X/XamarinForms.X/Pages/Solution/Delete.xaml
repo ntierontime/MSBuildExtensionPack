@@ -5,36 +5,31 @@
     xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.X"
     xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
     x:Class="MSBuildExtensionPack.XamarinForms.Pages.Solution.Delete"
-	Title="{i18n:Translate Text=Delete_Solution, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}">
+    Title="{i18n:Translate Text=Delete_Solution, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}">
     <ContentPage.Content>
-		<ScrollView>
-			<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-				<Label Text="{i18n:Translate Text=Warning_Areyousureyouwanttodeletethis, ResourceId=Framework.Resx.UIStringResource}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start"/>
-				<Label Text="{i18n:Translate Text=Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=Id, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=Organization_2Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Button Text="{Binding Path=Organization_2_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization.LaunchOrganization_2DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
-			<Label Text="{i18n:Translate Text=OrganizationId, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Button Text="{Binding Path=OrganizationId}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.LaunchOrganization_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
-			<Label Text="{i18n:Translate Text=ExternalParentId, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=ExternalParentId, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=Name, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=Name, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			<Label Text="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-			<Label Text="{Binding Path=Description, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-			</StackLayout>
-		</ScrollView>
+        <ScrollView>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Label Text="{i18n:Translate Text=Warning_Areyousureyouwanttodeletethis, ResourceId=Framework.Resx.UIStringResource}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start"/>
+                <Label Text="{i18n:Translate Text=Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=Id, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=Organization_2Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Button Text="{Binding Path=Organization_2_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization.LaunchOrganization_2DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+            <Label Text="{i18n:Translate Text=OrganizationId, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Button Text="{Binding Path=OrganizationId}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.LaunchOrganization_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+            <Label Text="{i18n:Translate Text=ExternalParentId, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=ExternalParentId, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=Name, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=Name, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=Description, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
-	<ContentPage.ToolbarItems>
-        <ToolbarItem Name="Delete" Order="Primary" Text="{i18n:Translate Text=DeleteAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution.DeleteCommand, Source={StaticResource Locator}}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="Delete" Order="Primary" Text="{i18n:Translate Text=DeleteAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution.DeleteCommand, Source={StaticResource Locator}}">
             <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Delete.png" Android="Assets/Delete.png" WinPhone="Assets/Delete.png" />
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/RecycleBin.png" Android="Assets/RecycleBin.png" WinPhone="Assets/RecycleBin.png" />
             </ToolbarItem.Icon>
         </ToolbarItem>
-        <ToolbarItem Name="Back" Order="Primary" Text="{i18n:Translate Text=BackAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution.CloseViewCommand, Source={StaticResource Locator}}">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Back.png" Android="Assets/Back.png" WinPhone="Assets/Back.png"  />
-            </ToolbarItem.Icon>
-        </ToolbarItem>
-	</ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>
 </ContentPage>

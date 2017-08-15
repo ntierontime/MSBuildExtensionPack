@@ -6,8 +6,8 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-	[Table("dbo.Organization")]
-    public partial class Organization 
+    [Table("dbo.Organization")]
+    public partial class Organization
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Organization ()
@@ -96,16 +96,13 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
 
         public System.Guid UniqueidentifierColumn { get; set; }
 
-
         public Organization Parent { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-		public ICollection<Organization> Organization_ParentIds { get; set; }
+        public ICollection<Organization> Organization_ParentIds { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-		public ICollection<Solution> Solutions { get; set; }
-
-
+        public ICollection<Solution> Solutions { get; set; }
 
     }
 }

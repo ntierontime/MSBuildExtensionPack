@@ -157,8 +157,6 @@ namespace MSBuildExtensionPack.WebApiClient
 
         #endregion batch insert, update and delete in an entity collection
 
-
-
         #region Query Methods Of NameValuePair of All per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         public const string ActionName_GetCollectionOfNameValuePairOfAll = "GetCollectionOfNameValuePairOfAll";
@@ -172,10 +170,10 @@ namespace MSBuildExtensionPack.WebApiClient
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
         public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfAllAsync(
-			int currentIndex
-			, int pageSize
-			, string queryOrderByExpression
-			)
+            int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
         {
             Dictionary<string, string> parameters = new Dictionary<string, string>();
 
@@ -183,15 +181,11 @@ namespace MSBuildExtensionPack.WebApiClient
             parameters.Add("pageSize", pageSize.ToString());
             parameters.Add("queryOrderByExpression", queryOrderByExpression);
 
-			string url = GetHttpRequestUrl(ActionName_GetCollectionOfNameValuePairOfAll, parameters);
+            string url = GetHttpRequestUrl(ActionName_GetCollectionOfNameValuePairOfAll, parameters);
             return await Get<Framework.NameValueCollection>(url);
-		}
+        }
 
         #endregion Query Methods Of NameValuePair of All per value type
-
-
-
-
 
         public const string ActionName_GetBuildEventCodeItemVM = "GetBuildEventCodeItemVM";
         /// <summary>
@@ -209,11 +203,6 @@ namespace MSBuildExtensionPack.WebApiClient
             return await GetItemViewModel<MSBuildExtensionPack.ViewModelData.BuildEventCodeItemVM>(url);
         }
 
-
-
-
-
-
             public const string ActionName_GetWPCommonOfBuildEventCodeVM = "GetWPCommonOfBuildEventCodeVM";
         /// <summary>
         /// Gets the wp common of build log vm.
@@ -229,9 +218,6 @@ namespace MSBuildExtensionPack.WebApiClient
 
             return await Post<MSBuildExtensionPack.ViewModelData.WPCommonOfBuildEventCodeVM>(url, vm);
         }
-
-
-
 
         public const string ActionName_GetWPEntityRelatedOfBuildEventCodeVM = "GetWPEntityRelatedOfBuildEventCodeVM";
         /// <summary>
@@ -249,10 +235,6 @@ namespace MSBuildExtensionPack.WebApiClient
             return await GetEntityRelated<MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfBuildEventCodeVM>(url);
         }
 
-
-
-
-
         public const string ActionName_HeartBeat = "HeartBeat";
         /// <summary>
         /// Hearts the beat asynchronous.
@@ -265,7 +247,7 @@ namespace MSBuildExtensionPack.WebApiClient
             var response = await Client.GetAsync(url);
 
             return response;
-        }   
+        }
     }
 }
 

@@ -3,7 +3,7 @@ namespace Framework.ViewModels
 {
     public interface IViewModelBase
     {
-		Framework.EntityContracts.ContentData ContentData { get; set; }
+        Framework.EntityContracts.ContentData ContentData { get; set; }
         Framework.NameValueCollection ListOfDataExport { get; set; }
         Framework.NameValueCollection ListOfQueryOrderBySettingCollecionInString { get; set; }
         string OriginalQueryOrderBySettingCollecionInString { get; set; }
@@ -19,7 +19,7 @@ namespace Framework.ViewModels
         string StatusMessageOfResult { get; set; }    }
 
     public interface IViewModelBase<TSearchCriteria>: IViewModelBase
-		where TSearchCriteria : class, new()
+        where TSearchCriteria : class, new()
     {
         TSearchCriteria Criteria { get; set; }
         IViewModelBase<TSearchCriteria> GetPrimaryInformationEntity();
@@ -32,5 +32,4 @@ namespace Framework.ViewModels
         TSearchResult Result { get; set; }
     }
 }
-
 

@@ -8,13 +8,12 @@ using System.Web.Mvc;
 namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 {
 
-    public partial class WPCommonOfBuildEventCodeVM : MSBuildExtensionPack.ViewModelData.WPCommonOfBuildEventCodeVM 
+    public partial class WPCommonOfBuildEventCodeVM : MSBuildExtensionPack.ViewModelData.WPCommonOfBuildEventCodeVM
     {
         public WPCommonOfBuildEventCodeVM ()
             : base()
         {
         }
-
 
         public Framework.Mvc.UISharedViewModel UISharedViewModel { get; set; }
 
@@ -25,7 +24,6 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 
         public override void GetDefaultPerViewModel()
         {
-
 
             this.UISharedViewModel = Framework.Mvc.UISharedViewModel.GetUISharedViewModel(this.ListOfQueryOrderBySettingCollecionInString, this.QueryPagingSetting.PageSizeSelectionList, this.ListOfDataExport);
         }
@@ -45,7 +43,6 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
                 new MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommon(this.Criteria)
                 , this.QueryPagingSetting
                 , this.QueryOrderBySettingCollection);
-
 
             this.StatusOfResult = searchResult.BusinessLogicLayerResponseStatus;
 
@@ -69,12 +66,9 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
         }
     }
 
-
-
-
-    public partial class WPEntityRelatedOfBuildEventCodeVM 
-		: MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfBuildEventCodeVM
-		//: Framework.ViewModels.ViewModelEntityRelatedBase<MSBuildExtensionPack.DataSourceEntities.BuildEventCode, MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaByIdentifier, Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus>
+    public partial class WPEntityRelatedOfBuildEventCodeVM
+        : MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfBuildEventCodeVM
+        //: Framework.ViewModels.ViewModelEntityRelatedBase<MSBuildExtensionPack.DataSourceEntities.BuildEventCode, MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaByIdentifier, Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus>
     {
         public WPEntityRelatedOfBuildEventCodeVM(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaByIdentifier criteriaOfMasterEntity)
             : base(criteriaOfMasterEntity)
@@ -83,11 +77,11 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
         }
 
         public void LoadData(
-			bool isToLoadFK_BuildLog_BuildEventCode = true
-			)
+            bool isToLoadFK_BuildLog_BuildEventCode = true
+            )
         {
             // 1. master on accessory part - Aside UIWorkspaceItemSetting
-			var masterEntityResult = MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.GetMessageOfEntityOfByIdentifier(this.CriteriaOfMasterEntity, this.QueryPagingSettingOneRecord, null);
+            var masterEntityResult = MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.GetMessageOfEntityOfByIdentifier(this.CriteriaOfMasterEntity, this.QueryPagingSettingOneRecord, null);
 
             this.StatusOfMasterEntity = masterEntityResult.BusinessLogicLayerResponseStatus;
 
@@ -95,33 +89,30 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
             {
                 this.MasterEntity = masterEntityResult.Message[0];
 
-				// 2. accessory part - Aside UIWorkspaceItemSetting
+                // 2. accessory part - Aside UIWorkspaceItemSetting
 
+                // 3. Major part - Article UIWorkspaceItemSetting - EntityReference/FK downtree
+                            // FK_BuildLog_BuildEventCode
+                if(isToLoadFK_BuildLog_BuildEventCode)
+                {
+                    this.CriteriaOfFK_BuildLog_BuildEventCode.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1.IsToCompare = true;
+                    this.CriteriaOfFK_BuildLog_BuildEventCode.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1.ValueToCompare = this.MasterEntity.Id;
+                    var resultFK_BuildLog_BuildEventCode = MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfDefaultOfByFKOnly(this.CriteriaOfFK_BuildLog_BuildEventCode, this.QueryPagingSetting, null);
+                    this.StatusOfFK_BuildLog_BuildEventCode = resultFK_BuildLog_BuildEventCode.BusinessLogicLayerResponseStatus;
+                    if (resultFK_BuildLog_BuildEventCode.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+                    {
+                        this.FK_BuildLog_BuildEventCode = resultFK_BuildLog_BuildEventCode.Message;
+                    }
+                    else
+                    {
+                        this.StatusMessageOfFK_BuildLog_BuildEventCode = resultFK_BuildLog_BuildEventCode.GetStatusMessage();
+    #if DEBUG
+                        this.StatusMessageOfFK_BuildLog_BuildEventCode = string.Format("{0} {1}", this.StatusMessageOfFK_BuildLog_BuildEventCode, resultFK_BuildLog_BuildEventCode.ServerErrorMessage);
+    #endif
+                    }
+                }
 
-				// 3. Major part - Article UIWorkspaceItemSetting - EntityReference/FK downtree
-							// FK_BuildLog_BuildEventCode
-				if(isToLoadFK_BuildLog_BuildEventCode)
-				{
-					this.CriteriaOfFK_BuildLog_BuildEventCode.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1.IsToCompare = true;
-					this.CriteriaOfFK_BuildLog_BuildEventCode.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1.ValueToCompare = this.MasterEntity.Id;
-					var resultFK_BuildLog_BuildEventCode = MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfDefaultOfByFKOnly(this.CriteriaOfFK_BuildLog_BuildEventCode, this.QueryPagingSetting, null);
-					this.StatusOfFK_BuildLog_BuildEventCode = resultFK_BuildLog_BuildEventCode.BusinessLogicLayerResponseStatus;
-					if (resultFK_BuildLog_BuildEventCode.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
-					{
-						this.FK_BuildLog_BuildEventCode = resultFK_BuildLog_BuildEventCode.Message;
-					}
-					else
-					{
-						this.StatusMessageOfFK_BuildLog_BuildEventCode = resultFK_BuildLog_BuildEventCode.GetStatusMessage();
-	#if DEBUG
-						this.StatusMessageOfFK_BuildLog_BuildEventCode = string.Format("{0} {1}", this.StatusMessageOfFK_BuildLog_BuildEventCode, resultFK_BuildLog_BuildEventCode.ServerErrorMessage);
-	#endif
-					}
-				}
-
-
-				// 4. Major part - Article UIWorkspaceItemSetting - EntityReference/FK CrossJoin
-
+                // 4. Major part - Article UIWorkspaceItemSetting - EntityReference/FK CrossJoin
 
             }
             else
@@ -132,13 +123,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 #endif
             }
         }
-	}
-
-
-
-
-
-
+    }
 
 }
 

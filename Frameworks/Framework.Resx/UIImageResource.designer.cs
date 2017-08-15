@@ -10,8 +10,7 @@
 
 namespace Framework.Resx {
     using System;
-    
-    
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -23,15 +22,15 @@ namespace Framework.Resx {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class UIImageResource {
-        
+
         private static global::System.Resources.ResourceManager resourceMan;
-        
+
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
+
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal UIImageResource() {
         }
-        
+
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -45,7 +44,7 @@ namespace Framework.Resx {
                 return resourceMan;
             }
         }
-        
+
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
@@ -60,8 +59,7 @@ namespace Framework.Resx {
             }
         }
 
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap AddNew {
@@ -70,8 +68,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string AddNewAlternativeText {
@@ -79,8 +77,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("AddNewAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string AddNewUrl {
@@ -89,9 +87,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Attachment {
@@ -100,8 +96,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string AttachmentAlternativeText {
@@ -109,8 +105,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("AttachmentAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string AttachmentUrl {
@@ -119,9 +115,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Back {
@@ -130,8 +124,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string BackAlternativeText {
@@ -139,8 +133,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("BackAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string BackUrl {
@@ -149,9 +143,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Bookmark {
@@ -160,8 +152,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string BookmarkAlternativeText {
@@ -169,8 +161,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("BookmarkAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string BookmarkUrl {
@@ -179,9 +171,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Calendar {
@@ -190,8 +180,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string CalendarAlternativeText {
@@ -199,8 +189,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("CalendarAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string CalendarUrl {
@@ -209,9 +199,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Cancel {
@@ -220,8 +208,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string CancelAlternativeText {
@@ -229,8 +217,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("CancelAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string CancelUrl {
@@ -239,9 +227,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap ChangePassword {
@@ -250,8 +236,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ChangePasswordAlternativeText {
@@ -259,8 +245,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("ChangePasswordAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ChangePasswordUrl {
@@ -269,9 +255,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Chart {
@@ -280,8 +264,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ChartAlternativeText {
@@ -289,8 +273,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("ChartAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ChartUrl {
@@ -299,9 +283,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Checkbox_Checked {
@@ -310,8 +292,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string Checkbox_CheckedAlternativeText {
@@ -319,8 +301,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("Checkbox_CheckedAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string Checkbox_CheckedUrl {
@@ -329,9 +311,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Checkbox_Unchecked {
@@ -340,8 +320,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string Checkbox_UncheckedAlternativeText {
@@ -349,8 +329,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("Checkbox_UncheckedAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string Checkbox_UncheckedUrl {
@@ -359,9 +339,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Clock {
@@ -370,8 +348,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ClockAlternativeText {
@@ -379,8 +357,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("ClockAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ClockUrl {
@@ -389,9 +367,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Close {
@@ -400,8 +376,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string CloseAlternativeText {
@@ -409,8 +385,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("CloseAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string CloseUrl {
@@ -419,9 +395,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Comment {
@@ -430,8 +404,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string CommentAlternativeText {
@@ -439,8 +413,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("CommentAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string CommentUrl {
@@ -449,9 +423,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Comments {
@@ -460,8 +432,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string CommentsAlternativeText {
@@ -469,8 +441,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("CommentsAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string CommentsUrl {
@@ -479,9 +451,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Confirm {
@@ -490,8 +460,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ConfirmAlternativeText {
@@ -499,8 +469,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("ConfirmAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ConfirmUrl {
@@ -509,9 +479,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap CreateUser {
@@ -520,8 +488,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string CreateUserAlternativeText {
@@ -529,8 +497,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("CreateUserAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string CreateUserUrl {
@@ -539,9 +507,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Delete {
@@ -550,8 +516,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string DeleteAlternativeText {
@@ -559,8 +525,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("DeleteAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string DeleteUrl {
@@ -569,9 +535,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Details {
@@ -580,8 +544,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string DetailsAlternativeText {
@@ -589,8 +553,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("DetailsAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string DetailsUrl {
@@ -599,9 +563,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Down {
@@ -610,8 +572,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string DownAlternativeText {
@@ -619,8 +581,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("DownAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string DownUrl {
@@ -629,9 +591,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Download {
@@ -640,8 +600,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string DownloadAlternativeText {
@@ -649,8 +609,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("DownloadAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string DownloadUrl {
@@ -659,9 +619,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Edit {
@@ -670,8 +628,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string EditAlternativeText {
@@ -679,8 +637,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("EditAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string EditUrl {
@@ -689,9 +647,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Exit {
@@ -700,8 +656,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ExitAlternativeText {
@@ -709,8 +665,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("ExitAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ExitUrl {
@@ -719,9 +675,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Export {
@@ -730,8 +684,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ExportAlternativeText {
@@ -739,8 +693,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("ExportAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ExportUrl {
@@ -749,9 +703,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap ExportToExcel {
@@ -760,8 +712,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ExportToExcelAlternativeText {
@@ -769,8 +721,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("ExportToExcelAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ExportToExcelUrl {
@@ -779,9 +731,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Favorite {
@@ -790,8 +740,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string FavoriteAlternativeText {
@@ -799,8 +749,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("FavoriteAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string FavoriteUrl {
@@ -809,9 +759,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap FileReplace {
@@ -820,8 +768,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string FileReplaceAlternativeText {
@@ -829,8 +777,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("FileReplaceAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string FileReplaceUrl {
@@ -839,9 +787,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap First {
@@ -850,8 +796,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string FirstAlternativeText {
@@ -859,8 +805,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("FirstAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string FirstUrl {
@@ -869,9 +815,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Forward {
@@ -880,8 +824,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ForwardAlternativeText {
@@ -889,8 +833,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("ForwardAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ForwardUrl {
@@ -899,9 +843,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Go {
@@ -910,8 +852,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string GoAlternativeText {
@@ -919,8 +861,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("GoAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string GoUrl {
@@ -929,9 +871,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Heart {
@@ -940,8 +880,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string HeartAlternativeText {
@@ -949,8 +889,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("HeartAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string HeartUrl {
@@ -959,9 +899,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Help {
@@ -970,8 +908,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string HelpAlternativeText {
@@ -979,8 +917,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("HelpAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string HelpUrl {
@@ -989,9 +927,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Home {
@@ -1000,8 +936,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string HomeAlternativeText {
@@ -1009,8 +945,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("HomeAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string HomeUrl {
@@ -1019,9 +955,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Import {
@@ -1030,8 +964,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ImportAlternativeText {
@@ -1039,8 +973,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("ImportAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ImportUrl {
@@ -1049,9 +983,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Index {
@@ -1060,8 +992,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string IndexAlternativeText {
@@ -1069,8 +1001,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("IndexAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string IndexUrl {
@@ -1079,9 +1011,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Information {
@@ -1090,8 +1020,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string InformationAlternativeText {
@@ -1099,8 +1029,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("InformationAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string InformationUrl {
@@ -1109,9 +1039,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Insert {
@@ -1120,8 +1048,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string InsertAlternativeText {
@@ -1129,8 +1057,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("InsertAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string InsertUrl {
@@ -1139,9 +1067,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Last {
@@ -1150,8 +1076,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string LastAlternativeText {
@@ -1159,8 +1085,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("LastAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string LastUrl {
@@ -1169,9 +1095,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap LoadFile {
@@ -1180,8 +1104,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string LoadFileAlternativeText {
@@ -1189,8 +1113,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("LoadFileAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string LoadFileUrl {
@@ -1199,9 +1123,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Lock {
@@ -1210,8 +1132,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string LockAlternativeText {
@@ -1219,8 +1141,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("LockAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string LockUrl {
@@ -1229,9 +1151,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Mail {
@@ -1240,8 +1160,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string MailAlternativeText {
@@ -1249,8 +1169,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("MailAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string MailUrl {
@@ -1259,9 +1179,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap MailLock {
@@ -1270,8 +1188,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string MailLockAlternativeText {
@@ -1279,8 +1197,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("MailLockAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string MailLockUrl {
@@ -1289,9 +1207,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap MailReceive {
@@ -1300,8 +1216,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string MailReceiveAlternativeText {
@@ -1309,8 +1225,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("MailReceiveAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string MailReceiveUrl {
@@ -1319,9 +1235,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap MailSearch {
@@ -1330,8 +1244,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string MailSearchAlternativeText {
@@ -1339,8 +1253,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("MailSearchAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string MailSearchUrl {
@@ -1349,9 +1263,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap MailSend {
@@ -1360,8 +1272,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string MailSendAlternativeText {
@@ -1369,8 +1281,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("MailSendAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string MailSendUrl {
@@ -1379,9 +1291,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Minus {
@@ -1390,8 +1300,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string MinusAlternativeText {
@@ -1399,8 +1309,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("MinusAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string MinusUrl {
@@ -1409,9 +1319,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Money {
@@ -1420,8 +1328,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string MoneyAlternativeText {
@@ -1429,8 +1337,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("MoneyAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string MoneyUrl {
@@ -1439,9 +1347,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap NewFile {
@@ -1450,8 +1356,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string NewFileAlternativeText {
@@ -1459,8 +1365,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("NewFileAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string NewFileUrl {
@@ -1469,9 +1375,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Next {
@@ -1480,8 +1384,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string NextAlternativeText {
@@ -1489,8 +1393,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("NextAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string NextUrl {
@@ -1499,9 +1403,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap NumericDown {
@@ -1510,8 +1412,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string NumericDownAlternativeText {
@@ -1519,8 +1421,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("NumericDownAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string NumericDownUrl {
@@ -1529,9 +1431,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap NumericUp {
@@ -1540,8 +1440,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string NumericUpAlternativeText {
@@ -1549,8 +1449,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("NumericUpAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string NumericUpUrl {
@@ -1559,9 +1459,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Open {
@@ -1570,8 +1468,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string OpenAlternativeText {
@@ -1579,8 +1477,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("OpenAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string OpenUrl {
@@ -1589,9 +1487,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap PageSize {
@@ -1600,8 +1496,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string PageSizeAlternativeText {
@@ -1609,8 +1505,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("PageSizeAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string PageSizeUrl {
@@ -1619,9 +1515,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap PasswordRecovery {
@@ -1630,8 +1524,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string PasswordRecoveryAlternativeText {
@@ -1639,8 +1533,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("PasswordRecoveryAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string PasswordRecoveryUrl {
@@ -1649,9 +1543,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Pause {
@@ -1660,8 +1552,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string PauseAlternativeText {
@@ -1669,8 +1561,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("PauseAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string PauseUrl {
@@ -1679,9 +1571,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap PieChart {
@@ -1690,8 +1580,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string PieChartAlternativeText {
@@ -1699,8 +1589,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("PieChartAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string PieChartUrl {
@@ -1709,9 +1599,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Play {
@@ -1720,8 +1608,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string PlayAlternativeText {
@@ -1729,8 +1617,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("PlayAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string PlayUrl {
@@ -1739,9 +1627,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Plus {
@@ -1750,8 +1636,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string PlusAlternativeText {
@@ -1759,8 +1645,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("PlusAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string PlusUrl {
@@ -1769,9 +1655,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Previous {
@@ -1780,8 +1664,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string PreviousAlternativeText {
@@ -1789,8 +1673,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("PreviousAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string PreviousUrl {
@@ -1799,9 +1683,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Process {
@@ -1810,8 +1692,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ProcessAlternativeText {
@@ -1819,8 +1701,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("ProcessAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ProcessUrl {
@@ -1829,9 +1711,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Promotion {
@@ -1840,8 +1720,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string PromotionAlternativeText {
@@ -1849,8 +1729,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("PromotionAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string PromotionUrl {
@@ -1859,9 +1739,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Protection {
@@ -1870,8 +1748,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ProtectionAlternativeText {
@@ -1879,8 +1757,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("ProtectionAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ProtectionUrl {
@@ -1889,9 +1767,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Question {
@@ -1900,8 +1776,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string QuestionAlternativeText {
@@ -1909,8 +1785,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("QuestionAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string QuestionUrl {
@@ -1919,9 +1795,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Record {
@@ -1930,8 +1804,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string RecordAlternativeText {
@@ -1939,8 +1813,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("RecordAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string RecordUrl {
@@ -1949,9 +1823,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Recycle {
@@ -1960,8 +1832,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string RecycleAlternativeText {
@@ -1969,8 +1841,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("RecycleAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string RecycleUrl {
@@ -1979,9 +1851,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Redo {
@@ -1990,8 +1860,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string RedoAlternativeText {
@@ -1999,8 +1869,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("RedoAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string RedoUrl {
@@ -2009,9 +1879,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Refresh {
@@ -2020,8 +1888,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string RefreshAlternativeText {
@@ -2029,8 +1897,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("RefreshAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string RefreshUrl {
@@ -2039,9 +1907,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Register {
@@ -2050,8 +1916,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string RegisterAlternativeText {
@@ -2059,8 +1925,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("RegisterAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string RegisterUrl {
@@ -2069,9 +1935,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Repeat {
@@ -2080,8 +1944,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string RepeatAlternativeText {
@@ -2089,8 +1953,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("RepeatAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string RepeatUrl {
@@ -2099,9 +1963,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap RSS {
@@ -2110,8 +1972,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string RSSAlternativeText {
@@ -2119,8 +1981,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("RSSAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string RSSUrl {
@@ -2129,9 +1991,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Save {
@@ -2140,8 +2000,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string SaveAlternativeText {
@@ -2149,8 +2009,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("SaveAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string SaveUrl {
@@ -2159,9 +2019,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Search {
@@ -2170,8 +2028,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string SearchAlternativeText {
@@ -2179,8 +2037,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("SearchAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string SearchUrl {
@@ -2189,9 +2047,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap SearchPage {
@@ -2200,8 +2056,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string SearchPageAlternativeText {
@@ -2209,8 +2065,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("SearchPageAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string SearchPageUrl {
@@ -2219,9 +2075,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Setting {
@@ -2230,8 +2084,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string SettingAlternativeText {
@@ -2239,8 +2093,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("SettingAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string SettingUrl {
@@ -2249,9 +2103,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap ShoppingCart {
@@ -2260,8 +2112,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ShoppingCartAlternativeText {
@@ -2269,8 +2121,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("ShoppingCartAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ShoppingCartUrl {
@@ -2279,9 +2131,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap SignUp {
@@ -2290,8 +2140,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string SignUpAlternativeText {
@@ -2299,8 +2149,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("SignUpAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string SignUpUrl {
@@ -2309,9 +2159,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Stop {
@@ -2320,8 +2168,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string StopAlternativeText {
@@ -2329,8 +2177,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("StopAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string StopUrl {
@@ -2339,9 +2187,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap TagBlue {
@@ -2350,8 +2196,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string TagBlueAlternativeText {
@@ -2359,8 +2205,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("TagBlueAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string TagBlueUrl {
@@ -2369,9 +2215,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap TagGreen {
@@ -2380,8 +2224,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string TagGreenAlternativeText {
@@ -2389,8 +2233,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("TagGreenAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string TagGreenUrl {
@@ -2399,9 +2243,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap TextPage {
@@ -2410,8 +2252,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string TextPageAlternativeText {
@@ -2419,8 +2261,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("TextPageAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string TextPageUrl {
@@ -2429,9 +2271,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Title {
@@ -2440,8 +2280,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string TitleAlternativeText {
@@ -2449,8 +2289,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("TitleAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string TitleUrl {
@@ -2459,9 +2299,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap ToggleButton_Checked {
@@ -2470,8 +2308,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ToggleButton_CheckedAlternativeText {
@@ -2479,8 +2317,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("ToggleButton_CheckedAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ToggleButton_CheckedUrl {
@@ -2489,9 +2327,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap ToggleButton_Unchecked {
@@ -2500,8 +2336,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ToggleButton_UncheckedAlternativeText {
@@ -2509,8 +2345,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("ToggleButton_UncheckedAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ToggleButton_UncheckedUrl {
@@ -2519,9 +2355,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Tutorial {
@@ -2530,8 +2364,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string TutorialAlternativeText {
@@ -2539,8 +2373,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("TutorialAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string TutorialUrl {
@@ -2549,9 +2383,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Undo {
@@ -2560,8 +2392,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string UndoAlternativeText {
@@ -2569,8 +2401,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("UndoAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string UndoUrl {
@@ -2579,9 +2411,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Unlock {
@@ -2590,8 +2420,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string UnlockAlternativeText {
@@ -2599,8 +2429,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("UnlockAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string UnlockUrl {
@@ -2609,9 +2439,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Up {
@@ -2620,8 +2448,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string UpAlternativeText {
@@ -2629,8 +2457,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("UpAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string UpUrl {
@@ -2639,9 +2467,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Update {
@@ -2650,8 +2476,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string UpdateAlternativeText {
@@ -2659,8 +2485,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("UpdateAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string UpdateUrl {
@@ -2669,9 +2495,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap User {
@@ -2680,8 +2504,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string UserAlternativeText {
@@ -2689,8 +2513,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("UserAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string UserUrl {
@@ -2699,9 +2523,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Users {
@@ -2710,8 +2532,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string UsersAlternativeText {
@@ -2719,8 +2541,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("UsersAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string UsersUrl {
@@ -2729,9 +2551,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Warning {
@@ -2740,8 +2560,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string WarningAlternativeText {
@@ -2749,8 +2569,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("WarningAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string WarningUrl {
@@ -2759,9 +2579,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap ZoomIn {
@@ -2770,8 +2588,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ZoomInAlternativeText {
@@ -2779,8 +2597,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("ZoomInAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ZoomInUrl {
@@ -2789,9 +2607,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap ZoomOut {
@@ -2800,8 +2616,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ZoomOutAlternativeText {
@@ -2809,8 +2625,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("ZoomOutAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string ZoomOutUrl {
@@ -2819,9 +2635,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Copy {
@@ -2830,8 +2644,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string CopyAlternativeText {
@@ -2839,8 +2653,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("CopyAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string CopyUrl {
@@ -2849,9 +2663,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap Paste {
@@ -2860,8 +2672,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string PasteAlternativeText {
@@ -2869,8 +2681,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("PasteAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string PasteUrl {
@@ -2879,9 +2691,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap More {
@@ -2890,8 +2700,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string MoreAlternativeText {
@@ -2899,8 +2709,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("MoreAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string MoreUrl {
@@ -2909,9 +2719,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap FullDetails {
@@ -2920,8 +2728,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string FullDetailsAlternativeText {
@@ -2929,8 +2737,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("FullDetailsAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string FullDetailsUrl {
@@ -2939,9 +2747,7 @@ namespace Framework.Resx {
             }
         }
 
-
-
-		/// <summary>
+        /// <summary>
         ///   Looks up a localized image similar to test.
         /// </summary>
         public static System.Drawing.Bitmap GotoSearch {
@@ -2950,8 +2756,8 @@ namespace Framework.Resx {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string GotoSearchAlternativeText {
@@ -2959,8 +2765,8 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("GotoSearchAlternativeText", resourceCulture);
             }
         }
-		
-		/// <summary>
+
+        /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
         public static string GotoSearchUrl {
@@ -2968,8 +2774,6 @@ namespace Framework.Resx {
                 return ResourceManager.GetString("GotoSearchUrl", resourceCulture);
             }
         }
-
-
 
     }
 }

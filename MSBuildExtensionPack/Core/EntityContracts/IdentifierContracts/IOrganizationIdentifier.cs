@@ -4,12 +4,12 @@ using System.Runtime.Serialization;
 namespace MSBuildExtensionPack.EntityContracts
 {
 
-	public partial interface IOrganizationIdentifier
-	{ 
+    public partial interface IOrganizationIdentifier
+    {
 
         System.Int64 Id { get; set; }
 
-	}
+    }
 
     public class QueryPredicateOrganizationByIdentifier<T>
         where T : IOrganization
@@ -29,7 +29,6 @@ namespace MSBuildExtensionPack.EntityContracts
 ;
         }
     }
-
 
     /// <summary>
     ///  a property defined when <see cref="OrganizationIdentifier"/> is used in other classes.

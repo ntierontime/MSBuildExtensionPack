@@ -12,39 +12,25 @@ namespace MSBuildExtensionPack.XamarinForms.Pages
     /// <summary>
     /// Interaction logic for WPCommonResultViewOfBuild.xaml
     /// </summary>
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class WPCommonResultViewOfBuild : ContentPage
     {
         public WPCommonResultViewOfBuild()
         {
             InitializeComponent();
 
+        BindingContext = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM_Static;
 
-		BindingContext = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM_Static;
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM_Static.LoadMoreCommand.Execute(null);
 
-		MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM_Static.SearchCommand.Execute(null);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            //TODO: The following code can replace the "Load More" button. ItemAppearing event is not working properly in UWP, but working in Android emulator/Windows phone emulator, IOs not tested.
+            //this.ResultView.ItemAppearing += (object sender, ItemVisibilityEventArgs e) => {
+            //    var viewCellDetails = e.Item as MSBuildExtensionPack.DataSourceEntities.Build.Default;
+            //    if (viewCellDetails == MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM_Static.EntityCollectionDefault[MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM_Static.EntityCollectionDefault.Count - 1])
+            //    {
+            //        MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM_Static.LoadMoreCommand.Execute(null);
+            //    }
+            //};
 
         }
     }

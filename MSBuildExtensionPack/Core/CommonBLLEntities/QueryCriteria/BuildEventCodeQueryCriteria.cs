@@ -13,29 +13,28 @@ namespace MSBuildExtensionPack.CommonBLLEntities
     /// </summary>
     public partial class BuildEventCodeQueryCriteriaCommon
     {
-		#region constructors
+        #region constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildEventCodeQueryCriteriaCommon"/> class.
         /// </summary>
-		public BuildEventCodeQueryCriteriaCommon()
-		{
-		}
-
+        public BuildEventCodeQueryCriteriaCommon()
+        {
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildEventCodeQueryCriteriaCommon"/> class.
         /// </summary>
         /// <param name="QuerySystemStringContainsCriteria">Initialize criteria of EventCode</param>
         /// <param name="QuerySystemStringContainsCriteria">Initialize criteria of Description</param>
-		public BuildEventCodeQueryCriteriaCommon(
-			QuerySystemStringContainsCriteria eventCodeCommonOft
-			, QuerySystemStringContainsCriteria descriptionCommonOft
-			)
-		{
-			this.EventCodeCommonOft = eventCodeCommonOft;
-			this.DescriptionCommonOft = descriptionCommonOft;
-		}
+        public BuildEventCodeQueryCriteriaCommon(
+            QuerySystemStringContainsCriteria eventCodeCommonOft
+            , QuerySystemStringContainsCriteria descriptionCommonOft
+            )
+        {
+            this.EventCodeCommonOft = eventCodeCommonOft;
+            this.DescriptionCommonOft = descriptionCommonOft;
+        }
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildEventCodeQueryCriteriaCommon"/> class.
         /// </summary>
@@ -43,22 +42,20 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="valueToBeContainedEventCodeCommonOft">value to compare/filter with EventCodeCommonOft property/field/column</param>
         /// <param name="isToCompareDescriptionCommonOft">will compare/filter DescriptionCommonOft property/field/column if true, otherwise false</param>
         /// <param name="valueToBeContainedDescriptionCommonOft">value to compare/filter with DescriptionCommonOft property/field/column</param>
-		public BuildEventCodeQueryCriteriaCommon(
-			bool isToCompareEventCodeCommonOft, System.String valueToBeContainedEventCodeCommonOft
-			, bool isToCompareDescriptionCommonOft, System.String valueToBeContainedDescriptionCommonOft
-			)
-			: this(
-				new QuerySystemStringContainsCriteria(isToCompareEventCodeCommonOft, valueToBeContainedEventCodeCommonOft)
-				, new QuerySystemStringContainsCriteria(isToCompareDescriptionCommonOft, valueToBeContainedDescriptionCommonOft)
-				)
-		{
-		}
+        public BuildEventCodeQueryCriteriaCommon(
+            bool isToCompareEventCodeCommonOft, System.String valueToBeContainedEventCodeCommonOft
+            , bool isToCompareDescriptionCommonOft, System.String valueToBeContainedDescriptionCommonOft
+            )
+            : this(
+                new QuerySystemStringContainsCriteria(isToCompareEventCodeCommonOft, valueToBeContainedEventCodeCommonOft)
+                , new QuerySystemStringContainsCriteria(isToCompareDescriptionCommonOft, valueToBeContainedDescriptionCommonOft)
+                )
+        {
+        }
 
+        #endregion constructors
 
-		#endregion constructors
-
-		#region Propertyies
-
+        #region Propertyies
 
         /// <summary>
         /// criteria of EventCode, filter type: Contains
@@ -70,87 +67,78 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// </summary>
         public QuerySystemStringContainsCriteria DescriptionCommonOft { get; set; }
 
-		#endregion Propertyies
-	}
-
+        #endregion Propertyies
+    }
 
     /// <summary>
     /// BusinessLogicLayerQueryCriteria, key=All
     /// </summary>
     public partial class BuildEventCodeQueryCriteriaAll
     {
-		#region constructors
+        #region constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildEventCodeQueryCriteriaAll"/> class.
         /// </summary>
-		public BuildEventCodeQueryCriteriaAll()
-		{
-		}
+        public BuildEventCodeQueryCriteriaAll()
+        {
+        }
 
+        #endregion constructors
 
-		#endregion constructors
+        #region Propertyies
 
-		#region Propertyies
-
-
-
-		#endregion Propertyies
-	}
-
+        #endregion Propertyies
+    }
 
     /// <summary>
     /// BusinessLogicLayerQueryCriteria, key=ByIdentifier
     /// </summary>
     public partial class BuildEventCodeQueryCriteriaByIdentifier
     {
-		#region constructors
+        #region constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildEventCodeQueryCriteriaByIdentifier"/> class.
         /// </summary>
-		public BuildEventCodeQueryCriteriaByIdentifier()
-		{
-		}
-
+        public BuildEventCodeQueryCriteriaByIdentifier()
+        {
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildEventCodeQueryCriteriaByIdentifier"/> class.
         /// </summary>
         /// <param name="QuerySystemInt32EqualsCriteria">Initialize criteria of Id</param>
-		public BuildEventCodeQueryCriteriaByIdentifier(
-			QuerySystemInt32EqualsCriteria idByIdentifierOft
-			)
-		{
-			this.IdByIdentifierOft = idByIdentifierOft;
-		}
+        public BuildEventCodeQueryCriteriaByIdentifier(
+            QuerySystemInt32EqualsCriteria idByIdentifierOft
+            )
+        {
+            this.IdByIdentifierOft = idByIdentifierOft;
+        }
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildEventCodeQueryCriteriaByIdentifier"/> class.
         /// </summary>
         /// <param name="isToCompareIdByIdentifierOft">will compare/filter IdByIdentifierOft property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIdByIdentifierOft">value to compare/filter with IdByIdentifierOft property/field/column</param>
-		public BuildEventCodeQueryCriteriaByIdentifier(
-			bool isToCompareIdByIdentifierOft, System.Int32? valueToCompareIdByIdentifierOft
-			)
-			: this(
-				new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOft, valueToCompareIdByIdentifierOft)
-				)
-		{
-		}
+        public BuildEventCodeQueryCriteriaByIdentifier(
+            bool isToCompareIdByIdentifierOft, System.Int32? valueToCompareIdByIdentifierOft
+            )
+            : this(
+                new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOft, valueToCompareIdByIdentifierOft)
+                )
+        {
+        }
 
+        #endregion constructors
 
-		#endregion constructors
-
-		#region Propertyies
-
+        #region Propertyies
 
         /// <summary>
         /// criteria of Id, filter type: Equals
         /// </summary>
         public QuerySystemInt32EqualsCriteria IdByIdentifierOft { get; set; }
 
-		#endregion Propertyies
-	}
-
+        #endregion Propertyies
+    }
 
 }

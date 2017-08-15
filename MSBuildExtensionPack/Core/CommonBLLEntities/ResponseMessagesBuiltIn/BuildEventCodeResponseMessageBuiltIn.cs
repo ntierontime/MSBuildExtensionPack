@@ -8,24 +8,20 @@ namespace MSBuildExtensionPack.CommonBLLEntities
     /// <summary>
     /// BusinessLogicLayerResponseMessage of entity MSBuildExtensionPack.BuildEventCode
     /// </summary>
-	public partial class BuildEventCodeResponseMessageBuiltIn
+    public partial class BuildEventCodeResponseMessageBuiltIn
         : Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBase<MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection>
     {
 
-		#region Nested Views classes and their collection classes 1
+        #region Nested Views classes and their collection classes 1
 
+        /// <summary>
+        /// BusinessLogicLayerResponseMessage of of view KeyInformation of entity MSBuildExtensionPack.BuildEventCode
+        /// </summary>
+        public partial class KeyInformation
+            : Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBase<MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformationCollection>
+        {
+        }
 
-	    /// <summary>
-		/// BusinessLogicLayerResponseMessage of of view KeyInformation of entity MSBuildExtensionPack.BuildEventCode
-		/// </summary>
-		public partial class KeyInformation
-			: Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBase<MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformationCollection>
-		{
-		}
-
-
-
-
-		#endregion Nested Views classes and their collection classes 1
+        #endregion Nested Views classes and their collection classes 1
     }
 }

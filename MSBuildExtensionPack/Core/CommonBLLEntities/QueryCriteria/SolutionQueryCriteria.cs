@@ -13,15 +13,14 @@ namespace MSBuildExtensionPack.CommonBLLEntities
     /// </summary>
     public partial class SolutionQueryCriteriaCommon
     {
-		#region constructors
+        #region constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SolutionQueryCriteriaCommon"/> class.
         /// </summary>
-		public SolutionQueryCriteriaCommon()
-		{
-		}
-
+        public SolutionQueryCriteriaCommon()
+        {
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SolutionQueryCriteriaCommon"/> class.
@@ -31,20 +30,20 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="QuerySystemStringContainsCriteria">Initialize criteria of ExternalParentId</param>
         /// <param name="QuerySystemStringContainsCriteria">Initialize criteria of Name</param>
         /// <param name="QuerySystemStringContainsCriteria">Initialize criteria of Description</param>
-		public SolutionQueryCriteriaCommon(
-			QuerySystemInt64EqualsCriteria idCommonOfOrganization_1
-			, QuerySystemInt64EqualsCriteria idCommonOfOrganization_2
-			, QuerySystemStringContainsCriteria externalParentIdCommonOft
-			, QuerySystemStringContainsCriteria nameCommonOft
-			, QuerySystemStringContainsCriteria descriptionCommonOft
-			)
-		{
-			this.IdCommonOfOrganization_1 = idCommonOfOrganization_1;
-			this.IdCommonOfOrganization_2 = idCommonOfOrganization_2;
-			this.ExternalParentIdCommonOft = externalParentIdCommonOft;
-			this.NameCommonOft = nameCommonOft;
-			this.DescriptionCommonOft = descriptionCommonOft;
-		}
+        public SolutionQueryCriteriaCommon(
+            QuerySystemInt64EqualsCriteria idCommonOfOrganization_1
+            , QuerySystemInt64EqualsCriteria idCommonOfOrganization_2
+            , QuerySystemStringContainsCriteria externalParentIdCommonOft
+            , QuerySystemStringContainsCriteria nameCommonOft
+            , QuerySystemStringContainsCriteria descriptionCommonOft
+            )
+        {
+            this.IdCommonOfOrganization_1 = idCommonOfOrganization_1;
+            this.IdCommonOfOrganization_2 = idCommonOfOrganization_2;
+            this.ExternalParentIdCommonOft = externalParentIdCommonOft;
+            this.NameCommonOft = nameCommonOft;
+            this.DescriptionCommonOft = descriptionCommonOft;
+        }
         /// <summary>
         /// Initializes a new instance of the <see cref="SolutionQueryCriteriaCommon"/> class.
         /// </summary>
@@ -58,28 +57,26 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="valueToBeContainedNameCommonOft">value to compare/filter with NameCommonOft property/field/column</param>
         /// <param name="isToCompareDescriptionCommonOft">will compare/filter DescriptionCommonOft property/field/column if true, otherwise false</param>
         /// <param name="valueToBeContainedDescriptionCommonOft">value to compare/filter with DescriptionCommonOft property/field/column</param>
-		public SolutionQueryCriteriaCommon(
-			bool isToCompareIdCommonOfOrganization_1, System.Int64? valueToCompareIdCommonOfOrganization_1
-			, bool isToCompareIdCommonOfOrganization_2, System.Int64? valueToCompareIdCommonOfOrganization_2
-			, bool isToCompareExternalParentIdCommonOft, System.String valueToBeContainedExternalParentIdCommonOft
-			, bool isToCompareNameCommonOft, System.String valueToBeContainedNameCommonOft
-			, bool isToCompareDescriptionCommonOft, System.String valueToBeContainedDescriptionCommonOft
-			)
-			: this(
-				new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1, valueToCompareIdCommonOfOrganization_1)
-				, new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2, valueToCompareIdCommonOfOrganization_2)
-				, new QuerySystemStringContainsCriteria(isToCompareExternalParentIdCommonOft, valueToBeContainedExternalParentIdCommonOft)
-				, new QuerySystemStringContainsCriteria(isToCompareNameCommonOft, valueToBeContainedNameCommonOft)
-				, new QuerySystemStringContainsCriteria(isToCompareDescriptionCommonOft, valueToBeContainedDescriptionCommonOft)
-				)
-		{
-		}
+        public SolutionQueryCriteriaCommon(
+            bool isToCompareIdCommonOfOrganization_1, System.Int64? valueToCompareIdCommonOfOrganization_1
+            , bool isToCompareIdCommonOfOrganization_2, System.Int64? valueToCompareIdCommonOfOrganization_2
+            , bool isToCompareExternalParentIdCommonOft, System.String valueToBeContainedExternalParentIdCommonOft
+            , bool isToCompareNameCommonOft, System.String valueToBeContainedNameCommonOft
+            , bool isToCompareDescriptionCommonOft, System.String valueToBeContainedDescriptionCommonOft
+            )
+            : this(
+                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1, valueToCompareIdCommonOfOrganization_1)
+                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2, valueToCompareIdCommonOfOrganization_2)
+                , new QuerySystemStringContainsCriteria(isToCompareExternalParentIdCommonOft, valueToBeContainedExternalParentIdCommonOft)
+                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOft, valueToBeContainedNameCommonOft)
+                , new QuerySystemStringContainsCriteria(isToCompareDescriptionCommonOft, valueToBeContainedDescriptionCommonOft)
+                )
+        {
+        }
 
+        #endregion constructors
 
-		#endregion constructors
-
-		#region Propertyies
-
+        #region Propertyies
 
         /// <summary>
         /// criteria of Id, filter type: Equals
@@ -106,63 +103,57 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// </summary>
         public QuerySystemStringContainsCriteria DescriptionCommonOft { get; set; }
 
-		#endregion Propertyies
-	}
-
+        #endregion Propertyies
+    }
 
     /// <summary>
     /// BusinessLogicLayerQueryCriteria, key=All
     /// </summary>
     public partial class SolutionQueryCriteriaAll
     {
-		#region constructors
+        #region constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SolutionQueryCriteriaAll"/> class.
         /// </summary>
-		public SolutionQueryCriteriaAll()
-		{
-		}
+        public SolutionQueryCriteriaAll()
+        {
+        }
 
+        #endregion constructors
 
-		#endregion constructors
+        #region Propertyies
 
-		#region Propertyies
-
-
-
-		#endregion Propertyies
-	}
-
+        #endregion Propertyies
+    }
 
     /// <summary>
     /// BusinessLogicLayerQueryCriteria, key=ByFKOnly
     /// </summary>
     public partial class SolutionQueryCriteriaByFKOnly
     {
-		#region constructors
+        #region constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SolutionQueryCriteriaByFKOnly"/> class.
         /// </summary>
-		public SolutionQueryCriteriaByFKOnly()
-		{
-		}
-
+        public SolutionQueryCriteriaByFKOnly()
+        {
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SolutionQueryCriteriaByFKOnly"/> class.
         /// </summary>
         /// <param name="QuerySystemInt64EqualsCriteria">Initialize criteria of Id</param>
         /// <param name="QuerySystemInt64EqualsCriteria">Initialize criteria of Id</param>
-		public SolutionQueryCriteriaByFKOnly(
-			QuerySystemInt64EqualsCriteria idByFKOnlyOfOrganization_1
-			, QuerySystemInt64EqualsCriteria idByFKOnlyOfOrganization_2
-			)
-		{
-			this.IdByFKOnlyOfOrganization_1 = idByFKOnlyOfOrganization_1;
-			this.IdByFKOnlyOfOrganization_2 = idByFKOnlyOfOrganization_2;
-		}
+        public SolutionQueryCriteriaByFKOnly(
+            QuerySystemInt64EqualsCriteria idByFKOnlyOfOrganization_1
+            , QuerySystemInt64EqualsCriteria idByFKOnlyOfOrganization_2
+            )
+        {
+            this.IdByFKOnlyOfOrganization_1 = idByFKOnlyOfOrganization_1;
+            this.IdByFKOnlyOfOrganization_2 = idByFKOnlyOfOrganization_2;
+        }
         /// <summary>
         /// Initializes a new instance of the <see cref="SolutionQueryCriteriaByFKOnly"/> class.
         /// </summary>
@@ -170,22 +161,20 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="valueToCompareIdByFKOnlyOfOrganization_1">value to compare/filter with IdByFKOnlyOfOrganization_1 property/field/column</param>
         /// <param name="isToCompareIdByFKOnlyOfOrganization_2">will compare/filter IdByFKOnlyOfOrganization_2 property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIdByFKOnlyOfOrganization_2">value to compare/filter with IdByFKOnlyOfOrganization_2 property/field/column</param>
-		public SolutionQueryCriteriaByFKOnly(
-			bool isToCompareIdByFKOnlyOfOrganization_1, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1
-			, bool isToCompareIdByFKOnlyOfOrganization_2, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2
-			)
-			: this(
-				new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1, valueToCompareIdByFKOnlyOfOrganization_1)
-				, new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2, valueToCompareIdByFKOnlyOfOrganization_2)
-				)
-		{
-		}
+        public SolutionQueryCriteriaByFKOnly(
+            bool isToCompareIdByFKOnlyOfOrganization_1, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1
+            , bool isToCompareIdByFKOnlyOfOrganization_2, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2
+            )
+            : this(
+                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1, valueToCompareIdByFKOnlyOfOrganization_1)
+                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2, valueToCompareIdByFKOnlyOfOrganization_2)
+                )
+        {
+        }
 
+        #endregion constructors
 
-		#endregion constructors
-
-		#region Propertyies
-
+        #region Propertyies
 
         /// <summary>
         /// criteria of Id, filter type: Equals
@@ -197,62 +186,57 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// </summary>
         public QuerySystemInt64EqualsCriteria IdByFKOnlyOfOrganization_2 { get; set; }
 
-		#endregion Propertyies
-	}
-
+        #endregion Propertyies
+    }
 
     /// <summary>
     /// BusinessLogicLayerQueryCriteria, key=ByIdentifier
     /// </summary>
     public partial class SolutionQueryCriteriaByIdentifier
     {
-		#region constructors
+        #region constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SolutionQueryCriteriaByIdentifier"/> class.
         /// </summary>
-		public SolutionQueryCriteriaByIdentifier()
-		{
-		}
-
+        public SolutionQueryCriteriaByIdentifier()
+        {
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SolutionQueryCriteriaByIdentifier"/> class.
         /// </summary>
         /// <param name="QuerySystemInt32EqualsCriteria">Initialize criteria of Id</param>
-		public SolutionQueryCriteriaByIdentifier(
-			QuerySystemInt32EqualsCriteria idByIdentifierOft
-			)
-		{
-			this.IdByIdentifierOft = idByIdentifierOft;
-		}
+        public SolutionQueryCriteriaByIdentifier(
+            QuerySystemInt32EqualsCriteria idByIdentifierOft
+            )
+        {
+            this.IdByIdentifierOft = idByIdentifierOft;
+        }
         /// <summary>
         /// Initializes a new instance of the <see cref="SolutionQueryCriteriaByIdentifier"/> class.
         /// </summary>
         /// <param name="isToCompareIdByIdentifierOft">will compare/filter IdByIdentifierOft property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIdByIdentifierOft">value to compare/filter with IdByIdentifierOft property/field/column</param>
-		public SolutionQueryCriteriaByIdentifier(
-			bool isToCompareIdByIdentifierOft, System.Int32? valueToCompareIdByIdentifierOft
-			)
-			: this(
-				new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOft, valueToCompareIdByIdentifierOft)
-				)
-		{
-		}
+        public SolutionQueryCriteriaByIdentifier(
+            bool isToCompareIdByIdentifierOft, System.Int32? valueToCompareIdByIdentifierOft
+            )
+            : this(
+                new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOft, valueToCompareIdByIdentifierOft)
+                )
+        {
+        }
 
+        #endregion constructors
 
-		#endregion constructors
-
-		#region Propertyies
-
+        #region Propertyies
 
         /// <summary>
         /// criteria of Id, filter type: Equals
         /// </summary>
         public QuerySystemInt32EqualsCriteria IdByIdentifierOft { get; set; }
 
-		#endregion Propertyies
-	}
-
+        #endregion Propertyies
+    }
 
 }

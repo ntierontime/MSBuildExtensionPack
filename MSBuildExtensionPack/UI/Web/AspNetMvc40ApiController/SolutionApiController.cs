@@ -14,11 +14,11 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
     /// </summary>
     public partial class SolutionApiController : ApiController
     {
-		#region log4net
+        #region log4net
 
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-		#endregion log4net
+        #endregion log4net
 
         #region insert, update and delete in an entity
 
@@ -26,7 +26,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// Inserts an entity of <see cref=" MSBuildExtensionPack.DataSourceEntities.Solution"/>.
         /// </summary>
         /// <param name="input">input entity</param>
-		[HttpPost, ActionName("InsertEntity")]
+        [HttpPost, ActionName("InsertEntity")]
         public MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn InsertEntity(
             MSBuildExtensionPack.DataSourceEntities.Solution input)
         {
@@ -78,17 +78,17 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
 
         #region delete using .Net value types
 
-		/// <summary>
+        /// <summary>
         /// delete an entity of <see cref=" MSBuildExtensionPack.DataSourceEntities.Solution"/> by identifier using .net value types.
         /// </summary>
         /// <param name="id">property value of System.Int32</param>
-		[HttpDelete, ActionName("DeleteByIdentifier")]
+        [HttpDelete, ActionName("DeleteByIdentifier")]
         public MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn DeleteByIdentifier(
-			System.Int32 id
-			)
+            System.Int32 id
+            )
         {
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn responseMessage = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.DeleteByIdentifierEntity(new MSBuildExtensionPack.DataSourceEntities.SolutionIdentifier(
-				id));
+                id));
 
             return responseMessage;
         }
@@ -105,48 +105,46 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         {
             Task<MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn> resultTask = Task.Factory.StartNew<MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn>(() =>
             {
-				MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn responseMessage = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.BatchUpdate(input);
+                MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn responseMessage = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.BatchUpdate(input);
 
-				return responseMessage;
+                return responseMessage;
             });
             return await resultTask;
         }
 
-		/// <summary>
+        /// <summary>
         /// batch insert a collection of <see cref=" MSBuildExtensionPack.DataSourceEntities.Solution"/>.
         /// </summary>
         /// <param name="input">The input collection.</param>
-		[HttpPost, ActionName("BatchInsert")]
+        [HttpPost, ActionName("BatchInsert")]
         public async Task<MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn> BatchInsert(MSBuildExtensionPack.DataSourceEntities.SolutionCollection input)
         {
             Task<MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn> resultTask = Task.Factory.StartNew<MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn>(() =>
             {
-				MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn responseMessage = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.BatchInsert(input);
+                MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn responseMessage = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.BatchInsert(input);
 
-				return responseMessage;
+                return responseMessage;
             });
             return await resultTask;
         }
 
-		/// <summary>
+        /// <summary>
         /// batch delete a collection of <see cref=" MSBuildExtensionPack.DataSourceEntities.Solution"/>.
         /// </summary>
         /// <param name="input">The input collection.</param>
-		[HttpDelete, ActionName("BatchDelete")]
+        [HttpDelete, ActionName("BatchDelete")]
         public async Task<MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn> BatchDelete(MSBuildExtensionPack.DataSourceEntities.SolutionCollection input)
         {
             Task<MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn> resultTask = Task.Factory.StartNew<MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn>(() =>
             {
-				MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn responseMessage = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.BatchDelete(input);
+                MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn responseMessage = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.BatchDelete(input);
 
-				return responseMessage;
+                return responseMessage;
             });
             return await resultTask;
         }
 
         #endregion batch insert, update and delete in an entity collection
-
-
 
         #region Query Methods Of NameValuePair of All per critieria, queryPagingSetting and queryOrderBySettingCollection
 
@@ -158,17 +156,17 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-		[HttpGet, ActionName("GetCollectionOfNameValuePairOfAll")]
+        [HttpGet, ActionName("GetCollectionOfNameValuePairOfAll")]
         public Framework.NameValueCollection GetCollectionOfNameValuePairOfAll(
-			int currentIndex
-			, int pageSize
-			, string queryOrderByExpression
-			)
+            int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
         {
-			return MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetCollectionOfNameValuePairOfAll(				currentIndex
-				, pageSize
-				, queryOrderByExpression);
-		}
+            return MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetCollectionOfNameValuePairOfAll(                currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
 
         /// <summary>
         /// Gets message of the collection of entity of common.
@@ -178,22 +176,19 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
-		[HttpGet, ActionName("GetMessageOfNameValuePairOfAll")]
+        [HttpGet, ActionName("GetMessageOfNameValuePairOfAll")]
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfAll(
-			int currentIndex
-			, int pageSize
-			, string queryOrderByExpression		)
+            int currentIndex
+            , int pageSize
+            , string queryOrderByExpression        )
 
         {
-			return MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfNameValuePairOfAll(				currentIndex
-				, pageSize
-				, queryOrderByExpression);
+            return MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfNameValuePairOfAll(                currentIndex
+                , pageSize
+                , queryOrderByExpression);
         }
 
         #endregion Query Methods Of NameValuePair of All per value type
-
-
-
 
         #region Query Methods Of NameValuePair of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
 
@@ -208,21 +203,21 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-		[HttpGet, ActionName("GetCollectionOfNameValuePairOfByFKOnly")]
+        [HttpGet, ActionName("GetCollectionOfNameValuePairOfByFKOnly")]
         public Framework.NameValueCollection GetCollectionOfNameValuePairOfByFKOnly(
-			bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-			, bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
-			, int currentIndex
-			, int pageSize
-			, string queryOrderByExpression
-			)
+            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
         {
-			return MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetCollectionOfNameValuePairOfByFKOnly(				isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly && valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly != default(System.Int64), valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-				, isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly && valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly != default(System.Int64), valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
-				, currentIndex
-				, pageSize
-				, queryOrderByExpression);
-		}
+            return MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetCollectionOfNameValuePairOfByFKOnly(                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly && valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly != default(System.Int64), valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly && valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly != default(System.Int64), valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
 
         /// <summary>
         /// Gets message of the collection of entity of common.
@@ -235,27 +230,23 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
-		[HttpGet, ActionName("GetMessageOfNameValuePairOfByFKOnly")]
+        [HttpGet, ActionName("GetMessageOfNameValuePairOfByFKOnly")]
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfByFKOnly(
-			bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-			, bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
-			, int currentIndex
-			, int pageSize
-			, string queryOrderByExpression		)
+            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression        )
 
         {
-			return MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfNameValuePairOfByFKOnly(				isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly && valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly != default(System.Int64), valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-				, isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly && valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly != default(System.Int64), valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
-				, currentIndex
-				, pageSize
-				, queryOrderByExpression);
+            return MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfNameValuePairOfByFKOnly(                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly && valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly != default(System.Int64), valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly && valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly != default(System.Int64), valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression);
         }
 
         #endregion Query Methods Of NameValuePair of ByFKOnly per value type
-
-
-
-
 
         /// <summary>
         /// Gets the Item View Model of MSBuildExtensionPack.Solution.
@@ -263,16 +254,13 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-		public MSBuildExtensionPack.ViewModelData.SolutionItemVM GetSolutionItemVM(
+        public MSBuildExtensionPack.ViewModelData.SolutionItemVM GetSolutionItemVM(
             System.Int32 id)
         {
             MSBuildExtensionPack.AspNetMvc40ViewModel.SolutionItemVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.SolutionItemVM();
             retval.Load(true, id, Framework.UIAction.ViewDetails);
             return retval;
         }
-
-
-
 
         /// <summary>
         /// Gets the Wrapper View Model of MSBuildExtensionPack.Solution: WPCommonOfSolutionVM.
@@ -303,9 +291,6 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
             return retval;
         }
 
-
-
-
         /// <summary>
         /// Gets entity related view model of MSBuildExtensionPack.Solution: WPEntityRelatedOfSolutionVM.
         /// http://[host]/api/SolutionApi/GetWPEntityRelatedOfSolutionVM?
@@ -319,11 +304,6 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
             retval.LoadData();
             return retval;
         }
-
-
-
-
-
 
         /// <summary>
         /// HearBeat.

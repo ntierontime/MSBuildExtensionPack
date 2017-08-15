@@ -13,7 +13,6 @@ namespace Framework
         {
         }
 
-
         public DataStreamServiceResult(string fileName, string mimeType, int contentLength, Stream input)
         {
             this.FileName = fileName;
@@ -46,5 +45,4 @@ namespace Framework
         public Stream Result { get; set; }
     }
 }
-
 

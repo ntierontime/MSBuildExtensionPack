@@ -8,25 +8,25 @@ namespace MSBuildExtensionPack.EntityContracts
     /// <summary>
     /// Interaction logic for IQueryCriteriaOrganizationByFKs
     /// </summary>
-	public partial interface IQueryCriteriaOrganizationByFKs
-	{
+    public partial interface IQueryCriteriaOrganizationByFKs
+    {
 
-        		bool IsToCompareParentId { get; set; }
-        		System.Int64 ComparedToParentId { get; set; }
-        
-	}
+                bool IsToCompareParentId { get; set; }
+                System.Int64 ComparedToParentId { get; set; }
 
-	#region PrediacteByFKs
+    }
+
+    #region PrediacteByFKs
 
     public class QueryPredicateOrganizationByFKs<T>
-		where T: IOrganization
+        where T: IOrganization
     {
-		public IQueryCriteriaOrganizationByFKs Criteria { get; set; }
+        public IQueryCriteriaOrganizationByFKs Criteria { get; set; }
 
         public QueryPredicateOrganizationByFKs(IQueryCriteriaOrganizationByFKs criteria)
         {
-			this. Criteria = criteria;
-		}
+            this. Criteria = criteria;
+        }
 
         public bool Predicate(T input)
         {
@@ -50,5 +50,5 @@ namespace MSBuildExtensionPack.EntityContracts
         }
     }
 
-	#endregion PrediacteByID
+    #endregion PrediacteByID
 }

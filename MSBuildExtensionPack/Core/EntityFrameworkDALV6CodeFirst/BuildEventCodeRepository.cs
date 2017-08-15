@@ -20,25 +20,25 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
     public class BuildEventCodeRepository
         : MSBuildExtensionPack.DALContracts.IBuildEventCodeRepository//<MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection, MSBuildExtensionPack.DataSourceEntities.BuildEventCode, MSBuildExtensionPack.DataSourceEntities.BuildEventCodeIdentifier>
     {
-		#region for log4net
+        #region for log4net
 
         /// <summary>
         /// for log4net
         /// </summary>
-		private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-		#endregion for log4net
+        #endregion for log4net
 
-		#region LinqContext
+        #region LinqContext
 
         /// <summary>
         /// DataContext for EF Linq
         /// </summary>
         public MSBuildExtensionPack.EntityFrameworkContext.MSBuildExtensionPackEntities LinqContext { get; set; }
-        
-		#endregion LinqContext
 
-		#region constructors
+        #endregion LinqContext
+
+        #region constructors
 
         /// <summary>
         /// default constructor, developer should assign LinqConext after.
@@ -56,7 +56,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             this.LinqContext = linqContext;
         }
 
-		#endregion constructors
+        #endregion constructors
 
         #region IDataAccessLayerContractBase<MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection,MSBuildExtensionPack.DataSourceEntities.BuildEventCode,MSBuildExtensionPack.DataSourceEntities.BuildEventCodeIdentifier> Members
 
@@ -104,14 +104,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 {
                     MSBuildExtensionPack.EntityContracts.IBuildEventCodeHelper.Copy<MSBuildExtensionPack.DataSourceEntities.BuildEventCode, MSBuildExtensionPack.EntityFrameworkContext.BuildEventCode>(input, _LinqItem);
                     this.LinqContext.SaveChanges();
-					MSBuildExtensionPack.DataSourceEntities.BuildEventCode _Result = new MSBuildExtensionPack.DataSourceEntities.BuildEventCode();
-					MSBuildExtensionPack.EntityContracts.IBuildEventCodeHelper.Copy<MSBuildExtensionPack.EntityFrameworkContext.BuildEventCode, MSBuildExtensionPack.DataSourceEntities.BuildEventCode>(_LinqItem, _Result);
-					_retval.Result = new MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection();
-					_retval.Result.Add(_Result);
+                    MSBuildExtensionPack.DataSourceEntities.BuildEventCode _Result = new MSBuildExtensionPack.DataSourceEntities.BuildEventCode();
+                    MSBuildExtensionPack.EntityContracts.IBuildEventCodeHelper.Copy<MSBuildExtensionPack.EntityFrameworkContext.BuildEventCode, MSBuildExtensionPack.DataSourceEntities.BuildEventCode>(_LinqItem, _Result);
+                    _retval.Result = new MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection();
+                    _retval.Result.Add(_Result);
                 }
             }
             log.Info(string.Format("{0}: Update", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
-			return _retval;
+            return _retval;
         }
 
         /// <summary>
@@ -136,7 +136,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 }
             }
             log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
-			return _retval;
+            return _retval;
         }
 
         /// <summary>
@@ -146,26 +146,26 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode DeleteByIdentifier(MSBuildExtensionPack.DataSourceEntities.BuildEventCodeIdentifier id)
         {
             log.Info(string.Format("{0}: DeleteByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
-            
-			MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode  _retval = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode();
+
+            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode  _retval = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode();
 
             if (id != null)
             {
                 MSBuildExtensionPack.EntityFrameworkContext.BuildEventCode _LinqItem = GetLinqObjectByIdentifier(id);
                 if (_LinqItem != null)
                 {
-					MSBuildExtensionPack.DataSourceEntities.BuildEventCode _Original = new MSBuildExtensionPack.DataSourceEntities.BuildEventCode();
-					MSBuildExtensionPack.EntityContracts.IBuildEventCodeHelper.Copy<MSBuildExtensionPack.EntityFrameworkContext.BuildEventCode, MSBuildExtensionPack.DataSourceEntities.BuildEventCode>(_LinqItem, _Original);
+                    MSBuildExtensionPack.DataSourceEntities.BuildEventCode _Original = new MSBuildExtensionPack.DataSourceEntities.BuildEventCode();
+                    MSBuildExtensionPack.EntityContracts.IBuildEventCodeHelper.Copy<MSBuildExtensionPack.EntityFrameworkContext.BuildEventCode, MSBuildExtensionPack.DataSourceEntities.BuildEventCode>(_LinqItem, _Original);
 
-					_retval.OriginalValue = new MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection();
-					_retval.OriginalValue.Add(_Original);
+                    _retval.OriginalValue = new MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection();
+                    _retval.OriginalValue.Add(_Original);
 
                     this.LinqContext.BuildEventCodes.Remove(_LinqItem);
                     this.LinqContext.SaveChanges();
                 }
             }
             log.Info(string.Format("{0}: DeleteByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
-			return _retval;
+            return _retval;
         }
 
         /// <summary>
@@ -176,7 +176,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         {
             log.Info(string.Format("{0}: BatchInsert", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
-			MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode  _retval = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode();
+            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode  _retval = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode();
             _retval.OriginalValue = input;
 
             if (input != null && input.Count > 0)
@@ -184,9 +184,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 try
                 {
                     DataTable _DataTable = new DataTable();
-				_DataTable.Columns.Add("Id", typeof(System.Int32));
-				_DataTable.Columns.Add("EventCode", typeof(System.String));
-				_DataTable.Columns.Add("Description", typeof(System.String));
+                _DataTable.Columns.Add("Id", typeof(System.Int32));
+                _DataTable.Columns.Add("EventCode", typeof(System.String));
+                _DataTable.Columns.Add("Description", typeof(System.String));
 
                     foreach (MSBuildExtensionPack.DataSourceEntities.BuildEventCode _Item in input)
                     {
@@ -197,9 +197,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     {
                         s.DestinationTableName = "dbo.BuildEventCode";
 
-					s.ColumnMappings.Add("Id", "Id");
-					s.ColumnMappings.Add("EventCode", "EventCode");
-					s.ColumnMappings.Add("Description", "Description");
+                    s.ColumnMappings.Add("Id", "Id");
+                    s.ColumnMappings.Add("EventCode", "EventCode");
+                    s.ColumnMappings.Add("Description", "Description");
 
                         s.NotifyAfter = 10000;
                         s.WriteToServer(_DataTable);
@@ -212,7 +212,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 }
             }
             log.Info(string.Format("{0}: BatchInsert", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
-			return _retval;
+            return _retval;
         }
 
         /// <summary>
@@ -223,7 +223,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         {
             log.Info(string.Format("{0}: BatchDelete", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
-			MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode  _retval = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode();
+            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode  _retval = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode();
             _retval.OriginalValue = input;
 
             if (input != null)
@@ -231,13 +231,13 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 List<MSBuildExtensionPack.EntityFrameworkContext.BuildEventCode> _ListOfLinq = new List<MSBuildExtensionPack.EntityFrameworkContext.BuildEventCode>();
                 foreach (MSBuildExtensionPack.DataSourceEntities.BuildEventCode _ItemOfInput in input)
                 {
-                    MSBuildExtensionPack.EntityFrameworkContext.BuildEventCode _LinqItem = GetLinqObjectByIdentifier(_ItemOfInput);	
-					this.LinqContext.BuildEventCodes.Remove(_LinqItem);
+                    MSBuildExtensionPack.EntityFrameworkContext.BuildEventCode _LinqItem = GetLinqObjectByIdentifier(_ItemOfInput);
+                    this.LinqContext.BuildEventCodes.Remove(_LinqItem);
                 }
                 this.LinqContext.SaveChanges();
             }
             log.Info(string.Format("{0}: BatchDelete", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
-			return _retval;
+            return _retval;
         }
 
         /// <summary>
@@ -248,7 +248,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         {
             log.Info(string.Format("{0}: BatchUpdate", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
-			MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode  _retval = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode();
+            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode  _retval = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode();
             _retval.OriginalValue = input;
 
             if (input != null)
@@ -271,7 +271,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 }
             }
             log.Info(string.Format("{0}: BatchUpdate", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
-			return _retval;
+            return _retval;
         }
 
         /// <summary>
@@ -309,22 +309,18 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         #endregion
 
-		#region Binary Columns
-
-
+        #region Binary Columns
 
         #endregion Binary Columns
 
-
-
-        #region Query Methods Of Entity of Common 
+        #region Query Methods Of Entity of Common
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// *internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// *internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -335,26 +331,26 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
         internal IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _GetQueryOfEntityOfCommon(
-			Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon
-			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
-			var _ResultFromDataSource = 
-				(
-					from t in this.LinqContext.BuildEventCodes
-					where
-						(
-							(
-							(criteriaOfEventCodeOftOfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfEventCodeOftOfCommonOfCommonOfCommon.IsToCompare && t.EventCode.Contains(criteriaOfEventCodeOftOfCommonOfCommonOfCommon.ValueToBeContained))
-							&&
-							(criteriaOfDescriptionOftOfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfDescriptionOftOfCommonOfCommonOfCommon.IsToCompare && t.Description.Contains(criteriaOfDescriptionOftOfCommonOfCommonOfCommon.ValueToBeContained))
-							)
-						)
-					select new MSBuildExtensionPack.DataSourceEntities.BuildEventCode { Id = t.Id, EventCode = t.EventCode, Description = t.Description } into x
-					select x
-				);
-			var _retval = _ResultFromDataSource.Distinct();
+            var _ResultFromDataSource =
+                (
+                    from t in this.LinqContext.BuildEventCodes
+                    where
+                        (
+                            (
+                            (criteriaOfEventCodeOftOfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfEventCodeOftOfCommonOfCommonOfCommon.IsToCompare && t.EventCode.Contains(criteriaOfEventCodeOftOfCommonOfCommonOfCommon.ValueToBeContained))
+                            &&
+                            (criteriaOfDescriptionOftOfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfDescriptionOftOfCommonOfCommonOfCommon.IsToCompare && t.Description.Contains(criteriaOfDescriptionOftOfCommonOfCommonOfCommon.ValueToBeContained))
+                            )
+                        )
+                    select new MSBuildExtensionPack.DataSourceEntities.BuildEventCode { Id = t.Id, EventCode = t.EventCode, Description = t.Description } into x
+                    select x
+                );
+            var _retval = _ResultFromDataSource.Distinct();
             IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _retval1;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -365,14 +361,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retval1 = _retval.AsQueryable().OrderBy(queryOrderBySettingCollection.GetOrderByExpression());
             }
             return _retval1;
-		}
+        }
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// *private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -384,29 +380,29 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>true if any in database, otherwise false</returns>
         private bool _ExistsOfEntityOfCommon(
-			Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon
-			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
-			,int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             int _Count = _GetCountOfEntityOfCommon(
-				criteriaOfEventCodeOftOfCommonOfCommonOfCommon
-				,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
-				,currentIndex
-				,pageSize
-				,queryOrderBySettingCollection
-			);
+                criteriaOfEventCodeOftOfCommonOfCommonOfCommon
+                ,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+                ,currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+            );
             return _Count > 0;
         }
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// *private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -419,19 +415,19 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>count of this query criteria</returns>
         private int _GetCountOfEntityOfCommon(
-			Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon
-			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
-			,int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
 
         {
             IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = _GetQueryOfEntityOfCommon(
-				criteriaOfEventCodeOftOfCommonOfCommonOfCommon
-				,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
-				,queryOrderBySettingCollection
-			);
+                criteriaOfEventCodeOftOfCommonOfCommonOfCommon
+                ,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+                ,queryOrderBySettingCollection
+            );
             int _Count;
             if (currentIndex == -1 || pageSize == -1)
             {
@@ -441,15 +437,15 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             {
                 _Count = _Query.Skip(currentIndex).Take(pageSize).Count();
             }
-			return _Count;
+            return _Count;
         }
-		
+
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// *public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -460,26 +456,26 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="currentIndex">current page index</param>
         /// <param name="pageSize">page size</param>
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>		
+        /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfCommon(
-			Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon
-			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
-			,int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             log.Info(string.Format("{0}: GetCountOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
                 int _retval = _GetCountOfEntityOfCommon(
-				criteriaOfEventCodeOftOfCommonOfCommonOfCommon
-				,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
-				,currentIndex
-				,pageSize
-				,queryOrderBySettingCollection
-					);
+                criteriaOfEventCodeOftOfCommonOfCommonOfCommon
+                ,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+                ,currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+                    );
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
                 _retMessage.Result = _retval;
             }
@@ -496,10 +492,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -512,24 +508,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfCommon(
-			Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon
-			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
-			,int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             log.Info(string.Format("{0}: ExistsOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
                 bool _retval = _ExistsOfEntityOfCommon(
-				criteriaOfEventCodeOftOfCommonOfCommonOfCommon
-				,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
-				,currentIndex
-				,pageSize
-				,queryOrderBySettingCollection
-					);
+                criteriaOfEventCodeOftOfCommonOfCommonOfCommon
+                ,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+                ,currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+                    );
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
                 _retMessage.Result = _retval;
             }
@@ -546,10 +542,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -560,30 +556,30 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode GetSingleOfEntityOfCommon(
-			Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon
-			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             log.Info(string.Format("{0}: GetSingleOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode _retMessage = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode();
             try
             {
                 bool _Exists = _ExistsOfEntityOfCommon(
-				criteriaOfEventCodeOftOfCommonOfCommonOfCommon
-				,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
-				,-1
-				,-1
-				,queryOrderBySettingCollection
-			);
+                criteriaOfEventCodeOftOfCommonOfCommonOfCommon
+                ,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+                ,-1
+                ,-1
+                ,queryOrderBySettingCollection
+            );
 
                 if (_Exists)
                 {
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = _GetQueryOfEntityOfCommon(
-				criteriaOfEventCodeOftOfCommonOfCommonOfCommon
-				,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
-				,queryOrderBySettingCollection
-			);
+                criteriaOfEventCodeOftOfCommonOfCommonOfCommon
+                ,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+                ,queryOrderBySettingCollection
+            );
 
                     MSBuildExtensionPack.DataSourceEntities.BuildEventCode _retval = _Query.SingleOrDefault();
 
@@ -609,10 +605,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common query set is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -625,12 +621,12 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode GetCollectionOfEntityOfCommon(
-			Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon
-			,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
-			,int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             log.Info(string.Format("{0}: GetCollectionOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
@@ -638,39 +634,39 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _Exists = _ExistsOfEntityOfCommon(
-				criteriaOfEventCodeOftOfCommonOfCommonOfCommon
-				,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
-				,currentIndex
-				,pageSize
-				,queryOrderBySettingCollection
-			);
+                criteriaOfEventCodeOftOfCommonOfCommonOfCommon
+                ,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+                ,currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+            );
 
                 if (_Exists)
                 {
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = _GetQueryOfEntityOfCommon(
-				criteriaOfEventCodeOftOfCommonOfCommonOfCommon
-				,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
-				,queryOrderBySettingCollection
-			);
+                criteriaOfEventCodeOftOfCommonOfCommonOfCommon
+                ,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+                ,queryOrderBySettingCollection
+            );
 
                     IEnumerable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _retval;
-					
-					if (currentIndex == -1 || pageSize == -1)
-					{
-						_retval = _Query;
-					}
-					else
-					{
-						_retval = _Query.Skip(currentIndex).Take(pageSize);
-					}
+
+                    if (currentIndex == -1 || pageSize == -1)
+                    {
+                        _retval = _Query;
+                    }
+                    else
+                    {
+                        _retval = _Query.Skip(currentIndex).Take(pageSize);
+                    }
                     _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-					_retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
+                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
                     _retMessage.QueryPagingResult.PageSize = pageSize;
                     _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
                     _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;
                     _retMessage.QueryPagingResult.CountOfRecords = _Query.Count();
                     _retMessage.Result = new MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection();
-					_retMessage.Result.AddRange(_retval);
+                    _retMessage.Result.AddRange(_retval);
                 }
                 else
                 {
@@ -688,18 +684,16 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             log.Info(string.Format("{0}: GetCollectionOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
-        #endregion Query Methods Of Entity of Common 
+        #endregion Query Methods Of Entity of Common
 
-
-
-        #region Query Methods Of Entity of All 
+        #region Query Methods Of Entity of All
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// *internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// *internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -710,16 +704,16 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
         internal IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _GetQueryOfEntityOfAll(
-			Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
-			var _ResultFromDataSource = 
-				(
-					from t in this.LinqContext.BuildEventCodes
-					select new MSBuildExtensionPack.DataSourceEntities.BuildEventCode { Id = t.Id, EventCode = t.EventCode, Description = t.Description } into x
-					select x
-				);
-			var _retval = _ResultFromDataSource.Distinct();
+            var _ResultFromDataSource =
+                (
+                    from t in this.LinqContext.BuildEventCodes
+                    select new MSBuildExtensionPack.DataSourceEntities.BuildEventCode { Id = t.Id, EventCode = t.EventCode, Description = t.Description } into x
+                    select x
+                );
+            var _retval = _ResultFromDataSource.Distinct();
             IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _retval1;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -730,14 +724,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retval1 = _retval.AsQueryable().OrderBy(queryOrderBySettingCollection.GetOrderByExpression());
             }
             return _retval1;
-		}
+        }
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// *private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -749,25 +743,25 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>true if any in database, otherwise false</returns>
         private bool _ExistsOfEntityOfAll(
-			int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             int _Count = _GetCountOfEntityOfAll(
-				currentIndex
-				,pageSize
-				,queryOrderBySettingCollection
-			);
+                currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+            );
             return _Count > 0;
         }
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// *private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -780,15 +774,15 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>count of this query criteria</returns>
         private int _GetCountOfEntityOfAll(
-			int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
 
         {
             IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = _GetQueryOfEntityOfAll(
-				queryOrderBySettingCollection
-			);
+                queryOrderBySettingCollection
+            );
             int _Count;
             if (currentIndex == -1 || pageSize == -1)
             {
@@ -798,15 +792,15 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             {
                 _Count = _Query.Skip(currentIndex).Take(pageSize).Count();
             }
-			return _Count;
+            return _Count;
         }
-		
+
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// *public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -817,22 +811,22 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="currentIndex">current page index</param>
         /// <param name="pageSize">page size</param>
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>		
+        /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfAll(
-			int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             log.Info(string.Format("{0}: GetCountOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
                 int _retval = _GetCountOfEntityOfAll(
-				currentIndex
-				,pageSize
-				,queryOrderBySettingCollection
-					);
+                currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+                    );
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
                 _retMessage.Result = _retval;
             }
@@ -849,10 +843,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -865,20 +859,20 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfAll(
-			int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             log.Info(string.Format("{0}: ExistsOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
                 bool _retval = _ExistsOfEntityOfAll(
-				currentIndex
-				,pageSize
-				,queryOrderBySettingCollection
-					);
+                currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+                    );
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
                 _retMessage.Result = _retval;
             }
@@ -895,10 +889,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -909,24 +903,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode GetSingleOfEntityOfAll(
-			Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             log.Info(string.Format("{0}: GetSingleOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode _retMessage = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode();
             try
             {
                 bool _Exists = _ExistsOfEntityOfAll(
-				-1
-				,-1
-				,queryOrderBySettingCollection
-			);
+                -1
+                ,-1
+                ,queryOrderBySettingCollection
+            );
 
                 if (_Exists)
                 {
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = _GetQueryOfEntityOfAll(
-				queryOrderBySettingCollection
-			);
+                queryOrderBySettingCollection
+            );
 
                     MSBuildExtensionPack.DataSourceEntities.BuildEventCode _retval = _Query.SingleOrDefault();
 
@@ -952,10 +946,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common query set is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -968,10 +962,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode GetCollectionOfEntityOfAll(
-			int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             log.Info(string.Format("{0}: GetCollectionOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
@@ -979,35 +973,35 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _Exists = _ExistsOfEntityOfAll(
-				currentIndex
-				,pageSize
-				,queryOrderBySettingCollection
-			);
+                currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+            );
 
                 if (_Exists)
                 {
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = _GetQueryOfEntityOfAll(
-				queryOrderBySettingCollection
-			);
+                queryOrderBySettingCollection
+            );
 
                     IEnumerable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _retval;
-					
-					if (currentIndex == -1 || pageSize == -1)
-					{
-						_retval = _Query;
-					}
-					else
-					{
-						_retval = _Query.Skip(currentIndex).Take(pageSize);
-					}
+
+                    if (currentIndex == -1 || pageSize == -1)
+                    {
+                        _retval = _Query;
+                    }
+                    else
+                    {
+                        _retval = _Query.Skip(currentIndex).Take(pageSize);
+                    }
                     _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-					_retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
+                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
                     _retMessage.QueryPagingResult.PageSize = pageSize;
                     _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
                     _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;
                     _retMessage.QueryPagingResult.CountOfRecords = _Query.Count();
                     _retMessage.Result = new MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection();
-					_retMessage.Result.AddRange(_retval);
+                    _retMessage.Result.AddRange(_retval);
                 }
                 else
                 {
@@ -1025,18 +1019,16 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             log.Info(string.Format("{0}: GetCollectionOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
-        #endregion Query Methods Of Entity of All 
+        #endregion Query Methods Of Entity of All
 
-
-
-        #region Query Methods Of NameValuePair of All 
+        #region Query Methods Of NameValuePair of All
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// *internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// *internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -1047,17 +1039,17 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
         internal IQueryable<Framework.NameValuePair> _GetQueryOfNameValuePairOfAll(
-			Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
-			var _ResultFromDataSource = 
-				(
-					from t in this.LinqContext.BuildEventCodes
-					let _Value = System.Data.Entity.SqlServer.SqlFunctions.StringConvert((double)t.Id).Trim()
-					select new Framework.NameValuePair { Name = t.EventCode, Value = _Value } into vD0
-					select vD0
-				);
-			var _retval = _ResultFromDataSource;
+            var _ResultFromDataSource =
+                (
+                    from t in this.LinqContext.BuildEventCodes
+                    let _Value = System.Data.Entity.SqlServer.SqlFunctions.StringConvert((double)t.Id).Trim()
+                    select new Framework.NameValuePair { Name = t.EventCode, Value = _Value } into vD0
+                    select vD0
+                );
+            var _retval = _ResultFromDataSource;
             IQueryable<Framework.NameValuePair> _retval1;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -1068,14 +1060,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retval1 = _retval.AsQueryable().OrderBy(queryOrderBySettingCollection.GetOrderByExpression());
             }
             return _retval1;
-		}
+        }
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// *private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -1087,25 +1079,25 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>true if any in database, otherwise false</returns>
         private bool _ExistsOfNameValuePairOfAll(
-			int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             int _Count = _GetCountOfNameValuePairOfAll(
-				currentIndex
-				,pageSize
-				,queryOrderBySettingCollection
-			);
+                currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+            );
             return _Count > 0;
         }
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// *private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -1118,15 +1110,15 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>count of this query criteria</returns>
         private int _GetCountOfNameValuePairOfAll(
-			int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
 
         {
             IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairOfAll(
-				queryOrderBySettingCollection
-			);
+                queryOrderBySettingCollection
+            );
             int _Count;
             if (currentIndex == -1 || pageSize == -1)
             {
@@ -1136,15 +1128,15 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             {
                 _Count = _Query.Skip(currentIndex).Take(pageSize).Count();
             }
-			return _Count;
+            return _Count;
         }
-		
+
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// *public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -1155,22 +1147,22 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="currentIndex">current page index</param>
         /// <param name="pageSize">page size</param>
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>		
+        /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfNameValuePairOfAll(
-			int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             log.Info(string.Format("{0}: GetCountOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
                 int _retval = _GetCountOfNameValuePairOfAll(
-				currentIndex
-				,pageSize
-				,queryOrderBySettingCollection
-					);
+                currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+                    );
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
                 _retMessage.Result = _retval;
             }
@@ -1187,10 +1179,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -1203,20 +1195,20 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfNameValuePairOfAll(
-			int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             log.Info(string.Format("{0}: ExistsOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
                 bool _retval = _ExistsOfNameValuePairOfAll(
-				currentIndex
-				,pageSize
-				,queryOrderBySettingCollection
-					);
+                currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+                    );
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
                 _retMessage.Result = _retval;
             }
@@ -1233,10 +1225,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -1247,24 +1239,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity GetSingleOfNameValuePairOfAll(
-			Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             log.Info(string.Format("{0}: GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity();
             try
             {
                 bool _Exists = _ExistsOfNameValuePairOfAll(
-				-1
-				,-1
-				,queryOrderBySettingCollection
-			);
+                -1
+                ,-1
+                ,queryOrderBySettingCollection
+            );
 
                 if (_Exists)
                 {
                     IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairOfAll(
-				queryOrderBySettingCollection
-			);
+                queryOrderBySettingCollection
+            );
 
                     Framework.NameValuePair _retval = _Query.SingleOrDefault();
 
@@ -1290,10 +1282,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common query set is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -1306,10 +1298,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection GetCollectionOfNameValuePairOfAll(
-			int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
@@ -1317,35 +1309,35 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _Exists = _ExistsOfNameValuePairOfAll(
-				currentIndex
-				,pageSize
-				,queryOrderBySettingCollection
-			);
+                currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+            );
 
                 if (_Exists)
                 {
                     IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairOfAll(
-				queryOrderBySettingCollection
-			);
+                queryOrderBySettingCollection
+            );
 
                     IEnumerable<Framework.NameValuePair> _retval;
-					
-					if (currentIndex == -1 || pageSize == -1)
-					{
-						_retval = _Query;
-					}
-					else
-					{
-						_retval = _Query.Skip(currentIndex).Take(pageSize);
-					}
+
+                    if (currentIndex == -1 || pageSize == -1)
+                    {
+                        _retval = _Query;
+                    }
+                    else
+                    {
+                        _retval = _Query.Skip(currentIndex).Take(pageSize);
+                    }
                     _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-					_retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
+                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
                     _retMessage.QueryPagingResult.PageSize = pageSize;
                     _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
                     _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;
                     _retMessage.QueryPagingResult.CountOfRecords = _Query.Count();
                     _retMessage.Result = new Framework.NameValueCollection();
-					_retMessage.Result.AddRange(_retval);
+                    _retMessage.Result.AddRange(_retval);
                 }
                 else
                 {
@@ -1363,18 +1355,16 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
-        #endregion Query Methods Of NameValuePair of All 
+        #endregion Query Methods Of NameValuePair of All
 
-
-
-        #region Query Methods Of RssItem of All 
+        #region Query Methods Of RssItem of All
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// *internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// *internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -1385,17 +1375,17 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
         internal IQueryable<Framework.RssItem> _GetQueryOfRssItemOfAll(
-			Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
-			var _ResultFromDataSource = 
-				(
-					from t in this.LinqContext.BuildEventCodes
-					let _IdentifierInString = System.Data.Entity.SqlServer.SqlFunctions.StringConvert((double)t.Id).Trim()
-					select new Framework.RssItem { Title = t.EventCode, Description = t.EventCode, IdentifierInString = _IdentifierInString } into vD1
-					select vD1
-				);
-			var _retval = _ResultFromDataSource;
+            var _ResultFromDataSource =
+                (
+                    from t in this.LinqContext.BuildEventCodes
+                    let _IdentifierInString = System.Data.Entity.SqlServer.SqlFunctions.StringConvert((double)t.Id).Trim()
+                    select new Framework.RssItem { Title = t.EventCode, Description = t.EventCode, IdentifierInString = _IdentifierInString } into vD1
+                    select vD1
+                );
+            var _retval = _ResultFromDataSource;
             IQueryable<Framework.RssItem> _retval1;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -1406,14 +1396,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retval1 = _retval.AsQueryable().OrderBy(queryOrderBySettingCollection.GetOrderByExpression());
             }
             return _retval1;
-		}
+        }
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// *private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -1425,25 +1415,25 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>true if any in database, otherwise false</returns>
         private bool _ExistsOfRssItemOfAll(
-			int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             int _Count = _GetCountOfRssItemOfAll(
-				currentIndex
-				,pageSize
-				,queryOrderBySettingCollection
-			);
+                currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+            );
             return _Count > 0;
         }
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// *private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -1456,15 +1446,15 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>count of this query criteria</returns>
         private int _GetCountOfRssItemOfAll(
-			int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
 
         {
             IQueryable<Framework.RssItem> _Query = _GetQueryOfRssItemOfAll(
-				queryOrderBySettingCollection
-			);
+                queryOrderBySettingCollection
+            );
             int _Count;
             if (currentIndex == -1 || pageSize == -1)
             {
@@ -1474,15 +1464,15 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             {
                 _Count = _Query.Skip(currentIndex).Take(pageSize).Count();
             }
-			return _Count;
+            return _Count;
         }
-		
+
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// *public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -1493,22 +1483,22 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="currentIndex">current page index</param>
         /// <param name="pageSize">page size</param>
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>		
+        /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfRssItemOfAll(
-			int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             log.Info(string.Format("{0}: GetCountOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
                 int _retval = _GetCountOfRssItemOfAll(
-				currentIndex
-				,pageSize
-				,queryOrderBySettingCollection
-					);
+                currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+                    );
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
                 _retMessage.Result = _retval;
             }
@@ -1525,10 +1515,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -1541,20 +1531,20 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfRssItemOfAll(
-			int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             log.Info(string.Format("{0}: ExistsOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
                 bool _retval = _ExistsOfRssItemOfAll(
-				currentIndex
-				,pageSize
-				,queryOrderBySettingCollection
-					);
+                currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+                    );
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
                 _retMessage.Result = _retval;
             }
@@ -1571,10 +1561,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -1585,24 +1575,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageRssItem GetSingleOfRssItemOfAll(
-			Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             log.Info(string.Format("{0}: GetSingleOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageRssItem _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageRssItem();
             try
             {
                 bool _Exists = _ExistsOfRssItemOfAll(
-				-1
-				,-1
-				,queryOrderBySettingCollection
-			);
+                -1
+                ,-1
+                ,queryOrderBySettingCollection
+            );
 
                 if (_Exists)
                 {
                     IQueryable<Framework.RssItem> _Query = _GetQueryOfRssItemOfAll(
-				queryOrderBySettingCollection
-			);
+                queryOrderBySettingCollection
+            );
 
                     Framework.RssItem _retval = _Query.SingleOrDefault();
 
@@ -1628,10 +1618,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common query set is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -1644,10 +1634,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection GetCollectionOfRssItemOfAll(
-			int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             log.Info(string.Format("{0}: GetCollectionOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
@@ -1655,35 +1645,35 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _Exists = _ExistsOfRssItemOfAll(
-				currentIndex
-				,pageSize
-				,queryOrderBySettingCollection
-			);
+                currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+            );
 
                 if (_Exists)
                 {
                     IQueryable<Framework.RssItem> _Query = _GetQueryOfRssItemOfAll(
-				queryOrderBySettingCollection
-			);
+                queryOrderBySettingCollection
+            );
 
                     IEnumerable<Framework.RssItem> _retval;
-					
-					if (currentIndex == -1 || pageSize == -1)
-					{
-						_retval = _Query;
-					}
-					else
-					{
-						_retval = _Query.Skip(currentIndex).Take(pageSize);
-					}
+
+                    if (currentIndex == -1 || pageSize == -1)
+                    {
+                        _retval = _Query;
+                    }
+                    else
+                    {
+                        _retval = _Query.Skip(currentIndex).Take(pageSize);
+                    }
                     _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-					_retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
+                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
                     _retMessage.QueryPagingResult.PageSize = pageSize;
                     _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
                     _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;
                     _retMessage.QueryPagingResult.CountOfRecords = _Query.Count();
                     _retMessage.Result = new Framework.RssItemCollection();
-					_retMessage.Result.AddRange(_retval);
+                    _retMessage.Result.AddRange(_retval);
                 }
                 else
                 {
@@ -1701,18 +1691,16 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             log.Info(string.Format("{0}: GetCollectionOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
-        #endregion Query Methods Of RssItem of All 
+        #endregion Query Methods Of RssItem of All
 
-
-
-        #region Query Methods Of Entity of ByIdentifier 
+        #region Query Methods Of Entity of ByIdentifier
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// *internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// *internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -1723,23 +1711,23 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
         internal IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _GetQueryOfEntityOfByIdentifier(
-			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
-			var _ResultFromDataSource = 
-				(
-					from t in this.LinqContext.BuildEventCodes
-					where
-						(
-							(
-							(criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.IsToCompare == false || criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.IsToCompare && t.Id == criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.ValueToCompare)
-							)
-						)
-					select new MSBuildExtensionPack.DataSourceEntities.BuildEventCode { Id = t.Id, EventCode = t.EventCode, Description = t.Description } into x
-					select x
-				);
-			var _retval = _ResultFromDataSource.Distinct();
+            var _ResultFromDataSource =
+                (
+                    from t in this.LinqContext.BuildEventCodes
+                    where
+                        (
+                            (
+                            (criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.IsToCompare == false || criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.IsToCompare && t.Id == criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.ValueToCompare)
+                            )
+                        )
+                    select new MSBuildExtensionPack.DataSourceEntities.BuildEventCode { Id = t.Id, EventCode = t.EventCode, Description = t.Description } into x
+                    select x
+                );
+            var _retval = _ResultFromDataSource.Distinct();
             IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _retval1;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -1750,14 +1738,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retval1 = _retval.AsQueryable().OrderBy(queryOrderBySettingCollection.GetOrderByExpression());
             }
             return _retval1;
-		}
+        }
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// *private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -1769,27 +1757,27 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>true if any in database, otherwise false</returns>
         private bool _ExistsOfEntityOfByIdentifier(
-			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-			,int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             int _Count = _GetCountOfEntityOfByIdentifier(
-				criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-				,currentIndex
-				,pageSize
-				,queryOrderBySettingCollection
-			);
+                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                ,currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+            );
             return _Count > 0;
         }
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// *private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -1802,17 +1790,17 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>count of this query criteria</returns>
         private int _GetCountOfEntityOfByIdentifier(
-			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-			,int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
 
         {
             IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = _GetQueryOfEntityOfByIdentifier(
-				criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-				,queryOrderBySettingCollection
-			);
+                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                ,queryOrderBySettingCollection
+            );
             int _Count;
             if (currentIndex == -1 || pageSize == -1)
             {
@@ -1822,15 +1810,15 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             {
                 _Count = _Query.Skip(currentIndex).Take(pageSize).Count();
             }
-			return _Count;
+            return _Count;
         }
-		
+
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// *public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -1841,24 +1829,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="currentIndex">current page index</param>
         /// <param name="pageSize">page size</param>
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>		
+        /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfByIdentifier(
-			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-			,int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             log.Info(string.Format("{0}: GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
                 int _retval = _GetCountOfEntityOfByIdentifier(
-				criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-				,currentIndex
-				,pageSize
-				,queryOrderBySettingCollection
-					);
+                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                ,currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+                    );
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
                 _retMessage.Result = _retval;
             }
@@ -1875,10 +1863,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -1891,22 +1879,22 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfByIdentifier(
-			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-			,int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             log.Info(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
                 bool _retval = _ExistsOfEntityOfByIdentifier(
-				criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-				,currentIndex
-				,pageSize
-				,queryOrderBySettingCollection
-					);
+                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                ,currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+                    );
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
                 _retMessage.Result = _retval;
             }
@@ -1923,10 +1911,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -1937,27 +1925,27 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode GetSingleOfEntityOfByIdentifier(
-			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             log.Info(string.Format("{0}: GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode _retMessage = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode();
             try
             {
                 bool _Exists = _ExistsOfEntityOfByIdentifier(
-				criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-				,-1
-				,-1
-				,queryOrderBySettingCollection
-			);
+                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                ,-1
+                ,-1
+                ,queryOrderBySettingCollection
+            );
 
                 if (_Exists)
                 {
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = _GetQueryOfEntityOfByIdentifier(
-				criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-				,queryOrderBySettingCollection
-			);
+                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                ,queryOrderBySettingCollection
+            );
 
                     MSBuildExtensionPack.DataSourceEntities.BuildEventCode _retval = _Query.SingleOrDefault();
 
@@ -1983,10 +1971,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common query set is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -1999,11 +1987,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode GetCollectionOfEntityOfByIdentifier(
-			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-			,int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             log.Info(string.Format("{0}: GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
@@ -2011,37 +1999,37 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _Exists = _ExistsOfEntityOfByIdentifier(
-				criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-				,currentIndex
-				,pageSize
-				,queryOrderBySettingCollection
-			);
+                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                ,currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+            );
 
                 if (_Exists)
                 {
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = _GetQueryOfEntityOfByIdentifier(
-				criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-				,queryOrderBySettingCollection
-			);
+                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                ,queryOrderBySettingCollection
+            );
 
                     IEnumerable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _retval;
-					
-					if (currentIndex == -1 || pageSize == -1)
-					{
-						_retval = _Query;
-					}
-					else
-					{
-						_retval = _Query.Skip(currentIndex).Take(pageSize);
-					}
+
+                    if (currentIndex == -1 || pageSize == -1)
+                    {
+                        _retval = _Query;
+                    }
+                    else
+                    {
+                        _retval = _Query.Skip(currentIndex).Take(pageSize);
+                    }
                     _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-					_retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
+                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
                     _retMessage.QueryPagingResult.PageSize = pageSize;
                     _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
                     _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;
                     _retMessage.QueryPagingResult.CountOfRecords = _Query.Count();
                     _retMessage.Result = new MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection();
-					_retMessage.Result.AddRange(_retval);
+                    _retMessage.Result.AddRange(_retval);
                 }
                 else
                 {
@@ -2059,18 +2047,16 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             log.Info(string.Format("{0}: GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
-        #endregion Query Methods Of Entity of ByIdentifier 
+        #endregion Query Methods Of Entity of ByIdentifier
 
-
-
-        #region Query Methods Of KeyInformation of ByIdentifier 
+        #region Query Methods Of KeyInformation of ByIdentifier
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// *internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// *internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -2081,23 +2067,23 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
         internal IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation> _GetQueryOfKeyInformationOfByIdentifier(
-			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
-			var _ResultFromDataSource = 
-				(
-					from t in this.LinqContext.BuildEventCodes
-					where
-						(
-							(
-							(criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.IsToCompare == false || criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.IsToCompare && t.Id == criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.ValueToCompare)
-							)
-						)
-					select new MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation { Id = t.Id, EventCode = t.EventCode } into vD2
-					select vD2
-				);
-			var _retval = _ResultFromDataSource;
+            var _ResultFromDataSource =
+                (
+                    from t in this.LinqContext.BuildEventCodes
+                    where
+                        (
+                            (
+                            (criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.IsToCompare == false || criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.IsToCompare && t.Id == criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.ValueToCompare)
+                            )
+                        )
+                    select new MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation { Id = t.Id, EventCode = t.EventCode } into vD2
+                    select vD2
+                );
+            var _retval = _ResultFromDataSource;
             IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation> _retval1;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -2108,14 +2094,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retval1 = _retval.AsQueryable().OrderBy(queryOrderBySettingCollection.GetOrderByExpression());
             }
             return _retval1;
-		}
+        }
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// *private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -2127,27 +2113,27 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>true if any in database, otherwise false</returns>
         private bool _ExistsOfKeyInformationOfByIdentifier(
-			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-			,int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             int _Count = _GetCountOfKeyInformationOfByIdentifier(
-				criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-				,currentIndex
-				,pageSize
-				,queryOrderBySettingCollection
-			);
+                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                ,currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+            );
             return _Count > 0;
         }
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// *private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -2160,17 +2146,17 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>count of this query criteria</returns>
         private int _GetCountOfKeyInformationOfByIdentifier(
-			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-			,int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
 
         {
             IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation> _Query = _GetQueryOfKeyInformationOfByIdentifier(
-				criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-				,queryOrderBySettingCollection
-			);
+                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                ,queryOrderBySettingCollection
+            );
             int _Count;
             if (currentIndex == -1 || pageSize == -1)
             {
@@ -2180,15 +2166,15 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             {
                 _Count = _Query.Skip(currentIndex).Take(pageSize).Count();
             }
-			return _Count;
+            return _Count;
         }
-		
+
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// *public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -2199,24 +2185,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="currentIndex">current page index</param>
         /// <param name="pageSize">page size</param>
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>		
+        /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfKeyInformationOfByIdentifier(
-			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-			,int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             log.Info(string.Format("{0}: GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
                 int _retval = _GetCountOfKeyInformationOfByIdentifier(
-				criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-				,currentIndex
-				,pageSize
-				,queryOrderBySettingCollection
-					);
+                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                ,currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+                    );
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
                 _retMessage.Result = _retval;
             }
@@ -2233,10 +2219,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -2249,22 +2235,22 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfKeyInformationOfByIdentifier(
-			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-			,int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             log.Info(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
                 bool _retval = _ExistsOfKeyInformationOfByIdentifier(
-				criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-				,currentIndex
-				,pageSize
-				,queryOrderBySettingCollection
-					);
+                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                ,currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+                    );
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
                 _retMessage.Result = _retval;
             }
@@ -2281,10 +2267,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -2295,27 +2281,27 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         public MSBuildExtensionPack.DataSourceEntities.BuildEventCode.DataAccessLayerMessageOfKeyInformation GetSingleOfKeyInformationOfByIdentifier(
-			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             log.Info(string.Format("{0}: GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.BuildEventCode.DataAccessLayerMessageOfKeyInformation _retMessage = new MSBuildExtensionPack.DataSourceEntities.BuildEventCode.DataAccessLayerMessageOfKeyInformation();
             try
             {
                 bool _Exists = _ExistsOfKeyInformationOfByIdentifier(
-				criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-				,-1
-				,-1
-				,queryOrderBySettingCollection
-			);
+                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                ,-1
+                ,-1
+                ,queryOrderBySettingCollection
+            );
 
                 if (_Exists)
                 {
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation> _Query = _GetQueryOfKeyInformationOfByIdentifier(
-				criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-				,queryOrderBySettingCollection
-			);
+                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                ,queryOrderBySettingCollection
+            );
 
                     MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation _retval = _Query.SingleOrDefault();
 
@@ -2341,10 +2327,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <summary>
         /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common. 
+        /// The key query criteria of this set of query is: Common.
         /// Common query set is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
         /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query 
+        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
         /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
         /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
         /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
@@ -2357,11 +2343,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         public MSBuildExtensionPack.DataSourceEntities.BuildEventCode.DataAccessLayerMessageOfKeyInformationCollection GetCollectionOfKeyInformationOfByIdentifier(
-			Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-			,int currentIndex
-			,int pageSize
-			,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-			)
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
         {
             log.Info(string.Format("{0}: GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
@@ -2369,37 +2355,37 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _Exists = _ExistsOfKeyInformationOfByIdentifier(
-				criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-				,currentIndex
-				,pageSize
-				,queryOrderBySettingCollection
-			);
+                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                ,currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+            );
 
                 if (_Exists)
                 {
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation> _Query = _GetQueryOfKeyInformationOfByIdentifier(
-				criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
-				,queryOrderBySettingCollection
-			);
+                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                ,queryOrderBySettingCollection
+            );
 
                     IEnumerable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation> _retval;
-					
-					if (currentIndex == -1 || pageSize == -1)
-					{
-						_retval = _Query;
-					}
-					else
-					{
-						_retval = _Query.Skip(currentIndex).Take(pageSize);
-					}
+
+                    if (currentIndex == -1 || pageSize == -1)
+                    {
+                        _retval = _Query;
+                    }
+                    else
+                    {
+                        _retval = _Query.Skip(currentIndex).Take(pageSize);
+                    }
                     _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-					_retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
+                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
                     _retMessage.QueryPagingResult.PageSize = pageSize;
                     _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
                     _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;
                     _retMessage.QueryPagingResult.CountOfRecords = _Query.Count();
                     _retMessage.Result = new MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformationCollection();
-					_retMessage.Result.AddRange(_retval);
+                    _retMessage.Result.AddRange(_retval);
                 }
                 else
                 {
@@ -2417,14 +2403,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             log.Info(string.Format("{0}: GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
-        #endregion Query Methods Of KeyInformation of ByIdentifier 
+        #endregion Query Methods Of KeyInformation of ByIdentifier
 
-
-
-
-
-
-
-	}
+    }
 }
 

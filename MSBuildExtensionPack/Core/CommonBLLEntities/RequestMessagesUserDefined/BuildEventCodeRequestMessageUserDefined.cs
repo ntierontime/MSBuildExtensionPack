@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-
 namespace MSBuildExtensionPack.CommonBLLEntities
 {
 
-    
-	/// <summary>
+    /// <summary>
     /// BusinessLogicLayerRequestMessageUserDefined, with Key=Common
     /// </summary>
     public partial class BuildEventCodeRequestMessageUserDefinedOfCommon
@@ -20,7 +18,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// Initializes a new instance of the <see cref="BuildEventCodeRequestMessageUserDefinedOfCommon"/> class.
         /// </summary>
         public BuildEventCodeRequestMessageUserDefinedOfCommon()
-			: base()
+            : base()
         {
         }
 
@@ -30,7 +28,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
         /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
         /// <param name="businessLogicLayerRequestID">The business logic layer request ID.</param>
-		public BuildEventCodeRequestMessageUserDefinedOfCommon(
+        public BuildEventCodeRequestMessageUserDefinedOfCommon(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID)
@@ -51,10 +49,10 @@ namespace MSBuildExtensionPack.CommonBLLEntities
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID
-			, int currentIndex
-			, int pageSize
-			, string queryOrderByExpression
-			)
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
             : base(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID, currentIndex, pageSize, queryOrderByExpression)
         {
         }
@@ -62,9 +60,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         #endregion constructors
     }
 
-
-    
-	/// <summary>
+    /// <summary>
     /// BusinessLogicLayerRequestMessageUserDefined, with Key=All
     /// </summary>
     public partial class BuildEventCodeRequestMessageUserDefinedOfAll
@@ -76,7 +72,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// Initializes a new instance of the <see cref="BuildEventCodeRequestMessageUserDefinedOfAll"/> class.
         /// </summary>
         public BuildEventCodeRequestMessageUserDefinedOfAll()
-			: base()
+            : base()
         {
         }
 
@@ -86,7 +82,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
         /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
         /// <param name="businessLogicLayerRequestID">The business logic layer request ID.</param>
-		public BuildEventCodeRequestMessageUserDefinedOfAll(
+        public BuildEventCodeRequestMessageUserDefinedOfAll(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID)
@@ -107,10 +103,10 @@ namespace MSBuildExtensionPack.CommonBLLEntities
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID
-			, int currentIndex
-			, int pageSize
-			, string queryOrderByExpression
-			)
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
             : base(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID, currentIndex, pageSize, queryOrderByExpression)
         {
         }
@@ -118,9 +114,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         #endregion constructors
     }
 
-
-    
-	/// <summary>
+    /// <summary>
     /// BusinessLogicLayerRequestMessageUserDefined, with Key=ByIdentifier
     /// </summary>
     public partial class BuildEventCodeRequestMessageUserDefinedOfByIdentifier
@@ -132,7 +126,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// Initializes a new instance of the <see cref="BuildEventCodeRequestMessageUserDefinedOfByIdentifier"/> class.
         /// </summary>
         public BuildEventCodeRequestMessageUserDefinedOfByIdentifier()
-			: base()
+            : base()
         {
         }
 
@@ -142,7 +136,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
         /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
         /// <param name="businessLogicLayerRequestID">The business logic layer request ID.</param>
-		public BuildEventCodeRequestMessageUserDefinedOfByIdentifier(
+        public BuildEventCodeRequestMessageUserDefinedOfByIdentifier(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID)
@@ -163,18 +157,15 @@ namespace MSBuildExtensionPack.CommonBLLEntities
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID
-			, int currentIndex
-			, int pageSize
-			, string queryOrderByExpression
-			)
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
             : base(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID, currentIndex, pageSize, queryOrderByExpression)
         {
         }
 
         #endregion constructors
     }
-
-
-
 
 }

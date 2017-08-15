@@ -15,8 +15,6 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 
         #endregion log4net
 
-
-
         public void Load(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
             , Framework.UIAction uiAction)
         {
@@ -32,7 +30,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
                     this.Item = _Response.Message[0];
                     this.UIActionStatusMessage = new Framework.UIActionStatusMessage(typeof(BuildEventCodeItemVM).FullName, uiAction.ToString(), uiAction, Framework.UIActionStatus.Launch);
                     log.Info(string.Format("{0}: {1}", uiAction, Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
-					this.LoadExtraData(uiAction);
+                    this.LoadExtraData(uiAction);
                 }
                 else
                 {
@@ -57,7 +55,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
             BuildEventCodeItemVM vm = new BuildEventCodeItemVM();
             vm.ContentData.Title = Framework.Resx.UIStringResource.AddNewAlternativeText;
             vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.AddNew_BuildEventCode;
-			vm.LoadExtraData(uiAction);
+            vm.LoadExtraData(uiAction);
 
             vm.Item = entity;
             vm.UIActionStatusMessage = new Framework.UIActionStatusMessage(typeof(BuildEventCodeItemVM).FullName, uiAction.ToString(), uiAction, Framework.UIActionStatus.Launch);
@@ -72,6 +70,6 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 
             }
         }
-	}
+    }
 }
 

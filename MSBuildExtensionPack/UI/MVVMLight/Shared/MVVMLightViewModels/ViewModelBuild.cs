@@ -90,80 +90,73 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         protected override void DoSearch()
         {
+            this.SearchStatus = Framework.EntityContracts.SearchStatus.Searching;
+
+            string viewName = ViewName;
+            Framework.UIAction uiAction = Framework.UIAction.Search;
+            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
+
+            try
+            {
+                var vmData = new MSBuildExtensionPack.ViewModelData.WPCommonOfBuildVM();
+                vmData.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaCommonFlatten(this.Criteria);
+                vmData.QueryPagingSetting = this.QueryPagingSetting;
+                vmData.QueryOrderBySettingCollection = this.QueryOrderBySettingCollection;
+
+                var client = new MSBuildExtensionPack.WebApiClient.BuildApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
+                var result = Task.Run(() => client.GetWPCommonOfBuildVMAsync(vmData)).Result;
+
+                var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
+
+                dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
+                {
+                    this.StatusOfResult = result.StatusOfResult;
+                    if (result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+                    {
+                        if (this.m_EntityCollectionDefault == null)
+                        {
+                            this.m_EntityCollectionDefault = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Build.Default>();
+                        }
+                        else
+                        {
+                            if (isToClearExistingResult)
+                            {
+                                this.m_EntityCollectionDefault.Clear();
+                            }
+                        }
+
+                        if (result.Result != null)
+                        {
+                            foreach (var item in result.Result)
+                            {
+                                this.m_EntityCollectionDefault.Add(item);
+                            }
+                        }
+
+                        this.QueryPagingSetting = result.QueryPagingSetting;
+                        this.OriginalQueryOrderBySettingCollecionInString = this.QueryOrderBySettingCollecionInString;
+                        this.QueryOrderBySettingCollection = result.QueryOrderBySettingCollection;
+                    }
+                    else
+                    {
+                        this.StatusMessageOfResult = result.StatusMessageOfResult;
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
+            }
         }
-    //    protected override void Search()
-    //    {
-    //        this.SearchStatus = Framework.EntityContracts.SearchStatus.Searching;
-
-    //        string viewName = ViewName;
-    //        Framework.UIAction uiAction = Framework.UIAction.Search;
-    //        Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
-
-    //        try
-    //        {
-    //            if (this.QueryPagingSetting != null && this.QueryPagingSetting.CurrentPage == 0)
-    //            {
-    //                this.QueryPagingSetting.CurrentPage = 1;
-    //            }
-
-    //            var vmData = new MSBuildExtensionPack.ViewModelData.WPCommonOfBuildVM();
-    //            vmData.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaCommonFlatten(this.Criteria);
-    //            vmData.QueryPagingSetting = this.QueryPagingSetting;
-    //            vmData.QueryOrderBySettingCollection = this.QueryOrderBySettingCollection;
-
-    //            var client = new MSBuildExtensionPack.WebApiClient.BuildApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-				//var result = Task.Run(() => client.GetWPCommonOfBuildVMAsync(vmData)).Result;
-
-    //            var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
-
-    //            dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
-    //            {
-    //                this.StatusOfResult = result.StatusOfResult;
-    //                if (result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
-    //                {
-    //                    if (this.m_EntityCollectionDefault == null)
-    //                    {
-    //                        this.m_EntityCollectionDefault = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Build.Default>();
-    //                    }
-    //                    else
-    //                    {
-    //                        this.m_EntityCollectionDefault.Clear();
-    //                    }
-
-    //                    if (result.Result != null)
-    //                    {
-    //                        foreach (var item in result.Result)
-    //                        {
-    //                            this.m_EntityCollectionDefault.Add(item);
-    //                        }
-    //                    }
-
-    //                    this.QueryPagingSetting = result.QueryPagingSetting;
-    //                    this.OriginalQueryOrderBySettingCollecionInString = this.QueryOrderBySettingCollecionInString;
-    //                    this.QueryOrderBySettingCollection = result.QueryOrderBySettingCollection;
-    //                }
-    //                else
-    //                {
-    //                    this.StatusMessageOfResult = result.StatusMessageOfResult;
-    //                }
-    //            });
-    //        }
-    //        catch (Exception ex)
-    //        {
-    //            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
-    //        }
-    //    }
 
         public override Framework.NameValueCollection GetDefaultListOfQueryOrderBySettingCollecionInString()
         {
             Framework.NameValueCollection list = new Framework.NameValueCollection();
             list.Add("Solution_1_Name~ASC", "Solution_1_Name A-Z");
-					list.Add("Solution_1_Name~DESC", "Solution_1_Name Z-A");
+                    list.Add("Solution_1_Name~DESC", "Solution_1_Name Z-A");
             return list;
         }
     }
 
-
 }
-
 

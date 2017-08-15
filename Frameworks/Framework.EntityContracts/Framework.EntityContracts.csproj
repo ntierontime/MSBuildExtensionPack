@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -47,15 +47,14 @@
     <Compile Include="KnownMathCalculations.cs" />
     <Compile Include="Queries\PredefinedBooleanSelectedValues.cs" />
     <Compile Include="Queries\PreDefinedDateTimeRanges.cs" />
+    <Compile Include="Queries\QueryCriteriaBase.cs" />
     <Compile Include="Queries\QueryPagingResult.cs" />
     <Compile Include="SummaryData.cs" />
     <Compile Include="ViewModels\ContentData.cs" />
     <Compile Include="ViewModels\SearchStatus.cs" />
-    <Compile Include="Queries\QueryCriteriaBase.cs" />
     <Compile Include="Queries\QueryOrderBySetting.cs" />
     <Compile Include="Queries\QueryPagingSetting.cs" />
     <Compile Include="Queries\QueryPredicateBase.cs" />
-    <Compile Include="Queries\IQueryPredicate.cs" />
     <Compile Include="Queries\QueryPredicateTypes.cs" />
     <None Include="map.1.B.3.vsd" />
     <None Include="map.1.B.3.vsd.png" />

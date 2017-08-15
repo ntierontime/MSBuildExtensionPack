@@ -8,14 +8,13 @@ using System.Web.Mvc;
 namespace Framework.Mvc
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public class UISharedViewModel
     {
         public List<SelectListItem> SelectListOfPageSize { get; set; }
         public List<SelectListItem> SelectListOfQueryOrderBySettingCollecionInString { get; set; }
         public List<SelectListItem> SelectListOfDataExport { get; set; }
-
 
         public static Framework.Mvc.UISharedViewModel GetUISharedViewModel(
             IList<Framework.NameValuePair> listOfQueryOrderBySettingCollecionInString
@@ -30,5 +29,4 @@ namespace Framework.Mvc
         }
     }
 }
-
 

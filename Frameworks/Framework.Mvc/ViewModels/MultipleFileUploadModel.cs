@@ -15,7 +15,7 @@ namespace Framework.Mvc
         }
         public string FilesToBeUploaded { get; set; }
         public List<HttpPostedFileBase> FileUploads { get; set; }
-		
+
     }
 
 }

@@ -60,10 +60,10 @@
 <tbody>
     @if (Model != null && Model.StatusOfFK_Organization_ParentId == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
     {
-		int index = 0;
+        int index = 0;
         foreach (var item in Model.FK_Organization_ParentId)
         {
-			index++;
+            index++;
 <tr><td  class="hidden-xs visible-sm"></td>
 <td >@Html.DisplayFor(modelItem => item.Organization_2_UniqueidentifierColumn)</td>
 <td >@Html.DisplayFor(modelItem => item.Organization_2_UniqueIdentifier)</td>
@@ -100,9 +100,9 @@
 <td >@Html.DisplayFor(modelItem => item.UniqueidentifierColumn)</td>
 <td  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetailsAlternativeText">
-		<span class="glyphicon glyphicon-briefcase"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetailsAlternativeText">
+        <span class="glyphicon glyphicon-briefcase"></span>
+    </a>
 </div>
 <div class="btn-group">
     <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Edit, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="EditToolBarRightInList" title="@Framework.Resx.UIStringResource.EditAlternativeText">
@@ -145,10 +145,10 @@
 <tbody>
     @if (Model != null && Model.StatusOfFK_Solution_OrganizationId == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
     {
-		int index = 0;
+        int index = 0;
         foreach (var item in Model.FK_Solution_OrganizationId)
         {
-			index++;
+            index++;
 <tr><td  class="hidden-xs visible-sm"></td>
 <td >@Html.DisplayFor(modelItem => item.Organization_1_UniqueIdentifier)</td>
 <td >@Html.DisplayFor(modelItem => item.Organization_1_UniqueidentifierColumn)</td>
@@ -161,9 +161,9 @@
 <td >@Html.DisplayFor(modelItem => item.Description)</td>
 <td  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetailsAlternativeText">
-		<span class="glyphicon glyphicon-briefcase"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetailsAlternativeText">
+        <span class="glyphicon glyphicon-briefcase"></span>
+    </a>
 </div>
 <div class="btn-group">
     <a href="@Url.Action(UrlStringsAlias.ActionName_Solution_Edit, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })" class="btn btn-default" role="button" type="button" name="EditToolBarRightInList" title="@Framework.Resx.UIStringResource.EditAlternativeText">
@@ -193,7 +193,7 @@
             <h3 style="display: inline;">
                 @MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Organization
             </h3>
-		</div>
+        </div>
 @if (Model.StatusOfMasterEntity == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
 { // Item
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
@@ -203,9 +203,9 @@
     </a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_AddNew, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="AddNewToolBarUp" title="@Framework.Resx.UIStringResource.AddNewAlternativeText">
-		<span class="glyphicon glyphicon-plus"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_AddNew, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="AddNewToolBarUp" title="@Framework.Resx.UIStringResource.AddNewAlternativeText">
+        <span class="glyphicon glyphicon-plus"></span>
+    </a>
 </div>
 <div class="btn-group">
     <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Copy, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="CopyToolBarUp" title="@Framework.Resx.UIStringResource.CopyAlternativeText">
@@ -218,211 +218,211 @@
     </a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Index, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearchAlternativeText">
-		<span class="glyphicon glyphicon-search"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Index, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearchAlternativeText">
+        <span class="glyphicon glyphicon-search"></span>
+    </a>
 </div>
 </div>
         <div class="panel-body">
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.Organization_2_UniqueidentifierColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.Organization_2_UniqueidentifierColumn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.Organization_2_UniqueidentifierColumn)
+            @Html.DisplayFor(model => model.MasterEntity.Organization_2_UniqueidentifierColumn)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.Organization_2_UniqueIdentifier, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.Organization_2_UniqueIdentifier, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.Organization_2_UniqueIdentifier)
+            @Html.DisplayFor(model => model.MasterEntity.Organization_2_UniqueIdentifier)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.Organization_2_Name, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.Organization_2_Name, new { @class = "control-label" })
         <div class="form-control">
 @Html.ActionLink(Model.MasterEntity.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.ParentId, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Organization_2_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Organization_2_UniqueidentifierColumn }, null)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.Id, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.Id, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.Id)
+            @Html.DisplayFor(model => model.MasterEntity.Id)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.Name, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.Name, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.Name)
+            @Html.DisplayFor(model => model.MasterEntity.Name)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.IsSystemBuiltIn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.IsSystemBuiltIn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.IsSystemBuiltIn)
+            @Html.DisplayFor(model => model.MasterEntity.IsSystemBuiltIn)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.UniqueIdentifier, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.UniqueIdentifier, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.UniqueIdentifier)
+            @Html.DisplayFor(model => model.MasterEntity.UniqueIdentifier)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.CreatedDateTime, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.CreatedDateTime, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.CreatedDateTime)
+            @Html.DisplayFor(model => model.MasterEntity.CreatedDateTime)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.CharColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.CharColumn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.CharColumn)
+            @Html.DisplayFor(model => model.MasterEntity.CharColumn)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.VarcharColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.VarcharColumn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.VarcharColumn)
+            @Html.DisplayFor(model => model.MasterEntity.VarcharColumn)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.TextColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.TextColumn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.TextColumn)
+            @Html.DisplayFor(model => model.MasterEntity.TextColumn)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.NcharColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.NcharColumn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.NcharColumn)
+            @Html.DisplayFor(model => model.MasterEntity.NcharColumn)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.NvarcharColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.NvarcharColumn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.NvarcharColumn)
+            @Html.DisplayFor(model => model.MasterEntity.NvarcharColumn)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.NtextColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.NtextColumn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.NtextColumn)
+            @Html.DisplayFor(model => model.MasterEntity.NtextColumn)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.BitColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.BitColumn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.BitColumn)
+            @Html.DisplayFor(model => model.MasterEntity.BitColumn)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.BinaryColumn, new { @class = "control-label" })
-        <div class="form-control">
-        </div>
-    </div>
-<div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.VarbinaryColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.BinaryColumn, new { @class = "control-label" })
         <div class="form-control">
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.ImageColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.VarbinaryColumn, new { @class = "control-label" })
         <div class="form-control">
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.TinyintColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.ImageColumn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.TinyintColumn)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.SmallintColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.TinyintColumn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.SmallintColumn)
+            @Html.DisplayFor(model => model.MasterEntity.TinyintColumn)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.IntColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.SmallintColumn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.IntColumn)
+            @Html.DisplayFor(model => model.MasterEntity.SmallintColumn)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.BigintColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.IntColumn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.BigintColumn)
+            @Html.DisplayFor(model => model.MasterEntity.IntColumn)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.DecimalColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.BigintColumn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.DecimalColumn)
+            @Html.DisplayFor(model => model.MasterEntity.BigintColumn)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.NumericColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.DecimalColumn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.NumericColumn)
+            @Html.DisplayFor(model => model.MasterEntity.DecimalColumn)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.SmallmoneyColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.NumericColumn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.SmallmoneyColumn)
+            @Html.DisplayFor(model => model.MasterEntity.NumericColumn)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.MoneyColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.SmallmoneyColumn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.MoneyColumn)
+            @Html.DisplayFor(model => model.MasterEntity.SmallmoneyColumn)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.FloatColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.MoneyColumn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.FloatColumn)
+            @Html.DisplayFor(model => model.MasterEntity.MoneyColumn)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.RealColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.FloatColumn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.RealColumn)
+            @Html.DisplayFor(model => model.MasterEntity.FloatColumn)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.DatetimeColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.RealColumn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.DatetimeColumn)
+            @Html.DisplayFor(model => model.MasterEntity.RealColumn)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.Datetime2Column, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.DatetimeColumn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.Datetime2Column)
+            @Html.DisplayFor(model => model.MasterEntity.DatetimeColumn)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.SmalldatetimeColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.Datetime2Column, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.SmalldatetimeColumn)
+            @Html.DisplayFor(model => model.MasterEntity.Datetime2Column)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.DateColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.SmalldatetimeColumn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.DateColumn)
+            @Html.DisplayFor(model => model.MasterEntity.SmalldatetimeColumn)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.TimeColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.DateColumn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.TimeColumn)
+            @Html.DisplayFor(model => model.MasterEntity.DateColumn)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.UniqueidentifierColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.TimeColumn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.UniqueidentifierColumn)
+            @Html.DisplayFor(model => model.MasterEntity.TimeColumn)
+        </div>
+    </div>
+<div class="form-group">
+            @Html.LabelFor(model => model.MasterEntity.UniqueidentifierColumn, new { @class = "control-label" })
+        <div class="form-control">
+            @Html.DisplayFor(model => model.MasterEntity.UniqueidentifierColumn)
         </div>
     </div>
 @Html.HiddenFor(model => model.MasterEntity.ParentId)
@@ -432,19 +432,19 @@
 {
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_AddNew, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="AddNewToolBarUp" title="@Framework.Resx.UIStringResource.AddNewAlternativeText">
-		<span class="glyphicon glyphicon-plus"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_AddNew, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="AddNewToolBarUp" title="@Framework.Resx.UIStringResource.AddNewAlternativeText">
+        <span class="glyphicon glyphicon-plus"></span>
+    </a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetailsAlternativeText">
-		<span class="glyphicon glyphicon-briefcase"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetailsAlternativeText">
+        <span class="glyphicon glyphicon-briefcase"></span>
+    </a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Index, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearchAlternativeText">
-		<span class="glyphicon glyphicon-search"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Index, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearchAlternativeText">
+        <span class="glyphicon glyphicon-search"></span>
+    </a>
 </div>
 </div>
 <div class="text-danger">@Model.StatusMessageOfMasterEntity</div>
@@ -465,51 +465,51 @@
 { // Item
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Index, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearchAlternativeText">
-		<span class="glyphicon glyphicon-search"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Index, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearchAlternativeText">
+        <span class="glyphicon glyphicon-search"></span>
+    </a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetailsAlternativeText">
-		<span class="glyphicon glyphicon-briefcase"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetailsAlternativeText">
+        <span class="glyphicon glyphicon-briefcase"></span>
+    </a>
 </div>
 </div>
         <div class="panel-body">
 <div class="form-group">
-			@Html.LabelFor(model => model.Organization_2.Id, new { @class = "control-label" })
+            @Html.LabelFor(model => model.Organization_2.Id, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.Organization_2.Id)
+            @Html.DisplayFor(model => model.Organization_2.Id)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.Organization_2.Name, new { @class = "control-label" })
+            @Html.LabelFor(model => model.Organization_2.Name, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.Organization_2.Name)
+            @Html.DisplayFor(model => model.Organization_2.Name)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.Organization_2.IsSystemBuiltIn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.Organization_2.IsSystemBuiltIn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.Organization_2.IsSystemBuiltIn)
+            @Html.DisplayFor(model => model.Organization_2.IsSystemBuiltIn)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.Organization_2.UniqueIdentifier, new { @class = "control-label" })
+            @Html.LabelFor(model => model.Organization_2.UniqueIdentifier, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.Organization_2.UniqueIdentifier)
+            @Html.DisplayFor(model => model.Organization_2.UniqueIdentifier)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.Organization_2.BitColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.Organization_2.BitColumn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.Organization_2.BitColumn)
+            @Html.DisplayFor(model => model.Organization_2.BitColumn)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.Organization_2.UniqueidentifierColumn, new { @class = "control-label" })
+            @Html.LabelFor(model => model.Organization_2.UniqueidentifierColumn, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.Organization_2.UniqueidentifierColumn)
+            @Html.DisplayFor(model => model.Organization_2.UniqueidentifierColumn)
         </div>
     </div>
         </div>
@@ -518,14 +518,14 @@
 {
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Index, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearchAlternativeText">
-		<span class="glyphicon glyphicon-search"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Index, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearchAlternativeText">
+        <span class="glyphicon glyphicon-search"></span>
+    </a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetailsAlternativeText">
-		<span class="glyphicon glyphicon-briefcase"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetailsAlternativeText">
+        <span class="glyphicon glyphicon-briefcase"></span>
+    </a>
 </div>
 </div>
 <div class="text-danger">@Model.StatusMessageOfOrganization_2</div>
