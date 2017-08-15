@@ -32,7 +32,7 @@
         </ScrollView>
     </ContentPage.Content>
     <ContentPage.ToolbarItems>
-        <ToolbarItem x:Name="Delete" Order="Primary" Text="{i18n:Translate Text=DeleteAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog.DeleteCommand, Source={StaticResource Locator}}">
+		<ToolbarItem x:Name="DeleteAction" Order="Primary" Text="{i18n:Translate Text=DeleteAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog.DeleteCommand, Source={StaticResource Locator}}">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/RecycleBin.png" Android="Assets/RecycleBin.png" WinPhone="Assets/RecycleBin.png" />
             </ToolbarItem.Icon>
