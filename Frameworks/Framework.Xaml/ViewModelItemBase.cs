@@ -12,7 +12,7 @@ namespace Framework.Xaml
     public abstract class ViewModelItemBase<TSearchCriteria, TItem>
         : GalaSoft.MvvmLight.ViewModelBase, Framework.ViewModels.IViewModelItemBase<TSearchCriteria, TItem>
         where TSearchCriteria : class, new()
-        where TItem : class, new()
+        where TItem : class, Framework.EntityContracts.IClone<TItem>, new()
     {
         #region constructor
 
@@ -70,7 +70,7 @@ namespace Framework.Xaml
             get { return m_Item; }
             set
             {
-                m_Item = value;
+                m_Item = value.GetAClone();
                 RaisePropertyChanged("Item");
             }
         }

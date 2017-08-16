@@ -119,7 +119,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                         }
                         else
                         {
-                            if (isToClearExistingResult)
+                            if (isToClearExistingResult && this.m_EntityCollection.Count > 0)
                             {
                                 this.m_EntityCollection.Clear();
                             }

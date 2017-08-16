@@ -9,8 +9,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
     /// Entity class, used across the solution. <see cref="BuildEventCode"/>
     /// </summary>
     //[DataContract]
-    public partial class BuildEventCode  : Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IBuildEventCode
-    {
+    public partial class BuildEventCode  : Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IBuildEventCode, Framework.EntityContracts.IClone<BuildEventCode>
+	{
 
         #region Storage Fields
 
