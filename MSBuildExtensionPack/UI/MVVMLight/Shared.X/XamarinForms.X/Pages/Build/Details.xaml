@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.X"
+    xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
+    x:Class="MSBuildExtensionPack.XamarinForms.Pages.Build.Details"
+    Title="{i18n:Translate Text=Details_Build, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Label Text="{i18n:Translate Text=Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=Id, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=BuildStartTime, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <DatePicker IsVisible="True" Format="F" Date="{Binding Path=BuildStartTime, Mode=OneWay}" IsEnabled="False" />
+         <TimePicker Format="F" Time="{Binding Path=BuildStartTime, Mode=OneWay}" IsEnabled="False" />
+            <Label Text="{Binding Path=BuildStartTime, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=Organization_2Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Button Text="{Binding Path=Organization_2_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization.LaunchOrganization_2DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+            <Label Text="{i18n:Translate Text=Organization_1Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Button Text="{Binding Path=Organization_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.LaunchOrganization_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+            <Label Text="{i18n:Translate Text=SolutionId, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Button Text="{Binding Path=SolutionId}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.LaunchSolution_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+            <Label Text="{i18n:Translate Text=Name, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=Name, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=Description, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="Edit" Order="Primary" Text="{i18n:Translate Text=EditAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchEditViewCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">Android/Edit.png</On>
+                    <On Platform="iOS">Assets/Edit.png</On>
+                    <On Platform="Windows">Assets/Edit.png</On>
+                    <On Platform="WinPhone">Assets/Edit.png</On>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem x:Name="Copy" Order="Primary" Text="{i18n:Translate Text=CopyAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchCopyViewCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">Android/Copy.png</On>
+                    <On Platform="iOS">Assets/Copy.png</On>
+                    <On Platform="Windows">Assets/Copy.png</On>
+                    <On Platform="WinPhone">Assets/Copy.png</On>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem x:Name="Delete" Order="Primary" Text="{i18n:Translate Text=DeleteAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchDeleteViewCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">Android/Bin.png</On>
+                    <On Platform="iOS">Assets/Bin.png</On>
+                    <On Platform="Windows">Assets/Bin.png</On>
+                    <On Platform="WinPhone">Assets/Bin.png</On>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+</ContentPage>

@@ -1,10 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
-#if (WINDOWS_PHONE || XAMARIN)
-#else
 using System.ComponentModel.DataAnnotations;
-#endif
 
 namespace MSBuildExtensionPack.DataSourceEntities
 {
@@ -12,14 +9,10 @@ namespace MSBuildExtensionPack.DataSourceEntities
     /// Entity class, used across the solution. <see cref="Organization"/>
     /// </summary>
     //[DataContract]
-	public partial class Organization  : Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IOrganization
-	{ 
+    public partial class Organization : Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IOrganization, Framework.EntityContracts.IClone<Organization>
+    {
 
-
-
-
-
-		#region Storage Fields
+        #region Storage Fields
 
         System.Int64 m_Id;
 
@@ -85,53 +78,49 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         System.Guid m_UniqueidentifierColumn;
 
+        #endregion Storage Fields
 
-		#endregion Storage Fields
-
-
-    
-
-		#region constructors
+        #region constructors
 
         /// <summary>
         /// default constructor
         /// Initializes a new instance of the <see cref=" Organization"/> class.
         /// </summary>
-		public Organization()
-		{
-			this.Id = default(long);
-			this.ParentId = default(long);
-			this.Name = null;
-			this.IsSystemBuiltIn = true;
-			this.UniqueIdentifier = new Guid();
-			this.CreatedDateTime = DateTime.Now;
-			this.CharColumn = null;
-			this.VarcharColumn = null;
-			this.TextColumn = null;
-			this.NcharColumn = null;
-			this.NvarcharColumn = null;
-			this.NtextColumn = null;
-			this.BitColumn = true;
-			this.BinaryColumn = null;
-			this.VarbinaryColumn = null;
-			this.ImageColumn = null;
-			this.TinyintColumn = default(byte);
-			this.SmallintColumn = default(short);
-			this.IntColumn = default(int);
-			this.BigintColumn = default(long);
-			this.DecimalColumn = default(decimal);
-			this.NumericColumn = default(decimal);
-			this.SmallmoneyColumn = default(decimal);
-			this.MoneyColumn = default(decimal);
-			this.FloatColumn = default(System.Single);
-			this.RealColumn = default(System.Single);
-			this.DatetimeColumn = DateTime.Now;
-			this.Datetime2Column = DateTime.Now;
-			this.SmalldatetimeColumn = DateTime.Now;
-			this.DateColumn = DateTime.Now;
-			this.TimeColumn = default(TimeSpan);
-			this.UniqueidentifierColumn = new Guid();
-		}
+        public Organization()
+        {
+            this.Id = default(long);
+            this.ParentId = default(long);
+            this.Name = null;
+            this.IsSystemBuiltIn = true;
+            this.UniqueIdentifier = new Guid();
+            this.CreatedDateTime = DateTime.Now;
+            this.CharColumn = null;
+            this.VarcharColumn = null;
+            this.TextColumn = null;
+            this.NcharColumn = null;
+            this.NvarcharColumn = null;
+            this.NtextColumn = null;
+            this.BitColumn = true;
+            this.BinaryColumn = null;
+            this.VarbinaryColumn = null;
+            this.ImageColumn = null;
+            this.TinyintColumn = default(byte);
+            this.SmallintColumn = default(short);
+            this.IntColumn = default(int);
+            this.BigintColumn = default(long);
+            this.DecimalColumn = default(decimal);
+            this.NumericColumn = default(decimal);
+            this.SmallmoneyColumn = default(decimal);
+            this.MoneyColumn = default(decimal);
+            this.FloatColumn = default(System.Single);
+            this.RealColumn = default(System.Single);
+            this.DatetimeColumn = DateTime.Now;
+            this.Datetime2Column = DateTime.Now;
+            this.SmalldatetimeColumn = DateTime.Now;
+            this.DateColumn = DateTime.Now;
+            this.TimeColumn = default(TimeSpan);
+            this.UniqueidentifierColumn = new Guid();
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref=" Organization"/> class with .Net value type parameters.
@@ -168,74 +157,74 @@ namespace MSBuildExtensionPack.DataSourceEntities
         /// <param name="dateColumn">property value of DateColumn</param>
         /// <param name="timeColumn">property value of TimeColumn</param>
         /// <param name="uniqueidentifierColumn">property value of UniqueidentifierColumn</param>
-		public Organization(
-			System.Int64 id
-			,System.Int64 parentId
-			,System.String name
-			,System.Boolean isSystemBuiltIn
-			,System.Guid uniqueIdentifier
-			,System.DateTime createdDateTime
-			,System.String charColumn
-			,System.String varcharColumn
-			,System.String textColumn
-			,System.String ncharColumn
-			,System.String nvarcharColumn
-			,System.String ntextColumn
-			,System.Boolean bitColumn
-			,System.Byte[] binaryColumn
-			,System.Byte[] varbinaryColumn
-			,System.Byte[] imageColumn
-			,System.Byte tinyintColumn
-			,System.Int16 smallintColumn
-			,System.Int32 intColumn
-			,System.Int64 bigintColumn
-			,System.Decimal decimalColumn
-			,System.Decimal numericColumn
-			,System.Decimal smallmoneyColumn
-			,System.Decimal moneyColumn
-			,System.Single floatColumn
-			,System.Single realColumn
-			,System.DateTime datetimeColumn
-			,System.DateTime datetime2Column
-			,System.DateTime smalldatetimeColumn
-			,System.DateTime dateColumn
-			,System.TimeSpan timeColumn
-			,System.Guid uniqueidentifierColumn
-			)
-		{
-			this.m_Id = id;
-			this.m_ParentId = parentId;
-			this.m_Name = name;
-			this.m_IsSystemBuiltIn = isSystemBuiltIn;
-			this.m_UniqueIdentifier = uniqueIdentifier;
-			this.m_CreatedDateTime = createdDateTime;
-			this.m_CharColumn = charColumn;
-			this.m_VarcharColumn = varcharColumn;
-			this.m_TextColumn = textColumn;
-			this.m_NcharColumn = ncharColumn;
-			this.m_NvarcharColumn = nvarcharColumn;
-			this.m_NtextColumn = ntextColumn;
-			this.m_BitColumn = bitColumn;
-			this.m_BinaryColumn = binaryColumn;
-			this.m_VarbinaryColumn = varbinaryColumn;
-			this.m_ImageColumn = imageColumn;
-			this.m_TinyintColumn = tinyintColumn;
-			this.m_SmallintColumn = smallintColumn;
-			this.m_IntColumn = intColumn;
-			this.m_BigintColumn = bigintColumn;
-			this.m_DecimalColumn = decimalColumn;
-			this.m_NumericColumn = numericColumn;
-			this.m_SmallmoneyColumn = smallmoneyColumn;
-			this.m_MoneyColumn = moneyColumn;
-			this.m_FloatColumn = floatColumn;
-			this.m_RealColumn = realColumn;
-			this.m_DatetimeColumn = datetimeColumn;
-			this.m_Datetime2Column = datetime2Column;
-			this.m_SmalldatetimeColumn = smalldatetimeColumn;
-			this.m_DateColumn = dateColumn;
-			this.m_TimeColumn = timeColumn;
-			this.m_UniqueidentifierColumn = uniqueidentifierColumn;
-		}
+        public Organization(
+            System.Int64 id
+            ,System.Int64 parentId
+            ,System.String name
+            ,System.Boolean isSystemBuiltIn
+            ,System.Guid uniqueIdentifier
+            ,System.DateTime createdDateTime
+            ,System.String charColumn
+            ,System.String varcharColumn
+            ,System.String textColumn
+            ,System.String ncharColumn
+            ,System.String nvarcharColumn
+            ,System.String ntextColumn
+            ,System.Boolean bitColumn
+            ,System.Byte[] binaryColumn
+            ,System.Byte[] varbinaryColumn
+            ,System.Byte[] imageColumn
+            ,System.Byte tinyintColumn
+            ,System.Int16 smallintColumn
+            ,System.Int32 intColumn
+            ,System.Int64 bigintColumn
+            ,System.Decimal decimalColumn
+            ,System.Decimal numericColumn
+            ,System.Decimal smallmoneyColumn
+            ,System.Decimal moneyColumn
+            ,System.Single floatColumn
+            ,System.Single realColumn
+            ,System.DateTime datetimeColumn
+            ,System.DateTime datetime2Column
+            ,System.DateTime smalldatetimeColumn
+            ,System.DateTime dateColumn
+            ,System.TimeSpan timeColumn
+            ,System.Guid uniqueidentifierColumn
+            )
+        {
+            this.m_Id = id;
+            this.m_ParentId = parentId;
+            this.m_Name = name;
+            this.m_IsSystemBuiltIn = isSystemBuiltIn;
+            this.m_UniqueIdentifier = uniqueIdentifier;
+            this.m_CreatedDateTime = createdDateTime;
+            this.m_CharColumn = charColumn;
+            this.m_VarcharColumn = varcharColumn;
+            this.m_TextColumn = textColumn;
+            this.m_NcharColumn = ncharColumn;
+            this.m_NvarcharColumn = nvarcharColumn;
+            this.m_NtextColumn = ntextColumn;
+            this.m_BitColumn = bitColumn;
+            this.m_BinaryColumn = binaryColumn;
+            this.m_VarbinaryColumn = varbinaryColumn;
+            this.m_ImageColumn = imageColumn;
+            this.m_TinyintColumn = tinyintColumn;
+            this.m_SmallintColumn = smallintColumn;
+            this.m_IntColumn = intColumn;
+            this.m_BigintColumn = bigintColumn;
+            this.m_DecimalColumn = decimalColumn;
+            this.m_NumericColumn = numericColumn;
+            this.m_SmallmoneyColumn = smallmoneyColumn;
+            this.m_MoneyColumn = moneyColumn;
+            this.m_FloatColumn = floatColumn;
+            this.m_RealColumn = realColumn;
+            this.m_DatetimeColumn = datetimeColumn;
+            this.m_Datetime2Column = datetime2Column;
+            this.m_SmalldatetimeColumn = smalldatetimeColumn;
+            this.m_DateColumn = dateColumn;
+            this.m_TimeColumn = timeColumn;
+            this.m_UniqueidentifierColumn = uniqueidentifierColumn;
+        }
 
         /// <summary>
         /// Initializes/clone a new instance of the <see cref=" Organization"/> class.
@@ -246,19 +235,13 @@ namespace MSBuildExtensionPack.DataSourceEntities
             MSBuildExtensionPack.EntityContracts.IOrganizationHelper.Copy<MSBuildExtensionPack.EntityContracts.IOrganization, Organization>(item, this);
         }
 
+        #endregion constructors
 
-		#endregion constructors
+        #region properties
 
-		#region properties
-
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Id_is_required")]
-#endif
-        public System.Int64 Id
+                [DataMember]
+        [Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Id_is_required")]        public System.Int64 Id
         {
             get
             {
@@ -271,14 +254,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "ParentId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="ParentId_is_required")]
-#endif
-        public System.Int64 ParentId
+                [DataMember]
+        [Display(Name = "ParentId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="ParentId_is_required")]        public System.Int64 ParentId
         {
             get
             {
@@ -291,15 +269,10 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Name_is_required")]
-		[StringLengthAttribute(50, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_50")]
-#endif
-        public System.String Name
+                [DataMember]
+        [Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Name_is_required")]
+        [StringLengthAttribute(50, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_50")]        public System.String Name
         {
             get
             {
@@ -312,14 +285,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "IsSystemBuiltIn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="IsSystemBuiltIn_is_required")]
-#endif
-        public System.Boolean IsSystemBuiltIn
+                [DataMember]
+        [Display(Name = "IsSystemBuiltIn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="IsSystemBuiltIn_is_required")]        public System.Boolean IsSystemBuiltIn
         {
             get
             {
@@ -332,14 +300,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="UniqueIdentifier_is_required")]
-#endif
-        public System.Guid UniqueIdentifier
+                [DataMember]
+        [Display(Name = "UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="UniqueIdentifier_is_required")]        public System.Guid UniqueIdentifier
         {
             get
             {
@@ -352,14 +315,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "CreatedDateTime", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="CreatedDateTime_is_required")]
-#endif
-        public System.DateTime CreatedDateTime
+                [DataMember]
+        [Display(Name = "CreatedDateTime", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="CreatedDateTime_is_required")]        public System.DateTime CreatedDateTime
         {
             get
             {
@@ -372,15 +330,10 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "CharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="CharColumn_is_required")]
-		[StringLengthAttribute(10, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_CharColumn_should_be_0_to_10")]
-#endif
-        public System.String CharColumn
+                [DataMember]
+        [Display(Name = "CharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="CharColumn_is_required")]
+        [StringLengthAttribute(10, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_CharColumn_should_be_0_to_10")]        public System.String CharColumn
         {
             get
             {
@@ -393,14 +346,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "VarcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="VarcharColumn_is_required")]
-#endif
-        public System.String VarcharColumn
+                [DataMember]
+        [Display(Name = "VarcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="VarcharColumn_is_required")]        public System.String VarcharColumn
         {
             get
             {
@@ -413,14 +361,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "TextColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="TextColumn_is_required")]
-#endif
-        public System.String TextColumn
+                [DataMember]
+        [Display(Name = "TextColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="TextColumn_is_required")]        public System.String TextColumn
         {
             get
             {
@@ -433,15 +376,10 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "NcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NcharColumn_is_required")]
-		[StringLengthAttribute(1, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_NcharColumn_should_be_0_to_1")]
-#endif
-        public System.String NcharColumn
+                [DataMember]
+        [Display(Name = "NcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NcharColumn_is_required")]
+        [StringLengthAttribute(1, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_NcharColumn_should_be_0_to_1")]        public System.String NcharColumn
         {
             get
             {
@@ -454,14 +392,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "NvarcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NvarcharColumn_is_required")]
-#endif
-        public System.String NvarcharColumn
+                [DataMember]
+        [Display(Name = "NvarcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NvarcharColumn_is_required")]        public System.String NvarcharColumn
         {
             get
             {
@@ -474,14 +407,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "NtextColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NtextColumn_is_required")]
-#endif
-        public System.String NtextColumn
+                [DataMember]
+        [Display(Name = "NtextColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NtextColumn_is_required")]        public System.String NtextColumn
         {
             get
             {
@@ -494,14 +422,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "BitColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="BitColumn_is_required")]
-#endif
-        public System.Boolean BitColumn
+                [DataMember]
+        [Display(Name = "BitColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="BitColumn_is_required")]        public System.Boolean BitColumn
         {
             get
             {
@@ -514,13 +437,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "BinaryColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Byte[] BinaryColumn
+                [DataMember]
+        [Display(Name = "BinaryColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Byte[] BinaryColumn
         {
             get
             {
@@ -533,13 +451,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "VarbinaryColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Byte[] VarbinaryColumn
+                [DataMember]
+        [Display(Name = "VarbinaryColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Byte[] VarbinaryColumn
         {
             get
             {
@@ -552,13 +465,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "ImageColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Byte[] ImageColumn
+                [DataMember]
+        [Display(Name = "ImageColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Byte[] ImageColumn
         {
             get
             {
@@ -571,14 +479,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "TinyintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="TinyintColumn_is_required")]
-#endif
-        public System.Byte TinyintColumn
+                [DataMember]
+        [Display(Name = "TinyintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="TinyintColumn_is_required")]        public System.Byte TinyintColumn
         {
             get
             {
@@ -591,14 +494,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "SmallintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="SmallintColumn_is_required")]
-#endif
-        public System.Int16 SmallintColumn
+                [DataMember]
+        [Display(Name = "SmallintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="SmallintColumn_is_required")]        public System.Int16 SmallintColumn
         {
             get
             {
@@ -611,14 +509,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "IntColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="IntColumn_is_required")]
-#endif
-        public System.Int32 IntColumn
+                [DataMember]
+        [Display(Name = "IntColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="IntColumn_is_required")]        public System.Int32 IntColumn
         {
             get
             {
@@ -631,14 +524,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "BigintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="BigintColumn_is_required")]
-#endif
-        public System.Int64 BigintColumn
+                [DataMember]
+        [Display(Name = "BigintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="BigintColumn_is_required")]        public System.Int64 BigintColumn
         {
             get
             {
@@ -651,14 +539,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "DecimalColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="DecimalColumn_is_required")]
-#endif
-        public System.Decimal DecimalColumn
+                [DataMember]
+        [Display(Name = "DecimalColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="DecimalColumn_is_required")]        public System.Decimal DecimalColumn
         {
             get
             {
@@ -671,14 +554,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "NumericColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NumericColumn_is_required")]
-#endif
-        public System.Decimal NumericColumn
+                [DataMember]
+        [Display(Name = "NumericColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NumericColumn_is_required")]        public System.Decimal NumericColumn
         {
             get
             {
@@ -691,14 +569,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "SmallmoneyColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="SmallmoneyColumn_is_required")]
-#endif
-        public System.Decimal SmallmoneyColumn
+                [DataMember]
+        [Display(Name = "SmallmoneyColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="SmallmoneyColumn_is_required")]        public System.Decimal SmallmoneyColumn
         {
             get
             {
@@ -711,14 +584,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "MoneyColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="MoneyColumn_is_required")]
-#endif
-        public System.Decimal MoneyColumn
+                [DataMember]
+        [Display(Name = "MoneyColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="MoneyColumn_is_required")]        public System.Decimal MoneyColumn
         {
             get
             {
@@ -731,14 +599,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "FloatColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="FloatColumn_is_required")]
-#endif
-        public System.Single FloatColumn
+                [DataMember]
+        [Display(Name = "FloatColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="FloatColumn_is_required")]        public System.Single FloatColumn
         {
             get
             {
@@ -751,14 +614,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "RealColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="RealColumn_is_required")]
-#endif
-        public System.Single RealColumn
+                [DataMember]
+        [Display(Name = "RealColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="RealColumn_is_required")]        public System.Single RealColumn
         {
             get
             {
@@ -771,14 +629,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "DatetimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="DatetimeColumn_is_required")]
-#endif
-        public System.DateTime DatetimeColumn
+                [DataMember]
+        [Display(Name = "DatetimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="DatetimeColumn_is_required")]        public System.DateTime DatetimeColumn
         {
             get
             {
@@ -791,14 +644,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "Datetime2Column", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Datetime2Column_is_required")]
-#endif
-        public System.DateTime Datetime2Column
+                [DataMember]
+        [Display(Name = "Datetime2Column", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Datetime2Column_is_required")]        public System.DateTime Datetime2Column
         {
             get
             {
@@ -811,14 +659,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "SmalldatetimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="SmalldatetimeColumn_is_required")]
-#endif
-        public System.DateTime SmalldatetimeColumn
+                [DataMember]
+        [Display(Name = "SmalldatetimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="SmalldatetimeColumn_is_required")]        public System.DateTime SmalldatetimeColumn
         {
             get
             {
@@ -831,14 +674,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "DateColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="DateColumn_is_required")]
-#endif
-        public System.DateTime DateColumn
+                [DataMember]
+        [Display(Name = "DateColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="DateColumn_is_required")]        public System.DateTime DateColumn
         {
             get
             {
@@ -851,14 +689,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "TimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="TimeColumn_is_required")]
-#endif
-        public System.TimeSpan TimeColumn
+                [DataMember]
+        [Display(Name = "TimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="TimeColumn_is_required")]        public System.TimeSpan TimeColumn
         {
             get
             {
@@ -871,14 +704,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-				[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="UniqueidentifierColumn_is_required")]
-#endif
-        public System.Guid UniqueidentifierColumn
+                [DataMember]
+        [Display(Name = "UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="UniqueidentifierColumn_is_required")]        public System.Guid UniqueidentifierColumn
         {
             get
             {
@@ -891,8 +719,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-
-		#endregion properties
+        #endregion properties
 
         #region override methods
 
@@ -928,7 +755,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         /// Returns a hash code for this instance.
         /// </summary>
         /// <returns>
-        /// A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+        /// A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         /// </returns>
         public override int GetHashCode()
         {
@@ -937,7 +764,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         #endregion override methods
 
-		#region Method of Organization GetAClone()
+        #region Method of Organization GetAClone()
 
         /// <summary>
         /// Gets the A clone.
@@ -948,25 +775,24 @@ namespace MSBuildExtensionPack.DataSourceEntities
             return MSBuildExtensionPack.EntityContracts.IOrganizationHelper.Clone<Organization, Organization>(this);
         }
 
-		public Organization GetACloneWithoutIdentifier()
+        public Organization GetACloneWithoutIdentifier()
         {
-			var cloned = GetAClone();
+            var cloned = GetAClone();
 
             return cloned;
-		}
+        }
 
-		#endregion Method of Organization GetAClone()
+        #endregion Method of Organization GetAClone()
 
-		#region Nested Views classes and their collection classes 4
-
+        #region Nested Views classes and their collection classes 4
 
         /// <summary>
-        /// View "Default" class of <see cref="Organization"/>, used across the solution. 
+        /// View "Default" class of <see cref="Organization"/>, used across the solution.
         /// </summary>
-		public partial class Default :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IOrganization, Framework.EntityContracts.IClone<Default>
-		{
+        public partial class Default :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IOrganization, Framework.EntityContracts.IClone<Default>
+        {
 
-			#region Storage Fields
+            #region Storage Fields
 
         System.Guid m_Organization_2_UniqueidentifierColumn;
 
@@ -1038,75 +864,68 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         System.Guid m_UniqueidentifierColumn;
 
+            #endregion Storage Fields
 
-			#endregion Storage Fields
+            #region Constructors
 
-			#region Constructors
+            /// <summary>
+            /// Initializes/clone a new instance of the <see cref=" Organization"/> class.
+            /// </summary>
+            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IOrganization"/></param>
+            public Default()
+            {
+                this.Organization_2_UniqueidentifierColumn = new Guid();
+                this.Organization_2_UniqueIdentifier = new Guid();
+                this.Organization_2_Name = null;
+                this.Id = default(long);
+                this.ParentId = default(long);
+                this.Name = null;
+                this.IsSystemBuiltIn = true;
+                this.UniqueIdentifier = new Guid();
+                this.CreatedDateTime = DateTime.Now;
+                this.CharColumn = null;
+                this.VarcharColumn = null;
+                this.TextColumn = null;
+                this.NcharColumn = null;
+                this.NvarcharColumn = null;
+                this.NtextColumn = null;
+                this.BitColumn = true;
+                this.BinaryColumn = null;
+                this.VarbinaryColumn = null;
+                this.ImageColumn = null;
+                this.TinyintColumn = default(byte);
+                this.SmallintColumn = default(short);
+                this.IntColumn = default(int);
+                this.BigintColumn = default(long);
+                this.DecimalColumn = default(decimal);
+                this.NumericColumn = default(decimal);
+                this.SmallmoneyColumn = default(decimal);
+                this.MoneyColumn = default(decimal);
+                this.FloatColumn = default(System.Single);
+                this.RealColumn = default(System.Single);
+                this.DatetimeColumn = DateTime.Now;
+                this.Datetime2Column = DateTime.Now;
+                this.SmalldatetimeColumn = DateTime.Now;
+                this.DateColumn = DateTime.Now;
+                this.TimeColumn = default(TimeSpan);
+                this.UniqueidentifierColumn = new Guid();
+            }
+            /*
+            /// <summary>
+            /// Initializes/clone a new instance of the <see cref=" Organization"/> class.
+            /// </summary>
+            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IOrganization"/></param>
+            public Default(MSBuildExtensionPack.EntityContracts.IOrganization item)
+            {
+                MSBuildExtensionPack.EntityContracts.IOrganizationHelper.Copy<MSBuildExtensionPack.EntityContracts.IOrganization, Default>(item, this);
+            }
+            */
+            #endregion Constructors
 
-			/// <summary>
-			/// Initializes/clone a new instance of the <see cref=" Organization"/> class.
-			/// </summary>
-			/// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IOrganization"/></param>
-			public Default()
-			{
-				this.Organization_2_UniqueidentifierColumn = new Guid();
-				this.Organization_2_UniqueIdentifier = new Guid();
-				this.Organization_2_Name = null;
-				this.Id = default(long);
-				this.ParentId = default(long);
-				this.Name = null;
-				this.IsSystemBuiltIn = true;
-				this.UniqueIdentifier = new Guid();
-				this.CreatedDateTime = DateTime.Now;
-				this.CharColumn = null;
-				this.VarcharColumn = null;
-				this.TextColumn = null;
-				this.NcharColumn = null;
-				this.NvarcharColumn = null;
-				this.NtextColumn = null;
-				this.BitColumn = true;
-				this.BinaryColumn = null;
-				this.VarbinaryColumn = null;
-				this.ImageColumn = null;
-				this.TinyintColumn = default(byte);
-				this.SmallintColumn = default(short);
-				this.IntColumn = default(int);
-				this.BigintColumn = default(long);
-				this.DecimalColumn = default(decimal);
-				this.NumericColumn = default(decimal);
-				this.SmallmoneyColumn = default(decimal);
-				this.MoneyColumn = default(decimal);
-				this.FloatColumn = default(System.Single);
-				this.RealColumn = default(System.Single);
-				this.DatetimeColumn = DateTime.Now;
-				this.Datetime2Column = DateTime.Now;
-				this.SmalldatetimeColumn = DateTime.Now;
-				this.DateColumn = DateTime.Now;
-				this.TimeColumn = default(TimeSpan);
-				this.UniqueidentifierColumn = new Guid();
-			}
-			/*
-			/// <summary>
-			/// Initializes/clone a new instance of the <see cref=" Organization"/> class.
-			/// </summary>
-			/// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IOrganization"/></param>
-			public Default(MSBuildExtensionPack.EntityContracts.IOrganization item)
-			{
-				MSBuildExtensionPack.EntityContracts.IOrganizationHelper.Copy<MSBuildExtensionPack.EntityContracts.IOrganization, Default>(item, this);
-			}
-			*/
-			#endregion Constructors
+            #region properties
 
-
-			#region properties
-
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "Organization_2_UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Guid Organization_2_UniqueidentifierColumn
+                    [DataMember]
+        [Display(Name = "Organization_2_UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Guid Organization_2_UniqueidentifierColumn
         {
             get
             {
@@ -1119,13 +938,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "Organization_2_UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Guid Organization_2_UniqueIdentifier
+                    [DataMember]
+        [Display(Name = "Organization_2_UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Guid Organization_2_UniqueIdentifier
         {
             get
             {
@@ -1138,13 +952,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "Organization_2_Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.String Organization_2_Name
+                    [DataMember]
+        [Display(Name = "Organization_2_Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.String Organization_2_Name
         {
             get
             {
@@ -1157,14 +966,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Id_is_required")]
-#endif
-        public System.Int64 Id
+                    [DataMember]
+        [Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Id_is_required")]        public System.Int64 Id
         {
             get
             {
@@ -1177,13 +981,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "ParentId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Int64 ParentId
+                    [DataMember]
+        [Display(Name = "ParentId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Int64 ParentId
         {
             get
             {
@@ -1196,15 +995,10 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Name_is_required")]
-		[StringLengthAttribute(50, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_50")]
-#endif
-        public System.String Name
+                    [DataMember]
+        [Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Name_is_required")]
+        [StringLengthAttribute(50, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_50")]        public System.String Name
         {
             get
             {
@@ -1217,14 +1011,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "IsSystemBuiltIn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="IsSystemBuiltIn_is_required")]
-#endif
-        public System.Boolean IsSystemBuiltIn
+                    [DataMember]
+        [Display(Name = "IsSystemBuiltIn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="IsSystemBuiltIn_is_required")]        public System.Boolean IsSystemBuiltIn
         {
             get
             {
@@ -1237,14 +1026,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="UniqueIdentifier_is_required")]
-#endif
-        public System.Guid UniqueIdentifier
+                    [DataMember]
+        [Display(Name = "UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="UniqueIdentifier_is_required")]        public System.Guid UniqueIdentifier
         {
             get
             {
@@ -1257,14 +1041,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "CreatedDateTime", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="CreatedDateTime_is_required")]
-#endif
-        public System.DateTime CreatedDateTime
+                    [DataMember]
+        [Display(Name = "CreatedDateTime", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="CreatedDateTime_is_required")]        public System.DateTime CreatedDateTime
         {
             get
             {
@@ -1277,15 +1056,10 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "CharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="CharColumn_is_required")]
-		[StringLengthAttribute(10, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_CharColumn_should_be_0_to_10")]
-#endif
-        public System.String CharColumn
+                    [DataMember]
+        [Display(Name = "CharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="CharColumn_is_required")]
+        [StringLengthAttribute(10, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_CharColumn_should_be_0_to_10")]        public System.String CharColumn
         {
             get
             {
@@ -1298,14 +1072,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "VarcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="VarcharColumn_is_required")]
-#endif
-        public System.String VarcharColumn
+                    [DataMember]
+        [Display(Name = "VarcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="VarcharColumn_is_required")]        public System.String VarcharColumn
         {
             get
             {
@@ -1318,14 +1087,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "TextColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="TextColumn_is_required")]
-#endif
-        public System.String TextColumn
+                    [DataMember]
+        [Display(Name = "TextColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="TextColumn_is_required")]        public System.String TextColumn
         {
             get
             {
@@ -1338,15 +1102,10 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "NcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NcharColumn_is_required")]
-		[StringLengthAttribute(1, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_NcharColumn_should_be_0_to_1")]
-#endif
-        public System.String NcharColumn
+                    [DataMember]
+        [Display(Name = "NcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NcharColumn_is_required")]
+        [StringLengthAttribute(1, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_NcharColumn_should_be_0_to_1")]        public System.String NcharColumn
         {
             get
             {
@@ -1359,14 +1118,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "NvarcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NvarcharColumn_is_required")]
-#endif
-        public System.String NvarcharColumn
+                    [DataMember]
+        [Display(Name = "NvarcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NvarcharColumn_is_required")]        public System.String NvarcharColumn
         {
             get
             {
@@ -1379,14 +1133,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "NtextColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NtextColumn_is_required")]
-#endif
-        public System.String NtextColumn
+                    [DataMember]
+        [Display(Name = "NtextColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NtextColumn_is_required")]        public System.String NtextColumn
         {
             get
             {
@@ -1399,14 +1148,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "BitColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="BitColumn_is_required")]
-#endif
-        public System.Boolean BitColumn
+                    [DataMember]
+        [Display(Name = "BitColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="BitColumn_is_required")]        public System.Boolean BitColumn
         {
             get
             {
@@ -1419,13 +1163,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "BinaryColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Byte[] BinaryColumn
+                    [DataMember]
+        [Display(Name = "BinaryColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Byte[] BinaryColumn
         {
             get
             {
@@ -1438,13 +1177,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "VarbinaryColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Byte[] VarbinaryColumn
+                    [DataMember]
+        [Display(Name = "VarbinaryColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Byte[] VarbinaryColumn
         {
             get
             {
@@ -1457,13 +1191,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "ImageColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Byte[] ImageColumn
+                    [DataMember]
+        [Display(Name = "ImageColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Byte[] ImageColumn
         {
             get
             {
@@ -1476,14 +1205,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "TinyintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="TinyintColumn_is_required")]
-#endif
-        public System.Byte TinyintColumn
+                    [DataMember]
+        [Display(Name = "TinyintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="TinyintColumn_is_required")]        public System.Byte TinyintColumn
         {
             get
             {
@@ -1496,14 +1220,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "SmallintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="SmallintColumn_is_required")]
-#endif
-        public System.Int16 SmallintColumn
+                    [DataMember]
+        [Display(Name = "SmallintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="SmallintColumn_is_required")]        public System.Int16 SmallintColumn
         {
             get
             {
@@ -1516,14 +1235,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "IntColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="IntColumn_is_required")]
-#endif
-        public System.Int32 IntColumn
+                    [DataMember]
+        [Display(Name = "IntColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="IntColumn_is_required")]        public System.Int32 IntColumn
         {
             get
             {
@@ -1536,14 +1250,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "BigintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="BigintColumn_is_required")]
-#endif
-        public System.Int64 BigintColumn
+                    [DataMember]
+        [Display(Name = "BigintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="BigintColumn_is_required")]        public System.Int64 BigintColumn
         {
             get
             {
@@ -1556,14 +1265,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "DecimalColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="DecimalColumn_is_required")]
-#endif
-        public System.Decimal DecimalColumn
+                    [DataMember]
+        [Display(Name = "DecimalColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="DecimalColumn_is_required")]        public System.Decimal DecimalColumn
         {
             get
             {
@@ -1576,14 +1280,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "NumericColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NumericColumn_is_required")]
-#endif
-        public System.Decimal NumericColumn
+                    [DataMember]
+        [Display(Name = "NumericColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="NumericColumn_is_required")]        public System.Decimal NumericColumn
         {
             get
             {
@@ -1596,14 +1295,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "SmallmoneyColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="SmallmoneyColumn_is_required")]
-#endif
-        public System.Decimal SmallmoneyColumn
+                    [DataMember]
+        [Display(Name = "SmallmoneyColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="SmallmoneyColumn_is_required")]        public System.Decimal SmallmoneyColumn
         {
             get
             {
@@ -1616,14 +1310,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "MoneyColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="MoneyColumn_is_required")]
-#endif
-        public System.Decimal MoneyColumn
+                    [DataMember]
+        [Display(Name = "MoneyColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="MoneyColumn_is_required")]        public System.Decimal MoneyColumn
         {
             get
             {
@@ -1636,14 +1325,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "FloatColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="FloatColumn_is_required")]
-#endif
-        public System.Single FloatColumn
+                    [DataMember]
+        [Display(Name = "FloatColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="FloatColumn_is_required")]        public System.Single FloatColumn
         {
             get
             {
@@ -1656,14 +1340,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "RealColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="RealColumn_is_required")]
-#endif
-        public System.Single RealColumn
+                    [DataMember]
+        [Display(Name = "RealColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="RealColumn_is_required")]        public System.Single RealColumn
         {
             get
             {
@@ -1676,14 +1355,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "DatetimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="DatetimeColumn_is_required")]
-#endif
-        public System.DateTime DatetimeColumn
+                    [DataMember]
+        [Display(Name = "DatetimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="DatetimeColumn_is_required")]        public System.DateTime DatetimeColumn
         {
             get
             {
@@ -1696,14 +1370,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "Datetime2Column", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Datetime2Column_is_required")]
-#endif
-        public System.DateTime Datetime2Column
+                    [DataMember]
+        [Display(Name = "Datetime2Column", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Datetime2Column_is_required")]        public System.DateTime Datetime2Column
         {
             get
             {
@@ -1716,14 +1385,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "SmalldatetimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="SmalldatetimeColumn_is_required")]
-#endif
-        public System.DateTime SmalldatetimeColumn
+                    [DataMember]
+        [Display(Name = "SmalldatetimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="SmalldatetimeColumn_is_required")]        public System.DateTime SmalldatetimeColumn
         {
             get
             {
@@ -1736,14 +1400,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "DateColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="DateColumn_is_required")]
-#endif
-        public System.DateTime DateColumn
+                    [DataMember]
+        [Display(Name = "DateColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="DateColumn_is_required")]        public System.DateTime DateColumn
         {
             get
             {
@@ -1756,14 +1415,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "TimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="TimeColumn_is_required")]
-#endif
-        public System.TimeSpan TimeColumn
+                    [DataMember]
+        [Display(Name = "TimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="TimeColumn_is_required")]        public System.TimeSpan TimeColumn
         {
             get
             {
@@ -1776,14 +1430,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="UniqueidentifierColumn_is_required")]
-#endif
-        public System.Guid UniqueidentifierColumn
+                    [DataMember]
+        [Display(Name = "UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="UniqueidentifierColumn_is_required")]        public System.Guid UniqueidentifierColumn
         {
             get
             {
@@ -1796,8 +1445,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-
-			#endregion properties
+            #endregion properties
 
             #region Method of Organization.Default  GetAClone()
 
@@ -1809,41 +1457,41 @@ namespace MSBuildExtensionPack.DataSourceEntities
             {
                 Default cloned = new Default();
 
-			cloned.m_Organization_2_UniqueidentifierColumn = m_Organization_2_UniqueidentifierColumn;
-			cloned.m_Organization_2_UniqueIdentifier = m_Organization_2_UniqueIdentifier;
-			cloned.m_Organization_2_Name = m_Organization_2_Name;
-			cloned.m_Id = m_Id;
-			cloned.m_ParentId = m_ParentId;
-			cloned.m_Name = m_Name;
-			cloned.m_IsSystemBuiltIn = m_IsSystemBuiltIn;
-			cloned.m_UniqueIdentifier = m_UniqueIdentifier;
-			cloned.m_CreatedDateTime = m_CreatedDateTime;
-			cloned.m_CharColumn = m_CharColumn;
-			cloned.m_VarcharColumn = m_VarcharColumn;
-			cloned.m_TextColumn = m_TextColumn;
-			cloned.m_NcharColumn = m_NcharColumn;
-			cloned.m_NvarcharColumn = m_NvarcharColumn;
-			cloned.m_NtextColumn = m_NtextColumn;
-			cloned.m_BitColumn = m_BitColumn;
-			cloned.m_BinaryColumn = m_BinaryColumn;
-			cloned.m_VarbinaryColumn = m_VarbinaryColumn;
-			cloned.m_ImageColumn = m_ImageColumn;
-			cloned.m_TinyintColumn = m_TinyintColumn;
-			cloned.m_SmallintColumn = m_SmallintColumn;
-			cloned.m_IntColumn = m_IntColumn;
-			cloned.m_BigintColumn = m_BigintColumn;
-			cloned.m_DecimalColumn = m_DecimalColumn;
-			cloned.m_NumericColumn = m_NumericColumn;
-			cloned.m_SmallmoneyColumn = m_SmallmoneyColumn;
-			cloned.m_MoneyColumn = m_MoneyColumn;
-			cloned.m_FloatColumn = m_FloatColumn;
-			cloned.m_RealColumn = m_RealColumn;
-			cloned.m_DatetimeColumn = m_DatetimeColumn;
-			cloned.m_Datetime2Column = m_Datetime2Column;
-			cloned.m_SmalldatetimeColumn = m_SmalldatetimeColumn;
-			cloned.m_DateColumn = m_DateColumn;
-			cloned.m_TimeColumn = m_TimeColumn;
-			cloned.m_UniqueidentifierColumn = m_UniqueidentifierColumn;
+            cloned.m_Organization_2_UniqueidentifierColumn = m_Organization_2_UniqueidentifierColumn;
+            cloned.m_Organization_2_UniqueIdentifier = m_Organization_2_UniqueIdentifier;
+            cloned.m_Organization_2_Name = m_Organization_2_Name;
+            cloned.m_Id = m_Id;
+            cloned.m_ParentId = m_ParentId;
+            cloned.m_Name = m_Name;
+            cloned.m_IsSystemBuiltIn = m_IsSystemBuiltIn;
+            cloned.m_UniqueIdentifier = m_UniqueIdentifier;
+            cloned.m_CreatedDateTime = m_CreatedDateTime;
+            cloned.m_CharColumn = m_CharColumn;
+            cloned.m_VarcharColumn = m_VarcharColumn;
+            cloned.m_TextColumn = m_TextColumn;
+            cloned.m_NcharColumn = m_NcharColumn;
+            cloned.m_NvarcharColumn = m_NvarcharColumn;
+            cloned.m_NtextColumn = m_NtextColumn;
+            cloned.m_BitColumn = m_BitColumn;
+            cloned.m_BinaryColumn = m_BinaryColumn;
+            cloned.m_VarbinaryColumn = m_VarbinaryColumn;
+            cloned.m_ImageColumn = m_ImageColumn;
+            cloned.m_TinyintColumn = m_TinyintColumn;
+            cloned.m_SmallintColumn = m_SmallintColumn;
+            cloned.m_IntColumn = m_IntColumn;
+            cloned.m_BigintColumn = m_BigintColumn;
+            cloned.m_DecimalColumn = m_DecimalColumn;
+            cloned.m_NumericColumn = m_NumericColumn;
+            cloned.m_SmallmoneyColumn = m_SmallmoneyColumn;
+            cloned.m_MoneyColumn = m_MoneyColumn;
+            cloned.m_FloatColumn = m_FloatColumn;
+            cloned.m_RealColumn = m_RealColumn;
+            cloned.m_DatetimeColumn = m_DatetimeColumn;
+            cloned.m_Datetime2Column = m_Datetime2Column;
+            cloned.m_SmalldatetimeColumn = m_SmalldatetimeColumn;
+            cloned.m_DateColumn = m_DateColumn;
+            cloned.m_TimeColumn = m_TimeColumn;
+            cloned.m_UniqueidentifierColumn = m_UniqueidentifierColumn;
 
                 return cloned;
             }
@@ -1860,40 +1508,39 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
 
             #endregion Method of Organization.Default  GetAClone()
-		}
+        }
 
         /// <summary>
-        /// View "Default" class of <see cref="Organization"/>, used across the solution. 
+        /// View "Default" class of <see cref="Organization"/>, used across the solution.
         /// </summary>
-		public partial class DefaultCollection
-			:  List<Default>
-		{ 
-		}
+        public partial class DefaultCollection
+            :  List<Default>
+        {
+        }
 
         /// <summary>
         /// message definition of "Default", pass single entry, from database, to business logic layer. <see cref="Organization"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
         /// </summary>
-		public class DataAccessLayerMessageOfDefault
-			: Framework.DataSourceEntities.DataAccessLayerMessageBase<Default>
-		{
-		}
+        public class DataAccessLayerMessageOfDefault
+            : Framework.DataSourceEntities.DataAccessLayerMessageBase<Default>
+        {
+        }
 
         /// <summary>
         /// message definition of "Default", pass a collection of instances, from database, to business logic layer. <see cref="Organization"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
         /// </summary>
-		public class DataAccessLayerMessageOfDefaultCollection
-			: Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultCollection>
-		{
-		}
-
+        public class DataAccessLayerMessageOfDefaultCollection
+            : Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultCollection>
+        {
+        }
 
         /// <summary>
-        /// View "DefaultWithPath" class of <see cref="Organization"/>, used across the solution. 
+        /// View "DefaultWithPath" class of <see cref="Organization"/>, used across the solution.
         /// </summary>
-		public partial class DefaultWithPath :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IOrganization, Framework.EntityContracts.IClone<DefaultWithPath>
-		{
+        public partial class DefaultWithPath :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IOrganization, Framework.EntityContracts.IClone<DefaultWithPath>
+        {
 
-			#region Storage Fields
+            #region Storage Fields
 
         System.Int64 m_Id;
 
@@ -1961,73 +1608,66 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         System.Guid m_UniqueidentifierColumn;
 
+            #endregion Storage Fields
 
-			#endregion Storage Fields
+            #region Constructors
 
-			#region Constructors
+            /// <summary>
+            /// Initializes/clone a new instance of the <see cref=" Organization"/> class.
+            /// </summary>
+            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IOrganization"/></param>
+            public DefaultWithPath()
+            {
+                this.Id = default(long);
+                this.RecursivePath__ = null;
+                this.ParentId = default(long);
+                this.Name = null;
+                this.IsSystemBuiltIn = true;
+                this.UniqueIdentifier = new Guid();
+                this.CreatedDateTime = DateTime.Now;
+                this.CharColumn = null;
+                this.VarcharColumn = null;
+                this.TextColumn = null;
+                this.NcharColumn = null;
+                this.NvarcharColumn = null;
+                this.NtextColumn = null;
+                this.BitColumn = true;
+                this.BinaryColumn = null;
+                this.VarbinaryColumn = null;
+                this.ImageColumn = null;
+                this.TinyintColumn = default(byte);
+                this.SmallintColumn = default(short);
+                this.IntColumn = default(int);
+                this.BigintColumn = default(long);
+                this.DecimalColumn = default(decimal);
+                this.NumericColumn = default(decimal);
+                this.SmallmoneyColumn = default(decimal);
+                this.MoneyColumn = default(decimal);
+                this.FloatColumn = default(System.Single);
+                this.RealColumn = default(System.Single);
+                this.DatetimeColumn = DateTime.Now;
+                this.Datetime2Column = DateTime.Now;
+                this.SmalldatetimeColumn = DateTime.Now;
+                this.DateColumn = DateTime.Now;
+                this.TimeColumn = default(TimeSpan);
+                this.UniqueidentifierColumn = new Guid();
+            }
+            /*
+            /// <summary>
+            /// Initializes/clone a new instance of the <see cref=" Organization"/> class.
+            /// </summary>
+            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IOrganization"/></param>
+            public DefaultWithPath(MSBuildExtensionPack.EntityContracts.IOrganization item)
+            {
+                MSBuildExtensionPack.EntityContracts.IOrganizationHelper.Copy<MSBuildExtensionPack.EntityContracts.IOrganization, DefaultWithPath>(item, this);
+            }
+            */
+            #endregion Constructors
 
-			/// <summary>
-			/// Initializes/clone a new instance of the <see cref=" Organization"/> class.
-			/// </summary>
-			/// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IOrganization"/></param>
-			public DefaultWithPath()
-			{
-				this.Id = default(long);
-				this.RecursivePath__ = null;
-				this.ParentId = default(long);
-				this.Name = null;
-				this.IsSystemBuiltIn = true;
-				this.UniqueIdentifier = new Guid();
-				this.CreatedDateTime = DateTime.Now;
-				this.CharColumn = null;
-				this.VarcharColumn = null;
-				this.TextColumn = null;
-				this.NcharColumn = null;
-				this.NvarcharColumn = null;
-				this.NtextColumn = null;
-				this.BitColumn = true;
-				this.BinaryColumn = null;
-				this.VarbinaryColumn = null;
-				this.ImageColumn = null;
-				this.TinyintColumn = default(byte);
-				this.SmallintColumn = default(short);
-				this.IntColumn = default(int);
-				this.BigintColumn = default(long);
-				this.DecimalColumn = default(decimal);
-				this.NumericColumn = default(decimal);
-				this.SmallmoneyColumn = default(decimal);
-				this.MoneyColumn = default(decimal);
-				this.FloatColumn = default(System.Single);
-				this.RealColumn = default(System.Single);
-				this.DatetimeColumn = DateTime.Now;
-				this.Datetime2Column = DateTime.Now;
-				this.SmalldatetimeColumn = DateTime.Now;
-				this.DateColumn = DateTime.Now;
-				this.TimeColumn = default(TimeSpan);
-				this.UniqueidentifierColumn = new Guid();
-			}
-			/*
-			/// <summary>
-			/// Initializes/clone a new instance of the <see cref=" Organization"/> class.
-			/// </summary>
-			/// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IOrganization"/></param>
-			public DefaultWithPath(MSBuildExtensionPack.EntityContracts.IOrganization item)
-			{
-				MSBuildExtensionPack.EntityContracts.IOrganizationHelper.Copy<MSBuildExtensionPack.EntityContracts.IOrganization, DefaultWithPath>(item, this);
-			}
-			*/
-			#endregion Constructors
+            #region properties
 
-
-			#region properties
-
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Int64 Id
+                    [DataMember]
+        [Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Int64 Id
         {
             get
             {
@@ -2040,13 +1680,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "RecursivePath__", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.String RecursivePath__
+                    [DataMember]
+        [Display(Name = "RecursivePath__", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.String RecursivePath__
         {
             get
             {
@@ -2059,13 +1694,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "ParentId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Int64 ParentId
+                    [DataMember]
+        [Display(Name = "ParentId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Int64 ParentId
         {
             get
             {
@@ -2078,13 +1708,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.String Name
+                    [DataMember]
+        [Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.String Name
         {
             get
             {
@@ -2097,13 +1722,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "IsSystemBuiltIn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Boolean IsSystemBuiltIn
+                    [DataMember]
+        [Display(Name = "IsSystemBuiltIn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Boolean IsSystemBuiltIn
         {
             get
             {
@@ -2116,13 +1736,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Guid UniqueIdentifier
+                    [DataMember]
+        [Display(Name = "UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Guid UniqueIdentifier
         {
             get
             {
@@ -2135,13 +1750,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "CreatedDateTime", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.DateTime CreatedDateTime
+                    [DataMember]
+        [Display(Name = "CreatedDateTime", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.DateTime CreatedDateTime
         {
             get
             {
@@ -2154,13 +1764,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "CharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.String CharColumn
+                    [DataMember]
+        [Display(Name = "CharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.String CharColumn
         {
             get
             {
@@ -2173,13 +1778,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "VarcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.String VarcharColumn
+                    [DataMember]
+        [Display(Name = "VarcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.String VarcharColumn
         {
             get
             {
@@ -2192,13 +1792,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "TextColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.String TextColumn
+                    [DataMember]
+        [Display(Name = "TextColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.String TextColumn
         {
             get
             {
@@ -2211,13 +1806,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "NcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.String NcharColumn
+                    [DataMember]
+        [Display(Name = "NcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.String NcharColumn
         {
             get
             {
@@ -2230,13 +1820,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "NvarcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.String NvarcharColumn
+                    [DataMember]
+        [Display(Name = "NvarcharColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.String NvarcharColumn
         {
             get
             {
@@ -2249,13 +1834,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "NtextColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.String NtextColumn
+                    [DataMember]
+        [Display(Name = "NtextColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.String NtextColumn
         {
             get
             {
@@ -2268,13 +1848,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "BitColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Boolean BitColumn
+                    [DataMember]
+        [Display(Name = "BitColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Boolean BitColumn
         {
             get
             {
@@ -2287,13 +1862,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "BinaryColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Byte[] BinaryColumn
+                    [DataMember]
+        [Display(Name = "BinaryColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Byte[] BinaryColumn
         {
             get
             {
@@ -2306,13 +1876,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "VarbinaryColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Byte[] VarbinaryColumn
+                    [DataMember]
+        [Display(Name = "VarbinaryColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Byte[] VarbinaryColumn
         {
             get
             {
@@ -2325,13 +1890,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "ImageColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Byte[] ImageColumn
+                    [DataMember]
+        [Display(Name = "ImageColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Byte[] ImageColumn
         {
             get
             {
@@ -2344,13 +1904,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "TinyintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Byte TinyintColumn
+                    [DataMember]
+        [Display(Name = "TinyintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Byte TinyintColumn
         {
             get
             {
@@ -2363,13 +1918,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "SmallintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Int16 SmallintColumn
+                    [DataMember]
+        [Display(Name = "SmallintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Int16 SmallintColumn
         {
             get
             {
@@ -2382,13 +1932,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "IntColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Int32 IntColumn
+                    [DataMember]
+        [Display(Name = "IntColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Int32 IntColumn
         {
             get
             {
@@ -2401,13 +1946,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "BigintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Int64 BigintColumn
+                    [DataMember]
+        [Display(Name = "BigintColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Int64 BigintColumn
         {
             get
             {
@@ -2420,13 +1960,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "DecimalColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Decimal DecimalColumn
+                    [DataMember]
+        [Display(Name = "DecimalColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Decimal DecimalColumn
         {
             get
             {
@@ -2439,13 +1974,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "NumericColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Decimal NumericColumn
+                    [DataMember]
+        [Display(Name = "NumericColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Decimal NumericColumn
         {
             get
             {
@@ -2458,13 +1988,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "SmallmoneyColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Decimal SmallmoneyColumn
+                    [DataMember]
+        [Display(Name = "SmallmoneyColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Decimal SmallmoneyColumn
         {
             get
             {
@@ -2477,13 +2002,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "MoneyColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Decimal MoneyColumn
+                    [DataMember]
+        [Display(Name = "MoneyColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Decimal MoneyColumn
         {
             get
             {
@@ -2496,13 +2016,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "FloatColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Single FloatColumn
+                    [DataMember]
+        [Display(Name = "FloatColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Single FloatColumn
         {
             get
             {
@@ -2515,13 +2030,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "RealColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Single RealColumn
+                    [DataMember]
+        [Display(Name = "RealColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Single RealColumn
         {
             get
             {
@@ -2534,13 +2044,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "DatetimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.DateTime DatetimeColumn
+                    [DataMember]
+        [Display(Name = "DatetimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.DateTime DatetimeColumn
         {
             get
             {
@@ -2553,13 +2058,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "Datetime2Column", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.DateTime Datetime2Column
+                    [DataMember]
+        [Display(Name = "Datetime2Column", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.DateTime Datetime2Column
         {
             get
             {
@@ -2572,13 +2072,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "SmalldatetimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.DateTime SmalldatetimeColumn
+                    [DataMember]
+        [Display(Name = "SmalldatetimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.DateTime SmalldatetimeColumn
         {
             get
             {
@@ -2591,13 +2086,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "DateColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.DateTime DateColumn
+                    [DataMember]
+        [Display(Name = "DateColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.DateTime DateColumn
         {
             get
             {
@@ -2610,13 +2100,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "TimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.TimeSpan TimeColumn
+                    [DataMember]
+        [Display(Name = "TimeColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.TimeSpan TimeColumn
         {
             get
             {
@@ -2629,13 +2114,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Guid UniqueidentifierColumn
+                    [DataMember]
+        [Display(Name = "UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Guid UniqueidentifierColumn
         {
             get
             {
@@ -2648,8 +2128,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-
-			#endregion properties
+            #endregion properties
 
             #region Method of Organization.DefaultWithPath  GetAClone()
 
@@ -2661,39 +2140,39 @@ namespace MSBuildExtensionPack.DataSourceEntities
             {
                 DefaultWithPath cloned = new DefaultWithPath();
 
-			cloned.m_Id = m_Id;
-			cloned.m_RecursivePath__ = m_RecursivePath__;
-			cloned.m_ParentId = m_ParentId;
-			cloned.m_Name = m_Name;
-			cloned.m_IsSystemBuiltIn = m_IsSystemBuiltIn;
-			cloned.m_UniqueIdentifier = m_UniqueIdentifier;
-			cloned.m_CreatedDateTime = m_CreatedDateTime;
-			cloned.m_CharColumn = m_CharColumn;
-			cloned.m_VarcharColumn = m_VarcharColumn;
-			cloned.m_TextColumn = m_TextColumn;
-			cloned.m_NcharColumn = m_NcharColumn;
-			cloned.m_NvarcharColumn = m_NvarcharColumn;
-			cloned.m_NtextColumn = m_NtextColumn;
-			cloned.m_BitColumn = m_BitColumn;
-			cloned.m_BinaryColumn = m_BinaryColumn;
-			cloned.m_VarbinaryColumn = m_VarbinaryColumn;
-			cloned.m_ImageColumn = m_ImageColumn;
-			cloned.m_TinyintColumn = m_TinyintColumn;
-			cloned.m_SmallintColumn = m_SmallintColumn;
-			cloned.m_IntColumn = m_IntColumn;
-			cloned.m_BigintColumn = m_BigintColumn;
-			cloned.m_DecimalColumn = m_DecimalColumn;
-			cloned.m_NumericColumn = m_NumericColumn;
-			cloned.m_SmallmoneyColumn = m_SmallmoneyColumn;
-			cloned.m_MoneyColumn = m_MoneyColumn;
-			cloned.m_FloatColumn = m_FloatColumn;
-			cloned.m_RealColumn = m_RealColumn;
-			cloned.m_DatetimeColumn = m_DatetimeColumn;
-			cloned.m_Datetime2Column = m_Datetime2Column;
-			cloned.m_SmalldatetimeColumn = m_SmalldatetimeColumn;
-			cloned.m_DateColumn = m_DateColumn;
-			cloned.m_TimeColumn = m_TimeColumn;
-			cloned.m_UniqueidentifierColumn = m_UniqueidentifierColumn;
+            cloned.m_Id = m_Id;
+            cloned.m_RecursivePath__ = m_RecursivePath__;
+            cloned.m_ParentId = m_ParentId;
+            cloned.m_Name = m_Name;
+            cloned.m_IsSystemBuiltIn = m_IsSystemBuiltIn;
+            cloned.m_UniqueIdentifier = m_UniqueIdentifier;
+            cloned.m_CreatedDateTime = m_CreatedDateTime;
+            cloned.m_CharColumn = m_CharColumn;
+            cloned.m_VarcharColumn = m_VarcharColumn;
+            cloned.m_TextColumn = m_TextColumn;
+            cloned.m_NcharColumn = m_NcharColumn;
+            cloned.m_NvarcharColumn = m_NvarcharColumn;
+            cloned.m_NtextColumn = m_NtextColumn;
+            cloned.m_BitColumn = m_BitColumn;
+            cloned.m_BinaryColumn = m_BinaryColumn;
+            cloned.m_VarbinaryColumn = m_VarbinaryColumn;
+            cloned.m_ImageColumn = m_ImageColumn;
+            cloned.m_TinyintColumn = m_TinyintColumn;
+            cloned.m_SmallintColumn = m_SmallintColumn;
+            cloned.m_IntColumn = m_IntColumn;
+            cloned.m_BigintColumn = m_BigintColumn;
+            cloned.m_DecimalColumn = m_DecimalColumn;
+            cloned.m_NumericColumn = m_NumericColumn;
+            cloned.m_SmallmoneyColumn = m_SmallmoneyColumn;
+            cloned.m_MoneyColumn = m_MoneyColumn;
+            cloned.m_FloatColumn = m_FloatColumn;
+            cloned.m_RealColumn = m_RealColumn;
+            cloned.m_DatetimeColumn = m_DatetimeColumn;
+            cloned.m_Datetime2Column = m_Datetime2Column;
+            cloned.m_SmalldatetimeColumn = m_SmalldatetimeColumn;
+            cloned.m_DateColumn = m_DateColumn;
+            cloned.m_TimeColumn = m_TimeColumn;
+            cloned.m_UniqueidentifierColumn = m_UniqueidentifierColumn;
 
                 return cloned;
             }
@@ -2710,40 +2189,39 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
 
             #endregion Method of Organization.DefaultWithPath  GetAClone()
-		}
+        }
 
         /// <summary>
-        /// View "DefaultWithPath" class of <see cref="Organization"/>, used across the solution. 
+        /// View "DefaultWithPath" class of <see cref="Organization"/>, used across the solution.
         /// </summary>
-		public partial class DefaultWithPathCollection
-			:  List<DefaultWithPath>
-		{ 
-		}
+        public partial class DefaultWithPathCollection
+            :  List<DefaultWithPath>
+        {
+        }
 
         /// <summary>
         /// message definition of "DefaultWithPath", pass single entry, from database, to business logic layer. <see cref="Organization"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
         /// </summary>
-		public class DataAccessLayerMessageOfDefaultWithPath
-			: Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultWithPath>
-		{
-		}
+        public class DataAccessLayerMessageOfDefaultWithPath
+            : Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultWithPath>
+        {
+        }
 
         /// <summary>
         /// message definition of "DefaultWithPath", pass a collection of instances, from database, to business logic layer. <see cref="Organization"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
         /// </summary>
-		public class DataAccessLayerMessageOfDefaultWithPathCollection
-			: Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultWithPathCollection>
-		{
-		}
-
+        public class DataAccessLayerMessageOfDefaultWithPathCollection
+            : Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultWithPathCollection>
+        {
+        }
 
         /// <summary>
-        /// View "DefaultGroupedDataView" class of <see cref="Organization"/>, used across the solution. 
+        /// View "DefaultGroupedDataView" class of <see cref="Organization"/>, used across the solution.
         /// </summary>
-		public partial class DefaultGroupedDataView :Framework.PropertyChangedNotifier, Framework.EntityContracts.IClone<DefaultGroupedDataView>
-		{
+        public partial class DefaultGroupedDataView :Framework.PropertyChangedNotifier, Framework.EntityContracts.IClone<DefaultGroupedDataView>
+        {
 
-			#region Storage Fields
+            #region Storage Fields
 
         System.Int64 m_ParentId;
 
@@ -2751,44 +2229,37 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         System.String m_Name;
 
+            #endregion Storage Fields
 
-			#endregion Storage Fields
+            #region Constructors
 
-			#region Constructors
+            /// <summary>
+            /// Initializes/clone a new instance of the <see cref=" Organization"/> class.
+            /// </summary>
+            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IOrganization"/></param>
+            public DefaultGroupedDataView()
+            {
+                this.ParentId = default(long);
+                this.CountPerFK = default(long);
+                this.Name = null;
+            }
+            /*
+            /// <summary>
+            /// Initializes/clone a new instance of the <see cref=" Organization"/> class.
+            /// </summary>
+            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IOrganization"/></param>
+            public DefaultGroupedDataView(MSBuildExtensionPack.EntityContracts.IOrganization item)
+            {
+                MSBuildExtensionPack.EntityContracts.IOrganizationHelper.Copy<MSBuildExtensionPack.EntityContracts.IOrganization, DefaultGroupedDataView>(item, this);
+            }
+            */
+            #endregion Constructors
 
-			/// <summary>
-			/// Initializes/clone a new instance of the <see cref=" Organization"/> class.
-			/// </summary>
-			/// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IOrganization"/></param>
-			public DefaultGroupedDataView()
-			{
-				this.ParentId = default(long);
-				this.CountPerFK = default(long);
-				this.Name = null;
-			}
-			/*
-			/// <summary>
-			/// Initializes/clone a new instance of the <see cref=" Organization"/> class.
-			/// </summary>
-			/// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IOrganization"/></param>
-			public DefaultGroupedDataView(MSBuildExtensionPack.EntityContracts.IOrganization item)
-			{
-				MSBuildExtensionPack.EntityContracts.IOrganizationHelper.Copy<MSBuildExtensionPack.EntityContracts.IOrganization, DefaultGroupedDataView>(item, this);
-			}
-			*/
-			#endregion Constructors
+            #region properties
 
-
-			#region properties
-
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "ParentId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="ParentId_is_required")]
-#endif
-        public System.Int64 ParentId
+                    [DataMember]
+        [Display(Name = "ParentId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="ParentId_is_required")]        public System.Int64 ParentId
         {
             get
             {
@@ -2801,13 +2272,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "CountPerFK", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.Int64 CountPerFK
+                    [DataMember]
+        [Display(Name = "CountPerFK", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Int64 CountPerFK
         {
             get
             {
@@ -2820,13 +2286,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-#endif
-        public System.String Name
+                    [DataMember]
+        [Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.String Name
         {
             get
             {
@@ -2839,8 +2300,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-
-			#endregion properties
+            #endregion properties
 
             #region Method of Organization.DefaultGroupedDataView  GetAClone()
 
@@ -2852,9 +2312,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             {
                 DefaultGroupedDataView cloned = new DefaultGroupedDataView();
 
-			cloned.m_ParentId = m_ParentId;
-			cloned.m_CountPerFK = m_CountPerFK;
-			cloned.m_Name = m_Name;
+            cloned.m_ParentId = m_ParentId;
+            cloned.m_CountPerFK = m_CountPerFK;
+            cloned.m_Name = m_Name;
 
                 return cloned;
             }
@@ -2871,40 +2331,39 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
 
             #endregion Method of Organization.DefaultGroupedDataView  GetAClone()
-		}
+        }
 
         /// <summary>
-        /// View "DefaultGroupedDataView" class of <see cref="Organization"/>, used across the solution. 
+        /// View "DefaultGroupedDataView" class of <see cref="Organization"/>, used across the solution.
         /// </summary>
-		public partial class DefaultGroupedDataViewCollection
-			:  List<DefaultGroupedDataView>
-		{ 
-		}
+        public partial class DefaultGroupedDataViewCollection
+            :  List<DefaultGroupedDataView>
+        {
+        }
 
         /// <summary>
         /// message definition of "DefaultGroupedDataView", pass single entry, from database, to business logic layer. <see cref="Organization"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
         /// </summary>
-		public class DataAccessLayerMessageOfDefaultGroupedDataView
-			: Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultGroupedDataView>
-		{
-		}
+        public class DataAccessLayerMessageOfDefaultGroupedDataView
+            : Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultGroupedDataView>
+        {
+        }
 
         /// <summary>
         /// message definition of "DefaultGroupedDataView", pass a collection of instances, from database, to business logic layer. <see cref="Organization"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
         /// </summary>
-		public class DataAccessLayerMessageOfDefaultGroupedDataViewCollection
-			: Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultGroupedDataViewCollection>
-		{
-		}
-
+        public class DataAccessLayerMessageOfDefaultGroupedDataViewCollection
+            : Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultGroupedDataViewCollection>
+        {
+        }
 
         /// <summary>
-        /// View "KeyInformation" class of <see cref="Organization"/>, used across the solution. 
+        /// View "KeyInformation" class of <see cref="Organization"/>, used across the solution.
         /// </summary>
-		public partial class KeyInformation :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IOrganizationIdentifier, Framework.EntityContracts.IClone<KeyInformation>
-		{
+        public partial class KeyInformation :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IOrganizationIdentifier, Framework.EntityContracts.IClone<KeyInformation>
+        {
 
-			#region Storage Fields
+            #region Storage Fields
 
         System.Int64 m_Id;
 
@@ -2918,47 +2377,40 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         System.Guid m_UniqueidentifierColumn;
 
+            #endregion Storage Fields
 
-			#endregion Storage Fields
+            #region Constructors
 
-			#region Constructors
+            /// <summary>
+            /// Initializes/clone a new instance of the <see cref=" Organization"/> class.
+            /// </summary>
+            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IOrganization"/></param>
+            public KeyInformation()
+            {
+                this.Id = default(long);
+                this.Name = null;
+                this.IsSystemBuiltIn = true;
+                this.UniqueIdentifier = new Guid();
+                this.BitColumn = true;
+                this.UniqueidentifierColumn = new Guid();
+            }
+            /*
+            /// <summary>
+            /// Initializes/clone a new instance of the <see cref=" Organization"/> class.
+            /// </summary>
+            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IOrganization"/></param>
+            public KeyInformation(MSBuildExtensionPack.EntityContracts.IOrganization item)
+            {
+                MSBuildExtensionPack.EntityContracts.IOrganizationHelper.Copy<MSBuildExtensionPack.EntityContracts.IOrganization, KeyInformation>(item, this);
+            }
+            */
+            #endregion Constructors
 
-			/// <summary>
-			/// Initializes/clone a new instance of the <see cref=" Organization"/> class.
-			/// </summary>
-			/// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IOrganization"/></param>
-			public KeyInformation()
-			{
-				this.Id = default(long);
-				this.Name = null;
-				this.IsSystemBuiltIn = true;
-				this.UniqueIdentifier = new Guid();
-				this.BitColumn = true;
-				this.UniqueidentifierColumn = new Guid();
-			}
-			/*
-			/// <summary>
-			/// Initializes/clone a new instance of the <see cref=" Organization"/> class.
-			/// </summary>
-			/// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IOrganization"/></param>
-			public KeyInformation(MSBuildExtensionPack.EntityContracts.IOrganization item)
-			{
-				MSBuildExtensionPack.EntityContracts.IOrganizationHelper.Copy<MSBuildExtensionPack.EntityContracts.IOrganization, KeyInformation>(item, this);
-			}
-			*/
-			#endregion Constructors
+            #region properties
 
-
-			#region properties
-
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Id_is_required")]
-#endif
-        public System.Int64 Id
+                    [DataMember]
+        [Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Id_is_required")]        public System.Int64 Id
         {
             get
             {
@@ -2971,15 +2423,10 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Name_is_required")]
-		[StringLengthAttribute(50, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_50")]
-#endif
-        public System.String Name
+                    [DataMember]
+        [Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="Name_is_required")]
+        [StringLengthAttribute(50, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_50")]        public System.String Name
         {
             get
             {
@@ -2992,14 +2439,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "IsSystemBuiltIn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="IsSystemBuiltIn_is_required")]
-#endif
-        public System.Boolean IsSystemBuiltIn
+                    [DataMember]
+        [Display(Name = "IsSystemBuiltIn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="IsSystemBuiltIn_is_required")]        public System.Boolean IsSystemBuiltIn
         {
             get
             {
@@ -3012,14 +2454,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="UniqueIdentifier_is_required")]
-#endif
-        public System.Guid UniqueIdentifier
+                    [DataMember]
+        [Display(Name = "UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="UniqueIdentifier_is_required")]        public System.Guid UniqueIdentifier
         {
             get
             {
@@ -3032,14 +2469,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "BitColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="BitColumn_is_required")]
-#endif
-        public System.Boolean BitColumn
+                    [DataMember]
+        [Display(Name = "BitColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="BitColumn_is_required")]        public System.Boolean BitColumn
         {
             get
             {
@@ -3052,14 +2484,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-					[DataMember]
-#if (WINDOWS_PHONE || XAMARIN)
-
-#else
-		[Display(Name = "UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="UniqueidentifierColumn_is_required")]
-#endif
-        public System.Guid UniqueidentifierColumn
+                    [DataMember]
+        [Display(Name = "UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="UniqueidentifierColumn_is_required")]        public System.Guid UniqueidentifierColumn
         {
             get
             {
@@ -3072,8 +2499,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-
-			#endregion properties
+            #endregion properties
 
             #region Method of Organization.KeyInformation  GetAClone()
 
@@ -3085,12 +2511,12 @@ namespace MSBuildExtensionPack.DataSourceEntities
             {
                 KeyInformation cloned = new KeyInformation();
 
-			cloned.m_Id = m_Id;
-			cloned.m_Name = m_Name;
-			cloned.m_IsSystemBuiltIn = m_IsSystemBuiltIn;
-			cloned.m_UniqueIdentifier = m_UniqueIdentifier;
-			cloned.m_BitColumn = m_BitColumn;
-			cloned.m_UniqueidentifierColumn = m_UniqueidentifierColumn;
+            cloned.m_Id = m_Id;
+            cloned.m_Name = m_Name;
+            cloned.m_IsSystemBuiltIn = m_IsSystemBuiltIn;
+            cloned.m_UniqueIdentifier = m_UniqueIdentifier;
+            cloned.m_BitColumn = m_BitColumn;
+            cloned.m_UniqueidentifierColumn = m_UniqueidentifierColumn;
 
                 return cloned;
             }
@@ -3107,55 +2533,49 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
 
             #endregion Method of Organization.KeyInformation  GetAClone()
-		}
+        }
 
         /// <summary>
-        /// View "KeyInformation" class of <see cref="Organization"/>, used across the solution. 
+        /// View "KeyInformation" class of <see cref="Organization"/>, used across the solution.
         /// </summary>
-		public partial class KeyInformationCollection
-			:  List<KeyInformation>
-		{ 
-		}
+        public partial class KeyInformationCollection
+            :  List<KeyInformation>
+        {
+        }
 
         /// <summary>
         /// message definition of "KeyInformation", pass single entry, from database, to business logic layer. <see cref="Organization"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
         /// </summary>
-		public class DataAccessLayerMessageOfKeyInformation
-			: Framework.DataSourceEntities.DataAccessLayerMessageBase<KeyInformation>
-		{
-		}
+        public class DataAccessLayerMessageOfKeyInformation
+            : Framework.DataSourceEntities.DataAccessLayerMessageBase<KeyInformation>
+        {
+        }
 
         /// <summary>
         /// message definition of "KeyInformation", pass a collection of instances, from database, to business logic layer. <see cref="Organization"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
         /// </summary>
-		public class DataAccessLayerMessageOfKeyInformationCollection
-			: Framework.DataSourceEntities.DataAccessLayerMessageBase<KeyInformationCollection>
-		{
-		}
+        public class DataAccessLayerMessageOfKeyInformationCollection
+            : Framework.DataSourceEntities.DataAccessLayerMessageBase<KeyInformationCollection>
+        {
+        }
 
-
-
-
-		#endregion Nested Views classes and their collection classes 4
-
-	}
-
-
+        #endregion Nested Views classes and their collection classes 4
+    }
 
 /*
     /// <summary>
     /// a property defined when <see cref="Organization"/> is used in other classes.
     /// </summary>
-	public interface WithEntityContractOrganization
-	{ 
+    public interface WithEntityContractOrganization
+    {
         /// <summary>
         /// Gets or sets Organization.
         /// </summary>
         /// <value>
         /// The Organization
         /// </value>
-		Organization Organization { get; set; }
-	}
+        Organization Organization { get; set; }
+    }
 */
 
     /// <summary>

@@ -88,9 +88,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         #endregion ClearSearchResult
 
-        #region Implement abstract Search
-
-        protected override void Search()
+        protected override void DoSearch()
         {
             this.SearchStatus = Framework.EntityContracts.SearchStatus.Searching;
 
@@ -100,18 +98,13 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
             try
             {
-                if (this.QueryPagingSetting != null && this.QueryPagingSetting.CurrentPage == 0)
-                {
-                    this.QueryPagingSetting.CurrentPage = 1;
-                }
-
                 var vmData = new MSBuildExtensionPack.ViewModelData.WPCommonOfBuildLogVM();
                 vmData.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommonFlatten(this.Criteria);
                 vmData.QueryPagingSetting = this.QueryPagingSetting;
                 vmData.QueryOrderBySettingCollection = this.QueryOrderBySettingCollection;
 
                 var client = new MSBuildExtensionPack.WebApiClient.BuildLogApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-				var result = Task.Run(() => client.GetWPCommonOfBuildLogVMAsync(vmData)).Result;
+                var result = Task.Run(() => client.GetWPCommonOfBuildLogVMAsync(vmData)).Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
 
@@ -126,7 +119,10 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                         }
                         else
                         {
-                            this.m_EntityCollectionDefault.Clear();
+                            if (isToClearExistingResult)
+                            {
+                                this.m_EntityCollectionDefault.Clear();
+                            }
                         }
 
                         if (result.Result != null)
@@ -153,18 +149,14 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
         }
 
-        #endregion Implement abstract Search
-
         public override Framework.NameValueCollection GetDefaultListOfQueryOrderBySettingCollecionInString()
         {
             Framework.NameValueCollection list = new Framework.NameValueCollection();
             list.Add("Build_1_Name~ASC", "Build_1_Name A-Z");
-					list.Add("Build_1_Name~DESC", "Build_1_Name Z-A");
+                    list.Add("Build_1_Name~DESC", "Build_1_Name Z-A");
             return list;
         }
     }
 
-
 }
-
 

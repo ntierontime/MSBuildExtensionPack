@@ -10,7 +10,7 @@ using GalaSoft.MvvmLight.Threading;
 
 namespace MSBuildExtensionPack.AndroidApp
 {
-    [Activity(Label = "Xamarin", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "MSBuildExtensionPack.AndroidApp", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
@@ -21,7 +21,7 @@ namespace MSBuildExtensionPack.AndroidApp
             base.OnCreate(bundle);
 
             Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<Framework.Xaml.IDispatcherHelperWrapper, MSBuildExtensionPack.AndroidApp.DispatcherHelperWrapper>();
-            DispatcherHelper.Initialize();
+            //DispatcherHelper.Initialize();
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
 

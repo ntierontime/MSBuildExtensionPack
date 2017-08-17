@@ -5,7 +5,7 @@ using System.Collections.ObjectModel;
 namespace Framework
 {
     /// <summary>
-    /// The SampleTreeItem represents a node in the TreeView.  
+    /// The SampleTreeItem represents a node in the TreeView.
     /// </summary>
     //[ContentProperty("Items")]
     public class MenuTreeItem
@@ -20,32 +20,32 @@ namespace Framework
             MenuTreeItems = new Collection<MenuTreeItem>();
         }
 
-		public MenuTreeItem (
-			System.String treeItemName, 
-			System.String title, 
-			System.String subTitle, 
-			System.String description, 
-			System.String iconResourceName, 
-			System.String iconResourceUrl, 
-			System.String sourceTypeFullName, 
-			System.String senderView, 
-			Framework.UIAction uIAction, 
-			Framework.UIActionStatus uIActionStatus)
-			: this()
-		{
-			this.TreeItemName=treeItemName;
-			this.Title=title;
-			this.SubTitle=subTitle;
-			this.Description=description;
-			this.IconResourceName=iconResourceName;
-			this.IconResourceUrl=iconResourceUrl;
-			this.SourceTypeFullName=sourceTypeFullName;
-			this.SenderView=senderView;
-			this.UIAction=uIAction;
-			this.UIActionStatus=uIActionStatus;
-		}
-		
-		#endregion constructor
+        public MenuTreeItem (
+            System.String treeItemName,
+            System.String title,
+            System.String subTitle,
+            System.String description,
+            System.String iconResourceName,
+            System.String iconResourceUrl,
+            System.String sourceTypeFullName,
+            System.String senderView,
+            Framework.UIAction uIAction,
+            Framework.UIActionStatus uIActionStatus)
+            : this()
+        {
+            this.TreeItemName=treeItemName;
+            this.Title=title;
+            this.SubTitle=subTitle;
+            this.Description=description;
+            this.IconResourceName=iconResourceName;
+            this.IconResourceUrl=iconResourceUrl;
+            this.SourceTypeFullName=sourceTypeFullName;
+            this.SenderView=senderView;
+            this.UIAction=uIAction;
+            this.UIActionStatus=uIActionStatus;
+        }
+
+        #endregion constructor
 
         #region value type properties
 
@@ -53,7 +53,7 @@ namespace Framework
         /// Gets or sets the name of the TreeView node.
         /// </summary>
         public string TreeItemName { get; set; }
-		
+
         /// <summary>
         /// Gets or sets the name of the TreeView node.
         /// </summary>
@@ -70,13 +70,13 @@ namespace Framework
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or sets the resource name of the Icon representing this 
+        /// Gets or sets the resource name of the Icon representing this
         /// node.
         /// </summary>
         public string IconResourceName { get; set; }
 
         /// <summary>
-        /// Gets or sets the resource url of the Icon representing this 
+        /// Gets or sets the resource url of the Icon representing this
         /// node.
         /// </summary>
         public string IconResourceUrl { get; set; }
@@ -124,50 +124,50 @@ namespace Framework
 
         #endregion Items properties
 
-		#region override string ToString()
+        #region override string ToString()
 
         public override string ToString()
         {
             return string.Format("TreeItemName:{0};Title:{1};SubTitle:{2};Description:{3};IconResourceName:{4};IconResourceUrl:{5};SourceTypeFullName:{6};SenderView:{7};UIAction:{8};UIActionStatus:{9};", this.TreeItemName, this.Title, this.SubTitle, this.Description, this.IconResourceName, this.IconResourceUrl, this.SourceTypeFullName, this.SenderView, this.UIAction, this.UIActionStatus);
         }
 
-		#endregion override string ToString()
-		
-		#region AddSubMenuTreeItem(...)
+        #endregion override string ToString()
+
+        #region AddSubMenuTreeItem(...)
 
         public MenuTreeItem AddSubMenuTreeItem(
-			System.String treeItemName
-			, System.String title
-			, System.String subTitle
-			, System.String description
-			, System.String iconResourceName
-			, System.String iconResourceUrl
-			, System.String sourceTypeFullName
-			, System.String senderView
-			, Framework.UIAction uIAction
-			, Framework.UIActionStatus uIActionStatus
-			)
+            System.String treeItemName
+            , System.String title
+            , System.String subTitle
+            , System.String description
+            , System.String iconResourceName
+            , System.String iconResourceUrl
+            , System.String sourceTypeFullName
+            , System.String senderView
+            , Framework.UIAction uIAction
+            , Framework.UIActionStatus uIActionStatus
+            )
         {
             if (this.MenuTreeItems == null)
             {
                 this.MenuTreeItems = new Collection<MenuTreeItem>();
             }
             MenuTreeItem _Item = new MenuTreeItem(
-				treeItemName
+                treeItemName
                 , title
                 , subTitle
                 , description
-				, iconResourceName
-				, iconResourceUrl
-				, sourceTypeFullName
-				, senderView
-				, uIAction
-				, uIActionStatus
-				);
+                , iconResourceName
+                , iconResourceUrl
+                , sourceTypeFullName
+                , senderView
+                , uIAction
+                , uIActionStatus
+                );
             this.MenuTreeItems.Add(_Item);
-			return _Item;
+            return _Item;
         }
 
-		#endregion AddSubMenuTreeItem(...)
+        #endregion AddSubMenuTreeItem(...)
     }
 }

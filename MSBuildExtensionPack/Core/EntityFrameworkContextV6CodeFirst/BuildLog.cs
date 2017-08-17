@@ -6,8 +6,8 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-	[Table("dbo.BuildLog")]
-    public partial class BuildLog 
+    [Table("dbo.BuildLog")]
+    public partial class BuildLog
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public BuildLog ()
@@ -28,12 +28,9 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
 
         public System.DateTime EventTime { get; set; }
 
-
         public Build Build { get; set; }
 
         public BuildEventCode BuildEventCode { get; set; }
-
-
 
     }
 }

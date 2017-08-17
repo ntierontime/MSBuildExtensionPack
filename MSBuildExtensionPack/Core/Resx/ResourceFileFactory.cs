@@ -13,36 +13,30 @@ namespace MSBuildExtensionPack.Resx
             return new MSBuildExtensionPack.Resx.UIStringResourcePerApp();
         }
 
-
         public static MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild GetUIStringResourcePerEntityBuild()
         {
             return new MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild();
         }
-
 
         public static MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode GetUIStringResourcePerEntityBuildEventCode()
         {
             return new MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode();
         }
 
-
         public static MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog GetUIStringResourcePerEntityBuildLog()
         {
             return new MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog();
         }
-
 
         public static MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization GetUIStringResourcePerEntityOrganization()
         {
             return new MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization();
         }
 
-
         public static MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution GetUIStringResourcePerEntitySolution()
         {
             return new MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution();
         }
-
 
     }
 }

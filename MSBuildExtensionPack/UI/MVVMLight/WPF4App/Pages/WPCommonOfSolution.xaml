@@ -7,20 +7,20 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-		xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels"
+        xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels"
         mc:Ignorable="d"
-		DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM, Source={StaticResource Locator}}"
+        DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM, Source={StaticResource Locator}}"
         xmlns:my="clr-namespace:MSBuildExtensionPack.WPF4App.UserControls"
-		Title="Workspace of Common"
-		>
-	<Grid>
+        Title="Workspace of Common"
+        >
+    <Grid>
         <Grid.RowDefinitions>
-			<RowDefinition Height="Auto"  />
-			<RowDefinition Height="Auto"  />
-		</Grid.RowDefinitions>
+            <RowDefinition Height="Auto"  />
+            <RowDefinition Height="Auto"  />
+        </Grid.RowDefinitions>
         <ToolBarTray DockPanel.Dock="Top" Grid.Row="0" Style="{StaticResource ToolBarTrayStyle}">
 <ToolBar>
-                <Button     Name="Search" Command="{Binding SearchCommand}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.SearchAlternativeText, Source={StaticResource LocalizedStrings}}">
+                <Button Name="Search" Command="{Binding SearchCommand}" Width="45" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.SearchAlternativeText, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>
                         <Rectangle Width="20" Height="20" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}">
                             <Rectangle.OpacityMask>
@@ -30,7 +30,7 @@
                         <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.SearchAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
                     </StackPanel>
                 </Button>
-                <Button     Name="AddNew" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution.LaunchCreateViewCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.AddNewAlternativeText, Source={StaticResource LocalizedStrings}}">
+                <Button     Name="AddNew" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution.LaunchCreateViewCommand, Source={StaticResource Locator}}" Width="45" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.AddNewAlternativeText, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>
                         <Rectangle Width="20" Height="20" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}">
                             <Rectangle.OpacityMask>
@@ -90,5 +90,5 @@
             </ToolBar>
         </ToolBarTray>
 <my:UCCommonOfSolution x:Name="UCCommonOfSolution1" Grid.Row="1" HorizontalAlignment="Stretch" />
-	</Grid>
+    </Grid>
 </Page>

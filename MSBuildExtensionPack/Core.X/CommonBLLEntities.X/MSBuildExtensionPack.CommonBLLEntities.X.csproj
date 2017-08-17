@@ -37,7 +37,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <None Include="map.2.B.3.vsd" />
-    <Content Include="map.2.B.3.vsd.png" />
+    <None Include="map.2.B.3.vsd.png" />
     <Compile Include="..\..\Core\CommonBLLEntities\ChainedQueryCriteria\BuildChainedQueryCriteria.cs">
       <Link>ChainedQueryCriteria\BuildChainedQueryCriteria.cs</Link>
     </Compile>

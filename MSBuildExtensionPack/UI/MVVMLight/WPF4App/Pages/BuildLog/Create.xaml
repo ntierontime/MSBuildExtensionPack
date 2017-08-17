@@ -6,7 +6,7 @@
         xmlns:cmd="http://www.galasoft.ch/mvvmlight"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
-		xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels"
+        xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels"
         xmlns:BuildLog="clr-namespace:MSBuildExtensionPack.WPF4App.UserControls.BuildLog"
         Title="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.AddNew_BuildLog, Source={StaticResource LocalizedStrings}}"
         >

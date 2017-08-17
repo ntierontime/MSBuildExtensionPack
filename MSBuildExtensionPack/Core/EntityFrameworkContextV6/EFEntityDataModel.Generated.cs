@@ -12,10 +12,9 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
     using System;
     using System.Collections.Generic;
 
+    #region partial class Build
 
-	#region partial class Build
-
-    public partial class Build 
+    public partial class Build
     {
         public Build ()
         {
@@ -29,20 +28,16 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
         public System.String Description { get; set; }
         public System.DateTime BuildStartTime { get; set; }
 
-
         public Solution Solution { get; set; }
         public ICollection<BuildLog> BuildLogs { get; set; }
 
-
     }
-	
-	#endregion partial class Build
 
+    #endregion partial class Build
 
+    #region partial class BuildEventCode
 
-	#region partial class BuildEventCode
-
-    public partial class BuildEventCode 
+    public partial class BuildEventCode
     {
         public BuildEventCode ()
         {
@@ -54,19 +49,15 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
         public System.String EventCode { get; set; }
         public System.String Description { get; set; }
 
-
         public ICollection<BuildLog> BuildLogs { get; set; }
 
-
     }
-	
-	#endregion partial class BuildEventCode
 
+    #endregion partial class BuildEventCode
 
+    #region partial class BuildLog
 
-	#region partial class BuildLog
-
-    public partial class BuildLog 
+    public partial class BuildLog
     {
         public BuildLog ()
         {
@@ -79,20 +70,16 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
         public System.String Message { get; set; }
         public System.DateTime EventTime { get; set; }
 
-
         public Build Build { get; set; }
         public BuildEventCode BuildEventCode { get; set; }
 
-
     }
-	
-	#endregion partial class BuildLog
 
+    #endregion partial class BuildLog
 
+    #region partial class Organization
 
-	#region partial class Organization
-
-    public partial class Organization 
+    public partial class Organization
     {
         public Organization ()
         {
@@ -134,21 +121,17 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
         public System.TimeSpan TimeColumn { get; set; }
         public System.Guid UniqueidentifierColumn { get; set; }
 
-
         public Organization Parent { get; set; }
         public ICollection<Organization> Organization_ParentIds { get; set; }
         public ICollection<Solution> Solutions { get; set; }
 
-
     }
-	
-	#endregion partial class Organization
 
+    #endregion partial class Organization
 
+    #region partial class Solution
 
-	#region partial class Solution
-
-    public partial class Solution 
+    public partial class Solution
     {
         public Solution ()
         {
@@ -162,22 +145,16 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
         public System.String Description { get; set; }
         public System.Nullable<System.Int64> OrganizationId { get; set; }
 
-
         public Organization Organization { get; set; }
         public ICollection<Build> Builds { get; set; }
 
-
     }
-	
-	#endregion partial class Solution
 
+    #endregion partial class Solution
 
+    #region class RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization
 
-
-
-	#region class RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization
-
-	public partial class RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization
+    public partial class RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization
     {
         public System.Int64 Id { get; set; }
         public System.Int64 ParentId { get; set; }
@@ -212,11 +189,10 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
         public System.TimeSpan TimeColumn { get; set; }
         public System.Guid UniqueidentifierColumn { get; set; }
 
-		public string RecursivePath__ { get; set; }
-	}
+        public string RecursivePath__ { get; set; }
+    }
 
-	#endregion class RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization
-
+    #endregion class RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization
 
 }
 

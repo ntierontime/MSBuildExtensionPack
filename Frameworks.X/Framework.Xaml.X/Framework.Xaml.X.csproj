@@ -37,27 +37,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <None Include="map.1.D.1.vsd" />
-    <Content Include="map.1.D.1.vsd.png" />
-    <Compile Include="..\..\Frameworks\Framework.Xaml\TextBoxUpdateSourceBehaviour.cs">
-      <Link>TextBoxUpdateSourceBehaviour.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.Xaml\BindingUtility.cs">
-      <Link>BindingUtility.cs</Link>
-    </Compile>
+    <None Include="map.1.D.1.vsd.png" />
     <Compile Include="..\..\Frameworks\Framework.Xaml\IDispatcherHelperWrapper.cs">
       <Link>IDispatcherHelperWrapper.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.Xaml\InfiniteListBox.cs">
-      <Link>InfiniteListBox.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.Xaml\LayoutAwarePage.cs">
-      <Link>LayoutAwarePage.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.Xaml\RichTextColumns.cs">
-      <Link>RichTextColumns.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.Xaml\SuspensionManager.cs">
-      <Link>SuspensionManager.cs</Link>
     </Compile>
     <Compile Include="..\..\Frameworks\Framework.Xaml\ViewModelBaseWithResultAndUIElement.cs">
       <Link>ViewModelBaseWithResultAndUIElement.cs</Link>

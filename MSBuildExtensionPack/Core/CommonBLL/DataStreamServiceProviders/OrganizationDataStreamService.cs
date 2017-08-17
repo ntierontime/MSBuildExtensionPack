@@ -5,8 +5,8 @@ using System.Text;
 
 namespace MSBuildExtensionPack.CommonBLL
 {
-    public class OrganizationDataStreamService 
-		: Framework.Services.DataStreamServiceProviderBase<MSBuildExtensionPack.DataSourceEntities.OrganizationCollection, MSBuildExtensionPack.DataSourceEntities.Organization>
+    public class OrganizationDataStreamService
+        : Framework.Services.DataStreamServiceProviderBase<MSBuildExtensionPack.DataSourceEntities.OrganizationCollection, MSBuildExtensionPack.DataSourceEntities.Organization>
     {
         public override void WriteHeaderLineToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, int row)
         {
@@ -108,7 +108,6 @@ namespace MSBuildExtensionPack.CommonBLL
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = "UniqueidentifierColumn";
-
 
         }
 
@@ -213,19 +212,17 @@ namespace MSBuildExtensionPack.CommonBLL
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.UniqueidentifierColumn;
 
-
         }
 
+        public class Default
+            : Framework.Services.DataStreamServiceProviderBase<MSBuildExtensionPack.DataSourceEntities.Organization.DefaultCollection, MSBuildExtensionPack.DataSourceEntities.Organization.Default>
+        {
+            public override void WriteHeaderLineToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, int row)
+            {
+                char cell = 'A';
 
-		public class Default 
-			: Framework.Services.DataStreamServiceProviderBase<MSBuildExtensionPack.DataSourceEntities.Organization.DefaultCollection, MSBuildExtensionPack.DataSourceEntities.Organization.Default>
-		{
-			public override void WriteHeaderLineToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, int row)
-			{
-				char cell = 'A';
-
-				string cellKey;
-	            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+                string cellKey;
+                cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = "Organization_2_UniqueidentifierColumn";
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
@@ -330,15 +327,14 @@ namespace MSBuildExtensionPack.CommonBLL
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = "UniqueidentifierColumn";
 
+            }
 
-			}
+            public override void WriteDataItemToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, MSBuildExtensionPack.DataSourceEntities.Organization.Default dataItem, int row)
+            {
+                char cell = 'A';
 
-			public override void WriteDataItemToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, MSBuildExtensionPack.DataSourceEntities.Organization.Default dataItem, int row)
-			{
-				char cell = 'A';
-
-				string cellKey;
-	            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+                string cellKey;
+                cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.Organization_2_UniqueidentifierColumn;
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
@@ -443,21 +439,18 @@ namespace MSBuildExtensionPack.CommonBLL
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.UniqueidentifierColumn;
 
+            }
+        }
 
-			}
-		}
+        public class DefaultWithPath
+            : Framework.Services.DataStreamServiceProviderBase<MSBuildExtensionPack.DataSourceEntities.Organization.DefaultWithPathCollection, MSBuildExtensionPack.DataSourceEntities.Organization.DefaultWithPath>
+        {
+            public override void WriteHeaderLineToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, int row)
+            {
+                char cell = 'A';
 
-
-
-		public class DefaultWithPath 
-			: Framework.Services.DataStreamServiceProviderBase<MSBuildExtensionPack.DataSourceEntities.Organization.DefaultWithPathCollection, MSBuildExtensionPack.DataSourceEntities.Organization.DefaultWithPath>
-		{
-			public override void WriteHeaderLineToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, int row)
-			{
-				char cell = 'A';
-
-				string cellKey;
-	            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+                string cellKey;
+                cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = "Id";
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
@@ -556,15 +549,14 @@ namespace MSBuildExtensionPack.CommonBLL
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = "UniqueidentifierColumn";
 
+            }
 
-			}
+            public override void WriteDataItemToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, MSBuildExtensionPack.DataSourceEntities.Organization.DefaultWithPath dataItem, int row)
+            {
+                char cell = 'A';
 
-			public override void WriteDataItemToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, MSBuildExtensionPack.DataSourceEntities.Organization.DefaultWithPath dataItem, int row)
-			{
-				char cell = 'A';
-
-				string cellKey;
-	            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+                string cellKey;
+                cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.Id;
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
@@ -663,21 +655,18 @@ namespace MSBuildExtensionPack.CommonBLL
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.UniqueidentifierColumn;
 
+            }
+        }
 
-			}
-		}
+        public class DefaultGroupedDataView
+            : Framework.Services.DataStreamServiceProviderBase<MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataViewCollection, MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView>
+        {
+            public override void WriteHeaderLineToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, int row)
+            {
+                char cell = 'A';
 
-
-
-		public class DefaultGroupedDataView 
-			: Framework.Services.DataStreamServiceProviderBase<MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataViewCollection, MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView>
-		{
-			public override void WriteHeaderLineToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, int row)
-			{
-				char cell = 'A';
-
-				string cellKey;
-	            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+                string cellKey;
+                cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = "ParentId";
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
@@ -686,15 +675,14 @@ namespace MSBuildExtensionPack.CommonBLL
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = "Name";
 
+            }
 
-			}
+            public override void WriteDataItemToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView dataItem, int row)
+            {
+                char cell = 'A';
 
-			public override void WriteDataItemToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView dataItem, int row)
-			{
-				char cell = 'A';
-
-				string cellKey;
-	            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+                string cellKey;
+                cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.ParentId;
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
@@ -703,21 +691,18 @@ namespace MSBuildExtensionPack.CommonBLL
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.Name;
 
+            }
+        }
 
-			}
-		}
+        public class KeyInformation
+            : Framework.Services.DataStreamServiceProviderBase<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformationCollection, MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation>
+        {
+            public override void WriteHeaderLineToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, int row)
+            {
+                char cell = 'A';
 
-
-
-		public class KeyInformation 
-			: Framework.Services.DataStreamServiceProviderBase<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformationCollection, MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation>
-		{
-			public override void WriteHeaderLineToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, int row)
-			{
-				char cell = 'A';
-
-				string cellKey;
-	            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+                string cellKey;
+                cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = "Id";
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
@@ -735,15 +720,14 @@ namespace MSBuildExtensionPack.CommonBLL
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = "UniqueidentifierColumn";
 
+            }
 
-			}
+            public override void WriteDataItemToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation dataItem, int row)
+            {
+                char cell = 'A';
 
-			public override void WriteDataItemToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation dataItem, int row)
-			{
-				char cell = 'A';
-
-				string cellKey;
-	            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+                string cellKey;
+                cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.Id;
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
@@ -761,11 +745,8 @@ namespace MSBuildExtensionPack.CommonBLL
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.UniqueidentifierColumn;
 
-
-			}
-		}
-
-
+            }
+        }
 
     }
 }

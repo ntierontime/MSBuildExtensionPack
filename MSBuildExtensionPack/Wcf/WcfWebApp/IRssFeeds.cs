@@ -18,33 +18,22 @@ namespace MSBuildExtensionPack.WcfWebApp
         [WebGet]
         Rss20FeedFormatter GetBuild();
 
-
-
         [OperationContract]
         [WebGet]
         Rss20FeedFormatter GetBuildEventCode();
-
-
 
         [OperationContract]
         [WebGet]
         Rss20FeedFormatter GetBuildLog();
 
-
-
         [OperationContract]
         [WebGet]
         Rss20FeedFormatter GetOrganization();
-
-
 
         [OperationContract]
         [WebGet]
         Rss20FeedFormatter GetSolution();
 
-
-
     }
 }
-
 

@@ -34,18 +34,12 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Compile Include="TextBoxUpdateSourceBehaviour.cs" />
-    <Compile Include="BindingUtility.cs" />
     <Compile Include="IDispatcherHelperWrapper.cs" />
-    <Compile Include="InfiniteListBox.cs" />
-    <Compile Include="LayoutAwarePage.cs" />
-    <Compile Include="RichTextColumns.cs" />
-    <Compile Include="SuspensionManager.cs" />
     <Compile Include="ViewModelBaseWithResultAndUIElement.cs" />
     <Compile Include="ViewModelItemBase.cs" />
     <Compile Include="MenuTreeItem.cs" />
     <None Include="map.1.D.1.vsd" />
-    <Content Include="map.1.D.1.vsd.png" />
+    <None Include="map.1.D.1.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Framework\Framework.csproj">

@@ -15,10 +15,10 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
     /// See http://www.galasoft.ch/mvvm/getstarted
     /// </summary>
     public partial class ItemVMBuildEventCode
-		: Framework.Xaml.ViewModelItemBase<MSBuildExtensionPack.DataSourceEntities.BuildEventCodeIdentifier, MSBuildExtensionPack.DataSourceEntities.BuildEventCode>
+        : Framework.Xaml.ViewModelItemBase<MSBuildExtensionPack.DataSourceEntities.BuildEventCodeIdentifier, MSBuildExtensionPack.DataSourceEntities.BuildEventCode>
     {
-		#region override string EntityName
-	    
+        #region override string EntityName
+
         public const string EntityName_Static = "MSBuildExtensionPack.BuildEventCode";
 
         public override string EntityName
@@ -29,7 +29,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
         }
 
-		#endregion override string EntityName
+        #endregion override string EntityName
 
         #region Constructor
 
@@ -37,7 +37,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         /// Initializes a new instance of the ItemVMBuildEventCode class.
         /// </summary>
         public ItemVMBuildEventCode()
-			: base()
+            : base()
         {
         }
 
@@ -52,8 +52,9 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
             try
             {
+
                 var client = new MSBuildExtensionPack.WebApiClient.BuildEventCodeApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-				var result = Task.Run(() => client.InsertEntityAsync(MSBuildExtensionPack.EntityContracts.IBuildEventCodeHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildEventCode, MSBuildExtensionPack.DataSourceEntities.BuildEventCode>(this.Item))).Result;
+                var result = Task.Run(() => client.InsertEntityAsync(MSBuildExtensionPack.EntityContracts.IBuildEventCodeHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildEventCode, MSBuildExtensionPack.DataSourceEntities.BuildEventCode>(this.Item))).Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
@@ -81,7 +82,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             try
             {
                 var client = new MSBuildExtensionPack.WebApiClient.BuildEventCodeApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-				var result = Task.Run(() => client.DeleteEntityAsync(MSBuildExtensionPack.EntityContracts.IBuildEventCodeHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildEventCode, MSBuildExtensionPack.DataSourceEntities.BuildEventCode>(this.Item))).Result;
+                var result = Task.Run(() => client.DeleteEntityAsync(MSBuildExtensionPack.EntityContracts.IBuildEventCodeHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildEventCode, MSBuildExtensionPack.DataSourceEntities.BuildEventCode>(this.Item))).Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
@@ -114,9 +115,8 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             try
             {
 
-
                 var client = new MSBuildExtensionPack.WebApiClient.BuildEventCodeApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-				var result = Task.Run(() => client.UpdateEntityAsync(MSBuildExtensionPack.EntityContracts.IBuildEventCodeHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildEventCode, MSBuildExtensionPack.DataSourceEntities.BuildEventCode>(this.Item))).Result;
+                var result = Task.Run(() => client.UpdateEntityAsync(MSBuildExtensionPack.EntityContracts.IBuildEventCodeHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildEventCode, MSBuildExtensionPack.DataSourceEntities.BuildEventCode>(this.Item))).Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
@@ -159,7 +159,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             try
             {
                 var client = new MSBuildExtensionPack.WebApiClient.BuildEventCodeApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-				var result = Task.Run(() => client.GetBuildEventCodeItemVMAsync(identifier.Id)).Result;
+                var result = Task.Run(() => client.GetBuildEventCodeItemVMAsync(identifier.Id)).Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
@@ -184,29 +184,18 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         {
             base.LaunchDetailsView(o);
 
-
-
-
         }
 
         protected override void LaunchEditView(MSBuildExtensionPack.DataSourceEntities.BuildEventCode oo)
         {
-			var o = oo == null ? this.Item.GetACloneWithoutIdentifier() : oo.GetACloneWithoutIdentifier();
-
-
-
-
+            var o = oo == null ? this.Item.GetACloneWithoutIdentifier() : oo.GetACloneWithoutIdentifier();
 
             base.LaunchEditView(o);
         }
 
         protected override void LaunchCopyView(MSBuildExtensionPack.DataSourceEntities.BuildEventCode oo)
         {
-			var o = oo == null ? this.Item.GetACloneWithoutIdentifier() : oo.GetACloneWithoutIdentifier();
-
-
-
-
+            var o = oo == null ? this.Item.GetACloneWithoutIdentifier() : oo.GetACloneWithoutIdentifier();
 
             base.LaunchCopyView(o);
         }

@@ -6,38 +6,37 @@ namespace MSBuildExtensionPack.DataSourceEntities
     /// <summary>
     ///  DataSourceQueryCriteriaByEntityReference of entity <see cref="MSBuildExtensionPack.Build"/>
     /// </summary>
-	public partial class BuildQueryCriteriaByEntityReference : MSBuildExtensionPack.EntityContracts.IQueryCriteriaBuildByFKs
-	{
-		#region constructors
+    public partial class BuildQueryCriteriaByEntityReference : MSBuildExtensionPack.EntityContracts.IQueryCriteriaBuildByFKs
+    {
+        #region constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildQueryCriteriaByEntityReference"/> class.
         /// </summary>
-		public BuildQueryCriteriaByEntityReference()
-		{
-		}
+        public BuildQueryCriteriaByEntityReference()
+        {
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildQueryCriteriaByEntityReference"/> class.
         /// </summary>
         public BuildQueryCriteriaByEntityReference(
 bool isToCompareSolutionId, System.Int32 comparedToSolutionId)
-		{
+        {
 
-			this.IsToCompareSolutionId = isToCompareSolutionId;
+            this.IsToCompareSolutionId = isToCompareSolutionId;
             this.ComparedToSolutionId = comparedToSolutionId;
 
-		}
+        }
 
-		#endregion constructors
+        #endregion constructors
 
-		#region properties
+        #region properties
 
-		public bool IsToCompareSolutionId { get; set; }
-		public System.Int32 ComparedToSolutionId { get; set; }
+        public bool IsToCompareSolutionId { get; set; }
+        public System.Int32 ComparedToSolutionId { get; set; }
 
-		
-		#endregion properties
+        #endregion properties
 
-	}
+    }
 }

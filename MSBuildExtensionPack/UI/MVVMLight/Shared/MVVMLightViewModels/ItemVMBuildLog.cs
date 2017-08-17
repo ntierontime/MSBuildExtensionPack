@@ -15,10 +15,10 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
     /// See http://www.galasoft.ch/mvvm/getstarted
     /// </summary>
     public partial class ItemVMBuildLog
-		: Framework.Xaml.ViewModelItemBase<MSBuildExtensionPack.DataSourceEntities.BuildLogIdentifier, MSBuildExtensionPack.DataSourceEntities.BuildLog.Default>
+        : Framework.Xaml.ViewModelItemBase<MSBuildExtensionPack.DataSourceEntities.BuildLogIdentifier, MSBuildExtensionPack.DataSourceEntities.BuildLog.Default>
     {
-		#region override string EntityName
-	    
+        #region override string EntityName
+
         public const string EntityName_Static = "MSBuildExtensionPack.BuildLog";
 
         public override string EntityName
@@ -29,7 +29,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
         }
 
-		#endregion override string EntityName
+        #endregion override string EntityName
 
         #region Constructor
 
@@ -37,7 +37,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         /// Initializes a new instance of the ItemVMBuildLog class.
         /// </summary>
         public ItemVMBuildLog()
-			: base()
+            : base()
         {
         }
 
@@ -52,8 +52,19 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
             try
             {
+
+                this.Item.Solution_1Id = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfSolution_1SelectedItem.Value;
+
+                this.Item.Organization_1Id = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfOrganization_1SelectedItem.Value;
+
+                this.Item.Organization_2Id = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfOrganization_2SelectedItem.Value;
+
+                this.Item.BuildId = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfBuild_1SelectedItem.Value;
+
+                this.Item.BuildEventCodeId = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfBuildEventCode_1SelectedItem.Value;
+
                 var client = new MSBuildExtensionPack.WebApiClient.BuildLogApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-				var result = Task.Run(() => client.InsertEntityAsync(MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(this.Item))).Result;
+                var result = Task.Run(() => client.InsertEntityAsync(MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(this.Item))).Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
@@ -81,7 +92,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             try
             {
                 var client = new MSBuildExtensionPack.WebApiClient.BuildLogApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-				var result = Task.Run(() => client.DeleteEntityAsync(MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(this.Item))).Result;
+                var result = Task.Run(() => client.DeleteEntityAsync(MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(this.Item))).Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
@@ -116,22 +127,16 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
                 this.Item.Solution_1Id = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfSolution_1SelectedItem.Value;
 
-
                 this.Item.Organization_1Id = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfOrganization_1SelectedItem.Value;
-
 
                 this.Item.Organization_2Id = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfOrganization_2SelectedItem.Value;
 
-
                 this.Item.BuildId = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfBuild_1SelectedItem.Value;
-
 
                 this.Item.BuildEventCodeId = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfBuildEventCode_1SelectedItem.Value;
 
-
-
                 var client = new MSBuildExtensionPack.WebApiClient.BuildLogApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-				var result = Task.Run(() => client.UpdateEntityAsync(MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(this.Item))).Result;
+                var result = Task.Run(() => client.UpdateEntityAsync(MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(this.Item))).Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
@@ -174,7 +179,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             try
             {
                 var client = new MSBuildExtensionPack.WebApiClient.BuildLogApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-				var result = Task.Run(() => client.GetBuildLogItemVMAsync(identifier.Id)).Result;
+                var result = Task.Run(() => client.GetBuildLogItemVMAsync(identifier.Id)).Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
@@ -199,101 +204,66 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         {
             base.LaunchDetailsView(o);
 
-
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfBuild_1(new Framework.NameValuePair<System.Int32>(o.Solution_1Id, o.Solution_1_Name));
-
 
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfSolution_1(new Framework.NameValuePair<System.Int64>(o.Organization_1Id, o.Organization_1_Name));
 
-
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfOrganization_1(new Framework.NameValuePair<System.Int64>(o.Organization_2Id, o.Organization_2_Name));
-
-
-
 
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfSolution_1SelectedItem = new Framework.NameValuePair<System.Int32>(o.Solution_1Id, o.Solution_1_Name);
 
-
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfOrganization_1SelectedItem = new Framework.NameValuePair<System.Int64>(o.Organization_1Id, o.Organization_1_Name);
-
 
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfOrganization_2SelectedItem = new Framework.NameValuePair<System.Int64>(o.Organization_2Id, o.Organization_2_Name);
 
-
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfBuild_1SelectedItem = new Framework.NameValuePair<System.Int64>(o.BuildId, o.Build_1_Name);
 
-
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfBuildEventCode_1SelectedItem = new Framework.NameValuePair<System.Int32>(o.BuildEventCodeId, o.BuildEventCode_1_Name);
-
 
         }
 
         protected override void LaunchEditView(MSBuildExtensionPack.DataSourceEntities.BuildLog.Default oo)
         {
-			var o = oo == null ? this.Item.GetACloneWithoutIdentifier() : oo.GetACloneWithoutIdentifier();
-
+            var o = oo == null ? this.Item.GetACloneWithoutIdentifier() : oo.GetACloneWithoutIdentifier();
 
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfBuild_1(new Framework.NameValuePair<System.Int32>(o.Solution_1Id, o.Solution_1_Name));
 
-
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfSolution_1(new Framework.NameValuePair<System.Int64>(o.Organization_1Id, o.Organization_1_Name));
-
 
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfOrganization_1(new Framework.NameValuePair<System.Int64>(o.Organization_2Id, o.Organization_2_Name));
 
-
-
-
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfSolution_1SelectedItem = new Framework.NameValuePair<System.Int32>(o.Solution_1Id, o.Solution_1_Name);
-
 
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfOrganization_1SelectedItem = new Framework.NameValuePair<System.Int64>(o.Organization_1Id, o.Organization_1_Name);
 
-
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfOrganization_2SelectedItem = new Framework.NameValuePair<System.Int64>(o.Organization_2Id, o.Organization_2_Name);
-
 
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfBuild_1SelectedItem = new Framework.NameValuePair<System.Int64>(o.BuildId, o.Build_1_Name);
 
-
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfBuildEventCode_1SelectedItem = new Framework.NameValuePair<System.Int32>(o.BuildEventCodeId, o.BuildEventCode_1_Name);
-
-
 
             base.LaunchEditView(o);
         }
 
         protected override void LaunchCopyView(MSBuildExtensionPack.DataSourceEntities.BuildLog.Default oo)
         {
-			var o = oo == null ? this.Item.GetACloneWithoutIdentifier() : oo.GetACloneWithoutIdentifier();
-
+            var o = oo == null ? this.Item.GetACloneWithoutIdentifier() : oo.GetACloneWithoutIdentifier();
 
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfBuild_1(new Framework.NameValuePair<System.Int32>(o.Solution_1Id, o.Solution_1_Name));
 
-
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfSolution_1(new Framework.NameValuePair<System.Int64>(o.Organization_1Id, o.Organization_1_Name));
-
 
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfOrganization_1(new Framework.NameValuePair<System.Int64>(o.Organization_2Id, o.Organization_2_Name));
 
-
-
-
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfSolution_1SelectedItem = new Framework.NameValuePair<System.Int32>(o.Solution_1Id, o.Solution_1_Name);
-
 
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfOrganization_1SelectedItem = new Framework.NameValuePair<System.Int64>(o.Organization_1Id, o.Organization_1_Name);
 
-
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfOrganization_2SelectedItem = new Framework.NameValuePair<System.Int64>(o.Organization_2Id, o.Organization_2_Name);
-
 
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfBuild_1SelectedItem = new Framework.NameValuePair<System.Int64>(o.BuildId, o.Build_1_Name);
 
-
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.DropDownContentsOfBuildEventCode_1SelectedItem = new Framework.NameValuePair<System.Int32>(o.BuildEventCodeId, o.BuildEventCode_1_Name);
-
-
 
             base.LaunchCopyView(o);
         }

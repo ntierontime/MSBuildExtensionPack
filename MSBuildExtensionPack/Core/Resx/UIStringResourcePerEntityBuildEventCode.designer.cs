@@ -11,7 +11,7 @@
 namespace MSBuildExtensionPack.Resx {
     using System;
     using System.Reflection;
-    
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -23,15 +23,15 @@ namespace MSBuildExtensionPack.Resx {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class UIStringResourcePerEntityBuildEventCode {
-        
+
         private static global::System.Resources.ResourceManager resourceMan;
-        
+
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
+
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         public UIStringResourcePerEntityBuildEventCode() {
         }
-        
+
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -45,7 +45,7 @@ namespace MSBuildExtensionPack.Resx {
                 return resourceMan;
             }
         }
-        
+
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
@@ -69,7 +69,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Loading BuildEventCode ..."".
         /// </summary>
@@ -78,7 +77,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Loading_BuildEventCode____", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Please select BuildEventCode ..."".
@@ -89,7 +87,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Rss Title of BuildEventCode"".
         /// </summary>
@@ -98,7 +95,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Rss_Title_of_BuildEventCode", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Rss Description of BuildEventCode"".
@@ -109,7 +105,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "AddNew BuildEventCode"".
         /// </summary>
@@ -118,7 +113,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("AddNew_BuildEventCode", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Delete BuildEventCode"".
@@ -129,7 +123,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Details BuildEventCode"".
         /// </summary>
@@ -138,7 +131,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Details_BuildEventCode", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Edit BuildEventCode"".
@@ -149,7 +141,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Id"".
         /// </summary>
@@ -158,7 +149,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("IdDescription", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Id"".
@@ -169,7 +159,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Id is required"".
         /// </summary>
@@ -178,7 +167,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("IdRequiredErrorMessage", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Id"".
@@ -189,7 +177,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Id has validation error"".
         /// </summary>
@@ -198,7 +185,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("IdValueValidationErrorMessage", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Please input Id validation regular expression"".
@@ -209,7 +195,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Id is required"".
         /// </summary>
@@ -218,7 +203,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Id_is_required", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Event Code"".
@@ -229,7 +213,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Event Code"".
         /// </summary>
@@ -238,7 +221,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("EventCode", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Event Code is required"".
@@ -249,7 +231,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Event Code"".
         /// </summary>
@@ -258,7 +239,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("EventCodeToolTip", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Event Code has validation error"".
@@ -269,7 +249,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Please input Event Code validation regular expression"".
         /// </summary>
@@ -278,7 +257,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("EventCodeValueValidationExpression", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "EventCode is required"".
@@ -289,7 +267,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "The length of EventCode should be 0 to 100"".
         /// </summary>
@@ -298,7 +275,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("The_length_of_EventCode_should_be_0_to_100", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Description"".
@@ -309,7 +285,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Description"".
         /// </summary>
@@ -318,7 +293,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Description", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Description is required"".
@@ -329,7 +303,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Description"".
         /// </summary>
@@ -338,7 +311,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("DescriptionToolTip", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Description has validation error"".
@@ -349,7 +321,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Please input Description validation regular expression"".
         /// </summary>
@@ -358,7 +329,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("DescriptionValueValidationExpression", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "The length of Description should be 0 to 1500"".
@@ -369,7 +339,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Value"".
         /// </summary>
@@ -378,7 +347,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Value", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Required Field Error Message of property Value of MSBuildExtensionPack.BuildEventCode"".
@@ -389,7 +357,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Value Validation Error Message of property Value of MSBuildExtensionPack.BuildEventCode"".
         /// </summary>
@@ -398,7 +365,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Value_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Name"".
@@ -409,7 +375,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Required Field Error Message of property Name of MSBuildExtensionPack.BuildEventCode"".
         /// </summary>
@@ -418,7 +383,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Required_Field_Error_Message_of_property_Name_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Value Validation Error Message of property Name of MSBuildExtensionPack.BuildEventCode"".
@@ -429,7 +393,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Identifier In String"".
         /// </summary>
@@ -438,7 +401,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("IdentifierInString", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Required Field Error Message of property IdentifierInString of MSBuildExtensionPack.BuildEventCode"".
@@ -449,7 +411,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Value Validation Error Message of property IdentifierInString of MSBuildExtensionPack.BuildEventCode"".
         /// </summary>
@@ -458,7 +419,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Value_Validation_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Title"".
@@ -469,7 +429,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Required Field Error Message of property Title of MSBuildExtensionPack.BuildEventCode"".
         /// </summary>
@@ -478,7 +437,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Required_Field_Error_Message_of_property_Title_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Value Validation Error Message of property Title of MSBuildExtensionPack.BuildEventCode"".
@@ -489,7 +447,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Required Field Error Message of property Description of MSBuildExtensionPack.BuildEventCode"".
         /// </summary>
@@ -498,7 +455,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Required_Field_Error_Message_of_property_Description_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Value Validation Error Message of property Description of MSBuildExtensionPack.BuildEventCode"".
@@ -509,7 +465,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Required Field Error Message of property Id of MSBuildExtensionPack.BuildEventCode"".
         /// </summary>
@@ -518,7 +473,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Required_Field_Error_Message_of_property_Id_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Value Validation Error Message of property Id of MSBuildExtensionPack.BuildEventCode"".
@@ -529,7 +483,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Required Field Error Message of property EventCode of MSBuildExtensionPack.BuildEventCode"".
         /// </summary>
@@ -538,7 +491,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Required_Field_Error_Message_of_property_EventCode_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Value Validation Error Message of property EventCode of MSBuildExtensionPack.BuildEventCode"".
@@ -549,7 +501,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "EventCode"".
         /// </summary>
@@ -558,7 +509,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareEventCodeCommonOftOfCommon", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Description of EventCode"".
@@ -569,7 +519,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Tooltip of EventCode"".
         /// </summary>
@@ -578,7 +527,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareEventCodeCommonOftOfCommon", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "EventCode of BuildEventCode"".
@@ -589,7 +537,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Description of EventCode of BuildEventCode"".
         /// </summary>
@@ -598,7 +545,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedEventCodeCommonOftOfCommon", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Tooltip of EventCode of BuildEventCode"".
@@ -609,7 +555,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Description"".
         /// </summary>
@@ -618,7 +563,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Description of Description"".
@@ -629,7 +573,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Tooltip of Description"".
         /// </summary>
@@ -638,7 +581,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Description of BuildEventCode"".
@@ -649,7 +591,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Description of Description of BuildEventCode"".
         /// </summary>
@@ -658,7 +599,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedDescriptionCommonOftOfCommon", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Tooltip of Description of BuildEventCode"".
@@ -669,7 +609,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Id"".
         /// </summary>
@@ -678,7 +617,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Description of Id"".
@@ -689,7 +627,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Tooltip of Id"".
         /// </summary>
@@ -698,7 +635,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier", resourceCulture);
             }
         }
-
 
         /// <summary>
         ///   Looks up a localized string similar to "Id of BuildEventCode"".
@@ -709,7 +645,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Description of Id of BuildEventCode"".
         /// </summary>
@@ -719,7 +654,6 @@ namespace MSBuildExtensionPack.Resx {
             }
         }
 
-
         /// <summary>
         ///   Looks up a localized string similar to "Tooltip of Id of BuildEventCode"".
         /// </summary>
@@ -728,7 +662,6 @@ namespace MSBuildExtensionPack.Resx {
                 return ResourceManager.GetString("Tooltip_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier", resourceCulture);
             }
         }
-
 
     }
 }

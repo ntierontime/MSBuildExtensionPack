@@ -15,10 +15,10 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 
         #endregion log4net
 
-				public List<SelectListItem> SelectListOfMSBuildExtensionPack_Organization { get; set; }
-				public List<SelectListItem> SelectListOfMSBuildExtensionPack_BuildEventCode { get; set; }
+                public List<SelectListItem> SelectListOfMSBuildExtensionPack_Organization { get; set; }
+                public List<SelectListItem> SelectListOfMSBuildExtensionPack_BuildEventCode { get; set; }
 
-        public void Load(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier
+        public void Load(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier
             , Framework.UIAction uiAction)
         {
             try
@@ -33,7 +33,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
                     this.Item = _Response.Message[0];
                     this.UIActionStatusMessage = new Framework.UIActionStatusMessage(typeof(BuildLogItemVM).FullName, uiAction.ToString(), uiAction, Framework.UIActionStatus.Launch);
                     log.Info(string.Format("{0}: {1}", uiAction, Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
-					this.LoadExtraData(uiAction);
+                    this.LoadExtraData(uiAction);
                 }
                 else
                 {
@@ -58,7 +58,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
             BuildLogItemVM vm = new BuildLogItemVM();
             vm.ContentData.Title = Framework.Resx.UIStringResource.AddNewAlternativeText;
             vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.AddNew_BuildLog;
-			vm.LoadExtraData(uiAction);
+            vm.LoadExtraData(uiAction);
 
             vm.Item = entity;
             vm.UIActionStatusMessage = new Framework.UIActionStatusMessage(typeof(BuildLogItemVM).FullName, uiAction.ToString(), uiAction, Framework.UIActionStatus.Launch);
@@ -70,14 +70,14 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
         {
             if (uiAction != Framework.UIAction.ViewDetails)
             {
-				this.NameValueCollectionOfMSBuildExtensionPack_Organization = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairOfAll(new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(), new Framework.EntityContracts.QueryPagingSetting(), null);
+                this.NameValueCollectionOfMSBuildExtensionPack_Organization = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairOfAll(new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(), new Framework.EntityContracts.QueryPagingSetting(), null);
                 this.SelectListOfMSBuildExtensionPack_Organization = Framework.Mvc.MvcHelper.BuildListOfSelectListItem(this.NameValueCollectionOfMSBuildExtensionPack_Organization);
 
-				this.NameValueCollectionOfMSBuildExtensionPack_BuildEventCode = MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.GetCollectionOfNameValuePairOfAll(new MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaAll(), new Framework.EntityContracts.QueryPagingSetting(), null);
+                this.NameValueCollectionOfMSBuildExtensionPack_BuildEventCode = MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.GetCollectionOfNameValuePairOfAll(new MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaAll(), new Framework.EntityContracts.QueryPagingSetting(), null);
                 this.SelectListOfMSBuildExtensionPack_BuildEventCode = Framework.Mvc.MvcHelper.BuildListOfSelectListItem(this.NameValueCollectionOfMSBuildExtensionPack_BuildEventCode);
 
             }
         }
-	}
+    }
 }
 

@@ -17,23 +17,21 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
     /// </summary>
     public partial class OrganizationController : Controller
     {
-		#region log4net
+        #region log4net
 
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-		#endregion log4net
+        #endregion log4net
 
-		#region Workspace Controller Methods : there are 1 workspace(s)
+        #region Workspace Controller Methods : there are 1 workspace(s)
 
-
-		
-		public const string TempDataKey_WPCommonOfOrganization = "TempDataKey_WPCommonOfOrganization";
+        public const string TempDataKey_WPCommonOfOrganization = "TempDataKey_WPCommonOfOrganization";
         /// <summary>
         /// Controller Method of View WPCommonOfOrganization : Description Of Common of MSBuildExtensionPack.Organization
         /// </summary>
         /// <returns></returns>
-		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_WPCommonOfOrganization)]
-		public ActionResult WPCommonOfOrganization(int currentPage = 1 ,string lowerBoundCreatedDateTimeCommonOftOfCommon = null, string upperBoundCreatedDateTimeCommonOftOfCommon = null,string lowerBoundDatetimeColumnCommonOftOfCommon = null, string upperBoundDatetimeColumnCommonOftOfCommon = null,string lowerBoundDatetime2ColumnCommonOftOfCommon = null, string upperBoundDatetime2ColumnCommonOftOfCommon = null,string lowerBoundSmalldatetimeColumnCommonOftOfCommon = null, string upperBoundSmalldatetimeColumnCommonOftOfCommon = null,string lowerBoundDateColumnCommonOftOfCommon = null, string upperBoundDateColumnCommonOftOfCommon = null, WPCommonOfOrganizationVM viewModel = null)
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_WPCommonOfOrganization)]
+        public ActionResult WPCommonOfOrganization(int currentPage = 1 ,string lowerBoundCreatedDateTimeCommonOftOfCommon = null, string upperBoundCreatedDateTimeCommonOftOfCommon = null,string lowerBoundDatetimeColumnCommonOftOfCommon = null, string upperBoundDatetimeColumnCommonOftOfCommon = null,string lowerBoundDatetime2ColumnCommonOftOfCommon = null, string upperBoundDatetime2ColumnCommonOftOfCommon = null,string lowerBoundSmalldatetimeColumnCommonOftOfCommon = null, string upperBoundSmalldatetimeColumnCommonOftOfCommon = null,string lowerBoundDateColumnCommonOftOfCommon = null, string upperBoundDateColumnCommonOftOfCommon = null, WPCommonOfOrganizationVM viewModel = null)
         {
             log.Info(string.Format("{0}: WPCommonOfOrganization", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
@@ -49,20 +47,20 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 
             viewModel.PopulateAllUIElements(vmFromTempData, currentPage);
 
-			viewModel.Criteria.LowerBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundCreatedDateTimeCommonOftOfCommon); viewModel.Criteria.UpperBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundCreatedDateTimeCommonOftOfCommon);
-			viewModel.Criteria.LowerBoundDatetimeColumnCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundDatetimeColumnCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundDatetimeColumnCommonOftOfCommon); viewModel.Criteria.UpperBoundDatetimeColumnCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundDatetimeColumnCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundDatetimeColumnCommonOftOfCommon);
-			viewModel.Criteria.LowerBoundDatetime2ColumnCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundDatetime2ColumnCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundDatetime2ColumnCommonOftOfCommon); viewModel.Criteria.UpperBoundDatetime2ColumnCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundDatetime2ColumnCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundDatetime2ColumnCommonOftOfCommon);
-			viewModel.Criteria.LowerBoundSmalldatetimeColumnCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundSmalldatetimeColumnCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundSmalldatetimeColumnCommonOftOfCommon); viewModel.Criteria.UpperBoundSmalldatetimeColumnCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundSmalldatetimeColumnCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundSmalldatetimeColumnCommonOftOfCommon);
-			viewModel.Criteria.LowerBoundDateColumnCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundDateColumnCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundDateColumnCommonOftOfCommon); viewModel.Criteria.UpperBoundDateColumnCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundDateColumnCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundDateColumnCommonOftOfCommon);
+            viewModel.Criteria.LowerBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundCreatedDateTimeCommonOftOfCommon); viewModel.Criteria.UpperBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundCreatedDateTimeCommonOftOfCommon);
+            viewModel.Criteria.LowerBoundDatetimeColumnCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundDatetimeColumnCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundDatetimeColumnCommonOftOfCommon); viewModel.Criteria.UpperBoundDatetimeColumnCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundDatetimeColumnCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundDatetimeColumnCommonOftOfCommon);
+            viewModel.Criteria.LowerBoundDatetime2ColumnCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundDatetime2ColumnCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundDatetime2ColumnCommonOftOfCommon); viewModel.Criteria.UpperBoundDatetime2ColumnCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundDatetime2ColumnCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundDatetime2ColumnCommonOftOfCommon);
+            viewModel.Criteria.LowerBoundSmalldatetimeColumnCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundSmalldatetimeColumnCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundSmalldatetimeColumnCommonOftOfCommon); viewModel.Criteria.UpperBoundSmalldatetimeColumnCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundSmalldatetimeColumnCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundSmalldatetimeColumnCommonOftOfCommon);
+            viewModel.Criteria.LowerBoundDateColumnCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundDateColumnCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundDateColumnCommonOftOfCommon); viewModel.Criteria.UpperBoundDateColumnCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundDateColumnCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundDateColumnCommonOftOfCommon);
             //viewModel.Criteria.LowerBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundCreatedDateTimeCommonOftOfCommon); viewModel.Criteria.UpperBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundCreatedDateTimeCommonOftOfCommon);
 
-			viewModel.LoadData(true);
+            viewModel.LoadData(true);
 
             if (viewModel.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-				TempData[TempDataKey_WPCommonOfOrganization] = viewModel.GetPrimaryInformationEntity();
-				TempData.Keep(TempDataKey_WPCommonOfOrganization); 
-			}
+                TempData[TempDataKey_WPCommonOfOrganization] = viewModel.GetPrimaryInformationEntity();
+                TempData.Keep(TempDataKey_WPCommonOfOrganization);
+            }
 //            else
 //            {
 //                viewModel.StatusMessageOfResult = searchResult.GetStatusMessage();
@@ -71,12 +69,12 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 //#endif
 //            }
 
-			if (viewModel.Result != null)
+            if (viewModel.Result != null)
             {
                 ViewBag.StaticPagedResult = new PagedList.StaticPagedList<MSBuildExtensionPack.DataSourceEntities.Organization.Default>(viewModel.Result, viewModel.QueryPagingSetting.CurrentPage, viewModel.QueryPagingSetting.PageSize, viewModel.QueryPagingSetting.CountOfRecords);
             }
 
-			viewModel.ContentData.Title = MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Organization;
+            viewModel.ContentData.Title = MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Organization;
             viewModel.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Description;
 
             return View(viewModel);
@@ -87,7 +85,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <param name="dataServiceType">Type of the data service.</param>
         /// <returns></returns>
-		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_WPCommonOfOrganization)]
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_WPCommonOfOrganization)]
         public ActionResult WPCommonOfOrganization_Export(Framework.DataServiceTypes dataServiceType)
         {
             log.Info(string.Format("{0}: WPCommonOfOrganization_Export", Framework.LoggingOptions.UI_Process_Started.ToString()));
@@ -97,16 +95,16 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             {
                 vmFromTempData = (Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommonFlatten>)TempData[TempDataKey_WPCommonOfOrganization];
 
-	            var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfDefaultOfCommon(
-		            new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon(vmFromTempData.Criteria)
+                var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfDefaultOfCommon(
+                    new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon(vmFromTempData.Criteria)
                     , new Framework.EntityContracts.QueryPagingSetting(-1, -1)
                     , new Framework.EntityContracts.QueryOrderBySettingCollection(vmFromTempData.QueryOrderBySettingCollecionInString)
-					, dataServiceType);
+                    , dataServiceType);
 
                 var result = searchResult.DataStreamServiceResult;
 
-				TempData[TempDataKey_WPCommonOfOrganization] = vmFromTempData.GetPrimaryInformationEntity();
-				TempData.Keep(TempDataKey_WPCommonOfOrganization); 
+                TempData[TempDataKey_WPCommonOfOrganization] = vmFromTempData.GetPrimaryInformationEntity();
+                TempData.Keep(TempDataKey_WPCommonOfOrganization);
 
                 return File(result.Result, result.MIMEType, string.Format("WPCommonOfOrganization_Export{0}{1}", result.DataServiceType, result.FileExtension));
             }
@@ -114,19 +112,14 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             return null;
         }
 
-
-
-
-
-		#endregion Workspace Controller Methods : there are 1 workspace(s)
-		
+        #endregion Workspace Controller Methods : there are 1 workspace(s)
 
         /// <summary>
         /// Display one entity and all related entities if any, either single item or a list, based on foreign keys
         /// </summary>
         /// <returns></returns>
-		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_WPEntityRelatedOfOrganization)]
-        public ActionResult WPEntityRelatedOfOrganization(bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64 valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_WPEntityRelatedOfOrganization)]
+        public ActionResult WPEntityRelatedOfOrganization(bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
         {
             MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfOrganizationVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfOrganizationVM(new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint));
             vm.LoadData();
@@ -134,22 +127,17 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             return View(vm);
         }
 
-
-
-
-
-
-		#region Import()
+        #region Import()
 
         /// <summary>
         /// Imports a list of entity from csv or excel file
         /// </summary>
         /// <param name="file">The file.</param>
         /// <returns></returns>
-		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Import)]
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Import)]
         public ActionResult Import(HttpPostedFileBase file)
         {
-			ViewBag.FileFormat = "Organization_2_UniqueidentifierColumn,Organization_2_UniqueIdentifier,Organization_2_Name,Id,ParentId,Name,IsSystemBuiltIn,UniqueIdentifier,CreatedDateTime,CharColumn,VarcharColumn,TextColumn,NcharColumn,NvarcharColumn,NtextColumn,BitColumn,BinaryColumn,VarbinaryColumn,ImageColumn,TinyintColumn,SmallintColumn,IntColumn,BigintColumn,DecimalColumn,NumericColumn,SmallmoneyColumn,MoneyColumn,FloatColumn,RealColumn,DatetimeColumn,Datetime2Column,SmalldatetimeColumn,DateColumn,TimeColumn,UniqueidentifierColumn";
+            ViewBag.FileFormat = "Organization_2_UniqueidentifierColumn,Organization_2_UniqueIdentifier,Organization_2_Name,Id,ParentId,Name,IsSystemBuiltIn,UniqueIdentifier,CreatedDateTime,CharColumn,VarcharColumn,TextColumn,NcharColumn,NvarcharColumn,NtextColumn,BitColumn,BinaryColumn,VarbinaryColumn,ImageColumn,TinyintColumn,SmallintColumn,IntColumn,BigintColumn,DecimalColumn,NumericColumn,SmallmoneyColumn,MoneyColumn,FloatColumn,RealColumn,DatetimeColumn,Datetime2Column,SmalldatetimeColumn,DateColumn,TimeColumn,UniqueidentifierColumn";
             if (file != null && file.ContentLength > 0 && !string.IsNullOrWhiteSpace(file.FileName))
             {
                 log.Info(string.Format("{0}: Import", Framework.LoggingOptions.UI_Process_Started.ToString()));
@@ -161,10 +149,10 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 
                 if (collection != null)
                 {
-					MSBuildExtensionPack.DataSourceEntities.OrganizationCollection resultCollection = new MSBuildExtensionPack.DataSourceEntities.OrganizationCollection();
-					MSBuildExtensionPack.EntityContracts.IOrganizationHelper.CopyCollection<MSBuildExtensionPack.DataSourceEntities.Organization.DefaultCollection, MSBuildExtensionPack.DataSourceEntities.OrganizationCollection, MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization>(collection, resultCollection);
+                    MSBuildExtensionPack.DataSourceEntities.OrganizationCollection resultCollection = new MSBuildExtensionPack.DataSourceEntities.OrganizationCollection();
+                    MSBuildExtensionPack.EntityContracts.IOrganizationHelper.CopyCollection<MSBuildExtensionPack.DataSourceEntities.Organization.DefaultCollection, MSBuildExtensionPack.DataSourceEntities.OrganizationCollection, MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization>(collection, resultCollection);
                     var result = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.BatchInsert(resultCollection);
-					ViewBag.Message = Framework.Resx.UIStringResource.Data_Import_Success;
+                    ViewBag.Message = Framework.Resx.UIStringResource.Data_Import_Success;
                 }
                 else
                 {
@@ -182,81 +170,79 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             }
         }
 
-		#endregion Import()
+        #endregion Import()
 
-		#region Index()
+        #region Index()
 
         /// <summary>
         /// default page, redirect to "WPCommonOrganization".
         /// </summary>
-		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Index)]
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Index)]
         public ActionResult Index()
         {
             return RedirectToAction("WPCommonOfOrganization");
         }
 
-		#endregion Index()
+        #endregion Index()
 
-		#region ActionResult Details(bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64 valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
+        #region ActionResult Details(bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
 
         /// <summary>
         /// GET method of details page, based on identifier or unique constraint, this entity only, no related entities.
         /// GET: /Organization/Details/5
         /// </summary>
         /// <returns></returns>
-		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Details)]
-        public ActionResult Details(bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64 valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Details)]
+        public ActionResult Details(bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
         {
             Framework.UIAction uiAction = Framework.UIAction.ViewDetails;
             MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM();
-			vm.Load(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, uiAction);
+            vm.Load(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, uiAction);
             vm.ContentData.Title = Framework.Resx.UIStringResource.DetailsAlternativeText;
             vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Details_Organization;
 
             return View(vm);
         }
 
-		#endregion ActionResult Details(bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64 valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
+        #endregion ActionResult Details(bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
 
-		#region ActionResult AddNew()
+        #region ActionResult AddNew()
 
-		/// <summary>
+        /// <summary>
         /// GET method of Adds the new <see cref="MSBuildExtensionPack.Organization"/>.
-        /// GET: /Organization/AddNew 
+        /// GET: /Organization/AddNew
         /// </summary>
         /// <returns></returns>
-		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_AddNew)]
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_AddNew)]
         public ActionResult AddNew()
         {
             var entity = CreateEmptyEntityOrGetFromTempData(TempDataKey_OrganizationController_Copy);
 
-			Framework.UIAction uiAction = Framework.UIAction.Create;
+            Framework.UIAction uiAction = Framework.UIAction.Create;
             MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM vm = MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM.CreateNewViewModel(entity);
             vm.LoadExtraData(uiAction);
 
             return View(vm);
-        } 
+        }
 
         /// <summary>
         /// Post method of Adds the new <see cref="MSBuildExtensionPack.Organization"/>.
-        /// POST: /Organization/AddNew 
+        /// POST: /Organization/AddNew
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_AddNew)]
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_AddNew)]
         public ActionResult AddNew(MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM vm)
         {
-			try
+            try
             {
                 log.Info(string.Format("{0}: AddNew", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-				MSBuildExtensionPack.DataSourceEntities.Organization entity = MSBuildExtensionPack.EntityContracts.IOrganizationHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization>(vm.Item);
+                MSBuildExtensionPack.DataSourceEntities.Organization entity = MSBuildExtensionPack.EntityContracts.IOrganizationHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization>(vm.Item);
 
                 var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.InsertEntity(entity);
 
-
-
-				TempData[TempDataKey_OrganizationController_Copy] = null;
+                TempData[TempDataKey_OrganizationController_Copy] = null;
                 TempData.Remove(TempDataKey_OrganizationController_Copy);
                 log.Info(string.Format("{0}: Insert", Framework.LoggingOptions.UI_Process_Ended.ToString()));
 
@@ -274,14 +260,14 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
                 return View(vm);
             }
         }
-        
+
         public const string TempDataKey_OrganizationController_Copy = "TempDataKey_OrganizationController_Copy";
         /// <summary>
         /// Copies current <see cref="MSBuildExtensionPack.Organization"/>, without identifier
         /// </summary>
         /// <returns></returns>
-		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Copy)]
-        public ActionResult Copy(bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64 valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Copy)]
+        public ActionResult Copy(bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
         {
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _Response =
                 MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfDefaultOfIdentifierAndUniqueConstraint(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, -1, -1, null);
@@ -293,23 +279,23 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             }
 
             return RedirectToAction("AddNew");
-        } 
+        }
 
-		#endregion ActionResult AddNew()
+        #endregion ActionResult AddNew()
 
-		#region ActionResult Edit(bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64 valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
+        #region ActionResult Edit(bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
 
         /// <summary>
         /// GET method of editing page of <see cref="MSBuildExtensionPack.Organization"/>.
         /// GET: /Organization/Edit/5
         /// </summary>
         /// <returns></returns>
-		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Edit)]
-        public ActionResult Edit(bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64 valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Edit)]
+        public ActionResult Edit(bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
         {
             Framework.UIAction uiAction = Framework.UIAction.Update;
             MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM();
-			vm.Load(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, uiAction);
+            vm.Load(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, uiAction);
             vm.ContentData.Title = Framework.Resx.UIStringResource.EditAlternativeText;
             vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Edit_Organization;
 
@@ -322,16 +308,15 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Edit)]
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Edit)]
         public ActionResult Edit(MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM vm)
         {
-		    try
+            try
             {
                 log.Info(string.Format("{0}: Edit", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-				MSBuildExtensionPack.DataSourceEntities.Organization entity = MSBuildExtensionPack.EntityContracts.IOrganizationHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization>(vm.Item);
+                MSBuildExtensionPack.DataSourceEntities.Organization entity = MSBuildExtensionPack.EntityContracts.IOrganizationHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization>(vm.Item);
                 var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.UpdateEntity(entity);
-
 
                 log.Info(string.Format("{0}: Edit", Framework.LoggingOptions.UI_Process_Ended.ToString()));
                 return RedirectToAction(UrlStringsAlias.ActionName_Organization_Index);
@@ -350,49 +335,49 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             }
         }
 
-		#endregion ActionResult Edit(bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64 valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
+        #endregion ActionResult Edit(bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
 
-		#region ActionResult Delete(bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64 valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
+        #region ActionResult Delete(bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
 
         /// <summary>
         /// GET method of delete page of <see cref="MSBuildExtensionPack.Organization"/>
         /// GET: /Organization/Delete/5
         /// </summary>
         /// <returns></returns>
-		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Delete)]
-        public ActionResult Delete(bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64 valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Delete)]
+        public ActionResult Delete(bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
         {
             Framework.UIAction uiAction = Framework.UIAction.Delete;
             MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM();
-			vm.Load(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, uiAction);
+            vm.Load(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, uiAction);
             vm.ContentData.Title = Framework.Resx.UIStringResource.DeleteAlternativeText;
             vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Delete_Organization;
             return View(vm);
         }
-		
+
         /// <summary>
         /// POST method of delete page of <see cref="MSBuildExtensionPack.Organization"/>
         /// POST: /Organization/Delete/5
         /// </summary>
         /// <returns></returns>
-		[HttpPost]
-		[MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Delete)]
-        public ActionResult Delete(bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64 valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM vm, FormCollection collection)
+        [HttpPost]
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Delete)]
+        public ActionResult Delete(bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM vm, FormCollection collection)
         {
             try
             {
                 log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Started.ToString()));
-				var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.ExistsOfDefaultOfIdentifierAndUniqueConstraint(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, -1, -1, null);
-				if (_Response)
+                var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.ExistsOfDefaultOfIdentifierAndUniqueConstraint(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, -1, -1, null);
+                if (_Response)
                 {
-					MSBuildExtensionPack.DataSourceEntities.Organization entity = MSBuildExtensionPack.EntityContracts.IOrganizationHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization>(vm.Item);
+                    MSBuildExtensionPack.DataSourceEntities.Organization entity = MSBuildExtensionPack.EntityContracts.IOrganizationHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization>(vm.Item);
                     MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.DeleteEntity(entity);
-					log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Ended.ToString()));
+                    log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Ended.ToString()));
                 }
-				else
-				{
-					log.Warn(string.Format("{0}: Delete, Entity not exists",  Framework.LoggingOptions.UI_Process_Ended.ToString()));
-				}
+                else
+                {
+                    log.Warn(string.Format("{0}: Delete, Entity not exists",  Framework.LoggingOptions.UI_Process_Ended.ToString()));
+                }
 
                 return RedirectToAction("UrlStringsAlias.ActionName_Organization_Index");
             }
@@ -407,25 +392,23 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
                 log.Error(string.Format("{0}: {1}, {2}, {3}", uiAction, Framework.LoggingOptions.UI_Process_Failed.ToString(), vm.StatusOfResult, vm.StatusMessageOfResult));
 
                 return View(vm);
-            } 
+            }
         }
 
-		#endregion ActionResult Delete(bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64 valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-		
-		#region Binary Columns
+        #endregion ActionResult Delete(bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
 
-
+        #region Binary Columns
 
         #endregion Binary Columns
 
-		#region GoBackList()
+        #region GoBackList()
 
         public ActionResult GoBackList()
         {
             return RedirectToAction(UrlStringsAlias.ActionName_Organization_Index);
         }
 
-		#endregion GoBackList()
+        #endregion GoBackList()
 
         private MSBuildExtensionPack.DataSourceEntities.Organization.Default CreateEmptyEntityOrGetFromTempData(string tempDataKey_OrganizationController_Copy)
         {

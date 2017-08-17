@@ -65,7 +65,7 @@
     <Compile Include="ResponseMessagesUserDefined\OrganizationResponseMessageUserDefined.cs" />
     <Compile Include="ResponseMessagesUserDefined\SolutionResponseMessageUserDefined.cs" />
     <None Include="map.2.B.3.vsd" />
-    <Content Include="map.2.B.3.vsd.png" />
+    <None Include="map.2.B.3.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataSourceEntities\MSBuildExtensionPack.DataSourceEntities.csproj">

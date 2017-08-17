@@ -40,7 +40,7 @@ namespace Framework.EntityContracts
     /// <typeparam name="TValueType">The type of the value type.</typeparam>
     /// <typeparam name="TQueryEqualCriteria">The type of the query equal criteria.</typeparam>
     [Obsolete("The original purpose is the utilize LinqKit predicate builder, retired.")]
-	public abstract class QueryPredicateBase<TEntity, TValueType, TQueryEqualCriteria>
+    public abstract class QueryPredicateBase<TEntity, TValueType, TQueryEqualCriteria>
         : QueryPredicateBase<TEntity>
         where TEntity : class
         where TQueryEqualCriteria : QueryEqualsCriteriaBase<TValueType>, new()
@@ -291,7 +291,7 @@ namespace Framework.EntityContracts
             this.PredicateTypes = QueryPredicateTypes.Contains;
             this.QueryContainsCriteria = criteria;
         }
-        
+
         #endregion constructors
     }
 }

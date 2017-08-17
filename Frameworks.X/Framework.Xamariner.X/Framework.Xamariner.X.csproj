@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Framework.Xamariner</RootNamespace>
-    <AssemblyName>Framework.Xamariner</AssemblyName>
+    <AssemblyName>Framework.Xamariner.X</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -38,14 +38,22 @@
     <None Include="packages.config" />
     <Compile Include="Behaviors\BehaviorBase.cs" />
     <Compile Include="Behaviors\EventToCommandBehavior.cs" />
-    <Compile Include="Controls\BindablePicker.cs" />
+    <Compile Include="Converters\EnumToNameValuePairConverter.cs" />
     <Compile Include="Globalization\ILocalize.cs" />
     <Compile Include="Globalization\PlatformCulture.cs" />
     <Compile Include="Globalization\Platforms.cs" />
     <None Include="map.1.D.1.vsd" />
-    <Content Include="map.1.D.1.vsd.png" />
+    <None Include="map.1.D.1.vsd.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Framework.X\Framework.X.csproj">
+      <Project>{cab19f30-0455-443c-b7a3-ba943aaa9d15}</Project>
+      <Name>Framework.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.Resx.X\Framework.Resx.X.csproj">
+      <Project>{f1e49e74-fec1-43f1-9013-3c17cdff28b4}</Project>
+      <Name>Framework.Resx.X</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

@@ -75,7 +75,7 @@ namespace Framework.EntityContracts
         }
 
         #endregion Clone()
-		
+
         public override string ToString()
         {
             return string.Format("CountOfRecords:{0};RecordCountOfCurrentPage:{1};CurrentIndexOfStartRecord:{2};PageSize:{3}"

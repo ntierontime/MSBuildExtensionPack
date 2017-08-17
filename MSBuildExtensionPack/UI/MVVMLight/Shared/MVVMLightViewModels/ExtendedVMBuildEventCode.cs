@@ -16,12 +16,10 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         public string EntityName { get { return EntityName_Static; } }
 
         public ExtendedVMBuildEventCode()
-			: base()
+            : base()
         {
 
         }
-
-
 
         public override void Cleanup()
         {

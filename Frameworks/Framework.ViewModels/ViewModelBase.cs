@@ -14,7 +14,7 @@ namespace Framework.ViewModels
         }
 
         public Framework.EntityContracts.ContentData ContentData { get; set; }
-        
+
         public TSearchCriteria Criteria { get; set; }
 
         public Framework.EntityContracts.QueryPagingSetting QueryPagingSetting { get; set; }
@@ -40,7 +40,6 @@ namespace Framework.ViewModels
 
             return vm;
         }
-
 
         public virtual void PopulateAllUIElements(Framework.ViewModels.IViewModelBase<TSearchCriteria> vmFromTempData, int currentPage)
         {
@@ -153,11 +152,11 @@ namespace Framework.ViewModels
         {
         }
     }
-    
+
     public class ViewModelBase<TSearchCriteria, TSearchResult> : ViewModelBase<TSearchCriteria>, Framework.ViewModels.IViewModelBase<TSearchCriteria, TSearchResult>
         where TSearchCriteria : class, new()
     {
-		public ViewModelBase()
+        public ViewModelBase()
             : base()
         {
             this.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady;

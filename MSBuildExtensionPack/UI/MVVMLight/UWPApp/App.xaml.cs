@@ -60,7 +60,7 @@ namespace MSBuildExtensionPack.UWPApp
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
                 Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<Framework.Xaml.IDispatcherHelperWrapper, MSBuildExtensionPack.UWPApp.DispatcherHelperWrapper>();
-                DispatcherHelper.Initialize();
+                //DispatcherHelper.Initialize();
 
                 Xamarin.Forms.Forms.Init(e);
 
@@ -111,5 +111,4 @@ namespace MSBuildExtensionPack.UWPApp
         }
     }
 }
-
 

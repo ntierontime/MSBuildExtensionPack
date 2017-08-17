@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.X"
+    xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
+    x:Class="MSBuildExtensionPack.XamarinForms.Pages.BuildEventCode.Delete"
+    Title="{i18n:Translate Text=Delete_BuildEventCode, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Label Text="{i18n:Translate Text=Warning_Areyousureyouwanttodeletethis, ResourceId=Framework.Resx.UIStringResource}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start"/>
+                <Label Text="{i18n:Translate Text=Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=Id, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=EventCode, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=EventCode, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=Description, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="DeleteAction" Order="Primary" Text="{i18n:Translate Text=DeleteAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode.DeleteCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">Android/RecycleBin.png</On>
+                    <On Platform="iOS">Assets/RecycleBin.png</On>
+                    <On Platform="Windows">Assets/RecycleBin.png</On>
+                    <On Platform="WinPhone">Assets/RecycleBin.png</On>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+</ContentPage>

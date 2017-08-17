@@ -16,23 +16,21 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         public string EntityName { get { return EntityName_Static; } }
 
         public ExtendedVMOrganization()
-			: base()
+            : base()
         {
 
-			// 1.1. Organization_2 LaunchOrganization_2DetailsView and its command
-			this.LaunchOrganization_2DetailsViewCommand = new RelayCommand<MSBuildExtensionPack.DataSourceEntities.Organization.Default>(this.LaunchOrganization_2DetailsView);
+            // 1.1. Organization_2 LaunchOrganization_2DetailsView and its command
+            this.LaunchOrganization_2DetailsViewCommand = new RelayCommand<MSBuildExtensionPack.DataSourceEntities.Organization.Default>(this.LaunchOrganization_2DetailsView);
 
-			// 1.2. Organization_2 GetDropDownContentsOfOrganization_2SelectionChanged and its command
-			this.GetDropDownContentsOfOrganization_2Command = new RelayCommand(this.GetDropDownContentsOfOrganization_2);
-
+            // 1.2. Organization_2 GetDropDownContentsOfOrganization_2SelectionChanged and its command
+            this.GetDropDownContentsOfOrganization_2Command = new RelayCommand(this.GetDropDownContentsOfOrganization_2);
+            this.GetDropDownContentsOfOrganization_2Command.Execute(null);
 
         }
 
+        #region 1. Organization_2
 
-
-		#region 1. Organization_2
-
-		// 1.1. Organization_2 LaunchOrganization_2DetailsView and its command
+        // 1.1. Organization_2 LaunchOrganization_2DetailsView and its command
 
         public RelayCommand<MSBuildExtensionPack.DataSourceEntities.Organization.Default> LaunchOrganization_2DetailsViewCommand { get; protected set; }
         protected void LaunchOrganization_2DetailsView(MSBuildExtensionPack.DataSourceEntities.Organization.Default item)
@@ -41,11 +39,10 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization_Static.LaunchDetailsViewCommand.Execute(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization_Static.Item);
         }
 
-
-		// 1.2. Organization_2 DropDownContentsOfOrganization_2 and its commands
+        // 1.2. Organization_2 DropDownContentsOfOrganization_2 and its commands
 
         public Framework.NameValuePair<System.Int64> m_DropDownContentsOfOrganization_2SelectedItem;
-        public Framework.NameValuePair<System.Int64> DropDownContentsOfOrganization_2SelectedItem 
+        public Framework.NameValuePair<System.Int64> DropDownContentsOfOrganization_2SelectedItem
         {
             get
             {
@@ -73,16 +70,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             get
             {
                 return this.m_DropDownContentsOfOrganization_2;
-            }
-            set
-            {
-                if (this.m_DropDownContentsOfOrganization_2 == value)
-                {
-                    return;
-                }
-
-                this.m_DropDownContentsOfOrganization_2 = value;
-                RaisePropertyChanged("DropDownContentsOfOrganization_2");
             }
         }
 
@@ -119,9 +106,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
         }
 
-		#endregion 1. Organization_2
-
-
+        #endregion 1. Organization_2
 
         public override void Cleanup()
         {

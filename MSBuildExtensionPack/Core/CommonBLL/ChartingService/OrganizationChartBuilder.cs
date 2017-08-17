@@ -40,5 +40,4 @@ namespace MSBuildExtensionPack.CommonBLL
         #endregion 4.2. Implement: Build Y axis
     }
 
-
 }

@@ -19,24 +19,27 @@ namespace Framework.Xaml
         public ViewModelBaseWithResultAndUIElement()
             : base()
         {
-			//this.ContentData = new Framework.EntityContracts.ContentData();
+            //this.ContentData = new Framework.EntityContracts.ContentData();
 
             this.ClearSearchResultCommand = new RelayCommand(ClearSearchResult, CanClearSearchResult);
-            
-			this.Criteria = new TSearchCriteria();
 
-			this.LaunchSearchViewCommand = new RelayCommand(this.LaunchSearchView);
-			this.CloseSearchViewCommand = new RelayCommand(this.CloseSearchView);
-			this.SearchCommand = new RelayCommand(this.Search, this.CanSearch);
+            this.Criteria = new TSearchCriteria();
+
+            this.LaunchSearchViewCommand = new RelayCommand(this.LaunchSearchView);
+            this.CloseSearchViewCommand = new RelayCommand(this.CloseSearchView);
+            this.LaunchResultViewCommand = new RelayCommand(this.LaunchResultView);
+            this.CloseResultViewCommand = new RelayCommand(this.CloseResultView);
+            this.SearchCommand = new RelayCommand(this.Search, this.CanSearch);
+            this.LoadMoreCommand = new RelayCommand(this.LoadMore, this.CanSearch);
 
             PopulateAllUIElements(this, 1);
 
-            this.PaginationFirstPageCommand = new RelayCommand(PaginationFirstPage, CanPaginationFirstPage);
-            this.PaginationPreviousPageCommand = new RelayCommand(PaginationPreviousPage, CanPaginationPreviousPage);
-            this.PaginationNextPageCommand = new RelayCommand(PaginationNextPage, CanPaginationNextPage);
-            this.PaginationLastPageCommand = new RelayCommand(PaginationLastPage, CanPaginationLastPage);
+            this.PaginationFirstPageCommand = new RelayCommand(PaginationFirstPage);
+            this.PaginationPreviousPageCommand = new RelayCommand(PaginationPreviousPage);
+            this.PaginationNextPageCommand = new RelayCommand(PaginationNextPage);
+            this.PaginationLastPageCommand = new RelayCommand(PaginationLastPage);
 
-			SuppressMVVMLightEventToCommandMessage = false;
+            SuppressMVVMLightEventToCommandMessage = false;
         }
 
         #endregion constructor
@@ -53,7 +56,7 @@ namespace Framework.Xaml
 
         /// <summary>
         /// Gets or sets the DataSourceEntities list.
-		/// should investigate whether can remove RaisePropertyChanged
+        /// should investigate whether can remove RaisePropertyChanged
         /// </summary>
         /// <value>The DataSourceEntities list.</value>
         public ObservableCollection<TSearchResultEntityItem> EntityCollection
@@ -71,13 +74,13 @@ namespace Framework.Xaml
         #region SearchStatus
 
         public Framework.EntityContracts.SearchStatus m_SearchStatus;
-		// should investigate whether can remove RaisePropertyChanged
-        public Framework.EntityContracts.SearchStatus SearchStatus 
-        { 
+        // should investigate whether can remove RaisePropertyChanged
+        public Framework.EntityContracts.SearchStatus SearchStatus
+        {
             get
             {
                 return this.m_SearchStatus;
-            } 
+            }
             set
             {
                 if(this.m_SearchStatus != value)
@@ -98,7 +101,7 @@ namespace Framework.Xaml
 
         #region ViewNames
 
-		public abstract string ViewName { get; }
+        public abstract string ViewName { get; }
 
         #endregion ViewNames
 
@@ -116,11 +119,11 @@ namespace Framework.Xaml
             get { return m_QueryPagingSetting; }
             set
             {
-				if (m_QueryPagingSetting != value)
-				{
-					m_QueryPagingSetting = value;
-					//RaisePropertyChanged("QueryPagingSetting");
-				}
+                if (m_QueryPagingSetting != value)
+                {
+                    m_QueryPagingSetting = value;
+                    RaisePropertyChanged("QueryPagingSetting");
+                }
             }
         }
 
@@ -155,12 +158,7 @@ namespace Framework.Xaml
         protected void PaginationFirstPage()
         {
             this.QueryPagingSetting.CurrentPage = 1;
-            this.Search();
-        }
-
-        protected bool CanPaginationFirstPage()
-        {
-            return this.QueryPagingSetting != null && this.QueryPagingSetting.IsMoreThanOnePage && !this.QueryPagingSetting.IsCurrentPageIsFirstPage;
+            this.DoSearch();
         }
 
         public RelayCommand PaginationPreviousPageCommand { get; protected set; }
@@ -168,12 +166,7 @@ namespace Framework.Xaml
         protected void PaginationPreviousPage()
         {
             this.QueryPagingSetting.CurrentPage -= 1;
-            this.Search();
-        }
-
-        protected bool CanPaginationPreviousPage()
-        {
-            return this.QueryPagingSetting != null && this.QueryPagingSetting.IsMoreThanOnePage && !this.QueryPagingSetting.IsCurrentPageIsFirstPage;
+            this.DoSearch();
         }
 
         public RelayCommand PaginationNextPageCommand { get; protected set; }
@@ -181,12 +174,7 @@ namespace Framework.Xaml
         protected void PaginationNextPage()
         {
             this.QueryPagingSetting.CurrentPage += 1;
-            this.Search();
-        }
-
-        protected bool CanPaginationNextPage()
-        {
-            return this.QueryPagingSetting != null && this.QueryPagingSetting.IsMoreThanOnePage && !this.QueryPagingSetting.IsCurrentPageIsLastPage;
+            this.DoSearch();
         }
 
         public RelayCommand PaginationLastPageCommand { get; protected set; }
@@ -194,18 +182,12 @@ namespace Framework.Xaml
         protected void PaginationLastPage()
         {
             this.QueryPagingSetting.CurrentPage = this.QueryPagingSetting.CountOfPages;
-            this.Search();
-        }
-
-        protected bool CanPaginationLastPage()
-        {
-            return this.QueryPagingSetting != null && this.QueryPagingSetting.IsMoreThanOnePage && !this.QueryPagingSetting.IsCurrentPageIsLastPage;
+            this.DoSearch();
         }
 
         #endregion Pagination Commands - First Page, Previous Page, Next Page, and Last Page
 
         #region QueryOrderBySettingCollection
-
 
         protected string m_QueryOrderBySettingCollecionInString;
 
@@ -252,7 +234,7 @@ namespace Framework.Xaml
         public Framework.NameValueCollection ListOfQueryOrderBySettingCollecionInString { get; set; }
 
         protected Framework.EntityContracts.QueryOrderBySettingCollection m_QueryOrderBySettingCollection;
-		/// <summary>
+        /// <summary>
         /// Gets or sets the query order by setting collection.
         /// </summary>
         /// <value>
@@ -423,7 +405,7 @@ namespace Framework.Xaml
         /// Determines whether you can clear search result
         /// </summary>
         /// <returns>
-        /// 	<c>true</c> if you can; otherwise, <c>false</c>.
+        ///     <c>true</c> if you can; otherwise, <c>false</c>.
         /// </returns>
         protected bool CanClearSearchResult()
         {
@@ -432,7 +414,7 @@ namespace Framework.Xaml
 
         #endregion ClearSearchResult
 
-        #region Search
+        protected bool isToClearExistingResult = false;
 
         protected TSearchCriteria m_Criteria;
 
@@ -468,25 +450,73 @@ namespace Framework.Xaml
 
         public RelayCommand SearchCommand { get; protected set; }
 
-        /// <summary>
-        /// GetCollectionOfEntityOfCommon
-        /// </summary>
-        protected abstract void Search();
+        protected void Search()
+        {
+            if (this.QueryPagingSetting != null && this.QueryPagingSetting.CurrentPage == 0)
+            {
+                this.QueryPagingSetting.CurrentPage = 1;
+            }
+
+             isToClearExistingResult = true;
+            DoSearch();
+        }
 
         protected bool CanSearch()
         {
             return true; // !(this.SearchStatus == Framework.EntityContracts.SearchStatus.Searching);
         }
 
-        #endregion Search
+        public RelayCommand LoadMoreCommand { get; protected set; }
 
-		public Framework.EntityContracts.ContentData ContentData { get; set; }
-		
+        protected void LoadMore()
+        {
+            if (this.QueryPagingSetting.CurrentPage == 0)
+            {
+                this.QueryPagingSetting.CurrentPage = 1;
+                isToClearExistingResult = true;
+                DoSearch();
+            }
+            else
+            {
+                isToClearExistingResult = false;
+                PaginationNextPage();
+            }
+        }
+
+        protected abstract void DoSearch();
+
+        #region Search Result
+
+        public RelayCommand LaunchResultViewCommand { get; protected set; }
+
+        protected void LaunchResultView()
+        {
+            this.QueryPagingSetting.CurrentPage = 0; // to re-do search when switch to ResultView Page
+            string viewName = ViewName;
+            Framework.UIAction uiAction = Framework.UIAction.Result;
+
+            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Launch));
+        }
+
+        public RelayCommand CloseResultViewCommand { get; protected set; }
+
+        protected void CloseResultView()
+        {
+            string viewName = ViewName;
+            Framework.UIAction uiAction = Framework.UIAction.Result;
+
+            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Close));
+        }
+
+        #endregion Search Result
+
+        public Framework.EntityContracts.ContentData ContentData { get; set; }
+
         #region Cleanup()
 
         public override void Cleanup()
         {
-			base.Cleanup();
+            base.Cleanup();
         }
 
         #endregion Cleanup()
@@ -521,7 +551,7 @@ namespace Framework.Xaml
 
         /// <summary>
         /// Gets or sets the Default DataView Item list.
-		/// should investigate whether can remove RaisePropertyChanged
+        /// should investigate whether can remove RaisePropertyChanged
         /// </summary>
         /// <value>The Default DataView Item list.</value>
         public ObservableCollection<TSearchResultDataViewItem> EntityCollectionDefault
@@ -533,12 +563,12 @@ namespace Framework.Xaml
                 RaisePropertyChanged("EntityCollectionDefault");
             }
         }
-				
+
         #region Cleanup()
 
         public override  void Cleanup()
         {
-			base.Cleanup();
+            base.Cleanup();
         }
 
         #endregion Cleanup()

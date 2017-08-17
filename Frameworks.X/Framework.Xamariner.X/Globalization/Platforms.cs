@@ -15,7 +15,7 @@ namespace Framework.Xamariner
     ///   http://www.csharp-examples.net/culture-names/
     /// You should always test all the locales implemented in your application.
     /// Sample apps built using the Xamarin.Forms framework.
-    /// 
+    ///
     /// License
     /// The Apache License 2.0 applies to all samples in this repository.
     /// Copyright 2011 Xamarin Inc

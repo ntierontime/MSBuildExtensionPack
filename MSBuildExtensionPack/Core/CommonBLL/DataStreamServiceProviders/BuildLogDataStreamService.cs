@@ -5,8 +5,8 @@ using System.Text;
 
 namespace MSBuildExtensionPack.CommonBLL
 {
-    public class BuildLogDataStreamService 
-		: Framework.Services.DataStreamServiceProviderBase<MSBuildExtensionPack.DataSourceEntities.BuildLogCollection, MSBuildExtensionPack.DataSourceEntities.BuildLog>
+    public class BuildLogDataStreamService
+        : Framework.Services.DataStreamServiceProviderBase<MSBuildExtensionPack.DataSourceEntities.BuildLogCollection, MSBuildExtensionPack.DataSourceEntities.BuildLog>
     {
         public override void WriteHeaderLineToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, int row)
         {
@@ -27,7 +27,6 @@ namespace MSBuildExtensionPack.CommonBLL
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = "EventTime";
-
 
         }
 
@@ -51,19 +50,17 @@ namespace MSBuildExtensionPack.CommonBLL
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.EventTime;
 
-
         }
 
+        public class Default
+            : Framework.Services.DataStreamServiceProviderBase<MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection, MSBuildExtensionPack.DataSourceEntities.BuildLog.Default>
+        {
+            public override void WriteHeaderLineToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, int row)
+            {
+                char cell = 'A';
 
-		public class Default 
-			: Framework.Services.DataStreamServiceProviderBase<MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection, MSBuildExtensionPack.DataSourceEntities.BuildLog.Default>
-		{
-			public override void WriteHeaderLineToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, int row)
-			{
-				char cell = 'A';
-
-				string cellKey;
-	            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+                string cellKey;
+                cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = "Build_1_Name";
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
@@ -114,15 +111,14 @@ namespace MSBuildExtensionPack.CommonBLL
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = "EventTime";
 
+            }
 
-			}
+            public override void WriteDataItemToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, MSBuildExtensionPack.DataSourceEntities.BuildLog.Default dataItem, int row)
+            {
+                char cell = 'A';
 
-			public override void WriteDataItemToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, MSBuildExtensionPack.DataSourceEntities.BuildLog.Default dataItem, int row)
-			{
-				char cell = 'A';
-
-				string cellKey;
-	            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+                string cellKey;
+                cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.Build_1_Name;
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
@@ -173,21 +169,18 @@ namespace MSBuildExtensionPack.CommonBLL
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.EventTime;
 
+            }
+        }
 
-			}
-		}
+        public class DefaultGroupedDataView
+            : Framework.Services.DataStreamServiceProviderBase<MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataViewCollection, MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataView>
+        {
+            public override void WriteHeaderLineToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, int row)
+            {
+                char cell = 'A';
 
-
-
-		public class DefaultGroupedDataView 
-			: Framework.Services.DataStreamServiceProviderBase<MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataViewCollection, MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataView>
-		{
-			public override void WriteHeaderLineToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, int row)
-			{
-				char cell = 'A';
-
-				string cellKey;
-	            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+                string cellKey;
+                cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = "BuildId";
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
@@ -208,15 +201,14 @@ namespace MSBuildExtensionPack.CommonBLL
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = "Organization_2Id";
 
+            }
 
-			}
+            public override void WriteDataItemToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataView dataItem, int row)
+            {
+                char cell = 'A';
 
-			public override void WriteDataItemToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataView dataItem, int row)
-			{
-				char cell = 'A';
-
-				string cellKey;
-	            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+                string cellKey;
+                cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.BuildId;
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
@@ -237,45 +229,38 @@ namespace MSBuildExtensionPack.CommonBLL
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.Organization_2Id;
 
+            }
+        }
 
-			}
-		}
+        public class KeyInformation
+            : Framework.Services.DataStreamServiceProviderBase<MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformationCollection, MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformation>
+        {
+            public override void WriteHeaderLineToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, int row)
+            {
+                char cell = 'A';
 
-
-
-		public class KeyInformation 
-			: Framework.Services.DataStreamServiceProviderBase<MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformationCollection, MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformation>
-		{
-			public override void WriteHeaderLineToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, int row)
-			{
-				char cell = 'A';
-
-				string cellKey;
-	            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+                string cellKey;
+                cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = "Id";
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = "BuildEventCodeId";
 
+            }
 
-			}
+            public override void WriteDataItemToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformation dataItem, int row)
+            {
+                char cell = 'A';
 
-			public override void WriteDataItemToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformation dataItem, int row)
-			{
-				char cell = 'A';
-
-				string cellKey;
-	            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+                string cellKey;
+                cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.Id;
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.BuildEventCodeId;
 
-
-			}
-		}
-
-
+            }
+        }
 
     }
 }

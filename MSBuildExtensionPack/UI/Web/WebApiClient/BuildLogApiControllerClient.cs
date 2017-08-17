@@ -157,8 +157,6 @@ namespace MSBuildExtensionPack.WebApiClient
 
         #endregion batch insert, update and delete in an entity collection
 
-
-
         #region Query Methods Of NameValuePair of All per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         public const string ActionName_GetCollectionOfNameValuePairOfAll = "GetCollectionOfNameValuePairOfAll";
@@ -172,10 +170,10 @@ namespace MSBuildExtensionPack.WebApiClient
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
         public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfAllAsync(
-			int currentIndex
-			, int pageSize
-			, string queryOrderByExpression
-			)
+            int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
         {
             Dictionary<string, string> parameters = new Dictionary<string, string>();
 
@@ -183,14 +181,11 @@ namespace MSBuildExtensionPack.WebApiClient
             parameters.Add("pageSize", pageSize.ToString());
             parameters.Add("queryOrderByExpression", queryOrderByExpression);
 
-			string url = GetHttpRequestUrl(ActionName_GetCollectionOfNameValuePairOfAll, parameters);
+            string url = GetHttpRequestUrl(ActionName_GetCollectionOfNameValuePairOfAll, parameters);
             return await Get<Framework.NameValueCollection>(url);
-		}
+        }
 
         #endregion Query Methods Of NameValuePair of All per value type
-
-
-
 
         #region Query Methods Of NameValuePair of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
 
@@ -214,35 +209,31 @@ namespace MSBuildExtensionPack.WebApiClient
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
         public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfByFKOnlyAsync(
-			bool isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, System.Int64 valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
-			, bool isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, System.Int32 valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
-			, bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64 valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-			, bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64 valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
-			, bool isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, System.Int32 valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
-			, int currentIndex
-			, int pageSize
-			, string queryOrderByExpression
-			)
+            bool isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+            , bool isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, System.Int32? valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+            , bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            , bool isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, System.Int32? valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
         {
             Dictionary<string, string> parameters = new Dictionary<string, string>();
-			parameters.Add("isToCompareIdByFKOnlyOfBuild_1OfByFKOnly", isToCompareIdByFKOnlyOfBuild_1OfByFKOnly.ToString()); parameters.Add("valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly", valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly.ToString());
-			parameters.Add("isToCompareIdByFKOnlyOfSolution_1OfByFKOnly", isToCompareIdByFKOnlyOfSolution_1OfByFKOnly.ToString()); parameters.Add("valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly", valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly.ToString());
-			parameters.Add("isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly", isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly.ToString()); parameters.Add("valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly", valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly.ToString());
-			parameters.Add("isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly", isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly.ToString()); parameters.Add("valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly", valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly.ToString());
-			parameters.Add("isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly", isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly.ToString()); parameters.Add("valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly", valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly.ToString());
+            parameters.Add("isToCompareIdByFKOnlyOfBuild_1OfByFKOnly", isToCompareIdByFKOnlyOfBuild_1OfByFKOnly.ToString()); parameters.Add("valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly", valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly.ToString());
+            parameters.Add("isToCompareIdByFKOnlyOfSolution_1OfByFKOnly", isToCompareIdByFKOnlyOfSolution_1OfByFKOnly.ToString()); parameters.Add("valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly", valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly.ToString());
+            parameters.Add("isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly", isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly.ToString()); parameters.Add("valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly", valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly.ToString());
+            parameters.Add("isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly", isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly.ToString()); parameters.Add("valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly", valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly.ToString());
+            parameters.Add("isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly", isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly.ToString()); parameters.Add("valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly", valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly.ToString());
             parameters.Add("currentIndex", currentIndex.ToString());
             parameters.Add("pageSize", pageSize.ToString());
             parameters.Add("queryOrderByExpression", queryOrderByExpression);
 
-			string url = GetHttpRequestUrl(ActionName_GetCollectionOfNameValuePairOfByFKOnly, parameters);
+            string url = GetHttpRequestUrl(ActionName_GetCollectionOfNameValuePairOfByFKOnly, parameters);
             return await Get<Framework.NameValueCollection>(url);
-		}
+        }
 
         #endregion Query Methods Of NameValuePair of ByFKOnly per value type
-
-
-
-
 
         public const string ActionName_GetBuildLogItemVM = "GetBuildLogItemVM";
         /// <summary>
@@ -260,11 +251,6 @@ namespace MSBuildExtensionPack.WebApiClient
             return await GetItemViewModel<MSBuildExtensionPack.ViewModelData.BuildLogItemVM>(url);
         }
 
-
-
-
-
-
             public const string ActionName_GetWPCommonOfBuildLogVM = "GetWPCommonOfBuildLogVM";
         /// <summary>
         /// Gets the wp common of build log vm.
@@ -280,9 +266,6 @@ namespace MSBuildExtensionPack.WebApiClient
 
             return await Post<MSBuildExtensionPack.ViewModelData.WPCommonOfBuildLogVM>(url, vm);
         }
-
-
-
 
         public const string ActionName_GetWPEntityRelatedOfBuildLogVM = "GetWPEntityRelatedOfBuildLogVM";
         /// <summary>
@@ -300,10 +283,6 @@ namespace MSBuildExtensionPack.WebApiClient
             return await GetEntityRelated<MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfBuildLogVM>(url);
         }
 
-
-
-
-
         public const string ActionName_HeartBeat = "HeartBeat";
         /// <summary>
         /// Hearts the beat asynchronous.
@@ -316,7 +295,7 @@ namespace MSBuildExtensionPack.WebApiClient
             var response = await Client.GetAsync(url);
 
             return response;
-        }   
+        }
     }
 }
 

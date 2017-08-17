@@ -4,12 +4,12 @@ using System.Runtime.Serialization;
 namespace MSBuildExtensionPack.EntityContracts
 {
 
-	public partial interface IBuildIdentifier
-	{ 
+    public partial interface IBuildIdentifier
+    {
 
         System.Int64 Id { get; set; }
 
-	}
+    }
 
     public class QueryPredicateBuildByIdentifier<T>
         where T : IBuild
@@ -29,7 +29,6 @@ namespace MSBuildExtensionPack.EntityContracts
 ;
         }
     }
-
 
     /// <summary>
     ///  a property defined when <see cref="BuildIdentifier"/> is used in other classes.

@@ -11,18 +11,20 @@ namespace MSBuildExtensionPack.UWPApp
     {
         public void CheckBeginInvokeOnUI(Action action)
         {
-            DispatcherHelper.CheckBeginInvokeOnUI(action);
+            Device.BeginInvokeOnMainThread(action);
+            //DispatcherHelper.CheckBeginInvokeOnUI(action);
         }
 
         public void Initialize()
         {
-            DispatcherHelper.Initialize();
+            throw new NotImplementedException();
+            //DispatcherHelper.Initialize();
         }
 
         public void Reset()
         {
-            DispatcherHelper.Reset();
-
+            throw new NotImplementedException();
+            //DispatcherHelper.Reset();
         }
     }
 }

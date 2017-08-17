@@ -6,29 +6,29 @@ namespace MSBuildExtensionPack.DataSourceEntities
     /// <summary>
     /// table/entity identifier, inherit from entity interface, <see cref="MSBuildExtensionPack.EntityContracts.ISolutionIdentifier"/>
     /// </summary>
-	public partial class SolutionIdentifier 
-		: MSBuildExtensionPack.EntityContracts.ISolutionIdentifier
-	{ 
+    public partial class SolutionIdentifier
+        : MSBuildExtensionPack.EntityContracts.ISolutionIdentifier
+    {
 
-		#region constructors
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SolutionIdentifier"/> class.
-        /// </summary>
-		public SolutionIdentifier ()
-		{
-		}
+        #region constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SolutionIdentifier"/> class.
         /// </summary>
-		public SolutionIdentifier (
+        public SolutionIdentifier ()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SolutionIdentifier"/> class.
+        /// </summary>
+        public SolutionIdentifier (
 System.Int32 id)
-		{
+        {
 
-			this.Id=id;
+            this.Id=id;
 
-		}
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SolutionIdentifier"/> class.
@@ -38,19 +38,17 @@ System.Int32 id)
             MSBuildExtensionPack.EntityContracts.ISolutionIdentifierHelper.Copy<MSBuildExtensionPack.EntityContracts.ISolutionIdentifier, SolutionIdentifier>(item, this);
         }
 
-		#endregion constructors
+        #endregion constructors
 
-		#region properties
-
+        #region properties
 
         public System.Int32 Id { get; set; }
 
-
-		#endregion properties
+        #endregion properties
 
         #region override methods
-		
-		/// <summary>
+
+        /// <summary>
         /// Returns a <see cref="System.String"/> that represents this instance, using ToString method in entity contract helper in EntityContract project
         /// </summary>
         /// <returns>
@@ -82,7 +80,7 @@ System.Int32 id)
         /// Returns a hash code for this instance.
         /// </summary>
         /// <returns>
-        /// A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+        /// A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         /// </returns>
         public override int GetHashCode()
         {
@@ -91,7 +89,7 @@ System.Int32 id)
 
         #endregion override methods
 
-		#region Method of SolutionIdentifier GetAClone()
+        #region Method of SolutionIdentifier GetAClone()
 
         /// <summary>
         /// Gets the A clone, using clone method in entity contract helper in EntityContract project.
@@ -102,9 +100,8 @@ System.Int32 id)
             return MSBuildExtensionPack.EntityContracts.ISolutionIdentifierHelper.Clone<SolutionIdentifier, SolutionIdentifier>(this);
         }
 
-
-		#endregion Method of SolutionIdentifier GetAClone()
-	}
+        #endregion Method of SolutionIdentifier GetAClone()
+    }
 
     /// <summary>
     ///  a property defined when <see cref="WithIdentifierContractSolution"/> is used in other classes.

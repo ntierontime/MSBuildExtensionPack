@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   
   <data name="Application_Title" xml:space="preserve">
@@ -138,6 +138,24 @@
   </data>
   <data name="ToolTip_Of_EntityRelated_of_MSBuildExtensionPack_Build" xml:space="preserve">
     <value>ToolTip Of EntityRelated of MSBuildExtensionPack.Build</value>
+  </data>
+  <data name="Description_Of_CommonSearchView_of_MSBuildExtensionPack_Build" xml:space="preserve">
+    <value>Description Of CommonSearchView of MSBuildExtensionPack.Build</value>
+  </data>
+  <data name="CommonSearchView_of_MSBuildExtensionPack_Build" xml:space="preserve">
+    <value>CommonSearchView of MSBuildExtensionPack.Build</value>
+  </data>
+  <data name="ToolTip_Of_CommonSearchView_of_MSBuildExtensionPack_Build" xml:space="preserve">
+    <value>ToolTip Of CommonSearchView of MSBuildExtensionPack.Build</value>
+  </data>
+  <data name="Description_Of_CommonResultView_of_MSBuildExtensionPack_Build" xml:space="preserve">
+    <value>Description Of CommonResultView of MSBuildExtensionPack.Build</value>
+  </data>
+  <data name="CommonResultView_of_MSBuildExtensionPack_Build" xml:space="preserve">
+    <value>CommonResultView of MSBuildExtensionPack.Build</value>
+  </data>
+  <data name="ToolTip_Of_CommonResultView_of_MSBuildExtensionPack_Build" xml:space="preserve">
+    <value>ToolTip Of CommonResultView of MSBuildExtensionPack.Build</value>
   </data>
   <data name="Description_Of_UpdateNameOnly_of_MSBuildExtensionPack_Build" xml:space="preserve">
     <value>Description Of UpdateNameOnly of MSBuildExtensionPack.Build</value>
@@ -166,6 +184,24 @@
   <data name="ToolTip_Of_EntityRelated_of_MSBuildExtensionPack_BuildEventCode" xml:space="preserve">
     <value>ToolTip Of EntityRelated of MSBuildExtensionPack.BuildEventCode</value>
   </data>
+  <data name="Description_Of_CommonSearchView_of_MSBuildExtensionPack_BuildEventCode" xml:space="preserve">
+    <value>Description Of CommonSearchView of MSBuildExtensionPack.BuildEventCode</value>
+  </data>
+  <data name="CommonSearchView_of_MSBuildExtensionPack_BuildEventCode" xml:space="preserve">
+    <value>CommonSearchView of MSBuildExtensionPack.BuildEventCode</value>
+  </data>
+  <data name="ToolTip_Of_CommonSearchView_of_MSBuildExtensionPack_BuildEventCode" xml:space="preserve">
+    <value>ToolTip Of CommonSearchView of MSBuildExtensionPack.BuildEventCode</value>
+  </data>
+  <data name="Description_Of_CommonResultView_of_MSBuildExtensionPack_BuildEventCode" xml:space="preserve">
+    <value>Description Of CommonResultView of MSBuildExtensionPack.BuildEventCode</value>
+  </data>
+  <data name="CommonResultView_of_MSBuildExtensionPack_BuildEventCode" xml:space="preserve">
+    <value>CommonResultView of MSBuildExtensionPack.BuildEventCode</value>
+  </data>
+  <data name="ToolTip_Of_CommonResultView_of_MSBuildExtensionPack_BuildEventCode" xml:space="preserve">
+    <value>ToolTip Of CommonResultView of MSBuildExtensionPack.BuildEventCode</value>
+  </data>
   <data name="Description_Of_Common_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
     <value>Description Of Common of MSBuildExtensionPack.BuildLog</value>
   </data>
@@ -183,6 +219,24 @@
   </data>
   <data name="ToolTip_Of_EntityRelated_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
     <value>ToolTip Of EntityRelated of MSBuildExtensionPack.BuildLog</value>
+  </data>
+  <data name="Description_Of_CommonSearchView_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
+    <value>Description Of CommonSearchView of MSBuildExtensionPack.BuildLog</value>
+  </data>
+  <data name="CommonSearchView_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
+    <value>CommonSearchView of MSBuildExtensionPack.BuildLog</value>
+  </data>
+  <data name="ToolTip_Of_CommonSearchView_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
+    <value>ToolTip Of CommonSearchView of MSBuildExtensionPack.BuildLog</value>
+  </data>
+  <data name="Description_Of_CommonResultView_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
+    <value>Description Of CommonResultView of MSBuildExtensionPack.BuildLog</value>
+  </data>
+  <data name="CommonResultView_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
+    <value>CommonResultView of MSBuildExtensionPack.BuildLog</value>
+  </data>
+  <data name="ToolTip_Of_CommonResultView_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
+    <value>ToolTip Of CommonResultView of MSBuildExtensionPack.BuildLog</value>
   </data>
   <data name="Description_Of_Common_of_MSBuildExtensionPack_Organization" xml:space="preserve">
     <value>Description Of Common of MSBuildExtensionPack.Organization</value>
@@ -202,6 +256,24 @@
   <data name="ToolTip_Of_EntityRelated_of_MSBuildExtensionPack_Organization" xml:space="preserve">
     <value>ToolTip Of EntityRelated of MSBuildExtensionPack.Organization</value>
   </data>
+  <data name="Description_Of_CommonSearchView_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Description Of CommonSearchView of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="CommonSearchView_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>CommonSearchView of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="ToolTip_Of_CommonSearchView_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>ToolTip Of CommonSearchView of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Description_Of_CommonResultView_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Description Of CommonResultView of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="CommonResultView_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>CommonResultView of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="ToolTip_Of_CommonResultView_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>ToolTip Of CommonResultView of MSBuildExtensionPack.Organization</value>
+  </data>
   <data name="Description_Of_Common_of_MSBuildExtensionPack_Solution" xml:space="preserve">
     <value>Description Of Common of MSBuildExtensionPack.Solution</value>
   </data>
@@ -219,6 +291,24 @@
   </data>
   <data name="ToolTip_Of_EntityRelated_of_MSBuildExtensionPack_Solution" xml:space="preserve">
     <value>ToolTip Of EntityRelated of MSBuildExtensionPack.Solution</value>
+  </data>
+  <data name="Description_Of_CommonSearchView_of_MSBuildExtensionPack_Solution" xml:space="preserve">
+    <value>Description Of CommonSearchView of MSBuildExtensionPack.Solution</value>
+  </data>
+  <data name="CommonSearchView_of_MSBuildExtensionPack_Solution" xml:space="preserve">
+    <value>CommonSearchView of MSBuildExtensionPack.Solution</value>
+  </data>
+  <data name="ToolTip_Of_CommonSearchView_of_MSBuildExtensionPack_Solution" xml:space="preserve">
+    <value>ToolTip Of CommonSearchView of MSBuildExtensionPack.Solution</value>
+  </data>
+  <data name="Description_Of_CommonResultView_of_MSBuildExtensionPack_Solution" xml:space="preserve">
+    <value>Description Of CommonResultView of MSBuildExtensionPack.Solution</value>
+  </data>
+  <data name="CommonResultView_of_MSBuildExtensionPack_Solution" xml:space="preserve">
+    <value>CommonResultView of MSBuildExtensionPack.Solution</value>
+  </data>
+  <data name="ToolTip_Of_CommonResultView_of_MSBuildExtensionPack_Solution" xml:space="preserve">
+    <value>ToolTip Of CommonResultView of MSBuildExtensionPack.Solution</value>
   </data>
 
 </root>

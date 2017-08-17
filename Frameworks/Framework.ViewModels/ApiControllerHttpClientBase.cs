@@ -18,7 +18,7 @@ namespace Framework.ViewModels
         /// <value>
         /// The root path.
         /// </value>
-        /// 
+        ///
         string RootPath { get; set; }
 
         public abstract string ControllerName { get; }
@@ -266,7 +266,4 @@ namespace Framework.ViewModels
         }
     }
 }
-
-
-
 

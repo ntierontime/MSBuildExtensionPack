@@ -4,12 +4,12 @@ using System.Runtime.Serialization;
 namespace MSBuildExtensionPack.EntityContracts
 {
 
-	public partial interface IBuildLogIdentifier
-	{ 
+    public partial interface IBuildLogIdentifier
+    {
 
         System.Int64 Id { get; set; }
 
-	}
+    }
 
     public class QueryPredicateBuildLogByIdentifier<T>
         where T : IBuildLog
@@ -29,7 +29,6 @@ namespace MSBuildExtensionPack.EntityContracts
 ;
         }
     }
-
 
     /// <summary>
     ///  a property defined when <see cref="BuildLogIdentifier"/> is used in other classes.

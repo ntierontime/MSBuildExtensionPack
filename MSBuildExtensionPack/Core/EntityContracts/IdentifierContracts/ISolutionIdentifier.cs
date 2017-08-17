@@ -4,12 +4,12 @@ using System.Runtime.Serialization;
 namespace MSBuildExtensionPack.EntityContracts
 {
 
-	public partial interface ISolutionIdentifier
-	{ 
+    public partial interface ISolutionIdentifier
+    {
 
         System.Int32 Id { get; set; }
 
-	}
+    }
 
     public class QueryPredicateSolutionByIdentifier<T>
         where T : ISolution
@@ -29,7 +29,6 @@ namespace MSBuildExtensionPack.EntityContracts
 ;
         }
     }
-
 
     /// <summary>
     ///  a property defined when <see cref="SolutionIdentifier"/> is used in other classes.

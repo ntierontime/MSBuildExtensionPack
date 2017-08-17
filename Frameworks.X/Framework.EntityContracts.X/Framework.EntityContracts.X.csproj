@@ -37,7 +37,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <None Include="map.1.B.3.vsd" />
-    <Content Include="map.1.B.3.vsd.png" />
+    <None Include="map.1.B.3.vsd.png" />
     <Compile Include="..\..\Frameworks\Framework.EntityContracts\AlphabeticalOrderCategory.cs">
       <Link>AlphabeticalOrderCategory.cs</Link>
     </Compile>
@@ -71,6 +71,15 @@
     <Compile Include="..\..\Frameworks\Framework.EntityContracts\KnownMathCalculations.cs">
       <Link>KnownMathCalculations.cs</Link>
     </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\Queries\PredefinedBooleanSelectedValues.cs">
+      <Link>Queries\PredefinedBooleanSelectedValues.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\Queries\PreDefinedDateTimeRanges.cs">
+      <Link>Queries\PreDefinedDateTimeRanges.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\Queries\QueryCriteriaBase.cs">
+      <Link>Queries\QueryCriteriaBase.cs</Link>
+    </Compile>
     <Compile Include="..\..\Frameworks\Framework.EntityContracts\Queries\QueryPagingResult.cs">
       <Link>Queries\QueryPagingResult.cs</Link>
     </Compile>
@@ -83,9 +92,6 @@
     <Compile Include="..\..\Frameworks\Framework.EntityContracts\ViewModels\SearchStatus.cs">
       <Link>ViewModels\SearchStatus.cs</Link>
     </Compile>
-    <Compile Include="..\..\Frameworks\Framework.EntityContracts\Queries\QueryCriteriaBase.cs">
-      <Link>Queries\QueryCriteriaBase.cs</Link>
-    </Compile>
     <Compile Include="..\..\Frameworks\Framework.EntityContracts\Queries\QueryOrderBySetting.cs">
       <Link>Queries\QueryOrderBySetting.cs</Link>
     </Compile>
@@ -94,9 +100,6 @@
     </Compile>
     <Compile Include="..\..\Frameworks\Framework.EntityContracts\Queries\QueryPredicateBase.cs">
       <Link>Queries\QueryPredicateBase.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.EntityContracts\Queries\IQueryPredicate.cs">
-      <Link>Queries\IQueryPredicate.cs</Link>
     </Compile>
     <Compile Include="..\..\Frameworks\Framework.EntityContracts\Queries\QueryPredicateTypes.cs">
       <Link>Queries\QueryPredicateTypes.cs</Link>

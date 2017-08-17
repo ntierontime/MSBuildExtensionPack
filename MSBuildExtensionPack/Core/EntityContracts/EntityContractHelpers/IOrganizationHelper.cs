@@ -5,12 +5,12 @@ using System.Runtime.Serialization;
 namespace MSBuildExtensionPack.EntityContracts
 {
     /// <summary>
-    /// provides common methods/actions/stubs on an entity. 
+    /// provides common methods/actions/stubs on an entity.
     /// </summary>
-	public static partial class IOrganizationHelper
-	{
+    public static partial class IOrganizationHelper
+    {
 
-		#region Copy<...>(...), Equals<...>(...), Clone<...>(...), ToString<...>(...), 
+        #region Copy<...>(...), Equals<...>(...), Clone<...>(...), ToString<...>(...),
 
         /// <summary>
         /// Copies the specified from.
@@ -23,47 +23,43 @@ namespace MSBuildExtensionPack.EntityContracts
             where T1 : IOrganization
             where T2 : IOrganization
         {
-			to.Id = from.Id;
-			to.ParentId = from.ParentId;
-			to.Name = from.Name;
-			to.IsSystemBuiltIn = from.IsSystemBuiltIn;
-			to.UniqueIdentifier = from.UniqueIdentifier;
-			to.CreatedDateTime = from.CreatedDateTime;
-			to.CharColumn = from.CharColumn;
-			to.VarcharColumn = from.VarcharColumn;
-			to.TextColumn = from.TextColumn;
-			to.NcharColumn = from.NcharColumn;
-			to.NvarcharColumn = from.NvarcharColumn;
-			to.NtextColumn = from.NtextColumn;
-			to.BitColumn = from.BitColumn;
-			to.BinaryColumn = from.BinaryColumn;
-			to.VarbinaryColumn = from.VarbinaryColumn;
-			to.ImageColumn = from.ImageColumn;
-			to.TinyintColumn = from.TinyintColumn;
-			to.SmallintColumn = from.SmallintColumn;
-			to.IntColumn = from.IntColumn;
-			to.BigintColumn = from.BigintColumn;
-			to.DecimalColumn = from.DecimalColumn;
-			to.NumericColumn = from.NumericColumn;
-			to.SmallmoneyColumn = from.SmallmoneyColumn;
-			to.MoneyColumn = from.MoneyColumn;
-			to.FloatColumn = from.FloatColumn;
-			to.RealColumn = from.RealColumn;
-			to.DatetimeColumn = from.DatetimeColumn;
-			to.Datetime2Column = from.Datetime2Column;
-			to.SmalldatetimeColumn = from.SmalldatetimeColumn;
-			to.DateColumn = from.DateColumn;
-			to.TimeColumn = from.TimeColumn;
-			to.UniqueidentifierColumn = from.UniqueidentifierColumn;
-        } 
+            to.Id = from.Id;
+            to.ParentId = from.ParentId;
+            to.Name = from.Name;
+            to.IsSystemBuiltIn = from.IsSystemBuiltIn;
+            to.UniqueIdentifier = from.UniqueIdentifier;
+            to.CreatedDateTime = from.CreatedDateTime;
+            to.CharColumn = from.CharColumn;
+            to.VarcharColumn = from.VarcharColumn;
+            to.TextColumn = from.TextColumn;
+            to.NcharColumn = from.NcharColumn;
+            to.NvarcharColumn = from.NvarcharColumn;
+            to.NtextColumn = from.NtextColumn;
+            to.BitColumn = from.BitColumn;
+            to.BinaryColumn = from.BinaryColumn;
+            to.VarbinaryColumn = from.VarbinaryColumn;
+            to.ImageColumn = from.ImageColumn;
+            to.TinyintColumn = from.TinyintColumn;
+            to.SmallintColumn = from.SmallintColumn;
+            to.IntColumn = from.IntColumn;
+            to.BigintColumn = from.BigintColumn;
+            to.DecimalColumn = from.DecimalColumn;
+            to.NumericColumn = from.NumericColumn;
+            to.SmallmoneyColumn = from.SmallmoneyColumn;
+            to.MoneyColumn = from.MoneyColumn;
+            to.FloatColumn = from.FloatColumn;
+            to.RealColumn = from.RealColumn;
+            to.DatetimeColumn = from.DatetimeColumn;
+            to.Datetime2Column = from.Datetime2Column;
+            to.SmalldatetimeColumn = from.SmalldatetimeColumn;
+            to.DateColumn = from.DateColumn;
+            to.TimeColumn = from.TimeColumn;
+            to.UniqueidentifierColumn = from.UniqueidentifierColumn;
+        }
 
+        #region special copy
 
-		#region special copy
-
-
-
-
-		#endregion special copy
+        #endregion special copy
 
         /// <summary>
         /// Equals the specified from.
@@ -77,40 +73,40 @@ namespace MSBuildExtensionPack.EntityContracts
             where T1 : IOrganization
             where T2 : IOrganization
         {
-			bool _retval = true;
-			_retval = _retval && to.Id == from.Id;
-			_retval = _retval && to.ParentId == from.ParentId;
-			_retval = _retval && to.Name == from.Name;
-			_retval = _retval && to.IsSystemBuiltIn == from.IsSystemBuiltIn;
-			_retval = _retval && to.UniqueIdentifier == from.UniqueIdentifier;
-			_retval = _retval && to.CreatedDateTime == from.CreatedDateTime;
-			_retval = _retval && to.CharColumn == from.CharColumn;
-			_retval = _retval && to.VarcharColumn == from.VarcharColumn;
-			_retval = _retval && to.TextColumn == from.TextColumn;
-			_retval = _retval && to.NcharColumn == from.NcharColumn;
-			_retval = _retval && to.NvarcharColumn == from.NvarcharColumn;
-			_retval = _retval && to.NtextColumn == from.NtextColumn;
-			_retval = _retval && to.BitColumn == from.BitColumn;
-			_retval = _retval && to.BinaryColumn == from.BinaryColumn;
-			_retval = _retval && to.VarbinaryColumn == from.VarbinaryColumn;
-			_retval = _retval && to.ImageColumn == from.ImageColumn;
-			_retval = _retval && to.TinyintColumn == from.TinyintColumn;
-			_retval = _retval && to.SmallintColumn == from.SmallintColumn;
-			_retval = _retval && to.IntColumn == from.IntColumn;
-			_retval = _retval && to.BigintColumn == from.BigintColumn;
-			_retval = _retval && to.DecimalColumn == from.DecimalColumn;
-			_retval = _retval && to.NumericColumn == from.NumericColumn;
-			_retval = _retval && to.SmallmoneyColumn == from.SmallmoneyColumn;
-			_retval = _retval && to.MoneyColumn == from.MoneyColumn;
-			_retval = _retval && to.FloatColumn == from.FloatColumn;
-			_retval = _retval && to.RealColumn == from.RealColumn;
-			_retval = _retval && to.DatetimeColumn == from.DatetimeColumn;
-			_retval = _retval && to.Datetime2Column == from.Datetime2Column;
-			_retval = _retval && to.SmalldatetimeColumn == from.SmalldatetimeColumn;
-			_retval = _retval && to.DateColumn == from.DateColumn;
-			_retval = _retval && to.TimeColumn == from.TimeColumn;
-			_retval = _retval && to.UniqueidentifierColumn == from.UniqueidentifierColumn;
-			return _retval;
+            bool _retval = true;
+            _retval = _retval && to.Id == from.Id;
+            _retval = _retval && to.ParentId == from.ParentId;
+            _retval = _retval && to.Name == from.Name;
+            _retval = _retval && to.IsSystemBuiltIn == from.IsSystemBuiltIn;
+            _retval = _retval && to.UniqueIdentifier == from.UniqueIdentifier;
+            _retval = _retval && to.CreatedDateTime == from.CreatedDateTime;
+            _retval = _retval && to.CharColumn == from.CharColumn;
+            _retval = _retval && to.VarcharColumn == from.VarcharColumn;
+            _retval = _retval && to.TextColumn == from.TextColumn;
+            _retval = _retval && to.NcharColumn == from.NcharColumn;
+            _retval = _retval && to.NvarcharColumn == from.NvarcharColumn;
+            _retval = _retval && to.NtextColumn == from.NtextColumn;
+            _retval = _retval && to.BitColumn == from.BitColumn;
+            _retval = _retval && to.BinaryColumn == from.BinaryColumn;
+            _retval = _retval && to.VarbinaryColumn == from.VarbinaryColumn;
+            _retval = _retval && to.ImageColumn == from.ImageColumn;
+            _retval = _retval && to.TinyintColumn == from.TinyintColumn;
+            _retval = _retval && to.SmallintColumn == from.SmallintColumn;
+            _retval = _retval && to.IntColumn == from.IntColumn;
+            _retval = _retval && to.BigintColumn == from.BigintColumn;
+            _retval = _retval && to.DecimalColumn == from.DecimalColumn;
+            _retval = _retval && to.NumericColumn == from.NumericColumn;
+            _retval = _retval && to.SmallmoneyColumn == from.SmallmoneyColumn;
+            _retval = _retval && to.MoneyColumn == from.MoneyColumn;
+            _retval = _retval && to.FloatColumn == from.FloatColumn;
+            _retval = _retval && to.RealColumn == from.RealColumn;
+            _retval = _retval && to.DatetimeColumn == from.DatetimeColumn;
+            _retval = _retval && to.Datetime2Column == from.Datetime2Column;
+            _retval = _retval && to.SmalldatetimeColumn == from.SmalldatetimeColumn;
+            _retval = _retval && to.DateColumn == from.DateColumn;
+            _retval = _retval && to.TimeColumn == from.TimeColumn;
+            _retval = _retval && to.UniqueidentifierColumn == from.UniqueidentifierColumn;
+            return _retval;
         }
 
         /// <summary>
@@ -128,8 +124,7 @@ namespace MSBuildExtensionPack.EntityContracts
             return _retval;
         }
 
-
-		static string m_Format = "Id:{0};ParentId:{1};Name:{2};IsSystemBuiltIn:{3};UniqueIdentifier:{4};CreatedDateTime:{5};CharColumn:{6};VarcharColumn:{7};TextColumn:{8};NcharColumn:{9};NvarcharColumn:{10};NtextColumn:{11};BitColumn:{12};BinaryColumn:{13};VarbinaryColumn:{14};ImageColumn:{15};TinyintColumn:{16};SmallintColumn:{17};IntColumn:{18};BigintColumn:{19};DecimalColumn:{20};NumericColumn:{21};SmallmoneyColumn:{22};MoneyColumn:{23};FloatColumn:{24};RealColumn:{25};DatetimeColumn:{26};Datetime2Column:{27};SmalldatetimeColumn:{28};DateColumn:{29};TimeColumn:{30};UniqueidentifierColumn:{31};";
+        static string m_Format = "Id:{0};ParentId:{1};Name:{2};IsSystemBuiltIn:{3};UniqueIdentifier:{4};CreatedDateTime:{5};CharColumn:{6};VarcharColumn:{7};TextColumn:{8};NcharColumn:{9};NvarcharColumn:{10};NtextColumn:{11};BitColumn:{12};BinaryColumn:{13};VarbinaryColumn:{14};ImageColumn:{15};TinyintColumn:{16};SmallintColumn:{17};IntColumn:{18};BigintColumn:{19};DecimalColumn:{20};NumericColumn:{21};SmallmoneyColumn:{22};MoneyColumn:{23};FloatColumn:{24};RealColumn:{25};DatetimeColumn:{26};Datetime2Column:{27};SmalldatetimeColumn:{28};DateColumn:{29};TimeColumn:{30};UniqueidentifierColumn:{31};";
         /// <summary>
         /// Returns a <see cref="System.String"/> that represents this instance.
         /// </summary>
@@ -142,44 +137,44 @@ namespace MSBuildExtensionPack.EntityContracts
             where T : IOrganization
         {
             return string.Format(m_Format
-				, input.Id
-				, input.ParentId
-				, input.Name
-				, input.IsSystemBuiltIn
-				, input.UniqueIdentifier
-				, input.CreatedDateTime
-				, input.CharColumn
-				, input.VarcharColumn
-				, input.TextColumn
-				, input.NcharColumn
-				, input.NvarcharColumn
-				, input.NtextColumn
-				, input.BitColumn
-				, input.BinaryColumn
-				, input.VarbinaryColumn
-				, input.ImageColumn
-				, input.TinyintColumn
-				, input.SmallintColumn
-				, input.IntColumn
-				, input.BigintColumn
-				, input.DecimalColumn
-				, input.NumericColumn
-				, input.SmallmoneyColumn
-				, input.MoneyColumn
-				, input.FloatColumn
-				, input.RealColumn
-				, input.DatetimeColumn
-				, input.Datetime2Column
-				, input.SmalldatetimeColumn
-				, input.DateColumn
-				, input.TimeColumn
-				, input.UniqueidentifierColumn
-				);
+                , input.Id
+                , input.ParentId
+                , input.Name
+                , input.IsSystemBuiltIn
+                , input.UniqueIdentifier
+                , input.CreatedDateTime
+                , input.CharColumn
+                , input.VarcharColumn
+                , input.TextColumn
+                , input.NcharColumn
+                , input.NvarcharColumn
+                , input.NtextColumn
+                , input.BitColumn
+                , input.BinaryColumn
+                , input.VarbinaryColumn
+                , input.ImageColumn
+                , input.TinyintColumn
+                , input.SmallintColumn
+                , input.IntColumn
+                , input.BigintColumn
+                , input.DecimalColumn
+                , input.NumericColumn
+                , input.SmallmoneyColumn
+                , input.MoneyColumn
+                , input.FloatColumn
+                , input.RealColumn
+                , input.DatetimeColumn
+                , input.Datetime2Column
+                , input.SmalldatetimeColumn
+                , input.DateColumn
+                , input.TimeColumn
+                , input.UniqueidentifierColumn
+                );
         }
 
-		#endregion Copy<...>(...), Equals<...>(...), Clone<...>(...), ToString<...>(...), 
+        #endregion Copy<...>(...), Equals<...>(...), Clone<...>(...), ToString<...>(...),
 
-		#region CopyCollection<...>(...), CloneCollection<...>(...)
+        #region CopyCollection<...>(...), CloneCollection<...>(...)
 
         /// <summary>
         /// Copies the collection.
@@ -221,9 +216,9 @@ namespace MSBuildExtensionPack.EntityContracts
             T2Collection _retval = new T2Collection();
             CopyCollection<T1Collection, T2Collection, T1, T2>(from, _retval);
             return _retval;
-        } 
+        }
 
-		#endregion CopyCollection<...>(...), CloneCollection<...>(...)
+        #endregion CopyCollection<...>(...), CloneCollection<...>(...)
 
         #region GetDefaultValue<T>()
 
@@ -237,11 +232,7 @@ namespace MSBuildExtensionPack.EntityContracts
         {
             T _retval = new T();
 
-
-
-
             _retval.ParentId = 1;
-
 
             return _retval;
         }
@@ -249,8 +240,6 @@ namespace MSBuildExtensionPack.EntityContracts
         #endregion GetDefaultValue<T>()
 
         #region NameValuePair related method
-
-
 
         /// <summary>
         /// Builds the name of name value pair.
@@ -263,7 +252,6 @@ namespace MSBuildExtensionPack.EntityContracts
         {
             return string.Format("{0}", input.Name);
         }
-
 
         /// <summary>
         /// Builds the name value pair.
@@ -278,15 +266,12 @@ namespace MSBuildExtensionPack.EntityContracts
             return _retval;
         }
 
-
-
         #endregion NameValuePair related method
 
-		#region Binary In File System,  BuildPhysicalFileFullPathOfProperty...<T>(T input)
+        #region Binary In File System,  BuildPhysicalFileFullPathOfProperty...<T>(T input)
 
+        #endregion Binary In File System,  BuildPhysicalFileFullPathOfProperty...<T>(T input)
 
-		#endregion Binary In File System,  BuildPhysicalFileFullPathOfProperty...<T>(T input)
-
-	}
+    }
 }
 

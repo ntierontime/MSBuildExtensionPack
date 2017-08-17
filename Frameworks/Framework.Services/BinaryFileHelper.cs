@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-
 namespace Framework.Services
 {
     /// <summary>
@@ -13,12 +12,12 @@ namespace Framework.Services
     public class BinaryFileHelper
     {
 
-		#region fields and properties
+        #region fields and properties
 
-        /// <summary>
-        /// Name in appsetting section in app.config or web.config
-        /// </summary>
-        static string AppConfigName_RootFolder = "FileRelativeRootFolder";
+        ///// <summary>
+        ///// Name in appsetting section in app.config or web.config
+        ///// </summary>
+        //static string AppConfigName_RootFolder = "FileRelativeRootFolder";
         /// <summary>
         /// Gets or sets the root folder.
         /// </summary>
@@ -27,20 +26,19 @@ namespace Framework.Services
         /// </value>
         public static string RootFolder { get; set; }
 
-		#endregion fields and properties
+        #endregion fields and properties
 
-		#region constructors
+        #region constructors
 
         /// <summary>
         /// Initializes the <see cref="BinaryFileHelper"/> class.
         /// </summary>
-		static BinaryFileHelper()
+        static BinaryFileHelper()
         {
             //RootFolder = ConfigurationManager.AppSettings[AppConfigName_RootFolder];
         }
 
-		#endregion constructors
-
+        #endregion constructors
 
         /// <summary>
         /// Gets the binary file response message when entity not exists.
@@ -49,7 +47,7 @@ namespace Framework.Services
         /// <param name="id">The id.</param>
         /// <param name="entityName">Name of the entity.</param>
         /// <returns>a new instance of <see cref="BinaryFileResponseMessage"/></returns>
-		public static BinaryFileResponseMessage GetBinaryFileResponseMessageWhenEntityNotExists(
+        public static BinaryFileResponseMessage GetBinaryFileResponseMessageWhenEntityNotExists(
             BinaryFileActionTypes binaryFileActionType
             , string id
             , string entityName)
@@ -72,7 +70,7 @@ namespace Framework.Services
         /// <param name="fileExtension">The file extension.</param>
         /// <param name="_Binary">The _ binary.</param>
         /// <returns>a new instance of <see cref="BinaryFileResponseMessage"/></returns>
-		public static BinaryFileResponseMessage BuildBinaryFileResponseMessage(
+        public static BinaryFileResponseMessage BuildBinaryFileResponseMessage(
             string id
             , string entityName
             , string fileName
@@ -80,7 +78,7 @@ namespace Framework.Services
         {
             return BuildBinaryFileResponseMessage(id, entityName, fileName, "application/octet-stream", _Binary);
         }
-		
+
         /// <summary>
         /// Builds the binary file response message.
         /// </summary>
@@ -148,11 +146,8 @@ namespace Framework.Services
             _retval.ActionLogs = new string[] { string.Format("Database failed when Entity of Identifier {0} in {1}, Details: {2}", id, entityName, message) };
 
             return _retval;
-        }                  
+        }
 
-#if (WINDOWS_PHONE || XAMARIN)
-#elif NETFX_CORE
-#else
         /// <summary>
         /// Loads the binary in file system.
         /// </summary>
@@ -221,7 +216,6 @@ namespace Framework.Services
 
             return _retval;
         }
-		
 
         /// <summary>
         /// Deletes the binary file.
@@ -253,8 +247,6 @@ namespace Framework.Services
             return _retval;
         }
 
-#endif
-
         #region BuildCSharpName(string input)
 
         /// <summary>
@@ -262,7 +254,7 @@ namespace Framework.Services
         /// </summary>
         /// <param name="input">The input.</param>
         /// <returns>converted CSharpName</returns>
-		public static string BuildCSharpName(string input)
+        public static string BuildCSharpName(string input)
         {
             if (string.IsNullOrEmpty(input) == false)
             {
@@ -338,7 +330,7 @@ namespace Framework.Services
             _retval = System.IO.Path.Combine(_retval, System.IO.Path.ChangeExtension(BuildCSharpName(fileNameWithoutExtension), fileExtension));
             return _retval;
         }
-		
+
         /// <summary>
         /// Builds the physical file full path.
         /// </summary>

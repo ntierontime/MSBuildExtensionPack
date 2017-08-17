@@ -11,9 +11,9 @@ namespace Framework.Web
     /// </summary>
     public static class WebFormApplicationApplicationVariables
     {
-		#region properties
+        #region properties
 
-		/// <summary>
+        /// <summary>
         /// application key of FileStorageRootFolder
         /// </summary>
         public static string Key_FileStorageRootFolder = "FileStorageRootFolder";
@@ -34,7 +34,6 @@ namespace Framework.Web
                 HttpContext.Current.Application[Key_FileStorageRootFolder] = value;
             }
         }
-
 
         /// <summary>
         /// application key of BinaryHandlerRootUrl
@@ -102,9 +101,9 @@ namespace Framework.Web
             }
         }
 
-		#endregion properties
+        #endregion properties
 
-		#region GetDefault()
+        #region GetDefault()
 
         /// <summary>
         /// Gets the default.
@@ -114,11 +113,10 @@ namespace Framework.Web
             FileStorageRootFolder = System.Configuration.ConfigurationManager.AppSettings[Key_FileStorageRootFolder];
             BinaryHandlerRootUrl = System.Configuration.ConfigurationManager.AppSettings[Key_BinaryHandlerRootUrl];
             MIMEContentTypeToFileExtensionMappingCollection = Framework.MIMEContentTypeToFileExtensionMappingCollection.GetDefault();
-        }    
+        }
 
-		#endregion GetDefault()
+        #endregion GetDefault()
 
-	}
+    }
 }
-
 

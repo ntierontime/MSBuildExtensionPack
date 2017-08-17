@@ -3,7 +3,6 @@ using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 
-
 namespace MSBuildExtensionPack.MVVMLightViewModels
 {
     /// <summary>
@@ -39,11 +38,11 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         /// <summary>
         /// field of LogOnModel
         /// </summary>
-		private Framework.LogOnModel m_LogOnModel;
+        private Framework.LogOnModel m_LogOnModel;
         /// <summary>
         /// LogOnModel
-        /// </summary>        
-		public Framework.LogOnModel LogOnModel
+        /// </summary>
+        public Framework.LogOnModel LogOnModel
         {
             get { return m_LogOnModel; }
             set
@@ -55,7 +54,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         /// <summary>
         /// LogonCommand
-        /// </summary>        
+        /// </summary>
         public RelayCommand LogonCommand { get; private set; }
 
         /// <summary>
@@ -66,7 +65,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             var_AuthenticationServiceAsynClient = new ??();
             _AuthenticationServiceAsynClient.LoginCompleted += new System.EventHandler<??.LoginCompletedEventArgs>(_AuthenticationServiceAsynClient_LoginCompleted);
             _AuthenticationServiceAsynClient.LoginAsync(this.m_LogOnModel.UserName, this.m_LogOnModel.Password, null, false);
-            
+
         }
 
         void _AuthenticationServiceAsynClient_LoginCompleted(object sender, ??.LoginCompletedEventArgs e)
@@ -78,7 +77,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         /// Determines whether you can Logon.
         /// </summary>
         /// <returns>
-        /// 	<c>true</c> if you can; otherwise, <c>false</c>.
+        ///     <c>true</c> if you can; otherwise, <c>false</c>.
         /// </returns>
         private bool CanLogon()
         {

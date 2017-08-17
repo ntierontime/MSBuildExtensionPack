@@ -6,7 +6,7 @@ using System.Web.Mvc;
 namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
 {
     /// <summary>
-	///
+    ///
     /// </summary>
     public partial class WebAuthorizationAttribute: ClaimsAuthorizationAttribute
     {
@@ -55,6 +55,6 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
             else
                 return url.RouteUrl(new { controller = "SignUp", action = "Login", area = "" });
         }
-	}
+    }
 }
 

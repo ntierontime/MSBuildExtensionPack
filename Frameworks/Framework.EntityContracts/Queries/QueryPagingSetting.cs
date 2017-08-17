@@ -9,8 +9,8 @@ namespace Framework.EntityContracts
     /// pull data according Paging setting.
     /// </summary>
     public class QueryPagingSetting// : Framework.PropertyChangedNotifier
-	{
-		#region constructors
+    {
+        #region constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="QueryPagingSetting"/> class.
@@ -44,7 +44,7 @@ namespace Framework.EntityContracts
 
         #region properties
 
-		[Newtonsoft.Json.JsonIgnore]
+        [Newtonsoft.Json.JsonIgnore]
         public bool IsEmptyResult
         {
             get
@@ -53,7 +53,7 @@ namespace Framework.EntityContracts
             }
         }
 
-		[Newtonsoft.Json.JsonIgnore]
+        [Newtonsoft.Json.JsonIgnore]
         public bool IsOnlyOnePage
         {
             get
@@ -62,7 +62,7 @@ namespace Framework.EntityContracts
             }
         }
 
-		[Newtonsoft.Json.JsonIgnore]
+        [Newtonsoft.Json.JsonIgnore]
         public bool CanChangeCurrentPage
         {
             get
@@ -71,7 +71,7 @@ namespace Framework.EntityContracts
             }
         }
 
-		[Newtonsoft.Json.JsonIgnore]
+        [Newtonsoft.Json.JsonIgnore]
         public bool IsMoreThanOnePage
         {
             get
@@ -80,7 +80,7 @@ namespace Framework.EntityContracts
             }
         }
 
-		[Newtonsoft.Json.JsonIgnore]
+        [Newtonsoft.Json.JsonIgnore]
         public bool IsCurrentPageIsFirstPage
         {
             get
@@ -89,7 +89,7 @@ namespace Framework.EntityContracts
             }
         }
 
-		[Newtonsoft.Json.JsonIgnore]
+        [Newtonsoft.Json.JsonIgnore]
         public bool IsCurrentPageIsLastPage
         {
             get
@@ -106,10 +106,10 @@ namespace Framework.EntityContracts
         /// <value>
         /// The index of the current page index.
         /// </value>
-        public int CurrentPage 
+        public int CurrentPage
         {
             get { return this.m_CurrentPage; }
-            set 
+            set
             {
                 if (this.m_CurrentPage != value)
                 {
@@ -125,7 +125,7 @@ namespace Framework.EntityContracts
         /// <value>
         /// The index of the current page index.
         /// </value>
-		[Newtonsoft.Json.JsonIgnore]
+        [Newtonsoft.Json.JsonIgnore]
         public int CurrentIndex
         {
             get
@@ -134,7 +134,7 @@ namespace Framework.EntityContracts
             }
         }
 
-		[Newtonsoft.Json.JsonIgnore]
+        [Newtonsoft.Json.JsonIgnore]
         public int EndIndex
         {
             get
@@ -142,7 +142,6 @@ namespace Framework.EntityContracts
                 return (this.CurrentPage - 1) * this.PageSize + this.RecordCountOfCurrentPage;
             }
         }
-
 
         int m_PageSize;
         /// <summary>
@@ -184,7 +183,7 @@ namespace Framework.EntityContracts
             }
         }
 
-		[Newtonsoft.Json.JsonIgnore]
+        [Newtonsoft.Json.JsonIgnore]
         public bool PageSizeChanged
         {
             get
@@ -220,7 +219,7 @@ namespace Framework.EntityContracts
         /// The count of pages.
         /// </value>
         [Newtonsoft.Json.JsonIgnore]
-		public int CountOfPages
+        public int CountOfPages
         {
             get
             {
@@ -260,12 +259,12 @@ namespace Framework.EntityContracts
             }
             else
             {
-                
+
                 return string.Format(Framework.Resx.UIStringResource.Pagination_PagingInformation, this.RecordCountOfCurrentPage, this.CurrentIndex + 1, this.EndIndex, this.CountOfRecords, this.CountOfPages, this.CurrentPage);
             }
         }
 
-		[Newtonsoft.Json.JsonIgnore]
+        [Newtonsoft.Json.JsonIgnore]
         public bool CanGoForeward
         {
             get
@@ -274,7 +273,7 @@ namespace Framework.EntityContracts
             }
         }
 
-		[Newtonsoft.Json.JsonIgnore]
+        [Newtonsoft.Json.JsonIgnore]
         public bool CanGoBackward
         {
             get
@@ -284,7 +283,7 @@ namespace Framework.EntityContracts
         }
 
         #endregion properties
-		
+
         public override string ToString()
         {
             return GetPagingInformationString();
@@ -296,5 +295,4 @@ namespace Framework.EntityContracts
         }
     }
 }
-
 
