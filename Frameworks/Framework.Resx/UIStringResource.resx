@@ -993,4 +993,10 @@
   <data name="LoadMoreAlternativeText" xml:space="preserve">
     <value>Load More</value>
   </data>
+  <data name="AllCaption" xml:space="preserve">
+    <value>-- All --</value>
+  </data>
+  <data name="SelectCaption" xml:space="preserve">
+    <value>-- Select --</value>
+  </data>
 </root>

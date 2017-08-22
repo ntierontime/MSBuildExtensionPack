@@ -11,8 +11,7 @@
 namespace Framework.Resx {
     using System;
     using System.Reflection;
-
-
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -932,6 +931,15 @@ namespace Framework.Resx {
         public static string AddNewAlternativeText {
             get {
                 return ResourceManager.GetString("AddNewAlternativeText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- All --.
+        /// </summary>
+        public static string AllCaption {
+            get {
+                return ResourceManager.GetString("AllCaption", resourceCulture);
             }
         }
         
@@ -2435,6 +2443,15 @@ namespace Framework.Resx {
         public static string SearchPageAlternativeText {
             get {
                 return ResourceManager.GetString("SearchPageAlternativeText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Select --.
+        /// </summary>
+        public static string SelectCaption {
+            get {
+                return ResourceManager.GetString("SelectCaption", resourceCulture);
             }
         }
         
