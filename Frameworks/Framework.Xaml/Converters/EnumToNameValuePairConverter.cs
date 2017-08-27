@@ -4,9 +4,13 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+#if XAMARIN
 using Xamarin.Forms;
+#else
+using System.Windows.Data;
+#endif
 
-namespace Framework.Xamariner
+namespace Framework.Xaml
 {
     public sealed class EnumToNameValuePairConverter : IValueConverter
     {

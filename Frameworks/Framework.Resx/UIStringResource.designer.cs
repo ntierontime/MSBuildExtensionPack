@@ -1807,6 +1807,24 @@ namespace Framework.Resx {
         }
 
         /// <summary>
+        ///   Looks up a localized string similar to "-- All --"".
+        /// </summary>
+        public static string AllCaption {
+            get {
+                return ResourceManager.GetString("AllCaption", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "-- Select --"".
+        /// </summary>
+        public static string SelectCaption {
+            get {
+                return ResourceManager.GetString("SelectCaption", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to "AddNew"".
         /// </summary>
         public static string AddNewAlternativeText {

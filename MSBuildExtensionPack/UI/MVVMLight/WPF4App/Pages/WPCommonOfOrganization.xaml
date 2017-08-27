@@ -8,6 +8,7 @@
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels"
+        xmlns:fvm="clr-namespace:Framework.Xaml;assembly=Framework.Xaml"
         mc:Ignorable="d"
         DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM, Source={StaticResource Locator}}"
         xmlns:my="clr-namespace:MSBuildExtensionPack.WPF4App.UserControls"

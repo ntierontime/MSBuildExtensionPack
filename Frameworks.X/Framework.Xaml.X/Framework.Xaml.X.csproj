@@ -38,8 +38,14 @@
     <None Include="packages.config" />
     <None Include="map.1.D.1.vsd" />
     <None Include="map.1.D.1.vsd.png" />
+    <Compile Include="..\..\Frameworks\Framework.Xaml\Converters\EnumToNameValuePairConverter.cs">
+      <Link>Converters\EnumToNameValuePairConverter.cs</Link>
+    </Compile>
     <Compile Include="..\..\Frameworks\Framework.Xaml\IDispatcherHelperWrapper.cs">
       <Link>IDispatcherHelperWrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Xaml\Behaviors\NullableComboBoxBehavior.cs">
+      <Link>Behaviors\NullableComboBoxBehavior.cs</Link>
     </Compile>
     <Compile Include="..\..\Frameworks\Framework.Xaml\ViewModelBaseWithResultAndUIElement.cs">
       <Link>ViewModelBaseWithResultAndUIElement.cs</Link>

@@ -34,7 +34,9 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
+    <Compile Include="Converters\EnumToNameValuePairConverter.cs" />
     <Compile Include="IDispatcherHelperWrapper.cs" />
+    <Compile Include="Behaviors\NullableComboBoxBehavior.cs" />
     <Compile Include="ViewModelBaseWithResultAndUIElement.cs" />
     <Compile Include="ViewModelItemBase.cs" />
     <Compile Include="MenuTreeItem.cs" />

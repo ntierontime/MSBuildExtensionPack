@@ -700,6 +700,12 @@
   <data name="To" xml:space="preserve">
     <value>To</value>
   </data>
+  <data name="AllCaption" xml:space="preserve">
+    <value>-- All --</value>
+  </data>
+  <data name="SelectCaption" xml:space="preserve">
+    <value>-- Select --</value>
+  </data>
   <data name="AddNewAlternativeText" xml:space="preserve">
     <value>AddNew</value>
   </data>
