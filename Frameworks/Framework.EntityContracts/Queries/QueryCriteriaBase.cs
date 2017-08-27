@@ -1072,7 +1072,11 @@ namespace Framework.EntityContracts
             }
         }
 
-        public bool IsCustomEditor { get; set; }
+        public bool IsCustomEditor
+        {
+            get;
+            set;
+        }
 
         public static QuerySystemDateTimeRangeCriteria GetBounds(Framework.EntityContracts.PreDefinedDateTimeRanges preDefinedDateTimeRange)
         {

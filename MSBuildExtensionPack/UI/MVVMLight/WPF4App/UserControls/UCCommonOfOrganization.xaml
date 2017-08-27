@@ -84,12 +84,12 @@
 
             <TextBlock x:Name="ID_CheckBox_Search_isToCompareDatetimeColumnCommonOftOfCommon1" Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareBitColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}"  HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="9" />
             <StackPanel Grid.Column="1" Grid.Row="9" HorizontalAlignment="Stretch">
-                <ComboBox Name="ID_DatePicker_Search_lowerBoundDatetimeColumnCommonOftOfCommonPreDefinedDateTimeRange" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="9"
+                <ComboBox Name="ID_DatePicker_Search_lowerBoundDatetimeColumnCommonOftOfCommonPreDefinedDateTimeRange" HorizontalAlignment="Stretch" VerticalAlignment="Center"
                     DisplayMemberPath="Name"
                     ItemsSource="{Binding Path=Main.PreDefinedDateTimeRangeList, Source={StaticResource Locator}}"
                     SelectedValue="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.PreDefinedDateTimeRange, Converter={StaticResource EnumToNameValuePairConverter}}">
                 </ComboBox>
-                <WrapPanel IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.IsCustomEditor}">
+                <WrapPanel IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.IsCustomEditor}">
                     <TextBlock x:Name="ID_CheckBox_Search_isToCompareLowerBoundDatetimeColumnCommonOftOfCommon1" Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}"  HorizontalAlignment="Left" VerticalAlignment="Center" />
                     <DatePicker Name="ID_DatePicker_Search_lowerBoundDatetimeColumnCommonOftOfCommon1" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundDatetimeColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Center" SelectedDate="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.LowerBound}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" />
                     <TextBlock x:Name="ID_CheckBox_Search_isToCompareUpperBoundDatetimeColumnCommonOftOfCommon1" Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}"  HorizontalAlignment="Left" VerticalAlignment="Center" />
