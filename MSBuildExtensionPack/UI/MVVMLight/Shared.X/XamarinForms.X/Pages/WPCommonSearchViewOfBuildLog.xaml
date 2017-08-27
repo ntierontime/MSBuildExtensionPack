@@ -7,18 +7,11 @@
              x:Class="MSBuildExtensionPack.XamarinForms.Pages.WPCommonSearchViewOfBuildLog">
     <ContentPage.Content>
     <StackLayout>
-                 <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+                 <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
                 <Picker
                     ItemDisplayBinding="{Binding Name}"
-                    ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfBuild_1, Source={StaticResource Locator}}"
-                    SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfBuild_1SelectedItem, Source={StaticResource Locator}}"
-                    HorizontalOptions="FillAndExpand">
-                </Picker>
-                <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-                <Picker
-                    ItemDisplayBinding="{Binding Name}"
-                    ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfSolution_1, Source={StaticResource Locator}}"
-                    SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfSolution_1SelectedItem, Source={StaticResource Locator}}"
+                    ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfOrganization_2, Source={StaticResource Locator}}"
+                    SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfOrganization_2SelectedItem, Source={StaticResource Locator}}"
                     HorizontalOptions="FillAndExpand">
                 </Picker>
                 <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_1OfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
@@ -28,11 +21,18 @@
                     SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfOrganization_1SelectedItem, Source={StaticResource Locator}}"
                     HorizontalOptions="FillAndExpand">
                 </Picker>
-                <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+                <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
                 <Picker
                     ItemDisplayBinding="{Binding Name}"
-                    ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfOrganization_2, Source={StaticResource Locator}}"
-                    SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfOrganization_2SelectedItem, Source={StaticResource Locator}}"
+                    ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfSolution_1, Source={StaticResource Locator}}"
+                    SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfSolution_1SelectedItem, Source={StaticResource Locator}}"
+                    HorizontalOptions="FillAndExpand">
+                </Picker>
+                <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+                <Picker
+                    ItemDisplayBinding="{Binding Name}"
+                    ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfBuild_1, Source={StaticResource Locator}}"
+                    SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfBuild_1SelectedItem, Source={StaticResource Locator}}"
                     HorizontalOptions="FillAndExpand">
                 </Picker>
                 <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuildEventCode_1OfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />

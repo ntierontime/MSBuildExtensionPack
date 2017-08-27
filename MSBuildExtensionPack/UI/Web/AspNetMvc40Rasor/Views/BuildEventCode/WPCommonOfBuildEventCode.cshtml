@@ -126,8 +126,6 @@
         {
             index++;
 <tr><td  class="hidden-xs visible-sm"></td>
-<td >@Html.DisplayFor(modelItem => item.EventCode)</td>
-<td >@Html.DisplayFor(modelItem => item.Description)</td>
 <td  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
     <a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetailsAlternativeText">
@@ -139,7 +137,9 @@
         <span class="glyphicon glyphicon-edit"></span>
     </a>
 </div>
-</div></td></tr>
+</div></td>
+<td >@Html.DisplayFor(modelItem => item.EventCode)</td>
+<td >@Html.DisplayFor(modelItem => item.Description)</td></tr>
         }
     }
     else
