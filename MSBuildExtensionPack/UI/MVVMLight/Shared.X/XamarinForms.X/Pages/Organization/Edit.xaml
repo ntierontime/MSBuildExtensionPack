@@ -115,12 +115,22 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem x:Name="Save" Order="Primary" Text="{i18n:Translate Text=SaveAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization.SaveCommand, Source={StaticResource Locator}}">
             <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Save.png" Android="Assets/Save.png" WinPhone="Assets/Save.png" />
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">Android/Save.png</On>
+                    <On Platform="iOS">Assets/Save.png</On>
+                    <On Platform="Windows">Assets/Save.png</On>
+                    <On Platform="WinPhone">Assets/Save.png</On>
+                </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
-        <ToolbarItem x:Name="Refresh" Order="Primary" Text="{i18n:Translate Text=RefreshAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization.RefreshCurrentItemCommand, Source={StaticResource Locator}}">
+        <ToolbarItem x:Name="RefreshWhenEdit" Order="Primary" Text="{i18n:Translate Text=RefreshAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization.RefreshCurrentItemCommand, Source={StaticResource Locator}}">
             <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Reload.png" Android="Assets/Reload.png" WinPhone="Assets/Reload.png"/>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">Android/Reload.png</On>
+                    <On Platform="iOS">Assets/Reload.png</On>
+                    <On Platform="Windows">Assets/Reload.png</On>
+                    <On Platform="WinPhone">Assets/Reload.png</On>
+                </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
     </ContentPage.ToolbarItems>

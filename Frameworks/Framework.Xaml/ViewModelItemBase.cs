@@ -70,8 +70,11 @@ namespace Framework.Xaml
             get { return m_Item; }
             set
             {
-                m_Item = value.GetAClone();
-                RaisePropertyChanged("Item");
+                if(value != null)
+                {
+                    m_Item = value.GetAClone();
+                    RaisePropertyChanged("Item");
+                }
             }
         }
 

@@ -117,6 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  
   <data name="Account_ChangePassword_TitleText" xml:space="preserve">
     <value>Change password</value>
   </data>
@@ -699,6 +700,12 @@
   <data name="To" xml:space="preserve">
     <value>To</value>
   </data>
+  <data name="AllCaption" xml:space="preserve">
+    <value>-- All --</value>
+  </data>
+  <data name="SelectCaption" xml:space="preserve">
+    <value>-- Select --</value>
+  </data>
   <data name="AddNewAlternativeText" xml:space="preserve">
     <value>AddNew</value>
   </data>
@@ -990,13 +997,6 @@
   <data name="GotoSearchAlternativeText" xml:space="preserve">
     <value>GotoSearch</value>
   </data>
-  <data name="LoadMoreAlternativeText" xml:space="preserve">
-    <value>Load More</value>
-  </data>
-  <data name="AllCaption" xml:space="preserve">
-    <value>-- All --</value>
-  </data>
-  <data name="SelectCaption" xml:space="preserve">
-    <value>-- Select --</value>
-  </data>
+
 </root>
+

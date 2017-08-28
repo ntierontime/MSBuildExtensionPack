@@ -106,9 +106,7 @@ namespace MSBuildExtensionPack.XamarinForms.GlobalPages {
 
             #endregion Create, Update and Delete, Details of MSBuildExtensionPack.Build
 
-            //#region Create, Update and Delete, Details of MSBuildExtensionPack.BuildEventCode
-
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuildEventCode.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuildEventCode.ViewName_Details, Framework.UIAction.ViewDetails, Framework.UIActionStatus.Launch, Framework.UIAction.Navigate, "/Pages/BuildEventCode/Details.xaml", typeof(MSBuildExtensionPack.XamarinForms.Pages.BuildEventCode.Details));
+            #region Create, Update and Delete, Details of MSBuildExtensionPack.BuildEventCode
 
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuildEventCode.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuildEventCode.ViewName_Details, Framework.UIAction.ViewDetails, Framework.UIActionStatus.Close, Framework.UIAction.GoBack, null, null);
 
@@ -120,10 +118,11 @@ namespace MSBuildExtensionPack.XamarinForms.GlobalPages {
 
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuildEventCode.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuildEventCode.ViewName_Details, Framework.UIAction.Copy,  Framework.UIActionStatus.Launch, Framework.UIAction.Navigate, "/Pages/BuildEventCode/Create.xaml", typeof(MSBuildExtensionPack.XamarinForms.Pages.BuildEventCode.Create));
 
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuildEventCode.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuildEventCode.ViewName_Details, Framework.UIAction.ViewDetails,  Framework.UIActionStatus.Launch, Framework.UIAction.Navigate, "/Pages/BuildEventCode/Details.xaml", typeof(MSBuildExtensionPack.XamarinForms.Pages.BuildEventCode.Details));
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuildEventCode.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuildEventCode.ViewName_Details, Framework.UIAction.Update,  Framework.UIActionStatus.Launch, Framework.UIAction.Navigate, "/Pages/BuildEventCode/Edit.xaml", typeof(MSBuildExtensionPack.XamarinForms.Pages.BuildEventCode.Edit));
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuildEventCode.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuildEventCode.ViewName_Details, Framework.UIAction.Delete,  Framework.UIActionStatus.Launch, Framework.UIAction.Navigate, "/Pages/BuildEventCode/Delete.xaml", typeof(MSBuildExtensionPack.XamarinForms.Pages.BuildEventCode.Delete));
 
-            //#endregion Create, Update and Delete, Details of MSBuildExtensionPack.BuildEventCode
+            #endregion Create, Update and Delete, Details of MSBuildExtensionPack.BuildEventCode
 
             #region Create, Update and Delete, Details of MSBuildExtensionPack.BuildLog
 

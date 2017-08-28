@@ -34,17 +34,12 @@ namespace Framework.Xaml
 
             PopulateAllUIElements(this, 1);
 
-            //this.PaginationFirstPageCommand = new RelayCommand(PaginationFirstPage, CanPaginationFirstPage);
-            //this.PaginationPreviousPageCommand = new RelayCommand(PaginationPreviousPage, CanPaginationPreviousPage);
-            //this.PaginationNextPageCommand = new RelayCommand(PaginationNextPage, CanPaginationNextPage);
-            //this.PaginationLastPageCommand = new RelayCommand(PaginationLastPage, CanPaginationLastPage);
+            this.PaginationFirstPageCommand = new RelayCommand(PaginationFirstPage);
+            this.PaginationPreviousPageCommand = new RelayCommand(PaginationPreviousPage);
+            this.PaginationNextPageCommand = new RelayCommand(PaginationNextPage);
+            this.PaginationLastPageCommand = new RelayCommand(PaginationLastPage);
 
-			this.PaginationFirstPageCommand = new RelayCommand(PaginationFirstPage);
-			this.PaginationPreviousPageCommand = new RelayCommand(PaginationPreviousPage);
-			this.PaginationNextPageCommand = new RelayCommand(PaginationNextPage);
-			this.PaginationLastPageCommand = new RelayCommand(PaginationLastPage);
-
-			SuppressMVVMLightEventToCommandMessage = false;
+            SuppressMVVMLightEventToCommandMessage = false;
         }
 
         #endregion constructor
@@ -166,11 +161,6 @@ namespace Framework.Xaml
             this.DoSearch();
         }
 
-        //protected bool CanPaginationFirstPage()
-        //{
-        //    return this.QueryPagingSetting != null && this.QueryPagingSetting.IsMoreThanOnePage && !this.QueryPagingSetting.IsCurrentPageIsFirstPage;
-        //}
-
         public RelayCommand PaginationPreviousPageCommand { get; protected set; }
 
         protected void PaginationPreviousPage()
@@ -178,11 +168,6 @@ namespace Framework.Xaml
             this.QueryPagingSetting.CurrentPage -= 1;
             this.DoSearch();
         }
-
-        //protected bool CanPaginationPreviousPage()
-        //{
-        //    return this.QueryPagingSetting != null && this.QueryPagingSetting.IsMoreThanOnePage && !this.QueryPagingSetting.IsCurrentPageIsFirstPage;
-        //}
 
         public RelayCommand PaginationNextPageCommand { get; protected set; }
 
@@ -192,11 +177,6 @@ namespace Framework.Xaml
             this.DoSearch();
         }
 
-        //protected bool CanPaginationNextPage()
-        //{
-        //    return this.QueryPagingSetting != null && this.QueryPagingSetting.IsMoreThanOnePage && !this.QueryPagingSetting.IsCurrentPageIsLastPage;
-        //}
-
         public RelayCommand PaginationLastPageCommand { get; protected set; }
 
         protected void PaginationLastPage()
@@ -204,11 +184,6 @@ namespace Framework.Xaml
             this.QueryPagingSetting.CurrentPage = this.QueryPagingSetting.CountOfPages;
             this.DoSearch();
         }
-
-        //protected bool CanPaginationLastPage()
-        //{
-        //    return this.QueryPagingSetting != null && this.QueryPagingSetting.IsMoreThanOnePage && !this.QueryPagingSetting.IsCurrentPageIsLastPage;
-        //}
 
         #endregion Pagination Commands - First Page, Previous Page, Next Page, and Last Page
 
@@ -484,11 +459,6 @@ namespace Framework.Xaml
 
              isToClearExistingResult = true;
             DoSearch();
-
-	  //      if (this.SearchStatus == Framework.EntityContracts.SearchStatus.SearchResultLoaded)
-	  //      {
-			//	RaisePropertyChanged("QueryPagingSetting");
-			//}
         }
 
         protected bool CanSearch()

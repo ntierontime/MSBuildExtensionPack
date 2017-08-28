@@ -13,19 +13,19 @@ namespace MSBuildExtensionPack.AndroidApp
         public void CheckBeginInvokeOnUI(Action action)
         {
             Device.BeginInvokeOnMainThread(action);
+            //DispatcherHelper.CheckBeginInvokeOnUI(action);
         }
 
         public void Initialize()
         {
-			throw new NotImplementedException();
-			//DispatcherHelper.Initialize();
+            throw new NotImplementedException();
+            //DispatcherHelper.Initialize();
         }
 
         public void Reset()
         {
-			throw new NotImplementedException();
-			//DispatcherHelper.Reset();
-
+            throw new NotImplementedException();
+            //DispatcherHelper.Reset();
         }
     }
 }

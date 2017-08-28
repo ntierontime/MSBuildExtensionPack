@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Collections;
 using System.ComponentModel;
@@ -33,7 +33,7 @@ namespace Framework.Xaml
 
     public abstract class NullableComboBoxBehavior : Behavior<ComboBox>
     {
-        // IsNullValueSelected 
+        // IsNullValueSelected
         public static readonly DependencyProperty IsNullValueSelectedProperty = DependencyProperty.Register("IsNullValueSelected", typeof(bool), typeof(NullableComboBoxBehavior), new PropertyMetadata(false));
         public static readonly DependencyProperty IsNonNullValueSelectedProperty = DependencyProperty.Register("IsNonNullValueSelected", typeof(bool), typeof(NullableComboBoxBehavior), new PropertyMetadata(false));
         public bool IsNullValueSelected { get { return (bool)GetValue(IsNullValueSelectedProperty); } set { SetValue(IsNullValueSelectedProperty, value); SetValue(IsNonNullValueSelectedProperty, !value); } }
@@ -55,12 +55,11 @@ namespace Framework.Xaml
             OnSelectedItemChanged(this, EventArgs.Empty);
         }
 
-
         private void OnSelectedItemChanged(object sender, EventArgs e)
         {
             var cbx = this.AssociatedObject;
 
-            // If the caption of the selected item is either "- All -" or no item is selected, 
+            // If the caption of the selected item is either "- All -" or no item is selected,
             // set IsNullValueSelected to true
             if (cbx.SelectedItem != null)
             {
@@ -103,8 +102,8 @@ namespace Framework.Xaml
                 // insert the null item
                 ((IList)cbx.ItemsSource).Insert(0, obj);
 
-                // select first item (optional). 
-                // If you uncomment this, remove the OnSelectedItemChanged call in OnAttached 
+                // select first item (optional).
+                // If you uncomment this, remove the OnSelectedItemChanged call in OnAttached
                 //cbx.SelectedIndex = 0;
             }
         }
@@ -119,3 +118,4 @@ namespace Framework.Xaml
         }
     }
 }
+

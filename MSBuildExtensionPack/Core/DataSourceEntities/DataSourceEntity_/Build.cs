@@ -9,7 +9,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
     /// Entity class, used across the solution. <see cref="Build"/>
     /// </summary>
     //[DataContract]
-    public partial class Build  : Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IBuild
+    public partial class Build : Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IBuild, Framework.EntityContracts.IClone<Build>
     {
 
         #region Storage Fields
@@ -995,7 +995,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
         #endregion Nested Views classes and their collection classes 4
-
     }
 
 /*

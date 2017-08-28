@@ -7,18 +7,18 @@
              x:Class="MSBuildExtensionPack.XamarinForms.Pages.WPCommonSearchViewOfSolution">
     <ContentPage.Content>
     <StackLayout>
-                 <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_1OfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-                <Picker
-                    ItemDisplayBinding="{Binding Name}"
-                    ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.DropDownContentsOfOrganization_1, Source={StaticResource Locator}}"
-                    SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.DropDownContentsOfOrganization_1SelectedItem, Source={StaticResource Locator}}"
-                    HorizontalOptions="FillAndExpand">
-                </Picker>
-                <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+                 <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
                 <Picker
                     ItemDisplayBinding="{Binding Name}"
                     ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.DropDownContentsOfOrganization_2, Source={StaticResource Locator}}"
                     SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.DropDownContentsOfOrganization_2SelectedItem, Source={StaticResource Locator}}"
+                    HorizontalOptions="FillAndExpand">
+                </Picker>
+                <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_1OfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+                <Picker
+                    ItemDisplayBinding="{Binding Name}"
+                    ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.DropDownContentsOfOrganization_1, Source={StaticResource Locator}}"
+                    SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.DropDownContentsOfOrganization_1SelectedItem, Source={StaticResource Locator}}"
                     HorizontalOptions="FillAndExpand">
                 </Picker>
                 <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareExternalParentIdCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
@@ -30,14 +30,24 @@
     </StackLayout>
     </ContentPage.Content>
     <ContentPage.ToolbarItems>
-        <ToolbarItem x:Name="Search" Order="Primary" Text="{i18n:Translate Text=SearchAlternativeText, ResourceId=Framework.Resx.UIStringResource}}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution.LaunchResultViewCommand, Source={StaticResource Locator}}">
+        <ToolbarItem x:Name="Result" Order="Primary" Text="{i18n:Translate Text=SearchAlternativeText, ResourceId=Framework.Resx.UIStringResource}}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution.LaunchResultViewCommand, Source={StaticResource Locator}}">
             <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Search.png" Android="Assets/Search.png" WinPhone="Assets/Search.png" />
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">Android/Search.png</On>
+                    <On Platform="iOS">Assets/Search.png</On>
+                    <On Platform="Windows">Assets/Search.png</On>
+                    <On Platform="WinPhone">Assets/Search.png</On>
+                </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
         <ToolbarItem x:Name="Add" Order="Primary" Text="{i18n:Translate Text=SaveAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution.AddCommand, Source={StaticResource Locator}}">
             <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Add.png" Android="Assets/Add.png" WinPhone="Assets/Add.png" />
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">Android/Add.png</On>
+                    <On Platform="iOS">Assets/Add.png</On>
+                    <On Platform="Windows">Assets/Add.png</On>
+                    <On Platform="WinPhone">Assets/Add.png</On>
+                </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
     </ContentPage.ToolbarItems>

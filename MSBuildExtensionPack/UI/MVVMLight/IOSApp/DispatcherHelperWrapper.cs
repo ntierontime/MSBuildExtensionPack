@@ -10,23 +10,23 @@ namespace MSBuildExtensionPack.IOSApp
 {
     public class DispatcherHelperWrapper : Framework.Xaml.IDispatcherHelperWrapper
     {
-		public void CheckBeginInvokeOnUI(Action action)
-		{
-			Device.BeginInvokeOnMainThread(action);
-			//DispatcherHelper.CheckBeginInvokeOnUI(action);
-		}
+        public void CheckBeginInvokeOnUI(Action action)
+        {
+            Device.BeginInvokeOnMainThread(action);
+            //DispatcherHelper.CheckBeginInvokeOnUI(action);
+        }
 
-		public void Initialize()
-		{
-			throw new NotImplementedException();
-			//DispatcherHelper.Initialize();
-		}
+        public void Initialize()
+        {
+            throw new NotImplementedException();
+            //DispatcherHelper.Initialize();
+        }
 
-		public void Reset()
-		{
-			throw new NotImplementedException();
-			//DispatcherHelper.Reset();
-		}
-	}
+        public void Reset()
+        {
+            throw new NotImplementedException();
+            //DispatcherHelper.Reset();
+        }
+    }
 }
 

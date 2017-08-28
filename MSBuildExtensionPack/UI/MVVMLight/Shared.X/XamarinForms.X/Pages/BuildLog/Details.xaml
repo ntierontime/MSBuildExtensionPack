@@ -33,17 +33,32 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem x:Name="Edit" Order="Primary" Text="{i18n:Translate Text=EditAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog.LaunchEditViewCommand, Source={StaticResource Locator}}">
             <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Edit.png" Android="Assets/Edit.png" WinPhone="Assets/Edit.png" />
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">Android/Edit.png</On>
+                    <On Platform="iOS">Assets/Edit.png</On>
+                    <On Platform="Windows">Assets/Edit.png</On>
+                    <On Platform="WinPhone">Assets/Edit.png</On>
+                </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
         <ToolbarItem x:Name="Copy" Order="Primary" Text="{i18n:Translate Text=CopyAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog.LaunchCopyViewCommand, Source={StaticResource Locator}}">
             <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Copy.png" Android="Assets/Copy.png" WinPhone="Assets/Copy.png"/>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">Android/Copy.png</On>
+                    <On Platform="iOS">Assets/Copy.png</On>
+                    <On Platform="Windows">Assets/Copy.png</On>
+                    <On Platform="WinPhone">Assets/Copy.png</On>
+                </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
         <ToolbarItem x:Name="Delete" Order="Primary" Text="{i18n:Translate Text=DeleteAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog.LaunchDeleteViewCommand, Source={StaticResource Locator}}">
             <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Bin.png" Android="Assets/Bin.png" WinPhone="Assets/Bin.png"/>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">Android/Bin.png</On>
+                    <On Platform="iOS">Assets/Bin.png</On>
+                    <On Platform="Windows">Assets/Bin.png</On>
+                    <On Platform="WinPhone">Assets/Bin.png</On>
+                </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
     </ContentPage.ToolbarItems>

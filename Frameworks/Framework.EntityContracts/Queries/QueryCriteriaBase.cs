@@ -36,11 +36,7 @@ namespace Framework.EntityContracts
         /// <value>
         ///     <c>true</c> if this instance is to compare; otherwise, <c>false</c>.
         /// </value>
-        public bool IsToCompare
-        {
-            get;
-            set;
-        }
+        public bool IsToCompare { get; set; }
 
         protected static Framework.NameValueCollection GetListWithLocalizedResource(string resourcePrefix, Type type)
         {
@@ -1072,11 +1068,7 @@ namespace Framework.EntityContracts
             }
         }
 
-        public bool IsCustomEditor
-        {
-            get;
-            set;
-        }
+        public bool IsCustomEditor { get; set; }
 
         public static QuerySystemDateTimeRangeCriteria GetBounds(Framework.EntityContracts.PreDefinedDateTimeRanges preDefinedDateTimeRange)
         {

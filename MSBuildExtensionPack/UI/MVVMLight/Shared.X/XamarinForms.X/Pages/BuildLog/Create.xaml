@@ -56,14 +56,24 @@
         </ScrollView>
     </ContentPage.Content>
     <ContentPage.ToolbarItems>
-        <ToolbarItem x:Name="Add" Order="Primary" Text="{i18n:Translate Text=SaveAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog.AddCommand, Source={StaticResource Locator}}">
+        <ToolbarItem x:Name="AddAction" Order="Primary" Text="{i18n:Translate Text=SaveAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog.AddCommand, Source={StaticResource Locator}}">
             <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Add.png" Android="Assets/Add.png" WinPhone="Assets/Add.png" />
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">Android/Add.png</On>
+                    <On Platform="iOS">Assets/Add.png</On>
+                    <On Platform="Windows">Assets/Add.png</On>
+                    <On Platform="WinPhone">Assets/Add.png</On>
+                </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
-        <ToolbarItem x:Name="Refresh" Order="Primary" Text="{i18n:Translate Text=RefreshAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog.RefreshCurrentItemCommand, Source={StaticResource Locator}}">
+        <ToolbarItem x:Name="RefreshWhenAddNew" Order="Primary" Text="{i18n:Translate Text=RefreshAlternativeText, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog.RefreshCurrentItemCommand, Source={StaticResource Locator}}">
             <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource" iOS="Assets/Reload.png" Android="Assets/Reload.png" WinPhone="Assets/Reload.png"/>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">Android/Reload.png</On>
+                    <On Platform="iOS">Assets/Reload.png</On>
+                    <On Platform="Windows">Assets/Reload.png</On>
+                    <On Platform="WinPhone">Assets/Reload.png</On>
+                </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
     </ContentPage.ToolbarItems>

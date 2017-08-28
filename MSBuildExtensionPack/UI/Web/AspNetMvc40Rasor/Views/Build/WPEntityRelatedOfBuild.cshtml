@@ -43,17 +43,6 @@
         {
             index++;
 <tr><td  class="hidden-xs visible-sm"></td>
-<td >@Html.ActionLink(item.Build_1_Name, UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.BuildId }, null)</td>
-<td >@Html.ActionLink(item.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Solution_1Id }, null)</td>
-<td >@Html.DisplayFor(modelItem => item.Organization_1_UniqueidentifierColumn)</td>
-<td >@Html.DisplayFor(modelItem => item.Organization_1_UniqueIdentifier)</td>
-<td >@Html.ActionLink(item.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1_UniqueidentifierColumn }, null)</td>
-<td >@Html.DisplayFor(modelItem => item.Organization_2_UniqueidentifierColumn)</td>
-<td >@Html.DisplayFor(modelItem => item.Organization_2_UniqueIdentifier)</td>
-<td >@Html.ActionLink(item.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2_UniqueidentifierColumn }, null)</td>
-<td >@Html.ActionLink(item.BuildEventCode_1_Name, UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.BuildEventCodeId }, null)</td>
-<td >@Html.DisplayFor(modelItem => item.Message)</td>
-<td >@Html.DisplayFor(modelItem => item.EventTime)</td>
 <td  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
     <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPEntityRelatedOfBuildLog, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetailsAlternativeText">
@@ -65,7 +54,18 @@
         <span class="glyphicon glyphicon-edit"></span>
     </a>
 </div>
-</div></td></tr>
+</div></td>
+<td >@Html.ActionLink(item.Build_1_Name, UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.BuildId }, null)</td>
+<td >@Html.ActionLink(item.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Solution_1Id }, null)</td>
+<td >@Html.DisplayFor(modelItem => item.Organization_1_UniqueidentifierColumn)</td>
+<td >@Html.DisplayFor(modelItem => item.Organization_1_UniqueIdentifier)</td>
+<td >@Html.ActionLink(item.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1_UniqueidentifierColumn }, null)</td>
+<td >@Html.DisplayFor(modelItem => item.Organization_2_UniqueidentifierColumn)</td>
+<td >@Html.DisplayFor(modelItem => item.Organization_2_UniqueIdentifier)</td>
+<td >@Html.ActionLink(item.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2_UniqueidentifierColumn }, null)</td>
+<td >@Html.ActionLink(item.BuildEventCode_1_Name, UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.BuildEventCodeId }, null)</td>
+<td >@Html.DisplayFor(modelItem => item.Message)</td>
+<td >@Html.DisplayFor(modelItem => item.EventTime)</td></tr>
         }
     }
     else
