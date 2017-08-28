@@ -89,7 +89,7 @@
                 <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="5" />
                 <TextBox Text="{Binding Path=Criteria.BuildQueryCriteriaCommon.DescriptionCommonOft.NullableValueToBeContained}" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Stretch"/>
         </Grid>
-        <ListView Name="V_Common" Width="600" Margin="12,12,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollection_AddDefault}" SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.Item, Mode=OneWay, Source={StaticResource Locator}}">
+        <ListView Name="V_Common" Width="600" Margin="12,12,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollectionDefault}" SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.Item, Mode=OneWay, Source={StaticResource Locator}}">
             <ListView.View>
                 <GridView ColumnHeaderToolTip="BuildLog" AllowsColumnReorder="true">
                     <GridViewColumn>

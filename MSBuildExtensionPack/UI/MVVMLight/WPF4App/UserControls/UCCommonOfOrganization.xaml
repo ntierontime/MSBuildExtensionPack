@@ -158,7 +158,7 @@
                 <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareNtextColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="14" />
                 <TextBox Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft.NullableValueToBeContained}" Grid.Column="1" Grid.Row="14" HorizontalAlignment="Stretch"/>
         </Grid>
-        <ListView Name="V_Common" Width="600" Margin="12,12,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollection_AddDefault}" SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization.Item, Mode=OneWay, Source={StaticResource Locator}}">
+        <ListView Name="V_Common" Width="600" Margin="12,12,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollectionDefault}" SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization.Item, Mode=OneWay, Source={StaticResource Locator}}">
             <ListView.View>
                 <GridView ColumnHeaderToolTip="BuildLog" AllowsColumnReorder="true">
                     <GridViewColumn>
@@ -226,22 +226,22 @@
                     </GridViewColumn>
                     <GridViewColumn Width="140">
                         <GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" Tag="IsSystemBuiltIn" />
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <Grid>
-                                    <CheckBox Style="{StaticResource GridBlockStyle}" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=IsSystemBuiltIn}" IsEnabled="False" />
-                                    <CheckBox Style="{StaticResource GridEditStyle}" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=IsSystemBuiltIn}" />
-                                </Grid>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
+						<GridViewColumn.CellTemplate>
+							<DataTemplate>
+								<Grid>
+									<CheckBox Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=IsSystemBuiltIn}" IsEnabled="False" />
+									<CheckBox Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=IsSystemBuiltIn}" />
+								</Grid>
+							</DataTemplate>
+						</GridViewColumn.CellTemplate>
+					</GridViewColumn>
                     <GridViewColumn Width="140">
                         <GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" Tag="BitColumn" />
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Grid>
-                                    <CheckBox Style="{StaticResource GridBlockStyle}" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=BitColumn}" IsEnabled="False" />
-                                    <CheckBox Style="{StaticResource GridEditStyle}" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=BitColumn}" />
+                                    <CheckBox Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=BitColumn}" IsEnabled="False" />
+                                    <CheckBox Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=BitColumn}" />
                                 </Grid>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
