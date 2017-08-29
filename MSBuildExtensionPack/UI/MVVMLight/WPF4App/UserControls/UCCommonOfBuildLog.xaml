@@ -115,17 +115,17 @@
                             <DataTemplate>
 <WrapPanel>
                 <!-- TO-DO: START it is regular details page, to be replaced by full details -->
-                <Button     Name="Details" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLogLog.LaunchDetailsViewCommand, Source={StaticResource Locator}}" Width="45" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.DetailsAlternativeText, Source={StaticResource LocalizedStrings}}" CommandParameter="{Binding}" >
+                <Button     Name="Details" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLogLog.LaunchDetailsViewCommand, Source={StaticResource Locator}}" Width="45" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.Details, Source={StaticResource LocalizedStrings}}" CommandParameter="{Binding}" >
                     <StackPanel>
                         <iconPacks:PackIconOcticons Kind="Briefcase" />
-                        <!--<TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.DetailsAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>-->
+                        <!--<TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.Details, Source={StaticResource LocalizedStrings}}"></TextBlock>-->
                     </StackPanel>
                 </Button>
                 <!-- TO-DO: END it is regular details page, to be replaced by full details -->
-                <Button     Name="Edit" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog.LaunchEditViewCommand, Source={StaticResource Locator}}" Width="45" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.EditAlternativeText, Source={StaticResource LocalizedStrings}}">
+                <Button     Name="Edit" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog.LaunchEditViewCommand, Source={StaticResource Locator}}" Width="45" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.Edit, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>
                         <iconPacks:PackIconModern Kind="Edit" />
-                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.EditAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.Edit, Source={StaticResource LocalizedStrings}}"></TextBlock>
                     </StackPanel>
                 </Button>
 </WrapPanel>

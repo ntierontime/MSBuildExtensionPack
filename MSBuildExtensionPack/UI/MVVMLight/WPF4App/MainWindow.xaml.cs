@@ -229,7 +229,7 @@ namespace MSBuildExtensionPack.WPF4App
             var mySettings = new MetroDialogSettings()
             {
                 AffirmativeButtonText = Framework.Resx.UIStringResource.Quit,
-                NegativeButtonText = Framework.Resx.UIStringResource.CancelAlternativeText,
+                NegativeButtonText = Framework.Resx.UIStringResource.Cancel,
                 AnimateShow = true,
                 AnimateHide = false
             };

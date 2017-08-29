@@ -21,33 +21,33 @@
         </Grid.RowDefinitions>
         <ToolBarTray DockPanel.Dock="Top" Grid.Row="0" Style="{StaticResource ToolBarTrayStyle}">
 <ToolBar>
-                <Button Name="Search" Command="{Binding SearchCommand}" Width="45" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.SearchAlternativeText, Source={StaticResource LocalizedStrings}}">
+                <Button Name="Search" Command="{Binding SearchCommand}" Width="45" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.Search, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>
                         <Rectangle Width="20" Height="20" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}">
                             <Rectangle.OpacityMask>
                                 <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_magnify}" />
                             </Rectangle.OpacityMask>
                         </Rectangle>
-                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.SearchAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.Search, Source={StaticResource LocalizedStrings}}"></TextBlock>
                     </StackPanel>
                 </Button>
-                <Button     Name="AddNew" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution.LaunchCreateViewCommand, Source={StaticResource Locator}}" Width="45" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.AddNewAlternativeText, Source={StaticResource LocalizedStrings}}">
+                <Button     Name="AddNew" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution.LaunchCreateViewCommand, Source={StaticResource Locator}}" Width="45" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.AddNew, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>
                         <Rectangle Width="20" Height="20" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}">
                             <Rectangle.OpacityMask>
                                 <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_add}" />
                             </Rectangle.OpacityMask>
                         </Rectangle>
-                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.AddNewAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.AddNew, Source={StaticResource LocalizedStrings}}"></TextBlock>
                     </StackPanel>
                 </Button>
                 <Separator />
-                <Button     Name="PaginationFirstPage" Command="{Binding PaginationFirstPageCommand}" Width="25" Height="25" ToolTip="{Binding Path=Framework_Resx_UIStringResource.FirstAlternativeText, Source={StaticResource LocalizedStrings}}" IsEnabled="{Binding Path=QueryPagingSetting.CanGoBackward}">
+                <Button     Name="PaginationFirstPage" Command="{Binding PaginationFirstPageCommand}" Width="25" Height="25" ToolTip="{Binding Path=Framework_Resx_UIStringResource.First, Source={StaticResource LocalizedStrings}}" IsEnabled="{Binding Path=QueryPagingSetting.CanGoBackward}">
                     <StackPanel>
                         <iconPacks:PackIconMaterial Kind="PageFirst" />
                     </StackPanel>
                 </Button>
-                <Button     Name="PaginationPreviousPage" Command="{Binding PaginationPreviousPageCommand}" Width="25" Height="25" ToolTip="{Binding Path=Framework_Resx_UIStringResource.PreviousAlternativeText, Source={StaticResource LocalizedStrings}}" IsEnabled="{Binding Path=QueryPagingSetting.CanGoBackward}">
+                <Button     Name="PaginationPreviousPage" Command="{Binding PaginationPreviousPageCommand}" Width="25" Height="25" ToolTip="{Binding Path=Framework_Resx_UIStringResource.Previous, Source={StaticResource LocalizedStrings}}" IsEnabled="{Binding Path=QueryPagingSetting.CanGoBackward}">
                     <StackPanel>
                         <iconPacks:PackIconMaterial Kind="ChevronLeft" />
                     </StackPanel>
@@ -57,17 +57,17 @@
                     <TextBlock Text="/" Width="20" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="8,0,0,0"></TextBlock>
                     <TextBlock Width="30" Text="{Binding Path=QueryPagingSetting.CountOfPages}" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
                 </WrapPanel>
-                <Button     Name="PaginationGo" Command="{Binding SearchCommand}" Width="30" Height="30" ToolTip="{Binding Path=Framework_Resx_UIStringResource.GoAlternativeText, Source={StaticResource LocalizedStrings}}" Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}">
+                <Button     Name="PaginationGo" Command="{Binding SearchCommand}" Width="30" Height="30" ToolTip="{Binding Path=Framework_Resx_UIStringResource.Go, Source={StaticResource LocalizedStrings}}" Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}">
                     <StackPanel>
-                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.GoAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.Go, Source={StaticResource LocalizedStrings}}"></TextBlock>
                     </StackPanel>
                 </Button>
-                <Button     Name="PaginationNextPage" Command="{Binding PaginationNextPageCommand}" Width="25" Height="25" ToolTip="{Binding Path=Framework_Resx_UIStringResource.NextAlternativeText, Source={StaticResource LocalizedStrings}}" IsEnabled="{Binding Path=QueryPagingSetting.CanGoForeward}">
+                <Button     Name="PaginationNextPage" Command="{Binding PaginationNextPageCommand}" Width="25" Height="25" ToolTip="{Binding Path=Framework_Resx_UIStringResource.Next, Source={StaticResource LocalizedStrings}}" IsEnabled="{Binding Path=QueryPagingSetting.CanGoForeward}">
                     <StackPanel>
                         <iconPacks:PackIconMaterial Kind="ChevronRight" />
                     </StackPanel>
                 </Button>
-                <Button     Name="PaginationLastPage" Command="{Binding PaginationLastPageCommand}" Width="25" Height="25" ToolTip="{Binding Path=Framework_Resx_UIStringResource.LastAlternativeText, Source={StaticResource LocalizedStrings}}" IsEnabled="{Binding Path=QueryPagingSetting.CanGoForeward}">
+                <Button     Name="PaginationLastPage" Command="{Binding PaginationLastPageCommand}" Width="25" Height="25" ToolTip="{Binding Path=Framework_Resx_UIStringResource.Last, Source={StaticResource LocalizedStrings}}" IsEnabled="{Binding Path=QueryPagingSetting.CanGoForeward}">
                     <StackPanel>
                         <iconPacks:PackIconMaterial Kind="PageLast" />
                     </StackPanel>
