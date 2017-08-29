@@ -47,7 +47,8 @@
             <ComboBox Grid.Column="1" Grid.Row="0"
                 DisplayMemberPath="Name" SelectedValuePath="Value"
                 ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfOrganization_2, Source={StaticResource Locator}}"
-                SelectedValue="{Binding Path=Criteria.BuildQueryCriteriaCommon.IdCommonOfOrganization_2.ValueToCompare}">
+                SelectedValue="{Binding Path=Criteria.BuildQueryCriteriaCommon.IdCommonOfOrganization_2.ValueToCompare}"
+                SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfOrganization_2SelectedItem, Source={StaticResource Locator}, Mode=OneWayToSource}">
                 <i:Interaction.Behaviors>
                     <fvm:AllCaptionNullableComboBoxBehavior IsNonNullValueSelected="{Binding Path=Criteria.BuildQueryCriteriaCommon.IdCommonOfOrganization_2.IsToCompare, Mode=OneWayToSource}" />
                 </i:Interaction.Behaviors>
@@ -56,7 +57,8 @@
             <ComboBox Grid.Column="1" Grid.Row="1"
                 DisplayMemberPath="Name" SelectedValuePath="Value"
                 ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfOrganization_1, Source={StaticResource Locator}}"
-                SelectedValue="{Binding Path=Criteria.BuildQueryCriteriaCommon.IdCommonOfOrganization_1.ValueToCompare}">
+                SelectedValue="{Binding Path=Criteria.BuildQueryCriteriaCommon.IdCommonOfOrganization_1.ValueToCompare}"
+                SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfOrganization_1SelectedItem, Source={StaticResource Locator}, Mode=OneWayToSource}">
                 <i:Interaction.Behaviors>
                     <fvm:AllCaptionNullableComboBoxBehavior IsNonNullValueSelected="{Binding Path=Criteria.BuildQueryCriteriaCommon.IdCommonOfOrganization_1.IsToCompare, Mode=OneWayToSource}" />
                 </i:Interaction.Behaviors>
@@ -65,7 +67,8 @@
             <ComboBox Grid.Column="1" Grid.Row="2"
                 DisplayMemberPath="Name" SelectedValuePath="Value"
                 ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfSolution_1, Source={StaticResource Locator}}"
-                SelectedValue="{Binding Path=Criteria.BuildQueryCriteriaCommon.IdCommonOfSolution_1.ValueToCompare}">
+                SelectedValue="{Binding Path=Criteria.BuildQueryCriteriaCommon.IdCommonOfSolution_1.ValueToCompare}"
+                SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfSolution_1SelectedItem, Source={StaticResource Locator}, Mode=OneWayToSource}">
                 <i:Interaction.Behaviors>
                     <fvm:AllCaptionNullableComboBoxBehavior IsNonNullValueSelected="{Binding Path=Criteria.BuildQueryCriteriaCommon.IdCommonOfSolution_1.IsToCompare, Mode=OneWayToSource}" />
                 </i:Interaction.Behaviors>

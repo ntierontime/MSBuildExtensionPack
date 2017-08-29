@@ -158,7 +158,12 @@
                 <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareNtextColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="14" />
                 <TextBox Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft.NullableValueToBeContained}" Grid.Column="1" Grid.Row="14" HorizontalAlignment="Stretch"/>
         </Grid>
-        <ListView Name="V_Common" Width="600" Margin="12,12,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollectionDefault}" SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization.Item, Mode=OneWay, Source={StaticResource Locator}}">
+        <ListView Name="V_Common" Margin="12,12,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollectionDefault}" SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization.Item, Mode=OneWay, Source={StaticResource Locator}}">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
             <ListView.View>
                 <GridView ColumnHeaderToolTip="BuildLog" AllowsColumnReorder="true">
                     <GridViewColumn>

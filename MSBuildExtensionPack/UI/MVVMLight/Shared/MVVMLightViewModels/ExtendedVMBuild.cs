@@ -88,25 +88,32 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         {
             try
             {
-                var client = new MSBuildExtensionPack.WebApiClient.SolutionApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-                var result = Task.Run(() => client.GetCollectionOfNameValuePairOfByFKOnlyAsync(true, input.Value,false, default(System.Int64), -1, -1, null)).Result;
-
-                var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
-                dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
+                if (input != null)
                 {
-                    this.DropDownContentsOfSolution_1.Clear();
-                    if (result != null)
+                    var client = new MSBuildExtensionPack.WebApiClient.SolutionApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
+                    var result = Task.Run(() => client.GetCollectionOfNameValuePairOfByFKOnlyAsync(true, input.Value, false, default(System.Int64), -1, -1, null)).Result;
+
+                    var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
+                    dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
                     {
-                        foreach (var item in result)
+                        this.DropDownContentsOfSolution_1.Clear();
+                        if (result != null)
                         {
-                            int value;
-                            if (int.TryParse(item.Value, out value))
+                            foreach (var item in result)
                             {
-                                this.DropDownContentsOfSolution_1.Add(new Framework.NameValuePair<System.Int32>(value, item.Name));
+                                int value;
+                                if (int.TryParse(item.Value, out value))
+                                {
+                                    this.DropDownContentsOfSolution_1.Add(new Framework.NameValuePair<System.Int32>(value, item.Name));
+                                }
                             }
                         }
-                    }
-                });
+                    });
+                }
+                else
+                {
+                    this.DropDownContentsOfSolution_1.Clear();
+                }
             }
             catch (Exception ex)
             {
@@ -168,7 +175,9 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         {
             try
             {
-                var client = new MSBuildExtensionPack.WebApiClient.OrganizationApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
+                if (input != null)
+                {
+                    var client = new MSBuildExtensionPack.WebApiClient.OrganizationApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
                 var result = Task.Run(() => client.GetCollectionOfNameValuePairOfByFKOnlyAsync(true, input.Value, -1, -1, null)).Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
@@ -187,6 +196,11 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                         }
                     }
                 });
+                }
+                else
+                {
+                    this.DropDownContentsOfOrganization_1.Clear();
+                }
             }
             catch (Exception ex)
             {
@@ -249,7 +263,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         {
             try
             {
-                var client = new MSBuildExtensionPack.WebApiClient.OrganizationApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
+                    var client = new MSBuildExtensionPack.WebApiClient.OrganizationApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
                 var result = Task.Run(() => client.GetCollectionOfNameValuePairOfAllAsync(-1, -1, null)).Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
