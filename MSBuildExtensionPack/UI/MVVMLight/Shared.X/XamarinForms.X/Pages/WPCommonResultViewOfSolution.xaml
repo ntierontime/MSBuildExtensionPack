@@ -31,7 +31,7 @@
             </DataTemplate>
         </ListView.ItemTemplate>
                 <ListView.Footer>
-                    <Button Text="{i18n:Translate Text=LoadMoreAlternativeText, ResourceId=Framework.Resx.UIStringResource}"  Command="{Binding Path=LoadMoreCommand}" />
+                    <Button Text="{i18n:Translate Text=MoreAlternativeText, ResourceId=Framework.Resx.UIStringResource}"  Command="{Binding Path=LoadMoreCommand}" />
                 </ListView.Footer>
             </ListView>
         </StackLayout>

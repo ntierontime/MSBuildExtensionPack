@@ -52,14 +52,13 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-             <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="0"/>
+             <CheckBox Name="checkBox_IsToCompare_Organization_2" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon, Source={StaticResource LocalizedStrings}}" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2.IsToCompare}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="0"/>
             <ComboBox Grid.Column="1" Grid.Row="0"
+                IsEnabled="{Binding ElementName=checkBox_IsToCompare_Organization_2, Path=IsChecked}"
                 DisplayMemberPath="Name" SelectedValuePath="Value"
                 ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization.DropDownContentsOfOrganization_2, Source={StaticResource Locator}}"
-                SelectedValue="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2.ValueToCompare}">
-                <i:Interaction.Behaviors>
-                    <fvm:AllCaptionNullableComboBoxBehavior IsNonNullValueSelected="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2.IsToCompare, Mode=OneWayToSource}" />
-                </i:Interaction.Behaviors>
+                SelectedValue="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2.ValueToCompare}"
+                SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization.DropDownContentsOfOrganization_2SelectedItem, Source={StaticResource Locator}, Mode=OneWayToSource}">
             </ComboBox>
             <TextBlock x:Name="IsToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInCommonOftOfCommon" Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="1" />
             <ComboBox x:Name="ValueToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInCommonOftOfCommon" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1"
@@ -231,22 +230,22 @@
                     </GridViewColumn>
                     <GridViewColumn Width="140">
                         <GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" Tag="IsSystemBuiltIn" />
-						<GridViewColumn.CellTemplate>
-							<DataTemplate>
-								<Grid>
-									<CheckBox Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=IsSystemBuiltIn}" IsEnabled="False" />
-									<CheckBox Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=IsSystemBuiltIn}" />
-								</Grid>
-							</DataTemplate>
-						</GridViewColumn.CellTemplate>
-					</GridViewColumn>
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <CheckBox Style="{StaticResource GridBlockStyle}" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=IsSystemBuiltIn}" IsEnabled="False" />
+                                    <CheckBox Style="{StaticResource GridEditStyle}" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsSystemBuiltIn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=IsSystemBuiltIn}" />
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
                     <GridViewColumn Width="140">
                         <GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" Tag="BitColumn" />
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Grid>
-                                    <CheckBox Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=BitColumn}" IsEnabled="False" />
-                                    <CheckBox Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=BitColumn}" />
+                                    <CheckBox Style="{StaticResource GridBlockStyle}" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=BitColumn}" IsEnabled="False" />
+                                    <CheckBox Style="{StaticResource GridEditStyle}" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.BitColumn, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=BitColumn}" />
                                 </Grid>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
