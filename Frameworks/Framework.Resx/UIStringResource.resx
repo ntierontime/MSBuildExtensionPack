@@ -706,296 +706,296 @@
   <data name="SelectCaption" xml:space="preserve">
     <value>-- Select --</value>
   </data>
-  <data name="AddNewAlternativeText" xml:space="preserve">
-    <value>AddNew</value>
+  <data name="AddNew" xml:space="preserve">
+    <value>Add New</value>
   </data>
-  <data name="AttachmentAlternativeText" xml:space="preserve">
+  <data name="Attachment" xml:space="preserve">
     <value>Attachment</value>
   </data>
-  <data name="BackAlternativeText" xml:space="preserve">
+  <data name="Back" xml:space="preserve">
     <value>Back</value>
   </data>
-  <data name="BookmarkAlternativeText" xml:space="preserve">
+  <data name="Bookmark" xml:space="preserve">
     <value>Bookmark</value>
   </data>
-  <data name="CalendarAlternativeText" xml:space="preserve">
+  <data name="Calendar" xml:space="preserve">
     <value>Calendar</value>
   </data>
-  <data name="CancelAlternativeText" xml:space="preserve">
+  <data name="Cancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
-  <data name="ChangePasswordAlternativeText" xml:space="preserve">
-    <value>ChangePassword</value>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Change Password</value>
   </data>
-  <data name="ChartAlternativeText" xml:space="preserve">
+  <data name="Chart" xml:space="preserve">
     <value>Chart</value>
   </data>
-  <data name="Checkbox_CheckedAlternativeText" xml:space="preserve">
-    <value>Checkbox_Checked</value>
+  <data name="Checkbox_Checked" xml:space="preserve">
+    <value>Checked</value>
   </data>
-  <data name="Checkbox_UncheckedAlternativeText" xml:space="preserve">
-    <value>Checkbox_Unchecked</value>
+  <data name="Checkbox_Unchecked" xml:space="preserve">
+    <value>Unchecked</value>
   </data>
-  <data name="ClockAlternativeText" xml:space="preserve">
+  <data name="Clock" xml:space="preserve">
     <value>Clock</value>
   </data>
-  <data name="CloseAlternativeText" xml:space="preserve">
+  <data name="Close" xml:space="preserve">
     <value>Close</value>
   </data>
-  <data name="CommentAlternativeText" xml:space="preserve">
+  <data name="Comment" xml:space="preserve">
     <value>Comment</value>
   </data>
-  <data name="CommentsAlternativeText" xml:space="preserve">
+  <data name="Comments" xml:space="preserve">
     <value>Comments</value>
   </data>
-  <data name="ConfirmAlternativeText" xml:space="preserve">
+  <data name="Confirm" xml:space="preserve">
     <value>Confirm</value>
   </data>
-  <data name="CreateUserAlternativeText" xml:space="preserve">
-    <value>CreateUser</value>
-  </data>
-  <data name="DeleteAlternativeText" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="DetailsAlternativeText" xml:space="preserve">
-    <value>Details</value>
-  </data>
-  <data name="DownAlternativeText" xml:space="preserve">
-    <value>Down</value>
-  </data>
-  <data name="DownloadAlternativeText" xml:space="preserve">
-    <value>Download</value>
-  </data>
-  <data name="EditAlternativeText" xml:space="preserve">
-    <value>Edit</value>
-  </data>
-  <data name="ExitAlternativeText" xml:space="preserve">
-    <value>Exit</value>
-  </data>
-  <data name="ExportAlternativeText" xml:space="preserve">
-    <value>Export</value>
-  </data>
-  <data name="ExportToExcelAlternativeText" xml:space="preserve">
-    <value>ExportToExcel</value>
-  </data>
-  <data name="FavoriteAlternativeText" xml:space="preserve">
-    <value>Favorite</value>
-  </data>
-  <data name="FileReplaceAlternativeText" xml:space="preserve">
-    <value>FileReplace</value>
-  </data>
-  <data name="FirstAlternativeText" xml:space="preserve">
-    <value>First</value>
-  </data>
-  <data name="ForwardAlternativeText" xml:space="preserve">
-    <value>Forward</value>
-  </data>
-  <data name="GoAlternativeText" xml:space="preserve">
-    <value>Go</value>
-  </data>
-  <data name="HeartAlternativeText" xml:space="preserve">
-    <value>Heart</value>
-  </data>
-  <data name="HelpAlternativeText" xml:space="preserve">
-    <value>Help</value>
-  </data>
-  <data name="HomeAlternativeText" xml:space="preserve">
-    <value>Home</value>
-  </data>
-  <data name="ImportAlternativeText" xml:space="preserve">
-    <value>Import</value>
-  </data>
-  <data name="IndexAlternativeText" xml:space="preserve">
-    <value>Index</value>
-  </data>
-  <data name="InformationAlternativeText" xml:space="preserve">
-    <value>Information</value>
-  </data>
-  <data name="InsertAlternativeText" xml:space="preserve">
-    <value>Insert</value>
-  </data>
-  <data name="LastAlternativeText" xml:space="preserve">
-    <value>Last</value>
-  </data>
-  <data name="LoadFileAlternativeText" xml:space="preserve">
-    <value>LoadFile</value>
-  </data>
-  <data name="LockAlternativeText" xml:space="preserve">
-    <value>Lock</value>
-  </data>
-  <data name="MailAlternativeText" xml:space="preserve">
-    <value>Mail</value>
-  </data>
-  <data name="MailLockAlternativeText" xml:space="preserve">
-    <value>MailLock</value>
-  </data>
-  <data name="MailReceiveAlternativeText" xml:space="preserve">
-    <value>MailReceive</value>
-  </data>
-  <data name="MailSearchAlternativeText" xml:space="preserve">
-    <value>MailSearch</value>
-  </data>
-  <data name="MailSendAlternativeText" xml:space="preserve">
-    <value>MailSend</value>
-  </data>
-  <data name="MinusAlternativeText" xml:space="preserve">
-    <value>Minus</value>
-  </data>
-  <data name="MoneyAlternativeText" xml:space="preserve">
-    <value>Money</value>
-  </data>
-  <data name="NewFileAlternativeText" xml:space="preserve">
-    <value>NewFile</value>
-  </data>
-  <data name="NextAlternativeText" xml:space="preserve">
-    <value>Next</value>
-  </data>
-  <data name="NumericDownAlternativeText" xml:space="preserve">
-    <value>NumericDown</value>
-  </data>
-  <data name="NumericUpAlternativeText" xml:space="preserve">
-    <value>NumericUp</value>
-  </data>
-  <data name="OpenAlternativeText" xml:space="preserve">
-    <value>Open</value>
-  </data>
-  <data name="PageSizeAlternativeText" xml:space="preserve">
-    <value>PageSize</value>
-  </data>
-  <data name="PasswordRecoveryAlternativeText" xml:space="preserve">
-    <value>PasswordRecovery</value>
-  </data>
-  <data name="PauseAlternativeText" xml:space="preserve">
-    <value>Pause</value>
-  </data>
-  <data name="PieChartAlternativeText" xml:space="preserve">
-    <value>PieChart</value>
-  </data>
-  <data name="PlayAlternativeText" xml:space="preserve">
-    <value>Play</value>
-  </data>
-  <data name="PlusAlternativeText" xml:space="preserve">
-    <value>Plus</value>
-  </data>
-  <data name="PreviousAlternativeText" xml:space="preserve">
-    <value>Previous</value>
-  </data>
-  <data name="ProcessAlternativeText" xml:space="preserve">
-    <value>Process</value>
-  </data>
-  <data name="PromotionAlternativeText" xml:space="preserve">
-    <value>Promotion</value>
-  </data>
-  <data name="ProtectionAlternativeText" xml:space="preserve">
-    <value>Protection</value>
-  </data>
-  <data name="QuestionAlternativeText" xml:space="preserve">
-    <value>Question</value>
-  </data>
-  <data name="RecordAlternativeText" xml:space="preserve">
-    <value>Record</value>
-  </data>
-  <data name="RecycleAlternativeText" xml:space="preserve">
-    <value>Recycle</value>
-  </data>
-  <data name="RedoAlternativeText" xml:space="preserve">
-    <value>Redo</value>
-  </data>
-  <data name="RefreshAlternativeText" xml:space="preserve">
-    <value>Refresh</value>
-  </data>
-  <data name="RegisterAlternativeText" xml:space="preserve">
-    <value>Register</value>
-  </data>
-  <data name="RepeatAlternativeText" xml:space="preserve">
-    <value>Repeat</value>
-  </data>
-  <data name="RSSAlternativeText" xml:space="preserve">
-    <value>RSS</value>
-  </data>
-  <data name="SaveAlternativeText" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="SearchAlternativeText" xml:space="preserve">
-    <value>Search</value>
-  </data>
-  <data name="SearchPageAlternativeText" xml:space="preserve">
-    <value>SearchPage</value>
-  </data>
-  <data name="SettingAlternativeText" xml:space="preserve">
-    <value>Setting</value>
-  </data>
-  <data name="ShoppingCartAlternativeText" xml:space="preserve">
-    <value>ShoppingCart</value>
-  </data>
-  <data name="SignUpAlternativeText" xml:space="preserve">
-    <value>SignUp</value>
-  </data>
-  <data name="StopAlternativeText" xml:space="preserve">
-    <value>Stop</value>
-  </data>
-  <data name="TagBlueAlternativeText" xml:space="preserve">
-    <value>TagBlue</value>
-  </data>
-  <data name="TagGreenAlternativeText" xml:space="preserve">
-    <value>TagGreen</value>
-  </data>
-  <data name="TextPageAlternativeText" xml:space="preserve">
-    <value>TextPage</value>
-  </data>
-  <data name="TitleAlternativeText" xml:space="preserve">
-    <value>Title</value>
-  </data>
-  <data name="ToggleButton_CheckedAlternativeText" xml:space="preserve">
-    <value>ToggleButton_Checked</value>
-  </data>
-  <data name="ToggleButton_UncheckedAlternativeText" xml:space="preserve">
-    <value>ToggleButton_Unchecked</value>
-  </data>
-  <data name="TutorialAlternativeText" xml:space="preserve">
-    <value>Tutorial</value>
-  </data>
-  <data name="UndoAlternativeText" xml:space="preserve">
-    <value>Undo</value>
-  </data>
-  <data name="UnlockAlternativeText" xml:space="preserve">
-    <value>Unlock</value>
-  </data>
-  <data name="UpAlternativeText" xml:space="preserve">
-    <value>Up</value>
-  </data>
-  <data name="UpdateAlternativeText" xml:space="preserve">
-    <value>Update</value>
-  </data>
-  <data name="UserAlternativeText" xml:space="preserve">
-    <value>User</value>
-  </data>
-  <data name="UsersAlternativeText" xml:space="preserve">
-    <value>Users</value>
-  </data>
-  <data name="WarningAlternativeText" xml:space="preserve">
-    <value>Warning</value>
-  </data>
-  <data name="ZoomInAlternativeText" xml:space="preserve">
-    <value>ZoomIn</value>
-  </data>
-  <data name="ZoomOutAlternativeText" xml:space="preserve">
-    <value>ZoomOut</value>
-  </data>
-  <data name="CopyAlternativeText" xml:space="preserve">
+  <data name="Copy" xml:space="preserve">
     <value>Copy</value>
   </data>
-  <data name="PasteAlternativeText" xml:space="preserve">
-    <value>Paste</value>
+  <data name="CreateUser" xml:space="preserve">
+    <value>Create User</value>
   </data>
-  <data name="MoreAlternativeText" xml:space="preserve">
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Down" xml:space="preserve">
+    <value>Down</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="ExportToExcel" xml:space="preserve">
+    <value>Export To Excel</value>
+  </data>
+  <data name="Favorite" xml:space="preserve">
+    <value>Favorite</value>
+  </data>
+  <data name="FileReplace" xml:space="preserve">
+    <value>File Replace</value>
+  </data>
+  <data name="First" xml:space="preserve">
+    <value>First</value>
+  </data>
+  <data name="Forward" xml:space="preserve">
+    <value>Forward</value>
+  </data>
+  <data name="FullDetails" xml:space="preserve">
+    <value>Full Details</value>
+  </data>
+  <data name="Go" xml:space="preserve">
+    <value>Go</value>
+  </data>
+  <data name="GotoSearch" xml:space="preserve">
+    <value>Goto Search</value>
+  </data>
+  <data name="Heart" xml:space="preserve">
+    <value>Heart</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Import" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="Index" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="Insert" xml:space="preserve">
+    <value>Insert</value>
+  </data>
+  <data name="Last" xml:space="preserve">
+    <value>Last</value>
+  </data>
+  <data name="LoadFile" xml:space="preserve">
+    <value>Load File</value>
+  </data>
+  <data name="Lock" xml:space="preserve">
+    <value>Lock</value>
+  </data>
+  <data name="Mail" xml:space="preserve">
+    <value>Mail</value>
+  </data>
+  <data name="MailLock" xml:space="preserve">
+    <value>Mail Lock</value>
+  </data>
+  <data name="MailReceive" xml:space="preserve">
+    <value>Mail Receive</value>
+  </data>
+  <data name="MailSearch" xml:space="preserve">
+    <value>Mail Search</value>
+  </data>
+  <data name="MailSend" xml:space="preserve">
+    <value>Mail Send</value>
+  </data>
+  <data name="Minus" xml:space="preserve">
+    <value>Minus</value>
+  </data>
+  <data name="Money" xml:space="preserve">
+    <value>Money</value>
+  </data>
+  <data name="More" xml:space="preserve">
     <value>More</value>
   </data>
-  <data name="FullDetailsAlternativeText" xml:space="preserve">
-    <value>FullDetails</value>
+  <data name="NewFile" xml:space="preserve">
+    <value>New File</value>
   </data>
-  <data name="GotoSearchAlternativeText" xml:space="preserve">
-    <value>GotoSearch</value>
+  <data name="Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="NumericDown" xml:space="preserve">
+    <value>Numeric Down</value>
+  </data>
+  <data name="NumericUp" xml:space="preserve">
+    <value>Numeric Up</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="PageSize" xml:space="preserve">
+    <value>Page Size</value>
+  </data>
+  <data name="PasswordRecovery" xml:space="preserve">
+    <value>Password Recovery</value>
+  </data>
+  <data name="Paste" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="PieChart" xml:space="preserve">
+    <value>Pie Chart</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>Play</value>
+  </data>
+  <data name="Plus" xml:space="preserve">
+    <value>Plus</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="Process" xml:space="preserve">
+    <value>Process</value>
+  </data>
+  <data name="Promotion" xml:space="preserve">
+    <value>Promotion</value>
+  </data>
+  <data name="Protection" xml:space="preserve">
+    <value>Protection</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="Record" xml:space="preserve">
+    <value>Record</value>
+  </data>
+  <data name="Recycle" xml:space="preserve">
+    <value>Recycle</value>
+  </data>
+  <data name="Redo" xml:space="preserve">
+    <value>Redo</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="Repeat" xml:space="preserve">
+    <value>Repeat</value>
+  </data>
+  <data name="Rss" xml:space="preserve">
+    <value>Rss</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="SearchPage" xml:space="preserve">
+    <value>Search Page</value>
+  </data>
+  <data name="Setting" xml:space="preserve">
+    <value>Setting</value>
+  </data>
+  <data name="ShoppingCart" xml:space="preserve">
+    <value>Shopping Cart</value>
+  </data>
+  <data name="SignUp" xml:space="preserve">
+    <value>Sign Up</value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="TagBlue" xml:space="preserve">
+    <value>Tag Blue</value>
+  </data>
+  <data name="TagGreen" xml:space="preserve">
+    <value>Tag Green</value>
+  </data>
+  <data name="TextPage" xml:space="preserve">
+    <value>Text Page</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="ToggleButton_Checked" xml:space="preserve">
+    <value>Checked</value>
+  </data>
+  <data name="ToggleButton_Unchecked" xml:space="preserve">
+    <value>Unchecked</value>
+  </data>
+  <data name="Tutorial" xml:space="preserve">
+    <value>Tutorial</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="Unlock" xml:space="preserve">
+    <value>Unlock</value>
+  </data>
+  <data name="Up" xml:space="preserve">
+    <value>Up</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="ZoomIn" xml:space="preserve">
+    <value>Zoom In</value>
+  </data>
+  <data name="ZoomOut" xml:space="preserve">
+    <value>Zoom Out</value>
   </data>
 
 </root>
