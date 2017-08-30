@@ -111,13 +111,12 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
                 {
-                    //MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode_Static.Item = null;
                     this.StatusOfResult = result.StatusOfResult;
                     if (result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
                     {
                         if (isToClearExistingResult)
                         {
-                            this.EntityCollection = new ObservableCollection<DataSourceEntities.BuildEventCode>(result.Result.ToList());
+                            this.EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildEventCode>(result.Result.ToList());
                         }
                         else
                         {

@@ -28,7 +28,7 @@
                                 <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_magnify}" />
                             </Rectangle.OpacityMask>
                         </Rectangle>
-                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.Search, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.Search, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Center"></TextBlock>
                     </StackPanel>
                 </Button>
                 <Button     Name="AddNew" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode.LaunchCreateViewCommand, Source={StaticResource Locator}}" Width="45" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.AddNew, Source={StaticResource LocalizedStrings}}">
@@ -38,7 +38,7 @@
                                 <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_add}" />
                             </Rectangle.OpacityMask>
                         </Rectangle>
-                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.AddNew, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.AddNew, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Center"></TextBlock>
                     </StackPanel>
                 </Button>
                 <Separator />

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.ObjectModel;
+using System.Linq;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
@@ -113,23 +114,20 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                     this.StatusOfResult = result.StatusOfResult;
                     if (result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
                     {
-                        if (this.m_EntityCollectionDefault == null)
+                        if (isToClearExistingResult)
                         {
-                            this.m_EntityCollectionDefault = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Solution.Default>();
+                            this.EntityCollectionDefault = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Solution.Default>(result.Result.ToList());
                         }
                         else
                         {
-                            if (isToClearExistingResult)
+                            if (this.EntityCollectionDefault == null)
                             {
-                                this.m_EntityCollectionDefault.Clear();
+                                this.EntityCollectionDefault = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Solution.Default>();
                             }
-                        }
 
-                        if (result.Result != null)
-                        {
                             foreach (var item in result.Result)
                             {
-                                this.m_EntityCollectionDefault.Add(item);
+                                this.EntityCollectionDefault.Add(item);
                             }
                         }
 

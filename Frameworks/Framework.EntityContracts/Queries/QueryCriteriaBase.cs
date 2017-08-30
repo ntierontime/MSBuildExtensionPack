@@ -164,6 +164,7 @@ namespace Framework.EntityContracts
         /// </summary>
         public QuerySystemBooleanEqualsCriteria()
         {
+            ValueToCompare = false;
         }
         /// <summary>
         /// Initializes a new instance of the <see cref="QuerySystemBooleanEqualsCriteria"/> class.
