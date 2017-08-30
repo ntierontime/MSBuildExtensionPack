@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
@@ -110,26 +111,24 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
                 {
+                    //MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode_Static.Item = null;
                     this.StatusOfResult = result.StatusOfResult;
                     if (result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
                     {
-                        if (this.m_EntityCollection == null)
+                        if (isToClearExistingResult)
                         {
-                            this.m_EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildEventCode>();
+                            this.EntityCollection = new ObservableCollection<DataSourceEntities.BuildEventCode>(result.Result.ToList());
                         }
                         else
                         {
-                            if (isToClearExistingResult)
+                            if (this.EntityCollection == null)
                             {
-                                this.m_EntityCollection.Clear();
+                                this.EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildEventCode>();
                             }
-                        }
 
-                        if (result.Result != null)
-                        {
                             foreach (var item in result.Result)
                             {
-                                this.m_EntityCollection.Add(item);
+                                this.EntityCollection.Add(item);
                             }
                         }
 

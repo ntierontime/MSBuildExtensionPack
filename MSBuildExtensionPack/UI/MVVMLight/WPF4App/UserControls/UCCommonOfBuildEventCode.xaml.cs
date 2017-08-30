@@ -22,6 +22,9 @@ namespace MSBuildExtensionPack.WPF4App.UserControls
         public UCCommonOfBuildEventCode()
         {
             InitializeComponent();
+
+            this.V_Common.UnselectAll();
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM_Static.SearchCommand.Execute(null);
         }
     }
 }

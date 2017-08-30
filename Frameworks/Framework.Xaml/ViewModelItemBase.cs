@@ -72,7 +72,8 @@ namespace Framework.Xaml
             {
                 if(value != null)
                 {
-                    m_Item = value.GetAClone();
+                    //m_Item = value.GetAClone();
+                    m_Item = value;
                     RaisePropertyChanged("Item");
                 }
             }

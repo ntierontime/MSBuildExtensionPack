@@ -173,6 +173,7 @@ namespace Framework.EntityContracts
         public QuerySystemBooleanEqualsCriteria(bool isToCompare, System.Boolean? valueToCompare)
             : base(isToCompare, valueToCompare)
         {
+            ValueToCompare = valueToCompare ?? false;
         }
 
         #endregion constructors
