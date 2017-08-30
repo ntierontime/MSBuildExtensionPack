@@ -65,7 +65,7 @@
                     </StackPanel>
                 </Button>
                 <!-- TO-DO: END it is regular details page, to be replaced by full details -->
-                <Button     Name="Edit" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode.LaunchEditViewCommand, Source={StaticResource Locator}}" Width="45" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.Edit, Source={StaticResource LocalizedStrings}}">
+				<Button     Name="Edit" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode.LaunchEditViewCommand, Source={StaticResource Locator}}" Width="45" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.Edit, Source={StaticResource LocalizedStrings}}" CommandParameter="{Binding}" >
                     <StackPanel>
                         <iconPacks:PackIconModern Kind="Edit" HorizontalAlignment="Center"/>
                         <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.Edit, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Center"></TextBlock>

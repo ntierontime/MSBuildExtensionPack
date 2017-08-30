@@ -89,7 +89,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         #endregion ClearSearchResult
 
-        protected override void DoSearch()
+        protected override void DoSearch(bool isToClearExistingResult)
         {
             this.SearchStatus = Framework.EntityContracts.SearchStatus.Searching;
 
