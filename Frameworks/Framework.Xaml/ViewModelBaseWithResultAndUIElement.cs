@@ -414,8 +414,6 @@ namespace Framework.Xaml
 
         #endregion ClearSearchResult
 
-        //protected bool isToClearExistingResult = false;
-
         protected TSearchCriteria m_Criteria;
 
         public TSearchCriteria Criteria
@@ -456,8 +454,8 @@ namespace Framework.Xaml
             {
                 this.QueryPagingSetting.CurrentPage = 1;
             }
-			
-            DoSearch(true);
+
+            this.DoSearch(true);
         }
 
         protected bool CanSearch()
@@ -472,13 +470,13 @@ namespace Framework.Xaml
             if (this.QueryPagingSetting.CurrentPage == 0)
             {
                 this.QueryPagingSetting.CurrentPage = 1;
-                DoSearch(false);
+                this.DoSearch(false);
             }
             else
             {
-				this.QueryPagingSetting.CurrentPage += 1;
-				this.DoSearch(false);
-			}
+                this.QueryPagingSetting.CurrentPage += 1;
+                this.DoSearch(false);
+            }
         }
 
         protected abstract void DoSearch(bool isToClearExistingResult);

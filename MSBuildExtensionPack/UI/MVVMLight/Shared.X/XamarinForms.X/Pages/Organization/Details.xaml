@@ -85,7 +85,7 @@
         </ScrollView>
     </ContentPage.Content>
     <ContentPage.ToolbarItems>
-        <ToolbarItem x:Name="Edit" Order="Primary" Text="{i18n:Translate Text=Edit, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization.LaunchEditViewCommand, Source={StaticResource Locator}}">
+        <ToolbarItem x:Name="Edit" Order="Primary" Text="{i18n:Translate Text=Edit, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization.LaunchEditViewCommand, Source={StaticResource Locator}}" >
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="Android">Android/Edit.png</On>

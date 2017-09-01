@@ -188,9 +188,9 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         protected override void LaunchEditView(MSBuildExtensionPack.DataSourceEntities.BuildEventCode oo)
         {
-            //var o = oo == null ? this.Item.GetACloneWithoutIdentifier() : oo.GetACloneWithoutIdentifier();
+            var o = oo == null ? this.Item.GetACloneWithoutIdentifier() : oo.GetACloneWithoutIdentifier();
 
-            base.LaunchEditView(oo);
+            base.LaunchEditView(o);
         }
 
         protected override void LaunchCopyView(MSBuildExtensionPack.DataSourceEntities.BuildEventCode oo)
