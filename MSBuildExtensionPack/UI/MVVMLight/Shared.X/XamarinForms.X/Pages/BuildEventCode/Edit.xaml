@@ -5,6 +5,7 @@
     xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.X"
     xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
     x:Class="MSBuildExtensionPack.XamarinForms.Pages.BuildEventCode.Edit"
+    NavigationPage.HasBackButton="False"
     Title="{i18n:Translate Text=Edit_BuildEventCode, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}">
     <ContentPage.Content>
         <ScrollView>

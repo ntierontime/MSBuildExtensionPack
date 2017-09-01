@@ -5,6 +5,7 @@
     xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.X"
     xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
     x:Class="MSBuildExtensionPack.XamarinForms.Pages.Solution.Delete"
+    NavigationPage.HasBackButton="False"
     Title="{i18n:Translate Text=Delete_Solution, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}">
     <ContentPage.Content>
         <ScrollView>

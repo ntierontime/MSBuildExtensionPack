@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
-             xmlns:fxr="clr-namespace:Framework.Xamariner;assembly=Framework.Xamariner.X"
-             xmlns:fe="clr-namespace:Framework.EntityContracts;assembly=Framework.EntityContracts.X"
-             x:Class="MSBuildExtensionPack.XamarinForms.Pages.WPCommonSearchViewOfSolution">
+<ContentPage
+        xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
+        xmlns:fxr="clr-namespace:Framework.Xamariner;assembly=Framework.Xamariner.X"
+        xmlns:fe="clr-namespace:Framework.EntityContracts;assembly=Framework.EntityContracts.X"
+        x:Class="MSBuildExtensionPack.XamarinForms.Pages.WPCommonSearchViewOfSolution"
+        NavigationPage.HasBackButton="False">
     <ContentPage.Content>
     <StackLayout>
                  <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
