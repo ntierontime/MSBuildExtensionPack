@@ -29,7 +29,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         /// The page instance singleton.
         /// </value>
         ConcurrentDictionary<Type, object> PageInstanceSingleton { get; set; }
-
         public bool QuitConfirmationEnabled { get; set; }
         public bool IsBusy { get; set; }
 
@@ -41,32 +40,16 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
         }
 
-        public Framework.Xaml.MenuTreeItem MainMenuTree { get; set; }
-
-        public Framework.MenuTreeItem m_SelectedMenuTreeItem;
-        public Framework.MenuTreeItem SelectedMenuTreeItem {
-            get
-            {
-                return this.m_SelectedMenuTreeItem;
-            }
-            set
-            {
-                this.m_SelectedMenuTreeItem = value;
-                RaisePropertyChanged("SelectedMenuTreeItem");
-            }
+        public RelayCommand GoHomeCommand { get; private set; }
+        public void GoHome()
+        {
+            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(null, null, Framework.UIAction.Home, Framework.UIActionStatus.Launch));
         }
 
-        public RelayCommand MenuItemSelectedCommand { get; private set; }
-
-        public void MenuItemSelected()
+        public RelayCommand GoBackCommand { get; private set; }
+        public void GoBack()
         {
-            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(this.SelectedMenuTreeItem.SourceTypeFullName, this.SelectedMenuTreeItem.SenderView, this.SelectedMenuTreeItem.UIAction, this.SelectedMenuTreeItem.UIActionStatus));
-        }
-
-        public RelayCommand<Framework.MenuTreeItem> MenuItemSelectedCommandTyped { get; private set; }
-        public void MenuItemSelectedTyped(Framework.MenuTreeItem selectedMenuTreeItem)
-        {
-            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(selectedMenuTreeItem.SourceTypeFullName, selectedMenuTreeItem.SenderView, selectedMenuTreeItem.UIAction, selectedMenuTreeItem.UIActionStatus));
+            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(null, null, Framework.UIAction.GoBack, Framework.UIActionStatus.Launch));
         }
 
         public Framework.NavigationSettingCollection NavigationSettingCollection { get; set; }
@@ -88,27 +71,16 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 // Code runs "for real"
             }
 
-            //#region 1. Initialize Menu
 
-            this.MainMenuTree = new Framework.Xaml.MenuTreeItem();
-
-            //#endregion 1. Initialize Menu
-
-            //#region 2. Initialize NavigationSettingCollection
-
+            // 1. Initialize NavigationSettingCollection
             this.NavigationSettingCollection = new Framework.NavigationSettingCollection();
-
-            //#endregion 2. Initialize NavigationSettingCollection
-
-            //#region 3. Initialize MenuItemSelectedCommand
-
-            this.MenuItemSelectedCommand = new RelayCommand(MenuItemSelected);
-            this.MenuItemSelectedCommandTyped = new RelayCommand<Framework.MenuTreeItem>(MenuItemSelectedTyped);
-
-            //#endregion 3. Initialize MenuItemSelectedCommand
-
             PageInstanceSingleton = new ConcurrentDictionary<Type, object>();
 
+            // 2. Command
+            this.GoHomeCommand = new RelayCommand(GoHome);
+            this.GoBackCommand = new RelayCommand(GoBack);
+
+            // 3. PreDefinedDateTimeRangeList and PredefinedBooleanSelectedValueList
             this.PreDefinedDateTimeRangeList = Framework.EntityContracts.QuerySystemDateTimeRangeCriteria.GetList(null);
             this.PredefinedBooleanSelectedValueList = Framework.EntityContracts.QuerySystemBooleanEqualsCriteria.GetList(null);
 

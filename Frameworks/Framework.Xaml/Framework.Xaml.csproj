@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -38,7 +38,6 @@
     <Compile Include="IDispatcherHelperWrapper.cs" />
     <Compile Include="ViewModelBaseWithResultAndUIElement.cs" />
     <Compile Include="ViewModelItemBase.cs" />
-    <Compile Include="MenuTreeItem.cs" />
     <None Include="map.1.D.1.vsd" />
     <None Include="map.1.D.1.vsd.png" />
   </ItemGroup>

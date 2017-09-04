@@ -10,6 +10,13 @@
             WinPhone="Assets/LockScreenLogo.scale-100.png" />
     </ContentPage.Icon>
     <ContentPage.Content>
-        <Label Text="Home Page" VerticalOptions="Center" HorizontalOptions="Center" />
+        <StackLayout BackgroundColor="Gray">
+            <Frame OutlineColor="Yellow" Padding="1">
+                <StackLayout Orientation="Horizontal" >
+                    <Label Text="{i18n:Translate Text=BuildEventCode, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" HorizontalOptions="Start" BackgroundColor="LightGray"  WidthRequest="150" HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
+                    <Button Text="Search" TextColor="White" BackgroundColor="Green" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM.LaunchSearchViewCommand, Source={StaticResource Locator}}" CommandParameter="Launch" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

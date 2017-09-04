@@ -41,6 +41,8 @@ namespace Framework
         /// for Xamarin only
         /// </summary>
         Result,
+
+        Home,
     }
 }
 

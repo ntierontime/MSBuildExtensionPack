@@ -26,9 +26,6 @@ namespace MSBuildExtensionPack.WPF4App
             Closing += (s, e) => MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.Cleanup();
 
             // The MVVM Light Messenger In-Depth: http://msdn.microsoft.com/en-us/magazine/dn745866.aspx
-
-            InitializeMainMenuTree();
-
             InitializeNavigationSettingCollectionInMainViewModel();
 
             Messenger.Default.Register<Framework.UIActionStatusMessage>(
@@ -60,26 +57,6 @@ namespace MSBuildExtensionPack.WPF4App
                         }
                     }
                 });
-        }
-
-        private static void InitializeMainMenuTree()
-        {
-
-            // 1.1 MSBuildExtensionPack.Build
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.MainMenuTree.AddSubMenuTreeItem("Common of MSBuildExtensionPack.Build", MSBuildExtensionPack.Resx.UIStringResourcePerApp.Common_of_MSBuildExtensionPack_Build, MSBuildExtensionPack.Resx.UIStringResourcePerApp.Common_of_MSBuildExtensionPack_Build, MSBuildExtensionPack.Resx.UIStringResourcePerApp.Description_Of_Common_of_MSBuildExtensionPack_Build, null, null, MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildVM.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildVM.ViewName_Static, Framework.UIAction.Search, Framework.UIActionStatus.Launch);
-
-            // 1.2 MSBuildExtensionPack.BuildEventCode
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.MainMenuTree.AddSubMenuTreeItem("Common of MSBuildExtensionPack.BuildEventCode", MSBuildExtensionPack.Resx.UIStringResourcePerApp.Common_of_MSBuildExtensionPack_BuildEventCode, MSBuildExtensionPack.Resx.UIStringResourcePerApp.Common_of_MSBuildExtensionPack_BuildEventCode, MSBuildExtensionPack.Resx.UIStringResourcePerApp.Description_Of_Common_of_MSBuildExtensionPack_BuildEventCode, null, null, MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildEventCodeVM.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildEventCodeVM.ViewName_Static, Framework.UIAction.Search, Framework.UIActionStatus.Launch);
-
-            // 1.3 MSBuildExtensionPack.BuildLog
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.MainMenuTree.AddSubMenuTreeItem("Common of MSBuildExtensionPack.BuildLog", MSBuildExtensionPack.Resx.UIStringResourcePerApp.Common_of_MSBuildExtensionPack_BuildLog, MSBuildExtensionPack.Resx.UIStringResourcePerApp.Common_of_MSBuildExtensionPack_BuildLog, MSBuildExtensionPack.Resx.UIStringResourcePerApp.Description_Of_Common_of_MSBuildExtensionPack_BuildLog, null, null, MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildLogVM.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildLogVM.ViewName_Static, Framework.UIAction.Search, Framework.UIActionStatus.Launch);
-
-            // 1.4 MSBuildExtensionPack.Organization
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.MainMenuTree.AddSubMenuTreeItem("Common of MSBuildExtensionPack.Organization", MSBuildExtensionPack.Resx.UIStringResourcePerApp.Common_of_MSBuildExtensionPack_Organization, MSBuildExtensionPack.Resx.UIStringResourcePerApp.Common_of_MSBuildExtensionPack_Organization, MSBuildExtensionPack.Resx.UIStringResourcePerApp.Description_Of_Common_of_MSBuildExtensionPack_Organization, null, null, MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfOrganizationVM.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfOrganizationVM.ViewName_Static, Framework.UIAction.Search, Framework.UIActionStatus.Launch);
-
-            // 1.5 MSBuildExtensionPack.Solution
-            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.MainMenuTree.AddSubMenuTreeItem("Common of MSBuildExtensionPack.Solution", MSBuildExtensionPack.Resx.UIStringResourcePerApp.Common_of_MSBuildExtensionPack_Solution, MSBuildExtensionPack.Resx.UIStringResourcePerApp.Common_of_MSBuildExtensionPack_Solution, MSBuildExtensionPack.Resx.UIStringResourcePerApp.Description_Of_Common_of_MSBuildExtensionPack_Solution, null, null, MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfSolutionVM.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfSolutionVM.ViewName_Static, Framework.UIAction.Search, Framework.UIActionStatus.Launch);
-
         }
 
         private static void InitializeNavigationSettingCollectionInMainViewModel()

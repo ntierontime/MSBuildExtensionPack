@@ -63,7 +63,8 @@ namespace Framework
         {
             if (DoesRegistrationExist<TIntf>())
                 throw new DuplicateRegistrationException("Can only contain one registration per type");
-            m_TypeRegistrations.Add(typeof(TIntf), typeof(TClass));
+            else
+                m_TypeRegistrations.Add(typeof(TIntf), typeof(TClass));
         }
 
         public TIntf Resolve<TIntf>() where TIntf : class
@@ -76,7 +77,9 @@ namespace Framework
             if (!m_TypeRegistrations.ContainsKey(type))
             {
                 if (!m_InstanceRegistrations.ContainsKey(type))
+                {
                     throw new NotSupportedException("Cannot find registration for type " + type.FullName + ".");
+                }
                 else
                     return m_InstanceRegistrations[type];
             }
