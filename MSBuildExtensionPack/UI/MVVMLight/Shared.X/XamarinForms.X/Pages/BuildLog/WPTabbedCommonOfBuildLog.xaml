@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+        xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
+        xmlns:l ="clr-namespace:MSBuildExtensionPack.XamarinForms.Pages.BuildLog"
+        x:Class="MSBuildExtensionPack.XamarinForms.Pages.BuildLog.WPTabbedCommonOfBuildLog"
+        Title="{i18n:Translate Text=BuildLog, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}"
+        NavigationPage.HasNavigationBar="False"
+        NavigationPage.HasBackButton="False"
+        >
+<l:WPCommonSearchViewOfBuildLog/>
+<l:WPCommonResultViewOfBuildLog/>
+</TabbedPage>

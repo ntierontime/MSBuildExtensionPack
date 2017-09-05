@@ -4,26 +4,12 @@ using Xamarin.Forms;
 namespace MSBuildExtensionPack.XamarinForms {
     public partial class App : Application {
 
-        // *********************************************************************
-        // TODO: wrap in a global Navigation Service (for example purposes only)
-        // https://wolfprogrammer.com/2016/07/22/navigation-using-mvvm-light/
-        public static NavigationPage NavigationPage { get; set; }
-        //private static MSBuildExtensionPack.XamarinForms.GlobalPages.RootPage RootPage;
-        //public static bool MenuIsPresented {
-        //    get {
-        //        return RootPage.IsPresented;
-        //    }
-        //    set {
-        //        RootPage.IsPresented = value;
-        //    }
-        //}
-        // *********************************************************************
+        public static NavigationPage NavigationPage { get; private set; }
 
         public App() {
             InitializeComponent();
 
             Assembly assembly = typeof(App).GetTypeInfo().Assembly;
-
             PCLAppConfig.ConfigurationManager.Initialise(assembly.GetManifestResourceStream("MSBuildExtensionPack.XamarinForms.ResourceApp.config"));
 
             if (Device.RuntimePlatform.ToLower() == Framework.Xamariner.Platforms.Android.ToString().ToLower())
@@ -39,13 +25,7 @@ namespace MSBuildExtensionPack.XamarinForms {
                 MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl = PCLAppConfig.ConfigurationManager.AppSettings[Framework.ViewModels.ApiControllerHttpClientBase.WebApiRootUrlAppSettingName];
             }
 
-            //var menuPage = new MSBuildExtensionPack.XamarinForms.GlobalPages.MenuPage();
-            //NavigationPage = new NavigationPage(new MSBuildExtensionPack.XamarinForms.GlobalPages.HomePage());
-            //RootPage = new MSBuildExtensionPack.XamarinForms.GlobalPages.RootPage();
-            //RootPage.Master = menuPage;
-            //RootPage.Detail = NavigationPage;
-            //MainPage = RootPage;
-            MainPage = NavigationPage = new NavigationPage(new MSBuildExtensionPack.XamarinForms.GlobalPages.HomePage());
+            MainPage = NavigationPage = new NavigationPage(new MSBuildExtensionPack.XamarinForms.Pages.HomePage());
 
             if (Device.RuntimePlatform.ToLower() == Framework.Xamariner.Platforms.iOS.ToString().ToLower() || Device.RuntimePlatform.ToLower() == Framework.Xamariner.Platforms.Android.ToString().ToLower())
             {

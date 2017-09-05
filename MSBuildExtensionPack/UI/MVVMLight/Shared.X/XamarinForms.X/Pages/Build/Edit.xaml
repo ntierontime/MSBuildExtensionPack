@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.X"
-    xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
-    x:Class="MSBuildExtensionPack.XamarinForms.Pages.Build.Edit"
-    NavigationPage.HasBackButton="False"
-    Title="{i18n:Translate Text=Edit_Build, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}">
+        xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.X"
+        xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
+        x:Class="MSBuildExtensionPack.XamarinForms.Pages.Build.Edit"
+        Title="{i18n:Translate Text=Edit_Build, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}"
+        NavigationPage.HasNavigationBar="False"
+        NavigationPage.HasBackButton="False"
+        >
     <ContentPage.Content>
         <ScrollView>
             <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">

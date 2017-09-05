@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.X"
-    xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
-    x:Class="MSBuildExtensionPack.XamarinForms.Pages.BuildEventCode.Details"
-    Title="{i18n:Translate Text=Details_BuildEventCode, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}"
-    NavigationPage.HasNavigationBar="False"
-    NavigationPage.HasBackButton="False"
-    >
+        xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.X"
+        xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
+        x:Class="MSBuildExtensionPack.XamarinForms.Pages.BuildEventCode.Details"
+        Title="{i18n:Translate Text=Details_BuildEventCode, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}"
+        NavigationPage.HasNavigationBar="False"
+        NavigationPage.HasBackButton="False"
+        >
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                 <Label Text="{i18n:Translate Text=Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
             <Label Text="{Binding Path=Id, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
             <Label Text="{i18n:Translate Text=EventCode, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
@@ -52,15 +52,5 @@
                 </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
-        <ToolbarItem x:Name="Search" Order="Primary" Text="{i18n:Translate Text=Search, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=LaunchSearchViewCommand}">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="Android">Android/Search.png</On>
-                    <On Platform="iOS">Assets/Search.png</On>
-                    <On Platform="Windows">Assets/Search.png</On>
-                    <On Platform="WinPhone">Assets/Search.png</On>
-                </OnPlatform>
-            </ToolbarItem.Icon>
-        </ToolbarItem>        
     </ContentPage.ToolbarItems>
 </ContentPage>

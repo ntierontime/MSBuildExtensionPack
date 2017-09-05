@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+        xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
+        xmlns:fxr="clr-namespace:Framework.Xamariner;assembly=Framework.Xamariner.X"
+        xmlns:fe="clr-namespace:Framework.EntityContracts;assembly=Framework.EntityContracts.X"
+        x:Class="MSBuildExtensionPack.XamarinForms.Pages.BuildLog.WPCommonSearchViewOfBuildLog"
+        Title="{i18n:Translate Text=Search, ResourceId=Framework.Resx.UIStringResource}"
+        NavigationPage.HasNavigationBar="False"
+        NavigationPage.HasBackButton="False"
+        >
+    <ContentPage.Content>
+    <StackLayout>
+                 <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+                <Picker
+                    ItemDisplayBinding="{Binding Name}"
+                    ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfOrganization_2, Source={StaticResource Locator}}"
+                    SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfOrganization_2SelectedItem, Source={StaticResource Locator}}"
+                    HorizontalOptions="FillAndExpand">
+                </Picker>
+                <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_1OfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+                <Picker
+                    ItemDisplayBinding="{Binding Name}"
+                    ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfOrganization_1, Source={StaticResource Locator}}"
+                    SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfOrganization_1SelectedItem, Source={StaticResource Locator}}"
+                    HorizontalOptions="FillAndExpand">
+                </Picker>
+                <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+                <Picker
+                    ItemDisplayBinding="{Binding Name}"
+                    ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfSolution_1, Source={StaticResource Locator}}"
+                    SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfSolution_1SelectedItem, Source={StaticResource Locator}}"
+                    HorizontalOptions="FillAndExpand">
+                </Picker>
+                <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+                <Picker
+                    ItemDisplayBinding="{Binding Name}"
+                    ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfBuild_1, Source={StaticResource Locator}}"
+                    SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfBuild_1SelectedItem, Source={StaticResource Locator}}"
+                    HorizontalOptions="FillAndExpand">
+                </Picker>
+                <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuildEventCode_1OfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+                <Picker
+                    ItemDisplayBinding="{Binding Name}"
+                    ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfBuildEventCode_1, Source={StaticResource Locator}}"
+                    SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfBuildEventCode_1SelectedItem, Source={StaticResource Locator}}"
+                    HorizontalOptions="FillAndExpand">
+                </Picker>
+                <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareEventTimeCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+                <Picker
+                    ItemDisplayBinding="{Binding Name}"
+                    ItemsSource="{Binding Path=Main.PreDefinedDateTimeRangeList, Source={StaticResource Locator}}"
+                    SelectedItem="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.PreDefinedDateTimeRange, Converter={StaticResource EnumToNameValuePairConverter}}"
+                    HorizontalOptions="FillAndExpand">
+                </Picker>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{i18n:Translate Text=From, ResourceId=Framework.Resx.UIStringResource}" FontSize="Small"  VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
+                    <DatePicker IsEnabled="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.IsCustomEditor}" IsVisible="True" Format="F" Date="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.LowerBound}" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{i18n:Translate Text=To, ResourceId=Framework.Resx.UIStringResource}" FontSize="Small"  VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
+                    <DatePicker IsEnabled="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.IsCustomEditor}" IsVisible="True" Format="F" Date="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.UpperBound}" />
+                </StackLayout>
+                <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareMessageCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+                <Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedMessageCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" Text="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.MessageCommonOft.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+    </StackLayout>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="Back" Order="Primary" Text="{i18n:Translate Text=Back, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=Main.GoBackCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">Android/Back.png</On>
+                    <On Platform="iOS">Assets/Back.png</On>
+                    <On Platform="Windows">Assets/Back.png</On>
+                    <On Platform="WinPhone">Assets/Back.png</On>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem x:Name="Add" Order="Primary" Text="{i18n:Translate Text=Save, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog.LaunchCreateViewCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">Android/Add.png</On>
+                    <On Platform="iOS">Assets/Add.png</On>
+                    <On Platform="Windows">Assets/Add.png</On>
+                    <On Platform="WinPhone">Assets/Add.png</On>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem x:Name="GoHome" Order="Primary" Text="{i18n:Translate Text=Home, ResourceId=Framework.Resx.UIStringResource}}" Command="{Binding Path=Main.GoHomeCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">Android/Home.png</On>
+                    <On Platform="iOS">Assets/Home.png</On>
+                    <On Platform="Windows">Assets/Home.png</On>
+                    <On Platform="WinPhone">Assets/Home.png</On>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+</ContentPage>

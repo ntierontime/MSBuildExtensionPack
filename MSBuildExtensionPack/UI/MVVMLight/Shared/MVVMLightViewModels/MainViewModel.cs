@@ -29,6 +29,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         /// The page instance singleton.
         /// </value>
         ConcurrentDictionary<Type, object> PageInstanceSingleton { get; set; }
+
         public bool QuitConfirmationEnabled { get; set; }
         public bool IsBusy { get; set; }
 
@@ -53,7 +54,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         }
 
         public Framework.NavigationSettingCollection NavigationSettingCollection { get; set; }
-
         public Framework.NameValueCollection PreDefinedDateTimeRangeList { get; }
         public Framework.NameValueCollection PredefinedBooleanSelectedValueList { get; }
 
@@ -71,9 +71,10 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 // Code runs "for real"
             }
 
-
             // 1. Initialize NavigationSettingCollection
+
             this.NavigationSettingCollection = new Framework.NavigationSettingCollection();
+
             PageInstanceSingleton = new ConcurrentDictionary<Type, object>();
 
             // 2. Command
@@ -81,6 +82,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             this.GoBackCommand = new RelayCommand(GoBack);
 
             // 3. PreDefinedDateTimeRangeList and PredefinedBooleanSelectedValueList
+
             this.PreDefinedDateTimeRangeList = Framework.EntityContracts.QuerySystemDateTimeRangeCriteria.GetList(null);
             this.PredefinedBooleanSelectedValueList = Framework.EntityContracts.QuerySystemBooleanEqualsCriteria.GetList(null);
 

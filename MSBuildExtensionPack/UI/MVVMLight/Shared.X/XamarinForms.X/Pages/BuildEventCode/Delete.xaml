@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.X"
-    xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
-    x:Class="MSBuildExtensionPack.XamarinForms.Pages.BuildEventCode.Delete"
-    Title="{i18n:Translate Text=Delete_BuildEventCode, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}"
-    NavigationPage.HasNavigationBar="False"
-    NavigationPage.HasBackButton="False"
-    >
+        xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.X"
+        xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
+        x:Class="MSBuildExtensionPack.XamarinForms.Pages.BuildEventCode.Delete"
+        Title="{i18n:Translate Text=Delete_BuildEventCode, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}"
+        NavigationPage.HasNavigationBar="False"
+        NavigationPage.HasBackButton="False"
+        >
     <ContentPage.Content>
         <ScrollView>
             <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
@@ -30,36 +30,6 @@
                     <On Platform="iOS">Assets/RecycleBin.png</On>
                     <On Platform="Windows">Assets/RecycleBin.png</On>
                     <On Platform="WinPhone">Assets/RecycleBin.png</On>
-                </OnPlatform>
-            </ToolbarItem.Icon>
-        </ToolbarItem>
-        <ToolbarItem x:Name="Search" Order="Primary" Text="{i18n:Translate Text=Search, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=LaunchSearchViewCommand}">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="Android">Android/Search.png</On>
-                    <On Platform="iOS">Assets/Search.png</On>
-                    <On Platform="Windows">Assets/Search.png</On>
-                    <On Platform="WinPhone">Assets/Search.png</On>
-                </OnPlatform>
-            </ToolbarItem.Icon>
-        </ToolbarItem>        
-        <ToolbarItem x:Name="Back" Order="Primary" Text="{i18n:Translate Text=Back, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=Main.GoBackCommand, Source={StaticResource Locator}}">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="Android">Android/Back.png</On>
-                    <On Platform="iOS">Assets/Back.png</On>
-                    <On Platform="Windows">Assets/Back.png</On>
-                    <On Platform="WinPhone">Assets/Back.png</On>
-                </OnPlatform>
-            </ToolbarItem.Icon>
-        </ToolbarItem>
-        <ToolbarItem x:Name="GoHome" Order="Primary" Text="{i18n:Translate Text=Home, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=Main.GoHomeCommand, Source={StaticResource Locator}}">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="Android">Android/Home.png</On>
-                    <On Platform="iOS">Assets/Home.png</On>
-                    <On Platform="Windows">Assets/Home.png</On>
-                    <On Platform="WinPhone">Assets/Home.png</On>
                 </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>

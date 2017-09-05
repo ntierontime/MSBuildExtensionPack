@@ -41,7 +41,6 @@
     <Compile Include="DataServiceTypes.cs" />
     <Compile Include="DataStreamServiceResult.cs" />
     <Compile Include="IDataStreamServiceProviderBase.cs" />
-    <Compile Include="Models\MenuTreeItem.cs" />
     <Compile Include="NavigationSetting.cs" />
     <Compile Include="PropertyChangedNotifier.cs" />
     <Compile Include="UIAction.cs" />

@@ -925,6 +925,9 @@
   <data name="Repeat" xml:space="preserve">
     <value>Repeat</value>
   </data>
+  <data name="Results" xml:space="preserve">
+    <value>Results</value>
+  </data>
   <data name="Rss" xml:space="preserve">
     <value>Rss</value>
   </data>

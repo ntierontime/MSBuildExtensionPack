@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+        xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
+        xmlns:l ="clr-namespace:MSBuildExtensionPack.XamarinForms.Pages.Build"
+        x:Class="MSBuildExtensionPack.XamarinForms.Pages.Build.WPTabbedCommonOfBuild"
+        Title="{i18n:Translate Text=Build, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}"
+        NavigationPage.HasNavigationBar="False"
+        NavigationPage.HasBackButton="False"
+        >
+<l:WPCommonSearchViewOfBuild/>
+<l:WPCommonResultViewOfBuild/>
+</TabbedPage>

@@ -25,7 +25,6 @@ namespace MSBuildExtensionPack.WPF4App
             InitializeComponent();
             Closing += (s, e) => MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.Cleanup();
 
-            // The MVVM Light Messenger In-Depth: http://msdn.microsoft.com/en-us/magazine/dn745866.aspx
             InitializeNavigationSettingCollectionInMainViewModel();
 
             Messenger.Default.Register<Framework.UIActionStatusMessage>(

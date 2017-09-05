@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -90,7 +90,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="app.config" />
     <None Include="packages.config" />
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -114,12 +113,10 @@
     <None Include="map.2.D.2.vsd" />
     <None Include="map.2.D.2.vsd.png" />
     <Content Include="Assets\Add.png" />
-    <Content Include="Assets\Back.png" />
     <Content Include="Assets\Bin.png" />
     <Content Include="Assets\Copy.png" />
     <Content Include="Assets\Download.png" />
     <Content Include="Assets\Edit.png" />
-    <Content Include="Assets\Home.png" />
     <Content Include="Assets\Properties.png" />
     <Content Include="Assets\RecycleBin.png" />
     <Content Include="Assets\Reload.png" />
@@ -127,6 +124,8 @@
     <Content Include="Assets\Search.png" />
     <Content Include="Assets\Upload.png" />
     <Content Include="Assets\UserProfile.png" />
+    <Content Include="Assets\Back.png" />
+    <Content Include="Assets\Home.png" />
     <Content Include="Assets\LockScreenLogo.scale-100.png" />
     <Content Include="Assets\LockScreenLogo.scale-125.png" />
     <Content Include="Assets\LockScreenLogo.scale-150.png" />

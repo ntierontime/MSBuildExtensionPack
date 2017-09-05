@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.X"
-    xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
-    x:Class="MSBuildExtensionPack.XamarinForms.Pages.Solution.Create"
-    NavigationPage.HasBackButton="False"
-    Title="{i18n:Translate Text=AddNew_Solution, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}">
+        xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels.X"
+        xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
+        x:Class="MSBuildExtensionPack.XamarinForms.Pages.Solution.Create"
+        Title="{i18n:Translate Text=AddNew_Solution, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}"
+        NavigationPage.HasNavigationBar="False"
+        NavigationPage.HasBackButton="False"
+        >
     <ContentPage.Content>
         <ScrollView>
             <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">

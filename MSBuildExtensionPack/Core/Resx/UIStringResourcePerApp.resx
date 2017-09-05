@@ -157,6 +157,15 @@
   <data name="ToolTip_Of_CommonResultView_of_MSBuildExtensionPack_Build" xml:space="preserve">
     <value>ToolTip Of CommonResultView of MSBuildExtensionPack.Build</value>
   </data>
+  <data name="Description_Of_TabbedCommon_of_MSBuildExtensionPack_Build" xml:space="preserve">
+    <value>Description Of TabbedCommon of MSBuildExtensionPack.Build</value>
+  </data>
+  <data name="TabbedCommon_of_MSBuildExtensionPack_Build" xml:space="preserve">
+    <value>TabbedCommon of MSBuildExtensionPack.Build</value>
+  </data>
+  <data name="ToolTip_Of_TabbedCommon_of_MSBuildExtensionPack_Build" xml:space="preserve">
+    <value>ToolTip Of TabbedCommon of MSBuildExtensionPack.Build</value>
+  </data>
   <data name="Description_Of_UpdateNameOnly_of_MSBuildExtensionPack_Build" xml:space="preserve">
     <value>Description Of UpdateNameOnly of MSBuildExtensionPack.Build</value>
   </data>
@@ -202,6 +211,15 @@
   <data name="ToolTip_Of_CommonResultView_of_MSBuildExtensionPack_BuildEventCode" xml:space="preserve">
     <value>ToolTip Of CommonResultView of MSBuildExtensionPack.BuildEventCode</value>
   </data>
+  <data name="Description_Of_TabbedCommon_of_MSBuildExtensionPack_BuildEventCode" xml:space="preserve">
+    <value>Description Of TabbedCommon of MSBuildExtensionPack.BuildEventCode</value>
+  </data>
+  <data name="TabbedCommon_of_MSBuildExtensionPack_BuildEventCode" xml:space="preserve">
+    <value>TabbedCommon of MSBuildExtensionPack.BuildEventCode</value>
+  </data>
+  <data name="ToolTip_Of_TabbedCommon_of_MSBuildExtensionPack_BuildEventCode" xml:space="preserve">
+    <value>ToolTip Of TabbedCommon of MSBuildExtensionPack.BuildEventCode</value>
+  </data>
   <data name="Description_Of_Common_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
     <value>Description Of Common of MSBuildExtensionPack.BuildLog</value>
   </data>
@@ -237,6 +255,15 @@
   </data>
   <data name="ToolTip_Of_CommonResultView_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
     <value>ToolTip Of CommonResultView of MSBuildExtensionPack.BuildLog</value>
+  </data>
+  <data name="Description_Of_TabbedCommon_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
+    <value>Description Of TabbedCommon of MSBuildExtensionPack.BuildLog</value>
+  </data>
+  <data name="TabbedCommon_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
+    <value>TabbedCommon of MSBuildExtensionPack.BuildLog</value>
+  </data>
+  <data name="ToolTip_Of_TabbedCommon_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
+    <value>ToolTip Of TabbedCommon of MSBuildExtensionPack.BuildLog</value>
   </data>
   <data name="Description_Of_Common_of_MSBuildExtensionPack_Organization" xml:space="preserve">
     <value>Description Of Common of MSBuildExtensionPack.Organization</value>
@@ -274,6 +301,15 @@
   <data name="ToolTip_Of_CommonResultView_of_MSBuildExtensionPack_Organization" xml:space="preserve">
     <value>ToolTip Of CommonResultView of MSBuildExtensionPack.Organization</value>
   </data>
+  <data name="Description_Of_TabbedCommon_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Description Of TabbedCommon of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="TabbedCommon_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>TabbedCommon of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="ToolTip_Of_TabbedCommon_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>ToolTip Of TabbedCommon of MSBuildExtensionPack.Organization</value>
+  </data>
   <data name="Description_Of_Common_of_MSBuildExtensionPack_Solution" xml:space="preserve">
     <value>Description Of Common of MSBuildExtensionPack.Solution</value>
   </data>
@@ -309,6 +345,15 @@
   </data>
   <data name="ToolTip_Of_CommonResultView_of_MSBuildExtensionPack_Solution" xml:space="preserve">
     <value>ToolTip Of CommonResultView of MSBuildExtensionPack.Solution</value>
+  </data>
+  <data name="Description_Of_TabbedCommon_of_MSBuildExtensionPack_Solution" xml:space="preserve">
+    <value>Description Of TabbedCommon of MSBuildExtensionPack.Solution</value>
+  </data>
+  <data name="TabbedCommon_of_MSBuildExtensionPack_Solution" xml:space="preserve">
+    <value>TabbedCommon of MSBuildExtensionPack.Solution</value>
+  </data>
+  <data name="ToolTip_Of_TabbedCommon_of_MSBuildExtensionPack_Solution" xml:space="preserve">
+    <value>ToolTip Of TabbedCommon of MSBuildExtensionPack.Solution</value>
   </data>
 
 </root>
