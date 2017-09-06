@@ -8,6 +8,7 @@
         Title="{i18n:Translate Text=Details_BuildEventCode, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}"
         NavigationPage.HasNavigationBar="False"
         NavigationPage.HasBackButton="False"
+	BindingContext="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode.Item, Mode=TwoWay, Source={StaticResource Locator}}"
         >
     <ContentPage.Content>
         <ScrollView>
@@ -22,7 +23,17 @@
         </ScrollView>
     </ContentPage.Content>
     <ContentPage.ToolbarItems>
-        <ToolbarItem x:Name="Edit" Order="Primary" Text="{i18n:Translate Text=Edit, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode.LaunchEditViewCommand, Source={StaticResource Locator}}" >
+		<ToolbarItem x:Name="Back" Order="Primary" Text="{i18n:Translate Text=Back, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=Main.GoBackCommand, Source={StaticResource Locator}}">
+			<ToolbarItem.Icon>
+				<OnPlatform x:TypeArguments="FileImageSource">
+					<On Platform="Android">Android/Back.png</On>
+					<On Platform="iOS">Assets/Back.png</On>
+					<On Platform="Windows">Assets/Back.png</On>
+					<On Platform="WinPhone">Assets/Back.png</On>
+				</OnPlatform>
+			</ToolbarItem.Icon>
+		</ToolbarItem>
+		<ToolbarItem x:Name="Edit" Order="Primary" Text="{i18n:Translate Text=Edit, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode.LaunchEditViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="Android">Android/Edit.png</On>
@@ -32,7 +43,7 @@
                 </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
-        <ToolbarItem x:Name="Copy" Order="Primary" Text="{i18n:Translate Text=Copy, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode.LaunchCopyViewCommand, Source={StaticResource Locator}}">
+        <ToolbarItem x:Name="Copy" Order="Primary" Text="{i18n:Translate Text=Copy, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode.LaunchCopyViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="Android">Android/Copy.png</On>
@@ -42,7 +53,7 @@
                 </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
-        <ToolbarItem x:Name="Delete" Order="Primary" Text="{i18n:Translate Text=Delete, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode.LaunchDeleteViewCommand, Source={StaticResource Locator}}">
+		<ToolbarItem x:Name="Delete" Order="Primary" Text="{i18n:Translate Text=Delete, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode.LaunchDeleteViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="Android">Android/Bin.png</On>
@@ -52,5 +63,15 @@
                 </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
-    </ContentPage.ToolbarItems>
+		<ToolbarItem x:Name="GoHome" Order="Primary" Text="{i18n:Translate Text=Home, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=Main.GoHomeCommand, Source={StaticResource Locator}}">
+			<ToolbarItem.Icon>
+				<OnPlatform x:TypeArguments="FileImageSource">
+					<On Platform="Android">Android/Home.png</On>
+					<On Platform="iOS">Assets/Home.png</On>
+					<On Platform="Windows">Assets/Home.png</On>
+					<On Platform="WinPhone">Assets/Home.png</On>
+				</OnPlatform>
+			</ToolbarItem.Icon>
+		</ToolbarItem>
+	</ContentPage.ToolbarItems>
 </ContentPage>

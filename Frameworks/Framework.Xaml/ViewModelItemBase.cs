@@ -144,7 +144,7 @@ namespace Framework.Xaml
             if (o != null)
             {
                 this.OriginalItem = o;
-                this.m_Item = o;
+                this.Item = o;
             }
         }
 

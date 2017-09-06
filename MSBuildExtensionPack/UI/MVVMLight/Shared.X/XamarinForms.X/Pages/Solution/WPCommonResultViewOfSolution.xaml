@@ -72,7 +72,7 @@
                 </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
-        <ToolbarItem x:Name="GoHome" Order="Primary" Text="{i18n:Translate Text=Home, ResourceId=Framework.Resx.UIStringResource}}" Command="{Binding Path=Main.GoHomeCommand, Source={StaticResource Locator}}">
+        <ToolbarItem x:Name="GoHome" Order="Primary" Text="{i18n:Translate Text=Home, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=Main.GoHomeCommand, Source={StaticResource Locator}}">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="Android">Android/Home.png</On>
