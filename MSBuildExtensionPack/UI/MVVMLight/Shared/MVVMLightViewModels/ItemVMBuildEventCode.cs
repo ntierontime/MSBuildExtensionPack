@@ -125,6 +125,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                     {
                         if (!this.SuppressMVVMLightEventToCommandMessage)
                             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
+                        RaisePropertyChanged("Item");
                     }
                 });
             }

@@ -15,7 +15,6 @@ namespace MSBuildExtensionPack.XamarinForms.Pages.Solution
         public Delete()
         {
             InitializeComponent();
-            BindingContext = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution_Static.Item;
         }
     }
 }

@@ -8,6 +8,7 @@
         Title="{i18n:Translate Text=Edit_Solution, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}"
         NavigationPage.HasNavigationBar="False"
         NavigationPage.HasBackButton="False"
+        BindingContext="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution.Item, Source={StaticResource Locator}}"
         >
     <ContentPage.Content>
         <ScrollView>
@@ -39,6 +40,16 @@
         </ScrollView>
     </ContentPage.Content>
     <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="Back" Order="Primary" Text="{i18n:Translate Text=Back, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=Main.GoBackCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">Android/Back.png</On>
+                    <On Platform="iOS">Assets/Back.png</On>
+                    <On Platform="Windows">Assets/Back.png</On>
+                    <On Platform="WinPhone">Assets/Back.png</On>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
         <ToolbarItem x:Name="Save" Order="Primary" Text="{i18n:Translate Text=Save, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution.SaveCommand, Source={StaticResource Locator}}">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
@@ -56,6 +67,16 @@
                     <On Platform="iOS">Assets/Reload.png</On>
                     <On Platform="Windows">Assets/Reload.png</On>
                     <On Platform="WinPhone">Assets/Reload.png</On>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem x:Name="GoHome" Order="Primary" Text="{i18n:Translate Text=Home, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=Main.GoHomeCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">Android/Home.png</On>
+                    <On Platform="iOS">Assets/Home.png</On>
+                    <On Platform="Windows">Assets/Home.png</On>
+                    <On Platform="WinPhone">Assets/Home.png</On>
                 </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
