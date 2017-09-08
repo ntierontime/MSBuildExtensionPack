@@ -216,8 +216,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         public override void Cleanup()
         {
             base.Cleanup();
-            this.Criteria = null;
-            this.ContentData = null;
         }
 
         #endregion Cleanup()

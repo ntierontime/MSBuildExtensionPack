@@ -48,6 +48,6 @@
         <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.BuildEventCodeId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
         <ComboBox ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.BuildEventCode_1_Name, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="5" ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfBuild_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=BuildEventCodeId}" />
         <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.Message, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="6" />
-        <TextBox Text="{Binding Path=Message, Mode=OneWay}" Grid.Column="1" Grid.Row="6" />
+        <TextBox Text="{Binding Path=Message, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="6" />
     </Grid>
 </UserControl>
