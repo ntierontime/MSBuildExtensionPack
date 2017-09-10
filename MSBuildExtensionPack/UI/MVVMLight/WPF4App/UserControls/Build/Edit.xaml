@@ -38,10 +38,10 @@
             </i:Interaction.Triggers>
         </ComboBox>
         <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.SolutionId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
-        <ComboBox Name="ID_DropDownList_SolutionId" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.Solution, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="4" SelectedValue="{Binding Path=SolutionId, Mode=TwoWay}" ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.DropDownContentsOfSolution_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value">
+        <ComboBox Name="ID_DropDownList_SolutionId" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.Solution, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="4" SelectedValue="{Binding Path=SolutionId, Mode=TwoWay}" ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfSolution_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="Loading">
-                    <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.GetDropDownContentsOfSolution_1Command, Source={StaticResource Locator}}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+                    <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.GetDropDownContentsOfSolution_1Command, Source={StaticResource Locator}}" PassEventArgsToCommand="True"></cmd:EventToCommand>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </ComboBox>

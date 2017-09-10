@@ -8,6 +8,8 @@
     <Application.Resources>
         <ResourceDictionary x:Name="appMain">
             <vm:ViewModelLocator x:Key="Locator" />
+
+            <fvm:SystemInt64ToNameValuePairConverter x:Key="SystemInt64ToNameValuePairConverter" />
             <fvm:EnumToNameValuePairConverter x:Key="EnumToNameValuePairConverter" />
             <Style x:Key="Heading" TargetType="Label">
                 <Setter Property="FontSize" Value="18" />

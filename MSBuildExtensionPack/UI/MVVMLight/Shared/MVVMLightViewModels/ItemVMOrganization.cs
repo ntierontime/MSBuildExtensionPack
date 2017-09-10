@@ -171,7 +171,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 {
                     this.StatusOfResult = result.StatusOfResult;
                     this.StatusMessageOfResult = result.StatusMessageOfResult;
-                    if (result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+                    if (result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK || result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
                     {
                         this.Item = result.Item;
                         if (!this.SuppressMVVMLightEventToCommandMessage)

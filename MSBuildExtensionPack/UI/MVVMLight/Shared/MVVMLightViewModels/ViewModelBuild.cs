@@ -91,6 +91,11 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         protected override void DoSearch(bool isToClearExistingResult)
         {
+#if (XAMARIN)
+            this.Criteria.BuildQueryCriteriaCommon.IdCommonOfOrganization_2.NullableValueToCompare = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild_Static.DropDownContentsOfOrganization_2SelectedItem != null ? MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild_Static.DropDownContentsOfOrganization_2SelectedItem.Value : default(long);
+            this.Criteria.BuildQueryCriteriaCommon.IdCommonOfOrganization_1.NullableValueToCompare = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild_Static.DropDownContentsOfOrganization_1SelectedItem != null ? MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild_Static.DropDownContentsOfOrganization_1SelectedItem.Value : default(long);
+            this.Criteria.BuildQueryCriteriaCommon.IdCommonOfSolution_1.NullableValueToCompare = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild_Static.DropDownContentsOfSolution_1SelectedItem != null ? MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild_Static.DropDownContentsOfSolution_1SelectedItem.Value : default(int);
+#endif
             this.SearchStatus = Framework.EntityContracts.SearchStatus.Searching;
 
             string viewName = ViewName;

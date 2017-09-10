@@ -200,7 +200,7 @@ namespace Framework.Xaml
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Launch));
 
-            this.RaiseItemPropertyChangedEvent();
+            //this.RaiseItemPropertyChangedEvent();
         }
 
         public RelayCommand CloseEditViewCommand { get; protected set; }

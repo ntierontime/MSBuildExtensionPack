@@ -41,7 +41,7 @@
         <ComboBox Name="ID_DropDownList_BuildId" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.Build, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="4" SelectedValue="{Binding Path=BuildId, Mode=TwoWay}" ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfBuild_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="Loading">
-                    <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.GetDropDownContentsOfBuild_1Command, Source={StaticResource Locator}}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+                    <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.GetDropDownContentsOfBuild_1Command, Source={StaticResource Locator}}" PassEventArgsToCommand="True"></cmd:EventToCommand>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </ComboBox>

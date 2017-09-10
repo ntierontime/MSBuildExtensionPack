@@ -39,7 +39,7 @@
         <ComboBox Name="ID_DropDownList_OrganizationId" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Organization, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="3" SelectedValue="{Binding Path=OrganizationId, Mode=TwoWay}" ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization.DropDownContentsOfOrganization_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="Loading">
-                    <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization.GetDropDownContentsOfOrganization_1Command, Source={StaticResource Locator}}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+                    <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.GetDropDownContentsOfOrganization_1Command, Source={StaticResource Locator}}" PassEventArgsToCommand="True"></cmd:EventToCommand>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </ComboBox>
