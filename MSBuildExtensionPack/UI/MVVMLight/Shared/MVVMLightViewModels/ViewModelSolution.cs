@@ -91,6 +91,12 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         protected override void DoSearch(bool isToClearExistingResult)
         {
+#if (XAMARIN)
+            Criteria.SolutionQueryCriteriaCommon.IdCommonOfOrganization_2.NullableValueToCompare = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.DropDownContentsOfOrganization_2SelectedItem != null ? MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.DropDownContentsOfOrganization_2SelectedItem.Value : default(System.Int64);
+            Criteria.SolutionQueryCriteriaCommon.IdCommonOfOrganization_1.NullableValueToCompare = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.DropDownContentsOfOrganization_1SelectedItem != null ? MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.DropDownContentsOfOrganization_1SelectedItem.Value : default(System.Int64);
+
+#endif
+
             this.SearchStatus = Framework.EntityContracts.SearchStatus.Searching;
 
             string viewName = ViewName;

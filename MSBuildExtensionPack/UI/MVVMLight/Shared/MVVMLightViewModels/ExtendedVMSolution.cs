@@ -54,12 +54,12 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
             set
             {
-                if (this.m_DropDownContentsOfOrganization_1SelectedItem == value)
+                if (this.m_DropDownContentsOfOrganization_1SelectedItem != null && this.m_DropDownContentsOfOrganization_1SelectedItem == value)
                 {
                     return;
                 }
 
-                this.m_DropDownContentsOfOrganization_1SelectedItem = value;
+                this.m_DropDownContentsOfOrganization_1SelectedItem = this.DropDownContentsOfOrganization_1.FirstOrDefault(t => t.Value == value.Value);
                 MessengerInstance.Send<Framework.UISelectedItemChangedMessage>(new Framework.UISelectedItemChangedMessage(EntityName, PropertyName_DropDownContentsOfOrganization_1SelectedItem, value));
                 RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_1SelectedItem);
             }
@@ -68,8 +68,8 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         public const string PropertyName_DropDownContentsOfOrganization_1SelectedItem = "DropDownContentsOfOrganization_1SelectedItem";
         public const string PropertyName_DropDownContentsOfOrganization_1 = "DropDownContentsOfOrganization_1";
 
-        public ObservableCollection<Framework.NameValuePair<System.Int64>> m_DropDownContentsOfOrganization_1 = new ObservableCollection<Framework.NameValuePair<System.Int64>>();
-        public ObservableCollection<Framework.NameValuePair<System.Int64>> DropDownContentsOfOrganization_1
+        public List<Framework.NameValuePair<System.Int64>> m_DropDownContentsOfOrganization_1 = new List<Framework.NameValuePair<System.Int64>>();
+        public List<Framework.NameValuePair<System.Int64>> DropDownContentsOfOrganization_1
         {
             get
             {
@@ -108,6 +108,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 {
                     this.DropDownContentsOfOrganization_1.Clear();
                 }
+                RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_1);
             }
             catch (Exception ex)
             {
@@ -139,12 +140,12 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
             set
             {
-                if (this.m_DropDownContentsOfOrganization_2SelectedItem == value)
+                if (this.m_DropDownContentsOfOrganization_2SelectedItem != null && this.m_DropDownContentsOfOrganization_2SelectedItem == value)
                 {
                     return;
                 }
 
-                this.m_DropDownContentsOfOrganization_2SelectedItem = value;
+                this.m_DropDownContentsOfOrganization_2SelectedItem = this.DropDownContentsOfOrganization_2.FirstOrDefault(t => t.Value == value.Value);
                 MessengerInstance.Send<Framework.UISelectedItemChangedMessage>(new Framework.UISelectedItemChangedMessage(EntityName, PropertyName_DropDownContentsOfOrganization_2SelectedItem, value));
                 GetDropDownContentsOfOrganization_1(value);
                 RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_2SelectedItem);
@@ -154,8 +155,8 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         public const string PropertyName_DropDownContentsOfOrganization_2SelectedItem = "DropDownContentsOfOrganization_2_1SelectedItem";
         public const string PropertyName_DropDownContentsOfOrganization_2 = "DropDownContentsOfOrganization_2";
 
-        public ObservableCollection<Framework.NameValuePair<System.Int64>> m_DropDownContentsOfOrganization_2 = new ObservableCollection<Framework.NameValuePair<System.Int64>>();
-        public ObservableCollection<Framework.NameValuePair<System.Int64>> DropDownContentsOfOrganization_2
+        public List<Framework.NameValuePair<System.Int64>> m_DropDownContentsOfOrganization_2 = new List<Framework.NameValuePair<System.Int64>>();
+        public List<Framework.NameValuePair<System.Int64>> DropDownContentsOfOrganization_2
         {
             get
             {
@@ -188,6 +189,8 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                             }
                         }
                     }
+
+                    RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_2);
                 });
             }
             catch (Exception ex)

@@ -60,7 +60,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
             set
             {
-                if (this.m_DropDownContentsOfSolution_1SelectedItem != null && this.m_DropDownContentsOfSolution_1SelectedItem.Equals(value))
+                if (this.m_DropDownContentsOfSolution_1SelectedItem != null && this.m_DropDownContentsOfSolution_1SelectedItem == value)
                 {
                     return;
                 }
@@ -114,7 +114,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 {
                     this.DropDownContentsOfSolution_1.Clear();
                 }
-                RaisePropertyChanged("DropDownContentsOfSolution_1");
+                RaisePropertyChanged(PropertyName_DropDownContentsOfSolution_1);
             }
             catch (Exception ex)
             {
@@ -146,12 +146,12 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
             set
             {
-                if (this.m_DropDownContentsOfOrganization_1SelectedItem != null && this.m_DropDownContentsOfOrganization_1SelectedItem.Equals(value))
+                if (this.m_DropDownContentsOfOrganization_1SelectedItem != null && this.m_DropDownContentsOfOrganization_1SelectedItem == value)
                 {
                     return;
                 }
 
-                this.m_DropDownContentsOfOrganization_1SelectedItem = this.DropDownContentsOfOrganization_1.FirstOrDefault(t=>t.Value ==  value.Value);
+                this.m_DropDownContentsOfOrganization_1SelectedItem = this.DropDownContentsOfOrganization_1.FirstOrDefault(t => t.Value == value.Value);
                 MessengerInstance.Send<Framework.UISelectedItemChangedMessage>(new Framework.UISelectedItemChangedMessage(EntityName, PropertyName_DropDownContentsOfOrganization_1SelectedItem, value));
                 GetDropDownContentsOfSolution_1(value);
                 RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_1SelectedItem);
@@ -202,7 +202,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 {
                     this.DropDownContentsOfOrganization_1.Clear();
                 }
-                RaisePropertyChanged("DropDownContentsOfOrganization_1");
+                RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_1);
             }
             catch (Exception ex)
             {
@@ -234,12 +234,12 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
             set
             {
-                if (this.m_DropDownContentsOfOrganization_2SelectedItem != null && this.m_DropDownContentsOfOrganization_2SelectedItem.Equals(value))
+                if (this.m_DropDownContentsOfOrganization_2SelectedItem != null && this.m_DropDownContentsOfOrganization_2SelectedItem == value)
                 {
                     return;
                 }
 
-                this.m_DropDownContentsOfOrganization_2SelectedItem = value;
+                this.m_DropDownContentsOfOrganization_2SelectedItem = this.DropDownContentsOfOrganization_2.FirstOrDefault(t => t.Value == value.Value);
                 MessengerInstance.Send<Framework.UISelectedItemChangedMessage>(new Framework.UISelectedItemChangedMessage(EntityName, PropertyName_DropDownContentsOfOrganization_2SelectedItem, value));
                 GetDropDownContentsOfOrganization_1(value);
                 RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_2SelectedItem);
@@ -283,8 +283,9 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                             }
                         }
                     }
+
+                    RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_2);
                 });
-                RaisePropertyChanged("DropDownContentsOfOrganization_2");
             }
             catch (Exception ex)
             {

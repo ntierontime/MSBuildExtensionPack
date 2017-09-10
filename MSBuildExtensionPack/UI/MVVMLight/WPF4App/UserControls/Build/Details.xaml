@@ -35,7 +35,7 @@
         <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.Organization_1Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
         <Button Style="{StaticResource LinkButton}" Content="{Binding Path=Organization_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.LaunchOrganization_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" Grid.Column="1" Grid.Row="4" />
         <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.SolutionId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
-        <Button Style="{StaticResource LinkButton}" Content="{Binding Path=Solution_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.LaunchSolution_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" Grid.Column="1" Grid.Row="5" />
+            <Button Style="{StaticResource LinkButton}" Content="{Binding Path=SolutionId}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.LaunchSolution_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" Grid.Column="1" Grid.Row="5" />
         <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="6" />
         <TextBlock Text="{Binding Path=Name, Mode=OneWay}" Grid.Column="1" Grid.Row="6" />
         <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.Description, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="7" />

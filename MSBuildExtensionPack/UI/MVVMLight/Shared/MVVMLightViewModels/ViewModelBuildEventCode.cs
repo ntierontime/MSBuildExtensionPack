@@ -91,6 +91,10 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         protected override void DoSearch(bool isToClearExistingResult)
         {
+#if (XAMARIN)
+
+#endif
+
             this.SearchStatus = Framework.EntityContracts.SearchStatus.Searching;
 
             string viewName = ViewName;
