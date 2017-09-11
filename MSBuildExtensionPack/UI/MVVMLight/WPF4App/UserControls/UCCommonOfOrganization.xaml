@@ -53,7 +53,7 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
              <CheckBox Name="checkBox_IsToCompare_Organization_2" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon, Source={StaticResource LocalizedStrings}}" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2.IsToCompare}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="0"/>
-            <ComboBox Grid.Column="1" Grid.Row="0"
+            <ComboBox Grid.Column="1" Grid.Row="0" IsTextSearchEnabled="False"
                 IsEnabled="{Binding ElementName=checkBox_IsToCompare_Organization_2, Path=IsChecked}"
                 DisplayMemberPath="Name" SelectedValuePath="Value"
                 ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization.DropDownContentsOfOrganization_2, Source={StaticResource Locator}}"
@@ -62,13 +62,13 @@
             </ComboBox>
             <TextBlock x:Name="IsToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInCommonOftOfCommon" Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="1" />
             <ComboBox x:Name="ValueToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInCommonOftOfCommon" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1"
-                DisplayMemberPath="Name" SelectedValuePath="Value"
+                DisplayMemberPath="Name" SelectedValuePath="Value" IsTextSearchEnabled="False"
                 ItemsSource="{Binding Path=Main.PredefinedBooleanSelectedValueList, Source={StaticResource Locator}}"
                 SelectedItem="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.IsSystemBuiltInCommonOft.PredefinedBooleanSelectedValue, Converter={StaticResource EnumToNameValuePairConverter}}">
             </ComboBox>
                 <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareCreatedDateTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="2"/>
                 <StackPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch">
-                    <ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                <ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Center" IsTextSearchEnabled="False"
                         DisplayMemberPath="Name" SelectedValuePath="Value"
                         ItemsSource="{Binding Path=Main.PreDefinedDateTimeRangeList, Source={StaticResource Locator}}"
                         SelectedItem="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.PreDefinedDateTimeRange, Converter={StaticResource EnumToNameValuePairConverter}}">
@@ -82,14 +82,14 @@
                 </StackPanel>
             <TextBlock x:Name="IsToCompare_ID_CheckBox_Search_isToCompareBitColumnCommonOftOfCommon" Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareBitColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="3" />
             <ComboBox x:Name="ValueToCompare_ID_CheckBox_Search_isToCompareBitColumnCommonOftOfCommon" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="3"
-                DisplayMemberPath="Name" SelectedValuePath="Value"
+                DisplayMemberPath="Name" SelectedValuePath="Value" IsTextSearchEnabled="False"
                 ItemsSource="{Binding Path=Main.PredefinedBooleanSelectedValueList, Source={StaticResource Locator}}"
                 SelectedItem="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.BitColumnCommonOft.PredefinedBooleanSelectedValue, Converter={StaticResource EnumToNameValuePairConverter}}">
             </ComboBox>
                 <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareDatetimeColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="4"/>
                 <StackPanel Grid.Column="1" Grid.Row="4" HorizontalAlignment="Stretch">
                     <ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Center"
-                        DisplayMemberPath="Name" SelectedValuePath="Value"
+                        DisplayMemberPath="Name" SelectedValuePath="Value" IsTextSearchEnabled="False"
                         ItemsSource="{Binding Path=Main.PreDefinedDateTimeRangeList, Source={StaticResource Locator}}"
                         SelectedItem="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.PreDefinedDateTimeRange, Converter={StaticResource EnumToNameValuePairConverter}}">
                     </ComboBox>
@@ -103,7 +103,7 @@
                 <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareDatetime2ColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="5"/>
                 <StackPanel Grid.Column="1" Grid.Row="5" HorizontalAlignment="Stretch">
                     <ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Center"
-                        DisplayMemberPath="Name" SelectedValuePath="Value"
+                        DisplayMemberPath="Name" SelectedValuePath="Value" IsTextSearchEnabled="False"
                         ItemsSource="{Binding Path=Main.PreDefinedDateTimeRangeList, Source={StaticResource Locator}}"
                         SelectedItem="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.PreDefinedDateTimeRange, Converter={StaticResource EnumToNameValuePairConverter}}">
                     </ComboBox>
@@ -117,7 +117,7 @@
                 <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareSmalldatetimeColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="6"/>
                 <StackPanel Grid.Column="1" Grid.Row="6" HorizontalAlignment="Stretch">
                     <ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Center"
-                        DisplayMemberPath="Name" SelectedValuePath="Value"
+                        DisplayMemberPath="Name" SelectedValuePath="Value" IsTextSearchEnabled="False"
                         ItemsSource="{Binding Path=Main.PreDefinedDateTimeRangeList, Source={StaticResource Locator}}"
                         SelectedItem="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.PreDefinedDateTimeRange, Converter={StaticResource EnumToNameValuePairConverter}}">
                     </ComboBox>
@@ -131,7 +131,7 @@
                 <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareDateColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="7"/>
                 <StackPanel Grid.Column="1" Grid.Row="7" HorizontalAlignment="Stretch">
                     <ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Center"
-                        DisplayMemberPath="Name" SelectedValuePath="Value"
+                        DisplayMemberPath="Name" SelectedValuePath="Value" IsTextSearchEnabled="False"
                         ItemsSource="{Binding Path=Main.PreDefinedDateTimeRangeList, Source={StaticResource Locator}}"
                         SelectedItem="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.PreDefinedDateTimeRange, Converter={StaticResource EnumToNameValuePairConverter}}">
                     </ComboBox>

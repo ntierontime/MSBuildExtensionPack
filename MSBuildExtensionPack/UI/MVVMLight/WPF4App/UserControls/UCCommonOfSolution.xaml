@@ -43,7 +43,7 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
              <CheckBox Name="checkBox_IsToCompare_Organization_2" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon, Source={StaticResource LocalizedStrings}}" IsChecked="{Binding Path=Criteria.SolutionQueryCriteriaCommon.IdCommonOfOrganization_2.IsToCompare}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="0"/>
-            <ComboBox Grid.Column="1" Grid.Row="0"
+            <ComboBox Grid.Column="1" Grid.Row="0" IsTextSearchEnabled="False"
                 IsEnabled="{Binding ElementName=checkBox_IsToCompare_Organization_2, Path=IsChecked}"
                 DisplayMemberPath="Name" SelectedValuePath="Value"
                 ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.DropDownContentsOfOrganization_2, Source={StaticResource Locator}}"
@@ -51,7 +51,7 @@
                 SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.DropDownContentsOfOrganization_2SelectedItem, Source={StaticResource Locator}, Mode=OneWayToSource}">
             </ComboBox>
             <CheckBox Name="checkBox_IsToCompare_Organization_1" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_1OfCommon, Source={StaticResource LocalizedStrings}}" IsChecked="{Binding Path=Criteria.SolutionQueryCriteriaCommon.IdCommonOfOrganization_1.IsToCompare}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="1"/>
-            <ComboBox Grid.Column="1" Grid.Row="1"
+            <ComboBox Grid.Column="1" Grid.Row="1" IsTextSearchEnabled="False"
                 IsEnabled="{Binding ElementName=checkBox_IsToCompare_Organization_1, Path=IsChecked}"
                 DisplayMemberPath="Name" SelectedValuePath="Value"
                 ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.DropDownContentsOfOrganization_1, Source={StaticResource Locator}}"

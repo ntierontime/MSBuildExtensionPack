@@ -27,7 +27,7 @@
             <Label Text="{i18n:Translate Text=Solution_1Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
             <Button Text="{Binding Path=Solution_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.LaunchSolution_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
             <Label Text="{i18n:Translate Text=BuildId, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-            <Button Text="{Binding Path=BuildId}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.LaunchBuild_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+            <Button Text="{Binding Path=Build_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.LaunchBuild_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
             <Label Text="{i18n:Translate Text=BuildEventCodeId, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
             <Button Text="{Binding Path=BuildEventCode_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.LaunchBuildEventCode_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
             <Label Text="{i18n:Translate Text=Message, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />

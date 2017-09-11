@@ -24,7 +24,7 @@
             <Label Text="{i18n:Translate Text=Organization_1Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
             <Button Text="{Binding Path=Organization_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.LaunchOrganization_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
             <Label Text="{i18n:Translate Text=SolutionId, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-            <Button Text="{Binding Path=SolutionId}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.LaunchSolution_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+            <Button Text="{Binding Path=Solution_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.LaunchSolution_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
             <Label Text="{i18n:Translate Text=Name, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
             <Label Text="{Binding Path=Name, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
             <Label Text="{i18n:Translate Text=Description, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />

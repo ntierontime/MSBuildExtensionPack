@@ -121,7 +121,8 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                     this.StatusOfResult = result.StatusOfResult;
                     if (result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
                     {
-                        MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild_Static.OriginalItem = null;
+                        MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild_Static.Item = new MSBuildExtensionPack.DataSourceEntities.Build.Default();
+                        MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild_Static.OriginalItem = new MSBuildExtensionPack.DataSourceEntities.Build.Default();
                         if (isToClearExistingResult)
                         {
                             this.EntityCollectionDefault = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Build.Default>(result.Result.ToList());

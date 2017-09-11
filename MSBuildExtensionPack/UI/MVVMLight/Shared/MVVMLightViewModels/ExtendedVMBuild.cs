@@ -65,7 +65,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                     return;
                 }
 
-                this.m_DropDownContentsOfSolution_1SelectedItem = this.DropDownContentsOfSolution_1.FirstOrDefault(t => t.Value == value.Value);
+                this.m_DropDownContentsOfSolution_1SelectedItem = value != null ? this.DropDownContentsOfSolution_1.FirstOrDefault(t => t.Value == value.Value) : null;
                 MessengerInstance.Send<Framework.UISelectedItemChangedMessage>(new Framework.UISelectedItemChangedMessage(EntityName, PropertyName_DropDownContentsOfSolution_1SelectedItem, value));
                 RaisePropertyChanged(PropertyName_DropDownContentsOfSolution_1SelectedItem);
             }
@@ -151,7 +151,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                     return;
                 }
 
-                this.m_DropDownContentsOfOrganization_1SelectedItem = this.DropDownContentsOfOrganization_1.FirstOrDefault(t => t.Value == value.Value);
+                this.m_DropDownContentsOfOrganization_1SelectedItem = value != null ? this.DropDownContentsOfOrganization_1.FirstOrDefault(t => t.Value == value.Value) : null;
                 MessengerInstance.Send<Framework.UISelectedItemChangedMessage>(new Framework.UISelectedItemChangedMessage(EntityName, PropertyName_DropDownContentsOfOrganization_1SelectedItem, value));
                 GetDropDownContentsOfSolution_1(value);
                 RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_1SelectedItem);
