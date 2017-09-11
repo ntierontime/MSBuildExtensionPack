@@ -121,23 +121,18 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                     this.StatusOfResult = result.StatusOfResult;
                     if (result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
                     {
-                        MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild_Static.Item = new MSBuildExtensionPack.DataSourceEntities.Build.Default();
-                        MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild_Static.OriginalItem = new MSBuildExtensionPack.DataSourceEntities.Build.Default();
+                        if (this.EntityCollectionDefault == null)
+                        {
+                            this.EntityCollectionDefault = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Build.Default>();
+                        }
                         if (isToClearExistingResult)
                         {
                             this.EntityCollectionDefault = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Build.Default>(result.Result.ToList());
                         }
-                        else
-                        {
-                            if (this.EntityCollectionDefault == null)
-                            {
-                                this.EntityCollectionDefault = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Build.Default>();
-                            }
 
-                            foreach (var item in result.Result)
-                            {
-                                this.EntityCollectionDefault.Add(item);
-                            }
+                        foreach (var item in result.Result)
+                        {
+                            this.EntityCollectionDefault.Add(item);
                         }
 
                         this.QueryPagingSetting = result.QueryPagingSetting;

@@ -123,23 +123,18 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                     this.StatusOfResult = result.StatusOfResult;
                     if (result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
                     {
-                        MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog_Static.Item = new MSBuildExtensionPack.DataSourceEntities.BuildLog.Default();
-                        MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog_Static.OriginalItem = new MSBuildExtensionPack.DataSourceEntities.BuildLog.Default();
+                        if (this.EntityCollectionDefault == null)
+                        {
+                            this.EntityCollectionDefault = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default>();
+                        }
                         if (isToClearExistingResult)
                         {
                             this.EntityCollectionDefault = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default>(result.Result.ToList());
                         }
-                        else
-                        {
-                            if (this.EntityCollectionDefault == null)
-                            {
-                                this.EntityCollectionDefault = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default>();
-                            }
 
-                            foreach (var item in result.Result)
-                            {
-                                this.EntityCollectionDefault.Add(item);
-                            }
+                        foreach (var item in result.Result)
+                        {
+                            this.EntityCollectionDefault.Add(item);
                         }
 
                         this.QueryPagingSetting = result.QueryPagingSetting;

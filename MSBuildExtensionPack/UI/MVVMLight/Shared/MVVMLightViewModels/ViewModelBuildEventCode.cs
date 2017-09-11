@@ -118,23 +118,18 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                     this.StatusOfResult = result.StatusOfResult;
                     if (result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
                     {
-                        MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode_Static.Item = new MSBuildExtensionPack.DataSourceEntities.BuildEventCode();
-                        MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode_Static.OriginalItem = new MSBuildExtensionPack.DataSourceEntities.BuildEventCode();
+                        if (this.EntityCollection == null)
+                        {
+                            this.EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildEventCode>();
+                        }
                         if (isToClearExistingResult)
                         {
                             this.EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildEventCode>(result.Result.ToList());
                         }
-                        else
-                        {
-                            if (this.EntityCollection == null)
-                            {
-                                this.EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildEventCode>();
-                            }
 
-                            foreach (var item in result.Result)
-                            {
-                                this.EntityCollection.Add(item);
-                            }
+                        foreach (var item in result.Result)
+                        {
+                            this.EntityCollection.Add(item);
                         }
 
                         this.QueryPagingSetting = result.QueryPagingSetting;

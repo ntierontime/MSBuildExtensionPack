@@ -43,7 +43,7 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
              <CheckBox Name="checkBox_IsToCompare_Organization_2" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon, Source={StaticResource LocalizedStrings}}" IsChecked="{Binding Path=Criteria.SolutionQueryCriteriaCommon.IdCommonOfOrganization_2.IsToCompare}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="0"/>
-            <ComboBox Grid.Column="1" Grid.Row="0" IsTextSearchEnabled="False"
+            <ComboBox Grid.Column="1" Grid.Row="0"
                 IsEnabled="{Binding ElementName=checkBox_IsToCompare_Organization_2, Path=IsChecked}"
                 DisplayMemberPath="Name" SelectedValuePath="Value"
                 ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.DropDownContentsOfOrganization_2, Source={StaticResource Locator}}"
@@ -51,7 +51,7 @@
                 SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.DropDownContentsOfOrganization_2SelectedItem, Source={StaticResource Locator}, Mode=OneWayToSource}">
             </ComboBox>
             <CheckBox Name="checkBox_IsToCompare_Organization_1" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_1OfCommon, Source={StaticResource LocalizedStrings}}" IsChecked="{Binding Path=Criteria.SolutionQueryCriteriaCommon.IdCommonOfOrganization_1.IsToCompare}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="1"/>
-            <ComboBox Grid.Column="1" Grid.Row="1" IsTextSearchEnabled="False"
+            <ComboBox Grid.Column="1" Grid.Row="1"
                 IsEnabled="{Binding ElementName=checkBox_IsToCompare_Organization_1, Path=IsChecked}"
                 DisplayMemberPath="Name" SelectedValuePath="Value"
                 ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.DropDownContentsOfOrganization_1, Source={StaticResource Locator}}"
@@ -65,7 +65,7 @@
                 <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="4" />
                 <TextBox Text="{Binding Path=Criteria.SolutionQueryCriteriaCommon.DescriptionCommonOft.NullableValueToBeContained}" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Stretch"/>
         </Grid>
-        <ListView Name="V_Common" Margin="12,12,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollectionDefault}" SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution.Item, Mode=TwoWay, Source={StaticResource Locator}}">
+        <ListView Name="V_Common" Margin="12,12,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollectionDefault}" >
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
