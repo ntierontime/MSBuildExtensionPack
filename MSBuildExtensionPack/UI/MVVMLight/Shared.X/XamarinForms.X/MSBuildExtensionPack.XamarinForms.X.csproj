@@ -191,7 +191,6 @@
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ResourceApp.config">
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Globallization\TranslateExtension.cs" />
     <None Include="app.config" />

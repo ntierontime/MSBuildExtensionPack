@@ -6,10 +6,17 @@
         xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
         x:Class="MSBuildExtensionPack.XamarinForms.Pages.BuildLog.Delete"
         Title="{i18n:Translate Text=Delete_BuildLog, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}"
-        NavigationPage.HasNavigationBar="False"
-        NavigationPage.HasBackButton="False"
         BindingContext="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog.Item, Source={StaticResource Locator}}"
+        NavigationPage.HasBackButton="False"
         >
+    <NavigationPage.HasNavigationBar>
+        <OnPlatform x:TypeArguments="x:Boolean">
+            <On Platform="Android">True</On>
+            <On Platform="iOS">True</On>
+            <On Platform="Windows">False</On>
+            <On Platform="WinPhone">False</On>
+        </OnPlatform>
+    </NavigationPage.HasNavigationBar>
     <ContentPage.Content>
         <ScrollView>
             <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
@@ -39,7 +46,7 @@
         <ToolbarItem x:Name="Back" Order="Primary" Text="{i18n:Translate Text=Back, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=Main.GoBackCommand, Source={StaticResource Locator}}">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="Android">Android/Back.png</On>
+                    <On Platform="Android">@drawable/Back.png</On>
                     <On Platform="iOS">Assets/Back.png</On>
                     <On Platform="Windows">Assets/Back.png</On>
                     <On Platform="WinPhone">Assets/Back.png</On>
@@ -49,7 +56,7 @@
         <ToolbarItem x:Name="DeleteAction" Order="Primary" Text="{i18n:Translate Text=Delete, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog.DeleteCommand, Source={StaticResource Locator}}">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="Android">Android/RecycleBin.png</On>
+                    <On Platform="Android">@drawable/RecycleBin.png</On>
                     <On Platform="iOS">Assets/RecycleBin.png</On>
                     <On Platform="Windows">Assets/RecycleBin.png</On>
                     <On Platform="WinPhone">Assets/RecycleBin.png</On>
@@ -59,7 +66,7 @@
         <ToolbarItem x:Name="GoHome" Order="Primary" Text="{i18n:Translate Text=Home, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=Main.GoHomeCommand, Source={StaticResource Locator}}">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="Android">Android/Home.png</On>
+                    <On Platform="Android">@drawable/Home.png</On>
                     <On Platform="iOS">Assets/Home.png</On>
                     <On Platform="Windows">Assets/Home.png</On>
                     <On Platform="WinPhone">Assets/Home.png</On>

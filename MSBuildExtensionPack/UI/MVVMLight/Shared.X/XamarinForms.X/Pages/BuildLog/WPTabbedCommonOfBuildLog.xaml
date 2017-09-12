@@ -6,9 +6,16 @@
         xmlns:l ="clr-namespace:MSBuildExtensionPack.XamarinForms.Pages.BuildLog"
         x:Class="MSBuildExtensionPack.XamarinForms.Pages.BuildLog.WPTabbedCommonOfBuildLog"
         Title="{i18n:Translate Text=BuildLog, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}"
-        NavigationPage.HasNavigationBar="False"
         NavigationPage.HasBackButton="False"
         >
+    <NavigationPage.HasNavigationBar>
+        <OnPlatform x:TypeArguments="x:Boolean">
+            <On Platform="Android">True</On>
+            <On Platform="iOS">True</On>
+            <On Platform="Windows">False</On>
+            <On Platform="WinPhone">False</On>
+        </OnPlatform>
+    </NavigationPage.HasNavigationBar>
 <l:WPCommonSearchViewOfBuildLog/>
 <l:WPCommonResultViewOfBuildLog/>
 </TabbedPage>

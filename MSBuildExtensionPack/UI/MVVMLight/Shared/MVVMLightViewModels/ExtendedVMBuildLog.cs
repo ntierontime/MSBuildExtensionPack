@@ -340,7 +340,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                     return;
                 }
 
-                this.m_DropDownContentsOfOrganization_2SelectedItem = value == null ? null : this.DropDownContentsOfOrganization_2.FirstOrDefault(t => t.Value == value.Value);
+                this.m_DropDownContentsOfOrganization_2SelectedItem = value != null ? this.DropDownContentsOfOrganization_2.FirstOrDefault(t => t.Value == value.Value) : null;
                 MessengerInstance.Send<Framework.UISelectedItemChangedMessage>(new Framework.UISelectedItemChangedMessage(EntityName, PropertyName_DropDownContentsOfOrganization_2SelectedItem, value));
                 GetDropDownContentsOfOrganization_1(value);
                 RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_2SelectedItem);

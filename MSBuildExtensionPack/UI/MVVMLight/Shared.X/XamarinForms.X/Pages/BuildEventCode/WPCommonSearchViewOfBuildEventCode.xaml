@@ -7,7 +7,16 @@
         xmlns:fe="clr-namespace:Framework.EntityContracts;assembly=Framework.EntityContracts.X"
         x:Class="MSBuildExtensionPack.XamarinForms.Pages.BuildEventCode.WPCommonSearchViewOfBuildEventCode"
         Title="{i18n:Translate Text=Search, ResourceId=Framework.Resx.UIStringResource}"
+        NavigationPage.HasBackButton="False"
         >
+    <NavigationPage.HasNavigationBar>
+        <OnPlatform x:TypeArguments="x:Boolean">
+            <On Platform="Android">True</On>
+            <On Platform="iOS">True</On>
+            <On Platform="Windows">False</On>
+            <On Platform="WinPhone">False</On>
+        </OnPlatform>
+    </NavigationPage.HasNavigationBar>
     <ContentPage.Content>
     <StackLayout>
                  <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareEventCodeCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
@@ -20,7 +29,7 @@
         <ToolbarItem x:Name="Back" Order="Primary" Text="{i18n:Translate Text=Back, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=Main.GoBackCommand, Source={StaticResource Locator}}">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="Android">Android/Back.png</On>
+                    <On Platform="Android">@drawable/Back.png</On>
                     <On Platform="iOS">Assets/Back.png</On>
                     <On Platform="Windows">Assets/Back.png</On>
                     <On Platform="WinPhone">Assets/Back.png</On>
@@ -30,7 +39,7 @@
         <ToolbarItem x:Name="Add" Order="Primary" Text="{i18n:Translate Text=AddNew, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildEventCode.LaunchCreateViewCommand, Source={StaticResource Locator}}">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="Android">Android/Add.png</On>
+                    <On Platform="Android">@drawable/Add.png</On>
                     <On Platform="iOS">Assets/Add.png</On>
                     <On Platform="Windows">Assets/Add.png</On>
                     <On Platform="WinPhone">Assets/Add.png</On>
@@ -40,7 +49,7 @@
         <ToolbarItem x:Name="GoHome" Order="Primary" Text="{i18n:Translate Text=Home, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=Main.GoHomeCommand, Source={StaticResource Locator}}">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="Android">Android/Home.png</On>
+                    <On Platform="Android">@drawable/Home.png</On>
                     <On Platform="iOS">Assets/Home.png</On>
                     <On Platform="Windows">Assets/Home.png</On>
                     <On Platform="WinPhone">Assets/Home.png</On>

@@ -6,9 +6,16 @@
         xmlns:l ="clr-namespace:MSBuildExtensionPack.XamarinForms.Pages.Organization"
         x:Class="MSBuildExtensionPack.XamarinForms.Pages.Organization.WPTabbedCommonOfOrganization"
         Title="{i18n:Translate Text=Organization, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}"
-        NavigationPage.HasNavigationBar="False"
         NavigationPage.HasBackButton="False"
         >
+    <NavigationPage.HasNavigationBar>
+        <OnPlatform x:TypeArguments="x:Boolean">
+            <On Platform="Android">True</On>
+            <On Platform="iOS">True</On>
+            <On Platform="Windows">False</On>
+            <On Platform="WinPhone">False</On>
+        </OnPlatform>
+    </NavigationPage.HasNavigationBar>
 <l:WPCommonSearchViewOfOrganization/>
 <l:WPCommonResultViewOfOrganization/>
 </TabbedPage>

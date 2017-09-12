@@ -6,9 +6,16 @@
         xmlns:l ="clr-namespace:MSBuildExtensionPack.XamarinForms.Pages.Solution"
         x:Class="MSBuildExtensionPack.XamarinForms.Pages.Solution.WPTabbedCommonOfSolution"
         Title="{i18n:Translate Text=Solution, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}"
-        NavigationPage.HasNavigationBar="False"
         NavigationPage.HasBackButton="False"
         >
+    <NavigationPage.HasNavigationBar>
+        <OnPlatform x:TypeArguments="x:Boolean">
+            <On Platform="Android">True</On>
+            <On Platform="iOS">True</On>
+            <On Platform="Windows">False</On>
+            <On Platform="WinPhone">False</On>
+        </OnPlatform>
+    </NavigationPage.HasNavigationBar>
 <l:WPCommonSearchViewOfSolution/>
 <l:WPCommonResultViewOfSolution/>
 </TabbedPage>
