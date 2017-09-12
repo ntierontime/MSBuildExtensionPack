@@ -7,8 +7,6 @@
         xmlns:fe="clr-namespace:Framework.EntityContracts;assembly=Framework.EntityContracts.X"
         x:Class="MSBuildExtensionPack.XamarinForms.Pages.BuildEventCode.WPCommonSearchViewOfBuildEventCode"
         Title="{i18n:Translate Text=Search, ResourceId=Framework.Resx.UIStringResource}"
-        NavigationPage.HasNavigationBar="False"
-        NavigationPage.HasBackButton="False"
         >
     <ContentPage.Content>
     <StackLayout>

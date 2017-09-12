@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{99C18CE6-D6CD-44A2-A187-9C8E83F79827}</ProjectGuid>
+    <ProjectGuid>{50ADD8CA-3E38-4596-A759-E4BBB25080F8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildExtensionPack.XamarinForms</RootNamespace>
@@ -191,6 +191,7 @@
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ResourceApp.config">
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Globallization\TranslateExtension.cs" />
     <None Include="app.config" />

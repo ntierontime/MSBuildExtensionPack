@@ -7,8 +7,6 @@
         xmlns:fe="clr-namespace:Framework.EntityContracts;assembly=Framework.EntityContracts.X"
         x:Class="MSBuildExtensionPack.XamarinForms.Pages.BuildEventCode.WPCommonResultViewOfBuildEventCode"
         Title="{i18n:Translate Text=Results, ResourceId=Framework.Resx.UIStringResource}"
-        NavigationPage.HasNavigationBar="False"
-        NavigationPage.HasBackButton="False"
         >
     <ContentPage.Content>
         <StackLayout BackgroundColor="#eee" Orientation="Vertical" VerticalOptions="FillAndExpand" Padding="5" Spacing="0">
