@@ -19,8 +19,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor
                         , "~/Scripts/bootstrap.js"
                         , "~/Scripts/bootstrap-datepicker.js"
                         , "~/Scripts/knockout-{version}.js"
-                        //, "~/Scripts/respond.js"
-                        ));
+						, "~/Scripts/daterangepicker.js"
+						));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
@@ -30,8 +30,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/bootstrap.css"
                 , "~/Content/bootstrap-datepicker.css"
-                //, "~/Content/bootstrap-datepicker3.css"
-                , "~/Content/awesome-bootstrap-checkbox.mvcmodified.css"
+				, "~/Content/daterangepicker.css"
+				, "~/Content/awesome-bootstrap-checkbox.mvcmodified.css"
                 //, "~/Content/PagedList.css"
                 , "~/Content/Site.css"
                 ));
