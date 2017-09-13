@@ -153,11 +153,7 @@
  <tr><th style="min-width:100px" class="hidden-xs col-sm-5 col-md-5 col-lg-5"></th>
 <th >@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Build_1_Name</th>
 <th >@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Solution_1_Name</th>
-<th >@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Organization_1_UniqueidentifierColumn</th>
-<th  class="hidden-xs visible-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Organization_1_UniqueIdentifier</th>
 <th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Organization_1_Name</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Organization_2_UniqueidentifierColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Organization_2_UniqueIdentifier</th>
 <th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Organization_2_Name</th>
 <th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.BuildEventCode_1_Name</th>
 <th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Message</th>
@@ -184,11 +180,7 @@
 </div></td>
 <td >@Html.ActionLink(item.Build_1_Name, UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.BuildId }, null)</td>
 <td >@Html.ActionLink(item.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Solution_1Id }, null)</td>
-<td >@Html.DisplayFor(modelItem => item.Organization_1_UniqueidentifierColumn)</td>
-<td >@Html.DisplayFor(modelItem => item.Organization_1_UniqueIdentifier)</td>
 <td >@Html.ActionLink(item.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1_UniqueidentifierColumn }, null)</td>
-<td >@Html.DisplayFor(modelItem => item.Organization_2_UniqueidentifierColumn)</td>
-<td >@Html.DisplayFor(modelItem => item.Organization_2_UniqueIdentifier)</td>
 <td >@Html.ActionLink(item.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2_UniqueidentifierColumn }, null)</td>
 <td >@Html.ActionLink(item.BuildEventCode_1_Name, UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.BuildEventCodeId }, null)</td>
 <td >@Html.DisplayFor(modelItem => item.Message)</td>
