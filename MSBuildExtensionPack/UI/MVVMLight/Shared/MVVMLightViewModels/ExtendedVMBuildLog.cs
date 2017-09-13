@@ -114,9 +114,9 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                         {
                             foreach (var item in result)
                             {
-                                int value;
-                                if (int.TryParse(item.Value, out value))
+                                if(item != null)
                                 {
+                                    System.Int64 value = item.ParseToSystemInt64(null);
                                     this.DropDownContentsOfBuild_1.Add(new Framework.NameValuePair<System.Int64>(value, item.Name));
                                 }
                             }
@@ -202,9 +202,9 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                         {
                             foreach (var item in result)
                             {
-                                int value;
-                                if (int.TryParse(item.Value, out value))
+                                if(item != null)
                                 {
+                                    System.Int32 value = item.ParseToSystemInt32(null);
                                     this.DropDownContentsOfSolution_1.Add(new Framework.NameValuePair<System.Int32>(value, item.Name));
                                 }
                             }
@@ -290,9 +290,9 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                         {
                             foreach (var item in result)
                             {
-                                int value;
-                                if (int.TryParse(item.Value, out value))
+                                if(item != null)
                                 {
+                                    System.Int64 value = item.ParseToSystemInt64(null);
                                     this.DropDownContentsOfOrganization_1.Add(new Framework.NameValuePair<System.Int64>(value, item.Name));
                                 }
                             }
@@ -377,9 +377,9 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                     {
                         foreach (var item in result)
                         {
-                            int value;
-                            if (int.TryParse(item.Value, out value))
+                            if(item != null)
                             {
+                                System.Int64 value = item.ParseToSystemInt64(null);
                                 this.DropDownContentsOfOrganization_2.Add(new Framework.NameValuePair<System.Int64>(value, item.Name));
                             }
                         }
@@ -459,9 +459,9 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                     {
                         foreach (var item in result)
                         {
-                            int value;
-                            if (int.TryParse(item.Value, out value))
+                            if(item != null)
                             {
+                                System.Int32 value = item.ParseToSystemInt32(null);
                                 this.DropDownContentsOfBuildEventCode_1.Add(new Framework.NameValuePair<System.Int32>(value, item.Name));
                             }
                         }

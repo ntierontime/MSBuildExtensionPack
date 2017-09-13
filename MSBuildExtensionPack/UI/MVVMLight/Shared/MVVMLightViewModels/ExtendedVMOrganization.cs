@@ -91,9 +91,9 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                     {
                         foreach (var item in result)
                         {
-                            int value;
-                            if (int.TryParse(item.Value, out value))
+                            if(item != null)
                             {
+                                System.Int64 value = item.ParseToSystemInt64(null);
                                 this.DropDownContentsOfOrganization_2.Add(new Framework.NameValuePair<System.Int64>(value, item.Name));
                             }
                         }
