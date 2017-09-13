@@ -87,8 +87,8 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         public const string PropertyName_DropDownContentsOfBuild_1SelectedItem = "DropDownContentsOfBuild_1SelectedItem";
         public const string PropertyName_DropDownContentsOfBuild_1 = "DropDownContentsOfBuild_1";
 
-        public List<Framework.NameValuePair<System.Int64>> m_DropDownContentsOfBuild_1 = new List<Framework.NameValuePair<System.Int64>>();
-        public List<Framework.NameValuePair<System.Int64>> DropDownContentsOfBuild_1
+        public ObservableCollection<Framework.NameValuePair<System.Int64>> m_DropDownContentsOfBuild_1 = new ObservableCollection<Framework.NameValuePair<System.Int64>>();
+        public ObservableCollection<Framework.NameValuePair<System.Int64>> DropDownContentsOfBuild_1
         {
             get
             {
@@ -127,7 +127,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 {
                     this.DropDownContentsOfBuild_1.Clear();
                 }
-                RaisePropertyChanged(PropertyName_DropDownContentsOfBuild_1);
             }
             catch (Exception ex)
             {
@@ -174,8 +173,8 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         public const string PropertyName_DropDownContentsOfSolution_1SelectedItem = "DropDownContentsOfSolution_1SelectedItem";
         public const string PropertyName_DropDownContentsOfSolution_1 = "DropDownContentsOfSolution_1";
 
-        public List<Framework.NameValuePair<System.Int32>> m_DropDownContentsOfSolution_1 = new List<Framework.NameValuePair<System.Int32>>();
-        public List<Framework.NameValuePair<System.Int32>> DropDownContentsOfSolution_1
+        public ObservableCollection<Framework.NameValuePair<System.Int32>> m_DropDownContentsOfSolution_1 = new ObservableCollection<Framework.NameValuePair<System.Int32>>();
+        public ObservableCollection<Framework.NameValuePair<System.Int32>> DropDownContentsOfSolution_1
         {
             get
             {
@@ -215,7 +214,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 {
                     this.DropDownContentsOfSolution_1.Clear();
                 }
-                RaisePropertyChanged(PropertyName_DropDownContentsOfSolution_1);
             }
             catch (Exception ex)
             {
@@ -262,8 +260,8 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         public const string PropertyName_DropDownContentsOfOrganization_1SelectedItem = "DropDownContentsOfOrganization_1SelectedItem";
         public const string PropertyName_DropDownContentsOfOrganization_1 = "DropDownContentsOfOrganization_1";
 
-        public List<Framework.NameValuePair<System.Int64>> m_DropDownContentsOfOrganization_1 = new List<Framework.NameValuePair<System.Int64>>();
-        public List<Framework.NameValuePair<System.Int64>> DropDownContentsOfOrganization_1
+        public ObservableCollection<Framework.NameValuePair<System.Int64>> m_DropDownContentsOfOrganization_1 = new ObservableCollection<Framework.NameValuePair<System.Int64>>();
+        public ObservableCollection<Framework.NameValuePair<System.Int64>> DropDownContentsOfOrganization_1
         {
             get
             {
@@ -303,7 +301,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 {
                     this.DropDownContentsOfOrganization_1.Clear();
                 }
-                RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_1);
             }
             catch (Exception ex)
             {
@@ -350,8 +347,8 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         public const string PropertyName_DropDownContentsOfOrganization_2SelectedItem = "DropDownContentsOfOrganization_2_1SelectedItem";
         public const string PropertyName_DropDownContentsOfOrganization_2 = "DropDownContentsOfOrganization_2";
 
-        public List<Framework.NameValuePair<System.Int64>> m_DropDownContentsOfOrganization_2 = new List<Framework.NameValuePair<System.Int64>>();
-        public List<Framework.NameValuePair<System.Int64>> DropDownContentsOfOrganization_2
+        public ObservableCollection<Framework.NameValuePair<System.Int64>> m_DropDownContentsOfOrganization_2 = new ObservableCollection<Framework.NameValuePair<System.Int64>>();
+        public ObservableCollection<Framework.NameValuePair<System.Int64>> DropDownContentsOfOrganization_2
         {
             get
             {
@@ -384,8 +381,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                             }
                         }
                     }
-
-                    RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_2);
                 });
             }
             catch (Exception ex)
@@ -432,8 +427,8 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         public const string PropertyName_DropDownContentsOfBuildEventCode_1SelectedItem = "DropDownContentsOfBuildEventCode_1_1SelectedItem";
         public const string PropertyName_DropDownContentsOfBuildEventCode_1 = "DropDownContentsOfBuildEventCode_1";
 
-        public List<Framework.NameValuePair<System.Int32>> m_DropDownContentsOfBuildEventCode_1 = new List<Framework.NameValuePair<System.Int32>>();
-        public List<Framework.NameValuePair<System.Int32>> DropDownContentsOfBuildEventCode_1
+        public ObservableCollection<Framework.NameValuePair<System.Int32>> m_DropDownContentsOfBuildEventCode_1 = new ObservableCollection<Framework.NameValuePair<System.Int32>>();
+        public ObservableCollection<Framework.NameValuePair<System.Int32>> DropDownContentsOfBuildEventCode_1
         {
             get
             {
@@ -466,7 +461,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                             }
                         }
                     }
-                    RaisePropertyChanged(PropertyName_DropDownContentsOfBuildEventCode_1);
                 });
             }
             catch (Exception ex)
