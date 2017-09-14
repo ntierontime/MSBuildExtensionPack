@@ -103,11 +103,10 @@
                         $(element).css('border', '1px solid rgb(170, 170, 170)');
                     },
                 errorLabelContainer: "#ErrorList",
-                wrapper: "li",
+                wrapper: "li"
             });
         }));
         function FetchOrganization_1() {
-var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $("#Item_Organization_1_UniqueIdentifier").val();
 var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $("#Item_Organization_2Id").val();
             var url = "/api/OrganizationApi/GetCollectionOfNameValuePairOfByFKOnly";
             var params = BuildCriteriaForFetchOrganization_1(selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly);

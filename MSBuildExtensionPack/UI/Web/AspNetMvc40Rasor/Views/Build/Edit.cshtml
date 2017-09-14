@@ -127,12 +127,12 @@
                         $(element).css('border', '1px solid rgb(170, 170, 170)');
                     },
                 errorLabelContainer: "#ErrorList",
-                wrapper: "li",
+                wrapper: "li"
             });
         }));
         function FetchSolution_1() {
 var selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly = $("#Item_Organization_1Id").val();
-var selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly = $("#Item_Organization_2Id").val();
+var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $("#Item_Organization_2Id").val();
             var url = "/api/SolutionApi/GetCollectionOfNameValuePairOfByFKOnly";
             var params = BuildCriteriaForFetchSolution_1(selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly,selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly);
             if(selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly && selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
@@ -156,7 +156,6 @@ var selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly = $("#Item_Organi
             return params;
         }
         function FetchOrganization_1() {
-var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $("#Item_Organization_1Id").val();
 var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $("#Item_Organization_2Id").val();
             var url = "/api/OrganizationApi/GetCollectionOfNameValuePairOfByFKOnly";
             var params = BuildCriteriaForFetchOrganization_1(selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly);

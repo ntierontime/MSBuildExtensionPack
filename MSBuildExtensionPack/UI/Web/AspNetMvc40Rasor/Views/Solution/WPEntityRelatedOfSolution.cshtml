@@ -16,16 +16,16 @@
  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 nopadding">
         <div class="panel panel-default">
             <div class="panel-heading clearfix">
-                <h3 style="display: inline;">@Html.ActionLink(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Build, "WPCommonOfBuild", "Build")
+                <h3 style="display: inline;">@Html.ActionLink(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Build, "WPCommonOfBuild", "Build")</h3>
             </div>
             <div class="table-responsive">
 <table id="MasterDataControl0" name="MasterDataControl0" class="table table-hover table-bordered table-striped">
 <thead>
- <tr><th  class="hidden-xs visible-sm"></th>
+ <tr><th  style="min-width:100px" class="hidden-xs visible-sm"></th>
 <th >@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Solution_1_Name</th>
 <th >@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Organization_1_UniqueIdentifier</th>
 <th >@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Organization_1_UniqueidentifierColumn</th>
-<th  class="hidden-xs visible-smvisible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Organization_1_Name</th>
+<th  class="hidden-xs visible-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Organization_1_Name</th>
 <th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Organization_2_UniqueIdentifier</th>
 <th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Organization_2_UniqueidentifierColumn</th>
 <th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Organization_2_Name</th>
@@ -41,7 +41,7 @@
         foreach (var item in Model.FK_Build_Solution)
         {
             index++;
-<tr><td  class="hidden-xs visible-sm"></td>
+<tr><td  style="min-width:100px" class="hidden-xs visible-sm"></td>
 <td  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
     <a href="@Url.Action(UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetails">
@@ -55,11 +55,7 @@
 </div>
 </div></td>
 <td >@Html.ActionLink(item.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.SolutionId }, null)</td>
-<td >@Html.DisplayFor(modelItem => item.Organization_1_UniqueIdentifier)</td>
-<td >@Html.DisplayFor(modelItem => item.Organization_1_UniqueidentifierColumn)</td>
 <td >@Html.ActionLink(item.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1_UniqueidentifierColumn }, null)</td>
-<td >@Html.DisplayFor(modelItem => item.Organization_2_UniqueIdentifier)</td>
-<td >@Html.DisplayFor(modelItem => item.Organization_2_UniqueidentifierColumn)</td>
 <td >@Html.ActionLink(item.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2_UniqueidentifierColumn }, null)</td>
 <td >@Html.DisplayFor(modelItem => item.Name)</td>
 <td >@Html.DisplayFor(modelItem => item.Description)</td>
@@ -409,7 +405,7 @@
                         $(element).css('border', '1px solid rgb(170, 170, 170)');
                     },
                 errorLabelContainer: "#ErrorList",
-                wrapper: "li",
+                wrapper: "li"
             });
         }));
         //cascaded dropdownlist by knockoutjs

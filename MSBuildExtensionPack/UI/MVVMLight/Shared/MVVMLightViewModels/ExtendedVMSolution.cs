@@ -108,6 +108,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 {
                     this.DropDownContentsOfOrganization_1.Clear();
                 }
+                RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_1);
             }
             catch (Exception ex)
             {
@@ -189,6 +190,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                         }
                     }
 
+                    RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_2);
                 });
             }
             catch (Exception ex)

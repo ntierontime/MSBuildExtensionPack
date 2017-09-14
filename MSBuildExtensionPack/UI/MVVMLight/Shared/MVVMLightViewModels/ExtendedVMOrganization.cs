@@ -98,6 +98,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                             }
                         }
                     }
+                    RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_2);
                 });
             }
             catch (Exception ex)

@@ -127,6 +127,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 {
                     this.DropDownContentsOfBuild_1.Clear();
                 }
+                RaisePropertyChanged(PropertyName_DropDownContentsOfBuild_1);
             }
             catch (Exception ex)
             {
@@ -214,6 +215,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 {
                     this.DropDownContentsOfSolution_1.Clear();
                 }
+                RaisePropertyChanged(PropertyName_DropDownContentsOfSolution_1);
             }
             catch (Exception ex)
             {
@@ -301,6 +303,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 {
                     this.DropDownContentsOfOrganization_1.Clear();
                 }
+                RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_1);
             }
             catch (Exception ex)
             {
@@ -381,6 +384,8 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                             }
                         }
                     }
+
+                    RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_2);
                 });
             }
             catch (Exception ex)
@@ -461,6 +466,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                             }
                         }
                     }
+                    RaisePropertyChanged(PropertyName_DropDownContentsOfBuildEventCode_1);
                 });
             }
             catch (Exception ex)
