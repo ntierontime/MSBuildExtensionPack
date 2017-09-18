@@ -42,18 +42,14 @@
         {
             index++;
 <tr><td  style="min-width:100px" class="hidden-xs visible-sm"></td>
-<td  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><div class="btn-group btn-group-justified" role="group" aria-label="...">
-<div class="btn-group">
+<td  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><div class="btn-group btn-group-justified" role="group" aria-label="..."><div class="btn-group">
     <a href="@Url.Action(UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetails">
         <span class="glyphicon glyphicon-briefcase"></span>
     </a>
-</div>
-<div class="btn-group">
     <a href="@Url.Action(UrlStringsAlias.ActionName_Build_Edit, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })" class="btn btn-default" role="button" type="button" name="EditToolBarRightInList" title="@Framework.Resx.UIStringResource.Edit">
         <span class="glyphicon glyphicon-edit"></span>
     </a>
-</div>
-</div></td>
+</div></div></td>
 <td >@Html.ActionLink(item.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.SolutionId }, null)</td>
 <td >@Html.ActionLink(item.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1_UniqueidentifierColumn }, null)</td>
 <td >@Html.ActionLink(item.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2_UniqueidentifierColumn }, null)</td>
@@ -92,7 +88,7 @@
     </a>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_Solution_AddNew, UrlStringsAlias.ControllerName_Solution)" class="btn btn-default" role="button" type="button" name="AddNewToolBarUp" title="@Framework.Resx.UIStringResource.AddNew">
+<a href="@Url.Action(UrlStringsAlias.ActionName_Solution_AddNew, UrlStringsAlias.ControllerName_Solution)" class="btn btn-default" role="button" type="button" name="AddNewToolBarUp" title="@Framework.Resx.UIStringResource.AddNew">
         <span class="glyphicon glyphicon-plus"></span>
     </a>
 </div>
@@ -100,6 +96,8 @@
     <a href="@Url.Action(UrlStringsAlias.ActionName_Solution_Copy, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="CopyToolBarUp" title="@Framework.Resx.UIStringResource.Copy">
         <span class="glyphicon glyphicon-copy"></span>
     </a>
+</div>
+<div class="btn-group">
 </div>
 <div class="btn-group">
     <a href="@Url.Action(UrlStringsAlias.ActionName_Solution_Details, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="DetailsToolBarUp" title="@Framework.Resx.UIStringResource.Details">
@@ -181,7 +179,7 @@
 {
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_Solution_AddNew, UrlStringsAlias.ControllerName_Solution)" class="btn btn-default" role="button" type="button" name="AddNewToolBarUp" title="@Framework.Resx.UIStringResource.AddNew">
+<a href="@Url.Action(UrlStringsAlias.ActionName_Solution_AddNew, UrlStringsAlias.ControllerName_Solution)" class="btn btn-default" role="button" type="button" name="AddNewToolBarUp" title="@Framework.Resx.UIStringResource.AddNew">
         <span class="glyphicon glyphicon-plus"></span>
     </a>
 </div>

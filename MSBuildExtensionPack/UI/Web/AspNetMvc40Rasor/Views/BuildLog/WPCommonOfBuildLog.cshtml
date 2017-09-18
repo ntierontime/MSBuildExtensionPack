@@ -28,7 +28,7 @@
     </button>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_AddNew, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="AddNewToolBarUp" title="@Framework.Resx.UIStringResource.AddNew">
+<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_AddNew, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="AddNewToolBarUp" title="@Framework.Resx.UIStringResource.AddNew">
         <span class="glyphicon glyphicon-plus"></span>
     </a>
 </div>
@@ -43,7 +43,7 @@
     </a>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Import, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="ImportToolBarUp" title="@Framework.Resx.UIStringResource.Import">
+<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Import, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="ImportToolBarUp" title="@Framework.Resx.UIStringResource.Import">
         <span class="glyphicon glyphicon-import"></span>
     </a>
 </div>
@@ -118,7 +118,7 @@
     </button>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_AddNew, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="AddNewToolBarBottom" title="@Framework.Resx.UIStringResource.AddNew">
+<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_AddNew, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="AddNewToolBarBottom" title="@Framework.Resx.UIStringResource.AddNew">
         <span class="glyphicon glyphicon-plus"></span>
     </a>
 </div>
@@ -133,7 +133,7 @@
     </a>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Import, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="ImportToolBarBottom" title="@Framework.Resx.UIStringResource.Import">
+<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Import, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="ImportToolBarBottom" title="@Framework.Resx.UIStringResource.Import">
         <span class="glyphicon glyphicon-import"></span>
     </a>
 </div>
@@ -172,18 +172,14 @@
         {
             index++;
 <tr><td  style="min-width:100px" class="hidden-xs visible-sm"></td>
-<td  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><div class="btn-group btn-group-justified" role="group" aria-label="...">
-<div class="btn-group">
+<td  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><div class="btn-group btn-group-justified" role="group" aria-label="..."><div class="btn-group">
     <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPEntityRelatedOfBuildLog, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetails">
         <span class="glyphicon glyphicon-briefcase"></span>
     </a>
-</div>
-<div class="btn-group">
     <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Edit, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })" class="btn btn-default" role="button" type="button" name="EditToolBarRightInList" title="@Framework.Resx.UIStringResource.Edit">
         <span class="glyphicon glyphicon-edit"></span>
     </a>
-</div>
-</div></td>
+</div></div></td>
 <td >@Html.ActionLink(item.Build_1_Name, UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.BuildId }, null)</td>
 <td >@Html.ActionLink(item.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Solution_1Id }, null)</td>
 <td >@Html.ActionLink(item.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1_UniqueidentifierColumn }, null)</td>
