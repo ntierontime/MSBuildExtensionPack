@@ -40,7 +40,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
             }
 
             var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.GetMessageOfEntityOfCommon(
-                new MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommon(this.Criteria)
+                this.Criteria
                 , this.QueryPagingSetting
                 , this.QueryOrderBySettingCollection);
 

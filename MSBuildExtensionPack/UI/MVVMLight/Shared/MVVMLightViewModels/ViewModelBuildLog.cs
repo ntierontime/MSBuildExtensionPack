@@ -109,7 +109,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             try
             {
                 var vmData = new MSBuildExtensionPack.ViewModelData.WPCommonOfBuildLogVM();
-                vmData.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommonFlatten(this.Criteria);
+                vmData.Criteria = this.Criteria;
                 vmData.QueryPagingSetting = this.QueryPagingSetting;
                 vmData.QueryOrderBySettingCollection = this.QueryOrderBySettingCollection;
 

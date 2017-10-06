@@ -14,132 +14,108 @@
 }
  <div class="row">
  <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
-        @using (Html.BeginForm())
-        {
-            <div class="panel panel-default">
-                <div class="panel-heading clearfix">
-                    <h3 style="display: inline;">@Framework.Resx.UIStringResource.Common_Filter</h3>
-                </div>
-                <div class="panel-footer nopadding">
-<div class="btn-group btn-group-justified" role="group" aria-label="...">
-<div class="btn-group">
-    <button class="btn btn-default" role="button" type="submit" name="SearchToolBarUp" title="@Framework.Resx.UIStringResource.Search">
-        <span class="glyphicon glyphicon-search"></span>
-    </button>
-</div>
-<div class="btn-group">
-<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_AddNew, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="AddNewToolBarUp" title="@Framework.Resx.UIStringResource.AddNew">
-        <span class="glyphicon glyphicon-plus"></span>
-    </a>
-</div>
-<div class="btn-group">
-    <a href="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPCommonOfBuildLog_Export, UrlStringsAlias.ControllerName_BuildLog, new RouteValueDictionary { { "dataServiceType", "Csv" } })'" class="btn btn-default" role="button" type="button" name="ExportToolBarUp" title="@Framework.Resx.UIStringResource.Export">
-        <span class="glyphicon glyphicon-export"></span>
-    </a>
-</div>
-<div class="btn-group">
-    <a href="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPCommonOfBuildLog_Export, UrlStringsAlias.ControllerName_BuildLog, new RouteValueDictionary { { "dataServiceType", "Excel2010" } })'" class="btn btn-default" role="button" type="button" name="ExportToExcelToolBarUp" title="@Framework.Resx.UIStringResource.ExportToExcel">
-        <span class="glyphicon glyphicon-export"></span>
-    </a>
-</div>
-<div class="btn-group">
-<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Import, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="ImportToolBarUp" title="@Framework.Resx.UIStringResource.Import">
-        <span class="glyphicon glyphicon-import"></span>
-    </a>
-</div>
-</div>
-                </div>
-                <div class="panel-body">
- <div class="form-group">
-</div>
-<div class="form-group">
-<div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareMessageCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareMessageCommonOftOfCommon</label>
-</div>
-@Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedMessageCommonOftOfCommon, new { @class = "form-control" })
-</div>
-<div class="form-group">
-<div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareEventTimeCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareEventTimeCommonOftOfCommon</label>
-</div><input type="text" rangepickername="datefilter" value="" class="form-control" />
-<div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareLowerBoundEventTimeCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundEventTimeCommonOftOfCommon</label>
-</div>
-@Html.TextBox("lowerBoundEventTimeCommonOftOfCommon", Model.Criteria.LowerBoundEventTimeCommonOftOfCommon.ToString(), new { @readonly = "readonly", @class = "form-control" })
-<div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareUpperBoundEventTimeCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundEventTimeCommonOftOfCommon</label>
-</div>
-@Html.TextBox("upperBoundEventTimeCommonOftOfCommon", Model.Criteria.UpperBoundEventTimeCommonOftOfCommon.ToString(), new { @readonly = "readonly", @class = "form-control" })
-</div>
-<div class="form-group">
-<div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareIdCommonOfBuildEventCode_1OfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuildEventCode_1OfCommon</label>
-</div>
-@Html.DropDownListFor(model => model.Criteria.ValueToCompareIdCommonOfBuildEventCode_1OfCommon, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_BuildEventCode, MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.Please_select_BuildEventCode____, new Dictionary<string,Object>{ { "class", "form-control" } })
-</div>
-<div class="form-group">
-<div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareIdCommonOfOrganization_2OfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon</label>
-</div>
-@Html.DropDownListFor(model => model.Criteria.ValueToCompareIdCommonOfOrganization_2OfCommon, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Organization, MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" }, { "onchange", "FetchOrganization_1();" } })
-</div>
-<div class="form-group">
-<div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareIdCommonOfOrganization_1OfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_1OfCommon</label>
-</div>
-@Html.DropDownListFor(model => model.Criteria.ValueToCompareIdCommonOfOrganization_1OfCommon, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" }, { "onchange", "FetchSolution_1();" }, { "data-bind", string.Format(@"options:selectListOfvalueToCompareIdCommonOfOrganization_1OfCommon,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedvalueToCompareIdCommonOfOrganization_1OfCommon", MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____) } })
-</div>
-<div class="form-group">
-<div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareIdCommonOfSolution_1OfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon</label>
-</div>
-@Html.DropDownListFor(model => model.Criteria.ValueToCompareIdCommonOfSolution_1OfCommon, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Please_select_Solution____, new Dictionary<string,Object>{ { "class", "form-control" }, { "onchange", "FetchBuild_1();" }, { "data-bind", string.Format(@"options:selectListOfvalueToCompareIdCommonOfSolution_1OfCommon,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedvalueToCompareIdCommonOfSolution_1OfCommon", MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Please_select_Solution____) } })
-</div>
-<div class="form-group">
-<div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareIdCommonOfBuild_1OfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon</label>
-</div>
-@Html.DropDownListFor(model => model.Criteria.ValueToCompareIdCommonOfBuild_1OfCommon, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Please_select_Build____, new Dictionary<string,Object>{ { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfvalueToCompareIdCommonOfBuild_1OfCommon,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedvalueToCompareIdCommonOfBuild_1OfCommon", MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Please_select_Build____) } })
-</div>
-                    <div class="form-group form-inline">
-                        <label class="control-label">Items per page : </label>
-                        @Html.DropDownListFor(model => model.QueryPagingSetting.PageSize, Model.UISharedViewModel.SelectListOfPageSize, new Dictionary<string, Object> { { "class", "form-control" }, { "onchange", "this.form.submit();" } })
-                    </div>
-                    <div class="form-group form-inline">
-                        <label class="control-label">Sort by:</label>
-                        @Html.DropDownListFor(model => model.QueryOrderBySettingCollecionInString, Model.UISharedViewModel.SelectListOfQueryOrderBySettingCollecionInString, new Dictionary<string, Object> { { "class", "form-control" }, { "onchange", "this.form.submit();" } })
-                    </div>
-                </div>
-                <div class="panel-footer nopadding">
-<div class="btn-group btn-group-justified" role="group" aria-label="...">
-<div class="btn-group">
-    <button class="btn btn-default" role="button" type="submit" name="SearchToolBarBottom" title="@Framework.Resx.UIStringResource.Search">
-        <span class="glyphicon glyphicon-search"></span>
-    </button>
-</div>
-<div class="btn-group">
-<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_AddNew, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="AddNewToolBarBottom" title="@Framework.Resx.UIStringResource.AddNew">
-        <span class="glyphicon glyphicon-plus"></span>
-    </a>
-</div>
-<div class="btn-group">
-    <a href="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPCommonOfBuildLog_Export, UrlStringsAlias.ControllerName_BuildLog, new RouteValueDictionary { { "dataServiceType", "Csv" } })'" class="btn btn-default" role="button" type="button" name="ExportToolBarBottom" title="@Framework.Resx.UIStringResource.Export">
-        <span class="glyphicon glyphicon-export"></span>
-    </a>
-</div>
-<div class="btn-group">
-    <a href="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPCommonOfBuildLog_Export, UrlStringsAlias.ControllerName_BuildLog, new RouteValueDictionary { { "dataServiceType", "Excel2010" } })'" class="btn btn-default" role="button" type="button" name="ExportToExcelToolBarBottom" title="@Framework.Resx.UIStringResource.ExportToExcel">
-        <span class="glyphicon glyphicon-export"></span>
-    </a>
-</div>
-<div class="btn-group">
-<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Import, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="ImportToolBarBottom" title="@Framework.Resx.UIStringResource.Import">
-        <span class="glyphicon glyphicon-import"></span>
-    </a>
-</div>
-</div>
-                </div>
-            </div>
+             @using (Html.BeginForm())
+             {
+                 <div class="panel panel-default">
+                     <div class="panel-heading clearfix">
+                         <h3 style="display: inline;">@Framework.Resx.UIStringResource.Common_Filter</h3>
+                     </div>
+                     <div class="panel-footer nopadding">
+                         <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                             <div class="btn-group">
+                                 <button class="btn btn-default" role="button" type="submit" name="SearchToolBarUp" title="@Framework.Resx.UIStringResource.Search">
+                                     <span class="glyphicon glyphicon-search"></span>
+                                 </button>
+                             </div>
+                             <div class="btn-group">
+                                 <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_AddNew, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="AddNewToolBarUp" title="@Framework.Resx.UIStringResource.AddNew">
+                                     <span class="glyphicon glyphicon-plus"></span>
+                                 </a>
+                             </div>
+                             <div class="btn-group">
+                                 <a href="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPCommonOfBuildLog_Export, UrlStringsAlias.ControllerName_BuildLog, new RouteValueDictionary { { "dataServiceType", "Csv" } })'" class="btn btn-default" role="button" type="button" name="ExportToolBarUp" title="@Framework.Resx.UIStringResource.Export">
+                                     <span class="glyphicon glyphicon-export"></span>
+                                 </a>
+                             </div>
+                             <div class="btn-group">
+                                 <a href="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPCommonOfBuildLog_Export, UrlStringsAlias.ControllerName_BuildLog, new RouteValueDictionary { { "dataServiceType", "Excel2010" } })'" class="btn btn-default" role="button" type="button" name="ExportToExcelToolBarUp" title="@Framework.Resx.UIStringResource.ExportToExcel">
+                                     <span class="glyphicon glyphicon-export"></span>
+                                 </a>
+                             </div>
+                             <div class="btn-group">
+                                 <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Import, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="ImportToolBarUp" title="@Framework.Resx.UIStringResource.Import">
+                                     <span class="glyphicon glyphicon-import"></span>
+                                 </a>
+                             </div>
+                         </div>
+                     </div>>
+
+                     <div class="panel-body">
+                         <div class="form-group">
+                             <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareEventTimeCommonOftOfCommon</label>
+                             @Html.DropDownListFor(model => model.Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.PreDefinedDateTimeRange, (List<SelectListItem>)Model.UISharedViewModel.SelectListOfPreDefinedDateTimeRanges, MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.Please_select_BuildEventCode____, new Dictionary<string, Object> { { "class", "form-control" } })
+                             @Html.TextBox("lowerBoundEventTimeCommonOftOfCommon", Model.Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.NullableLowerBound, new {@readonly = "readonly", @class = "form-control"})
+                             @Html.TextBox("upperBoundEventTimeCommonOftOfCommon", Model.Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.NullableUpperBound, new { @readonly = "readonly", @class = "form-control" })
+                         </div>
+                         <div class="form-group">
+                             <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuildEventCode_1OfCommon</label>
+                             @Html.DropDownListFor(model => model.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuildEventCode_1.NullableValueToCompare, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_BuildEventCode, MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.Please_select_BuildEventCode____, new Dictionary<string, Object> { { "class", "form-control" } })
+                         </div>
+                         <div class="form-group">
+                             <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon</label>
+                             @Html.DropDownListFor(model => model.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_2, (List<SelectListItem>) Model.SelectListOfMSBuildExtensionPack_Organization, MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string, Object> {{"class", "form-control"}, {"onchange", "FetchOrganization_1();"}})
+                         </div>
+                         <div class="form-group">
+                             <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_1OfCommon</label>
+                             @Html.DropDownListFor(model => model.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_1.NullableValueToCompare, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string, Object> {{"class", "form-control"}, {"onchange", "FetchSolution_1();"}, {"data-bind", string.Format(@"options:selectListOfvalueToCompareIdCommonOfOrganization_1OfCommon,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedvalueToCompareIdCommonOfOrganization_1OfCommon", MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____)}})
+                         </div>
+                         <div class="form-group">
+                             <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon</label>
+                             @Html.DropDownListFor(model => model.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.NullableValueToCompare, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Please_select_Solution____, new Dictionary<string, Object> {{"class", "form-control"}, {"onchange", "FetchBuild_1();"}, {"data-bind", string.Format(@"options:selectListOfvalueToCompareIdCommonOfSolution_1OfCommon,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedvalueToCompareIdCommonOfSolution_1OfCommon", MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Please_select_Solution____)}})
+                         </div>
+                         <div class="form-group">
+                             <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon</label>
+                             @Html.DropDownListFor(model => model.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.NullableValueToCompare, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Please_select_Build____, new Dictionary<string, Object> {{"class", "form-control"}, {"data-bind", string.Format(@"options:selectListOfvalueToCompareIdCommonOfBuild_1OfCommon,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedvalueToCompareIdCommonOfBuild_1OfCommon", MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Please_select_Build____)}})
+                         </div>
+                         <div class="form-group form-inline">
+                             <label class="control-label">Items per page : </label>
+                             @Html.DropDownListFor(model => model.QueryPagingSetting.PageSize, Model.UISharedViewModel.SelectListOfPageSize, new Dictionary<string, Object> { { "class", "form-control" }, { "onchange", "this.form.submit();" } })
+                         </div>
+                         <div class="form-group form-inline">
+                             <label class="control-label">Sort by:</label>
+                             @Html.DropDownListFor(model => model.QueryOrderBySettingCollecionInString, Model.UISharedViewModel.SelectListOfQueryOrderBySettingCollecionInString, new Dictionary<string, Object> { { "class", "form-control" }, { "onchange", "this.form.submit();" } })
+                         </div>
+                     </div>
+                     <div class="panel-footer nopadding">
+                         <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                             <div class="btn-group">
+                                 <button class="btn btn-default" role="button" type="submit" name="SearchToolBarBottom" title="@Framework.Resx.UIStringResource.Search">
+                                     <span class="glyphicon glyphicon-search"></span>
+                                 </button>
+                             </div>
+                             <div class="btn-group">
+                                 <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_AddNew, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="AddNewToolBarBottom" title="@Framework.Resx.UIStringResource.AddNew">
+                                     <span class="glyphicon glyphicon-plus"></span>
+                                 </a>
+                             </div>
+                             <div class="btn-group">
+                                 <a href="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPCommonOfBuildLog_Export, UrlStringsAlias.ControllerName_BuildLog, new RouteValueDictionary { { "dataServiceType", "Csv" } })'" class="btn btn-default" role="button" type="button" name="ExportToolBarBottom" title="@Framework.Resx.UIStringResource.Export">
+                                     <span class="glyphicon glyphicon-export"></span>
+                                 </a>
+                             </div>
+                             <div class="btn-group">
+                                 <a href="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPCommonOfBuildLog_Export, UrlStringsAlias.ControllerName_BuildLog, new RouteValueDictionary { { "dataServiceType", "Excel2010" } })'" class="btn btn-default" role="button" type="button" name="ExportToExcelToolBarBottom" title="@Framework.Resx.UIStringResource.ExportToExcel">
+                                     <span class="glyphicon glyphicon-export"></span>
+                                 </a>
+                             </div>
+                             <div class="btn-group">
+                                 <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Import, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="ImportToolBarBottom" title="@Framework.Resx.UIStringResource.Import">
+                                     <span class="glyphicon glyphicon-import"></span>
+                                 </a>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
         }
  </div>
  <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9 nopadding">
@@ -257,16 +233,16 @@
                 $('input[rangepickername="datefilter"]').daterangepicker({
                     autoUpdateInput: false,
                     locale: {
-                                cancelLabel: 'Clear'
-                            },
+                        cancelLabel: 'Clear'
+                    },
                     ranges: {
-                               'Today': [moment(), moment()],
-                               'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                               'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-                               'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-                               'This Month': [moment().startOf('month'), moment().endOf('month')],
-                               'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-                            }
+                        'Today': [moment(), moment()],
+                        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                        'This Month': [moment().startOf('month'), moment().endOf('month')],
+                        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                    }
                 });
                 $('input[rangepickername="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
                     var filterCheckbox = $(this).siblings(".input-group-addon").children('input');
@@ -362,12 +338,12 @@
             {
                 $.getJSON(url, params, function (data) {
                     objVM.selectListOfvalueToCompareIdCommonOfOrganization_1OfCommon(data);
-                    if(0 != @(Model.Criteria.ValueToCompareIdCommonOfOrganization_1OfCommon.HasValue ? Model.Criteria.ValueToCompareIdCommonOfOrganization_1OfCommon.Value : default(System.Int64)))
+                    if(0 != @(Model.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_1.NullableValueToCompare.HasValue ? Model.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_1.NullableValueToCompare.Value : default(System.Int64)))
                     {
-                        objVM.selectedvalueToCompareIdCommonOfOrganization_1OfCommon(@Model.Criteria.ValueToCompareIdCommonOfOrganization_1OfCommon);
-                    }
+                        objVM.selectedvalueToCompareIdCommonOfOrganization_1OfCommon(@Model.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_1.NullableValueToCompare.Value);
+                }
                 });
-            }
+        }
         }
         function BuildCriteriaForFetchOrganization_1(selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly) {
             var params = {
@@ -388,12 +364,12 @@
             {
                 $.getJSON(url, params, function (data) {
                     objVM.selectListOfvalueToCompareIdCommonOfSolution_1OfCommon(data);
-                    if(0 != @(Model.Criteria.ValueToCompareIdCommonOfSolution_1OfCommon.HasValue ? Model.Criteria.ValueToCompareIdCommonOfSolution_1OfCommon.Value : default(System.Int32)))
+                    if(0 != @(Model.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.NullableValueToCompare.HasValue ? Model.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.NullableValueToCompare.Value : default(System.Int32)))
                     {
-                        objVM.selectedvalueToCompareIdCommonOfSolution_1OfCommon(@Model.Criteria.ValueToCompareIdCommonOfSolution_1OfCommon);
-                    }
+                        objVM.selectedvalueToCompareIdCommonOfSolution_1OfCommon(@Model.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.NullableValueToCompare.Value);
+                }
                 });
-            }
+        }
         }
         function BuildCriteriaForFetchSolution_1(selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly,selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly) {
             var params = {
@@ -417,12 +393,12 @@
             {
                 $.getJSON(url, params, function (data) {
                     objVM.selectListOfvalueToCompareIdCommonOfBuild_1OfCommon(data);
-                    if(0 != @(Model.Criteria.ValueToCompareIdCommonOfBuild_1OfCommon.HasValue ? Model.Criteria.ValueToCompareIdCommonOfBuild_1OfCommon.Value : default(System.Int64)))
+                    if(0 != @(Model.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.NullableValueToCompare.HasValue ? Model.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.NullableValueToCompare.Value : default(System.Int64)))
                     {
-                        objVM.selectedvalueToCompareIdCommonOfBuild_1OfCommon(@Model.Criteria.ValueToCompareIdCommonOfBuild_1OfCommon);
-                    }
+                        objVM.selectedvalueToCompareIdCommonOfBuild_1OfCommon(@Model.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.NullableValueToCompare.Value);
+                }
                 });
-            }
+        }
         }
         function BuildCriteriaForFetchBuild_1(selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly,selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly,selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly) {
             var params = {
@@ -450,6 +426,6 @@
         }
         var objVM = new CascadingDDLViewModel();
         ko.applyBindings(objVM);
-$("#Criteria_ValueToCompareValueToCompareIdCommonOfOrganization_2OfCommon").change();
+        $("#Criteria_ValueToCompareValueToCompareIdCommonOfOrganization_2OfCommon").change();
     </script>
 }

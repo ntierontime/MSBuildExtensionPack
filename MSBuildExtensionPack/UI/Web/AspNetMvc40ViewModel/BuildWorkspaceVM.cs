@@ -45,7 +45,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
             }
 
             var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCBuild.GetMessageOfDefaultOfCommon(
-                new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaCommon(this.Criteria)
+				this.Criteria
                 , this.QueryPagingSetting
                 , this.QueryOrderBySettingCollection);
 

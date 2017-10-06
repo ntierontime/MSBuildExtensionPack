@@ -35,10 +35,10 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         {
             log.Info(string.Format("{0}: WPCommonOfSolution", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-            Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommonFlatten> vmFromTempData;
+            Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon> vmFromTempData;
             if (TempData.ContainsKey(TempDataKey_WPCommonOfSolution))
             {
-                vmFromTempData = (Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommonFlatten>)TempData[TempDataKey_WPCommonOfSolution];
+                vmFromTempData = (Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon>)TempData[TempDataKey_WPCommonOfSolution];
             }
             else
             {

@@ -15,8 +15,10 @@ namespace Framework.Mvc
         public List<SelectListItem> SelectListOfPageSize { get; set; }
         public List<SelectListItem> SelectListOfQueryOrderBySettingCollecionInString { get; set; }
         public List<SelectListItem> SelectListOfDataExport { get; set; }
+		public List<SelectListItem> SelectListOfPreDefinedDateTimeRanges { get; set; }
+		public List<SelectListItem> SelectListOfPredefinedBooleanOptions { get; set; }
 
-        public static Framework.Mvc.UISharedViewModel GetUISharedViewModel(
+		public static Framework.Mvc.UISharedViewModel GetUISharedViewModel(
             IList<Framework.NameValuePair> listOfQueryOrderBySettingCollecionInString
             , IList<Framework.NameValuePair> pageSizeSelectionList
             , IList<Framework.NameValuePair> listOfDataExport)
@@ -24,8 +26,10 @@ namespace Framework.Mvc
             Framework.Mvc.UISharedViewModel retval = new Framework.Mvc.UISharedViewModel();
             retval.SelectListOfQueryOrderBySettingCollecionInString = Framework.Mvc.MvcHelper.BuildListOfSelectListItem(listOfQueryOrderBySettingCollecionInString);
             retval.SelectListOfPageSize = Framework.Mvc.MvcHelper.BuildListOfSelectListItem(pageSizeSelectionList);
-            retval.SelectListOfDataExport = Framework.Mvc.MvcHelper.BuildListOfSelectListItem(listOfDataExport);
-            return retval;
+			retval.SelectListOfDataExport = Framework.Mvc.MvcHelper.BuildListOfSelectListItem(listOfDataExport);
+			retval.SelectListOfPreDefinedDateTimeRanges = Framework.Mvc.MvcHelper.BuildListOfSelectListItem(Framework.EntityContracts.QuerySystemDateTimeRangeCriteria.GetList(null));
+			retval.SelectListOfPredefinedBooleanOptions = Framework.Mvc.MvcHelper.BuildListOfSelectListItem(Framework.EntityContracts.QuerySystemBooleanEqualsCriteria.GetList(null));
+			return retval;
         }
     }
 }
