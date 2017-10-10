@@ -50,20 +50,16 @@
 </div>
                 </div>
                 <div class="panel-body">
- <div class="form-group">
-</div>
 <div class="form-group">
-<div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareDescriptionCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon</label>
 </div>
-@Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedDescriptionCommonOftOfCommon, new { @class = "form-control" })
-</div>
-<div class="form-group">
-<div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareEventCodeCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.IsToCompare_ID_CheckBox_Search_isToCompareEventCodeCommonOftOfCommon</label>
-</div>
-@Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedEventCodeCommonOftOfCommon, new { @class = "form-control" })
-</div>
+                    <div class="form-group">
+                            <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon</label>
+                            @Html.TextBoxFor(model => model.Criteria.BuildEventCodeQueryCriteriaCommon.DescriptionCommonOft.NullableValueToBeContained, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.IsToCompare_ID_CheckBox_Search_isToCompareEventCodeCommonOftOfCommon</label>
+                            @Html.TextBoxFor(model => model.Criteria.BuildEventCodeQueryCriteriaCommon.EventCodeCommonOft.NullableValueToBeContained, new { @class = "form-control" })
+                        </div>
                     <div class="form-group form-inline">
                         <label class="control-label">Items per page : </label>
                         @Html.DropDownListFor(model => model.QueryPagingSetting.PageSize, Model.UISharedViewModel.SelectListOfPageSize, new Dictionary<string, Object> { { "class", "form-control" }, { "onchange", "this.form.submit();" } })

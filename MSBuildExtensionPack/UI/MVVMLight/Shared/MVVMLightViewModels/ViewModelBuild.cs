@@ -129,10 +129,12 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                         {
                             this.EntityCollectionDefault = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Build.Default>(result.Result.ToList());
                         }
-
-                        foreach (var item in result.Result)
+                        else
                         {
-                            this.EntityCollectionDefault.Add(item);
+                            foreach (var item in result.Result)
+                            {
+                                this.EntityCollectionDefault.Add(item);
+                            }
                         }
 
                         this.QueryPagingSetting = result.QueryPagingSetting;

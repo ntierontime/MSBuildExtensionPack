@@ -45,28 +45,24 @@
     <Compile Include="Controllers\BuildController.cs" />
     <Compile Include="Controllers\BuildController.gg.cs">
       <DependentUpon>BuildController.cs</DependentUpon>
-      <SubType>GeneratedCSharpCode</SubType>
     </Compile>
     <Compile Include="Controllers\BuildEventCodeController.cs" />
     <Compile Include="Controllers\BuildEventCodeController.gg.cs">
       <DependentUpon>BuildEventCodeController.cs</DependentUpon>
-      <SubType>GeneratedCSharpCode</SubType>
     </Compile>
     <Compile Include="Controllers\BuildLogController.cs" />
     <Compile Include="Controllers\BuildLogController.gg.cs">
       <DependentUpon>BuildLogController.cs</DependentUpon>
-      <SubType>GeneratedCSharpCode</SubType>
     </Compile>
     <Compile Include="Controllers\OrganizationController.cs" />
     <Compile Include="Controllers\OrganizationController.gg.cs">
       <DependentUpon>OrganizationController.cs</DependentUpon>
-      <SubType>GeneratedCSharpCode</SubType>
     </Compile>
     <Compile Include="Controllers\SolutionController.cs" />
     <Compile Include="Controllers\SolutionController.gg.cs">
       <DependentUpon>SolutionController.cs</DependentUpon>
-      <SubType>GeneratedCSharpCode</SubType>
     </Compile>
+    <Content Include="Scripts\app.js" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
@@ -130,7 +126,6 @@
     <Content Include="Global.asax" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Helpers\ClaimsAuthorizationAttribute.cs" />
     <Compile Include="Helpers\CustomizedClaimTypes.cs" />
