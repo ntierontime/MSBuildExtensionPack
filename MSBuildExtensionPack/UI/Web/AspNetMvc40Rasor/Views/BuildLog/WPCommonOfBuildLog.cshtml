@@ -240,14 +240,9 @@
             return params;
         }
         function FetchBuild_1() {
-            var selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly = $('select[name="Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.NullableValueToCompare"]').val();
-            var selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly = $('select[name="Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_1.NullableValueToCompare"]').val();
-            var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $('select[name="Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_2.NullableValueToCompare"]').val();
             var url = "/api/BuildApi/GetCollectionOfNameValuePairOfByFKOnly";
-            var params = BuildCriteriaForFetchBuild_1(selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly,selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly,selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly);
-            if(selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly && selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly && selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-            {
                 try {
+                    var params = BuildCriteriaForFetchBuild_1();
                     $.getJSON(url, params, function (data) {
                         objVM.selectListOfvalueToCompareIdCommonOfBuild_1OfCommon(data);
                         objVM.selectedvalueToCompareIdCommonOfBuild_1OfCommon(@Model.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.ValueToCompare);
@@ -255,9 +250,11 @@
                 }
                 catch (e) {
                 }
-            }
         }
-        function BuildCriteriaForFetchBuild_1(selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly,selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly,selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly) {
+        function BuildCriteriaForFetchBuild_1() {
+            var selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly = $('select[name="Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.NullableValueToCompare"]').val();
+            var selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly = $('select[name="Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_1.NullableValueToCompare"]').val();
+            var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $('select[name="Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_2.NullableValueToCompare"]').val();
             var params = {
                 isToCompareIdByFKOnlyOfSolution_1OfByFKOnly: true,
                 valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly,
