@@ -6,17 +6,17 @@ namespace MSBuildExtensionPack.DataSourceEntities
     /// <summary>
     /// collection class for entity <see cref="BuildLog"/>
     /// </summary>
-	public partial class BuildLogCollection : List<BuildLog>
-	{ 
+    public partial class BuildLogCollection : List<BuildLog>
+    {
 
-		#region constructors
+        #region constructors
 
         /// <summary>
         ///  default constructors
         /// </summary>
-		public BuildLogCollection(): base()
-		{
-		}
+        public BuildLogCollection(): base()
+        {
+        }
 
         /// <summary>
         /// constructor with IEnumerable input
@@ -27,7 +27,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         {
         }
 
-		#endregion constructors
+        #endregion constructors
 
         #region Add(...)
 
@@ -35,24 +35,22 @@ namespace MSBuildExtensionPack.DataSourceEntities
         /// add an item with parameters of .net value type for each property
         /// </summary>
         public void Add(
-			System.Int64 id
-			, System.Int64 buildId
-			, System.Int32 buildEventCodeId
-			, System.String message
-			, System.DateTime eventTime)
+            System.Int64 id
+            , System.Int64 buildId
+            , System.Int32 buildEventCodeId
+            , System.String message
+            , System.DateTime eventTime)
         {
             BuildLog _Item = new BuildLog(
-				id
-				, buildId
-				, buildEventCodeId
-				, message
-				, eventTime			);
+                id
+                , buildId
+                , buildEventCodeId
+                , message
+                , eventTime            );
             this.Add(_Item);
         }
 
         #endregion Add(...)
-
-
 
         #region PrediacteByFKs
 
@@ -61,11 +59,11 @@ namespace MSBuildExtensionPack.DataSourceEntities
         /// </summary>
         /// <param name="criteria">The criteria.</param>
         /// <returns>true if any, otherwise false</returns>
-		public bool ExistsByFKs(BuildLogQueryCriteriaByEntityReference criteria)
-		{
+        public bool ExistsByFKs(BuildLogQueryCriteriaByEntityReference criteria)
+        {
             MSBuildExtensionPack.EntityContracts.QueryPredicateBuildLogByFKs<BuildLog> _PrediacteByFKs = new MSBuildExtensionPack.EntityContracts.QueryPredicateBuildLogByFKs<BuildLog>(criteria);
             return this.Count(_PrediacteByFKs.Predicate) > 0;
-		}
+        }
 
         /// <summary>
         /// Gets the by FKs.
@@ -73,10 +71,10 @@ namespace MSBuildExtensionPack.DataSourceEntities
         /// <param name="criteria">The criteria.</param>
         /// <returns>the first entity if any, otherwise null</returns>
         public BuildLog GetByFKs(BuildLogQueryCriteriaByEntityReference criteria)
-		{
+        {
             MSBuildExtensionPack.EntityContracts.QueryPredicateBuildLogByFKs<BuildLog> _PrediacteByFKs = new MSBuildExtensionPack.EntityContracts.QueryPredicateBuildLogByFKs<BuildLog>(criteria);
             return this.Single(_PrediacteByFKs.Predicate);
-		}
+        }
 
         /// <summary>
         /// Gets the collection by FKs.
@@ -87,36 +85,34 @@ namespace MSBuildExtensionPack.DataSourceEntities
         {
             MSBuildExtensionPack.EntityContracts.QueryPredicateBuildLogByFKs<BuildLog> _PrediacteByFKs = new MSBuildExtensionPack.EntityContracts.QueryPredicateBuildLogByFKs<BuildLog>(criteria);
             return new BuildLogCollection(this.Where(_PrediacteByFKs.Predicate));
-		}
+        }
 
         #endregion PrediacteByFKs
 
+    }
 
-	}
-
-		    /// <summary>
+            /// <summary>
 
     /// <summary>
     ///  a property defined when <see cref="IBuildLogCollection"/> is used in other classes.
     /// </summary>
-	public partial interface IBuildLogCollection
-	{ 
+    public partial interface IBuildLogCollection
+    {
         /// <summary>
         /// Gets or sets the BuildLogCollection
         /// </summary>
         /// <value>
         /// BuildLogCollection
         /// </value>
-		BuildLogCollection BuildLogCollection { get; set; }
-	}
+        BuildLogCollection BuildLogCollection { get; set; }
+    }
 
     /// <summary>
     /// message definition, pass single entry, pulled from database, to business logic layer. <see cref="BuildLogCollection"/> and <see cref="Framework.DataSourceEntities.DataAccessLayerMessageBase&lt;T&gt;"/> />
     /// </summary>
-	public partial class DataAccessLayerMessageOfEntityCollectionBuildLog
+    public partial class DataAccessLayerMessageOfEntityCollectionBuildLog
         : Framework.DataSourceEntities.DataAccessLayerMessageBase<BuildLogCollection>
     {
     }
-
 
 }

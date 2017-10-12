@@ -57,6 +57,6 @@ namespace Framework.DAL
 //        TCollection GetAll();
 //        int GetCountOfAll();
 //        T GetByIdentifier(TIdentifier id);
-	}
+    }
 }
 

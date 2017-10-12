@@ -21,76 +21,114 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 style="display: inline;">
-                @MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildLog.BuildLog
+                @MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.BuildLog
             </h3>
-		</div>
+        </div>
 @if (Model.StatusOfMasterEntity == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
 { // Item
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Edit, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="EditToolBarUp" title="@Framework.Resources.UIStringResource.EditAlternativeText">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Edit, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="EditToolBarUp" title="@Framework.Resx.UIStringResource.Edit">
         <span class="glyphicon glyphicon-edit"></span>
     </a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_AddNew, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="AddNewToolBarUp" title="@Framework.Resources.UIStringResource.AddNewAlternativeText">
-		<span class="glyphicon glyphicon-plus"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_AddNew, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="AddNewToolBarUp" title="@Framework.Resx.UIStringResource.AddNew">
+        <span class="glyphicon glyphicon-plus"></span>
+    </a>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Copy, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="CopyToolBarUp" title="@Framework.Resources.UIStringResource.CopyAlternativeText">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Copy, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="CopyToolBarUp" title="@Framework.Resx.UIStringResource.Copy">
         <span class="glyphicon glyphicon-copy"></span>
     </a>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Details, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="DetailsToolBarUp" title="@Framework.Resources.UIStringResource.DetailsAlternativeText">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Details, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="DetailsToolBarUp" title="@Framework.Resx.UIStringResource.Details">
         <span class="glyphicon glyphicon-file"></span>
     </a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Index, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resources.UIStringResource.GotoSearchAlternativeText">
-		<span class="glyphicon glyphicon-search"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Index, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearch">
+        <span class="glyphicon glyphicon-search"></span>
+    </a>
 </div>
 </div>
         <div class="panel-body">
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.Build_1_Name, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.Build_1_Name, new { @class = "control-label" })
         <div class="form-control">
 @Html.ActionLink(Model.MasterEntity.Build_1_Name, UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.BuildId }, null)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.Id, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.Id, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.Id)
+            @Html.DisplayFor(model => model.MasterEntity.Id)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.Solution_1_Name, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.Solution_1_Name, new { @class = "control-label" })
         <div class="form-control">
 @Html.ActionLink(Model.MasterEntity.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Solution_1Id }, null)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.BuildEventCode_1_Name, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.Organization_1_UniqueidentifierColumn, new { @class = "control-label" })
+        <div class="form-control">
+            @Html.DisplayFor(model => model.MasterEntity.Organization_1_UniqueidentifierColumn)
+        </div>
+    </div>
+<div class="form-group">
+            @Html.LabelFor(model => model.MasterEntity.Organization_1_UniqueIdentifier, new { @class = "control-label" })
+        <div class="form-control">
+            @Html.DisplayFor(model => model.MasterEntity.Organization_1_UniqueIdentifier)
+        </div>
+    </div>
+<div class="form-group">
+            @Html.LabelFor(model => model.MasterEntity.Organization_1_Name, new { @class = "control-label" })
+        <div class="form-control">
+@Html.ActionLink(Model.MasterEntity.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Organization_1Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Organization_1_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Organization_1_UniqueidentifierColumn }, null)
+        </div>
+    </div>
+<div class="form-group">
+            @Html.LabelFor(model => model.MasterEntity.Organization_2_UniqueidentifierColumn, new { @class = "control-label" })
+        <div class="form-control">
+            @Html.DisplayFor(model => model.MasterEntity.Organization_2_UniqueidentifierColumn)
+        </div>
+    </div>
+<div class="form-group">
+            @Html.LabelFor(model => model.MasterEntity.Organization_2_UniqueIdentifier, new { @class = "control-label" })
+        <div class="form-control">
+            @Html.DisplayFor(model => model.MasterEntity.Organization_2_UniqueIdentifier)
+        </div>
+    </div>
+<div class="form-group">
+            @Html.LabelFor(model => model.MasterEntity.Organization_2_Name, new { @class = "control-label" })
+        <div class="form-control">
+@Html.ActionLink(Model.MasterEntity.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Organization_2Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Organization_2_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Organization_2_UniqueidentifierColumn }, null)
+        </div>
+    </div>
+<div class="form-group">
+            @Html.LabelFor(model => model.MasterEntity.BuildEventCode_1_Name, new { @class = "control-label" })
         <div class="form-control">
 @Html.ActionLink(Model.MasterEntity.BuildEventCode_1_Name, UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.BuildEventCodeId }, null)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.Message, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.Message, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.Message)
+            @Html.DisplayFor(model => model.MasterEntity.Message)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.MasterEntity.EventTime, new { @class = "control-label" })
+            @Html.LabelFor(model => model.MasterEntity.EventTime, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.MasterEntity.EventTime)
+            @Html.DisplayFor(model => model.MasterEntity.EventTime)
         </div>
     </div>
 @Html.HiddenFor(model => model.MasterEntity.Solution_1Id)
+@Html.HiddenFor(model => model.MasterEntity.Organization_1Id)
+@Html.HiddenFor(model => model.MasterEntity.Organization_2Id)
 @Html.HiddenFor(model => model.MasterEntity.BuildId)
 @Html.HiddenFor(model => model.MasterEntity.BuildEventCodeId)
         </div>
@@ -99,19 +137,19 @@
 {
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_AddNew, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="AddNewToolBarUp" title="@Framework.Resources.UIStringResource.AddNewAlternativeText">
-		<span class="glyphicon glyphicon-plus"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_AddNew, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="AddNewToolBarUp" title="@Framework.Resx.UIStringResource.AddNew">
+        <span class="glyphicon glyphicon-plus"></span>
+    </a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPEntityRelatedOfBuildLog, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
-		<span class="glyphicon glyphicon-briefcase"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPEntityRelatedOfBuildLog, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetails">
+        <span class="glyphicon glyphicon-briefcase"></span>
+    </a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Index, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resources.UIStringResource.GotoSearchAlternativeText">
-		<span class="glyphicon glyphicon-search"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Index, UrlStringsAlias.ControllerName_BuildLog)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearch">
+        <span class="glyphicon glyphicon-search"></span>
+    </a>
 </div>
 </div>
 <div class="text-danger">@Model.StatusMessageOfMasterEntity</div>
@@ -124,7 +162,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 style="display: inline;">
-                <a data-toggle="collapse" href="#collapseBuild_1">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuild.Build</a>
+                <a data-toggle="collapse" href="#collapseBuild_1">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Build</a>
             </h3>
         </div>
         <div id="collapseBuild_1" class="panel-collapse collapse">
@@ -132,27 +170,27 @@
 { // Item
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Build_Index, UrlStringsAlias.ControllerName_Build)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resources.UIStringResource.GotoSearchAlternativeText">
-		<span class="glyphicon glyphicon-search"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Build_Index, UrlStringsAlias.ControllerName_Build)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearch">
+        <span class="glyphicon glyphicon-search"></span>
+    </a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Build_1.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
-		<span class="glyphicon glyphicon-briefcase"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Build_1.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetails">
+        <span class="glyphicon glyphicon-briefcase"></span>
+    </a>
 </div>
 </div>
         <div class="panel-body">
 <div class="form-group">
-			@Html.LabelFor(model => model.Build_1.Id, new { @class = "control-label" })
+            @Html.LabelFor(model => model.Build_1.Id, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.Build_1.Id)
+            @Html.DisplayFor(model => model.Build_1.Id)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.Build_1.Name, new { @class = "control-label" })
+            @Html.LabelFor(model => model.Build_1.Name, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.Build_1.Name)
+            @Html.DisplayFor(model => model.Build_1.Name)
         </div>
     </div>
         </div>
@@ -161,14 +199,14 @@
 {
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Build_Index, UrlStringsAlias.ControllerName_Build)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resources.UIStringResource.GotoSearchAlternativeText">
-		<span class="glyphicon glyphicon-search"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Build_Index, UrlStringsAlias.ControllerName_Build)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearch">
+        <span class="glyphicon glyphicon-search"></span>
+    </a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Build_1.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
-		<span class="glyphicon glyphicon-briefcase"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Build_1.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetails">
+        <span class="glyphicon glyphicon-briefcase"></span>
+    </a>
 </div>
 </div>
 <div class="text-danger">@Model.StatusMessageOfBuild_1</div>
@@ -182,7 +220,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 style="display: inline;">
-                <a data-toggle="collapse" href="#collapseSolution_2">@MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Solution</a>
+                <a data-toggle="collapse" href="#collapseSolution_2">@MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Solution</a>
             </h3>
         </div>
         <div id="collapseSolution_2" class="panel-collapse collapse">
@@ -190,27 +228,27 @@
 { // Item
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Solution_Index, UrlStringsAlias.ControllerName_Solution)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resources.UIStringResource.GotoSearchAlternativeText">
-		<span class="glyphicon glyphicon-search"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Solution_Index, UrlStringsAlias.ControllerName_Solution)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearch">
+        <span class="glyphicon glyphicon-search"></span>
+    </a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Solution_1.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
-		<span class="glyphicon glyphicon-briefcase"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Solution_1.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetails">
+        <span class="glyphicon glyphicon-briefcase"></span>
+    </a>
 </div>
 </div>
         <div class="panel-body">
 <div class="form-group">
-			@Html.LabelFor(model => model.Solution_1.Id, new { @class = "control-label" })
+            @Html.LabelFor(model => model.Solution_1.Id, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.Solution_1.Id)
+            @Html.DisplayFor(model => model.Solution_1.Id)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.Solution_1.Name, new { @class = "control-label" })
+            @Html.LabelFor(model => model.Solution_1.Name, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.Solution_1.Name)
+            @Html.DisplayFor(model => model.Solution_1.Name)
         </div>
     </div>
         </div>
@@ -219,14 +257,14 @@
 {
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Solution_Index, UrlStringsAlias.ControllerName_Solution)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resources.UIStringResource.GotoSearchAlternativeText">
-		<span class="glyphicon glyphicon-search"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Solution_Index, UrlStringsAlias.ControllerName_Solution)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearch">
+        <span class="glyphicon glyphicon-search"></span>
+    </a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Solution_1.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
-		<span class="glyphicon glyphicon-briefcase"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Solution_1.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetails">
+        <span class="glyphicon glyphicon-briefcase"></span>
+    </a>
 </div>
 </div>
 <div class="text-danger">@Model.StatusMessageOfSolution_1</div>
@@ -235,40 +273,204 @@
     </div>
 </div>
 <!-- Aside.21.End. MSBuildExtensionPack.Solution => RelatedEntityWhenMasterViewIsFKEntity -->
-<!-- Aside.31.Start. MSBuildExtensionPack.BuildEventCode => RelatedEntityWhenMasterViewIsFKEntity -->
+<!-- Aside.31.Start. MSBuildExtensionPack.Organization => RelatedEntityWhenMasterViewIsFKEntity -->
 <div class="panel-group">
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 style="display: inline;">
-                <a data-toggle="collapse" href="#collapseBuildEventCode_3">@MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildEventCode.BuildEventCode</a>
+                <a data-toggle="collapse" href="#collapseOrganization_3">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Organization</a>
             </h3>
         </div>
-        <div id="collapseBuildEventCode_3" class="panel-collapse collapse">
-@if (Model.StatusOfBuildEventCode_1 == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+        <div id="collapseOrganization_3" class="panel-collapse collapse">
+@if (Model.StatusOfOrganization_1 == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
 { // Item
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_Index, UrlStringsAlias.ControllerName_BuildEventCode)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resources.UIStringResource.GotoSearchAlternativeText">
-		<span class="glyphicon glyphicon-search"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Index, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearch">
+        <span class="glyphicon glyphicon-search"></span>
+    </a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.BuildEventCode_1.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
-		<span class="glyphicon glyphicon-briefcase"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_1.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_1.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_1.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetails">
+        <span class="glyphicon glyphicon-briefcase"></span>
+    </a>
 </div>
 </div>
         <div class="panel-body">
 <div class="form-group">
-			@Html.LabelFor(model => model.BuildEventCode_1.Id, new { @class = "control-label" })
+            @Html.LabelFor(model => model.Organization_1.Id, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.BuildEventCode_1.Id)
+            @Html.DisplayFor(model => model.Organization_1.Id)
         </div>
     </div>
 <div class="form-group">
-			@Html.LabelFor(model => model.BuildEventCode_1.EventCode, new { @class = "control-label" })
+            @Html.LabelFor(model => model.Organization_1.Name, new { @class = "control-label" })
         <div class="form-control">
-			@Html.DisplayFor(model => model.BuildEventCode_1.EventCode)
+            @Html.DisplayFor(model => model.Organization_1.Name)
+        </div>
+    </div>
+<div class="form-group">
+            @Html.LabelFor(model => model.Organization_1.IsSystemBuiltIn, new { @class = "control-label" })
+        <div class="form-control">
+            @Html.DisplayFor(model => model.Organization_1.IsSystemBuiltIn)
+        </div>
+    </div>
+<div class="form-group">
+            @Html.LabelFor(model => model.Organization_1.UniqueIdentifier, new { @class = "control-label" })
+        <div class="form-control">
+            @Html.DisplayFor(model => model.Organization_1.UniqueIdentifier)
+        </div>
+    </div>
+<div class="form-group">
+            @Html.LabelFor(model => model.Organization_1.BitColumn, new { @class = "control-label" })
+        <div class="form-control">
+            @Html.DisplayFor(model => model.Organization_1.BitColumn)
+        </div>
+    </div>
+<div class="form-group">
+            @Html.LabelFor(model => model.Organization_1.UniqueidentifierColumn, new { @class = "control-label" })
+        <div class="form-control">
+            @Html.DisplayFor(model => model.Organization_1.UniqueidentifierColumn)
+        </div>
+    </div>
+        </div>
+}
+@if (Model.StatusOfOrganization_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady && Model.StatusOfOrganization_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+{
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+<div class="btn-group">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Index, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearch">
+        <span class="glyphicon glyphicon-search"></span>
+    </a>
+</div>
+<div class="btn-group">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_1.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_1.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_1.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetails">
+        <span class="glyphicon glyphicon-briefcase"></span>
+    </a>
+</div>
+</div>
+<div class="text-danger">@Model.StatusMessageOfOrganization_1</div>
+}
+        </div>
+    </div>
+</div>
+<!-- Aside.31.End. MSBuildExtensionPack.Organization => RelatedEntityWhenMasterViewIsFKEntity -->
+<!-- Aside.41.Start. MSBuildExtensionPack.Organization => RelatedEntityWhenMasterViewIsFKEntity -->
+<div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 style="display: inline;">
+                <a data-toggle="collapse" href="#collapseOrganization_4">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Organization</a>
+            </h3>
+        </div>
+        <div id="collapseOrganization_4" class="panel-collapse collapse">
+@if (Model.StatusOfOrganization_2 == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+{ // Item
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+<div class="btn-group">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Index, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearch">
+        <span class="glyphicon glyphicon-search"></span>
+    </a>
+</div>
+<div class="btn-group">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetails">
+        <span class="glyphicon glyphicon-briefcase"></span>
+    </a>
+</div>
+</div>
+        <div class="panel-body">
+<div class="form-group">
+            @Html.LabelFor(model => model.Organization_2.Id, new { @class = "control-label" })
+        <div class="form-control">
+            @Html.DisplayFor(model => model.Organization_2.Id)
+        </div>
+    </div>
+<div class="form-group">
+            @Html.LabelFor(model => model.Organization_2.Name, new { @class = "control-label" })
+        <div class="form-control">
+            @Html.DisplayFor(model => model.Organization_2.Name)
+        </div>
+    </div>
+<div class="form-group">
+            @Html.LabelFor(model => model.Organization_2.IsSystemBuiltIn, new { @class = "control-label" })
+        <div class="form-control">
+            @Html.DisplayFor(model => model.Organization_2.IsSystemBuiltIn)
+        </div>
+    </div>
+<div class="form-group">
+            @Html.LabelFor(model => model.Organization_2.UniqueIdentifier, new { @class = "control-label" })
+        <div class="form-control">
+            @Html.DisplayFor(model => model.Organization_2.UniqueIdentifier)
+        </div>
+    </div>
+<div class="form-group">
+            @Html.LabelFor(model => model.Organization_2.BitColumn, new { @class = "control-label" })
+        <div class="form-control">
+            @Html.DisplayFor(model => model.Organization_2.BitColumn)
+        </div>
+    </div>
+<div class="form-group">
+            @Html.LabelFor(model => model.Organization_2.UniqueidentifierColumn, new { @class = "control-label" })
+        <div class="form-control">
+            @Html.DisplayFor(model => model.Organization_2.UniqueidentifierColumn)
+        </div>
+    </div>
+        </div>
+}
+@if (Model.StatusOfOrganization_2 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady && Model.StatusOfOrganization_2 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+{
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+<div class="btn-group">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Index, UrlStringsAlias.ControllerName_Organization)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearch">
+        <span class="glyphicon glyphicon-search"></span>
+    </a>
+</div>
+<div class="btn-group">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetails">
+        <span class="glyphicon glyphicon-briefcase"></span>
+    </a>
+</div>
+</div>
+<div class="text-danger">@Model.StatusMessageOfOrganization_2</div>
+}
+        </div>
+    </div>
+</div>
+<!-- Aside.41.End. MSBuildExtensionPack.Organization => RelatedEntityWhenMasterViewIsFKEntity -->
+<!-- Aside.51.Start. MSBuildExtensionPack.BuildEventCode => RelatedEntityWhenMasterViewIsFKEntity -->
+<div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 style="display: inline;">
+                <a data-toggle="collapse" href="#collapseBuildEventCode_5">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.BuildEventCode</a>
+            </h3>
+        </div>
+        <div id="collapseBuildEventCode_5" class="panel-collapse collapse">
+@if (Model.StatusOfBuildEventCode_1 == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+{ // Item
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+<div class="btn-group">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_Index, UrlStringsAlias.ControllerName_BuildEventCode)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearch">
+        <span class="glyphicon glyphicon-search"></span>
+    </a>
+</div>
+<div class="btn-group">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.BuildEventCode_1.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetails">
+        <span class="glyphicon glyphicon-briefcase"></span>
+    </a>
+</div>
+</div>
+        <div class="panel-body">
+<div class="form-group">
+            @Html.LabelFor(model => model.BuildEventCode_1.Id, new { @class = "control-label" })
+        <div class="form-control">
+            @Html.DisplayFor(model => model.BuildEventCode_1.Id)
+        </div>
+    </div>
+<div class="form-group">
+            @Html.LabelFor(model => model.BuildEventCode_1.EventCode, new { @class = "control-label" })
+        <div class="form-control">
+            @Html.DisplayFor(model => model.BuildEventCode_1.EventCode)
         </div>
     </div>
         </div>
@@ -277,14 +479,14 @@
 {
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_Index, UrlStringsAlias.ControllerName_BuildEventCode)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resources.UIStringResource.GotoSearchAlternativeText">
-		<span class="glyphicon glyphicon-search"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_Index, UrlStringsAlias.ControllerName_BuildEventCode)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resx.UIStringResource.GotoSearch">
+        <span class="glyphicon glyphicon-search"></span>
+    </a>
 </div>
 <div class="btn-group">
-	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.BuildEventCode_1.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
-		<span class="glyphicon glyphicon-briefcase"></span>
-	</a>
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.BuildEventCode_1.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetails">
+        <span class="glyphicon glyphicon-briefcase"></span>
+    </a>
 </div>
 </div>
 <div class="text-danger">@Model.StatusMessageOfBuildEventCode_1</div>
@@ -292,7 +494,7 @@
         </div>
     </div>
 </div>
-<!-- Aside.31.End. MSBuildExtensionPack.BuildEventCode => RelatedEntityWhenMasterViewIsFKEntity -->
+<!-- Aside.51.End. MSBuildExtensionPack.BuildEventCode => RelatedEntityWhenMasterViewIsFKEntity -->
  </div>
  </div>
 @section Scripts {
@@ -333,7 +535,7 @@
                         $(element).css('border', '1px solid rgb(170, 170, 170)');
                     },
                 errorLabelContainer: "#ErrorList",
-                wrapper: "li",
+                wrapper: "li"
             });
         }));
         //cascaded dropdownlist by knockoutjs

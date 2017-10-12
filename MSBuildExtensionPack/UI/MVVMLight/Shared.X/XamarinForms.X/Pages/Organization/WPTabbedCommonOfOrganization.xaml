@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+        xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
+        xmlns:l ="clr-namespace:MSBuildExtensionPack.XamarinForms.Pages.Organization"
+        x:Class="MSBuildExtensionPack.XamarinForms.Pages.Organization.WPTabbedCommonOfOrganization"
+        Title="{i18n:Translate Text=Organization, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}"
+        NavigationPage.HasBackButton="False"
+        >
+    <NavigationPage.HasNavigationBar>
+        <OnPlatform x:TypeArguments="x:Boolean">
+            <On Platform="Android">True</On>
+            <On Platform="iOS">True</On>
+            <On Platform="Windows">False</On>
+            <On Platform="WinPhone">False</On>
+        </OnPlatform>
+    </NavigationPage.HasNavigationBar>
+<l:WPCommonSearchViewOfOrganization/>
+<l:WPCommonResultViewOfOrganization/>
+</TabbedPage>

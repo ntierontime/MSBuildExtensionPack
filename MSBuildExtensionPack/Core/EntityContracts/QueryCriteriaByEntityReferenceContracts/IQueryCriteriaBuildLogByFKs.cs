@@ -8,29 +8,28 @@ namespace MSBuildExtensionPack.EntityContracts
     /// <summary>
     /// Interaction logic for IQueryCriteriaBuildLogByFKs
     /// </summary>
-	public partial interface IQueryCriteriaBuildLogByFKs
-	{
+    public partial interface IQueryCriteriaBuildLogByFKs
+    {
 
-        		bool IsToCompareBuildId { get; set; }
-        		System.Int64 ComparedToBuildId { get; set; }
-        
+                bool IsToCompareBuildId { get; set; }
+                System.Int64 ComparedToBuildId { get; set; }
 
-        		bool IsToCompareBuildEventCodeId { get; set; }
-        		System.Int32 ComparedToBuildEventCodeId { get; set; }
-        
-	}
+                bool IsToCompareBuildEventCodeId { get; set; }
+                System.Int32 ComparedToBuildEventCodeId { get; set; }
 
-	#region PrediacteByFKs
+    }
+
+    #region PrediacteByFKs
 
     public class QueryPredicateBuildLogByFKs<T>
-		where T: IBuildLog
+        where T: IBuildLog
     {
-		public IQueryCriteriaBuildLogByFKs Criteria { get; set; }
+        public IQueryCriteriaBuildLogByFKs Criteria { get; set; }
 
         public QueryPredicateBuildLogByFKs(IQueryCriteriaBuildLogByFKs criteria)
         {
-			this. Criteria = criteria;
-		}
+            this. Criteria = criteria;
+        }
 
         public bool Predicate(T input)
         {
@@ -48,7 +47,6 @@ namespace MSBuildExtensionPack.EntityContracts
 
  (this.Criteria.IsToCompareBuildId == false || this.Criteria.IsToCompareBuildId == true && input.BuildId == this.Criteria.ComparedToBuildId)
 
-
 &&(this.Criteria.IsToCompareBuildEventCodeId == false || this.Criteria.IsToCompareBuildEventCodeId == true && input.BuildEventCodeId == this.Criteria.ComparedToBuildEventCodeId)
 
 );
@@ -57,5 +55,5 @@ namespace MSBuildExtensionPack.EntityContracts
         }
     }
 
-	#endregion PrediacteByID
+    #endregion PrediacteByID
 }

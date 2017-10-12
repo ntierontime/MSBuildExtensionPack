@@ -34,31 +34,29 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Compile Include="TextBoxUpdateSourceBehaviour.cs" />
-    <Compile Include="BindingUtility.cs" />
-    <Compile Include="BooleanToOnOffConverter.cs" />
-    <Compile Include="InfiniteListBox.cs" />
-    <Compile Include="LayoutAwarePage.cs" />
-    <Compile Include="NameValuePairToIntegerConverter.cs" />
-    <Compile Include="RichTextColumns.cs" />
-    <Compile Include="SuspensionManager.cs" />
+    <Compile Include="Converters\EnumToNameValuePairConverter.cs" />
+    <Compile Include="IDispatcherHelperWrapper.cs" />
     <Compile Include="ViewModelBaseWithResultAndUIElement.cs" />
     <Compile Include="ViewModelItemBase.cs" />
-    <Compile Include="BooleanNegationConverter.cs" />
-    <Compile Include="MenuTreeItem.cs" />
+    <None Include="map.1.D.1.vsd" />
+    <None Include="map.1.D.1.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Framework\Framework.csproj">
       <Project>{6d25aa30-c3af-4ae0-b567-0f2653120cdc}</Project>
       <Name>Framework</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Framework.CommonBLLEntities\Framework.CommonBLLEntities.csproj">
+      <Project>{ba8c8c0b-470a-4d3c-b3da-9e28599799b5}</Project>
+      <Name>Framework.CommonBLLEntities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Framework.EntityContracts\Framework.EntityContracts.csproj">
       <Project>{c3a270de-9727-492e-91e2-f56e7e0e0f83}</Project>
       <Name>Framework.EntityContracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Framework.Resources\Framework.Resources.csproj">
+    <ProjectReference Include="..\Framework.Resx\Framework.Resx.csproj">
       <Project>{c72b898b-b53b-42d5-9f4f-673f84bb485b}</Project>
-      <Name>Framework.Resources</Name>
+      <Name>Framework.Resx</Name>
     </ProjectReference>
     <ProjectReference Include="..\Framework.ViewModels\Framework.ViewModels.csproj">
       <Project>{2cc97c32-9ffa-4da4-a6c0-83f300404ec3}</Project>
@@ -70,15 +68,9 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.ServiceModel" />
-    <Reference Include="System.Xaml" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="GalaSoft.MvvmLight, Version=5.3.0.19026, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">

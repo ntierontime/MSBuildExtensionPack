@@ -14,7 +14,7 @@ namespace Framework.ViewModels
         }
 
         public Framework.EntityContracts.ContentData ContentData { get; set; }
-        
+
         public TSearchCriteria Criteria { get; set; }
 
         public Framework.EntityContracts.QueryPagingSetting QueryPagingSetting { get; set; }
@@ -23,6 +23,8 @@ namespace Framework.ViewModels
         public Framework.NameValueCollection ListOfQueryOrderBySettingCollecionInString { get; set; }
         public Framework.NameValueCollection ListOfDataExport { get; set; }
         public Framework.EntityContracts.QueryOrderBySettingCollection QueryOrderBySettingCollection { get; set; }
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfResult { get; set; }
+        public string StatusMessageOfResult { get; set; }
 
         public Framework.ViewModels.IViewModelBase<TSearchCriteria> GetPrimaryInformationEntity()
         {
@@ -38,7 +40,6 @@ namespace Framework.ViewModels
 
             return vm;
         }
-
 
         public virtual void PopulateAllUIElements(Framework.ViewModels.IViewModelBase<TSearchCriteria> vmFromTempData, int currentPage)
         {
@@ -151,17 +152,16 @@ namespace Framework.ViewModels
         {
         }
     }
-    
+
     public class ViewModelBase<TSearchCriteria, TSearchResult> : ViewModelBase<TSearchCriteria>, Framework.ViewModels.IViewModelBase<TSearchCriteria, TSearchResult>
         where TSearchCriteria : class, new()
     {
-		public ViewModelBase()
+        public ViewModelBase()
             : base()
         {
-            this.SearchStatus = Framework.EntityContracts.SearchStatus.Unknown;
+            this.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady;
         }
         public TSearchResult Result {get;set;}
-		public Framework.EntityContracts.SearchStatus SearchStatus { get; set; }
     }
 }
 

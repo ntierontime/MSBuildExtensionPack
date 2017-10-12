@@ -1,7 +1,6 @@
 using System.Windows;
 using GalaSoft.MvvmLight.Threading;
 
-
 namespace MSBuildExtensionPack.WPF4App
 {
     /// <summary>
@@ -11,26 +10,25 @@ namespace MSBuildExtensionPack.WPF4App
     {
         static App()
         {
-            Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer, Framework.CommonBLLEntities.BusinessLogicLayerContextContainerCommon>();
+            Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<Framework.Xaml.IDispatcherHelperWrapper, MSBuildExtensionPack.WPF4App.DispatcherHelperWrapper>();
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl = System.Configuration.ConfigurationManager.AppSettings[Framework.ViewModels.ApiControllerHttpClientBase.WebApiRootUrlAppSettingName];
+            DispatcherHelper.Initialize();
 
-			#region Asyncronized wcf method call
+            #region for async wcf calls -- to-be-removed
+            //Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer, Framework.CommonBLLEntities.BusinessLogicLayerContextContainerCommon>();
+            //Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<MSBuildExtensionPack.WcfContracts.IBusinessLogicLayerFactoryAsyn, MSBuildExtensionPack.WcfClientBLL.WcfClientFactoryAsyn>();
+            //Framework.CommonBLLEntities.BusinessLogicLayerMemberShip _BusinessLogicLayerMemberShip = new Framework.CommonBLLEntities.BusinessLogicLayerMemberShip();
+            //Framework.CommonBLLEntities.SessionVariablesCommon.BusinessLogicLayerContext = new Framework.CommonBLLEntities.BusinessLogicLayerContext(_BusinessLogicLayerMemberShip);
+            #endregion for async wcf calls -- to-be-removed
 
-            Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<MSBuildExtensionPack.WcfContracts.IBusinessLogicLayerFactoryAsyn, MSBuildExtensionPack.WcfClientBLL.WcfClientFactoryAsyn>();
-			
-            #endregion Asyncronized wcf method call
-
-            #region Syncronized wcf method call -- not in use/WPF only
+            #region Syncronized wcf method call -- not in use/WPF only -- to-be-removed
 
             /*
             Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<MSBuildExtensionPack.WcfContracts.IBusinessLogicLayerFactory, MSBuildExtensionPack.WcfClientBLL.WcfClientFactory>();
-			*/
+            */
 
-            #endregion Syncronized wcf method call -- not in use/WPF only
-
-            Framework.CommonBLLEntities.BusinessLogicLayerMemberShip _BusinessLogicLayerMemberShip = new Framework.CommonBLLEntities.BusinessLogicLayerMemberShip();
-            Framework.CommonBLLEntities.SessionVariablesCommon.BusinessLogicLayerContext = new Framework.CommonBLLEntities.BusinessLogicLayerContext(_BusinessLogicLayerMemberShip);
-
-			DispatcherHelper.Initialize();
+            #endregion Syncronized wcf method call -- not in use/WPF only -- to-be-removed
         }
     }
 }
+

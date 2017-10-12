@@ -19,13 +19,11 @@ namespace MSBuildExtensionPack.WcfWebApp
             return new Rss20FeedFormatter(feed);
         }
 
-
         public Rss20FeedFormatter GetBuildEventCode()
         {
             SyndicationFeed feed = MSBuildExtensionPack.CommonBLL.SyndicationFeedFacade.GetBuildEventCode();
             return new Rss20FeedFormatter(feed);
         }
-
 
         public Rss20FeedFormatter GetBuildLog()
         {
@@ -33,6 +31,11 @@ namespace MSBuildExtensionPack.WcfWebApp
             return new Rss20FeedFormatter(feed);
         }
 
+        public Rss20FeedFormatter GetOrganization()
+        {
+            SyndicationFeed feed = MSBuildExtensionPack.CommonBLL.SyndicationFeedFacade.GetOrganization();
+            return new Rss20FeedFormatter(feed);
+        }
 
         public Rss20FeedFormatter GetSolution()
         {
@@ -40,8 +43,6 @@ namespace MSBuildExtensionPack.WcfWebApp
             return new Rss20FeedFormatter(feed);
         }
 
-
     }
 }
-
 

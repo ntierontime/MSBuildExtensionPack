@@ -37,27 +37,35 @@
     <Compile Include="ChainedQueryCriteria\BuildChainedQueryCriteria.cs" />
     <Compile Include="ChainedQueryCriteria\BuildEventCodeChainedQueryCriteria.cs" />
     <Compile Include="ChainedQueryCriteria\BuildLogChainedQueryCriteria.cs" />
+    <Compile Include="ChainedQueryCriteria\OrganizationChainedQueryCriteria.cs" />
     <Compile Include="ChainedQueryCriteria\SolutionChainedQueryCriteria.cs" />
     <Compile Include="QueryCriteria\BuildQueryCriteria.cs" />
     <Compile Include="QueryCriteria\BuildEventCodeQueryCriteria.cs" />
     <Compile Include="QueryCriteria\BuildLogQueryCriteria.cs" />
+    <Compile Include="QueryCriteria\OrganizationQueryCriteria.cs" />
     <Compile Include="QueryCriteria\SolutionQueryCriteria.cs" />
     <Compile Include="RequestMessagesBuiltIn\BuildRequestMessageBuiltIn.cs" />
     <Compile Include="RequestMessagesBuiltIn\BuildEventCodeRequestMessageBuiltIn.cs" />
     <Compile Include="RequestMessagesBuiltIn\BuildLogRequestMessageBuiltIn.cs" />
+    <Compile Include="RequestMessagesBuiltIn\OrganizationRequestMessageBuiltIn.cs" />
     <Compile Include="RequestMessagesBuiltIn\SolutionRequestMessageBuiltIn.cs" />
     <Compile Include="RequestMessagesUserDefined\BuildRequestMessageUserDefined.cs" />
     <Compile Include="RequestMessagesUserDefined\BuildEventCodeRequestMessageUserDefined.cs" />
     <Compile Include="RequestMessagesUserDefined\BuildLogRequestMessageUserDefined.cs" />
+    <Compile Include="RequestMessagesUserDefined\OrganizationRequestMessageUserDefined.cs" />
     <Compile Include="RequestMessagesUserDefined\SolutionRequestMessageUserDefined.cs" />
     <Compile Include="ResponseMessagesBuiltIn\BuildResponseMessageBuiltIn.cs" />
     <Compile Include="ResponseMessagesBuiltIn\BuildEventCodeResponseMessageBuiltIn.cs" />
     <Compile Include="ResponseMessagesBuiltIn\BuildLogResponseMessageBuiltIn.cs" />
+    <Compile Include="ResponseMessagesBuiltIn\OrganizationResponseMessageBuiltIn.cs" />
     <Compile Include="ResponseMessagesBuiltIn\SolutionResponseMessageBuiltIn.cs" />
     <Compile Include="ResponseMessagesUserDefined\BuildResponseMessageUserDefined.cs" />
     <Compile Include="ResponseMessagesUserDefined\BuildEventCodeResponseMessageUserDefined.cs" />
     <Compile Include="ResponseMessagesUserDefined\BuildLogResponseMessageUserDefined.cs" />
+    <Compile Include="ResponseMessagesUserDefined\OrganizationResponseMessageUserDefined.cs" />
     <Compile Include="ResponseMessagesUserDefined\SolutionResponseMessageUserDefined.cs" />
+    <None Include="map.2.B.3.vsd" />
+    <None Include="map.2.B.3.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataSourceEntities\MSBuildExtensionPack.DataSourceEntities.csproj">
@@ -87,14 +95,6 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.ServiceModel" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

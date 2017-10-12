@@ -3,8 +3,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:vm="clr-namespace:MSBuildExtensionPack.ViewModels;assembly=MSBuildExtensionPack.ViewModels"
-	xmlns:fvm="clr-namespace:Framework.Xaml;assembly=Framework.Xaml"
+    xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels"
+    xmlns:fvm="clr-namespace:Framework.Xaml;assembly=Framework.Xaml"
     mc:Ignorable="d"
     >
     <BooleanToVisibilityConverter x:Key="BoolToVis" />
@@ -88,14 +88,14 @@
         <Setter Property="Background" Value="LightBlue" />
         <Setter Property="HorizontalAlignment" Value="Stretch" />
     </Style>
-	<Style TargetType="ToolTip">
-	  <Setter Property = "HorizontalOffset" Value="10"/>
-	  <Setter Property = "VerticalOffset" Value="10"/>
-	  <Setter Property = "Background" Value="LightBlue"/>
-	  <Setter Property = "Foreground" Value="Purple"/>
-	  <Setter Property = "FontSize" Value="14"/>
-	  <Setter Property = "FontWeight" Value="Bold"/>
-	</Style>
+    <Style TargetType="ToolTip">
+      <Setter Property = "HorizontalOffset" Value="10"/>
+      <Setter Property = "VerticalOffset" Value="10"/>
+      <Setter Property = "Background" Value="LightBlue"/>
+      <Setter Property = "Foreground" Value="Purple"/>
+      <Setter Property = "FontSize" Value="14"/>
+      <Setter Property = "FontWeight" Value="Bold"/>
+    </Style>
     <Style x:Key="LinkButton" TargetType="Button">
         <Setter Property="Template">
             <Setter.Value>

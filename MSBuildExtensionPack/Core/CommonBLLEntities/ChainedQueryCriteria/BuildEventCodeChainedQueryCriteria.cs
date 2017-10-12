@@ -8,21 +8,20 @@ using Framework;
 namespace MSBuildExtensionPack.CommonBLLEntities
 {
 
-    
-	/// <summary>
+    /// <summary>
     /// BusinessLogicLayerChainedQueryCriteria, key=Common
     /// </summary>
-    public partial class BuildEventCodeChainedQueryCriteriaCommon
+    public class BuildEventCodeChainedQueryCriteriaCommon
     {
-		#region constructors
+        #region constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaCommon"/> class.
         /// </summary>
-		public BuildEventCodeChainedQueryCriteriaCommon()
-			: this(new BuildEventCodeChainedQueryCriteriaCommonFlatten())
-		{
-		}
+        public BuildEventCodeChainedQueryCriteriaCommon()
+            : this(new BuildEventCodeChainedQueryCriteriaCommonFlatten())
+        {
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaCommon"/> class.
@@ -30,9 +29,9 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="input">Flatten query class</param>
         public BuildEventCodeChainedQueryCriteriaCommon(BuildEventCodeChainedQueryCriteriaCommonFlatten input)
             : this(
-				input.IsToCompareEventCodeCommonOftOfCommon, input.ValueToBeContainedEventCodeCommonOftOfCommon
-				, input.IsToCompareDescriptionCommonOftOfCommon, input.ValueToBeContainedDescriptionCommonOftOfCommon
-			)
+                input.IsToCompareEventCodeCommonOftOfCommon, input.ValueToBeContainedEventCodeCommonOftOfCommon
+                , input.IsToCompareDescriptionCommonOftOfCommon, input.ValueToBeContainedDescriptionCommonOftOfCommon
+            )
         {
         }
 
@@ -40,120 +39,121 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaCommon"/> class.
         /// </summary>
 
-		public BuildEventCodeChainedQueryCriteriaCommon(
-			BuildEventCodeQueryCriteriaCommon buildEventCodeQueryCriteriaCommon			
-			)
-		{
-			this.BuildEventCodeQueryCriteriaCommon = buildEventCodeQueryCriteriaCommon;
-		}
+        public BuildEventCodeChainedQueryCriteriaCommon(
+            BuildEventCodeQueryCriteriaCommon buildEventCodeQueryCriteriaCommon
+            )
+        {
+            this.BuildEventCodeQueryCriteriaCommon = buildEventCodeQueryCriteriaCommon;
+        }
 
-		/// <summary>
-		/// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaCommon"/> class.
-		/// </summary>
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaCommon"/> class.
+        /// </summary>
         /// <param name="eventCodeCommonOftOfCommon">Initialize criteria of EventCodeCommonOftOfCommon</param>
-        /// <param name="descriptionCommonOftOfCommon">Initialize criteria of DescriptionCommonOftOfCommon</param>	
-		public BuildEventCodeChainedQueryCriteriaCommon(
-			QuerySystemStringContainsCriteria eventCodeCommonOftOfCommon
-			, QuerySystemStringContainsCriteria descriptionCommonOftOfCommon
-			)
-			: this(
-			new BuildEventCodeQueryCriteriaCommon(eventCodeCommonOftOfCommon,descriptionCommonOftOfCommon)
-				)
-		{
-		}
+        /// <param name="descriptionCommonOftOfCommon">Initialize criteria of DescriptionCommonOftOfCommon</param>
+        public BuildEventCodeChainedQueryCriteriaCommon(
+            QuerySystemStringContainsCriteria eventCodeCommonOftOfCommon
+            , QuerySystemStringContainsCriteria descriptionCommonOftOfCommon
+            )
+            : this(
+            new BuildEventCodeQueryCriteriaCommon(eventCodeCommonOftOfCommon,descriptionCommonOftOfCommon)
+                )
+        {
+        }
 
-
-		/// <summary>
-		/// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaCommon"/> class.
-		/// </summary>
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaCommon"/> class.
+        /// </summary>
         /// <param name="isToCompareEventCodeCommonOftOfCommon">will compare/filter EventCodeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToBeContainedEventCodeCommonOftOfCommon">value to compare/filter with EventCodeCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareDescriptionCommonOftOfCommon">will compare/filter DescriptionCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon">value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>	
-		public BuildEventCodeChainedQueryCriteriaCommon(
-			bool isToCompareEventCodeCommonOftOfCommon, System.String valueToBeContainedEventCodeCommonOftOfCommon
-			, bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
-			)
-			: this(
-			new QuerySystemStringContainsCriteria(isToCompareEventCodeCommonOftOfCommon, valueToBeContainedEventCodeCommonOftOfCommon)
-			, new QuerySystemStringContainsCriteria(isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon)
-				)
-		{
-		}
+        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon">value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>
+        public BuildEventCodeChainedQueryCriteriaCommon(
+            bool isToCompareEventCodeCommonOftOfCommon, System.String valueToBeContainedEventCodeCommonOftOfCommon
+            , bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
+            )
+            : this(
+            new QuerySystemStringContainsCriteria(isToCompareEventCodeCommonOftOfCommon, valueToBeContainedEventCodeCommonOftOfCommon)
+            , new QuerySystemStringContainsCriteria(isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon)
+                )
+        {
+        }
 
+        #endregion constructors
 
+        #region Propertyies
 
-		#endregion constructors
-
-		#region Propertyies
-
-		
         /// <summary>
         /// DataQueryPerQuerySetting, key is Common
         /// </summary>
         public BuildEventCodeQueryCriteriaCommon BuildEventCodeQueryCriteriaCommon { get; set; }
-		#endregion Propertyies
-	}
+        #endregion Propertyies
+    }
 
-	public partial class BuildEventCodeChainedQueryCriteriaCommonFlatten
+    public class BuildEventCodeChainedQueryCriteriaCommonFlatten
     {
-		#region constructors
+        #region constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaCommonFlatten"/> class.
         /// </summary>
-		public BuildEventCodeChainedQueryCriteriaCommonFlatten()
-		{
-			this.IsToCompareEventCodeCommonOftOfCommon= false; this.ValueToBeContainedEventCodeCommonOftOfCommon= null;
-			this.IsToCompareDescriptionCommonOftOfCommon= false; this.ValueToBeContainedDescriptionCommonOftOfCommon= null;
-		}
+        public BuildEventCodeChainedQueryCriteriaCommonFlatten()
+        {
+            this.IsToCompareEventCodeCommonOftOfCommon= false; this.ValueToBeContainedEventCodeCommonOftOfCommon= null;
+            this.IsToCompareDescriptionCommonOftOfCommon= false; this.ValueToBeContainedDescriptionCommonOftOfCommon= null;
+        }
 
-
-		/// <summary>
-		/// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaCommonFlatten"/> class.
-		/// </summary>
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaCommonFlatten"/> class.
+        /// </summary>
         /// <param name="isToCompareEventCodeCommonOftOfCommon">will compare/filter EventCodeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToBeContainedEventCodeCommonOftOfCommon">value to compare/filter with EventCodeCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareDescriptionCommonOftOfCommon">will compare/filter DescriptionCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon">value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>	
-		public BuildEventCodeChainedQueryCriteriaCommonFlatten(
-			bool isToCompareEventCodeCommonOftOfCommon, System.String valueToBeContainedEventCodeCommonOftOfCommon
-			, bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
-			)
-		{
-			this.IsToCompareEventCodeCommonOftOfCommon= isToCompareEventCodeCommonOftOfCommon; this.ValueToBeContainedEventCodeCommonOftOfCommon= valueToBeContainedEventCodeCommonOftOfCommon;
-			this.IsToCompareDescriptionCommonOftOfCommon= isToCompareDescriptionCommonOftOfCommon; this.ValueToBeContainedDescriptionCommonOftOfCommon= valueToBeContainedDescriptionCommonOftOfCommon;
-		}
+        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon">value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>
+        public BuildEventCodeChainedQueryCriteriaCommonFlatten(
+            bool isToCompareEventCodeCommonOftOfCommon, System.String valueToBeContainedEventCodeCommonOftOfCommon
+            , bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
+            )
+        {
+            this.IsToCompareEventCodeCommonOftOfCommon= isToCompareEventCodeCommonOftOfCommon; this.ValueToBeContainedEventCodeCommonOftOfCommon= valueToBeContainedEventCodeCommonOftOfCommon;
+            this.IsToCompareDescriptionCommonOftOfCommon= isToCompareDescriptionCommonOftOfCommon; this.ValueToBeContainedDescriptionCommonOftOfCommon= valueToBeContainedDescriptionCommonOftOfCommon;
+        }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaCommonFlatten"/> class.
+        /// </summary>
+        public BuildEventCodeChainedQueryCriteriaCommonFlatten(BuildEventCodeChainedQueryCriteriaCommon input)
+            : this(
+            input.BuildEventCodeQueryCriteriaCommon.EventCodeCommonOft.IsToCompare, input.BuildEventCodeQueryCriteriaCommon.EventCodeCommonOft.ValueToBeContained
+            , input.BuildEventCodeQueryCriteriaCommon.DescriptionCommonOft.IsToCompare, input.BuildEventCodeQueryCriteriaCommon.DescriptionCommonOft.ValueToBeContained
+            )
+        {
+        }
 
+        #endregion constructors
 
-		#endregion constructors
+        #region Propertyies
 
-		#region Propertyies
+        public bool IsToCompareEventCodeCommonOftOfCommon { get; set; } public System.String ValueToBeContainedEventCodeCommonOftOfCommon { get; set; }
+        public bool IsToCompareDescriptionCommonOftOfCommon { get; set; } public System.String ValueToBeContainedDescriptionCommonOftOfCommon { get; set; }
 
-		public bool IsToCompareEventCodeCommonOftOfCommon { get; set; } public System.String ValueToBeContainedEventCodeCommonOftOfCommon { get; set; }
-		public bool IsToCompareDescriptionCommonOftOfCommon { get; set; } public System.String ValueToBeContainedDescriptionCommonOftOfCommon { get; set; }
+        #endregion Propertyies
+    }
 
-		#endregion Propertyies
-	}
-
-
-
-    
-	/// <summary>
+    /// <summary>
     /// BusinessLogicLayerChainedQueryCriteria, key=All
     /// </summary>
-    public partial class BuildEventCodeChainedQueryCriteriaAll
+    public class BuildEventCodeChainedQueryCriteriaAll
     {
-		#region constructors
+        #region constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaAll"/> class.
         /// </summary>
-		public BuildEventCodeChainedQueryCriteriaAll()
-			
-		{
-		}
+        public BuildEventCodeChainedQueryCriteriaAll()
+
+        {
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaAll"/> class.
@@ -162,7 +162,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         public BuildEventCodeChainedQueryCriteriaAll(BuildEventCodeChainedQueryCriteriaAllFlatten input)
             : this(
 
-			)
+            )
         {
         }
 
@@ -170,66 +170,57 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaAll"/> class.
         /// </summary>
 
-		public BuildEventCodeChainedQueryCriteriaAll(
-			BuildEventCodeQueryCriteriaAll buildEventCodeQueryCriteriaAll			
-			)
-		{
-			this.BuildEventCodeQueryCriteriaAll = buildEventCodeQueryCriteriaAll;
-		}
+        public BuildEventCodeChainedQueryCriteriaAll(
+            BuildEventCodeQueryCriteriaAll buildEventCodeQueryCriteriaAll
+            )
+        {
+            this.BuildEventCodeQueryCriteriaAll = buildEventCodeQueryCriteriaAll;
+        }
 
+        #endregion constructors
 
-		#endregion constructors
+        #region Propertyies
 
-		#region Propertyies
-
-		
         /// <summary>
         /// DataQueryPerQuerySetting, key is All
         /// </summary>
         public BuildEventCodeQueryCriteriaAll BuildEventCodeQueryCriteriaAll { get; set; }
-		#endregion Propertyies
-	}
+        #endregion Propertyies
+    }
 
-	public partial class BuildEventCodeChainedQueryCriteriaAllFlatten
+    public class BuildEventCodeChainedQueryCriteriaAllFlatten
     {
-		#region constructors
+        #region constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaAllFlatten"/> class.
         /// </summary>
-		public BuildEventCodeChainedQueryCriteriaAllFlatten()
-		{
+        public BuildEventCodeChainedQueryCriteriaAllFlatten()
+        {
 
-		}
+        }
 
+        #endregion constructors
 
+        #region Propertyies
 
-		#endregion constructors
+        #endregion Propertyies
+    }
 
-		#region Propertyies
-
-
-
-		#endregion Propertyies
-	}
-
-
-
-    
-	/// <summary>
+    /// <summary>
     /// BusinessLogicLayerChainedQueryCriteria, key=ByIdentifier
     /// </summary>
-    public partial class BuildEventCodeChainedQueryCriteriaByIdentifier
+    public class BuildEventCodeChainedQueryCriteriaByIdentifier
     {
-		#region constructors
+        #region constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaByIdentifier"/> class.
         /// </summary>
-		public BuildEventCodeChainedQueryCriteriaByIdentifier()
-			: this(new BuildEventCodeChainedQueryCriteriaByIdentifierFlatten())
-		{
-		}
+        public BuildEventCodeChainedQueryCriteriaByIdentifier()
+            : this(new BuildEventCodeChainedQueryCriteriaByIdentifierFlatten())
+        {
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaByIdentifier"/> class.
@@ -237,8 +228,8 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="input">Flatten query class</param>
         public BuildEventCodeChainedQueryCriteriaByIdentifier(BuildEventCodeChainedQueryCriteriaByIdentifierFlatten input)
             : this(
-				input.IsToCompareIdByIdentifierOftOfByIdentifier, input.ValueToCompareIdByIdentifierOftOfByIdentifier.HasValue ? input.ValueToCompareIdByIdentifierOftOfByIdentifier.Value : default(int)
-			)
+                input.IsToCompareIdByIdentifierOftOfByIdentifier, input.ValueToCompareIdByIdentifierOftOfByIdentifier.HasValue ? input.ValueToCompareIdByIdentifierOftOfByIdentifier.Value : default(int)
+            )
         {
         }
 
@@ -246,91 +237,93 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaByIdentifier"/> class.
         /// </summary>
 
-		public BuildEventCodeChainedQueryCriteriaByIdentifier(
-			BuildEventCodeQueryCriteriaByIdentifier buildEventCodeQueryCriteriaByIdentifier			
-			)
-		{
-			this.BuildEventCodeQueryCriteriaByIdentifier = buildEventCodeQueryCriteriaByIdentifier;
-		}
+        public BuildEventCodeChainedQueryCriteriaByIdentifier(
+            BuildEventCodeQueryCriteriaByIdentifier buildEventCodeQueryCriteriaByIdentifier
+            )
+        {
+            this.BuildEventCodeQueryCriteriaByIdentifier = buildEventCodeQueryCriteriaByIdentifier;
+        }
 
-		/// <summary>
-		/// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaByIdentifier"/> class.
-		/// </summary>
-        /// <param name="idByIdentifierOftOfByIdentifier">Initialize criteria of IdByIdentifierOftOfByIdentifier</param>	
-		public BuildEventCodeChainedQueryCriteriaByIdentifier(
-			QuerySystemInt32EqualsCriteria idByIdentifierOftOfByIdentifier
-			)
-			: this(
-			new BuildEventCodeQueryCriteriaByIdentifier(idByIdentifierOftOfByIdentifier)
-				)
-		{
-		}
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaByIdentifier"/> class.
+        /// </summary>
+        /// <param name="idByIdentifierOftOfByIdentifier">Initialize criteria of IdByIdentifierOftOfByIdentifier</param>
+        public BuildEventCodeChainedQueryCriteriaByIdentifier(
+            QuerySystemInt32EqualsCriteria idByIdentifierOftOfByIdentifier
+            )
+            : this(
+            new BuildEventCodeQueryCriteriaByIdentifier(idByIdentifierOftOfByIdentifier)
+                )
+        {
+        }
 
-
-		/// <summary>
-		/// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaByIdentifier"/> class.
-		/// </summary>
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaByIdentifier"/> class.
+        /// </summary>
         /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>	
-		public BuildEventCodeChainedQueryCriteriaByIdentifier(
-			bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32 valueToCompareIdByIdentifierOftOfByIdentifier
-			)
-			: this(
-			new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier)
-				)
-		{
-		}
+        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        public BuildEventCodeChainedQueryCriteriaByIdentifier(
+            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            )
+            : this(
+            new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier)
+                )
+        {
+        }
 
+        #endregion constructors
 
+        #region Propertyies
 
-		#endregion constructors
-
-		#region Propertyies
-
-		
         /// <summary>
         /// DataQueryPerQuerySetting, key is ByIdentifier
         /// </summary>
         public BuildEventCodeQueryCriteriaByIdentifier BuildEventCodeQueryCriteriaByIdentifier { get; set; }
-		#endregion Propertyies
-	}
+        #endregion Propertyies
+    }
 
-	public partial class BuildEventCodeChainedQueryCriteriaByIdentifierFlatten
+    public class BuildEventCodeChainedQueryCriteriaByIdentifierFlatten
     {
-		#region constructors
+        #region constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaByIdentifierFlatten"/> class.
         /// </summary>
-		public BuildEventCodeChainedQueryCriteriaByIdentifierFlatten()
-		{
-			this.IsToCompareIdByIdentifierOftOfByIdentifier= false; this.ValueToCompareIdByIdentifierOftOfByIdentifier= default(int);
-		}
+        public BuildEventCodeChainedQueryCriteriaByIdentifierFlatten()
+        {
+            this.IsToCompareIdByIdentifierOftOfByIdentifier= false; this.ValueToCompareIdByIdentifierOftOfByIdentifier= default(int);
+        }
 
-
-		/// <summary>
-		/// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaByIdentifierFlatten"/> class.
-		/// </summary>
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaByIdentifierFlatten"/> class.
+        /// </summary>
         /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>	
-		public BuildEventCodeChainedQueryCriteriaByIdentifierFlatten(
-			bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
-			)
-		{
-			this.IsToCompareIdByIdentifierOftOfByIdentifier= isToCompareIdByIdentifierOftOfByIdentifier; this.ValueToCompareIdByIdentifierOftOfByIdentifier= valueToCompareIdByIdentifierOftOfByIdentifier;
-		}
+        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        public BuildEventCodeChainedQueryCriteriaByIdentifierFlatten(
+            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            )
+        {
+            this.IsToCompareIdByIdentifierOftOfByIdentifier= isToCompareIdByIdentifierOftOfByIdentifier; this.ValueToCompareIdByIdentifierOftOfByIdentifier= valueToCompareIdByIdentifierOftOfByIdentifier;
+        }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BuildEventCodeChainedQueryCriteriaByIdentifierFlatten"/> class.
+        /// </summary>
+        public BuildEventCodeChainedQueryCriteriaByIdentifierFlatten(BuildEventCodeChainedQueryCriteriaByIdentifier input)
+            : this(
+            input.BuildEventCodeQueryCriteriaByIdentifier.IdByIdentifierOft.IsToCompare, input.BuildEventCodeQueryCriteriaByIdentifier.IdByIdentifierOft.ValueToCompare
+            )
+        {
+        }
 
+        #endregion constructors
 
-		#endregion constructors
+        #region Propertyies
 
-		#region Propertyies
+        public bool IsToCompareIdByIdentifierOftOfByIdentifier { get; set; } public System.Int32? ValueToCompareIdByIdentifierOftOfByIdentifier { get; set; }
 
-		public bool IsToCompareIdByIdentifierOftOfByIdentifier { get; set; } public System.Int32? ValueToCompareIdByIdentifierOftOfByIdentifier { get; set; }
-
-		#endregion Propertyies
-	}
-
-
+        #endregion Propertyies
+    }
 
 }
+

@@ -4,12 +4,12 @@ using System.Runtime.Serialization;
 namespace MSBuildExtensionPack.EntityContracts
 {
 
-	public partial interface IBuildEventCodeIdentifier
-	{ 
+    public partial interface IBuildEventCodeIdentifier
+    {
 
         System.Int32 Id { get; set; }
 
-	}
+    }
 
     public class QueryPredicateBuildEventCodeByIdentifier<T>
         where T : IBuildEventCode
@@ -29,7 +29,6 @@ namespace MSBuildExtensionPack.EntityContracts
 ;
         }
     }
-
 
     /// <summary>
     ///  a property defined when <see cref="BuildEventCodeIdentifier"/> is used in other classes.

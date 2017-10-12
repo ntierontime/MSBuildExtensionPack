@@ -12,6 +12,47 @@ namespace MSBuildExtensionPack.EntityFrameworkContext
     using System;
     using System.Collections.Generic;
 
+    #region class RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization
+
+    public partial class RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization
+    {
+        public System.Int64 Id { get; set; }
+        public System.Int64 ParentId { get; set; }
+        public System.String Name { get; set; }
+        public System.Boolean IsSystemBuiltIn { get; set; }
+        public System.Guid UniqueIdentifier { get; set; }
+        public System.DateTime CreatedDateTime { get; set; }
+        public System.String CharColumn { get; set; }
+        public System.String VarcharColumn { get; set; }
+        public System.String TextColumn { get; set; }
+        public System.String NcharColumn { get; set; }
+        public System.String NvarcharColumn { get; set; }
+        public System.String NtextColumn { get; set; }
+        public System.Boolean BitColumn { get; set; }
+        public System.Byte[] BinaryColumn { get; set; }
+        public System.Byte[] VarbinaryColumn { get; set; }
+        public System.Byte[] ImageColumn { get; set; }
+        public System.Byte TinyintColumn { get; set; }
+        public System.Int16 SmallintColumn { get; set; }
+        public System.Int32 IntColumn { get; set; }
+        public System.Int64 BigintColumn { get; set; }
+        public System.Decimal DecimalColumn { get; set; }
+        public System.Decimal NumericColumn { get; set; }
+        public System.Decimal SmallmoneyColumn { get; set; }
+        public System.Decimal MoneyColumn { get; set; }
+        public System.Single FloatColumn { get; set; }
+        public System.Single RealColumn { get; set; }
+        public System.DateTime DatetimeColumn { get; set; }
+        public System.DateTime Datetime2Column { get; set; }
+        public System.DateTime SmalldatetimeColumn { get; set; }
+        public System.DateTime DateColumn { get; set; }
+        public System.TimeSpan TimeColumn { get; set; }
+        public System.Guid UniqueidentifierColumn { get; set; }
+
+        public string RecursivePath__ { get; set; }
+    }
+
+    #endregion class RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization
 
 }
 

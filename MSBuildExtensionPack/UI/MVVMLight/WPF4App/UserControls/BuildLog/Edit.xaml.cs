@@ -25,6 +25,5 @@ namespace MSBuildExtensionPack.WPF4App.UserControls.BuildLog
             InitializeComponent();
         }
     }
-}	
-	
+}
 

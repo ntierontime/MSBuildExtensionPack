@@ -12,13 +12,14 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor
 
             bundles.Add(new ScriptBundle("~/bundles/js").Include(
                         "~/Scripts/jquery-{version}.js"
+                        , "~/Scripts/moment-with-locales.js"
                         , "~/Scripts/jquery.validate.js"
                         , "~/Scripts/jquery.validate.unobtrusive.js"
                         //, "~/Scripts/jquery.unobtrusive-ajax.js"
                         , "~/Scripts/bootstrap.js"
                         , "~/Scripts/bootstrap-datepicker.js"
                         , "~/Scripts/knockout-{version}.js"
-                        //, "~/Scripts/respond.js"
+                        , "~/Scripts/daterangepicker.js"
                         ));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
@@ -29,7 +30,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/bootstrap.css"
                 , "~/Content/bootstrap-datepicker.css"
-                //, "~/Content/bootstrap-datepicker3.css"
+                , "~/Content/daterangepicker.css"
                 , "~/Content/awesome-bootstrap-checkbox.mvcmodified.css"
                 //, "~/Content/PagedList.css"
                 , "~/Content/Site.css"

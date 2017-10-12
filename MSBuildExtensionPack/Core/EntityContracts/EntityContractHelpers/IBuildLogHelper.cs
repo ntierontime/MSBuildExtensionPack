@@ -5,12 +5,12 @@ using System.Runtime.Serialization;
 namespace MSBuildExtensionPack.EntityContracts
 {
     /// <summary>
-    /// provides common methods/actions/stubs on an entity. 
+    /// provides common methods/actions/stubs on an entity.
     /// </summary>
-	public static partial class IBuildLogHelper
-	{
+    public static partial class IBuildLogHelper
+    {
 
-		#region Copy<...>(...), Equals<...>(...), Clone<...>(...), ToString<...>(...), 
+        #region Copy<...>(...), Equals<...>(...), Clone<...>(...), ToString<...>(...),
 
         /// <summary>
         /// Copies the specified from.
@@ -23,20 +23,16 @@ namespace MSBuildExtensionPack.EntityContracts
             where T1 : IBuildLog
             where T2 : IBuildLog
         {
-			to.Id = from.Id;
-			to.BuildId = from.BuildId;
-			to.BuildEventCodeId = from.BuildEventCodeId;
-			to.Message = from.Message;
-			to.EventTime = from.EventTime;
-        } 
+            to.Id = from.Id;
+            to.BuildId = from.BuildId;
+            to.BuildEventCodeId = from.BuildEventCodeId;
+            to.Message = from.Message;
+            to.EventTime = from.EventTime;
+        }
 
+        #region special copy
 
-		#region special copy
-
-
-
-
-		#endregion special copy
+        #endregion special copy
 
         /// <summary>
         /// Equals the specified from.
@@ -50,13 +46,13 @@ namespace MSBuildExtensionPack.EntityContracts
             where T1 : IBuildLog
             where T2 : IBuildLog
         {
-			bool _retval = true;
-			_retval = _retval && to.Id == from.Id;
-			_retval = _retval && to.BuildId == from.BuildId;
-			_retval = _retval && to.BuildEventCodeId == from.BuildEventCodeId;
-			_retval = _retval && to.Message == from.Message;
-			_retval = _retval && to.EventTime == from.EventTime;
-			return _retval;
+            bool _retval = true;
+            _retval = _retval && to.Id == from.Id;
+            _retval = _retval && to.BuildId == from.BuildId;
+            _retval = _retval && to.BuildEventCodeId == from.BuildEventCodeId;
+            _retval = _retval && to.Message == from.Message;
+            _retval = _retval && to.EventTime == from.EventTime;
+            return _retval;
         }
 
         /// <summary>
@@ -74,8 +70,7 @@ namespace MSBuildExtensionPack.EntityContracts
             return _retval;
         }
 
-
-		static string m_Format = "Id:{0};BuildId:{1};BuildEventCodeId:{2};Message:{3};EventTime:{4};";
+        static string m_Format = "Id:{0};BuildId:{1};BuildEventCodeId:{2};Message:{3};EventTime:{4};";
         /// <summary>
         /// Returns a <see cref="System.String"/> that represents this instance.
         /// </summary>
@@ -88,17 +83,17 @@ namespace MSBuildExtensionPack.EntityContracts
             where T : IBuildLog
         {
             return string.Format(m_Format
-				, input.Id
-				, input.BuildId
-				, input.BuildEventCodeId
-				, input.Message
-				, input.EventTime
-				);
+                , input.Id
+                , input.BuildId
+                , input.BuildEventCodeId
+                , input.Message
+                , input.EventTime
+                );
         }
 
-		#endregion Copy<...>(...), Equals<...>(...), Clone<...>(...), ToString<...>(...), 
+        #endregion Copy<...>(...), Equals<...>(...), Clone<...>(...), ToString<...>(...),
 
-		#region CopyCollection<...>(...), CloneCollection<...>(...)
+        #region CopyCollection<...>(...), CloneCollection<...>(...)
 
         /// <summary>
         /// Copies the collection.
@@ -140,9 +135,9 @@ namespace MSBuildExtensionPack.EntityContracts
             T2Collection _retval = new T2Collection();
             CopyCollection<T1Collection, T2Collection, T1, T2>(from, _retval);
             return _retval;
-        } 
+        }
 
-		#endregion CopyCollection<...>(...), CloneCollection<...>(...)
+        #endregion CopyCollection<...>(...), CloneCollection<...>(...)
 
         #region GetDefaultValue<T>()
 
@@ -156,14 +151,9 @@ namespace MSBuildExtensionPack.EntityContracts
         {
             T _retval = new T();
 
-
-
-
             _retval.BuildId = 1;
 
-
             _retval.BuildEventCodeId = 1;
-
 
             return _retval;
         }
@@ -171,8 +161,6 @@ namespace MSBuildExtensionPack.EntityContracts
         #endregion GetDefaultValue<T>()
 
         #region NameValuePair related method
-
-
 
         /// <summary>
         /// Builds the name of name value pair.
@@ -185,7 +173,6 @@ namespace MSBuildExtensionPack.EntityContracts
         {
             return string.Format("{0}", input.Message);
         }
-
 
         /// <summary>
         /// Builds the name value pair.
@@ -200,15 +187,12 @@ namespace MSBuildExtensionPack.EntityContracts
             return _retval;
         }
 
-
-
         #endregion NameValuePair related method
 
-		#region Binary In File System,  BuildPhysicalFileFullPathOfProperty...<T>(T input)
+        #region Binary In File System,  BuildPhysicalFileFullPathOfProperty...<T>(T input)
 
+        #endregion Binary In File System,  BuildPhysicalFileFullPathOfProperty...<T>(T input)
 
-		#endregion Binary In File System,  BuildPhysicalFileFullPathOfProperty...<T>(T input)
-
-	}
+    }
 }
 

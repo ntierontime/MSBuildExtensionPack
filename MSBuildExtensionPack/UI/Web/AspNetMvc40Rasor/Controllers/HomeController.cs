@@ -10,21 +10,21 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = Framework.Resources.UIStringResource.Common_WelcomeToNTIERONTIME;
+            ViewBag.Message = Framework.Resx.UIStringResource.Common_WelcomeToNTIERONTIME;
 
             return View();
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = Framework.Resources.UIStringResource.Common_AboutPageTitle;
+            ViewBag.Message = Framework.Resx.UIStringResource.Common_AboutPageTitle;
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = Framework.Resources.UIStringResource.Common_ContactPageTitle;
+            ViewBag.Message = Framework.Resx.UIStringResource.Common_ContactPageTitle;
 
             return View();
         }

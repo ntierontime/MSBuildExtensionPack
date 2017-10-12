@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-
 namespace MSBuildExtensionPack.CommonBLLEntities
 {
 
-    
-	/// <summary>
+    /// <summary>
     /// BusinessLogicLayerRequestMessageUserDefined, with Key=Common
     /// </summary>
     public partial class BuildLogRequestMessageUserDefinedOfCommon
@@ -20,7 +18,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// Initializes a new instance of the <see cref="BuildLogRequestMessageUserDefinedOfCommon"/> class.
         /// </summary>
         public BuildLogRequestMessageUserDefinedOfCommon()
-			: base()
+            : base()
         {
         }
 
@@ -30,7 +28,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
         /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
         /// <param name="businessLogicLayerRequestID">The business logic layer request ID.</param>
-		public BuildLogRequestMessageUserDefinedOfCommon(
+        public BuildLogRequestMessageUserDefinedOfCommon(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID)
@@ -51,10 +49,10 @@ namespace MSBuildExtensionPack.CommonBLLEntities
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID
-			, int currentIndex
-			, int pageSize
-			, string queryOrderByExpression
-			)
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
             : base(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID, currentIndex, pageSize, queryOrderByExpression)
         {
         }
@@ -62,9 +60,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         #endregion constructors
     }
 
-
-    
-	/// <summary>
+    /// <summary>
     /// BusinessLogicLayerRequestMessageUserDefined, with Key=All
     /// </summary>
     public partial class BuildLogRequestMessageUserDefinedOfAll
@@ -76,7 +72,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// Initializes a new instance of the <see cref="BuildLogRequestMessageUserDefinedOfAll"/> class.
         /// </summary>
         public BuildLogRequestMessageUserDefinedOfAll()
-			: base()
+            : base()
         {
         }
 
@@ -86,7 +82,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
         /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
         /// <param name="businessLogicLayerRequestID">The business logic layer request ID.</param>
-		public BuildLogRequestMessageUserDefinedOfAll(
+        public BuildLogRequestMessageUserDefinedOfAll(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID)
@@ -107,10 +103,10 @@ namespace MSBuildExtensionPack.CommonBLLEntities
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID
-			, int currentIndex
-			, int pageSize
-			, string queryOrderByExpression
-			)
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
             : base(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID, currentIndex, pageSize, queryOrderByExpression)
         {
         }
@@ -118,9 +114,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         #endregion constructors
     }
 
-
-    
-	/// <summary>
+    /// <summary>
     /// BusinessLogicLayerRequestMessageUserDefined, with Key=ByFKOnly
     /// </summary>
     public partial class BuildLogRequestMessageUserDefinedOfByFKOnly
@@ -132,7 +126,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// Initializes a new instance of the <see cref="BuildLogRequestMessageUserDefinedOfByFKOnly"/> class.
         /// </summary>
         public BuildLogRequestMessageUserDefinedOfByFKOnly()
-			: base()
+            : base()
         {
         }
 
@@ -142,7 +136,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
         /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
         /// <param name="businessLogicLayerRequestID">The business logic layer request ID.</param>
-		public BuildLogRequestMessageUserDefinedOfByFKOnly(
+        public BuildLogRequestMessageUserDefinedOfByFKOnly(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID)
@@ -163,10 +157,10 @@ namespace MSBuildExtensionPack.CommonBLLEntities
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID
-			, int currentIndex
-			, int pageSize
-			, string queryOrderByExpression
-			)
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
             : base(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID, currentIndex, pageSize, queryOrderByExpression)
         {
         }
@@ -174,9 +168,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         #endregion constructors
     }
 
-
-    
-	/// <summary>
+    /// <summary>
     /// BusinessLogicLayerRequestMessageUserDefined, with Key=ByIdentifier
     /// </summary>
     public partial class BuildLogRequestMessageUserDefinedOfByIdentifier
@@ -188,7 +180,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// Initializes a new instance of the <see cref="BuildLogRequestMessageUserDefinedOfByIdentifier"/> class.
         /// </summary>
         public BuildLogRequestMessageUserDefinedOfByIdentifier()
-			: base()
+            : base()
         {
         }
 
@@ -198,7 +190,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
         /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
         /// <param name="businessLogicLayerRequestID">The business logic layer request ID.</param>
-		public BuildLogRequestMessageUserDefinedOfByIdentifier(
+        public BuildLogRequestMessageUserDefinedOfByIdentifier(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID)
@@ -219,18 +211,15 @@ namespace MSBuildExtensionPack.CommonBLLEntities
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID
-			, int currentIndex
-			, int pageSize
-			, string queryOrderByExpression
-			)
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
             : base(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID, currentIndex, pageSize, queryOrderByExpression)
         {
         }
 
         #endregion constructors
     }
-
-
-
 
 }

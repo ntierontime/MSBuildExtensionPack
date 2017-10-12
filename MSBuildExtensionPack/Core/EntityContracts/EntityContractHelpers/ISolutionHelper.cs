@@ -5,12 +5,12 @@ using System.Runtime.Serialization;
 namespace MSBuildExtensionPack.EntityContracts
 {
     /// <summary>
-    /// provides common methods/actions/stubs on an entity. 
+    /// provides common methods/actions/stubs on an entity.
     /// </summary>
-	public static partial class ISolutionHelper
-	{
+    public static partial class ISolutionHelper
+    {
 
-		#region Copy<...>(...), Equals<...>(...), Clone<...>(...), ToString<...>(...), 
+        #region Copy<...>(...), Equals<...>(...), Clone<...>(...), ToString<...>(...),
 
         /// <summary>
         /// Copies the specified from.
@@ -23,19 +23,16 @@ namespace MSBuildExtensionPack.EntityContracts
             where T1 : ISolution
             where T2 : ISolution
         {
-			to.Id = from.Id;
-			to.ExternalParentId = from.ExternalParentId;
-			to.Name = from.Name;
-			to.Description = from.Description;
-        } 
+            to.Id = from.Id;
+            to.ExternalParentId = from.ExternalParentId;
+            to.Name = from.Name;
+            to.Description = from.Description;
+            to.OrganizationId = from.OrganizationId;
+        }
 
+        #region special copy
 
-		#region special copy
-
-
-
-
-		#endregion special copy
+        #endregion special copy
 
         /// <summary>
         /// Equals the specified from.
@@ -49,12 +46,13 @@ namespace MSBuildExtensionPack.EntityContracts
             where T1 : ISolution
             where T2 : ISolution
         {
-			bool _retval = true;
-			_retval = _retval && to.Id == from.Id;
-			_retval = _retval && to.ExternalParentId == from.ExternalParentId;
-			_retval = _retval && to.Name == from.Name;
-			_retval = _retval && to.Description == from.Description;
-			return _retval;
+            bool _retval = true;
+            _retval = _retval && to.Id == from.Id;
+            _retval = _retval && to.ExternalParentId == from.ExternalParentId;
+            _retval = _retval && to.Name == from.Name;
+            _retval = _retval && to.Description == from.Description;
+            _retval = _retval && to.OrganizationId == from.OrganizationId;
+            return _retval;
         }
 
         /// <summary>
@@ -72,8 +70,7 @@ namespace MSBuildExtensionPack.EntityContracts
             return _retval;
         }
 
-
-		static string m_Format = "Id:{0};ExternalParentId:{1};Name:{2};Description:{3};";
+        static string m_Format = "Id:{0};ExternalParentId:{1};Name:{2};Description:{3};OrganizationId:{4};";
         /// <summary>
         /// Returns a <see cref="System.String"/> that represents this instance.
         /// </summary>
@@ -86,16 +83,17 @@ namespace MSBuildExtensionPack.EntityContracts
             where T : ISolution
         {
             return string.Format(m_Format
-				, input.Id
-				, input.ExternalParentId
-				, input.Name
-				, input.Description
-				);
+                , input.Id
+                , input.ExternalParentId
+                , input.Name
+                , input.Description
+                , input.OrganizationId
+                );
         }
 
-		#endregion Copy<...>(...), Equals<...>(...), Clone<...>(...), ToString<...>(...), 
+        #endregion Copy<...>(...), Equals<...>(...), Clone<...>(...), ToString<...>(...),
 
-		#region CopyCollection<...>(...), CloneCollection<...>(...)
+        #region CopyCollection<...>(...), CloneCollection<...>(...)
 
         /// <summary>
         /// Copies the collection.
@@ -137,9 +135,9 @@ namespace MSBuildExtensionPack.EntityContracts
             T2Collection _retval = new T2Collection();
             CopyCollection<T1Collection, T2Collection, T1, T2>(from, _retval);
             return _retval;
-        } 
+        }
 
-		#endregion CopyCollection<...>(...), CloneCollection<...>(...)
+        #endregion CopyCollection<...>(...), CloneCollection<...>(...)
 
         #region GetDefaultValue<T>()
 
@@ -153,8 +151,7 @@ namespace MSBuildExtensionPack.EntityContracts
         {
             T _retval = new T();
 
-
-
+            _retval.OrganizationId = 1;
 
             return _retval;
         }
@@ -162,8 +159,6 @@ namespace MSBuildExtensionPack.EntityContracts
         #endregion GetDefaultValue<T>()
 
         #region NameValuePair related method
-
-
 
         /// <summary>
         /// Builds the name of name value pair.
@@ -176,7 +171,6 @@ namespace MSBuildExtensionPack.EntityContracts
         {
             return string.Format("{0}", input.ExternalParentId);
         }
-
 
         /// <summary>
         /// Builds the name value pair.
@@ -191,15 +185,12 @@ namespace MSBuildExtensionPack.EntityContracts
             return _retval;
         }
 
-
-
         #endregion NameValuePair related method
 
-		#region Binary In File System,  BuildPhysicalFileFullPathOfProperty...<T>(T input)
+        #region Binary In File System,  BuildPhysicalFileFullPathOfProperty...<T>(T input)
 
+        #endregion Binary In File System,  BuildPhysicalFileFullPathOfProperty...<T>(T input)
 
-		#endregion Binary In File System,  BuildPhysicalFileFullPathOfProperty...<T>(T input)
-
-	}
+    }
 }
 

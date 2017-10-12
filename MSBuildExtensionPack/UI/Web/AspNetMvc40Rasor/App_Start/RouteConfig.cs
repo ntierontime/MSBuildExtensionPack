@@ -21,3 +21,4 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor
         }
     }
 }
+

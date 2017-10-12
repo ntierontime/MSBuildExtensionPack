@@ -10,7 +10,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
     /// </summary>
     public class EFDataAccessLayerFactory
         : MSBuildExtensionPack.DALContracts.DataAccessLayerFactoryContract
-	{
+    {
         #region constructors
 
         /// <summary>
@@ -22,8 +22,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         #endregion constructors
 
-		#region Entity related
-
+        #region Entity related
 
         /// <summary>
         /// method to create an data access layer class instance of <see cref="MSBuildExtensionPack.DALContracts.IBuildRepository"/>
@@ -34,8 +33,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return new MSBuildExtensionPack.EntityFrameworkDAL.BuildRepository(new MSBuildExtensionPack.EntityFrameworkContext.MSBuildExtensionPackEntities());
         }
 
-
-
         /// <summary>
         /// method to create an data access layer class instance of <see cref="MSBuildExtensionPack.DALContracts.IBuildEventCodeRepository"/>
         /// </summary>
@@ -44,8 +41,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         {
             return new MSBuildExtensionPack.EntityFrameworkDAL.BuildEventCodeRepository(new MSBuildExtensionPack.EntityFrameworkContext.MSBuildExtensionPackEntities());
         }
-
-
 
         /// <summary>
         /// method to create an data access layer class instance of <see cref="MSBuildExtensionPack.DALContracts.IBuildLogRepository"/>
@@ -56,7 +51,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return new MSBuildExtensionPack.EntityFrameworkDAL.BuildLogRepository(new MSBuildExtensionPack.EntityFrameworkContext.MSBuildExtensionPackEntities());
         }
 
-
+        /// <summary>
+        /// method to create an data access layer class instance of <see cref="MSBuildExtensionPack.DALContracts.IOrganizationRepository"/>
+        /// </summary>
+        /// <returns>a new instance of <see cref="MSBuildExtensionPack.DALContracts.IOrganizationRepository"/>.</returns>
+        public MSBuildExtensionPack.DALContracts.IOrganizationRepository CreateDALInstanceOfOrganization()
+        {
+            return new MSBuildExtensionPack.EntityFrameworkDAL.OrganizationRepository(new MSBuildExtensionPack.EntityFrameworkContext.MSBuildExtensionPackEntities());
+        }
 
         /// <summary>
         /// method to create an data access layer class instance of <see cref="MSBuildExtensionPack.DALContracts.ISolutionRepository"/>
@@ -67,9 +69,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return new MSBuildExtensionPack.EntityFrameworkDAL.SolutionRepository(new MSBuildExtensionPack.EntityFrameworkContext.MSBuildExtensionPackEntities());
         }
 
-
-
-		#endregion Entity related
+        #endregion Entity related
     }
 
     /// <summary>
@@ -79,3 +79,4 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
     {
     }
 }
+
