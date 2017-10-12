@@ -32,7 +32,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Models
     public partial class RegisterExternalLoginModel
     {
         [Required]
-        [Display(Name = "Common_UserNameLabelText", ResourceType = typeof(Framework.Resources.UIStringResource))]
+        [Display(Name = "Common_UserNameLabelText", ResourceType = typeof(Framework.Resx.UIStringResource))]
         public string UserName { get; set; }
 
         public string ExternalLoginData { get; set; }
@@ -42,51 +42,51 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Models
     {
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Common_CurrentPasswordLabelText", ResourceType = typeof(Framework.Resources.UIStringResource))]
+        [Display(Name = "Common_CurrentPasswordLabelText", ResourceType = typeof(Framework.Resx.UIStringResource))]
         public string OldPassword { get; set; }
 
         [Required]
-        [StringLength(100, MinimumLength = 6, ErrorMessageResourceName = "Common_PasswordLengthErrorMessage", ErrorMessageResourceType = typeof(Framework.Resources.UIStringResource))]
+        [StringLength(100, MinimumLength = 6, ErrorMessageResourceName = "Common_PasswordLengthErrorMessage", ErrorMessageResourceType = typeof(Framework.Resx.UIStringResource))]
         [DataType(DataType.Password)]
-        [Display(Name = "Common_NewPasswordLabelText", ResourceType = typeof(Framework.Resources.UIStringResource))]
+        [Display(Name = "Common_NewPasswordLabelText", ResourceType = typeof(Framework.Resx.UIStringResource))]
         public string NewPassword { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Common_ConfirmPasswordLabelText", ResourceType = typeof(Framework.Resources.UIStringResource))]
-        [System.ComponentModel.DataAnnotations.Compare("NewPassword", ErrorMessageResourceName= "Common_ConfirmPasswordNotMatchErrorMessage", ErrorMessageResourceType = typeof(Framework.Resources.UIStringResource))]
+        [Display(Name = "Common_ConfirmPasswordLabelText", ResourceType = typeof(Framework.Resx.UIStringResource))]
+        [System.ComponentModel.DataAnnotations.Compare("NewPassword", ErrorMessageResourceName= "Common_ConfirmPasswordNotMatchErrorMessage", ErrorMessageResourceType = typeof(Framework.Resx.UIStringResource))]
         public string ConfirmPassword { get; set; }
     }
 
     public partial class LoginModel
     {
         [Required]
-        [Display(Name = "Common_UserNameLabelText", ResourceType = typeof(Framework.Resources.UIStringResource))]
+        [Display(Name = "Common_UserNameLabelText", ResourceType = typeof(Framework.Resx.UIStringResource))]
         public string UserName { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Common_PasswordLabelText", ResourceType = typeof(Framework.Resources.UIStringResource))]
+        [Display(Name = "Common_PasswordLabelText", ResourceType = typeof(Framework.Resx.UIStringResource))]
         public string Password { get; set; }
 
-        [Display(Name = "Account_LogIn_RememberMeText", ResourceType = typeof(Framework.Resources.UIStringResource))]
+        [Display(Name = "Account_LogIn_RememberMeText", ResourceType = typeof(Framework.Resx.UIStringResource))]
         public bool RememberMe { get; set; }
     }
 
     public partial class RegisterModel
     {
         [Required]
-        [Display(Name = "Common_UserNameLabelText", ResourceType = typeof(Framework.Resources.UIStringResource))]
+        [Display(Name = "Common_UserNameLabelText", ResourceType = typeof(Framework.Resx.UIStringResource))]
         public string UserName { get; set; }
 
         [Required]
-        [StringLength(100, MinimumLength = 6, ErrorMessageResourceName = "Common_PasswordLengthErrorMessage", ErrorMessageResourceType = typeof(Framework.Resources.UIStringResource))]
+        [StringLength(100, MinimumLength = 6, ErrorMessageResourceName = "Common_PasswordLengthErrorMessage", ErrorMessageResourceType = typeof(Framework.Resx.UIStringResource))]
         [DataType(DataType.Password)]
-        [Display(Name = "Common_PasswordLabelText", ResourceType = typeof(Framework.Resources.UIStringResource))]
+        [Display(Name = "Common_PasswordLabelText", ResourceType = typeof(Framework.Resx.UIStringResource))]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Common_ConfirmPasswordLabelText", ResourceType = typeof(Framework.Resources.UIStringResource))]
-        [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessageResourceName= "Common_ConfirmPasswordNotMatchErrorMessage", ErrorMessageResourceType = typeof(Framework.Resources.UIStringResource))]
+        [Display(Name = "Common_ConfirmPasswordLabelText", ResourceType = typeof(Framework.Resx.UIStringResource))]
+        [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessageResourceName= "Common_ConfirmPasswordNotMatchErrorMessage", ErrorMessageResourceType = typeof(Framework.Resx.UIStringResource))]
         public string ConfirmPassword { get; set; }
     }
 

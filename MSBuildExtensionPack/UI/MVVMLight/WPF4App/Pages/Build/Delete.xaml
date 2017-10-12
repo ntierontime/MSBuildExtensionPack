@@ -6,9 +6,9 @@
         xmlns:cmd="http://www.galasoft.ch/mvvmlight"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
-		xmlns:vm="clr-namespace:MSBuildExtensionPack.ViewModels;assembly=MSBuildExtensionPack.ViewModels"
-		xmlns:Build="clr-namespace:MSBuildExtensionPack.WPF4App.UserControls.Build"
-        Title="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuild.Build_Delete, Source={StaticResource LocalizedStrings}}"
+        xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels"
+        xmlns:Build="clr-namespace:MSBuildExtensionPack.WPF4App.UserControls.Build"
+        Title="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.Delete_Build, Source={StaticResource LocalizedStrings}}"
         >
     <Grid>
         <Grid.RowDefinitions>
@@ -17,17 +17,17 @@
         </Grid.RowDefinitions>
         <ToolBarTray Grid.Row="0" Style="{StaticResource ToolBarTrayStyle}">
             <ToolBar>
-                <TextBlock VerticalAlignment="Center" Text="{Binding Path=Framework_Resources_UIStringResource.Warning_Areyousureyouwanttodeletethis, Source={StaticResource LocalizedStrings}}" />
-                <Button     Name="DeleteOutter" Command="{Binding MSBuildExtensionPack_ViewModels_ItemVMBuild.DeleteCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.DeleteAlternativeText, Source={StaticResource LocalizedStrings}}">
+                <TextBlock VerticalAlignment="Center" Text="{Binding Path=Framework_Resx_UIStringResource.Warning_Areyousureyouwanttodeletethis, Source={StaticResource LocalizedStrings}}" />
+                <Button     Name="DeleteOutter" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.DeleteCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.DeleteAlternativeText, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>
                         <iconPacks:PackIconMaterial Kind="Delete" HorizontalAlignment="Center" />
-                        <TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.DeleteAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.DeleteAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
                     </StackPanel>
                 </Button>
-                <Button     Name="Close" Command="{Binding MSBuildExtensionPack_ViewModels_ItemVMBuild.CloseDeleteViewCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.BackAlternativeText, Source={StaticResource LocalizedStrings}}">
+                <Button     Name="Close" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.CloseDeleteViewCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.BackAlternativeText, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>
                         <iconPacks:PackIconEntypo Kind="Back" HorizontalAlignment="Center" />
-                        <TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.BackAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.BackAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
                     </StackPanel>
                 </Button>
             </ToolBar>

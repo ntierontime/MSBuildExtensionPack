@@ -5,13 +5,13 @@
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
             mc:Ignorable="d"
-			xmlns:cmd="http://www.galasoft.ch/mvvmlight"
-			xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-			xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
-			xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
-		    xmlns:vm="clr-namespace:MSBuildExtensionPack.ViewModels;assembly=MSBuildExtensionPack.ViewModels"
+            xmlns:cmd="http://www.galasoft.ch/mvvmlight"
+            xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+            xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+            xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+            xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels"
             >
-    <Grid DataContext="{Binding MSBuildExtensionPack_ViewModels_ItemVMSolution.Item, Source={StaticResource Locator}}">
+    <Grid DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution.Item, Source={StaticResource Locator}}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition   Width="150" />
             <ColumnDefinition   Width="*" MaxWidth="750"/>
@@ -21,14 +21,21 @@
             <RowDefinition   Height="35" />
             <RowDefinition   Height="35" />
             <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
         </Grid.RowDefinitions>
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntitySolution.Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="0" />
-		<TextBlock Text="{Binding Path=Id, Mode=TwoWay}" Grid.Column="1" Grid.Row="0" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntitySolution.ExternalParentId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="1" />
-		<TextBlock Text="{Binding Path=ExternalParentId, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntitySolution.Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="2" />
-		<TextBlock Text="{Binding Path=Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="2" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntitySolution.Description, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="3" />
-		<TextBlock Text="{Binding Path=Description, Mode=TwoWay}" Grid.Column="1" Grid.Row="3" />
+        <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="1" />
+        <TextBlock Text="{Binding Path=Id, Mode=OneWay}" Grid.Column="1" Grid.Row="1" />
+        <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.Organization_2Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="2" />
+        <Button Style="{StaticResource LinkButton}" Content="{Binding Path=Organization_2_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization.LaunchOrganization_2DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+        <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.OrganizationId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="3" />
+            <Button Style="{StaticResource LinkButton}" Content="{Binding Path=OrganizationId}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.LaunchOrganization_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+        <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.ExternalParentId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
+        <TextBlock Text="{Binding Path=ExternalParentId, Mode=OneWay}" Grid.Column="1" Grid.Row="4" />
+        <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
+        <TextBlock Text="{Binding Path=Name, Mode=OneWay}" Grid.Column="1" Grid.Row="5" />
+        <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.Description, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="6" />
+        <TextBlock Text="{Binding Path=Description, Mode=OneWay}" Grid.Column="1" Grid.Row="6" />
     </Grid>
 </UserControl>

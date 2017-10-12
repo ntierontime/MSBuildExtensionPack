@@ -5,13 +5,13 @@
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
             mc:Ignorable="d"
-			xmlns:cmd="http://www.galasoft.ch/mvvmlight"
-			xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-			xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
-			xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
-		    xmlns:vm="clr-namespace:MSBuildExtensionPack.ViewModels;assembly=MSBuildExtensionPack.ViewModels"
+            xmlns:cmd="http://www.galasoft.ch/mvvmlight"
+            xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+            xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+            xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+            xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels"
             >
-    <Grid DataContext="{Binding MSBuildExtensionPack_ViewModels_ItemVMBuildLog.NewItemDefault, Source={StaticResource Locator}}">
+    <Grid DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuildLog.Item, Source={StaticResource Locator}}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition   Width="150" />
             <ColumnDefinition   Width="*" MaxWidth="750"/>
@@ -24,24 +24,30 @@
             <RowDefinition   Height="35" />
             <RowDefinition   Height="35" />
             <RowDefinition   Height="35" />
-            <RowDefinition   Height="35" />
-            <RowDefinition   Height="35" />
         </Grid.RowDefinitions>
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Build_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="0" />
-		<TextBlock Text="{Binding Path=Build_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="0" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="1" />
-		<TextBlock Text="{Binding Path=Id, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Solution_1Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="2" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Solution_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="3" />
-		<TextBlock Text="{Binding Path=Solution_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="3" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.BuildEventCode_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
-		<TextBlock Text="{Binding Path=BuildEventCode_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="4" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.BuildId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
-		<ComboBox ToolTip="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuild.BuildLog, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="5" ItemsSource="{Binding Path=MSBuildExtensionPack_ViewModels_WPCommonOfBuildLogVM.DropDownContentsOfBuild_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=BuildId}" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.BuildEventCodeId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="6" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.Message, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="7" />
-		<TextBox Text="{Binding Path=Message, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="7" />
-		<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.EventTime, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="8" />
-		<DatePicker HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="8" SelectedDate="{Binding Path=EventTime, Mode=TwoWay}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" />
+        <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="1" />
+        <TextBlock Text="{Binding Path=Id, Mode=OneWay}" Grid.Column="1" Grid.Row="1" />
+        <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.EventTime, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="2" />
+        <DatePicker HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" SelectedDate="{Binding Path=EventTime, Mode=TwoWay}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" />
+        <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.Organization_2Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="3" />
+        <ComboBox Name="ID_DropDownList_Organization_2Id" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.Organization_2_Name, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="3" ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfOrganization_2, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Organization_2Id, Mode=TwoWay}" IsEditable="False" IsSynchronizedWithCurrentItem="True" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Loading">
+                    <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.GetDropDownContentsOfOrganization_2Command, Source={StaticResource Locator}}" PassEventArgsToCommand="false" ></cmd:EventToCommand>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </ComboBox>
+        <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.BuildId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
+        <ComboBox Name="ID_DropDownList_BuildId" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.Build, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="4" SelectedValue="{Binding Path=BuildId, Mode=TwoWay}" ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfBuild_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Loading">
+                    <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.GetDropDownContentsOfBuild_1Command, Source={StaticResource Locator}}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </ComboBox>
+        <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.BuildEventCodeId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
+        <ComboBox ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.BuildEventCode_1_Name, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="5" ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog.DropDownContentsOfBuild_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=BuildEventCodeId}" />
+        <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.Message, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="6" />
+        <TextBox Text="{Binding Path=Message, Mode=OneWay}" Grid.Column="1" Grid.Row="6" />
     </Grid>
 </UserControl>

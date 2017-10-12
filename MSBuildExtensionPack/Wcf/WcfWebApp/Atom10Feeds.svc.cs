@@ -19,13 +19,11 @@ namespace MSBuildExtensionPack.WcfWebApp
             return new Atom10FeedFormatter(feed);
         }
 
-
         public Atom10FeedFormatter GetBuildEventCode()
         {
             SyndicationFeed feed = MSBuildExtensionPack.CommonBLL.SyndicationFeedFacade.GetBuildEventCode();
             return new Atom10FeedFormatter(feed);
         }
-
 
         public Atom10FeedFormatter GetBuildLog()
         {
@@ -33,6 +31,11 @@ namespace MSBuildExtensionPack.WcfWebApp
             return new Atom10FeedFormatter(feed);
         }
 
+        public Atom10FeedFormatter GetOrganization()
+        {
+            SyndicationFeed feed = MSBuildExtensionPack.CommonBLL.SyndicationFeedFacade.GetOrganization();
+            return new Atom10FeedFormatter(feed);
+        }
 
         public Atom10FeedFormatter GetSolution()
         {
@@ -40,8 +43,6 @@ namespace MSBuildExtensionPack.WcfWebApp
             return new Atom10FeedFormatter(feed);
         }
 
-
     }
 }
-
 

@@ -6,17 +6,17 @@ namespace MSBuildExtensionPack.DataSourceEntities
     /// <summary>
     /// collection class for entity <see cref="BuildEventCode"/>
     /// </summary>
-	public partial class BuildEventCodeCollection : List<BuildEventCode>
-	{ 
+    public partial class BuildEventCodeCollection : List<BuildEventCode>
+    {
 
-		#region constructors
+        #region constructors
 
         /// <summary>
         ///  default constructors
         /// </summary>
-		public BuildEventCodeCollection(): base()
-		{
-		}
+        public BuildEventCodeCollection(): base()
+        {
+        }
 
         /// <summary>
         /// constructor with IEnumerable input
@@ -27,7 +27,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         {
         }
 
-		#endregion constructors
+        #endregion constructors
 
         #region Add(...)
 
@@ -35,45 +35,43 @@ namespace MSBuildExtensionPack.DataSourceEntities
         /// add an item with parameters of .net value type for each property
         /// </summary>
         public void Add(
-			System.Int32 id
-			, System.String eventCode
-			, System.String description)
+            System.Int32 id
+            , System.String eventCode
+            , System.String description)
         {
             BuildEventCode _Item = new BuildEventCode(
-				id
-				, eventCode
-				, description			);
+                id
+                , eventCode
+                , description            );
             this.Add(_Item);
         }
 
         #endregion Add(...)
 
+    }
 
-	}
-
-		    /// <summary>
+            /// <summary>
 
     /// <summary>
     ///  a property defined when <see cref="IBuildEventCodeCollection"/> is used in other classes.
     /// </summary>
-	public partial interface IBuildEventCodeCollection
-	{ 
+    public partial interface IBuildEventCodeCollection
+    {
         /// <summary>
         /// Gets or sets the BuildEventCodeCollection
         /// </summary>
         /// <value>
         /// BuildEventCodeCollection
         /// </value>
-		BuildEventCodeCollection BuildEventCodeCollection { get; set; }
-	}
+        BuildEventCodeCollection BuildEventCodeCollection { get; set; }
+    }
 
     /// <summary>
     /// message definition, pass single entry, pulled from database, to business logic layer. <see cref="BuildEventCodeCollection"/> and <see cref="Framework.DataSourceEntities.DataAccessLayerMessageBase&lt;T&gt;"/> />
     /// </summary>
-	public partial class DataAccessLayerMessageOfEntityCollectionBuildEventCode
+    public partial class DataAccessLayerMessageOfEntityCollectionBuildEventCode
         : Framework.DataSourceEntities.DataAccessLayerMessageBase<BuildEventCodeCollection>
     {
     }
-
 
 }

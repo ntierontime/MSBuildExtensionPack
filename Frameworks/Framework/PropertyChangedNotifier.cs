@@ -8,21 +8,11 @@ namespace Framework
     /// We use this class for model classes.
     /// It should be serializable.
     /// </summary>
-#if (SILVERLIGHT || XAMARIN)
-#elif (NETFX_CORE)
-#else
-    [Serializable]
-#endif
     public class PropertyChangedNotifier : INotifyPropertyChanged
     {
         /// <summary>
         /// Occurs when a property value changes.
         /// </summary>
-#if (SILVERLIGHT || XAMARIN)
-#elif (NETFX_CORE)
-#else
-        [field: NonSerialized]
-#endif
         public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
@@ -41,5 +31,4 @@ namespace Framework
         }
     }
 }
-
 

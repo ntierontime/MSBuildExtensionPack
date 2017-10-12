@@ -37,7 +37,10 @@
     <Compile Include="IoCBuild.cs" />
     <Compile Include="IoCBuildEventCode.cs" />
     <Compile Include="IoCBuildLog.cs" />
+    <Compile Include="IoCOrganization.cs" />
     <Compile Include="IoCSolution.cs" />
+    <None Include="map.2.C.2.vsd" />
+    <None Include="map.2.C.2.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommonBLLEntities\MSBuildExtensionPack.CommonBLLEntities.csproj">
@@ -75,14 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.ServiceModel" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

@@ -18,27 +18,22 @@ namespace MSBuildExtensionPack.WcfWebApp
         [WebGet]
         Atom10FeedFormatter GetBuild();
 
-
-
         [OperationContract]
         [WebGet]
         Atom10FeedFormatter GetBuildEventCode();
-
-
 
         [OperationContract]
         [WebGet]
         Atom10FeedFormatter GetBuildLog();
 
-
+        [OperationContract]
+        [WebGet]
+        Atom10FeedFormatter GetOrganization();
 
         [OperationContract]
         [WebGet]
         Atom10FeedFormatter GetSolution();
 
-
-
     }
 }
-
 

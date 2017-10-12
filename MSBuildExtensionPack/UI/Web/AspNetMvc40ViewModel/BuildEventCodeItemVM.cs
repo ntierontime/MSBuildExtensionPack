@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Web;
+using System.Web.Mvc;
 
 namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 {
-    public partial class BuildEventCodeItemVM : Framework.ViewModels.ViewModelItemBase<MSBuildExtensionPack.DataSourceEntities.BuildEventCodeIdentifier, MSBuildExtensionPack.DataSourceEntities.BuildEventCode>
+    public partial class BuildEventCodeItemVM : MSBuildExtensionPack.ViewModelData.BuildEventCodeItemVM
     {
         #region log4net
 
@@ -14,11 +15,9 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 
         #endregion log4net
 
-        public static BuildEventCodeItemVM Load(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32 valueToCompareIdByIdentifierOftOfByIdentifier
+        public void Load(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
             , Framework.UIAction uiAction)
         {
-            BuildEventCodeItemVM vm = new BuildEventCodeItemVM();
-
             try
             {
                 log.Info(string.Format("{0}: Details", Framework.LoggingOptions.UI_Process_Started.ToString()));
@@ -28,41 +27,49 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 
                 if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK || _Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
                 {
-                    vm.Item = _Response.Message[0];
-                    vm.UIActionStatusMessage = new Framework.UIActionStatusMessage(typeof(BuildEventCodeItemVM).FullName, uiAction.ToString(), uiAction, Framework.UIActionStatus.Launch);
+                    this.Item = _Response.Message[0];
+                    this.UIActionStatusMessage = new Framework.UIActionStatusMessage(typeof(BuildEventCodeItemVM).FullName, uiAction.ToString(), uiAction, Framework.UIActionStatus.Launch);
                     log.Info(string.Format("{0}: {1}", uiAction, Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    this.LoadExtraData(uiAction);
                 }
                 else
                 {
-                    vm.StatusOfResult = _Response.BusinessLogicLayerResponseStatus;
-                    vm.StatusMessageOfResult = _Response.ServerErrorMessage;
-                    vm.UIActionStatusMessage = new Framework.UIActionStatusMessage(typeof(BuildEventCodeItemVM).FullName, uiAction.ToString(), uiAction, Framework.UIActionStatus.Failed);
-                    log.Error(string.Format("{0}: {1}, {2}, {3}", uiAction, Framework.LoggingOptions.UI_Process_Failed.ToString(), vm.StatusOfResult, vm.StatusMessageOfResult));
+                    this.StatusOfResult = _Response.BusinessLogicLayerResponseStatus;
+                    this.StatusMessageOfResult = _Response.ServerErrorMessage;
+                    this.UIActionStatusMessage = new Framework.UIActionStatusMessage(typeof(BuildEventCodeItemVM).FullName, uiAction.ToString(), uiAction, Framework.UIActionStatus.Failed);
+                    log.Error(string.Format("{0}: {1}, {2}, {3}", uiAction, Framework.LoggingOptions.UI_Process_Failed.ToString(), this.StatusOfResult, this.StatusMessageOfResult));
                 }
             }
             catch (Exception ex)
             {
-                vm.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
-                vm.StatusMessageOfResult = ex.Message;
-                vm.UIActionStatusMessage = new Framework.UIActionStatusMessage(typeof(BuildEventCodeItemVM).FullName, uiAction.ToString(), uiAction, Framework.UIActionStatus.Failed);
-                log.Error(string.Format("{0}: {1}, {2}, {3}", uiAction, Framework.LoggingOptions.UI_Process_Failed.ToString(), vm.StatusOfResult, vm.StatusMessageOfResult));
+                this.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
+                this.StatusMessageOfResult = ex.Message;
+                this.UIActionStatusMessage = new Framework.UIActionStatusMessage(typeof(BuildEventCodeItemVM).FullName, uiAction.ToString(), uiAction, Framework.UIActionStatus.Failed);
+                log.Error(string.Format("{0}: {1}, {2}, {3}", uiAction, Framework.LoggingOptions.UI_Process_Failed.ToString(), this.StatusOfResult, this.StatusMessageOfResult));
             }
-
-            return vm;
         }
 
         public static BuildEventCodeItemVM CreateNewViewModel(MSBuildExtensionPack.DataSourceEntities.BuildEventCode entity)
         {
             Framework.UIAction uiAction = Framework.UIAction.Create;
             BuildEventCodeItemVM vm = new BuildEventCodeItemVM();
-            vm.ContentData.Title = Framework.Resources.UIStringResource.AddNewAlternativeText;
-            vm.ContentData.Summary = MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildEventCode.AddNew_BuildEventCode;
+            vm.ContentData.Title = Framework.Resx.UIStringResource.AddNewAlternativeText;
+            vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.AddNew_BuildEventCode;
+            vm.LoadExtraData(uiAction);
 
             vm.Item = entity;
             vm.UIActionStatusMessage = new Framework.UIActionStatusMessage(typeof(BuildEventCodeItemVM).FullName, uiAction.ToString(), uiAction, Framework.UIActionStatus.Launch);
 
             return vm;
         }
-	}
+
+        public void LoadExtraData(Framework.UIAction uiAction)
+        {
+            if (uiAction != Framework.UIAction.ViewDetails)
+            {
+
+            }
+        }
+    }
 }
 

@@ -10,7 +10,6 @@ namespace MSBuildExtensionPack.WcfContracts
     public static partial class WcfServiceResolver
     {
 
-
         public static MSBuildExtensionPack.WcfContracts.IBuildService ResolveWcfServiceBuild()
         {
             Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer _IBusinessLogicLayerContextContainer = Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Resolve<Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer>();
@@ -19,8 +18,6 @@ namespace MSBuildExtensionPack.WcfContracts
             MSBuildExtensionPack.WcfContracts.IBuildService _BusinessLogicLayerInstance = _IBusinessLogicLayerFactory.CreateBLLInstanceOfEntityBuild(_BusinessLogicLayerContext);
             return _BusinessLogicLayerInstance;
         }
-
-
 
         public static MSBuildExtensionPack.WcfContracts.IBuildEventCodeService ResolveWcfServiceBuildEventCode()
         {
@@ -31,8 +28,6 @@ namespace MSBuildExtensionPack.WcfContracts
             return _BusinessLogicLayerInstance;
         }
 
-
-
         public static MSBuildExtensionPack.WcfContracts.IBuildLogService ResolveWcfServiceBuildLog()
         {
             Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer _IBusinessLogicLayerContextContainer = Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Resolve<Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer>();
@@ -42,7 +37,14 @@ namespace MSBuildExtensionPack.WcfContracts
             return _BusinessLogicLayerInstance;
         }
 
-
+        public static MSBuildExtensionPack.WcfContracts.IOrganizationService ResolveWcfServiceOrganization()
+        {
+            Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer _IBusinessLogicLayerContextContainer = Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Resolve<Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer>();
+            Framework.CommonBLLEntities.BusinessLogicLayerContext _BusinessLogicLayerContext = _IBusinessLogicLayerContextContainer.BusinessLogicLayerContext;
+            MSBuildExtensionPack.WcfContracts.IBusinessLogicLayerFactory _IBusinessLogicLayerFactory = Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Resolve<MSBuildExtensionPack.WcfContracts.IBusinessLogicLayerFactory>();
+            MSBuildExtensionPack.WcfContracts.IOrganizationService _BusinessLogicLayerInstance = _IBusinessLogicLayerFactory.CreateBLLInstanceOfEntityOrganization(_BusinessLogicLayerContext);
+            return _BusinessLogicLayerInstance;
+        }
 
         public static MSBuildExtensionPack.WcfContracts.ISolutionService ResolveWcfServiceSolution()
         {
@@ -53,12 +55,10 @@ namespace MSBuildExtensionPack.WcfContracts
             return _BusinessLogicLayerInstance;
         }
 
-
     }
 
     public static partial class WcfServiceResolverAsyn
     {
-
 
         public static MSBuildExtensionPack.WcfContracts.IBuildServiceAsyn ResolveWcfServiceBuild()
         {
@@ -69,8 +69,6 @@ namespace MSBuildExtensionPack.WcfContracts
             return _BusinessLogicLayerInstance;
         }
 
-
-
         public static MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn ResolveWcfServiceBuildEventCode()
         {
             Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer _IBusinessLogicLayerContextContainer = Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Resolve<Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer>();
@@ -79,8 +77,6 @@ namespace MSBuildExtensionPack.WcfContracts
             MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn _BusinessLogicLayerInstance = _IBusinessLogicLayerFactory.CreateBLLInstanceOfEntityBuildEventCode(_BusinessLogicLayerContext);
             return _BusinessLogicLayerInstance;
         }
-
-
 
         public static MSBuildExtensionPack.WcfContracts.IBuildLogServiceAsyn ResolveWcfServiceBuildLog()
         {
@@ -91,7 +87,14 @@ namespace MSBuildExtensionPack.WcfContracts
             return _BusinessLogicLayerInstance;
         }
 
-
+        public static MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn ResolveWcfServiceOrganization()
+        {
+            Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer _IBusinessLogicLayerContextContainer = Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Resolve<Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer>();
+            Framework.CommonBLLEntities.BusinessLogicLayerContext _BusinessLogicLayerContext = _IBusinessLogicLayerContextContainer.BusinessLogicLayerContext;
+            MSBuildExtensionPack.WcfContracts.IBusinessLogicLayerFactoryAsyn _IBusinessLogicLayerFactory = Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Resolve<MSBuildExtensionPack.WcfContracts.IBusinessLogicLayerFactoryAsyn>();
+            MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn _BusinessLogicLayerInstance = _IBusinessLogicLayerFactory.CreateBLLInstanceOfEntityOrganization(_BusinessLogicLayerContext);
+            return _BusinessLogicLayerInstance;
+        }
 
         public static MSBuildExtensionPack.WcfContracts.ISolutionServiceAsyn ResolveWcfServiceSolution()
         {
@@ -101,7 +104,6 @@ namespace MSBuildExtensionPack.WcfContracts
             MSBuildExtensionPack.WcfContracts.ISolutionServiceAsyn _BusinessLogicLayerInstance = _IBusinessLogicLayerFactory.CreateBLLInstanceOfEntitySolution(_BusinessLogicLayerContext);
             return _BusinessLogicLayerInstance;
         }
-
 
     }
 }

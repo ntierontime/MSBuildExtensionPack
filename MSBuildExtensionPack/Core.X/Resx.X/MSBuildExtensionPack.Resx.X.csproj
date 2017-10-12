@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4E3E985C-7D38-40F5-81E4-92FAC3E9357A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MSBuildExtensionPack.Resx</RootNamespace>
+    <AssemblyName>MSBuildExtensionPack.Resx.X</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
+    <None Include="map.2.A.2.vsd" />
+    <None Include="map.2.A.2.vsd.png" />
+    <Compile Include="..\..\Core\Resx\ResourceFileFactory.cs">
+      <Link>ResourceFileFactory.cs</Link>
+    </Compile>
+    <EmbeddedResource Include="..\..\Core\Resx\UIStringResourcePerApp.resx">
+      <Link>UIStringResourcePerApp.resx</Link>
+    </EmbeddedResource>
+    <Compile Include="..\..\Core\Resx\UIStringResourcePerApp.designer.cs">
+      <Link>UIStringResourcePerApp.designer.cs</Link>
+      <DependentUpon>UIStringResourcePerApp.resx</DependentUpon>
+      <SubType>RESXCodeBehind</SubType>
+    </Compile>
+    <EmbeddedResource Include="..\..\Core\Resx\UIStringResourcePerEntityBuild.resx">
+      <Link>UIStringResourcePerEntityBuild.resx</Link>
+    </EmbeddedResource>
+    <Compile Include="..\..\Core\Resx\UIStringResourcePerEntityBuild.designer.cs">
+      <Link>UIStringResourcePerEntityBuild.designer.cs</Link>
+      <DependentUpon>UIStringResourcePerEntityBuild.resx</DependentUpon>
+      <SubType>RESXCodeBehind</SubType>
+    </Compile>
+    <EmbeddedResource Include="..\..\Core\Resx\UIStringResourcePerEntityBuildEventCode.resx">
+      <Link>UIStringResourcePerEntityBuildEventCode.resx</Link>
+    </EmbeddedResource>
+    <Compile Include="..\..\Core\Resx\UIStringResourcePerEntityBuildEventCode.designer.cs">
+      <Link>UIStringResourcePerEntityBuildEventCode.designer.cs</Link>
+      <DependentUpon>UIStringResourcePerEntityBuildEventCode.resx</DependentUpon>
+      <SubType>RESXCodeBehind</SubType>
+    </Compile>
+    <EmbeddedResource Include="..\..\Core\Resx\UIStringResourcePerEntityBuildLog.resx">
+      <Link>UIStringResourcePerEntityBuildLog.resx</Link>
+    </EmbeddedResource>
+    <Compile Include="..\..\Core\Resx\UIStringResourcePerEntityBuildLog.designer.cs">
+      <Link>UIStringResourcePerEntityBuildLog.designer.cs</Link>
+      <DependentUpon>UIStringResourcePerEntityBuildLog.resx</DependentUpon>
+      <SubType>RESXCodeBehind</SubType>
+    </Compile>
+    <EmbeddedResource Include="..\..\Core\Resx\UIStringResourcePerEntityOrganization.resx">
+      <Link>UIStringResourcePerEntityOrganization.resx</Link>
+    </EmbeddedResource>
+    <Compile Include="..\..\Core\Resx\UIStringResourcePerEntityOrganization.designer.cs">
+      <Link>UIStringResourcePerEntityOrganization.designer.cs</Link>
+      <DependentUpon>UIStringResourcePerEntityOrganization.resx</DependentUpon>
+      <SubType>RESXCodeBehind</SubType>
+    </Compile>
+    <EmbeddedResource Include="..\..\Core\Resx\UIStringResourcePerEntitySolution.resx">
+      <Link>UIStringResourcePerEntitySolution.resx</Link>
+    </EmbeddedResource>
+    <Compile Include="..\..\Core\Resx\UIStringResourcePerEntitySolution.designer.cs">
+      <Link>UIStringResourcePerEntitySolution.designer.cs</Link>
+      <DependentUpon>UIStringResourcePerEntitySolution.resx</DependentUpon>
+      <SubType>RESXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Frameworks.X\Framework.X\Framework.X.csproj">
+      <Project>{cab19f30-0455-443c-b7a3-ba943aaa9d15}</Project>
+      <Name>Framework.X</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

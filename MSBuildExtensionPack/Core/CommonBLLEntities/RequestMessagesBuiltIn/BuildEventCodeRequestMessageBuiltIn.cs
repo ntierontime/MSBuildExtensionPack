@@ -11,29 +11,28 @@ namespace MSBuildExtensionPack.CommonBLLEntities
     public partial class BuildEventCodeRequestMessageBuiltIn
         : Framework.CommonBLLEntities.BusinessLogicLayerRequestMessageBase<MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection>
     {
-		#region constructors
+        #region constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildEventCodeRequestMessageBuiltIn"/> class.
         /// </summary>
         public BuildEventCodeRequestMessageBuiltIn()
-			: base()
+            : base()
         {
         }
-
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildEventCodeRequestMessageBuiltIn"/> class.
         /// </summary>
-        /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>        
-		/// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
+        /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
+        /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
         /// <param name="businessLogicLayerRequestID">The business logic layer request ID.</param>
         public BuildEventCodeRequestMessageBuiltIn(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID
-			)
-			: base(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID)
+            )
+            : base(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID)
         {
         }
 
@@ -50,10 +49,10 @@ namespace MSBuildExtensionPack.CommonBLLEntities
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID
-			, int currentIndex
+            , int currentIndex
             , int pageSize
-			, string queryOrderByExpression)
-			: base(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID, currentIndex, pageSize, queryOrderByExpression)
+            , string queryOrderByExpression)
+            : base(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID, currentIndex, pageSize, queryOrderByExpression)
         {
         }
 
@@ -72,23 +71,22 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// Initializes a new instance of the <see cref="BuildEventCodeRequestMessageBuiltInOfIdentifier"/> class.
         /// </summary>
         public BuildEventCodeRequestMessageBuiltInOfIdentifier()
-			: base()
+            : base()
         {
         }
-
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildEventCodeRequestMessageBuiltIn"/> class.
         /// </summary>
-        /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>        
-		/// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
+        /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
+        /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
         /// <param name="businessLogicLayerRequestID">The business logic layer request ID.</param>
         public BuildEventCodeRequestMessageBuiltInOfIdentifier(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID
-			)
-			: base(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID)
+            )
+            : base(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID)
         {
         }
 
@@ -105,10 +103,10 @@ namespace MSBuildExtensionPack.CommonBLLEntities
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID
-			, int currentIndex
+            , int currentIndex
             , int pageSize
-			, string queryOrderByExpression)
-			: base(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID, currentIndex, pageSize, queryOrderByExpression)
+            , string queryOrderByExpression)
+            : base(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID, currentIndex, pageSize, queryOrderByExpression)
         {
         }
 

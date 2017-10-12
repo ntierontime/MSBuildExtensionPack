@@ -9,7 +9,7 @@ using System.Web.Routing;
 
 namespace MSBuildExtensionPack.AspNetMvc40Rasor
 {
-    // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
+    // Note: For instructions on enabling IIS6 or IIS7 classic mode,
     // visit http://go.microsoft.com/?LinkId=9394801
 
     public class Global : System.Web.HttpApplication
@@ -23,32 +23,29 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor
             log.Info("Application starting");
 
             AreaRegistration.RegisterAllAreas();
-			
+
             MSBuildExtensionPack.AspNetMvc40Rasor.WebApiConfig.Register(GlobalConfiguration.Configuration);
             MSBuildExtensionPack.AspNetMvc40Rasor.FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             MSBuildExtensionPack.AspNetMvc40Rasor.RouteConfig.RegisterRoutes(RouteTable.Routes);
             MSBuildExtensionPack.AspNetMvc40Rasor.BundleConfig.RegisterBundles(BundleTable.Bundles);
             MSBuildExtensionPack.AspNetMvc40Rasor.AuthConfig.RegisterAuth();
 
-			GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Clear();
-			GlobalConfiguration.Configuration.Formatters.JsonFormatter.MediaTypeMappings.Add(new System.Net.Http.Formatting.QueryStringMapping("json", "true", "application/json"));
-			
-			Framework.Web.WebFormApplicationApplicationVariables.GetDefault();
+            GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Clear();
+            GlobalConfiguration.Configuration.Formatters.JsonFormatter.MediaTypeMappings.Add(new System.Net.Http.Formatting.QueryStringMapping("json", "true", "application/json"));
 
-			Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<MSBuildExtensionPack.WcfContracts.IBusinessLogicLayerFactory, MSBuildExtensionPack.CommonBLL.BusinessLogicLayerFactory>();
+            Framework.Web.WebFormApplicationApplicationVariables.GetDefault();
+
+            Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<MSBuildExtensionPack.WcfContracts.IBusinessLogicLayerFactory, MSBuildExtensionPack.CommonBLL.BusinessLogicLayerFactory>();
             Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer, Framework.CommonBLLEntities.BusinessLogicLayerContextContainerCommon>();
             Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<MSBuildExtensionPack.DALContracts.DataAccessLayerFactoryContract, MSBuildExtensionPack.EntityFrameworkDAL.EFDataAccessLayerFactory>();
 
             Framework.CommonBLLEntities.BusinessLogicLayerMemberShip _BusinessLogicLayerMemberShip = new Framework.CommonBLLEntities.BusinessLogicLayerMemberShip();
-            //Framework.Web.WebFormApplicationSessionVariables.BusinessLogicLayerContext = new Framework.CommonBLLEntities.BusinessLogicLayerContext(
-            //    _BusinessLogicLayerMemberShip 
-            //    , MSBuildExtensionPack.LinqDAL.LinqToSqlDataAccessLayerFactorySingleton.Instance);
             List<Framework.CommonBLLEntities.BusinessLogicLayerContextSetting> _BusinessLogicLayerContextSettingCollection = new List<Framework.CommonBLLEntities.BusinessLogicLayerContextSetting>();
             _BusinessLogicLayerContextSettingCollection.Add(new Framework.CommonBLLEntities.BusinessLogicLayerContextSetting(
-				"MSBuildExtensionPack"
-				, typeof(Framework.Web.WebFormApplicationSessionVariables)
-				, typeof(Framework.CommonBLLEntities.BusinessLogicLayerContext)
-				, typeof(MSBuildExtensionPack.EntityFrameworkDAL.EFDataAccessLayerFactory)));
+                "MSBuildExtensionPack"
+                , typeof(Framework.Web.WebFormApplicationSessionVariables)
+                , typeof(Framework.CommonBLLEntities.BusinessLogicLayerContext)
+                , typeof(MSBuildExtensionPack.EntityFrameworkDAL.EFDataAccessLayerFactory)));
             foreach (Framework.CommonBLLEntities.BusinessLogicLayerContextSetting _BusinessLogicLayerContextSetting in _BusinessLogicLayerContextSettingCollection)
             {
                 object[] _Params = new object[] {_BusinessLogicLayerMemberShip };
@@ -56,7 +53,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor
                 _BusinessLogicLayerContextSetting.TypeOfTargetUser.GetProperty("BusinessLogicLayerContext").SetValue(null, _BusinessLogicLayerContext, null);
             }
 
-			log.Info("Application started");
+            log.Info("Application started");
         }
     }
 }

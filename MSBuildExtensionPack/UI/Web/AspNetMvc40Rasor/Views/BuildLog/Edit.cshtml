@@ -10,7 +10,7 @@
 @if (Model.StatusOfResult != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK && Model.StatusOfResult != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
 {
             <div class="panel-body">
-				<div class="text-danger">@Model.StatusMessageOfResult</div>
+                <div class="text-danger">@Model.StatusMessageOfResult</div>
             </div>
 }
 @using (Html.BeginForm(UrlStringsAlias.ActionName_BuildLog_Edit, UrlStringsAlias.ControllerName_BuildLog, FormMethod.Post, new { @class= "form" })) {
@@ -18,45 +18,53 @@
     @Html.ValidationSummary(true)
             <div class="panel-body">
 @Html.HiddenFor(model => model.Item.Build_1_Name)@Html.HiddenFor(model => model.Item.Id)  <div class="form-group">
-			@Html.LabelFor(model => model.Item.Solution_1Id, new { @class = "control-label" })
-			@Html.DropDownListFor(model => model.Item.Solution_1Id, (List<SelectListItem>)ViewBag.SelectListOfMSBuildExtensionPack_Solution, MSBuildExtensionPack.Resources.UIStringResourcePerEntitySolution.Please_select_Solution____, new Dictionary<string,Object>{ { "onchange", "FetchBuild_1();" }, { "class", "form-control" } })
+            @Html.LabelFor(model => model.Item.Solution_1Id, new { @class = "control-label" })
+            @Html.DropDownListFor(model => model.Item.Solution_1Id, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Please_select_Solution____, new Dictionary<string,Object>{ { "onchange", "FetchBuild_1();" }, { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfSolution_1Id,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedSolution_1Id", MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Please_select_Solution____) } })
     </div>
-@Html.HiddenFor(model => model.Item.Solution_1_Name)@Html.HiddenFor(model => model.Item.BuildEventCode_1_Name)  <div class="form-group">
-			@Html.LabelFor(model => model.Item.BuildId, new { @class = "control-label" })
-			@Html.DropDownListFor(model => model.Item.BuildId, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuild.Please_select_Build____, new Dictionary<string,Object>{ { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfBuildId,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedBuildId", MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuild.Please_select_Build____) } })
+@Html.HiddenFor(model => model.Item.Solution_1_Name)@Html.HiddenFor(model => model.Item.Organization_1_UniqueidentifierColumn)@Html.HiddenFor(model => model.Item.Organization_1_UniqueIdentifier)  <div class="form-group">
+            @Html.LabelFor(model => model.Item.Organization_1Id, new { @class = "control-label" })
+            @Html.DropDownListFor(model => model.Item.Organization_1Id, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "onchange", "FetchSolution_1();" }, { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfOrganization_1Id,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedOrganization_1Id", MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____) } })
+    </div>
+@Html.HiddenFor(model => model.Item.Organization_1_Name)@Html.HiddenFor(model => model.Item.Organization_2_UniqueidentifierColumn)  <div class="form-group">
+            @Html.LabelFor(model => model.Item.Organization_2Id, new { @class = "control-label" })
+            @Html.DropDownListFor(model => model.Item.Organization_2Id, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Organization, MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "onchange", "FetchOrganization_1();" }, { "class", "form-control" } })
+    </div>
+@Html.HiddenFor(model => model.Item.Organization_2_UniqueIdentifier)@Html.HiddenFor(model => model.Item.Organization_2_Name)@Html.HiddenFor(model => model.Item.BuildEventCode_1_Name)  <div class="form-group">
+            @Html.LabelFor(model => model.Item.BuildId, new { @class = "control-label" })
+            @Html.DropDownListFor(model => model.Item.BuildId, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Please_select_Build____, new Dictionary<string,Object>{ { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfBuildId,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedBuildId", MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Please_select_Build____) } })
     </div>
   <div class="form-group">
-			@Html.LabelFor(model => model.Item.BuildEventCodeId, new { @class = "control-label" })
-			@Html.DropDownListFor(model => model.Item.BuildEventCodeId, (List<SelectListItem>)ViewBag.SelectListOfMSBuildExtensionPack_BuildEventCode, MSBuildExtensionPack.Resources.UIStringResourcePerEntityBuildEventCode.Please_select_BuildEventCode____, new Dictionary<string,Object>{ { "class", "form-control" } })
+            @Html.LabelFor(model => model.Item.BuildEventCodeId, new { @class = "control-label" })
+            @Html.DropDownListFor(model => model.Item.BuildEventCodeId, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_BuildEventCode, MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.Please_select_BuildEventCode____, new Dictionary<string,Object>{ { "class", "form-control" } })
     </div>
   <div class="form-group">
-			@Html.LabelFor(model => model.Item.Message, new { @class = "control-label" })
-			@Html.TextBoxFor(model => model.Item.Message, new { @class = "form-control" })
-			@Html.ValidationMessageFor(model => model.Item.Message, null, new { @class = "text-danger" })
+            @Html.LabelFor(model => model.Item.Message, new { @class = "control-label" })
+            @Html.TextBoxFor(model => model.Item.Message, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Item.Message, null, new { @class = "text-danger" })
     </div>
   <div class="form-group">
-			@Html.LabelFor(model => model.Item.EventTime, new { @class = "control-label" })
-			@Html.TextBoxFor(model => model.Item.EventTime, new { @Value = Model.Item.EventTime.ToString("dd/MM/yyyy"), @class = "form-control" })
-			@Html.ValidationMessageFor(model => model.Item.EventTime, null, new { @class = "text-danger" })
+            @Html.LabelFor(model => model.Item.EventTime, new { @class = "control-label" })
+            @Html.TextBoxFor(model => model.Item.EventTime, new { @Value = Model.Item.EventTime.ToString("dd/MM/yyyy"), @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Item.EventTime, null, new { @class = "text-danger" })
     </div>
             </div>
-			<div class="panel-footer nopadding">
+            <div class="panel-footer nopadding">
                 <div class="btn-group btn-group-justified" role="group" aria-label="...">
                     <div class="btn-group">
-						<button class="btn btn-primary" role="button" type="submit">
-							<span class="glyphicon glyphicon-ok-sign"></span>
-							<span class="submit-text hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resources.UIStringResource.SaveAlternativeText</span>
-						</button>
+                        <button class="btn btn-primary" role="button" type="submit">
+                            <span class="glyphicon glyphicon-ok-sign"></span>
+                            <span class="submit-text hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.SaveAlternativeText</span>
+                        </button>
                     </div>
                     <div class="btn-group">
-						<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Edit, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Id })" class="btn btn-default" role="button" type="button">
-							<span class="glyphicon glyphicon-refresh"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resources.UIStringResource.RefreshAlternativeText</span>
-						</a>
+                        <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Edit, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Id })" class="btn btn-default" role="button" type="button">
+                            <span class="glyphicon glyphicon-refresh"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.RefreshAlternativeText</span>
+                        </a>
                     </div>
                     <div class="btn-group">
-						<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Index)" class="btn btn-default" role="button" type="button">
-							<span class="glyphicon glyphicon-ban-circle"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resources.UIStringResource.BackAlternativeText</span>
-						</a>
+                        <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Index)" class="btn btn-default" role="button" type="button">
+                            <span class="glyphicon glyphicon-ban-circle"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.BackAlternativeText</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -67,7 +75,7 @@
 @section Scripts {
     <script type="text/javascript">
         $(document).ready($(function() {
-            $('input[name=EventTime]').datepicker({
+            $('input[name=Item.EventTime]').datepicker({
                 autoclose: true,
                 beforeShowDay: $.noop,
                 calendarWeeks: false,
@@ -127,9 +135,11 @@
         }));
         function FetchBuild_1() {
 var selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly = $("#Item_Solution_1Id").val();
+var selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly = $("#Item_Organization_1_UniqueidentifierColumn").val();
+var selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly = $("#Item_Organization_2_UniqueidentifierColumn").val();
             var url = "/api/BuildApi/GetCollectionOfNameValuePairOfByFKOnly";
-            var params = BuildCriteriaForFetchBuild_1(selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly);
-            if(selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
+            var params = BuildCriteriaForFetchBuild_1(selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly,selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly,selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly);
+            if(selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly && selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly && selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
             {
                 $.getJSON(url, params, function (data) {
                     objVM.selectListOfBuildId(data);
@@ -137,10 +147,62 @@ var selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly = $("#Item_Solution_1
                 });
             }
         }
-        function BuildCriteriaForFetchBuild_1(selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly) {
+        function BuildCriteriaForFetchBuild_1(selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly,selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly,selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly) {
             var params = {
                 isToCompareIdByFKOnlyOfSolution_1OfByFKOnly: true,
                 valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly,
+                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly: true,
+                valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly,
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: true,
+                valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly,
+                currentIndex: -1,
+                pageSize: -1,
+                queryOrderByExpression: null
+            };
+            return params;
+        }
+        function FetchSolution_1() {
+var selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly = $("#Item_Organization_1_UniqueidentifierColumn").val();
+var selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly = $("#Item_Organization_2_UniqueidentifierColumn").val();
+            var url = "/api/SolutionApi/GetCollectionOfNameValuePairOfByFKOnly";
+            var params = BuildCriteriaForFetchSolution_1(selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly,selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly);
+            if(selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly && selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
+            {
+                $.getJSON(url, params, function (data) {
+                    objVM.selectListOfSolution_1Id(data);
+                    objVM.selectedSolution_1Id(@Model.Item.Solution_1Id);
+                });
+            }
+        }
+        function BuildCriteriaForFetchSolution_1(selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly,selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly) {
+            var params = {
+                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly: true,
+                valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly,
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: true,
+                valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly,
+                currentIndex: -1,
+                pageSize: -1,
+                queryOrderByExpression: null
+            };
+            return params;
+        }
+        function FetchOrganization_1() {
+var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $("#Item_Organization_1_UniqueidentifierColumn").val();
+var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $("#Item_Organization_2_UniqueidentifierColumn").val();
+            var url = "/api/OrganizationApi/GetCollectionOfNameValuePairOfByFKOnly";
+            var params = BuildCriteriaForFetchOrganization_1(selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly);
+            if(selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
+            {
+                $.getJSON(url, params, function (data) {
+                    objVM.selectListOfOrganization_1Id(data);
+                    objVM.selectedOrganization_1Id(@Model.Item.Organization_1Id);
+                });
+            }
+        }
+        function BuildCriteriaForFetchOrganization_1(selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly) {
+            var params = {
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: true,
+                valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly,
                 currentIndex: -1,
                 pageSize: -1,
                 queryOrderByExpression: null
@@ -150,11 +212,15 @@ var selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly = $("#Item_Solution_1
         //cascaded dropdownlist by knockoutjs
         function CascadingDDLViewModel() {
             var self = this;
+            self.selectListOfSolution_1Id = ko.observableArray([]);
+            self.selectedSolution_1Id = ko.observable();
+            self.selectListOfOrganization_1Id = ko.observableArray([]);
+            self.selectedOrganization_1Id = ko.observable();
             self.selectListOfBuildId = ko.observableArray([]);
             self.selectedBuildId = ko.observable();
         }
         var objVM = new CascadingDDLViewModel();
         ko.applyBindings(objVM);
-$("#Item_Solution_1Id").change();
+$("#Item_Organization_2Id").change();
     </script>
 }

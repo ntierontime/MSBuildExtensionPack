@@ -8,25 +8,25 @@ namespace MSBuildExtensionPack.EntityContracts
     /// <summary>
     /// Interaction logic for IQueryCriteriaBuildByFKs
     /// </summary>
-	public partial interface IQueryCriteriaBuildByFKs
-	{
+    public partial interface IQueryCriteriaBuildByFKs
+    {
 
-        		bool IsToCompareSolutionId { get; set; }
-        		System.Int32 ComparedToSolutionId { get; set; }
-        
-	}
+                bool IsToCompareSolutionId { get; set; }
+                System.Int32 ComparedToSolutionId { get; set; }
 
-	#region PrediacteByFKs
+    }
+
+    #region PrediacteByFKs
 
     public class QueryPredicateBuildByFKs<T>
-		where T: IBuild
+        where T: IBuild
     {
-		public IQueryCriteriaBuildByFKs Criteria { get; set; }
+        public IQueryCriteriaBuildByFKs Criteria { get; set; }
 
         public QueryPredicateBuildByFKs(IQueryCriteriaBuildByFKs criteria)
         {
-			this. Criteria = criteria;
-		}
+            this. Criteria = criteria;
+        }
 
         public bool Predicate(T input)
         {
@@ -50,5 +50,5 @@ namespace MSBuildExtensionPack.EntityContracts
         }
     }
 
-	#endregion PrediacteByID
+    #endregion PrediacteByID
 }

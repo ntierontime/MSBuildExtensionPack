@@ -37,21 +37,30 @@
     <Compile Include="DataSourceEntity_\Build.cs" />
     <Compile Include="DataSourceEntity_\BuildEventCode.cs" />
     <Compile Include="DataSourceEntity_\BuildLog.cs" />
+    <Compile Include="DataSourceEntity_\Organization.cs" />
     <Compile Include="DataSourceEntity_\Solution.cs" />
     <Compile Include="DataSourceEntity_\BuildCollection.cs" />
     <Compile Include="DataSourceEntity_\BuildEventCodeCollection.cs" />
     <Compile Include="DataSourceEntity_\BuildLogCollection.cs" />
+    <Compile Include="DataSourceEntity_\OrganizationCollection.cs" />
     <Compile Include="DataSourceEntity_\SolutionCollection.cs" />
     <Compile Include="DataSourceEntityHelpers\BuildHelper.cs" />
     <Compile Include="DataSourceEntityHelpers\BuildEventCodeHelper.cs" />
     <Compile Include="DataSourceEntityHelpers\BuildLogHelper.cs" />
+    <Compile Include="DataSourceEntityHelpers\OrganizationHelper.cs" />
     <Compile Include="DataSourceEntityHelpers\SolutionHelper.cs" />
     <Compile Include="DataSourceIdentifiers\BuildIdentifier.cs" />
     <Compile Include="DataSourceIdentifiers\BuildEventCodeIdentifier.cs" />
     <Compile Include="DataSourceIdentifiers\BuildLogIdentifier.cs" />
+    <Compile Include="DataSourceIdentifiers\OrganizationIdentifier.cs" />
     <Compile Include="DataSourceIdentifiers\SolutionIdentifier.cs" />
     <Compile Include="DataSourceQueryCriteriaByEntityReferences\BuildQueryCriteriaByEntityReference.cs" />
     <Compile Include="DataSourceQueryCriteriaByEntityReferences\BuildLogQueryCriteriaByEntityReference.cs" />
+    <Compile Include="DataSourceQueryCriteriaByEntityReferences\OrganizationQueryCriteriaByEntityReference.cs" />
+    <Compile Include="DataSourceQueryCriteriaByEntityReferences\SolutionQueryCriteriaByEntityReference.cs" />
+    <Compile Include="DataSourceQueryCriteriaByUniqueConstraints\OrganizationQueryCriteriaByUniqueConstraint.cs" />
+    <None Include="map.2.B.3.vsd" />
+    <None Include="map.2.B.3.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj">
@@ -70,27 +79,33 @@
       <Project>{f85a14d5-64e0-4cfc-88da-27fe9d0dd664}</Project>
       <Name>Framework.DataSourceEntities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Resources\MSBuildExtensionPack.Resources.csproj">
-      <Project>{42681747-107b-487b-9ea2-ce46754682fd}</Project>
-      <Name>MSBuildExtensionPack.Resources</Name>
+    <ProjectReference Include="..\..\..\Frameworks\Framework.EntityContracts\Framework.EntityContracts.csproj">
+      <Project>{c3a270de-9727-492e-91e2-f56e7e0e0f83}</Project>
+      <Name>Framework.EntityContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Resx\MSBuildExtensionPack.Resx.csproj">
+      <Project>{fd138435-0f7c-4b72-b9d3-987e7fe69f80}</Project>
+      <Name>MSBuildExtensionPack.Resx</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.DirectoryServices.Protocols" />
     <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.ServiceModel" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="LINQtoCSV, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\LINQtoCSV.1.5.0.0\lib\net35\LINQtoCSV.dll</HintPath>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Portable.DataAnnotations, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Net46-Portable.DataAnnotations.1.0.2\lib\net46\Portable.DataAnnotations.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.Runtime.Serialization.Primitives.4.3.0\lib\net46\System.Runtime.Serialization.Primitives.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <PropertyGroup>

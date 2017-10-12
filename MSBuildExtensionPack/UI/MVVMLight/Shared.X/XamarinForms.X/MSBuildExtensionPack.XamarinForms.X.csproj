@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{99C18CE6-D6CD-44A2-A187-9C8E83F79827}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MSBuildExtensionPack.XamarinForms</RootNamespace>
+    <AssemblyName>MSBuildExtensionPack.XamarinForms.X</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
+    <EmbeddedResource Include="Pages\Build\Create.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\Build\Create.xaml.cs">
+      <DependentUpon>Create.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\BuildEventCode\Create.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\BuildEventCode\Create.xaml.cs">
+      <DependentUpon>Create.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\BuildLog\Create.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\BuildLog\Create.xaml.cs">
+      <DependentUpon>Create.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\Organization\Create.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\Organization\Create.xaml.cs">
+      <DependentUpon>Create.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\Solution\Create.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\Solution\Create.xaml.cs">
+      <DependentUpon>Create.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\Build\Delete.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\Build\Delete.xaml.cs">
+      <DependentUpon>Delete.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\BuildEventCode\Delete.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\BuildEventCode\Delete.xaml.cs">
+      <DependentUpon>Delete.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\BuildLog\Delete.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\BuildLog\Delete.xaml.cs">
+      <DependentUpon>Delete.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\Organization\Delete.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\Organization\Delete.xaml.cs">
+      <DependentUpon>Delete.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\Solution\Delete.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\Solution\Delete.xaml.cs">
+      <DependentUpon>Delete.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\Build\Details.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\Build\Details.xaml.cs">
+      <DependentUpon>Details.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\BuildEventCode\Details.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\BuildEventCode\Details.xaml.cs">
+      <DependentUpon>Details.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\BuildLog\Details.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\BuildLog\Details.xaml.cs">
+      <DependentUpon>Details.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\Organization\Details.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\Organization\Details.xaml.cs">
+      <DependentUpon>Details.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\Solution\Details.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\Solution\Details.xaml.cs">
+      <DependentUpon>Details.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\Build\Edit.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\Build\Edit.xaml.cs">
+      <DependentUpon>Edit.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\BuildEventCode\Edit.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\BuildEventCode\Edit.xaml.cs">
+      <DependentUpon>Edit.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\BuildLog\Edit.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\BuildLog\Edit.xaml.cs">
+      <DependentUpon>Edit.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\Organization\Edit.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\Organization\Edit.xaml.cs">
+      <DependentUpon>Edit.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\Solution\Edit.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\Solution\Edit.xaml.cs">
+      <DependentUpon>Edit.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="App.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GlobalPages\HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="GlobalPages\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GlobalPages\MenuPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="GlobalPages\MenuPage.xaml.cs">
+      <DependentUpon>MenuPage.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GlobalPages\RootPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="GlobalPages\RootPage.xaml.cs">
+      <DependentUpon>RootPage.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ResourceApp.config">
+    </EmbeddedResource>
+    <Compile Include="Globallization\TranslateExtension.cs" />
+    <None Include="app.config" />
+    <Compile Include="ViewModels\MenuPageViewModel.cs" />
+    <EmbeddedResource Include="Pages\WPCommonSearchViewOfBuild.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\WPCommonSearchViewOfBuild.xaml.cs">
+      <DependentUpon>WPCommonSearchViewOfBuild.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\WPCommonResultViewOfBuild.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\WPCommonResultViewOfBuild.xaml.cs">
+      <DependentUpon>WPCommonResultViewOfBuild.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\WPCommonSearchViewOfBuildEventCode.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\WPCommonSearchViewOfBuildEventCode.xaml.cs">
+      <DependentUpon>WPCommonSearchViewOfBuildEventCode.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\WPCommonResultViewOfBuildEventCode.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\WPCommonResultViewOfBuildEventCode.xaml.cs">
+      <DependentUpon>WPCommonResultViewOfBuildEventCode.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\WPCommonSearchViewOfBuildLog.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\WPCommonSearchViewOfBuildLog.xaml.cs">
+      <DependentUpon>WPCommonSearchViewOfBuildLog.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\WPCommonResultViewOfBuildLog.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\WPCommonResultViewOfBuildLog.xaml.cs">
+      <DependentUpon>WPCommonResultViewOfBuildLog.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\WPCommonSearchViewOfOrganization.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\WPCommonSearchViewOfOrganization.xaml.cs">
+      <DependentUpon>WPCommonSearchViewOfOrganization.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\WPCommonResultViewOfOrganization.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\WPCommonResultViewOfOrganization.xaml.cs">
+      <DependentUpon>WPCommonResultViewOfOrganization.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\WPCommonSearchViewOfSolution.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\WPCommonSearchViewOfSolution.xaml.cs">
+      <DependentUpon>WPCommonSearchViewOfSolution.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\WPCommonResultViewOfSolution.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\WPCommonResultViewOfSolution.xaml.cs">
+      <DependentUpon>WPCommonResultViewOfSolution.xaml</DependentUpon>
+    </Compile>
+    <None Include="map.2.D.1.vsd" />
+    <None Include="map.2.D.1.vsd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Core.X\CommonBLLEntities.X\MSBuildExtensionPack.CommonBLLEntities.X.csproj">
+      <Project>{3097e99f-b10c-4335-9d39-25f53642b272}</Project>
+      <Name>MSBuildExtensionPack.CommonBLLEntities.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core.X\DataSourceEntities.X\MSBuildExtensionPack.DataSourceEntities.X.csproj">
+      <Project>{7a9ed7b9-4cb5-40df-89df-4293bfb4de22}</Project>
+      <Name>MSBuildExtensionPack.DataSourceEntities.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core.X\EntityContracts.X\MSBuildExtensionPack.EntityContracts.X.csproj">
+      <Project>{9b54200d-20f0-4380-bd15-f6211718853a}</Project>
+      <Name>MSBuildExtensionPack.EntityContracts.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.X\Framework.X\Framework.X.csproj">
+      <Project>{cab19f30-0455-443c-b7a3-ba943aaa9d15}</Project>
+      <Name>Framework.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.X\Framework.CommonBLLEntities.X\Framework.CommonBLLEntities.X.csproj">
+      <Project>{bd3f8de3-cf0f-4187-915c-b5d9f76c2d67}</Project>
+      <Name>Framework.CommonBLLEntities.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.X\Framework.DAL.X\Framework.DAL.X.csproj">
+      <Project>{c41fd193-e8a9-4c77-93d1-3b464d58a876}</Project>
+      <Name>Framework.DAL.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.X\Framework.DataSourceEntities.X\Framework.DataSourceEntities.X.csproj">
+      <Project>{b9131050-fd8e-404d-a135-11e210cdd438}</Project>
+      <Name>Framework.DataSourceEntities.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.X\Framework.EntityContracts.X\Framework.EntityContracts.X.csproj">
+      <Project>{81863781-aa71-4530-a59c-04d2153ddd30}</Project>
+      <Name>Framework.EntityContracts.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.X\Framework.Resx.X\Framework.Resx.X.csproj">
+      <Project>{f1e49e74-fec1-43f1-9013-3c17cdff28b4}</Project>
+      <Name>Framework.Resx.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.X\Framework.ViewModels.X\Framework.ViewModels.X.csproj">
+      <Project>{9ebb2439-1a6e-4d2f-b8bb-f09a1e76293e}</Project>
+      <Name>Framework.ViewModels.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.X\Framework.Xamariner.X\Framework.Xamariner.X.csproj">
+      <Project>{397ffa3d-9a4e-4900-9714-65d16a871613}</Project>
+      <Name>Framework.Xamariner.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.X\Framework.Xaml.X\Framework.Xaml.X.csproj">
+      <Project>{3f42d127-aaa5-4810-b593-8f2a426bce05}</Project>
+      <Name>Framework.Xaml.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVVMLightViewModels.X\MSBuildExtensionPack.MVVMLightViewModels.X.csproj">
+      <Project>{3c6a61c1-2044-4fde-8729-5917787d58aa}</Project>
+      <Name>MSBuildExtensionPack.MVVMLightViewModels.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core.X\Resx.X\MSBuildExtensionPack.Resx.X.csproj">
+      <Project>{4e3e985c-7d38-40f5-81e4-92fac3e9357a}</Project>
+      <Name>MSBuildExtensionPack.Resx.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core.X\ViewModelData.X\MSBuildExtensionPack.ViewModelData.X.csproj">
+      <Project>{d1609968-bd0d-4112-a3f7-fd48ec7fc7a4}</Project>
+      <Name>MSBuildExtensionPack.ViewModelData.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Web.X\WebApiClient.X\MSBuildExtensionPack.WebApiClient.X.csproj">
+      <Project>{9aab8c12-451c-44e8-a951-b7684be71323}</Project>
+      <Name>MSBuildExtensionPack.WebApiClient.X</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.3.0.19026, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\\packages\MvvmLightLibs.5.3.0.0\lib\portable-net45+wp8+wpa81+netcore45+monoandroid1+xamarin.ios10\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.3.0.19032, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\\packages\MvvmLightLibs.5.3.0.0\lib\portable-net45+wp8+wpa81+netcore45+monoandroid1+xamarin.ios10\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialIcons, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\\packages\MaterialIcons.1.0.3\lib\MaterialIcons.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLAppConfig, Version=0.2.0.0, Culture=neutral, PublicKeyToken=7dc9bc9afb3fa588, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\packages\PCLAppConfig.0.3.2\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\PCLAppConfig.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PCLAppConfig.FileSystemStream, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\packages\PCLAppConfig.0.3.2\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\PCLAppConfig.FileSystemStream.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PCLAppConfig.FileSystemStream.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\packages\PCLAppConfig.0.3.2\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\PCLAppConfig.FileSystemStream.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PCLStorage, Version=1.0.2.0, Culture=neutral, PublicKeyToken=286fe515a2c35b64, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\packages\PCLStorage.1.0.2\lib\portable-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac\PCLStorage.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PCLStorage.Abstractions, Version=1.0.2.0, Culture=neutral, PublicKeyToken=286fe515a2c35b64, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\packages\PCLStorage.1.0.2\lib\portable-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac\PCLStorage.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\\packages\Xamarin.Forms.2.3.4.231\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\\packages\Xamarin.Forms.2.3.4.231\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\\packages\Xamarin.Forms.2.3.4.231\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\..\..\..\..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\..\..\..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {{0}}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\..\..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets'))" />
+  </Target>
+</Project>

@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>D5323F30-7193-4287-B93F-58115E095B1C</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MSBuildExtensionPack.IOSApp</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>MSBuildExtensionPack.IOSApp</AssemblyName>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <BuildIpa>True</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="DispatcherHelperWrapper.cs" />
+    <Compile Include="Localize.cs" />
+    <Compile Include="Main.cs" />
+    <None Include="map.2.D.2.vsd" />
+    <None Include="map.2.D.2.vsd.png" />
+    <BundleResource Include="Assets\ActiveDirectory.png" />
+    <BundleResource Include="Assets\AddComputer.png" />
+    <BundleResource Include="Assets\Addcsv01.png" />
+    <BundleResource Include="Assets\Addcsv02.png" />
+    <BundleResource Include="Assets\AddNew.png" />
+    <BundleResource Include="Assets\AdobeAcrobat.png" />
+    <BundleResource Include="Assets\AdobeDreamweaver.png" />
+    <BundleResource Include="Assets\AdobeIllustrator.png" />
+    <BundleResource Include="Assets\AdobePhotoshop.png" />
+    <BundleResource Include="Assets\Agreement01.png" />
+    <BundleResource Include="Assets\Agreement02.png" />
+    <BundleResource Include="Assets\AlignCenter.png" />
+    <BundleResource Include="Assets\AlignHorizontalCenter.png" />
+    <BundleResource Include="Assets\AlignJustify.png" />
+    <BundleResource Include="Assets\AlignLeft.png" />
+    <BundleResource Include="Assets\AlignRight.png" />
+    <BundleResource Include="Assets\Allsoftwareupdatesthatareinstalledincomputer.png" />
+    <BundleResource Include="Assets\Animation01.png" />
+    <BundleResource Include="Assets\Animation02.png" />
+    <BundleResource Include="Assets\Animation03.png" />
+    <BundleResource Include="Assets\Application01.png" />
+    <BundleResource Include="Assets\Arrow.png" />
+    <BundleResource Include="Assets\ArrowExpand.png" />
+    <BundleResource Include="Assets\Arrowhead01.png" />
+    <BundleResource Include="Assets\ArrowheadDown.png" />
+    <BundleResource Include="Assets\ArrowheadDown01.png" />
+    <BundleResource Include="Assets\ArrowheadLeft.png" />
+    <BundleResource Include="Assets\ArrowheadLeft01.png" />
+    <BundleResource Include="Assets\ArrowheadRight.png" />
+    <BundleResource Include="Assets\ArrowheadRight01.png" />
+    <BundleResource Include="Assets\ArrowheadTop.png" />
+    <BundleResource Include="Assets\ArrowheadUp.png" />
+    <BundleResource Include="Assets\Assign.png" />
+    <BundleResource Include="Assets\Audit.png" />
+    <BundleResource Include="Assets\Avalanche.png" />
+    <BundleResource Include="Assets\Basket.png" />
+    <BundleResource Include="Assets\BlackList.png" />
+    <BundleResource Include="Assets\BlackListFolder.png" />
+    <BundleResource Include="Assets\Blog.png" />
+    <BundleResource Include="Assets\BookClose.png" />
+    <BundleResource Include="Assets\Bookmarkadd.png" />
+    <BundleResource Include="Assets\BookmarkDelete.png" />
+    <BundleResource Include="Assets\BookmarkDown.png" />
+    <BundleResource Include="Assets\Bookmarkedit.png" />
+    <BundleResource Include="Assets\BookmarkFind.png" />
+    <BundleResource Include="Assets\BookmarkHelp.png" />
+    <BundleResource Include="Assets\BookmarkInfo.png" />
+    <BundleResource Include="Assets\Bookmarklocked.png" />
+    <BundleResource Include="Assets\BookmarkNew.png" />
+    <BundleResource Include="Assets\BookmarkOk.png" />
+    <BundleResource Include="Assets\BookmarkPrevious.png" />
+    <BundleResource Include="Assets\BookmarkRefresh.png" />
+    <BundleResource Include="Assets\Bookmarkremove.png" />
+    <BundleResource Include="Assets\BookMarks.png" />
+    <BundleResource Include="Assets\BookmarkSave.png" />
+    <BundleResource Include="Assets\BookmarkSearch.png" />
+    <BundleResource Include="Assets\BookmarkSettings.png" />
+    <BundleResource Include="Assets\Bookmarksfavourites.png" />
+    <BundleResource Include="Assets\Bookmarkslocked.png" />
+    <BundleResource Include="Assets\BookMarksSync.png" />
+    <BundleResource Include="Assets\BookmarksUpload.png" />
+    <BundleResource Include="Assets\BookmarkUp.png" />
+    <BundleResource Include="Assets\BookOpen.png" />
+    <BundleResource Include="Assets\Braces01.png" />
+    <BundleResource Include="Assets\BracketsSquare.png" />
+    <BundleResource Include="Assets\BringToFront.png" />
+    <BundleResource Include="Assets\Bullet.png" />
+    <BundleResource Include="Assets\BurnDisk01.png" />
+    <BundleResource Include="Assets\BurnDisk02.png" />
+    <BundleResource Include="Assets\Calculator01.png" />
+    <BundleResource Include="Assets\Calculator02.png" />
+    <BundleResource Include="Assets\Calendar01.png" />
+    <BundleResource Include="Assets\Calendar02.png" />
+    <BundleResource Include="Assets\Calendar03.png" />
+    <BundleResource Include="Assets\Calendar04.png" />
+    <BundleResource Include="Assets\Calendar05.png" />
+    <BundleResource Include="Assets\CalendarAdd.png" />
+    <BundleResource Include="Assets\CalendarDelete.png" />
+    <BundleResource Include="Assets\Calendardownload.png" />
+    <BundleResource Include="Assets\Calendaredit.png" />
+    <BundleResource Include="Assets\CalendarFavourite.png" />
+    <BundleResource Include="Assets\CalendarHelp.png" />
+    <BundleResource Include="Assets\CalendarInfo.png" />
+    <BundleResource Include="Assets\Calendarlocked.png" />
+    <BundleResource Include="Assets\CalendarNext.png" />
+    <BundleResource Include="Assets\CalendarOk.png" />
+    <BundleResource Include="Assets\CalendarPrevious.png" />
+    <BundleResource Include="Assets\Calendarremove.png" />
+    <BundleResource Include="Assets\CalendarSave.png" />
+    <BundleResource Include="Assets\CalendarSettings.png" />
+    <BundleResource Include="Assets\Calendarunlocked.png" />
+    <BundleResource Include="Assets\CalendarUpload.png" />
+    <BundleResource Include="Assets\CCleaner.png" />
+    <BundleResource Include="Assets\CDCatalog01.png" />
+    <BundleResource Include="Assets\CDCatalog02.png" />
+    <BundleResource Include="Assets\CDMusic.png" />
+    <BundleResource Include="Assets\CDNew.png" />
+    <BundleResource Include="Assets\CDPause.png" />
+    <BundleResource Include="Assets\CDPlay.png" />
+    <BundleResource Include="Assets\CDSoftware.png" />
+    <BundleResource Include="Assets\CDStop.png" />
+    <BundleResource Include="Assets\CDValid.png" />
+    <BundleResource Include="Assets\CDView.png" />
+    <BundleResource Include="Assets\CDWarning.png" />
+    <BundleResource Include="Assets\Certificate01.png" />
+    <BundleResource Include="Assets\Certificate02.png" />
+    <BundleResource Include="Assets\Check.png" />
+    <BundleResource Include="Assets\Check01.png" />
+    <BundleResource Include="Assets\Check02.png" />
+    <BundleResource Include="Assets\Check03.png" />
+    <BundleResource Include="Assets\Clipboard.png" />
+    <BundleResource Include="Assets\ClipboardNext.png" />
+    <BundleResource Include="Assets\ClipboardNextDown.png" />
+    <BundleResource Include="Assets\closeiconimage.png" />
+    <BundleResource Include="Assets\Cloud.png" />
+    <BundleResource Include="Assets\ColumnSelection.png" />
+    <BundleResource Include="Assets\CommandPaste.png" />
+    <BundleResource Include="Assets\CommandRedo.png" />
+    <BundleResource Include="Assets\CommandRefresh.png" />
+    <BundleResource Include="Assets\CommandRefresh01.png" />
+    <BundleResource Include="Assets\CommandReset.png" />
+    <BundleResource Include="Assets\CommandUndo.png" />
+    <BundleResource Include="Assets\ComodoDragon.png" />
+    <BundleResource Include="Assets\ComputerDesktop.png" />
+    <BundleResource Include="Assets\ComputerthatisMemberofsecuritygoup.png" />
+    <BundleResource Include="Assets\ConferenceCall.png" />
+    <BundleResource Include="Assets\ConferenceCall01.png" />
+    <BundleResource Include="Assets\ConferenceCall02.png" />
+    <BundleResource Include="Assets\ConferenceCall03.png" />
+    <BundleResource Include="Assets\ConnectiontoaComputer.png" />
+    <BundleResource Include="Assets\Connectiontomultiplecomputer.png" />
+    <BundleResource Include="Assets\ConnectivityError.png" />
+    <BundleResource Include="Assets\Contacts.png" />
+    <BundleResource Include="Assets\ContactsDelete.png" />
+    <BundleResource Include="Assets\ContactsDownload.png" />
+    <BundleResource Include="Assets\Contactsedit.png" />
+    <BundleResource Include="Assets\Contactsfavourites.png" />
+    <BundleResource Include="Assets\ContactsFind.png" />
+    <BundleResource Include="Assets\Contactshelp.png" />
+    <BundleResource Include="Assets\Contactsinfo.png" />
+    <BundleResource Include="Assets\ContactsLocked.png" />
+    <BundleResource Include="Assets\ContactsNext.png" />
+    <BundleResource Include="Assets\ContactsOk.png" />
+    <BundleResource Include="Assets\ContactsPrevious.png" />
+    <BundleResource Include="Assets\ContactsRefresh.png" />
+    <BundleResource Include="Assets\ContactsRemove.png" />
+    <BundleResource Include="Assets\ContactsSave.png" />
+    <BundleResource Include="Assets\ContactsSearch.png" />
+    <BundleResource Include="Assets\ContactsSettings.png" />
+    <BundleResource Include="Assets\ContactsSync.png" />
+    <BundleResource Include="Assets\ContactsUnLocked.png" />
+    <BundleResource Include="Assets\Contactsupload.png" />
+    <BundleResource Include="Assets\Crop.png" />
+    <BundleResource Include="Assets\Crop01.png" />
+    <BundleResource Include="Assets\Crop02.png" />
+    <BundleResource Include="Assets\CSharp01.png" />
+    <BundleResource Include="Assets\CSharp02.png" />
+    <BundleResource Include="Assets\Curve.png" />
+    <BundleResource Include="Assets\Cut.png" />
+    <BundleResource Include="Assets\DatabaseConnection.png" />
+    <BundleResource Include="Assets\DataCollapse.png" />
+    <BundleResource Include="Assets\DataDefragmentation.png" />
+    <BundleResource Include="Assets\DataEdit.png" />
+    <BundleResource Include="Assets\DataErase.png" />
+    <BundleResource Include="Assets\DataExchange.png" />
+    <BundleResource Include="Assets\DataExport.png" />
+    <BundleResource Include="Assets\DataFiles.png" />
+    <BundleResource Include="Assets\DataHistogram.png" />
+    <BundleResource Include="Assets\DataImport.png" />
+    <BundleResource Include="Assets\DataInformation.png" />
+    <BundleResource Include="Assets\DataMerge.png" />
+    <BundleResource Include="Assets\DataShare.png" />
+    <BundleResource Include="Assets\DataSplit.png" />
+    <BundleResource Include="Assets\DataSplit01.png" />
+    <BundleResource Include="Assets\DataSynchronize.png" />
+    <BundleResource Include="Assets\DataText.png" />
+    <BundleResource Include="Assets\DecreaseIntend.png" />
+    <BundleResource Include="Assets\Despeckle01.png" />
+    <BundleResource Include="Assets\DeviceHeadphone.png" />
+    <BundleResource Include="Assets\DeviceRadio.png" />
+    <BundleResource Include="Assets\DeviceTablet.png" />
+    <BundleResource Include="Assets\DialogBoxAbout.png" />
+    <BundleResource Include="Assets\DiscError.png" />
+    <BundleResource Include="Assets\DiscInformation.png" />
+    <BundleResource Include="Assets\DisplayBrightness.png" />
+    <BundleResource Include="Assets\DisplayContrast.png" />
+    <BundleResource Include="Assets\DisplayContrast02.png" />
+    <BundleResource Include="Assets\Document01.png" />
+    <BundleResource Include="Assets\Document02.png" />
+    <BundleResource Include="Assets\DocumentAdd.png" />
+    <BundleResource Include="Assets\DocumentAdd01.png" />
+    <BundleResource Include="Assets\DocumentCheck.png" />
+    <BundleResource Include="Assets\DocumentDelete.png" />
+    <BundleResource Include="Assets\DocumentDelete01.png" />
+    <BundleResource Include="Assets\DocumentDownload.png" />
+    <BundleResource Include="Assets\DocumentDownload01.png" />
+    <BundleResource Include="Assets\DocumentEdit.png" />
+    <BundleResource Include="Assets\DocumentError.png" />
+    <BundleResource Include="Assets\DocumentError01.png" />
+    <BundleResource Include="Assets\DocumentExchange.png" />
+    <BundleResource Include="Assets\DocumentExchange01.png" />
+    <BundleResource Include="Assets\DocumentFind.png" />
+    <BundleResource Include="Assets\DocumentFind02.png" />
+    <BundleResource Include="Assets\DocumentMusic.png" />
+    <BundleResource Include="Assets\DocumentMusic01.png" />
+    <BundleResource Include="Assets\DocumentMusic02.png" />
+    <BundleResource Include="Assets\DocumentNew.png" />
+    <BundleResource Include="Assets\Documents01.png" />
+    <BundleResource Include="Assets\Documents02.png" />
+    <BundleResource Include="Assets\DocumentSave.png" />
+    <BundleResource Include="Assets\DocumentSettings.png" />
+    <BundleResource Include="Assets\DocumentSettings01.png" />
+    <BundleResource Include="Assets\DocumentShare.png" />
+    <BundleResource Include="Assets\DocumentShare01.png" />
+    <BundleResource Include="Assets\DocumentWarning.png" />
+    <BundleResource Include="Assets\DocumentWarning01.png" />
+    <BundleResource Include="Assets\DocumentZoomIn.png" />
+    <BundleResource Include="Assets\DocumentZoomIn01.png" />
+    <BundleResource Include="Assets\DocumentZoomIn02.png" />
+    <BundleResource Include="Assets\DocumentZoomOut.png" />
+    <BundleResource Include="Assets\DocumentZoomOut01.png" />
+    <BundleResource Include="Assets\DocumentZoomOut02.png" />
+    <BundleResource Include="Assets\DownloadError.png" />
+    <BundleResource Include="Assets\Drag01.png" />
+    <BundleResource Include="Assets\Drag02.png" />
+    <BundleResource Include="Assets\Dropbox.png" />
+    <BundleResource Include="Assets\EarthQuake.png" />
+    <BundleResource Include="Assets\Edit.png" />
+    <BundleResource Include="Assets\EllipseSelection.png" />
+    <BundleResource Include="Assets\Executemultiplequeries.png" />
+    <BundleResource Include="Assets\Expand01.png" />
+    <BundleResource Include="Assets\Expand02.png" />
+    <BundleResource Include="Assets\Expand03.png" />
+    <BundleResource Include="Assets\Expanderdown01.png" />
+    <BundleResource Include="Assets\Expansion01.png" />
+    <BundleResource Include="Assets\Expansion02.png" />
+    <BundleResource Include="Assets\Favourites.png" />
+    <BundleResource Include="Assets\FavouritesAdd.png" />
+    <BundleResource Include="Assets\FavouritesDelete.png" />
+    <BundleResource Include="Assets\FavouritesDownload.png" />
+    <BundleResource Include="Assets\FavouritesDownload2.png" />
+    <BundleResource Include="Assets\Favouritesedit.png" />
+    <BundleResource Include="Assets\Favouritesfavourites.png" />
+    <BundleResource Include="Assets\FavouritesFind.png" />
+    <BundleResource Include="Assets\FavouritesHelp.png" />
+    <BundleResource Include="Assets\FavouritesInfo.png" />
+    <BundleResource Include="Assets\Favouriteslocked.png" />
+    <BundleResource Include="Assets\FavouritesNext.png" />
+    <BundleResource Include="Assets\FavouritesNext2.png" />
+    <BundleResource Include="Assets\FavouritesOk.png" />
+    <BundleResource Include="Assets\FavouritesPrevious.png" />
+    <BundleResource Include="Assets\FavouritesRefresh.png" />
+    <BundleResource Include="Assets\Favouritesremove.png" />
+    <BundleResource Include="Assets\FavouritesSave.png" />
+    <BundleResource Include="Assets\FavouritesSearch.png" />
+    <BundleResource Include="Assets\FavouritesSettings.png" />
+    <BundleResource Include="Assets\FavouritesSync.png" />
+    <BundleResource Include="Assets\FavouritesUnlocked.png" />
+    <BundleResource Include="Assets\FavouritesUpload.png" />
+    <BundleResource Include="Assets\File.png" />
+    <BundleResource Include="Assets\Fileadd.png" />
+    <BundleResource Include="Assets\FileDelete.png" />
+    <BundleResource Include="Assets\FileDownload.png" />
+    <BundleResource Include="Assets\Fileedit.png" />
+    <BundleResource Include="Assets\Filefavourite.png" />
+    <BundleResource Include="Assets\FileFind.png" />
+    <BundleResource Include="Assets\FileFormatBitMap.png" />
+    <BundleResource Include="Assets\FileFormatEPS.png" />
+    <BundleResource Include="Assets\FileFormatGIF.png" />
+    <BundleResource Include="Assets\FileFormatIcon.png" />
+    <BundleResource Include="Assets\FileFormatJPEG.png" />
+    <BundleResource Include="Assets\FileFormatMp3.png" />
+    <BundleResource Include="Assets\FileFormatPNG.png" />
+    <BundleResource Include="Assets\FileFormatPPT.png" />
+    <BundleResource Include="Assets\FileFormatSWF.png" />
+    <BundleResource Include="Assets\FileFormatTGA.png" />
+    <BundleResource Include="Assets\FileFormatTIFF.png" />
+    <BundleResource Include="Assets\FileFormatWave.png" />
+    <BundleResource Include="Assets\FileFormatZIP.png" />
+    <BundleResource Include="Assets\FileHelp.png" />
+    <BundleResource Include="Assets\Fileinfo.png" />
+    <BundleResource Include="Assets\Filelock.png" />
+    <BundleResource Include="Assets\FileNext.png" />
+    <BundleResource Include="Assets\FileOk.png" />
+    <BundleResource Include="Assets\FilePrevious.png" />
+    <BundleResource Include="Assets\Filerefresh.png" />
+    <BundleResource Include="Assets\FIleSave.png" />
+    <BundleResource Include="Assets\FileSearch.png" />
+    <BundleResource Include="Assets\FileSettings.png" />
+    <BundleResource Include="Assets\FileSync.png" />
+    <BundleResource Include="Assets\FileTorrent.png" />
+    <BundleResource Include="Assets\Fileunlock.png" />
+    <BundleResource Include="Assets\FileUpload.png" />
+    <BundleResource Include="Assets\FindPrevious.png" />
+    <BundleResource Include="Assets\FindReplace.png" />
+    <BundleResource Include="Assets\FindReplace01.png" />
+    <BundleResource Include="Assets\FitToSize.png" />
+    <BundleResource Include="Assets\FlashPlayer.png" />
+    <BundleResource Include="Assets\Folder01.png" />
+    <BundleResource Include="Assets\Folder02.png" />
+    <BundleResource Include="Assets\Folder03.png" />
+    <BundleResource Include="Assets\Folder04.png" />
+    <BundleResource Include="Assets\Folder05.png" />
+    <BundleResource Include="Assets\Folder1WF.png" />
+    <BundleResource Include="Assets\FolderAdd.png" />
+    <BundleResource Include="Assets\FolderAdd01.png" />
+    <BundleResource Include="Assets\FolderAdd02.png" />
+    <BundleResource Include="Assets\FolderAdd03.png" />
+    <BundleResource Include="Assets\FolderAdd04.png" />
+    <BundleResource Include="Assets\FolderAdd05.png" />
+    <BundleResource Include="Assets\FolderConnect.png" />
+    <BundleResource Include="Assets\FolderCube.png" />
+    <BundleResource Include="Assets\FolderCube01.png" />
+    <BundleResource Include="Assets\FolderDelete.png" />
+    <BundleResource Include="Assets\FolderDelete01.png" />
+    <BundleResource Include="Assets\FolderDownload.png" />
+    <BundleResource Include="Assets\FolderDownload01.png" />
+    <BundleResource Include="Assets\FolderDownload02.png" />
+    <BundleResource Include="Assets\FolderEdit.png" />
+    <BundleResource Include="Assets\FolderEdit01.png" />
+    <BundleResource Include="Assets\FolderEmpty.png" />
+    <BundleResource Include="Assets\FolderFind01.png" />
+    <BundleResource Include="Assets\FolderInformation.png" />
+    <BundleResource Include="Assets\FolderMovie.png" />
+    <BundleResource Include="Assets\FolderMovie01.png" />
+    <BundleResource Include="Assets\FolderMovie02.png" />
+    <BundleResource Include="Assets\FolderMovie03.png" />
+    <BundleResource Include="Assets\FolderMusic.png" />
+    <BundleResource Include="Assets\FolderMusic01.png" />
+    <BundleResource Include="Assets\FolderMusic02.png" />
+    <BundleResource Include="Assets\FolderNew.png" />
+    <BundleResource Include="Assets\FolderNew01.png" />
+    <BundleResource Include="Assets\FolderOk.png" />
+    <BundleResource Include="Assets\FolderOpen01.png" />
+    <BundleResource Include="Assets\FolderOpen03.png" />
+    <BundleResource Include="Assets\FolderPicture.png" />
+    <BundleResource Include="Assets\FolderRemove01.png" />
+    <BundleResource Include="Assets\FolderRemove02.png" />
+    <BundleResource Include="Assets\FolderRemove03.png" />
+    <BundleResource Include="Assets\FolderRemove04.png" />
+    <BundleResource Include="Assets\FolderShare01.png" />
+    <BundleResource Include="Assets\FolderUpload.png" />
+    <BundleResource Include="Assets\FolderUpload01.png" />
+    <BundleResource Include="Assets\FolderUpload02.png" />
+    <BundleResource Include="Assets\FolderZoomIn.png" />
+    <BundleResource Include="Assets\FolderZoomOut01.png" />
+    <BundleResource Include="Assets\FolderZoomOutWF.png" />
+    <BundleResource Include="Assets\ForestFire.png" />
+    <BundleResource Include="Assets\FormatBullets.png" />
+    <BundleResource Include="Assets\FormatBullets01.png" />
+    <BundleResource Include="Assets\FormatBullets02.png" />
+    <BundleResource Include="Assets\FreeHandSelection.png" />
+    <BundleResource Include="Assets\FullScreenCollapse.png" />
+    <BundleResource Include="Assets\FullScreenExpand.png" />
+    <BundleResource Include="Assets\GarbageClosed.png" />
+    <BundleResource Include="Assets\GarbageFull.png" />
+    <BundleResource Include="Assets\GarbageOpen.png" />
+    <BundleResource Include="Assets\Gear03WF.png" />
+    <BundleResource Include="Assets\Globe.png" />
+    <BundleResource Include="Assets\GoogleDrive.png" />
+    <BundleResource Include="Assets\GraphicsCard.png" />
+    <BundleResource Include="Assets\GroupAdd.png" />
+    <BundleResource Include="Assets\GroupCluster.png" />
+    <BundleResource Include="Assets\GroupDelete.png" />
+    <BundleResource Include="Assets\GroupModify.png" />
+    <BundleResource Include="Assets\GsmTower.png" />
+    <BundleResource Include="Assets\Help.png" />
+    <BundleResource Include="Assets\Help01.png" />
+    <BundleResource Include="Assets\Help02.png" />
+    <BundleResource Include="Assets\Hide.png" />
+    <BundleResource Include="Assets\Hook.png" />
+    <BundleResource Include="Assets\HorizontalAlignLeft.png" />
+    <BundleResource Include="Assets\HorizontalAlignRight.png" />
+    <BundleResource Include="Assets\Increaseintend.png" />
+    <BundleResource Include="Assets\Infrared.png" />
+    <BundleResource Include="Assets\Installation01.png" />
+    <BundleResource Include="Assets\Installation02.png" />
+    <BundleResource Include="Assets\Installation03.png" />
+    <BundleResource Include="Assets\InternetFacilities.png" />
+    <BundleResource Include="Assets\KeyAccess.png" />
+    <BundleResource Include="Assets\KeyAccess01.png" />
+    <BundleResource Include="Assets\KeyHash.png" />
+    <BundleResource Include="Assets\Lambda01.png" />
+    <BundleResource Include="Assets\Layers.png" />
+    <BundleResource Include="Assets\Link.png" />
+    <BundleResource Include="Assets\Link01.png" />
+    <BundleResource Include="Assets\Link02.png" />
+    <BundleResource Include="Assets\Link03.png" />
+    <BundleResource Include="Assets\Link04.png" />
+    <BundleResource Include="Assets\Link05.png" />
+    <BundleResource Include="Assets\Link06.png" />
+    <BundleResource Include="Assets\Link07.png" />
+    <BundleResource Include="Assets\ListAllApplicationinstalledoncmputer.png" />
+    <BundleResource Include="Assets\Listallsecuritygroupsoncomputer.png" />
+    <BundleResource Include="Assets\Listen.png" />
+    <BundleResource Include="Assets\Loading01.png" />
+    <BundleResource Include="Assets\Loading02.png" />
+    <BundleResource Include="Assets\Loading03.png" />
+    <BundleResource Include="Assets\Loading04.png" />
+    <BundleResource Include="Assets\Loading05.png" />
+    <BundleResource Include="Assets\Loading06.png" />
+    <BundleResource Include="Assets\Loading08.png" />
+    <BundleResource Include="Assets\Loading09.png" />
+    <BundleResource Include="Assets\Loading10.png" />
+    <BundleResource Include="Assets\Loading11.png" />
+    <BundleResource Include="Assets\Logfileicon.png" />
+    <BundleResource Include="Assets\Logfileicon2.png" />
+    <BundleResource Include="Assets\Login01.png" />
+    <BundleResource Include="Assets\Login02.png" />
+    <BundleResource Include="Assets\LoginArrow.png" />
+    <BundleResource Include="Assets\LoginDoor.png" />
+    <BundleResource Include="Assets\Mail,Find.png" />
+    <BundleResource Include="Assets\Mail.png" />
+    <BundleResource Include="Assets\Mail02.png" />
+    <BundleResource Include="Assets\Mail03.png" />
+    <BundleResource Include="Assets\MailAdd.png" />
+    <BundleResource Include="Assets\MailBox.png" />
+    <BundleResource Include="Assets\Maildelete.png" />
+    <BundleResource Include="Assets\Maildownload.png" />
+    <BundleResource Include="Assets\Mailedit.png" />
+    <BundleResource Include="Assets\MailFavourites.png" />
+    <BundleResource Include="Assets\MailHelp.png" />
+    <BundleResource Include="Assets\Mailinfo.png" />
+    <BundleResource Include="Assets\Maillocked.png" />
+    <BundleResource Include="Assets\Mailnext.png" />
+    <BundleResource Include="Assets\MailOk.png" />
+    <BundleResource Include="Assets\MailOpen.png" />
+    <BundleResource Include="Assets\MailPrevious.png" />
+    <BundleResource Include="Assets\MailRefresh.png" />
+    <BundleResource Include="Assets\Mailremove.png" />
+    <BundleResource Include="Assets\MailSave.png" />
+    <BundleResource Include="Assets\MailSearch.png" />
+    <BundleResource Include="Assets\MailSent.png" />
+    <BundleResource Include="Assets\MailSettings.png" />
+    <BundleResource Include="Assets\MailSync.png" />
+    <BundleResource Include="Assets\Mailunlocked.png" />
+    <BundleResource Include="Assets\Mailupload.png" />
+    <BundleResource Include="Assets\Margin01.png" />
+    <BundleResource Include="Assets\Margin02.png" />
+    <BundleResource Include="Assets\Maximize01.png" />
+    <BundleResource Include="Assets\Maximize02.png" />
+    <BundleResource Include="Assets\Maximize03.png" />
+    <BundleResource Include="Assets\Maximize04.png" />
+    <BundleResource Include="Assets\Measurements01.png" />
+    <BundleResource Include="Assets\Measurements02.png" />
+    <BundleResource Include="Assets\Measurements03.png" />
+    <BundleResource Include="Assets\Measurements04.png" />
+    <BundleResource Include="Assets\MediaBack.png" />
+    <BundleResource Include="Assets\MediaEject.png" />
+    <BundleResource Include="Assets\MediaEnd.png" />
+    <BundleResource Include="Assets\MediaFastforward.png" />
+    <BundleResource Include="Assets\MediaFastforward01.png" />
+    <BundleResource Include="Assets\MediaFirst.png" />
+    <BundleResource Include="Assets\MediaLast.png" />
+    <BundleResource Include="Assets\MediaNext.png" />
+    <BundleResource Include="Assets\MediaPause.png" />
+    <BundleResource Include="Assets\MediaPlay.png" />
+    <BundleResource Include="Assets\MediaPlay01.png" />
+    <BundleResource Include="Assets\MediaPlay02.png" />
+    <BundleResource Include="Assets\MediaPlayerVLC.png" />
+    <BundleResource Include="Assets\MediaPlayerWinamp.png" />
+    <BundleResource Include="Assets\MediaPrevious.png" />
+    <BundleResource Include="Assets\MediaRewind.png" />
+    <BundleResource Include="Assets\MediaRewind01.png" />
+    <BundleResource Include="Assets\MediaStart.png" />
+    <BundleResource Include="Assets\MediaStop.png" />
+    <BundleResource Include="Assets\MessageMail.png" />
+    <BundleResource Include="Assets\MessageVoiceMail.png" />
+    <BundleResource Include="Assets\MessageWarning.png" />
+    <BundleResource Include="Assets\Minimize01.png" />
+    <BundleResource Include="Assets\MobilePhoneMessage.png" />
+    <BundleResource Include="Assets\MobilePhoneMusic.png" />
+    <BundleResource Include="Assets\MoneyCoin.png" />
+    <BundleResource Include="Assets\MoneyCoin01.png" />
+    <BundleResource Include="Assets\MoneyCreditCard.png" />
+    <BundleResource Include="Assets\MoneyGold.png" />
+    <BundleResource Include="Assets\MouseDrag.png" />
+    <BundleResource Include="Assets\MouseWireless.png" />
+    <BundleResource Include="Assets\Move01.png" />
+    <BundleResource Include="Assets\Movie.png" />
+    <BundleResource Include="Assets\MovieAdd.png" />
+    <BundleResource Include="Assets\MovieDelete.png" />
+    <BundleResource Include="Assets\MovieDownload.png" />
+    <BundleResource Include="Assets\Movieedit.png" />
+    <BundleResource Include="Assets\MovieFav.png" />
+    <BundleResource Include="Assets\MovieFind.png" />
+    <BundleResource Include="Assets\MovieHelp.png" />
+    <BundleResource Include="Assets\MovieInfo.png" />
+    <BundleResource Include="Assets\MovieLocked.png" />
+    <BundleResource Include="Assets\MovieNext.png" />
+    <BundleResource Include="Assets\MovieOk.png" />
+    <BundleResource Include="Assets\MoviePrevious.png" />
+    <BundleResource Include="Assets\Movierefresh.png" />
+    <BundleResource Include="Assets\MovieRemove.png" />
+    <BundleResource Include="Assets\MovieSave.png" />
+    <BundleResource Include="Assets\MovieSearch.png" />
+    <BundleResource Include="Assets\MovieSettings.png" />
+    <BundleResource Include="Assets\MovieSync.png" />
+    <BundleResource Include="Assets\Movieunlocked.png" />
+    <BundleResource Include="Assets\MovieUpload.png" />
+    <BundleResource Include="Assets\MSSystemsettingsConfigurationManger01.png" />
+    <BundleResource Include="Assets\MSSystemsettingsConfigurationManger02.png" />
+    <BundleResource Include="Assets\Mug.png" />
+    <BundleResource Include="Assets\Multiplethreads.png" />
+    <BundleResource Include="Assets\MusicIcon.png" />
+    <BundleResource Include="Assets\NavigationDown.png" />
+    <BundleResource Include="Assets\NavigationDownRight.png" />
+    <BundleResource Include="Assets\NavigationRight.png" />
+    <BundleResource Include="Assets\NavigationUpLeft.png" />
+    <BundleResource Include="Assets\Network01.png" />
+    <BundleResource Include="Assets\NetworkDrives.png" />
+    <BundleResource Include="Assets\NetworkSignal.png" />
+    <BundleResource Include="Assets\Noise.png" />
+    <BundleResource Include="Assets\Numbering.png" />
+    <BundleResource Include="Assets\OrientationLandscape.png" />
+    <BundleResource Include="Assets\OrientationPortrait.png" />
+    <BundleResource Include="Assets\ParagraphIndentDecrease.png" />
+    <BundleResource Include="Assets\ParagraphIndentIncrease.png" />
+    <BundleResource Include="Assets\ParaMark01.png" />
+    <BundleResource Include="Assets\ParaMark02.png" />
+    <BundleResource Include="Assets\ParaMark03.png" />
+    <BundleResource Include="Assets\Parenthesis.png" />
+    <BundleResource Include="Assets\PasswordText.png" />
+    <BundleResource Include="Assets\PasswordText01.png" />
+    <BundleResource Include="Assets\Phonebook,download.png" />
+    <BundleResource Include="Assets\Phonebook,upload.png" />
+    <BundleResource Include="Assets\Phonebook.png" />
+    <BundleResource Include="Assets\PhonebookAdd.png" />
+    <BundleResource Include="Assets\PhonebookDelete.png" />
+    <BundleResource Include="Assets\Phonebookedit.png" />
+    <BundleResource Include="Assets\PhonebookFavourites.png" />
+    <BundleResource Include="Assets\PhonebookFind.png" />
+    <BundleResource Include="Assets\PhonebookHelp.png" />
+    <BundleResource Include="Assets\PhonebookInfo.png" />
+    <BundleResource Include="Assets\PhonebookLocked.png" />
+    <BundleResource Include="Assets\PhonebookNext.png" />
+    <BundleResource Include="Assets\PhonebookOk.png" />
+    <BundleResource Include="Assets\PhonebookPrevious.png" />
+    <BundleResource Include="Assets\PhonebookRefresh.png" />
+    <BundleResource Include="Assets\PhonebookRemove.png" />
+    <BundleResource Include="Assets\PhonebookSave.png" />
+    <BundleResource Include="Assets\PhonebookSearch.png" />
+    <BundleResource Include="Assets\PhonebookSettings.png" />
+    <BundleResource Include="Assets\PhonebookSync.png" />
+    <BundleResource Include="Assets\PhonebookUnLocked.png" />
+    <BundleResource Include="Assets\PhonebookWF.png" />
+    <BundleResource Include="Assets\PlayOnce.png" />
+    <BundleResource Include="Assets\Pointer.png" />
+    <BundleResource Include="Assets\PowerOff.png" />
+    <BundleResource Include="Assets\Pressure.png" />
+    <BundleResource Include="Assets\ProductBox.png" />
+    <BundleResource Include="Assets\ProductBoxWithDisc.png" />
+    <BundleResource Include="Assets\QuotationMarks.png" />
+    <BundleResource Include="Assets\Rating01.png" />
+    <BundleResource Include="Assets\Rating02.png" />
+    <BundleResource Include="Assets\Rating03.png" />
+    <BundleResource Include="Assets\RectangleSelection.png" />
+    <BundleResource Include="Assets\RecycleBin.png" />
+    <BundleResource Include="Assets\Reload01.png" />
+    <BundleResource Include="Assets\Restore01.png" />
+    <BundleResource Include="Assets\Restore02.png" />
+    <BundleResource Include="Assets\RopeLasso.png" />
+    <BundleResource Include="Assets\RowSelection.png" />
+    <BundleResource Include="Assets\RSSFeeds.png" />
+    <BundleResource Include="Assets\Save.png" />
+    <BundleResource Include="Assets\ScaleToFit.png" />
+    <BundleResource Include="Assets\SCCM.png" />
+    <BundleResource Include="Assets\SearchFind.png" />
+    <BundleResource Include="Assets\SecurityGroupMember.png" />
+    <BundleResource Include="Assets\SendToBack.png" />
+    <BundleResource Include="Assets\ShapeCube.png" />
+    <BundleResource Include="Assets\Share01.png" />
+    <BundleResource Include="Assets\Share02.png" />
+    <BundleResource Include="Assets\Show.png" />
+    <BundleResource Include="Assets\Shrink01.png" />
+    <BundleResource Include="Assets\SingleCurlyQuotationMarks.png" />
+    <BundleResource Include="Assets\Skew.png" />
+    <BundleResource Include="Assets\Slash.png" />
+    <BundleResource Include="Assets\SoftwareisAvailabletoinstall.png" />
+    <BundleResource Include="Assets\SoftwareSAP.png" />
+    <BundleResource Include="Assets\SortAscending.png" />
+    <BundleResource Include="Assets\SortDescending.png" />
+    <BundleResource Include="Assets\Speaker01.png" />
+    <BundleResource Include="Assets\Speaker02.png" />
+    <BundleResource Include="Assets\Speaker03.png" />
+    <BundleResource Include="Assets\Speaker04.png" />
+    <BundleResource Include="Assets\SpeakerAudible01.png" />
+    <BundleResource Include="Assets\SpeakerAudible02.png" />
+    <BundleResource Include="Assets\SpeakerDecrease01.png" />
+    <BundleResource Include="Assets\SpeakerIncrease01.png" />
+    <BundleResource Include="Assets\SpeakerIncrease02.png" />
+    <BundleResource Include="Assets\Speakerlow01.png" />
+    <BundleResource Include="Assets\Speakerlow02.png" />
+    <BundleResource Include="Assets\SpeakerMute01.png" />
+    <BundleResource Include="Assets\SpeakerMute03.png" />
+    <BundleResource Include="Assets\SpeakerMute04.png" />
+    <BundleResource Include="Assets\SpellCheck.png" />
+    <BundleResource Include="Assets\Stack01.png" />
+    <BundleResource Include="Assets\Stack02.png" />
+    <BundleResource Include="Assets\Stack03.png" />
+    <BundleResource Include="Assets\Stackadd.png" />
+    <BundleResource Include="Assets\StopMedia.png" />
+    <BundleResource Include="Assets\StopMedia02WF.png" />
+    <BundleResource Include="Assets\Submit01.png" />
+    <BundleResource Include="Assets\Submit02.png" />
+    <BundleResource Include="Assets\Sync01.png" />
+    <BundleResource Include="Assets\LockScreenLogo.scale-100.png" />
+    <BundleResource Include="Assets\LockScreenLogo.scale-125.png" />
+    <BundleResource Include="Assets\LockScreenLogo.scale-150.png" />
+    <BundleResource Include="Assets\LockScreenLogo.scale-200.png" />
+    <BundleResource Include="Assets\LockScreenLogo.scale-400.png" />
+    <BundleResource Include="Assets\SplashScreen.scale-100.png" />
+    <BundleResource Include="Assets\SplashScreen.scale-125.png" />
+    <BundleResource Include="Assets\SplashScreen.scale-150.png" />
+    <BundleResource Include="Assets\SplashScreen.scale-200.png" />
+    <BundleResource Include="Assets\SplashScreen.scale-400.png" />
+    <BundleResource Include="Assets\Square150x150Logo.scale-100.png" />
+    <BundleResource Include="Assets\Square150x150Logo.scale-125.png" />
+    <BundleResource Include="Assets\Square150x150Logo.scale-150.png" />
+    <BundleResource Include="Assets\Square150x150Logo.scale-200.png" />
+    <BundleResource Include="Assets\Square150x150Logo.scale-400.png" />
+    <BundleResource Include="Assets\Square44x44Logo.scale-100.png" />
+    <BundleResource Include="Assets\Square44x44Logo.scale-125.png" />
+    <BundleResource Include="Assets\Square44x44Logo.scale-150.png" />
+    <BundleResource Include="Assets\Square44x44Logo.scale-200.png" />
+    <BundleResource Include="Assets\Square44x44Logo.scale-400.png" />
+    <BundleResource Include="Assets\Square44x44Logo.targetsize-16_altform-unplated.png" />
+    <BundleResource Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <BundleResource Include="Assets\Square44x44Logo.targetsize-256_altform-unplated.png" />
+    <BundleResource Include="Assets\Square44x44Logo.targetsize-32_altform-unplated.png" />
+    <BundleResource Include="Assets\Square44x44Logo.targetsize-48_altform-unplated.png" />
+    <BundleResource Include="Assets\StoreLogo.png" />
+    <BundleResource Include="Assets\Wide310x150Logo.scale-100.png" />
+    <BundleResource Include="Assets\Wide310x150Logo.scale-125.png" />
+    <BundleResource Include="Assets\Wide310x150Logo.scale-150.png" />
+    <BundleResource Include="Assets\Wide310x150Logo.scale-200.png" />
+    <BundleResource Include="Assets\Wide310x150Logo.scale-400.png" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork@2x" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default@2x.png" />
+    <BundleResource Include="Resources\Default-568h@2x.png" />
+    <BundleResource Include="Resources\Default-Portrait.png" />
+    <BundleResource Include="Resources\Default-Portrait@2x.png" />
+    <BundleResource Include="Resources\Icon-60@2x.png" />
+    <BundleResource Include="Resources\Icon-60@3x.png" />
+    <BundleResource Include="Resources\Icon-76.png" />
+    <BundleResource Include="Resources\Icon-76@2x.png" />
+    <BundleResource Include="Resources\Icon-Small.png" />
+    <BundleResource Include="Resources\Icon-Small@2x.png" />
+    <BundleResource Include="Resources\Icon-Small@3x.png" />
+    <BundleResource Include="Resources\Icon-Small-40.png" />
+    <BundleResource Include="Resources\Icon-Small-40@2x.png" />
+    <BundleResource Include="Resources\Icon-Small-40@3x.png" />
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core.X\CommonBLLEntities.X\MSBuildExtensionPack.CommonBLLEntities.X.csproj">
+      <Project>{3097e99f-b10c-4335-9d39-25f53642b272}</Project>
+      <Name>MSBuildExtensionPack.CommonBLLEntities.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core.X\DataSourceEntities.X\MSBuildExtensionPack.DataSourceEntities.X.csproj">
+      <Project>{7a9ed7b9-4cb5-40df-89df-4293bfb4de22}</Project>
+      <Name>MSBuildExtensionPack.DataSourceEntities.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core.X\EntityContracts.X\MSBuildExtensionPack.EntityContracts.X.csproj">
+      <Project>{9b54200d-20f0-4380-bd15-f6211718853a}</Project>
+      <Name>MSBuildExtensionPack.EntityContracts.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks.X\Framework.X\Framework.X.csproj">
+      <Project>{cab19f30-0455-443c-b7a3-ba943aaa9d15}</Project>
+      <Name>Framework.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks.X\Framework.CommonBLLEntities.X\Framework.CommonBLLEntities.X.csproj">
+      <Project>{bd3f8de3-cf0f-4187-915c-b5d9f76c2d67}</Project>
+      <Name>Framework.CommonBLLEntities.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks.X\Framework.DAL.X\Framework.DAL.X.csproj">
+      <Project>{c41fd193-e8a9-4c77-93d1-3b464d58a876}</Project>
+      <Name>Framework.DAL.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks.X\Framework.DataSourceEntities.X\Framework.DataSourceEntities.X.csproj">
+      <Project>{b9131050-fd8e-404d-a135-11e210cdd438}</Project>
+      <Name>Framework.DataSourceEntities.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks.X\Framework.EntityContracts.X\Framework.EntityContracts.X.csproj">
+      <Project>{81863781-aa71-4530-a59c-04d2153ddd30}</Project>
+      <Name>Framework.EntityContracts.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks.X\Framework.Resx.X\Framework.Resx.X.csproj">
+      <Project>{f1e49e74-fec1-43f1-9013-3c17cdff28b4}</Project>
+      <Name>Framework.Resx.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks.X\Framework.ViewModels.X\Framework.ViewModels.X.csproj">
+      <Project>{9ebb2439-1a6e-4d2f-b8bb-f09a1e76293e}</Project>
+      <Name>Framework.ViewModels.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks.X\Framework.Xamariner.X\Framework.Xamariner.X.csproj">
+      <Project>{397ffa3d-9a4e-4900-9714-65d16a871613}</Project>
+      <Name>Framework.Xamariner.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks.X\Framework.Xaml.X\Framework.Xaml.X.csproj">
+      <Project>{3f42d127-aaa5-4810-b593-8f2a426bce05}</Project>
+      <Name>Framework.Xaml.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shared.X\MVVMLightViewModels.X\MSBuildExtensionPack.MVVMLightViewModels.X.csproj">
+      <Project>{3c6a61c1-2044-4fde-8729-5917787d58aa}</Project>
+      <Name>MSBuildExtensionPack.MVVMLightViewModels.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shared.X\XamarinForms.X\MSBuildExtensionPack.XamarinForms.X.csproj">
+      <Project>{99c18ce6-d6cd-44a2-a187-9c8e83f79827}</Project>
+      <Name>MSBuildExtensionPack.XamarinForms.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core.X\Resx.X\MSBuildExtensionPack.Resx.X.csproj">
+      <Project>{4e3e985c-7d38-40f5-81e4-92fac3e9357a}</Project>
+      <Name>MSBuildExtensionPack.Resx.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core.X\ViewModelData.X\MSBuildExtensionPack.ViewModelData.X.csproj">
+      <Project>{d1609968-bd0d-4112-a3f7-fd48ec7fc7a4}</Project>
+      <Name>MSBuildExtensionPack.ViewModelData.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Web.X\WebApiClient.X\MSBuildExtensionPack.WebApiClient.X.csproj">
+      <Project>{9aab8c12-451c-44e8-a951-b7684be71323}</Project>
+      <Name>MSBuildExtensionPack.WebApiClient.X</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.3.0.19026, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\\packages\MvvmLightLibs.5.3.0.0\lib\xamarin.ios10\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.3.0.19032, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\\packages\MvvmLightLibs.5.3.0.0\lib\xamarin.ios10\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.3.0.19043, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\\packages\MvvmLightLibs.5.3.0.0\lib\xamarin.ios10\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLAppConfig, Version=0.2.0.0, Culture=neutral, PublicKeyToken=7dc9bc9afb3fa588, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\\packages\PCLAppConfig.0.3.2\lib\Xamarin.iOS\PCLAppConfig.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLAppConfig.FileSystemStream.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\\packages\PCLAppConfig.0.3.2\lib\Xamarin.iOS\PCLAppConfig.FileSystemStream.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLAppConfig.FileSystemStream.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\\packages\PCLAppConfig.0.3.2\lib\Xamarin.iOS\PCLAppConfig.FileSystemStream.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\\packages\PCLStorage.1.0.2\lib\portable-Xamarin.iOS+Xamarin.Mac\PCLStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage.Abstractions, Version=1.0.2.0, Culture=neutral, PublicKeyToken=286fe515a2c35b64, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\\packages\PCLStorage.1.0.2\lib\portable-Xamarin.iOS+Xamarin.Mac\PCLStorage.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\\packages\Xamarin.Forms.2.3.4.231\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\\packages\Xamarin.Forms.2.3.4.231\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\\packages\Xamarin.Forms.2.3.4.231\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\\packages\Xamarin.Forms.2.3.4.231\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\..\..\..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\..\..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets'))" />
+  </Target>
+</Project>

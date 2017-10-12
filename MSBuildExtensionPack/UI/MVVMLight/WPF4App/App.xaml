@@ -3,13 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:vm="clr-namespace:MSBuildExtensionPack.ViewModels;assembly=MSBuildExtensionPack.ViewModels"
+             xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels"
              StartupUri="MainWindow.xaml"
              mc:Ignorable="d">
     <Application.Resources>
         <ResourceDictionary x:Name="appMain">
             <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
-	        <vm:LocalizedStrings x:Key="LocalizedStrings" />
+            <vm:LocalizedStrings x:Key="LocalizedStrings" />
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="AppResourceDictionary.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />

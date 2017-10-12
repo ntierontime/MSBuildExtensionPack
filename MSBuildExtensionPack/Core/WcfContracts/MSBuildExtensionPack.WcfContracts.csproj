@@ -38,12 +38,16 @@
     <Compile Include="IBuildService.cs" />
     <Compile Include="IBuildEventCodeService.cs" />
     <Compile Include="IBuildLogService.cs" />
+    <Compile Include="IOrganizationService.cs" />
     <Compile Include="ISolutionService.cs" />
     <Compile Include="IBuildServiceAsyn.cs" />
     <Compile Include="IBuildEventCodeServiceAsyn.cs" />
     <Compile Include="IBuildLogServiceAsyn.cs" />
+    <Compile Include="IOrganizationServiceAsyn.cs" />
     <Compile Include="ISolutionServiceAsyn.cs" />
     <Compile Include="WcfServiceResolver.cs" />
+    <None Include="map.2.B.2.vsd" />
+    <None Include="map.2.B.2.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommonBLLEntities\MSBuildExtensionPack.CommonBLLEntities.csproj">
@@ -78,13 +82,7 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

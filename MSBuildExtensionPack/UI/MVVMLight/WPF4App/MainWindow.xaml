@@ -6,10 +6,10 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:cmd="http://www.galasoft.ch/mvvmlight"
-		xmlns:vm="clr-namespace:MSBuildExtensionPack.ViewModels;assembly=MSBuildExtensionPack.ViewModels"
-		xmlns:my="clr-namespace:MSBuildExtensionPack.WPF4App.UserControls"
-        Title="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerApp.Title, Mode=OneWay, Source={StaticResource LocalizedStrings}}"
-		WindowState="Normal"
+        xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels"
+        xmlns:my="clr-namespace:MSBuildExtensionPack.WPF4App.UserControls"
+        Title="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerApp.Application_Title, Mode=OneWay, Source={StaticResource LocalizedStrings}}"
+        WindowState="Normal"
         DataContext="{Binding Main, Source={StaticResource Locator}}">
     <Window.Resources>
         <ResourceDictionary>
@@ -27,31 +27,38 @@
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
                 <Menu>
-            <MenuItem Header="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuild.Build, Mode=OneWay, Source={StaticResource LocalizedStrings}}" >
+            <MenuItem Header="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.Build, Mode=OneWay, Source={StaticResource LocalizedStrings}}" >
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Click">
-						<cmd:EventToCommand Command="{Binding Path=MSBuildExtensionPack_ViewModels_WPCommonOfBuildVM.LaunchSearchViewCommand, Mode=OneWay, Source={StaticResource Locator}}" PassEventArgsToCommand="false" />
+                        <cmd:EventToCommand Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM.LaunchSearchViewCommand, Mode=OneWay, Source={StaticResource Locator}}" PassEventArgsToCommand="false" />
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
             </MenuItem>
-            <MenuItem Header="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildEventCode.BuildEventCode, Mode=OneWay, Source={StaticResource LocalizedStrings}}" >
+            <MenuItem Header="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildEventCode.BuildEventCode, Mode=OneWay, Source={StaticResource LocalizedStrings}}" >
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Click">
-						<cmd:EventToCommand Command="{Binding Path=MSBuildExtensionPack_ViewModels_WPCommonOfBuildEventCodeVM.LaunchSearchViewCommand, Mode=OneWay, Source={StaticResource Locator}}" PassEventArgsToCommand="false" />
+                        <cmd:EventToCommand Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM.LaunchSearchViewCommand, Mode=OneWay, Source={StaticResource Locator}}" PassEventArgsToCommand="false" />
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
             </MenuItem>
-            <MenuItem Header="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntityBuildLog.BuildLog, Mode=OneWay, Source={StaticResource LocalizedStrings}}" >
+            <MenuItem Header="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildLog.BuildLog, Mode=OneWay, Source={StaticResource LocalizedStrings}}" >
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Click">
-						<cmd:EventToCommand Command="{Binding Path=MSBuildExtensionPack_ViewModels_WPCommonOfBuildLogVM.LaunchSearchViewCommand, Mode=OneWay, Source={StaticResource Locator}}" PassEventArgsToCommand="false" />
+                        <cmd:EventToCommand Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM.LaunchSearchViewCommand, Mode=OneWay, Source={StaticResource Locator}}" PassEventArgsToCommand="false" />
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
             </MenuItem>
-            <MenuItem Header="{Binding Path=MSBuildExtensionPack_Resources_UIStringResourcePerEntitySolution.Solution, Mode=OneWay, Source={StaticResource LocalizedStrings}}" >
+            <MenuItem Header="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.Organization, Mode=OneWay, Source={StaticResource LocalizedStrings}}" >
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Click">
-						<cmd:EventToCommand Command="{Binding Path=MSBuildExtensionPack_ViewModels_WPCommonOfSolutionVM.LaunchSearchViewCommand, Mode=OneWay, Source={StaticResource Locator}}" PassEventArgsToCommand="false" />
+                        <cmd:EventToCommand Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM.LaunchSearchViewCommand, Mode=OneWay, Source={StaticResource Locator}}" PassEventArgsToCommand="false" />
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </MenuItem>
+            <MenuItem Header="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.Solution, Mode=OneWay, Source={StaticResource LocalizedStrings}}" >
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <cmd:EventToCommand Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM.LaunchSearchViewCommand, Mode=OneWay, Source={StaticResource Locator}}" PassEventArgsToCommand="false" />
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
             </MenuItem>
@@ -64,6 +71,6 @@
                     <Frame Name="_mainFrame" DockPanel.Dock="Right" NavigationUIVisibility="Visible" />
                 </DockPanel>
             </Grid>
-		</Grid>
-	</Grid>
+        </Grid>
+    </Grid>
 </Controls:MetroWindow>

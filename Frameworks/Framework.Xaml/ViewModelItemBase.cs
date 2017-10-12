@@ -2,16 +2,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using GalaSoft.MvvmLight.CommandWpf;
+using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 
 namespace Framework.Xaml
 {
-    public abstract class ViewModelItemBase<TSearchCriteria, TItem> : Framework.ViewModels.ViewModelItemBase<TSearchCriteria, TItem>, INotifyPropertyChanged
+    public abstract class ViewModelItemBase<TSearchCriteria, TItem>
+        : GalaSoft.MvvmLight.ViewModelBase, Framework.ViewModels.IViewModelItemBase<TSearchCriteria, TItem>
         where TSearchCriteria : class, new()
-        where TItem : class, new()
+        where TItem : class, Framework.EntityContracts.IClone<TItem>, new()
     {
         #region constructor
 
@@ -19,6 +20,9 @@ namespace Framework.Xaml
             : base()
         {
             this.SuppressMVVMLightEventToCommandMessage = false;
+
+            this.Item = new TItem();
+            this.OriginalItem = new TItem();
 
             this.LaunchCopyViewCommand = new RelayCommand<TItem>(LaunchCopyView);
 
@@ -41,6 +45,8 @@ namespace Framework.Xaml
 
             this.LoadItemCommand = new RelayCommand(this.LoadItem);
             this.LoadItemCommandTyped = new RelayCommand<TSearchCriteria>(this.LoadItem);
+
+            this.RaiseItemPropertyChangedEventCommand = new RelayCommand(this.RaiseItemPropertyChangedEvent);
         }
 
         #endregion constructor
@@ -48,7 +54,7 @@ namespace Framework.Xaml
         #region override properties
 
         protected TSearchCriteria m_Criteria;
-        public override TSearchCriteria Criteria
+        public TSearchCriteria Criteria
         {
             get { return m_Criteria; }
             set
@@ -59,46 +65,75 @@ namespace Framework.Xaml
         }
 
         protected TItem m_Item;
-        public override TItem Item
+        public TItem Item
         {
             get { return m_Item; }
             set
             {
-                m_Item = value;
-                RaisePropertyChanged("Item");
+                if(value != null)
+                {
+                    m_Item = value.GetAClone();
+                    RaisePropertyChanged("Item");
+                }
+            }
+        }
+
+        protected Framework.EntityContracts.ContentData m_ContentData;
+        public Framework.EntityContracts.ContentData ContentData
+        {
+            get { return m_ContentData; }
+            set
+            {
+                m_ContentData = value;
+                RaisePropertyChanged("ContentData");
+            }
+        }
+
+        protected Framework.EntityContracts.SearchStatus m_SearchStatus;
+        public Framework.EntityContracts.SearchStatus SearchStatus
+        {
+            get { return m_SearchStatus; }
+            set
+            {
+                m_SearchStatus = value;
+                RaisePropertyChanged("SearchStatus");
+            }
+        }
+
+        protected string m_StatusMessageOfResult;
+        public string StatusMessageOfResult
+        {
+            get { return m_StatusMessageOfResult; }
+            set
+            {
+                m_StatusMessageOfResult = value;
+                RaisePropertyChanged("StatusMessageOfResult");
+            }
+        }
+
+        protected Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus m_StatusOfResult;
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfResult
+        {
+            get { return m_StatusOfResult; }
+            set
+            {
+                m_StatusOfResult = value;
+                RaisePropertyChanged("StatusOfResult");
+            }
+        }
+
+        protected Framework.UIActionStatusMessage m_UIActionStatusMessage;
+        public Framework.UIActionStatusMessage UIActionStatusMessage
+        {
+            get { return m_UIActionStatusMessage; }
+            set
+            {
+                m_UIActionStatusMessage = value;
+                RaisePropertyChanged("UIActionStatusMessage");
             }
         }
 
         #endregion override properties
-
-        #region INotifyPropertyChanged Implementation 
-
-        /// <summary>
-        /// Occurs when a property value changes.
-        /// </summary>
-#if (SILVERLIGHT || XAMARIN)
-#elif (NETFX_CORE)
-#else
-        [field: NonSerialized]
-#endif
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// Notifies that <see cref="propertyName" /> has changed.
-        /// </summary>
-        /// <param name="propertyName">Name of the property.</param>
-        protected virtual void RaisePropertyChanged(string propertyName)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(
-                    this,
-                    new PropertyChangedEventArgs(propertyName)
-                    );
-            }
-        }
-
-        #endregion INotifyPropertyChanged Implementation 
 
         public TItem OriginalItem { get; set; }
 
@@ -106,21 +141,24 @@ namespace Framework.Xaml
 
         protected virtual void PrepareItem(TItem o)
         {
-            this.OriginalItem = o;
-            this.Item = o;
+            if (o != null)
+            {
+                this.OriginalItem = o;
+                this.m_Item = o;
+            }
         }
 
         #region ViewDetails
 
         public RelayCommand<TItem> LaunchDetailsViewCommand { get; protected set; }
 
-        protected void LaunchDetailsView(TItem o)
+        protected virtual void LaunchDetailsView(TItem o)
         {
             string viewName = ViewName_Details;
             Framework.UIAction uiAction = Framework.UIAction.ViewDetails;
 
             PrepareItem(o);
-			
+
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Launch));
         }
 
@@ -140,7 +178,7 @@ namespace Framework.Xaml
 
         public RelayCommand<TItem> LaunchCopyViewCommand { get; protected set; }
 
-        protected void LaunchCopyView(TItem o)
+        protected virtual void LaunchCopyView(TItem o)
         {
             string viewName = ViewName_Details;
             Framework.UIAction uiAction = Framework.UIAction.Copy;
@@ -156,7 +194,7 @@ namespace Framework.Xaml
 
         public RelayCommand<TItem> LaunchEditViewCommand { get; protected set; }
 
-        protected void LaunchEditView(TItem o)
+        protected virtual void LaunchEditView(TItem o)
         {
             string viewName = ViewName_Details;
             Framework.UIAction uiAction = Framework.UIAction.Update;
@@ -164,6 +202,8 @@ namespace Framework.Xaml
             PrepareItem(o);
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Launch));
+
+            this.RaiseItemPropertyChangedEvent();
         }
 
         public RelayCommand CloseEditViewCommand { get; protected set; }
@@ -172,7 +212,7 @@ namespace Framework.Xaml
         {
             string viewName = ViewName_Edit;
             Framework.UIAction uiAction = Framework.UIAction.Update;
-
+            this.Cleanup();
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Close));
         }
 
@@ -187,7 +227,7 @@ namespace Framework.Xaml
         /// Determines whether you can save Entity
         /// </summary>
         /// <returns>
-        /// 	<c>true</c> if you can; otherwise, <c>false</c>.
+        ///     <c>true</c> if you can; otherwise, <c>false</c>.
         /// </returns>
         protected virtual bool CanSave()
         {
@@ -202,7 +242,7 @@ namespace Framework.Xaml
 
         protected void LaunchCreateView()
         {
-            string viewName = ViewName_SearchResult;
+            string viewName = ViewName_Create;
             Framework.UIAction uiAction = Framework.UIAction.Create;
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Launch));
@@ -229,7 +269,7 @@ namespace Framework.Xaml
         /// Determines whether you can create
         /// </summary>
         /// <returns>
-        /// 	<c>true</c> if you can; otherwise, <c>false</c>.
+        ///     <c>true</c> if you can; otherwise, <c>false</c>.
         /// </returns>
         protected bool CanAdd()
         {
@@ -273,7 +313,7 @@ namespace Framework.Xaml
         /// Determines whether you can delete an Entity
         /// </summary>
         /// <returns>
-        /// 	<c>true</c> if you can; otherwise, <c>false</c>.
+        ///     <c>true</c> if you can; otherwise, <c>false</c>.
         /// </returns>
         protected virtual bool CanDelete()
         {
@@ -282,12 +322,10 @@ namespace Framework.Xaml
 
         #endregion Delete
 
-
         #region LoadItem
 
         public RelayCommand LoadItemCommand { get; protected set; }
         public RelayCommand<TSearchCriteria> LoadItemCommandTyped { get; protected set; }
-
 
         public virtual void LoadItem()
         {
@@ -295,7 +333,6 @@ namespace Framework.Xaml
         }
 
         public abstract void LoadItem(TSearchCriteria identifier);
-
 
         public abstract void ReLoadItem(TItem o);
 
@@ -328,15 +365,24 @@ namespace Framework.Xaml
 
         #endregion string EntityName
 
-        #region ViewNames
-
         public const string ViewName_Edit = "Edit";
         public const string ViewName_Create = "Create";
         public const string ViewName_Delete = "Delete";
         public const string ViewName_Details = "Details";
-        public const string ViewName_SearchResult = "SearchResult";
 
-        #endregion ViewNames
+        public override void Cleanup()
+        {
+            base.Cleanup();
+            this.m_Item = new TItem();
+            this.OriginalItem = new TItem();
+        }
+
+        public RelayCommand RaiseItemPropertyChangedEventCommand { get; protected set; }
+
+        public void RaiseItemPropertyChangedEvent()
+        {
+            this.RaisePropertyChanged("Item");
+        }
     }
 }
 

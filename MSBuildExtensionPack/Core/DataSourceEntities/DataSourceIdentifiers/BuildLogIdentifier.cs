@@ -6,29 +6,29 @@ namespace MSBuildExtensionPack.DataSourceEntities
     /// <summary>
     /// table/entity identifier, inherit from entity interface, <see cref="MSBuildExtensionPack.EntityContracts.IBuildLogIdentifier"/>
     /// </summary>
-	public partial class BuildLogIdentifier 
-		: MSBuildExtensionPack.EntityContracts.IBuildLogIdentifier
-	{ 
+    public partial class BuildLogIdentifier
+        : MSBuildExtensionPack.EntityContracts.IBuildLogIdentifier
+    {
 
-		#region constructors
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BuildLogIdentifier"/> class.
-        /// </summary>
-		public BuildLogIdentifier ()
-		{
-		}
+        #region constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildLogIdentifier"/> class.
         /// </summary>
-		public BuildLogIdentifier (
+        public BuildLogIdentifier ()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BuildLogIdentifier"/> class.
+        /// </summary>
+        public BuildLogIdentifier (
 System.Int64 id)
-		{
+        {
 
-			this.Id=id;
+            this.Id=id;
 
-		}
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildLogIdentifier"/> class.
@@ -38,19 +38,17 @@ System.Int64 id)
             MSBuildExtensionPack.EntityContracts.IBuildLogIdentifierHelper.Copy<MSBuildExtensionPack.EntityContracts.IBuildLogIdentifier, BuildLogIdentifier>(item, this);
         }
 
-		#endregion constructors
+        #endregion constructors
 
-		#region properties
-
+        #region properties
 
         public System.Int64 Id { get; set; }
 
-
-		#endregion properties
+        #endregion properties
 
         #region override methods
-		
-		/// <summary>
+
+        /// <summary>
         /// Returns a <see cref="System.String"/> that represents this instance, using ToString method in entity contract helper in EntityContract project
         /// </summary>
         /// <returns>
@@ -82,7 +80,7 @@ System.Int64 id)
         /// Returns a hash code for this instance.
         /// </summary>
         /// <returns>
-        /// A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+        /// A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         /// </returns>
         public override int GetHashCode()
         {
@@ -91,7 +89,7 @@ System.Int64 id)
 
         #endregion override methods
 
-		#region Method of BuildLogIdentifier GetAClone()
+        #region Method of BuildLogIdentifier GetAClone()
 
         /// <summary>
         /// Gets the A clone, using clone method in entity contract helper in EntityContract project.
@@ -102,9 +100,8 @@ System.Int64 id)
             return MSBuildExtensionPack.EntityContracts.IBuildLogIdentifierHelper.Clone<BuildLogIdentifier, BuildLogIdentifier>(this);
         }
 
-
-		#endregion Method of BuildLogIdentifier GetAClone()
-	}
+        #endregion Method of BuildLogIdentifier GetAClone()
+    }
 
     /// <summary>
     ///  a property defined when <see cref="WithIdentifierContractBuildLog"/> is used in other classes.
