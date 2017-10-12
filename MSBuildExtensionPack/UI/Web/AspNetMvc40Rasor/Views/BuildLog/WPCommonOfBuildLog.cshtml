@@ -241,27 +241,27 @@
         }
         function FetchBuild_1() {
             var url = "/api/BuildApi/GetCollectionOfNameValuePairOfByFKOnly";
-                try {
-                    var params = BuildCriteriaForFetchBuild_1();
-                    $.getJSON(url, params, function (data) {
-                        objVM.selectListOfvalueToCompareIdCommonOfBuild_1OfCommon(data);
-                        objVM.selectedvalueToCompareIdCommonOfBuild_1OfCommon(@Model.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.ValueToCompare);
-                        });
-                }
-                catch (e) {
-                }
+            try {
+				var params = BuildCriteriaForFetchBuild_1();
+                $.getJSON(url, params, function (data) {
+                    objVM.selectListOfvalueToCompareIdCommonOfBuild_1OfCommon(data);
+                    objVM.selectedvalueToCompareIdCommonOfBuild_1OfCommon(@Model.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.ValueToCompare);
+                });
+            }
+            catch (e) {
+            }
         }
         function BuildCriteriaForFetchBuild_1() {
-            var selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly = $('select[name="Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.NullableValueToCompare"]').val();
-            var selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly = $('select[name="Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_1.NullableValueToCompare"]').val();
             var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $('select[name="Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_2.NullableValueToCompare"]').val();
+            var selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly = $('select[name="Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_1.NullableValueToCompare"]').val();
+            var selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly = $('select[name="Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.NullableValueToCompare"]').val();
             var params = {
-                isToCompareIdByFKOnlyOfSolution_1OfByFKOnly: true,
-                valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly,
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly: true,
-                valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly,
                 isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: true,
                 valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly,
+                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly: true,
+                valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly,
+                isToCompareIdByFKOnlyOfSolution_1OfByFKOnly: true,
+                valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly,
                 currentIndex: -1,
                 pageSize: -1,
                 queryOrderByExpression: null
