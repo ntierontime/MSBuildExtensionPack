@@ -8,7 +8,7 @@ namespace Framework.EntityContracts
     /// <summary>
     /// pull data according Paging setting.
     /// </summary>
-    public class QueryPagingSetting// : Framework.PropertyChangedNotifier
+    public class QueryPagingSetting : Framework.PropertyChangedNotifier
     {
         #region constructors
 
@@ -114,7 +114,20 @@ namespace Framework.EntityContracts
                 if (this.m_CurrentPage != value)
                 {
                     this.m_CurrentPage = value;
-                    //RaisePropertyChanged("CurrentPage");
+                    RaisePropertyChanged("CurrentPage");
+                    RaisePropertyChanged("IsEmptyResult");
+                    RaisePropertyChanged("IsOnlyOnePage");
+                    RaisePropertyChanged("CanChangeCurrentPage");
+                    RaisePropertyChanged("IsMoreThanOnePage");
+                    RaisePropertyChanged("IsCurrentPageIsFirstPage");
+                    RaisePropertyChanged("IsCurrentPageIsLastPage");
+                    RaisePropertyChanged("CurrentIndex");
+                    RaisePropertyChanged("EndIndex");
+                    RaisePropertyChanged("PageSizeChanged");
+                    RaisePropertyChanged("CountOfPages");
+                    RaisePropertyChanged("RecordCountOfCurrentPage");
+                    RaisePropertyChanged("CanGoForeward");
+                    RaisePropertyChanged("CanGoBackward");
                 }
             }
         }
@@ -158,7 +171,7 @@ namespace Framework.EntityContracts
                 if (this.m_PageSize != value)
                 {
                     this.m_PageSize = value;
-                    //RaisePropertyChanged("PageSize");
+                    RaisePropertyChanged("PageSize");
                 }
             }
         }
@@ -178,7 +191,7 @@ namespace Framework.EntityContracts
                 if (this.m_OriginalPageSize != value)
                 {
                     this.m_OriginalPageSize = value;
-                    //RaisePropertyChanged("OriginalPageSize");
+                    RaisePropertyChanged("OriginalPageSize");
                 }
             }
         }
@@ -207,7 +220,7 @@ namespace Framework.EntityContracts
                 if (this.m_CountOfRecords != value)
                 {
                     this.m_CountOfRecords = value;
-                    //RaisePropertyChanged("CountOfRecords");
+                    RaisePropertyChanged("CountOfRecords");
                 }
             }
         }

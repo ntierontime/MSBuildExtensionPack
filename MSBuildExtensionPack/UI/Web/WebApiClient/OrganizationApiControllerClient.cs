@@ -60,7 +60,7 @@ namespace MSBuildExtensionPack.WebApiClient
         public async Task<MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn> UpdateEntityAsync(
             MSBuildExtensionPack.DataSourceEntities.Organization input)
         {
-            string url = GetHttpRequestUrl(ActionName_InsertEntity);
+            string url = GetHttpRequestUrl(ActionName_UpdateEntity);
 
             return await Put<MSBuildExtensionPack.DataSourceEntities.Organization, MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn>(url, input);
         }

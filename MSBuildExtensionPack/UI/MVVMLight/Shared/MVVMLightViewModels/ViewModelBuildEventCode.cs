@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
@@ -88,8 +89,12 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         #endregion ClearSearchResult
 
-        protected override void DoSearch()
+        protected override void DoSearch(bool isToClearExistingResult)
         {
+#if (XAMARIN)
+
+#endif
+
             this.SearchStatus = Framework.EntityContracts.SearchStatus.Searching;
 
             string viewName = ViewName;
@@ -113,23 +118,19 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                     this.StatusOfResult = result.StatusOfResult;
                     if (result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
                     {
-                        if (this.m_EntityCollection == null)
+                        if (this.EntityCollection == null)
                         {
-                            this.m_EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildEventCode>();
+                            this.EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildEventCode>();
+                        }
+                        if (isToClearExistingResult)
+                        {
+                            this.EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildEventCode>(result.Result.ToList());
                         }
                         else
                         {
-                            if (isToClearExistingResult)
-                            {
-                                this.m_EntityCollection.Clear();
-                            }
-                        }
-
-                        if (result.Result != null)
-                        {
                             foreach (var item in result.Result)
                             {
-                                this.m_EntityCollection.Add(item);
+                                this.EntityCollection.Add(item);
                             }
                         }
 

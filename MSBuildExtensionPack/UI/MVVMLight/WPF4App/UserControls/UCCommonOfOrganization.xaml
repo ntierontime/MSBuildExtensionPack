@@ -31,137 +31,138 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" Grid.Column="0" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM, Source={StaticResource Locator}}" HorizontalAlignment="Stretch">
-<TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon, Source={StaticResource LocalizedStrings}}" VerticalOptions="Center" HorizontalOptions="Start" Grid.Column="0" Grid.Row="0"/>
-            <ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="14"
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+             <CheckBox Name="checkBox_IsToCompare_Organization_2" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon, Source={StaticResource LocalizedStrings}}" IsChecked="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2.IsToCompare}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="0"/>
+            <ComboBox Grid.Column="1" Grid.Row="0"
+                IsEnabled="{Binding ElementName=checkBox_IsToCompare_Organization_2, Path=IsChecked}"
                 DisplayMemberPath="Name" SelectedValuePath="Value"
                 ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization.DropDownContentsOfOrganization_2, Source={StaticResource Locator}}"
-                SelectedValue="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2.ValueToCompare}">
-                <i:Interaction.Behaviors>
-                    <fvm:AllCaptionNullableComboBoxBehavior IsNonNullValueSelected="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2.IsToCompare, Mode=OneWayToSource}" />
-                </i:Interaction.Behaviors>
+                SelectedValue="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2.ValueToCompare}"
+                SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization.DropDownContentsOfOrganization_2SelectedItem, Source={StaticResource Locator}, Mode=OneWayToSource}">
             </ComboBox>
-            <TextBlock x:Name="IsToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInCommonOftOfCommon" Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInCommonOftOfCommon, Source={StaticResource LocalizedStrings}}"  HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" />
+            <TextBlock x:Name="IsToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInCommonOftOfCommon" Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="1" />
             <ComboBox x:Name="ValueToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInCommonOftOfCommon" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1"
-                DisplayMemberPath="Name"
+                DisplayMemberPath="Name" SelectedValuePath="Value"
                 ItemsSource="{Binding Path=Main.PredefinedBooleanSelectedValueList, Source={StaticResource Locator}}"
-                SelectedValue="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.IsSystemBuiltInCommonOft.PredefinedBooleanSelectedValue, Converter={StaticResource EnumToNameValuePairConverter}}">
+                SelectedItem="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.IsSystemBuiltInCommonOft.PredefinedBooleanSelectedValue, Converter={StaticResource EnumToNameValuePairConverter}}">
             </ComboBox>
-                <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareCreatedDateTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" VerticalOptions="Center" HorizontalOptions="Start" Grid.Column="1" Grid.Row="2"/>
+                <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareCreatedDateTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="2"/>
                 <StackPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch">
                     <ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Center"
-                        ItemDisplayBinding="{Binding Name}"
+                        DisplayMemberPath="Name" SelectedValuePath="Value"
                         ItemsSource="{Binding Path=Main.PreDefinedDateTimeRangeList, Source={StaticResource Locator}}"
                         SelectedItem="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.PreDefinedDateTimeRange, Converter={StaticResource EnumToNameValuePairConverter}}">
                     </ComboBox>
-                    <WrapPanel Orientation="Horizontal" IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.IsCustomEditor}">
-                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.From, Source={StaticResource LocalizedStrings}}" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
-                        <DatePicker Date="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.LowerBound}" />
-                    </WrapPanel>
-                    <WrapPanel Orientation="Horizontal" IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.IsCustomEditor}">
-                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.To, Source={StaticResource LocalizedStrings}}" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
-                        <DatePicker Date="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.UpperBound}" />
-                    </WrapPanel>
+                    <StackPanel Orientation="Horizontal" IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.IsCustomEditor}">
+                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.From, Source={StaticResource LocalizedStrings}}" TextAlignment="Right" VerticalAlignment="Bottom" Width="50"/>
+                        <DatePicker SelectedDate="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.LowerBound}" />
+                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.To, Source={StaticResource LocalizedStrings}}" TextAlignment="Right" VerticalAlignment="Bottom" Width="50"/>
+                        <DatePicker SelectedDate="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.UpperBound}" />
+                    </StackPanel>
                 </StackPanel>
-            <TextBlock x:Name="IsToCompare_ID_CheckBox_Search_isToCompareBitColumnCommonOftOfCommon" Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareBitColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}"  HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="3" />
+            <TextBlock x:Name="IsToCompare_ID_CheckBox_Search_isToCompareBitColumnCommonOftOfCommon" Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareBitColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="3" />
             <ComboBox x:Name="ValueToCompare_ID_CheckBox_Search_isToCompareBitColumnCommonOftOfCommon" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="3"
-                DisplayMemberPath="Name"
+                DisplayMemberPath="Name" SelectedValuePath="Value"
                 ItemsSource="{Binding Path=Main.PredefinedBooleanSelectedValueList, Source={StaticResource Locator}}"
-                SelectedValue="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.BitColumnCommonOft.PredefinedBooleanSelectedValue, Converter={StaticResource EnumToNameValuePairConverter}}">
+                SelectedItem="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.BitColumnCommonOft.PredefinedBooleanSelectedValue, Converter={StaticResource EnumToNameValuePairConverter}}">
             </ComboBox>
-                <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareDatetimeColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" VerticalOptions="Center" HorizontalOptions="Start" Grid.Column="1" Grid.Row="4"/>
+                <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareDatetimeColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="4"/>
                 <StackPanel Grid.Column="1" Grid.Row="4" HorizontalAlignment="Stretch">
                     <ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Center"
-                        ItemDisplayBinding="{Binding Name}"
+                        DisplayMemberPath="Name" SelectedValuePath="Value"
                         ItemsSource="{Binding Path=Main.PreDefinedDateTimeRangeList, Source={StaticResource Locator}}"
                         SelectedItem="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.PreDefinedDateTimeRange, Converter={StaticResource EnumToNameValuePairConverter}}">
                     </ComboBox>
-                    <WrapPanel Orientation="Horizontal" IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.IsCustomEditor}">
-                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.From, Source={StaticResource LocalizedStrings}}" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
-                        <DatePicker Date="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.LowerBound}" />
-                    </WrapPanel>
-                    <WrapPanel Orientation="Horizontal" IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.IsCustomEditor}">
-                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.To, Source={StaticResource LocalizedStrings}}" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
-                        <DatePicker Date="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.UpperBound}" />
-                    </WrapPanel>
+                    <StackPanel Orientation="Horizontal" IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.IsCustomEditor}">
+                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.From, Source={StaticResource LocalizedStrings}}" TextAlignment="Right" VerticalAlignment="Bottom" Width="50"/>
+                        <DatePicker SelectedDate="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.LowerBound}" />
+                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.To, Source={StaticResource LocalizedStrings}}" TextAlignment="Right" VerticalAlignment="Bottom" Width="50"/>
+                        <DatePicker SelectedDate="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.UpperBound}" />
+                    </StackPanel>
                 </StackPanel>
-                <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareDatetime2ColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" VerticalOptions="Center" HorizontalOptions="Start" Grid.Column="1" Grid.Row="5"/>
+                <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareDatetime2ColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="5"/>
                 <StackPanel Grid.Column="1" Grid.Row="5" HorizontalAlignment="Stretch">
                     <ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Center"
-                        ItemDisplayBinding="{Binding Name}"
+                        DisplayMemberPath="Name" SelectedValuePath="Value"
                         ItemsSource="{Binding Path=Main.PreDefinedDateTimeRangeList, Source={StaticResource Locator}}"
                         SelectedItem="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.PreDefinedDateTimeRange, Converter={StaticResource EnumToNameValuePairConverter}}">
                     </ComboBox>
-                    <WrapPanel Orientation="Horizontal" IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.IsCustomEditor}">
-                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.From, Source={StaticResource LocalizedStrings}}" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
-                        <DatePicker Date="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.LowerBound}" />
-                    </WrapPanel>
-                    <WrapPanel Orientation="Horizontal" IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.IsCustomEditor}">
-                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.To, Source={StaticResource LocalizedStrings}}" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
-                        <DatePicker Date="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.UpperBound}" />
-                    </WrapPanel>
+                    <StackPanel Orientation="Horizontal" IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.IsCustomEditor}">
+                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.From, Source={StaticResource LocalizedStrings}}" TextAlignment="Right" VerticalAlignment="Bottom" Width="50"/>
+                        <DatePicker SelectedDate="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.LowerBound}" />
+                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.To, Source={StaticResource LocalizedStrings}}" TextAlignment="Right" VerticalAlignment="Bottom" Width="50"/>
+                        <DatePicker SelectedDate="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.UpperBound}" />
+                    </StackPanel>
                 </StackPanel>
-                <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareSmalldatetimeColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" VerticalOptions="Center" HorizontalOptions="Start" Grid.Column="1" Grid.Row="6"/>
+                <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareSmalldatetimeColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="6"/>
                 <StackPanel Grid.Column="1" Grid.Row="6" HorizontalAlignment="Stretch">
                     <ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Center"
-                        ItemDisplayBinding="{Binding Name}"
+                        DisplayMemberPath="Name" SelectedValuePath="Value"
                         ItemsSource="{Binding Path=Main.PreDefinedDateTimeRangeList, Source={StaticResource Locator}}"
                         SelectedItem="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.PreDefinedDateTimeRange, Converter={StaticResource EnumToNameValuePairConverter}}">
                     </ComboBox>
-                    <WrapPanel Orientation="Horizontal" IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.IsCustomEditor}">
-                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.From, Source={StaticResource LocalizedStrings}}" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
-                        <DatePicker Date="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.LowerBound}" />
-                    </WrapPanel>
-                    <WrapPanel Orientation="Horizontal" IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.IsCustomEditor}">
-                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.To, Source={StaticResource LocalizedStrings}}" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
-                        <DatePicker Date="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.UpperBound}" />
-                    </WrapPanel>
+                    <StackPanel Orientation="Horizontal" IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.IsCustomEditor}">
+                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.From, Source={StaticResource LocalizedStrings}}" TextAlignment="Right" VerticalAlignment="Bottom" Width="50"/>
+                        <DatePicker SelectedDate="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.LowerBound}" />
+                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.To, Source={StaticResource LocalizedStrings}}" TextAlignment="Right" VerticalAlignment="Bottom" Width="50"/>
+                        <DatePicker SelectedDate="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.UpperBound}" />
+                    </StackPanel>
                 </StackPanel>
-                <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareDateColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" VerticalOptions="Center" HorizontalOptions="Start" Grid.Column="1" Grid.Row="7"/>
+                <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareDateColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="7"/>
                 <StackPanel Grid.Column="1" Grid.Row="7" HorizontalAlignment="Stretch">
                     <ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Center"
-                        ItemDisplayBinding="{Binding Name}"
+                        DisplayMemberPath="Name" SelectedValuePath="Value"
                         ItemsSource="{Binding Path=Main.PreDefinedDateTimeRangeList, Source={StaticResource Locator}}"
                         SelectedItem="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.PreDefinedDateTimeRange, Converter={StaticResource EnumToNameValuePairConverter}}">
                     </ComboBox>
-                    <WrapPanel Orientation="Horizontal" IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.IsCustomEditor}">
-                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.From, Source={StaticResource LocalizedStrings}}" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
-                        <DatePicker Date="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.LowerBound}" />
-                    </WrapPanel>
-                    <WrapPanel Orientation="Horizontal" IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.IsCustomEditor}">
-                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.To, Source={StaticResource LocalizedStrings}}" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
-                        <DatePicker Date="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.UpperBound}" />
-                    </WrapPanel>
+                    <StackPanel Orientation="Horizontal" IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.IsCustomEditor}">
+                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.From, Source={StaticResource LocalizedStrings}}" TextAlignment="Right" VerticalAlignment="Bottom" Width="50"/>
+                        <DatePicker SelectedDate="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.LowerBound}" />
+                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.To, Source={StaticResource LocalizedStrings}}" TextAlignment="Right" VerticalAlignment="Bottom" Width="50"/>
+                        <DatePicker SelectedDate="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.UpperBound}" />
+                    </StackPanel>
                 </StackPanel>
-                <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" Grid.Column="0" Grid.Row="8" />
-                <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="8">
-                    <TextBox Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.NameCommonOft.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
-                </StackPanel>
-                <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareCharColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" Grid.Column="0" Grid.Row="9" />
-                <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="9">
-                    <TextBox Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.CharColumnCommonOft.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
-                </StackPanel>
-                <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareVarcharColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" Grid.Column="0" Grid.Row="10" />
-                <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="10">
-                    <TextBox Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.VarcharColumnCommonOft.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
-                </StackPanel>
-                <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareTextColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" Grid.Column="0" Grid.Row="11" />
-                <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="11">
-                    <TextBox Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.TextColumnCommonOft.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
-                </StackPanel>
-                <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareNcharColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" Grid.Column="0" Grid.Row="12" />
-                <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="12">
-                    <TextBox Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.NcharColumnCommonOft.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
-                </StackPanel>
-                <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareNvarcharColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" Grid.Column="0" Grid.Row="13" />
-                <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="13">
-                    <TextBox Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.NvarcharColumnCommonOft.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
-                </StackPanel>
-                <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareNtextColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" Grid.Column="0" Grid.Row="14" />
-                <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="14">
-                    <TextBox Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
-                </StackPanel>
+                <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="8" />
+                <TextBox Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.NameCommonOft.NullableValueToBeContained}" Grid.Column="1" Grid.Row="8" HorizontalAlignment="Stretch"/>
+                <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareCharColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="9" />
+                <TextBox Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.CharColumnCommonOft.NullableValueToBeContained}" Grid.Column="1" Grid.Row="9" HorizontalAlignment="Stretch"/>
+                <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareVarcharColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="10" />
+                <TextBox Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.VarcharColumnCommonOft.NullableValueToBeContained}" Grid.Column="1" Grid.Row="10" HorizontalAlignment="Stretch"/>
+                <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareTextColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="11" />
+                <TextBox Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.TextColumnCommonOft.NullableValueToBeContained}" Grid.Column="1" Grid.Row="11" HorizontalAlignment="Stretch"/>
+                <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareNcharColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="12" />
+                <TextBox Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.NcharColumnCommonOft.NullableValueToBeContained}" Grid.Column="1" Grid.Row="12" HorizontalAlignment="Stretch"/>
+                <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareNvarcharColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="13" />
+                <TextBox Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.NvarcharColumnCommonOft.NullableValueToBeContained}" Grid.Column="1" Grid.Row="13" HorizontalAlignment="Stretch"/>
+                <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareNtextColumnCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="14" />
+                <TextBox Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft.NullableValueToBeContained}" Grid.Column="1" Grid.Row="14" HorizontalAlignment="Stretch"/>
         </Grid>
-        <ListView Name="V_Common" Width="600" Margin="12,12,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollection_AddDefault}" SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization.Item, Mode=OneWay, Source={StaticResource Locator}}">
+        <ListView Name="V_Common" Margin="12,12,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollectionDefault}" >
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
             <ListView.View>
                 <GridView ColumnHeaderToolTip="BuildLog" AllowsColumnReorder="true">
                     <GridViewColumn>
@@ -170,17 +171,17 @@
                             <DataTemplate>
 <WrapPanel>
                 <!-- TO-DO: START it is regular details page, to be replaced by full details -->
-                <Button     Name="Details" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganizationLog.LaunchDetailsViewCommand, Source={StaticResource Locator}}" Width="45" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.DetailsAlternativeText, Source={StaticResource LocalizedStrings}}" CommandParameter="{Binding}" >
+                <Button Name="Details" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization.LaunchDetailsViewCommand, Source={StaticResource Locator}}" Width="45" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.Details, Source={StaticResource LocalizedStrings}}" CommandParameter="{Binding}" >
                     <StackPanel>
-                        <iconPacks:PackIconOcticons Kind="Briefcase" />
-                        <!--<TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.DetailsAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>-->
+                        <iconPacks:PackIconOcticons Kind="Briefcase" HorizontalAlignment="Center"/>
+                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.Details, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Center"></TextBlock>
                     </StackPanel>
                 </Button>
                 <!-- TO-DO: END it is regular details page, to be replaced by full details -->
-                <Button     Name="Edit" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization.LaunchEditViewCommand, Source={StaticResource Locator}}" Width="45" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.EditAlternativeText, Source={StaticResource LocalizedStrings}}">
+                <Button Name="Edit" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization.LaunchEditViewCommand, Source={StaticResource Locator}}" Width="45" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.Edit, Source={StaticResource LocalizedStrings}}" CommandParameter="{Binding}">
                     <StackPanel>
-                        <iconPacks:PackIconModern Kind="Edit" />
-                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.EditAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                        <iconPacks:PackIconModern Kind="Edit" HorizontalAlignment="Center"/>
+                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.Edit, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Center"></TextBlock>
                     </StackPanel>
                 </Button>
 </WrapPanel>

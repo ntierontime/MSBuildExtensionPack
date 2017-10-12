@@ -158,7 +158,7 @@ namespace Framework.Xaml
         protected void PaginationFirstPage()
         {
             this.QueryPagingSetting.CurrentPage = 1;
-            this.DoSearch();
+            this.DoSearch(true);
         }
 
         public RelayCommand PaginationPreviousPageCommand { get; protected set; }
@@ -166,7 +166,7 @@ namespace Framework.Xaml
         protected void PaginationPreviousPage()
         {
             this.QueryPagingSetting.CurrentPage -= 1;
-            this.DoSearch();
+            this.DoSearch(true);
         }
 
         public RelayCommand PaginationNextPageCommand { get; protected set; }
@@ -174,7 +174,7 @@ namespace Framework.Xaml
         protected void PaginationNextPage()
         {
             this.QueryPagingSetting.CurrentPage += 1;
-            this.DoSearch();
+            this.DoSearch(true);
         }
 
         public RelayCommand PaginationLastPageCommand { get; protected set; }
@@ -182,7 +182,7 @@ namespace Framework.Xaml
         protected void PaginationLastPage()
         {
             this.QueryPagingSetting.CurrentPage = this.QueryPagingSetting.CountOfPages;
-            this.DoSearch();
+            this.DoSearch(true);
         }
 
         #endregion Pagination Commands - First Page, Previous Page, Next Page, and Last Page
@@ -414,8 +414,6 @@ namespace Framework.Xaml
 
         #endregion ClearSearchResult
 
-        protected bool isToClearExistingResult = false;
-
         protected TSearchCriteria m_Criteria;
 
         public TSearchCriteria Criteria
@@ -457,8 +455,7 @@ namespace Framework.Xaml
                 this.QueryPagingSetting.CurrentPage = 1;
             }
 
-             isToClearExistingResult = true;
-            DoSearch();
+            this.DoSearch(true);
         }
 
         protected bool CanSearch()
@@ -473,17 +470,16 @@ namespace Framework.Xaml
             if (this.QueryPagingSetting.CurrentPage == 0)
             {
                 this.QueryPagingSetting.CurrentPage = 1;
-                isToClearExistingResult = true;
-                DoSearch();
+                this.DoSearch(false);
             }
             else
             {
-                isToClearExistingResult = false;
-                PaginationNextPage();
+                this.QueryPagingSetting.CurrentPage += 1;
+                this.DoSearch(false);
             }
         }
 
-        protected abstract void DoSearch();
+        protected abstract void DoSearch(bool isToClearExistingResult);
 
         #region Search Result
 

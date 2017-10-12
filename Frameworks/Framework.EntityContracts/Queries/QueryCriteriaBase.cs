@@ -164,6 +164,7 @@ namespace Framework.EntityContracts
         /// </summary>
         public QuerySystemBooleanEqualsCriteria()
         {
+            ValueToCompare = false;
         }
         /// <summary>
         /// Initializes a new instance of the <see cref="QuerySystemBooleanEqualsCriteria"/> class.
@@ -173,6 +174,7 @@ namespace Framework.EntityContracts
         public QuerySystemBooleanEqualsCriteria(bool isToCompare, System.Boolean? valueToCompare)
             : base(isToCompare, valueToCompare)
         {
+            ValueToCompare = valueToCompare ?? false;
         }
 
         #endregion constructors

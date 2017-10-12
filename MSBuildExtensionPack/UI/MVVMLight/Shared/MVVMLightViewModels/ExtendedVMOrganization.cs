@@ -50,12 +50,12 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
             set
             {
-                if (this.m_DropDownContentsOfOrganization_2SelectedItem == value)
+                if (this.m_DropDownContentsOfOrganization_2SelectedItem != null && this.m_DropDownContentsOfOrganization_2SelectedItem == value)
                 {
                     return;
                 }
 
-                this.m_DropDownContentsOfOrganization_2SelectedItem = value;
+                this.m_DropDownContentsOfOrganization_2SelectedItem = value != null ? this.DropDownContentsOfOrganization_2.FirstOrDefault(t => t.Value == value.Value) : null;
                 MessengerInstance.Send<Framework.UISelectedItemChangedMessage>(new Framework.UISelectedItemChangedMessage(EntityName, PropertyName_DropDownContentsOfOrganization_2SelectedItem, value));
                 RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_2SelectedItem);
             }
@@ -91,13 +91,14 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                     {
                         foreach (var item in result)
                         {
-                            int value;
-                            if (int.TryParse(item.Value, out value))
+                            if(item != null)
                             {
+                                System.Int64 value = item.ParseToSystemInt64(null);
                                 this.DropDownContentsOfOrganization_2.Add(new Framework.NameValuePair<System.Int64>(value, item.Name));
                             }
                         }
                     }
+                    RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_2);
                 });
             }
             catch (Exception ex)

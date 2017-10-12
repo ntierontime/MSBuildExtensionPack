@@ -55,7 +55,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
         {
             Framework.UIAction uiAction = Framework.UIAction.Create;
             OrganizationItemVM vm = new OrganizationItemVM();
-            vm.ContentData.Title = Framework.Resx.UIStringResource.AddNewAlternativeText;
+            vm.ContentData.Title = Framework.Resx.UIStringResource.AddNew;
             vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.AddNew_Organization;
             vm.LoadExtraData(uiAction);
 

@@ -18,16 +18,16 @@
         <ToolBarTray Grid.Row="0" Style="{StaticResource ToolBarTrayStyle}">
             <ToolBar>
                 <TextBlock VerticalAlignment="Center" Text="{Binding Path=Framework_Resx_UIStringResource.Warning_Areyousureyouwanttodeletethis, Source={StaticResource LocalizedStrings}}" />
-                <Button     Name="DeleteOutter" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution.DeleteCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.DeleteAlternativeText, Source={StaticResource LocalizedStrings}}">
+                <Button Name="DeleteOutter" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution.DeleteCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.Delete, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>
                         <iconPacks:PackIconMaterial Kind="Delete" HorizontalAlignment="Center" />
-                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.DeleteAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.Delete, Source={StaticResource LocalizedStrings}}"></TextBlock>
                     </StackPanel>
                 </Button>
-                <Button     Name="Close" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution.CloseDeleteViewCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.BackAlternativeText, Source={StaticResource LocalizedStrings}}">
+                <Button Name="Close" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMSolution.CloseDeleteViewCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.Back, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>
                         <iconPacks:PackIconEntypo Kind="Back" HorizontalAlignment="Center" />
-                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.BackAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.Back, Source={StaticResource LocalizedStrings}}"></TextBlock>
                     </StackPanel>
                 </Button>
             </ToolBar>

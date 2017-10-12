@@ -70,11 +70,8 @@ namespace Framework.Xaml
             get { return m_Item; }
             set
             {
-                if(value != null)
-                {
-                    m_Item = value.GetAClone();
-                    RaisePropertyChanged("Item");
-                }
+                m_Item = value != null ? value.GetAClone() : new TItem();
+                RaisePropertyChanged("Item");
             }
         }
 
@@ -144,7 +141,7 @@ namespace Framework.Xaml
             if (o != null)
             {
                 this.OriginalItem = o;
-                this.m_Item = o;
+                this.Item = o;
             }
         }
 
@@ -203,7 +200,7 @@ namespace Framework.Xaml
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Launch));
 
-            this.RaiseItemPropertyChangedEvent();
+            //this.RaiseItemPropertyChangedEvent();
         }
 
         public RelayCommand CloseEditViewCommand { get; protected set; }
@@ -212,7 +209,6 @@ namespace Framework.Xaml
         {
             string viewName = ViewName_Edit;
             Framework.UIAction uiAction = Framework.UIAction.Update;
-            this.Cleanup();
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Close));
         }
 
@@ -254,7 +250,7 @@ namespace Framework.Xaml
         {
             string viewName = ViewName_Create;
             Framework.UIAction uiAction = Framework.UIAction.Create;
-
+            this.Item = new TItem();
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Close));
         }
 

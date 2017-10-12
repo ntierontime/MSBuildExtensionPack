@@ -21,7 +21,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;XAMARIN;__MOBILE__</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -29,7 +29,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>TRACE;XAMARIN;__MOBILE__</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -55,9 +55,6 @@
     </Compile>
     <Compile Include="..\..\Frameworks\Framework\IDataStreamServiceProviderBase.cs">
       <Link>IDataStreamServiceProviderBase.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework\Models\MenuTreeItem.cs">
-      <Link>Models\MenuTreeItem.cs</Link>
     </Compile>
     <Compile Include="..\..\Frameworks\Framework\NavigationSetting.cs">
       <Link>NavigationSetting.cs</Link>

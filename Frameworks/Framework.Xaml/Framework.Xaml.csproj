@@ -36,10 +36,8 @@
     <None Include="packages.config" />
     <Compile Include="Converters\EnumToNameValuePairConverter.cs" />
     <Compile Include="IDispatcherHelperWrapper.cs" />
-    <Compile Include="Behaviors\NullableComboBoxBehavior.cs" />
     <Compile Include="ViewModelBaseWithResultAndUIElement.cs" />
     <Compile Include="ViewModelItemBase.cs" />
-    <Compile Include="MenuTreeItem.cs" />
     <None Include="map.1.D.1.vsd" />
     <None Include="map.1.D.1.vsd.png" />
   </ItemGroup>
@@ -67,7 +65,12 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="GalaSoft.MvvmLight, Version=5.3.0.19026, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">

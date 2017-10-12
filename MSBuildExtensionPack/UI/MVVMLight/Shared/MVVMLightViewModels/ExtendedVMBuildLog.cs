@@ -73,12 +73,12 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
             set
             {
-                if (this.m_DropDownContentsOfBuild_1SelectedItem == value)
+                if (this.m_DropDownContentsOfBuild_1SelectedItem != null && this.m_DropDownContentsOfBuild_1SelectedItem == value)
                 {
                     return;
                 }
 
-                this.m_DropDownContentsOfBuild_1SelectedItem = value;
+                this.m_DropDownContentsOfBuild_1SelectedItem = value != null ? this.DropDownContentsOfBuild_1.FirstOrDefault(t => t.Value == value.Value) : null;
                 MessengerInstance.Send<Framework.UISelectedItemChangedMessage>(new Framework.UISelectedItemChangedMessage(EntityName, PropertyName_DropDownContentsOfBuild_1SelectedItem, value));
                 RaisePropertyChanged(PropertyName_DropDownContentsOfBuild_1SelectedItem);
             }
@@ -101,25 +101,33 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         {
             try
             {
-                var client = new MSBuildExtensionPack.WebApiClient.BuildApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-                var result = Task.Run(() => client.GetCollectionOfNameValuePairOfByFKOnlyAsync(true, input.Value,false, default(System.Int64),false, default(System.Int64), -1, -1, null)).Result;
-
-                var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
-                dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
+                if (input != null)
                 {
-                    this.DropDownContentsOfBuild_1.Clear();
-                    if (result != null)
+                    var client = new MSBuildExtensionPack.WebApiClient.BuildApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
+                    var result = Task.Run(() => client.GetCollectionOfNameValuePairOfByFKOnlyAsync(true, input.Value,false, default(System.Int64),false, default(System.Int64), -1, -1, null)).Result;
+
+                    var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
+                    dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
                     {
-                        foreach (var item in result)
+                        this.DropDownContentsOfBuild_1.Clear();
+                        if (result != null)
                         {
-                            int value;
-                            if (int.TryParse(item.Value, out value))
+                            foreach (var item in result)
                             {
-                                this.DropDownContentsOfBuild_1.Add(new Framework.NameValuePair<System.Int64>(value, item.Name));
+                                if(item != null)
+                                {
+                                    System.Int64 value = item.ParseToSystemInt64(null);
+                                    this.DropDownContentsOfBuild_1.Add(new Framework.NameValuePair<System.Int64>(value, item.Name));
+                                }
                             }
                         }
-                    }
-                });
+                    });
+                }
+                else
+                {
+                    this.DropDownContentsOfBuild_1.Clear();
+                }
+                RaisePropertyChanged(PropertyName_DropDownContentsOfBuild_1);
             }
             catch (Exception ex)
             {
@@ -151,12 +159,12 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
             set
             {
-                if (this.m_DropDownContentsOfSolution_1SelectedItem == value)
+                if (this.m_DropDownContentsOfSolution_1SelectedItem != null && this.m_DropDownContentsOfSolution_1SelectedItem == value)
                 {
                     return;
                 }
 
-                this.m_DropDownContentsOfSolution_1SelectedItem = value;
+                this.m_DropDownContentsOfSolution_1SelectedItem = value != null ? this.DropDownContentsOfSolution_1.FirstOrDefault(t => t.Value == value.Value) : null;
                 MessengerInstance.Send<Framework.UISelectedItemChangedMessage>(new Framework.UISelectedItemChangedMessage(EntityName, PropertyName_DropDownContentsOfSolution_1SelectedItem, value));
                 GetDropDownContentsOfBuild_1(value);
                 RaisePropertyChanged(PropertyName_DropDownContentsOfSolution_1SelectedItem);
@@ -181,25 +189,33 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         {
             try
             {
-                var client = new MSBuildExtensionPack.WebApiClient.SolutionApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-                var result = Task.Run(() => client.GetCollectionOfNameValuePairOfByFKOnlyAsync(true, input.Value,false, default(System.Int64), -1, -1, null)).Result;
-
-                var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
-                dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
+                if (input != null)
                 {
-                    this.DropDownContentsOfSolution_1.Clear();
-                    if (result != null)
+                    var client = new MSBuildExtensionPack.WebApiClient.SolutionApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
+                    var result = Task.Run(() => client.GetCollectionOfNameValuePairOfByFKOnlyAsync(true, input.Value,false, default(System.Int64), -1, -1, null)).Result;
+
+                    var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
+                    dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
                     {
-                        foreach (var item in result)
+                        this.DropDownContentsOfSolution_1.Clear();
+                        if (result != null)
                         {
-                            int value;
-                            if (int.TryParse(item.Value, out value))
+                            foreach (var item in result)
                             {
-                                this.DropDownContentsOfSolution_1.Add(new Framework.NameValuePair<System.Int32>(value, item.Name));
+                                if(item != null)
+                                {
+                                    System.Int32 value = item.ParseToSystemInt32(null);
+                                    this.DropDownContentsOfSolution_1.Add(new Framework.NameValuePair<System.Int32>(value, item.Name));
+                                }
                             }
                         }
-                    }
-                });
+                    });
+                }
+                else
+                {
+                    this.DropDownContentsOfSolution_1.Clear();
+                }
+                RaisePropertyChanged(PropertyName_DropDownContentsOfSolution_1);
             }
             catch (Exception ex)
             {
@@ -231,12 +247,12 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
             set
             {
-                if (this.m_DropDownContentsOfOrganization_1SelectedItem == value)
+                if (this.m_DropDownContentsOfOrganization_1SelectedItem != null && this.m_DropDownContentsOfOrganization_1SelectedItem == value)
                 {
                     return;
                 }
 
-                this.m_DropDownContentsOfOrganization_1SelectedItem = value;
+                this.m_DropDownContentsOfOrganization_1SelectedItem = value != null ? this.DropDownContentsOfOrganization_1.FirstOrDefault(t => t.Value == value.Value) : null;
                 MessengerInstance.Send<Framework.UISelectedItemChangedMessage>(new Framework.UISelectedItemChangedMessage(EntityName, PropertyName_DropDownContentsOfOrganization_1SelectedItem, value));
                 GetDropDownContentsOfSolution_1(value);
                 RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_1SelectedItem);
@@ -261,25 +277,33 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         {
             try
             {
-                var client = new MSBuildExtensionPack.WebApiClient.OrganizationApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-                var result = Task.Run(() => client.GetCollectionOfNameValuePairOfByFKOnlyAsync(true, input.Value, -1, -1, null)).Result;
-
-                var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
-                dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
+                if (input != null)
                 {
-                    this.DropDownContentsOfOrganization_1.Clear();
-                    if (result != null)
+                    var client = new MSBuildExtensionPack.WebApiClient.OrganizationApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
+                    var result = Task.Run(() => client.GetCollectionOfNameValuePairOfByFKOnlyAsync(true, input.Value, -1, -1, null)).Result;
+
+                    var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
+                    dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
                     {
-                        foreach (var item in result)
+                        this.DropDownContentsOfOrganization_1.Clear();
+                        if (result != null)
                         {
-                            int value;
-                            if (int.TryParse(item.Value, out value))
+                            foreach (var item in result)
                             {
-                                this.DropDownContentsOfOrganization_1.Add(new Framework.NameValuePair<System.Int64>(value, item.Name));
+                                if(item != null)
+                                {
+                                    System.Int64 value = item.ParseToSystemInt64(null);
+                                    this.DropDownContentsOfOrganization_1.Add(new Framework.NameValuePair<System.Int64>(value, item.Name));
+                                }
                             }
                         }
-                    }
-                });
+                    });
+                }
+                else
+                {
+                    this.DropDownContentsOfOrganization_1.Clear();
+                }
+                RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_1);
             }
             catch (Exception ex)
             {
@@ -311,12 +335,12 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
             set
             {
-                if (this.m_DropDownContentsOfOrganization_2SelectedItem == value)
+                if (this.m_DropDownContentsOfOrganization_2SelectedItem != null && this.m_DropDownContentsOfOrganization_2SelectedItem == value)
                 {
                     return;
                 }
 
-                this.m_DropDownContentsOfOrganization_2SelectedItem = value;
+                this.m_DropDownContentsOfOrganization_2SelectedItem = value != null ? this.DropDownContentsOfOrganization_2.FirstOrDefault(t => t.Value == value.Value) : null;
                 MessengerInstance.Send<Framework.UISelectedItemChangedMessage>(new Framework.UISelectedItemChangedMessage(EntityName, PropertyName_DropDownContentsOfOrganization_2SelectedItem, value));
                 GetDropDownContentsOfOrganization_1(value);
                 RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_2SelectedItem);
@@ -353,13 +377,15 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                     {
                         foreach (var item in result)
                         {
-                            int value;
-                            if (int.TryParse(item.Value, out value))
+                            if(item != null)
                             {
+                                System.Int64 value = item.ParseToSystemInt64(null);
                                 this.DropDownContentsOfOrganization_2.Add(new Framework.NameValuePair<System.Int64>(value, item.Name));
                             }
                         }
                     }
+
+                    RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_2);
                 });
             }
             catch (Exception ex)
@@ -392,12 +418,12 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
             set
             {
-                if (this.m_DropDownContentsOfBuildEventCode_1SelectedItem == value)
+                if (this.m_DropDownContentsOfBuildEventCode_1SelectedItem != null && this.m_DropDownContentsOfBuildEventCode_1SelectedItem == value)
                 {
                     return;
                 }
 
-                this.m_DropDownContentsOfBuildEventCode_1SelectedItem = value;
+                this.m_DropDownContentsOfBuildEventCode_1SelectedItem = value != null ? this.DropDownContentsOfBuildEventCode_1.FirstOrDefault(t => t.Value == value.Value) : null;
                 MessengerInstance.Send<Framework.UISelectedItemChangedMessage>(new Framework.UISelectedItemChangedMessage(EntityName, PropertyName_DropDownContentsOfBuildEventCode_1SelectedItem, value));
                 RaisePropertyChanged(PropertyName_DropDownContentsOfBuildEventCode_1SelectedItem);
             }
@@ -433,13 +459,14 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                     {
                         foreach (var item in result)
                         {
-                            int value;
-                            if (int.TryParse(item.Value, out value))
+                            if(item != null)
                             {
+                                System.Int32 value = item.ParseToSystemInt32(null);
                                 this.DropDownContentsOfBuildEventCode_1.Add(new Framework.NameValuePair<System.Int32>(value, item.Name));
                             }
                         }
                     }
+                    RaisePropertyChanged(PropertyName_DropDownContentsOfBuildEventCode_1);
                 });
             }
             catch (Exception ex)
