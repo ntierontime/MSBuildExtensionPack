@@ -31,7 +31,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Solution_WPCommonOfSolution)]
-        public ActionResult WPCommonOfSolution(int currentPage = 1 , WPCommonOfSolutionVM viewModel = null)
+        public ActionResult WPCommonOfSolution(int currentPage = 1, WPCommonOfSolutionVM viewModel = null)
         {
             log.Info(string.Format("{0}: WPCommonOfSolution", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
@@ -46,8 +46,6 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             }
 
             viewModel.PopulateAllUIElements(vmFromTempData, currentPage);
-
-            //viewModel.Criteria.LowerBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundCreatedDateTimeCommonOftOfCommon); viewModel.Criteria.UpperBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundCreatedDateTimeCommonOftOfCommon);
 
             viewModel.LoadData(true);
 

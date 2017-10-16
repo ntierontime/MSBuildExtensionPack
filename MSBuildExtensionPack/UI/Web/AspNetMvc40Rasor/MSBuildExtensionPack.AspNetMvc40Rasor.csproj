@@ -21,8 +21,6 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -64,7 +62,6 @@
     <Compile Include="Controllers\SolutionController.gg.cs">
       <DependentUpon>SolutionController.cs</DependentUpon>
     </Compile>
-    <Content Include="Scripts\app.js" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
@@ -278,6 +275,7 @@
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\App.js" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AspNetMvc40ApiController\MSBuildExtensionPack.AspNetMvc40ApiController.csproj">
@@ -499,13 +497,6 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Import Project="..\..\..\..\packages\LiveXAML.1.2.69\build\LiveXAML.targets" Condition="Exists('..\..\..\..\packages\LiveXAML.1.2.69\build\LiveXAML.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\..\..\..\packages\LiveXAML.1.2.69\build\LiveXAML.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\packages\LiveXAML.1.2.69\build\LiveXAML.targets'))" />
-  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

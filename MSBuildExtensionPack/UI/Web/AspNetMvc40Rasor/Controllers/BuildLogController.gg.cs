@@ -31,7 +31,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_WPCommonOfBuildLog)]
-        public ActionResult WPCommonOfBuildLog(int currentPage = 1 ,string lowerBoundEventTimeCommonOftOfCommon = null, string upperBoundEventTimeCommonOftOfCommon = null, WPCommonOfBuildLogVM viewModel = null)
+        public ActionResult WPCommonOfBuildLog(int currentPage = 1, WPCommonOfBuildLogVM viewModel = null)
         {
             log.Info(string.Format("{0}: WPCommonOfBuildLog", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
@@ -46,9 +46,6 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             }
 
             viewModel.PopulateAllUIElements(vmFromTempData, currentPage);
-
-            //viewModel.Criteria.LowerBoundEventTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundEventTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundEventTimeCommonOftOfCommon); viewModel.Criteria.UpperBoundEventTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundEventTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundEventTimeCommonOftOfCommon);
-            ////viewModel.Criteria.LowerBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundCreatedDateTimeCommonOftOfCommon); viewModel.Criteria.UpperBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundCreatedDateTimeCommonOftOfCommon);
 
             viewModel.LoadData(true);
 
