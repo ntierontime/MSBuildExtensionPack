@@ -18,386 +18,137 @@
     @Html.ValidationSummary(true)
             <div class="panel-body">
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.Id, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.DisplayFor(model => model.Item.Id)
-                    </div>
+                    @Html.LabelFor(model => model.Item.Id, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.Id)
+                        </div>
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.CreatedDateTime, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.DisplayFor(model => model.Item.CreatedDateTime)
-                    </div>
+                    @Html.LabelFor(model => model.Item.CreatedDateTime, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.CreatedDateTime)
+                        </div>
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.ParentId, new { @class = "control-label" })
-                    <div class="form-control">
+                    @Html.LabelFor(model => model.Item.ParentId, new { @class = "control-label" })
+                        @Html.HiddenFor(model => model.Item.Organization_2_UniqueidentifierColumn)
+                        @Html.HiddenFor(model => model.Item.Organization_2_UniqueIdentifier)
                         @Html.HiddenFor(model => model.Item.ParentId)
                         @Html.DropDownListFor(model => model.Item.ParentId, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Organization, MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" } })
-                    </div>
                 </div>
                 <div class="form-group" >
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.IsSystemBuiltIn)
-                    </div>
+                        @Html.EditorFor(model => model.Item.IsSystemBuiltIn, new { @class = "form-control" })
                 </div>
                 <div class="form-group" >
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.BitColumn)
-                    </div>
+                        @Html.EditorFor(model => model.Item.BitColumn, new { @class = "form-control" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.Name, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.Name)
-                    </div>
+                    @Html.LabelFor(model => model.Item.Name, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.Item.Name, new { @class = "form-control" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.UniqueIdentifier, new { @class = "control-label" })
-                    <div class="form-control">
-        @Html.EditorFor(model => model.Item.UniqueIdentifier)
-                    </div>
+                    @Html.LabelFor(model => model.Item.UniqueIdentifier, new { @class = "control-label" })
+        @Html.EditorFor(model => model.Item.UniqueIdentifier, new { @class = "form-control" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.CharColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.CharColumn)
-                    </div>
+                    @Html.LabelFor(model => model.Item.CharColumn, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.Item.CharColumn, new { @class = "form-control" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.VarcharColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.VarcharColumn)
-                    </div>
+                    @Html.LabelFor(model => model.Item.VarcharColumn, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.Item.VarcharColumn, new { @class = "form-control" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.TextColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.TextColumn)
-                    </div>
+                    @Html.LabelFor(model => model.Item.TextColumn, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.Item.TextColumn, new { @class = "form-control" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.NcharColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.NcharColumn)
-                    </div>
+                    @Html.LabelFor(model => model.Item.NcharColumn, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.Item.NcharColumn, new { @class = "form-control" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.NvarcharColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.NvarcharColumn)
-                    </div>
+                    @Html.LabelFor(model => model.Item.NvarcharColumn, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.Item.NvarcharColumn, new { @class = "form-control" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.NtextColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.NtextColumn)
-                    </div>
+                    @Html.LabelFor(model => model.Item.NtextColumn, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.Item.NtextColumn, new { @class = "form-control" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.BinaryColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.BinaryColumn)
-                    </div>
+                    @Html.LabelFor(model => model.Item.BinaryColumn, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.Item.BinaryColumn, new { @class = "form-control" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.VarbinaryColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.VarbinaryColumn)
-                    </div>
+                    @Html.LabelFor(model => model.Item.VarbinaryColumn, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.Item.VarbinaryColumn, new { @class = "form-control" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.ImageColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.ImageColumn)
-                    </div>
+                    @Html.LabelFor(model => model.Item.ImageColumn, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.Item.ImageColumn, new { @class = "form-control" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.TinyintColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.TinyintColumn)
-                    </div>
+                    @Html.LabelFor(model => model.Item.TinyintColumn, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.Item.TinyintColumn, new { @class = "form-control" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.SmallintColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.SmallintColumn)
-                    </div>
+                    @Html.LabelFor(model => model.Item.SmallintColumn, new { @class = "control-label" })
+                        @Html.EditorFor(model => model.Item.SmallintColumn, new { @class = "form-control" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.IntColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.IntColumn)
-                    </div>
+                    @Html.LabelFor(model => model.Item.IntColumn, new { @class = "control-label" })
+                        @Html.EditorFor(model => model.Item.IntColumn, new { @class = "form-control" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.BigintColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.BigintColumn)
-                    </div>
+                    @Html.LabelFor(model => model.Item.BigintColumn, new { @class = "control-label" })
+                        @Html.EditorFor(model => model.Item.BigintColumn, new { @class = "form-control" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.DecimalColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.DecimalColumn)
-                    </div>
+                    @Html.LabelFor(model => model.Item.DecimalColumn, new { @class = "control-label" })
+                        @Html.EditorFor(model => model.Item.DecimalColumn, new { @class = "form-control" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.NumericColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.NumericColumn)
-                    </div>
+                    @Html.LabelFor(model => model.Item.NumericColumn, new { @class = "control-label" })
+                        @Html.EditorFor(model => model.Item.NumericColumn, new { @class = "form-control" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.SmallmoneyColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.SmallmoneyColumn)
-                    </div>
+                    @Html.LabelFor(model => model.Item.SmallmoneyColumn, new { @class = "control-label" })
+                        @Html.EditorFor(model => model.Item.SmallmoneyColumn, new { @class = "form-control" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.MoneyColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.MoneyColumn)
-                    </div>
+                    @Html.LabelFor(model => model.Item.MoneyColumn, new { @class = "control-label" })
+                        @Html.EditorFor(model => model.Item.MoneyColumn, new { @class = "form-control" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.FloatColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.FloatColumn)
-                    </div>
+                    @Html.LabelFor(model => model.Item.FloatColumn, new { @class = "control-label" })
+                        @Html.EditorFor(model => model.Item.FloatColumn, new { @class = "form-control" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.RealColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.RealColumn)
-                    </div>
+                    @Html.LabelFor(model => model.Item.RealColumn, new { @class = "control-label" })
+                        @Html.EditorFor(model => model.Item.RealColumn, new { @class = "form-control" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.DatetimeColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.DisplayFor(model => model.Item.DatetimeColumn)
-                    </div>
+                    @Html.LabelFor(model => model.Item.DatetimeColumn, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.Item.DatetimeColumn, new { @class = "form-control", @readonly = "readonly" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.Datetime2Column, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.DisplayFor(model => model.Item.Datetime2Column)
-                    </div>
+                    @Html.LabelFor(model => model.Item.Datetime2Column, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.Item.Datetime2Column, new { @class = "form-control", @readonly = "readonly" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.SmalldatetimeColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.DisplayFor(model => model.Item.SmalldatetimeColumn)
-                    </div>
+                    @Html.LabelFor(model => model.Item.SmalldatetimeColumn, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.Item.SmalldatetimeColumn, new { @class = "form-control", @readonly = "readonly" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.DateColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.DisplayFor(model => model.Item.DateColumn)
-                    </div>
+                    @Html.LabelFor(model => model.Item.DateColumn, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.Item.DateColumn, new { @class = "form-control", @readonly = "readonly" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.TimeColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.TimeColumn)
-                    </div>
+                    @Html.LabelFor(model => model.Item.TimeColumn, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.Item.TimeColumn, new { @class = "form-control" })
                 </div>
                 <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.UniqueidentifierColumn, new { @class = "control-label" })
-                    <div class="form-control">
-        @Html.EditorFor(model => model.Item.UniqueidentifierColumn)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.Id, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.DisplayFor(model => model.Item.Id)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.CreatedDateTime, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.DisplayFor(model => model.Item.CreatedDateTime)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.ParentId, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.HiddenFor(model => model.Item.ParentId)
-                        @Html.DropDownListFor(model => model.Item.ParentId, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Organization, MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" } })
-                    </div>
-                </div>
-                <div class="form-group" >
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.IsSystemBuiltIn)
-                    </div>
-                </div>
-                <div class="form-group" >
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.BitColumn)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.Name, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.Name)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.UniqueIdentifier, new { @class = "control-label" })
-                    <div class="form-control">
-        @Html.EditorFor(model => model.Item.UniqueIdentifier)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.CharColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.CharColumn)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.VarcharColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.VarcharColumn)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.TextColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.TextColumn)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.NcharColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.NcharColumn)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.NvarcharColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.NvarcharColumn)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.NtextColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.NtextColumn)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.BinaryColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.BinaryColumn)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.VarbinaryColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.VarbinaryColumn)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.ImageColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.ImageColumn)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.TinyintColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.TinyintColumn)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.SmallintColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.SmallintColumn)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.IntColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.IntColumn)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.BigintColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.BigintColumn)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.DecimalColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.DecimalColumn)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.NumericColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.NumericColumn)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.SmallmoneyColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.SmallmoneyColumn)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.MoneyColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.MoneyColumn)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.FloatColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.FloatColumn)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.RealColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.RealColumn)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.DatetimeColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.DisplayFor(model => model.Item.DatetimeColumn)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.Datetime2Column, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.DisplayFor(model => model.Item.Datetime2Column)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.SmalldatetimeColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.DisplayFor(model => model.Item.SmalldatetimeColumn)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.DateColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.DisplayFor(model => model.Item.DateColumn)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.TimeColumn, new { @class = "control-label" })
-                    <div class="form-control">
-                        @Html.EditorFor(model => model.Item.TimeColumn)
-                    </div>
-                </div>
-                <div class="form-group" >
-                        @Html.LabelFor(model => model.Item.UniqueidentifierColumn, new { @class = "control-label" })
-                    <div class="form-control">
-        @Html.EditorFor(model => model.Item.UniqueidentifierColumn)
-                    </div>
+                    @Html.LabelFor(model => model.Item.UniqueidentifierColumn, new { @class = "control-label" })
+        @Html.EditorFor(model => model.Item.UniqueidentifierColumn, new { @class = "form-control" })
                 </div>
             </div>
             <div class="panel-footer nopadding">
@@ -425,9 +176,9 @@
     </div>
 </div>
 @section Scripts {
-    <script type="text/javascript">
+   <script type="text/javascript">
         $(document).ready($(function() {
-            $('input[name=Item.DatetimeColumn]').datepicker({
+            $('input[name="Item.DatetimeColumn"]').datepicker({
                 autoclose: true,
                 beforeShowDay: $.noop,
                 calendarWeeks: false,
@@ -447,7 +198,7 @@
                 todayHighlight: false,
                 weekStart: 0
             });
-            $('input[name=Item.Datetime2Column]').datepicker({
+            $('input[name="Item.Datetime2Column"]').datepicker({
                 autoclose: true,
                 beforeShowDay: $.noop,
                 calendarWeeks: false,
@@ -467,7 +218,7 @@
                 todayHighlight: false,
                 weekStart: 0
             });
-            $('input[name=Item.SmalldatetimeColumn]').datepicker({
+            $('input[name="Item.SmalldatetimeColumn"]').datepicker({
                 autoclose: true,
                 beforeShowDay: $.noop,
                 calendarWeeks: false,
@@ -487,7 +238,7 @@
                 todayHighlight: false,
                 weekStart: 0
             });
-            $('input[name=Item.DateColumn]').datepicker({
+            $('input[name="Item.DateColumn"]').datepicker({
                 autoclose: true,
                 beforeShowDay: $.noop,
                 calendarWeeks: false,
@@ -508,48 +259,5 @@
                 weekStart: 0
             });
         }));
-        $(document).ready($(function() {
-            $.validator.addMethod(
-                "date",
-                function(value, element) {
-                    var bits = value.match(/([0-9]+)/gi), str;
-                    if (!bits)
-                        return this.optional(element) || false;
-                    str = bits[1] + '/' + bits[0] + '/' + bits[2];
-                    return this.optional(element) || !/Invalid|NaN/.test(new Date(str));
-                },
-                "Please enter a date in the format dd/mm/yyyy"
-            );
-            $("form").validate({
-                onkeyup: false,
-                errorPlacement: function(error, element) {
-                    if (element.attr("name").indexOf("DOB") >= 0) {
-                        error.insertAfter("#DOB_Day");
-                    } else {
-                        error.insertAfter(element);
-                    }
-                },
-                rules: {
-                },
-                messages: {
-                },
-                highlight:
-                    function(element) {
-                        $(element).css('border', '2px solid red');
-                    },
-                unhighlight:
-                    function(element) {
-                        $(element).css('border', '1px solid rgb(170, 170, 170)');
-                    },
-                errorLabelContainer: "#ErrorList",
-                wrapper: "li"
-            });
-        }));
-        //cascaded dropdownlist by knockoutjs
-        function CascadingDDLViewModel() {
-            var self = this;
-        }
-        var objVM = new CascadingDDLViewModel();
-        ko.applyBindings(objVM);
     </script>
 }

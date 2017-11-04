@@ -123,45 +123,44 @@
             <div class="table-responsive">
 <table id="MasterDataControl1" name="MasterDataControl1" class="table table-hover table-bordered table-striped">
 <thead>
- <tr><th  style="min-width:100px" class="hidden-xs visible-sm"></th>
-<th >@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Solution_1_Name</th>
-<th >@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Organization_1_UniqueIdentifier</th>
-<th >@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Organization_1_UniqueidentifierColumn</th>
-<th  class="hidden-xs visible-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Organization_1_Name</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Organization_2_UniqueIdentifier</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Organization_2_UniqueidentifierColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Organization_2_Name</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Name</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Description</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.BuildStartTime</th>
-<th  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"></th></tr>
+    <tr>
+<th style="min-width:100px" class="hidden-xs visible-sm"></th>
+<th class="hidden-sm">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Id</th>
+<th>@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.BuildStartTime</th>
+<th>@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Organization_2_Name</th>
+<th>@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Organization_1_Name</th>
+<th class="hidden-xs">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Solution_1_Name</th>
+<th class="hidden-xs">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Name</th>
+<th class="hidden-sm">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Description</th>
+    </tr>
 </thead>
 <tbody>
     @if (Model != null && Model.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
     {
-        int index = 0;
-        foreach (var item in Model.Result)
+        for (var i = 0; i < Model.Result.Count; i ++)
         {
-            index++;
-<tr><td  style="min-width:100px" class="hidden-xs visible-sm"></td>
-<td  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><div class="btn-group btn-group-justified" role="group" aria-label="...">
+            <tr>
+<td><div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetails">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Result[i].Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetails">
         <span class="glyphicon glyphicon-briefcase"></span>
     </a>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_Build_Edit, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })" class="btn btn-default" role="button" type="button" name="EditToolBarRightInList" title="@Framework.Resx.UIStringResource.Edit">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Build_Edit, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Result[i].Id })" class="btn btn-default" role="button" type="button" name="EditToolBarRightInList" title="@Framework.Resx.UIStringResource.Edit">
         <span class="glyphicon glyphicon-edit"></span>
     </a>
 </div>
-</div></td>
-<td >@Html.ActionLink(item.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.SolutionId }, null)</td>
-<td >@Html.ActionLink(item.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1_UniqueidentifierColumn }, null)</td>
-<td >@Html.ActionLink(item.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2_UniqueidentifierColumn }, null)</td>
-<td >@Html.DisplayFor(modelItem => item.Name)</td>
-<td >@Html.DisplayFor(modelItem => item.Description)</td>
-<td >@Html.DisplayFor(modelItem => item.BuildStartTime)</td></tr>
+</div>
+</td>
+<td class="hidden-sm">@Html.DisplayFor(model => model.Result[i].Id)</td>
+<td>@Html.DisplayFor(model => model.Result[i].BuildStartTime)</td>
+<td>@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].Organization_2Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].Organization_2_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].Organization_2_UniqueidentifierColumn }, null)</td>
+<td>@Html.ActionLink(Model.Result[i].Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].Organization_1Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].Organization_1_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].Organization_1_UniqueidentifierColumn }, null)</td>
+<td class="hidden-xs">@Html.ActionLink(Model.Result[i].Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareByIdentifierOftOfByIdentifier=true, valueToCompareByIdentifierOftOfByIdentifier = Model.Result[i].SolutionId }, null)</td>
+<td class="hidden-xs">@Html.DisplayFor(model => model.Result[i].Name)</td>
+<td class="hidden-sm">@Html.DisplayFor(model => model.Result[i].Description)</td>
+            </tr>
         }
     }
     else

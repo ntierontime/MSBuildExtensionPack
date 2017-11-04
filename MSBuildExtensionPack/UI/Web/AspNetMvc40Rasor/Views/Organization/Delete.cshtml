@@ -17,189 +17,194 @@
 @using (Html.BeginForm(UrlStringsAlias.ActionName_Organization_Delete, UrlStringsAlias.ControllerName_Organization, FormMethod.Post, new { @class= "form" })) {
     @Html.AntiForgeryToken()
             <div class="panel-body">
-@Html.HiddenFor(model => model.Item.Organization_2_UniqueidentifierColumn)@Html.HiddenFor(model => model.Item.Organization_2_UniqueIdentifier)  <div class="form-group">
-            @Html.LabelFor(model => model.Item.Organization_2_Name, new { @class = "control-label" })
-        <div class="form-control">
-@Html.ActionLink(Model.Item.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.ParentId, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Organization_2_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Organization_2_UniqueidentifierColumn }, null)
-        </div>
-    </div>
-@Html.HiddenFor(model => model.Item.Id)@Html.HiddenFor(model => model.Item.ParentId)  <div class="form-group">
-            @Html.LabelFor(model => model.Item.Name, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.Name)
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.IsSystemBuiltIn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.IsSystemBuiltIn)
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.UniqueIdentifier, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.UniqueIdentifier)
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.CreatedDateTime, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.CreatedDateTime)
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.CharColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.CharColumn)
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.VarcharColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.VarcharColumn)
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.TextColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.TextColumn)
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.NcharColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.NcharColumn)
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.NvarcharColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.NvarcharColumn)
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.NtextColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.NtextColumn)
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.BitColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.BitColumn)
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.BinaryColumn, new { @class = "control-label" })
-        <div class="form-control">
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.VarbinaryColumn, new { @class = "control-label" })
-        <div class="form-control">
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.ImageColumn, new { @class = "control-label" })
-        <div class="form-control">
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.TinyintColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.TinyintColumn)
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.SmallintColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.SmallintColumn)
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.IntColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.IntColumn)
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.BigintColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.BigintColumn)
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.DecimalColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.DecimalColumn)
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.NumericColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.NumericColumn)
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.SmallmoneyColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.SmallmoneyColumn)
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.MoneyColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.MoneyColumn)
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.FloatColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.FloatColumn)
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.RealColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.RealColumn)
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.DatetimeColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.DatetimeColumn)
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.Datetime2Column, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.Datetime2Column)
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.SmalldatetimeColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.SmalldatetimeColumn)
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.DateColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.DateColumn)
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.TimeColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.TimeColumn)
-        </div>
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.UniqueidentifierColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Item.UniqueidentifierColumn)
-        </div>
-    </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.Id, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.Id)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.CreatedDateTime, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.CreatedDateTime)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.ParentId, new { @class = "control-label" })
+                        @Html.ActionLink(Model.Item.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Organization_2_UniqueidentifierColumn, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Organization_2_UniqueIdentifier, isToCompareIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.ParentId }, null)
+                </div>
+                <div class="form-group" >
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.IsSystemBuiltIn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.BitColumn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.Name, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.Name)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.UniqueIdentifier, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.UniqueIdentifier)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.CharColumn, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.CharColumn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.VarcharColumn, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.VarcharColumn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.TextColumn, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.TextColumn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.NcharColumn, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.NcharColumn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.NvarcharColumn, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.NvarcharColumn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.NtextColumn, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.NtextColumn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.BinaryColumn, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.BinaryColumn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.VarbinaryColumn, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.VarbinaryColumn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.ImageColumn, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.ImageColumn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.TinyintColumn, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.TinyintColumn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.SmallintColumn, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.SmallintColumn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.IntColumn, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.IntColumn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.BigintColumn, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.BigintColumn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.DecimalColumn, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.DecimalColumn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.NumericColumn, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.NumericColumn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.SmallmoneyColumn, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.SmallmoneyColumn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.MoneyColumn, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.MoneyColumn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.FloatColumn, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.FloatColumn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.RealColumn, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.RealColumn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.DatetimeColumn, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.DatetimeColumn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.Datetime2Column, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.Datetime2Column)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.SmalldatetimeColumn, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.SmalldatetimeColumn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.DateColumn, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.DateColumn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.TimeColumn, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.TimeColumn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Item.UniqueidentifierColumn, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.UniqueidentifierColumn)
+                        </div>
+                </div>
             </div>
             <div class="panel-footer nopadding">
                 <div class="btn-group btn-group-justified" role="group" aria-label="...">
