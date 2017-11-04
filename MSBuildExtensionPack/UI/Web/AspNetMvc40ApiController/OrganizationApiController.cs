@@ -375,7 +375,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
             }
             else
             {
-                retval.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommonFlatten();
+                retval.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon();
                 retval.QueryPagingSetting = Framework.EntityContracts.QueryPagingSetting.GetDefault();
                 //retval.QueryOrderBySettingCollecionInString = MSBuildExtensionPack.ViewModelData.OrderByLists.WPCommonOfOrganizationVM_GetDefaultListOfQueryOrderBySettingCollecionInString();
             }

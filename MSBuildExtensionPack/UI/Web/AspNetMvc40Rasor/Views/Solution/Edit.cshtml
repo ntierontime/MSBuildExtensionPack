@@ -17,29 +17,41 @@
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
             <div class="panel-body">
-@Html.HiddenFor(model => model.Item.Organization_1_UniqueIdentifier)@Html.HiddenFor(model => model.Item.Organization_1_UniqueidentifierColumn)@Html.HiddenFor(model => model.Item.Organization_1_Name)@Html.HiddenFor(model => model.Item.Id)  <div class="form-group">
-            @Html.LabelFor(model => model.Item.Organization_2Id, new { @class = "control-label" })
-            @Html.DropDownListFor(model => model.Item.Organization_2Id, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Organization, MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "onchange", "FetchOrganization_1();" }, { "class", "form-control" } })
-    </div>
-@Html.HiddenFor(model => model.Item.Organization_2_UniqueIdentifier)@Html.HiddenFor(model => model.Item.Organization_2_UniqueidentifierColumn)@Html.HiddenFor(model => model.Item.Organization_2_Name)  <div class="form-group">
-            @Html.LabelFor(model => model.Item.ExternalParentId, new { @class = "control-label" })
-            @Html.TextBoxFor(model => model.Item.ExternalParentId, new { @class = "form-control" })
-            @Html.ValidationMessageFor(model => model.Item.ExternalParentId, null, new { @class = "text-danger" })
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.Name, new { @class = "control-label" })
-            @Html.TextBoxFor(model => model.Item.Name, new { @class = "form-control" })
-            @Html.ValidationMessageFor(model => model.Item.Name, null, new { @class = "text-danger" })
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.Description, new { @class = "control-label" })
-            @Html.TextBoxFor(model => model.Item.Description, new { @class = "form-control" })
-            @Html.ValidationMessageFor(model => model.Item.Description, null, new { @class = "text-danger" })
-    </div>
-  <div class="form-group">
-            @Html.LabelFor(model => model.Item.OrganizationId, new { @class = "control-label" })
-            @Html.DropDownListFor(model => model.Item.OrganizationId, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfOrganizationId,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedOrganizationId", MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____) } })
-    </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Item.Id, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Item.Id)
+                        </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Item.Organization_2Id, new { @class = "control-label" })
+                        @Html.HiddenFor(model => model.Item.Organization_2Id)
+                        @Html.HiddenFor(model => model.Item.Organization_2_UniqueIdentifier)
+                        @Html.HiddenFor(model => model.Item.Organization_2_UniqueidentifierColumn)
+                        @Html.DropDownListFor(model => model.Item.Organization_2Id, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Organization, MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "onchange", "FetchOrganization_1();" }, { "class", "form-control" } })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Item.OrganizationId, new { @class = "control-label" })
+                        @Html.HiddenFor(model => model.Item.Organization_1_UniqueIdentifier)
+                        @Html.HiddenFor(model => model.Item.Organization_1_UniqueidentifierColumn)
+                        @Html.HiddenFor(model => model.Item.OrganizationId)
+                        @Html.DropDownListFor(model => model.Item.OrganizationId, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfOrganization_1,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedOrganization_1", MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____) } })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Item.ExternalParentId, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.Item.ExternalParentId, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Item.ExternalParentId, null, new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Item.Name, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.Item.Name, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Item.Name, null, new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Item.Description, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.Item.Description, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Item.Description, null, new { @class = "text-danger" })
+                </div>
             </div>
             <div class="panel-footer nopadding">
                 <div class="btn-group btn-group-justified" role="group" aria-label="...">
@@ -66,59 +78,21 @@
     </div>
 </div>
 @section Scripts {
-    <script type="text/javascript">
-        $(document).ready($(function() {
-        }));
-        $(document).ready($(function() {
-            $.validator.addMethod(
-                "date",
-                function(value, element) {
-                    var bits = value.match(/([0-9]+)/gi), str;
-                    if (!bits)
-                        return this.optional(element) || false;
-                    str = bits[1] + '/' + bits[0] + '/' + bits[2];
-                    return this.optional(element) || !/Invalid|NaN/.test(new Date(str));
-                },
-                "Please enter a date in the format dd/mm/yyyy"
-            );
-            $("form").validate({
-                onkeyup: false,
-                errorPlacement: function(error, element) {
-                    if (element.attr("name").indexOf("DOB") >= 0) {
-                        error.insertAfter("#DOB_Day");
-                    } else {
-                        error.insertAfter(element);
-                    }
-                },
-                rules: {
-                },
-                messages: {
-                },
-                highlight:
-                    function(element) {
-                        $(element).css('border', '2px solid red');
-                    },
-                unhighlight:
-                    function(element) {
-                        $(element).css('border', '1px solid rgb(170, 170, 170)');
-                    },
-                errorLabelContainer: "#ErrorList",
-                wrapper: "li"
-            });
-        }));
+   <script type="text/javascript">
         function FetchOrganization_1() {
-var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $("#Item_Organization_2Id").val();
             var url = "/api/OrganizationApi/GetCollectionOfNameValuePairOfByFKOnly";
-            var params = BuildCriteriaForFetchOrganization_1(selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly);
-            if(selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-            {
+            try {
+                var params = BuildCriteriaForFetchOrganization_1();
                 $.getJSON(url, params, function (data) {
-                    objVM.selectListOfOrganizationId(data);
-                    objVM.selectedOrganizationId(@Model.Item.OrganizationId);
+                    objVM.selectListOfOrganization_1(data);
+                    objVM.selectedOrganization_1(@Model.Item.OrganizationId);
                 });
             }
+            catch (e) {
+            }
         }
-        function BuildCriteriaForFetchOrganization_1(selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly) {
+        function BuildCriteriaForFetchOrganization_1() {
+            var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $('select[name="Item.Organization_2Id"]').val();
             var params = {
                 isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: true,
                 valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly,
@@ -131,11 +105,11 @@ var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $("#Item_Organi
         //cascaded dropdownlist by knockoutjs
         function CascadingDDLViewModel() {
             var self = this;
-            self.selectListOfOrganizationId = ko.observableArray([]);
-            self.selectedOrganizationId = ko.observable();
+            self.selectListOfOrganization_1 = ko.observableArray([]);
+            self.selectedOrganization_1 = ko.observable();
         }
         var objVM = new CascadingDDLViewModel();
         ko.applyBindings(objVM);
-$("#Item_Organization_2Id").change();
+        $('select[name="Item.Organization_2Id"]').change();
     </script>
 }

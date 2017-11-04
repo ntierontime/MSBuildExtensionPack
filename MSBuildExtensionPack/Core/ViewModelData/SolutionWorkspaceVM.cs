@@ -6,7 +6,7 @@ using System.Text;
 namespace MSBuildExtensionPack.ViewModelData
 {
 
-    public partial class WPCommonOfSolutionVM : Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommonFlatten, MSBuildExtensionPack.DataSourceEntities.Solution.DefaultCollection>
+    public partial class WPCommonOfSolutionVM : Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon, MSBuildExtensionPack.DataSourceEntities.Solution.DefaultCollection>
     {
         public WPCommonOfSolutionVM()
             : base()

@@ -21,47 +21,46 @@
             <div class="table-responsive">
 <table id="MasterDataControl0" name="MasterDataControl0" class="table table-hover table-bordered table-striped">
 <thead>
- <tr><th  style="min-width:100px" class="hidden-xs visible-sm"></th>
-<th >@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Build_1_Name</th>
-<th >@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Solution_1_Name</th>
-<th >@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Organization_1_UniqueidentifierColumn</th>
-<th  class="hidden-xs visible-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Organization_1_UniqueIdentifier</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Organization_1_Name</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Organization_2_UniqueidentifierColumn</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Organization_2_UniqueIdentifier</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Organization_2_Name</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.BuildEventCode_1_Name</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Message</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.EventTime</th>
-<th  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"></th></tr>
+    <tr>
+<th style="min-width:100px" class="hidden-xs visible-sm"></th>
+<th class="hidden-sm">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Id</th>
+<th>@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.EventTime</th>
+<th>@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Organization_2_Name</th>
+<th>@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Organization_1_Name</th>
+<th class="hidden-xs">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Solution_1_Name</th>
+<th class="hidden-xs">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Build_1_Name</th>
+<th class="hidden-sm">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.BuildEventCode_1_Name</th>
+<th class="hidden-sm">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Message</th>
+    </tr>
 </thead>
 <tbody>
     @if (Model != null && Model.StatusOfFK_BuildLog_Build == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
     {
-        int index = 0;
-        foreach (var item in Model.FK_BuildLog_Build)
+        for (var i = 0; i < Model.FK_BuildLog_Build.Count; i ++)
         {
-            index++;
-<tr><td  style="min-width:100px" class="hidden-xs visible-sm"></td>
-<td  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><div class="btn-group btn-group-justified" role="group" aria-label="...">
+            <tr>
+<td><div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPEntityRelatedOfBuildLog, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetails">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPEntityRelatedOfBuildLog, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.FK_BuildLog_Build[i].Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetails">
         <span class="glyphicon glyphicon-briefcase"></span>
     </a>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Edit, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })" class="btn btn-default" role="button" type="button" name="EditToolBarRightInList" title="@Framework.Resx.UIStringResource.Edit">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Edit, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.FK_BuildLog_Build[i].Id })" class="btn btn-default" role="button" type="button" name="EditToolBarRightInList" title="@Framework.Resx.UIStringResource.Edit">
         <span class="glyphicon glyphicon-edit"></span>
     </a>
 </div>
-</div></td>
-<td >@Html.ActionLink(item.Build_1_Name, UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.BuildId }, null)</td>
-<td >@Html.ActionLink(item.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Solution_1Id }, null)</td>
-<td >@Html.ActionLink(item.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_1_UniqueidentifierColumn }, null)</td>
-<td >@Html.ActionLink(item.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = item.Organization_2_UniqueidentifierColumn }, null)</td>
-<td >@Html.ActionLink(item.BuildEventCode_1_Name, UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.BuildEventCodeId }, null)</td>
-<td >@Html.DisplayFor(modelItem => item.Message)</td>
-<td >@Html.DisplayFor(modelItem => item.EventTime)</td></tr>
+</div>
+</td>
+<td class="hidden-sm">@Html.DisplayFor(model => model.FK_BuildLog_Build[i].Id)</td>
+<td>@Html.DisplayFor(model => model.FK_BuildLog_Build[i].EventTime)</td>
+<td>@Html.ActionLink(Model.FK_BuildLog_Build[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.FK_BuildLog_Build[i].Organization_2_UniqueidentifierColumn, isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.FK_BuildLog_Build[i].Organization_2Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.FK_BuildLog_Build[i].Organization_2_UniqueIdentifier }, null)</td>
+<td>@Html.ActionLink(Model.FK_BuildLog_Build[i].Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.FK_BuildLog_Build[i].Organization_1_UniqueidentifierColumn, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.FK_BuildLog_Build[i].Organization_1_UniqueIdentifier, isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.FK_BuildLog_Build[i].Organization_1Id }, null)</td>
+<td class="hidden-xs">@Html.ActionLink(Model.FK_BuildLog_Build[i].Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.FK_BuildLog_Build[i].Solution_1Id }, null)</td>
+<td class="hidden-xs">@Html.ActionLink(Model.FK_BuildLog_Build[i].Build_1_Name, UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareByIdentifierOftOfByIdentifier=true, valueToCompareByIdentifierOftOfByIdentifier = Model.FK_BuildLog_Build[i].BuildId }, null)</td>
+<td class="hidden-sm">@Html.ActionLink(Model.FK_BuildLog_Build[i].BuildEventCode_1_Name, UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareByIdentifierOftOfByIdentifier=true, valueToCompareByIdentifierOftOfByIdentifier = Model.FK_BuildLog_Build[i].BuildEventCodeId }, null)</td>
+<td class="hidden-sm">@Html.DisplayFor(model => model.FK_BuildLog_Build[i].Message)</td>
+            </tr>
         }
     }
     else
@@ -120,75 +119,42 @@
 </div>
 </div>
         <div class="panel-body">
-<div class="form-group">
-            @Html.LabelFor(model => model.MasterEntity.Solution_1_Name, new { @class = "control-label" })
-        <div class="form-control">
-@Html.ActionLink(Model.MasterEntity.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.SolutionId }, null)
-        </div>
-    </div>
-<div class="form-group">
-            @Html.LabelFor(model => model.MasterEntity.Id, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.MasterEntity.Id)
-        </div>
-    </div>
-<div class="form-group">
-            @Html.LabelFor(model => model.MasterEntity.Organization_1_UniqueIdentifier, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.MasterEntity.Organization_1_UniqueIdentifier)
-        </div>
-    </div>
-<div class="form-group">
-            @Html.LabelFor(model => model.MasterEntity.Organization_1_UniqueidentifierColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.MasterEntity.Organization_1_UniqueidentifierColumn)
-        </div>
-    </div>
-<div class="form-group">
-            @Html.LabelFor(model => model.MasterEntity.Organization_1_Name, new { @class = "control-label" })
-        <div class="form-control">
-@Html.ActionLink(Model.MasterEntity.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Organization_1Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Organization_1_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Organization_1_UniqueidentifierColumn }, null)
-        </div>
-    </div>
-<div class="form-group">
-            @Html.LabelFor(model => model.MasterEntity.Organization_2_UniqueIdentifier, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.MasterEntity.Organization_2_UniqueIdentifier)
-        </div>
-    </div>
-<div class="form-group">
-            @Html.LabelFor(model => model.MasterEntity.Organization_2_UniqueidentifierColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.MasterEntity.Organization_2_UniqueidentifierColumn)
-        </div>
-    </div>
-<div class="form-group">
-            @Html.LabelFor(model => model.MasterEntity.Organization_2_Name, new { @class = "control-label" })
-        <div class="form-control">
-@Html.ActionLink(Model.MasterEntity.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Organization_2Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Organization_2_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Organization_2_UniqueidentifierColumn }, null)
-        </div>
-    </div>
-<div class="form-group">
-            @Html.LabelFor(model => model.MasterEntity.Name, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.MasterEntity.Name)
-        </div>
-    </div>
-<div class="form-group">
-            @Html.LabelFor(model => model.MasterEntity.Description, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.MasterEntity.Description)
-        </div>
-    </div>
-<div class="form-group">
-            @Html.LabelFor(model => model.MasterEntity.BuildStartTime, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.MasterEntity.BuildStartTime)
-        </div>
-    </div>
-@Html.HiddenFor(model => model.MasterEntity.Organization_1Id)
-@Html.HiddenFor(model => model.MasterEntity.Organization_2Id)
-@Html.HiddenFor(model => model.MasterEntity.SolutionId)
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.MasterEntity.Id, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.MasterEntity.Id)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.MasterEntity.BuildStartTime, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.MasterEntity.BuildStartTime)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.MasterEntity.Organization_2Id, new { @class = "control-label" })
+                        @Html.ActionLink(Model.MasterEntity.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Organization_2Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Organization_2_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Organization_2_UniqueidentifierColumn }, null)
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.MasterEntity.Organization_1Id, new { @class = "control-label" })
+                        @Html.ActionLink(Model.MasterEntity.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Organization_1Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Organization_1_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Organization_1_UniqueidentifierColumn }, null)
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.MasterEntity.SolutionId, new { @class = "control-label" })
+                        @Html.ActionLink(Model.MasterEntity.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareByIdentifierOftOfByIdentifier=true, valueToCompareByIdentifierOftOfByIdentifier = Model.MasterEntity.SolutionId }, null)
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.MasterEntity.Name, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.MasterEntity.Name)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.MasterEntity.Description, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.MasterEntity.Description)
+                        </div>
+                </div>
         </div>
 }
 @if (Model.StatusOfMasterEntity != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady && Model.StatusOfMasterEntity != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -239,18 +205,18 @@
 </div>
 </div>
         <div class="panel-body">
-<div class="form-group">
-            @Html.LabelFor(model => model.Solution_1.Id, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Solution_1.Id)
-        </div>
-    </div>
-<div class="form-group">
-            @Html.LabelFor(model => model.Solution_1.Name, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Solution_1.Name)
-        </div>
-    </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Solution_1.Id, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Solution_1.Id)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Solution_1.Name, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Solution_1.Name)
+                        </div>
+                </div>
         </div>
 }
 @if (Model.StatusOfSolution_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady && Model.StatusOfSolution_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -297,42 +263,40 @@
 </div>
 </div>
         <div class="panel-body">
-<div class="form-group">
-            @Html.LabelFor(model => model.Organization_1.Id, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Organization_1.Id)
-        </div>
-    </div>
-<div class="form-group">
-            @Html.LabelFor(model => model.Organization_1.Name, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Organization_1.Name)
-        </div>
-    </div>
-<div class="form-group">
-            @Html.LabelFor(model => model.Organization_1.IsSystemBuiltIn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Organization_1.IsSystemBuiltIn)
-        </div>
-    </div>
-<div class="form-group">
-            @Html.LabelFor(model => model.Organization_1.UniqueIdentifier, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Organization_1.UniqueIdentifier)
-        </div>
-    </div>
-<div class="form-group">
-            @Html.LabelFor(model => model.Organization_1.BitColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Organization_1.BitColumn)
-        </div>
-    </div>
-<div class="form-group">
-            @Html.LabelFor(model => model.Organization_1.UniqueidentifierColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Organization_1.UniqueidentifierColumn)
-        </div>
-    </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Organization_1.Id, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Organization_1.Id)
+                        </div>
+                </div>
+                <div class="form-group" >
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Organization_1.IsSystemBuiltIn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Organization_1.BitColumn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Organization_1.Name, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Organization_1.Name)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Organization_1.UniqueIdentifier, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Organization_1.UniqueIdentifier)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Organization_1.UniqueidentifierColumn, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Organization_1.UniqueidentifierColumn)
+                        </div>
+                </div>
         </div>
 }
 @if (Model.StatusOfOrganization_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady && Model.StatusOfOrganization_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -379,42 +343,40 @@
 </div>
 </div>
         <div class="panel-body">
-<div class="form-group">
-            @Html.LabelFor(model => model.Organization_2.Id, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Organization_2.Id)
-        </div>
-    </div>
-<div class="form-group">
-            @Html.LabelFor(model => model.Organization_2.Name, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Organization_2.Name)
-        </div>
-    </div>
-<div class="form-group">
-            @Html.LabelFor(model => model.Organization_2.IsSystemBuiltIn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Organization_2.IsSystemBuiltIn)
-        </div>
-    </div>
-<div class="form-group">
-            @Html.LabelFor(model => model.Organization_2.UniqueIdentifier, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Organization_2.UniqueIdentifier)
-        </div>
-    </div>
-<div class="form-group">
-            @Html.LabelFor(model => model.Organization_2.BitColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Organization_2.BitColumn)
-        </div>
-    </div>
-<div class="form-group">
-            @Html.LabelFor(model => model.Organization_2.UniqueidentifierColumn, new { @class = "control-label" })
-        <div class="form-control">
-            @Html.DisplayFor(model => model.Organization_2.UniqueidentifierColumn)
-        </div>
-    </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Organization_2.Id, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Organization_2.Id)
+                        </div>
+                </div>
+                <div class="form-group" >
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Organization_2.IsSystemBuiltIn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Organization_2.BitColumn)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Organization_2.Name, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Organization_2.Name)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Organization_2.UniqueIdentifier, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Organization_2.UniqueIdentifier)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.Organization_2.UniqueidentifierColumn, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.Organization_2.UniqueidentifierColumn)
+                        </div>
+                </div>
         </div>
 }
 @if (Model.StatusOfOrganization_2 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady && Model.StatusOfOrganization_2 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -439,52 +401,3 @@
 <!-- Aside.31.End. MSBuildExtensionPack.Organization => RelatedEntityWhenMasterViewIsFKEntity -->
  </div>
  </div>
-@section Scripts {
-    <script type="text/javascript">
-        $(document).ready($(function() {
-        }));
-        $(document).ready($(function() {
-            $.validator.addMethod(
-                "date",
-                function(value, element) {
-                    var bits = value.match(/([0-9]+)/gi), str;
-                    if (!bits)
-                        return this.optional(element) || false;
-                    str = bits[1] + '/' + bits[0] + '/' + bits[2];
-                    return this.optional(element) || !/Invalid|NaN/.test(new Date(str));
-                },
-                "Please enter a date in the format dd/mm/yyyy"
-            );
-            $("form").validate({
-                onkeyup: false,
-                errorPlacement: function(error, element) {
-                    if (element.attr("name").indexOf("DOB") >= 0) {
-                        error.insertAfter("#DOB_Day");
-                    } else {
-                        error.insertAfter(element);
-                    }
-                },
-                rules: {
-                },
-                messages: {
-                },
-                highlight:
-                    function(element) {
-                        $(element).css('border', '2px solid red');
-                    },
-                unhighlight:
-                    function(element) {
-                        $(element).css('border', '1px solid rgb(170, 170, 170)');
-                    },
-                errorLabelContainer: "#ErrorList",
-                wrapper: "li"
-            });
-        }));
-        //cascaded dropdownlist by knockoutjs
-        function CascadingDDLViewModel() {
-            var self = this;
-        }
-        var objVM = new CascadingDDLViewModel();
-        ko.applyBindings(objVM);
-    </script>
-}

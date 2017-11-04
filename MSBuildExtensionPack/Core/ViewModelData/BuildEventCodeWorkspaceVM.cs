@@ -6,7 +6,7 @@ using System.Text;
 namespace MSBuildExtensionPack.ViewModelData
 {
 
-    public partial class WPCommonOfBuildEventCodeVM : Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommonFlatten, MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection>
+    public partial class WPCommonOfBuildEventCodeVM : Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommon, MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection>
     {
         public WPCommonOfBuildEventCodeVM()
             : base()
