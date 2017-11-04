@@ -31,14 +31,14 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildEventCode_WPCommonOfBuildEventCode)]
-        public ActionResult WPCommonOfBuildEventCode(int currentPage = 1 , WPCommonOfBuildEventCodeVM viewModel = null)
+        public ActionResult WPCommonOfBuildEventCode(int currentPage = 1, WPCommonOfBuildEventCodeVM viewModel = null)
         {
             log.Info(string.Format("{0}: WPCommonOfBuildEventCode", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-            Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommonFlatten> vmFromTempData;
+            Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommon> vmFromTempData;
             if (TempData.ContainsKey(TempDataKey_WPCommonOfBuildEventCode))
             {
-                vmFromTempData = (Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommonFlatten>)TempData[TempDataKey_WPCommonOfBuildEventCode];
+                vmFromTempData = (Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommon>)TempData[TempDataKey_WPCommonOfBuildEventCode];
             }
             else
             {
@@ -46,8 +46,6 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             }
 
             viewModel.PopulateAllUIElements(vmFromTempData, currentPage);
-
-            //viewModel.Criteria.LowerBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundCreatedDateTimeCommonOftOfCommon); viewModel.Criteria.UpperBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundCreatedDateTimeCommonOftOfCommon);
 
             viewModel.LoadData(true);
 
@@ -85,13 +83,13 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         {
             log.Info(string.Format("{0}: WPCommonOfBuildEventCode_Export", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-            Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommonFlatten> vmFromTempData;
+            Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommon> vmFromTempData;
             if (TempData.ContainsKey(TempDataKey_WPCommonOfBuildEventCode))
             {
-                vmFromTempData = (Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommonFlatten>)TempData[TempDataKey_WPCommonOfBuildEventCode];
+                vmFromTempData = (Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommon>)TempData[TempDataKey_WPCommonOfBuildEventCode];
 
                 var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.GetMessageOfEntityOfCommon(
-                    new MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommon(vmFromTempData.Criteria)
+                    vmFromTempData.Criteria
                     , new Framework.EntityContracts.QueryPagingSetting(-1, -1)
                     , new Framework.EntityContracts.QueryOrderBySettingCollection(vmFromTempData.QueryOrderBySettingCollecionInString)
                     , dataServiceType);

@@ -31,14 +31,14 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_WPCommonOfOrganization)]
-        public ActionResult WPCommonOfOrganization(int currentPage = 1 ,string lowerBoundCreatedDateTimeCommonOftOfCommon = null, string upperBoundCreatedDateTimeCommonOftOfCommon = null,string lowerBoundDatetimeColumnCommonOftOfCommon = null, string upperBoundDatetimeColumnCommonOftOfCommon = null,string lowerBoundDatetime2ColumnCommonOftOfCommon = null, string upperBoundDatetime2ColumnCommonOftOfCommon = null,string lowerBoundSmalldatetimeColumnCommonOftOfCommon = null, string upperBoundSmalldatetimeColumnCommonOftOfCommon = null,string lowerBoundDateColumnCommonOftOfCommon = null, string upperBoundDateColumnCommonOftOfCommon = null, WPCommonOfOrganizationVM viewModel = null)
+        public ActionResult WPCommonOfOrganization(int currentPage = 1, WPCommonOfOrganizationVM viewModel = null)
         {
             log.Info(string.Format("{0}: WPCommonOfOrganization", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-            Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommonFlatten> vmFromTempData;
+            Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon> vmFromTempData;
             if (TempData.ContainsKey(TempDataKey_WPCommonOfOrganization))
             {
-                vmFromTempData = (Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommonFlatten>)TempData[TempDataKey_WPCommonOfOrganization];
+                vmFromTempData = (Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon>)TempData[TempDataKey_WPCommonOfOrganization];
             }
             else
             {
@@ -46,13 +46,6 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             }
 
             viewModel.PopulateAllUIElements(vmFromTempData, currentPage);
-
-            viewModel.Criteria.LowerBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundCreatedDateTimeCommonOftOfCommon); viewModel.Criteria.UpperBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundCreatedDateTimeCommonOftOfCommon);
-            viewModel.Criteria.LowerBoundDatetimeColumnCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundDatetimeColumnCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundDatetimeColumnCommonOftOfCommon); viewModel.Criteria.UpperBoundDatetimeColumnCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundDatetimeColumnCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundDatetimeColumnCommonOftOfCommon);
-            viewModel.Criteria.LowerBoundDatetime2ColumnCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundDatetime2ColumnCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundDatetime2ColumnCommonOftOfCommon); viewModel.Criteria.UpperBoundDatetime2ColumnCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundDatetime2ColumnCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundDatetime2ColumnCommonOftOfCommon);
-            viewModel.Criteria.LowerBoundSmalldatetimeColumnCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundSmalldatetimeColumnCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundSmalldatetimeColumnCommonOftOfCommon); viewModel.Criteria.UpperBoundSmalldatetimeColumnCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundSmalldatetimeColumnCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundSmalldatetimeColumnCommonOftOfCommon);
-            viewModel.Criteria.LowerBoundDateColumnCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundDateColumnCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundDateColumnCommonOftOfCommon); viewModel.Criteria.UpperBoundDateColumnCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundDateColumnCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundDateColumnCommonOftOfCommon);
-            //viewModel.Criteria.LowerBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundCreatedDateTimeCommonOftOfCommon); viewModel.Criteria.UpperBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundCreatedDateTimeCommonOftOfCommon);
 
             viewModel.LoadData(true);
 
@@ -90,13 +83,13 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         {
             log.Info(string.Format("{0}: WPCommonOfOrganization_Export", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-            Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommonFlatten> vmFromTempData;
+            Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon> vmFromTempData;
             if (TempData.ContainsKey(TempDataKey_WPCommonOfOrganization))
             {
-                vmFromTempData = (Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommonFlatten>)TempData[TempDataKey_WPCommonOfOrganization];
+                vmFromTempData = (Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon>)TempData[TempDataKey_WPCommonOfOrganization];
 
                 var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfDefaultOfCommon(
-                    new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon(vmFromTempData.Criteria)
+                    vmFromTempData.Criteria
                     , new Framework.EntityContracts.QueryPagingSetting(-1, -1)
                     , new Framework.EntityContracts.QueryOrderBySettingCollection(vmFromTempData.QueryOrderBySettingCollecionInString)
                     , dataServiceType);

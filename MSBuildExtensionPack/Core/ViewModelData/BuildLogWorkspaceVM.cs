@@ -6,7 +6,7 @@ using System.Text;
 namespace MSBuildExtensionPack.ViewModelData
 {
 
-    public partial class WPCommonOfBuildLogVM : Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommonFlatten, MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection>
+    public partial class WPCommonOfBuildLogVM : Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon, MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection>
     {
         public WPCommonOfBuildLogVM()
             : base()

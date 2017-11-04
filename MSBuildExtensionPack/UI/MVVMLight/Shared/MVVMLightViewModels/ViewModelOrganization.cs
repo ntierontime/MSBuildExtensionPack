@@ -105,7 +105,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             try
             {
                 var vmData = new MSBuildExtensionPack.ViewModelData.WPCommonOfOrganizationVM();
-                vmData.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommonFlatten(this.Criteria);
+                vmData.Criteria = this.Criteria;
                 vmData.QueryPagingSetting = this.QueryPagingSetting;
                 vmData.QueryOrderBySettingCollection = this.QueryOrderBySettingCollection;
 
