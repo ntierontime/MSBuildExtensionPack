@@ -2,7 +2,7 @@
 <edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <edmx:Diagrams>
-      <edmx:Diagram DiagramId="e1661019616e4d6f86a39811a39cfffd" Name="Diagram1">
+      <edmx:Diagram DiagramId="8c5140e6ec8547abbab8bf335247f2dc" Name="Diagram1">
         <edmx:EntityTypeShape EntityType="MSBuildExtensionPackModel.Build" Width="1.5" PointX="1" PointY="1" IsExpanded="true" />
         <edmx:EntityTypeShape EntityType="MSBuildExtensionPackModel.BuildEventCode" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <edmx:EntityTypeShape EntityType="MSBuildExtensionPackModel.BuildLog" Width="1.5" PointX="5" PointY="1" IsExpanded="true" />
