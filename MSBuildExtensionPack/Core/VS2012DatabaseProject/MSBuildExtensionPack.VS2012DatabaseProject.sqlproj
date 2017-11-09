@@ -49,8 +49,6 @@
   </PropertyGroup>
   <!-- VS10 without SP1 will not have VisualStudioVersion set, so do that here -->
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <None Include="Build and Deploy\BuildBacpac.bat" />
     <None Include="Build and Deploy\DeployUsingMsdeploy.bat" />
     <None Include="Build and Deploy\DeployUsingSqlpackage.bat" />
