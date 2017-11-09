@@ -7,84 +7,83 @@
                 <h2>@Model.ContentData.Title.</h2>
                 <h4>@Model.ContentData.Summary</h4>
             </div>
-            @if (Model.StatusOfResult != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK && Model.StatusOfResult != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
-            {
-                <div class="panel-body">
-                    <div class="text-danger">@Model.StatusMessageOfResult</div>
-                </div>
-            }
-            @using (Html.BeginForm(UrlStringsAlias.ActionName_BuildLog_Edit, UrlStringsAlias.ControllerName_BuildLog, FormMethod.Post, new { @class = "form" }))
-            {
-                @Html.AntiForgeryToken()
-                @Html.ValidationSummary(true)
-                <div class="panel-body">
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Item.Id, new { @class = "control-label" })
+@if (Model.StatusOfResult != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK && Model.StatusOfResult != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
+{
+            <div class="panel-body">
+                <div class="text-danger">@Model.StatusMessageOfResult</div>
+            </div>
+}
+@using (Html.BeginForm(UrlStringsAlias.ActionName_BuildLog_Edit, UrlStringsAlias.ControllerName_BuildLog, FormMethod.Post, new { @class= "form" })) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+            <div class="panel-body">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Item.Id, new { @class = "control-label" })
                         <div class="form-control">
                             @Html.DisplayFor(model => model.Item.Id)
                         </div>
-                    </div>
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Item.EventTime, new { @class = "control-label" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Item.EventTime, new { @class = "control-label" })
                         @Html.TextBoxFor(model => model.Item.EventTime, new { @class = "form-control", @readonly = "readonly" })
                         @Html.ValidationMessageFor(model => model.Item.EventTime, null, new { @class = "text-danger" })
-                    </div>
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Item.Organization_2Id, new { @class = "control-label" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Item.Organization_2Id, new { @class = "control-label" })
                         @Html.HiddenFor(model => model.Item.Organization_2_UniqueidentifierColumn)
                         @Html.HiddenFor(model => model.Item.Organization_2Id)
                         @Html.HiddenFor(model => model.Item.Organization_2_UniqueIdentifier)
-                        @Html.DropDownListFor(model => model.Item.Organization_2Id, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Organization, MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string, Object> { { "onchange", "FetchOrganization_1();" }, { "class", "form-control" } })
-                    </div>
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Item.Organization_1Id, new { @class = "control-label" })
+                        @Html.DropDownListFor(model => model.Item.Organization_2Id, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Organization, MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "onchange", "FetchOrganization_1();" }, { "class", "form-control" } })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Item.Organization_1Id, new { @class = "control-label" })
                         @Html.HiddenFor(model => model.Item.Organization_1_UniqueidentifierColumn)
                         @Html.HiddenFor(model => model.Item.Organization_1_UniqueIdentifier)
                         @Html.HiddenFor(model => model.Item.Organization_1Id)
-                        @Html.DropDownListFor(model => model.Item.Organization_1Id, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string, Object> { { "onchange", "FetchSolution_1();" }, { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfOrganization_1,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedOrganization_1", MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____) } })
-                    </div>
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Item.Solution_1Id, new { @class = "control-label" })
+                        @Html.DropDownListFor(model => model.Item.Organization_1Id, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "onchange", "FetchSolution_1();" }, { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfOrganization_1,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedOrganization_1", MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____) } })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Item.Solution_1Id, new { @class = "control-label" })
                         @Html.HiddenFor(model => model.Item.Solution_1Id)
-                        @Html.DropDownListFor(model => model.Item.Solution_1Id, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Please_select_Solution____, new Dictionary<string, Object> { { "onchange", "FetchBuild_1();" }, { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfSolution_1,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedSolution_1", MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Please_select_Solution____) } })
-                    </div>
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Item.BuildId, new { @class = "control-label" })
+                        @Html.DropDownListFor(model => model.Item.Solution_1Id, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Please_select_Solution____, new Dictionary<string,Object>{ { "onchange", "FetchBuild_1();" }, { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfSolution_1,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedSolution_1", MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Please_select_Solution____) } })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Item.BuildId, new { @class = "control-label" })
                         @Html.HiddenFor(model => model.Item.BuildId)
-                        @Html.DropDownListFor(model => model.Item.BuildId, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Please_select_Build____, new Dictionary<string, Object> { { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfBuild_1,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedBuild_1", MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Please_select_Build____) } })
-                    </div>
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Item.BuildEventCodeId, new { @class = "control-label" })
+                        @Html.DropDownListFor(model => model.Item.BuildId, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Please_select_Build____, new Dictionary<string,Object>{ { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfBuild_1,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedBuild_1", MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Please_select_Build____) } })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Item.BuildEventCodeId, new { @class = "control-label" })
                         @Html.HiddenFor(model => model.Item.BuildEventCodeId)
-                        @Html.DropDownListFor(model => model.Item.BuildEventCodeId, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_BuildEventCode, MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.Please_select_BuildEventCode____, new Dictionary<string, Object> { { "class", "form-control" } })
-                    </div>
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Item.Message, new { @class = "control-label" })
+                        @Html.DropDownListFor(model => model.Item.BuildEventCodeId, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_BuildEventCode, MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.Please_select_BuildEventCode____, new Dictionary<string,Object>{ { "class", "form-control" } })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Item.Message, new { @class = "control-label" })
                         @Html.TextBoxFor(model => model.Item.Message, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.Item.Message, null, new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="panel-footer nopadding">
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                    <div class="btn-group">
+                        <button class="btn btn-primary" role="button" type="submit">
+                            <span class="glyphicon glyphicon-ok-sign"></span>
+                            <span class="submit-text hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.Save</span>
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Edit, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Id })" class="btn btn-default" role="button" type="button">
+                            <span class="glyphicon glyphicon-refresh"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.Refresh</span>
+                        </a>
+                    </div>
+                    <div class="btn-group">
+                        <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Index)" class="btn btn-default" role="button" type="button">
+                            <span class="glyphicon glyphicon-ban-circle"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.Back</span>
+                        </a>
                     </div>
                 </div>
-                <div class="panel-footer nopadding">
-                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
-                        <div class="btn-group">
-                            <button class="btn btn-primary" role="button" type="submit">
-                                <span class="glyphicon glyphicon-ok-sign"></span>
-                                <span class="submit-text hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.Save</span>
-                            </button>
-                        </div>
-                        <div class="btn-group">
-                            <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Edit, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Id })" class="btn btn-default" role="button" type="button">
-                                <span class="glyphicon glyphicon-refresh"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.Refresh</span>
-                            </a>
-                        </div>
-                        <div class="btn-group">
-                            <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Index)" class="btn btn-default" role="button" type="button">
-                                <span class="glyphicon glyphicon-ban-circle"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.Back</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            }
+            </div>
+}
         </div>
     </div>
 </div>

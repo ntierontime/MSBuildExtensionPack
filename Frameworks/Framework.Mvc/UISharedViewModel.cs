@@ -42,7 +42,6 @@ namespace Framework.Mvc
                 retval.PredefinedBooleanSelectionList.Add(new SelectListItem { Text = item.Name, Value = item.Value });
             }
             return retval;
-            return retval;
         }
     }
 }
