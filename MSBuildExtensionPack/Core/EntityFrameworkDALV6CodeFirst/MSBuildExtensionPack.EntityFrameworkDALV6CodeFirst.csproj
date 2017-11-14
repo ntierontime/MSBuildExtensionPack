@@ -76,10 +76,6 @@
       <Project>{c3a270de-9727-492e-91e2-f56e7e0e0f83}</Project>
       <Name>Framework.EntityContracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Frameworks\Framework.LinqDAL\Framework.LinqDAL.csproj">
-      <Project>{7d1b22f8-06a2-4d09-a3ad-d93a09a01815}</Project>
-      <Name>Framework.LinqDAL</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />

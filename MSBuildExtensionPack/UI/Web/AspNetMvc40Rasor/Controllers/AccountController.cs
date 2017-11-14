@@ -16,9 +16,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 {
     [Authorize]
     [InitializeSimpleMembership]
-    public class AccountController : Controller
+    public partial class AccountController : Controller
     {
-        //
         // GET: /Account/Login
 
         [AllowAnonymous]
@@ -407,3 +406,4 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
     }
 }
 */
+

@@ -186,3 +186,4 @@ namespace MSBuildExtensionPack.EntityContracts
         #endregion CopyCollection<...>(...), CloneCollection<...>(...)
     }
 }
+

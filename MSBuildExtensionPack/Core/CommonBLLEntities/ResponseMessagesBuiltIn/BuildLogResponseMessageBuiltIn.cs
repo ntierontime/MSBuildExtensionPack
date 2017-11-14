@@ -41,3 +41,4 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         #endregion Nested Views classes and their collection classes 3
     }
 }
+
