@@ -5,7 +5,7 @@ namespace MSBuildExtensionPack.EntityContracts
     using System.Linq;
     using System.Linq.Expressions;
 
-    public partial interface IQueryCriteriaByUC_Organization_UniqueIdentifierOfOrganization
+    public interface IQueryCriteriaByUC_Organization_UniqueIdentifierOfOrganization
     {
 
         System.Guid UniqueIdentifier { get; set; }
@@ -27,6 +27,7 @@ namespace MSBuildExtensionPack.EntityContracts
         {
             Expression<Func<T, bool>> _retvalExpression = GetPredicateExpression();
             return _retvalExpression.Compile()(input);
+            //return input != null &&  this.Criteria != null input.UniqueIdentifier == this.Criteria.UniqueIdentifier//;
         }
 
         public Expression<Func<T, bool>> GetPredicateExpression()
@@ -49,7 +50,7 @@ namespace MSBuildExtensionPack.EntityContracts
     using System.Linq;
     using System.Linq.Expressions;
 
-    public partial interface IQueryCriteriaByUC_Organization_UniqueidentifierColumnOfOrganization
+    public interface IQueryCriteriaByUC_Organization_UniqueidentifierColumnOfOrganization
     {
 
         System.Guid UniqueidentifierColumn { get; set; }
@@ -71,6 +72,7 @@ namespace MSBuildExtensionPack.EntityContracts
         {
             Expression<Func<T, bool>> _retvalExpression = GetPredicateExpression();
             return _retvalExpression.Compile()(input);
+            //return input != null &&  this.Criteria != null input.UniqueidentifierColumn == this.Criteria.UniqueidentifierColumn//;
         }
 
         public Expression<Func<T, bool>> GetPredicateExpression()

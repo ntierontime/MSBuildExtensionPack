@@ -51,7 +51,7 @@ VALUES
 		,""
 		,0
 		,NEWID()
-		,""
+		,GETDATE()
 		,""
 		,""
 		,""
@@ -69,10 +69,10 @@ VALUES
 		,0
 		,0
 		,0
-		,""
-		,""
-		,""
-		,""
+		,GETDATE()
+		,GETDATE()
+		,GETDATE()
+		,GETDATE()
 		,""
 		,NEWID()
 )
@@ -91,3 +91,4 @@ WHERE (??Condition??) --
 */
 
 SET IDENTITY_INSERT [dbo].[Organization] OFF
+

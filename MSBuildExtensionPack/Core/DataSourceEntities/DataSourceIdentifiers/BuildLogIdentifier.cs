@@ -117,3 +117,4 @@ System.Int64 id)
         BuildLogIdentifier BuildLogIdentifier { get; set; }
     }
 }
+

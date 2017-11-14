@@ -39,3 +39,4 @@ namespace MSBuildExtensionPack.EntityContracts
         T OrganizationIdentifier { get; set; }
     }
 }
+

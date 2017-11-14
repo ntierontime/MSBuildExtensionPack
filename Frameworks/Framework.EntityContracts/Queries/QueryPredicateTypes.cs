@@ -29,3 +29,4 @@ namespace Framework.EntityContracts
         InSelectedList,
     }
 }
+

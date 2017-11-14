@@ -91,8 +91,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
     }
 
-            /// <summary>
-
     /// <summary>
     ///  a property defined when <see cref="IBuildCollection"/> is used in other classes.
     /// </summary>
@@ -114,5 +112,5 @@ namespace MSBuildExtensionPack.DataSourceEntities
         : Framework.DataSourceEntities.DataAccessLayerMessageBase<BuildCollection>
     {
     }
-
 }
+

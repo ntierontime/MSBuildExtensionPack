@@ -8,7 +8,7 @@ namespace MSBuildExtensionPack.CommonBLL
     /// <summary>
     /// is to factory class to create instances of business layer classes
     /// </summary>
-    public partial class BusinessLogicLayerFactory : MSBuildExtensionPack.WcfContracts.IBusinessLogicLayerFactory
+    public class BusinessLogicLayerFactory : MSBuildExtensionPack.WcfContracts.IBusinessLogicLayerFactory
     {
         #region Entity related
 
@@ -73,3 +73,4 @@ namespace MSBuildExtensionPack.CommonBLL
     {
     }
 }
+

@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 {
-    public class HomeController : Controller
+    public partial class HomeController : Controller
     {
         public ActionResult Index()
         {
@@ -30,3 +30,4 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         }
     }
 }
+

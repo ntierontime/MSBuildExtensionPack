@@ -35,8 +35,8 @@
     </Key>
     <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="SolutionId" Type="int" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="_100" />
-    <Property Name="Description" Type="nvarchar" MaxLength="_1500" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1500" />
     <Property Name="BuildStartTime" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="BuildEventCode">
@@ -44,8 +44,8 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="EventCode" Type="nvarchar" Nullable="false" MaxLength="_100" />
-    <Property Name="Description" Type="nvarchar" MaxLength="_1500" />
+    <Property Name="EventCode" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1500" />
   </EntityType>
   <EntityType Name="BuildLog">
     <Key>
@@ -54,7 +54,7 @@
     <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="BuildId" Type="bigint" Nullable="false" />
     <Property Name="BuildEventCodeId" Type="int" Nullable="false" />
-    <Property Name="Message" Type="nvarchar" MaxLength="_1500" />
+    <Property Name="Message" Type="nvarchar" MaxLength="1500" />
     <Property Name="EventTime" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="Organization">
@@ -63,19 +63,19 @@
     </Key>
     <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ParentId" Type="bigint" Nullable="false" />
-    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="_50" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
     <Property Name="IsSystemBuiltIn" Type="bit" Nullable="false" />
     <Property Name="UniqueIdentifier" Type="uniqueidentifier" Nullable="false" />
     <Property Name="CreatedDateTime" Type="datetime" Nullable="false" />
-    <Property Name="CharColumn" Type="char" Nullable="false" MaxLength="_10" />
-    <Property Name="VarcharColumn" Type="varchar" Nullable="false" MaxLength="_MAX" />
+    <Property Name="CharColumn" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="VarcharColumn" Type="varchar" Nullable="false" MaxLength="Max" />
     <Property Name="TextColumn" Type="text" Nullable="false" />
-    <Property Name="NcharColumn" Type="nchar" Nullable="false" MaxLength="_1" />
-    <Property Name="NvarcharColumn" Type="nvarchar" Nullable="false" MaxLength="_MAX" />
+    <Property Name="NcharColumn" Type="nchar" Nullable="false" MaxLength="1" />
+    <Property Name="NvarcharColumn" Type="nvarchar" Nullable="false" MaxLength="Max" />
     <Property Name="NtextColumn" Type="ntext" Nullable="false" />
     <Property Name="BitColumn" Type="bit" Nullable="false" />
-    <Property Name="BinaryColumn" Type="binary" MaxLength="_10" />
-    <Property Name="VarbinaryColumn" Type="varbinary" MaxLength="_MAX" />
+    <Property Name="BinaryColumn" Type="binary" MaxLength="10" />
+    <Property Name="VarbinaryColumn" Type="varbinary" MaxLength="Max" />
     <Property Name="ImageColumn" Type="image" />
     <Property Name="TinyintColumn" Type="tinyint" Nullable="false" />
     <Property Name="SmallintColumn" Type="smallint" Nullable="false" />
@@ -88,10 +88,10 @@
     <Property Name="FloatColumn" Type="real" Nullable="false" />
     <Property Name="RealColumn" Type="real" Nullable="false" />
     <Property Name="DatetimeColumn" Type="datetime" Nullable="false" />
-    <Property Name="Datetime2Column" Type="datetime2" Nullable="false" MaxLength="_7" />
+    <Property Name="Datetime2Column" Type="datetime2" Nullable="false" Precision="7" />
     <Property Name="SmalldatetimeColumn" Type="smalldatetime" Nullable="false" />
     <Property Name="DateColumn" Type="date" Nullable="false" />
-    <Property Name="TimeColumn" Type="time" Nullable="false" MaxLength="_7" />
+    <Property Name="TimeColumn" Type="time" Nullable="false" Precision="7" />
     <Property Name="UniqueidentifierColumn" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="Solution">
@@ -99,9 +99,9 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="ExternalParentId" Type="nvarchar" MaxLength="_100" />
-    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="_100" />
-    <Property Name="Description" Type="nvarchar" MaxLength="_1500" />
+    <Property Name="ExternalParentId" Type="nvarchar" MaxLength="100" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1500" />
     <Property Name="OrganizationId" Type="bigint" />
   </EntityType>
   <Association Name="FK_Build_Solution">
@@ -177,19 +177,19 @@
   <ComplexType Name="RecursivePathResultOfParentIdOfMSBuildExtensionPack_Organization">
     <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="Int64" Name="ParentId" Nullable="false" />
-    <Property Type="String" Name="Name" Nullable="false" MaxLength="_50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Type="Boolean" Name="IsSystemBuiltIn" Nullable="false" />
     <Property Type="Guid" Name="UniqueIdentifier" Nullable="false" />
     <Property Type="DateTime" Name="CreatedDateTime" Nullable="false" />
-    <Property Type="String" Name="CharColumn" Nullable="false" MaxLength="_10" FixedLength="false" />
-    <Property Type="String" Name="VarcharColumn" Nullable="false" MaxLength="_MAX" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CharColumn" Nullable="false" MaxLength="10" FixedLength="false" />
+    <Property Type="String" Name="VarcharColumn" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="TextColumn" Nullable="false" Unicode="false" />
-    <Property Type="String" Name="NcharColumn" Nullable="false" MaxLength="_1" FixedLength="false" />
-    <Property Type="String" Name="NvarcharColumn" Nullable="false" MaxLength="_MAX" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NcharColumn" Nullable="false" MaxLength="1" FixedLength="false" />
+    <Property Type="String" Name="NvarcharColumn" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="NtextColumn" Nullable="false" Unicode="false" />
     <Property Type="Boolean" Name="BitColumn" Nullable="false" />
-    <Property Type="Binary" Name="BinaryColumn" MaxLength="_10" FixedLength="false" />
-    <Property Type="Binary" Name="VarbinaryColumn" MaxLength="_MAX" FixedLength="false" />
+    <Property Type="Binary" Name="BinaryColumn" MaxLength="10" FixedLength="false" />
+    <Property Type="Binary" Name="VarbinaryColumn" MaxLength="Max" FixedLength="false" />
     <Property Type="Binary" Name="ImageColumn" />
     <Property Type="Byte" Name="TinyintColumn" Nullable="false" />
     <Property Type="Int16" Name="SmallintColumn" Nullable="false" />
@@ -202,10 +202,10 @@
     <Property Type="Single" Name="FloatColumn" Nullable="false" />
     <Property Type="Single" Name="RealColumn" Nullable="false" />
     <Property Type="DateTime" Name="DatetimeColumn" Nullable="false" />
-    <Property Type="DateTime" Name="Datetime2Column" Nullable="false" MaxLength="_7" FixedLength="false" />
+    <Property Type="DateTime" Name="Datetime2Column" Nullable="false" Precision="7" />
     <Property Type="DateTime" Name="SmalldatetimeColumn" Nullable="false" />
     <Property Type="DateTime" Name="DateColumn" Nullable="false" />
-    <Property Type="TimeSpan" Name="TimeColumn" Nullable="false" MaxLength="_7" FixedLength="false" />
+    <Property Type="Time" Name="TimeColumn" Nullable="false" Precision="7" />
     <Property Type="Guid" Name="UniqueidentifierColumn" Nullable="false" />
     <Property Type="String" Name="RecursivePath__" Nullable="true" />
   </ComplexType>
@@ -248,8 +248,8 @@
     </Key>
     <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="Int32" Name="SolutionId" Nullable="false" />
-    <Property Type="String" Name="Name" Nullable="false" MaxLength="_100" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Description" MaxLength="_1500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="1500" FixedLength="false" Unicode="false" />
     <Property Type="DateTime" Name="BuildStartTime" Nullable="false" />
     <NavigationProperty Name="Solution" Relationship="MSBuildExtensionPackModel.FK_Build_Solution" FromRole="Solution" ToRole="Build" />
     <NavigationProperty Name="BuildLogs" Relationship="MSBuildExtensionPackModel.FK_BuildLog_Build" FromRole="BuildLog" ToRole="Build" />
@@ -259,8 +259,8 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="EventCode" Nullable="false" MaxLength="_100" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Description" MaxLength="_1500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EventCode" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="1500" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="BuildLogs" Relationship="MSBuildExtensionPackModel.FK_BuildLog_BuildEventCode" FromRole="BuildLog" ToRole="BuildEventCode" />
   </EntityType>
   <EntityType Name="BuildLog">
@@ -270,7 +270,7 @@
     <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="Int64" Name="BuildId" Nullable="false" />
     <Property Type="Int32" Name="BuildEventCodeId" Nullable="false" />
-    <Property Type="String" Name="Message" MaxLength="_1500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Message" MaxLength="1500" FixedLength="false" Unicode="false" />
     <Property Type="DateTime" Name="EventTime" Nullable="false" />
     <NavigationProperty Name="Build" Relationship="MSBuildExtensionPackModel.FK_BuildLog_Build" FromRole="Build" ToRole="BuildLog" />
     <NavigationProperty Name="BuildEventCode" Relationship="MSBuildExtensionPackModel.FK_BuildLog_BuildEventCode" FromRole="BuildEventCode" ToRole="BuildLog" />
@@ -281,19 +281,19 @@
     </Key>
     <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="Int64" Name="ParentId" Nullable="false" />
-    <Property Type="String" Name="Name" Nullable="false" MaxLength="_50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Type="Boolean" Name="IsSystemBuiltIn" Nullable="false" />
     <Property Type="Guid" Name="UniqueIdentifier" Nullable="false" />
     <Property Type="DateTime" Name="CreatedDateTime" Nullable="false" />
-    <Property Type="String" Name="CharColumn" Nullable="false" MaxLength="_10" FixedLength="false" />
-    <Property Type="String" Name="VarcharColumn" Nullable="false" MaxLength="_MAX" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CharColumn" Nullable="false" MaxLength="10" FixedLength="false" />
+    <Property Type="String" Name="VarcharColumn" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="TextColumn" Nullable="false" Unicode="false" />
-    <Property Type="String" Name="NcharColumn" Nullable="false" MaxLength="_1" FixedLength="false" />
-    <Property Type="String" Name="NvarcharColumn" Nullable="false" MaxLength="_MAX" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NcharColumn" Nullable="false" MaxLength="1" FixedLength="false" />
+    <Property Type="String" Name="NvarcharColumn" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="NtextColumn" Nullable="false" Unicode="false" />
     <Property Type="Boolean" Name="BitColumn" Nullable="false" />
-    <Property Type="Binary" Name="BinaryColumn" MaxLength="_10" FixedLength="false" />
-    <Property Type="Binary" Name="VarbinaryColumn" MaxLength="_MAX" FixedLength="false" />
+    <Property Type="Binary" Name="BinaryColumn" MaxLength="10" FixedLength="false" />
+    <Property Type="Binary" Name="VarbinaryColumn" MaxLength="Max" FixedLength="false" />
     <Property Type="Binary" Name="ImageColumn" />
     <Property Type="Byte" Name="TinyintColumn" Nullable="false" />
     <Property Type="Int16" Name="SmallintColumn" Nullable="false" />
@@ -306,10 +306,10 @@
     <Property Type="Single" Name="FloatColumn" Nullable="false" />
     <Property Type="Single" Name="RealColumn" Nullable="false" />
     <Property Type="DateTime" Name="DatetimeColumn" Nullable="false" />
-    <Property Type="DateTime" Name="Datetime2Column" Nullable="false" MaxLength="_7" FixedLength="false" />
+    <Property Type="DateTime" Name="Datetime2Column" Nullable="false" Precision="7" />
     <Property Type="DateTime" Name="SmalldatetimeColumn" Nullable="false" />
     <Property Type="DateTime" Name="DateColumn" Nullable="false" />
-    <Property Type="TimeSpan" Name="TimeColumn" Nullable="false" MaxLength="_7" FixedLength="false" />
+    <Property Type="Time" Name="TimeColumn" Nullable="false" Precision="7" />
     <Property Type="Guid" Name="UniqueidentifierColumn" Nullable="false" />
     <NavigationProperty Name="Parent" Relationship="MSBuildExtensionPackModel.FK_Organization_ParentId" FromRole="Organization1" ToRole="Organization" />
     <NavigationProperty Name="Organization_ParentIds" Relationship="MSBuildExtensionPackModel.FK_Organization_ParentId" FromRole="Organization" ToRole="Organization1" />
@@ -320,9 +320,9 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="ExternalParentId" MaxLength="_100" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Name" Nullable="false" MaxLength="_100" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Description" MaxLength="_1500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ExternalParentId" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="1500" FixedLength="false" Unicode="false" />
     <Property Type="Int64" Name="OrganizationId" />
     <NavigationProperty Name="Organization" Relationship="MSBuildExtensionPackModel.FK_Solution_OrganizationId" FromRole="Organization" ToRole="Solution" />
     <NavigationProperty Name="Builds" Relationship="MSBuildExtensionPackModel.FK_Build_Solution" FromRole="Build" ToRole="Solution" />

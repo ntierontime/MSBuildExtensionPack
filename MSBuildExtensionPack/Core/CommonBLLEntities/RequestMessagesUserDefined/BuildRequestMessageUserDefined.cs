@@ -260,3 +260,4 @@ namespace MSBuildExtensionPack.CommonBLLEntities
     #endregion EntityUpdateActionSetting - UpdateNameOnly
 
 }
+

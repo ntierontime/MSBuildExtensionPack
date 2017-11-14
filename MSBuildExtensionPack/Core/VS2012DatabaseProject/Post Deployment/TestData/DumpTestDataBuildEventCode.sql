@@ -19,3 +19,4 @@ VALUES
 */
 
 SET IDENTITY_INSERT [dbo].[BuildEventCode] OFF
+

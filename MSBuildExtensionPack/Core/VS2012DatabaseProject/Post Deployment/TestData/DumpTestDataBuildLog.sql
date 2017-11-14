@@ -23,3 +23,4 @@ VALUES
 */
 
 SET IDENTITY_INSERT [dbo].[BuildLog] OFF
+

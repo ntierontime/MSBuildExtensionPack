@@ -439,3 +439,4 @@ namespace MSBuildExtensionPack.CommonBLLEntities
     }
 
 }
+

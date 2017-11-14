@@ -26,7 +26,7 @@ VALUES
 		,0
 		,0
 		,""
-		,""
+		,GETDATE()
 )
 
 
@@ -34,3 +34,4 @@ VALUES
 */
 
 SET IDENTITY_INSERT [dbo].[BuildLog] OFF
+

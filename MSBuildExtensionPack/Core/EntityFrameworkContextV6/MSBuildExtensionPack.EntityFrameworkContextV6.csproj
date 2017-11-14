@@ -37,6 +37,9 @@
     <None Include="App.config" />
         <EntityDeploy Include="EFEntityDataModel.edmx" />
 
+    <None Include="EFEntityDataModel.edmx.diagram">
+      <DependentUpon>EFEntityDataModel.edmx</DependentUpon>
+    </None>
     <Compile Include="EFEntityDataModel.edmx.designer.cs">
       <DependentUpon>EFEntityDataModel.edmx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
