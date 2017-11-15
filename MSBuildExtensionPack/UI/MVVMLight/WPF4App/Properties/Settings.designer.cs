@@ -23,3 +23,4 @@ namespace MSBuildExtensionPack.WPF4App.Properties.Properties {
         }
     }
 }
+

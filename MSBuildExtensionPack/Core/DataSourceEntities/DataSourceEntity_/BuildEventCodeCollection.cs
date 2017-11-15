@@ -50,8 +50,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
     }
 
-            /// <summary>
-
     /// <summary>
     ///  a property defined when <see cref="IBuildEventCodeCollection"/> is used in other classes.
     /// </summary>
@@ -73,5 +71,5 @@ namespace MSBuildExtensionPack.DataSourceEntities
         : Framework.DataSourceEntities.DataAccessLayerMessageBase<BuildEventCodeCollection>
     {
     }
-
 }
+

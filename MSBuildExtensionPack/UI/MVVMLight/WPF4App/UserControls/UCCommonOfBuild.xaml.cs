@@ -25,3 +25,4 @@ namespace MSBuildExtensionPack.WPF4App.UserControls
         }
     }
 }
+

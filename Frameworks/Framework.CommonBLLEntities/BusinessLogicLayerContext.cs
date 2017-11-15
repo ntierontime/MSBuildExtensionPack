@@ -43,3 +43,4 @@ namespace Framework.CommonBLLEntities
         //public MSBuildExtensionPack.DALContracts.DataAccessLayerFactoryContract DataAccessLayerFactory { get; set; }
     }
 }
+

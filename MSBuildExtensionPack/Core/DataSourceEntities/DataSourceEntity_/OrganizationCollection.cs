@@ -144,7 +144,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         #endregion PrediacteByFKs
 
         #region QueryCriteriaByUC_Organization_UniqueIdentifierOfOrganization
-//
+
 //        /// <summary>
 //        /// Existses the by Unique Constraint.
 //        /// </summary>
@@ -155,7 +155,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 //            MSBuildExtensionPack.EntityContracts.QueryPredicateByUC_Organization_UniqueIdentifierOfOrganization<Organization> _Predicate = new MSBuildExtensionPack.EntityContracts.QueryPredicateByUC_Organization_UniqueIdentifierOfOrganization<Organization>(criteria);
 //            return this.Count(_Predicate.Predicate) > 0;
 //        }
-//
+
 //        /// <summary>
 //        /// Gets the by Unique Constraint.
 //        /// </summary>
@@ -170,7 +170,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         #endregion QueryCriteriaByUC_Organization_UniqueIdentifierOfOrganization
 
         #region QueryCriteriaByUC_Organization_UniqueidentifierColumnOfOrganization
-//
+
 //        /// <summary>
 //        /// Existses the by Unique Constraint.
 //        /// </summary>
@@ -181,7 +181,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 //            MSBuildExtensionPack.EntityContracts.QueryPredicateByUC_Organization_UniqueidentifierColumnOfOrganization<Organization> _Predicate = new MSBuildExtensionPack.EntityContracts.QueryPredicateByUC_Organization_UniqueidentifierColumnOfOrganization<Organization>(criteria);
 //            return this.Count(_Predicate.Predicate) > 0;
 //        }
-//
+
 //        /// <summary>
 //        /// Gets the by Unique Constraint.
 //        /// </summary>
@@ -196,8 +196,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
         #endregion QueryCriteriaByUC_Organization_UniqueidentifierColumnOfOrganization
 
     }
-
-            /// <summary>
 
     /// <summary>
     ///  a property defined when <see cref="IOrganizationCollection"/> is used in other classes.
@@ -220,5 +218,5 @@ namespace MSBuildExtensionPack.DataSourceEntities
         : Framework.DataSourceEntities.DataAccessLayerMessageBase<OrganizationCollection>
     {
     }
-
 }
+

@@ -5,14 +5,11 @@ using System.Linq;
 
 namespace MSBuildExtensionPack.EntityContracts
 {
-    /// <summary>
-    /// Interaction logic for IQueryCriteriaSolutionByFKs
-    /// </summary>
-    public partial interface IQueryCriteriaSolutionByFKs
+    public interface IQueryCriteriaSolutionByFKs
     {
 
-                bool IsToCompareOrganizationId { get; set; }
-                System.Nullable<System.Int64> ComparedToOrganizationId { get; set; }
+        bool IsToCompareOrganizationId { get; set; }
+        System.Nullable<System.Int64> ComparedToOrganizationId { get; set; }
 
     }
 
@@ -32,23 +29,20 @@ namespace MSBuildExtensionPack.EntityContracts
         {
             Expression<Func<T, bool>> _retvalExpression = GetPredicateExpression();
             return _retvalExpression.Compile()(input);
-
-            //return Criteria != null && input != null &&
-//<<<<<6>>>>>;
         }
 
         public Expression<Func<T, bool>> GetPredicateExpression()
         {
             Expression<Func<T, bool>> _retval = input =>
-                (Criteria != null && input != null &&
+                (Criteria != null && input != null
 
- (this.Criteria.IsToCompareOrganizationId == false || this.Criteria.IsToCompareOrganizationId == true && input.OrganizationId == this.Criteria.ComparedToOrganizationId)
+                    && (this.Criteria.IsToCompareOrganizationId == false || this.Criteria.IsToCompareOrganizationId == true && input.OrganizationId == this.Criteria.ComparedToOrganizationId)
 
-);
-
+                );
             return _retval;
         }
     }
 
     #endregion PrediacteByID
 }
+
