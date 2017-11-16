@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MSBuildExtensionPackModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=D:\Github\MSBuildExtensionPack\MSBuildExtensionPack\Core\MSBuildExtensionPack.SQLiteEFContext\dbfile\MSBuildExtensionPack.db" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Build">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SolutionId" Type="integer" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="1500" />
+          <Property Name="BuildStartTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BuildEventCode">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EventCode" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="1500" />
+        </EntityType>
+        <EntityType Name="BuildLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BuildId" Type="integer" Nullable="false" />
+          <Property Name="BuildEventCodeId" Type="integer" Nullable="false" />
+          <Property Name="Message" Type="nvarchar" MaxLength="1500" />
+          <Property Name="EventTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Organization">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ParentId" Type="integer" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsSystemBuiltIn" Type="bit" Nullable="false" />
+          <Property Name="UniqueIdentifier" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CreatedDateTime" Type="datetime" Nullable="false" />
+          <Property Name="CharColumn" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="VarcharColumn" Type="varchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="TextColumn" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="NcharColumn" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="NvarcharColumn" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="NtextColumn" Type="nvarchar" MaxLength="1073741823" Nullable="false" />
+          <Property Name="BitColumn" Type="bit" Nullable="false" />
+          <Property Name="BinaryColumn" Type="blob" />
+          <Property Name="VarbinaryColumn" Type="blob" />
+          <Property Name="ImageColumn" Type="blob" />
+          <Property Name="TinyintColumn" Type="smallint" Nullable="false" />
+          <Property Name="SmallintColumn" Type="smallint" Nullable="false" />
+          <Property Name="IntColumn" Type="integer" Nullable="false" />
+          <Property Name="BigintColumn" Type="integer" Nullable="false" />
+          <Property Name="DecimalColumn" Type="decimal" Precision="53" Scale="0" Nullable="false" />
+          <Property Name="NumericColumn" Type="decimal" Precision="53" Scale="0" Nullable="false" />
+          <Property Name="SmallmoneyColumn" Type="decimal" Precision="53" Scale="0" Nullable="false" />
+          <Property Name="MoneyColumn" Type="decimal" Precision="53" Scale="0" Nullable="false" />
+          <Property Name="FloatColumn" Type="real" Nullable="false" />
+          <Property Name="RealColumn" Type="real" Nullable="false" />
+          <Property Name="DatetimeColumn" Type="datetime" Nullable="false" />
+          <Property Name="Datetime2Column" Type="datetime" Nullable="false" />
+          <Property Name="SmalldatetimeColumn" Type="datetime" Nullable="false" />
+          <Property Name="DateColumn" Type="datetime" Nullable="false" />
+          <Property Name="TimeColumn" Type="datetime" Nullable="false" />
+          <Property Name="UniqueidentifierColumn" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Solution">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ExternalParentId" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="1500" />
+          <Property Name="OrganizationId" Type="integer" />
+        </EntityType>
+        <Association Name="FK_Build_0_0">
+          <End Role="Solution" Type="Self.Solution" Multiplicity="1" />
+          <End Role="Build" Type="Self.Build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Solution">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Build">
+              <PropertyRef Name="SolutionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BuildLog_0_0">
+          <End Role="BuildEventCode" Type="Self.BuildEventCode" Multiplicity="1" />
+          <End Role="BuildLog" Type="Self.BuildLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BuildEventCode">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BuildLog">
+              <PropertyRef Name="BuildEventCodeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BuildLog_1_0">
+          <End Role="Build" Type="Self.Build" Multiplicity="1" />
+          <End Role="BuildLog" Type="Self.BuildLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Build">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BuildLog">
+              <PropertyRef Name="BuildId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Organization_0_0">
+          <End Role="Organization" Type="Self.Organization" Multiplicity="1" />
+          <End Role="Organization1" Type="Self.Organization" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organization">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Organization1">
+              <PropertyRef Name="ParentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Solution_0_0">
+          <End Role="Organization" Type="Self.Organization" Multiplicity="0..1" />
+          <End Role="Solution" Type="Self.Solution" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organization">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Solution">
+              <PropertyRef Name="OrganizationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MSBuildExtensionPackModelStoreContainer">
+          <EntitySet Name="Build" EntityType="Self.Build" store:Type="Tables" />
+          <EntitySet Name="BuildEventCode" EntityType="Self.BuildEventCode" store:Type="Tables" />
+          <EntitySet Name="BuildLog" EntityType="Self.BuildLog" store:Type="Tables" />
+          <EntitySet Name="Organization" EntityType="Self.Organization" store:Type="Tables" />
+          <EntitySet Name="Solution" EntityType="Self.Solution" store:Type="Tables" />
+          <AssociationSet Name="FK_Build_0_0" Association="Self.FK_Build_0_0">
+            <End Role="Solution" EntitySet="Solution" />
+            <End Role="Build" EntitySet="Build" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BuildLog_0_0" Association="Self.FK_BuildLog_0_0">
+            <End Role="BuildEventCode" EntitySet="BuildEventCode" />
+            <End Role="BuildLog" EntitySet="BuildLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BuildLog_1_0" Association="Self.FK_BuildLog_1_0">
+            <End Role="Build" EntitySet="Build" />
+            <End Role="BuildLog" EntitySet="BuildLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Organization_0_0" Association="Self.FK_Organization_0_0">
+            <End Role="Organization" EntitySet="Organization" />
+            <End Role="Organization1" EntitySet="Organization" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Solution_0_0" Association="Self.FK_Solution_0_0">
+            <End Role="Organization" EntitySet="Organization" />
+            <End Role="Solution" EntitySet="Solution" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MSBuildExtensionPackModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Build">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SolutionId" Type="Int64" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+          <Property Name="BuildStartTime" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="Solution" Relationship="Self.FK_Build_0_0" FromRole="Build" ToRole="Solution" />
+          <NavigationProperty Name="BuildLogs" Relationship="Self.FK_BuildLog_1_0" FromRole="Build" ToRole="BuildLog" />
+        </EntityType>
+        <EntityType Name="BuildEventCode">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EventCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="BuildLogs" Relationship="Self.FK_BuildLog_0_0" FromRole="BuildEventCode" ToRole="BuildLog" />
+        </EntityType>
+        <EntityType Name="BuildLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BuildId" Type="Int64" Nullable="false" />
+          <Property Name="BuildEventCodeId" Type="Int64" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+          <Property Name="EventTime" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="Build" Relationship="Self.FK_BuildLog_1_0" FromRole="BuildLog" ToRole="Build" />
+          <NavigationProperty Name="BuildEventCode" Relationship="Self.FK_BuildLog_0_0" FromRole="BuildLog" ToRole="BuildEventCode" />
+        </EntityType>
+        <EntityType Name="Organization">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ParentId" Type="Int64" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IsSystemBuiltIn" Type="Boolean" Nullable="false" />
+          <Property Name="UniqueIdentifier" Type="Guid" Nullable="false" />
+          <Property Name="CreatedDateTime" Type="DateTime" Nullable="false" />
+          <Property Name="CharColumn" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="VarcharColumn" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TextColumn" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NcharColumn" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NvarcharColumn" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NtextColumn" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BitColumn" Type="Boolean" Nullable="false" />
+          <Property Name="BinaryColumn" Type="Binary" MaxLength="2147483647" FixedLength="false" />
+          <Property Name="VarbinaryColumn" Type="Binary" MaxLength="2147483647" FixedLength="false" />
+          <Property Name="ImageColumn" Type="Binary" MaxLength="2147483647" FixedLength="false" />
+          <Property Name="TinyintColumn" Type="Int16" Nullable="false" />
+          <Property Name="SmallintColumn" Type="Int16" Nullable="false" />
+          <Property Name="IntColumn" Type="Int64" Nullable="false" />
+          <Property Name="BigintColumn" Type="Int64" Nullable="false" />
+          <Property Name="DecimalColumn" Type="Decimal" Precision="53" Scale="0" Nullable="false" />
+          <Property Name="NumericColumn" Type="Decimal" Precision="53" Scale="0" Nullable="false" />
+          <Property Name="SmallmoneyColumn" Type="Decimal" Precision="53" Scale="0" Nullable="false" />
+          <Property Name="MoneyColumn" Type="Decimal" Precision="53" Scale="0" Nullable="false" />
+          <Property Name="FloatColumn" Type="Double" Nullable="false" />
+          <Property Name="RealColumn" Type="Double" Nullable="false" />
+          <Property Name="DatetimeColumn" Type="DateTime" Nullable="false" />
+          <Property Name="Datetime2Column" Type="DateTime" Nullable="false" />
+          <Property Name="SmalldatetimeColumn" Type="DateTime" Nullable="false" />
+          <Property Name="DateColumn" Type="DateTime" Nullable="false" />
+          <Property Name="TimeColumn" Type="DateTime" Nullable="false" />
+          <Property Name="UniqueidentifierColumn" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="Organization1" Relationship="Self.FK_Organization_0_0" FromRole="Organization" ToRole="Organization1" />
+          <NavigationProperty Name="Organization2" Relationship="Self.FK_Organization_0_0" FromRole="Organization1" ToRole="Organization" />
+          <NavigationProperty Name="Solutions" Relationship="Self.FK_Solution_0_0" FromRole="Organization" ToRole="Solution" />
+        </EntityType>
+        <EntityType Name="Solution">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ExternalParentId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+          <Property Name="OrganizationId" Type="Int64" />
+          <NavigationProperty Name="Builds" Relationship="Self.FK_Build_0_0" FromRole="Solution" ToRole="Build" />
+          <NavigationProperty Name="Organization" Relationship="Self.FK_Solution_0_0" FromRole="Solution" ToRole="Organization" />
+        </EntityType>
+        <Association Name="FK_Build_0_0">
+          <End Role="Solution" Type="Self.Solution" Multiplicity="1" />
+          <End Role="Build" Type="Self.Build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Solution">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Build">
+              <PropertyRef Name="SolutionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BuildLog_1_0">
+          <End Role="Build" Type="Self.Build" Multiplicity="1" />
+          <End Role="BuildLog" Type="Self.BuildLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Build">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BuildLog">
+              <PropertyRef Name="BuildId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BuildLog_0_0">
+          <End Role="BuildEventCode" Type="Self.BuildEventCode" Multiplicity="1" />
+          <End Role="BuildLog" Type="Self.BuildLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BuildEventCode">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BuildLog">
+              <PropertyRef Name="BuildEventCodeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Organization_0_0">
+          <End Role="Organization" Type="Self.Organization" Multiplicity="1" />
+          <End Role="Organization1" Type="Self.Organization" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organization">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Organization1">
+              <PropertyRef Name="ParentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Solution_0_0">
+          <End Role="Organization" Type="Self.Organization" Multiplicity="0..1" />
+          <End Role="Solution" Type="Self.Solution" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organization">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Solution">
+              <PropertyRef Name="OrganizationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MSBuildExtensionPackEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Builds" EntityType="Self.Build" />
+          <EntitySet Name="BuildEventCodes" EntityType="Self.BuildEventCode" />
+          <EntitySet Name="BuildLogs" EntityType="Self.BuildLog" />
+          <EntitySet Name="Organizations" EntityType="Self.Organization" />
+          <EntitySet Name="Solutions" EntityType="Self.Solution" />
+          <AssociationSet Name="FK_Build_0_0" Association="Self.FK_Build_0_0">
+            <End Role="Solution" EntitySet="Solutions" />
+            <End Role="Build" EntitySet="Builds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BuildLog_1_0" Association="Self.FK_BuildLog_1_0">
+            <End Role="Build" EntitySet="Builds" />
+            <End Role="BuildLog" EntitySet="BuildLogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BuildLog_0_0" Association="Self.FK_BuildLog_0_0">
+            <End Role="BuildEventCode" EntitySet="BuildEventCodes" />
+            <End Role="BuildLog" EntitySet="BuildLogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Organization_0_0" Association="Self.FK_Organization_0_0">
+            <End Role="Organization" EntitySet="Organizations" />
+            <End Role="Organization1" EntitySet="Organizations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Solution_0_0" Association="Self.FK_Solution_0_0">
+            <End Role="Organization" EntitySet="Organizations" />
+            <End Role="Solution" EntitySet="Solutions" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MSBuildExtensionPackModelStoreContainer" CdmEntityContainer="MSBuildExtensionPackEntities">
+          <EntitySetMapping Name="Builds">
+            <EntityTypeMapping TypeName="MSBuildExtensionPackModel.Build">
+              <MappingFragment StoreEntitySet="Build">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="SolutionId" ColumnName="SolutionId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="BuildStartTime" ColumnName="BuildStartTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BuildEventCodes">
+            <EntityTypeMapping TypeName="MSBuildExtensionPackModel.BuildEventCode">
+              <MappingFragment StoreEntitySet="BuildEventCode">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BuildLogs">
+            <EntityTypeMapping TypeName="MSBuildExtensionPackModel.BuildLog">
+              <MappingFragment StoreEntitySet="BuildLog">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="BuildId" ColumnName="BuildId" />
+                <ScalarProperty Name="BuildEventCodeId" ColumnName="BuildEventCodeId" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="EventTime" ColumnName="EventTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Organizations">
+            <EntityTypeMapping TypeName="MSBuildExtensionPackModel.Organization">
+              <MappingFragment StoreEntitySet="Organization">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IsSystemBuiltIn" ColumnName="IsSystemBuiltIn" />
+                <ScalarProperty Name="UniqueIdentifier" ColumnName="UniqueIdentifier" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="CharColumn" ColumnName="CharColumn" />
+                <ScalarProperty Name="VarcharColumn" ColumnName="VarcharColumn" />
+                <ScalarProperty Name="TextColumn" ColumnName="TextColumn" />
+                <ScalarProperty Name="NcharColumn" ColumnName="NcharColumn" />
+                <ScalarProperty Name="NvarcharColumn" ColumnName="NvarcharColumn" />
+                <ScalarProperty Name="NtextColumn" ColumnName="NtextColumn" />
+                <ScalarProperty Name="BitColumn" ColumnName="BitColumn" />
+                <ScalarProperty Name="BinaryColumn" ColumnName="BinaryColumn" />
+                <ScalarProperty Name="VarbinaryColumn" ColumnName="VarbinaryColumn" />
+                <ScalarProperty Name="ImageColumn" ColumnName="ImageColumn" />
+                <ScalarProperty Name="TinyintColumn" ColumnName="TinyintColumn" />
+                <ScalarProperty Name="SmallintColumn" ColumnName="SmallintColumn" />
+                <ScalarProperty Name="IntColumn" ColumnName="IntColumn" />
+                <ScalarProperty Name="BigintColumn" ColumnName="BigintColumn" />
+                <ScalarProperty Name="DecimalColumn" ColumnName="DecimalColumn" />
+                <ScalarProperty Name="NumericColumn" ColumnName="NumericColumn" />
+                <ScalarProperty Name="SmallmoneyColumn" ColumnName="SmallmoneyColumn" />
+                <ScalarProperty Name="MoneyColumn" ColumnName="MoneyColumn" />
+                <ScalarProperty Name="FloatColumn" ColumnName="FloatColumn" />
+                <ScalarProperty Name="RealColumn" ColumnName="RealColumn" />
+                <ScalarProperty Name="DatetimeColumn" ColumnName="DatetimeColumn" />
+                <ScalarProperty Name="Datetime2Column" ColumnName="Datetime2Column" />
+                <ScalarProperty Name="SmalldatetimeColumn" ColumnName="SmalldatetimeColumn" />
+                <ScalarProperty Name="DateColumn" ColumnName="DateColumn" />
+                <ScalarProperty Name="TimeColumn" ColumnName="TimeColumn" />
+                <ScalarProperty Name="UniqueidentifierColumn" ColumnName="UniqueidentifierColumn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Solutions">
+            <EntityTypeMapping TypeName="MSBuildExtensionPackModel.Solution">
+              <MappingFragment StoreEntitySet="Solution">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ExternalParentId" ColumnName="ExternalParentId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="OrganizationId" ColumnName="OrganizationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
