@@ -5,7 +5,7 @@
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9B54200D-20F0-4380-BD15-F6211718853A}</ProjectGuid>
+    <ProjectGuid>{CB3F9A0F-D4F1-4280-A040-16F8364B868F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildExtensionPack.EntityContracts</RootNamespace>
@@ -116,19 +116,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Frameworks.X\Framework.X\Framework.X.csproj">
-      <Project>{cab19f30-0455-443c-b7a3-ba943aaa9d15}</Project>
+      <Project>{f855538a-24d9-4cc1-b1ca-b396208a2faa}</Project>
       <Name>Framework.X</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.X\Framework.DAL.X\Framework.DAL.X.csproj">
-      <Project>{c41fd193-e8a9-4c77-93d1-3b464d58a876}</Project>
+      <Project>{f86c1b14-5e6d-461e-8f83-18d54a614866}</Project>
       <Name>Framework.DAL.X</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.X\Framework.DataSourceEntities.X\Framework.DataSourceEntities.X.csproj">
-      <Project>{b9131050-fd8e-404d-a135-11e210cdd438}</Project>
+      <Project>{d100d7c5-d3dd-4be0-9080-9540b2685d00}</Project>
       <Name>Framework.DataSourceEntities.X</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.X\Framework.EntityContracts.X\Framework.EntityContracts.X.csproj">
-      <Project>{81863781-aa71-4530-a59c-04d2153ddd30}</Project>
+      <Project>{29aba5e2-51b4-4cfd-9b22-0f3bca9e385a}</Project>
       <Name>Framework.EntityContracts.X</Name>
     </ProjectReference>
   </ItemGroup>

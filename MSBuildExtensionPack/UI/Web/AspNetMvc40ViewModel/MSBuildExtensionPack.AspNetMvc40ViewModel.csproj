@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{5A5DDD83-CA50-4A8E-9A8D-E1CA02FF6402}</ProjectGuid>
+    <ProjectGuid>{5C13B4FC-504C-4B9B-B9DC-ACB81273E880}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildExtensionPack.AspNetMvc40ViewModel</RootNamespace>
@@ -49,27 +49,27 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Core\CommonBLL\MSBuildExtensionPack.CommonBLL.csproj">
-      <Project>{eb345c1f-d609-43c1-a97f-7b3b3a5a0352}</Project>
+      <Project>{72276066-e617-4e9b-a941-6d126b9209aa}</Project>
       <Name>MSBuildExtensionPack.CommonBLL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core\CommonBLLEntities\MSBuildExtensionPack.CommonBLLEntities.csproj">
-      <Project>{6a520483-5254-4978-ad53-3147addeffb6}</Project>
+      <Project>{4c5ae3d3-dbad-466d-9d9b-fc7774f79f66}</Project>
       <Name>MSBuildExtensionPack.CommonBLLEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core\CommonBLLIoC\MSBuildExtensionPack.CommonBLLIoC.csproj">
-      <Project>{6992a9f3-9832-46fd-8c7f-d2bb5777e7d9}</Project>
+      <Project>{a3e7f2d8-e0a7-4da1-b658-dce90754b727}</Project>
       <Name>MSBuildExtensionPack.CommonBLLIoC</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core\DALContracts\MSBuildExtensionPack.DALContracts.csproj">
-      <Project>{54d13c75-9e50-4ed3-b265-9fc6819ea35e}</Project>
+      <Project>{7dfe0fcf-b521-4c42-9d41-6bca8a58c312}</Project>
       <Name>MSBuildExtensionPack.DALContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core\DataSourceEntities\MSBuildExtensionPack.DataSourceEntities.csproj">
-      <Project>{d0b33cdd-97c7-4d99-a579-8fc566de7153}</Project>
+      <Project>{9648aca2-bcb5-4149-b363-cf8f5d95d71f}</Project>
       <Name>MSBuildExtensionPack.DataSourceEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj">
-      <Project>{d79953a8-febc-4b13-9cda-f7675a233481}</Project>
+      <Project>{a52cefcb-200e-44b3-8719-c03ad74d29f1}</Project>
       <Name>MSBuildExtensionPack.EntityContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\Frameworks\Framework\Framework.csproj">
@@ -109,15 +109,15 @@
       <Name>Framework.Web</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core\Resx\MSBuildExtensionPack.Resx.csproj">
-      <Project>{fd138435-0f7c-4b72-b9d3-987e7fe69f80}</Project>
+      <Project>{e0c76f49-da1b-46c5-80a1-defe0bb80017}</Project>
       <Name>MSBuildExtensionPack.Resx</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core\ViewModelData\MSBuildExtensionPack.ViewModelData.csproj">
-      <Project>{59622778-b13c-464e-98f7-ea662653af27}</Project>
+      <Project>{7702279c-4f80-4dbc-9b7b-695132438dc8}</Project>
       <Name>MSBuildExtensionPack.ViewModelData</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core\WcfContracts\MSBuildExtensionPack.WcfContracts.csproj">
-      <Project>{3ff07bef-ff15-47ee-9bf2-107623976ca5}</Project>
+      <Project>{e1f126a9-7fc3-4854-9bba-45c6db0d2e5c}</Project>
       <Name>MSBuildExtensionPack.WcfContracts</Name>
     </ProjectReference>
   </ItemGroup>

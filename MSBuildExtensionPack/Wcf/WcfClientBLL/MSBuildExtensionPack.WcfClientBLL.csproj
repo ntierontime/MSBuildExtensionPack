@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{9CCCD6FA-FAE9-40DA-987E-96A53923BA0D}</ProjectGuid>
+    <ProjectGuid>{395BDA0A-0AA6-44ED-B7E1-3D34586D2082}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildExtensionPack.WcfClientBLL</RootNamespace>
@@ -51,15 +51,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\CommonBLLEntities\MSBuildExtensionPack.CommonBLLEntities.csproj">
-      <Project>{6a520483-5254-4978-ad53-3147addeffb6}</Project>
+      <Project>{4c5ae3d3-dbad-466d-9d9b-fc7774f79f66}</Project>
       <Name>MSBuildExtensionPack.CommonBLLEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Core\DataSourceEntities\MSBuildExtensionPack.DataSourceEntities.csproj">
-      <Project>{d0b33cdd-97c7-4d99-a579-8fc566de7153}</Project>
+      <Project>{9648aca2-bcb5-4149-b363-cf8f5d95d71f}</Project>
       <Name>MSBuildExtensionPack.DataSourceEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Core\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj">
-      <Project>{d79953a8-febc-4b13-9cda-f7675a233481}</Project>
+      <Project>{a52cefcb-200e-44b3-8719-c03ad74d29f1}</Project>
       <Name>MSBuildExtensionPack.EntityContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks\Framework\Framework.csproj">
@@ -79,7 +79,7 @@
       <Name>Framework.EntityContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Core\WcfContracts\MSBuildExtensionPack.WcfContracts.csproj">
-      <Project>{3ff07bef-ff15-47ee-9bf2-107623976ca5}</Project>
+      <Project>{e1f126a9-7fc3-4854-9bba-45c6db0d2e5c}</Project>
       <Name>MSBuildExtensionPack.WcfContracts</Name>
     </ProjectReference>
   </ItemGroup>

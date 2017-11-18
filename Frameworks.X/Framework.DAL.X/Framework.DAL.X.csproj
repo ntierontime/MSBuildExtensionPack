@@ -5,7 +5,7 @@
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C41FD193-E8A9-4C77-93D1-3B464D58A876}</ProjectGuid>
+    <ProjectGuid>{F86C1B14-5E6D-461E-8F83-18D54A614866}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Framework.DAL</RootNamespace>
@@ -50,7 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Framework.DataSourceEntities.X\Framework.DataSourceEntities.X.csproj">
-      <Project>{b9131050-fd8e-404d-a135-11e210cdd438}</Project>
+      <Project>{d100d7c5-d3dd-4be0-9080-9540b2685d00}</Project>
       <Name>Framework.DataSourceEntities.X</Name>
     </ProjectReference>
   </ItemGroup>

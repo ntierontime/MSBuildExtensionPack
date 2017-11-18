@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{66F1C60F-BFF8-4795-9C1D-9A413801E080}</ProjectGuid>
+    <ProjectGuid>{86934FBF-C7A4-44B5-97B1-0904EB58A4EC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildExtensionPack.EntityFrameworkContext</RootNamespace>
@@ -35,7 +35,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <None Include="App.config" />
-    <EntityDeploy Include="EFEntityDataModel.edmx" />
+        <EntityDeploy Include="EFEntityDataModel.edmx" />
+
     <None Include="EFEntityDataModel.edmx.diagram">
       <DependentUpon>EFEntityDataModel.edmx</DependentUpon>
     </None>
@@ -47,6 +48,7 @@
     <None Include="EFEntityDataModel.Context.tt" />
     <Compile Include="EFEntityDataModel.Context.cs">
       <DependentUpon>EFEntityDataModel.Context.tt</DependentUpon>
+      <SubType>RESXCodeBehind</SubType>
     </Compile>
     <Compile Include="EFEntityDataModel.Generated.cs" />
     <None Include="EFEntityDataModel.txt" />
@@ -55,7 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj">
-      <Project>{d79953a8-febc-4b13-9cda-f7675a233481}</Project>
+      <Project>{a52cefcb-200e-44b3-8719-c03ad74d29f1}</Project>
       <Name>MSBuildExtensionPack.EntityContracts</Name>
     </ProjectReference>
   </ItemGroup>

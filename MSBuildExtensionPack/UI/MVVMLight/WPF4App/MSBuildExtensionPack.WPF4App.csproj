@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8D2D7E8F-8415-424C-AF9C-967113BE5136}</ProjectGuid>
+    <ProjectGuid>{3255B9A7-5075-4B57-9FF4-D8E7DE462C8E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildExtensionPack.WPF4App</RootNamespace>
@@ -457,15 +457,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Core\CommonBLLEntities\MSBuildExtensionPack.CommonBLLEntities.csproj">
-      <Project>{6a520483-5254-4978-ad53-3147addeffb6}</Project>
+      <Project>{4c5ae3d3-dbad-466d-9d9b-fc7774f79f66}</Project>
       <Name>MSBuildExtensionPack.CommonBLLEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core\DataSourceEntities\MSBuildExtensionPack.DataSourceEntities.csproj">
-      <Project>{d0b33cdd-97c7-4d99-a579-8fc566de7153}</Project>
+      <Project>{9648aca2-bcb5-4149-b363-cf8f5d95d71f}</Project>
       <Name>MSBuildExtensionPack.DataSourceEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj">
-      <Project>{d79953a8-febc-4b13-9cda-f7675a233481}</Project>
+      <Project>{a52cefcb-200e-44b3-8719-c03ad74d29f1}</Project>
       <Name>MSBuildExtensionPack.EntityContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\Frameworks\Framework\Framework.csproj">
@@ -497,19 +497,19 @@
       <Name>Framework.Xaml</Name>
     </ProjectReference>
     <ProjectReference Include="..\Shared\MVVMLightViewModels\MSBuildExtensionPack.MVVMLightViewModels.csproj">
-      <Project>{aeba199a-084c-4ffc-b215-d080e50c81df}</Project>
+      <Project>{3bba5fb7-fe25-48df-9100-3fd799c67658}</Project>
       <Name>MSBuildExtensionPack.MVVMLightViewModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core\Resx\MSBuildExtensionPack.Resx.csproj">
-      <Project>{fd138435-0f7c-4b72-b9d3-987e7fe69f80}</Project>
+      <Project>{e0c76f49-da1b-46c5-80a1-defe0bb80017}</Project>
       <Name>MSBuildExtensionPack.Resx</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core\ViewModelData\MSBuildExtensionPack.ViewModelData.csproj">
-      <Project>{59622778-b13c-464e-98f7-ea662653af27}</Project>
+      <Project>{7702279c-4f80-4dbc-9b7b-695132438dc8}</Project>
       <Name>MSBuildExtensionPack.ViewModelData</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Web\WebApiClient\MSBuildExtensionPack.WebApiClient.csproj">
-      <Project>{c126ea08-56e0-4aa7-85d3-1fe40fed592d}</Project>
+      <Project>{bfd22cbf-b2ae-4cd7-accd-de8150b28b0c}</Project>
       <Name>MSBuildExtensionPack.WebApiClient</Name>
     </ProjectReference>
   </ItemGroup>
