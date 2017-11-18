@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="MSBuildExtensionPack" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.Build" Member="Builds">
+    <Type Name="Build">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SolutionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(1500)" CanBeNull="true" />
+      <Column Name="BuildStartTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="FK_Build_Solution" Member="Solution" ThisKey="SolutionId" OtherKey="Id" Type="Solution" IsForeignKey="true" />
+      <Association Name="FK_BuildLog_Build" Member="BuildLogs" ThisKey="Id" OtherKey="BuildId" Type="BuildLog" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BuildEventCode" Member="BuildEventCodes">
+    <Type Name="BuildEventCode">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EventCode" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(1500)" CanBeNull="true" />
+      <Association Name="FK_BuildLog_BuildEventCode" Member="BuildLogs" ThisKey="Id" OtherKey="BuildEventCodeId" Type="BuildLog" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BuildLog" Member="BuildLogs">
+    <Type Name="BuildLog">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BuildId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="BuildEventCodeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(1500)" CanBeNull="true" />
+      <Column Name="EventTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="FK_BuildLog_Build" Member="Build" ThisKey="BuildId" OtherKey="Id" Type="Build" IsForeignKey="true" />
+      <Association Name="FK_BuildLog_BuildEventCode" Member="BuildEventCode" ThisKey="BuildEventCodeId" OtherKey="Id" Type="BuildEventCode" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Organization" Member="Organizations">
+    <Type Name="Organization">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParentId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsSystemBuiltIn" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UniqueIdentifier" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CharColumn" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="VarcharColumn" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="TextColumn" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="NcharColumn" Type="System.String" DbType="NChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="NvarcharColumn" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="NtextColumn" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="BitColumn" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="BinaryColumn" Type="System.Data.Linq.Binary" DbType="Binary(10)" CanBeNull="true" />
+      <Column Name="VarbinaryColumn" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ImageColumn" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TinyintColumn" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="SmallintColumn" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IntColumn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BigintColumn" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DecimalColumn" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="NumericColumn" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="SmallmoneyColumn" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="MoneyColumn" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="FloatColumn" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="RealColumn" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="DatetimeColumn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Datetime2Column" Type="System.DateTime" DbType="DateTime2(7) NOT NULL" CanBeNull="false" />
+      <Column Name="SmalldatetimeColumn" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateColumn" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="TimeColumn" Type="System.TimeSpan" DbType="Time(7) NOT NULL" CanBeNull="false" />
+      <Column Name="UniqueidentifierColumn" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="FK_Organization_ParentId" Member="Parent" ThisKey="ParentId" OtherKey="Id" Type="Organization" IsForeignKey="true" />
+      <Association Name="FK_Organization_ParentId" Member="Organization_ParentIds" ThisKey="Id" OtherKey="ParentId" Type="Organization" DeleteRule="NO ACTION" />
+      <Association Name="FK_Solution_OrganizationId" Member="Solutions" ThisKey="Id" OtherKey="OrganizationId" Type="Solution" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Solution" Member="Solutions">
+    <Type Name="Solution">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ExternalParentId" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(1500)" CanBeNull="true" />
+      <Column Name="OrganizationId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="FK_Build_Solution" Member="Builds" ThisKey="Id" OtherKey="SolutionId" Type="Build" DeleteRule="NO ACTION" />
+      <Association Name="FK_Solution_OrganizationId" Member="Organization" ThisKey="OrganizationId" OtherKey="Id" Type="Organization" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
