@@ -5,3 +5,5 @@ del UpgradeLog*.XML
 rmdir ".vs" /S /Q
 rmdir "%localappdata%\temp\Temporary ASP.NET Files\vs" /S /Q
 rmdir "%localappdata%\temp\Temporary ASP.NET Files\root" /S /Q
+
+REM for /d /r . %%d in (bin,obj) do @if exist "%%d" rd /s/q "%%d"
