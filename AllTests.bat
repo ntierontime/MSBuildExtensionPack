@@ -1,9 +1,16 @@
-for /d /r . %%d in (bin,obj) do @if exist "%%d" rd /s/q "%%d"
-for /d /r . %%d in (_UpgradeReport_Files,Backup) do @if exist "%%d" rd /s/q "%%d"
-del UpgradeLog*.htm
-del UpgradeLog*.XML
-rmdir ".vs" /S /Q
-rmdir "%localappdata%\temp\Temporary ASP.NET Files\vs" /S /Q
-rmdir "%localappdata%\temp\Temporary ASP.NET Files\root" /S /Q
+git checkout foo || git checkout -b fooRD MSBuildExtensionPack /S /Q
+RD Frameworks /S /Q
+RD Frameworks.X /S /Q
+RD MSBuildExtensionPack /S /Q
+DEL *.sln /S /Q
 
-REM for /d /r . %%d in (bin,obj) do @if exist "%%d" rd /s/q "%%d"
+SET server=localhost
+SET database=MSBuildExtensionPack
+SET user=sa
+SET password=Qwer~123
+
+D:\Test4\WhatEverII\trunk\BuiltResults\Dbml.CommandLine\nTierCraft.T4Parser.FileBuilders.Generated.Dbml.CommandLine.exe -o LoadQuickCodeGenConfigurationCmdLineArgPerSolution -r "D:\Github\%database%"
+
+git add -A
+
+git commit -m test2
