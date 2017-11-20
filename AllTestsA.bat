@@ -18,8 +18,6 @@ git push
 
 copy "D:\Test4\WhatEverII\trunk\TestCertificates\UWPApp_TemporaryKey.pfx.copy" %database%\UI\MVVMLight\UWPApp\%database%.UWPApp_TemporaryKey.pfx
 
-"C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe" %database%.sln /property:Configuration=Release
-
 "C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe" %database%\UI\MVVMLight\AndroidApp\%database%.AndroidApp.csproj /p:Configuration=Release
 
 "C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe" %database%\UI\MVVMLight\IOSApp\%database%.IOSApp.csproj /p:Configuration=Release
