@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="MSBuildExtensionPack" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.Build" Member="Build">
+    <Type Name="Build">
+	  <ExtendedTypeDeclaration PropertyNameOfNameList="Name" HasPre_PartialInsertMethod="true" HasPost_PartialInsertMethod="true" HasPre_PartialDeleteMethod="true"/>		
+	  <EntityUpdateMethodSetting DataViewKey="UpdateNameRequest" ActionName="UpdateNameOnly" PropertyNameList="Name" Description="" HasPre_PartialMethod="true"/>		
+    </Type>
+  </Table>
+  <Table Name="dbo.BuildEventCode" Member="BuildEventCode">
+    <Type Name="BuildEventCode">
+    </Type>
+  </Table>
+  <Table Name="dbo.BuildLog" Member="BuildLog">
+    <Type Name="BuildLog">
+    </Type>
+  </Table>
+  <Table Name="dbo.Solution" Member="Solution">
+    <Type Name="Solution">
+    </Type>
+  </Table>
+</Database>
