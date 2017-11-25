@@ -1,1 +1,2 @@
 # MSBuildExtensionPack
+Test
