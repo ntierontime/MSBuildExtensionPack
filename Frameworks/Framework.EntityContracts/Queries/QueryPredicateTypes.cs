@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+//TODO: can be removed
 namespace Framework.EntityContracts
 {
     /// <summary>
