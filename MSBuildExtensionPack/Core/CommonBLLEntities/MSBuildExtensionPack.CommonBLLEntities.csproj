@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6A520483-5254-4978-AD53-3147ADDEFFB6}</ProjectGuid>
+    <ProjectGuid>{1863424E-9841-4647-97A2-4CC17A4BC7BA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildExtensionPack.CommonBLLEntities</RootNamespace>
@@ -69,11 +69,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataSourceEntities\MSBuildExtensionPack.DataSourceEntities.csproj">
-      <Project>{d0b33cdd-97c7-4d99-a579-8fc566de7153}</Project>
+      <Project>{3a8f1415-88ef-4b9e-8fef-4296bf953f31}</Project>
       <Name>MSBuildExtensionPack.DataSourceEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj">
-      <Project>{d79953a8-febc-4b13-9cda-f7675a233481}</Project>
+      <Project>{9abeb016-fb34-40ab-b469-3b00f0048d27}</Project>
       <Name>MSBuildExtensionPack.EntityContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks\Framework\Framework.csproj">

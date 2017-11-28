@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D79953A8-FEBC-4B13-9CDA-F7675A233481}</ProjectGuid>
+    <ProjectGuid>{9ABEB016-FB34-40AB-B469-3B00F0048D27}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildExtensionPack.EntityContracts</RootNamespace>

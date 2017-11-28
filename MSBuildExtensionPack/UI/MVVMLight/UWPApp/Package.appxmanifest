@@ -5,11 +5,11 @@
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
   IgnorableNamespaces="uap mp">
   <Identity
-    Name="f8bbed73-df22-4dee-9d16-7b4af8785d11"
+    Name="00062a82-fcea-4cf7-806a-9d1c335c846c"
     Publisher="CN=NTIER ON TIME TECHNOLOGIES INC."
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="f8bbed73-df22-4dee-9d16-7b4af8785d11" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="00062a82-fcea-4cf7-806a-9d1c335c846c" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>MSBuildExtensionPack.UWPApp</DisplayName>

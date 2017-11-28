@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C126EA08-56E0-4AA7-85D3-1FE40FED592D}</ProjectGuid>
+    <ProjectGuid>{3D7F434B-49DF-4E21-8FDD-4F88907F14A3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildExtensionPack.WebApiClient</RootNamespace>
@@ -44,15 +44,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Core\CommonBLLEntities\MSBuildExtensionPack.CommonBLLEntities.csproj">
-      <Project>{6a520483-5254-4978-ad53-3147addeffb6}</Project>
+      <Project>{1863424e-9841-4647-97a2-4cc17a4bc7ba}</Project>
       <Name>MSBuildExtensionPack.CommonBLLEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core\DataSourceEntities\MSBuildExtensionPack.DataSourceEntities.csproj">
-      <Project>{d0b33cdd-97c7-4d99-a579-8fc566de7153}</Project>
+      <Project>{3a8f1415-88ef-4b9e-8fef-4296bf953f31}</Project>
       <Name>MSBuildExtensionPack.DataSourceEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj">
-      <Project>{d79953a8-febc-4b13-9cda-f7675a233481}</Project>
+      <Project>{9abeb016-fb34-40ab-b469-3b00f0048d27}</Project>
       <Name>MSBuildExtensionPack.EntityContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\Frameworks\Framework\Framework.csproj">
@@ -84,11 +84,11 @@
       <Name>Framework.ViewModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core\Resx\MSBuildExtensionPack.Resx.csproj">
-      <Project>{fd138435-0f7c-4b72-b9d3-987e7fe69f80}</Project>
+      <Project>{960e0564-9487-4c39-9f6a-ef730d96c18e}</Project>
       <Name>MSBuildExtensionPack.Resx</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core\ViewModelData\MSBuildExtensionPack.ViewModelData.csproj">
-      <Project>{59622778-b13c-464e-98f7-ea662653af27}</Project>
+      <Project>{e9d59ccd-7122-40ba-93b2-2d2e40b09662}</Project>
       <Name>MSBuildExtensionPack.ViewModelData</Name>
     </ProjectReference>
   </ItemGroup>

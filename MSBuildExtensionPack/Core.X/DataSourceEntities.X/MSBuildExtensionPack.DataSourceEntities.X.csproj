@@ -5,7 +5,7 @@
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7A9ED7B9-4CB5-40DF-89DF-4293BFB4DE22}</ProjectGuid>
+    <ProjectGuid>{5656D29D-E7FE-4624-8EFB-D3251F683A4F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildExtensionPack.DataSourceEntities</RootNamespace>
@@ -116,27 +116,27 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EntityContracts.X\MSBuildExtensionPack.EntityContracts.X.csproj">
-      <Project>{9b54200d-20f0-4380-bd15-f6211718853a}</Project>
+      <Project>{fe8476f3-e114-49b6-bf21-0d69ad7a0544}</Project>
       <Name>MSBuildExtensionPack.EntityContracts.X</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.X\Framework.X\Framework.X.csproj">
-      <Project>{cab19f30-0455-443c-b7a3-ba943aaa9d15}</Project>
+      <Project>{e10855c7-201c-43c3-940a-a7275fd2b804}</Project>
       <Name>Framework.X</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.X\Framework.DAL.X\Framework.DAL.X.csproj">
-      <Project>{c41fd193-e8a9-4c77-93d1-3b464d58a876}</Project>
+      <Project>{37e0d750-d617-4f48-8f1b-a261a7aec109}</Project>
       <Name>Framework.DAL.X</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.X\Framework.DataSourceEntities.X\Framework.DataSourceEntities.X.csproj">
-      <Project>{b9131050-fd8e-404d-a135-11e210cdd438}</Project>
+      <Project>{801a91e0-b9fc-4808-8045-36560d6af1c3}</Project>
       <Name>Framework.DataSourceEntities.X</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.X\Framework.EntityContracts.X\Framework.EntityContracts.X.csproj">
-      <Project>{81863781-aa71-4530-a59c-04d2153ddd30}</Project>
+      <Project>{d8aafb54-4c8d-4352-9ffd-eaea3d77b200}</Project>
       <Name>Framework.EntityContracts.X</Name>
     </ProjectReference>
     <ProjectReference Include="..\Resx.X\MSBuildExtensionPack.Resx.X.csproj">
-      <Project>{4e3e985c-7d38-40f5-81e4-92fac3e9357a}</Project>
+      <Project>{e4e691e9-3912-44a7-aa4e-607a9bb4a9fc}</Project>
       <Name>MSBuildExtensionPack.Resx.X</Name>
     </ProjectReference>
   </ItemGroup>
