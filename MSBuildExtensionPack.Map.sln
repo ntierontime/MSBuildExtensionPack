@@ -70,7 +70,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.Resx",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.ViewModelData", "MSBuildExtensionPack\Core\ViewModelData\MSBuildExtensionPack.ViewModelData.csproj", "{59622778-B13C-464E-98F7-EA662653AF27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.VS2012DatabaseProject", "MSBuildExtensionPack\Core\VS2012DatabaseProject\MSBuildExtensionPack.VS2012DatabaseProject.sqlproj", "{D1D12E36-D3E2-40D8-9AE4-91943585E7E5}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MSBuildExtensionPack.VS2012DatabaseProject", "MSBuildExtensionPack\Core\VS2012DatabaseProject\MSBuildExtensionPack.VS2012DatabaseProject.sqlproj", "{D1D12E36-D3E2-40D8-9AE4-91943585E7E5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.WcfClientBLL", "MSBuildExtensionPack\Wcf\WcfClientBLL\MSBuildExtensionPack.WcfClientBLL.csproj", "{9CCCD6FA-FAE9-40DA-987E-96A53923BA0D}"
 EndProject
