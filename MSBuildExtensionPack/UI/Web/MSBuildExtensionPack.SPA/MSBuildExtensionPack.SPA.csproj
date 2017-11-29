@@ -127,6 +127,10 @@
     <TypeScriptCompile Include="src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\ApiControllerHttpClientBase.ts" />
+    <TypeScriptCompile Include="src\app\Framework.CommonBLLEntities.ts" />
+    <TypeScriptCompile Include="src\app\Framework.ViewModels.ts" />
+    <TypeScriptCompile Include="src\app\Framework.DataSourceEntities.ts" />
     <TypeScriptCompile Include="src\app\Framework.ts" />
     <TypeScriptCompile Include="src\app\Framework.EntityContracts.ts" />
     <TypeScriptCompile Include="src\app\entity.BuildEventCode.ts" />
