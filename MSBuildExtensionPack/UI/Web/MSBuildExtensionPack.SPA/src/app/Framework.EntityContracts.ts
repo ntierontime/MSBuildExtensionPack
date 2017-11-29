@@ -8,28 +8,17 @@ import 'rxjs/add/observable/throw';
 export namespace Framework.EntityContracts {
     export enum KnownMathCalculations {
         Sum,
-
         Count,
-
         Average,
-
         Max,
-
         Min,
-
         Product,
-
         CountNumber,
-
         StdDev,
-
         StdDevp,
-
         Var,
-
         Varp
     }
-
 
     export class AlphabeticalOrderCategory {
         constructor(id: number, name: string) {
@@ -43,85 +32,49 @@ export namespace Framework.EntityContracts {
     // Queries
     export enum DateTimeUnit {
         Tick,
-
         Year,
-
         QuarterOfYear,
-
         Month,
-
         SemiMonth,
-
         BiWeek,
-
         Week,
-
         Day,
-
         Hour,
-
         Minute,
-
         Second,
-
         MilliSecond,
-
         Negate,
-
         None
     }
 
     export enum PredefinedBooleanSelectedValues {
         All,
-
         True,
-
         False
     }
 
     export enum PreDefinedDateTimeRanges {
         Unknown,
-
         Custom,
-
         LastTenYears,
-
         LastFiveYears,
-
         LastYear,
-
         LastSixMonths,
-
         LastThreeMonths,
-
         LastMonth,
-
         LastWeek,
-
         Yesterday,
-
         ThisYear,
-
         ThisMonth,
-
         ThisWeek,
-
         Today,
-
         Tomorrow,
-
         NextWeek,
-
         NextMonth,
-
         NextThreeMonths,
-
         NextSixMonths,
-
         NextYear,
-
         NextFiveYears,
-
         NextTenYears
     }
 
@@ -280,9 +233,7 @@ export namespace Framework.EntityContracts {
 
     export enum SearchStatus {
         Unknown,
-
         Searching,
-
         SearchResultLoaded
     }
 }
