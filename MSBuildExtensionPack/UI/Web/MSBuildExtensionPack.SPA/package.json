@@ -42,7 +42,8 @@
     "resx-to-typescript": "1.0.15",
     "rxjs": "^5.5.2",
     "systemjs": "0.19.40",
-    "zone.js": "^0.8.4"
+    "zone.js": "^0.8.4",
+    "moment": "^2.19.3"
   },
   "devDependencies": {
     "concurrently": "^3.2.0",
