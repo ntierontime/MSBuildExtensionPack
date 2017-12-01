@@ -1,17 +1,23 @@
 ﻿import { Injectable, Inject } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpResponse, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 import * as Framework from './Framework';
 import * as FrameworkEntityContracts from './Framework.EntityContracts';
+import * as FrameworkViewModels from './Framework.ViewModels';
+//we may need angular client
+// https://codingthesmartway.com/angular-4-3-httpclient-accessing-rest-web-services-with-angular/
+// $ npm install -g @angular/cli@latest
+// ??$ ng new nghttp01
 
+@Injectable()
 export class ApiControllerHttpClientBase {
     public static WebApiRootUrlAppSettingName: string = "WebApiRootUrl";
     RootPath: string;
     public ControllerName: string;
-    protected static Client: HttpClient;// = new HttpClient(); need initialization
+    public Client: HttpClient;// = new HttpClient(); need initialization
     constructor(rootPath: string) {
         this.RootPath = rootPath;
     }
@@ -37,5 +43,94 @@ export class ApiControllerHttpClientBase {
         });
         var parametersInString: string = parametersInList.join("&");
         return ApiControllerHttpClientBase.GetHttpRequestUrl(this.RootPath, this.ControllerName, actionName, parametersInString);
+    }
+
+    // https://blog.mariusschulz.com/2016/12/09/typescript-2-1-async-await-for-es3-es5
+    // https://medium.com/@bluepnume/learn-about-promises-before-you-start-using-async-await-eb148164a9c8
+    // this is not an async method
+    public Get<TResponse>(url: string): TResponse {
+        this.Client.get<TResponse>(url).subscribe(
+            data => {
+                console.log(data);
+                return data;
+            },
+            err => {
+                console.log('error when in ' + url);
+                return null;
+            });
+        return null;
+    }
+
+    //public GetItemViewModel<TViewMode>(url: string): TViewMode {
+    //    this.Client.get<TViewMode>(url).subscribe(
+    //        data => {
+    //            console.log(data);
+    //            return data;
+    //        },
+    //        err => {
+    //            console.log('error when in ' + url);
+    //            return null;
+    //        });
+    //    return null;
+    //}
+
+    public GetEntityRelated<TViewModel>(url: string): TViewModel {
+        this.Client.get<TViewModel>(url).subscribe(
+            data => {
+                console.log(data);
+                return data;
+            },
+            err => {
+                console.log('error when in ' + url);
+                return null;
+            });
+        return null;
+    }
+
+    public Post<TViewModel>(url: string, vm: TViewModel): TViewModel {
+        this.Client.post<TViewModel>(url, vm).subscribe(
+            res => {
+                console.log(res);
+                return res;
+            },
+            (err: HttpErrorResponse) => {
+                console.log(err.error);
+                console.log(err.name);
+                console.log(err.message);
+                console.log(err.status);
+                return null;
+            });
+        return null;
+    }
+
+    public Put<TRequest, TResponse>(url: string, request: TRequest): TResponse {
+        this.Client.put<TResponse>(url, request).subscribe(
+            res => {
+                console.log(res);
+                return res;
+            },
+            (err: HttpErrorResponse) => {
+                console.log(err.error);
+                console.log(err.name);
+                console.log(err.message);
+                console.log(err.status);
+                return null;
+            });
+        return null;
+    }
+    public Delete<TResponse>(url: string): TResponse {
+        this.Client.delete<TResponse>(url).subscribe(
+            res => {
+                console.log(res);
+                return res;
+            },
+            (err: HttpErrorResponse) => {
+                console.log(err.error);
+                console.log(err.name);
+                console.log(err.message);
+                console.log(err.status);
+                return null;
+            });
+        return null;
     }
 }

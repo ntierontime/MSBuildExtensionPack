@@ -301,7 +301,7 @@ import 'rxjs/add/observable/throw';
         //    return GetListWithLocalizedResource(resourcePrefix, type);
         //}
     }
-    export class QuerySystemByteEqualsCriteria extends QueryEqualsCriteriaBaseNullable<number>
+    export class QueryNumberEqualsCriteria extends QueryEqualsCriteriaBaseNullable<number>
     {
         constructor(isToCompare: boolean, valueToCompare: number) {
             super(isToCompare, valueToCompare);
