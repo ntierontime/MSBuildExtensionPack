@@ -24,13 +24,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core.X", "Core.X", "{E97DFE
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web.X", "Web.X", "{24D72529-FF40-42EE-AF37-5F522593A80C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{C7AFD4E1-D307-437A-A664-00C8BAD46061}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
-		.nuget\NuGet.targets = .nuget\NuGet.targets
-	EndProjectSection
-EndProject
+
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.AspNetMvc40ApiController", "MSBuildExtensionPack\UI\Web\AspNetMvc40ApiController\MSBuildExtensionPack.AspNetMvc40ApiController.csproj", "{745AF834-F156-4766-93AB-421ADB241292}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.AspNetMvc40Rasor", "MSBuildExtensionPack\UI\Web\AspNetMvc40Rasor\MSBuildExtensionPack.AspNetMvc40Rasor.csproj", "{ACD15310-6046-41BA-AE72-F53471CB7BC6}"
