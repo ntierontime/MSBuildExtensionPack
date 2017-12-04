@@ -128,12 +128,18 @@
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
     <TypeScriptCompile Include="src\app\ApiControllerHttpClientBase.ts" />
+    <TypeScriptCompile Include="src\app\CommonBLLEntities\BuildLog.ts" />
+    <TypeScriptCompile Include="src\app\DataSourceEntities\BuildLog.ts" />
+    <TypeScriptCompile Include="src\app\ViewModelData\BuildLog.ts" />
+    <TypeScriptCompile Include="src\app\ViewModelData\BuildEventCode.ts" />
+    <TypeScriptCompile Include="src\app\WebApiClients\WebApiClient.ts" />
+    <TypeScriptCompile Include="src\app\CommonBLLEntities\BuildEventCode.ts" />
     <TypeScriptCompile Include="src\app\Framework.CommonBLLEntities.ts" />
     <TypeScriptCompile Include="src\app\Framework.ViewModels.ts" />
     <TypeScriptCompile Include="src\app\Framework.DataSourceEntities.ts" />
     <TypeScriptCompile Include="src\app\Framework.ts" />
     <TypeScriptCompile Include="src\app\Framework.EntityContracts.ts" />
-    <TypeScriptCompile Include="src\app\entity.BuildEventCode.ts" />
+    <TypeScriptCompile Include="src\app\DataSourceEntities\BuildEventCode.ts" />
     <TypeScriptCompile Include="src\main.ts" />
   </ItemGroup>
   <ItemGroup>
@@ -237,6 +243,7 @@
       <Name>MSBuildExtensionPack.AspNetMvc40ViewModel</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
