@@ -132,7 +132,7 @@
     <TypeScriptCompile Include="src\app\DataSourceEntities\BuildLog.ts" />
     <TypeScriptCompile Include="src\app\ViewModelData\BuildLog.ts" />
     <TypeScriptCompile Include="src\app\ViewModelData\BuildEventCode.ts" />
-    <TypeScriptCompile Include="src\app\WebApiClients\WebApiClient.ts" />
+    <TypeScriptCompile Include="src\app\WebApiClients\BuildLog.ts" />
     <TypeScriptCompile Include="src\app\CommonBLLEntities\BuildEventCode.ts" />
     <TypeScriptCompile Include="src\app\Framework.CommonBLLEntities.ts" />
     <TypeScriptCompile Include="src\app\Framework.ViewModels.ts" />

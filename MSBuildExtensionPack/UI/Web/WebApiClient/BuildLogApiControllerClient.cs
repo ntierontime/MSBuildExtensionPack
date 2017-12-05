@@ -79,6 +79,7 @@ namespace MSBuildExtensionPack.WebApiClient
             return await Post<MSBuildExtensionPack.DataSourceEntities.BuildLogIdentifier, MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn>(url, identifier);
         }
 
+        //TODO: a bug, changed
         public const string ActionName_DeleteEntity = "DeleteEntity";
         /// <summary>
         /// delete an entity of <see cref=" MSBuildExtensionPack.DataSourceEntities.BuildLog"/> using .net value types.
@@ -88,7 +89,7 @@ namespace MSBuildExtensionPack.WebApiClient
         public async Task<MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn> DeleteEntityAsync(
             MSBuildExtensionPack.DataSourceEntities.BuildLog input)
         {
-            string url = GetHttpRequestUrl(ActionName_InsertEntity);
+            string url = GetHttpRequestUrl(ActionName_DeleteEntity);
 
             return await Post<MSBuildExtensionPack.DataSourceEntities.BuildLog, MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn>(url, input);
         }
@@ -97,6 +98,7 @@ namespace MSBuildExtensionPack.WebApiClient
 
         #region delete using .Net value types
 
+        //TODO: a bug, changed
         public const string ActionName_DeleteByIdentifier = "DeleteByIdentifier";
         /// <summary>
         /// delete an entity of <see cref=" MSBuildExtensionPack.DataSourceEntities.BuildLog"/> by identifier using .net value types.
@@ -107,7 +109,9 @@ namespace MSBuildExtensionPack.WebApiClient
             System.Int64 id
             )
         {
-            string url = GetHttpRequestUrl(ActionName_InsertEntity);
+            var querystringParams = new Dictionary<string, string>();
+            querystringParams.Add("id", id.ToString());
+            string url = GetHttpRequestUrl(ActionName_DeleteByIdentifier, querystringParams);
 
             return await Delete<MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn>(url);
         }

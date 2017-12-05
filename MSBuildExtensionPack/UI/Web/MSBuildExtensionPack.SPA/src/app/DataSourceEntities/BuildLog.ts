@@ -5,7 +5,6 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 import * as Framework from '../Framework';
-import * as FrameworkEntityContracts from '../Framework.EntityContracts';
 
 export class BuildLog {
     constructor() {
@@ -16,7 +15,6 @@ export class BuildLog {
     public Message: string;
     public EventTime: Date;
 }
-
 
 export namespace BuildLog {
     export class Default {

@@ -8,70 +8,70 @@ import * as Framework from '../Framework';
 import * as FrameworkCommonBLLEntities from '../Framework.CommonBLLEntities';
 import * as FrameworkEntityContracts from '../Framework.EntityContracts';
 import * as FrameworkViewModels from '../Framework.ViewModels';
-import * as BuildEventCodeDS from '../DataSourceEntities/BuildEventCode';
+import * as DataSourceEntities from '../DataSourceEntities/BuildEventCode';
 
-export class BuildEventCodeQueryCriteriaCommon {
-    constructor(eventCodeCommonOft: FrameworkEntityContracts.QuerySystemStringContainsCriteria, descriptionCommonOft: FrameworkEntityContracts.QuerySystemStringContainsCriteria) {
-        this.EventCodeCommonOft = eventCodeCommonOft;
-        this.DescriptionCommonOft = descriptionCommonOft;
+    export class BuildEventCodeQueryCriteriaCommon {
+        constructor(eventCodeCommonOft: FrameworkEntityContracts.QuerySystemStringContainsCriteria, descriptionCommonOft: FrameworkEntityContracts.QuerySystemStringContainsCriteria) {
+            this.EventCodeCommonOft = eventCodeCommonOft;
+            this.DescriptionCommonOft = descriptionCommonOft;
+        }
+        public EventCodeCommonOft: FrameworkEntityContracts.QuerySystemStringContainsCriteria;
+        public DescriptionCommonOft: FrameworkEntityContracts.QuerySystemStringContainsCriteria;
     }
-    public EventCodeCommonOft: FrameworkEntityContracts.QuerySystemStringContainsCriteria;
-    public DescriptionCommonOft: FrameworkEntityContracts.QuerySystemStringContainsCriteria;
-}
-export class BuildEventCodeQueryCriteriaAll {
-    constructor() {
+    export class BuildEventCodeQueryCriteriaAll {
+        constructor() {
+        }
     }
-}
-export class BuildEventCodeQueryCriteriaByIdentifier {
-    constructor(idByIdentifierOft: FrameworkEntityContracts.QueryNumberEqualsCriteria) {
-        this.IdByIdentifierOft = idByIdentifierOft;
+    export class BuildEventCodeQueryCriteriaByIdentifier {
+        constructor(idByIdentifierOft: FrameworkEntityContracts.QueryNumberEqualsCriteria) {
+            this.IdByIdentifierOft = idByIdentifierOft;
+        }
+        public IdByIdentifierOft: FrameworkEntityContracts.QueryNumberEqualsCriteria;
     }
-    public IdByIdentifierOft: FrameworkEntityContracts.QueryNumberEqualsCriteria;
-}
 
-export class BuildEventCodeChainedQueryCriteriaCommon {
-    constructor(eventCodeCommonOftOfCommon: FrameworkEntityContracts.QuerySystemStringContainsCriteria, descriptionCommonOftOfCommon: FrameworkEntityContracts.QuerySystemStringContainsCriteria) {
-        this.BuildEventCodeQueryCriteriaCommon = new BuildEventCodeQueryCriteriaCommon(eventCodeCommonOftOfCommon, descriptionCommonOftOfCommon);
+    export class BuildEventCodeChainedQueryCriteriaCommon {
+        constructor(eventCodeCommonOftOfCommon: FrameworkEntityContracts.QuerySystemStringContainsCriteria, descriptionCommonOftOfCommon: FrameworkEntityContracts.QuerySystemStringContainsCriteria) {
+            this.BuildEventCodeQueryCriteriaCommon = new BuildEventCodeQueryCriteriaCommon(eventCodeCommonOftOfCommon, descriptionCommonOftOfCommon);
+        }
+        public BuildEventCodeQueryCriteriaCommon: BuildEventCodeQueryCriteriaCommon;
     }
-    public BuildEventCodeQueryCriteriaCommon: BuildEventCodeQueryCriteriaCommon;
-}
 
-export class BuildEventCodeChainedQueryCriteriaAll {
-    constructor(buildEventCodeQueryCriteriaAll: BuildEventCodeQueryCriteriaAll) {
-        this.BuildEventCodeQueryCriteriaAll = buildEventCodeQueryCriteriaAll;
+    export class BuildEventCodeChainedQueryCriteriaAll {
+        constructor(buildEventCodeQueryCriteriaAll: BuildEventCodeQueryCriteriaAll) {
+            this.BuildEventCodeQueryCriteriaAll = buildEventCodeQueryCriteriaAll;
+        }
+        public BuildEventCodeQueryCriteriaAll: BuildEventCodeQueryCriteriaAll;
     }
-    public BuildEventCodeQueryCriteriaAll: BuildEventCodeQueryCriteriaAll;
-}
 
-export class BuildEventCodeChainedQueryCriteriaByIdentifier {
-    constructor(buildEventCodeQueryCriteriaByIdentifier: BuildEventCodeQueryCriteriaByIdentifier) {
-        this.BuildEventCodeQueryCriteriaByIdentifier = buildEventCodeQueryCriteriaByIdentifier;
+    export class BuildEventCodeChainedQueryCriteriaByIdentifier {
+        constructor(buildEventCodeQueryCriteriaByIdentifier: BuildEventCodeQueryCriteriaByIdentifier) {
+            this.BuildEventCodeQueryCriteriaByIdentifier = buildEventCodeQueryCriteriaByIdentifier;
+        }
+        public BuildEventCodeQueryCriteriaByIdentifier: BuildEventCodeQueryCriteriaByIdentifier;
     }
-    public BuildEventCodeQueryCriteriaByIdentifier: BuildEventCodeQueryCriteriaByIdentifier;
-}
 
-export class BuildEventCodeRequestMessageBuiltIn extends FrameworkCommonBLLEntities.BusinessLogicLayerRequestMessageBase<BuildEventCodeDS.BuildEventCode[]>
-{
-    constructor(businessLogicLayerRequestTypes: FrameworkCommonBLLEntities.BusinessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey: string, businessLogicLayerRequestID: string, currentIndex: number, pageSize: number, queryOrderByExpression: string) {
-        super(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID, currentIndex, pageSize, queryOrderByExpression);
-
-    }
-}
-
-export class BuildEventCodeRequestMessageBuiltInOfIdentifier extends FrameworkCommonBLLEntities.BusinessLogicLayerRequestMessageBase<BuildEventCodeDS.BuildEventCodeIdentifier>
-{
-    constructor(businessLogicLayerRequestTypes: FrameworkCommonBLLEntities.BusinessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey: string, businessLogicLayerRequestID: string, currentIndex: number, pageSize: number, queryOrderByExpression: string) {
-        super(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID, currentIndex, pageSize, queryOrderByExpression);
-
-    }
-}
-
-export class BuildEventCodeResponseMessageBuiltIn extends FrameworkCommonBLLEntities.BusinessLogicLayerResponseMessageBase<BuildEventCodeDS.BuildEventCode[]>
-{
-
-}
-export module BuildEventCodeResponseMessageBuiltIn {
-    export class KeyInformation extends FrameworkCommonBLLEntities.BusinessLogicLayerResponseMessageBase<BuildEventCodeDS.BuildEventCode.KeyInformation[]>
+    export class BuildEventCodeRequestMessageBuiltIn extends FrameworkCommonBLLEntities.BusinessLogicLayerRequestMessageBase<DataSourceEntities.BuildEventCode[]>
     {
+        constructor(businessLogicLayerRequestTypes: FrameworkCommonBLLEntities.BusinessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey: string, businessLogicLayerRequestID: string, currentIndex: number, pageSize: number, queryOrderByExpression: string) {
+            super(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID, currentIndex, pageSize, queryOrderByExpression);
+
+        }
     }
-}
+
+    export class BuildEventCodeRequestMessageBuiltInOfIdentifier extends FrameworkCommonBLLEntities.BusinessLogicLayerRequestMessageBase<DataSourceEntities.BuildEventCodeIdentifier>
+    {
+        constructor(businessLogicLayerRequestTypes: FrameworkCommonBLLEntities.BusinessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey: string, businessLogicLayerRequestID: string, currentIndex: number, pageSize: number, queryOrderByExpression: string) {
+            super(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID, currentIndex, pageSize, queryOrderByExpression);
+
+        }
+    }
+
+    export class BuildEventCodeResponseMessageBuiltIn extends FrameworkCommonBLLEntities.BusinessLogicLayerResponseMessageBase<DataSourceEntities.BuildEventCode[]>
+    {
+
+    }
+    export namespace BuildEventCodeResponseMessageBuiltIn {
+        export class KeyInformation extends FrameworkCommonBLLEntities.BusinessLogicLayerResponseMessageBase<DataSourceEntities.BuildEventCode.KeyInformation[]>
+        {
+        }
+    }

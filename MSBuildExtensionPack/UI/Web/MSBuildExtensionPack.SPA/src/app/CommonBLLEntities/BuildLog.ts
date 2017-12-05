@@ -8,7 +8,7 @@ import * as Framework from '../Framework';
 import * as FrameworkCommonBLLEntities from '../Framework.CommonBLLEntities';
 import * as FrameworkEntityContracts from '../Framework.EntityContracts';
 import * as FrameworkViewModels from '../Framework.ViewModels';
-import * as BuildLogDS from '../DataSourceEntities/BuildLog';
+import * as DataSourceEntities from '../DataSourceEntities/BuildLog';
 
 export class BuildLogQueryCriteriaCommon {
     constructor(idCommonOfBuild_1: FrameworkEntityContracts.QueryNumberEqualsCriteria, idCommonOfSolution_1: FrameworkEntityContracts.QueryNumberEqualsCriteria, idCommonOfOrganization_1: FrameworkEntityContracts.QueryNumberEqualsCriteria, idCommonOfOrganization_2: FrameworkEntityContracts.QueryNumberEqualsCriteria, idCommonOfBuildEventCode_1: FrameworkEntityContracts.QueryNumberEqualsCriteria, eventTimeCommonOft: FrameworkEntityContracts.QuerySystemDateTimeRangeCriteria, messageCommonOft: FrameworkEntityContracts.QuerySystemStringContainsCriteria) {
@@ -79,13 +79,13 @@ export class BuildLogChainedQueryCriteriaByIdentifier {
 
 export class BuildLogChainedQueryCriteriaByFKOnly {
     constructor(idByFKOnlyOfBuild_1OfByFKOnly: FrameworkEntityContracts.QueryNumberEqualsCriteria, idByFKOnlyOfSolution_1OfByFKOnly: FrameworkEntityContracts.QueryNumberEqualsCriteria, idByFKOnlyOfOrganization_1OfByFKOnly: FrameworkEntityContracts.QueryNumberEqualsCriteria, idByFKOnlyOfOrganization_2OfByFKOnly: FrameworkEntityContracts.QueryNumberEqualsCriteria, idByFKOnlyOfBuildEventCode_1OfByFKOnly: FrameworkEntityContracts.QueryNumberEqualsCriteria) {
-        this.BuildLogQueryCriteriaByFKOnly  = new BuildLogQueryCriteriaByFKOnly(idByFKOnlyOfBuild_1OfByFKOnly, idByFKOnlyOfSolution_1OfByFKOnly, idByFKOnlyOfOrganization_1OfByFKOnly, idByFKOnlyOfOrganization_2OfByFKOnly, idByFKOnlyOfBuildEventCode_1OfByFKOnly);
+        this.BuildLogQueryCriteriaByFKOnly = new BuildLogQueryCriteriaByFKOnly(idByFKOnlyOfBuild_1OfByFKOnly, idByFKOnlyOfSolution_1OfByFKOnly, idByFKOnlyOfOrganization_1OfByFKOnly, idByFKOnlyOfOrganization_2OfByFKOnly, idByFKOnlyOfBuildEventCode_1OfByFKOnly);
     }
 
     public BuildLogQueryCriteriaByFKOnly: BuildLogQueryCriteriaByFKOnly;
 }
 
-export class BuildLogRequestMessageBuiltIn extends FrameworkCommonBLLEntities.BusinessLogicLayerRequestMessageBase<BuildLogDS.BuildLog[]>
+export class BuildLogRequestMessageBuiltIn extends FrameworkCommonBLLEntities.BusinessLogicLayerRequestMessageBase<DataSourceEntities.BuildLog[]>
 {
     constructor(businessLogicLayerRequestTypes: FrameworkCommonBLLEntities.BusinessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey: string, businessLogicLayerRequestID: string, currentIndex: number, pageSize: number, queryOrderByExpression: string) {
         super(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID, currentIndex, pageSize, queryOrderByExpression);
@@ -93,7 +93,7 @@ export class BuildLogRequestMessageBuiltIn extends FrameworkCommonBLLEntities.Bu
     }
 }
 
-export class BuildLogRequestMessageBuiltInOfIdentifier extends FrameworkCommonBLLEntities.BusinessLogicLayerRequestMessageBase<BuildLogDS.BuildLogIdentifier>
+export class BuildLogRequestMessageBuiltInOfIdentifier extends FrameworkCommonBLLEntities.BusinessLogicLayerRequestMessageBase<DataSourceEntities.BuildLogIdentifier>
 {
     constructor(businessLogicLayerRequestTypes: FrameworkCommonBLLEntities.BusinessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey: string, businessLogicLayerRequestID: string, currentIndex: number, pageSize: number, queryOrderByExpression: string) {
         super(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID, currentIndex, pageSize, queryOrderByExpression);
@@ -101,18 +101,18 @@ export class BuildLogRequestMessageBuiltInOfIdentifier extends FrameworkCommonBL
     }
 }
 
-export class BuildLogResponseMessageBuiltIn extends FrameworkCommonBLLEntities.BusinessLogicLayerResponseMessageBase<BuildLogDS.BuildLog[]>
+export class BuildLogResponseMessageBuiltIn extends FrameworkCommonBLLEntities.BusinessLogicLayerResponseMessageBase<DataSourceEntities.BuildLog[]>
 {
 
 }
 export module BuildLogResponseMessageBuiltIn {
-    export class Default extends FrameworkCommonBLLEntities.BusinessLogicLayerResponseMessageBase<BuildLogDS.BuildLog.Default[]>
+    export class Default extends FrameworkCommonBLLEntities.BusinessLogicLayerResponseMessageBase<DataSourceEntities.BuildLog.Default[]>
     {
     }
-    export class DefaultGroupedDataView extends FrameworkCommonBLLEntities.BusinessLogicLayerResponseMessageBase<BuildLogDS.BuildLog.DefaultGroupedDataView[]>
+    export class DefaultGroupedDataView extends FrameworkCommonBLLEntities.BusinessLogicLayerResponseMessageBase<DataSourceEntities.BuildLog.DefaultGroupedDataView[]>
     {
     }
-    export class KeyInformation extends FrameworkCommonBLLEntities.BusinessLogicLayerResponseMessageBase<BuildLogDS.BuildLog.KeyInformation[]>
+    export class KeyInformation extends FrameworkCommonBLLEntities.BusinessLogicLayerResponseMessageBase<DataSourceEntities.BuildLog.KeyInformation[]>
     {
     }
 }

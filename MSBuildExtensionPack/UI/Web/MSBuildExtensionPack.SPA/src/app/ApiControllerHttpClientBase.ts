@@ -15,7 +15,7 @@ import * as FrameworkViewModels from './Framework.ViewModels';
 @Injectable()
 export class ApiControllerHttpClientBase {
     public static WebApiRootUrlAppSettingName: string = "WebApiRootUrl";
-    RootPath: string;
+    public RootPath: string;
     public ControllerName: string;
     public Client: HttpClient;// = new HttpClient(); need initialization
     constructor(rootPath: string) {
@@ -44,7 +44,9 @@ export class ApiControllerHttpClientBase {
         var parametersInString: string = parametersInList.join("&");
         return ApiControllerHttpClientBase.GetHttpRequestUrl(this.RootPath, this.ControllerName, actionName, parametersInString);
     }
-
+    //public GetHttpRequestUrl(actionName: string): string {
+    //    return ApiControllerHttpClientBase.GetHttpRequestUrl(this.RootPath, this.ControllerName, actionName, null);
+    //}
     // https://blog.mariusschulz.com/2016/12/09/typescript-2-1-async-await-for-es3-es5
     // https://medium.com/@bluepnume/learn-about-promises-before-you-start-using-async-await-eb148164a9c8
     // this is not an async method
@@ -87,8 +89,8 @@ export class ApiControllerHttpClientBase {
         return null;
     }
 
-    public Post<TViewModel>(url: string, vm: TViewModel): TViewModel {
-        this.Client.post<TViewModel>(url, vm).subscribe(
+    public Post<TRequest, TResponse>(url: string, vm: TRequest): TResponse {
+        this.Client.post<TResponse>(url, vm).subscribe(
             res => {
                 console.log(res);
                 return res;
