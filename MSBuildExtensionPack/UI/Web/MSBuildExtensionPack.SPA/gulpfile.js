@@ -3,11 +3,11 @@ var gulp = require('gulp'),
     gutil = require('gulp-util');
 
 // create a default task and just log a message
-gulp.task('resx-to-typescript', function () {
-    var resxToTypeScript = require('resx-to-typescript');
-    resxToTypeScript.execute('Resources', '../../../../Frameworks/Framework.Resx', '/src/app/localization');
-    resxToTypeScript.execute('Resources', '../../../Core/Resx', '/src/app/localization');
-});
+//gulp.task('resx-to-typescript', function () {
+//    var resxToTypeScript = require('resx-to-typescript');
+//    resxToTypeScript.execute('Resources', '../../../../Frameworks/Framework.Resx', '/src/app/localization');
+//    resxToTypeScript.execute('Resources', '../../../Core/Resx', '/src/app/localization');
+//});
 
 //gulp.task('clean', function () {
 //    //del is an async function and not a gulp plugin (just standard nodejs)
