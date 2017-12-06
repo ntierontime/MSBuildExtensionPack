@@ -113,10 +113,10 @@ export class BuildLogApiControllerClient extends Net.ApiControllerHttpClientBase
         var url: string = super.GetHttpRequestUrl(BuildLogApiControllerClient.ActionName_GetWPEntityRelatedOfBuildLogVM, parameters);
         return super.Get<ViewModelData.WPEntityRelatedOfBuildLogVM>(url);
     }
-    //public static ActionName_HeartBeat: string = "HeartBeat";
-    //public HeartBeatAsync(): HttpResponse {
-    //    var url: string = super.GetHttpRequestUrl(BuildLogApiControllerClient.ActionName_HeartBeat, null);
-    //    var response = Client.Get(url);
-    //    return response;
-    //}
+    public static ActionName_HeartBeat: string = "HeartBeat";
+    public HeartBeatAsync(): Observable<HttpResponse<any>> {
+        var url: string = super.GetHttpRequestUrl(BuildLogApiControllerClient.ActionName_HeartBeat, null);
+        var response = this.Client.get<HttpResponse<any>>(url);
+        return response;
+    }
 }
