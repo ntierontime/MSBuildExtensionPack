@@ -36,14 +36,15 @@
     "angular-in-memory-web-api": "~0.3.0",
     "core-js": "^2.4.1",
     "del": "^3.0.0",
+    "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-install": "^1.1.0",
     "gulp-uglify": "^3.0.0",
+    "moment": "^2.19.3",
     "resx-to-typescript": "1.0.15",
     "rxjs": "^5.5.2",
     "systemjs": "0.19.40",
-    "zone.js": "^0.8.4",
-    "moment": "^2.19.3"
+    "zone.js": "^0.8.4"
   },
   "devDependencies": {
     "@angular/cli": "^1.5.5",
