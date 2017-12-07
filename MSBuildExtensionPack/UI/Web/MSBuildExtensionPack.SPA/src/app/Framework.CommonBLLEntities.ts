@@ -68,7 +68,7 @@ export class BusinessLogicLayerResponseMessageBase<TResponse> {
     public BusinessLogicLayerRequestID: string;
     public BusinessLogicLayerResponseID: string;
     public Message: TResponse;
-    public DataStreamServiceResult: Framework.DataStreamServiceResult;
+    //public DataStreamServiceResult: Framework.DataStreamServiceResult;
     //public GetStatusMessage(): string {
     //    return Framework.Resx.UIStringResource.ResourceManager.GetString(this.BusinessLogicLayerResponseStatus.ToString());
     //}

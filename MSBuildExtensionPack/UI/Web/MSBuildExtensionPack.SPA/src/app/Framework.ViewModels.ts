@@ -110,6 +110,96 @@ export class ViewModelBase<TSearchCriteria, TSearchResult>
     }
 }
 
+export class ViewModelBaseWithResultAndUIElement<TSearchCriteria, TSearchResultEntity>
+{
+  constructor() {
+    //this.Criteria = new TSearchCriteria();
+    //PopulateAllUIElements(this, 1);
+  }
+  public EntityName: string;
+  public ViewName: string;
+  public EntityCollection: TSearchResultEntity;
+  public SearchStatus: FrameworkEntityContracts.SearchStatus;
+  public QueryPagingSetting: FrameworkEntityContracts.QueryPagingSetting;
+  public GetDefaultQueryPagingSetting(): FrameworkEntityContracts.QueryPagingSetting {
+    var queryPagingSetting: FrameworkEntityContracts.QueryPagingSetting = new FrameworkEntityContracts.QueryPagingSetting(-1, -1);
+    if (queryPagingSetting.CountOfPages == 0 || queryPagingSetting.CountOfRecords == 0) {
+      queryPagingSetting.CurrentPage = 0;
+    }
+    return queryPagingSetting;
+  }
+  protected GetQueryPagingSettingFromQueryPagingResult(queryPagingResult: FrameworkEntityContracts.QueryPagingResult): FrameworkEntityContracts.QueryPagingSetting {
+    var queryPagingSetting: FrameworkEntityContracts.QueryPagingSetting = new FrameworkEntityContracts.QueryPagingSetting(-1, -1);
+    queryPagingSetting.CountOfRecords = queryPagingResult.CountOfRecords;
+    queryPagingSetting.PageSize = queryPagingResult.PageSize;
+    queryPagingSetting.CurrentPage = queryPagingResult.CurrentIndexOfStartRecord / queryPagingResult.PageSize + 1;
+    queryPagingSetting.RecordCountOfCurrentPage = queryPagingResult.RecordCountOfCurrentPage;
+    return queryPagingSetting;
+  }
+  protected m_QueryOrderBySettingCollecionInString: string;
+  public get QueryOrderBySettingCollecionInString(): string {
+    if (this.m_QueryOrderBySettingCollecionInString != null && this.m_QueryOrderBySettingCollecionInString != "" && this.ListOfQueryOrderBySettingCollecionInString != null) {
+      this.m_QueryOrderBySettingCollecionInString = this.ListOfQueryOrderBySettingCollecionInString[0].Value;
+    }
+    return this.m_QueryOrderBySettingCollecionInString;
+  }
+  public set QueryOrderBySettingCollecionInString(value: string) {
+    if (this.m_QueryOrderBySettingCollecionInString != value) {
+      this.m_QueryOrderBySettingCollecionInString = value;
+      if (this.m_QueryOrderBySettingCollecionInString != null && this.m_QueryOrderBySettingCollecionInString != "") {
+        this.QueryOrderBySettingCollection = []; // TODO: new FrameworkEntityContracts.QueryOrderBySetting[](this.m_QueryOrderBySettingCollecionInString)
+      }
+    }
+  }
+  public OriginalQueryOrderBySettingCollecionInString: string;
+  public ListOfQueryOrderBySettingCollecionInString: Framework.NameValuePair[];
+  public QueryOrderBySettingCollection: FrameworkEntityContracts.QueryOrderBySetting[];
+  public GetDefaultListOfQueryOrderBySettingCollecionInString(): Framework.NameValuePair[] {
+    return null;
+  }
+  public ListOfDataExport: Framework.NameValuePair[];
+  public GetPrimaryInformationEntity(): ViewModelBase<TSearchCriteria, TSearchResultEntity> {
+    var vm: ViewModelBase<TSearchCriteria, TSearchResultEntity>;
+    vm = new ViewModelBase<TSearchCriteria, TSearchResultEntity>();
+    vm.Criteria = this.Criteria;
+    vm.ListOfQueryOrderBySettingCollecionInString = this.ListOfQueryOrderBySettingCollecionInString;
+    vm.QueryOrderBySettingCollecionInString = this.QueryOrderBySettingCollecionInString;
+    vm.OriginalQueryOrderBySettingCollecionInString = this.OriginalQueryOrderBySettingCollecionInString;
+    vm.QueryPagingSetting = this.QueryPagingSetting;
+    return vm;
+  }
+
+  public GetDefaultPerViewModel(): void {
+
+  }
+  public Criteria: TSearchCriteria;
+  protected Search(): void {
+    if (this.QueryPagingSetting != null && this.QueryPagingSetting.CurrentPage == 0) {
+      this.QueryPagingSetting.CurrentPage = 1;
+    }
+    this.DoSearch(true);
+  }
+  protected CanSearch(): boolean {
+    return true;
+  }
+  protected LoadMore(): void {
+    if (this.QueryPagingSetting.CurrentPage == 0) {
+      this.QueryPagingSetting.CurrentPage = 1;
+      this.DoSearch(false);
+    }
+    else {
+      this.QueryPagingSetting.CurrentPage += 1;
+      this.DoSearch(false);
+    }
+  }
+  protected DoSearch(isToClearExistingResult: boolean): void { throw new Error('not implemented'); }
+  public ContentData: FrameworkEntityContracts.ContentData;
+  public Cleanup(): void {
+  }
+  public StatusOfResult: FrameworkCommonBLLEntities.BusinessLogicLayerResponseStatus;
+  public StatusMessageOfResult: string;
+}
+
 export class ViewModelEntityRelatedBase<TMasterEntity, TCriteriaOfMasterEntity>
 {
     constructor(criteriaOfMasterEntity: TCriteriaOfMasterEntity) {

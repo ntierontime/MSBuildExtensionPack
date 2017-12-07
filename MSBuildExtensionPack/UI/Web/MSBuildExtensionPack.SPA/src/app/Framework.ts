@@ -94,32 +94,32 @@ export enum DataServiceTypes {
     Excel2010 = 2
 }
 
-export class DataStreamServiceResult {
-    constructor(fileName: string, mimeType: string, contentLength: number) {
-        let path = require('path')
-        this.FileName = fileName;
-        this.FileExtension = path.GetExtension(fileName);
-        this.MIMEType = mimeType;
-        this.ContentLength = contentLength;
-        //this.Result = input;
-        if (this.FileExtension.toLowerCase() == ".xlsx" || this.FileExtension.toLowerCase() == "xlsx") {
-            this.DataServiceType = DataServiceTypes.Excel2010;
-        }
-        else if (this.FileExtension.toLowerCase() == ".csv" || this.FileExtension.toLowerCase() == "csv") {
-            this.DataServiceType = DataServiceTypes.Csv;
-        }
-        else {
-            this.DataServiceType = DataServiceTypes.Csv;
-        }
-    }
-    public DataServiceType: DataServiceTypes;
-    public ContentLength: number;
-    public MIMEType: string;
-    public FileName: string;
-    public FileExtension: string;
-    public TempFilePath: string;
-    //public Result: Stream;
-}
+//export class DataStreamServiceResult {
+//    constructor(fileName: string, mimeType: string, contentLength: number) {
+//        let path = require('path')
+//        this.FileName = fileName;
+//        this.FileExtension = path.GetExtension(fileName);
+//        this.MIMEType = mimeType;
+//        this.ContentLength = contentLength;
+//        //this.Result = input;
+//        if (this.FileExtension.toLowerCase() == ".xlsx" || this.FileExtension.toLowerCase() == "xlsx") {
+//            this.DataServiceType = DataServiceTypes.Excel2010;
+//        }
+//        else if (this.FileExtension.toLowerCase() == ".csv" || this.FileExtension.toLowerCase() == "csv") {
+//            this.DataServiceType = DataServiceTypes.Csv;
+//        }
+//        else {
+//            this.DataServiceType = DataServiceTypes.Csv;
+//        }
+//    }
+//    public DataServiceType: DataServiceTypes;
+//    public ContentLength: number;
+//    public MIMEType: string;
+//    public FileName: string;
+//    public FileExtension: string;
+//    public TempFilePath: string;
+//    //public Result: Stream;
+//}
 
 export class NavigationSetting {
     constructor(sourceTypeFullName: string,
@@ -235,35 +235,35 @@ export class UISelectedItemChangedMessage {
 }
 
 
-export class ApiControllerHttpClientBase {
-    public static WebApiRootUrlAppSettingName: string = "WebApiRootUrl";
-    RootPath: string;
-    public ControllerName: string;
-    protected static Client: HttpClient;// = new HttpClient(); need initialization
-    constructor(rootPath: string) {
-        this.RootPath = rootPath;
-    }
+//export class ApiControllerHttpClientBase {
+//    public static WebApiRootUrlAppSettingName: string = "WebApiRootUrl";
+//    RootPath: string;
+//    public ControllerName: string;
+//    protected static Client: HttpClient;// = new HttpClient(); need initialization
+//    constructor(rootPath: string) {
+//        this.RootPath = rootPath;
+//    }
 
-    public static GetHttpRequestUrl(rootPath: string, controllerName: string, actionName: string, parameters: string): string {
-        var retval: string = rootPath;
-        if (controllerName != null && controllerName != '') {
-            retval = retval + '/' + controllerName.trim();
-        }
-        if (actionName != null && actionName != '') {
-            retval = retval + '/' + actionName.trim();
-        }
-        if (parameters != null && parameters != '') {
-            retval = retval + '?' + parameters.trim();
-        }
-        return retval;
-    }
+//    public static GetHttpRequestUrl(rootPath: string, controllerName: string, actionName: string, parameters: string): string {
+//        var retval: string = rootPath;
+//        if (controllerName != null && controllerName != '') {
+//            retval = retval + '/' + controllerName.trim();
+//        }
+//        if (actionName != null && actionName != '') {
+//            retval = retval + '/' + actionName.trim();
+//        }
+//        if (parameters != null && parameters != '') {
+//            retval = retval + '?' + parameters.trim();
+//        }
+//        return retval;
+//    }
 
-    public GetHttpRequestUrl(actionName: string, parameters: [string, string][]): string {
-        var parametersInList: string[] = [];
-        parameters.forEach(function (kvPair) {
-            parametersInList.push(kvPair[0] + '=' + kvPair[1]);
-        });
-        var parametersInString: string = parametersInList.join("&");
-        return ApiControllerHttpClientBase.GetHttpRequestUrl(this.RootPath, this.ControllerName, actionName, parametersInString);
-    }
-}
+//    public GetHttpRequestUrl(actionName: string, parameters: [string, string][]): string {
+//        var parametersInList: string[] = [];
+//        parameters.forEach(function (kvPair) {
+//            parametersInList.push(kvPair[0] + '=' + kvPair[1]);
+//        });
+//        var parametersInString: string = parametersInList.join("&");
+//        return ApiControllerHttpClientBase.GetHttpRequestUrl(this.RootPath, this.ControllerName, actionName, parametersInString);
+//    }
+//}

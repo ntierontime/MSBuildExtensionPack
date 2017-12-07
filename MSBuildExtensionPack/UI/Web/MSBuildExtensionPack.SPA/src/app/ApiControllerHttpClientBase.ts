@@ -12,13 +12,12 @@ import * as FrameworkViewModels from './Framework.ViewModels';
 // $ npm install -g @angular/cli@latest
 // ??$ ng new nghttp01
 
-@Injectable()
 export class ApiControllerHttpClientBase {
     public static WebApiRootUrlAppSettingName: string = "WebApiRootUrl";
     public RootPath: string;
     public ControllerName: string;
-    public Client: HttpClient;// = new HttpClient(); need initialization
-    constructor(rootPath: string) {
+    //public Client: HttpClient = new HttpClient(); //need initialization
+    constructor(rootPath: string, private http: HttpClient) {
         this.RootPath = rootPath;
     }
 
@@ -37,12 +36,14 @@ export class ApiControllerHttpClientBase {
     }
 
     public GetHttpRequestUrl(actionName: string, parameters: [string, string][]): string {
-        var parametersInList: string[] = [];
+      var parametersInList: string[] = [];
+      if (parameters != null && parameters != undefined) {
         parameters.forEach(function (kvPair) {
-            parametersInList.push(kvPair[0] + '=' + kvPair[1]);
+          parametersInList.push(kvPair[0] + '=' + kvPair[1]);
         });
         var parametersInString: string = parametersInList.join("&");
-        return ApiControllerHttpClientBase.GetHttpRequestUrl(this.RootPath, this.ControllerName, actionName, parametersInString);
+      }
+      return ApiControllerHttpClientBase.GetHttpRequestUrl(this.RootPath, this.ControllerName, actionName, parametersInString);
     }
     //public GetHttpRequestUrl(actionName: string): string {
     //    return ApiControllerHttpClientBase.GetHttpRequestUrl(this.RootPath, this.ControllerName, actionName, null);
@@ -51,7 +52,7 @@ export class ApiControllerHttpClientBase {
     // https://medium.com/@bluepnume/learn-about-promises-before-you-start-using-async-await-eb148164a9c8
     // this is not an async method
     public Get<TResponse>(url: string): TResponse {
-        this.Client.get<TResponse>(url).subscribe(
+      this.http.get<TResponse>(url).subscribe(
             data => {
                 console.log(data);
                 return data;
@@ -77,7 +78,7 @@ export class ApiControllerHttpClientBase {
     //}
 
     public GetEntityRelated<TViewModel>(url: string): TViewModel {
-        this.Client.get<TViewModel>(url).subscribe(
+      this.http.get<TViewModel>(url).subscribe(
             data => {
                 console.log(data);
                 return data;
@@ -90,7 +91,7 @@ export class ApiControllerHttpClientBase {
     }
 
     public Post<TRequest, TResponse>(url: string, vm: TRequest): TResponse {
-        this.Client.post<TResponse>(url, vm).subscribe(
+      this.http.post<TResponse>(url, vm).subscribe(
             res => {
                 console.log(res);
                 return res;
@@ -106,7 +107,7 @@ export class ApiControllerHttpClientBase {
     }
 
     public Put<TRequest, TResponse>(url: string, request: TRequest): TResponse {
-        this.Client.put<TResponse>(url, request).subscribe(
+      this.http.put<TResponse>(url, request).subscribe(
             res => {
                 console.log(res);
                 return res;
@@ -121,7 +122,7 @@ export class ApiControllerHttpClientBase {
         return null;
     }
     public Delete<TResponse>(url: string): TResponse {
-        this.Client.delete<TResponse>(url).subscribe(
+      this.http.delete<TResponse>(url).subscribe(
             res => {
                 console.log(res);
                 return res;
