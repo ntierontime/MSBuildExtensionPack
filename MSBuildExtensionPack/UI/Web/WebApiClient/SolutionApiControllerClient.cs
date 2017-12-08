@@ -88,7 +88,7 @@ namespace MSBuildExtensionPack.WebApiClient
         public async Task<MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn> DeleteEntityAsync(
             MSBuildExtensionPack.DataSourceEntities.Solution input)
         {
-            string url = GetHttpRequestUrl(ActionName_InsertEntity);
+            string url = GetHttpRequestUrl(ActionName_DeleteEntity);
 
             return await Post<MSBuildExtensionPack.DataSourceEntities.Solution, MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn>(url, input);
         }
@@ -107,7 +107,7 @@ namespace MSBuildExtensionPack.WebApiClient
             System.Int64 id
             )
         {
-            string url = GetHttpRequestUrl(ActionName_InsertEntity);
+            string url = GetHttpRequestUrl(ActionName_DeleteByIdentifier);
 
             return await Delete<MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn>(url);
         }

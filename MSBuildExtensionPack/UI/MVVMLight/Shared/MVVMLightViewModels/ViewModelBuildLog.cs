@@ -23,7 +23,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
     /// </para>
     /// </summary>
     public class WPCommonOfBuildLogVM
-        : Framework.Xaml.ViewModelBaseWithResultAndUIElement<MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon, MSBuildExtensionPack.DataSourceEntities.BuildLogCollection, MSBuildExtensionPack.DataSourceEntities.BuildLog, MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection, MSBuildExtensionPack.DataSourceEntities.BuildLog.Default>
+        : Framework.Xaml.ViewModelBaseWithResultAndUIElement<MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon, MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection, MSBuildExtensionPack.DataSourceEntities.BuildLog.Default>
     {
         #region override string EntityName and ViewName
 
@@ -56,7 +56,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         /// </summary>
         public WPCommonOfBuildLogVM()
         {
-            this.EntityCollectionDefault = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default>();
+            this.EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default>();
 
             ////if (IsInDesignMode)
             ////{
@@ -82,7 +82,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
 
-            this.m_EntityCollectionDefault.Clear();
+            this.m_EntityCollection.Clear();
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
         }
@@ -123,19 +123,19 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                     this.StatusOfResult = result.StatusOfResult;
                     if (result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
                     {
-                        if (this.EntityCollectionDefault == null)
+                        if (this.EntityCollection == null)
                         {
-                            this.EntityCollectionDefault = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default>();
+                            this.EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default>();
                         }
                         if (isToClearExistingResult)
                         {
-                            this.EntityCollectionDefault = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default>(result.Result.ToList());
+                            this.EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default>(result.Result.ToList());
                         }
                         else
                         {
                             foreach (var item in result.Result)
                             {
-                                this.EntityCollectionDefault.Add(item);
+                                this.EntityCollection.Add(item);
                             }
                         }
 
