@@ -1,5 +1,5 @@
 ﻿import { Injectable, Inject } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpResponse, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
@@ -25,118 +25,32 @@ export class ViewModelBase<TSearchCriteria, TSearchResult>
     public statusOfResult: FrameworkCommonBLLEntities.BusinessLogicLayerResponseStatus;
     public statusMessageOfResult: string;
     public result: TSearchResult;
-
-    public GetPrimaryInformationEntity(): ViewModelBase<TSearchCriteria, TSearchResult> {
-        var vm: ViewModelBase<TSearchCriteria, TSearchResult>;
-        vm = new ViewModelBase<TSearchCriteria, TSearchResult>();
-        vm.criteria = this.criteria;
-        vm.listOfQueryOrderBySettingCollecionInString = this.listOfQueryOrderBySettingCollecionInString;
-        vm.queryOrderBySettingCollecionInString = this.queryOrderBySettingCollecionInString;
-        vm.originalQueryOrderBySettingCollecionInString = this.originalQueryOrderBySettingCollecionInString;
-        vm.queryPagingSetting = this.queryPagingSetting;
-        return vm;
-    }
-    public PopulateAllUIElements(vmFromTempData: ViewModelBase<TSearchCriteria, TSearchResult>, currentPage: number): void {
-        if (this.criteria == null) {
-            if (vmFromTempData != null && vmFromTempData.criteria != null) {
-                this.criteria = vmFromTempData.criteria;
-            }
-            else {
-                //this.Criteria = new TSearchCriteria();
-            }
-        }
-        if (this.listOfQueryOrderBySettingCollecionInString == null) {
-            if (vmFromTempData != null && vmFromTempData.listOfQueryOrderBySettingCollecionInString != null) {
-                this.listOfQueryOrderBySettingCollecionInString = vmFromTempData.listOfQueryOrderBySettingCollecionInString;
-            }
-            else {
-                this.listOfQueryOrderBySettingCollecionInString = this.GetDefaultListOfQueryOrderBySettingCollecionInString();
-            }
-        }
-        if (this.queryPagingSetting == null) {
-            if (vmFromTempData != null && vmFromTempData.queryPagingSetting != null) {
-                this.queryPagingSetting = vmFromTempData.queryPagingSetting;
-                this.queryPagingSetting.CurrentPage = currentPage;
-            }
-            else {
-                this.queryPagingSetting = this.GetDefaultQueryPagingSetting();
-            }
-        }
-        else {
-            if (this.queryPagingSetting.PageSizeChanged) {
-                this.queryPagingSetting.CurrentPage = 1;
-                this.queryPagingSetting.OriginalPageSize = this.queryPagingSetting.PageSize;
-            }
-            else if (this.originalQueryOrderBySettingCollecionInString != this.queryOrderBySettingCollecionInString) {
-                this.originalQueryOrderBySettingCollecionInString = this.queryOrderBySettingCollecionInString;
-                this.queryPagingSetting.CurrentPage = 1;
-            }
-            else {
-                this.queryPagingSetting.CurrentPage = 1;
-            }
-        }
-        if (this.queryOrderBySettingCollecionInString != null && this.queryOrderBySettingCollecionInString != '') {
-            if (vmFromTempData != null && vmFromTempData.queryOrderBySettingCollecionInString != null && vmFromTempData.queryOrderBySettingCollecionInString != '') {
-                this.queryOrderBySettingCollecionInString = vmFromTempData.queryOrderBySettingCollecionInString;
-            }
-        }
-        //if (!string.IsNullOrWhiteSpace(this.QueryOrderBySettingCollecionInString)) {
-        //    this.QueryOrderBySettingCollection = new FrameworkEntityContracts.QueryOrderBySettingCollection(this.QueryOrderBySettingCollecionInString);
-        //}
-        this.GetDefaultPerViewModel();
-        if (this.listOfDataExport == null) {
-            if (vmFromTempData != null && vmFromTempData.listOfDataExport != null) {
-                this.listOfDataExport = vmFromTempData.listOfDataExport;
-            }
-            else {
-                this.listOfDataExport = [];
-                let temp: Framework.NameValuePair;
-                temp = new Framework.NameValuePair("Csv", "Csv");
-                this.listOfDataExport.push(temp);
-                temp = new Framework.NameValuePair("Excel2010", "Excel2010");
-                this.listOfDataExport.push(temp);
-            }
-        }
-    }
-    public GetDefaultListOfQueryOrderBySettingCollecionInString(): Framework.NameValuePair[] {
-        return null;
-    }
-    public GetDefaultQueryPagingSetting(): FrameworkEntityContracts.QueryPagingSetting {
-        var queryPagingSetting: FrameworkEntityContracts.QueryPagingSetting = new FrameworkEntityContracts.QueryPagingSetting(-1, -1);
-        return queryPagingSetting;
-    }
-    public GetDefaultPerViewModel(): void {
-
-    }
 }
 
 export class ViewModelBaseWithResultAndUIElement<TSearchCriteria, TSearchResultEntity>
 {
-  constructor() {
-    //this.Criteria = new TSearchCriteria();
-    //PopulateAllUIElements(this, 1);
+  protected http: HttpClient;
+  protected url: string;
+  constructor(http: HttpClient, url: string) {
+    this.http = http;
+    this.url = url;
+    this.QueryPagingSetting = this.GetDefaultQueryPagingSetting();
   }
   public EntityName: string;
   public ViewName: string;
-  public EntityCollection: TSearchResultEntity;
+  public Criteria: TSearchCriteria;
   public SearchStatus: FrameworkEntityContracts.SearchStatus;
+  public StatusOfResult: FrameworkCommonBLLEntities.BusinessLogicLayerResponseStatus;
+  public StatusMessageOfResult: string;
+  public EntityCollection: TSearchResultEntity[];
   public QueryPagingSetting: FrameworkEntityContracts.QueryPagingSetting;
-  public GetDefaultQueryPagingSetting(): FrameworkEntityContracts.QueryPagingSetting {
-    var queryPagingSetting: FrameworkEntityContracts.QueryPagingSetting = new FrameworkEntityContracts.QueryPagingSetting(-1, -1);
-    if (queryPagingSetting.CountOfPages == 0 || queryPagingSetting.CountOfRecords == 0) {
-      queryPagingSetting.CurrentPage = 0;
-    }
-    return queryPagingSetting;
-  }
-  protected GetQueryPagingSettingFromQueryPagingResult(queryPagingResult: FrameworkEntityContracts.QueryPagingResult): FrameworkEntityContracts.QueryPagingSetting {
-    var queryPagingSetting: FrameworkEntityContracts.QueryPagingSetting = new FrameworkEntityContracts.QueryPagingSetting(-1, -1);
-    queryPagingSetting.CountOfRecords = queryPagingResult.CountOfRecords;
-    queryPagingSetting.PageSize = queryPagingResult.PageSize;
-    queryPagingSetting.CurrentPage = queryPagingResult.CurrentIndexOfStartRecord / queryPagingResult.PageSize + 1;
-    queryPagingSetting.RecordCountOfCurrentPage = queryPagingResult.RecordCountOfCurrentPage;
-    return queryPagingSetting;
-  }
+  public ContentData: FrameworkEntityContracts.ContentData;
+  public OriginalQueryOrderBySettingCollecionInString: string;
+  public ListOfQueryOrderBySettingCollecionInString: Framework.NameValuePair[];
+  public QueryOrderBySettingCollection: FrameworkEntityContracts.QueryOrderBySetting[];
+  public ListOfDataExport: Framework.NameValuePair[];
   protected m_QueryOrderBySettingCollecionInString: string;
+
   public get QueryOrderBySettingCollecionInString(): string {
     if (this.m_QueryOrderBySettingCollecionInString != null && this.m_QueryOrderBySettingCollecionInString != "" && this.ListOfQueryOrderBySettingCollecionInString != null) {
       this.m_QueryOrderBySettingCollecionInString = this.ListOfQueryOrderBySettingCollecionInString[0].Value;
@@ -151,16 +65,30 @@ export class ViewModelBaseWithResultAndUIElement<TSearchCriteria, TSearchResultE
       }
     }
   }
-  public OriginalQueryOrderBySettingCollecionInString: string;
-  public ListOfQueryOrderBySettingCollecionInString: Framework.NameValuePair[];
-  public QueryOrderBySettingCollection: FrameworkEntityContracts.QueryOrderBySetting[];
+
+  public GetDefaultQueryPagingSetting(): FrameworkEntityContracts.QueryPagingSetting {
+
+    var queryPagingSetting: FrameworkEntityContracts.QueryPagingSetting = new FrameworkEntityContracts.QueryPagingSetting(-1, -1);
+    if (queryPagingSetting.CountOfPages == 0 || queryPagingSetting.CountOfRecords == 0) {
+      queryPagingSetting.CurrentPage = 0;
+    }
+    return queryPagingSetting;
+  }
+  protected GetQueryPagingSettingFromQueryPagingResult(queryPagingResult: FrameworkEntityContracts.QueryPagingResult): FrameworkEntityContracts.QueryPagingSetting {
+    var queryPagingSetting: FrameworkEntityContracts.QueryPagingSetting = new FrameworkEntityContracts.QueryPagingSetting(-1, -1);
+    queryPagingSetting.CountOfRecords = queryPagingResult.CountOfRecords;
+    queryPagingSetting.PageSize = queryPagingResult.PageSize;
+    queryPagingSetting.CurrentPage = queryPagingResult.CurrentIndexOfStartRecord / queryPagingResult.PageSize + 1;
+    queryPagingSetting.RecordCountOfCurrentPage = queryPagingResult.RecordCountOfCurrentPage;
+    return queryPagingSetting;
+  }
+
   public GetDefaultListOfQueryOrderBySettingCollecionInString(): Framework.NameValuePair[] {
     return null;
   }
-  public ListOfDataExport: Framework.NameValuePair[];
-  public GetPrimaryInformationEntity(): ViewModelBase<TSearchCriteria, TSearchResultEntity> {
-    var vm: ViewModelBase<TSearchCriteria, TSearchResultEntity>;
-    vm = new ViewModelBase<TSearchCriteria, TSearchResultEntity>();
+  public GetPrimaryInformationEntity(): ViewModelBase<TSearchCriteria, TSearchResultEntity[]> {
+    var vm: ViewModelBase<TSearchCriteria, TSearchResultEntity[]>;
+    vm = new ViewModelBase<TSearchCriteria, TSearchResultEntity[]>();
     vm.criteria = this.Criteria;
     vm.listOfQueryOrderBySettingCollecionInString = this.ListOfQueryOrderBySettingCollecionInString;
     vm.queryOrderBySettingCollecionInString = this.QueryOrderBySettingCollecionInString;
@@ -169,19 +97,17 @@ export class ViewModelBaseWithResultAndUIElement<TSearchCriteria, TSearchResultE
     return vm;
   }
 
-  public GetDefaultPerViewModel(): void {
-
-  }
-  public Criteria: TSearchCriteria;
   protected Search(): void {
     if (this.QueryPagingSetting != null && this.QueryPagingSetting.CurrentPage == 0) {
       this.QueryPagingSetting.CurrentPage = 1;
     }
     this.DoSearch(true);
   }
+
   protected CanSearch(): boolean {
     return true;
   }
+
   protected LoadMore(): void {
     if (this.QueryPagingSetting.CurrentPage == 0) {
       this.QueryPagingSetting.CurrentPage = 1;
@@ -192,12 +118,35 @@ export class ViewModelBaseWithResultAndUIElement<TSearchCriteria, TSearchResultE
       this.DoSearch(false);
     }
   }
-  protected DoSearch(isToClearExistingResult: boolean): void { throw new Error('not implemented'); }
-  public ContentData: FrameworkEntityContracts.ContentData;
+
+  protected CanLoadMore(): boolean {
+    return true;
+  }
+
+  protected DoSearch(isToClearExistingResult: boolean): void {
+    let request = this.GetPrimaryInformationEntity();
+    this.http.post<ViewModelBase<TSearchCriteria, TSearchResultEntity[]>>(this.url, request).subscribe(
+      resp => {
+        this.DoSearchCallBack(isToClearExistingResult, resp);
+      },
+      (err: HttpErrorResponse) => {
+        console.log(err.message);
+      }
+    );
+  }
+
+  public DoSearchCallBack(isToClearExistingResult: boolean, response: ViewModelBase<TSearchCriteria, TSearchResultEntity[]>): void {
+    if (isToClearExistingResult || this.EntityCollection === undefined || this.EntityCollection === null)
+      this.EntityCollection = [];
+    this.EntityCollection = this.EntityCollection.concat(response.result);
+    this.StatusMessageOfResult = response.statusMessageOfResult;
+    this.StatusOfResult = response.statusOfResult;
+    this.QueryPagingSetting = response.queryPagingSetting;
+    this.SearchStatus = FrameworkEntityContracts.SearchStatus.SearchResultLoaded;
+  }
+
   public Cleanup(): void {
   }
-  public StatusOfResult: FrameworkCommonBLLEntities.BusinessLogicLayerResponseStatus;
-  public StatusMessageOfResult: string;
 }
 
 export class ViewModelEntityRelatedBase<TMasterEntity, TCriteriaOfMasterEntity>
