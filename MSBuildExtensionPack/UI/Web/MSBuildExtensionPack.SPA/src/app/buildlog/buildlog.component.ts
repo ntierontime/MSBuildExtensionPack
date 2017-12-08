@@ -19,15 +19,16 @@ import * as ViewModelData from '../ViewModelData/BuildLog';
   templateUrl: './buildlog.component.html',
   styleUrls: ['./buildlog.component.css']
 })
+@Injectable()
 export class BuildlogComponent extends FrameworkViewModels.ViewModelBaseWithResultAndUIElement<CommonBLLEntities.BuildLogChainedQueryCriteriaCommon, DataSourceEntities.BuildLog.Default[]> implements OnInit {
 
   constructor(private http: HttpClient) {
     super();
-    //this.WebApiClient = new WebApi.BuildLogApiControllerClient("localhost:63242");
   }
 
   ngOnInit() {
     this.Criteria = new CommonBLLEntities.BuildLogChainedQueryCriteriaCommon(new FrameworkEntityContracts.QueryNumberEqualsCriteria(false, null), new FrameworkEntityContracts.QueryNumberEqualsCriteria(false, null), new FrameworkEntityContracts.QueryNumberEqualsCriteria(false, null), new FrameworkEntityContracts.QueryNumberEqualsCriteria(false, null), new FrameworkEntityContracts.QueryNumberEqualsCriteria(false, null), new FrameworkEntityContracts.QuerySystemDateTimeRangeCriteria(false, false, null, false, null), new FrameworkEntityContracts.QuerySystemStringContainsCriteria(false, null));
+    this.EntityCollection = [];
     this.DoSearch(true);
   }
 
@@ -41,21 +42,23 @@ export class BuildlogComponent extends FrameworkViewModels.ViewModelBaseWithResu
   }
 
   protected DoSearch(isToClearExistingResult: boolean): void {
-    try {
-      let request = new ViewModelData.WPCommonOfBuildLogVM();
-      request.Criteria = this.Criteria;
-      //private http: HttpClient
-      //this.http.post<ViewModelData.WPCommonOfBuildLogVM>('/api/buildlog/WPCommonOfBuildLogVM', request).subscribe(data => {
-      //  // Read the result field from the JSON response.
-      //  this.EntityCollection = data.Result;
-      //});
-      //let response = this.WebApiClient.GetWPCommonOfBuildLogVMAsync(request);
-      //this.EntityCollection = response.Result;
-    }
-    catch (e) {
-      console.log(e);
-    }
+    var request = new ViewModelData.WPCommonOfBuildLogVM();
+    request.criteria = this.Criteria;;
+    request.queryPagingSetting = new FrameworkEntityContracts.QueryPagingSetting(1, 10);
+    this.http.post<ViewModelData.WPCommonOfBuildLogVM>('http://localhost:63242/api/BuildLogApi/GetWPCommonOfBuildLogVM', request).subscribe(
+      resp => {
+        this.DoSearchCallBack(isToClearExistingResult, resp);
+      },
+      (err: HttpErrorResponse) => {
+        console.log(err.message);
+      }
+    );
+    console.log("aaaa");
   }
 
-    hero = 'Windstorm';
+  public DoSearchCallBack(isToClearExistingResult: boolean, resp: ViewModelData.WPCommonOfBuildLogVM): void {
+    if (isToClearExistingResult || this.EntityCollection === undefined || this.EntityCollection === null)
+      this.EntityCollection = [];
+    this.EntityCollection = this.EntityCollection.concat(resp.result);
+  }
 }

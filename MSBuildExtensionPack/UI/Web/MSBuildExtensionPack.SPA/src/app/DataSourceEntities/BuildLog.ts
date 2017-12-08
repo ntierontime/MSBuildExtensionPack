@@ -9,60 +9,60 @@ import * as Framework from '../Framework';
 export class BuildLog {
     constructor() {
     }
-    public Id: number;
-    public BuildId: number;
-    public BuildEventCodeId: number;
-    public Message: string;
-    public EventTime: Date;
+    public id: number;
+    public buildId: number;
+    public buildEventCodeId: number;
+    public message: string;
+    public eventTime: Date;
 }
 
 export namespace BuildLog {
     export class Default {
         constructor() {
         }
-        public Build_1_Name: string;
-        public Id: number;
-        public Solution_1Id: number;
-        public Solution_1_Name: string;
-        public Organization_1_UniqueidentifierColumn: Framework.Guid;
-        public Organization_1_UniqueIdentifier: Framework.Guid;
-        public Organization_1Id: number;
-        public Organization_1_Name: string;
-        public Organization_2_UniqueidentifierColumn: Framework.Guid;
-        public Organization_2Id: number;
-        public Organization_2_UniqueIdentifier: Framework.Guid;
-        public Organization_2_Name: string;
-        public BuildEventCode_1_Name: string;
-        public BuildId: number;
-        public BuildEventCodeId: number;
-        public Message: string;
-        public EventTime: Date;
+        public build_1_Name: string;
+        public id: number;
+        public solution_1Id: number;
+        public solution_1_Name: string;
+        public organization_1_UniqueidentifierColumn: Framework.Guid;
+        public organization_1_UniqueIdentifier: Framework.Guid;
+        public organization_1Id: number;
+        public organization_1_Name: string;
+        public organization_2_UniqueidentifierColumn: Framework.Guid;
+        public organization_2Id: number;
+        public organization_2_UniqueIdentifier: Framework.Guid;
+        public organization_2_Name: string;
+        public buildEventCode_1_Name: string;
+        public buildId: number;
+        public buildEventCodeId: number;
+        public message: string;
+        public eventTime: Date;
     }
 
     export class DefaultGroupedDataView {
         constructor() {
         }
-        public BuildId: number;
-        public BuildEventCodeId: number;
-        public CountPerFK: number;
-        public Name: string;
-        public Solution_1Id: number;
-        public Organization_1Id: number;
-        public Organization_2Id: number;
+        public buildId: number;
+        public buildEventCodeId: number;
+        public countPerFK: number;
+        public name: string;
+        public solution_1Id: number;
+        public organization_1Id: number;
+        public organization_2Id: number;
     }
 
     export class KeyInformation {
         constructor() {
-            this.Id = null;
-            this.BuildEventCodeId = null;
+          this.id = null;
+            this.buildEventCodeId = null;
         }
-        public Id: number;
-        public BuildEventCodeId: number;
+      public id: number;
+        public buildEventCodeId: number;
     }
 }
 export class BuildLogIdentifier {
     constructor(id: number) {
-        this.Id = id;
+        this.id = id;
     }
-    public Id: number;
+    public id: number;
 }

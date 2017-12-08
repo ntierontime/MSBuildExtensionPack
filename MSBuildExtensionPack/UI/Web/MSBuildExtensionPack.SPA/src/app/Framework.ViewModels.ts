@@ -11,90 +11,90 @@ import * as FrameworkCommonBLLEntities from './Framework.CommonBLLEntities';
 export class ViewModelBase<TSearchCriteria, TSearchResult>
 {
     constructor() {
-        this.StatusOfResult = FrameworkCommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady;
-        this.ContentData = new FrameworkEntityContracts.ContentData();
+        this.statusOfResult = FrameworkCommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady;
+        this.contentData = new FrameworkEntityContracts.ContentData();
     }
-    public ContentData: FrameworkEntityContracts.ContentData;
-    public Criteria: TSearchCriteria;
-    public QueryPagingSetting: FrameworkEntityContracts.QueryPagingSetting;
-    public QueryOrderBySettingCollecionInString: string;
-    public OriginalQueryOrderBySettingCollecionInString: string;
-    public ListOfQueryOrderBySettingCollecionInString: Framework.NameValuePair[];
-    public ListOfDataExport: Framework.NameValuePair[];
-    public QueryOrderBySettingCollection: FrameworkEntityContracts.QueryOrderBySetting[];
-    public StatusOfResult: FrameworkCommonBLLEntities.BusinessLogicLayerResponseStatus;
-    public StatusMessageOfResult: string;
-    public Result: TSearchResult;
+    public contentData: FrameworkEntityContracts.ContentData;
+    public criteria: TSearchCriteria;
+    public queryPagingSetting: FrameworkEntityContracts.QueryPagingSetting;
+    public queryOrderBySettingCollecionInString: string;
+    public originalQueryOrderBySettingCollecionInString: string;
+    public listOfQueryOrderBySettingCollecionInString: Framework.NameValuePair[];
+    public listOfDataExport: Framework.NameValuePair[];
+    public queryOrderBySettingCollection: FrameworkEntityContracts.QueryOrderBySetting[];
+    public statusOfResult: FrameworkCommonBLLEntities.BusinessLogicLayerResponseStatus;
+    public statusMessageOfResult: string;
+    public result: TSearchResult;
 
     public GetPrimaryInformationEntity(): ViewModelBase<TSearchCriteria, TSearchResult> {
         var vm: ViewModelBase<TSearchCriteria, TSearchResult>;
         vm = new ViewModelBase<TSearchCriteria, TSearchResult>();
-        vm.Criteria = this.Criteria;
-        vm.ListOfQueryOrderBySettingCollecionInString = this.ListOfQueryOrderBySettingCollecionInString;
-        vm.QueryOrderBySettingCollecionInString = this.QueryOrderBySettingCollecionInString;
-        vm.OriginalQueryOrderBySettingCollecionInString = this.OriginalQueryOrderBySettingCollecionInString;
-        vm.QueryPagingSetting = this.QueryPagingSetting;
+        vm.criteria = this.criteria;
+        vm.listOfQueryOrderBySettingCollecionInString = this.listOfQueryOrderBySettingCollecionInString;
+        vm.queryOrderBySettingCollecionInString = this.queryOrderBySettingCollecionInString;
+        vm.originalQueryOrderBySettingCollecionInString = this.originalQueryOrderBySettingCollecionInString;
+        vm.queryPagingSetting = this.queryPagingSetting;
         return vm;
     }
     public PopulateAllUIElements(vmFromTempData: ViewModelBase<TSearchCriteria, TSearchResult>, currentPage: number): void {
-        if (this.Criteria == null) {
-            if (vmFromTempData != null && vmFromTempData.Criteria != null) {
-                this.Criteria = vmFromTempData.Criteria;
+        if (this.criteria == null) {
+            if (vmFromTempData != null && vmFromTempData.criteria != null) {
+                this.criteria = vmFromTempData.criteria;
             }
             else {
                 //this.Criteria = new TSearchCriteria();
             }
         }
-        if (this.ListOfQueryOrderBySettingCollecionInString == null) {
-            if (vmFromTempData != null && vmFromTempData.ListOfQueryOrderBySettingCollecionInString != null) {
-                this.ListOfQueryOrderBySettingCollecionInString = vmFromTempData.ListOfQueryOrderBySettingCollecionInString;
+        if (this.listOfQueryOrderBySettingCollecionInString == null) {
+            if (vmFromTempData != null && vmFromTempData.listOfQueryOrderBySettingCollecionInString != null) {
+                this.listOfQueryOrderBySettingCollecionInString = vmFromTempData.listOfQueryOrderBySettingCollecionInString;
             }
             else {
-                this.ListOfQueryOrderBySettingCollecionInString = this.GetDefaultListOfQueryOrderBySettingCollecionInString();
+                this.listOfQueryOrderBySettingCollecionInString = this.GetDefaultListOfQueryOrderBySettingCollecionInString();
             }
         }
-        if (this.QueryPagingSetting == null) {
-            if (vmFromTempData != null && vmFromTempData.QueryPagingSetting != null) {
-                this.QueryPagingSetting = vmFromTempData.QueryPagingSetting;
-                this.QueryPagingSetting.CurrentPage = currentPage;
+        if (this.queryPagingSetting == null) {
+            if (vmFromTempData != null && vmFromTempData.queryPagingSetting != null) {
+                this.queryPagingSetting = vmFromTempData.queryPagingSetting;
+                this.queryPagingSetting.CurrentPage = currentPage;
             }
             else {
-                this.QueryPagingSetting = this.GetDefaultQueryPagingSetting();
+                this.queryPagingSetting = this.GetDefaultQueryPagingSetting();
             }
         }
         else {
-            if (this.QueryPagingSetting.PageSizeChanged) {
-                this.QueryPagingSetting.CurrentPage = 1;
-                this.QueryPagingSetting.OriginalPageSize = this.QueryPagingSetting.PageSize;
+            if (this.queryPagingSetting.PageSizeChanged) {
+                this.queryPagingSetting.CurrentPage = 1;
+                this.queryPagingSetting.OriginalPageSize = this.queryPagingSetting.PageSize;
             }
-            else if (this.OriginalQueryOrderBySettingCollecionInString != this.QueryOrderBySettingCollecionInString) {
-                this.OriginalQueryOrderBySettingCollecionInString = this.QueryOrderBySettingCollecionInString;
-                this.QueryPagingSetting.CurrentPage = 1;
+            else if (this.originalQueryOrderBySettingCollecionInString != this.queryOrderBySettingCollecionInString) {
+                this.originalQueryOrderBySettingCollecionInString = this.queryOrderBySettingCollecionInString;
+                this.queryPagingSetting.CurrentPage = 1;
             }
             else {
-                this.QueryPagingSetting.CurrentPage = 1;
+                this.queryPagingSetting.CurrentPage = 1;
             }
         }
-        if (this.QueryOrderBySettingCollecionInString != null && this.QueryOrderBySettingCollecionInString != '') {
-            if (vmFromTempData != null && vmFromTempData.QueryOrderBySettingCollecionInString != null && vmFromTempData.QueryOrderBySettingCollecionInString != '') {
-                this.QueryOrderBySettingCollecionInString = vmFromTempData.QueryOrderBySettingCollecionInString;
+        if (this.queryOrderBySettingCollecionInString != null && this.queryOrderBySettingCollecionInString != '') {
+            if (vmFromTempData != null && vmFromTempData.queryOrderBySettingCollecionInString != null && vmFromTempData.queryOrderBySettingCollecionInString != '') {
+                this.queryOrderBySettingCollecionInString = vmFromTempData.queryOrderBySettingCollecionInString;
             }
         }
         //if (!string.IsNullOrWhiteSpace(this.QueryOrderBySettingCollecionInString)) {
         //    this.QueryOrderBySettingCollection = new FrameworkEntityContracts.QueryOrderBySettingCollection(this.QueryOrderBySettingCollecionInString);
         //}
         this.GetDefaultPerViewModel();
-        if (this.ListOfDataExport == null) {
-            if (vmFromTempData != null && vmFromTempData.ListOfDataExport != null) {
-                this.ListOfDataExport = vmFromTempData.ListOfDataExport;
+        if (this.listOfDataExport == null) {
+            if (vmFromTempData != null && vmFromTempData.listOfDataExport != null) {
+                this.listOfDataExport = vmFromTempData.listOfDataExport;
             }
             else {
-                this.ListOfDataExport = [];
+                this.listOfDataExport = [];
                 let temp: Framework.NameValuePair;
                 temp = new Framework.NameValuePair("Csv", "Csv");
-                this.ListOfDataExport.push(temp);
+                this.listOfDataExport.push(temp);
                 temp = new Framework.NameValuePair("Excel2010", "Excel2010");
-                this.ListOfDataExport.push(temp);
+                this.listOfDataExport.push(temp);
             }
         }
     }
@@ -161,11 +161,11 @@ export class ViewModelBaseWithResultAndUIElement<TSearchCriteria, TSearchResultE
   public GetPrimaryInformationEntity(): ViewModelBase<TSearchCriteria, TSearchResultEntity> {
     var vm: ViewModelBase<TSearchCriteria, TSearchResultEntity>;
     vm = new ViewModelBase<TSearchCriteria, TSearchResultEntity>();
-    vm.Criteria = this.Criteria;
-    vm.ListOfQueryOrderBySettingCollecionInString = this.ListOfQueryOrderBySettingCollecionInString;
-    vm.QueryOrderBySettingCollecionInString = this.QueryOrderBySettingCollecionInString;
-    vm.OriginalQueryOrderBySettingCollecionInString = this.OriginalQueryOrderBySettingCollecionInString;
-    vm.QueryPagingSetting = this.QueryPagingSetting;
+    vm.criteria = this.Criteria;
+    vm.listOfQueryOrderBySettingCollecionInString = this.ListOfQueryOrderBySettingCollecionInString;
+    vm.queryOrderBySettingCollecionInString = this.QueryOrderBySettingCollecionInString;
+    vm.originalQueryOrderBySettingCollecionInString = this.OriginalQueryOrderBySettingCollecionInString;
+    vm.queryPagingSetting = this.QueryPagingSetting;
     return vm;
   }
 
