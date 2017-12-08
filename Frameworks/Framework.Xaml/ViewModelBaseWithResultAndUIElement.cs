@@ -543,20 +543,20 @@ namespace Framework.Xaml
 
     //    #endregion constructor
 
-    //    protected ObservableCollection<TSearchResultDataViewItem> m_EntityCollectionDefault;
+    //    protected ObservableCollection<TSearchResultDataViewItem> m_EntityCollection;
 
     //    /// <summary>
     //    /// Gets or sets the Default DataView Item list.
     //    /// should investigate whether can remove RaisePropertyChanged
     //    /// </summary>
     //    /// <value>The Default DataView Item list.</value>k
-    //    public ObservableCollection<TSearchResultDataViewItem> EntityCollectionDefault
+    //    public ObservableCollection<TSearchResultDataViewItem> EntityCollection
     //    {
-    //        get { return m_EntityCollectionDefault; }
+    //        get { return m_EntityCollection; }
     //        set
     //        {
-    //            m_EntityCollectionDefault = value;
-    //            RaisePropertyChanged("EntityCollectionDefault");
+    //            m_EntityCollection = value;
+    //            RaisePropertyChanged("EntityCollection");
     //        }
     //    }
 

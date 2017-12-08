@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-//TODO: can be removed
+//TODO: can be removed : DONE
 namespace Framework.EntityContracts
 {
     /// <summary>

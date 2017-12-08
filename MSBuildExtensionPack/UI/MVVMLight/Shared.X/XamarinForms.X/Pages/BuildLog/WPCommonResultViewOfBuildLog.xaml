@@ -19,7 +19,7 @@
     </NavigationPage.HasNavigationBar>
     <ContentPage.Content>
         <StackLayout BackgroundColor="#eee" Orientation="Vertical" VerticalOptions="FillAndExpand" Padding="5" Spacing="0">
-            <ListView x:Name="ResultView" ItemsSource="{Binding Path=EntityCollectionDefault}" VerticalOptions="FillAndExpand" HasUnevenRows="True">
+            <ListView x:Name="ResultView" ItemsSource="{Binding Path=EntityCollection}" VerticalOptions="FillAndExpand" HasUnevenRows="True">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
