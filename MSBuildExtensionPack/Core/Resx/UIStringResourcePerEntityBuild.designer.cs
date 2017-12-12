@@ -511,7 +511,7 @@ namespace MSBuildExtensionPack.Resx {
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Identifier In String"".
+        ///   Looks up a localized string similar to "IdentifierInString"".
         /// </summary>
         public static string IdentifierInString {
             get {
@@ -583,7 +583,7 @@ namespace MSBuildExtensionPack.Resx {
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Pub Date"".
+        ///   Looks up a localized string similar to "PubDate"".
         /// </summary>
         public static string PubDate {
             get {
@@ -907,7 +907,7 @@ namespace MSBuildExtensionPack.Resx {
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Count Per FK"".
+        ///   Looks up a localized string similar to "CountPerFK"".
         /// </summary>
         public static string CountPerFK {
             get {

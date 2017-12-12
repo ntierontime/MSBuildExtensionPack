@@ -266,7 +266,7 @@
     <value>Value Validation Error Message of property Name of MSBuildExtensionPack.Solution</value>
   </data>
   <data name="IdentifierInString" xml:space="preserve">
-    <value>Identifier In String</value>
+    <value>IdentifierInString</value>
   </data>
   <data name="Required_Field_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Solution" xml:space="preserve">
     <value>Required Field Error Message of property IdentifierInString of MSBuildExtensionPack.Solution</value>
@@ -371,7 +371,7 @@
     <value>Value Validation Error Message of property OrganizationId of MSBuildExtensionPack.Solution</value>
   </data>
   <data name="CountPerFK" xml:space="preserve">
-    <value>Count Per FK</value>
+    <value>CountPerFK</value>
   </data>
   <data name="Required_Field_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Solution" xml:space="preserve">
     <value>Required Field Error Message of property CountPerFK of MSBuildExtensionPack.Solution</value>
