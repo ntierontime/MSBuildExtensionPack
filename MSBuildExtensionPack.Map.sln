@@ -2,31 +2,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.AspNetMvc40ApiController", "MSBuildExtensionPack\UI\Web\AspNetMvc40ApiController\MSBuildExtensionPack.AspNetMvc40ApiController.csproj", "{745AF834-F156-4766-93AB-421ADB241292}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.AspNetMvc40ApiController", "MSBuildExtensionPack\UIWeb\AspNetMvc40ApiController\MSBuildExtensionPack.AspNetMvc40ApiController.csproj", "{745AF834-F156-4766-93AB-421ADB241292}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.AspNetMvc40Rasor", "MSBuildExtensionPack\UI\Web\AspNetMvc40Rasor\MSBuildExtensionPack.AspNetMvc40Rasor.csproj", "{ACD15310-6046-41BA-AE72-F53471CB7BC6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.AspNetMvc40Rasor", "MSBuildExtensionPack\UIWeb\AspNetMvc40Rasor\MSBuildExtensionPack.AspNetMvc40Rasor.csproj", "{ACD15310-6046-41BA-AE72-F53471CB7BC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.AspNetMvc40ViewModel", "MSBuildExtensionPack\UI\Web\AspNetMvc40ViewModel\MSBuildExtensionPack.AspNetMvc40ViewModel.csproj", "{D28BCC74-CEE0-4427-8D9D-FD3CAA6310D6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.AspNetMvc40ViewModel", "MSBuildExtensionPack\UIWeb\AspNetMvc40ViewModel\MSBuildExtensionPack.AspNetMvc40ViewModel.csproj", "{D28BCC74-CEE0-4427-8D9D-FD3CAA6310D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.CommonBLL", "MSBuildExtensionPack\Core\CommonBLL\MSBuildExtensionPack.CommonBLL.csproj", "{01FA0028-AD94-4D6B-9A89-3FABF3C9C779}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.CommonBLL", "MSBuildExtensionPack\Services\CommonBLL\MSBuildExtensionPack.CommonBLL.csproj", "{01FA0028-AD94-4D6B-9A89-3FABF3C9C779}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.CommonBLLEntities", "MSBuildExtensionPack\Core\CommonBLLEntities\MSBuildExtensionPack.CommonBLLEntities.csproj", "{1863424E-9841-4647-97A2-4CC17A4BC7BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.CommonBLLEntities", "MSBuildExtensionPack\Contracts\CommonBLLEntities\MSBuildExtensionPack.CommonBLLEntities.csproj", "{1863424E-9841-4647-97A2-4CC17A4BC7BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.CommonBLLIoC", "MSBuildExtensionPack\Core\CommonBLLIoC\MSBuildExtensionPack.CommonBLLIoC.csproj", "{2DD6D618-B371-4A82-9C67-D3D8B073782B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.CommonBLLIoC", "MSBuildExtensionPack\Services\CommonBLLIoC\MSBuildExtensionPack.CommonBLLIoC.csproj", "{2DD6D618-B371-4A82-9C67-D3D8B073782B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.DALContracts", "MSBuildExtensionPack\Core\DALContracts\MSBuildExtensionPack.DALContracts.csproj", "{11CC9717-71A4-41E7-B27E-D59A54D221DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.DALContracts", "MSBuildExtensionPack\DAL\DALContracts\MSBuildExtensionPack.DALContracts.csproj", "{11CC9717-71A4-41E7-B27E-D59A54D221DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.DataSourceEntities", "MSBuildExtensionPack\Core\DataSourceEntities\MSBuildExtensionPack.DataSourceEntities.csproj", "{3A8F1415-88EF-4B9E-8FEF-4296BF953F31}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.DataSourceEntities", "MSBuildExtensionPack\Contracts\DataSourceEntities\MSBuildExtensionPack.DataSourceEntities.csproj", "{3A8F1415-88EF-4B9E-8FEF-4296BF953F31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.EntityContracts", "MSBuildExtensionPack\Core\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj", "{9ABEB016-FB34-40AB-B469-3B00F0048D27}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.EntityContracts", "MSBuildExtensionPack\Contracts\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj", "{9ABEB016-FB34-40AB-B469-3B00F0048D27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.EntityFrameworkContextV6", "MSBuildExtensionPack\Core\EntityFrameworkContextV6\MSBuildExtensionPack.EntityFrameworkContextV6.csproj", "{25082160-7E27-40C0-BE53-778C977B758C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.EntityFrameworkContextV6", "MSBuildExtensionPack\DAL\EntityFrameworkContextV6\MSBuildExtensionPack.EntityFrameworkContextV6.csproj", "{25082160-7E27-40C0-BE53-778C977B758C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.EntityFrameworkContextV6CodeFirst", "MSBuildExtensionPack\Core\EntityFrameworkContextV6CodeFirst\MSBuildExtensionPack.EntityFrameworkContextV6CodeFirst.csproj", "{F9AACC1C-5613-4F62-AF63-B04098F61192}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.EntityFrameworkContextV6CodeFirst", "MSBuildExtensionPack\DAL\EntityFrameworkContextV6CodeFirst\MSBuildExtensionPack.EntityFrameworkContextV6CodeFirst.csproj", "{F9AACC1C-5613-4F62-AF63-B04098F61192}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.EntityFrameworkDALV6", "MSBuildExtensionPack\Core\EntityFrameworkDALV6\MSBuildExtensionPack.EntityFrameworkDALV6.csproj", "{78EE7B03-B20A-411C-95E7-D23083E254AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.EntityFrameworkDALV6", "MSBuildExtensionPack\DAL\EntityFrameworkDALV6\MSBuildExtensionPack.EntityFrameworkDALV6.csproj", "{78EE7B03-B20A-411C-95E7-D23083E254AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.EntityFrameworkDALV6CodeFirst", "MSBuildExtensionPack\Core\EntityFrameworkDALV6CodeFirst\MSBuildExtensionPack.EntityFrameworkDALV6CodeFirst.csproj", "{254B5A90-DCBB-4013-8BFC-49CF3DFA95AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.EntityFrameworkDALV6CodeFirst", "MSBuildExtensionPack\DAL\EntityFrameworkDALV6CodeFirst\MSBuildExtensionPack.EntityFrameworkDALV6CodeFirst.csproj", "{254B5A90-DCBB-4013-8BFC-49CF3DFA95AE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework", "Frameworks\Framework\Framework.csproj", "{6D25AA30-C3AF-4AE0-B567-0F2653120CDC}"
 EndProject
@@ -54,37 +54,37 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Xamariner.X", "Fr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Xaml", "Frameworks\Framework.Xaml\Framework.Xaml.csproj", "{E5302713-0022-4657-85D8-9620818071DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.MVVMLightViewModels", "MSBuildExtensionPack\UI\MVVMLight\Shared\MVVMLightViewModels\MSBuildExtensionPack.MVVMLightViewModels.csproj", "{37677547-9CC8-4641-8B4E-20A8771B8964}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.MVVMLightViewModels", "MSBuildExtensionPack\UINative\Shared\MVVMLightViewModels\MSBuildExtensionPack.MVVMLightViewModels.csproj", "{37677547-9CC8-4641-8B4E-20A8771B8964}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.WPF4App", "MSBuildExtensionPack\UI\MVVMLight\WPF4App\MSBuildExtensionPack.WPF4App.csproj", "{70D67203-03A5-417A-A27B-15C447A78C21}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.WPF4App", "MSBuildExtensionPack\UINative\WPF4App\MSBuildExtensionPack.WPF4App.csproj", "{70D67203-03A5-417A-A27B-15C447A78C21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.AndroidApp", "MSBuildExtensionPack\UI\MVVMLight\AndroidApp\MSBuildExtensionPack.AndroidApp.csproj", "{E8422666-0A62-4F54-A2D7-CF499AAEC215}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.AndroidApp", "MSBuildExtensionPack\UINative\AndroidApp\MSBuildExtensionPack.AndroidApp.csproj", "{E8422666-0A62-4F54-A2D7-CF499AAEC215}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.XamarinForms.X", "MSBuildExtensionPack\UI\MVVMLight\Shared.X\XamarinForms.X\MSBuildExtensionPack.XamarinForms.X.csproj", "{5A57F496-4A8B-451F-9077-3A92173743A9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.XamarinForms.X", "MSBuildExtensionPack\UINative\Shared.X\XamarinForms.X\MSBuildExtensionPack.XamarinForms.X.csproj", "{5A57F496-4A8B-451F-9077-3A92173743A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.IOSApp", "MSBuildExtensionPack\UI\MVVMLight\IOSApp\MSBuildExtensionPack.IOSApp.csproj", "{BB3C8690-9AEF-4949-922B-A27C94F1039F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.IOSApp", "MSBuildExtensionPack\UINative\IOSApp\MSBuildExtensionPack.IOSApp.csproj", "{BB3C8690-9AEF-4949-922B-A27C94F1039F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.UWPApp", "MSBuildExtensionPack\UI\MVVMLight\UWPApp\MSBuildExtensionPack.UWPApp.csproj", "{00062A82-FCEA-4CF7-806A-9D1C335C846C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.UWPApp", "MSBuildExtensionPack\UINative\UWPApp\MSBuildExtensionPack.UWPApp.csproj", "{00062A82-FCEA-4CF7-806A-9D1C335C846C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.Resx", "MSBuildExtensionPack\Core\Resx\MSBuildExtensionPack.Resx.csproj", "{960E0564-9487-4C39-9F6A-EF730D96C18E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.Resx", "MSBuildExtensionPack\Contracts\Resx\MSBuildExtensionPack.Resx.csproj", "{960E0564-9487-4C39-9F6A-EF730D96C18E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.ViewModelData", "MSBuildExtensionPack\Core\ViewModelData\MSBuildExtensionPack.ViewModelData.csproj", "{E9D59CCD-7122-40BA-93B2-2D2E40B09662}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.ViewModelData", "MSBuildExtensionPack\Contracts\ViewModelData\MSBuildExtensionPack.ViewModelData.csproj", "{E9D59CCD-7122-40BA-93B2-2D2E40B09662}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MSBuildExtensionPack.VS2012DatabaseProject", "MSBuildExtensionPack\Core\VS2012DatabaseProject\MSBuildExtensionPack.VS2012DatabaseProject.sqlproj", "{9B81ECD9-731C-49FF-8417-7900133846B0}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MSBuildExtensionPack.VS2012DatabaseProject", "MSBuildExtensionPack\DAL\VS2012DatabaseProject\MSBuildExtensionPack.VS2012DatabaseProject.sqlproj", "{9B81ECD9-731C-49FF-8417-7900133846B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.WcfClientBLL", "MSBuildExtensionPack\Wcf\WcfClientBLL\MSBuildExtensionPack.WcfClientBLL.csproj", "{4CCC7A86-294C-4C14-90E2-536DE23FB7B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.WcfClientBLL", "MSBuildExtensionPack\Services\WcfClientBLL\MSBuildExtensionPack.WcfClientBLL.csproj", "{4CCC7A86-294C-4C14-90E2-536DE23FB7B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.WcfContracts", "MSBuildExtensionPack\Core\WcfContracts\MSBuildExtensionPack.WcfContracts.csproj", "{88D3427B-531B-45BF-A336-CEFBEE3DBEB7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.WcfContracts", "MSBuildExtensionPack\Services\WcfContracts\MSBuildExtensionPack.WcfContracts.csproj", "{88D3427B-531B-45BF-A336-CEFBEE3DBEB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.WcfWebApp", "MSBuildExtensionPack\Wcf\WcfWebApp\MSBuildExtensionPack.WcfWebApp.csproj", "{35D692B7-D98F-455F-8AF0-6B65D13E80B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.WcfWebApp", "MSBuildExtensionPack\Services\WcfWebApp\MSBuildExtensionPack.WcfWebApp.csproj", "{35D692B7-D98F-455F-8AF0-6B65D13E80B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.WebApiClient", "MSBuildExtensionPack\UI\Web\WebApiClient\MSBuildExtensionPack.WebApiClient.csproj", "{3D7F434B-49DF-4E21-8FDD-4F88907F14A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.WebApiClient", "MSBuildExtensionPack\UINative\Shared\WebApiClient\MSBuildExtensionPack.WebApiClient.csproj", "{3D7F434B-49DF-4E21-8FDD-4F88907F14A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.CommonBLLEntities.X", "MSBuildExtensionPack\Core.X\CommonBLLEntities.X\MSBuildExtensionPack.CommonBLLEntities.X.csproj", "{43FC15B7-2CC9-41CD-932E-B24EE8DC4A85}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.CommonBLLEntities.X", "MSBuildExtensionPack\Contracts.X\CommonBLLEntities.X\MSBuildExtensionPack.CommonBLLEntities.X.csproj", "{43FC15B7-2CC9-41CD-932E-B24EE8DC4A85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.DataSourceEntities.X", "MSBuildExtensionPack\Core.X\DataSourceEntities.X\MSBuildExtensionPack.DataSourceEntities.X.csproj", "{5656D29D-E7FE-4624-8EFB-D3251F683A4F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.DataSourceEntities.X", "MSBuildExtensionPack\Contracts.X\DataSourceEntities.X\MSBuildExtensionPack.DataSourceEntities.X.csproj", "{5656D29D-E7FE-4624-8EFB-D3251F683A4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.EntityContracts.X", "MSBuildExtensionPack\Core.X\EntityContracts.X\MSBuildExtensionPack.EntityContracts.X.csproj", "{FE8476F3-E114-49B6-BF21-0D69AD7A0544}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.EntityContracts.X", "MSBuildExtensionPack\Contracts.X\EntityContracts.X\MSBuildExtensionPack.EntityContracts.X.csproj", "{FE8476F3-E114-49B6-BF21-0D69AD7A0544}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.X", "Frameworks.X\Framework.X\Framework.X.csproj", "{E10855C7-201C-43C3-940A-A7275FD2B804}"
 EndProject
@@ -102,13 +102,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.ViewModels.X", "F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Xaml.X", "Frameworks.X\Framework.Xaml.X\Framework.Xaml.X.csproj", "{82D72544-D241-4DF3-9069-CA0F2F0C2618}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.MVVMLightViewModels.X", "MSBuildExtensionPack\UI\MVVMLight\Shared.X\MVVMLightViewModels.X\MSBuildExtensionPack.MVVMLightViewModels.X.csproj", "{04E76035-A7EB-4055-A643-07FA9088F5A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.MVVMLightViewModels.X", "MSBuildExtensionPack\UINative\Shared.X\MVVMLightViewModels.X\MSBuildExtensionPack.MVVMLightViewModels.X.csproj", "{04E76035-A7EB-4055-A643-07FA9088F5A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.Resx.X", "MSBuildExtensionPack\Core.X\Resx.X\MSBuildExtensionPack.Resx.X.csproj", "{E4E691E9-3912-44A7-AA4E-607A9BB4A9FC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.Resx.X", "MSBuildExtensionPack\Contracts.X\Resx.X\MSBuildExtensionPack.Resx.X.csproj", "{E4E691E9-3912-44A7-AA4E-607A9BB4A9FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.ViewModelData.X", "MSBuildExtensionPack\Core.X\ViewModelData.X\MSBuildExtensionPack.ViewModelData.X.csproj", "{FBAB66F2-C88B-413B-9C49-A8AC835C7BA3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.ViewModelData.X", "MSBuildExtensionPack\Contracts.X\ViewModelData.X\MSBuildExtensionPack.ViewModelData.X.csproj", "{FBAB66F2-C88B-413B-9C49-A8AC835C7BA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.WebApiClient.X", "MSBuildExtensionPack\UI\Web.X\WebApiClient.X\MSBuildExtensionPack.WebApiClient.X.csproj", "{72874F45-8700-4671-902F-1100F82FA5AB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.WebApiClient.X", "MSBuildExtensionPack\UINative\Shared.X\WebApiClient.X\MSBuildExtensionPack.WebApiClient.X.csproj", "{72874F45-8700-4671-902F-1100F82FA5AB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.A.1.", "1.A.1.", "{2de48dd9-908a-4881-af27-121dff17f3bb}"
 EndProject

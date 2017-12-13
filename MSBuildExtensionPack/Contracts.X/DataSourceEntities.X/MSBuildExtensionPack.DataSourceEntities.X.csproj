@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5656D29D-E7FE-4624-8EFB-D3251F683A4F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MSBuildExtensionPack.DataSourceEntities</RootNamespace>
+    <AssemblyName>MSBuildExtensionPack.DataSourceEntities.X</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;XAMARIN;__MOBILE__</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;XAMARIN;__MOBILE__</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
+    <None Include="map.2.B.3.vsd" />
+    <None Include="map.2.B.3.vsd.png" />
+    <Compile Include="..\..\Contracts\DataSourceEntities\DataSourceEntity_\Build.cs">
+      <Link>DataSourceEntity_\Build.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\DataSourceEntities\DataSourceEntity_\BuildEventCode.cs">
+      <Link>DataSourceEntity_\BuildEventCode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\DataSourceEntities\DataSourceEntity_\BuildLog.cs">
+      <Link>DataSourceEntity_\BuildLog.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\DataSourceEntities\DataSourceEntity_\Organization.cs">
+      <Link>DataSourceEntity_\Organization.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\DataSourceEntities\DataSourceEntity_\Solution.cs">
+      <Link>DataSourceEntity_\Solution.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\DataSourceEntities\DataSourceEntity_\BuildCollection.cs">
+      <Link>DataSourceEntity_\BuildCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\DataSourceEntities\DataSourceEntity_\BuildEventCodeCollection.cs">
+      <Link>DataSourceEntity_\BuildEventCodeCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\DataSourceEntities\DataSourceEntity_\BuildLogCollection.cs">
+      <Link>DataSourceEntity_\BuildLogCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\DataSourceEntities\DataSourceEntity_\OrganizationCollection.cs">
+      <Link>DataSourceEntity_\OrganizationCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\DataSourceEntities\DataSourceEntity_\SolutionCollection.cs">
+      <Link>DataSourceEntity_\SolutionCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\DataSourceEntities\DataSourceEntityHelpers\BuildHelper.cs">
+      <Link>DataSourceEntityHelpers\BuildHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\DataSourceEntities\DataSourceEntityHelpers\BuildEventCodeHelper.cs">
+      <Link>DataSourceEntityHelpers\BuildEventCodeHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\DataSourceEntities\DataSourceEntityHelpers\BuildLogHelper.cs">
+      <Link>DataSourceEntityHelpers\BuildLogHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\DataSourceEntities\DataSourceEntityHelpers\OrganizationHelper.cs">
+      <Link>DataSourceEntityHelpers\OrganizationHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\DataSourceEntities\DataSourceEntityHelpers\SolutionHelper.cs">
+      <Link>DataSourceEntityHelpers\SolutionHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\DataSourceEntities\DataSourceIdentifiers\BuildIdentifier.cs">
+      <Link>DataSourceIdentifiers\BuildIdentifier.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\DataSourceEntities\DataSourceIdentifiers\BuildEventCodeIdentifier.cs">
+      <Link>DataSourceIdentifiers\BuildEventCodeIdentifier.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\DataSourceEntities\DataSourceIdentifiers\BuildLogIdentifier.cs">
+      <Link>DataSourceIdentifiers\BuildLogIdentifier.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\DataSourceEntities\DataSourceIdentifiers\OrganizationIdentifier.cs">
+      <Link>DataSourceIdentifiers\OrganizationIdentifier.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\DataSourceEntities\DataSourceIdentifiers\SolutionIdentifier.cs">
+      <Link>DataSourceIdentifiers\SolutionIdentifier.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\DataSourceEntities\DataSourceQueryCriteriaByEntityReferences\BuildQueryCriteriaByEntityReference.cs">
+      <Link>DataSourceQueryCriteriaByEntityReferences\BuildQueryCriteriaByEntityReference.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\DataSourceEntities\DataSourceQueryCriteriaByEntityReferences\BuildLogQueryCriteriaByEntityReference.cs">
+      <Link>DataSourceQueryCriteriaByEntityReferences\BuildLogQueryCriteriaByEntityReference.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\DataSourceEntities\DataSourceQueryCriteriaByEntityReferences\OrganizationQueryCriteriaByEntityReference.cs">
+      <Link>DataSourceQueryCriteriaByEntityReferences\OrganizationQueryCriteriaByEntityReference.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\DataSourceEntities\DataSourceQueryCriteriaByEntityReferences\SolutionQueryCriteriaByEntityReference.cs">
+      <Link>DataSourceQueryCriteriaByEntityReferences\SolutionQueryCriteriaByEntityReference.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\DataSourceEntities\DataSourceQueryCriteriaByUniqueConstraints\OrganizationQueryCriteriaByUniqueConstraint.cs">
+      <Link>DataSourceQueryCriteriaByUniqueConstraints\OrganizationQueryCriteriaByUniqueConstraint.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EntityContracts.X\MSBuildExtensionPack.EntityContracts.X.csproj">
+      <Project>{fe8476f3-e114-49b6-bf21-0d69ad7a0544}</Project>
+      <Name>MSBuildExtensionPack.EntityContracts.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks.X\Framework.X\Framework.X.csproj">
+      <Project>{e10855c7-201c-43c3-940a-a7275fd2b804}</Project>
+      <Name>Framework.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks.X\Framework.DAL.X\Framework.DAL.X.csproj">
+      <Project>{37e0d750-d617-4f48-8f1b-a261a7aec109}</Project>
+      <Name>Framework.DAL.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks.X\Framework.DataSourceEntities.X\Framework.DataSourceEntities.X.csproj">
+      <Project>{801a91e0-b9fc-4808-8045-36560d6af1c3}</Project>
+      <Name>Framework.DataSourceEntities.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks.X\Framework.EntityContracts.X\Framework.EntityContracts.X.csproj">
+      <Project>{d8aafb54-4c8d-4352-9ffd-eaea3d77b200}</Project>
+      <Name>Framework.EntityContracts.X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Resx.X\MSBuildExtensionPack.Resx.X.csproj">
+      <Project>{e4e691e9-3912-44a7-aa4e-607a9bb4a9fc}</Project>
+      <Name>MSBuildExtensionPack.Resx.X</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Portable.DataAnnotations, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Net46-Portable.DataAnnotations.1.0.2\lib\portable-net45+netcore45+wpa81\Portable.DataAnnotations.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
