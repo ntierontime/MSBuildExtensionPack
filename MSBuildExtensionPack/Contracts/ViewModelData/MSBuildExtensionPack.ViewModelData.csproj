@@ -32,9 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="OrderByLists.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Compile Include="OrderByLists.cs" />
     <Compile Include="BuildItemVM.cs" />
     <Compile Include="BuildEventCodeItemVM.cs" />
     <Compile Include="BuildLogItemVM.cs" />

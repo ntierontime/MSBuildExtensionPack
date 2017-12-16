@@ -33,7 +33,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="Contracts\IBuild.cs" />
     <Compile Include="Contracts\IBuildEventCode.cs" />
     <Compile Include="Contracts\IBuildLog.cs" />
@@ -54,6 +53,7 @@
     <Compile Include="IdentifierContractHelpers\IBuildLogIdentifierHelper.cs" />
     <Compile Include="IdentifierContractHelpers\IOrganizationIdentifierHelper.cs" />
     <Compile Include="IdentifierContractHelpers\ISolutionIdentifierHelper.cs" />
+    <None Include="packages.config" />
     <Compile Include="QueryCriteriaByEntityReferenceContracts\IQueryCriteriaBuildByFKs.cs" />
     <Compile Include="QueryCriteriaByEntityReferenceContracts\IQueryCriteriaBuildLogByFKs.cs" />
     <Compile Include="QueryCriteriaByEntityReferenceContracts\IQueryCriteriaOrganizationByFKs.cs" />

@@ -33,7 +33,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="AuthContext.cs" />
     <Compile Include="AuthRepository.cs" />
@@ -54,6 +53,7 @@
     <Compile Include="Results\ChallengeResult.cs" />
     <Compile Include="Startup.cs" />
     <None Include="Web.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Framework\Framework.csproj">

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -40,32 +40,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="Controllers\BuildController.cs" />
     <Compile Include="Controllers\BuildController.gg.cs">
       <DependentUpon>BuildController.cs</DependentUpon>
-      <SubType>GeneratedCSharpCode</SubType>
     </Compile>
     <Compile Include="Controllers\BuildEventCodeController.cs" />
     <Compile Include="Controllers\BuildEventCodeController.gg.cs">
       <DependentUpon>BuildEventCodeController.cs</DependentUpon>
-      <SubType>GeneratedCSharpCode</SubType>
     </Compile>
     <Compile Include="Controllers\BuildLogController.cs" />
     <Compile Include="Controllers\BuildLogController.gg.cs">
       <DependentUpon>BuildLogController.cs</DependentUpon>
-      <SubType>GeneratedCSharpCode</SubType>
     </Compile>
     <Compile Include="Controllers\OrganizationController.cs" />
     <Compile Include="Controllers\OrganizationController.gg.cs">
       <DependentUpon>OrganizationController.cs</DependentUpon>
-      <SubType>GeneratedCSharpCode</SubType>
     </Compile>
     <Compile Include="Controllers\SolutionController.cs" />
     <Compile Include="Controllers\SolutionController.gg.cs">
       <DependentUpon>SolutionController.cs</DependentUpon>
-      <SubType>GeneratedCSharpCode</SubType>
     </Compile>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
@@ -130,15 +123,16 @@
     <Content Include="Global.asax" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Helpers\ClaimsAuthorizationAttribute.cs" />
     <Compile Include="Helpers\CustomizedClaimTypes.cs" />
     <Compile Include="Helpers\WebAuthorizationAttribute.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <None Include="Web.config" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="Logging.config" />
     <None Include="Logging.config" />
+    <None Include="packages.config" />
     <Content Include="Views\Build\WPCommonOfBuild.cshtml" />
     <Content Include="Views\Build\WPEntityRelatedOfBuild.cshtml" />
     <Content Include="Views\Build\WPUpdateNameOnlyOfBuild.cshtml" />

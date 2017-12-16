@@ -33,9 +33,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="MSChartBuilder.cs" />
     <Compile Include="MSChartConfiguration.cs" />
+    <None Include="packages.config" />
     <None Include="map.1.B.2.vsd" />
     <None Include="map.1.B.2.vsd.png" />
   </ItemGroup>

@@ -33,9 +33,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="DataAccessLayerContractBase.cs" />
     <Compile Include="DataAccessLayerPickListTemplateContract.cs" />
+    <None Include="packages.config" />
     <Compile Include="StatusChangeLinqQuerySetBase.cs" />
     <None Include="map.1.A.1.vsd" />
     <None Include="map.1.A.1.vsd.png" />

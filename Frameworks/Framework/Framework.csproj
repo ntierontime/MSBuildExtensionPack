@@ -33,7 +33,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="BinaryRelated\BinaryFile.cs" />
     <Compile Include="DateTimePeriodHelper.cs" />
     <Compile Include="UISelectedItemChangedMessage.cs" />
@@ -53,6 +52,7 @@
     <Compile Include="Models\LogOnModel.cs" />
     <Compile Include="Models\RegisterModel.cs" />
     <Compile Include="NameValuePair.cs" />
+    <None Include="packages.config" />
     <Compile Include="PagingPageSizeOption.cs" />
     <Compile Include="RssItem.cs" />
     <Compile Include="Common\Singleton.cs" />

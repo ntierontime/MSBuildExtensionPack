@@ -33,13 +33,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="IViewModelBase.cs" />
     <Compile Include="ViewModelBase.cs" />
     <Compile Include="ViewModelEntityRelatedBase.cs" />
     <Compile Include="ViewModelItemBase.cs" />
     <Compile Include="ApiControllerHttpClientBase.cs" />
     <Compile Include="IViewModelItemBase.cs" />
+    <None Include="packages.config" />
     <None Include="map.1.A.3.vsd" />
     <None Include="map.1.A.3.vsd.png" />
   </ItemGroup>

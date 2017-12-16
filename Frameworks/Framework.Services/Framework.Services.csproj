@@ -33,12 +33,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="BinaryFileHelper.cs" />
     <Compile Include="ClosedXmlHelper.cs" />
     <Compile Include="DataStreamServiceProviderBase.cs" />
     <Compile Include="LinqToCsvHelper.cs" />
     <Compile Include="LinqToExcelHelper.cs" />
+    <None Include="packages.config" />
     <None Include="map.1.A.2.vsd" />
     <None Include="map.1.A.2.vsd.png" />
   </ItemGroup>

@@ -33,7 +33,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="HtmlChartHelpers.cs" />
     <Compile Include="PagerHelper.cs" />
     <Compile Include="PagerHtmlRenderer.cs" />
@@ -41,6 +40,7 @@
     <Compile Include="ViewModels\MultipleFileUploadModel.cs" />
     <Compile Include="ViewModels\ViewModelItemBase.cs" />
     <Compile Include="MvcHelper.cs" />
+    <None Include="packages.config" />
     <None Include="map.1.D.1.vsd" />
     <None Include="map.1.D.1.vsd.png" />
   </ItemGroup>

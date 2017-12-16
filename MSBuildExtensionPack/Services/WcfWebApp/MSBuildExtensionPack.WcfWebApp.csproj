@@ -84,8 +84,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <None Include="Logging.config" />
+    <None Include="packages.config" />
     <Content Include="clientaccesspolicy.xml" />
     <Content Include="crossdomain.xml" />
     <Content Include="WcfMarkupBuild.svc" />

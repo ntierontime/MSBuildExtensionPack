@@ -33,7 +33,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="DataSourceEntity_\Build.cs" />
     <Compile Include="DataSourceEntity_\BuildEventCode.cs" />
     <Compile Include="DataSourceEntity_\BuildLog.cs" />
@@ -59,6 +58,7 @@
     <Compile Include="DataSourceQueryCriteriaByEntityReferences\OrganizationQueryCriteriaByEntityReference.cs" />
     <Compile Include="DataSourceQueryCriteriaByEntityReferences\SolutionQueryCriteriaByEntityReference.cs" />
     <Compile Include="DataSourceQueryCriteriaByUniqueConstraints\OrganizationQueryCriteriaByUniqueConstraint.cs" />
+    <None Include="packages.config" />
     <None Include="map.2.B.3.vsd" />
     <None Include="map.2.B.3.vsd.png" />
   </ItemGroup>

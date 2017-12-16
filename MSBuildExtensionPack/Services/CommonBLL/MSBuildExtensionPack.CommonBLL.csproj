@@ -33,7 +33,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="Services\BuildService.cs" />
     <Compile Include="Services\BuildEventCodeService.cs" />
     <Compile Include="Services\BuildLogService.cs" />
@@ -50,6 +49,7 @@
     <Compile Include="DataStreamServiceProviders\BuildLogDataStreamService.cs" />
     <Compile Include="DataStreamServiceProviders\OrganizationDataStreamService.cs" />
     <Compile Include="DataStreamServiceProviders\SolutionDataStreamService.cs" />
+    <None Include="packages.config" />
     <Compile Include="SyndicationFeedFacade.cs" />
     <None Include="map.2.B.2.vsd" />
     <None Include="map.2.B.2.vsd.png" />

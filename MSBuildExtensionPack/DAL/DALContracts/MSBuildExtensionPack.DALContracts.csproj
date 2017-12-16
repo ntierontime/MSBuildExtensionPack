@@ -33,13 +33,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="IBuildRepository.cs" />
     <Compile Include="IBuildEventCodeRepository.cs" />
     <Compile Include="IBuildLogRepository.cs" />
     <Compile Include="IOrganizationRepository.cs" />
     <Compile Include="ISolutionRepository.cs" />
     <Compile Include="DataAccessLayerFactoryContract.cs" />
+    <None Include="packages.config" />
     <None Include="map.2.A.1.vsd" />
     <None Include="map.2.A.1.vsd.png" />
   </ItemGroup>

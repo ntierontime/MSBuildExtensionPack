@@ -33,7 +33,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="ChainedQueryCriteria\BuildChainedQueryCriteria.cs" />
     <Compile Include="ChainedQueryCriteria\BuildEventCodeChainedQueryCriteria.cs" />
     <Compile Include="ChainedQueryCriteria\BuildLogChainedQueryCriteria.cs" />
@@ -64,6 +63,7 @@
     <Compile Include="ResponseMessagesUserDefined\BuildLogResponseMessageUserDefined.cs" />
     <Compile Include="ResponseMessagesUserDefined\OrganizationResponseMessageUserDefined.cs" />
     <Compile Include="ResponseMessagesUserDefined\SolutionResponseMessageUserDefined.cs" />
+    <None Include="packages.config" />
     <None Include="map.2.B.3.vsd" />
     <None Include="map.2.B.3.vsd.png" />
   </ItemGroup>

@@ -93,11 +93,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="DispatcherHelperWrapper.cs" />
     <Compile Include="Localize.cs" />
     <Compile Include="Main.cs" />
+    <None Include="packages.config" />
     <None Include="map.2.D.2.vsd" />
     <None Include="map.2.D.2.vsd.png" />
     <BundleResource Include="Assets\Add.png" />

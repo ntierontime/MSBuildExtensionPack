@@ -33,8 +33,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="IBusinessLogicLayerFactory.cs" />
+    <None Include="packages.config" />
     <Compile Include="IBuildService.cs" />
     <Compile Include="IBuildEventCodeService.cs" />
     <Compile Include="IBuildLogService.cs" />
