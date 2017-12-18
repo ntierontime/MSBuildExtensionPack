@@ -15,6 +15,7 @@ namespace Framework.ViewModels
         public const string ViewName_Details = "Details";
 
         public ViewModelItemBase()
+            : base()
         {
             this.SearchStatus = Framework.EntityContracts.SearchStatus.Unknown;
             this.ContentData = new Framework.EntityContracts.ContentData();

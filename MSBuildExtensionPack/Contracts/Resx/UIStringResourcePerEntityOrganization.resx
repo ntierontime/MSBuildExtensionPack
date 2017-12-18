@@ -1,0 +1,2059 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  
+  <data name="Organization" xml:space="preserve">
+    <value>Organization</value>
+  </data>
+  <data name="Loading_Organization____" xml:space="preserve">
+    <value>Loading Organization ...</value>
+  </data>
+  <data name="Please_select_Organization____" xml:space="preserve">
+    <value>Please select Organization ...</value>
+  </data>
+  <data name="Rss_Title_of_Organization" xml:space="preserve">
+    <value>Rss Title of Organization</value>
+  </data>
+  <data name="Rss_Description_of_Organization" xml:space="preserve">
+    <value>Rss Description of Organization</value>
+  </data>
+  <data name="AddNew_Organization" xml:space="preserve">
+    <value>AddNew Organization</value>
+  </data>
+  <data name="Delete_Organization" xml:space="preserve">
+    <value>Delete Organization</value>
+  </data>
+  <data name="Details_Organization" xml:space="preserve">
+    <value>Details Organization</value>
+  </data>
+  <data name="Edit_Organization" xml:space="preserve">
+    <value>Edit Organization</value>
+  </data>
+  <data name="IdDescription" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="IdRequiredErrorMessage" xml:space="preserve">
+    <value>Id is required</value>
+  </data>
+  <data name="IdToolTip" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="IdValueValidationErrorMessage" xml:space="preserve">
+    <value>Id has validation error</value>
+  </data>
+  <data name="IdValueValidationExpression" xml:space="preserve">
+    <value>Please input Id validation regular expression</value>
+  </data>
+  <data name="Id_is_required" xml:space="preserve">
+    <value>Id is required</value>
+  </data>
+  <data name="ParentIdDescription" xml:space="preserve">
+    <value>Parent Id</value>
+  </data>
+  <data name="ParentId" xml:space="preserve">
+    <value>Parent Id</value>
+  </data>
+  <data name="ParentIdRequiredErrorMessage" xml:space="preserve">
+    <value>Parent Id is required</value>
+  </data>
+  <data name="ParentIdToolTip" xml:space="preserve">
+    <value>Parent Id</value>
+  </data>
+  <data name="ParentIdValueValidationErrorMessage" xml:space="preserve">
+    <value>Parent Id has validation error</value>
+  </data>
+  <data name="ParentIdValueValidationExpression" xml:space="preserve">
+    <value>Please input Parent Id validation regular expression</value>
+  </data>
+  <data name="ParentId_is_required" xml:space="preserve">
+    <value>ParentId is required</value>
+  </data>
+  <data name="NameDescription" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NameRequiredErrorMessage" xml:space="preserve">
+    <value>Name is required</value>
+  </data>
+  <data name="NameToolTip" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NameValueValidationErrorMessage" xml:space="preserve">
+    <value>Name has validation error</value>
+  </data>
+  <data name="NameValueValidationExpression" xml:space="preserve">
+    <value>Please input Name validation regular expression</value>
+  </data>
+  <data name="Name_is_required" xml:space="preserve">
+    <value>Name is required</value>
+  </data>
+  <data name="The_length_of_Name_should_be_0_to_50" xml:space="preserve">
+    <value>The length of Name should be 0 to 50</value>
+  </data>
+  <data name="IsSystemBuiltInDescription" xml:space="preserve">
+    <value>Is System Built In</value>
+  </data>
+  <data name="IsSystemBuiltIn" xml:space="preserve">
+    <value>Is System Built In</value>
+  </data>
+  <data name="IsSystemBuiltInRequiredErrorMessage" xml:space="preserve">
+    <value>Is System Built In is required</value>
+  </data>
+  <data name="IsSystemBuiltInToolTip" xml:space="preserve">
+    <value>Is System Built In</value>
+  </data>
+  <data name="IsSystemBuiltInValueValidationErrorMessage" xml:space="preserve">
+    <value>Is System Built In has validation error</value>
+  </data>
+  <data name="IsSystemBuiltInValueValidationExpression" xml:space="preserve">
+    <value>Please input Is System Built In validation regular expression</value>
+  </data>
+  <data name="IsSystemBuiltIn_is_required" xml:space="preserve">
+    <value>IsSystemBuiltIn is required</value>
+  </data>
+  <data name="UniqueIdentifierDescription" xml:space="preserve">
+    <value>Unique Identifier</value>
+  </data>
+  <data name="UniqueIdentifier" xml:space="preserve">
+    <value>Unique Identifier</value>
+  </data>
+  <data name="UniqueIdentifierRequiredErrorMessage" xml:space="preserve">
+    <value>Unique Identifier is required</value>
+  </data>
+  <data name="UniqueIdentifierToolTip" xml:space="preserve">
+    <value>Unique Identifier</value>
+  </data>
+  <data name="UniqueIdentifierValueValidationErrorMessage" xml:space="preserve">
+    <value>Unique Identifier has validation error</value>
+  </data>
+  <data name="UniqueIdentifierValueValidationExpression" xml:space="preserve">
+    <value>Please input Unique Identifier validation regular expression</value>
+  </data>
+  <data name="UniqueIdentifier_is_required" xml:space="preserve">
+    <value>UniqueIdentifier is required</value>
+  </data>
+  <data name="CreatedDateTimeDescription" xml:space="preserve">
+    <value>Created Date Time</value>
+  </data>
+  <data name="CreatedDateTime" xml:space="preserve">
+    <value>Created Date Time</value>
+  </data>
+  <data name="CreatedDateTimeRequiredErrorMessage" xml:space="preserve">
+    <value>Created Date Time is required</value>
+  </data>
+  <data name="CreatedDateTimeToolTip" xml:space="preserve">
+    <value>Created Date Time</value>
+  </data>
+  <data name="CreatedDateTimeValueValidationErrorMessage" xml:space="preserve">
+    <value>Created Date Time has validation error</value>
+  </data>
+  <data name="CreatedDateTimeValueValidationExpression" xml:space="preserve">
+    <value>Please input Created Date Time validation regular expression</value>
+  </data>
+  <data name="CreatedDateTime_is_required" xml:space="preserve">
+    <value>CreatedDateTime is required</value>
+  </data>
+  <data name="CharColumnDescription" xml:space="preserve">
+    <value>Char Column</value>
+  </data>
+  <data name="CharColumn" xml:space="preserve">
+    <value>Char Column</value>
+  </data>
+  <data name="CharColumnRequiredErrorMessage" xml:space="preserve">
+    <value>Char Column is required</value>
+  </data>
+  <data name="CharColumnToolTip" xml:space="preserve">
+    <value>Char Column</value>
+  </data>
+  <data name="CharColumnValueValidationErrorMessage" xml:space="preserve">
+    <value>Char Column has validation error</value>
+  </data>
+  <data name="CharColumnValueValidationExpression" xml:space="preserve">
+    <value>Please input Char Column validation regular expression</value>
+  </data>
+  <data name="CharColumn_is_required" xml:space="preserve">
+    <value>CharColumn is required</value>
+  </data>
+  <data name="The_length_of_CharColumn_should_be_0_to_10" xml:space="preserve">
+    <value>The length of CharColumn should be 0 to 10</value>
+  </data>
+  <data name="VarcharColumnDescription" xml:space="preserve">
+    <value>Varchar Column</value>
+  </data>
+  <data name="VarcharColumn" xml:space="preserve">
+    <value>Varchar Column</value>
+  </data>
+  <data name="VarcharColumnRequiredErrorMessage" xml:space="preserve">
+    <value>Varchar Column is required</value>
+  </data>
+  <data name="VarcharColumnToolTip" xml:space="preserve">
+    <value>Varchar Column</value>
+  </data>
+  <data name="VarcharColumnValueValidationErrorMessage" xml:space="preserve">
+    <value>Varchar Column has validation error</value>
+  </data>
+  <data name="VarcharColumnValueValidationExpression" xml:space="preserve">
+    <value>Please input Varchar Column validation regular expression</value>
+  </data>
+  <data name="VarcharColumn_is_required" xml:space="preserve">
+    <value>VarcharColumn is required</value>
+  </data>
+  <data name="TextColumnDescription" xml:space="preserve">
+    <value>Text Column</value>
+  </data>
+  <data name="TextColumn" xml:space="preserve">
+    <value>Text Column</value>
+  </data>
+  <data name="TextColumnRequiredErrorMessage" xml:space="preserve">
+    <value>Text Column is required</value>
+  </data>
+  <data name="TextColumnToolTip" xml:space="preserve">
+    <value>Text Column</value>
+  </data>
+  <data name="TextColumnValueValidationErrorMessage" xml:space="preserve">
+    <value>Text Column has validation error</value>
+  </data>
+  <data name="TextColumnValueValidationExpression" xml:space="preserve">
+    <value>Please input Text Column validation regular expression</value>
+  </data>
+  <data name="TextColumn_is_required" xml:space="preserve">
+    <value>TextColumn is required</value>
+  </data>
+  <data name="NcharColumnDescription" xml:space="preserve">
+    <value>Nchar Column</value>
+  </data>
+  <data name="NcharColumn" xml:space="preserve">
+    <value>Nchar Column</value>
+  </data>
+  <data name="NcharColumnRequiredErrorMessage" xml:space="preserve">
+    <value>Nchar Column is required</value>
+  </data>
+  <data name="NcharColumnToolTip" xml:space="preserve">
+    <value>Nchar Column</value>
+  </data>
+  <data name="NcharColumnValueValidationErrorMessage" xml:space="preserve">
+    <value>Nchar Column has validation error</value>
+  </data>
+  <data name="NcharColumnValueValidationExpression" xml:space="preserve">
+    <value>Please input Nchar Column validation regular expression</value>
+  </data>
+  <data name="NcharColumn_is_required" xml:space="preserve">
+    <value>NcharColumn is required</value>
+  </data>
+  <data name="The_length_of_NcharColumn_should_be_0_to_1" xml:space="preserve">
+    <value>The length of NcharColumn should be 0 to 1</value>
+  </data>
+  <data name="NvarcharColumnDescription" xml:space="preserve">
+    <value>Nvarchar Column</value>
+  </data>
+  <data name="NvarcharColumn" xml:space="preserve">
+    <value>Nvarchar Column</value>
+  </data>
+  <data name="NvarcharColumnRequiredErrorMessage" xml:space="preserve">
+    <value>Nvarchar Column is required</value>
+  </data>
+  <data name="NvarcharColumnToolTip" xml:space="preserve">
+    <value>Nvarchar Column</value>
+  </data>
+  <data name="NvarcharColumnValueValidationErrorMessage" xml:space="preserve">
+    <value>Nvarchar Column has validation error</value>
+  </data>
+  <data name="NvarcharColumnValueValidationExpression" xml:space="preserve">
+    <value>Please input Nvarchar Column validation regular expression</value>
+  </data>
+  <data name="NvarcharColumn_is_required" xml:space="preserve">
+    <value>NvarcharColumn is required</value>
+  </data>
+  <data name="NtextColumnDescription" xml:space="preserve">
+    <value>Ntext Column</value>
+  </data>
+  <data name="NtextColumn" xml:space="preserve">
+    <value>Ntext Column</value>
+  </data>
+  <data name="NtextColumnRequiredErrorMessage" xml:space="preserve">
+    <value>Ntext Column is required</value>
+  </data>
+  <data name="NtextColumnToolTip" xml:space="preserve">
+    <value>Ntext Column</value>
+  </data>
+  <data name="NtextColumnValueValidationErrorMessage" xml:space="preserve">
+    <value>Ntext Column has validation error</value>
+  </data>
+  <data name="NtextColumnValueValidationExpression" xml:space="preserve">
+    <value>Please input Ntext Column validation regular expression</value>
+  </data>
+  <data name="NtextColumn_is_required" xml:space="preserve">
+    <value>NtextColumn is required</value>
+  </data>
+  <data name="BitColumnDescription" xml:space="preserve">
+    <value>Bit Column</value>
+  </data>
+  <data name="BitColumn" xml:space="preserve">
+    <value>Bit Column</value>
+  </data>
+  <data name="BitColumnRequiredErrorMessage" xml:space="preserve">
+    <value>Bit Column is required</value>
+  </data>
+  <data name="BitColumnToolTip" xml:space="preserve">
+    <value>Bit Column</value>
+  </data>
+  <data name="BitColumnValueValidationErrorMessage" xml:space="preserve">
+    <value>Bit Column has validation error</value>
+  </data>
+  <data name="BitColumnValueValidationExpression" xml:space="preserve">
+    <value>Please input Bit Column validation regular expression</value>
+  </data>
+  <data name="BitColumn_is_required" xml:space="preserve">
+    <value>BitColumn is required</value>
+  </data>
+  <data name="BinaryColumnDescription" xml:space="preserve">
+    <value>Binary Column</value>
+  </data>
+  <data name="BinaryColumn" xml:space="preserve">
+    <value>Binary Column</value>
+  </data>
+  <data name="BinaryColumnRequiredErrorMessage" xml:space="preserve">
+    <value>Binary Column is required</value>
+  </data>
+  <data name="BinaryColumnToolTip" xml:space="preserve">
+    <value>Binary Column</value>
+  </data>
+  <data name="BinaryColumnValueValidationErrorMessage" xml:space="preserve">
+    <value>Binary Column has validation error</value>
+  </data>
+  <data name="BinaryColumnValueValidationExpression" xml:space="preserve">
+    <value>Please input Binary Column validation regular expression</value>
+  </data>
+  <data name="VarbinaryColumnDescription" xml:space="preserve">
+    <value>Varbinary Column</value>
+  </data>
+  <data name="VarbinaryColumn" xml:space="preserve">
+    <value>Varbinary Column</value>
+  </data>
+  <data name="VarbinaryColumnRequiredErrorMessage" xml:space="preserve">
+    <value>Varbinary Column is required</value>
+  </data>
+  <data name="VarbinaryColumnToolTip" xml:space="preserve">
+    <value>Varbinary Column</value>
+  </data>
+  <data name="VarbinaryColumnValueValidationErrorMessage" xml:space="preserve">
+    <value>Varbinary Column has validation error</value>
+  </data>
+  <data name="VarbinaryColumnValueValidationExpression" xml:space="preserve">
+    <value>Please input Varbinary Column validation regular expression</value>
+  </data>
+  <data name="ImageColumnDescription" xml:space="preserve">
+    <value>Image Column</value>
+  </data>
+  <data name="ImageColumn" xml:space="preserve">
+    <value>Image Column</value>
+  </data>
+  <data name="ImageColumnRequiredErrorMessage" xml:space="preserve">
+    <value>Image Column is required</value>
+  </data>
+  <data name="ImageColumnToolTip" xml:space="preserve">
+    <value>Image Column</value>
+  </data>
+  <data name="ImageColumnValueValidationErrorMessage" xml:space="preserve">
+    <value>Image Column has validation error</value>
+  </data>
+  <data name="ImageColumnValueValidationExpression" xml:space="preserve">
+    <value>Please input Image Column validation regular expression</value>
+  </data>
+  <data name="TinyintColumnDescription" xml:space="preserve">
+    <value>Tinyint Column</value>
+  </data>
+  <data name="TinyintColumn" xml:space="preserve">
+    <value>Tinyint Column</value>
+  </data>
+  <data name="TinyintColumnRequiredErrorMessage" xml:space="preserve">
+    <value>Tinyint Column is required</value>
+  </data>
+  <data name="TinyintColumnToolTip" xml:space="preserve">
+    <value>Tinyint Column</value>
+  </data>
+  <data name="TinyintColumnValueValidationErrorMessage" xml:space="preserve">
+    <value>Tinyint Column has validation error</value>
+  </data>
+  <data name="TinyintColumnValueValidationExpression" xml:space="preserve">
+    <value>Please input Tinyint Column validation regular expression</value>
+  </data>
+  <data name="TinyintColumn_is_required" xml:space="preserve">
+    <value>TinyintColumn is required</value>
+  </data>
+  <data name="SmallintColumnDescription" xml:space="preserve">
+    <value>Smallint Column</value>
+  </data>
+  <data name="SmallintColumn" xml:space="preserve">
+    <value>Smallint Column</value>
+  </data>
+  <data name="SmallintColumnRequiredErrorMessage" xml:space="preserve">
+    <value>Smallint Column is required</value>
+  </data>
+  <data name="SmallintColumnToolTip" xml:space="preserve">
+    <value>Smallint Column</value>
+  </data>
+  <data name="SmallintColumnValueValidationErrorMessage" xml:space="preserve">
+    <value>Smallint Column has validation error</value>
+  </data>
+  <data name="SmallintColumnValueValidationExpression" xml:space="preserve">
+    <value>Please input Smallint Column validation regular expression</value>
+  </data>
+  <data name="SmallintColumn_is_required" xml:space="preserve">
+    <value>SmallintColumn is required</value>
+  </data>
+  <data name="IntColumnDescription" xml:space="preserve">
+    <value>Int Column</value>
+  </data>
+  <data name="IntColumn" xml:space="preserve">
+    <value>Int Column</value>
+  </data>
+  <data name="IntColumnRequiredErrorMessage" xml:space="preserve">
+    <value>Int Column is required</value>
+  </data>
+  <data name="IntColumnToolTip" xml:space="preserve">
+    <value>Int Column</value>
+  </data>
+  <data name="IntColumnValueValidationErrorMessage" xml:space="preserve">
+    <value>Int Column has validation error</value>
+  </data>
+  <data name="IntColumnValueValidationExpression" xml:space="preserve">
+    <value>Please input Int Column validation regular expression</value>
+  </data>
+  <data name="IntColumn_is_required" xml:space="preserve">
+    <value>IntColumn is required</value>
+  </data>
+  <data name="BigintColumnDescription" xml:space="preserve">
+    <value>Bigint Column</value>
+  </data>
+  <data name="BigintColumn" xml:space="preserve">
+    <value>Bigint Column</value>
+  </data>
+  <data name="BigintColumnRequiredErrorMessage" xml:space="preserve">
+    <value>Bigint Column is required</value>
+  </data>
+  <data name="BigintColumnToolTip" xml:space="preserve">
+    <value>Bigint Column</value>
+  </data>
+  <data name="BigintColumnValueValidationErrorMessage" xml:space="preserve">
+    <value>Bigint Column has validation error</value>
+  </data>
+  <data name="BigintColumnValueValidationExpression" xml:space="preserve">
+    <value>Please input Bigint Column validation regular expression</value>
+  </data>
+  <data name="BigintColumn_is_required" xml:space="preserve">
+    <value>BigintColumn is required</value>
+  </data>
+  <data name="DecimalColumnDescription" xml:space="preserve">
+    <value>Decimal Column</value>
+  </data>
+  <data name="DecimalColumn" xml:space="preserve">
+    <value>Decimal Column</value>
+  </data>
+  <data name="DecimalColumnRequiredErrorMessage" xml:space="preserve">
+    <value>Decimal Column is required</value>
+  </data>
+  <data name="DecimalColumnToolTip" xml:space="preserve">
+    <value>Decimal Column</value>
+  </data>
+  <data name="DecimalColumnValueValidationErrorMessage" xml:space="preserve">
+    <value>Decimal Column has validation error</value>
+  </data>
+  <data name="DecimalColumnValueValidationExpression" xml:space="preserve">
+    <value>Please input Decimal Column validation regular expression</value>
+  </data>
+  <data name="DecimalColumn_is_required" xml:space="preserve">
+    <value>DecimalColumn is required</value>
+  </data>
+  <data name="NumericColumnDescription" xml:space="preserve">
+    <value>Numeric Column</value>
+  </data>
+  <data name="NumericColumn" xml:space="preserve">
+    <value>Numeric Column</value>
+  </data>
+  <data name="NumericColumnRequiredErrorMessage" xml:space="preserve">
+    <value>Numeric Column is required</value>
+  </data>
+  <data name="NumericColumnToolTip" xml:space="preserve">
+    <value>Numeric Column</value>
+  </data>
+  <data name="NumericColumnValueValidationErrorMessage" xml:space="preserve">
+    <value>Numeric Column has validation error</value>
+  </data>
+  <data name="NumericColumnValueValidationExpression" xml:space="preserve">
+    <value>Please input Numeric Column validation regular expression</value>
+  </data>
+  <data name="NumericColumn_is_required" xml:space="preserve">
+    <value>NumericColumn is required</value>
+  </data>
+  <data name="SmallmoneyColumnDescription" xml:space="preserve">
+    <value>Smallmoney Column</value>
+  </data>
+  <data name="SmallmoneyColumn" xml:space="preserve">
+    <value>Smallmoney Column</value>
+  </data>
+  <data name="SmallmoneyColumnRequiredErrorMessage" xml:space="preserve">
+    <value>Smallmoney Column is required</value>
+  </data>
+  <data name="SmallmoneyColumnToolTip" xml:space="preserve">
+    <value>Smallmoney Column</value>
+  </data>
+  <data name="SmallmoneyColumnValueValidationErrorMessage" xml:space="preserve">
+    <value>Smallmoney Column has validation error</value>
+  </data>
+  <data name="SmallmoneyColumnValueValidationExpression" xml:space="preserve">
+    <value>Please input Smallmoney Column validation regular expression</value>
+  </data>
+  <data name="SmallmoneyColumn_is_required" xml:space="preserve">
+    <value>SmallmoneyColumn is required</value>
+  </data>
+  <data name="MoneyColumnDescription" xml:space="preserve">
+    <value>Money Column</value>
+  </data>
+  <data name="MoneyColumn" xml:space="preserve">
+    <value>Money Column</value>
+  </data>
+  <data name="MoneyColumnRequiredErrorMessage" xml:space="preserve">
+    <value>Money Column is required</value>
+  </data>
+  <data name="MoneyColumnToolTip" xml:space="preserve">
+    <value>Money Column</value>
+  </data>
+  <data name="MoneyColumnValueValidationErrorMessage" xml:space="preserve">
+    <value>Money Column has validation error</value>
+  </data>
+  <data name="MoneyColumnValueValidationExpression" xml:space="preserve">
+    <value>Please input Money Column validation regular expression</value>
+  </data>
+  <data name="MoneyColumn_is_required" xml:space="preserve">
+    <value>MoneyColumn is required</value>
+  </data>
+  <data name="FloatColumnDescription" xml:space="preserve">
+    <value>Float Column</value>
+  </data>
+  <data name="FloatColumn" xml:space="preserve">
+    <value>Float Column</value>
+  </data>
+  <data name="FloatColumnRequiredErrorMessage" xml:space="preserve">
+    <value>Float Column is required</value>
+  </data>
+  <data name="FloatColumnToolTip" xml:space="preserve">
+    <value>Float Column</value>
+  </data>
+  <data name="FloatColumnValueValidationErrorMessage" xml:space="preserve">
+    <value>Float Column has validation error</value>
+  </data>
+  <data name="FloatColumnValueValidationExpression" xml:space="preserve">
+    <value>Please input Float Column validation regular expression</value>
+  </data>
+  <data name="FloatColumn_is_required" xml:space="preserve">
+    <value>FloatColumn is required</value>
+  </data>
+  <data name="RealColumnDescription" xml:space="preserve">
+    <value>Real Column</value>
+  </data>
+  <data name="RealColumn" xml:space="preserve">
+    <value>Real Column</value>
+  </data>
+  <data name="RealColumnRequiredErrorMessage" xml:space="preserve">
+    <value>Real Column is required</value>
+  </data>
+  <data name="RealColumnToolTip" xml:space="preserve">
+    <value>Real Column</value>
+  </data>
+  <data name="RealColumnValueValidationErrorMessage" xml:space="preserve">
+    <value>Real Column has validation error</value>
+  </data>
+  <data name="RealColumnValueValidationExpression" xml:space="preserve">
+    <value>Please input Real Column validation regular expression</value>
+  </data>
+  <data name="RealColumn_is_required" xml:space="preserve">
+    <value>RealColumn is required</value>
+  </data>
+  <data name="DatetimeColumnDescription" xml:space="preserve">
+    <value>Datetime Column</value>
+  </data>
+  <data name="DatetimeColumn" xml:space="preserve">
+    <value>Datetime Column</value>
+  </data>
+  <data name="DatetimeColumnRequiredErrorMessage" xml:space="preserve">
+    <value>Datetime Column is required</value>
+  </data>
+  <data name="DatetimeColumnToolTip" xml:space="preserve">
+    <value>Datetime Column</value>
+  </data>
+  <data name="DatetimeColumnValueValidationErrorMessage" xml:space="preserve">
+    <value>Datetime Column has validation error</value>
+  </data>
+  <data name="DatetimeColumnValueValidationExpression" xml:space="preserve">
+    <value>Please input Datetime Column validation regular expression</value>
+  </data>
+  <data name="DatetimeColumn_is_required" xml:space="preserve">
+    <value>DatetimeColumn is required</value>
+  </data>
+  <data name="Datetime2ColumnDescription" xml:space="preserve">
+    <value>Datetime 2 Column</value>
+  </data>
+  <data name="Datetime2Column" xml:space="preserve">
+    <value>Datetime 2 Column</value>
+  </data>
+  <data name="Datetime2ColumnRequiredErrorMessage" xml:space="preserve">
+    <value>Datetime 2 Column is required</value>
+  </data>
+  <data name="Datetime2ColumnToolTip" xml:space="preserve">
+    <value>Datetime 2 Column</value>
+  </data>
+  <data name="Datetime2ColumnValueValidationErrorMessage" xml:space="preserve">
+    <value>Datetime 2 Column has validation error</value>
+  </data>
+  <data name="Datetime2ColumnValueValidationExpression" xml:space="preserve">
+    <value>Please input Datetime 2 Column validation regular expression</value>
+  </data>
+  <data name="Datetime2Column_is_required" xml:space="preserve">
+    <value>Datetime2Column is required</value>
+  </data>
+  <data name="SmalldatetimeColumnDescription" xml:space="preserve">
+    <value>Smalldatetime Column</value>
+  </data>
+  <data name="SmalldatetimeColumn" xml:space="preserve">
+    <value>Smalldatetime Column</value>
+  </data>
+  <data name="SmalldatetimeColumnRequiredErrorMessage" xml:space="preserve">
+    <value>Smalldatetime Column is required</value>
+  </data>
+  <data name="SmalldatetimeColumnToolTip" xml:space="preserve">
+    <value>Smalldatetime Column</value>
+  </data>
+  <data name="SmalldatetimeColumnValueValidationErrorMessage" xml:space="preserve">
+    <value>Smalldatetime Column has validation error</value>
+  </data>
+  <data name="SmalldatetimeColumnValueValidationExpression" xml:space="preserve">
+    <value>Please input Smalldatetime Column validation regular expression</value>
+  </data>
+  <data name="SmalldatetimeColumn_is_required" xml:space="preserve">
+    <value>SmalldatetimeColumn is required</value>
+  </data>
+  <data name="DateColumnDescription" xml:space="preserve">
+    <value>Date Column</value>
+  </data>
+  <data name="DateColumn" xml:space="preserve">
+    <value>Date Column</value>
+  </data>
+  <data name="DateColumnRequiredErrorMessage" xml:space="preserve">
+    <value>Date Column is required</value>
+  </data>
+  <data name="DateColumnToolTip" xml:space="preserve">
+    <value>Date Column</value>
+  </data>
+  <data name="DateColumnValueValidationErrorMessage" xml:space="preserve">
+    <value>Date Column has validation error</value>
+  </data>
+  <data name="DateColumnValueValidationExpression" xml:space="preserve">
+    <value>Please input Date Column validation regular expression</value>
+  </data>
+  <data name="DateColumn_is_required" xml:space="preserve">
+    <value>DateColumn is required</value>
+  </data>
+  <data name="TimeColumnDescription" xml:space="preserve">
+    <value>Time Column</value>
+  </data>
+  <data name="TimeColumn" xml:space="preserve">
+    <value>Time Column</value>
+  </data>
+  <data name="TimeColumnRequiredErrorMessage" xml:space="preserve">
+    <value>Time Column is required</value>
+  </data>
+  <data name="TimeColumnToolTip" xml:space="preserve">
+    <value>Time Column</value>
+  </data>
+  <data name="TimeColumnValueValidationErrorMessage" xml:space="preserve">
+    <value>Time Column has validation error</value>
+  </data>
+  <data name="TimeColumnValueValidationExpression" xml:space="preserve">
+    <value>Please input Time Column validation regular expression</value>
+  </data>
+  <data name="TimeColumn_is_required" xml:space="preserve">
+    <value>TimeColumn is required</value>
+  </data>
+  <data name="UniqueidentifierColumnDescription" xml:space="preserve">
+    <value>Uniqueidentifier Column</value>
+  </data>
+  <data name="UniqueidentifierColumn" xml:space="preserve">
+    <value>Uniqueidentifier Column</value>
+  </data>
+  <data name="UniqueidentifierColumnRequiredErrorMessage" xml:space="preserve">
+    <value>Uniqueidentifier Column is required</value>
+  </data>
+  <data name="UniqueidentifierColumnToolTip" xml:space="preserve">
+    <value>Uniqueidentifier Column</value>
+  </data>
+  <data name="UniqueidentifierColumnValueValidationErrorMessage" xml:space="preserve">
+    <value>Uniqueidentifier Column has validation error</value>
+  </data>
+  <data name="UniqueidentifierColumnValueValidationExpression" xml:space="preserve">
+    <value>Please input Uniqueidentifier Column validation regular expression</value>
+  </data>
+  <data name="UniqueidentifierColumn_is_required" xml:space="preserve">
+    <value>UniqueidentifierColumn is required</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Value_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property Value of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Value_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property Value of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Name_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property Name of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Name_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property Name of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="IdentifierInString" xml:space="preserve">
+    <value>IdentifierInString</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property IdentifierInString of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property IdentifierInString of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Title_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property Title of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Title_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property Title of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Description_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property Description of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Description_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property Description of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="PubDate" xml:space="preserve">
+    <value>PubDate</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_PubDate_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property PubDate of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_PubDate_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property PubDate of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Organization_2_UniqueidentifierColumn" xml:space="preserve">
+    <value>Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property Organization_2_UniqueidentifierColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property Organization_2_UniqueidentifierColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Organization_2_UniqueIdentifier" xml:space="preserve">
+    <value>Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Organization_2_UniqueIdentifier_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property Organization_2_UniqueIdentifier of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Organization_2_UniqueIdentifier_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property Organization_2_UniqueIdentifier of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Organization_2_Name" xml:space="preserve">
+    <value>Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Organization_2_Name_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property Organization_2_Name of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Organization_2_Name_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property Organization_2_Name of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Id_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property Id of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Id_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property Id of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_ParentId_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property ParentId of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_ParentId_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property ParentId of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_IsSystemBuiltIn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property IsSystemBuiltIn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_IsSystemBuiltIn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property IsSystemBuiltIn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_UniqueIdentifier_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property UniqueIdentifier of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_UniqueIdentifier_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property UniqueIdentifier of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_CreatedDateTime_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property CreatedDateTime of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_CreatedDateTime_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property CreatedDateTime of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_CharColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property CharColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_CharColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property CharColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_VarcharColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property VarcharColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_VarcharColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property VarcharColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_TextColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property TextColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_TextColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property TextColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_NcharColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property NcharColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_NcharColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property NcharColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_NvarcharColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property NvarcharColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_NvarcharColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property NvarcharColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_NtextColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property NtextColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_NtextColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property NtextColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_BitColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property BitColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_BitColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property BitColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_BinaryColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property BinaryColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_BinaryColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property BinaryColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_VarbinaryColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property VarbinaryColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_VarbinaryColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property VarbinaryColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_ImageColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property ImageColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_ImageColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property ImageColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_TinyintColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property TinyintColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_TinyintColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property TinyintColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_SmallintColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property SmallintColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_SmallintColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property SmallintColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_IntColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property IntColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_IntColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property IntColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_BigintColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property BigintColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_BigintColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property BigintColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_DecimalColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property DecimalColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_DecimalColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property DecimalColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_NumericColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property NumericColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_NumericColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property NumericColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_SmallmoneyColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property SmallmoneyColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_SmallmoneyColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property SmallmoneyColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_MoneyColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property MoneyColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_MoneyColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property MoneyColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_FloatColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property FloatColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_FloatColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property FloatColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_RealColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property RealColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_RealColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property RealColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_DatetimeColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property DatetimeColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_DatetimeColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property DatetimeColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Datetime2Column_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property Datetime2Column of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Datetime2Column_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property Datetime2Column of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_SmalldatetimeColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property SmalldatetimeColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_SmalldatetimeColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property SmalldatetimeColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_DateColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property DateColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_DateColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property DateColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_TimeColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property TimeColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_TimeColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property TimeColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property UniqueidentifierColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property UniqueidentifierColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="RecursivePath__" xml:space="preserve">
+    <value>RecursivePath__</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_RecursivePath___of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property RecursivePath__ of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_RecursivePath___of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property RecursivePath__ of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="CountPerFK" xml:space="preserve">
+    <value>CountPerFK</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property CountPerFK of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property CountPerFK of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon" xml:space="preserve">
+    <value>Organization</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon" xml:space="preserve">
+    <value>Description of Id of Organization</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon" xml:space="preserve">
+    <value>Tooltip of Id of Organization</value>
+  </data>
+  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfOrganization_2OfCommon" xml:space="preserve">
+    <value>Id of Organization</value>
+  </data>
+  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfOrganization_2OfCommon" xml:space="preserve">
+    <value>Description of Id of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfOrganization_2OfCommon" xml:space="preserve">
+    <value>Tooltip of Id of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInCommonOftOfCommon" xml:space="preserve">
+    <value>IsSystemBuiltIn</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInCommonOftOfCommon" xml:space="preserve">
+    <value>Description of IsSystemBuiltIn</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of IsSystemBuiltIn</value>
+  </data>
+  <data name="ValueToCompare_ID_CheckBox_Search_valueToCompareIsSystemBuiltInCommonOftOfCommon" xml:space="preserve">
+    <value>IsSystemBuiltIn of Organization</value>
+  </data>
+  <data name="Description_of_ValueToCompare_ID_CheckBox_Search_valueToCompareIsSystemBuiltInCommonOftOfCommon" xml:space="preserve">
+    <value>Description of IsSystemBuiltIn of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToCompare_ID_CheckBox_Search_valueToCompareIsSystemBuiltInCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of IsSystemBuiltIn of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareCreatedDateTimeCommonOftOfCommon" xml:space="preserve">
+    <value>CreatedDateTime</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareCreatedDateTimeCommonOftOfCommon" xml:space="preserve">
+    <value>Description of CreatedDateTime</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareCreatedDateTimeCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of CreatedDateTime</value>
+  </data>
+  <data name="IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Description_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon" xml:space="preserve">
+    <value>Description of From</value>
+  </data>
+  <data name="Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of From</value>
+  </data>
+  <data name="LowerBound_ID_TextBox_Search_lowerBoundCreatedDateTimeCommonOftOfCommon" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Description_of_LowerBound_ID_TextBox_Search_lowerBoundCreatedDateTimeCommonOftOfCommon" xml:space="preserve">
+    <value>Description of From</value>
+  </data>
+  <data name="Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundCreatedDateTimeCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of From</value>
+  </data>
+  <data name="IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Description_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon" xml:space="preserve">
+    <value>Description of To</value>
+  </data>
+  <data name="Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of To</value>
+  </data>
+  <data name="UpperBound_ID_TextBox_Search_upperBoundCreatedDateTimeCommonOftOfCommon" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Description_of_UpperBound_ID_TextBox_Search_upperBoundCreatedDateTimeCommonOftOfCommon" xml:space="preserve">
+    <value>Description of To</value>
+  </data>
+  <data name="Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundCreatedDateTimeCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of To</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareBitColumnCommonOftOfCommon" xml:space="preserve">
+    <value>BitColumn</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareBitColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of BitColumn</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareBitColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of BitColumn</value>
+  </data>
+  <data name="ValueToCompare_ID_CheckBox_Search_valueToCompareBitColumnCommonOftOfCommon" xml:space="preserve">
+    <value>BitColumn of Organization</value>
+  </data>
+  <data name="Description_of_ValueToCompare_ID_CheckBox_Search_valueToCompareBitColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of BitColumn of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToCompare_ID_CheckBox_Search_valueToCompareBitColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of BitColumn of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareDatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>DatetimeColumn</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareDatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of DatetimeColumn</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareDatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of DatetimeColumn</value>
+  </data>
+  <data name="IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Description_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of From</value>
+  </data>
+  <data name="Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of From</value>
+  </data>
+  <data name="LowerBound_ID_TextBox_Search_lowerBoundDatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Description_of_LowerBound_ID_TextBox_Search_lowerBoundDatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of From</value>
+  </data>
+  <data name="Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundDatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of From</value>
+  </data>
+  <data name="IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Description_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of To</value>
+  </data>
+  <data name="Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of To</value>
+  </data>
+  <data name="UpperBound_ID_TextBox_Search_upperBoundDatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Description_of_UpperBound_ID_TextBox_Search_upperBoundDatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of To</value>
+  </data>
+  <data name="Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundDatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of To</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareDatetime2ColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Datetime2Column</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareDatetime2ColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of Datetime2Column</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareDatetime2ColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of Datetime2Column</value>
+  </data>
+  <data name="IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Description_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of From</value>
+  </data>
+  <data name="Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of From</value>
+  </data>
+  <data name="LowerBound_ID_TextBox_Search_lowerBoundDatetime2ColumnCommonOftOfCommon" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Description_of_LowerBound_ID_TextBox_Search_lowerBoundDatetime2ColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of From</value>
+  </data>
+  <data name="Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundDatetime2ColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of From</value>
+  </data>
+  <data name="IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Description_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of To</value>
+  </data>
+  <data name="Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of To</value>
+  </data>
+  <data name="UpperBound_ID_TextBox_Search_upperBoundDatetime2ColumnCommonOftOfCommon" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Description_of_UpperBound_ID_TextBox_Search_upperBoundDatetime2ColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of To</value>
+  </data>
+  <data name="Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundDatetime2ColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of To</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareSmalldatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>SmalldatetimeColumn</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareSmalldatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of SmalldatetimeColumn</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareSmalldatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of SmalldatetimeColumn</value>
+  </data>
+  <data name="IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Description_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of From</value>
+  </data>
+  <data name="Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of From</value>
+  </data>
+  <data name="LowerBound_ID_TextBox_Search_lowerBoundSmalldatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Description_of_LowerBound_ID_TextBox_Search_lowerBoundSmalldatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of From</value>
+  </data>
+  <data name="Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundSmalldatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of From</value>
+  </data>
+  <data name="IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Description_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of To</value>
+  </data>
+  <data name="Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of To</value>
+  </data>
+  <data name="UpperBound_ID_TextBox_Search_upperBoundSmalldatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Description_of_UpperBound_ID_TextBox_Search_upperBoundSmalldatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of To</value>
+  </data>
+  <data name="Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundSmalldatetimeColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of To</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareDateColumnCommonOftOfCommon" xml:space="preserve">
+    <value>DateColumn</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareDateColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of DateColumn</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareDateColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of DateColumn</value>
+  </data>
+  <data name="IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDateColumnCommonOftOfCommon" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Description_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDateColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of From</value>
+  </data>
+  <data name="Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDateColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of From</value>
+  </data>
+  <data name="LowerBound_ID_TextBox_Search_lowerBoundDateColumnCommonOftOfCommon" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Description_of_LowerBound_ID_TextBox_Search_lowerBoundDateColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of From</value>
+  </data>
+  <data name="Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundDateColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of From</value>
+  </data>
+  <data name="IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDateColumnCommonOftOfCommon" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Description_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDateColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of To</value>
+  </data>
+  <data name="Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDateColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of To</value>
+  </data>
+  <data name="UpperBound_ID_TextBox_Search_upperBoundDateColumnCommonOftOfCommon" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Description_of_UpperBound_ID_TextBox_Search_upperBoundDateColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of To</value>
+  </data>
+  <data name="Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundDateColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of To</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon" xml:space="preserve">
+    <value>Description of Name</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of Name</value>
+  </data>
+  <data name="ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon" xml:space="preserve">
+    <value>Name of Organization</value>
+  </data>
+  <data name="Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon" xml:space="preserve">
+    <value>Description of Name of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of Name of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareCharColumnCommonOftOfCommon" xml:space="preserve">
+    <value>CharColumn</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareCharColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of CharColumn</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareCharColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of CharColumn</value>
+  </data>
+  <data name="ValueToBeContained_ID_TextBox_Search_valueToBeContainedCharColumnCommonOftOfCommon" xml:space="preserve">
+    <value>CharColumn of Organization</value>
+  </data>
+  <data name="Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedCharColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of CharColumn of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedCharColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of CharColumn of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareVarcharColumnCommonOftOfCommon" xml:space="preserve">
+    <value>VarcharColumn</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareVarcharColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of VarcharColumn</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareVarcharColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of VarcharColumn</value>
+  </data>
+  <data name="ValueToBeContained_ID_TextBox_Search_valueToBeContainedVarcharColumnCommonOftOfCommon" xml:space="preserve">
+    <value>VarcharColumn of Organization</value>
+  </data>
+  <data name="Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedVarcharColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of VarcharColumn of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedVarcharColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of VarcharColumn of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareTextColumnCommonOftOfCommon" xml:space="preserve">
+    <value>TextColumn</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareTextColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of TextColumn</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareTextColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of TextColumn</value>
+  </data>
+  <data name="ValueToBeContained_ID_TextBox_Search_valueToBeContainedTextColumnCommonOftOfCommon" xml:space="preserve">
+    <value>TextColumn of Organization</value>
+  </data>
+  <data name="Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedTextColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of TextColumn of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedTextColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of TextColumn of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareNcharColumnCommonOftOfCommon" xml:space="preserve">
+    <value>NcharColumn</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareNcharColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of NcharColumn</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNcharColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of NcharColumn</value>
+  </data>
+  <data name="ValueToBeContained_ID_TextBox_Search_valueToBeContainedNcharColumnCommonOftOfCommon" xml:space="preserve">
+    <value>NcharColumn of Organization</value>
+  </data>
+  <data name="Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNcharColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of NcharColumn of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNcharColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of NcharColumn of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareNvarcharColumnCommonOftOfCommon" xml:space="preserve">
+    <value>NvarcharColumn</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareNvarcharColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of NvarcharColumn</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNvarcharColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of NvarcharColumn</value>
+  </data>
+  <data name="ValueToBeContained_ID_TextBox_Search_valueToBeContainedNvarcharColumnCommonOftOfCommon" xml:space="preserve">
+    <value>NvarcharColumn of Organization</value>
+  </data>
+  <data name="Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNvarcharColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of NvarcharColumn of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNvarcharColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of NvarcharColumn of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareNtextColumnCommonOftOfCommon" xml:space="preserve">
+    <value>NtextColumn</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareNtextColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of NtextColumn</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNtextColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of NtextColumn</value>
+  </data>
+  <data name="ValueToBeContained_ID_TextBox_Search_valueToBeContainedNtextColumnCommonOftOfCommon" xml:space="preserve">
+    <value>NtextColumn of Organization</value>
+  </data>
+  <data name="Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNtextColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Description of NtextColumn of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNtextColumnCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of NtextColumn of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly" xml:space="preserve">
+    <value>Organization</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly" xml:space="preserve">
+    <value>Description of Id of Organization</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly" xml:space="preserve">
+    <value>Tooltip of Id of Organization</value>
+  </data>
+  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly" xml:space="preserve">
+    <value>Id of Organization</value>
+  </data>
+  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly" xml:space="preserve">
+    <value>Description of Id of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly" xml:space="preserve">
+    <value>Tooltip of Id of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+    <value>Description of Id</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+    <value>Tooltip of Id</value>
+  </data>
+  <data name="ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+    <value>Id of Organization</value>
+  </data>
+  <data name="Description_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+    <value>Description of Id of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+    <value>Tooltip of Id of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier" xml:space="preserve">
+    <value>UniqueIdentifier</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier" xml:space="preserve">
+    <value>Description of UniqueIdentifier</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier" xml:space="preserve">
+    <value>Tooltip of UniqueIdentifier</value>
+  </data>
+  <data name="ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier" xml:space="preserve">
+    <value>UniqueIdentifier of Organization</value>
+  </data>
+  <data name="Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier" xml:space="preserve">
+    <value>Description of UniqueIdentifier of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier" xml:space="preserve">
+    <value>Tooltip of UniqueIdentifier of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn" xml:space="preserve">
+    <value>UniqueidentifierColumn</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn" xml:space="preserve">
+    <value>Description of UniqueidentifierColumn</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn" xml:space="preserve">
+    <value>Tooltip of UniqueidentifierColumn</value>
+  </data>
+  <data name="ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn" xml:space="preserve">
+    <value>UniqueidentifierColumn of Organization</value>
+  </data>
+  <data name="Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn" xml:space="preserve">
+    <value>Description of UniqueidentifierColumn of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn" xml:space="preserve">
+    <value>Tooltip of UniqueidentifierColumn of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
+    <value>Description of Id</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
+    <value>Tooltip of Id</value>
+  </data>
+  <data name="ValueToCompare_ID_Unknown_Search_valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
+    <value>Id of Organization</value>
+  </data>
+  <data name="Description_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
+    <value>Description of Id of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
+    <value>Tooltip of Id of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
+    <value>UniqueIdentifier</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
+    <value>Description of UniqueIdentifier</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
+    <value>Tooltip of UniqueIdentifier</value>
+  </data>
+  <data name="ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
+    <value>UniqueIdentifier of Organization</value>
+  </data>
+  <data name="Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
+    <value>Description of UniqueIdentifier of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
+    <value>Tooltip of UniqueIdentifier of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
+    <value>UniqueidentifierColumn</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
+    <value>Description of UniqueidentifierColumn</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
+    <value>Tooltip of UniqueidentifierColumn</value>
+  </data>
+  <data name="ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
+    <value>UniqueidentifierColumn of Organization</value>
+  </data>
+  <data name="Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
+    <value>Description of UniqueidentifierColumn of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
+    <value>Tooltip of UniqueidentifierColumn of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Organization</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of UniqueIdentifier of Organization</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of UniqueIdentifier of Organization</value>
+  </data>
+  <data name="ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>UniqueIdentifier of Organization</value>
+  </data>
+  <data name="Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of UniqueIdentifier of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of UniqueIdentifier of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Organization</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of UniqueidentifierColumn of Organization</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of UniqueidentifierColumn of Organization</value>
+  </data>
+  <data name="ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>UniqueidentifierColumn of Organization</value>
+  </data>
+  <data name="Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of UniqueidentifierColumn of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of UniqueidentifierColumn of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>IsSystemBuiltIn</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of IsSystemBuiltIn</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of IsSystemBuiltIn</value>
+  </data>
+  <data name="ValueToCompare_ID_CheckBox_Search_valueToCompareIsSystemBuiltInUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>IsSystemBuiltIn of Organization</value>
+  </data>
+  <data name="Description_of_ValueToCompare_ID_CheckBox_Search_valueToCompareIsSystemBuiltInUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of IsSystemBuiltIn of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToCompare_ID_CheckBox_Search_valueToCompareIsSystemBuiltInUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of IsSystemBuiltIn of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>CreatedDateTime</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of CreatedDateTime</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of CreatedDateTime</value>
+  </data>
+  <data name="IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Description_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of From</value>
+  </data>
+  <data name="Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of From</value>
+  </data>
+  <data name="LowerBound_ID_TextBox_Search_lowerBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Description_of_LowerBound_ID_TextBox_Search_lowerBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of From</value>
+  </data>
+  <data name="Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of From</value>
+  </data>
+  <data name="IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Description_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of To</value>
+  </data>
+  <data name="Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of To</value>
+  </data>
+  <data name="UpperBound_ID_TextBox_Search_upperBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Description_of_UpperBound_ID_TextBox_Search_upperBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of To</value>
+  </data>
+  <data name="Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of To</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareBitColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>BitColumn</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareBitColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of BitColumn</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareBitColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of BitColumn</value>
+  </data>
+  <data name="ValueToCompare_ID_CheckBox_Search_valueToCompareBitColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>BitColumn of Organization</value>
+  </data>
+  <data name="Description_of_ValueToCompare_ID_CheckBox_Search_valueToCompareBitColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of BitColumn of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToCompare_ID_CheckBox_Search_valueToCompareBitColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of BitColumn of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>DatetimeColumn</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of DatetimeColumn</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of DatetimeColumn</value>
+  </data>
+  <data name="IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Description_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of From</value>
+  </data>
+  <data name="Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of From</value>
+  </data>
+  <data name="LowerBound_ID_TextBox_Search_lowerBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Description_of_LowerBound_ID_TextBox_Search_lowerBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of From</value>
+  </data>
+  <data name="Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of From</value>
+  </data>
+  <data name="IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Description_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of To</value>
+  </data>
+  <data name="Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of To</value>
+  </data>
+  <data name="UpperBound_ID_TextBox_Search_upperBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Description_of_UpperBound_ID_TextBox_Search_upperBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of To</value>
+  </data>
+  <data name="Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of To</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Datetime2Column</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of Datetime2Column</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of Datetime2Column</value>
+  </data>
+  <data name="IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Description_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of From</value>
+  </data>
+  <data name="Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of From</value>
+  </data>
+  <data name="LowerBound_ID_TextBox_Search_lowerBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Description_of_LowerBound_ID_TextBox_Search_lowerBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of From</value>
+  </data>
+  <data name="Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of From</value>
+  </data>
+  <data name="IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Description_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of To</value>
+  </data>
+  <data name="Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of To</value>
+  </data>
+  <data name="UpperBound_ID_TextBox_Search_upperBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Description_of_UpperBound_ID_TextBox_Search_upperBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of To</value>
+  </data>
+  <data name="Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of To</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>SmalldatetimeColumn</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of SmalldatetimeColumn</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of SmalldatetimeColumn</value>
+  </data>
+  <data name="IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Description_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of From</value>
+  </data>
+  <data name="Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of From</value>
+  </data>
+  <data name="LowerBound_ID_TextBox_Search_lowerBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Description_of_LowerBound_ID_TextBox_Search_lowerBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of From</value>
+  </data>
+  <data name="Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of From</value>
+  </data>
+  <data name="IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Description_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of To</value>
+  </data>
+  <data name="Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of To</value>
+  </data>
+  <data name="UpperBound_ID_TextBox_Search_upperBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Description_of_UpperBound_ID_TextBox_Search_upperBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of To</value>
+  </data>
+  <data name="Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of To</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>DateColumn</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of DateColumn</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of DateColumn</value>
+  </data>
+  <data name="IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Description_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of From</value>
+  </data>
+  <data name="Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of From</value>
+  </data>
+  <data name="LowerBound_ID_TextBox_Search_lowerBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Description_of_LowerBound_ID_TextBox_Search_lowerBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of From</value>
+  </data>
+  <data name="Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of From</value>
+  </data>
+  <data name="IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Description_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of To</value>
+  </data>
+  <data name="Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of To</value>
+  </data>
+  <data name="UpperBound_ID_TextBox_Search_upperBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Description_of_UpperBound_ID_TextBox_Search_upperBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of To</value>
+  </data>
+  <data name="Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of To</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareNameUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareNameUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of Name</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNameUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of Name</value>
+  </data>
+  <data name="ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Name of Organization</value>
+  </data>
+  <data name="Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of Name of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of Name of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareCharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>CharColumn</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareCharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of CharColumn</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareCharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of CharColumn</value>
+  </data>
+  <data name="ValueToBeContained_ID_TextBox_Search_valueToBeContainedCharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>CharColumn of Organization</value>
+  </data>
+  <data name="Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedCharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of CharColumn of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedCharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of CharColumn of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareVarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>VarcharColumn</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareVarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of VarcharColumn</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareVarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of VarcharColumn</value>
+  </data>
+  <data name="ValueToBeContained_ID_TextBox_Search_valueToBeContainedVarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>VarcharColumn of Organization</value>
+  </data>
+  <data name="Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedVarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of VarcharColumn of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedVarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of VarcharColumn of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareTextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>TextColumn</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareTextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of TextColumn</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareTextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of TextColumn</value>
+  </data>
+  <data name="ValueToBeContained_ID_TextBox_Search_valueToBeContainedTextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>TextColumn of Organization</value>
+  </data>
+  <data name="Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedTextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of TextColumn of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedTextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of TextColumn of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareNcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>NcharColumn</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareNcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of NcharColumn</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of NcharColumn</value>
+  </data>
+  <data name="ValueToBeContained_ID_TextBox_Search_valueToBeContainedNcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>NcharColumn of Organization</value>
+  </data>
+  <data name="Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of NcharColumn of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of NcharColumn of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareNvarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>NvarcharColumn</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareNvarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of NvarcharColumn</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNvarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of NvarcharColumn</value>
+  </data>
+  <data name="ValueToBeContained_ID_TextBox_Search_valueToBeContainedNvarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>NvarcharColumn of Organization</value>
+  </data>
+  <data name="Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNvarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of NvarcharColumn of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNvarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of NvarcharColumn of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareNtextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>NtextColumn</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareNtextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of NtextColumn</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNtextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of NtextColumn</value>
+  </data>
+  <data name="ValueToBeContained_ID_TextBox_Search_valueToBeContainedNtextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>NtextColumn of Organization</value>
+  </data>
+  <data name="Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNtextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Description of NtextColumn of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNtextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon" xml:space="preserve">
+    <value>Tooltip of NtextColumn of Organization</value>
+  </data>
+
+</root>
+
+
