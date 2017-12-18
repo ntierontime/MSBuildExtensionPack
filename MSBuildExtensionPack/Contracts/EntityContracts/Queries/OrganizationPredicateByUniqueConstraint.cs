@@ -27,7 +27,7 @@ namespace MSBuildExtensionPack.EntityContracts
         {
             Expression<Func<T, bool>> _retvalExpression = GetPredicateExpression();
             return _retvalExpression.Compile()(input);
-            //return input != null &&  this.Criteria != null input.UniqueIdentifier == this.Criteria.UniqueIdentifier//;
+            //return input != null &&  this.Criteria != null
         }
 
         public Expression<Func<T, bool>> GetPredicateExpression()
@@ -72,7 +72,7 @@ namespace MSBuildExtensionPack.EntityContracts
         {
             Expression<Func<T, bool>> _retvalExpression = GetPredicateExpression();
             return _retvalExpression.Compile()(input);
-            //return input != null &&  this.Criteria != null input.UniqueidentifierColumn == this.Criteria.UniqueidentifierColumn//;
+            //return input != null &&  this.Criteria != null
         }
 
         public Expression<Func<T, bool>> GetPredicateExpression()
