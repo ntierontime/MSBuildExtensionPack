@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Condition="Exists('..\..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Project="..\..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
-  <Import Condition="Exists('..\..\..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Project="..\..\..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" />
+  <Import Condition="Exists('..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Project="..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
+  <Import Condition="Exists('..\..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Project="..\..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" />
   <Import Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" />
   <Import Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
   <Import Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" />
@@ -45,55 +45,53 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <HintPath>..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Net.Http, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\packages\System.Net.Http.4.3.2\lib\net46\System.Net.Http.dll</HintPath>
+      <HintPath>..\..\..\packages\System.Net.Http.4.3.2\lib\net46\System.Net.Http.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <HintPath>..\..\..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <HintPath>..\..\..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <HintPath>..\..\..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <HintPath>..\..\..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
@@ -107,42 +105,42 @@
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Xml.Linq" />
@@ -246,97 +244,97 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Frameworks\Framework.Charting\Framework.Charting.csproj">
+    <ProjectReference Include="..\..\..\Frameworks\Framework.Charting\Framework.Charting.csproj">
       <Project>{51d5f233-02f2-45f7-b4f2-60d18ef3dec5}</Project>
       <Name>Framework.Charting</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Frameworks\Framework.CommonBLLEntities\Framework.CommonBLLEntities.csproj">
+    <ProjectReference Include="..\..\..\Frameworks\Framework.CommonBLLEntities\Framework.CommonBLLEntities.csproj">
       <Project>{ba8c8c0b-470a-4d3c-b3da-9e28599799b5}</Project>
       <Name>Framework.CommonBLLEntities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Frameworks\Framework.DAL\Framework.DAL.csproj">
+    <ProjectReference Include="..\..\..\Frameworks\Framework.DAL\Framework.DAL.csproj">
       <Project>{525678c4-fdc1-4a5d-9d8a-d7e78309335f}</Project>
       <Name>Framework.DAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Frameworks\Framework.DataSourceEntities\Framework.DataSourceEntities.csproj">
+    <ProjectReference Include="..\..\..\Frameworks\Framework.DataSourceEntities\Framework.DataSourceEntities.csproj">
       <Project>{f85a14d5-64e0-4cfc-88da-27fe9d0dd664}</Project>
       <Name>Framework.DataSourceEntities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Frameworks\Framework.EntityContracts\Framework.EntityContracts.csproj">
+    <ProjectReference Include="..\..\..\Frameworks\Framework.EntityContracts\Framework.EntityContracts.csproj">
       <Project>{c3a270de-9727-492e-91e2-f56e7e0e0f83}</Project>
       <Name>Framework.EntityContracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Frameworks\Framework.Mvc\Framework.Mvc.csproj">
+    <ProjectReference Include="..\..\..\Frameworks\Framework.Mvc\Framework.Mvc.csproj">
       <Project>{e45a004f-fbef-445c-9607-fbc89d6d4590}</Project>
       <Name>Framework.Mvc</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Frameworks\Framework.Resx\Framework.Resx.csproj">
+    <ProjectReference Include="..\..\..\Frameworks\Framework.Resx\Framework.Resx.csproj">
       <Project>{c72b898b-b53b-42d5-9f4f-673f84bb485b}</Project>
       <Name>Framework.Resx</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Frameworks\Framework.Services\Framework.Services.csproj">
+    <ProjectReference Include="..\..\..\Frameworks\Framework.Services\Framework.Services.csproj">
       <Project>{3ef91dc7-12c9-47f3-bb18-ad3d85d1b624}</Project>
       <Name>Framework.Services</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Frameworks\Framework.ViewModels\Framework.ViewModels.csproj">
+    <ProjectReference Include="..\..\..\Frameworks\Framework.ViewModels\Framework.ViewModels.csproj">
       <Project>{2cc97c32-9ffa-4da4-a6c0-83f300404ec3}</Project>
       <Name>Framework.ViewModels</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Frameworks\Framework.Web\Framework.Web.csproj">
+    <ProjectReference Include="..\..\..\Frameworks\Framework.Web\Framework.Web.csproj">
       <Project>{950b9cdb-9286-4a1a-8d88-1df6954a45e3}</Project>
       <Name>Framework.Web</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Frameworks\Framework.Xaml\Framework.Xaml.csproj">
-      <Project>{e5302713-0022-4657-85d8-9620818071df}</Project>
-      <Name>Framework.Xaml</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Frameworks\Framework\Framework.csproj">
+    <ProjectReference Include="..\..\..\Frameworks\Framework\Framework.csproj">
       <Project>{6d25aa30-c3af-4ae0-b567-0f2653120cdc}</Project>
       <Name>Framework</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Core\CommonBLLEntities\MSBuildExtensionPack.CommonBLLEntities.csproj">
-      <Project>{6a520483-5254-4978-ad53-3147addeffb6}</Project>
+    <ProjectReference Include="..\..\Contracts\CommonBLLEntities\MSBuildExtensionPack.CommonBLLEntities.csproj">
+      <Project>{1863424e-9841-4647-97a2-4cc17a4bc7ba}</Project>
       <Name>MSBuildExtensionPack.CommonBLLEntities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Core\CommonBLLIoC\MSBuildExtensionPack.CommonBLLIoC.csproj">
-      <Project>{6992a9f3-9832-46fd-8c7f-d2bb5777e7d9}</Project>
-      <Name>MSBuildExtensionPack.CommonBLLIoC</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Core\CommonBLL\MSBuildExtensionPack.CommonBLL.csproj">
-      <Project>{eb345c1f-d609-43c1-a97f-7b3b3a5a0352}</Project>
-      <Name>MSBuildExtensionPack.CommonBLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Core\DALContracts\MSBuildExtensionPack.DALContracts.csproj">
-      <Project>{54d13c75-9e50-4ed3-b265-9fc6819ea35e}</Project>
-      <Name>MSBuildExtensionPack.DALContracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Core\DataSourceEntities\MSBuildExtensionPack.DataSourceEntities.csproj">
-      <Project>{d0b33cdd-97c7-4d99-a579-8fc566de7153}</Project>
+    <ProjectReference Include="..\..\Contracts\DataSourceEntities\MSBuildExtensionPack.DataSourceEntities.csproj">
+      <Project>{3a8f1415-88ef-4b9e-8fef-4296bf953f31}</Project>
       <Name>MSBuildExtensionPack.DataSourceEntities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Core\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj">
-      <Project>{d79953a8-febc-4b13-9cda-f7675a233481}</Project>
+    <ProjectReference Include="..\..\Contracts\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj">
+      <Project>{9abeb016-fb34-40ab-b469-3b00f0048d27}</Project>
       <Name>MSBuildExtensionPack.EntityContracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Core\EntityFrameworkContextV6CodeFirst\MSBuildExtensionPack.EntityFrameworkContextV6CodeFirst.csproj">
-      <Project>{41282156-28f5-4bc3-b10e-35eaac542577}</Project>
-      <Name>MSBuildExtensionPack.EntityFrameworkContextV6CodeFirst</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Core\EntityFrameworkDALV6CodeFirst\MSBuildExtensionPack.EntityFrameworkDALV6CodeFirst.csproj">
-      <Project>{ca09c384-1354-45ee-bdb3-7a39cbfe6695}</Project>
-      <Name>MSBuildExtensionPack.EntityFrameworkDALV6CodeFirst</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Core\Resx\MSBuildExtensionPack.Resx.csproj">
-      <Project>{fd138435-0f7c-4b72-b9d3-987e7fe69f80}</Project>
+    <ProjectReference Include="..\..\Contracts\Resx\MSBuildExtensionPack.Resx.csproj">
+      <Project>{960e0564-9487-4c39-9f6a-ef730d96c18e}</Project>
       <Name>MSBuildExtensionPack.Resx</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Core\ViewModelData\MSBuildExtensionPack.ViewModelData.csproj">
-      <Project>{59622778-b13c-464e-98f7-ea662653af27}</Project>
+    <ProjectReference Include="..\..\Contracts\ViewModelData\MSBuildExtensionPack.ViewModelData.csproj">
+      <Project>{e9d59ccd-7122-40ba-93b2-2d2e40b09662}</Project>
       <Name>MSBuildExtensionPack.ViewModelData</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Core\WcfContracts\MSBuildExtensionPack.WcfContracts.csproj">
-      <Project>{3ff07bef-ff15-47ee-9bf2-107623976ca5}</Project>
+    <ProjectReference Include="..\..\DAL\DALContracts\MSBuildExtensionPack.DALContracts.csproj">
+      <Project>{11cc9717-71a4-41e7-b27e-d59a54d221dd}</Project>
+      <Name>MSBuildExtensionPack.DALContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DAL\EntityFrameworkContextV6CodeFirst\MSBuildExtensionPack.EntityFrameworkContextV6CodeFirst.csproj">
+      <Project>{f9aacc1c-5613-4f62-af63-b04098f61192}</Project>
+      <Name>MSBuildExtensionPack.EntityFrameworkContextV6CodeFirst</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DAL\EntityFrameworkDALV6CodeFirst\MSBuildExtensionPack.EntityFrameworkDALV6CodeFirst.csproj">
+      <Project>{254b5a90-dcbb-4013-8bfc-49cf3dfa95ae}</Project>
+      <Name>MSBuildExtensionPack.EntityFrameworkDALV6CodeFirst</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Services\CommonBLLIoC\MSBuildExtensionPack.CommonBLLIoC.csproj">
+      <Project>{2dd6d618-b371-4a82-9c67-d3d8b073782b}</Project>
+      <Name>MSBuildExtensionPack.CommonBLLIoC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Services\CommonBLL\MSBuildExtensionPack.CommonBLL.csproj">
+      <Project>{01fa0028-ad94-4d6b-9a89-3fabf3c9c779}</Project>
+      <Name>MSBuildExtensionPack.CommonBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Services\WcfContracts\MSBuildExtensionPack.WcfContracts.csproj">
+      <Project>{88d3427b-531b-45bf-a336-cefbee3dbeb7}</Project>
       <Name>MSBuildExtensionPack.WcfContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UINative\Shared\MVVMLightViewModels\MSBuildExtensionPack.MVVMLightViewModels.csproj">
+      <Project>{37677547-9cc8-4641-8b4e-20a8771b8964}</Project>
+      <Name>MSBuildExtensionPack.MVVMLightViewModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\AspNetMvc40ApiController\MSBuildExtensionPack.AspNetMvc40ApiController.csproj">
       <Project>{b136b1c2-48e2-4651-9b39-a97037822583}</Project>
@@ -378,9 +376,9 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
-    <Error Condition="!Exists('..\..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
-    <Error Condition="!Exists('..\..\..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
-    <Error Condition="!Exists('..\..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
 </Project>
