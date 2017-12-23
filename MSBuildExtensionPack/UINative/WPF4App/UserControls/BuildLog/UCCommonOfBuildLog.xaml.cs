@@ -9,16 +9,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MSBuildExtensionPack.WPF4App.Pages
+namespace MSBuildExtensionPack.WPF4App.UserControls.BuildLog
 {
     /// <summary>
-    /// Interaction logic for WPCommonOfBuildEventCode.xaml
+    /// Interaction logic for UCCommonOfBuildLog.xaml
     /// </summary>
-    public partial class WPCommonOfBuildEventCode : Page
+    public partial class UCCommonOfBuildLog : UserControl
     {
-        public WPCommonOfBuildEventCode()
+        public UCCommonOfBuildLog()
         {
             InitializeComponent();
         }

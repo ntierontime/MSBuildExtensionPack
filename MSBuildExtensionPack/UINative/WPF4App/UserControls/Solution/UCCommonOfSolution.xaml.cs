@@ -12,14 +12,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MSBuildExtensionPack.WPF4App.UserControls
+namespace MSBuildExtensionPack.WPF4App.UserControls.Solution
 {
     /// <summary>
-    /// Interaction logic for UCCommonOfBuild.xaml
+    /// Interaction logic for UCCommonOfSolution.xaml
     /// </summary>
-    public partial class UCCommonOfBuild : UserControl
+    public partial class UCCommonOfSolution : UserControl
     {
-        public UCCommonOfBuild()
+        public UCCommonOfSolution()
         {
             InitializeComponent();
         }

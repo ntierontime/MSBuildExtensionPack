@@ -1,5 +1,5 @@
 <UserControl
-        x:Class="MSBuildExtensionPack.WPF4App.UserControls.UCCommonOfSolution"
+        x:Class="MSBuildExtensionPack.WPF4App.UserControls.Solution.UCCommonOfSolution"
         xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"

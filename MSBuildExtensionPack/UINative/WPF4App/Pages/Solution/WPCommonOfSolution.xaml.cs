@@ -11,7 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace MSBuildExtensionPack.WPF4App.Pages
+namespace MSBuildExtensionPack.WPF4App.Pages.Solution
 {
     /// <summary>
     /// Interaction logic for WPCommonOfSolution.xaml

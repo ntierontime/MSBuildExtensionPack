@@ -12,14 +12,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MSBuildExtensionPack.WPF4App.UserControls
+namespace MSBuildExtensionPack.WPF4App.UserControls.BuildEventCode
 {
     /// <summary>
-    /// Interaction logic for UCCommonOfSolution.xaml
+    /// Interaction logic for UCCommonOfBuildEventCode.xaml
     /// </summary>
-    public partial class UCCommonOfSolution : UserControl
+    public partial class UCCommonOfBuildEventCode : UserControl
     {
-        public UCCommonOfSolution()
+        public UCCommonOfBuildEventCode()
         {
             InitializeComponent();
         }

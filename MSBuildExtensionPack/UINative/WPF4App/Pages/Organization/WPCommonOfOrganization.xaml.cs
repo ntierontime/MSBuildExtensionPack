@@ -11,14 +11,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace MSBuildExtensionPack.WPF4App.Pages
+namespace MSBuildExtensionPack.WPF4App.Pages.Organization
 {
     /// <summary>
-    /// Interaction logic for WPCommonOfBuildLog.xaml
+    /// Interaction logic for WPCommonOfOrganization.xaml
     /// </summary>
-    public partial class WPCommonOfBuildLog : Page
+    public partial class WPCommonOfOrganization : Page
     {
-        public WPCommonOfBuildLog()
+        public WPCommonOfOrganization()
         {
             InitializeComponent();
         }

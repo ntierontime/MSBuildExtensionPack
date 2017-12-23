@@ -1,4 +1,4 @@
-<Page x:Class="MSBuildExtensionPack.WPF4App.Pages.WPCommonOfOrganization"
+<Page x:Class="MSBuildExtensionPack.WPF4App.Pages.Build.WPCommonOfBuild"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -10,8 +10,8 @@
         xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels"
         xmlns:fvm="clr-namespace:Framework.Xaml;assembly=Framework.Xaml"
         mc:Ignorable="d"
-        DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM, Source={StaticResource Locator}}"
-        xmlns:my="clr-namespace:MSBuildExtensionPack.WPF4App.UserControls"
+        DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM, Source={StaticResource Locator}}"
+        xmlns:my="clr-namespace:MSBuildExtensionPack.WPF4App.UserControls.Build"
         Title="Workspace of Common"
         >
     <Grid>
@@ -31,7 +31,7 @@
                         <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.Search, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Center"></TextBlock>
                     </StackPanel>
                 </Button>
-                <Button Name="AddNew" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMOrganization.LaunchCreateViewCommand, Source={StaticResource Locator}}" Width="45" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.AddNew, Source={StaticResource LocalizedStrings}}">
+                <Button Name="AddNew" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchCreateViewCommand, Source={StaticResource Locator}}" Width="45" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.AddNew, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>
                         <Rectangle Width="20" Height="20" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}">
                             <Rectangle.OpacityMask>
@@ -90,6 +90,6 @@
                 </ComboBox>
             </ToolBar>
         </ToolBarTray>
-<my:UCCommonOfOrganization x:Name="UCCommonOfOrganization1" Grid.Row="1" HorizontalAlignment="Stretch" />
+<my:UCCommonOfBuild x:Name="UCCommonOfBuild1" Grid.Row="1" HorizontalAlignment="Stretch" />
     </Grid>
 </Page>

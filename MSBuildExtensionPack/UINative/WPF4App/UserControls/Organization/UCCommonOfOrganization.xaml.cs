@@ -9,16 +9,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MSBuildExtensionPack.WPF4App.Pages
+namespace MSBuildExtensionPack.WPF4App.UserControls.Organization
 {
     /// <summary>
-    /// Interaction logic for WPCommonOfBuild.xaml
+    /// Interaction logic for UCCommonOfOrganization.xaml
     /// </summary>
-    public partial class WPCommonOfBuild : Page
+    public partial class UCCommonOfOrganization : UserControl
     {
-        public WPCommonOfBuild()
+        public UCCommonOfOrganization()
         {
             InitializeComponent();
         }

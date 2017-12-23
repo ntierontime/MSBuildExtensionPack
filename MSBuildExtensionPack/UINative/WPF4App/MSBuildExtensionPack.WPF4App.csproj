@@ -375,74 +375,74 @@
       <SubType>RESXCodeBehind</SubType>
     </Compile>
     <None Include="packages.config" />
-    <Page Include="Pages\WPCommonOfBuild.xaml">
+    <Page Include="Pages\Build\WPCommonOfBuild.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\WPCommonOfBuild.xaml.cs">
+    <Compile Include="Pages\Build\WPCommonOfBuild.xaml.cs">
       <DependentUpon>WPCommonOfBuild.xaml</DependentUpon>
     </Compile>
-    <Page Include="Pages\WPCommonOfBuildEventCode.xaml">
+    <Page Include="Pages\BuildEventCode\WPCommonOfBuildEventCode.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\WPCommonOfBuildEventCode.xaml.cs">
+    <Compile Include="Pages\BuildEventCode\WPCommonOfBuildEventCode.xaml.cs">
       <DependentUpon>WPCommonOfBuildEventCode.xaml</DependentUpon>
     </Compile>
-    <Page Include="Pages\WPCommonOfBuildLog.xaml">
+    <Page Include="Pages\BuildLog\WPCommonOfBuildLog.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\WPCommonOfBuildLog.xaml.cs">
+    <Compile Include="Pages\BuildLog\WPCommonOfBuildLog.xaml.cs">
       <DependentUpon>WPCommonOfBuildLog.xaml</DependentUpon>
     </Compile>
-    <Page Include="Pages\WPCommonOfOrganization.xaml">
+    <Page Include="Pages\Organization\WPCommonOfOrganization.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\WPCommonOfOrganization.xaml.cs">
+    <Compile Include="Pages\Organization\WPCommonOfOrganization.xaml.cs">
       <DependentUpon>WPCommonOfOrganization.xaml</DependentUpon>
     </Compile>
-    <Page Include="Pages\WPCommonOfSolution.xaml">
+    <Page Include="Pages\Solution\WPCommonOfSolution.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\WPCommonOfSolution.xaml.cs">
+    <Compile Include="Pages\Solution\WPCommonOfSolution.xaml.cs">
       <DependentUpon>WPCommonOfSolution.xaml</DependentUpon>
     </Compile>
-    <Page Include="UserControls\UCCommonOfBuild.xaml">
+    <Page Include="UserControls\Build\UCCommonOfBuild.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\UCCommonOfBuild.xaml.cs">
+    <Compile Include="UserControls\Build\UCCommonOfBuild.xaml.cs">
       <DependentUpon>UCCommonOfBuild.xaml</DependentUpon>
     </Compile>
-    <Page Include="UserControls\UCCommonOfBuildEventCode.xaml">
+    <Page Include="UserControls\BuildEventCode\UCCommonOfBuildEventCode.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\UCCommonOfBuildEventCode.xaml.cs">
+    <Compile Include="UserControls\BuildEventCode\UCCommonOfBuildEventCode.xaml.cs">
       <DependentUpon>UCCommonOfBuildEventCode.xaml</DependentUpon>
     </Compile>
-    <Page Include="UserControls\UCCommonOfBuildLog.xaml">
+    <Page Include="UserControls\BuildLog\UCCommonOfBuildLog.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\UCCommonOfBuildLog.xaml.cs">
+    <Compile Include="UserControls\BuildLog\UCCommonOfBuildLog.xaml.cs">
       <DependentUpon>UCCommonOfBuildLog.xaml</DependentUpon>
     </Compile>
-    <Page Include="UserControls\UCCommonOfOrganization.xaml">
+    <Page Include="UserControls\Organization\UCCommonOfOrganization.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\UCCommonOfOrganization.xaml.cs">
+    <Compile Include="UserControls\Organization\UCCommonOfOrganization.xaml.cs">
       <DependentUpon>UCCommonOfOrganization.xaml</DependentUpon>
     </Compile>
-    <Page Include="UserControls\UCCommonOfSolution.xaml">
+    <Page Include="UserControls\Solution\UCCommonOfSolution.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\UCCommonOfSolution.xaml.cs">
+    <Compile Include="UserControls\Solution\UCCommonOfSolution.xaml.cs">
       <DependentUpon>UCCommonOfSolution.xaml</DependentUpon>
     </Compile>
     <None Include="map.2.D.2.vsd" />
