@@ -18,21 +18,5 @@ namespace MSBuildExtensionPack.EntityContracts
         System.DateTime BuildStartTime { get; set; }
 
     }
-
-    /// <summary>
-    /// a property defined when <see cref="WithEntityContractBuild"/> is used in other classes.
-    /// </summary>
-    /// <typeparam name="T">a type inherits from <see cref="WithEntityContractBuild"/></typeparam>
-    public partial interface WithEntityContractBuild<T>
-        where T : IBuild
-    {
-        /// <summary>
-        /// Gets or sets the Build
-        /// </summary>
-        /// <value>
-        /// The Build
-        /// </value>
-        T Build { get; set; }
-    }
 }
 

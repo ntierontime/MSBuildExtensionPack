@@ -957,22 +957,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
         #endregion Nested Views classes and their collection classes 3
     }
 
-/*
-    /// <summary>
-    /// a property defined when <see cref="BuildLog"/> is used in other classes.
-    /// </summary>
-    public interface WithEntityContractBuildLog
-    {
-        /// <summary>
-        /// Gets or sets BuildLog.
-        /// </summary>
-        /// <value>
-        /// The BuildLog
-        /// </value>
-        BuildLog BuildLog { get; set; }
-    }
-*/
-
     /// <summary>
     /// message definition, pass single entry, pulled from database, to business logic layer. <see cref="BuildLog"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
     /// </summary>

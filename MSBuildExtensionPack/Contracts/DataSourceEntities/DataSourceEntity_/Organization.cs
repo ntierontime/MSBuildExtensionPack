@@ -2562,22 +2562,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
         #endregion Nested Views classes and their collection classes 4
     }
 
-/*
-    /// <summary>
-    /// a property defined when <see cref="Organization"/> is used in other classes.
-    /// </summary>
-    public interface WithEntityContractOrganization
-    {
-        /// <summary>
-        /// Gets or sets Organization.
-        /// </summary>
-        /// <value>
-        /// The Organization
-        /// </value>
-        Organization Organization { get; set; }
-    }
-*/
-
     /// <summary>
     /// message definition, pass single entry, pulled from database, to business logic layer. <see cref="Organization"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
     /// </summary>

@@ -102,19 +102,5 @@ System.Int64 id)
 
         #endregion Method of BuildLogIdentifier GetAClone()
     }
-
-    /// <summary>
-    ///  a property defined when <see cref="WithIdentifierContractBuildLog"/> is used in other classes.
-    /// </summary>
-    public partial interface WithIdentifierContractBuildLog
-    {
-        /// <summary>
-        /// Gets or sets the BuildLogIdentifier
-        /// </summary>
-        /// <value>
-        /// The BuildLogIdentifier
-        /// </value>
-        BuildLogIdentifier BuildLogIdentifier { get; set; }
-    }
 }
 

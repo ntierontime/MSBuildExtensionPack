@@ -29,14 +29,5 @@ namespace MSBuildExtensionPack.EntityContracts
 ;
         }
     }
-
-    /// <summary>
-    ///  a property defined when <see cref="OrganizationIdentifier"/> is used in other classes.
-    /// </summary>
-    public partial interface WithIdentifierContractOrganization<T>
-        where T : IOrganizationIdentifier
-    {
-        T OrganizationIdentifier { get; set; }
-    }
 }
 

@@ -29,14 +29,5 @@ namespace MSBuildExtensionPack.EntityContracts
 ;
         }
     }
-
-    /// <summary>
-    ///  a property defined when <see cref="BuildLogIdentifier"/> is used in other classes.
-    /// </summary>
-    public partial interface WithIdentifierContractBuildLog<T>
-        where T : IBuildLogIdentifier
-    {
-        T BuildLogIdentifier { get; set; }
-    }
 }
 

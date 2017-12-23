@@ -997,22 +997,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
         #endregion Nested Views classes and their collection classes 4
     }
 
-/*
-    /// <summary>
-    /// a property defined when <see cref="Build"/> is used in other classes.
-    /// </summary>
-    public interface WithEntityContractBuild
-    {
-        /// <summary>
-        /// Gets or sets Build.
-        /// </summary>
-        /// <value>
-        /// The Build
-        /// </value>
-        Build Build { get; set; }
-    }
-*/
-
     /// <summary>
     /// message definition, pass single entry, pulled from database, to business logic layer. <see cref="Build"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
     /// </summary>

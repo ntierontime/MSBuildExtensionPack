@@ -307,22 +307,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
         #endregion Nested Views classes and their collection classes 1
     }
 
-/*
-    /// <summary>
-    /// a property defined when <see cref="BuildEventCode"/> is used in other classes.
-    /// </summary>
-    public interface WithEntityContractBuildEventCode
-    {
-        /// <summary>
-        /// Gets or sets BuildEventCode.
-        /// </summary>
-        /// <value>
-        /// The BuildEventCode
-        /// </value>
-        BuildEventCode BuildEventCode { get; set; }
-    }
-*/
-
     /// <summary>
     /// message definition, pass single entry, pulled from database, to business logic layer. <see cref="BuildEventCode"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
     /// </summary>

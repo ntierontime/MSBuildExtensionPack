@@ -102,19 +102,5 @@ System.Int32 id)
 
         #endregion Method of SolutionIdentifier GetAClone()
     }
-
-    /// <summary>
-    ///  a property defined when <see cref="WithIdentifierContractSolution"/> is used in other classes.
-    /// </summary>
-    public partial interface WithIdentifierContractSolution
-    {
-        /// <summary>
-        /// Gets or sets the SolutionIdentifier
-        /// </summary>
-        /// <value>
-        /// The SolutionIdentifier
-        /// </value>
-        SolutionIdentifier SolutionIdentifier { get; set; }
-    }
 }
 

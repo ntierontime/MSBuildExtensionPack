@@ -29,14 +29,5 @@ namespace MSBuildExtensionPack.EntityContracts
 ;
         }
     }
-
-    /// <summary>
-    ///  a property defined when <see cref="SolutionIdentifier"/> is used in other classes.
-    /// </summary>
-    public partial interface WithIdentifierContractSolution<T>
-        where T : ISolutionIdentifier
-    {
-        T SolutionIdentifier { get; set; }
-    }
 }
 
