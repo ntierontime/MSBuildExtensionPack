@@ -83,9 +83,7 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="Logging.config" />
-    <None Include="packages.config" />
     <Content Include="clientaccesspolicy.xml" />
     <Content Include="crossdomain.xml" />
     <Content Include="WcfMarkupBuild.svc" />
@@ -110,6 +108,8 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Content Include="Web.config" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
     <None Include="map.2.C.1.vsd" />
     <None Include="map.2.C.1.vsd.png" />
   </ItemGroup>

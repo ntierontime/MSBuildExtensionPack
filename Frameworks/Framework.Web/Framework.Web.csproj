@@ -32,10 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="WebFormApplicationApplicationVariables.cs" />
     <Compile Include="WebFormApplicationSessionVariables.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
     <None Include="map.1.D.1.vsd" />
     <None Include="map.1.D.1.vsd.png" />
   </ItemGroup>

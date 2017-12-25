@@ -32,7 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="App.config" />
     <Compile Include="EFEntityDataModel.Companion.cs" />
     <Compile Include="EFEntityDataModel.Context.cs" />
@@ -42,6 +41,7 @@
     <Compile Include="Organization.cs" />
     <Compile Include="Solution.cs" />
     <Compile Include="EFEntityDataModel.StoredProcedure.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <None Include="map.2.A.1.vsd" />
     <None Include="map.2.A.1.vsd.png" />

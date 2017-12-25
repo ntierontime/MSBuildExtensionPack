@@ -34,7 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Pages\Build\Create.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
@@ -175,6 +174,25 @@
     <Compile Include="Pages\Solution\Edit.xaml.cs">
       <DependentUpon>Edit.xaml</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="App.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ResourceApp.config">
+    </EmbeddedResource>
+    <Compile Include="Globallization\TranslateExtension.cs" />
+    <None Include="app.config" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <EmbeddedResource Include="Pages\Build\WPCommonSearchViewOfBuild.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -281,24 +299,6 @@
     <Compile Include="Pages\Solution\WPTabbedCommonOfSolution.xaml.cs">
       <DependentUpon>WPTabbedCommonOfSolution.xaml</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="App.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Pages\HomePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Pages\HomePage.xaml.cs">
-      <DependentUpon>HomePage.xaml</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="ResourceApp.config">
-    </EmbeddedResource>
-    <Compile Include="Globallization\TranslateExtension.cs" />
-    <None Include="app.config" />
     <None Include="map.2.D.1.vsd" />
     <None Include="map.2.D.1.vsd.png" />
   </ItemGroup>

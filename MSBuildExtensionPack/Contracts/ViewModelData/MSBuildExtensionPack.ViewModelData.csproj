@@ -33,8 +33,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="OrderByLists.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="BuildItemVM.cs" />
     <Compile Include="BuildEventCodeItemVM.cs" />
     <Compile Include="BuildLogItemVM.cs" />
@@ -45,6 +43,8 @@
     <Compile Include="BuildLogWorkspaceVM.cs" />
     <Compile Include="OrganizationWorkspaceVM.cs" />
     <Compile Include="SolutionWorkspaceVM.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
     <None Include="map.2.B.2.vsd" />
     <None Include="map.2.B.2.vsd.png" />
   </ItemGroup>

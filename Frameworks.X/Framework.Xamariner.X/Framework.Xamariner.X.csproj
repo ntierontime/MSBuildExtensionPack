@@ -34,12 +34,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Behaviors\BehaviorBase.cs" />
     <Compile Include="Behaviors\EventToCommandBehavior.cs" />
     <Compile Include="Globalization\ILocalize.cs" />
     <Compile Include="Globalization\PlatformCulture.cs" />
     <Compile Include="Globalization\Platforms.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <None Include="map.1.D.1.vsd" />
     <None Include="map.1.D.1.vsd.png" />

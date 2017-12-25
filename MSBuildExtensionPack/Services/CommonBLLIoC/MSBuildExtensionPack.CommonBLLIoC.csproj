@@ -32,12 +32,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="IoCBuild.cs" />
     <Compile Include="IoCBuildEventCode.cs" />
     <Compile Include="IoCBuildLog.cs" />
     <Compile Include="IoCOrganization.cs" />
     <Compile Include="IoCSolution.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <None Include="map.2.C.2.vsd" />
     <None Include="map.2.C.2.vsd.png" />

@@ -32,7 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Contracts\IBuild.cs" />
     <Compile Include="Contracts\IBuildEventCode.cs" />
     <Compile Include="Contracts\IBuildLog.cs" />
@@ -53,12 +52,13 @@
     <Compile Include="IdentifierContractHelpers\IBuildLogIdentifierHelper.cs" />
     <Compile Include="IdentifierContractHelpers\IOrganizationIdentifierHelper.cs" />
     <Compile Include="IdentifierContractHelpers\ISolutionIdentifierHelper.cs" />
-    <None Include="packages.config" />
     <Compile Include="QueryCriteriaByEntityReferenceContracts\IQueryCriteriaBuildByFKs.cs" />
     <Compile Include="QueryCriteriaByEntityReferenceContracts\IQueryCriteriaBuildLogByFKs.cs" />
     <Compile Include="QueryCriteriaByEntityReferenceContracts\IQueryCriteriaOrganizationByFKs.cs" />
     <Compile Include="QueryCriteriaByEntityReferenceContracts\IQueryCriteriaSolutionByFKs.cs" />
     <Compile Include="Queries\OrganizationPredicateByUniqueConstraint.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
     <None Include="map.2.B.3.vsd" />
     <None Include="map.2.B.3.vsd.png" />
   </ItemGroup>

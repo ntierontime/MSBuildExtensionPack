@@ -32,13 +32,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="BuildApiControllerClient.cs" />
     <Compile Include="BuildEventCodeApiControllerClient.cs" />
     <Compile Include="BuildLogApiControllerClient.cs" />
     <Compile Include="OrganizationApiControllerClient.cs" />
     <Compile Include="SolutionApiControllerClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
     <None Include="map.2.B.2.vsd" />
     <None Include="map.2.B.2.vsd.png" />
   </ItemGroup>
