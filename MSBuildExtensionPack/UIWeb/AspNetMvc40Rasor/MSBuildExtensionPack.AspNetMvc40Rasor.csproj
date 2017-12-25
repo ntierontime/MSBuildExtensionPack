@@ -137,7 +137,6 @@
     <None Include="Web.config" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="Logging.config" />
-    <None Include="Logging.config" />
     <None Include="packages.config" />
     <Content Include="Views\Build\WPCommonOfBuild.cshtml" />
     <Content Include="Views\Build\WPEntityRelatedOfBuild.cshtml" />
