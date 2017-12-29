@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UIWeb", "UIWeb", "{6F2936FD-41C8-44AE-B6B4-D89E4D5EFC99}"
 EndProject
@@ -22,7 +22,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared.X", "Shared.X", "{91
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts.X", "Contracts.X", "{BDB3AFEC-F56B-4135-880F-34123136FC6F}"
 EndProject
-
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.AspNetMvc40ApiController", "MSBuildExtensionPack\UIWeb\AspNetMvc40ApiController\MSBuildExtensionPack.AspNetMvc40ApiController.csproj", "{745AF834-F156-4766-93AB-421ADB241292}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.AspNetMvc40Rasor", "MSBuildExtensionPack\UIWeb\AspNetMvc40Rasor\MSBuildExtensionPack.AspNetMvc40Rasor.csproj", "{ACD15310-6046-41BA-AE72-F53471CB7BC6}"
@@ -1809,9 +1808,7 @@ Global
 		{E8422666-0A62-4F54-A2D7-CF499AAEC215}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{E8422666-0A62-4F54-A2D7-CF499AAEC215}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
 		{E8422666-0A62-4F54-A2D7-CF499AAEC215}.Release|Mixed Platforms.Deploy.0 = Debug|Any CPU
-        {E8422666-0A62-4F54-A2D7-CF499AAEC215}.Release|x64.ActiveCfg = Release|Any CPU
-		{E8422666-0A62-4F54-A2D7-CF499AAEC215}.Release|x64.Build.0 = Release|Any CPU
-		{E8422666-0A62-4F54-A2D7-CF499AAEC215}.Release|x64.Deploy.0 = Release|Any CPU
+		{E8422666-0A62-4F54-A2D7-CF499AAEC215}.Release|x64.ActiveCfg = Release|Any CPU
 		{E8422666-0A62-4F54-A2D7-CF499AAEC215}.Release|x86.ActiveCfg = Release|Any CPU
 		{E8422666-0A62-4F54-A2D7-CF499AAEC215}.Release|x86.Build.0 = Release|Any CPU
 		{E8422666-0A62-4F54-A2D7-CF499AAEC215}.Release|x86.Deploy.0 = Release|Any CPU
@@ -1949,9 +1946,7 @@ Global
 		{BB3C8690-9AEF-4949-922B-A27C94F1039F}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{BB3C8690-9AEF-4949-922B-A27C94F1039F}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
 		{BB3C8690-9AEF-4949-922B-A27C94F1039F}.Release|Mixed Platforms.Deploy.0 = Debug|Any CPU
-        {BB3C8690-9AEF-4949-922B-A27C94F1039F}.Release|x64.ActiveCfg = Release|Any CPU
-		{BB3C8690-9AEF-4949-922B-A27C94F1039F}.Release|x64.Build.0 = Release|Any CPU
-		{BB3C8690-9AEF-4949-922B-A27C94F1039F}.Release|x64.Deploy.0 = Release|Any CPU
+		{BB3C8690-9AEF-4949-922B-A27C94F1039F}.Release|x64.ActiveCfg = Release|Any CPU
 		{BB3C8690-9AEF-4949-922B-A27C94F1039F}.Release|x86.ActiveCfg = Release|Any CPU
 		{BB3C8690-9AEF-4949-922B-A27C94F1039F}.Release|x86.Build.0 = Release|Any CPU
 		{BB3C8690-9AEF-4949-922B-A27C94F1039F}.Release|x86.Deploy.0 = Release|Any CPU
@@ -2008,9 +2003,7 @@ Global
 		{00062A82-FCEA-4CF7-806A-9D1C335C846C}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{00062A82-FCEA-4CF7-806A-9D1C335C846C}.Debug|Mixed Platforms.Build.0 = Debug|x86
 		{00062A82-FCEA-4CF7-806A-9D1C335C846C}.Debug|Mixed Platforms.Deploy.0 = Debug|x86
-        {00062A82-FCEA-4CF7-806A-9D1C335C846C}.Debug|x64.ActiveCfg = Debug|x64
-		{00062A82-FCEA-4CF7-806A-9D1C335C846C}.Debug|x64.Build.0 = Debug|x64
-		{00062A82-FCEA-4CF7-806A-9D1C335C846C}.Debug|x64.Deploy.0 = Debug|x64
+		{00062A82-FCEA-4CF7-806A-9D1C335C846C}.Debug|x64.ActiveCfg = Debug|x86
 		{00062A82-FCEA-4CF7-806A-9D1C335C846C}.Debug|x86.ActiveCfg = Debug|x86
 		{00062A82-FCEA-4CF7-806A-9D1C335C846C}.Debug|x86.Build.0 = Debug|x86
 		{00062A82-FCEA-4CF7-806A-9D1C335C846C}.Debug|x86.Deploy.0 = Debug|x86
@@ -3263,7 +3256,7 @@ Global
 		{72874F45-8700-4671-902F-1100F82FA5AB}.Release|x64.Build.0 = Release|Any CPU
 		{72874F45-8700-4671-902F-1100F82FA5AB}.Release|x86.ActiveCfg = Release|Any CPU
 		{72874F45-8700-4671-902F-1100F82FA5AB}.Release|x86.Build.0 = Release|Any CPU
- EndGlobalSection
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
@@ -3324,5 +3317,8 @@ Global
 		{E4E691E9-3912-44A7-AA4E-607A9BB4A9FC} = {BDB3AFEC-F56B-4135-880F-34123136FC6F}
 		{FBAB66F2-C88B-413B-9C49-A8AC835C7BA3} = {BDB3AFEC-F56B-4135-880F-34123136FC6F}
 		{72874F45-8700-4671-902F-1100F82FA5AB} = {91FAF52A-A68B-41F9-8C28-CA352EA446FB}
-  EndGlobalSection
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B516CB0A-3448-47C5-AAB5-64E547D11146}
+	EndGlobalSection
 EndGlobal
