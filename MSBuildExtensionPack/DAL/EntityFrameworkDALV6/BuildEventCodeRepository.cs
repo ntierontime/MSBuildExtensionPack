@@ -1045,8 +1045,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             var _ResultFromDataSource =
                 (
                     from t in this.LinqContext.BuildEventCodes
-                    let _Value = System.Data.Entity.SqlServer.SqlFunctions.StringConvert((double)t.Id).Trim()
-                    select new Framework.NameValuePair { Name = t.EventCode, Value = _Value } into vD0
+                    select new Framework.NameValuePair { Value = t.Id.ToString(), Name = t.EventCode } into vD0
                     select vD0
                 );
             var _retval = _ResultFromDataSource;
@@ -1381,8 +1380,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             var _ResultFromDataSource =
                 (
                     from t in this.LinqContext.BuildEventCodes
-                    let _IdentifierInString = System.Data.Entity.SqlServer.SqlFunctions.StringConvert((double)t.Id).Trim()
-                    select new Framework.RssItem { Title = t.EventCode, Description = t.EventCode, IdentifierInString = _IdentifierInString } into vD1
+                    select new Framework.RssItem { IdentifierInString = t.Id.ToString(), Title = t.EventCode, Description = t.EventCode } into vD1
                     select vD1
                 );
             var _retval = _ResultFromDataSource;

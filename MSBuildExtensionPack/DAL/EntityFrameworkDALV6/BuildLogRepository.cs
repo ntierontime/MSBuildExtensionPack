@@ -1616,8 +1616,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     join Organization_1 in this.LinqContext.Organizations on Solution_1.OrganizationId equals Organization_1.Id
                     join Organization_2 in this.LinqContext.Organizations on Organization_1.ParentId equals Organization_2.Id
                     join BuildEventCode_1 in this.LinqContext.BuildEventCodes on t.BuildEventCodeId equals BuildEventCode_1.Id
-                    let _Value = System.Data.Entity.SqlServer.SqlFunctions.StringConvert((double)t.Id).Trim()
-                    select new Framework.NameValuePair { Name = t.Message, Value = _Value } into vD0
+                    select new Framework.NameValuePair { Value = t.Id.ToString(), Name = t.Message } into vD0
                     select vD0
                 );
             var _retval = _ResultFromDataSource;
@@ -1957,8 +1956,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     join Organization_1 in this.LinqContext.Organizations on Solution_1.OrganizationId equals Organization_1.Id
                     join Organization_2 in this.LinqContext.Organizations on Organization_1.ParentId equals Organization_2.Id
                     join BuildEventCode_1 in this.LinqContext.BuildEventCodes on t.BuildEventCodeId equals BuildEventCode_1.Id
-                    let _IdentifierInString = System.Data.Entity.SqlServer.SqlFunctions.StringConvert((double)t.Id).Trim()
-                    select new Framework.RssItem { Title = t.Message, Description = t.Message, PubDate = t.EventTime, IdentifierInString = _IdentifierInString } into vD1
+                    select new Framework.RssItem { IdentifierInString = t.Id.ToString(), Title = t.Message, Description = t.Message, PubDate = t.EventTime } into vD1
                     select vD1
                 );
             var _retval = _ResultFromDataSource;
@@ -2746,8 +2744,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && BuildEventCode_1.Id == criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
                             )
                         )
-                    let _Value = System.Data.Entity.SqlServer.SqlFunctions.StringConvert((double)t.Id).Trim()
-                    select new Framework.NameValuePair { Name = t.Message, Value = _Value } into vD0
+                    select new Framework.NameValuePair { Value = t.Id.ToString(), Name = t.Message } into vD0
                     select vD0
                 );
             var _retval = _ResultFromDataSource;
@@ -3176,8 +3173,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && BuildEventCode_1.Id == criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
                             )
                         )
-                    let _IdentifierInString = System.Data.Entity.SqlServer.SqlFunctions.StringConvert((double)t.Id).Trim()
-                    select new Framework.RssItem { Title = t.Message, Description = t.Message, PubDate = t.EventTime, IdentifierInString = _IdentifierInString } into vD1
+                    select new Framework.RssItem { IdentifierInString = t.Id.ToString(), Title = t.Message, Description = t.Message, PubDate = t.EventTime } into vD1
                     select vD1
                 );
             var _retval = _ResultFromDataSource;
@@ -4035,7 +4031,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && BuildEventCode_1.Id == criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
                             )
                         )
-                    group t by new { BuildId = t.BuildId, BuildEventCodeId = t.BuildEventCodeId, Solution_1Id = Solution_1.Id, Organization_1Id = Organization_1.Id, Organization_2Id = Organization_2.Id, Name = string.Format("{0} - {1} - {2} - {3} - {4}", Build_1.Name, Solution_1.ExternalParentId, Organization_1.Name, Organization_2.Name, BuildEventCode_1.EventCode) } into tG
+                    group t by new { BuildId = t.BuildId, BuildEventCodeId = t.BuildEventCodeId, Solution_1Id = Solution_1.Id, Organization_1Id = Organization_1.Id, Organization_2Id = Organization_2.Id, Name = string.Concat(new string[] { Build_1.Name," - ",Solution_1.ExternalParentId," - ",Organization_1.Name," - ",Organization_2.Name," - ",BuildEventCode_1.EventCode }) } into tG
                     let _CountPerFK = tG.Count()
                     select new MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataView { BuildId = tG.Key.BuildId, BuildEventCodeId = tG.Key.BuildEventCodeId, Solution_1Id = tG.Key.Solution_1Id, Organization_1Id = tG.Key.Organization_1Id, Organization_2Id = tG.Key.Organization_2Id, CountPerFK = _CountPerFK, Name = tG.Key.Name } into vD3
                     select vD3

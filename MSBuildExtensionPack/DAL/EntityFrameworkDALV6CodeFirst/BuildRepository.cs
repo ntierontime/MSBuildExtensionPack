@@ -1574,8 +1574,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     join Solution_1 in this.LinqContext.Solutions on t.SolutionId equals Solution_1.Id
                     join Organization_1 in this.LinqContext.Organizations on Solution_1.OrganizationId equals Organization_1.Id
                     join Organization_2 in this.LinqContext.Organizations on Organization_1.ParentId equals Organization_2.Id
-                    let _Value = System.Data.Entity.SqlServer.SqlFunctions.StringConvert((double)t.Id).Trim()
-                    select new Framework.NameValuePair { Name = t.Name, Value = _Value } into vD0
+                    select new Framework.NameValuePair { Value = t.Id.ToString(), Name = t.Name } into vD0
                     select vD0
                 );
             var _retval = _ResultFromDataSource;
@@ -1913,8 +1912,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     join Solution_1 in this.LinqContext.Solutions on t.SolutionId equals Solution_1.Id
                     join Organization_1 in this.LinqContext.Organizations on Solution_1.OrganizationId equals Organization_1.Id
                     join Organization_2 in this.LinqContext.Organizations on Organization_1.ParentId equals Organization_2.Id
-                    let _IdentifierInString = System.Data.Entity.SqlServer.SqlFunctions.StringConvert((double)t.Id).Trim()
-                    select new Framework.RssItem { Title = t.Name, Description = t.Name, PubDate = t.BuildStartTime, IdentifierInString = _IdentifierInString } into vD1
+                    select new Framework.RssItem { IdentifierInString = t.Id.ToString(), Title = t.Name, Description = t.Name, PubDate = t.BuildStartTime } into vD1
                     select vD1
                 );
             var _retval = _ResultFromDataSource;
@@ -2658,8 +2656,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_2.Id == criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
                             )
                         )
-                    let _Value = System.Data.Entity.SqlServer.SqlFunctions.StringConvert((double)t.Id).Trim()
-                    select new Framework.NameValuePair { Name = t.Name, Value = _Value } into vD0
+                    select new Framework.NameValuePair { Value = t.Id.ToString(), Name = t.Name } into vD0
                     select vD0
                 );
             var _retval = _ResultFromDataSource;
@@ -3052,8 +3049,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_2.Id == criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
                             )
                         )
-                    let _IdentifierInString = System.Data.Entity.SqlServer.SqlFunctions.StringConvert((double)t.Id).Trim()
-                    select new Framework.RssItem { Title = t.Name, Description = t.Name, PubDate = t.BuildStartTime, IdentifierInString = _IdentifierInString } into vD1
+                    select new Framework.RssItem { IdentifierInString = t.Id.ToString(), Title = t.Name, Description = t.Name, PubDate = t.BuildStartTime } into vD1
                     select vD1
                 );
             var _retval = _ResultFromDataSource;
@@ -3839,7 +3835,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_2.Id == criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
                             )
                         )
-                    group t by new { SolutionId = t.SolutionId, Organization_1Id = Organization_1.Id, Organization_2Id = Organization_2.Id, Name = string.Format("{0} - {1} - {2}", Solution_1.ExternalParentId, Organization_1.Name, Organization_2.Name) } into tG
+                    group t by new { SolutionId = t.SolutionId, Organization_1Id = Organization_1.Id, Organization_2Id = Organization_2.Id, Name = string.Concat(new string[] { Solution_1.ExternalParentId," - ",Organization_1.Name," - ",Organization_2.Name }) } into tG
                     let _CountPerFK = tG.Count()
                     select new MSBuildExtensionPack.DataSourceEntities.Build.DefaultGroupedDataView { SolutionId = tG.Key.SolutionId, Organization_1Id = tG.Key.Organization_1Id, Organization_2Id = tG.Key.Organization_2Id, CountPerFK = _CountPerFK, Name = tG.Key.Name } into vD3
                     select vD3

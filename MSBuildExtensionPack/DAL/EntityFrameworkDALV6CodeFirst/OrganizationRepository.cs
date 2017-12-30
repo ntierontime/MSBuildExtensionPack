@@ -1926,8 +1926,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 (
                     from t in this.LinqContext.Organizations
                     join Organization_2 in this.LinqContext.Organizations on t.ParentId equals Organization_2.Id
-                    let _Value = System.Data.Entity.SqlServer.SqlFunctions.StringConvert((double)t.Id).Trim()
-                    select new Framework.NameValuePair { Name = t.Name, Value = _Value } into vD0
+                    select new Framework.NameValuePair { Value = t.Id.ToString(), Name = t.Name } into vD0
                     select vD0
                 );
             var _retval = _ResultFromDataSource;
@@ -2263,8 +2262,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 (
                     from t in this.LinqContext.Organizations
                     join Organization_2 in this.LinqContext.Organizations on t.ParentId equals Organization_2.Id
-                    let _IdentifierInString = System.Data.Entity.SqlServer.SqlFunctions.StringConvert((double)t.Id).Trim()
-                    select new Framework.RssItem { Title = t.Name, Description = t.Name, PubDate = t.CreatedDateTime, IdentifierInString = _IdentifierInString } into vD1
+                    select new Framework.RssItem { IdentifierInString = t.Id.ToString(), Title = t.Name, Description = t.Name, PubDate = t.CreatedDateTime } into vD1
                     select vD1
                 );
             var _retval = _ResultFromDataSource;
@@ -2964,8 +2962,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_2.Id == criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
                             )
                         )
-                    let _Value = System.Data.Entity.SqlServer.SqlFunctions.StringConvert((double)t.Id).Trim()
-                    select new Framework.NameValuePair { Name = t.Name, Value = _Value } into vD0
+                    select new Framework.NameValuePair { Value = t.Id.ToString(), Name = t.Name } into vD0
                     select vD0
                 );
             var _retval = _ResultFromDataSource;
@@ -3322,8 +3319,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_2.Id == criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
                             )
                         )
-                    let _IdentifierInString = System.Data.Entity.SqlServer.SqlFunctions.StringConvert((double)t.Id).Trim()
-                    select new Framework.RssItem { Title = t.Name, Description = t.Name, PubDate = t.CreatedDateTime, IdentifierInString = _IdentifierInString } into vD1
+                    select new Framework.RssItem { IdentifierInString = t.Id.ToString(), Title = t.Name, Description = t.Name, PubDate = t.CreatedDateTime } into vD1
                     select vD1
                 );
             var _retval = _ResultFromDataSource;
@@ -4037,7 +4033,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_2.Id == criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
                             )
                         )
-                    group t by new { ParentId = t.ParentId, Name = string.Format("{0}", Organization_2.Name) } into tG
+                    group t by new { ParentId = t.ParentId, Name = string.Concat(new string[] { Organization_2.Name }) } into tG
                     let _CountPerFK = tG.Count()
                     select new MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView { ParentId = tG.Key.ParentId, CountPerFK = _CountPerFK, Name = tG.Key.Name } into vD4
                     select vD4
@@ -5824,8 +5820,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (criteriaOfUniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifier.IsToCompare == false || criteriaOfUniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifier.IsToCompare && t.UniqueIdentifier == criteriaOfUniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifier.ValueToCompare)
                             )
                         )
-                    let _Value = System.Data.Entity.SqlServer.SqlFunctions.StringConvert((double)t.Id).Trim()
-                    select new Framework.NameValuePair { Name = t.Name, Value = _Value } into vD0
+                    select new Framework.NameValuePair { Value = t.Id.ToString(), Name = t.Name } into vD0
                     select vD0
                 );
             var _retval = _ResultFromDataSource;
@@ -6896,8 +6891,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (criteriaOfUniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn.IsToCompare == false || criteriaOfUniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn.IsToCompare && t.UniqueidentifierColumn == criteriaOfUniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn.ValueToCompare)
                             )
                         )
-                    let _Value = System.Data.Entity.SqlServer.SqlFunctions.StringConvert((double)t.Id).Trim()
-                    select new Framework.NameValuePair { Name = t.Name, Value = _Value } into vD0
+                    select new Framework.NameValuePair { Value = t.Id.ToString(), Name = t.Name } into vD0
                     select vD0
                 );
             var _retval = _ResultFromDataSource;
