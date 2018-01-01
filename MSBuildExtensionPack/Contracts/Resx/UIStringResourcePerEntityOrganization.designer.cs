@@ -2313,33 +2313,6 @@ namespace MSBuildExtensionPack.Resx {
         /// <summary>
         ///   Looks up a localized string similar to "Organization"".
         /// </summary>
-        public static string Organization_2_UniqueidentifierColumn {
-            get {
-                return ResourceManager.GetString("Organization_2_UniqueidentifierColumn", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Required Field Error Message of property Organization_2_UniqueidentifierColumn of MSBuildExtensionPack.Organization"".
-        /// </summary>
-        public static string Required_Field_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization {
-            get {
-                return ResourceManager.GetString("Required_Field_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Value Validation Error Message of property Organization_2_UniqueidentifierColumn of MSBuildExtensionPack.Organization"".
-        /// </summary>
-        public static string Value_Validation_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization {
-            get {
-                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Organization"".
-        /// </summary>
         public static string Organization_2_UniqueIdentifier {
             get {
                 return ResourceManager.GetString("Organization_2_UniqueIdentifier", resourceCulture);
@@ -2361,6 +2334,33 @@ namespace MSBuildExtensionPack.Resx {
         public static string Value_Validation_Error_Message_of_property_Organization_2_UniqueIdentifier_of_MSBuildExtensionPack_Organization {
             get {
                 return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Organization_2_UniqueIdentifier_of_MSBuildExtensionPack_Organization", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Organization"".
+        /// </summary>
+        public static string Organization_2_UniqueidentifierColumn {
+            get {
+                return ResourceManager.GetString("Organization_2_UniqueidentifierColumn", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Required Field Error Message of property Organization_2_UniqueidentifierColumn of MSBuildExtensionPack.Organization"".
+        /// </summary>
+        public static string Required_Field_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization {
+            get {
+                return ResourceManager.GetString("Required_Field_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Value Validation Error Message of property Organization_2_UniqueidentifierColumn of MSBuildExtensionPack.Organization"".
+        /// </summary>
+        public static string Value_Validation_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization {
+            get {
+                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization", resourceCulture);
             }
         }
 

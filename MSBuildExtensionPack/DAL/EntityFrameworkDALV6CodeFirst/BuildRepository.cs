@@ -814,7 +814,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (criteriaOfDescriptionOftOfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfDescriptionOftOfCommonOfCommonOfCommon.IsToCompare && t.Description.Contains(criteriaOfDescriptionOftOfCommonOfCommonOfCommon.ValueToBeContained))
                             )
                         )
-                    select new MSBuildExtensionPack.DataSourceEntities.Build.Default { Id = t.Id, SolutionId = t.SolutionId, Name = t.Name, Description = t.Description, BuildStartTime = t.BuildStartTime, Solution_1_Name = Solution_1.Name, Organization_1_Name = Organization_1.Name, Organization_1Id = Organization_1.Id, Organization_1_UniqueIdentifier = Organization_1.UniqueIdentifier, Organization_1_UniqueidentifierColumn = Organization_1.UniqueidentifierColumn, Organization_2_Name = Organization_2.Name, Organization_2Id = Organization_2.Id, Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_UniqueidentifierColumn = Organization_2.UniqueidentifierColumn } into vD2
+                    select new MSBuildExtensionPack.DataSourceEntities.Build.Default { Solution_1_Name = Solution_1.Name, Id = t.Id, Organization_1Id = Organization_1.Id, Organization_1_UniqueIdentifier = Organization_1.UniqueIdentifier, Organization_1_UniqueidentifierColumn = Organization_1.UniqueidentifierColumn, Organization_1_Name = Organization_1.Name, Organization_2Id = Organization_2.Id, Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_UniqueidentifierColumn = Organization_2.UniqueidentifierColumn, Organization_2_Name = Organization_2.Name, SolutionId = t.SolutionId, Name = t.Name, Description = t.Description, BuildStartTime = t.BuildStartTime } into vD2
                     select vD2
                 );
             var _retval = _ResultFromDataSource;
@@ -3442,7 +3442,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_2.Id == criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
                             )
                         )
-                    select new MSBuildExtensionPack.DataSourceEntities.Build.Default { Id = t.Id, SolutionId = t.SolutionId, Name = t.Name, Description = t.Description, BuildStartTime = t.BuildStartTime, Solution_1_Name = Solution_1.Name, Organization_1_Name = Organization_1.Name, Organization_1Id = Organization_1.Id, Organization_1_UniqueIdentifier = Organization_1.UniqueIdentifier, Organization_1_UniqueidentifierColumn = Organization_1.UniqueidentifierColumn, Organization_2_Name = Organization_2.Name, Organization_2Id = Organization_2.Id, Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_UniqueidentifierColumn = Organization_2.UniqueidentifierColumn } into vD2
+                    select new MSBuildExtensionPack.DataSourceEntities.Build.Default { Solution_1_Name = Solution_1.Name, Id = t.Id, Organization_1Id = Organization_1.Id, Organization_1_UniqueIdentifier = Organization_1.UniqueIdentifier, Organization_1_UniqueidentifierColumn = Organization_1.UniqueidentifierColumn, Organization_1_Name = Organization_1.Name, Organization_2Id = Organization_2.Id, Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_UniqueidentifierColumn = Organization_2.UniqueidentifierColumn, Organization_2_Name = Organization_2.Name, SolutionId = t.SolutionId, Name = t.Name, Description = t.Description, BuildStartTime = t.BuildStartTime } into vD2
                     select vD2
                 );
             var _retval = _ResultFromDataSource;
@@ -4583,7 +4583,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.IsToCompare == false || criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.IsToCompare && t.Id == criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.ValueToCompare)
                             )
                         )
-                    select new MSBuildExtensionPack.DataSourceEntities.Build.Default { Id = t.Id, SolutionId = t.SolutionId, Name = t.Name, Description = t.Description, BuildStartTime = t.BuildStartTime, Solution_1_Name = Solution_1.Name, Organization_1_Name = Organization_1.Name, Organization_1Id = Organization_1.Id, Organization_1_UniqueIdentifier = Organization_1.UniqueIdentifier, Organization_1_UniqueidentifierColumn = Organization_1.UniqueidentifierColumn, Organization_2_Name = Organization_2.Name, Organization_2Id = Organization_2.Id, Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_UniqueidentifierColumn = Organization_2.UniqueidentifierColumn } into vD2
+                    select new MSBuildExtensionPack.DataSourceEntities.Build.Default { Solution_1_Name = Solution_1.Name, Id = t.Id, Organization_1Id = Organization_1.Id, Organization_1_UniqueIdentifier = Organization_1.UniqueIdentifier, Organization_1_UniqueidentifierColumn = Organization_1.UniqueidentifierColumn, Organization_1_Name = Organization_1.Name, Organization_2Id = Organization_2.Id, Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_UniqueidentifierColumn = Organization_2.UniqueidentifierColumn, Organization_2_Name = Organization_2.Name, SolutionId = t.SolutionId, Name = t.Name, Description = t.Description, BuildStartTime = t.BuildStartTime } into vD2
                     select vD2
                 );
             var _retval = _ResultFromDataSource;
@@ -4942,7 +4942,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.IsToCompare == false || criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.IsToCompare && t.Id == criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.ValueToCompare)
                             )
                         )
-                    select new MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest { Name = t.Name, Id = t.Id } into vD4
+                    select new MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest { Id = t.Id, Name = t.Name } into vD4
                     select vD4
                 );
             var _retval = _ResultFromDataSource;

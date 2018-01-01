@@ -868,15 +868,6 @@
   <data name="Value_Validation_Error_Message_of_property_PubDate_of_MSBuildExtensionPack_Organization" xml:space="preserve">
     <value>Value Validation Error Message of property PubDate of MSBuildExtensionPack.Organization</value>
   </data>
-  <data name="Organization_2_UniqueidentifierColumn" xml:space="preserve">
-    <value>Organization</value>
-  </data>
-  <data name="Required_Field_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
-    <value>Required Field Error Message of property Organization_2_UniqueidentifierColumn of MSBuildExtensionPack.Organization</value>
-  </data>
-  <data name="Value_Validation_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
-    <value>Value Validation Error Message of property Organization_2_UniqueidentifierColumn of MSBuildExtensionPack.Organization</value>
-  </data>
   <data name="Organization_2_UniqueIdentifier" xml:space="preserve">
     <value>Organization</value>
   </data>
@@ -885,6 +876,15 @@
   </data>
   <data name="Value_Validation_Error_Message_of_property_Organization_2_UniqueIdentifier_of_MSBuildExtensionPack_Organization" xml:space="preserve">
     <value>Value Validation Error Message of property Organization_2_UniqueIdentifier of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Organization_2_UniqueidentifierColumn" xml:space="preserve">
+    <value>Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property Organization_2_UniqueidentifierColumn of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property Organization_2_UniqueidentifierColumn of MSBuildExtensionPack.Organization</value>
   </data>
   <data name="Organization_2_Name" xml:space="preserve">
     <value>Organization</value>

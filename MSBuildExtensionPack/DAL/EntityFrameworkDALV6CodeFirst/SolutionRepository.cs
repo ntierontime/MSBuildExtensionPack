@@ -792,7 +792,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (criteriaOfDescriptionOftOfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfDescriptionOftOfCommonOfCommonOfCommon.IsToCompare && t.Description.Contains(criteriaOfDescriptionOftOfCommonOfCommonOfCommon.ValueToBeContained))
                             )
                         )
-                    select new MSBuildExtensionPack.DataSourceEntities.Solution.Default { Id = t.Id, ExternalParentId = t.ExternalParentId, Name = t.Name, Description = t.Description, OrganizationId = t.OrganizationId, Organization_1_Name = Organization_1.Name, Organization_1_UniqueIdentifier = Organization_1.UniqueIdentifier, Organization_1_UniqueidentifierColumn = Organization_1.UniqueidentifierColumn, Organization_2_Name = Organization_2.Name, Organization_2Id = Organization_2.Id, Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_UniqueidentifierColumn = Organization_2.UniqueidentifierColumn } into vD2
+                    select new MSBuildExtensionPack.DataSourceEntities.Solution.Default { Organization_1_UniqueIdentifier = Organization_1.UniqueIdentifier, Organization_1_UniqueidentifierColumn = Organization_1.UniqueidentifierColumn, Organization_1_Name = Organization_1.Name, Id = t.Id, Organization_2Id = Organization_2.Id, Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_UniqueidentifierColumn = Organization_2.UniqueidentifierColumn, Organization_2_Name = Organization_2.Name, ExternalParentId = t.ExternalParentId, Name = t.Name, Description = t.Description, OrganizationId = t.OrganizationId } into vD2
                     select vD2
                 );
             var _retval = _ResultFromDataSource;
@@ -3345,7 +3345,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_2.Id == criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
                             )
                         )
-                    select new MSBuildExtensionPack.DataSourceEntities.Solution.Default { Id = t.Id, ExternalParentId = t.ExternalParentId, Name = t.Name, Description = t.Description, OrganizationId = t.OrganizationId, Organization_1_Name = Organization_1.Name, Organization_1_UniqueIdentifier = Organization_1.UniqueIdentifier, Organization_1_UniqueidentifierColumn = Organization_1.UniqueidentifierColumn, Organization_2_Name = Organization_2.Name, Organization_2Id = Organization_2.Id, Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_UniqueidentifierColumn = Organization_2.UniqueidentifierColumn } into vD2
+                    select new MSBuildExtensionPack.DataSourceEntities.Solution.Default { Organization_1_UniqueIdentifier = Organization_1.UniqueIdentifier, Organization_1_UniqueidentifierColumn = Organization_1.UniqueidentifierColumn, Organization_1_Name = Organization_1.Name, Id = t.Id, Organization_2Id = Organization_2.Id, Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_UniqueidentifierColumn = Organization_2.UniqueidentifierColumn, Organization_2_Name = Organization_2.Name, ExternalParentId = t.ExternalParentId, Name = t.Name, Description = t.Description, OrganizationId = t.OrganizationId } into vD2
                     select vD2
                 );
             var _retval = _ResultFromDataSource;
@@ -4452,7 +4452,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.IsToCompare == false || criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.IsToCompare && t.Id == criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.ValueToCompare)
                             )
                         )
-                    select new MSBuildExtensionPack.DataSourceEntities.Solution.Default { Id = t.Id, ExternalParentId = t.ExternalParentId, Name = t.Name, Description = t.Description, OrganizationId = t.OrganizationId, Organization_1_Name = Organization_1.Name, Organization_1_UniqueIdentifier = Organization_1.UniqueIdentifier, Organization_1_UniqueidentifierColumn = Organization_1.UniqueidentifierColumn, Organization_2_Name = Organization_2.Name, Organization_2Id = Organization_2.Id, Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_UniqueidentifierColumn = Organization_2.UniqueidentifierColumn } into vD2
+                    select new MSBuildExtensionPack.DataSourceEntities.Solution.Default { Organization_1_UniqueIdentifier = Organization_1.UniqueIdentifier, Organization_1_UniqueidentifierColumn = Organization_1.UniqueidentifierColumn, Organization_1_Name = Organization_1.Name, Id = t.Id, Organization_2Id = Organization_2.Id, Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_UniqueidentifierColumn = Organization_2.UniqueidentifierColumn, Organization_2_Name = Organization_2.Name, ExternalParentId = t.ExternalParentId, Name = t.Name, Description = t.Description, OrganizationId = t.OrganizationId } into vD2
                     select vD2
                 );
             var _retval = _ResultFromDataSource;

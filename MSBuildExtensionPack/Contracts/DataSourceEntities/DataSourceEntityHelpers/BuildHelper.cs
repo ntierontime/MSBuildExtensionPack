@@ -137,24 +137,24 @@ System.String identifierInString, System.String title, System.String description
         /// </summary>
         /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.Build.Default"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.Build.Default CreateDefault(
-System.Int64 id, System.Int32 solutionId, System.String name, System.String description, System.DateTime buildStartTime, System.String solution_1_Name, System.String organization_1_Name, System.Int64 organization_1Id, System.Guid organization_1_UniqueIdentifier, System.Guid organization_1_UniqueidentifierColumn, System.String organization_2_Name, System.Int64 organization_2Id, System.Guid organization_2_UniqueIdentifier, System.Guid organization_2_UniqueidentifierColumn
+System.String solution_1_Name, System.Int64 id, System.Int64 organization_1Id, System.Guid organization_1_UniqueIdentifier, System.Guid organization_1_UniqueidentifierColumn, System.String organization_1_Name, System.Int64 organization_2Id, System.Guid organization_2_UniqueIdentifier, System.Guid organization_2_UniqueidentifierColumn, System.String organization_2_Name, System.Int32 solutionId, System.String name, System.String description, System.DateTime buildStartTime
             )
         {
             MSBuildExtensionPack.DataSourceEntities.Build.Default _retval = new MSBuildExtensionPack.DataSourceEntities.Build.Default();
+                _retval.Solution_1_Name = solution_1_Name;
                 _retval.Id = id;
+                _retval.Organization_1Id = organization_1Id;
+                _retval.Organization_1_UniqueIdentifier = organization_1_UniqueIdentifier;
+                _retval.Organization_1_UniqueidentifierColumn = organization_1_UniqueidentifierColumn;
+                _retval.Organization_1_Name = organization_1_Name;
+                _retval.Organization_2Id = organization_2Id;
+                _retval.Organization_2_UniqueIdentifier = organization_2_UniqueIdentifier;
+                _retval.Organization_2_UniqueidentifierColumn = organization_2_UniqueidentifierColumn;
+                _retval.Organization_2_Name = organization_2_Name;
                 _retval.SolutionId = solutionId;
                 _retval.Name = name;
                 _retval.Description = description;
                 _retval.BuildStartTime = buildStartTime;
-                _retval.Solution_1_Name = solution_1_Name;
-                _retval.Organization_1_Name = organization_1_Name;
-                _retval.Organization_1Id = organization_1Id;
-                _retval.Organization_1_UniqueIdentifier = organization_1_UniqueIdentifier;
-                _retval.Organization_1_UniqueidentifierColumn = organization_1_UniqueidentifierColumn;
-                _retval.Organization_2_Name = organization_2_Name;
-                _retval.Organization_2Id = organization_2Id;
-                _retval.Organization_2_UniqueIdentifier = organization_2_UniqueIdentifier;
-                _retval.Organization_2_UniqueidentifierColumn = organization_2_UniqueidentifierColumn;
             return _retval;
         }
 
@@ -188,12 +188,12 @@ System.Int32 solutionId, System.Int64 organization_1Id, System.Int64 organizatio
         /// </summary>
         /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest CreateUpdateNameRequest(
-System.String name, System.Int64 id
+System.Int64 id, System.String name
             )
         {
             MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest _retval = new MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest();
-                _retval.Name = name;
                 _retval.Id = id;
+                _retval.Name = name;
             return _retval;
         }
 

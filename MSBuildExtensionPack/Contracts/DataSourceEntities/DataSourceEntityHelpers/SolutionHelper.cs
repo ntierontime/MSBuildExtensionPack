@@ -131,22 +131,22 @@ System.String identifierInString, System.String title, System.String description
         /// </summary>
         /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.Solution.Default"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.Solution.Default CreateDefault(
-System.Int32 id, System.String externalParentId, System.String name, System.String description, System.Int64 organizationId, System.String organization_1_Name, System.Guid organization_1_UniqueIdentifier, System.Guid organization_1_UniqueidentifierColumn, System.String organization_2_Name, System.Int64 organization_2Id, System.Guid organization_2_UniqueIdentifier, System.Guid organization_2_UniqueidentifierColumn
+System.Guid organization_1_UniqueIdentifier, System.Guid organization_1_UniqueidentifierColumn, System.String organization_1_Name, System.Int32 id, System.Int64 organization_2Id, System.Guid organization_2_UniqueIdentifier, System.Guid organization_2_UniqueidentifierColumn, System.String organization_2_Name, System.String externalParentId, System.String name, System.String description, System.Int64 organizationId
             )
         {
             MSBuildExtensionPack.DataSourceEntities.Solution.Default _retval = new MSBuildExtensionPack.DataSourceEntities.Solution.Default();
+                _retval.Organization_1_UniqueIdentifier = organization_1_UniqueIdentifier;
+                _retval.Organization_1_UniqueidentifierColumn = organization_1_UniqueidentifierColumn;
+                _retval.Organization_1_Name = organization_1_Name;
                 _retval.Id = id;
+                _retval.Organization_2Id = organization_2Id;
+                _retval.Organization_2_UniqueIdentifier = organization_2_UniqueIdentifier;
+                _retval.Organization_2_UniqueidentifierColumn = organization_2_UniqueidentifierColumn;
+                _retval.Organization_2_Name = organization_2_Name;
                 _retval.ExternalParentId = externalParentId;
                 _retval.Name = name;
                 _retval.Description = description;
                 _retval.OrganizationId = organizationId;
-                _retval.Organization_1_Name = organization_1_Name;
-                _retval.Organization_1_UniqueIdentifier = organization_1_UniqueIdentifier;
-                _retval.Organization_1_UniqueidentifierColumn = organization_1_UniqueidentifierColumn;
-                _retval.Organization_2_Name = organization_2_Name;
-                _retval.Organization_2Id = organization_2Id;
-                _retval.Organization_2_UniqueIdentifier = organization_2_UniqueIdentifier;
-                _retval.Organization_2_UniqueidentifierColumn = organization_2_UniqueidentifierColumn;
             return _retval;
         }
 

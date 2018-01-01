@@ -130,7 +130,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Import)]
         public ActionResult Import(HttpPostedFileBase file)
         {
-            ViewBag.FileFormat = "Build_1_Name,Id,Solution_1Id,Solution_1_Name,Organization_1_UniqueidentifierColumn,Organization_1_UniqueIdentifier,Organization_1Id,Organization_1_Name,Organization_2_UniqueidentifierColumn,Organization_2Id,Organization_2_UniqueIdentifier,Organization_2_Name,BuildEventCode_1_Name,BuildId,BuildEventCodeId,Message,EventTime";
+            ViewBag.FileFormat = "Build_1_Name,Id,Solution_1Id,Solution_1_Name,Organization_1Id,Organization_1_UniqueIdentifier,Organization_1_UniqueidentifierColumn,Organization_1_Name,Organization_2Id,Organization_2_UniqueIdentifier,Organization_2_UniqueidentifierColumn,Organization_2_Name,BuildEventCode_1_Name,BuildId,BuildEventCodeId,Message,EventTime";
             if (file != null && file.ContentLength > 0 && !string.IsNullOrWhiteSpace(file.FileName))
             {
                 log.Info(string.Format("{0}: Import", Framework.LoggingOptions.UI_Process_Started.ToString()));

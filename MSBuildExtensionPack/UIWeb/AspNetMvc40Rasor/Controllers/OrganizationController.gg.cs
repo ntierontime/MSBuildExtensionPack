@@ -130,7 +130,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Import)]
         public ActionResult Import(HttpPostedFileBase file)
         {
-            ViewBag.FileFormat = "Organization_2_UniqueidentifierColumn,Organization_2_UniqueIdentifier,Organization_2_Name,Id,ParentId,Name,IsSystemBuiltIn,UniqueIdentifier,CreatedDateTime,CharColumn,VarcharColumn,TextColumn,NcharColumn,NvarcharColumn,NtextColumn,BitColumn,BinaryColumn,VarbinaryColumn,ImageColumn,TinyintColumn,SmallintColumn,IntColumn,BigintColumn,DecimalColumn,NumericColumn,SmallmoneyColumn,MoneyColumn,FloatColumn,RealColumn,DatetimeColumn,Datetime2Column,SmalldatetimeColumn,DateColumn,TimeColumn,UniqueidentifierColumn";
+            ViewBag.FileFormat = "Organization_2_UniqueIdentifier,Organization_2_UniqueidentifierColumn,Organization_2_Name,Id,ParentId,Name,IsSystemBuiltIn,UniqueIdentifier,CreatedDateTime,CharColumn,VarcharColumn,TextColumn,NcharColumn,NvarcharColumn,NtextColumn,BitColumn,BinaryColumn,VarbinaryColumn,ImageColumn,TinyintColumn,SmallintColumn,IntColumn,BigintColumn,DecimalColumn,NumericColumn,SmallmoneyColumn,MoneyColumn,FloatColumn,RealColumn,DatetimeColumn,Datetime2Column,SmalldatetimeColumn,DateColumn,TimeColumn,UniqueidentifierColumn";
             if (file != null && file.ContentLength > 0 && !string.IsNullOrWhiteSpace(file.FileName))
             {
                 log.Info(string.Format("{0}: Import", Framework.LoggingOptions.UI_Process_Started.ToString()));

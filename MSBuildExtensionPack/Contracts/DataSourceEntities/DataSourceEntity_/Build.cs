@@ -576,11 +576,11 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         System.Int64 m_Organization_1Id;
 
+        System.Int64 m_Organization_2Id;
+
         System.Int64 m_CountPerFK;
 
         System.String m_Name;
-
-        System.Int64 m_Organization_2Id;
 
             #endregion Storage Fields
 
@@ -594,9 +594,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             {
                 this.SolutionId = default(int);
                 this.Organization_1Id = default(long);
+                this.Organization_2Id = default(long);
                 this.CountPerFK = default(long);
                 this.Name = null;
-                this.Organization_2Id = default(long);
             }
             /*
             /// <summary>
@@ -613,8 +613,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
             #region properties
 
                     [DataMember]
-        [Display(Name = "SolutionId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild))]
-        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild), ErrorMessageResourceName="SolutionId_is_required")]        public System.Int32 SolutionId
+        [Display(Name = "SolutionId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild))]        public System.Int32 SolutionId
         {
             get
             {
@@ -638,6 +637,20 @@ namespace MSBuildExtensionPack.DataSourceEntities
             {
                 m_Organization_1Id = value;
                 RaisePropertyChanged("Organization_1Id");
+            }
+        }
+
+                    [DataMember]
+        [Display(Name = "Organization_2Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild))]        public System.Int64 Organization_2Id
+        {
+            get
+            {
+                return m_Organization_2Id;
+            }
+            set
+            {
+                m_Organization_2Id = value;
+                RaisePropertyChanged("Organization_2Id");
             }
         }
 
@@ -669,20 +682,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-                    [DataMember]
-        [Display(Name = "Organization_2Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild))]        public System.Int64 Organization_2Id
-        {
-            get
-            {
-                return m_Organization_2Id;
-            }
-            set
-            {
-                m_Organization_2Id = value;
-                RaisePropertyChanged("Organization_2Id");
-            }
-        }
-
             #endregion properties
 
             #region Method of Build.DefaultGroupedDataView  GetAClone()
@@ -697,9 +696,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
             cloned.m_SolutionId = m_SolutionId;
             cloned.m_Organization_1Id = m_Organization_1Id;
+            cloned.m_Organization_2Id = m_Organization_2Id;
             cloned.m_CountPerFK = m_CountPerFK;
             cloned.m_Name = m_Name;
-            cloned.m_Organization_2Id = m_Organization_2Id;
 
                 return cloned;
             }

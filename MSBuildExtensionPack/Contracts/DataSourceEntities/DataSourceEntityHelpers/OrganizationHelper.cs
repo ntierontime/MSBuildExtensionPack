@@ -211,10 +211,13 @@ System.String identifierInString, System.String title, System.String description
         /// </summary>
         /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.Organization.Default"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.Organization.Default CreateDefault(
-System.Int64 id, System.Int64 parentId, System.String name, System.Boolean isSystemBuiltIn, System.Guid uniqueIdentifier, System.DateTime createdDateTime, System.String charColumn, System.String varcharColumn, System.String textColumn, System.String ncharColumn, System.String nvarcharColumn, System.String ntextColumn, System.Boolean bitColumn, System.Byte[] binaryColumn, System.Byte[] varbinaryColumn, System.Byte[] imageColumn, System.Byte tinyintColumn, System.Int16 smallintColumn, System.Int32 intColumn, System.Int64 bigintColumn, System.Decimal decimalColumn, System.Decimal numericColumn, System.Decimal smallmoneyColumn, System.Decimal moneyColumn, System.Single floatColumn, System.Single realColumn, System.DateTime datetimeColumn, System.DateTime datetime2Column, System.DateTime smalldatetimeColumn, System.DateTime dateColumn, System.TimeSpan timeColumn, System.Guid uniqueidentifierColumn, System.String organization_2_Name, System.Guid organization_2_UniqueIdentifier, System.Guid organization_2_UniqueidentifierColumn
+System.Guid organization_2_UniqueIdentifier, System.Guid organization_2_UniqueidentifierColumn, System.String organization_2_Name, System.Int64 id, System.Int64 parentId, System.String name, System.Boolean isSystemBuiltIn, System.Guid uniqueIdentifier, System.DateTime createdDateTime, System.String charColumn, System.String varcharColumn, System.String textColumn, System.String ncharColumn, System.String nvarcharColumn, System.String ntextColumn, System.Boolean bitColumn, System.Byte[] binaryColumn, System.Byte[] varbinaryColumn, System.Byte[] imageColumn, System.Byte tinyintColumn, System.Int16 smallintColumn, System.Int32 intColumn, System.Int64 bigintColumn, System.Decimal decimalColumn, System.Decimal numericColumn, System.Decimal smallmoneyColumn, System.Decimal moneyColumn, System.Single floatColumn, System.Single realColumn, System.DateTime datetimeColumn, System.DateTime datetime2Column, System.DateTime smalldatetimeColumn, System.DateTime dateColumn, System.TimeSpan timeColumn, System.Guid uniqueidentifierColumn
             )
         {
             MSBuildExtensionPack.DataSourceEntities.Organization.Default _retval = new MSBuildExtensionPack.DataSourceEntities.Organization.Default();
+                _retval.Organization_2_UniqueIdentifier = organization_2_UniqueIdentifier;
+                _retval.Organization_2_UniqueidentifierColumn = organization_2_UniqueidentifierColumn;
+                _retval.Organization_2_Name = organization_2_Name;
                 _retval.Id = id;
                 _retval.ParentId = parentId;
                 _retval.Name = name;
@@ -247,9 +250,6 @@ System.Int64 id, System.Int64 parentId, System.String name, System.Boolean isSys
                 _retval.DateColumn = dateColumn;
                 _retval.TimeColumn = timeColumn;
                 _retval.UniqueidentifierColumn = uniqueidentifierColumn;
-                _retval.Organization_2_Name = organization_2_Name;
-                _retval.Organization_2_UniqueIdentifier = organization_2_UniqueIdentifier;
-                _retval.Organization_2_UniqueidentifierColumn = organization_2_UniqueidentifierColumn;
             return _retval;
         }
 
@@ -262,11 +262,12 @@ System.Int64 id, System.Int64 parentId, System.String name, System.Boolean isSys
         /// </summary>
         /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.Organization.DefaultWithPath"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.Organization.DefaultWithPath CreateDefaultWithPath(
-System.Int64 t_Id, System.Int64 t_ParentId, System.String t_Name, System.Boolean t_IsSystemBuiltIn, System.Guid t_UniqueIdentifier, System.DateTime t_CreatedDateTime, System.String t_CharColumn, System.String t_VarcharColumn, System.String t_TextColumn, System.String t_NcharColumn, System.String t_NvarcharColumn, System.String t_NtextColumn, System.Boolean t_BitColumn, System.Byte[] t_BinaryColumn, System.Byte[] t_VarbinaryColumn, System.Byte[] t_ImageColumn, System.Byte t_TinyintColumn, System.Int16 t_SmallintColumn, System.Int32 t_IntColumn, System.Int64 t_BigintColumn, System.Decimal t_DecimalColumn, System.Decimal t_NumericColumn, System.Decimal t_SmallmoneyColumn, System.Decimal t_MoneyColumn, System.Single t_FloatColumn, System.Single t_RealColumn, System.DateTime t_DatetimeColumn, System.DateTime t_Datetime2Column, System.DateTime t_SmalldatetimeColumn, System.DateTime t_DateColumn, System.TimeSpan t_TimeColumn, System.Guid t_UniqueidentifierColumn, System.String t_RecursivePath__
+System.Int64 t_Id, System.String t_RecursivePath__, System.Int64 t_ParentId, System.String t_Name, System.Boolean t_IsSystemBuiltIn, System.Guid t_UniqueIdentifier, System.DateTime t_CreatedDateTime, System.String t_CharColumn, System.String t_VarcharColumn, System.String t_TextColumn, System.String t_NcharColumn, System.String t_NvarcharColumn, System.String t_NtextColumn, System.Boolean t_BitColumn, System.Byte[] t_BinaryColumn, System.Byte[] t_VarbinaryColumn, System.Byte[] t_ImageColumn, System.Byte t_TinyintColumn, System.Int16 t_SmallintColumn, System.Int32 t_IntColumn, System.Int64 t_BigintColumn, System.Decimal t_DecimalColumn, System.Decimal t_NumericColumn, System.Decimal t_SmallmoneyColumn, System.Decimal t_MoneyColumn, System.Single t_FloatColumn, System.Single t_RealColumn, System.DateTime t_DatetimeColumn, System.DateTime t_Datetime2Column, System.DateTime t_SmalldatetimeColumn, System.DateTime t_DateColumn, System.TimeSpan t_TimeColumn, System.Guid t_UniqueidentifierColumn
             )
         {
             MSBuildExtensionPack.DataSourceEntities.Organization.DefaultWithPath _retval = new MSBuildExtensionPack.DataSourceEntities.Organization.DefaultWithPath();
                 _retval.Id = t_Id;
+                _retval.RecursivePath__ = t_RecursivePath__;
                 _retval.ParentId = t_ParentId;
                 _retval.Name = t_Name;
                 _retval.IsSystemBuiltIn = t_IsSystemBuiltIn;
@@ -298,7 +299,6 @@ System.Int64 t_Id, System.Int64 t_ParentId, System.String t_Name, System.Boolean
                 _retval.DateColumn = t_DateColumn;
                 _retval.TimeColumn = t_TimeColumn;
                 _retval.UniqueidentifierColumn = t_UniqueidentifierColumn;
-                _retval.RecursivePath__ = t_RecursivePath__;
             return _retval;
         }
 
@@ -330,15 +330,15 @@ System.Int64 parentId, System.Int64 countPerFK, System.String name
         /// </summary>
         /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation CreateKeyInformation(
-System.Int64 id, System.String name, System.Boolean isSystemBuiltIn, System.Boolean bitColumn, System.Guid uniqueIdentifier, System.Guid uniqueidentifierColumn
+System.Int64 id, System.String name, System.Boolean isSystemBuiltIn, System.Guid uniqueIdentifier, System.Boolean bitColumn, System.Guid uniqueidentifierColumn
             )
         {
             MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation _retval = new MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation();
                 _retval.Id = id;
                 _retval.Name = name;
                 _retval.IsSystemBuiltIn = isSystemBuiltIn;
-                _retval.BitColumn = bitColumn;
                 _retval.UniqueIdentifier = uniqueIdentifier;
+                _retval.BitColumn = bitColumn;
                 _retval.UniqueidentifierColumn = uniqueidentifierColumn;
             return _retval;
         }

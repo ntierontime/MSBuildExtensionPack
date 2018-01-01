@@ -337,14 +337,14 @@
   <data name="Value_Validation_Error_Message_of_property_Solution_1_Name_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
     <value>Value Validation Error Message of property Solution_1_Name of MSBuildExtensionPack.BuildLog</value>
   </data>
-  <data name="Organization_1_UniqueidentifierColumn" xml:space="preserve">
+  <data name="Organization_1Id" xml:space="preserve">
     <value>Organization</value>
   </data>
-  <data name="Required_Field_Error_Message_of_property_Organization_1_UniqueidentifierColumn_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
-    <value>Required Field Error Message of property Organization_1_UniqueidentifierColumn of MSBuildExtensionPack.BuildLog</value>
+  <data name="Required_Field_Error_Message_of_property_Organization_1Id_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
+    <value>Required Field Error Message of property Organization_1Id of MSBuildExtensionPack.BuildLog</value>
   </data>
-  <data name="Value_Validation_Error_Message_of_property_Organization_1_UniqueidentifierColumn_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
-    <value>Value Validation Error Message of property Organization_1_UniqueidentifierColumn of MSBuildExtensionPack.BuildLog</value>
+  <data name="Value_Validation_Error_Message_of_property_Organization_1Id_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
+    <value>Value Validation Error Message of property Organization_1Id of MSBuildExtensionPack.BuildLog</value>
   </data>
   <data name="Organization_1_UniqueIdentifier" xml:space="preserve">
     <value>Organization</value>
@@ -355,14 +355,14 @@
   <data name="Value_Validation_Error_Message_of_property_Organization_1_UniqueIdentifier_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
     <value>Value Validation Error Message of property Organization_1_UniqueIdentifier of MSBuildExtensionPack.BuildLog</value>
   </data>
-  <data name="Organization_1Id" xml:space="preserve">
+  <data name="Organization_1_UniqueidentifierColumn" xml:space="preserve">
     <value>Organization</value>
   </data>
-  <data name="Required_Field_Error_Message_of_property_Organization_1Id_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
-    <value>Required Field Error Message of property Organization_1Id of MSBuildExtensionPack.BuildLog</value>
+  <data name="Required_Field_Error_Message_of_property_Organization_1_UniqueidentifierColumn_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
+    <value>Required Field Error Message of property Organization_1_UniqueidentifierColumn of MSBuildExtensionPack.BuildLog</value>
   </data>
-  <data name="Value_Validation_Error_Message_of_property_Organization_1Id_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
-    <value>Value Validation Error Message of property Organization_1Id of MSBuildExtensionPack.BuildLog</value>
+  <data name="Value_Validation_Error_Message_of_property_Organization_1_UniqueidentifierColumn_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
+    <value>Value Validation Error Message of property Organization_1_UniqueidentifierColumn of MSBuildExtensionPack.BuildLog</value>
   </data>
   <data name="Organization_1_Name" xml:space="preserve">
     <value>Organization</value>
@@ -372,15 +372,6 @@
   </data>
   <data name="Value_Validation_Error_Message_of_property_Organization_1_Name_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
     <value>Value Validation Error Message of property Organization_1_Name of MSBuildExtensionPack.BuildLog</value>
-  </data>
-  <data name="Organization_2_UniqueidentifierColumn" xml:space="preserve">
-    <value>Organization</value>
-  </data>
-  <data name="Required_Field_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
-    <value>Required Field Error Message of property Organization_2_UniqueidentifierColumn of MSBuildExtensionPack.BuildLog</value>
-  </data>
-  <data name="Value_Validation_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
-    <value>Value Validation Error Message of property Organization_2_UniqueidentifierColumn of MSBuildExtensionPack.BuildLog</value>
   </data>
   <data name="Organization_2Id" xml:space="preserve">
     <value>Organization</value>
@@ -399,6 +390,15 @@
   </data>
   <data name="Value_Validation_Error_Message_of_property_Organization_2_UniqueIdentifier_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
     <value>Value Validation Error Message of property Organization_2_UniqueIdentifier of MSBuildExtensionPack.BuildLog</value>
+  </data>
+  <data name="Organization_2_UniqueidentifierColumn" xml:space="preserve">
+    <value>Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
+    <value>Required Field Error Message of property Organization_2_UniqueidentifierColumn of MSBuildExtensionPack.BuildLog</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
+    <value>Value Validation Error Message of property Organization_2_UniqueidentifierColumn of MSBuildExtensionPack.BuildLog</value>
   </data>
   <data name="Organization_2_Name" xml:space="preserve">
     <value>Organization</value>
