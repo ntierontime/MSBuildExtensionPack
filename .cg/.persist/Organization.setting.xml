@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="MSBuildExtensionPack.Organization">
+  <DataView Key="NameValuePair" DataViewKnownCategory="NameValuePair" IsGroupByResult="false">
+    <Description>NameValuePair</Description>
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemString)Value=Id.ToString();(SystemString)Name=Name~Name</Properties>
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
+  </DataView>
+  <DataView Key="RssItem" DataViewKnownCategory="RssItem" IsGroupByResult="false">
+    <Description>RssItem</Description>
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemString)IdentifierInString=Id.ToString();(SystemString)Title=Name;(SystemString)Description=Name;(SystemDateTime)PubDate=CreatedDateTime</Properties>
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
+  </DataView>
+  <DataView Key="Default" DataViewKnownCategory="Default" IsGroupByResult="false">
+    <Description>Default</Description>
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemGuid)Organization_2_UniqueIdentifier=\ParentId:UniqueIdentifier~ParentUniqueConstraint;(SystemGuid)Organization_2_UniqueidentifierColumn=\ParentId:UniqueidentifierColumn~ParentUniqueConstraint;(SystemString)Organization_2_Name=\ParentId:Name~Name;(SystemInt64)Id=Id~Identifier;(SystemInt64)ParentId=ParentId~ForeignKey;(SystemString)Name=Name;(SystemBoolean)IsSystemBuiltIn=IsSystemBuiltIn;(SystemGuid)UniqueIdentifier=UniqueIdentifier;(SystemDateTime)CreatedDateTime=CreatedDateTime;(SystemString)CharColumn=CharColumn;(SystemString)VarcharColumn=VarcharColumn;(SystemString)TextColumn=TextColumn;(SystemString)NcharColumn=NcharColumn;(SystemString)NvarcharColumn=NvarcharColumn;(SystemString)NtextColumn=NtextColumn;(SystemBoolean)BitColumn=BitColumn;(SystemByteArray?)BinaryColumn=BinaryColumn;(SystemByteArray?)VarbinaryColumn=VarbinaryColumn;(SystemByteArray?)ImageColumn=ImageColumn;(SystemByte)TinyintColumn=TinyintColumn;(SystemInt16)SmallintColumn=SmallintColumn;(SystemInt32)IntColumn=IntColumn;(SystemInt64)BigintColumn=BigintColumn;(SystemDecimal)DecimalColumn=DecimalColumn;(SystemDecimal)NumericColumn=NumericColumn;(SystemDecimal)SmallmoneyColumn=SmallmoneyColumn;(SystemDecimal)MoneyColumn=MoneyColumn;(SystemSingle)FloatColumn=FloatColumn;(SystemSingle)RealColumn=RealColumn;(SystemDateTime)DatetimeColumn=DatetimeColumn;(SystemDateTime)Datetime2Column=Datetime2Column;(SystemDateTime)SmalldatetimeColumn=SmalldatetimeColumn;(SystemDateTime)DateColumn=DateColumn;(SystemTimeSpan)TimeColumn=TimeColumn;(SystemGuid)UniqueidentifierColumn=UniqueidentifierColumn</Properties>
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
+  </DataView>
+  <DataView Key="DefaultWithPath" DataViewKnownCategory="DefaultWithPath" IsGroupByResult="false">
+    <Description>DefaultWithPath</Description>
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting" />
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting">(SystemInt64)Id=Id~Identifier;(SystemString)RecursivePath__=RecursivePath__;(SystemInt64)ParentId=ParentId~ForeignKey;(SystemString)Name=Name;(SystemBoolean)IsSystemBuiltIn=IsSystemBuiltIn;(SystemGuid)UniqueIdentifier=UniqueIdentifier;(SystemDateTime)CreatedDateTime=CreatedDateTime;(SystemString)CharColumn=CharColumn;(SystemString)VarcharColumn=VarcharColumn;(SystemString)TextColumn=TextColumn;(SystemString)NcharColumn=NcharColumn;(SystemString)NvarcharColumn=NvarcharColumn;(SystemString)NtextColumn=NtextColumn;(SystemBoolean)BitColumn=BitColumn;(SystemByteArray?)BinaryColumn=BinaryColumn;(SystemByteArray?)VarbinaryColumn=VarbinaryColumn;(SystemByteArray?)ImageColumn=ImageColumn;(SystemByte)TinyintColumn=TinyintColumn;(SystemInt16)SmallintColumn=SmallintColumn;(SystemInt32)IntColumn=IntColumn;(SystemInt64)BigintColumn=BigintColumn;(SystemDecimal)DecimalColumn=DecimalColumn;(SystemDecimal)NumericColumn=NumericColumn;(SystemDecimal)SmallmoneyColumn=SmallmoneyColumn;(SystemDecimal)MoneyColumn=MoneyColumn;(SystemSingle)FloatColumn=FloatColumn;(SystemSingle)RealColumn=RealColumn;(SystemDateTime)DatetimeColumn=DatetimeColumn;(SystemDateTime)Datetime2Column=Datetime2Column;(SystemDateTime)SmalldatetimeColumn=SmalldatetimeColumn;(SystemDateTime)DateColumn=DateColumn;(SystemTimeSpan)TimeColumn=TimeColumn;(SystemGuid)UniqueidentifierColumn=UniqueidentifierColumn</Properties>
+  </DataView>
+  <DataView Key="DefaultGroupedDataView" DataViewKnownCategory="DefaultGroupedDataView" IsGroupByResult="true">
+    <Description>DefaultGroupedDataView</Description>
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemInt64)ParentId=ParentId</Properties>
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting">(SystemInt64)CountPerFK=#GroupedResult.Count~#Predicate;(SystemString)Name=#GroupedByColumn~#StringConcat[\ParentId:Name]</Properties>
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
+  </DataView>
+  <DataView Key="KeyInformation" DataViewKnownCategory="KeyInformation" IsGroupByResult="false">
+    <Description>KeyInformation</Description>
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemInt64)Id=Id~Identifier;(SystemString)Name=Name;(SystemBoolean)IsSystemBuiltIn=IsSystemBuiltIn;(SystemGuid)UniqueIdentifier=UniqueIdentifier;(SystemBoolean)BitColumn=BitColumn;(SystemGuid)UniqueidentifierColumn=UniqueidentifierColumn</Properties>
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
+  </DataView>
+  <Query Key="Common" SourceTypeFullName="MSBuildExtensionPack.Organization">
+    <Description>Query by EntityReference, String, Bool, Order By DateTime</Description>
+    <QueryUnitGroups>Common</QueryUnitGroups>
+  </Query>
+  <Query Key="All" SourceTypeFullName="MSBuildExtensionPack.Organization">
+    <Description>Without condition, Order By DateTime</Description>
+    <QueryUnitGroups>All</QueryUnitGroups>
+  </Query>
+  <Query Key="ByFKOnly" SourceTypeFullName="MSBuildExtensionPack.Organization">
+    <Description>Query by EntityReference</Description>
+    <QueryUnitGroups>ByFKOnly</QueryUnitGroups>
+  </Query>
+  <Query Key="ByIdentifier" SourceTypeFullName="MSBuildExtensionPack.Organization">
+    <Description>Query by Identifier</Description>
+    <QueryUnitGroups>ByIdentifier</QueryUnitGroups>
+  </Query>
+  <Query Key="UniqueConstraintOfUC_Organization_UniqueIdentifier" SourceTypeFullName="MSBuildExtensionPack.Organization">
+    <Description>Query by UniqueConstrain of UC_Organization_UniqueIdentifier</Description>
+    <QueryUnitGroups>UniqueConstraintOfUC_Organization_UniqueIdentifier</QueryUnitGroups>
+  </Query>
+  <Query Key="UniqueConstraintOfUC_Organization_UniqueidentifierColumn" SourceTypeFullName="MSBuildExtensionPack.Organization">
+    <Description>Query by UniqueConstrain of UC_Organization_UniqueidentifierColumn</Description>
+    <QueryUnitGroups>UniqueConstraintOfUC_Organization_UniqueidentifierColumn</QueryUnitGroups>
+  </Query>
+  <Query Key="IdentifierAndUniqueConstraint" SourceTypeFullName="MSBuildExtensionPack.Organization">
+    <Description>Query by Identifier and UniqueConstraints</Description>
+    <QueryUnitGroups>IdentifierAndUniqueConstraint</QueryUnitGroups>
+  </Query>
+  <QueryUnitGroup Key="Common" DataQueryPerQueryKnownKey="Common" SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" ConditionOperator="AND">
+    <Description>Query by EntityReference, String, Bool, Order By DateTime</Description>
+    <QueryUnits Key="Common" ConditionOperator="AND" Description="Query by EntityReference, Bool, DateTime">\ParentId:Id.Equals;:IsSystemBuiltIn.Equals;:CreatedDateTime.Range;:BitColumn.Equals;:DatetimeColumn.Range;:Datetime2Column.Range;:SmalldatetimeColumn.Range;:DateColumn.Range</QueryUnits>
+    <QueryUnits Key="Common" ConditionOperator="AND" Description="Query by String">:Name.Contains;:CharColumn.Contains;:VarcharColumn.Contains;:TextColumn.Contains;:NcharColumn.Contains;:NvarcharColumn.Contains;:NtextColumn.Contains</QueryUnits>
+  </QueryUnitGroup>
+  <QueryUnitGroup Key="All" DataQueryPerQueryKnownKey="All" SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" ConditionOperator="AND">
+    <Description>Without condition, Order By DateTime</Description>
+    <QueryUnits Key="All" ConditionOperator="AND" Description="Without condition, Order By DateTime" />
+  </QueryUnitGroup>
+  <QueryUnitGroup Key="ByFKOnly" DataQueryPerQueryKnownKey="ByFKOnly" SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" ConditionOperator="AND">
+    <Description>Query by EntityReference</Description>
+    <QueryUnits Key="ByFKOnly" ConditionOperator="AND" Description="Query by EntityReference, Order By DateTime">\ParentId:Id.Equals</QueryUnits>
+  </QueryUnitGroup>
+  <QueryUnitGroup Key="ByIdentifier" DataQueryPerQueryKnownKey="ByIdentifier" SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" ConditionOperator="AND">
+    <Description>Query by Identifier</Description>
+    <QueryUnits Key="ByIdentifier" ConditionOperator="AND" Description="Query by Identifier">:Id.Equals</QueryUnits>
+  </QueryUnitGroup>
+  <QueryUnitGroup Key="UniqueConstraintOfUC_Organization_UniqueIdentifier" DataQueryPerQueryKnownKey="UniqueConstraint" SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" ConditionOperator="AND">
+    <Description>Query by UniqueConstrain of UC_Organization_UniqueIdentifier</Description>
+    <QueryUnits Key="UniqueConstraintOfUC_Organization_UniqueIdentifier" ConditionOperator="AND" Description="Query by UniqueConstrain of UC_Organization_UniqueIdentifier">:UniqueIdentifier.Equals</QueryUnits>
+  </QueryUnitGroup>
+  <QueryUnitGroup Key="UniqueConstraintOfUC_Organization_UniqueidentifierColumn" DataQueryPerQueryKnownKey="UniqueConstraint" SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" ConditionOperator="AND">
+    <Description>Query by UniqueConstrain of UC_Organization_UniqueidentifierColumn</Description>
+    <QueryUnits Key="UniqueConstraintOfUC_Organization_UniqueidentifierColumn" ConditionOperator="AND" Description="Query by UniqueConstrain of UC_Organization_UniqueidentifierColumn">:UniqueidentifierColumn.Equals</QueryUnits>
+  </QueryUnitGroup>
+  <QueryUnitGroup Key="IdentifierAndUniqueConstraint" DataQueryPerQueryKnownKey="IdentifierAndUniqueConstraint" SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" ConditionOperator="AND">
+    <Description>Query by Identifier and UniqueConstraints</Description>
+    <QueryUnits Key="IdentifierAndUniqueConstraint" ConditionOperator="AND" Description="Query by Identifier and UniqueConstraints">:Id.Equals;:UniqueIdentifier.Equals;:UniqueidentifierColumn.Equals</QueryUnits>
+  </QueryUnitGroup>
+  <Workspace MasterTypeFullName="MSBuildExtensionPack.Organization" Key="Common" UIWorkspaceType="SearchResult" DataViewKey="Default" QueryKey="Common" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>Workspace of Common</Description>
+  </Workspace>
+  <Workspace MasterTypeFullName="MSBuildExtensionPack.Organization" Key="EntityRelated" UIWorkspaceType="EntityRelated" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>Workspace of ByIdentifier</Description>
+    <View SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" Group="Article" Key="V_Organization_Via_ParentId" UIViewType="RelatedEntityWhenMasterViewIsPKEntity" QueryKey="ByFKOnly" DataViewKey="Default" EntityReferenceName="FK_Organization_ParentId" Name="View of MSBuildExtensionPack.Organization via ParentId">
+      <Description>View of MSBuildExtensionPack.Organization via ParentId</Description>
+    </View>
+    <View SourceTypeDeclarationFullName="MSBuildExtensionPack.Solution" Group="Article" Key="V_Solution_Via_OrganizationId" UIViewType="RelatedEntityWhenMasterViewIsPKEntity" QueryKey="ByFKOnly" DataViewKey="Default" EntityReferenceName="FK_Solution_OrganizationId" Name="View of MSBuildExtensionPack.Solution via OrganizationId">
+      <Description>View of MSBuildExtensionPack.Solution via OrganizationId</Description>
+    </View>
+    <View SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" Group="Aside" Key="V_Organization_Via_This" UIViewType="MasterViewAsideKeyInformation" QueryKey="IdentifierAndUniqueConstraint" DataViewKey="Default" EntityReferenceSimpleFullPath="" EntityReferenceName="" Name="View of MSBuildExtensionPack.Organization via This">
+      <Description>View of MSBuildExtensionPack.Organization via This</Description>
+    </View>
+    <View SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" Group="Aside" Key="V_Organization_Via_ParentId" UIViewType="RelatedEntityWhenMasterViewIsFKEntity" QueryKey="ByIdentifier" DataViewKey="KeyInformation" EntityReferenceSimpleFullPath="\ParentId" Name="View of MSBuildExtensionPack.Organization via ParentId">
+      <Description>View of MSBuildExtensionPack.Organization via ParentId</Description>
+    </View>
+  </Workspace>
+  <Workspace MasterTypeFullName="MSBuildExtensionPack.Organization" Key="CommonSearchView" UIWorkspaceType="Search" DataViewKey="Default" QueryKey="Common" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>Workspace of CommonSearchView</Description>
+  </Workspace>
+  <Workspace MasterTypeFullName="MSBuildExtensionPack.Organization" Key="CommonResultView" UIWorkspaceType="Results" DataViewKey="Default" QueryKey="Common" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>Workspace of CommonResultView</Description>
+  </Workspace>
+  <Workspace MasterTypeFullName="MSBuildExtensionPack.Organization" Key="TabbedCommon" UIWorkspaceType="TabbedSearch" DataViewKey="" QueryKey="" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>Workspace of TabbedCommon</Description>
+    <ViewReference Group="OnlyOneArticle" Key="WSI_TabbedCommon" ReferencedKeyOfUIWorkspace="CommonSearchView" Name="WorkspaceItem of TabbedCommon">
+      <Description>WorkspaceItem of TabbedCommon</Description>
+    </ViewReference>
+    <ViewReference Group="OnlyOneArticle" Key="WSI_TabbedCommon" ReferencedKeyOfUIWorkspace="CommonResultView" Name="WorkspaceItem of TabbedCommon">
+      <Description>WorkspaceItem of TabbedCommon</Description>
+    </ViewReference>
+  </Workspace>
+  <ForeignKeyPersistList>
+    <ForeignKeyPersist>
+      <EntityReferenceResultForPersistAliaType>DownTree</EntityReferenceResultForPersistAliaType>
+      <KeyOfEntityReferenceResultCollectionGroupCollection>MSBuildExtensionPack.Organization</KeyOfEntityReferenceResultCollectionGroupCollection>
+      <KeyOfEntityReferenceResultCollectionGroup>MSBuildExtensionPack.Organization</KeyOfEntityReferenceResultCollectionGroup>
+      <PKTypeFullName>MSBuildExtensionPack.Organization</PKTypeFullName>
+      <PKPropertyName>Id</PKPropertyName>
+      <Key1>FK_Organization_ParentId</Key1>
+      <FKPropertyName>ParentId</FKPropertyName>
+      <Key2>t</Key2>
+      <IsJoinFromPKToFK>false</IsJoinFromPKToFK>
+      <EntityReferenceSimpleFullPath>\ParentId</EntityReferenceSimpleFullPath>
+      <EntityReferenceFullPath>\MSBuildExtensionPack.Organization.ParentId</EntityReferenceFullPath>
+      <EntityReferenceForeignKeyPath>\FK_Organization_ParentId</EntityReferenceForeignKeyPath>
+      <IsLeftJoin>false</IsLeftJoin>
+      <NotInDataSourceEntity>false</NotInDataSourceEntity>
+      <NotInCriteria>false</NotInCriteria>
+      <PropertyName_Origin_InThisType>ParentId</PropertyName_Origin_InThisType>
+      <DefaultOrder>1</DefaultOrder>
+      <IsTop>true</IsTop>
+      <Key>MSBuildExtensionPack.Organization</Key>
+      <Result>Organization_2</Result>
+    </ForeignKeyPersist>
+  </ForeignKeyPersistList>
+</Entity>
