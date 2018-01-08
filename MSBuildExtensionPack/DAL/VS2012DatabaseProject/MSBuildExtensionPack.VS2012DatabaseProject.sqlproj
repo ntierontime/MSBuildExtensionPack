@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -7,7 +7,7 @@
     <Name>MSBuildExtensionPack.VS2012DatabaseProject</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
-    <ProjectGuid>{9B81ECD9-731C-49FF-8417-7900133846B0}</ProjectGuid>
+    <ProjectGuid>{8b48bc6a-e81a-4539-aef7-2c276b880b77}</ProjectGuid>
     <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
@@ -17,7 +17,7 @@
     <ModelCollation>1033, CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <TargetLanguage>CS</TargetLanguage>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <SqlServerVerification>False</SqlServerVerification>
@@ -47,55 +47,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <!-- VS10 without SP1 will not have VisualStudioVersion set, so do that here -->
-  <ItemGroup>
-    <None Include="Build and Deploy\BuildBacpac.bat" />
-    <None Include="Build and Deploy\DeployUsingMsdeploy.bat" />
-    <None Include="Build and Deploy\DeployUsingSqlpackage.bat" />
-    <Build Include="dbo\Functions\BigIntegerToIPAddress.sql" >
-      <QuotedIdentifier>Off</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Functions\IPAddressToBigInteger.sql" >
-      <QuotedIdentifier>Off</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Stored Procedures\StoredProcedureOfGetAscendantOfAndGetdDescendantOf.sql" />
-    <Build Include="dbo\Tables\Build.sql" />
-    <Build Include="dbo\Tables\BuildEventCode.sql" />
-    <Build Include="dbo\Tables\BuildLog.sql" />
-    <Build Include="dbo\Tables\Organization.sql" />
-    <Build Include="dbo\Tables\Solution.sql" />
-    <PostDeploy Include="Post Deployment\PostDeployment.sql" />
-    <None Include="Post Deployment\PostDeployment_DisableCheckContraints.sql" />
-    <None Include="Post Deployment\PostDeployment_EnableCheckContraints.sql" />
-    <None Include="Post Deployment\SystemInitializationData\InitBuild.sql" />
-    <None Include="Post Deployment\SystemInitializationData\InitBuildEventCode.sql" />
-    <None Include="Post Deployment\SystemInitializationData\InitBuildLog.sql" />
-    <None Include="Post Deployment\SystemInitializationData\InitOrganization.sql" />
-    <None Include="Post Deployment\SystemInitializationData\InitSolution.sql" />
-    <None Include="Post Deployment\TestData\DumpTestDataBuild.sql" />
-    <None Include="Post Deployment\TestData\DumpTestDataBuildEventCode.sql" />
-    <None Include="Post Deployment\TestData\DumpTestDataBuildLog.sql" />
-    <None Include="Post Deployment\TestData\DumpTestDataOrganization.sql" />
-    <None Include="Post Deployment\TestData\DumpTestDataSolution.sql" />
-    <PreDeploy Include="Pre Deployment\PreDeployment.sql" />
-    <Content Include="Publish Profles\Localhost.publish.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Build and Deploy\" />
-    <Folder Include="dbo\" />
-    <Folder Include="dbo\Functions\" />
-    <Folder Include="dbo\Stored Procedures\" />
-    <Folder Include="dbo\Tables\" />
-    <Folder Include="Post Deployment\" />
-    <Folder Include="Post Deployment\SystemInitializationData\" />
-    <Folder Include="Post Deployment\TestData\" />
-    <Folder Include="Pre Deployment\" />
-    <Folder Include="Publish Profles\" />
-  </ItemGroup>
-  <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
     <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
@@ -103,18 +54,8 @@
     <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
   </PropertyGroup>
   <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
-  <Import Condition = "'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-  </ItemGroup>
-  <ItemGroup>
-    <SqlCmdVariable Include="SqlCmdVar_LoadSystemInitilizationData">
-      <DefaultValue>True</DefaultValue>
-      <Value>$(SqlCmdVar_LoadSystemInitilizationData)</Value>
-    </SqlCmdVariable>
-    <SqlCmdVariable Include="SqlCmdVar_DumpTestData">
-      <DefaultValue>True</DefaultValue>
-      <Value>$(SqlCmdVar_DumpTestData)</Value>
-    </SqlCmdVariable>
   </ItemGroup>
 </Project>

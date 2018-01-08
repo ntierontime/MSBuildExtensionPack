@@ -1,91 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C3A270DE-9727-492E-91E2-F56E7E0E0F83}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Framework.EntityContracts</RootNamespace>
-    <AssemblyName>Framework.EntityContracts</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="AlphabeticalOrderCategory.cs" />
-    <Compile Include="DateTimePivotEntities\DateTimePivot.cs" />
-    <Compile Include="DateTimePivotEntities\DateTimePivotCollection.cs" />
-    <Compile Include="DateTimePivotEntities\DateTimePivotContextBase.cs" />
-    <Compile Include="DateTimePivotEntities\DateTimePivotContextByAlphabeticalOrderCategoryBase.cs" />
-    <Compile Include="DateTimePivotEntities\DateTimePivotContextByDateTimePivotSettingBase.cs" />
-    <Compile Include="DateTimePivotEntities\DateTimePivotContextByNameValuePairBase.cs" />
-    <Compile Include="DateTimePivotEntities\DateTimePivotSetting.cs" />
-    <Compile Include="Queries\DateTimeUnit.cs" />
-    <Compile Include="IClone.cs" />
-    <Compile Include="KnownMathCalculations.cs" />
-    <Compile Include="Queries\PredefinedBooleanSelectedValues.cs" />
-    <Compile Include="Queries\PreDefinedDateTimeRanges.cs" />
-    <Compile Include="Queries\QueryCriteriaBase.cs" />
-    <Compile Include="Queries\QueryPagingResult.cs" />
-    <Compile Include="SummaryData.cs" />
-    <Compile Include="ViewModels\ContentData.cs" />
-    <Compile Include="ViewModels\SearchStatus.cs" />
-    <Compile Include="Queries\QueryOrderBySetting.cs" />
-    <Compile Include="Queries\QueryPagingSetting.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
-    <None Include="map.1.B.3.vsd" />
-    <None Include="map.1.B.3.vsd.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Framework\Framework.csproj">
-      <Project>{6d25aa30-c3af-4ae0-b567-0f2653120cdc}</Project>
-      <Name>Framework</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Framework.Resx\Framework.Resx.csproj">
-      <Project>{c72b898b-b53b-42d5-9f4f-673f84bb485b}</Project>
-      <Name>Framework.Resx</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-  </ItemGroup>
-  <PropertyGroup>
-    <PostBuildEvent>rem copy $(TargetPath) $(SolutionDir)BuiltResults\*.* /y</PostBuildEvent>
-  </PropertyGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+	<PropertyGroup>
+	   <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	</PropertyGroup>
+	<ItemGroup>
+	  <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Framework.Resx\Framework.Resx.csproj" />
+	  <ProjectReference Include="..\Framework\Framework.csproj" />
+	</ItemGroup>
 </Project>
