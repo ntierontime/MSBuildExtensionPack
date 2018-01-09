@@ -22,10 +22,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         #endregion Storage Fields
 
-        #region constructors
-
         /// <summary>
-        /// default constructor
         /// Initializes a new instance of the <see cref=" BuildEventCode"/> class.
         /// </summary>
         public BuildEventCode()
@@ -60,8 +57,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
         {
             MSBuildExtensionPack.EntityContracts.IBuildEventCodeHelper.Copy<MSBuildExtensionPack.EntityContracts.IBuildEventCode, BuildEventCode>(item, this);
         }
-
-        #endregion constructors
 
         #region properties
 

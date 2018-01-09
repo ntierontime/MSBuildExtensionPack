@@ -26,10 +26,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         #endregion Storage Fields
 
-        #region constructors
-
         /// <summary>
-        /// default constructor
         /// Initializes a new instance of the <see cref=" Build"/> class.
         /// </summary>
         public Build()
@@ -72,8 +69,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
         {
             MSBuildExtensionPack.EntityContracts.IBuildHelper.Copy<MSBuildExtensionPack.EntityContracts.IBuild, Build>(item, this);
         }
-
-        #endregion constructors
 
         #region properties
 

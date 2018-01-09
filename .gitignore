@@ -6,6 +6,7 @@
 # BuiltResults
 [Bb]uilt[Rr]esults/
 [Bb]uilt[Rr]esults/*.*
+.cg/
 
 # User-specific files
 *.suo

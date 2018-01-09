@@ -30,10 +30,6 @@ namespace MSBuildExtensionPack.EntityContracts
             to.EventTime = from.EventTime;
         }
 
-        #region special copy
-
-        #endregion special copy
-
         /// <summary>
         /// Equals the specified from.
         /// </summary>

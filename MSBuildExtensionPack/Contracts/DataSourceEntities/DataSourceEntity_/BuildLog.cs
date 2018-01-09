@@ -26,10 +26,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         #endregion Storage Fields
 
-        #region constructors
-
         /// <summary>
-        /// default constructor
         /// Initializes a new instance of the <see cref=" BuildLog"/> class.
         /// </summary>
         public BuildLog()
@@ -72,8 +69,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
         {
             MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Copy<MSBuildExtensionPack.EntityContracts.IBuildLog, BuildLog>(item, this);
         }
-
-        #endregion constructors
 
         #region properties
 
