@@ -7,7 +7,7 @@
     <Name>MSBuildExtensionPack.VS2012DatabaseProject</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
-    <ProjectGuid>{9B81ECD9-731C-49FF-8417-7900133846B0}</ProjectGuid>
+    <ProjectGuid>{528E5585-F0C4-43AC-BBB3-4F998EC3927B}</ProjectGuid>
     <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>

@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{E9D59CCD-7122-40BA-93B2-2D2E40B09662}</ProjectGuid>
+    <ProjectGuid>{80B1D16F-6EE3-45A0-8483-2FE5485DBD32}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildExtensionPack.ViewModelData</RootNamespace>
@@ -50,15 +50,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommonBLLEntities\MSBuildExtensionPack.CommonBLLEntities.csproj">
-      <Project>{1863424e-9841-4647-97a2-4cc17a4bc7ba}</Project>
+      <Project>{58e3795b-9de9-4648-939b-61b0c55a42a1}</Project>
       <Name>MSBuildExtensionPack.CommonBLLEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\DataSourceEntities\MSBuildExtensionPack.DataSourceEntities.csproj">
-      <Project>{3a8f1415-88ef-4b9e-8fef-4296bf953f31}</Project>
+      <Project>{5deb4a5e-98ae-4acb-a0fe-a67ac3bd217e}</Project>
       <Name>MSBuildExtensionPack.DataSourceEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj">
-      <Project>{9abeb016-fb34-40ab-b469-3b00f0048d27}</Project>
+      <Project>{5b486d1c-013e-4c38-9b36-67c97377eed3}</Project>
       <Name>MSBuildExtensionPack.EntityContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks\Framework\Framework.csproj">
@@ -86,7 +86,7 @@
       <Name>Framework.ViewModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\Resx\MSBuildExtensionPack.Resx.csproj">
-      <Project>{960e0564-9487-4c39-9f6a-ef730d96c18e}</Project>
+      <Project>{fa0338f6-9857-4674-b767-5f1c19114372}</Project>
       <Name>MSBuildExtensionPack.Resx</Name>
     </ProjectReference>
   </ItemGroup>

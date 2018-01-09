@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{78EE7B03-B20A-411C-95E7-D23083E254AF}</ProjectGuid>
+    <ProjectGuid>{4E27D4DA-AC87-4DE7-9702-EB6BE27DC51C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildExtensionPack.EntityFrameworkDAL</RootNamespace>
@@ -45,19 +45,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DALContracts\MSBuildExtensionPack.DALContracts.csproj">
-      <Project>{11cc9717-71a4-41e7-b27e-d59a54d221dd}</Project>
+      <Project>{b5fc759a-6e18-4db2-80c2-77a9aba499a6}</Project>
       <Name>MSBuildExtensionPack.DALContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Contracts\DataSourceEntities\MSBuildExtensionPack.DataSourceEntities.csproj">
-      <Project>{3a8f1415-88ef-4b9e-8fef-4296bf953f31}</Project>
+      <Project>{5deb4a5e-98ae-4acb-a0fe-a67ac3bd217e}</Project>
       <Name>MSBuildExtensionPack.DataSourceEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Contracts\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj">
-      <Project>{9abeb016-fb34-40ab-b469-3b00f0048d27}</Project>
+      <Project>{5b486d1c-013e-4c38-9b36-67c97377eed3}</Project>
       <Name>MSBuildExtensionPack.EntityContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\EntityFrameworkContextV6\MSBuildExtensionPack.EntityFrameworkContextV6.csproj">
-      <Project>{25082160-7e27-40c0-be53-778c977b758c}</Project>
+      <Project>{9a932b26-3aeb-41aa-b82a-0e2dae1283cd}</Project>
       <Name>MSBuildExtensionPack.EntityFrameworkContextV6</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks\Framework\Framework.csproj">

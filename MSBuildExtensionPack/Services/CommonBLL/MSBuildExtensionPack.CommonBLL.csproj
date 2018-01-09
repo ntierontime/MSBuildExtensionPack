@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{01FA0028-AD94-4D6B-9A89-3FABF3C9C779}</ProjectGuid>
+    <ProjectGuid>{6D17AD0D-B33F-41A5-92DB-FFB472B61DF7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildExtensionPack.CommonBLL</RootNamespace>
@@ -56,19 +56,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Contracts\CommonBLLEntities\MSBuildExtensionPack.CommonBLLEntities.csproj">
-      <Project>{1863424e-9841-4647-97a2-4cc17a4bc7ba}</Project>
+      <Project>{58e3795b-9de9-4648-939b-61b0c55a42a1}</Project>
       <Name>MSBuildExtensionPack.CommonBLLEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\DAL\DALContracts\MSBuildExtensionPack.DALContracts.csproj">
-      <Project>{11cc9717-71a4-41e7-b27e-d59a54d221dd}</Project>
+      <Project>{b5fc759a-6e18-4db2-80c2-77a9aba499a6}</Project>
       <Name>MSBuildExtensionPack.DALContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Contracts\DataSourceEntities\MSBuildExtensionPack.DataSourceEntities.csproj">
-      <Project>{3a8f1415-88ef-4b9e-8fef-4296bf953f31}</Project>
+      <Project>{5deb4a5e-98ae-4acb-a0fe-a67ac3bd217e}</Project>
       <Name>MSBuildExtensionPack.DataSourceEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Contracts\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj">
-      <Project>{9abeb016-fb34-40ab-b469-3b00f0048d27}</Project>
+      <Project>{5b486d1c-013e-4c38-9b36-67c97377eed3}</Project>
       <Name>MSBuildExtensionPack.EntityContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks\Framework\Framework.csproj">
@@ -104,11 +104,11 @@
       <Name>Framework.Web</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Contracts\Resx\MSBuildExtensionPack.Resx.csproj">
-      <Project>{960e0564-9487-4c39-9f6a-ef730d96c18e}</Project>
+      <Project>{fa0338f6-9857-4674-b767-5f1c19114372}</Project>
       <Name>MSBuildExtensionPack.Resx</Name>
     </ProjectReference>
     <ProjectReference Include="..\WcfContracts\MSBuildExtensionPack.WcfContracts.csproj">
-      <Project>{88d3427b-531b-45bf-a336-cefbee3dbeb7}</Project>
+      <Project>{7079fa1a-9fdf-4dbe-8639-d33d8d01a093}</Project>
       <Name>MSBuildExtensionPack.WcfContracts</Name>
     </ProjectReference>
   </ItemGroup>

@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3A8F1415-88EF-4B9E-8FEF-4296BF953F31}</ProjectGuid>
+    <ProjectGuid>{5DEB4A5E-98AE-4ACB-A0FE-A67AC3BD217E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildExtensionPack.DataSourceEntities</RootNamespace>
@@ -64,7 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj">
-      <Project>{9abeb016-fb34-40ab-b469-3b00f0048d27}</Project>
+      <Project>{5b486d1c-013e-4c38-9b36-67c97377eed3}</Project>
       <Name>MSBuildExtensionPack.EntityContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks\Framework\Framework.csproj">
@@ -84,7 +84,7 @@
       <Name>Framework.EntityContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\Resx\MSBuildExtensionPack.Resx.csproj">
-      <Project>{960e0564-9487-4c39-9f6a-ef730d96c18e}</Project>
+      <Project>{fa0338f6-9857-4674-b767-5f1c19114372}</Project>
       <Name>MSBuildExtensionPack.Resx</Name>
     </ProjectReference>
   </ItemGroup>

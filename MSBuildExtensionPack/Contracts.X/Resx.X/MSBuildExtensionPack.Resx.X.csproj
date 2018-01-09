@@ -5,7 +5,7 @@
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E4E691E9-3912-44A7-AA4E-607A9BB4A9FC}</ProjectGuid>
+    <ProjectGuid>{55D8BCD1-9292-49F9-8E25-7427F62FC990}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildExtensionPack.Resx</RootNamespace>
@@ -92,7 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Frameworks.X\Framework.X\Framework.X.csproj">
-      <Project>{e10855c7-201c-43c3-940a-a7275fd2b804}</Project>
+      <Project>{d85996cb-db60-46f0-befe-551383442c6c}</Project>
       <Name>Framework.X</Name>
     </ProjectReference>
   </ItemGroup>
