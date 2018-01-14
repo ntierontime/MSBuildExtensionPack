@@ -71,21 +71,6 @@
     <Compile Include="..\..\..\UINative\Shared\MVVMLightViewModels\MainViewModel.cs">
       <Link>MainViewModel.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\UINative\Shared\MVVMLightViewModels\ViewModelBuild.cs">
-      <Link>ViewModelBuild.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\UINative\Shared\MVVMLightViewModels\ViewModelBuildEventCode.cs">
-      <Link>ViewModelBuildEventCode.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\UINative\Shared\MVVMLightViewModels\ViewModelBuildLog.cs">
-      <Link>ViewModelBuildLog.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\UINative\Shared\MVVMLightViewModels\ViewModelOrganization.cs">
-      <Link>ViewModelOrganization.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\UINative\Shared\MVVMLightViewModels\ViewModelSolution.cs">
-      <Link>ViewModelSolution.cs</Link>
-    </Compile>
     <Compile Include="..\..\..\UINative\Shared\MVVMLightViewModels\ViewModelLocator.cs">
       <Link>ViewModelLocator.cs</Link>
     </Compile>
@@ -94,6 +79,21 @@
     </Compile>
     <Compile Include="..\..\..\UINative\Shared\MVVMLightViewModels\LocalizedStrings.cs">
       <Link>LocalizedStrings.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\UINative\Shared\MVVMLightViewModels\WPCommonOfBuildVM.cs">
+      <Link>WPCommonOfBuildVM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\UINative\Shared\MVVMLightViewModels\WPCommonOfBuildEventCodeVM.cs">
+      <Link>WPCommonOfBuildEventCodeVM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\UINative\Shared\MVVMLightViewModels\WPCommonOfBuildLogVM.cs">
+      <Link>WPCommonOfBuildLogVM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\UINative\Shared\MVVMLightViewModels\WPCommonOfOrganizationVM.cs">
+      <Link>WPCommonOfOrganizationVM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\UINative\Shared\MVVMLightViewModels\WPCommonOfSolutionVM.cs">
+      <Link>WPCommonOfSolutionVM.cs</Link>
     </Compile>
   </ItemGroup>
   <ItemGroup>

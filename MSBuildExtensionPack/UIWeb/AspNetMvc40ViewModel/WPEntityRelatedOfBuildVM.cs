@@ -7,70 +7,6 @@ using System.Web.Mvc;
 
 namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 {
-
-    public partial class WPCommonOfBuildVM : MSBuildExtensionPack.ViewModelData.WPCommonOfBuildVM
-    {
-        public WPCommonOfBuildVM ()
-            : base()
-        {
-        }
-        public List<SelectListItem> SelectListOfMSBuildExtensionPack_Organization { get; set; }
-
-        public Framework.Mvc.UISharedViewModel UISharedViewModel { get; set; }
-
-        public override Framework.NameValueCollection GetDefaultListOfQueryOrderBySettingCollecionInString()
-        {
-            return MSBuildExtensionPack.ViewModelData.OrderByLists.WPCommonOfBuildVM_GetDefaultListOfQueryOrderBySettingCollecionInString();
-        }
-
-        public override void GetDefaultPerViewModel()
-        {
-            this.NameValueCollectionOfMSBuildExtensionPack_Organization = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairOfAll(new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(), new Framework.EntityContracts.QueryPagingSetting(-1, -1), null);
-            this.SelectListOfMSBuildExtensionPack_Organization = Framework.Mvc.MvcHelper.BuildListOfSelectListItem(this.NameValueCollectionOfMSBuildExtensionPack_Organization);
-
-            this.UISharedViewModel = Framework.Mvc.UISharedViewModel.GetUISharedViewModel(this.ListOfQueryOrderBySettingCollecionInString, this.QueryPagingSetting.PageSizeSelectionList, this.ListOfDataExport);
-        }
-
-        //public override void LoadData()
-        /// <summary>
-        /// Loads the data.
-        /// </summary>
-        public void LoadData(bool isToLoadDropDownlistContent)
-        {
-            if (isToLoadDropDownlistContent)
-            {
-            this.NameValueCollectionOfMSBuildExtensionPack_Organization = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairOfAll(new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(), new Framework.EntityContracts.QueryPagingSetting(-1, -1), null);
-            this.SelectListOfMSBuildExtensionPack_Organization = Framework.Mvc.MvcHelper.BuildListOfSelectListItem(this.NameValueCollectionOfMSBuildExtensionPack_Organization);
-
-            }
-
-            var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCBuild.GetMessageOfDefaultOfCommon(
-                this.Criteria
-                , this.QueryPagingSetting
-                , this.QueryOrderBySettingCollection);
-
-            this.StatusOfResult = searchResult.BusinessLogicLayerResponseStatus;
-
-            if (this.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
-            {
-                this.Result = searchResult.Message;
-
-                if (searchResult.QueryPagingResult != null)
-                {
-                    this.QueryPagingSetting.CountOfRecords = searchResult.QueryPagingResult.CountOfRecords;
-                    this.QueryPagingSetting.RecordCountOfCurrentPage = searchResult.QueryPagingResult.RecordCountOfCurrentPage;
-                }
-            }
-            else
-            {
-                this.StatusMessageOfResult = searchResult.GetStatusMessage();
-#if DEBUG
-                this.StatusMessageOfResult = string.Format("{0} {1}", this.StatusMessageOfResult, searchResult.ServerErrorMessage);
-#endif
-            }
-        }
-    }
-
     public partial class WPEntityRelatedOfBuildVM
         : MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfBuildVM
         //: Framework.ViewModels.ViewModelEntityRelatedBase<MSBuildExtensionPack.DataSourceEntities.Build.Default, MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier, Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus>
@@ -191,58 +127,5 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
             }
         }
     }
-
-    public partial class WPUpdateNameOnlyOfBuildVM
-        : MSBuildExtensionPack.ViewModelData.WPUpdateNameOnlyOfBuildVM
-        //: Framework.ViewModels.ViewModelEntityRelatedBase<MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest, MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier>
-    {
-        public WPUpdateNameOnlyOfBuildVM ()
-            : base(new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier())
-        {
-        }
-
-        public WPUpdateNameOnlyOfBuildVM(MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier criteriaOfMasterEntity)
-            : base(criteriaOfMasterEntity)
-        {
-        }
-
-        public void LoadData()
-        {
-            // 1. master on accessory part - Aside UIWorkspaceItemSetting
-            var masterEntityResult = MSBuildExtensionPack.CommonBLLIoC.IoCBuild.GetMessageOfUpdateNameRequestOfByIdentifier(this.CriteriaOfMasterEntity, this.QueryPagingSettingOneRecord, null);
-
-            this.StatusOfMasterEntity = masterEntityResult.BusinessLogicLayerResponseStatus;
-
-            if (masterEntityResult.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
-            {
-                this.MasterEntity = masterEntityResult.Message[0];
-                this.StatusOfMasterEntity = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady;
-                this.StatusMessageOfMasterEntity = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.UpdateNameOnly_Description;
-            }
-            else
-            {
-                this.StatusMessageOfMasterEntity = masterEntityResult.GetStatusMessage();
-#if DEBUG
-                this.StatusMessageOfMasterEntity = string.Format("{0} {1}", this.StatusMessageOfMasterEntity, masterEntityResult.ServerErrorMessage);
-#endif
-            }
-        }
-        public void SaveData()
-        {
-            var request = new MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedUpdateNameOnly();
-            request.Critieria = this.MasterEntity;
-            var response = MSBuildExtensionPack.CommonBLLIoC.IoCBuild.UpdateNameOnly(request);
-            this.StatusOfMasterEntity = response.BusinessLogicLayerResponseStatus;
-            if (this.StatusOfMasterEntity == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
-            {
-                this.StatusMessageOfMasterEntity = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.UpdateNameOnly_Success; // Success
-            }
-            else
-            {
-                this.StatusMessageOfMasterEntity = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.UpdateNameOnly_Failed; // failed
-            }
-        }
-    }
-
 }
 

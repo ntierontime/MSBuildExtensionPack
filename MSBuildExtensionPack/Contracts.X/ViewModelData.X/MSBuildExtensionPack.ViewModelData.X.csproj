@@ -56,20 +56,38 @@
     <Compile Include="..\..\Contracts\ViewModelData\SolutionItemVM.cs">
       <Link>SolutionItemVM.cs</Link>
     </Compile>
-    <Compile Include="..\..\Contracts\ViewModelData\BuildWorkspaceVM.cs">
-      <Link>BuildWorkspaceVM.cs</Link>
+    <Compile Include="..\..\Contracts\ViewModelData\WPCommonOfBuildVM.cs">
+      <Link>WPCommonOfBuildVM.cs</Link>
     </Compile>
-    <Compile Include="..\..\Contracts\ViewModelData\BuildEventCodeWorkspaceVM.cs">
-      <Link>BuildEventCodeWorkspaceVM.cs</Link>
+    <Compile Include="..\..\Contracts\ViewModelData\WPEntityRelatedOfBuildVM.cs">
+      <Link>WPEntityRelatedOfBuildVM.cs</Link>
     </Compile>
-    <Compile Include="..\..\Contracts\ViewModelData\BuildLogWorkspaceVM.cs">
-      <Link>BuildLogWorkspaceVM.cs</Link>
+    <Compile Include="..\..\Contracts\ViewModelData\WPUpdateNameOnlyOfBuildVM.cs">
+      <Link>WPUpdateNameOnlyOfBuildVM.cs</Link>
     </Compile>
-    <Compile Include="..\..\Contracts\ViewModelData\OrganizationWorkspaceVM.cs">
-      <Link>OrganizationWorkspaceVM.cs</Link>
+    <Compile Include="..\..\Contracts\ViewModelData\WPCommonOfBuildEventCodeVM.cs">
+      <Link>WPCommonOfBuildEventCodeVM.cs</Link>
     </Compile>
-    <Compile Include="..\..\Contracts\ViewModelData\SolutionWorkspaceVM.cs">
-      <Link>SolutionWorkspaceVM.cs</Link>
+    <Compile Include="..\..\Contracts\ViewModelData\WPEntityRelatedOfBuildEventCodeVM.cs">
+      <Link>WPEntityRelatedOfBuildEventCodeVM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\ViewModelData\WPCommonOfBuildLogVM.cs">
+      <Link>WPCommonOfBuildLogVM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\ViewModelData\WPEntityRelatedOfBuildLogVM.cs">
+      <Link>WPEntityRelatedOfBuildLogVM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\ViewModelData\WPCommonOfOrganizationVM.cs">
+      <Link>WPCommonOfOrganizationVM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\ViewModelData\WPEntityRelatedOfOrganizationVM.cs">
+      <Link>WPEntityRelatedOfOrganizationVM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\ViewModelData\WPCommonOfSolutionVM.cs">
+      <Link>WPCommonOfSolutionVM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Contracts\ViewModelData\WPEntityRelatedOfSolutionVM.cs">
+      <Link>WPEntityRelatedOfSolutionVM.cs</Link>
     </Compile>
   </ItemGroup>
   <ItemGroup>

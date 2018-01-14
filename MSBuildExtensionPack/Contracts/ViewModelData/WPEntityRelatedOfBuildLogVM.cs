@@ -5,24 +5,6 @@ using System.Text;
 
 namespace MSBuildExtensionPack.ViewModelData
 {
-
-    public partial class WPCommonOfBuildLogVM : Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon, MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection>
-    {
-        public WPCommonOfBuildLogVM()
-            : base()
-        {
-        }
-
-            public Framework.NameValueCollection NameValueCollectionOfMSBuildExtensionPack_Organization { get; set; }
-
-            public Framework.NameValueCollection NameValueCollectionOfMSBuildExtensionPack_BuildEventCode { get; set; }
-
-        public override Framework.NameValueCollection GetDefaultListOfQueryOrderBySettingCollecionInString()
-        {
-            return MSBuildExtensionPack.ViewModelData.OrderByLists.WPCommonOfBuildLogVM_GetDefaultListOfQueryOrderBySettingCollecionInString();
-        }
-    }
-
     public partial class WPEntityRelatedOfBuildLogVM
         : Framework.ViewModels.ViewModelEntityRelatedBase<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier>
     {
@@ -66,6 +48,5 @@ namespace MSBuildExtensionPack.ViewModelData
         public string StatusMessageOfBuildEventCode_1 { get; set; }
         public MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation BuildEventCode_1 { get; set; }
     }
-
 }
 

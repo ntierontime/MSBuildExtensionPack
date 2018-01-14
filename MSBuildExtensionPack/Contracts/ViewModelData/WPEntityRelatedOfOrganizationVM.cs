@@ -5,22 +5,6 @@ using System.Text;
 
 namespace MSBuildExtensionPack.ViewModelData
 {
-
-    public partial class WPCommonOfOrganizationVM : Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon, MSBuildExtensionPack.DataSourceEntities.Organization.DefaultCollection>
-    {
-        public WPCommonOfOrganizationVM()
-            : base()
-        {
-        }
-
-            public Framework.NameValueCollection NameValueCollectionOfMSBuildExtensionPack_Organization { get; set; }
-
-        public override Framework.NameValueCollection GetDefaultListOfQueryOrderBySettingCollecionInString()
-        {
-            return MSBuildExtensionPack.ViewModelData.OrderByLists.WPCommonOfOrganizationVM_GetDefaultListOfQueryOrderBySettingCollecionInString();
-        }
-    }
-
     public partial class WPEntityRelatedOfOrganizationVM
         : Framework.ViewModels.ViewModelEntityRelatedBase<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint>
     {
@@ -52,6 +36,5 @@ namespace MSBuildExtensionPack.ViewModelData
         public string StatusMessageOfOrganization_2 { get; set; }
         public MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation Organization_2 { get; set; }
     }
-
 }
 

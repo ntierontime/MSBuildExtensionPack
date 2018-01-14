@@ -5,22 +5,6 @@ using System.Text;
 
 namespace MSBuildExtensionPack.ViewModelData
 {
-
-    public partial class WPCommonOfBuildVM : Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaCommon, MSBuildExtensionPack.DataSourceEntities.Build.DefaultCollection>
-    {
-        public WPCommonOfBuildVM()
-            : base()
-        {
-        }
-
-            public Framework.NameValueCollection NameValueCollectionOfMSBuildExtensionPack_Organization { get; set; }
-
-        public override Framework.NameValueCollection GetDefaultListOfQueryOrderBySettingCollecionInString()
-        {
-            return MSBuildExtensionPack.ViewModelData.OrderByLists.WPCommonOfBuildVM_GetDefaultListOfQueryOrderBySettingCollecionInString();
-        }
-    }
-
     public partial class WPEntityRelatedOfBuildVM
         : Framework.ViewModels.ViewModelEntityRelatedBase<MSBuildExtensionPack.DataSourceEntities.Build.Default, MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier>
     {
@@ -58,20 +42,5 @@ namespace MSBuildExtensionPack.ViewModelData
         public string StatusMessageOfOrganization_2 { get; set; }
         public MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation Organization_2 { get; set; }
     }
-
-    public partial class WPUpdateNameOnlyOfBuildVM
-        : Framework.ViewModels.ViewModelEntityRelatedBase<MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest, MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier>
-    {
-        public WPUpdateNameOnlyOfBuildVM ()
-            : base(new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier())
-        {
-        }
-
-        public WPUpdateNameOnlyOfBuildVM(MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier criteriaOfMasterEntity)
-            : base(criteriaOfMasterEntity)
-        {
-        }
-    }
-
 }
 

@@ -37,13 +37,19 @@
     <Compile Include="BuildLogItemVM.cs" />
     <Compile Include="OrganizationItemVM.cs" />
     <Compile Include="SolutionItemVM.cs" />
-    <Compile Include="BuildWorkspaceVM.cs" />
-    <Compile Include="BuildEventCodeWorkspaceVM.cs" />
-    <Compile Include="BuildLogWorkspaceVM.cs" />
-    <Compile Include="OrganizationWorkspaceVM.cs" />
-    <Compile Include="SolutionWorkspaceVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
+    <Compile Include="WPCommonOfBuildVM.cs" />
+    <Compile Include="WPEntityRelatedOfBuildVM.cs" />
+    <Compile Include="WPUpdateNameOnlyOfBuildVM.cs" />
+    <Compile Include="WPCommonOfBuildEventCodeVM.cs" />
+    <Compile Include="WPEntityRelatedOfBuildEventCodeVM.cs" />
+    <Compile Include="WPCommonOfBuildLogVM.cs" />
+    <Compile Include="WPEntityRelatedOfBuildLogVM.cs" />
+    <Compile Include="WPCommonOfOrganizationVM.cs" />
+    <Compile Include="WPEntityRelatedOfOrganizationVM.cs" />
+    <Compile Include="WPCommonOfSolutionVM.cs" />
+    <Compile Include="WPEntityRelatedOfSolutionVM.cs" />
     <None Include="map.2.D.1.vsd" />
     <None Include="map.2.D.1.vsd.png" />
   </ItemGroup>

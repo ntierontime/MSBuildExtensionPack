@@ -8,26 +8,12 @@ using System.Threading.Tasks;
 
 namespace MSBuildExtensionPack.MVVMLightViewModels
 {
-
-    /// <summary>
-    /// This class contains properties that a View can data bind to.
-    /// After 2014-01-31 is Asyncronized Wcf Method call
-    /// <para>
-    /// Use the <strong>mvvminpc</strong> snippet to add bindable properties to this ViewModel.
-    /// </para>
-    /// <para>
-    /// You can also use Blend to data bind with the tool's support.
-    /// </para>
-    /// <para>
-    /// See http://www.galasoft.ch/mvvm/getstarted
-    /// </para>
-    /// </summary>
-    public class WPCommonOfOrganizationVM
-        : Framework.Xaml.ViewModelBaseWithResultAndUIElement<MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon, MSBuildExtensionPack.DataSourceEntities.Organization.DefaultCollection, MSBuildExtensionPack.DataSourceEntities.Organization.Default>
+    public class WPCommonOfBuildEventCodeVM
+        : Framework.Xaml.ViewModelBaseWithResultAndUIElement<MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommon, MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection, MSBuildExtensionPack.DataSourceEntities.BuildEventCode>
     {
         #region override string EntityName and ViewName
 
-        public const string EntityName_Static = "MSBuildExtensionPack.Organization";
+        public const string EntityName_Static = "MSBuildExtensionPack.BuildEventCode";
 
         public override string EntityName
         {
@@ -37,7 +23,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
         }
 
-        public const string ViewName_Static = "WPCommonOfOrganizationVM";
+        public const string ViewName_Static = "WPCommonOfBuildEventCodeVM";
 
         public override string ViewName
         {
@@ -52,11 +38,11 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         #region Constructor
 
         /// <summary>
-        /// Initializes a new instance of the WPCommonOfOrganization class.
+        /// Initializes a new instance of the WPCommonOfBuildEventCodeVM class.
         /// </summary>
-        public WPCommonOfOrganizationVM()
+        public WPCommonOfBuildEventCodeVM()
         {
-            this.EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Organization.Default>();
+            this.EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildEventCode>();
 
             ////if (IsInDesignMode)
             ////{
@@ -92,7 +78,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         protected override void DoSearch(bool isToClearExistingResult)
         {
 #if (XAMARIN)
-            Criteria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2.NullableValueToCompare = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization_Static.DropDownContentsOfOrganization_2SelectedItem != null ? MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization_Static.DropDownContentsOfOrganization_2SelectedItem.Value : default(System.Int64);
 
 #endif
 
@@ -104,13 +89,13 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
             try
             {
-                var vmData = new MSBuildExtensionPack.ViewModelData.WPCommonOfOrganizationVM();
+                var vmData = new MSBuildExtensionPack.ViewModelData.WPCommonOfBuildEventCodeVM();
                 vmData.Criteria = this.Criteria;
                 vmData.QueryPagingSetting = this.QueryPagingSetting;
                 vmData.QueryOrderBySettingCollection = this.QueryOrderBySettingCollection;
 
-                var client = new MSBuildExtensionPack.WebApiClient.OrganizationApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-                var result = Task.Run(() => client.GetWPCommonOfOrganizationVMAsync(vmData)).Result;
+                var client = new MSBuildExtensionPack.WebApiClient.BuildEventCodeApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
+                var result = Task.Run(() => client.GetWPCommonOfBuildEventCodeVMAsync(vmData)).Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
 
@@ -121,11 +106,11 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                     {
                         if (this.EntityCollection == null)
                         {
-                            this.EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Organization.Default>();
+                            this.EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildEventCode>();
                         }
                         if (isToClearExistingResult)
                         {
-                            this.EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Organization.Default>(result.Result.ToList());
+                            this.EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildEventCode>(result.Result.ToList());
                         }
                         else
                         {
@@ -154,11 +139,10 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         public override Framework.NameValueCollection GetDefaultListOfQueryOrderBySettingCollecionInString()
         {
             Framework.NameValueCollection list = new Framework.NameValueCollection();
-            list.Add("Organization_2_Name~ASC", "Organization_2_Name A-Z");
-                    list.Add("Organization_2_Name~DESC", "Organization_2_Name Z-A");
+            list.Add("EventCode~ASC", "EventCode A-Z");
+        list.Add("EventCode~DESC", "EventCode Z-A");
             return list;
         }
     }
-
 }
 

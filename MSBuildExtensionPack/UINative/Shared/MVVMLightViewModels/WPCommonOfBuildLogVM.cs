@@ -8,20 +8,6 @@ using System.Threading.Tasks;
 
 namespace MSBuildExtensionPack.MVVMLightViewModels
 {
-
-    /// <summary>
-    /// This class contains properties that a View can data bind to.
-    /// After 2014-01-31 is Asyncronized Wcf Method call
-    /// <para>
-    /// Use the <strong>mvvminpc</strong> snippet to add bindable properties to this ViewModel.
-    /// </para>
-    /// <para>
-    /// You can also use Blend to data bind with the tool's support.
-    /// </para>
-    /// <para>
-    /// See http://www.galasoft.ch/mvvm/getstarted
-    /// </para>
-    /// </summary>
     public class WPCommonOfBuildLogVM
         : Framework.Xaml.ViewModelBaseWithResultAndUIElement<MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon, MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection, MSBuildExtensionPack.DataSourceEntities.BuildLog.Default>
     {
@@ -52,7 +38,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         #region Constructor
 
         /// <summary>
-        /// Initializes a new instance of the WPCommonOfBuildLog class.
+        /// Initializes a new instance of the WPCommonOfBuildLogVM class.
         /// </summary>
         public WPCommonOfBuildLogVM()
         {
@@ -159,10 +145,9 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         {
             Framework.NameValueCollection list = new Framework.NameValueCollection();
             list.Add("Build_1_Name~ASC", "Build_1_Name A-Z");
-                    list.Add("Build_1_Name~DESC", "Build_1_Name Z-A");
+        list.Add("Build_1_Name~DESC", "Build_1_Name Z-A");
             return list;
         }
     }
-
 }
 

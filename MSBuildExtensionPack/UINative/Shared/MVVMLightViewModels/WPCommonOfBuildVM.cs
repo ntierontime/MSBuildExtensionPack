@@ -8,26 +8,12 @@ using System.Threading.Tasks;
 
 namespace MSBuildExtensionPack.MVVMLightViewModels
 {
-
-    /// <summary>
-    /// This class contains properties that a View can data bind to.
-    /// After 2014-01-31 is Asyncronized Wcf Method call
-    /// <para>
-    /// Use the <strong>mvvminpc</strong> snippet to add bindable properties to this ViewModel.
-    /// </para>
-    /// <para>
-    /// You can also use Blend to data bind with the tool's support.
-    /// </para>
-    /// <para>
-    /// See http://www.galasoft.ch/mvvm/getstarted
-    /// </para>
-    /// </summary>
-    public class WPCommonOfBuildEventCodeVM
-        : Framework.Xaml.ViewModelBaseWithResultAndUIElement<MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommon, MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection, MSBuildExtensionPack.DataSourceEntities.BuildEventCode>
+    public class WPCommonOfBuildVM
+        : Framework.Xaml.ViewModelBaseWithResultAndUIElement<MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaCommon, MSBuildExtensionPack.DataSourceEntities.Build.DefaultCollection, MSBuildExtensionPack.DataSourceEntities.Build.Default>
     {
         #region override string EntityName and ViewName
 
-        public const string EntityName_Static = "MSBuildExtensionPack.BuildEventCode";
+        public const string EntityName_Static = "MSBuildExtensionPack.Build";
 
         public override string EntityName
         {
@@ -37,7 +23,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
         }
 
-        public const string ViewName_Static = "WPCommonOfBuildEventCodeVM";
+        public const string ViewName_Static = "WPCommonOfBuildVM";
 
         public override string ViewName
         {
@@ -52,11 +38,11 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         #region Constructor
 
         /// <summary>
-        /// Initializes a new instance of the WPCommonOfBuildEventCode class.
+        /// Initializes a new instance of the WPCommonOfBuildVM class.
         /// </summary>
-        public WPCommonOfBuildEventCodeVM()
+        public WPCommonOfBuildVM()
         {
-            this.EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildEventCode>();
+            this.EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Build.Default>();
 
             ////if (IsInDesignMode)
             ////{
@@ -92,6 +78,9 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         protected override void DoSearch(bool isToClearExistingResult)
         {
 #if (XAMARIN)
+            Criteria.BuildQueryCriteriaCommon.IdCommonOfOrganization_2.NullableValueToCompare = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild_Static.DropDownContentsOfOrganization_2SelectedItem != null ? MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild_Static.DropDownContentsOfOrganization_2SelectedItem.Value : default(System.Int64);
+            Criteria.BuildQueryCriteriaCommon.IdCommonOfOrganization_1.NullableValueToCompare = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild_Static.DropDownContentsOfOrganization_1SelectedItem != null ? MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild_Static.DropDownContentsOfOrganization_1SelectedItem.Value : default(System.Int64);
+            Criteria.BuildQueryCriteriaCommon.IdCommonOfSolution_1.NullableValueToCompare = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild_Static.DropDownContentsOfSolution_1SelectedItem != null ? MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild_Static.DropDownContentsOfSolution_1SelectedItem.Value : default(System.Int32);
 
 #endif
 
@@ -103,13 +92,13 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
             try
             {
-                var vmData = new MSBuildExtensionPack.ViewModelData.WPCommonOfBuildEventCodeVM();
+                var vmData = new MSBuildExtensionPack.ViewModelData.WPCommonOfBuildVM();
                 vmData.Criteria = this.Criteria;
                 vmData.QueryPagingSetting = this.QueryPagingSetting;
                 vmData.QueryOrderBySettingCollection = this.QueryOrderBySettingCollection;
 
-                var client = new MSBuildExtensionPack.WebApiClient.BuildEventCodeApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-                var result = Task.Run(() => client.GetWPCommonOfBuildEventCodeVMAsync(vmData)).Result;
+                var client = new MSBuildExtensionPack.WebApiClient.BuildApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
+                var result = Task.Run(() => client.GetWPCommonOfBuildVMAsync(vmData)).Result;
 
                 var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
 
@@ -120,11 +109,11 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                     {
                         if (this.EntityCollection == null)
                         {
-                            this.EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildEventCode>();
+                            this.EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Build.Default>();
                         }
                         if (isToClearExistingResult)
                         {
-                            this.EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildEventCode>(result.Result.ToList());
+                            this.EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Build.Default>(result.Result.ToList());
                         }
                         else
                         {
@@ -153,11 +142,10 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         public override Framework.NameValueCollection GetDefaultListOfQueryOrderBySettingCollecionInString()
         {
             Framework.NameValueCollection list = new Framework.NameValueCollection();
-            list.Add("EventCode~ASC", "EventCode A-Z");
-                    list.Add("EventCode~DESC", "EventCode Z-A");
+            list.Add("Solution_1_Name~ASC", "Solution_1_Name A-Z");
+        list.Add("Solution_1_Name~DESC", "Solution_1_Name Z-A");
             return list;
         }
     }
-
 }
 
