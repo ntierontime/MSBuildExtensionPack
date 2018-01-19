@@ -8,7 +8,7 @@ namespace MSBuildExtensionPack.ViewModelData
     public partial class WPUpdateNameOnlyOfBuildVM
         : Framework.ViewModels.ViewModelEntityRelatedBase<MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest, MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier>
     {
-        public WPUpdateNameOnlyOfBuildVM ()
+        public WPUpdateNameOnlyOfBuildVM()
             : base(new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier())
         {
         }
