@@ -255,7 +255,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion batch insert, update and delete in an entity collection
 
-        #region Query Methods Of Entity of Common per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of Entity of Common per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -621,7 +621,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of Entity of Common per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of Entity of Common per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of Entity of Common per value type
 
@@ -665,13 +665,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaCommon(
-                new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon));
+            _Request.Criteria = _BuildCriteriaOfCommon(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon, isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon, isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon, isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon, isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon, isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon);
+
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -750,13 +745,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaCommon(
-                new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon));
+            _Request.Criteria = _BuildCriteriaOfCommon(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon, isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon, isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon, isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon, isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon, isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon);
+
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -825,13 +815,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaCommon(
-                new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon));
+            _Request.Criteria = _BuildCriteriaOfCommon(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon, isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon, isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon, isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon, isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon, isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon);
+
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -890,13 +875,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaCommon(
-                new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon));
+            _Request.Criteria = _BuildCriteriaOfCommon(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon, isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon, isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon, isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon, isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon, isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon);
+
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -955,13 +935,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaCommon(
-                new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon));
+            _Request.Criteria = _BuildCriteriaOfCommon(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon, isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon, isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon, isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon, isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon, isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon);
+
             MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -974,6 +949,18 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 //log.Error(string.Format("{0}: GetCollectionOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
+        }
+
+        private static CommonBLLEntities.BuildChainedQueryCriteriaCommon _BuildCriteriaOfCommon(bool isToCompareIdCommonOfSolution_1OfCommon, int? valueToCompareIdCommonOfSolution_1OfCommon, bool isToCompareIdCommonOfOrganization_1OfCommon, long? valueToCompareIdCommonOfOrganization_1OfCommon, bool isToCompareIdCommonOfOrganization_2OfCommon, long? valueToCompareIdCommonOfOrganization_2OfCommon, bool isToCompareBuildStartTimeCommonOftOfCommon, bool isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, DateTime? lowerBoundBuildStartTimeCommonOftOfCommon, bool isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, DateTime? upperBoundBuildStartTimeCommonOftOfCommon, bool isToCompareNameCommonOftOfCommon, string valueToBeContainedNameCommonOftOfCommon, bool isToCompareDescriptionCommonOftOfCommon, string valueToBeContainedDescriptionCommonOftOfCommon)
+        {
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaCommon();
+            criteria.BuildQueryCriteriaCommon.IdCommonOfSolution_1 = new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon);
+            criteria.BuildQueryCriteriaCommon.IdCommonOfOrganization_1 = new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon);
+            criteria.BuildQueryCriteriaCommon.IdCommonOfOrganization_2 = new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon);
+            criteria.BuildQueryCriteriaCommon.BuildStartTimeCommonOft = new QuerySystemDateTimeRangeCriteria(isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon);
+            criteria.BuildQueryCriteriaCommon.NameCommonOft = new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon);
+            criteria.BuildQueryCriteriaCommon.DescriptionCommonOft = new QuerySystemStringContainsCriteria(isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon);
+            return criteria;
         }
 
         /// <summary>
@@ -1019,13 +1006,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaCommon(
-                new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon));
+            _Request.Criteria = _BuildCriteriaOfCommon(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon, isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon, isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon, isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon, isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon, isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon);
 
             MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfCommon(_Request);
             return _Response;
@@ -1071,14 +1052,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaCommon(
-                new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon)
-                );
+            _Request.Criteria = _BuildCriteriaOfCommon(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon, isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon, isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon, isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon, isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon, isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon);
+
             MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -1095,7 +1070,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of Entity of Common per value type
 
-        #region Query Methods Of Default of Common per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of Default of Common per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -1461,7 +1436,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of Default of Common per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of Default of Common per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of Default of Common per value type
 
@@ -1505,13 +1480,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaCommon(
-                new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon));
+            _Request.Criteria = _BuildCriteriaOfCommon(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon, isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon, isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon, isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon, isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon, isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon);
+
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -1590,13 +1560,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaCommon(
-                new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon));
+            _Request.Criteria = _BuildCriteriaOfCommon(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon, isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon, isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon, isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon, isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon, isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon);
+
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -1665,13 +1630,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaCommon(
-                new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon));
+            _Request.Criteria = _BuildCriteriaOfCommon(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon, isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon, isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon, isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon, isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon, isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon);
+
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -1730,13 +1690,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaCommon(
-                new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon));
+            _Request.Criteria = _BuildCriteriaOfCommon(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon, isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon, isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon, isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon, isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon, isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon);
+
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -1795,13 +1750,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaCommon(
-                new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon));
+            _Request.Criteria = _BuildCriteriaOfCommon(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon, isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon, isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon, isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon, isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon, isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon);
+
             MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -1859,13 +1809,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaCommon(
-                new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon));
+            _Request.Criteria = _BuildCriteriaOfCommon(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon, isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon, isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon, isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon, isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon, isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon);
 
             MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfCommon(_Request);
             return _Response;
@@ -1911,14 +1855,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaCommon(
-                new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon)
-                );
+            _Request.Criteria = _BuildCriteriaOfCommon(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon, isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon, isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon, isToCompareBuildStartTimeCommonOftOfCommon, isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, lowerBoundBuildStartTimeCommonOftOfCommon, isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, upperBoundBuildStartTimeCommonOftOfCommon, isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon, isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon);
+
             MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetSingleOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -1935,7 +1873,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of Default of Common per value type
 
-        #region Query Methods Of Entity of All per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of Entity of All per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -2301,7 +2239,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of Entity of All per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of Entity of All per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of Entity of All per value type
 
@@ -2600,7 +2538,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of Entity of All per value type
 
-        #region Query Methods Of NameValuePair of All per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of NameValuePair of All per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -2966,7 +2904,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of NameValuePair of All per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of NameValuePair of All per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of NameValuePair of All per value type
 
@@ -3265,7 +3203,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of NameValuePair of All per value type
 
-        #region Query Methods Of RssItem of All per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of RssItem of All per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -3631,7 +3569,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of RssItem of All per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of RssItem of All per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of RssItem of All per value type
 
@@ -3930,7 +3868,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of RssItem of All per value type
 
-        #region Query Methods Of Entity of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of Entity of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -4296,7 +4234,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of Entity of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of Entity of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of Entity of ByFKOnly per value type
 
@@ -4665,7 +4603,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of Entity of ByFKOnly per value type
 
-        #region Query Methods Of NameValuePair of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of NameValuePair of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -5031,7 +4969,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of NameValuePair of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of NameValuePair of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of NameValuePair of ByFKOnly per value type
 
@@ -5400,7 +5338,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of NameValuePair of ByFKOnly per value type
 
-        #region Query Methods Of RssItem of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of RssItem of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -5766,7 +5704,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of RssItem of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of RssItem of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of RssItem of ByFKOnly per value type
 
@@ -6135,7 +6073,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of RssItem of ByFKOnly per value type
 
-        #region Query Methods Of Default of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of Default of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -6501,7 +6439,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of Default of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of Default of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of Default of ByFKOnly per value type
 
@@ -6870,7 +6808,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of Default of ByFKOnly per value type
 
-        #region Query Methods Of DefaultGroupedDataView of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of DefaultGroupedDataView of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -7236,7 +7174,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of DefaultGroupedDataView of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of DefaultGroupedDataView of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of DefaultGroupedDataView of ByFKOnly per value type
 
@@ -7605,7 +7543,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of DefaultGroupedDataView of ByFKOnly per value type
 
-        #region Query Methods Of Entity of ByIdentifier per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of Entity of ByIdentifier per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -7971,7 +7909,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of Entity of ByIdentifier per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of Entity of ByIdentifier per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of Entity of ByIdentifier per value type
 
@@ -8284,7 +8222,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of Entity of ByIdentifier per value type
 
-        #region Query Methods Of Default of ByIdentifier per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of Default of ByIdentifier per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -8650,7 +8588,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of Default of ByIdentifier per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of Default of ByIdentifier per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of Default of ByIdentifier per value type
 
@@ -8963,7 +8901,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of Default of ByIdentifier per value type
 
-        #region Query Methods Of UpdateNameRequest of ByIdentifier per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of UpdateNameRequest of ByIdentifier per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -9329,7 +9267,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of UpdateNameRequest of ByIdentifier per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of UpdateNameRequest of ByIdentifier per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of UpdateNameRequest of ByIdentifier per value type
 
@@ -9642,7 +9580,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of UpdateNameRequest of ByIdentifier per value type
 
-        #region Query Methods Of KeyInformation of ByIdentifier per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of KeyInformation of ByIdentifier per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -10008,7 +9946,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of KeyInformation of ByIdentifier per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of KeyInformation of ByIdentifier per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of KeyInformation of ByIdentifier per value type
 

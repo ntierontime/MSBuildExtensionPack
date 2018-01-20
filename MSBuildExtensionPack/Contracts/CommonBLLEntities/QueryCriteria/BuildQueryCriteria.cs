@@ -13,80 +13,80 @@ namespace MSBuildExtensionPack.CommonBLLEntities
     /// </summary>
     public partial class BuildQueryCriteriaCommon
     {
-        #region constructors
-
         /// <summary>
         /// Initializes a new instance of the <see cref="BuildQueryCriteriaCommon"/> class.
         /// </summary>
         public BuildQueryCriteriaCommon()
         {
+            this.IdCommonOfOrganization_1 = new QuerySystemInt64EqualsCriteria();
+            this.IdCommonOfOrganization_2 = new QuerySystemInt64EqualsCriteria();
+            this.IdCommonOfSolution_1 = new QuerySystemInt32EqualsCriteria();
+            this.BuildStartTimeCommonOft = new QuerySystemDateTimeRangeCriteria();
+            this.DescriptionCommonOft = new QuerySystemStringContainsCriteria();
+            this.NameCommonOft = new QuerySystemStringContainsCriteria();
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BuildQueryCriteriaCommon"/> class.
-        /// </summary>
-        /// <param name="QuerySystemInt32EqualsCriteria">Initialize criteria of Id</param>
-        /// <param name="QuerySystemInt64EqualsCriteria">Initialize criteria of Id</param>
-        /// <param name="QuerySystemInt64EqualsCriteria">Initialize criteria of Id</param>
-        /// <param name="QuerySystemDateTimeRangeCriteria">Initialize criteria of BuildStartTime</param>
-        /// <param name="QuerySystemStringContainsCriteria">Initialize criteria of Name</param>
-        /// <param name="QuerySystemStringContainsCriteria">Initialize criteria of Description</param>
-        public BuildQueryCriteriaCommon(
-            QuerySystemInt32EqualsCriteria idCommonOfSolution_1
-            , QuerySystemInt64EqualsCriteria idCommonOfOrganization_1
-            , QuerySystemInt64EqualsCriteria idCommonOfOrganization_2
-            , QuerySystemDateTimeRangeCriteria buildStartTimeCommonOft
-            , QuerySystemStringContainsCriteria nameCommonOft
-            , QuerySystemStringContainsCriteria descriptionCommonOft
-            )
-        {
-            this.IdCommonOfSolution_1 = idCommonOfSolution_1;
-            this.IdCommonOfOrganization_1 = idCommonOfOrganization_1;
-            this.IdCommonOfOrganization_2 = idCommonOfOrganization_2;
-            this.BuildStartTimeCommonOft = buildStartTimeCommonOft;
-            this.NameCommonOft = nameCommonOft;
-            this.DescriptionCommonOft = descriptionCommonOft;
-        }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BuildQueryCriteriaCommon"/> class.
-        /// </summary>
-        /// <param name="isToCompareIdCommonOfSolution_1">will compare/filter IdCommonOfSolution_1 property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfSolution_1">value to compare/filter with IdCommonOfSolution_1 property/field/column</param>
-        /// <param name="isToCompareIdCommonOfOrganization_1">will compare/filter IdCommonOfOrganization_1 property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_1">value to compare/filter with IdCommonOfOrganization_1 property/field/column</param>
-        /// <param name="isToCompareIdCommonOfOrganization_2">will compare/filter IdCommonOfOrganization_2 property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_2">value to compare/filter with IdCommonOfOrganization_2 property/field/column</param>
-        /// <param name="isToCompareBuildStartTimeCommonOft">will compare/filter BuildStartTimeCommonOft property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundBuildStartTimeCommonOft">will compare/filter to lower bound of BuildStartTimeCommonOft property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildStartTimeCommonOft">value of lower bound</param>
-        /// <param name="isToCompareUpperBoundBuildStartTimeCommonOft">will compare/filter to upper bound of BuildStartTimeCommonOft property/field/column if true, otherwise false</param>
-        /// <param name="upperBoundBuildStartTimeCommonOft">upper bound</param>
-        /// <param name="isToCompareNameCommonOft">will compare/filter NameCommonOft property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOft">value to compare/filter with NameCommonOft property/field/column</param>
-        /// <param name="isToCompareDescriptionCommonOft">will compare/filter DescriptionCommonOft property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedDescriptionCommonOft">value to compare/filter with DescriptionCommonOft property/field/column</param>
-        public BuildQueryCriteriaCommon(
-            bool isToCompareIdCommonOfSolution_1, System.Int32? valueToCompareIdCommonOfSolution_1
-            , bool isToCompareIdCommonOfOrganization_1, System.Int64? valueToCompareIdCommonOfOrganization_1
-            , bool isToCompareIdCommonOfOrganization_2, System.Int64? valueToCompareIdCommonOfOrganization_2
-            , bool isToCompareBuildStartTimeCommonOft, bool isToCompareLowerBoundBuildStartTimeCommonOft, System.DateTime? lowerBoundBuildStartTimeCommonOft, bool isToCompareUpperBoundBuildStartTimeCommonOft, System.DateTime? upperBoundBuildStartTimeCommonOft
-            , bool isToCompareNameCommonOft, System.String valueToBeContainedNameCommonOft
-            , bool isToCompareDescriptionCommonOft, System.String valueToBeContainedDescriptionCommonOft
-            )
-            : this(
-                new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1, valueToCompareIdCommonOfSolution_1)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1, valueToCompareIdCommonOfOrganization_1)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2, valueToCompareIdCommonOfOrganization_2)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareBuildStartTimeCommonOft, isToCompareLowerBoundBuildStartTimeCommonOft, lowerBoundBuildStartTimeCommonOft, isToCompareUpperBoundBuildStartTimeCommonOft, upperBoundBuildStartTimeCommonOft)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOft, valueToBeContainedNameCommonOft)
-                , new QuerySystemStringContainsCriteria(isToCompareDescriptionCommonOft, valueToBeContainedDescriptionCommonOft)
-                )
-        {
-        }
-
-        #endregion constructors
-
-        #region Propertyies
+        ///// <summary>
+        ///// Initializes a new instance of the <see cref="BuildQueryCriteriaCommon"/> class.
+        ///// </summary>
+        ///// <param name="QuerySystemInt32EqualsCriteria">Initialize criteria of Id</param>
+        ///// <param name="QuerySystemInt64EqualsCriteria">Initialize criteria of Id</param>
+        ///// <param name="QuerySystemInt64EqualsCriteria">Initialize criteria of Id</param>
+        ///// <param name="QuerySystemDateTimeRangeCriteria">Initialize criteria of BuildStartTime</param>
+        ///// <param name="QuerySystemStringContainsCriteria">Initialize criteria of Name</param>
+        ///// <param name="QuerySystemStringContainsCriteria">Initialize criteria of Description</param>
+        //public BuildQueryCriteriaCommon(
+        //    QuerySystemInt32EqualsCriteria idCommonOfSolution_1
+        //    , QuerySystemInt64EqualsCriteria idCommonOfOrganization_1
+        //    , QuerySystemInt64EqualsCriteria idCommonOfOrganization_2
+        //    , QuerySystemDateTimeRangeCriteria buildStartTimeCommonOft
+        //    , QuerySystemStringContainsCriteria nameCommonOft
+        //    , QuerySystemStringContainsCriteria descriptionCommonOft
+        //    )
+        //{
+        //    this.IdCommonOfSolution_1 = idCommonOfSolution_1;
+        //    this.IdCommonOfOrganization_1 = idCommonOfOrganization_1;
+        //    this.IdCommonOfOrganization_2 = idCommonOfOrganization_2;
+        //    this.BuildStartTimeCommonOft = buildStartTimeCommonOft;
+        //    this.NameCommonOft = nameCommonOft;
+        //    this.DescriptionCommonOft = descriptionCommonOft;
+        //}
+        ///// <summary>
+        ///// Initializes a new instance of the <see cref="BuildQueryCriteriaCommon"/> class.
+        ///// </summary>
+        ///// <param name="isToCompareIdCommonOfSolution_1">will compare/filter IdCommonOfSolution_1 property/field/column if true, otherwise false</param>
+        ///// <param name="valueToCompareIdCommonOfSolution_1">value to compare/filter with IdCommonOfSolution_1 property/field/column</param>
+        ///// <param name="isToCompareIdCommonOfOrganization_1">will compare/filter IdCommonOfOrganization_1 property/field/column if true, otherwise false</param>
+        ///// <param name="valueToCompareIdCommonOfOrganization_1">value to compare/filter with IdCommonOfOrganization_1 property/field/column</param>
+        ///// <param name="isToCompareIdCommonOfOrganization_2">will compare/filter IdCommonOfOrganization_2 property/field/column if true, otherwise false</param>
+        ///// <param name="valueToCompareIdCommonOfOrganization_2">value to compare/filter with IdCommonOfOrganization_2 property/field/column</param>
+        ///// <param name="isToCompareBuildStartTimeCommonOft">will compare/filter BuildStartTimeCommonOft property/field/column if true, otherwise false</param>
+        ///// <param name="isToCompareLowerBoundBuildStartTimeCommonOft">will compare/filter to lower bound of BuildStartTimeCommonOft property/field/column if true, otherwise false</param>
+        ///// <param name="lowerBoundBuildStartTimeCommonOft">value of lower bound</param>
+        ///// <param name="isToCompareUpperBoundBuildStartTimeCommonOft">will compare/filter to upper bound of BuildStartTimeCommonOft property/field/column if true, otherwise false</param>
+        ///// <param name="upperBoundBuildStartTimeCommonOft">upper bound</param>
+        ///// <param name="isToCompareNameCommonOft">will compare/filter NameCommonOft property/field/column if true, otherwise false</param>
+        ///// <param name="valueToBeContainedNameCommonOft">value to compare/filter with NameCommonOft property/field/column</param>
+        ///// <param name="isToCompareDescriptionCommonOft">will compare/filter DescriptionCommonOft property/field/column if true, otherwise false</param>
+        ///// <param name="valueToBeContainedDescriptionCommonOft">value to compare/filter with DescriptionCommonOft property/field/column</param>
+        //public BuildQueryCriteriaCommon(
+        //    bool isToCompareIdCommonOfSolution_1, System.Int32? valueToCompareIdCommonOfSolution_1
+        //    , bool isToCompareIdCommonOfOrganization_1, System.Int64? valueToCompareIdCommonOfOrganization_1
+        //    , bool isToCompareIdCommonOfOrganization_2, System.Int64? valueToCompareIdCommonOfOrganization_2
+        //    , bool isToCompareBuildStartTimeCommonOft, bool isToCompareLowerBoundBuildStartTimeCommonOft, System.DateTime? lowerBoundBuildStartTimeCommonOft, bool isToCompareUpperBoundBuildStartTimeCommonOft, System.DateTime? upperBoundBuildStartTimeCommonOft
+        //    , bool isToCompareNameCommonOft, System.String valueToBeContainedNameCommonOft
+        //    , bool isToCompareDescriptionCommonOft, System.String valueToBeContainedDescriptionCommonOft
+        //    )
+        //    : this(
+        //        new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1, valueToCompareIdCommonOfSolution_1)
+        //        , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1, valueToCompareIdCommonOfOrganization_1)
+        //        , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2, valueToCompareIdCommonOfOrganization_2)
+        //        , new QuerySystemDateTimeRangeCriteria(isToCompareBuildStartTimeCommonOft, isToCompareLowerBoundBuildStartTimeCommonOft, lowerBoundBuildStartTimeCommonOft, isToCompareUpperBoundBuildStartTimeCommonOft, upperBoundBuildStartTimeCommonOft)
+        //        , new QuerySystemStringContainsCriteria(isToCompareNameCommonOft, valueToBeContainedNameCommonOft)
+        //        , new QuerySystemStringContainsCriteria(isToCompareDescriptionCommonOft, valueToBeContainedDescriptionCommonOft)
+        //        )
+        //{
+        //}
 
         /// <summary>
         /// criteria of Id, filter type: Equals
@@ -117,8 +117,6 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// criteria of Description, filter type: Contains
         /// </summary>
         public QuerySystemStringContainsCriteria DescriptionCommonOft { get; set; }
-
-        #endregion Propertyies
     }
 
     /// <summary>

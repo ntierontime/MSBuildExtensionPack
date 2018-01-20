@@ -255,7 +255,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion batch insert, update and delete in an entity collection
 
-        #region Query Methods Of Entity of Common per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of Entity of Common per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -621,7 +621,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of Entity of Common per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of Entity of Common per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of Entity of Common per value type
 
@@ -1123,7 +1123,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of Entity of Common per value type
 
-        #region Query Methods Of Default of Common per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of Default of Common per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -1489,7 +1489,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of Default of Common per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of Default of Common per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of Default of Common per value type
 
@@ -1991,7 +1991,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of Default of Common per value type
 
-        #region Query Methods Of Entity of All per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of Entity of All per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -2357,7 +2357,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of Entity of All per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of Entity of All per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of Entity of All per value type
 
@@ -2656,7 +2656,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of Entity of All per value type
 
-        #region Query Methods Of NameValuePair of All per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of NameValuePair of All per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -3022,7 +3022,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of NameValuePair of All per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of NameValuePair of All per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of NameValuePair of All per value type
 
@@ -3321,7 +3321,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of NameValuePair of All per value type
 
-        #region Query Methods Of RssItem of All per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of RssItem of All per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -3687,7 +3687,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of RssItem of All per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of RssItem of All per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of RssItem of All per value type
 
@@ -3986,7 +3986,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of RssItem of All per value type
 
-        #region Query Methods Of Entity of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of Entity of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -4352,7 +4352,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of Entity of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of Entity of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of Entity of ByFKOnly per value type
 
@@ -4777,7 +4777,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of Entity of ByFKOnly per value type
 
-        #region Query Methods Of NameValuePair of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of NameValuePair of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -5143,7 +5143,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of NameValuePair of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of NameValuePair of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of NameValuePair of ByFKOnly per value type
 
@@ -5568,7 +5568,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of NameValuePair of ByFKOnly per value type
 
-        #region Query Methods Of RssItem of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of RssItem of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -5934,7 +5934,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of RssItem of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of RssItem of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of RssItem of ByFKOnly per value type
 
@@ -6359,7 +6359,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of RssItem of ByFKOnly per value type
 
-        #region Query Methods Of Default of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of Default of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -6725,7 +6725,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of Default of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of Default of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of Default of ByFKOnly per value type
 
@@ -7150,7 +7150,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of Default of ByFKOnly per value type
 
-        #region Query Methods Of DefaultGroupedDataView of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of DefaultGroupedDataView of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -7516,7 +7516,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of DefaultGroupedDataView of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of DefaultGroupedDataView of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of DefaultGroupedDataView of ByFKOnly per value type
 
@@ -7941,7 +7941,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of DefaultGroupedDataView of ByFKOnly per value type
 
-        #region Query Methods Of Entity of ByIdentifier per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of Entity of ByIdentifier per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -8307,7 +8307,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of Entity of ByIdentifier per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of Entity of ByIdentifier per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of Entity of ByIdentifier per value type
 
@@ -8620,7 +8620,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of Entity of ByIdentifier per value type
 
-        #region Query Methods Of Default of ByIdentifier per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of Default of ByIdentifier per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -8986,7 +8986,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of Default of ByIdentifier per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of Default of ByIdentifier per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of Default of ByIdentifier per value type
 
@@ -9299,7 +9299,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of Default of ByIdentifier per value type
 
-        #region Query Methods Of KeyInformation of ByIdentifier per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of KeyInformation of ByIdentifier per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -9665,7 +9665,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of KeyInformation of ByIdentifier per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of KeyInformation of ByIdentifier per critieria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of KeyInformation of ByIdentifier per value type
 
