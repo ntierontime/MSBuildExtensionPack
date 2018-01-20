@@ -8,7 +8,7 @@ namespace Framework.EntityContracts
     #region QueryCriterias
 
     /// <summary>
-    /// QueryCriteriaBase class for all concrete Query Critieria classes
+    /// QueryCriteriaBase class for all concrete Query Criteria classes
     /// </summary>
     /// <typeparam name="T">.Net value type</typeparam>
     public abstract class QueryCriteriaBase<T>: Framework.PropertyChangedNotifier
@@ -61,7 +61,7 @@ namespace Framework.EntityContracts
     #region Equals Criterias
 
     /// <summary>
-    /// for all concrete Query Critieria classes which process equals predicate
+    /// for all concrete Query Criteria classes which process equals predicate
     /// </summary>
     /// <typeparam name="T">.Net value type</typeparam>
     public abstract class QueryEqualsCriteriaBase<T> : QueryCriteriaBase<T>
@@ -700,7 +700,7 @@ namespace Framework.EntityContracts
     #region Range Criterias
 
     /// <summary>
-    /// for all concrete Query Critieria classes which process range predicate
+    /// for all concrete Query Criteria classes which process range predicate
     /// </summary>
     /// <typeparam name="T">.Net value type</typeparam>
     public abstract class QueryRangeCriteriaBase<T> : QueryCriteriaBase<T>
@@ -2120,7 +2120,7 @@ namespace Framework.EntityContracts
     #region InSelectedList Criterias
 
     /// <summary>
-    ///  for all concrete Query Critieria classes which process In SelectList predicate
+    ///  for all concrete Query Criteria classes which process In SelectList predicate
     /// </summary>
     /// <typeparam name="T">.Net value type</typeparam>
     public abstract class QueryInSelectedListCriteriaBase<T> : QueryCriteriaBase<T>
@@ -2788,7 +2788,7 @@ namespace Framework.EntityContracts
     #region string contains criteria
 
     /// <summary>
-    ///  for all concrete Query Critieria classes which process Contains predicate
+    ///  for all concrete Query Criteria classes which process Contains predicate
     /// </summary>
     /// <typeparam name="T">.Net value type</typeparam>
     public abstract class QueryContainsCriteriaBase<T> : QueryCriteriaBase<T>

@@ -77,8 +77,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             MSBuildExtensionPack.DataSourceEntities.Solution input)
         {
             MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageBuiltIn _Request =new MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageBuiltIn(Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Create, Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Create.ToString(), Guid.NewGuid().ToString());
-            _Request.Critieria = new MSBuildExtensionPack.DataSourceEntities.SolutionCollection();
-            _Request.Critieria.Add(input);
+            _Request.Criteria = new MSBuildExtensionPack.DataSourceEntities.SolutionCollection();
+            _Request.Criteria.Add(input);
             return InsertRequest(_Request);
         }
 
@@ -91,8 +91,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             MSBuildExtensionPack.DataSourceEntities.Solution input)
         {
             MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageBuiltIn _Request = new MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageBuiltIn(Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Update, Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Update.ToString(), Guid.NewGuid().ToString());
-            _Request.Critieria = new MSBuildExtensionPack.DataSourceEntities.SolutionCollection();
-            _Request.Critieria.Add(input);
+            _Request.Criteria = new MSBuildExtensionPack.DataSourceEntities.SolutionCollection();
+            _Request.Criteria.Add(input);
             return UpdateRequest(_Request);
         }
 
@@ -105,7 +105,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             MSBuildExtensionPack.DataSourceEntities.SolutionIdentifier identifier)
         {
             MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageBuiltInOfIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageBuiltInOfIdentifier(Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Delete, Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Delete.ToString(), Guid.NewGuid().ToString());
-            _Request.Critieria = identifier;
+            _Request.Criteria = identifier;
             return DeleteByIdentifierRequest(_Request);
         }
 
@@ -118,8 +118,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             MSBuildExtensionPack.DataSourceEntities.Solution input)
         {
             MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageBuiltIn _Request = new MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageBuiltIn(Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Delete, Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Delete.ToString(), Guid.NewGuid().ToString());
-            _Request.Critieria = new MSBuildExtensionPack.DataSourceEntities.SolutionCollection();
-            _Request.Critieria.Add(input);
+            _Request.Criteria = new MSBuildExtensionPack.DataSourceEntities.SolutionCollection();
+            _Request.Criteria.Add(input);
             return DeleteRequest(_Request);
         }
 
@@ -222,8 +222,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         {
             MSBuildExtensionPack.WcfContracts.ISolutionService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceSolution();
             MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageBuiltIn _Request = new MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageBuiltIn(Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Update, Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Update.ToString(), Guid.NewGuid().ToString());
-            _Request.Critieria = new MSBuildExtensionPack.DataSourceEntities.SolutionCollection();
-            _Request.Critieria.AddRange(input);
+            _Request.Criteria = new MSBuildExtensionPack.DataSourceEntities.SolutionCollection();
+            _Request.Criteria.AddRange(input);
             return _BusinessLogicLayerInstance.BatchUpdate(_Request);
         }
 
@@ -235,8 +235,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         {
             MSBuildExtensionPack.WcfContracts.ISolutionService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceSolution();
             MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageBuiltIn _Request = new MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageBuiltIn(Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Create, Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Create.ToString(), Guid.NewGuid().ToString());
-            _Request.Critieria = new MSBuildExtensionPack.DataSourceEntities.SolutionCollection();
-            _Request.Critieria.AddRange(input);
+            _Request.Criteria = new MSBuildExtensionPack.DataSourceEntities.SolutionCollection();
+            _Request.Criteria.AddRange(input);
             return _BusinessLogicLayerInstance.BatchInsert(_Request);
         }
 
@@ -248,14 +248,14 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         {
             MSBuildExtensionPack.WcfContracts.ISolutionService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceSolution();
             MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageBuiltIn _Request = new MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageBuiltIn(Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Delete, Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Delete.ToString(), Guid.NewGuid().ToString());
-            _Request.Critieria = new MSBuildExtensionPack.DataSourceEntities.SolutionCollection();
-            _Request.Critieria.AddRange(input);
+            _Request.Criteria = new MSBuildExtensionPack.DataSourceEntities.SolutionCollection();
+            _Request.Criteria.AddRange(input);
             return _BusinessLogicLayerInstance.BatchDelete(_Request);
         }
 
         #endregion batch insert, update and delete in an entity collection
 
-        #region Query Methods Of Entity of Common per critieria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of Entity of Common per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -276,7 +276,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfEntityOfCommon for GetPageNumberListOfEntityOfCommon"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -347,7 +347,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfEntityOfCommon for GetPageCountOfEntityOfCommon"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -404,7 +404,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfEntityOfCommon"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -449,7 +449,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "ExistsOfEntityOfCommon"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -494,7 +494,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCollectionOfEntityOfCommon"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -559,7 +559,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetMessageOfEntityOfCommon"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -595,7 +595,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetSingleOfEntityOfCommon"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -621,7 +621,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of Entity of Common per critieria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of Entity of Common per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of Entity of Common per value type
 
@@ -659,7 +659,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
                 , new QuerySystemStringContainsCriteria(isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon)
@@ -737,7 +737,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
                 , new QuerySystemStringContainsCriteria(isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon)
@@ -805,7 +805,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
                 , new QuerySystemStringContainsCriteria(isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon)
@@ -863,7 +863,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
                 , new QuerySystemStringContainsCriteria(isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon)
@@ -921,7 +921,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
                 , new QuerySystemStringContainsCriteria(isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon)
@@ -978,7 +978,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
                 , new QuerySystemStringContainsCriteria(isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon)
@@ -1023,7 +1023,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
                 , new QuerySystemStringContainsCriteria(isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon)
@@ -1046,7 +1046,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of Entity of Common per value type
 
-        #region Query Methods Of Default of Common per critieria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of Default of Common per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -1067,7 +1067,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfDefaultOfCommon for GetPageNumberListOfDefaultOfCommon"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -1138,7 +1138,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfDefaultOfCommon for GetPageCountOfDefaultOfCommon"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -1195,7 +1195,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfDefaultOfCommon"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -1240,7 +1240,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "ExistsOfDefaultOfCommon"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -1285,7 +1285,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCollectionOfDefaultOfCommon"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -1350,7 +1350,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetMessageOfDefaultOfCommon"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -1386,7 +1386,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetSingleOfDefaultOfCommon"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -1412,7 +1412,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of Default of Common per critieria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of Default of Common per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of Default of Common per value type
 
@@ -1450,7 +1450,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
                 , new QuerySystemStringContainsCriteria(isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon)
@@ -1528,7 +1528,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
                 , new QuerySystemStringContainsCriteria(isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon)
@@ -1596,7 +1596,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
                 , new QuerySystemStringContainsCriteria(isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon)
@@ -1654,7 +1654,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
                 , new QuerySystemStringContainsCriteria(isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon)
@@ -1712,7 +1712,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
                 , new QuerySystemStringContainsCriteria(isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon)
@@ -1769,7 +1769,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
                 , new QuerySystemStringContainsCriteria(isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon)
@@ -1814,7 +1814,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
                 , new QuerySystemStringContainsCriteria(isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon)
@@ -1837,7 +1837,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of Default of Common per value type
 
-        #region Query Methods Of Entity of All per critieria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of Entity of All per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -1858,7 +1858,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfEntityOfAll for GetPageNumberListOfEntityOfAll"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -1929,7 +1929,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfEntityOfAll for GetPageCountOfEntityOfAll"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -1986,7 +1986,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfEntityOfAll"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -2031,7 +2031,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "ExistsOfEntityOfAll"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -2076,7 +2076,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCollectionOfEntityOfAll"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -2141,7 +2141,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetMessageOfEntityOfAll"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -2177,7 +2177,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetSingleOfEntityOfAll"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -2203,7 +2203,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of Entity of All per critieria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of Entity of All per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of Entity of All per value type
 
@@ -2227,7 +2227,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -2287,7 +2287,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -2337,7 +2337,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -2377,7 +2377,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -2417,7 +2417,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -2456,7 +2456,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
 );
 
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfAll(_Request);
@@ -2483,7 +2483,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
 
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfAll(_Request);
@@ -2502,7 +2502,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of Entity of All per value type
 
-        #region Query Methods Of NameValuePair of All per critieria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of NameValuePair of All per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -2523,7 +2523,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfNameValuePairOfAll for GetPageNumberListOfNameValuePairOfAll"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -2594,7 +2594,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfNameValuePairOfAll for GetPageCountOfNameValuePairOfAll"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -2651,7 +2651,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfNameValuePairOfAll"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -2696,7 +2696,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "ExistsOfNameValuePairOfAll"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -2741,7 +2741,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCollectionOfNameValuePairOfAll"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -2806,7 +2806,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetMessageOfNameValuePairOfAll"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -2842,7 +2842,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetSingleOfNameValuePairOfAll"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -2868,7 +2868,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of NameValuePair of All per critieria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of NameValuePair of All per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of NameValuePair of All per value type
 
@@ -2892,7 +2892,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -2952,7 +2952,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -3002,7 +3002,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -3042,7 +3042,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -3082,7 +3082,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -3121,7 +3121,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
 );
 
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairOfAll(_Request);
@@ -3148,7 +3148,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
 
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetSingleOfNameValuePairOfAll(_Request);
@@ -3167,7 +3167,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of NameValuePair of All per value type
 
-        #region Query Methods Of RssItem of All per critieria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of RssItem of All per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -3188,7 +3188,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfRssItemOfAll for GetPageNumberListOfRssItemOfAll"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -3259,7 +3259,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfRssItemOfAll for GetPageCountOfRssItemOfAll"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -3316,7 +3316,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfRssItemOfAll"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -3361,7 +3361,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "ExistsOfRssItemOfAll"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -3406,7 +3406,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCollectionOfRssItemOfAll"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -3471,7 +3471,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetMessageOfRssItemOfAll"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -3507,7 +3507,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetSingleOfRssItemOfAll"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -3533,7 +3533,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of RssItem of All per critieria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of RssItem of All per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of RssItem of All per value type
 
@@ -3557,7 +3557,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -3617,7 +3617,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -3667,7 +3667,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -3707,7 +3707,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -3747,7 +3747,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -3786,7 +3786,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
 );
 
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfRssItemOfAll(_Request);
@@ -3813,7 +3813,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaAll(
 
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetSingleOfRssItemOfAll(_Request);
@@ -3832,7 +3832,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of RssItem of All per value type
 
-        #region Query Methods Of Entity of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of Entity of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -3853,7 +3853,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfEntityOfByFKOnly for GetPageNumberListOfEntityOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -3924,7 +3924,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfEntityOfByFKOnly for GetPageCountOfEntityOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -3981,7 +3981,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfEntityOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -4026,7 +4026,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "ExistsOfEntityOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -4071,7 +4071,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCollectionOfEntityOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -4136,7 +4136,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetMessageOfEntityOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -4172,7 +4172,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetSingleOfEntityOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -4198,7 +4198,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of Entity of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of Entity of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of Entity of ByFKOnly per value type
 
@@ -4227,7 +4227,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByFKOnly(_Request);
@@ -4293,7 +4293,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByFKOnly(_Request);
@@ -4349,7 +4349,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByFKOnly(_Request);
@@ -4395,7 +4395,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfByFKOnly(_Request);
@@ -4441,7 +4441,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfByFKOnly(_Request);
@@ -4486,7 +4486,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
 
@@ -4519,7 +4519,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
                 );
@@ -4539,7 +4539,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of Entity of ByFKOnly per value type
 
-        #region Query Methods Of NameValuePair of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of NameValuePair of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -4560,7 +4560,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfNameValuePairOfByFKOnly for GetPageNumberListOfNameValuePairOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -4631,7 +4631,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfNameValuePairOfByFKOnly for GetPageCountOfNameValuePairOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -4688,7 +4688,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfNameValuePairOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -4733,7 +4733,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "ExistsOfNameValuePairOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -4778,7 +4778,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCollectionOfNameValuePairOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -4843,7 +4843,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetMessageOfNameValuePairOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -4879,7 +4879,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetSingleOfNameValuePairOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -4905,7 +4905,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of NameValuePair of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of NameValuePair of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of NameValuePair of ByFKOnly per value type
 
@@ -4934,7 +4934,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfByFKOnly(_Request);
@@ -5000,7 +5000,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfByFKOnly(_Request);
@@ -5056,7 +5056,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfByFKOnly(_Request);
@@ -5102,7 +5102,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfNameValuePairOfByFKOnly(_Request);
@@ -5148,7 +5148,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairOfByFKOnly(_Request);
@@ -5193,7 +5193,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
 
@@ -5226,7 +5226,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
                 );
@@ -5246,7 +5246,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of NameValuePair of ByFKOnly per value type
 
-        #region Query Methods Of RssItem of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of RssItem of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -5267,7 +5267,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfRssItemOfByFKOnly for GetPageNumberListOfRssItemOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -5338,7 +5338,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfRssItemOfByFKOnly for GetPageCountOfRssItemOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -5395,7 +5395,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfRssItemOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -5440,7 +5440,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "ExistsOfRssItemOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -5485,7 +5485,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCollectionOfRssItemOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -5550,7 +5550,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetMessageOfRssItemOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -5586,7 +5586,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetSingleOfRssItemOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -5612,7 +5612,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of RssItem of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of RssItem of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of RssItem of ByFKOnly per value type
 
@@ -5641,7 +5641,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfByFKOnly(_Request);
@@ -5707,7 +5707,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfByFKOnly(_Request);
@@ -5763,7 +5763,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfByFKOnly(_Request);
@@ -5809,7 +5809,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfRssItemOfByFKOnly(_Request);
@@ -5855,7 +5855,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfRssItemOfByFKOnly(_Request);
@@ -5900,7 +5900,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
 
@@ -5933,7 +5933,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
                 );
@@ -5953,7 +5953,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of RssItem of ByFKOnly per value type
 
-        #region Query Methods Of Default of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of Default of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -5974,7 +5974,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfDefaultOfByFKOnly for GetPageNumberListOfDefaultOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -6045,7 +6045,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfDefaultOfByFKOnly for GetPageCountOfDefaultOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -6102,7 +6102,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfDefaultOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -6147,7 +6147,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "ExistsOfDefaultOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -6192,7 +6192,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCollectionOfDefaultOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -6257,7 +6257,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetMessageOfDefaultOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -6293,7 +6293,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetSingleOfDefaultOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -6319,7 +6319,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of Default of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of Default of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of Default of ByFKOnly per value type
 
@@ -6348,7 +6348,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByFKOnly(_Request);
@@ -6414,7 +6414,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByFKOnly(_Request);
@@ -6470,7 +6470,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByFKOnly(_Request);
@@ -6516,7 +6516,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultOfByFKOnly(_Request);
@@ -6562,7 +6562,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfByFKOnly(_Request);
@@ -6607,7 +6607,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
 
@@ -6640,7 +6640,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
                 );
@@ -6660,7 +6660,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of Default of ByFKOnly per value type
 
-        #region Query Methods Of DefaultGroupedDataView of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of DefaultGroupedDataView of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -6681,7 +6681,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfDefaultGroupedDataViewOfByFKOnly for GetPageNumberListOfDefaultGroupedDataViewOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -6752,7 +6752,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfDefaultGroupedDataViewOfByFKOnly for GetPageCountOfDefaultGroupedDataViewOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -6809,7 +6809,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfDefaultGroupedDataViewOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -6854,7 +6854,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "ExistsOfDefaultGroupedDataViewOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -6899,7 +6899,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCollectionOfDefaultGroupedDataViewOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -6964,7 +6964,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetMessageOfDefaultGroupedDataViewOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -7000,7 +7000,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetSingleOfDefaultGroupedDataViewOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -7026,7 +7026,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of DefaultGroupedDataView of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of DefaultGroupedDataView of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of DefaultGroupedDataView of ByFKOnly per value type
 
@@ -7055,7 +7055,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
@@ -7121,7 +7121,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
@@ -7177,7 +7177,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
@@ -7223,7 +7223,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultGroupedDataViewOfByFKOnly(_Request);
@@ -7269,7 +7269,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultGroupedDataViewOfByFKOnly(_Request);
@@ -7314,7 +7314,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
 
@@ -7347,7 +7347,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly(
                 new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
                 , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
                 );
@@ -7367,7 +7367,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of DefaultGroupedDataView of ByFKOnly per value type
 
-        #region Query Methods Of Entity of ByIdentifier per critieria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of Entity of ByIdentifier per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -7388,7 +7388,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfEntityOfByIdentifier for GetPageNumberListOfEntityOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -7459,7 +7459,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfEntityOfByIdentifier for GetPageCountOfEntityOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -7516,7 +7516,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfEntityOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -7561,7 +7561,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "ExistsOfEntityOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -7606,7 +7606,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCollectionOfEntityOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -7671,7 +7671,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetMessageOfEntityOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -7707,7 +7707,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetSingleOfEntityOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -7733,7 +7733,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of Entity of ByIdentifier per critieria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of Entity of ByIdentifier per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of Entity of ByIdentifier per value type
 
@@ -7759,7 +7759,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
                 new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -7821,7 +7821,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
                 new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -7873,7 +7873,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
                 new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -7915,7 +7915,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
                 new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -7957,7 +7957,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
                 new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -7998,7 +7998,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
                 new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
 
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfByIdentifier(_Request);
@@ -8027,7 +8027,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
                 new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier)
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfByIdentifier(_Request);
@@ -8046,7 +8046,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of Entity of ByIdentifier per value type
 
-        #region Query Methods Of Default of ByIdentifier per critieria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of Default of ByIdentifier per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -8067,7 +8067,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfDefaultOfByIdentifier for GetPageNumberListOfDefaultOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -8138,7 +8138,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfDefaultOfByIdentifier for GetPageCountOfDefaultOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -8195,7 +8195,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfDefaultOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -8240,7 +8240,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "ExistsOfDefaultOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -8285,7 +8285,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCollectionOfDefaultOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -8350,7 +8350,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetMessageOfDefaultOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -8386,7 +8386,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetSingleOfDefaultOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -8412,7 +8412,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of Default of ByIdentifier per critieria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of Default of ByIdentifier per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of Default of ByIdentifier per value type
 
@@ -8438,7 +8438,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
                 new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -8500,7 +8500,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
                 new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -8552,7 +8552,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
                 new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -8594,7 +8594,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
                 new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -8636,7 +8636,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
                 new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -8677,7 +8677,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
                 new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
 
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfByIdentifier(_Request);
@@ -8706,7 +8706,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
                 new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier)
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetSingleOfDefaultOfByIdentifier(_Request);
@@ -8725,7 +8725,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of Default of ByIdentifier per value type
 
-        #region Query Methods Of KeyInformation of ByIdentifier per critieria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of KeyInformation of ByIdentifier per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the page number list of entity of common.
@@ -8746,7 +8746,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfKeyInformationOfByIdentifier for GetPageNumberListOfKeyInformationOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -8817,7 +8817,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfKeyInformationOfByIdentifier for GetPageCountOfKeyInformationOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -8874,7 +8874,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCountOfKeyInformationOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -8919,7 +8919,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "ExistsOfKeyInformationOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -8964,7 +8964,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetCollectionOfKeyInformationOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -9029,7 +9029,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetMessageOfKeyInformationOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -9065,7 +9065,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , "GetSingleOfKeyInformationOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
-            _Request.Critieria = criteria;
+            _Request.Criteria = criteria;
             _Request.QueryPagingSetting = queryPagingSetting;
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
@@ -9091,7 +9091,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
         }
 
-        #endregion Query Methods Of KeyInformation of ByIdentifier per critieria, queryPagingSetting and queryOrderBySettingCollection
+        #endregion Query Methods Of KeyInformation of ByIdentifier per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         #region Query Methods Of KeyInformation of ByIdentifier per value type
 
@@ -9117,7 +9117,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
                 new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -9179,7 +9179,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
                 new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -9231,7 +9231,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
                 new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -9273,7 +9273,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
                 new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -9315,7 +9315,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
                 new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetCollectionOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -9356,7 +9356,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
                 new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
 
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetCollectionOfKeyInformationOfByIdentifier(_Request);
@@ -9385,7 +9385,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Critieria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
+            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(
                 new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier)
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetSingleOfKeyInformationOfByIdentifier(_Request);

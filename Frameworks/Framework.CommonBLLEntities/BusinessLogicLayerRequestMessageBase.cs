@@ -7,7 +7,7 @@ using System.Runtime.Serialization;
 namespace Framework.CommonBLLEntities
 {
     /// <summary>
-    ///  include information of a query, filter critieria, paging, sorting
+    ///  include information of a query, filter criteria, paging, sorting
     /// </summary>
     /// <typeparam name="TQueryCriteria">The type of the filter/query criteria.</typeparam>
     public class BusinessLogicLayerRequestMessageBase<TQueryCriteria>
@@ -92,13 +92,13 @@ namespace Framework.CommonBLLEntities
         public string BusinessLogicLayerRequestID { get; set; }
 
         /// <summary>
-        /// Gets or sets the critieria.
+        /// Gets or sets the criteria.
         /// </summary>
         /// <value>
-        /// The critieria.
+        /// The criteria.
         /// </value>
         [DataMember]
-        public TQueryCriteria Critieria { get; set; }
+        public TQueryCriteria Criteria { get; set; }
 
         /// <summary>
         /// Gets or sets the query order by setting collection.

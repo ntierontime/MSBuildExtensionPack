@@ -45,7 +45,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
         public void SaveData()
         {
             var request = new MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedUpdateNameOnly();
-            request.Critieria = this.MasterEntity;
+            request.Criteria = this.MasterEntity;
             var response = MSBuildExtensionPack.CommonBLLIoC.IoCBuild.UpdateNameOnly(request);
             this.StatusOfMasterEntity = response.BusinessLogicLayerResponseStatus;
             if (this.StatusOfMasterEntity == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
