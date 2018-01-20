@@ -348,21 +348,21 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfEntityOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfEntityOfCommon(
-                request.Critieria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2
-                , request.Critieria.OrganizationQueryCriteriaCommon.IsSystemBuiltInCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.BitColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.DateColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NameCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.CharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.VarcharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.TextColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NcharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NvarcharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft
+                request.Criteria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2
+                , request.Criteria.OrganizationQueryCriteriaCommon.IsSystemBuiltInCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.BitColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NameCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.CharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.VarcharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.TextColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NcharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NvarcharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -384,21 +384,21 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfEntityOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfEntityOfCommon(
-                request.Critieria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2
-                , request.Critieria.OrganizationQueryCriteriaCommon.IsSystemBuiltInCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.BitColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.DateColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NameCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.CharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.VarcharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.TextColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NcharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NvarcharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft
+                request.Criteria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2
+                , request.Criteria.OrganizationQueryCriteriaCommon.IsSystemBuiltInCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.BitColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NameCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.CharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.VarcharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.TextColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NcharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NvarcharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -420,21 +420,21 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfEntityOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _resultFromDAL = this.DALClassInstance.GetCollectionOfEntityOfCommon(
-                request.Critieria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2
-                , request.Critieria.OrganizationQueryCriteriaCommon.IsSystemBuiltInCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.BitColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.DateColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NameCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.CharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.VarcharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.TextColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NcharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NvarcharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft
+                request.Criteria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2
+                , request.Criteria.OrganizationQueryCriteriaCommon.IsSystemBuiltInCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.BitColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NameCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.CharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.VarcharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.TextColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NcharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NvarcharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -467,21 +467,21 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfEntityOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _resultFromDAL = this.DALClassInstance.GetSingleOfEntityOfCommon(
-                request.Critieria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2
-                , request.Critieria.OrganizationQueryCriteriaCommon.IsSystemBuiltInCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.BitColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.DateColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NameCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.CharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.VarcharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.TextColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NcharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NvarcharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft
+                request.Criteria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2
+                , request.Criteria.OrganizationQueryCriteriaCommon.IsSystemBuiltInCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.BitColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NameCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.CharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.VarcharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.TextColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NcharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NvarcharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft
                 , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -513,21 +513,21 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfDefaultOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfDefaultOfCommon(
-                request.Critieria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2
-                , request.Critieria.OrganizationQueryCriteriaCommon.IsSystemBuiltInCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.BitColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.DateColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NameCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.CharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.VarcharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.TextColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NcharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NvarcharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft
+                request.Criteria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2
+                , request.Criteria.OrganizationQueryCriteriaCommon.IsSystemBuiltInCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.BitColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NameCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.CharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.VarcharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.TextColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NcharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NvarcharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -549,21 +549,21 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfDefaultOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfDefaultOfCommon(
-                request.Critieria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2
-                , request.Critieria.OrganizationQueryCriteriaCommon.IsSystemBuiltInCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.BitColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.DateColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NameCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.CharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.VarcharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.TextColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NcharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NvarcharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft
+                request.Criteria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2
+                , request.Criteria.OrganizationQueryCriteriaCommon.IsSystemBuiltInCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.BitColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NameCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.CharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.VarcharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.TextColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NcharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NvarcharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -585,21 +585,21 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfDefaultOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfDefaultOfCommon(
-                request.Critieria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2
-                , request.Critieria.OrganizationQueryCriteriaCommon.IsSystemBuiltInCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.BitColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.DateColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NameCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.CharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.VarcharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.TextColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NcharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NvarcharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft
+                request.Criteria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2
+                , request.Criteria.OrganizationQueryCriteriaCommon.IsSystemBuiltInCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.BitColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NameCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.CharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.VarcharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.TextColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NcharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NvarcharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -632,21 +632,21 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfDefaultOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault _resultFromDAL = this.DALClassInstance.GetSingleOfDefaultOfCommon(
-                request.Critieria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2
-                , request.Critieria.OrganizationQueryCriteriaCommon.IsSystemBuiltInCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.BitColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.DateColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NameCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.CharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.VarcharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.TextColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NcharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NvarcharColumnCommonOft
-                , request.Critieria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft
+                request.Criteria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2
+                , request.Criteria.OrganizationQueryCriteriaCommon.IsSystemBuiltInCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.BitColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NameCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.CharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.VarcharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.TextColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NcharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NvarcharColumnCommonOft
+                , request.Criteria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft
                 , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -993,7 +993,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfEntityOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfEntityOfByFKOnly(
-                request.Critieria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
+                request.Criteria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1015,7 +1015,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfEntityOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfEntityOfByFKOnly(
-                request.Critieria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
+                request.Criteria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1037,7 +1037,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfEntityOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _resultFromDAL = this.DALClassInstance.GetCollectionOfEntityOfByFKOnly(
-                request.Critieria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
+                request.Criteria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -1070,7 +1070,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfEntityOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _resultFromDAL = this.DALClassInstance.GetSingleOfEntityOfByFKOnly(
-                request.Critieria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
+                request.Criteria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
                 , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -1102,7 +1102,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfNameValuePairOfByFKOnly(
-                request.Critieria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
+                request.Criteria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1124,7 +1124,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfNameValuePairOfByFKOnly(
-                request.Critieria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
+                request.Criteria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1146,7 +1146,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfNameValuePairOfByFKOnly(
-                request.Critieria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
+                request.Criteria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -1179,7 +1179,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity _resultFromDAL = this.DALClassInstance.GetSingleOfNameValuePairOfByFKOnly(
-                request.Critieria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
+                request.Criteria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
                 , request.QueryOrderBySettingCollection);
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _retval = new Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -1211,7 +1211,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfRssItemOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfRssItemOfByFKOnly(
-                request.Critieria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
+                request.Criteria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1233,7 +1233,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfRssItemOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfRssItemOfByFKOnly(
-                request.Critieria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
+                request.Criteria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1255,7 +1255,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfRssItemOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfRssItemOfByFKOnly(
-                request.Critieria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
+                request.Criteria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -1288,7 +1288,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfRssItemOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageRssItem _resultFromDAL = this.DALClassInstance.GetSingleOfRssItemOfByFKOnly(
-                request.Critieria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
+                request.Criteria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
                 , request.QueryOrderBySettingCollection);
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _retval = new Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -1320,7 +1320,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfDefaultOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfDefaultOfByFKOnly(
-                request.Critieria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
+                request.Criteria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1342,7 +1342,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfDefaultOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfDefaultOfByFKOnly(
-                request.Critieria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
+                request.Criteria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1364,7 +1364,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfDefaultOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfDefaultOfByFKOnly(
-                request.Critieria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
+                request.Criteria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -1397,7 +1397,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfDefaultOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault _resultFromDAL = this.DALClassInstance.GetSingleOfDefaultOfByFKOnly(
-                request.Critieria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
+                request.Criteria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
                 , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -1429,7 +1429,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfDefaultGroupedDataViewOfByFKOnly(
-                request.Critieria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
+                request.Criteria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1451,7 +1451,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfDefaultGroupedDataViewOfByFKOnly(
-                request.Critieria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
+                request.Criteria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1473,7 +1473,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultGroupedDataViewCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
-                request.Critieria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
+                request.Criteria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -1506,7 +1506,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultGroupedDataView _resultFromDAL = this.DALClassInstance.GetSingleOfDefaultGroupedDataViewOfByFKOnly(
-                request.Critieria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
+                request.Criteria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
                 , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -1538,7 +1538,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfEntityOfByIdentifier(
-                request.Critieria.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft
+                request.Criteria.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1560,7 +1560,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfEntityOfByIdentifier(
-                request.Critieria.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft
+                request.Criteria.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1582,7 +1582,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _resultFromDAL = this.DALClassInstance.GetCollectionOfEntityOfByIdentifier(
-                request.Critieria.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft
+                request.Criteria.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -1615,7 +1615,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _resultFromDAL = this.DALClassInstance.GetSingleOfEntityOfByIdentifier(
-                request.Critieria.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft
+                request.Criteria.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft
                 , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -1647,7 +1647,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfDefaultOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfDefaultOfByIdentifier(
-                request.Critieria.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft
+                request.Criteria.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1669,7 +1669,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfDefaultOfByIdentifier(
-                request.Critieria.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft
+                request.Criteria.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1691,7 +1691,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfDefaultOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfDefaultOfByIdentifier(
-                request.Critieria.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft
+                request.Criteria.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -1724,7 +1724,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfDefaultOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault _resultFromDAL = this.DALClassInstance.GetSingleOfDefaultOfByIdentifier(
-                request.Critieria.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft
+                request.Criteria.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft
                 , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -1756,7 +1756,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfKeyInformationOfByIdentifier(
-                request.Critieria.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft
+                request.Criteria.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1778,7 +1778,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfKeyInformationOfByIdentifier(
-                request.Critieria.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft
+                request.Criteria.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1800,7 +1800,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformationCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfKeyInformationOfByIdentifier(
-                request.Critieria.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft
+                request.Criteria.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -1833,7 +1833,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformation _resultFromDAL = this.DALClassInstance.GetSingleOfKeyInformationOfByIdentifier(
-                request.Critieria.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft
+                request.Criteria.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft
                 , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -1865,7 +1865,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                request.Critieria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft
+                request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1887,7 +1887,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                request.Critieria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft
+                request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1909,7 +1909,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _resultFromDAL = this.DALClassInstance.GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                request.Critieria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft
+                request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -1942,7 +1942,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _resultFromDAL = this.DALClassInstance.GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                request.Critieria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft
+                request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft
                 , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -1974,7 +1974,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                request.Critieria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft
+                request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1996,7 +1996,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                request.Critieria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft
+                request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -2018,7 +2018,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                request.Critieria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft
+                request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -2051,7 +2051,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity _resultFromDAL = this.DALClassInstance.GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                request.Critieria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft
+                request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft
                 , request.QueryOrderBySettingCollection);
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _retval = new Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -2083,7 +2083,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                request.Critieria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft
+                request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -2105,7 +2105,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                request.Critieria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft
+                request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -2127,7 +2127,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                request.Critieria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft
+                request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -2160,7 +2160,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault _resultFromDAL = this.DALClassInstance.GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                request.Critieria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft
+                request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft
                 , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -2192,7 +2192,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                request.Critieria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft
+                request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -2214,7 +2214,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                request.Critieria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft
+                request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -2236,7 +2236,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _resultFromDAL = this.DALClassInstance.GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                request.Critieria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft
+                request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -2269,7 +2269,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _resultFromDAL = this.DALClassInstance.GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                request.Critieria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft
+                request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft
                 , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -2301,7 +2301,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                request.Critieria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft
+                request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -2323,7 +2323,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                request.Critieria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft
+                request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -2345,7 +2345,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                request.Critieria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft
+                request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -2378,7 +2378,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity _resultFromDAL = this.DALClassInstance.GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                request.Critieria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft
+                request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft
                 , request.QueryOrderBySettingCollection);
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _retval = new Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -2410,7 +2410,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                request.Critieria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft
+                request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -2432,7 +2432,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                request.Critieria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft
+                request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -2454,7 +2454,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                request.Critieria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft
+                request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -2487,7 +2487,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault _resultFromDAL = this.DALClassInstance.GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                request.Critieria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft
+                request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft
                 , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -2519,9 +2519,9 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfEntityOfIdentifierAndUniqueConstraint(
-                request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft
-                , request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft
-                , request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft
+                request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft
+                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft
+                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -2543,9 +2543,9 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfEntityOfIdentifierAndUniqueConstraint(
-                request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft
-                , request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft
-                , request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft
+                request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft
+                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft
+                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -2567,9 +2567,9 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _resultFromDAL = this.DALClassInstance.GetCollectionOfEntityOfIdentifierAndUniqueConstraint(
-                request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft
-                , request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft
-                , request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft
+                request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft
+                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft
+                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -2602,9 +2602,9 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _resultFromDAL = this.DALClassInstance.GetSingleOfEntityOfIdentifierAndUniqueConstraint(
-                request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft
-                , request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft
-                , request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft
+                request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft
+                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft
+                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft
                 , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -2636,9 +2636,9 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfDefaultOfIdentifierAndUniqueConstraint(
-                request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft
-                , request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft
-                , request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft
+                request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft
+                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft
+                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -2660,9 +2660,9 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfDefaultOfIdentifierAndUniqueConstraint(
-                request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft
-                , request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft
-                , request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft
+                request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft
+                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft
+                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -2684,9 +2684,9 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfDefaultOfIdentifierAndUniqueConstraint(
-                request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft
-                , request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft
-                , request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft
+                request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft
+                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft
+                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -2719,9 +2719,9 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault _resultFromDAL = this.DALClassInstance.GetSingleOfDefaultOfIdentifierAndUniqueConstraint(
-                request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft
-                , request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft
-                , request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft
+                request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft
+                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft
+                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft
                 , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -2753,9 +2753,9 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfKeyInformationOfIdentifierAndUniqueConstraint(
-                request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft
-                , request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft
-                , request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft
+                request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft
+                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft
+                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -2777,9 +2777,9 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(
-                request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft
-                , request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft
-                , request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft
+                request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft
+                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft
+                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -2801,9 +2801,9 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformationCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint(
-                request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft
-                , request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft
-                , request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft
+                request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft
+                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft
+                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -2836,9 +2836,9 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformation _resultFromDAL = this.DALClassInstance.GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint(
-                request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft
-                , request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft
-                , request.Critieria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft
+                request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft
+                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft
+                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft
                 , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
