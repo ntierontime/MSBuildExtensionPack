@@ -221,11 +221,11 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
             , string queryOrderByExpression
             )
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetCollectionOfNameValuePairOfByFKOnly(                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly && valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly != default(System.Int64), valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly && valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly != default(System.Int32), valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly && valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly != default(System.Int64), valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly && valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly != default(System.Int64), valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
-                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly && valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly != default(System.Int32), valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetCollectionOfNameValuePairOfByFKOnly(                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
                 , currentIndex
                 , pageSize
                 , queryOrderByExpression);
@@ -260,11 +260,11 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
             , string queryOrderByExpression        )
 
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfNameValuePairOfByFKOnly(                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly && valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly != default(System.Int64), valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly && valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly != default(System.Int32), valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly && valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly != default(System.Int64), valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly && valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly != default(System.Int64), valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
-                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly && valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly != default(System.Int32), valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfNameValuePairOfByFKOnly(                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
                 , currentIndex
                 , pageSize
                 , queryOrderByExpression);
