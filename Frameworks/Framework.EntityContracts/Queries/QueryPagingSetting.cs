@@ -306,6 +306,21 @@ namespace Framework.EntityContracts
         {
             return new QueryPagingSetting(1, 10);
         }
+
+        public static int GetPageCount(int pageSize, int _RecordCount)
+        {
+            int _PageCount;
+            if (pageSize > 0)
+            {
+                _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
+            }
+            else
+            {
+                _PageCount = 0;
+            }
+
+            return _PageCount;
+        }
     }
 }
 

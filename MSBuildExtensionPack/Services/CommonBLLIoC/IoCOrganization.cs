@@ -498,6 +498,210 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion batch insert, update and delete in an entity collection
 
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareIdCommonOfOrganization_2OfCommon">will compare/filter IdCommonOfOrganization_2OfCommon property/field/column if true, otherwise false</param>
+        /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
+        /// <param name="isToCompareIsSystemBuiltInCommonOftOfCommon">will compare/filter IsSystemBuiltInCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="valueToCompareIsSystemBuiltInCommonOftOfCommon">value to compare/filter with IsSystemBuiltInCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon" > will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon" > will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to upper bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="upperBoundCreatedDateTimeCommonOftOfCommon">upper bound</param>
+        /// <param name="isToCompareBitColumnCommonOftOfCommon">will compare/filter BitColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="valueToCompareBitColumnCommonOftOfCommon">value to compare/filter with BitColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon" > will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareUpperBoundDatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="upperBoundDatetimeColumnCommonOftOfCommon">upper bound</param>
+        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon" > will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon" > will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to upper bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="upperBoundDatetime2ColumnCommonOftOfCommon">upper bound</param>
+        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon" > will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="upperBoundSmalldatetimeColumnCommonOftOfCommon">upper bound</param>
+        /// <param name="isToCompareDateColumnCommonOftOfCommon" > will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon" > will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDateColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareUpperBoundDateColumnCommonOftOfCommon">will compare/filter to upper bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="upperBoundDateColumnCommonOftOfCommon">upper bound</param>
+        /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareCharColumnCommonOftOfCommon">will compare/filter CharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon" > value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareVarcharColumnCommonOftOfCommon">will compare/filter VarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon" > value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareTextColumnCommonOftOfCommon">will compare/filter TextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon" > value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareNcharColumnCommonOftOfCommon">will compare/filter NcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon" > value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareNvarcharColumnCommonOftOfCommon">will compare/filter NvarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon" > value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareNtextColumnCommonOftOfCommon">will compare/filter NtextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon" > value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns></returns>
+        private static MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon _GetOrganizationChainedQueryCriteriaCommon(
+            bool isToCompareIdCommonOfOrganization_2OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_2OfCommon
+            , bool isToCompareIsSystemBuiltInCommonOftOfCommon, System.Boolean? valueToCompareIsSystemBuiltInCommonOftOfCommon
+            , bool isToCompareCreatedDateTimeCommonOftOfCommon, bool isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, System.DateTime? lowerBoundCreatedDateTimeCommonOftOfCommon, bool isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, System.DateTime? upperBoundCreatedDateTimeCommonOftOfCommon
+            , bool isToCompareBitColumnCommonOftOfCommon, System.Boolean? valueToCompareBitColumnCommonOftOfCommon
+            , bool isToCompareDatetimeColumnCommonOftOfCommon, bool isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, System.DateTime? lowerBoundDatetimeColumnCommonOftOfCommon, bool isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, System.DateTime? upperBoundDatetimeColumnCommonOftOfCommon
+            , bool isToCompareDatetime2ColumnCommonOftOfCommon, bool isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, System.DateTime? lowerBoundDatetime2ColumnCommonOftOfCommon, bool isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, System.DateTime? upperBoundDatetime2ColumnCommonOftOfCommon
+            , bool isToCompareSmalldatetimeColumnCommonOftOfCommon, bool isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, System.DateTime? lowerBoundSmalldatetimeColumnCommonOftOfCommon, bool isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, System.DateTime? upperBoundSmalldatetimeColumnCommonOftOfCommon
+            , bool isToCompareDateColumnCommonOftOfCommon, bool isToCompareLowerBoundDateColumnCommonOftOfCommon, System.DateTime? lowerBoundDateColumnCommonOftOfCommon, bool isToCompareUpperBoundDateColumnCommonOftOfCommon, System.DateTime? upperBoundDateColumnCommonOftOfCommon
+            , bool isToCompareNameCommonOftOfCommon, System.String valueToBeContainedNameCommonOftOfCommon
+            , bool isToCompareCharColumnCommonOftOfCommon, System.String valueToBeContainedCharColumnCommonOftOfCommon
+            , bool isToCompareVarcharColumnCommonOftOfCommon, System.String valueToBeContainedVarcharColumnCommonOftOfCommon
+            , bool isToCompareTextColumnCommonOftOfCommon, System.String valueToBeContainedTextColumnCommonOftOfCommon
+            , bool isToCompareNcharColumnCommonOftOfCommon, System.String valueToBeContainedNcharColumnCommonOftOfCommon
+            , bool isToCompareNvarcharColumnCommonOftOfCommon, System.String valueToBeContainedNvarcharColumnCommonOftOfCommon
+            , bool isToCompareNtextColumnCommonOftOfCommon, System.String valueToBeContainedNtextColumnCommonOftOfCommon
+            )
+        {
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon();
+            criteria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2 = new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon);
+            criteria.OrganizationQueryCriteriaCommon.IsSystemBuiltInCommonOft = new QuerySystemBooleanEqualsCriteria(isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon);
+            criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft = new QuerySystemDateTimeRangeCriteria(isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon);
+            criteria.OrganizationQueryCriteriaCommon.BitColumnCommonOft = new QuerySystemBooleanEqualsCriteria(isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon);
+            criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft = new QuerySystemDateTimeRangeCriteria(isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon);
+            criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft = new QuerySystemDateTimeRangeCriteria(isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon);
+            criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft = new QuerySystemDateTimeRangeCriteria(isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon);
+            criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft = new QuerySystemDateTimeRangeCriteria(isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon);
+            criteria.OrganizationQueryCriteriaCommon.NameCommonOft = new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon);
+            criteria.OrganizationQueryCriteriaCommon.CharColumnCommonOft = new QuerySystemStringContainsCriteria(isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon);
+            criteria.OrganizationQueryCriteriaCommon.VarcharColumnCommonOft = new QuerySystemStringContainsCriteria(isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon);
+            criteria.OrganizationQueryCriteriaCommon.TextColumnCommonOft = new QuerySystemStringContainsCriteria(isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon);
+            criteria.OrganizationQueryCriteriaCommon.NcharColumnCommonOft = new QuerySystemStringContainsCriteria(isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon);
+            criteria.OrganizationQueryCriteriaCommon.NvarcharColumnCommonOft = new QuerySystemStringContainsCriteria(isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon);
+            criteria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft = new QuerySystemStringContainsCriteria(isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon);
+            return criteria;
+        }
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns></returns>
+        private static MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll _GetOrganizationChainedQueryCriteriaAll(
+
+            )
+        {
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll();
+
+            return criteria;
+        }
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
+        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns></returns>
+        private static MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly _GetOrganizationChainedQueryCriteriaByFKOnly(
+            bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            )
+        {
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly();
+            criteria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2 = new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly);
+            return criteria;
+        }
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
+        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns></returns>
+        private static MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier _GetOrganizationChainedQueryCriteriaByIdentifier(
+            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier
+            )
+        {
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier();
+            criteria.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft = new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier);
+            return criteria;
+        }
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier">will compare/filter UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier property/field/column if true, otherwise false</param>
+        /// <param name="valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier">value to compare/filter with UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns></returns>
+        private static MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            bool isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, System.Guid? valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+            )
+        {
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier();
+            criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft = new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier);
+            return criteria;
+        }
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn">will compare/filter UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn property/field/column if true, otherwise false</param>
+        /// <param name="valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn">value to compare/filter with UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns></returns>
+        private static MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            bool isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, System.Guid? valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+            )
+        {
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn();
+            criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft = new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn);
+            return criteria;
+        }
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint">will compare/filter IdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint property/field/column if true, otherwise false</param>
+        /// <param name="valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint">value to compare/filter with IdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint property/field/column</param>
+        /// <param name="isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint">will compare/filter UniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint property/field/column if true, otherwise false</param>
+        /// <param name="valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint">value to compare/filter with UniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint property/field/column</param>
+        /// <param name="isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint">will compare/filter UniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint property/field/column if true, otherwise false</param>
+        /// <param name="valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint">value to compare/filter with UniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns></returns>
+        private static MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
+            bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+            , bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+            , bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+            )
+        {
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint();
+            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft = new QuerySystemInt64EqualsCriteria(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint);
+            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft = new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint);
+            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft = new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint);
+            return criteria;
+        }
+
         #region Query Methods Of Entity of Common per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
@@ -536,17 +740,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -606,17 +800,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -875,47 +1059,47 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIsSystemBuiltInCommonOftOfCommon">will compare/filter IsSystemBuiltInCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIsSystemBuiltInCommonOftOfCommon">value to compare/filter with IsSystemBuiltInCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon">will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon" > will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon" > will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to upper bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundCreatedDateTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareBitColumnCommonOftOfCommon">will compare/filter BitColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareBitColumnCommonOftOfCommon">value to compare/filter with BitColumnCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon">will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon" > will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon">will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon" > will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon" > will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to upper bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetime2ColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon">will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon" > will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundSmalldatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDateColumnCommonOftOfCommon">will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon">will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDateColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDateColumnCommonOftOfCommon" > will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon" > will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDateColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDateColumnCommonOftOfCommon">will compare/filter to upper bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDateColumnCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon">value to compare/filter with NameCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareCharColumnCommonOftOfCommon">will compare/filter CharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon">value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon" > value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareVarcharColumnCommonOftOfCommon">will compare/filter VarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon">value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon" > value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareTextColumnCommonOftOfCommon">will compare/filter TextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon">value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon" > value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNcharColumnCommonOftOfCommon">will compare/filter NcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon">value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon" > value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNvarcharColumnCommonOftOfCommon">will compare/filter NvarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon">value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon" > value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNtextColumnCommonOftOfCommon">will compare/filter NtextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon">value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon" > value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
         public static int[] GetPageNumberListOfEntityOfCommon(
@@ -947,36 +1131,27 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon
+                , isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon
+                , isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon
+                , isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon
+                , isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon
+                , isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon
+                , isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon
+                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
+                , isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon
+                , isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon
+                , isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon
+                , isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon
+                , isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon
+                , isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -1008,47 +1183,47 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIsSystemBuiltInCommonOftOfCommon">will compare/filter IsSystemBuiltInCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIsSystemBuiltInCommonOftOfCommon">value to compare/filter with IsSystemBuiltInCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon">will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon" > will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon" > will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to upper bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundCreatedDateTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareBitColumnCommonOftOfCommon">will compare/filter BitColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareBitColumnCommonOftOfCommon">value to compare/filter with BitColumnCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon">will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon" > will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon">will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon" > will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon" > will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to upper bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetime2ColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon">will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon" > will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundSmalldatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDateColumnCommonOftOfCommon">will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon">will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDateColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDateColumnCommonOftOfCommon" > will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon" > will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDateColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDateColumnCommonOftOfCommon">will compare/filter to upper bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDateColumnCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon">value to compare/filter with NameCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareCharColumnCommonOftOfCommon">will compare/filter CharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon">value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon" > value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareVarcharColumnCommonOftOfCommon">will compare/filter VarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon">value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon" > value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareTextColumnCommonOftOfCommon">will compare/filter TextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon">value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon" > value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNcharColumnCommonOftOfCommon">will compare/filter NcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon">value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon" > value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNvarcharColumnCommonOftOfCommon">will compare/filter NvarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon">value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon" > value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNtextColumnCommonOftOfCommon">will compare/filter NtextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon">value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon" > value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
         public static int GetPageCountOfEntityOfCommon(
@@ -1080,36 +1255,27 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon
+                , isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon
+                , isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon
+                , isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon
+                , isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon
+                , isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon
+                , isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon
+                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
+                , isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon
+                , isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon
+                , isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon
+                , isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon
+                , isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon
+                , isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -1128,47 +1294,47 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIsSystemBuiltInCommonOftOfCommon">will compare/filter IsSystemBuiltInCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIsSystemBuiltInCommonOftOfCommon">value to compare/filter with IsSystemBuiltInCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon">will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon" > will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon" > will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to upper bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundCreatedDateTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareBitColumnCommonOftOfCommon">will compare/filter BitColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareBitColumnCommonOftOfCommon">value to compare/filter with BitColumnCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon">will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon" > will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon">will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon" > will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon" > will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to upper bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetime2ColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon">will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon" > will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundSmalldatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDateColumnCommonOftOfCommon">will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon">will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDateColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDateColumnCommonOftOfCommon" > will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon" > will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDateColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDateColumnCommonOftOfCommon">will compare/filter to upper bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDateColumnCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon">value to compare/filter with NameCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareCharColumnCommonOftOfCommon">will compare/filter CharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon">value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon" > value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareVarcharColumnCommonOftOfCommon">will compare/filter VarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon">value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon" > value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareTextColumnCommonOftOfCommon">will compare/filter TextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon">value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon" > value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNcharColumnCommonOftOfCommon">will compare/filter NcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon">value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon" > value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNvarcharColumnCommonOftOfCommon">will compare/filter NvarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon">value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon" > value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNtextColumnCommonOftOfCommon">will compare/filter NtextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon">value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon" > value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
@@ -1203,22 +1369,23 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon
+                , isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon
+                , isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon
+                , isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon
+                , isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon
+                , isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon
+                , isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon
+                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
+                , isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon
+                , isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon
+                , isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon
+                , isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon
+                , isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon
+                , isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -1240,47 +1407,47 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIsSystemBuiltInCommonOftOfCommon">will compare/filter IsSystemBuiltInCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIsSystemBuiltInCommonOftOfCommon">value to compare/filter with IsSystemBuiltInCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon">will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon" > will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon" > will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to upper bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundCreatedDateTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareBitColumnCommonOftOfCommon">will compare/filter BitColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareBitColumnCommonOftOfCommon">value to compare/filter with BitColumnCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon">will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon" > will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon">will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon" > will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon" > will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to upper bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetime2ColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon">will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon" > will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundSmalldatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDateColumnCommonOftOfCommon">will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon">will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDateColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDateColumnCommonOftOfCommon" > will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon" > will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDateColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDateColumnCommonOftOfCommon">will compare/filter to upper bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDateColumnCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon">value to compare/filter with NameCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareCharColumnCommonOftOfCommon">will compare/filter CharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon">value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon" > value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareVarcharColumnCommonOftOfCommon">will compare/filter VarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon">value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon" > value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareTextColumnCommonOftOfCommon">will compare/filter TextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon">value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon" > value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNcharColumnCommonOftOfCommon">will compare/filter NcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon">value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon" > value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNvarcharColumnCommonOftOfCommon">will compare/filter NvarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon">value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon" > value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNtextColumnCommonOftOfCommon">will compare/filter NtextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon">value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon" > value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
@@ -1316,22 +1483,23 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon
+                , isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon
+                , isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon
+                , isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon
+                , isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon
+                , isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon
+                , isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon
+                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
+                , isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon
+                , isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon
+                , isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon
+                , isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon
+                , isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon
+                , isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -1353,47 +1521,47 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIsSystemBuiltInCommonOftOfCommon">will compare/filter IsSystemBuiltInCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIsSystemBuiltInCommonOftOfCommon">value to compare/filter with IsSystemBuiltInCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon">will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon" > will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon" > will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to upper bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundCreatedDateTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareBitColumnCommonOftOfCommon">will compare/filter BitColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareBitColumnCommonOftOfCommon">value to compare/filter with BitColumnCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon">will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon" > will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon">will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon" > will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon" > will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to upper bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetime2ColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon">will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon" > will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundSmalldatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDateColumnCommonOftOfCommon">will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon">will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDateColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDateColumnCommonOftOfCommon" > will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon" > will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDateColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDateColumnCommonOftOfCommon">will compare/filter to upper bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDateColumnCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon">value to compare/filter with NameCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareCharColumnCommonOftOfCommon">will compare/filter CharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon">value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon" > value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareVarcharColumnCommonOftOfCommon">will compare/filter VarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon">value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon" > value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareTextColumnCommonOftOfCommon">will compare/filter TextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon">value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon" > value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNcharColumnCommonOftOfCommon">will compare/filter NcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon">value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon" > value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNvarcharColumnCommonOftOfCommon">will compare/filter NvarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon">value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon" > value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNtextColumnCommonOftOfCommon">will compare/filter NtextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon">value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon" > value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
@@ -1429,22 +1597,23 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon
+                , isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon
+                , isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon
+                , isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon
+                , isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon
+                , isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon
+                , isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon
+                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
+                , isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon
+                , isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon
+                , isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon
+                , isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon
+                , isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon
+                , isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -1466,47 +1635,47 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIsSystemBuiltInCommonOftOfCommon">will compare/filter IsSystemBuiltInCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIsSystemBuiltInCommonOftOfCommon">value to compare/filter with IsSystemBuiltInCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon">will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon" > will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon" > will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to upper bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundCreatedDateTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareBitColumnCommonOftOfCommon">will compare/filter BitColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareBitColumnCommonOftOfCommon">value to compare/filter with BitColumnCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon">will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon" > will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon">will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon" > will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon" > will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to upper bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetime2ColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon">will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon" > will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundSmalldatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDateColumnCommonOftOfCommon">will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon">will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDateColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDateColumnCommonOftOfCommon" > will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon" > will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDateColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDateColumnCommonOftOfCommon">will compare/filter to upper bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDateColumnCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon">value to compare/filter with NameCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareCharColumnCommonOftOfCommon">will compare/filter CharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon">value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon" > value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareVarcharColumnCommonOftOfCommon">will compare/filter VarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon">value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon" > value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareTextColumnCommonOftOfCommon">will compare/filter TextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon">value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon" > value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNcharColumnCommonOftOfCommon">will compare/filter NcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon">value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon" > value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNvarcharColumnCommonOftOfCommon">will compare/filter NvarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon">value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon" > value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNtextColumnCommonOftOfCommon">will compare/filter NtextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon">value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon" > value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
@@ -1541,23 +1710,23 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon));
-
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon
+                , isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon
+                , isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon
+                , isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon
+                , isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon
+                , isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon
+                , isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon
+                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
+                , isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon
+                , isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon
+                , isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon
+                , isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon
+                , isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon
+                , isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfCommon(_Request);
             return _Response;
         }
@@ -1569,47 +1738,47 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIsSystemBuiltInCommonOftOfCommon">will compare/filter IsSystemBuiltInCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIsSystemBuiltInCommonOftOfCommon">value to compare/filter with IsSystemBuiltInCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon">will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon" > will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon" > will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to upper bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundCreatedDateTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareBitColumnCommonOftOfCommon">will compare/filter BitColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareBitColumnCommonOftOfCommon">value to compare/filter with BitColumnCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon">will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon" > will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon">will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon" > will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon" > will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to upper bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetime2ColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon">will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon" > will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundSmalldatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDateColumnCommonOftOfCommon">will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon">will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDateColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDateColumnCommonOftOfCommon" > will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon" > will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDateColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDateColumnCommonOftOfCommon">will compare/filter to upper bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDateColumnCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon">value to compare/filter with NameCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareCharColumnCommonOftOfCommon">will compare/filter CharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon">value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon" > value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareVarcharColumnCommonOftOfCommon">will compare/filter VarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon">value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon" > value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareTextColumnCommonOftOfCommon">will compare/filter TextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon">value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon" > value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNcharColumnCommonOftOfCommon">will compare/filter NcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon">value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon" > value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNvarcharColumnCommonOftOfCommon">will compare/filter NvarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon">value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon" > value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNtextColumnCommonOftOfCommon">will compare/filter NtextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon">value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon" > value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.OrganizationCollection"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.OrganizationCollection GetSingleOfEntityOfCommon(
             bool isToCompareIdCommonOfOrganization_2OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_2OfCommon
@@ -1641,22 +1810,22 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon)
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon
+                , isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon
+                , isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon
+                , isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon
+                , isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon
+                , isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon
+                , isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon
+                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
+                , isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon
+                , isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon
+                , isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon
+                , isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon
+                , isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon
+                , isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon
                 );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -1712,17 +1881,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -1782,17 +1941,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -2051,47 +2200,47 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIsSystemBuiltInCommonOftOfCommon">will compare/filter IsSystemBuiltInCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIsSystemBuiltInCommonOftOfCommon">value to compare/filter with IsSystemBuiltInCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon">will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon" > will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon" > will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to upper bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundCreatedDateTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareBitColumnCommonOftOfCommon">will compare/filter BitColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareBitColumnCommonOftOfCommon">value to compare/filter with BitColumnCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon">will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon" > will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon">will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon" > will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon" > will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to upper bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetime2ColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon">will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon" > will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundSmalldatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDateColumnCommonOftOfCommon">will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon">will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDateColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDateColumnCommonOftOfCommon" > will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon" > will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDateColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDateColumnCommonOftOfCommon">will compare/filter to upper bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDateColumnCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon">value to compare/filter with NameCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareCharColumnCommonOftOfCommon">will compare/filter CharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon">value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon" > value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareVarcharColumnCommonOftOfCommon">will compare/filter VarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon">value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon" > value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareTextColumnCommonOftOfCommon">will compare/filter TextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon">value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon" > value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNcharColumnCommonOftOfCommon">will compare/filter NcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon">value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon" > value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNvarcharColumnCommonOftOfCommon">will compare/filter NvarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon">value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon" > value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNtextColumnCommonOftOfCommon">will compare/filter NtextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon">value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon" > value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
         public static int[] GetPageNumberListOfDefaultOfCommon(
@@ -2123,36 +2272,27 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon
+                , isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon
+                , isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon
+                , isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon
+                , isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon
+                , isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon
+                , isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon
+                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
+                , isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon
+                , isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon
+                , isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon
+                , isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon
+                , isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon
+                , isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -2184,47 +2324,47 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIsSystemBuiltInCommonOftOfCommon">will compare/filter IsSystemBuiltInCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIsSystemBuiltInCommonOftOfCommon">value to compare/filter with IsSystemBuiltInCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon">will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon" > will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon" > will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to upper bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundCreatedDateTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareBitColumnCommonOftOfCommon">will compare/filter BitColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareBitColumnCommonOftOfCommon">value to compare/filter with BitColumnCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon">will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon" > will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon">will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon" > will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon" > will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to upper bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetime2ColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon">will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon" > will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundSmalldatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDateColumnCommonOftOfCommon">will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon">will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDateColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDateColumnCommonOftOfCommon" > will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon" > will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDateColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDateColumnCommonOftOfCommon">will compare/filter to upper bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDateColumnCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon">value to compare/filter with NameCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareCharColumnCommonOftOfCommon">will compare/filter CharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon">value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon" > value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareVarcharColumnCommonOftOfCommon">will compare/filter VarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon">value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon" > value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareTextColumnCommonOftOfCommon">will compare/filter TextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon">value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon" > value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNcharColumnCommonOftOfCommon">will compare/filter NcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon">value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon" > value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNvarcharColumnCommonOftOfCommon">will compare/filter NvarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon">value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon" > value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNtextColumnCommonOftOfCommon">will compare/filter NtextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon">value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon" > value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
         public static int GetPageCountOfDefaultOfCommon(
@@ -2256,36 +2396,27 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon
+                , isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon
+                , isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon
+                , isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon
+                , isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon
+                , isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon
+                , isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon
+                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
+                , isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon
+                , isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon
+                , isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon
+                , isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon
+                , isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon
+                , isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -2304,47 +2435,47 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIsSystemBuiltInCommonOftOfCommon">will compare/filter IsSystemBuiltInCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIsSystemBuiltInCommonOftOfCommon">value to compare/filter with IsSystemBuiltInCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon">will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon" > will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon" > will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to upper bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundCreatedDateTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareBitColumnCommonOftOfCommon">will compare/filter BitColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareBitColumnCommonOftOfCommon">value to compare/filter with BitColumnCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon">will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon" > will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon">will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon" > will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon" > will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to upper bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetime2ColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon">will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon" > will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundSmalldatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDateColumnCommonOftOfCommon">will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon">will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDateColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDateColumnCommonOftOfCommon" > will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon" > will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDateColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDateColumnCommonOftOfCommon">will compare/filter to upper bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDateColumnCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon">value to compare/filter with NameCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareCharColumnCommonOftOfCommon">will compare/filter CharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon">value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon" > value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareVarcharColumnCommonOftOfCommon">will compare/filter VarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon">value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon" > value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareTextColumnCommonOftOfCommon">will compare/filter TextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon">value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon" > value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNcharColumnCommonOftOfCommon">will compare/filter NcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon">value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon" > value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNvarcharColumnCommonOftOfCommon">will compare/filter NvarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon">value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon" > value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNtextColumnCommonOftOfCommon">will compare/filter NtextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon">value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon" > value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
@@ -2379,22 +2510,23 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon
+                , isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon
+                , isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon
+                , isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon
+                , isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon
+                , isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon
+                , isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon
+                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
+                , isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon
+                , isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon
+                , isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon
+                , isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon
+                , isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon
+                , isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -2416,47 +2548,47 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIsSystemBuiltInCommonOftOfCommon">will compare/filter IsSystemBuiltInCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIsSystemBuiltInCommonOftOfCommon">value to compare/filter with IsSystemBuiltInCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon">will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon" > will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon" > will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to upper bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundCreatedDateTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareBitColumnCommonOftOfCommon">will compare/filter BitColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareBitColumnCommonOftOfCommon">value to compare/filter with BitColumnCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon">will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon" > will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon">will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon" > will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon" > will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to upper bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetime2ColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon">will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon" > will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundSmalldatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDateColumnCommonOftOfCommon">will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon">will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDateColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDateColumnCommonOftOfCommon" > will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon" > will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDateColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDateColumnCommonOftOfCommon">will compare/filter to upper bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDateColumnCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon">value to compare/filter with NameCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareCharColumnCommonOftOfCommon">will compare/filter CharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon">value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon" > value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareVarcharColumnCommonOftOfCommon">will compare/filter VarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon">value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon" > value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareTextColumnCommonOftOfCommon">will compare/filter TextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon">value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon" > value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNcharColumnCommonOftOfCommon">will compare/filter NcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon">value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon" > value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNvarcharColumnCommonOftOfCommon">will compare/filter NvarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon">value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon" > value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNtextColumnCommonOftOfCommon">will compare/filter NtextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon">value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon" > value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
@@ -2492,22 +2624,23 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon
+                , isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon
+                , isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon
+                , isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon
+                , isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon
+                , isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon
+                , isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon
+                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
+                , isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon
+                , isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon
+                , isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon
+                , isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon
+                , isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon
+                , isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -2529,47 +2662,47 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIsSystemBuiltInCommonOftOfCommon">will compare/filter IsSystemBuiltInCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIsSystemBuiltInCommonOftOfCommon">value to compare/filter with IsSystemBuiltInCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon">will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon" > will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon" > will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to upper bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundCreatedDateTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareBitColumnCommonOftOfCommon">will compare/filter BitColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareBitColumnCommonOftOfCommon">value to compare/filter with BitColumnCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon">will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon" > will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon">will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon" > will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon" > will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to upper bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetime2ColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon">will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon" > will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundSmalldatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDateColumnCommonOftOfCommon">will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon">will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDateColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDateColumnCommonOftOfCommon" > will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon" > will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDateColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDateColumnCommonOftOfCommon">will compare/filter to upper bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDateColumnCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon">value to compare/filter with NameCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareCharColumnCommonOftOfCommon">will compare/filter CharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon">value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon" > value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareVarcharColumnCommonOftOfCommon">will compare/filter VarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon">value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon" > value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareTextColumnCommonOftOfCommon">will compare/filter TextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon">value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon" > value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNcharColumnCommonOftOfCommon">will compare/filter NcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon">value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon" > value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNvarcharColumnCommonOftOfCommon">will compare/filter NvarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon">value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon" > value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNtextColumnCommonOftOfCommon">will compare/filter NtextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon">value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon" > value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
@@ -2605,22 +2738,23 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon
+                , isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon
+                , isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon
+                , isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon
+                , isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon
+                , isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon
+                , isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon
+                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
+                , isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon
+                , isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon
+                , isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon
+                , isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon
+                , isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon
+                , isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -2642,47 +2776,47 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIsSystemBuiltInCommonOftOfCommon">will compare/filter IsSystemBuiltInCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIsSystemBuiltInCommonOftOfCommon">value to compare/filter with IsSystemBuiltInCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon">will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon" > will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon" > will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to upper bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundCreatedDateTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareBitColumnCommonOftOfCommon">will compare/filter BitColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareBitColumnCommonOftOfCommon">value to compare/filter with BitColumnCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon">will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon" > will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon">will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon" > will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon" > will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to upper bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetime2ColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon">will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon" > will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundSmalldatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDateColumnCommonOftOfCommon">will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon">will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDateColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDateColumnCommonOftOfCommon" > will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon" > will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDateColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDateColumnCommonOftOfCommon">will compare/filter to upper bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDateColumnCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon">value to compare/filter with NameCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareCharColumnCommonOftOfCommon">will compare/filter CharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon">value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon" > value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareVarcharColumnCommonOftOfCommon">will compare/filter VarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon">value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon" > value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareTextColumnCommonOftOfCommon">will compare/filter TextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon">value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon" > value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNcharColumnCommonOftOfCommon">will compare/filter NcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon">value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon" > value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNvarcharColumnCommonOftOfCommon">will compare/filter NvarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon">value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon" > value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNtextColumnCommonOftOfCommon">will compare/filter NtextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon">value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon" > value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
@@ -2717,23 +2851,23 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon));
-
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon
+                , isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon
+                , isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon
+                , isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon
+                , isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon
+                , isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon
+                , isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon
+                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
+                , isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon
+                , isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon
+                , isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon
+                , isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon
+                , isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon
+                , isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfCommon(_Request);
             return _Response;
         }
@@ -2745,47 +2879,47 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIsSystemBuiltInCommonOftOfCommon">will compare/filter IsSystemBuiltInCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIsSystemBuiltInCommonOftOfCommon">value to compare/filter with IsSystemBuiltInCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon">will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareCreatedDateTimeCommonOftOfCommon" > will compare/filter CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon" > will compare/filter to lower bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildCreatedDateTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon">will compare/filter to upper bound of CreatedDateTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundCreatedDateTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareBitColumnCommonOftOfCommon">will compare/filter BitColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareBitColumnCommonOftOfCommon">value to compare/filter with BitColumnCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon">will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetimeColumnCommonOftOfCommon" > will compare/filter DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of DatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon">will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDatetime2ColumnCommonOftOfCommon" > will compare/filter Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon" > will compare/filter to lower bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDatetime2ColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon">will compare/filter to upper bound of Datetime2ColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDatetime2ColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon">will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareSmalldatetimeColumnCommonOftOfCommon" > will compare/filter SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon" > will compare/filter to lower bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildSmalldatetimeColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon">will compare/filter to upper bound of SmalldatetimeColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundSmalldatetimeColumnCommonOftOfCommon">upper bound</param>
-        /// <param name="isToCompareDateColumnCommonOftOfCommon">will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon">will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundDateColumnCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareDateColumnCommonOftOfCommon" > will compare/filter DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundDateColumnCommonOftOfCommon" > will compare/filter to lower bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildDateColumnCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundDateColumnCommonOftOfCommon">will compare/filter to upper bound of DateColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundDateColumnCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon">value to compare/filter with NameCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareCharColumnCommonOftOfCommon">will compare/filter CharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon">value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedCharColumnCommonOftOfCommon" > value to compare/filter with CharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareVarcharColumnCommonOftOfCommon">will compare/filter VarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon">value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedVarcharColumnCommonOftOfCommon" > value to compare/filter with VarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareTextColumnCommonOftOfCommon">will compare/filter TextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon">value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedTextColumnCommonOftOfCommon" > value to compare/filter with TextColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNcharColumnCommonOftOfCommon">will compare/filter NcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon">value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNcharColumnCommonOftOfCommon" > value to compare/filter with NcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNvarcharColumnCommonOftOfCommon">will compare/filter NvarcharColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon">value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNvarcharColumnCommonOftOfCommon" > value to compare/filter with NvarcharColumnCommonOftOfCommon property/field/column</param>
         /// <param name="isToCompareNtextColumnCommonOftOfCommon">will compare/filter NtextColumnCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon">value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedNtextColumnCommonOftOfCommon" > value to compare/filter with NtextColumnCommonOftOfCommon property/field/column</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.Organization.DefaultCollection"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.Organization.DefaultCollection GetSingleOfDefaultOfCommon(
             bool isToCompareIdCommonOfOrganization_2OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_2OfCommon
@@ -2817,22 +2951,22 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon)
-                , new QuerySystemBooleanEqualsCriteria(isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon)
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIsSystemBuiltInCommonOftOfCommon, valueToCompareIsSystemBuiltInCommonOftOfCommon
+                , isToCompareCreatedDateTimeCommonOftOfCommon, isToCompareLowerBoundCreatedDateTimeCommonOftOfCommon, lowerBoundCreatedDateTimeCommonOftOfCommon, isToCompareUpperBoundCreatedDateTimeCommonOftOfCommon, upperBoundCreatedDateTimeCommonOftOfCommon
+                , isToCompareBitColumnCommonOftOfCommon, valueToCompareBitColumnCommonOftOfCommon
+                , isToCompareDatetimeColumnCommonOftOfCommon, isToCompareLowerBoundDatetimeColumnCommonOftOfCommon, lowerBoundDatetimeColumnCommonOftOfCommon, isToCompareUpperBoundDatetimeColumnCommonOftOfCommon, upperBoundDatetimeColumnCommonOftOfCommon
+                , isToCompareDatetime2ColumnCommonOftOfCommon, isToCompareLowerBoundDatetime2ColumnCommonOftOfCommon, lowerBoundDatetime2ColumnCommonOftOfCommon, isToCompareUpperBoundDatetime2ColumnCommonOftOfCommon, upperBoundDatetime2ColumnCommonOftOfCommon
+                , isToCompareSmalldatetimeColumnCommonOftOfCommon, isToCompareLowerBoundSmalldatetimeColumnCommonOftOfCommon, lowerBoundSmalldatetimeColumnCommonOftOfCommon, isToCompareUpperBoundSmalldatetimeColumnCommonOftOfCommon, upperBoundSmalldatetimeColumnCommonOftOfCommon
+                , isToCompareDateColumnCommonOftOfCommon, isToCompareLowerBoundDateColumnCommonOftOfCommon, lowerBoundDateColumnCommonOftOfCommon, isToCompareUpperBoundDateColumnCommonOftOfCommon, upperBoundDateColumnCommonOftOfCommon
+                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
+                , isToCompareCharColumnCommonOftOfCommon, valueToBeContainedCharColumnCommonOftOfCommon
+                , isToCompareVarcharColumnCommonOftOfCommon, valueToBeContainedVarcharColumnCommonOftOfCommon
+                , isToCompareTextColumnCommonOftOfCommon, valueToBeContainedTextColumnCommonOftOfCommon
+                , isToCompareNcharColumnCommonOftOfCommon, valueToBeContainedNcharColumnCommonOftOfCommon
+                , isToCompareNvarcharColumnCommonOftOfCommon, valueToBeContainedNvarcharColumnCommonOftOfCommon
+                , isToCompareNtextColumnCommonOftOfCommon, valueToBeContainedNtextColumnCommonOftOfCommon
                 );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetSingleOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -2888,17 +3022,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -2958,17 +3082,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -3240,22 +3354,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -3300,22 +3405,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -3350,8 +3446,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -3390,8 +3487,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -3430,8 +3528,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaAll(
+
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -3469,9 +3568,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaAll(
 
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfAll(_Request);
             return _Response;
         }
@@ -3496,7 +3595,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaAll(
 
                 );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfAll(_Request);
@@ -3553,17 +3652,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -3623,17 +3712,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -3905,22 +3984,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -3965,22 +4035,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -4015,8 +4076,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -4055,8 +4117,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -4095,8 +4158,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -4134,9 +4198,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaAll(
 
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairOfAll(_Request);
             return _Response;
         }
@@ -4161,7 +4225,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaAll(
 
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetSingleOfNameValuePairOfAll(_Request);
@@ -4218,17 +4282,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -4288,17 +4342,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -4570,22 +4614,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -4630,22 +4665,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -4680,8 +4706,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -4720,8 +4747,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -4760,8 +4788,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -4799,9 +4828,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaAll(
 
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfRssItemOfAll(_Request);
             return _Response;
         }
@@ -4826,7 +4855,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaAll(
 
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetSingleOfRssItemOfAll(_Request);
@@ -4883,17 +4912,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -4953,17 +4972,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -5237,22 +5246,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -5299,22 +5299,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -5351,8 +5342,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -5393,8 +5385,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -5435,8 +5428,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -5476,9 +5470,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
-
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfByFKOnly(_Request);
             return _Response;
         }
@@ -5505,8 +5499,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
                 );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -5562,17 +5556,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -5632,17 +5616,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -5916,22 +5890,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -5978,22 +5943,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -6030,8 +5986,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -6072,8 +6029,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -6114,8 +6072,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -6155,9 +6114,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
-
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairOfByFKOnly(_Request);
             return _Response;
         }
@@ -6184,8 +6143,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetSingleOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -6241,17 +6200,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -6311,17 +6260,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -6595,22 +6534,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -6657,22 +6587,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -6709,8 +6630,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -6751,8 +6673,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -6793,8 +6716,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -6834,9 +6758,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
-
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfRssItemOfByFKOnly(_Request);
             return _Response;
         }
@@ -6863,8 +6787,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetSingleOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -6920,17 +6844,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -6990,17 +6904,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -7274,22 +7178,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -7336,22 +7231,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -7388,8 +7274,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -7430,8 +7317,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -7472,8 +7360,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -7513,9 +7402,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
-
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfByFKOnly(_Request);
             return _Response;
         }
@@ -7542,8 +7431,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
                 );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetSingleOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -7599,17 +7488,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -7669,17 +7548,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -7953,22 +7822,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -8015,22 +7875,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -8067,8 +7918,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -8109,8 +7961,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -8151,8 +8004,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -8192,9 +8046,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly));
-
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultGroupedDataViewOfByFKOnly(_Request);
             return _Response;
         }
@@ -8221,8 +8075,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
                 );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView _Response = _BusinessLogicLayerInstance.GetSingleOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -8278,17 +8132,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -8348,17 +8192,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -8632,22 +8466,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -8694,22 +8519,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -8746,8 +8562,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -8788,8 +8605,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -8830,8 +8648,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -8871,9 +8690,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
-
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfByIdentifier(_Request);
             return _Response;
         }
@@ -8900,8 +8719,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier)
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
                 );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -8957,17 +8776,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -9027,17 +8836,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -9311,22 +9110,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -9373,22 +9163,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -9425,8 +9206,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -9467,8 +9249,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -9509,8 +9292,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -9550,9 +9334,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
-
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfByIdentifier(_Request);
             return _Response;
         }
@@ -9579,8 +9363,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier)
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
                 );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetSingleOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -9636,17 +9420,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -9706,17 +9480,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -9990,22 +9754,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -10052,22 +9807,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -10104,8 +9850,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -10146,8 +9893,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -10188,8 +9936,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetCollectionOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -10229,9 +9978,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
-
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetCollectionOfKeyInformationOfByIdentifier(_Request);
             return _Response;
         }
@@ -10258,8 +10007,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier)
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
                 );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetSingleOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -10315,17 +10064,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -10385,17 +10124,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -10669,22 +10398,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -10731,22 +10451,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -10783,8 +10494,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -10825,8 +10537,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -10867,8 +10580,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -10908,9 +10622,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier));
-
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             return _Response;
         }
@@ -10937,8 +10651,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier)
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier
                 );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -10994,17 +10708,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -11064,17 +10768,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -11348,22 +11042,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -11410,22 +11095,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -11462,8 +11138,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -11504,8 +11181,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -11546,8 +11224,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -11587,9 +11266,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier));
-
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             return _Response;
         }
@@ -11616,8 +11295,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier)
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -11673,17 +11352,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -11743,17 +11412,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -12027,22 +11686,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -12089,22 +11739,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -12141,8 +11782,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -12183,8 +11825,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -12225,8 +11868,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -12266,9 +11910,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier));
-
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             return _Response;
         }
@@ -12295,8 +11939,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier)
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier
                 );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -12352,17 +11996,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -12422,17 +12056,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -12706,22 +12330,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -12768,22 +12383,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -12820,8 +12426,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -12862,8 +12469,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -12904,8 +12512,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -12945,9 +12554,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn));
-
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             return _Response;
         }
@@ -12974,8 +12583,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn)
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
                 );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -13031,17 +12640,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -13101,17 +12700,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -13385,22 +12974,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -13447,22 +13027,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -13499,8 +13070,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -13541,8 +13113,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -13583,8 +13156,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -13624,9 +13198,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn));
-
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             return _Response;
         }
@@ -13653,8 +13227,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn)
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -13710,17 +13284,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -13780,17 +13344,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -14064,22 +13618,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -14126,22 +13671,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -14178,8 +13714,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -14220,8 +13757,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -14262,8 +13800,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -14303,9 +13842,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn));
-
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             return _Response;
         }
@@ -14332,8 +13871,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-                new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn)
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
                 );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -14389,17 +13928,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -14459,17 +13988,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -14749,24 +14268,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
+                isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -14819,24 +14329,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
+                isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -14879,10 +14380,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
+                isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -14929,10 +14431,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
+                isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -14979,10 +14482,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
+                isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -15028,11 +14532,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint));
-
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
+                isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfIdentifierAndUniqueConstraint(_Request);
             return _Response;
         }
@@ -15065,10 +14569,10 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
+                isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
                 );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -15124,17 +14628,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -15194,17 +14688,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -15484,24 +14968,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
+                isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -15554,24 +15029,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
+                isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -15614,10 +15080,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
+                isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -15664,10 +15131,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
+                isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultOfIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -15714,10 +15182,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
+                isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -15763,11 +15232,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint));
-
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
+                isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfIdentifierAndUniqueConstraint(_Request);
             return _Response;
         }
@@ -15800,10 +15269,10 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
+                isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
                 );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetSingleOfDefaultOfIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -15859,17 +15328,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -15929,17 +15388,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -16219,24 +15668,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
+                isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -16289,24 +15729,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
+                isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -16349,10 +15780,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
+                isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -16399,10 +15831,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
+                isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -16449,10 +15882,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint));
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
+                isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -16498,11 +15932,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint));
-
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
+                isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint(_Request);
             return _Response;
         }
@@ -16535,10 +15969,10 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
-                , new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
+                isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+                , isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
                 );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)

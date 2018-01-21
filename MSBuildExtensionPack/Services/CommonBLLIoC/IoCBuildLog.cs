@@ -255,6 +255,120 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion batch insert, update and delete in an entity collection
 
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareIdCommonOfBuild_1OfCommon">will compare/filter IdCommonOfBuild_1OfCommon property/field/column if true, otherwise false</param>
+        /// <param name="valueToCompareIdCommonOfBuild_1OfCommon">value to compare/filter with IdCommonOfBuild_1OfCommon property/field/column</param>
+        /// <param name="isToCompareIdCommonOfSolution_1OfCommon">will compare/filter IdCommonOfSolution_1OfCommon property/field/column if true, otherwise false</param>
+        /// <param name="valueToCompareIdCommonOfSolution_1OfCommon">value to compare/filter with IdCommonOfSolution_1OfCommon property/field/column</param>
+        /// <param name="isToCompareIdCommonOfOrganization_1OfCommon">will compare/filter IdCommonOfOrganization_1OfCommon property/field/column if true, otherwise false</param>
+        /// <param name="valueToCompareIdCommonOfOrganization_1OfCommon">value to compare/filter with IdCommonOfOrganization_1OfCommon property/field/column</param>
+        /// <param name="isToCompareIdCommonOfOrganization_2OfCommon">will compare/filter IdCommonOfOrganization_2OfCommon property/field/column if true, otherwise false</param>
+        /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
+        /// <param name="isToCompareIdCommonOfBuildEventCode_1OfCommon">will compare/filter IdCommonOfBuildEventCode_1OfCommon property/field/column if true, otherwise false</param>
+        /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
+        /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
+        /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="valueToBeContainedMessageCommonOftOfCommon" > value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns></returns>
+        private static MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon _GetBuildLogChainedQueryCriteriaCommon(
+            bool isToCompareIdCommonOfBuild_1OfCommon, System.Int64? valueToCompareIdCommonOfBuild_1OfCommon
+            , bool isToCompareIdCommonOfSolution_1OfCommon, System.Int32? valueToCompareIdCommonOfSolution_1OfCommon
+            , bool isToCompareIdCommonOfOrganization_1OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_1OfCommon
+            , bool isToCompareIdCommonOfOrganization_2OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_2OfCommon
+            , bool isToCompareIdCommonOfBuildEventCode_1OfCommon, System.Int32? valueToCompareIdCommonOfBuildEventCode_1OfCommon
+            , bool isToCompareEventTimeCommonOftOfCommon, bool isToCompareLowerBoundEventTimeCommonOftOfCommon, System.DateTime? lowerBoundEventTimeCommonOftOfCommon, bool isToCompareUpperBoundEventTimeCommonOftOfCommon, System.DateTime? upperBoundEventTimeCommonOftOfCommon
+            , bool isToCompareMessageCommonOftOfCommon, System.String valueToBeContainedMessageCommonOftOfCommon
+            )
+        {
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon();
+            criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1 = new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon);
+            criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1 = new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon);
+            criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_1 = new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon);
+            criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_2 = new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon);
+            criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuildEventCode_1 = new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon);
+            criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft = new QuerySystemDateTimeRangeCriteria(isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon);
+            criteria.BuildLogQueryCriteriaCommon.MessageCommonOft = new QuerySystemStringContainsCriteria(isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon);
+            return criteria;
+        }
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns></returns>
+        private static MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll _GetBuildLogChainedQueryCriteriaAll(
+
+            )
+        {
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll();
+
+            return criteria;
+        }
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareIdByFKOnlyOfBuild_1OfByFKOnly">will compare/filter IdByFKOnlyOfBuild_1OfByFKOnly property/field/column if true, otherwise false</param>
+        /// <param name="valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfBuild_1OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareIdByFKOnlyOfSolution_1OfByFKOnly">will compare/filter IdByFKOnlyOfSolution_1OfByFKOnly property/field/column if true, otherwise false</param>
+        /// <param name="valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfSolution_1OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
+        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
+        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly">will compare/filter IdByFKOnlyOfBuildEventCode_1OfByFKOnly property/field/column if true, otherwise false</param>
+        /// <param name="valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfBuildEventCode_1OfByFKOnly property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns></returns>
+        private static MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly _GetBuildLogChainedQueryCriteriaByFKOnly(
+            bool isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+            , bool isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, System.Int32? valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+            , bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            , bool isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, System.Int32? valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+            )
+        {
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly();
+            criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1 = new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly);
+            criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1 = new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly);
+            criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1 = new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly);
+            criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2 = new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly);
+            criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1 = new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly);
+            return criteria;
+        }
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
+        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns></returns>
+        private static MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier _GetBuildLogChainedQueryCriteriaByIdentifier(
+            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier
+            )
+        {
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier();
+            criteria.BuildLogQueryCriteriaByIdentifier.IdByIdentifierOft = new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier);
+            return criteria;
+        }
+
         #region Query Methods Of Entity of Common per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
@@ -293,17 +407,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -363,17 +467,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -638,13 +732,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIdCommonOfBuildEventCode_1OfCommon">will compare/filter IdCommonOfBuildEventCode_1OfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
-        /// <param name="isToCompareEventTimeCommonOftOfCommon">will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon">will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedMessageCommonOftOfCommon">value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedMessageCommonOftOfCommon" > value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
         public static int[] GetPageNumberListOfEntityOfCommon(
@@ -668,28 +762,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon
+                , isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon
+                , isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
+                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon
+                , isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon
+                , isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -727,13 +812,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIdCommonOfBuildEventCode_1OfCommon">will compare/filter IdCommonOfBuildEventCode_1OfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
-        /// <param name="isToCompareEventTimeCommonOftOfCommon">will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon">will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedMessageCommonOftOfCommon">value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedMessageCommonOftOfCommon" > value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
         public static int GetPageCountOfEntityOfCommon(
@@ -757,28 +842,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon
+                , isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon
+                , isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
+                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon
+                , isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon
+                , isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -803,13 +879,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIdCommonOfBuildEventCode_1OfCommon">will compare/filter IdCommonOfBuildEventCode_1OfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
-        /// <param name="isToCompareEventTimeCommonOftOfCommon">will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon">will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedMessageCommonOftOfCommon">value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedMessageCommonOftOfCommon" > value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
@@ -836,14 +912,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon
+                , isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon
+                , isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
+                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon
+                , isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon
+                , isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -871,13 +948,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIdCommonOfBuildEventCode_1OfCommon">will compare/filter IdCommonOfBuildEventCode_1OfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
-        /// <param name="isToCompareEventTimeCommonOftOfCommon">will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon">will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedMessageCommonOftOfCommon">value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedMessageCommonOftOfCommon" > value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
@@ -905,14 +982,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon
+                , isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon
+                , isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
+                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon
+                , isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon
+                , isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -940,13 +1018,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIdCommonOfBuildEventCode_1OfCommon">will compare/filter IdCommonOfBuildEventCode_1OfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
-        /// <param name="isToCompareEventTimeCommonOftOfCommon">will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon">will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedMessageCommonOftOfCommon">value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedMessageCommonOftOfCommon" > value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
@@ -974,14 +1052,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon
+                , isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon
+                , isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
+                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon
+                , isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon
+                , isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon
+                );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -1009,13 +1088,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIdCommonOfBuildEventCode_1OfCommon">will compare/filter IdCommonOfBuildEventCode_1OfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
-        /// <param name="isToCompareEventTimeCommonOftOfCommon">will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon">will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedMessageCommonOftOfCommon">value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedMessageCommonOftOfCommon" > value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
@@ -1042,15 +1121,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon));
-
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon
+                , isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon
+                , isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
+                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon
+                , isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon
+                , isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon
+                );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfCommon(_Request);
             return _Response;
         }
@@ -1068,13 +1147,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIdCommonOfBuildEventCode_1OfCommon">will compare/filter IdCommonOfBuildEventCode_1OfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
-        /// <param name="isToCompareEventTimeCommonOftOfCommon">will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon">will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedMessageCommonOftOfCommon">value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedMessageCommonOftOfCommon" > value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection GetSingleOfEntityOfCommon(
             bool isToCompareIdCommonOfBuild_1OfCommon, System.Int64? valueToCompareIdCommonOfBuild_1OfCommon
@@ -1098,14 +1177,14 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon)
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon
+                , isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon
+                , isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
+                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon
+                , isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon
+                , isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon
                 );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -1161,17 +1240,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -1231,17 +1300,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -1506,13 +1565,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIdCommonOfBuildEventCode_1OfCommon">will compare/filter IdCommonOfBuildEventCode_1OfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
-        /// <param name="isToCompareEventTimeCommonOftOfCommon">will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon">will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedMessageCommonOftOfCommon">value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedMessageCommonOftOfCommon" > value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
         public static int[] GetPageNumberListOfDefaultOfCommon(
@@ -1536,28 +1595,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon
+                , isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon
+                , isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
+                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon
+                , isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon
+                , isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -1595,13 +1645,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIdCommonOfBuildEventCode_1OfCommon">will compare/filter IdCommonOfBuildEventCode_1OfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
-        /// <param name="isToCompareEventTimeCommonOftOfCommon">will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon">will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedMessageCommonOftOfCommon">value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedMessageCommonOftOfCommon" > value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
         public static int GetPageCountOfDefaultOfCommon(
@@ -1625,28 +1675,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon
+                , isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon
+                , isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
+                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon
+                , isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon
+                , isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -1671,13 +1712,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIdCommonOfBuildEventCode_1OfCommon">will compare/filter IdCommonOfBuildEventCode_1OfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
-        /// <param name="isToCompareEventTimeCommonOftOfCommon">will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon">will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedMessageCommonOftOfCommon">value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedMessageCommonOftOfCommon" > value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
@@ -1704,14 +1745,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon
+                , isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon
+                , isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
+                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon
+                , isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon
+                , isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -1739,13 +1781,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIdCommonOfBuildEventCode_1OfCommon">will compare/filter IdCommonOfBuildEventCode_1OfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
-        /// <param name="isToCompareEventTimeCommonOftOfCommon">will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon">will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedMessageCommonOftOfCommon">value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedMessageCommonOftOfCommon" > value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
@@ -1773,14 +1815,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon
+                , isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon
+                , isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
+                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon
+                , isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon
+                , isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -1808,13 +1851,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIdCommonOfBuildEventCode_1OfCommon">will compare/filter IdCommonOfBuildEventCode_1OfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
-        /// <param name="isToCompareEventTimeCommonOftOfCommon">will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon">will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedMessageCommonOftOfCommon">value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedMessageCommonOftOfCommon" > value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
@@ -1842,14 +1885,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon
+                , isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon
+                , isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
+                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon
+                , isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon
+                , isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon
+                );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -1877,13 +1921,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIdCommonOfBuildEventCode_1OfCommon">will compare/filter IdCommonOfBuildEventCode_1OfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
-        /// <param name="isToCompareEventTimeCommonOftOfCommon">will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon">will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedMessageCommonOftOfCommon">value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedMessageCommonOftOfCommon" > value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
@@ -1910,15 +1954,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon));
-
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon
+                , isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon
+                , isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
+                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon
+                , isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon
+                , isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon
+                );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfCommon(_Request);
             return _Response;
         }
@@ -1936,13 +1980,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareIdCommonOfBuildEventCode_1OfCommon">will compare/filter IdCommonOfBuildEventCode_1OfCommon property/field/column if true, otherwise false</param>
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
-        /// <param name="isToCompareEventTimeCommonOftOfCommon">will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon">will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
+        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedMessageCommonOftOfCommon">value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
+        /// <param name="valueToBeContainedMessageCommonOftOfCommon" > value to compare/filter with MessageCommonOftOfCommon property/field/column</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection GetSingleOfDefaultOfCommon(
             bool isToCompareIdCommonOfBuild_1OfCommon, System.Int64? valueToCompareIdCommonOfBuild_1OfCommon
@@ -1966,14 +2010,14 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon)
-                , new QuerySystemDateTimeRangeCriteria(isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon)
-                , new QuerySystemStringContainsCriteria(isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon)
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaCommon(
+                isToCompareIdCommonOfBuild_1OfCommon, valueToCompareIdCommonOfBuild_1OfCommon
+                , isToCompareIdCommonOfSolution_1OfCommon, valueToCompareIdCommonOfSolution_1OfCommon
+                , isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
+                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
+                , isToCompareIdCommonOfBuildEventCode_1OfCommon, valueToCompareIdCommonOfBuildEventCode_1OfCommon
+                , isToCompareEventTimeCommonOftOfCommon, isToCompareLowerBoundEventTimeCommonOftOfCommon, lowerBoundEventTimeCommonOftOfCommon, isToCompareUpperBoundEventTimeCommonOftOfCommon, upperBoundEventTimeCommonOftOfCommon
+                , isToCompareMessageCommonOftOfCommon, valueToBeContainedMessageCommonOftOfCommon
                 );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetSingleOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -2029,17 +2073,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -2099,17 +2133,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -2381,22 +2405,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -2441,22 +2456,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -2491,8 +2497,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -2531,8 +2538,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -2571,8 +2579,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
+
+                );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -2610,9 +2619,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
+                );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfAll(_Request);
             return _Response;
         }
@@ -2637,7 +2646,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll(
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
                 );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfAll(_Request);
@@ -2694,17 +2703,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -2764,17 +2763,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -3046,22 +3035,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -3106,22 +3086,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -3156,8 +3127,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -3196,8 +3168,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -3236,8 +3209,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -3275,9 +3249,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairOfAll(_Request);
             return _Response;
         }
@@ -3302,7 +3276,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll(
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetSingleOfNameValuePairOfAll(_Request);
@@ -3359,17 +3333,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -3429,17 +3393,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -3711,22 +3665,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -3771,22 +3716,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -3821,8 +3757,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -3861,8 +3798,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -3901,8 +3839,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
+
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -3940,9 +3879,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll(
-);
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfRssItemOfAll(_Request);
             return _Response;
         }
@@ -3967,7 +3906,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll(
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetSingleOfRssItemOfAll(_Request);
@@ -4024,17 +3963,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -4094,17 +4023,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -4390,26 +4309,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -4468,26 +4378,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -4536,12 +4437,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -4594,12 +4496,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -4652,12 +4555,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -4709,13 +4613,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
-
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfByFKOnly(_Request);
             return _Response;
         }
@@ -4754,12 +4658,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly)
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
                 );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -4815,17 +4719,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -4885,17 +4779,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -5181,26 +5065,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -5259,26 +5134,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -5327,12 +5193,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -5385,12 +5252,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -5443,12 +5311,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -5500,13 +5369,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
-
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairOfByFKOnly(_Request);
             return _Response;
         }
@@ -5545,12 +5414,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly)
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetSingleOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -5606,17 +5475,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -5676,17 +5535,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -5972,26 +5821,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -6050,26 +5890,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -6118,12 +5949,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -6176,12 +6008,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -6234,12 +6067,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -6291,13 +6125,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
-
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfRssItemOfByFKOnly(_Request);
             return _Response;
         }
@@ -6336,12 +6170,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly)
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetSingleOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -6397,17 +6231,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -6467,17 +6291,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -6763,26 +6577,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -6841,26 +6646,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -6909,12 +6705,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -6967,12 +6764,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -7025,12 +6823,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -7082,13 +6881,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
-
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfByFKOnly(_Request);
             return _Response;
         }
@@ -7127,12 +6926,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly)
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
                 );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetSingleOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -7188,17 +6987,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -7258,17 +7047,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -7554,26 +7333,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -7632,26 +7402,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -7700,12 +7461,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -7758,12 +7520,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -7816,12 +7579,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -7873,13 +7637,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly));
-
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
+                );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultGroupedDataViewOfByFKOnly(_Request);
             return _Response;
         }
@@ -7918,12 +7682,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly)
-                , new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly)
-                , new QuerySystemInt32EqualsCriteria(isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly)
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByFKOnly(
+                isToCompareIdByFKOnlyOfBuild_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
+                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                , isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly, valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly
                 );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView _Response = _BusinessLogicLayerInstance.GetSingleOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -7979,17 +7743,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -8049,17 +7803,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -8333,22 +8077,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -8395,22 +8130,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -8447,8 +8173,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -8489,8 +8216,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -8531,8 +8259,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -8572,9 +8301,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
-
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfByIdentifier(_Request);
             return _Response;
         }
@@ -8601,8 +8330,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier)
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
                 );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -8658,17 +8387,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -8728,17 +8447,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -9012,22 +8721,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -9074,22 +8774,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -9126,8 +8817,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -9168,8 +8860,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -9210,8 +8903,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -9251,9 +8945,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
-
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfByIdentifier(_Request);
             return _Response;
         }
@@ -9280,8 +8974,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier)
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
                 );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetSingleOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -9337,17 +9031,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -9407,17 +9091,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -9691,22 +9365,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 if (_PageCount > 0)
                 {
                     List<int> _retval = new List<int>();
@@ -9753,22 +9418,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , null
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                int _RecordCount = _Response.Message;
-
-                int _PageCount;
-                if (pageSize > 0)
-                {
-                    _PageCount = _RecordCount / pageSize + _RecordCount % pageSize > 0 ? 1 : 0;
-                }
-                else
-                {
-                    _PageCount = 0;
-                }
+                int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
                 //log.Info(string.Format("{0}: GetPageCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
@@ -9805,8 +9461,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -9847,8 +9504,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -9889,8 +9547,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetCollectionOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -9930,9 +9589,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , pageSize
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
-
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetCollectionOfKeyInformationOfByIdentifier(_Request);
             return _Response;
         }
@@ -9959,8 +9618,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , -1
                 , queryOrderByExpression
                 );
-            _Request.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier(
-                new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier)
+            _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
+                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
                 );
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetSingleOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
