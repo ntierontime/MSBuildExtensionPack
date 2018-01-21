@@ -2208,13 +2208,25 @@ namespace Framework.EntityContracts
     /// <typeparam name="T">.Net value type</typeparam>
     public abstract class QueryInSelectedListCriteriaBase<T> : QueryCriteriaBase<T>
     {
+        private T[] m_SelectedList { get; set; }
         /// <summary>
         /// Gets or sets the selected list.
         /// </summary>
         /// <value>
         /// The selected list.
         /// </value>
-        public T[] SelectedList { get; set; }
+        public T[] SelectedList
+        {
+            get
+            {
+                return this.m_SelectedList;
+            }
+            set
+            {
+                this.m_SelectedList = value;
+                this.IsToCompare = this.m_SelectedList != null && this.m_SelectedList.Length > 0;
+            }
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="QueryInSelectedListCriteriaBase&lt;T&gt;"/> class.
@@ -2228,7 +2240,6 @@ namespace Framework.EntityContracts
         /// <param name="isToCompare">if set to <c>true</c> [is to compare].</param>
         /// <param name="selectedList">The selected list.</param>
         public QueryInSelectedListCriteriaBase(T[] selectedList)
-            : base(selectedList != null && selectedList.Length >0)
         {
             //this.IsToCompare = isToCompare;
             this.SelectedList = selectedList;
@@ -2242,7 +2253,7 @@ namespace Framework.EntityContracts
             : base(isToCompare)
         {
             //this.IsToCompare = isToCompare;
-            this.SelectedList = selectedList;
+            this.m_SelectedList = selectedList;
         }
     }
 

@@ -263,10 +263,10 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <returns></returns>
         [HttpGet]
         public MSBuildExtensionPack.ViewModelData.BuildItemVM GetBuildItemVM(
-            System.Int64 id)
+System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
         {
             MSBuildExtensionPack.AspNetMvc40ViewModel.BuildItemVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.BuildItemVM();
-            retval.Load(true, id, Framework.UIAction.ViewDetails);
+            retval.Load(valueToCompareIdByIdentifierOftOfByIdentifier.HasValue, valueToCompareIdByIdentifierOftOfByIdentifier, Framework.UIAction.ViewDetails);
             return retval;
         }
 
@@ -306,9 +306,11 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <returns></returns>
         [HttpGet, ActionName("GetWPEntityRelatedOfBuildVM")]
         public MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfBuildVM GetWPEntityRelatedOfBuildVM(
-            System.Int64 id)
+System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
         {
-            MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildVM(new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier(true, id));
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier();
+            criteria.BuildQueryCriteriaByIdentifier.IdByIdentifierOft.NullableValueToCompare = valueToCompareIdByIdentifierOftOfByIdentifier;
+            MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildVM(criteria);
             retval.LoadData();
             return retval;
         }
@@ -322,11 +324,14 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <returns></returns>
         [HttpGet, ActionName("GetWPUpdateNameOnlyOfBuildVM")]
         public MSBuildExtensionPack.ViewModelData.WPUpdateNameOnlyOfBuildVM GetWPUpdateNameOnlyOfBuildVM(
-            System.Int64 id
+System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier
             )
         {
-            MSBuildExtensionPack.AspNetMvc40ViewModel.WPUpdateNameOnlyOfBuildVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPUpdateNameOnlyOfBuildVM();
-            vm.CriteriaOfMasterEntity = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier(true, id);
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier();
+            criteria.BuildQueryCriteriaByIdentifier.IdByIdentifierOft.NullableValueToCompare = valueToCompareIdByIdentifierOftOfByIdentifier;
+
+            var vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPUpdateNameOnlyOfBuildVM();
+            vm.CriteriaOfMasterEntity =  criteria;
             vm.LoadData();
             return vm;
         }

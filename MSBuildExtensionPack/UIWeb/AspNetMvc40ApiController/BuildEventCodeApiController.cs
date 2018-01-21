@@ -197,10 +197,10 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <returns></returns>
         [HttpGet]
         public MSBuildExtensionPack.ViewModelData.BuildEventCodeItemVM GetBuildEventCodeItemVM(
-            System.Int32 id)
+System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier)
         {
             MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM();
-            retval.Load(true, id, Framework.UIAction.ViewDetails);
+            retval.Load(valueToCompareIdByIdentifierOftOfByIdentifier.HasValue, valueToCompareIdByIdentifierOftOfByIdentifier, Framework.UIAction.ViewDetails);
             return retval;
         }
 
@@ -240,9 +240,11 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <returns></returns>
         [HttpGet, ActionName("GetWPEntityRelatedOfBuildEventCodeVM")]
         public MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfBuildEventCodeVM GetWPEntityRelatedOfBuildEventCodeVM(
-            System.Int32 id)
+System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier)
         {
-            MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildEventCodeVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildEventCodeVM(new MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaByIdentifier(true, id));
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaByIdentifier();
+            criteria.BuildEventCodeQueryCriteriaByIdentifier.IdByIdentifierOft.NullableValueToCompare = valueToCompareIdByIdentifierOftOfByIdentifier;
+            MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildEventCodeVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildEventCodeVM(criteria);
             retval.LoadData();
             return retval;
         }
