@@ -10,6 +10,7 @@ namespace Framework.ViewModels
     {
         public ViewModelBase()
         {
+            this.Criteria = new TSearchCriteria();
             this.ContentData = new Framework.EntityContracts.ContentData();
         }
 
