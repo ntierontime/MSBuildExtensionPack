@@ -270,7 +270,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
         /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -734,7 +734,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
         /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -814,7 +814,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
         /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -881,7 +881,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
         /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -950,7 +950,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
         /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -1020,7 +1020,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
         /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -1090,7 +1090,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
         /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -1149,7 +1149,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
         /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -1567,7 +1567,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
         /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -1647,7 +1647,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
         /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -1714,7 +1714,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
         /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -1783,7 +1783,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
         /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -1853,7 +1853,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
         /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -1923,7 +1923,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
         /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -1982,7 +1982,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfBuildEventCode_1OfCommon">value to compare/filter with IdCommonOfBuildEventCode_1OfCommon property/field/column</param>
         /// <param name="isToCompareEventTimeCommonOftOfCommon" > will compare/filter EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundEventTimeCommonOftOfCommon" > will compare/filter to lower bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildEventTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundEventTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundEventTimeCommonOftOfCommon">will compare/filter to upper bound of EventTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundEventTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareMessageCommonOftOfCommon">will compare/filter MessageCommonOftOfCommon property/field/column if true, otherwise false</param>

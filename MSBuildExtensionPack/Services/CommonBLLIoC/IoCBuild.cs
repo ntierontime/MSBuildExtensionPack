@@ -266,7 +266,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareBuildStartTimeCommonOftOfCommon" > will compare/filter BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundBuildStartTimeCommonOftOfCommon" > will compare/filter to lower bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildBuildStartTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundBuildStartTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundBuildStartTimeCommonOftOfCommon">will compare/filter to upper bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundBuildStartTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -718,7 +718,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareBuildStartTimeCommonOftOfCommon" > will compare/filter BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundBuildStartTimeCommonOftOfCommon" > will compare/filter to lower bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildBuildStartTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundBuildStartTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundBuildStartTimeCommonOftOfCommon">will compare/filter to upper bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundBuildStartTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -794,7 +794,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareBuildStartTimeCommonOftOfCommon" > will compare/filter BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundBuildStartTimeCommonOftOfCommon" > will compare/filter to lower bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildBuildStartTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundBuildStartTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundBuildStartTimeCommonOftOfCommon">will compare/filter to upper bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundBuildStartTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -857,7 +857,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareBuildStartTimeCommonOftOfCommon" > will compare/filter BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundBuildStartTimeCommonOftOfCommon" > will compare/filter to lower bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildBuildStartTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundBuildStartTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundBuildStartTimeCommonOftOfCommon">will compare/filter to upper bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundBuildStartTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -922,7 +922,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareBuildStartTimeCommonOftOfCommon" > will compare/filter BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundBuildStartTimeCommonOftOfCommon" > will compare/filter to lower bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildBuildStartTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundBuildStartTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundBuildStartTimeCommonOftOfCommon">will compare/filter to upper bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundBuildStartTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -988,7 +988,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareBuildStartTimeCommonOftOfCommon" > will compare/filter BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundBuildStartTimeCommonOftOfCommon" > will compare/filter to lower bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildBuildStartTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundBuildStartTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundBuildStartTimeCommonOftOfCommon">will compare/filter to upper bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundBuildStartTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -1054,7 +1054,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareBuildStartTimeCommonOftOfCommon" > will compare/filter BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundBuildStartTimeCommonOftOfCommon" > will compare/filter to lower bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildBuildStartTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundBuildStartTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundBuildStartTimeCommonOftOfCommon">will compare/filter to upper bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundBuildStartTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -1109,7 +1109,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareBuildStartTimeCommonOftOfCommon" > will compare/filter BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundBuildStartTimeCommonOftOfCommon" > will compare/filter to lower bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildBuildStartTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundBuildStartTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundBuildStartTimeCommonOftOfCommon">will compare/filter to upper bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundBuildStartTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -1523,7 +1523,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareBuildStartTimeCommonOftOfCommon" > will compare/filter BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundBuildStartTimeCommonOftOfCommon" > will compare/filter to lower bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildBuildStartTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundBuildStartTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundBuildStartTimeCommonOftOfCommon">will compare/filter to upper bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundBuildStartTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -1599,7 +1599,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareBuildStartTimeCommonOftOfCommon" > will compare/filter BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundBuildStartTimeCommonOftOfCommon" > will compare/filter to lower bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildBuildStartTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundBuildStartTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundBuildStartTimeCommonOftOfCommon">will compare/filter to upper bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundBuildStartTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -1662,7 +1662,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareBuildStartTimeCommonOftOfCommon" > will compare/filter BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundBuildStartTimeCommonOftOfCommon" > will compare/filter to lower bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildBuildStartTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundBuildStartTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundBuildStartTimeCommonOftOfCommon">will compare/filter to upper bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundBuildStartTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -1727,7 +1727,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareBuildStartTimeCommonOftOfCommon" > will compare/filter BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundBuildStartTimeCommonOftOfCommon" > will compare/filter to lower bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildBuildStartTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundBuildStartTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundBuildStartTimeCommonOftOfCommon">will compare/filter to upper bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundBuildStartTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -1793,7 +1793,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareBuildStartTimeCommonOftOfCommon" > will compare/filter BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundBuildStartTimeCommonOftOfCommon" > will compare/filter to lower bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildBuildStartTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundBuildStartTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundBuildStartTimeCommonOftOfCommon">will compare/filter to upper bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundBuildStartTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -1859,7 +1859,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareBuildStartTimeCommonOftOfCommon" > will compare/filter BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundBuildStartTimeCommonOftOfCommon" > will compare/filter to lower bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildBuildStartTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundBuildStartTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundBuildStartTimeCommonOftOfCommon">will compare/filter to upper bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundBuildStartTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
@@ -1914,7 +1914,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
         /// <param name="isToCompareBuildStartTimeCommonOftOfCommon" > will compare/filter BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="isToCompareLowerBoundBuildStartTimeCommonOftOfCommon" > will compare/filter to lower bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="lowerBoundBuildBuildStartTimeCommonOftOfCommon">value of lower bound</param>
+        /// <param name="lowerBoundBuildStartTimeCommonOftOfCommon">value of lower bound</param>
         /// <param name="isToCompareUpperBoundBuildStartTimeCommonOftOfCommon">will compare/filter to upper bound of BuildStartTimeCommonOftOfCommon property/field/column if true, otherwise false</param>
         /// <param name="upperBoundBuildStartTimeCommonOftOfCommon">upper bound</param>
         /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
