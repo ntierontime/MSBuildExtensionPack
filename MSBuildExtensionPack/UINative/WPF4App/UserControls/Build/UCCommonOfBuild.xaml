@@ -43,28 +43,28 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-             <CheckBox Name="checkBox_IsToCompare_Organization_2" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon, Source={StaticResource LocalizedStrings}}" IsChecked="{Binding Path=Criteria.BuildQueryCriteriaCommon.IdCommonOfOrganization_2.IsToCompare}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="0"/>
+             <CheckBox Name="checkBox_IsToCompare_Organization_2" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon, Source={StaticResource LocalizedStrings}}" IsChecked="{Binding Path=Criteria.BuildQueryCriteriaCommon.Organization_2Id.IsToCompare}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="0"/>
             <ComboBox Grid.Column="1" Grid.Row="0"
                 IsEnabled="{Binding ElementName=checkBox_IsToCompare_Organization_2, Path=IsChecked}"
                 DisplayMemberPath="Name" SelectedValuePath="Value"
                 ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfOrganization_2, Source={StaticResource Locator}}"
-                SelectedValue="{Binding Path=Criteria.BuildQueryCriteriaCommon.IdCommonOfOrganization_2.ValueToCompare}"
+                SelectedValue="{Binding Path=Criteria.BuildQueryCriteriaCommon.Organization_2Id.ValueToCompare}"
                 SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfOrganization_2SelectedItem, Source={StaticResource Locator}, Mode=OneWayToSource}">
             </ComboBox>
-            <CheckBox Name="checkBox_IsToCompare_Organization_1" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_1OfCommon, Source={StaticResource LocalizedStrings}}" IsChecked="{Binding Path=Criteria.BuildQueryCriteriaCommon.IdCommonOfOrganization_1.IsToCompare}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="1"/>
+            <CheckBox Name="checkBox_IsToCompare_Organization_1" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_1OfCommon, Source={StaticResource LocalizedStrings}}" IsChecked="{Binding Path=Criteria.BuildQueryCriteriaCommon.Organization_1Id.IsToCompare}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="1"/>
             <ComboBox Grid.Column="1" Grid.Row="1"
                 IsEnabled="{Binding ElementName=checkBox_IsToCompare_Organization_1, Path=IsChecked}"
                 DisplayMemberPath="Name" SelectedValuePath="Value"
                 ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfOrganization_1, Source={StaticResource Locator}}"
-                SelectedValue="{Binding Path=Criteria.BuildQueryCriteriaCommon.IdCommonOfOrganization_1.ValueToCompare}"
+                SelectedValue="{Binding Path=Criteria.BuildQueryCriteriaCommon.Organization_1Id.ValueToCompare}"
                 SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfOrganization_1SelectedItem, Source={StaticResource Locator}, Mode=OneWayToSource}">
             </ComboBox>
-            <CheckBox Name="checkBox_IsToCompare_Solution_1" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon, Source={StaticResource LocalizedStrings}}" IsChecked="{Binding Path=Criteria.BuildQueryCriteriaCommon.IdCommonOfSolution_1.IsToCompare}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="2"/>
+            <CheckBox Name="checkBox_IsToCompare_Solution_1" Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon, Source={StaticResource LocalizedStrings}}" IsChecked="{Binding Path=Criteria.BuildQueryCriteriaCommon.SolutionId.IsToCompare}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="2"/>
             <ComboBox Grid.Column="1" Grid.Row="2"
                 IsEnabled="{Binding ElementName=checkBox_IsToCompare_Solution_1, Path=IsChecked}"
                 DisplayMemberPath="Name" SelectedValuePath="Value"
                 ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfSolution_1, Source={StaticResource Locator}}"
-                SelectedValue="{Binding Path=Criteria.BuildQueryCriteriaCommon.IdCommonOfSolution_1.ValueToCompare}"
+                SelectedValue="{Binding Path=Criteria.BuildQueryCriteriaCommon.SolutionId.ValueToCompare}"
                 SelectedItem="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.DropDownContentsOfSolution_1SelectedItem, Source={StaticResource Locator}, Mode=OneWayToSource}">
             </ComboBox>
                 <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareBuildStartTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="3"/>
@@ -72,19 +72,19 @@
                     <ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Center"
                         DisplayMemberPath="Name" SelectedValuePath="Value"
                         ItemsSource="{Binding Path=Main.PreDefinedDateTimeRangeList, Source={StaticResource Locator}}"
-                        SelectedItem="{Binding Path=Criteria.BuildQueryCriteriaCommon.BuildStartTimeCommonOft.PreDefinedDateTimeRange, Converter={StaticResource EnumToNameValuePairConverter}}">
+                        SelectedItem="{Binding Path=Criteria.BuildQueryCriteriaCommon.BuildStartTimeRange.PreDefinedDateTimeRange, Converter={StaticResource EnumToNameValuePairConverter}}">
                     </ComboBox>
-                    <StackPanel Orientation="Horizontal" IsEnabled="{Binding Path=Criteria.BuildQueryCriteriaCommon.BuildStartTimeCommonOft.IsCustomEditor}">
+                    <StackPanel Orientation="Horizontal" IsEnabled="{Binding Path=Criteria.BuildQueryCriteriaCommon.BuildStartTimeRange.IsCustomEditor}">
                         <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.From, Source={StaticResource LocalizedStrings}}" TextAlignment="Right" VerticalAlignment="Bottom" Width="50"/>
-                        <DatePicker SelectedDate="{Binding Path=Criteria.BuildQueryCriteriaCommon.BuildStartTimeCommonOft.LowerBound}" />
+                        <DatePicker SelectedDate="{Binding Path=Criteria.BuildQueryCriteriaCommon.BuildStartTimeRange.LowerBound}" />
                         <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.To, Source={StaticResource LocalizedStrings}}" TextAlignment="Right" VerticalAlignment="Bottom" Width="50"/>
-                        <DatePicker SelectedDate="{Binding Path=Criteria.BuildQueryCriteriaCommon.BuildStartTimeCommonOft.UpperBound}" />
+                        <DatePicker SelectedDate="{Binding Path=Criteria.BuildQueryCriteriaCommon.BuildStartTimeRange.UpperBound}" />
                     </StackPanel>
                 </StackPanel>
                 <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="4" />
-                <TextBox Text="{Binding Path=Criteria.BuildQueryCriteriaCommon.NameCommonOft.NullableValueToBeContained}" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Stretch"/>
+                <TextBox Text="{Binding Path=Criteria.BuildQueryCriteriaCommon.Name.NullableValueToBeContained}" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Stretch"/>
                 <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="5" />
-                <TextBox Text="{Binding Path=Criteria.BuildQueryCriteriaCommon.DescriptionCommonOft.NullableValueToBeContained}" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Stretch"/>
+                <TextBox Text="{Binding Path=Criteria.BuildQueryCriteriaCommon.Description.NullableValueToBeContained}" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Stretch"/>
         </Grid>
         <ListView Name="V_Common" Margin="12,12,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollection}" >
             <ListView.ItemContainerStyle>

@@ -40,9 +40,9 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
                  <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildEventCode.IsToCompare_ID_CheckBox_Search_isToCompareEventCodeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="0" />
-                <TextBox Text="{Binding Path=Criteria.BuildEventCodeQueryCriteriaCommon.EventCodeCommonOft.NullableValueToBeContained}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Stretch"/>
+                <TextBox Text="{Binding Path=Criteria.BuildEventCodeQueryCriteriaCommon.EventCode.NullableValueToBeContained}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Stretch"/>
                 <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildEventCode.IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="1" />
-                <TextBox Text="{Binding Path=Criteria.BuildEventCodeQueryCriteriaCommon.DescriptionCommonOft.NullableValueToBeContained}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch"/>
+                <TextBox Text="{Binding Path=Criteria.BuildEventCodeQueryCriteriaCommon.Description.NullableValueToBeContained}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch"/>
         </Grid>
         <ListView Name="V_Common" Margin="12,12,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollection}" >
             <ListView.ItemContainerStyle>

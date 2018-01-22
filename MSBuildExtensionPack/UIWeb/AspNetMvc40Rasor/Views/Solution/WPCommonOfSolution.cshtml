@@ -52,23 +52,23 @@
                 <div class="panel-body">
  <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon</label>
-    @Html.DropDownListFor(model => model.Criteria.SolutionQueryCriteriaCommon.IdCommonOfOrganization_2.NullableValueToCompare, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Organization, MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" }, { "onchange", "FetchOrganization_1();" } })
+    @Html.DropDownListFor(model => model.Criteria.SolutionQueryCriteriaCommon.Organization_2Id.NullableValueToCompare, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Organization, MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" }, { "onchange", "FetchOrganization_1();" } })
 </div>
 <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_1OfCommon</label>
-    @Html.DropDownListFor(model => model.Criteria.SolutionQueryCriteriaCommon.IdCommonOfOrganization_1.NullableValueToCompare, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfvalueToCompareIdCommonOfOrganization_1OfCommon,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedvalueToCompareIdCommonOfOrganization_1OfCommon", MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____) } })
+    @Html.DropDownListFor(model => model.Criteria.SolutionQueryCriteriaCommon.OrganizationId.NullableValueToCompare, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfvalueToCompareIdCommonOfOrganization_1OfCommon,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedvalueToCompareIdCommonOfOrganization_1OfCommon", MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____) } })
 </div>
 <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareExternalParentIdCommonOftOfCommon</label>
-    @Html.TextBoxFor(model=>model.Criteria.SolutionQueryCriteriaCommon.ExternalParentIdCommonOft.NullableValueToBeContained, new { @class = "form-control" })
+    @Html.TextBoxFor(model=>model.Criteria.SolutionQueryCriteriaCommon.ExternalParentId.NullableValueToBeContained, new { @class = "form-control" })
 </div>
 <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon</label>
-    @Html.TextBoxFor(model=>model.Criteria.SolutionQueryCriteriaCommon.NameCommonOft.NullableValueToBeContained, new { @class = "form-control" })
+    @Html.TextBoxFor(model=>model.Criteria.SolutionQueryCriteriaCommon.Name.NullableValueToBeContained, new { @class = "form-control" })
 </div>
 <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon</label>
-    @Html.TextBoxFor(model=>model.Criteria.SolutionQueryCriteriaCommon.DescriptionCommonOft.NullableValueToBeContained, new { @class = "form-control" })
+    @Html.TextBoxFor(model=>model.Criteria.SolutionQueryCriteriaCommon.Description.NullableValueToBeContained, new { @class = "form-control" })
 </div>
                     <div class="form-group form-inline">
                         <label class="control-label">Items per page : </label>
@@ -185,14 +185,14 @@
                 var params = BuildCriteriaForFetchOrganization_1();
                 $.getJSON(url, params, function (data) {
                     objVM.selectListOfvalueToCompareIdCommonOfOrganization_1OfCommon(data);
-                    objVM.selectedvalueToCompareIdCommonOfOrganization_1OfCommon(@Model.Criteria.SolutionQueryCriteriaCommon.IdCommonOfOrganization_1.ValueToCompare);
+                    objVM.selectedvalueToCompareIdCommonOfOrganization_1OfCommon(@Model.Criteria.SolutionQueryCriteriaCommon.OrganizationId.ValueToCompare);
                 });
             }
             catch (e) {
             }
         }
         function BuildCriteriaForFetchOrganization_1() {
-            var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $('select[name="Criteria.SolutionQueryCriteriaCommon.IdCommonOfOrganization_2.NullableValueToCompare"]').val();
+            var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $('select[name="Criteria.SolutionQueryCriteriaCommon.Organization_2Id.NullableValueToCompare"]').val();
             var params = {
                 isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: true,
                 valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly,
@@ -210,6 +210,6 @@
         }
         var objVM = new CascadingDDLViewModel();
         ko.applyBindings(objVM);
-        $('select[name="Criteria.SolutionQueryCriteriaCommon.IdCommonOfOrganization_2.NullableValueToCompare"]').change();
+        $('select[name="Criteria.SolutionQueryCriteriaCommon.Organization_2Id.NullableValueToCompare"]').change();
     </script>
 }
