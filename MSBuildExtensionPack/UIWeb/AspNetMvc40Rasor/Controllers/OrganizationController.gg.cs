@@ -112,14 +112,14 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_WPEntityRelatedOfOrganization)]
-        public ActionResult WPEntityRelatedOfOrganization(System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
-            , System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
-            , System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
+        public ActionResult WPEntityRelatedOfOrganization(System.Int64? id
+            , System.Guid? uniqueIdentifier
+            , System.Guid? uniqueidentifierColumn)
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint();
-            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft.NullableValueToCompare = valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint;
-            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft.NullableValueToCompare = valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint;
-            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft.NullableValueToCompare = valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint;
+            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft.NullableValueToCompare = id;
+            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft.NullableValueToCompare = uniqueIdentifier;
+            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft.NullableValueToCompare = uniqueidentifierColumn;
             MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfOrganizationVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfOrganizationVM(criteria);
             vm.LoadData();
 
@@ -184,7 +184,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 
         #endregion Index()
 
-        #region ActionResult Details(System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint            , System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint            , System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
+        #region ActionResult Details(System.Int64? id            , System.Guid? uniqueIdentifier            , System.Guid? uniqueidentifierColumn)
 
         /// <summary>
         /// GET method of details page, based on identifier or unique constraint, this entity only, no related entities.
@@ -192,20 +192,20 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Details)]
-        public ActionResult Details(System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
-            , System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
-            , System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
+        public ActionResult Details(System.Int64? id
+            , System.Guid? uniqueIdentifier
+            , System.Guid? uniqueidentifierColumn)
         {
             Framework.UIAction uiAction = Framework.UIAction.ViewDetails;
             MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM();
-            vm.Load(valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint.HasValue, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint.HasValue, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint.HasValue, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, uiAction);
+            vm.Load(id.HasValue, id, uniqueIdentifier.HasValue, uniqueIdentifier, uniqueidentifierColumn.HasValue, uniqueidentifierColumn, uiAction);
             vm.ContentData.Title = Framework.Resx.UIStringResource.Details;
             vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Details_Organization;
 
             return View(vm);
         }
 
-        #endregion ActionResult Details(System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint            , System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint            , System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
+        #endregion ActionResult Details(System.Int64? id            , System.Guid? uniqueIdentifier            , System.Guid? uniqueidentifierColumn)
 
         #region ActionResult AddNew()
 
@@ -268,12 +268,12 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Copy)]
-        public ActionResult Copy(System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
-            , System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
-            , System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
+        public ActionResult Copy(System.Int64? id
+            , System.Guid? uniqueIdentifier
+            , System.Guid? uniqueidentifierColumn)
         {
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _Response =
-                MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfDefaultOfIdentifierAndUniqueConstraint(valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint.HasValue, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint.HasValue, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint.HasValue, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, -1, -1, null);
+                MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfDefaultOfIdentifierAndUniqueConstraint(id.HasValue, id, uniqueIdentifier.HasValue, uniqueIdentifier, uniqueidentifierColumn.HasValue, uniqueidentifierColumn, -1, -1, null);
 
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -286,7 +286,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 
         #endregion ActionResult AddNew()
 
-        #region ActionResult Edit(System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint            , System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint            , System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
+        #region ActionResult Edit(System.Int64? id            , System.Guid? uniqueIdentifier            , System.Guid? uniqueidentifierColumn)
 
         /// <summary>
         /// GET method of editing page of <see cref="MSBuildExtensionPack.Organization"/>.
@@ -294,13 +294,13 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Edit)]
-        public ActionResult Edit(System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
-            , System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
-            , System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
+        public ActionResult Edit(System.Int64? id
+            , System.Guid? uniqueIdentifier
+            , System.Guid? uniqueidentifierColumn)
         {
             Framework.UIAction uiAction = Framework.UIAction.Update;
             MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM();
-            vm.Load(valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint.HasValue, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint.HasValue, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint.HasValue, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, uiAction);
+            vm.Load(id.HasValue, id, uniqueIdentifier.HasValue, uniqueIdentifier, uniqueidentifierColumn.HasValue, uniqueidentifierColumn, uiAction);
             vm.ContentData.Title = Framework.Resx.UIStringResource.Edit;
             vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Edit_Organization;
 
@@ -340,9 +340,9 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             }
         }
 
-        #endregion ActionResult Edit(System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint            , System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint            , System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
+        #endregion ActionResult Edit(System.Int64? id            , System.Guid? uniqueIdentifier            , System.Guid? uniqueidentifierColumn)
 
-        #region ActionResult Delete(System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint            , System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint            , System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
+        #region ActionResult Delete(System.Int64? id            , System.Guid? uniqueIdentifier            , System.Guid? uniqueidentifierColumn)
 
         /// <summary>
         /// GET method of delete page of <see cref="MSBuildExtensionPack.Organization"/>
@@ -350,13 +350,13 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Delete)]
-        public ActionResult Delete(System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
-            , System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
-            , System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
+        public ActionResult Delete(System.Int64? id
+            , System.Guid? uniqueIdentifier
+            , System.Guid? uniqueidentifierColumn)
         {
             Framework.UIAction uiAction = Framework.UIAction.Delete;
             MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM();
-            vm.Load(valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint.HasValue, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint.HasValue, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint.HasValue, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, uiAction);
+            vm.Load(id.HasValue, id, uniqueIdentifier.HasValue, uniqueIdentifier, uniqueidentifierColumn.HasValue, uniqueidentifierColumn, uiAction);
             vm.ContentData.Title = Framework.Resx.UIStringResource.Delete;
             vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Delete_Organization;
             return View(vm);
@@ -369,14 +369,14 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// <returns></returns>
         [HttpPost]
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Delete)]
-        public ActionResult Delete(System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
-            , System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
-            , System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM vm, FormCollection collection)
+        public ActionResult Delete(System.Int64? id
+            , System.Guid? uniqueIdentifier
+            , System.Guid? uniqueidentifierColumn, MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM vm, FormCollection collection)
         {
             try
             {
                 log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Started.ToString()));
-                var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.ExistsOfDefaultOfIdentifierAndUniqueConstraint(valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint.HasValue, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint.HasValue, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint.HasValue, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, -1, -1, null);
+                var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.ExistsOfDefaultOfIdentifierAndUniqueConstraint(id.HasValue, id, uniqueIdentifier.HasValue, uniqueIdentifier, uniqueidentifierColumn.HasValue, uniqueidentifierColumn, -1, -1, null);
                 if (_Response)
                 {
                     MSBuildExtensionPack.DataSourceEntities.Organization entity = MSBuildExtensionPack.EntityContracts.IOrganizationHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization>(vm.Item);
@@ -404,7 +404,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             }
         }
 
-        #endregion ActionResult Delete(System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint            , System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint            , System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
+        #endregion ActionResult Delete(System.Int64? id            , System.Guid? uniqueIdentifier            , System.Guid? uniqueidentifierColumn)
 
         #region Binary Columns
 

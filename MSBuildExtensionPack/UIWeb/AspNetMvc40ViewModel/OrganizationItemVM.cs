@@ -17,7 +17,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 
                 public List<SelectListItem> SelectListOfMSBuildExtensionPack_Organization { get; set; }
 
-        public void Load(bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+        public void Load(bool isToCompareId, System.Int64? id, bool isToCompareUniqueIdentifier, System.Guid? uniqueIdentifier, bool isToCompareUniqueidentifierColumn, System.Guid? uniqueidentifierColumn
             , Framework.UIAction uiAction)
         {
             try
@@ -25,7 +25,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
                 log.Info(string.Format("{0}: Details", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
                 MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _Response =
-                    MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfDefaultOfIdentifierAndUniqueConstraint(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, -1, -1, null);
+                    MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfDefaultOfIdentifierAndUniqueConstraint(isToCompareId, id, isToCompareUniqueIdentifier, uniqueIdentifier, isToCompareUniqueidentifierColumn, uniqueidentifierColumn, -1, -1, null);
 
                 if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK || _Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
                 {

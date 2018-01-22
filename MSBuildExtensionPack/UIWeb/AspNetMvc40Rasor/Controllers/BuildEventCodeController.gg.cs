@@ -112,10 +112,10 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildEventCode_WPEntityRelatedOfBuildEventCode)]
-        public ActionResult WPEntityRelatedOfBuildEventCode(System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier)
+        public ActionResult WPEntityRelatedOfBuildEventCode(System.Int32? id)
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaByIdentifier();
-            criteria.BuildEventCodeQueryCriteriaByIdentifier.IdByIdentifierOft.NullableValueToCompare = valueToCompareIdByIdentifierOftOfByIdentifier;
+            criteria.BuildEventCodeQueryCriteriaByIdentifier.IdByIdentifierOft.NullableValueToCompare = id;
             MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildEventCodeVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildEventCodeVM(criteria);
             vm.LoadData();
 
@@ -179,7 +179,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 
         #endregion Index()
 
-        #region ActionResult Details(System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier)
+        #region ActionResult Details(System.Int32? id)
 
         /// <summary>
         /// GET method of details page, based on identifier or unique constraint, this entity only, no related entities.
@@ -187,18 +187,18 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildEventCode_Details)]
-        public ActionResult Details(System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier)
+        public ActionResult Details(System.Int32? id)
         {
             Framework.UIAction uiAction = Framework.UIAction.ViewDetails;
             MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM();
-            vm.Load(valueToCompareIdByIdentifierOftOfByIdentifier.HasValue, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
+            vm.Load(id.HasValue, id, uiAction);
             vm.ContentData.Title = Framework.Resx.UIStringResource.Details;
             vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.Details_BuildEventCode;
 
             return View(vm);
         }
 
-        #endregion ActionResult Details(System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier)
+        #endregion ActionResult Details(System.Int32? id)
 
         #region ActionResult AddNew()
 
@@ -261,10 +261,10 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildEventCode_Copy)]
-        public ActionResult Copy(System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier)
+        public ActionResult Copy(System.Int32? id)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn _Response =
-                MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.GetMessageOfEntityOfByIdentifier(valueToCompareIdByIdentifierOftOfByIdentifier.HasValue, valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
+                MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.GetMessageOfEntityOfByIdentifier(id.HasValue, id, -1, -1, null);
 
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -277,7 +277,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 
         #endregion ActionResult AddNew()
 
-        #region ActionResult Edit(System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier)
+        #region ActionResult Edit(System.Int32? id)
 
         /// <summary>
         /// GET method of editing page of <see cref="MSBuildExtensionPack.BuildEventCode"/>.
@@ -285,11 +285,11 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildEventCode_Edit)]
-        public ActionResult Edit(System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier)
+        public ActionResult Edit(System.Int32? id)
         {
             Framework.UIAction uiAction = Framework.UIAction.Update;
             MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM();
-            vm.Load(valueToCompareIdByIdentifierOftOfByIdentifier.HasValue, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
+            vm.Load(id.HasValue, id, uiAction);
             vm.ContentData.Title = Framework.Resx.UIStringResource.Edit;
             vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.Edit_BuildEventCode;
 
@@ -329,9 +329,9 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             }
         }
 
-        #endregion ActionResult Edit(System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier)
+        #endregion ActionResult Edit(System.Int32? id)
 
-        #region ActionResult Delete(System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier)
+        #region ActionResult Delete(System.Int32? id)
 
         /// <summary>
         /// GET method of delete page of <see cref="MSBuildExtensionPack.BuildEventCode"/>
@@ -339,11 +339,11 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildEventCode_Delete)]
-        public ActionResult Delete(System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier)
+        public ActionResult Delete(System.Int32? id)
         {
             Framework.UIAction uiAction = Framework.UIAction.Delete;
             MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM();
-            vm.Load(valueToCompareIdByIdentifierOftOfByIdentifier.HasValue, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
+            vm.Load(id.HasValue, id, uiAction);
             vm.ContentData.Title = Framework.Resx.UIStringResource.Delete;
             vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.Delete_BuildEventCode;
             return View(vm);
@@ -356,12 +356,12 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// <returns></returns>
         [HttpPost]
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildEventCode_Delete)]
-        public ActionResult Delete(System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier, MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM vm, FormCollection collection)
+        public ActionResult Delete(System.Int32? id, MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM vm, FormCollection collection)
         {
             try
             {
                 log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Started.ToString()));
-                var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.ExistsOfEntityOfByIdentifier(valueToCompareIdByIdentifierOftOfByIdentifier.HasValue, valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
+                var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.ExistsOfEntityOfByIdentifier(id.HasValue, id, -1, -1, null);
                 if (_Response)
                 {
                     MSBuildExtensionPack.DataSourceEntities.BuildEventCode entity = vm.Item;
@@ -389,7 +389,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             }
         }
 
-        #endregion ActionResult Delete(System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier)
+        #endregion ActionResult Delete(System.Int32? id)
 
         #region Binary Columns
 

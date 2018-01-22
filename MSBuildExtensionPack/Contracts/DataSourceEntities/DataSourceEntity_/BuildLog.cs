@@ -482,8 +482,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
                     [DataMember]
-        [Display(Name = "BuildId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
-        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="BuildId_is_required")]        public System.Int64 BuildId
+        [Display(Name = "BuildId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]        public System.Int64 BuildId
         {
             get
             {
@@ -497,8 +496,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
                     [DataMember]
-        [Display(Name = "BuildEventCodeId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
-        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="BuildEventCodeId_is_required")]        public System.Int32 BuildEventCodeId
+        [Display(Name = "BuildEventCodeId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]        public System.Int32 BuildEventCodeId
         {
             get
             {
@@ -667,8 +665,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
             #region properties
 
                     [DataMember]
-        [Display(Name = "BuildId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
-        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="BuildId_is_required")]        public System.Int64 BuildId
+        [Display(Name = "BuildId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]        public System.Int64 BuildId
         {
             get
             {
@@ -682,8 +679,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
                     [DataMember]
-        [Display(Name = "BuildEventCodeId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
-        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="BuildEventCodeId_is_required")]        public System.Int32 BuildEventCodeId
+        [Display(Name = "BuildEventCodeId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]        public System.Int32 BuildEventCodeId
         {
             get
             {
@@ -882,8 +878,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
                     [DataMember]
-        [Display(Name = "BuildEventCodeId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
-        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="BuildEventCodeId_is_required")]        public System.Int32 BuildEventCodeId
+        [Display(Name = "BuildEventCodeId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]        public System.Int32 BuildEventCodeId
         {
             get
             {

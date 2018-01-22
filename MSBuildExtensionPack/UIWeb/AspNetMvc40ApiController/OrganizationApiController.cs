@@ -195,21 +195,21 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <summary>
         /// Gets the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareParentId">will compare/filter parentId property/field/column if true, otherwise false</param>
+        /// <param name="parentId">value to compare/filter with parentId property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
         [HttpGet, ActionName("GetCollectionOfNameValuePairOfByFKOnly")]
         public Framework.NameValueCollection GetCollectionOfNameValuePairOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareParentId, System.Int64? parentId
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
             )
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairOfByFKOnly(                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairOfByFKOnly(                isToCompareParentId, parentId
                 , currentIndex
                 , pageSize
                 , queryOrderByExpression);
@@ -218,21 +218,21 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <summary>
         /// Gets message of the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareParentId">will compare/filter parentId property/field/column if true, otherwise false</param>
+        /// <param name="parentId">value to compare/filter with parentId property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
         [HttpGet, ActionName("GetMessageOfNameValuePairOfByFKOnly")]
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareParentId, System.Int64? parentId
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression        )
 
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfNameValuePairOfByFKOnly(                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfNameValuePairOfByFKOnly(                isToCompareParentId, parentId
                 , currentIndex
                 , pageSize
                 , queryOrderByExpression);
@@ -245,21 +245,21 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <summary>
         /// Gets the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier">will compare/filter UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier">value to compare/filter with UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier property/field/column</param>
+        /// <param name="isToCompareUniqueIdentifier">will compare/filter uniqueIdentifier property/field/column if true, otherwise false</param>
+        /// <param name="uniqueIdentifier">value to compare/filter with uniqueIdentifier property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
         [HttpGet, ActionName("GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier")]
         public Framework.NameValueCollection GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            bool isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, System.Guid? valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+            bool isToCompareUniqueIdentifier, System.Guid? uniqueIdentifier
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
             )
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(                isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(                isToCompareUniqueIdentifier, uniqueIdentifier
                 , currentIndex
                 , pageSize
                 , queryOrderByExpression);
@@ -268,21 +268,21 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <summary>
         /// Gets message of the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier">will compare/filter UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier">value to compare/filter with UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier property/field/column</param>
+        /// <param name="isToCompareUniqueIdentifier">will compare/filter uniqueIdentifier property/field/column if true, otherwise false</param>
+        /// <param name="uniqueIdentifier">value to compare/filter with uniqueIdentifier property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
         [HttpGet, ActionName("GetMessageOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier")]
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            bool isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, System.Guid? valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+            bool isToCompareUniqueIdentifier, System.Guid? uniqueIdentifier
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression        )
 
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(                isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier, valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(                isToCompareUniqueIdentifier, uniqueIdentifier
                 , currentIndex
                 , pageSize
                 , queryOrderByExpression);
@@ -295,21 +295,21 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <summary>
         /// Gets the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn">will compare/filter UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn">value to compare/filter with UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn property/field/column</param>
+        /// <param name="isToCompareUniqueidentifierColumn">will compare/filter uniqueidentifierColumn property/field/column if true, otherwise false</param>
+        /// <param name="uniqueidentifierColumn">value to compare/filter with uniqueidentifierColumn property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
         [HttpGet, ActionName("GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn")]
         public Framework.NameValueCollection GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            bool isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, System.Guid? valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+            bool isToCompareUniqueidentifierColumn, System.Guid? uniqueidentifierColumn
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
             )
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(                isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(                isToCompareUniqueidentifierColumn, uniqueidentifierColumn
                 , currentIndex
                 , pageSize
                 , queryOrderByExpression);
@@ -318,21 +318,21 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <summary>
         /// Gets message of the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn">will compare/filter UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn">value to compare/filter with UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn property/field/column</param>
+        /// <param name="isToCompareUniqueidentifierColumn">will compare/filter uniqueidentifierColumn property/field/column if true, otherwise false</param>
+        /// <param name="uniqueidentifierColumn">value to compare/filter with uniqueidentifierColumn property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
         [HttpGet, ActionName("GetMessageOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn")]
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            bool isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, System.Guid? valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+            bool isToCompareUniqueidentifierColumn, System.Guid? uniqueidentifierColumn
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression        )
 
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(                isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(                isToCompareUniqueidentifierColumn, uniqueidentifierColumn
                 , currentIndex
                 , pageSize
                 , queryOrderByExpression);
@@ -347,12 +347,12 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <returns></returns>
         [HttpGet]
         public MSBuildExtensionPack.ViewModelData.OrganizationItemVM GetOrganizationItemVM(
-System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
-            , System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
-            , System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
+System.Int64? id
+            , System.Guid? uniqueIdentifier
+            , System.Guid? uniqueidentifierColumn)
         {
             MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM();
-            retval.Load(valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint.HasValue, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint.HasValue, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint.HasValue, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, Framework.UIAction.ViewDetails);
+            retval.Load(id.HasValue, id, uniqueIdentifier.HasValue, uniqueIdentifier, uniqueidentifierColumn.HasValue, uniqueidentifierColumn, Framework.UIAction.ViewDetails);
             return retval;
         }
 
@@ -392,14 +392,14 @@ System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUni
         /// <returns></returns>
         [HttpGet, ActionName("GetWPEntityRelatedOfOrganizationVM")]
         public MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfOrganizationVM GetWPEntityRelatedOfOrganizationVM(
-System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
-            , System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
-            , System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint)
+System.Int64? id
+            , System.Guid? uniqueIdentifier
+            , System.Guid? uniqueidentifierColumn)
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint();
-            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft.NullableValueToCompare = valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint;
-            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft.NullableValueToCompare = valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint;
-            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft.NullableValueToCompare = valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint;
+            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft.NullableValueToCompare = id;
+            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft.NullableValueToCompare = uniqueIdentifier;
+            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft.NullableValueToCompare = uniqueidentifierColumn;
             MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfOrganizationVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfOrganizationVM(criteria);
             retval.LoadData();
             return retval;

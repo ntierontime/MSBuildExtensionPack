@@ -258,34 +258,34 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdCommonOfOrganization_1OfCommon">will compare/filter IdCommonOfOrganization_1OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_1OfCommon">value to compare/filter with IdCommonOfOrganization_1OfCommon property/field/column</param>
-        /// <param name="isToCompareIdCommonOfOrganization_2OfCommon">will compare/filter IdCommonOfOrganization_2OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
-        /// <param name="isToCompareExternalParentIdCommonOftOfCommon">will compare/filter ExternalParentIdCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedExternalParentIdCommonOftOfCommon" > value to compare/filter with ExternalParentIdCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDescriptionCommonOftOfCommon">will compare/filter DescriptionCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon" > value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareExternalParentId">will compare/filter externalParentId property/field/column if true, otherwise false</param>
+        /// <param name="externalParentId" > value to compare/filter with externalParentId property/field/column</param>
+        /// <param name="isToCompareName">will compare/filter name property/field/column if true, otherwise false</param>
+        /// <param name="name" > value to compare/filter with name property/field/column</param>
+        /// <param name="isToCompareDescription">will compare/filter description property/field/column if true, otherwise false</param>
+        /// <param name="description" > value to compare/filter with description property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns></returns>
         private static MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon _GetSolutionChainedQueryCriteriaCommon(
-            bool isToCompareIdCommonOfOrganization_1OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_1OfCommon
-            , bool isToCompareIdCommonOfOrganization_2OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_2OfCommon
-            , bool isToCompareExternalParentIdCommonOftOfCommon, System.String valueToBeContainedExternalParentIdCommonOftOfCommon
-            , bool isToCompareNameCommonOftOfCommon, System.String valueToBeContainedNameCommonOftOfCommon
-            , bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
+            , bool isToCompareExternalParentId, System.String externalParentId
+            , bool isToCompareName, System.String name
+            , bool isToCompareDescription, System.String description
             )
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon();
-            criteria.SolutionQueryCriteriaCommon.IdCommonOfOrganization_1 = new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon);
-            criteria.SolutionQueryCriteriaCommon.IdCommonOfOrganization_2 = new QuerySystemInt64EqualsCriteria(isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon);
-            criteria.SolutionQueryCriteriaCommon.ExternalParentIdCommonOft = new QuerySystemStringContainsCriteria(isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon);
-            criteria.SolutionQueryCriteriaCommon.NameCommonOft = new QuerySystemStringContainsCriteria(isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon);
-            criteria.SolutionQueryCriteriaCommon.DescriptionCommonOft = new QuerySystemStringContainsCriteria(isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon);
+            criteria.SolutionQueryCriteriaCommon.IdCommonOfOrganization_1 = new QuerySystemInt64EqualsCriteria(isToCompareOrganizationId, organizationId);
+            criteria.SolutionQueryCriteriaCommon.IdCommonOfOrganization_2 = new QuerySystemInt64EqualsCriteria(isToCompareOrganization_2Id, organization_2Id);
+            criteria.SolutionQueryCriteriaCommon.ExternalParentIdCommonOft = new QuerySystemStringContainsCriteria(isToCompareExternalParentId, externalParentId);
+            criteria.SolutionQueryCriteriaCommon.NameCommonOft = new QuerySystemStringContainsCriteria(isToCompareName, name);
+            criteria.SolutionQueryCriteriaCommon.DescriptionCommonOft = new QuerySystemStringContainsCriteria(isToCompareDescription, description);
             return criteria;
         }
 
@@ -309,40 +309,40 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns></returns>
         private static MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly _GetSolutionChainedQueryCriteriaByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             )
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly();
-            criteria.SolutionQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1 = new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly);
-            criteria.SolutionQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2 = new QuerySystemInt64EqualsCriteria(isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly);
+            criteria.SolutionQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1 = new QuerySystemInt64EqualsCriteria(isToCompareOrganizationId, organizationId);
+            criteria.SolutionQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2 = new QuerySystemInt64EqualsCriteria(isToCompareOrganization_2Id, organization_2Id);
             return criteria;
         }
 
         /// <summary>
         /// Gets the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns></returns>
         private static MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier _GetSolutionChainedQueryCriteriaByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             )
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier();
-            criteria.SolutionQueryCriteriaByIdentifier.IdByIdentifierOft = new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier);
+            criteria.SolutionQueryCriteriaByIdentifier.IdByIdentifierOft = new QuerySystemInt32EqualsCriteria(isToCompareId, id);
             return criteria;
         }
 
@@ -699,24 +699,24 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the page number list of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdCommonOfOrganization_1OfCommon">will compare/filter IdCommonOfOrganization_1OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_1OfCommon">value to compare/filter with IdCommonOfOrganization_1OfCommon property/field/column</param>
-        /// <param name="isToCompareIdCommonOfOrganization_2OfCommon">will compare/filter IdCommonOfOrganization_2OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
-        /// <param name="isToCompareExternalParentIdCommonOftOfCommon">will compare/filter ExternalParentIdCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedExternalParentIdCommonOftOfCommon" > value to compare/filter with ExternalParentIdCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDescriptionCommonOftOfCommon">will compare/filter DescriptionCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon" > value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareExternalParentId">will compare/filter externalParentId property/field/column if true, otherwise false</param>
+        /// <param name="externalParentId" > value to compare/filter with externalParentId property/field/column</param>
+        /// <param name="isToCompareName">will compare/filter name property/field/column if true, otherwise false</param>
+        /// <param name="name" > value to compare/filter with name property/field/column</param>
+        /// <param name="isToCompareDescription">will compare/filter description property/field/column if true, otherwise false</param>
+        /// <param name="description" > value to compare/filter with description property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
         public static int[] GetPageNumberListOfEntityOfCommon(
-            bool isToCompareIdCommonOfOrganization_1OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_1OfCommon
-            , bool isToCompareIdCommonOfOrganization_2OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_2OfCommon
-            , bool isToCompareExternalParentIdCommonOftOfCommon, System.String valueToBeContainedExternalParentIdCommonOftOfCommon
-            , bool isToCompareNameCommonOftOfCommon, System.String valueToBeContainedNameCommonOftOfCommon
-            , bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
+            , bool isToCompareExternalParentId, System.String externalParentId
+            , bool isToCompareName, System.String name
+            , bool isToCompareDescription, System.String description
             , int pageSize
             )
         {
@@ -731,11 +731,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , null
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaCommon(
-                isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
-                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
-                , isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon
-                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
-                , isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
+                , isToCompareExternalParentId, externalParentId
+                , isToCompareName, name
+                , isToCompareDescription, description
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -768,24 +768,24 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the page count of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdCommonOfOrganization_1OfCommon">will compare/filter IdCommonOfOrganization_1OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_1OfCommon">value to compare/filter with IdCommonOfOrganization_1OfCommon property/field/column</param>
-        /// <param name="isToCompareIdCommonOfOrganization_2OfCommon">will compare/filter IdCommonOfOrganization_2OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
-        /// <param name="isToCompareExternalParentIdCommonOftOfCommon">will compare/filter ExternalParentIdCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedExternalParentIdCommonOftOfCommon" > value to compare/filter with ExternalParentIdCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDescriptionCommonOftOfCommon">will compare/filter DescriptionCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon" > value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareExternalParentId">will compare/filter externalParentId property/field/column if true, otherwise false</param>
+        /// <param name="externalParentId" > value to compare/filter with externalParentId property/field/column</param>
+        /// <param name="isToCompareName">will compare/filter name property/field/column if true, otherwise false</param>
+        /// <param name="name" > value to compare/filter with name property/field/column</param>
+        /// <param name="isToCompareDescription">will compare/filter description property/field/column if true, otherwise false</param>
+        /// <param name="description" > value to compare/filter with description property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
         public static int GetPageCountOfEntityOfCommon(
-            bool isToCompareIdCommonOfOrganization_1OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_1OfCommon
-            , bool isToCompareIdCommonOfOrganization_2OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_2OfCommon
-            , bool isToCompareExternalParentIdCommonOftOfCommon, System.String valueToBeContainedExternalParentIdCommonOftOfCommon
-            , bool isToCompareNameCommonOftOfCommon, System.String valueToBeContainedNameCommonOftOfCommon
-            , bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
+            , bool isToCompareExternalParentId, System.String externalParentId
+            , bool isToCompareName, System.String name
+            , bool isToCompareDescription, System.String description
             , int pageSize
             )
         {
@@ -800,11 +800,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , null
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaCommon(
-                isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
-                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
-                , isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon
-                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
-                , isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
+                , isToCompareExternalParentId, externalParentId
+                , isToCompareName, name
+                , isToCompareDescription, description
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -824,25 +824,25 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the count of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdCommonOfOrganization_1OfCommon">will compare/filter IdCommonOfOrganization_1OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_1OfCommon">value to compare/filter with IdCommonOfOrganization_1OfCommon property/field/column</param>
-        /// <param name="isToCompareIdCommonOfOrganization_2OfCommon">will compare/filter IdCommonOfOrganization_2OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
-        /// <param name="isToCompareExternalParentIdCommonOftOfCommon">will compare/filter ExternalParentIdCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedExternalParentIdCommonOftOfCommon" > value to compare/filter with ExternalParentIdCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDescriptionCommonOftOfCommon">will compare/filter DescriptionCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon" > value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareExternalParentId">will compare/filter externalParentId property/field/column if true, otherwise false</param>
+        /// <param name="externalParentId" > value to compare/filter with externalParentId property/field/column</param>
+        /// <param name="isToCompareName">will compare/filter name property/field/column if true, otherwise false</param>
+        /// <param name="name" > value to compare/filter with name property/field/column</param>
+        /// <param name="isToCompareDescription">will compare/filter description property/field/column if true, otherwise false</param>
+        /// <param name="description" > value to compare/filter with description property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         public static int GetCountOfEntityOfCommon(
-            bool isToCompareIdCommonOfOrganization_1OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_1OfCommon
-            , bool isToCompareIdCommonOfOrganization_2OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_2OfCommon
-            , bool isToCompareExternalParentIdCommonOftOfCommon, System.String valueToBeContainedExternalParentIdCommonOftOfCommon
-            , bool isToCompareNameCommonOftOfCommon, System.String valueToBeContainedNameCommonOftOfCommon
-            , bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
+            , bool isToCompareExternalParentId, System.String externalParentId
+            , bool isToCompareName, System.String name
+            , bool isToCompareDescription, System.String description
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -859,11 +859,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaCommon(
-                isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
-                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
-                , isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon
-                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
-                , isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
+                , isToCompareExternalParentId, externalParentId
+                , isToCompareName, name
+                , isToCompareDescription, description
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -882,26 +882,26 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Exists the of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdCommonOfOrganization_1OfCommon">will compare/filter IdCommonOfOrganization_1OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_1OfCommon">value to compare/filter with IdCommonOfOrganization_1OfCommon property/field/column</param>
-        /// <param name="isToCompareIdCommonOfOrganization_2OfCommon">will compare/filter IdCommonOfOrganization_2OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
-        /// <param name="isToCompareExternalParentIdCommonOftOfCommon">will compare/filter ExternalParentIdCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedExternalParentIdCommonOftOfCommon" > value to compare/filter with ExternalParentIdCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDescriptionCommonOftOfCommon">will compare/filter DescriptionCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon" > value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareExternalParentId">will compare/filter externalParentId property/field/column if true, otherwise false</param>
+        /// <param name="externalParentId" > value to compare/filter with externalParentId property/field/column</param>
+        /// <param name="isToCompareName">will compare/filter name property/field/column if true, otherwise false</param>
+        /// <param name="name" > value to compare/filter with name property/field/column</param>
+        /// <param name="isToCompareDescription">will compare/filter description property/field/column if true, otherwise false</param>
+        /// <param name="description" > value to compare/filter with description property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>true if meets criteria, otherwise false</returns>
         public static bool ExistsOfEntityOfCommon(
-            bool isToCompareIdCommonOfOrganization_1OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_1OfCommon
-            , bool isToCompareIdCommonOfOrganization_2OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_2OfCommon
-            , bool isToCompareExternalParentIdCommonOftOfCommon, System.String valueToBeContainedExternalParentIdCommonOftOfCommon
-            , bool isToCompareNameCommonOftOfCommon, System.String valueToBeContainedNameCommonOftOfCommon
-            , bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
+            , bool isToCompareExternalParentId, System.String externalParentId
+            , bool isToCompareName, System.String name
+            , bool isToCompareDescription, System.String description
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -918,11 +918,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaCommon(
-                isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
-                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
-                , isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon
-                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
-                , isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
+                , isToCompareExternalParentId, externalParentId
+                , isToCompareName, name
+                , isToCompareDescription, description
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -941,26 +941,26 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdCommonOfOrganization_1OfCommon">will compare/filter IdCommonOfOrganization_1OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_1OfCommon">value to compare/filter with IdCommonOfOrganization_1OfCommon property/field/column</param>
-        /// <param name="isToCompareIdCommonOfOrganization_2OfCommon">will compare/filter IdCommonOfOrganization_2OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
-        /// <param name="isToCompareExternalParentIdCommonOftOfCommon">will compare/filter ExternalParentIdCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedExternalParentIdCommonOftOfCommon" > value to compare/filter with ExternalParentIdCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDescriptionCommonOftOfCommon">will compare/filter DescriptionCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon" > value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareExternalParentId">will compare/filter externalParentId property/field/column if true, otherwise false</param>
+        /// <param name="externalParentId" > value to compare/filter with externalParentId property/field/column</param>
+        /// <param name="isToCompareName">will compare/filter name property/field/column if true, otherwise false</param>
+        /// <param name="name" > value to compare/filter with name property/field/column</param>
+        /// <param name="isToCompareDescription">will compare/filter description property/field/column if true, otherwise false</param>
+        /// <param name="description" > value to compare/filter with description property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.SolutionCollection"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.SolutionCollection GetCollectionOfEntityOfCommon(
-            bool isToCompareIdCommonOfOrganization_1OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_1OfCommon
-            , bool isToCompareIdCommonOfOrganization_2OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_2OfCommon
-            , bool isToCompareExternalParentIdCommonOftOfCommon, System.String valueToBeContainedExternalParentIdCommonOftOfCommon
-            , bool isToCompareNameCommonOftOfCommon, System.String valueToBeContainedNameCommonOftOfCommon
-            , bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
+            , bool isToCompareExternalParentId, System.String externalParentId
+            , bool isToCompareName, System.String name
+            , bool isToCompareDescription, System.String description
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -977,11 +977,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaCommon(
-                isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
-                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
-                , isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon
-                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
-                , isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
+                , isToCompareExternalParentId, externalParentId
+                , isToCompareName, name
+                , isToCompareDescription, description
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -1000,26 +1000,26 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets message of the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdCommonOfOrganization_1OfCommon">will compare/filter IdCommonOfOrganization_1OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_1OfCommon">value to compare/filter with IdCommonOfOrganization_1OfCommon property/field/column</param>
-        /// <param name="isToCompareIdCommonOfOrganization_2OfCommon">will compare/filter IdCommonOfOrganization_2OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
-        /// <param name="isToCompareExternalParentIdCommonOftOfCommon">will compare/filter ExternalParentIdCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedExternalParentIdCommonOftOfCommon" > value to compare/filter with ExternalParentIdCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDescriptionCommonOftOfCommon">will compare/filter DescriptionCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon" > value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareExternalParentId">will compare/filter externalParentId property/field/column if true, otherwise false</param>
+        /// <param name="externalParentId" > value to compare/filter with externalParentId property/field/column</param>
+        /// <param name="isToCompareName">will compare/filter name property/field/column if true, otherwise false</param>
+        /// <param name="name" > value to compare/filter with name property/field/column</param>
+        /// <param name="isToCompareDescription">will compare/filter description property/field/column if true, otherwise false</param>
+        /// <param name="description" > value to compare/filter with description property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn"/></returns>
         public static MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn GetMessageOfEntityOfCommon(
-            bool isToCompareIdCommonOfOrganization_1OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_1OfCommon
-            , bool isToCompareIdCommonOfOrganization_2OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_2OfCommon
-            , bool isToCompareExternalParentIdCommonOftOfCommon, System.String valueToBeContainedExternalParentIdCommonOftOfCommon
-            , bool isToCompareNameCommonOftOfCommon, System.String valueToBeContainedNameCommonOftOfCommon
-            , bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
+            , bool isToCompareExternalParentId, System.String externalParentId
+            , bool isToCompareName, System.String name
+            , bool isToCompareDescription, System.String description
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression        )
@@ -1035,11 +1035,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaCommon(
-                isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
-                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
-                , isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon
-                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
-                , isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
+                , isToCompareExternalParentId, externalParentId
+                , isToCompareName, name
+                , isToCompareDescription, description
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfCommon(_Request);
             return _Response;
@@ -1048,23 +1048,23 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the single of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdCommonOfOrganization_1OfCommon">will compare/filter IdCommonOfOrganization_1OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_1OfCommon">value to compare/filter with IdCommonOfOrganization_1OfCommon property/field/column</param>
-        /// <param name="isToCompareIdCommonOfOrganization_2OfCommon">will compare/filter IdCommonOfOrganization_2OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
-        /// <param name="isToCompareExternalParentIdCommonOftOfCommon">will compare/filter ExternalParentIdCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedExternalParentIdCommonOftOfCommon" > value to compare/filter with ExternalParentIdCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDescriptionCommonOftOfCommon">will compare/filter DescriptionCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon" > value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareExternalParentId">will compare/filter externalParentId property/field/column if true, otherwise false</param>
+        /// <param name="externalParentId" > value to compare/filter with externalParentId property/field/column</param>
+        /// <param name="isToCompareName">will compare/filter name property/field/column if true, otherwise false</param>
+        /// <param name="name" > value to compare/filter with name property/field/column</param>
+        /// <param name="isToCompareDescription">will compare/filter description property/field/column if true, otherwise false</param>
+        /// <param name="description" > value to compare/filter with description property/field/column</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.SolutionCollection"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.SolutionCollection GetSingleOfEntityOfCommon(
-            bool isToCompareIdCommonOfOrganization_1OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_1OfCommon
-            , bool isToCompareIdCommonOfOrganization_2OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_2OfCommon
-            , bool isToCompareExternalParentIdCommonOftOfCommon, System.String valueToBeContainedExternalParentIdCommonOftOfCommon
-            , bool isToCompareNameCommonOftOfCommon, System.String valueToBeContainedNameCommonOftOfCommon
-            , bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
+            , bool isToCompareExternalParentId, System.String externalParentId
+            , bool isToCompareName, System.String name
+            , bool isToCompareDescription, System.String description
             , string queryOrderByExpression
             )
 
@@ -1080,11 +1080,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaCommon(
-                isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
-                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
-                , isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon
-                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
-                , isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
+                , isToCompareExternalParentId, externalParentId
+                , isToCompareName, name
+                , isToCompareDescription, description
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -1455,24 +1455,24 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the page number list of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdCommonOfOrganization_1OfCommon">will compare/filter IdCommonOfOrganization_1OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_1OfCommon">value to compare/filter with IdCommonOfOrganization_1OfCommon property/field/column</param>
-        /// <param name="isToCompareIdCommonOfOrganization_2OfCommon">will compare/filter IdCommonOfOrganization_2OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
-        /// <param name="isToCompareExternalParentIdCommonOftOfCommon">will compare/filter ExternalParentIdCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedExternalParentIdCommonOftOfCommon" > value to compare/filter with ExternalParentIdCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDescriptionCommonOftOfCommon">will compare/filter DescriptionCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon" > value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareExternalParentId">will compare/filter externalParentId property/field/column if true, otherwise false</param>
+        /// <param name="externalParentId" > value to compare/filter with externalParentId property/field/column</param>
+        /// <param name="isToCompareName">will compare/filter name property/field/column if true, otherwise false</param>
+        /// <param name="name" > value to compare/filter with name property/field/column</param>
+        /// <param name="isToCompareDescription">will compare/filter description property/field/column if true, otherwise false</param>
+        /// <param name="description" > value to compare/filter with description property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
         public static int[] GetPageNumberListOfDefaultOfCommon(
-            bool isToCompareIdCommonOfOrganization_1OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_1OfCommon
-            , bool isToCompareIdCommonOfOrganization_2OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_2OfCommon
-            , bool isToCompareExternalParentIdCommonOftOfCommon, System.String valueToBeContainedExternalParentIdCommonOftOfCommon
-            , bool isToCompareNameCommonOftOfCommon, System.String valueToBeContainedNameCommonOftOfCommon
-            , bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
+            , bool isToCompareExternalParentId, System.String externalParentId
+            , bool isToCompareName, System.String name
+            , bool isToCompareDescription, System.String description
             , int pageSize
             )
         {
@@ -1487,11 +1487,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , null
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaCommon(
-                isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
-                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
-                , isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon
-                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
-                , isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
+                , isToCompareExternalParentId, externalParentId
+                , isToCompareName, name
+                , isToCompareDescription, description
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -1524,24 +1524,24 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the page count of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdCommonOfOrganization_1OfCommon">will compare/filter IdCommonOfOrganization_1OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_1OfCommon">value to compare/filter with IdCommonOfOrganization_1OfCommon property/field/column</param>
-        /// <param name="isToCompareIdCommonOfOrganization_2OfCommon">will compare/filter IdCommonOfOrganization_2OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
-        /// <param name="isToCompareExternalParentIdCommonOftOfCommon">will compare/filter ExternalParentIdCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedExternalParentIdCommonOftOfCommon" > value to compare/filter with ExternalParentIdCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDescriptionCommonOftOfCommon">will compare/filter DescriptionCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon" > value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareExternalParentId">will compare/filter externalParentId property/field/column if true, otherwise false</param>
+        /// <param name="externalParentId" > value to compare/filter with externalParentId property/field/column</param>
+        /// <param name="isToCompareName">will compare/filter name property/field/column if true, otherwise false</param>
+        /// <param name="name" > value to compare/filter with name property/field/column</param>
+        /// <param name="isToCompareDescription">will compare/filter description property/field/column if true, otherwise false</param>
+        /// <param name="description" > value to compare/filter with description property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
         public static int GetPageCountOfDefaultOfCommon(
-            bool isToCompareIdCommonOfOrganization_1OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_1OfCommon
-            , bool isToCompareIdCommonOfOrganization_2OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_2OfCommon
-            , bool isToCompareExternalParentIdCommonOftOfCommon, System.String valueToBeContainedExternalParentIdCommonOftOfCommon
-            , bool isToCompareNameCommonOftOfCommon, System.String valueToBeContainedNameCommonOftOfCommon
-            , bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
+            , bool isToCompareExternalParentId, System.String externalParentId
+            , bool isToCompareName, System.String name
+            , bool isToCompareDescription, System.String description
             , int pageSize
             )
         {
@@ -1556,11 +1556,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , null
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaCommon(
-                isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
-                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
-                , isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon
-                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
-                , isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
+                , isToCompareExternalParentId, externalParentId
+                , isToCompareName, name
+                , isToCompareDescription, description
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -1580,25 +1580,25 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the count of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdCommonOfOrganization_1OfCommon">will compare/filter IdCommonOfOrganization_1OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_1OfCommon">value to compare/filter with IdCommonOfOrganization_1OfCommon property/field/column</param>
-        /// <param name="isToCompareIdCommonOfOrganization_2OfCommon">will compare/filter IdCommonOfOrganization_2OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
-        /// <param name="isToCompareExternalParentIdCommonOftOfCommon">will compare/filter ExternalParentIdCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedExternalParentIdCommonOftOfCommon" > value to compare/filter with ExternalParentIdCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDescriptionCommonOftOfCommon">will compare/filter DescriptionCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon" > value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareExternalParentId">will compare/filter externalParentId property/field/column if true, otherwise false</param>
+        /// <param name="externalParentId" > value to compare/filter with externalParentId property/field/column</param>
+        /// <param name="isToCompareName">will compare/filter name property/field/column if true, otherwise false</param>
+        /// <param name="name" > value to compare/filter with name property/field/column</param>
+        /// <param name="isToCompareDescription">will compare/filter description property/field/column if true, otherwise false</param>
+        /// <param name="description" > value to compare/filter with description property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         public static int GetCountOfDefaultOfCommon(
-            bool isToCompareIdCommonOfOrganization_1OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_1OfCommon
-            , bool isToCompareIdCommonOfOrganization_2OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_2OfCommon
-            , bool isToCompareExternalParentIdCommonOftOfCommon, System.String valueToBeContainedExternalParentIdCommonOftOfCommon
-            , bool isToCompareNameCommonOftOfCommon, System.String valueToBeContainedNameCommonOftOfCommon
-            , bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
+            , bool isToCompareExternalParentId, System.String externalParentId
+            , bool isToCompareName, System.String name
+            , bool isToCompareDescription, System.String description
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -1615,11 +1615,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaCommon(
-                isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
-                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
-                , isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon
-                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
-                , isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
+                , isToCompareExternalParentId, externalParentId
+                , isToCompareName, name
+                , isToCompareDescription, description
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -1638,26 +1638,26 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Exists the of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdCommonOfOrganization_1OfCommon">will compare/filter IdCommonOfOrganization_1OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_1OfCommon">value to compare/filter with IdCommonOfOrganization_1OfCommon property/field/column</param>
-        /// <param name="isToCompareIdCommonOfOrganization_2OfCommon">will compare/filter IdCommonOfOrganization_2OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
-        /// <param name="isToCompareExternalParentIdCommonOftOfCommon">will compare/filter ExternalParentIdCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedExternalParentIdCommonOftOfCommon" > value to compare/filter with ExternalParentIdCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDescriptionCommonOftOfCommon">will compare/filter DescriptionCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon" > value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareExternalParentId">will compare/filter externalParentId property/field/column if true, otherwise false</param>
+        /// <param name="externalParentId" > value to compare/filter with externalParentId property/field/column</param>
+        /// <param name="isToCompareName">will compare/filter name property/field/column if true, otherwise false</param>
+        /// <param name="name" > value to compare/filter with name property/field/column</param>
+        /// <param name="isToCompareDescription">will compare/filter description property/field/column if true, otherwise false</param>
+        /// <param name="description" > value to compare/filter with description property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>true if meets criteria, otherwise false</returns>
         public static bool ExistsOfDefaultOfCommon(
-            bool isToCompareIdCommonOfOrganization_1OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_1OfCommon
-            , bool isToCompareIdCommonOfOrganization_2OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_2OfCommon
-            , bool isToCompareExternalParentIdCommonOftOfCommon, System.String valueToBeContainedExternalParentIdCommonOftOfCommon
-            , bool isToCompareNameCommonOftOfCommon, System.String valueToBeContainedNameCommonOftOfCommon
-            , bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
+            , bool isToCompareExternalParentId, System.String externalParentId
+            , bool isToCompareName, System.String name
+            , bool isToCompareDescription, System.String description
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -1674,11 +1674,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaCommon(
-                isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
-                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
-                , isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon
-                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
-                , isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
+                , isToCompareExternalParentId, externalParentId
+                , isToCompareName, name
+                , isToCompareDescription, description
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -1697,26 +1697,26 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdCommonOfOrganization_1OfCommon">will compare/filter IdCommonOfOrganization_1OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_1OfCommon">value to compare/filter with IdCommonOfOrganization_1OfCommon property/field/column</param>
-        /// <param name="isToCompareIdCommonOfOrganization_2OfCommon">will compare/filter IdCommonOfOrganization_2OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
-        /// <param name="isToCompareExternalParentIdCommonOftOfCommon">will compare/filter ExternalParentIdCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedExternalParentIdCommonOftOfCommon" > value to compare/filter with ExternalParentIdCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDescriptionCommonOftOfCommon">will compare/filter DescriptionCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon" > value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareExternalParentId">will compare/filter externalParentId property/field/column if true, otherwise false</param>
+        /// <param name="externalParentId" > value to compare/filter with externalParentId property/field/column</param>
+        /// <param name="isToCompareName">will compare/filter name property/field/column if true, otherwise false</param>
+        /// <param name="name" > value to compare/filter with name property/field/column</param>
+        /// <param name="isToCompareDescription">will compare/filter description property/field/column if true, otherwise false</param>
+        /// <param name="description" > value to compare/filter with description property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.Solution.DefaultCollection"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.Solution.DefaultCollection GetCollectionOfDefaultOfCommon(
-            bool isToCompareIdCommonOfOrganization_1OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_1OfCommon
-            , bool isToCompareIdCommonOfOrganization_2OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_2OfCommon
-            , bool isToCompareExternalParentIdCommonOftOfCommon, System.String valueToBeContainedExternalParentIdCommonOftOfCommon
-            , bool isToCompareNameCommonOftOfCommon, System.String valueToBeContainedNameCommonOftOfCommon
-            , bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
+            , bool isToCompareExternalParentId, System.String externalParentId
+            , bool isToCompareName, System.String name
+            , bool isToCompareDescription, System.String description
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -1733,11 +1733,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaCommon(
-                isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
-                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
-                , isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon
-                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
-                , isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
+                , isToCompareExternalParentId, externalParentId
+                , isToCompareName, name
+                , isToCompareDescription, description
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -1756,26 +1756,26 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets message of the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdCommonOfOrganization_1OfCommon">will compare/filter IdCommonOfOrganization_1OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_1OfCommon">value to compare/filter with IdCommonOfOrganization_1OfCommon property/field/column</param>
-        /// <param name="isToCompareIdCommonOfOrganization_2OfCommon">will compare/filter IdCommonOfOrganization_2OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
-        /// <param name="isToCompareExternalParentIdCommonOftOfCommon">will compare/filter ExternalParentIdCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedExternalParentIdCommonOftOfCommon" > value to compare/filter with ExternalParentIdCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDescriptionCommonOftOfCommon">will compare/filter DescriptionCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon" > value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareExternalParentId">will compare/filter externalParentId property/field/column if true, otherwise false</param>
+        /// <param name="externalParentId" > value to compare/filter with externalParentId property/field/column</param>
+        /// <param name="isToCompareName">will compare/filter name property/field/column if true, otherwise false</param>
+        /// <param name="name" > value to compare/filter with name property/field/column</param>
+        /// <param name="isToCompareDescription">will compare/filter description property/field/column if true, otherwise false</param>
+        /// <param name="description" > value to compare/filter with description property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.Default"/></returns>
         public static MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.Default GetMessageOfDefaultOfCommon(
-            bool isToCompareIdCommonOfOrganization_1OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_1OfCommon
-            , bool isToCompareIdCommonOfOrganization_2OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_2OfCommon
-            , bool isToCompareExternalParentIdCommonOftOfCommon, System.String valueToBeContainedExternalParentIdCommonOftOfCommon
-            , bool isToCompareNameCommonOftOfCommon, System.String valueToBeContainedNameCommonOftOfCommon
-            , bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
+            , bool isToCompareExternalParentId, System.String externalParentId
+            , bool isToCompareName, System.String name
+            , bool isToCompareDescription, System.String description
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression        )
@@ -1791,11 +1791,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaCommon(
-                isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
-                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
-                , isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon
-                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
-                , isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
+                , isToCompareExternalParentId, externalParentId
+                , isToCompareName, name
+                , isToCompareDescription, description
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfCommon(_Request);
             return _Response;
@@ -1804,23 +1804,23 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the single of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdCommonOfOrganization_1OfCommon">will compare/filter IdCommonOfOrganization_1OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_1OfCommon">value to compare/filter with IdCommonOfOrganization_1OfCommon property/field/column</param>
-        /// <param name="isToCompareIdCommonOfOrganization_2OfCommon">will compare/filter IdCommonOfOrganization_2OfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdCommonOfOrganization_2OfCommon">value to compare/filter with IdCommonOfOrganization_2OfCommon property/field/column</param>
-        /// <param name="isToCompareExternalParentIdCommonOftOfCommon">will compare/filter ExternalParentIdCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedExternalParentIdCommonOftOfCommon" > value to compare/filter with ExternalParentIdCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareNameCommonOftOfCommon">will compare/filter NameCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedNameCommonOftOfCommon" > value to compare/filter with NameCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDescriptionCommonOftOfCommon">will compare/filter DescriptionCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon" > value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareExternalParentId">will compare/filter externalParentId property/field/column if true, otherwise false</param>
+        /// <param name="externalParentId" > value to compare/filter with externalParentId property/field/column</param>
+        /// <param name="isToCompareName">will compare/filter name property/field/column if true, otherwise false</param>
+        /// <param name="name" > value to compare/filter with name property/field/column</param>
+        /// <param name="isToCompareDescription">will compare/filter description property/field/column if true, otherwise false</param>
+        /// <param name="description" > value to compare/filter with description property/field/column</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.Solution.DefaultCollection"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.Solution.DefaultCollection GetSingleOfDefaultOfCommon(
-            bool isToCompareIdCommonOfOrganization_1OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_1OfCommon
-            , bool isToCompareIdCommonOfOrganization_2OfCommon, System.Int64? valueToCompareIdCommonOfOrganization_2OfCommon
-            , bool isToCompareExternalParentIdCommonOftOfCommon, System.String valueToBeContainedExternalParentIdCommonOftOfCommon
-            , bool isToCompareNameCommonOftOfCommon, System.String valueToBeContainedNameCommonOftOfCommon
-            , bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
+            , bool isToCompareExternalParentId, System.String externalParentId
+            , bool isToCompareName, System.String name
+            , bool isToCompareDescription, System.String description
             , string queryOrderByExpression
             )
 
@@ -1836,11 +1836,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaCommon(
-                isToCompareIdCommonOfOrganization_1OfCommon, valueToCompareIdCommonOfOrganization_1OfCommon
-                , isToCompareIdCommonOfOrganization_2OfCommon, valueToCompareIdCommonOfOrganization_2OfCommon
-                , isToCompareExternalParentIdCommonOftOfCommon, valueToBeContainedExternalParentIdCommonOftOfCommon
-                , isToCompareNameCommonOftOfCommon, valueToBeContainedNameCommonOftOfCommon
-                , isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
+                , isToCompareExternalParentId, externalParentId
+                , isToCompareName, name
+                , isToCompareDescription, description
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetSingleOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -4101,15 +4101,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the page number list of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
         public static int[] GetPageNumberListOfEntityOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int pageSize
             )
         {
@@ -4124,8 +4124,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , null
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -4158,15 +4158,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the page count of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
         public static int GetPageCountOfEntityOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int pageSize
             )
         {
@@ -4181,8 +4181,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , null
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -4202,16 +4202,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the count of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         public static int GetCountOfEntityOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -4228,8 +4228,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -4248,17 +4248,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Exists the of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>true if meets criteria, otherwise false</returns>
         public static bool ExistsOfEntityOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -4275,8 +4275,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -4295,17 +4295,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.SolutionCollection"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.SolutionCollection GetCollectionOfEntityOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -4322,8 +4322,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -4342,17 +4342,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets message of the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn"/></returns>
         public static MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn GetMessageOfEntityOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression        )
@@ -4368,8 +4368,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfByFKOnly(_Request);
             return _Response;
@@ -4378,14 +4378,14 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the single of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.SolutionCollection"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.SolutionCollection GetSingleOfEntityOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , string queryOrderByExpression
             )
 
@@ -4401,8 +4401,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -4773,15 +4773,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the page number list of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
         public static int[] GetPageNumberListOfNameValuePairOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int pageSize
             )
         {
@@ -4796,8 +4796,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , null
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -4830,15 +4830,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the page count of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
         public static int GetPageCountOfNameValuePairOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int pageSize
             )
         {
@@ -4853,8 +4853,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , null
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -4874,16 +4874,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the count of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         public static int GetCountOfNameValuePairOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -4900,8 +4900,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -4920,17 +4920,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Exists the of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>true if meets criteria, otherwise false</returns>
         public static bool ExistsOfNameValuePairOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -4947,8 +4947,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -4967,17 +4967,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
         public static Framework.NameValueCollection GetCollectionOfNameValuePairOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -4994,8 +4994,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -5014,17 +5014,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets message of the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
         public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression        )
@@ -5040,8 +5040,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairOfByFKOnly(_Request);
             return _Response;
@@ -5050,14 +5050,14 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the single of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
         public static Framework.NameValueCollection GetSingleOfNameValuePairOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , string queryOrderByExpression
             )
 
@@ -5073,8 +5073,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetSingleOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -5445,15 +5445,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the page number list of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
         public static int[] GetPageNumberListOfRssItemOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int pageSize
             )
         {
@@ -5468,8 +5468,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , null
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -5502,15 +5502,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the page count of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
         public static int GetPageCountOfRssItemOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int pageSize
             )
         {
@@ -5525,8 +5525,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , null
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -5546,16 +5546,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the count of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         public static int GetCountOfRssItemOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -5572,8 +5572,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -5592,17 +5592,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Exists the of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>true if meets criteria, otherwise false</returns>
         public static bool ExistsOfRssItemOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -5619,8 +5619,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -5639,17 +5639,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.RssItemCollection"/></returns>
         public static Framework.RssItemCollection GetCollectionOfRssItemOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -5666,8 +5666,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -5686,17 +5686,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets message of the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection"/></returns>
         public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetMessageOfRssItemOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression        )
@@ -5712,8 +5712,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfRssItemOfByFKOnly(_Request);
             return _Response;
@@ -5722,14 +5722,14 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the single of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <returns>the collection of type <see cref="Framework.RssItemCollection"/></returns>
         public static Framework.RssItemCollection GetSingleOfRssItemOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , string queryOrderByExpression
             )
 
@@ -5745,8 +5745,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetSingleOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -6117,15 +6117,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the page number list of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
         public static int[] GetPageNumberListOfDefaultOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int pageSize
             )
         {
@@ -6140,8 +6140,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , null
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -6174,15 +6174,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the page count of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
         public static int GetPageCountOfDefaultOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int pageSize
             )
         {
@@ -6197,8 +6197,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , null
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -6218,16 +6218,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the count of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         public static int GetCountOfDefaultOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -6244,8 +6244,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -6264,17 +6264,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Exists the of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>true if meets criteria, otherwise false</returns>
         public static bool ExistsOfDefaultOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -6291,8 +6291,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -6311,17 +6311,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.Solution.DefaultCollection"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.Solution.DefaultCollection GetCollectionOfDefaultOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -6338,8 +6338,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -6358,17 +6358,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets message of the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.Default"/></returns>
         public static MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.Default GetMessageOfDefaultOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression        )
@@ -6384,8 +6384,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfByFKOnly(_Request);
             return _Response;
@@ -6394,14 +6394,14 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the single of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.Solution.DefaultCollection"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.Solution.DefaultCollection GetSingleOfDefaultOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , string queryOrderByExpression
             )
 
@@ -6417,8 +6417,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetSingleOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -6789,15 +6789,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the page number list of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
         public static int[] GetPageNumberListOfDefaultGroupedDataViewOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int pageSize
             )
         {
@@ -6812,8 +6812,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , null
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -6846,15 +6846,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the page count of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
         public static int GetPageCountOfDefaultGroupedDataViewOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int pageSize
             )
         {
@@ -6869,8 +6869,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , null
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -6890,16 +6890,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the count of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         public static int GetCountOfDefaultGroupedDataViewOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -6916,8 +6916,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -6936,17 +6936,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Exists the of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>true if meets criteria, otherwise false</returns>
         public static bool ExistsOfDefaultGroupedDataViewOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -6963,8 +6963,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -6983,17 +6983,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataViewCollection"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataViewCollection GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -7010,8 +7010,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -7030,17 +7030,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets message of the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView"/></returns>
         public static MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView GetMessageOfDefaultGroupedDataViewOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression        )
@@ -7056,8 +7056,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultGroupedDataViewOfByFKOnly(_Request);
             return _Response;
@@ -7066,14 +7066,14 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the single of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataViewCollection"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataViewCollection GetSingleOfDefaultGroupedDataViewOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
             , string queryOrderByExpression
             )
 
@@ -7089,8 +7089,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByFKOnly(
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView _Response = _BusinessLogicLayerInstance.GetSingleOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -7461,12 +7461,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the page number list of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
         public static int[] GetPageNumberListOfEntityOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int pageSize
             )
         {
@@ -7481,7 +7481,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , null
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -7514,12 +7514,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the page count of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
         public static int GetPageCountOfEntityOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int pageSize
             )
         {
@@ -7534,7 +7534,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , null
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -7554,13 +7554,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the count of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         public static int GetCountOfEntityOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -7577,7 +7577,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -7596,14 +7596,14 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Exists the of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>true if meets criteria, otherwise false</returns>
         public static bool ExistsOfEntityOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -7620,7 +7620,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -7639,14 +7639,14 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.SolutionCollection"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.SolutionCollection GetCollectionOfEntityOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -7663,7 +7663,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -7682,14 +7682,14 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets message of the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn"/></returns>
         public static MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn GetMessageOfEntityOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression        )
@@ -7705,7 +7705,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfByIdentifier(_Request);
             return _Response;
@@ -7714,11 +7714,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the single of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.SolutionCollection"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.SolutionCollection GetSingleOfEntityOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , string queryOrderByExpression
             )
 
@@ -7734,7 +7734,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -8105,12 +8105,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the page number list of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
         public static int[] GetPageNumberListOfDefaultOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int pageSize
             )
         {
@@ -8125,7 +8125,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , null
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -8158,12 +8158,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the page count of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
         public static int GetPageCountOfDefaultOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int pageSize
             )
         {
@@ -8178,7 +8178,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , null
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -8198,13 +8198,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the count of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         public static int GetCountOfDefaultOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -8221,7 +8221,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -8240,14 +8240,14 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Exists the of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>true if meets criteria, otherwise false</returns>
         public static bool ExistsOfDefaultOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -8264,7 +8264,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -8283,14 +8283,14 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.Solution.DefaultCollection"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.Solution.DefaultCollection GetCollectionOfDefaultOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -8307,7 +8307,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -8326,14 +8326,14 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets message of the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.Default"/></returns>
         public static MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.Default GetMessageOfDefaultOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression        )
@@ -8349,7 +8349,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfByIdentifier(_Request);
             return _Response;
@@ -8358,11 +8358,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the single of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.Solution.DefaultCollection"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.Solution.DefaultCollection GetSingleOfDefaultOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , string queryOrderByExpression
             )
 
@@ -8378,7 +8378,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetSingleOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -8749,12 +8749,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the page number list of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
         public static int[] GetPageNumberListOfKeyInformationOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int pageSize
             )
         {
@@ -8769,7 +8769,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , null
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -8802,12 +8802,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the page count of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
         public static int GetPageCountOfKeyInformationOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int pageSize
             )
         {
@@ -8822,7 +8822,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , null
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -8842,13 +8842,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the count of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         public static int GetCountOfKeyInformationOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -8865,7 +8865,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -8884,14 +8884,14 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Exists the of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>true if meets criteria, otherwise false</returns>
         public static bool ExistsOfKeyInformationOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -8908,7 +8908,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -8927,14 +8927,14 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.Solution.KeyInformationCollection"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.Solution.KeyInformationCollection GetCollectionOfKeyInformationOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -8951,7 +8951,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetCollectionOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -8970,14 +8970,14 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets message of the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.KeyInformation"/></returns>
         public static MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.KeyInformation GetMessageOfKeyInformationOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression        )
@@ -8993,7 +8993,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetCollectionOfKeyInformationOfByIdentifier(_Request);
             return _Response;
@@ -9002,11 +9002,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the single of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.Solution.KeyInformationCollection"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.Solution.KeyInformationCollection GetSingleOfKeyInformationOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , string queryOrderByExpression
             )
 
@@ -9022,7 +9022,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetSolutionChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetSingleOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)

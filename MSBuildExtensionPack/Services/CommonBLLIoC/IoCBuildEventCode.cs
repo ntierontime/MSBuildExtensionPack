@@ -240,22 +240,22 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareEventCodeCommonOftOfCommon">will compare/filter EventCodeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedEventCodeCommonOftOfCommon" > value to compare/filter with EventCodeCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDescriptionCommonOftOfCommon">will compare/filter DescriptionCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon" > value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareEventCode">will compare/filter eventCode property/field/column if true, otherwise false</param>
+        /// <param name="eventCode" > value to compare/filter with eventCode property/field/column</param>
+        /// <param name="isToCompareDescription">will compare/filter description property/field/column if true, otherwise false</param>
+        /// <param name="description" > value to compare/filter with description property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns></returns>
         private static MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommon _GetBuildEventCodeChainedQueryCriteriaCommon(
-            bool isToCompareEventCodeCommonOftOfCommon, System.String valueToBeContainedEventCodeCommonOftOfCommon
-            , bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
+            bool isToCompareEventCode, System.String eventCode
+            , bool isToCompareDescription, System.String description
             )
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommon();
-            criteria.BuildEventCodeQueryCriteriaCommon.EventCodeCommonOft = new QuerySystemStringContainsCriteria(isToCompareEventCodeCommonOftOfCommon, valueToBeContainedEventCodeCommonOftOfCommon);
-            criteria.BuildEventCodeQueryCriteriaCommon.DescriptionCommonOft = new QuerySystemStringContainsCriteria(isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon);
+            criteria.BuildEventCodeQueryCriteriaCommon.EventCodeCommonOft = new QuerySystemStringContainsCriteria(isToCompareEventCode, eventCode);
+            criteria.BuildEventCodeQueryCriteriaCommon.DescriptionCommonOft = new QuerySystemStringContainsCriteria(isToCompareDescription, description);
             return criteria;
         }
 
@@ -279,18 +279,18 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns></returns>
         private static MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaByIdentifier _GetBuildEventCodeChainedQueryCriteriaByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             )
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaByIdentifier();
-            criteria.BuildEventCodeQueryCriteriaByIdentifier.IdByIdentifierOft = new QuerySystemInt32EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier);
+            criteria.BuildEventCodeQueryCriteriaByIdentifier.IdByIdentifierOft = new QuerySystemInt32EqualsCriteria(isToCompareId, id);
             return criteria;
         }
 
@@ -647,15 +647,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the page number list of entity of common.
         /// </summary>
-        /// <param name="isToCompareEventCodeCommonOftOfCommon">will compare/filter EventCodeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedEventCodeCommonOftOfCommon" > value to compare/filter with EventCodeCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDescriptionCommonOftOfCommon">will compare/filter DescriptionCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon" > value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareEventCode">will compare/filter eventCode property/field/column if true, otherwise false</param>
+        /// <param name="eventCode" > value to compare/filter with eventCode property/field/column</param>
+        /// <param name="isToCompareDescription">will compare/filter description property/field/column if true, otherwise false</param>
+        /// <param name="description" > value to compare/filter with description property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
         public static int[] GetPageNumberListOfEntityOfCommon(
-            bool isToCompareEventCodeCommonOftOfCommon, System.String valueToBeContainedEventCodeCommonOftOfCommon
-            , bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
+            bool isToCompareEventCode, System.String eventCode
+            , bool isToCompareDescription, System.String description
             , int pageSize
             )
         {
@@ -670,8 +670,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , null
                 );
             _Request.Criteria = _GetBuildEventCodeChainedQueryCriteriaCommon(
-                isToCompareEventCodeCommonOftOfCommon, valueToBeContainedEventCodeCommonOftOfCommon
-                , isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon
+                isToCompareEventCode, eventCode
+                , isToCompareDescription, description
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -704,15 +704,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the page count of entity of common.
         /// </summary>
-        /// <param name="isToCompareEventCodeCommonOftOfCommon">will compare/filter EventCodeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedEventCodeCommonOftOfCommon" > value to compare/filter with EventCodeCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDescriptionCommonOftOfCommon">will compare/filter DescriptionCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon" > value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareEventCode">will compare/filter eventCode property/field/column if true, otherwise false</param>
+        /// <param name="eventCode" > value to compare/filter with eventCode property/field/column</param>
+        /// <param name="isToCompareDescription">will compare/filter description property/field/column if true, otherwise false</param>
+        /// <param name="description" > value to compare/filter with description property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
         public static int GetPageCountOfEntityOfCommon(
-            bool isToCompareEventCodeCommonOftOfCommon, System.String valueToBeContainedEventCodeCommonOftOfCommon
-            , bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
+            bool isToCompareEventCode, System.String eventCode
+            , bool isToCompareDescription, System.String description
             , int pageSize
             )
         {
@@ -727,8 +727,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , null
                 );
             _Request.Criteria = _GetBuildEventCodeChainedQueryCriteriaCommon(
-                isToCompareEventCodeCommonOftOfCommon, valueToBeContainedEventCodeCommonOftOfCommon
-                , isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon
+                isToCompareEventCode, eventCode
+                , isToCompareDescription, description
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -748,16 +748,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the count of entity of common.
         /// </summary>
-        /// <param name="isToCompareEventCodeCommonOftOfCommon">will compare/filter EventCodeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedEventCodeCommonOftOfCommon" > value to compare/filter with EventCodeCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDescriptionCommonOftOfCommon">will compare/filter DescriptionCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon" > value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareEventCode">will compare/filter eventCode property/field/column if true, otherwise false</param>
+        /// <param name="eventCode" > value to compare/filter with eventCode property/field/column</param>
+        /// <param name="isToCompareDescription">will compare/filter description property/field/column if true, otherwise false</param>
+        /// <param name="description" > value to compare/filter with description property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         public static int GetCountOfEntityOfCommon(
-            bool isToCompareEventCodeCommonOftOfCommon, System.String valueToBeContainedEventCodeCommonOftOfCommon
-            , bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
+            bool isToCompareEventCode, System.String eventCode
+            , bool isToCompareDescription, System.String description
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -774,8 +774,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetBuildEventCodeChainedQueryCriteriaCommon(
-                isToCompareEventCodeCommonOftOfCommon, valueToBeContainedEventCodeCommonOftOfCommon
-                , isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon
+                isToCompareEventCode, eventCode
+                , isToCompareDescription, description
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -794,17 +794,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Exists the of entity of common.
         /// </summary>
-        /// <param name="isToCompareEventCodeCommonOftOfCommon">will compare/filter EventCodeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedEventCodeCommonOftOfCommon" > value to compare/filter with EventCodeCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDescriptionCommonOftOfCommon">will compare/filter DescriptionCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon" > value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareEventCode">will compare/filter eventCode property/field/column if true, otherwise false</param>
+        /// <param name="eventCode" > value to compare/filter with eventCode property/field/column</param>
+        /// <param name="isToCompareDescription">will compare/filter description property/field/column if true, otherwise false</param>
+        /// <param name="description" > value to compare/filter with description property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>true if meets criteria, otherwise false</returns>
         public static bool ExistsOfEntityOfCommon(
-            bool isToCompareEventCodeCommonOftOfCommon, System.String valueToBeContainedEventCodeCommonOftOfCommon
-            , bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
+            bool isToCompareEventCode, System.String eventCode
+            , bool isToCompareDescription, System.String description
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -821,8 +821,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetBuildEventCodeChainedQueryCriteriaCommon(
-                isToCompareEventCodeCommonOftOfCommon, valueToBeContainedEventCodeCommonOftOfCommon
-                , isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon
+                isToCompareEventCode, eventCode
+                , isToCompareDescription, description
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -841,17 +841,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareEventCodeCommonOftOfCommon">will compare/filter EventCodeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedEventCodeCommonOftOfCommon" > value to compare/filter with EventCodeCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDescriptionCommonOftOfCommon">will compare/filter DescriptionCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon" > value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareEventCode">will compare/filter eventCode property/field/column if true, otherwise false</param>
+        /// <param name="eventCode" > value to compare/filter with eventCode property/field/column</param>
+        /// <param name="isToCompareDescription">will compare/filter description property/field/column if true, otherwise false</param>
+        /// <param name="description" > value to compare/filter with description property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection GetCollectionOfEntityOfCommon(
-            bool isToCompareEventCodeCommonOftOfCommon, System.String valueToBeContainedEventCodeCommonOftOfCommon
-            , bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
+            bool isToCompareEventCode, System.String eventCode
+            , bool isToCompareDescription, System.String description
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -868,8 +868,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetBuildEventCodeChainedQueryCriteriaCommon(
-                isToCompareEventCodeCommonOftOfCommon, valueToBeContainedEventCodeCommonOftOfCommon
-                , isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon
+                isToCompareEventCode, eventCode
+                , isToCompareDescription, description
                 );
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -888,17 +888,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets message of the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareEventCodeCommonOftOfCommon">will compare/filter EventCodeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedEventCodeCommonOftOfCommon" > value to compare/filter with EventCodeCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDescriptionCommonOftOfCommon">will compare/filter DescriptionCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon" > value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareEventCode">will compare/filter eventCode property/field/column if true, otherwise false</param>
+        /// <param name="eventCode" > value to compare/filter with eventCode property/field/column</param>
+        /// <param name="isToCompareDescription">will compare/filter description property/field/column if true, otherwise false</param>
+        /// <param name="description" > value to compare/filter with description property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn"/></returns>
         public static MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn GetMessageOfEntityOfCommon(
-            bool isToCompareEventCodeCommonOftOfCommon, System.String valueToBeContainedEventCodeCommonOftOfCommon
-            , bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
+            bool isToCompareEventCode, System.String eventCode
+            , bool isToCompareDescription, System.String description
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression        )
@@ -914,8 +914,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetBuildEventCodeChainedQueryCriteriaCommon(
-                isToCompareEventCodeCommonOftOfCommon, valueToBeContainedEventCodeCommonOftOfCommon
-                , isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon
+                isToCompareEventCode, eventCode
+                , isToCompareDescription, description
                 );
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfCommon(_Request);
             return _Response;
@@ -924,14 +924,14 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the single of entity of common.
         /// </summary>
-        /// <param name="isToCompareEventCodeCommonOftOfCommon">will compare/filter EventCodeCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedEventCodeCommonOftOfCommon" > value to compare/filter with EventCodeCommonOftOfCommon property/field/column</param>
-        /// <param name="isToCompareDescriptionCommonOftOfCommon">will compare/filter DescriptionCommonOftOfCommon property/field/column if true, otherwise false</param>
-        /// <param name="valueToBeContainedDescriptionCommonOftOfCommon" > value to compare/filter with DescriptionCommonOftOfCommon property/field/column</param>
+        /// <param name="isToCompareEventCode">will compare/filter eventCode property/field/column if true, otherwise false</param>
+        /// <param name="eventCode" > value to compare/filter with eventCode property/field/column</param>
+        /// <param name="isToCompareDescription">will compare/filter description property/field/column if true, otherwise false</param>
+        /// <param name="description" > value to compare/filter with description property/field/column</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection GetSingleOfEntityOfCommon(
-            bool isToCompareEventCodeCommonOftOfCommon, System.String valueToBeContainedEventCodeCommonOftOfCommon
-            , bool isToCompareDescriptionCommonOftOfCommon, System.String valueToBeContainedDescriptionCommonOftOfCommon
+            bool isToCompareEventCode, System.String eventCode
+            , bool isToCompareDescription, System.String description
             , string queryOrderByExpression
             )
 
@@ -947,8 +947,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetBuildEventCodeChainedQueryCriteriaCommon(
-                isToCompareEventCodeCommonOftOfCommon, valueToBeContainedEventCodeCommonOftOfCommon
-                , isToCompareDescriptionCommonOftOfCommon, valueToBeContainedDescriptionCommonOftOfCommon
+                isToCompareEventCode, eventCode
+                , isToCompareDescription, description
                 );
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -3209,12 +3209,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the page number list of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
         public static int[] GetPageNumberListOfEntityOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int pageSize
             )
         {
@@ -3229,7 +3229,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , null
                 );
             _Request.Criteria = _GetBuildEventCodeChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -3262,12 +3262,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the page count of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
         public static int GetPageCountOfEntityOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int pageSize
             )
         {
@@ -3282,7 +3282,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , null
                 );
             _Request.Criteria = _GetBuildEventCodeChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -3302,13 +3302,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the count of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         public static int GetCountOfEntityOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -3325,7 +3325,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetBuildEventCodeChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -3344,14 +3344,14 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Exists the of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>true if meets criteria, otherwise false</returns>
         public static bool ExistsOfEntityOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -3368,7 +3368,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetBuildEventCodeChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -3387,14 +3387,14 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection GetCollectionOfEntityOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -3411,7 +3411,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetBuildEventCodeChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -3430,14 +3430,14 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets message of the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn"/></returns>
         public static MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn GetMessageOfEntityOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression        )
@@ -3453,7 +3453,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetBuildEventCodeChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfByIdentifier(_Request);
             return _Response;
@@ -3462,11 +3462,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the single of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection GetSingleOfEntityOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , string queryOrderByExpression
             )
 
@@ -3482,7 +3482,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetBuildEventCodeChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -3853,12 +3853,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the page number list of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
         public static int[] GetPageNumberListOfKeyInformationOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int pageSize
             )
         {
@@ -3873,7 +3873,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , null
                 );
             _Request.Criteria = _GetBuildEventCodeChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -3906,12 +3906,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the page count of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
         public static int GetPageCountOfKeyInformationOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int pageSize
             )
         {
@@ -3926,7 +3926,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , null
                 );
             _Request.Criteria = _GetBuildEventCodeChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -3946,13 +3946,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the count of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         public static int GetCountOfKeyInformationOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -3969,7 +3969,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetBuildEventCodeChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -3988,14 +3988,14 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Exists the of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>true if meets criteria, otherwise false</returns>
         public static bool ExistsOfKeyInformationOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -4012,7 +4012,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetBuildEventCodeChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -4031,14 +4031,14 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformationCollection"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformationCollection GetCollectionOfKeyInformationOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -4055,7 +4055,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetBuildEventCodeChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetCollectionOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -4074,14 +4074,14 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets message of the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation"/></returns>
         public static MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation GetMessageOfKeyInformationOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression        )
@@ -4097,7 +4097,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetBuildEventCodeChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetCollectionOfKeyInformationOfByIdentifier(_Request);
             return _Response;
@@ -4106,11 +4106,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <summary>
         /// Gets the single of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">will compare/filter IdByIdentifierOftOfByIdentifier property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">value to compare/filter with IdByIdentifierOftOfByIdentifier property/field/column</param>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformationCollection"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformationCollection GetSingleOfKeyInformationOfByIdentifier(
-            bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+            bool isToCompareId, System.Int32? id
             , string queryOrderByExpression
             )
 
@@ -4126,7 +4126,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , queryOrderByExpression
                 );
             _Request.Criteria = _GetBuildEventCodeChainedQueryCriteriaByIdentifier(
-                isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier
+                isToCompareId, id
                 );
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetSingleOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)

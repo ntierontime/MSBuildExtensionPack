@@ -17,7 +17,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 
                 public List<SelectListItem> SelectListOfMSBuildExtensionPack_Organization { get; set; }
 
-        public void Load(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier
+        public void Load(bool isToCompareId, System.Int32? id
             , Framework.UIAction uiAction)
         {
             try
@@ -25,7 +25,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
                 log.Info(string.Format("{0}: Details", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
                 MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.Default _Response =
-                    MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfDefaultOfByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
+                    MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfDefaultOfByIdentifier(isToCompareId, id, -1, -1, null);
 
                 if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK || _Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
                 {

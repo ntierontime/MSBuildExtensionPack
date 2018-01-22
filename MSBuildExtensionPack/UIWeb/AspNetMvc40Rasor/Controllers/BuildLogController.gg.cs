@@ -112,10 +112,10 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_WPEntityRelatedOfBuildLog)]
-        public ActionResult WPEntityRelatedOfBuildLog(System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
+        public ActionResult WPEntityRelatedOfBuildLog(System.Int64? id)
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier();
-            criteria.BuildLogQueryCriteriaByIdentifier.IdByIdentifierOft.NullableValueToCompare = valueToCompareIdByIdentifierOftOfByIdentifier;
+            criteria.BuildLogQueryCriteriaByIdentifier.IdByIdentifierOft.NullableValueToCompare = id;
             MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildLogVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildLogVM(criteria);
             vm.LoadData();
 
@@ -180,7 +180,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 
         #endregion Index()
 
-        #region ActionResult Details(System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
+        #region ActionResult Details(System.Int64? id)
 
         /// <summary>
         /// GET method of details page, based on identifier or unique constraint, this entity only, no related entities.
@@ -188,18 +188,18 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Details)]
-        public ActionResult Details(System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
+        public ActionResult Details(System.Int64? id)
         {
             Framework.UIAction uiAction = Framework.UIAction.ViewDetails;
             MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM();
-            vm.Load(valueToCompareIdByIdentifierOftOfByIdentifier.HasValue, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
+            vm.Load(id.HasValue, id, uiAction);
             vm.ContentData.Title = Framework.Resx.UIStringResource.Details;
             vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Details_BuildLog;
 
             return View(vm);
         }
 
-        #endregion ActionResult Details(System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
+        #endregion ActionResult Details(System.Int64? id)
 
         #region ActionResult AddNew()
 
@@ -262,10 +262,10 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Copy)]
-        public ActionResult Copy(System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
+        public ActionResult Copy(System.Int64? id)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response =
-                MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfDefaultOfByIdentifier(valueToCompareIdByIdentifierOftOfByIdentifier.HasValue, valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
+                MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfDefaultOfByIdentifier(id.HasValue, id, -1, -1, null);
 
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -278,7 +278,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 
         #endregion ActionResult AddNew()
 
-        #region ActionResult Edit(System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
+        #region ActionResult Edit(System.Int64? id)
 
         /// <summary>
         /// GET method of editing page of <see cref="MSBuildExtensionPack.BuildLog"/>.
@@ -286,11 +286,11 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Edit)]
-        public ActionResult Edit(System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
+        public ActionResult Edit(System.Int64? id)
         {
             Framework.UIAction uiAction = Framework.UIAction.Update;
             MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM();
-            vm.Load(valueToCompareIdByIdentifierOftOfByIdentifier.HasValue, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
+            vm.Load(id.HasValue, id, uiAction);
             vm.ContentData.Title = Framework.Resx.UIStringResource.Edit;
             vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Edit_BuildLog;
 
@@ -330,9 +330,9 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             }
         }
 
-        #endregion ActionResult Edit(System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
+        #endregion ActionResult Edit(System.Int64? id)
 
-        #region ActionResult Delete(System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
+        #region ActionResult Delete(System.Int64? id)
 
         /// <summary>
         /// GET method of delete page of <see cref="MSBuildExtensionPack.BuildLog"/>
@@ -340,11 +340,11 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Delete)]
-        public ActionResult Delete(System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
+        public ActionResult Delete(System.Int64? id)
         {
             Framework.UIAction uiAction = Framework.UIAction.Delete;
             MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM();
-            vm.Load(valueToCompareIdByIdentifierOftOfByIdentifier.HasValue, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
+            vm.Load(id.HasValue, id, uiAction);
             vm.ContentData.Title = Framework.Resx.UIStringResource.Delete;
             vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Delete_BuildLog;
             return View(vm);
@@ -357,12 +357,12 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// <returns></returns>
         [HttpPost]
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Delete)]
-        public ActionResult Delete(System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier, MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM vm, FormCollection collection)
+        public ActionResult Delete(System.Int64? id, MSBuildExtensionPack.AspNetMvc40ViewModel.BuildLogItemVM vm, FormCollection collection)
         {
             try
             {
                 log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Started.ToString()));
-                var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.ExistsOfDefaultOfByIdentifier(valueToCompareIdByIdentifierOftOfByIdentifier.HasValue, valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
+                var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.ExistsOfDefaultOfByIdentifier(id.HasValue, id, -1, -1, null);
                 if (_Response)
                 {
                     MSBuildExtensionPack.DataSourceEntities.BuildLog entity = MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(vm.Item);
@@ -390,7 +390,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             }
         }
 
-        #endregion ActionResult Delete(System.Int64? valueToCompareIdByIdentifierOftOfByIdentifier)
+        #endregion ActionResult Delete(System.Int64? id)
 
         #region Binary Columns
 

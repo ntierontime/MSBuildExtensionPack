@@ -432,8 +432,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
                     [DataMember]
-        [Display(Name = "SolutionId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild))]
-        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild), ErrorMessageResourceName="SolutionId_is_required")]        public System.Int32 SolutionId
+        [Display(Name = "SolutionId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild))]        public System.Int32 SolutionId
         {
             get
             {
@@ -609,8 +608,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
             #region properties
 
                     [DataMember]
-        [Display(Name = "SolutionId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild))]
-        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild), ErrorMessageResourceName="SolutionId_is_required")]        public System.Int32 SolutionId
+        [Display(Name = "SolutionId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild))]        public System.Int32 SolutionId
         {
             get
             {
