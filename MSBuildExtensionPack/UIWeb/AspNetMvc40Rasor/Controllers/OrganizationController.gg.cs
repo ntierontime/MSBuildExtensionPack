@@ -117,9 +117,9 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             , System.Guid? uniqueidentifierColumn)
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint();
-            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft.NullableValueToCompare = id;
-            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft.NullableValueToCompare = uniqueIdentifier;
-            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft.NullableValueToCompare = uniqueidentifierColumn;
+            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.Id.NullableValueToCompare = id;
+            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifier.NullableValueToCompare = uniqueIdentifier;
+            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumn.NullableValueToCompare = uniqueidentifierColumn;
             MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfOrganizationVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfOrganizationVM(criteria);
             vm.LoadData();
 

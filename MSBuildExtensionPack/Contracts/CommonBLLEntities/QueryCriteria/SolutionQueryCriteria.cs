@@ -17,11 +17,11 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         {
         }
 
-        public QuerySystemInt64EqualsCriteria IdCommonOfOrganization_1 { get; set; } = new QuerySystemInt64EqualsCriteria();
-        public QuerySystemInt64EqualsCriteria IdCommonOfOrganization_2 { get; set; } = new QuerySystemInt64EqualsCriteria();
-        public QuerySystemStringContainsCriteria ExternalParentIdCommonOft { get; set; } = new QuerySystemStringContainsCriteria();
-        public QuerySystemStringContainsCriteria NameCommonOft { get; set; } = new QuerySystemStringContainsCriteria();
-        public QuerySystemStringContainsCriteria DescriptionCommonOft { get; set; } = new QuerySystemStringContainsCriteria();
+        public QuerySystemInt64EqualsCriteria OrganizationId { get; set; } = new QuerySystemInt64EqualsCriteria();
+        public QuerySystemInt64EqualsCriteria Organization_2Id { get; set; } = new QuerySystemInt64EqualsCriteria();
+        public QuerySystemStringContainsCriteria ExternalParentId { get; set; } = new QuerySystemStringContainsCriteria();
+        public QuerySystemStringContainsCriteria Name { get; set; } = new QuerySystemStringContainsCriteria();
+        public QuerySystemStringContainsCriteria Description { get; set; } = new QuerySystemStringContainsCriteria();
     }
 
     /// <summary>
@@ -44,8 +44,8 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         {
         }
 
-        public QuerySystemInt64EqualsCriteria IdByFKOnlyOfOrganization_1 { get; set; } = new QuerySystemInt64EqualsCriteria();
-        public QuerySystemInt64EqualsCriteria IdByFKOnlyOfOrganization_2 { get; set; } = new QuerySystemInt64EqualsCriteria();
+        public QuerySystemInt64EqualsCriteria OrganizationId { get; set; } = new QuerySystemInt64EqualsCriteria();
+        public QuerySystemInt64EqualsCriteria Organization_2Id { get; set; } = new QuerySystemInt64EqualsCriteria();
     }
 
     /// <summary>
@@ -57,7 +57,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         {
         }
 
-        public QuerySystemInt32EqualsCriteria IdByIdentifierOft { get; set; } = new QuerySystemInt32EqualsCriteria();
+        public QuerySystemInt32EqualsCriteria Id { get; set; } = new QuerySystemInt32EqualsCriteria();
     }
 
 }

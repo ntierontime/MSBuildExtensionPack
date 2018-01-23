@@ -17,13 +17,13 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         {
         }
 
-        public QuerySystemInt64EqualsCriteria IdCommonOfBuild_1 { get; set; } = new QuerySystemInt64EqualsCriteria();
-        public QuerySystemInt32EqualsCriteria IdCommonOfSolution_1 { get; set; } = new QuerySystemInt32EqualsCriteria();
-        public QuerySystemInt64EqualsCriteria IdCommonOfOrganization_1 { get; set; } = new QuerySystemInt64EqualsCriteria();
-        public QuerySystemInt64EqualsCriteria IdCommonOfOrganization_2 { get; set; } = new QuerySystemInt64EqualsCriteria();
-        public QuerySystemInt32EqualsCriteria IdCommonOfBuildEventCode_1 { get; set; } = new QuerySystemInt32EqualsCriteria();
-        public QuerySystemDateTimeRangeCriteria EventTimeCommonOft { get; set; } = new QuerySystemDateTimeRangeCriteria();
-        public QuerySystemStringContainsCriteria MessageCommonOft { get; set; } = new QuerySystemStringContainsCriteria();
+        public QuerySystemInt64EqualsCriteria BuildId { get; set; } = new QuerySystemInt64EqualsCriteria();
+        public QuerySystemInt32EqualsCriteria Solution_1Id { get; set; } = new QuerySystemInt32EqualsCriteria();
+        public QuerySystemInt64EqualsCriteria Organization_1Id { get; set; } = new QuerySystemInt64EqualsCriteria();
+        public QuerySystemInt64EqualsCriteria Organization_2Id { get; set; } = new QuerySystemInt64EqualsCriteria();
+        public QuerySystemInt32EqualsCriteria BuildEventCodeId { get; set; } = new QuerySystemInt32EqualsCriteria();
+        public QuerySystemDateTimeRangeCriteria EventTimeRange { get; set; } = new QuerySystemDateTimeRangeCriteria();
+        public QuerySystemStringContainsCriteria Message { get; set; } = new QuerySystemStringContainsCriteria();
     }
 
     /// <summary>
@@ -46,11 +46,11 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         {
         }
 
-        public QuerySystemInt64EqualsCriteria IdByFKOnlyOfBuild_1 { get; set; } = new QuerySystemInt64EqualsCriteria();
-        public QuerySystemInt32EqualsCriteria IdByFKOnlyOfSolution_1 { get; set; } = new QuerySystemInt32EqualsCriteria();
-        public QuerySystemInt64EqualsCriteria IdByFKOnlyOfOrganization_1 { get; set; } = new QuerySystemInt64EqualsCriteria();
-        public QuerySystemInt64EqualsCriteria IdByFKOnlyOfOrganization_2 { get; set; } = new QuerySystemInt64EqualsCriteria();
-        public QuerySystemInt32EqualsCriteria IdByFKOnlyOfBuildEventCode_1 { get; set; } = new QuerySystemInt32EqualsCriteria();
+        public QuerySystemInt64EqualsCriteria BuildId { get; set; } = new QuerySystemInt64EqualsCriteria();
+        public QuerySystemInt32EqualsCriteria Solution_1Id { get; set; } = new QuerySystemInt32EqualsCriteria();
+        public QuerySystemInt64EqualsCriteria Organization_1Id { get; set; } = new QuerySystemInt64EqualsCriteria();
+        public QuerySystemInt64EqualsCriteria Organization_2Id { get; set; } = new QuerySystemInt64EqualsCriteria();
+        public QuerySystemInt32EqualsCriteria BuildEventCodeId { get; set; } = new QuerySystemInt32EqualsCriteria();
     }
 
     /// <summary>
@@ -62,7 +62,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         {
         }
 
-        public QuerySystemInt64EqualsCriteria IdByIdentifierOft { get; set; } = new QuerySystemInt64EqualsCriteria();
+        public QuerySystemInt64EqualsCriteria Id { get; set; } = new QuerySystemInt64EqualsCriteria();
     }
 
 }

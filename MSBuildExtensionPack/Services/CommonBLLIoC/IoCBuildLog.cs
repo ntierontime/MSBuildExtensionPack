@@ -290,13 +290,13 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             )
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon();
-            criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1 = new QuerySystemInt64EqualsCriteria(isToCompareBuildId, buildId);
-            criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1 = new QuerySystemInt32EqualsCriteria(isToCompareSolution_1Id, solution_1Id);
-            criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_1 = new QuerySystemInt64EqualsCriteria(isToCompareOrganization_1Id, organization_1Id);
-            criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_2 = new QuerySystemInt64EqualsCriteria(isToCompareOrganization_2Id, organization_2Id);
-            criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuildEventCode_1 = new QuerySystemInt32EqualsCriteria(isToCompareBuildEventCodeId, buildEventCodeId);
-            criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft = new QuerySystemDateTimeRangeCriteria(isToCompareEventTimeRange, isToCompareEventTimeRangeLow, eventTimeRangeLow, isToCompareEventTimeRangeHigh, eventTimeRangeHigh);
-            criteria.BuildLogQueryCriteriaCommon.MessageCommonOft = new QuerySystemStringContainsCriteria(isToCompareMessage, message);
+            criteria.BuildLogQueryCriteriaCommon.BuildId = new QuerySystemInt64EqualsCriteria(isToCompareBuildId, buildId);
+            criteria.BuildLogQueryCriteriaCommon.Solution_1Id = new QuerySystemInt32EqualsCriteria(isToCompareSolution_1Id, solution_1Id);
+            criteria.BuildLogQueryCriteriaCommon.Organization_1Id = new QuerySystemInt64EqualsCriteria(isToCompareOrganization_1Id, organization_1Id);
+            criteria.BuildLogQueryCriteriaCommon.Organization_2Id = new QuerySystemInt64EqualsCriteria(isToCompareOrganization_2Id, organization_2Id);
+            criteria.BuildLogQueryCriteriaCommon.BuildEventCodeId = new QuerySystemInt32EqualsCriteria(isToCompareBuildEventCodeId, buildEventCodeId);
+            criteria.BuildLogQueryCriteriaCommon.EventTimeRange = new QuerySystemDateTimeRangeCriteria(isToCompareEventTimeRange, isToCompareEventTimeRangeLow, eventTimeRangeLow, isToCompareEventTimeRangeHigh, eventTimeRangeHigh);
+            criteria.BuildLogQueryCriteriaCommon.Message = new QuerySystemStringContainsCriteria(isToCompareMessage, message);
             return criteria;
         }
 
@@ -343,11 +343,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             )
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly();
-            criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1 = new QuerySystemInt64EqualsCriteria(isToCompareBuildId, buildId);
-            criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1 = new QuerySystemInt32EqualsCriteria(isToCompareSolution_1Id, solution_1Id);
-            criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1 = new QuerySystemInt64EqualsCriteria(isToCompareOrganization_1Id, organization_1Id);
-            criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2 = new QuerySystemInt64EqualsCriteria(isToCompareOrganization_2Id, organization_2Id);
-            criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1 = new QuerySystemInt32EqualsCriteria(isToCompareBuildEventCodeId, buildEventCodeId);
+            criteria.BuildLogQueryCriteriaByFKOnly.BuildId = new QuerySystemInt64EqualsCriteria(isToCompareBuildId, buildId);
+            criteria.BuildLogQueryCriteriaByFKOnly.Solution_1Id = new QuerySystemInt32EqualsCriteria(isToCompareSolution_1Id, solution_1Id);
+            criteria.BuildLogQueryCriteriaByFKOnly.Organization_1Id = new QuerySystemInt64EqualsCriteria(isToCompareOrganization_1Id, organization_1Id);
+            criteria.BuildLogQueryCriteriaByFKOnly.Organization_2Id = new QuerySystemInt64EqualsCriteria(isToCompareOrganization_2Id, organization_2Id);
+            criteria.BuildLogQueryCriteriaByFKOnly.BuildEventCodeId = new QuerySystemInt32EqualsCriteria(isToCompareBuildEventCodeId, buildEventCodeId);
             return criteria;
         }
 
@@ -365,7 +365,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             )
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier();
-            criteria.BuildLogQueryCriteriaByIdentifier.IdByIdentifierOft = new QuerySystemInt64EqualsCriteria(isToCompareId, id);
+            criteria.BuildLogQueryCriteriaByIdentifier.Id = new QuerySystemInt64EqualsCriteria(isToCompareId, id);
             return criteria;
         }
 

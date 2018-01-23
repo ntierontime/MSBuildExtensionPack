@@ -348,13 +348,13 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfEntityOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfEntityOfCommon(
-                request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuildEventCode_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft
-                , request.Criteria.BuildLogQueryCriteriaCommon.MessageCommonOft
+                request.Criteria.BuildLogQueryCriteriaCommon.BuildId
+                , request.Criteria.BuildLogQueryCriteriaCommon.Solution_1Id
+                , request.Criteria.BuildLogQueryCriteriaCommon.Organization_1Id
+                , request.Criteria.BuildLogQueryCriteriaCommon.Organization_2Id
+                , request.Criteria.BuildLogQueryCriteriaCommon.BuildEventCodeId
+                , request.Criteria.BuildLogQueryCriteriaCommon.EventTimeRange
+                , request.Criteria.BuildLogQueryCriteriaCommon.Message
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -376,13 +376,13 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfEntityOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfEntityOfCommon(
-                request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuildEventCode_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft
-                , request.Criteria.BuildLogQueryCriteriaCommon.MessageCommonOft
+                request.Criteria.BuildLogQueryCriteriaCommon.BuildId
+                , request.Criteria.BuildLogQueryCriteriaCommon.Solution_1Id
+                , request.Criteria.BuildLogQueryCriteriaCommon.Organization_1Id
+                , request.Criteria.BuildLogQueryCriteriaCommon.Organization_2Id
+                , request.Criteria.BuildLogQueryCriteriaCommon.BuildEventCodeId
+                , request.Criteria.BuildLogQueryCriteriaCommon.EventTimeRange
+                , request.Criteria.BuildLogQueryCriteriaCommon.Message
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -404,13 +404,13 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfEntityOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildLog _resultFromDAL = this.DALClassInstance.GetCollectionOfEntityOfCommon(
-                request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuildEventCode_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft
-                , request.Criteria.BuildLogQueryCriteriaCommon.MessageCommonOft
+                request.Criteria.BuildLogQueryCriteriaCommon.BuildId
+                , request.Criteria.BuildLogQueryCriteriaCommon.Solution_1Id
+                , request.Criteria.BuildLogQueryCriteriaCommon.Organization_1Id
+                , request.Criteria.BuildLogQueryCriteriaCommon.Organization_2Id
+                , request.Criteria.BuildLogQueryCriteriaCommon.BuildEventCodeId
+                , request.Criteria.BuildLogQueryCriteriaCommon.EventTimeRange
+                , request.Criteria.BuildLogQueryCriteriaCommon.Message
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -443,14 +443,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfEntityOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildLog _resultFromDAL = this.DALClassInstance.GetSingleOfEntityOfCommon(
-                request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuildEventCode_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft
-                , request.Criteria.BuildLogQueryCriteriaCommon.MessageCommonOft
-                , request.QueryOrderBySettingCollection);
+                request.Criteria.BuildLogQueryCriteriaCommon.BuildId                , request.Criteria.BuildLogQueryCriteriaCommon.Solution_1Id                , request.Criteria.BuildLogQueryCriteriaCommon.Organization_1Id                , request.Criteria.BuildLogQueryCriteriaCommon.Organization_2Id                , request.Criteria.BuildLogQueryCriteriaCommon.BuildEventCodeId                , request.Criteria.BuildLogQueryCriteriaCommon.EventTimeRange                , request.Criteria.BuildLogQueryCriteriaCommon.Message                , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _retval = new MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
 
@@ -481,13 +474,13 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfDefaultOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfDefaultOfCommon(
-                request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuildEventCode_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft
-                , request.Criteria.BuildLogQueryCriteriaCommon.MessageCommonOft
+                request.Criteria.BuildLogQueryCriteriaCommon.BuildId
+                , request.Criteria.BuildLogQueryCriteriaCommon.Solution_1Id
+                , request.Criteria.BuildLogQueryCriteriaCommon.Organization_1Id
+                , request.Criteria.BuildLogQueryCriteriaCommon.Organization_2Id
+                , request.Criteria.BuildLogQueryCriteriaCommon.BuildEventCodeId
+                , request.Criteria.BuildLogQueryCriteriaCommon.EventTimeRange
+                , request.Criteria.BuildLogQueryCriteriaCommon.Message
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -509,13 +502,13 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfDefaultOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfDefaultOfCommon(
-                request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuildEventCode_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft
-                , request.Criteria.BuildLogQueryCriteriaCommon.MessageCommonOft
+                request.Criteria.BuildLogQueryCriteriaCommon.BuildId
+                , request.Criteria.BuildLogQueryCriteriaCommon.Solution_1Id
+                , request.Criteria.BuildLogQueryCriteriaCommon.Organization_1Id
+                , request.Criteria.BuildLogQueryCriteriaCommon.Organization_2Id
+                , request.Criteria.BuildLogQueryCriteriaCommon.BuildEventCodeId
+                , request.Criteria.BuildLogQueryCriteriaCommon.EventTimeRange
+                , request.Criteria.BuildLogQueryCriteriaCommon.Message
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -537,13 +530,13 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfDefaultOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.BuildLog.DataAccessLayerMessageOfDefaultCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfDefaultOfCommon(
-                request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuildEventCode_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft
-                , request.Criteria.BuildLogQueryCriteriaCommon.MessageCommonOft
+                request.Criteria.BuildLogQueryCriteriaCommon.BuildId
+                , request.Criteria.BuildLogQueryCriteriaCommon.Solution_1Id
+                , request.Criteria.BuildLogQueryCriteriaCommon.Organization_1Id
+                , request.Criteria.BuildLogQueryCriteriaCommon.Organization_2Id
+                , request.Criteria.BuildLogQueryCriteriaCommon.BuildEventCodeId
+                , request.Criteria.BuildLogQueryCriteriaCommon.EventTimeRange
+                , request.Criteria.BuildLogQueryCriteriaCommon.Message
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -576,14 +569,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfDefaultOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.BuildLog.DataAccessLayerMessageOfDefault _resultFromDAL = this.DALClassInstance.GetSingleOfDefaultOfCommon(
-                request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuildEventCode_1
-                , request.Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft
-                , request.Criteria.BuildLogQueryCriteriaCommon.MessageCommonOft
-                , request.QueryOrderBySettingCollection);
+                request.Criteria.BuildLogQueryCriteriaCommon.BuildId                , request.Criteria.BuildLogQueryCriteriaCommon.Solution_1Id                , request.Criteria.BuildLogQueryCriteriaCommon.Organization_1Id                , request.Criteria.BuildLogQueryCriteriaCommon.Organization_2Id                , request.Criteria.BuildLogQueryCriteriaCommon.BuildEventCodeId                , request.Criteria.BuildLogQueryCriteriaCommon.EventTimeRange                , request.Criteria.BuildLogQueryCriteriaCommon.Message                , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _retval = new MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
 
@@ -929,11 +915,11 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfEntityOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfEntityOfByFKOnly(
-                request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1
+                request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildId
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Solution_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_2Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildEventCodeId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -955,11 +941,11 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfEntityOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfEntityOfByFKOnly(
-                request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1
+                request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildId
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Solution_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_2Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildEventCodeId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -981,11 +967,11 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfEntityOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildLog _resultFromDAL = this.DALClassInstance.GetCollectionOfEntityOfByFKOnly(
-                request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1
+                request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildId
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Solution_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_2Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildEventCodeId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -1018,12 +1004,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfEntityOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildLog _resultFromDAL = this.DALClassInstance.GetSingleOfEntityOfByFKOnly(
-                request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1
-                , request.QueryOrderBySettingCollection);
+                request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildId                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Solution_1Id                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_1Id                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_2Id                , request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildEventCodeId                , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _retval = new MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
 
@@ -1054,11 +1035,11 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfNameValuePairOfByFKOnly(
-                request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1
+                request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildId
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Solution_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_2Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildEventCodeId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1080,11 +1061,11 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfNameValuePairOfByFKOnly(
-                request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1
+                request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildId
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Solution_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_2Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildEventCodeId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1106,11 +1087,11 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfNameValuePairOfByFKOnly(
-                request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1
+                request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildId
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Solution_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_2Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildEventCodeId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -1143,12 +1124,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity _resultFromDAL = this.DALClassInstance.GetSingleOfNameValuePairOfByFKOnly(
-                request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1
-                , request.QueryOrderBySettingCollection);
+                request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildId                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Solution_1Id                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_1Id                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_2Id                , request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildEventCodeId                , request.QueryOrderBySettingCollection);
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _retval = new Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
 
@@ -1179,11 +1155,11 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfRssItemOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfRssItemOfByFKOnly(
-                request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1
+                request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildId
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Solution_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_2Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildEventCodeId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1205,11 +1181,11 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfRssItemOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfRssItemOfByFKOnly(
-                request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1
+                request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildId
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Solution_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_2Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildEventCodeId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1231,11 +1207,11 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfRssItemOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfRssItemOfByFKOnly(
-                request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1
+                request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildId
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Solution_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_2Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildEventCodeId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -1268,12 +1244,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfRssItemOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageRssItem _resultFromDAL = this.DALClassInstance.GetSingleOfRssItemOfByFKOnly(
-                request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1
-                , request.QueryOrderBySettingCollection);
+                request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildId                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Solution_1Id                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_1Id                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_2Id                , request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildEventCodeId                , request.QueryOrderBySettingCollection);
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _retval = new Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
 
@@ -1304,11 +1275,11 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfDefaultOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfDefaultOfByFKOnly(
-                request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1
+                request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildId
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Solution_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_2Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildEventCodeId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1330,11 +1301,11 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfDefaultOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfDefaultOfByFKOnly(
-                request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1
+                request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildId
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Solution_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_2Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildEventCodeId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1356,11 +1327,11 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfDefaultOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.BuildLog.DataAccessLayerMessageOfDefaultCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfDefaultOfByFKOnly(
-                request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1
+                request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildId
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Solution_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_2Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildEventCodeId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -1393,12 +1364,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfDefaultOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.BuildLog.DataAccessLayerMessageOfDefault _resultFromDAL = this.DALClassInstance.GetSingleOfDefaultOfByFKOnly(
-                request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1
-                , request.QueryOrderBySettingCollection);
+                request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildId                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Solution_1Id                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_1Id                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_2Id                , request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildEventCodeId                , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _retval = new MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
 
@@ -1429,11 +1395,11 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfDefaultGroupedDataViewOfByFKOnly(
-                request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1
+                request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildId
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Solution_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_2Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildEventCodeId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1455,11 +1421,11 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfDefaultGroupedDataViewOfByFKOnly(
-                request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1
+                request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildId
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Solution_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_2Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildEventCodeId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1481,11 +1447,11 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.BuildLog.DataAccessLayerMessageOfDefaultGroupedDataViewCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
-                request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1
+                request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildId
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Solution_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_2Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildEventCodeId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -1518,12 +1484,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.BuildLog.DataAccessLayerMessageOfDefaultGroupedDataView _resultFromDAL = this.DALClassInstance.GetSingleOfDefaultGroupedDataViewOfByFKOnly(
-                request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
-                , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1
-                , request.QueryOrderBySettingCollection);
+                request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildId                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Solution_1Id                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_1Id                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_2Id                , request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildEventCodeId                , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView _retval = new MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
 
@@ -1554,7 +1515,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfEntityOfByIdentifier(
-                request.Criteria.BuildLogQueryCriteriaByIdentifier.IdByIdentifierOft
+                request.Criteria.BuildLogQueryCriteriaByIdentifier.Id
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1576,7 +1537,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfEntityOfByIdentifier(
-                request.Criteria.BuildLogQueryCriteriaByIdentifier.IdByIdentifierOft
+                request.Criteria.BuildLogQueryCriteriaByIdentifier.Id
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1598,7 +1559,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildLog _resultFromDAL = this.DALClassInstance.GetCollectionOfEntityOfByIdentifier(
-                request.Criteria.BuildLogQueryCriteriaByIdentifier.IdByIdentifierOft
+                request.Criteria.BuildLogQueryCriteriaByIdentifier.Id
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -1631,8 +1592,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildLog _resultFromDAL = this.DALClassInstance.GetSingleOfEntityOfByIdentifier(
-                request.Criteria.BuildLogQueryCriteriaByIdentifier.IdByIdentifierOft
-                , request.QueryOrderBySettingCollection);
+                request.Criteria.BuildLogQueryCriteriaByIdentifier.Id                , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _retval = new MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
 
@@ -1663,7 +1623,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfDefaultOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfDefaultOfByIdentifier(
-                request.Criteria.BuildLogQueryCriteriaByIdentifier.IdByIdentifierOft
+                request.Criteria.BuildLogQueryCriteriaByIdentifier.Id
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1685,7 +1645,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfDefaultOfByIdentifier(
-                request.Criteria.BuildLogQueryCriteriaByIdentifier.IdByIdentifierOft
+                request.Criteria.BuildLogQueryCriteriaByIdentifier.Id
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1707,7 +1667,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfDefaultOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.BuildLog.DataAccessLayerMessageOfDefaultCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfDefaultOfByIdentifier(
-                request.Criteria.BuildLogQueryCriteriaByIdentifier.IdByIdentifierOft
+                request.Criteria.BuildLogQueryCriteriaByIdentifier.Id
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -1740,8 +1700,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfDefaultOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.BuildLog.DataAccessLayerMessageOfDefault _resultFromDAL = this.DALClassInstance.GetSingleOfDefaultOfByIdentifier(
-                request.Criteria.BuildLogQueryCriteriaByIdentifier.IdByIdentifierOft
-                , request.QueryOrderBySettingCollection);
+                request.Criteria.BuildLogQueryCriteriaByIdentifier.Id                , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _retval = new MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
 
@@ -1772,7 +1731,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfKeyInformationOfByIdentifier(
-                request.Criteria.BuildLogQueryCriteriaByIdentifier.IdByIdentifierOft
+                request.Criteria.BuildLogQueryCriteriaByIdentifier.Id
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1794,7 +1753,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfKeyInformationOfByIdentifier(
-                request.Criteria.BuildLogQueryCriteriaByIdentifier.IdByIdentifierOft
+                request.Criteria.BuildLogQueryCriteriaByIdentifier.Id
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -1816,7 +1775,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.BuildLog.DataAccessLayerMessageOfKeyInformationCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfKeyInformationOfByIdentifier(
-                request.Criteria.BuildLogQueryCriteriaByIdentifier.IdByIdentifierOft
+                request.Criteria.BuildLogQueryCriteriaByIdentifier.Id
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -1849,8 +1808,7 @@ namespace MSBuildExtensionPack.CommonBLL
         {
             log.Info(string.Format("{0}: GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.BuildLog.DataAccessLayerMessageOfKeyInformation _resultFromDAL = this.DALClassInstance.GetSingleOfKeyInformationOfByIdentifier(
-                request.Criteria.BuildLogQueryCriteriaByIdentifier.IdByIdentifierOft
-                , request.QueryOrderBySettingCollection);
+                request.Criteria.BuildLogQueryCriteriaByIdentifier.Id                , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation _retval = new MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
 

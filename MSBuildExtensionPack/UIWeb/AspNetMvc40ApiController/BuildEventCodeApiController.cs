@@ -243,7 +243,7 @@ System.Int32? id)
 System.Int32? id)
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaByIdentifier();
-            criteria.BuildEventCodeQueryCriteriaByIdentifier.IdByIdentifierOft.NullableValueToCompare = id;
+            criteria.BuildEventCodeQueryCriteriaByIdentifier.Id.NullableValueToCompare = id;
             MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildEventCodeVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildEventCodeVM(criteria);
             retval.LoadData();
             return retval;

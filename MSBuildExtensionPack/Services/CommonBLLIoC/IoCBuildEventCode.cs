@@ -254,8 +254,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             )
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommon();
-            criteria.BuildEventCodeQueryCriteriaCommon.EventCodeCommonOft = new QuerySystemStringContainsCriteria(isToCompareEventCode, eventCode);
-            criteria.BuildEventCodeQueryCriteriaCommon.DescriptionCommonOft = new QuerySystemStringContainsCriteria(isToCompareDescription, description);
+            criteria.BuildEventCodeQueryCriteriaCommon.EventCode = new QuerySystemStringContainsCriteria(isToCompareEventCode, eventCode);
+            criteria.BuildEventCodeQueryCriteriaCommon.Description = new QuerySystemStringContainsCriteria(isToCompareDescription, description);
             return criteria;
         }
 
@@ -290,7 +290,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             )
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaByIdentifier();
-            criteria.BuildEventCodeQueryCriteriaByIdentifier.IdByIdentifierOft = new QuerySystemInt32EqualsCriteria(isToCompareId, id);
+            criteria.BuildEventCodeQueryCriteriaByIdentifier.Id = new QuerySystemInt32EqualsCriteria(isToCompareId, id);
             return criteria;
         }
 

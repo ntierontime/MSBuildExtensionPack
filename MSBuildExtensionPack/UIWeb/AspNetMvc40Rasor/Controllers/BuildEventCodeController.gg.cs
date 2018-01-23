@@ -115,7 +115,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         public ActionResult WPEntityRelatedOfBuildEventCode(System.Int32? id)
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaByIdentifier();
-            criteria.BuildEventCodeQueryCriteriaByIdentifier.IdByIdentifierOft.NullableValueToCompare = id;
+            criteria.BuildEventCodeQueryCriteriaByIdentifier.Id.NullableValueToCompare = id;
             MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildEventCodeVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildEventCodeVM(criteria);
             vm.LoadData();
 

@@ -325,7 +325,7 @@ System.Int64? id)
 System.Int64? id)
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier();
-            criteria.BuildLogQueryCriteriaByIdentifier.IdByIdentifierOft.NullableValueToCompare = id;
+            criteria.BuildLogQueryCriteriaByIdentifier.Id.NullableValueToCompare = id;
             MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildLogVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildLogVM(criteria);
             retval.LoadData();
             return retval;

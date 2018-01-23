@@ -569,21 +569,21 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             )
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon();
-            criteria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2 = new QuerySystemInt64EqualsCriteria(isToCompareParentId, parentId);
-            criteria.OrganizationQueryCriteriaCommon.IsSystemBuiltInCommonOft = new QuerySystemBooleanEqualsCriteria(isToCompareIsSystemBuiltIn, isSystemBuiltIn);
-            criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft = new QuerySystemDateTimeRangeCriteria(isToCompareCreatedDateTimeRange, isToCompareCreatedDateTimeRangeLow, createdDateTimeRangeLow, isToCompareCreatedDateTimeRangeHigh, createdDateTimeRangeHigh);
-            criteria.OrganizationQueryCriteriaCommon.BitColumnCommonOft = new QuerySystemBooleanEqualsCriteria(isToCompareBitColumn, bitColumn);
-            criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft = new QuerySystemDateTimeRangeCriteria(isToCompareDatetimeColumnRange, isToCompareDatetimeColumnRangeLow, datetimeColumnRangeLow, isToCompareDatetimeColumnRangeHigh, datetimeColumnRangeHigh);
-            criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft = new QuerySystemDateTimeRangeCriteria(isToCompareDatetime2ColumnRange, isToCompareDatetime2ColumnRangeLow, datetime2ColumnRangeLow, isToCompareDatetime2ColumnRangeHigh, datetime2ColumnRangeHigh);
-            criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft = new QuerySystemDateTimeRangeCriteria(isToCompareSmalldatetimeColumnRange, isToCompareSmalldatetimeColumnRangeLow, smalldatetimeColumnRangeLow, isToCompareSmalldatetimeColumnRangeHigh, smalldatetimeColumnRangeHigh);
-            criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft = new QuerySystemDateTimeRangeCriteria(isToCompareDateColumnRange, isToCompareDateColumnRangeLow, dateColumnRangeLow, isToCompareDateColumnRangeHigh, dateColumnRangeHigh);
-            criteria.OrganizationQueryCriteriaCommon.NameCommonOft = new QuerySystemStringContainsCriteria(isToCompareName, name);
-            criteria.OrganizationQueryCriteriaCommon.CharColumnCommonOft = new QuerySystemStringContainsCriteria(isToCompareCharColumn, charColumn);
-            criteria.OrganizationQueryCriteriaCommon.VarcharColumnCommonOft = new QuerySystemStringContainsCriteria(isToCompareVarcharColumn, varcharColumn);
-            criteria.OrganizationQueryCriteriaCommon.TextColumnCommonOft = new QuerySystemStringContainsCriteria(isToCompareTextColumn, textColumn);
-            criteria.OrganizationQueryCriteriaCommon.NcharColumnCommonOft = new QuerySystemStringContainsCriteria(isToCompareNcharColumn, ncharColumn);
-            criteria.OrganizationQueryCriteriaCommon.NvarcharColumnCommonOft = new QuerySystemStringContainsCriteria(isToCompareNvarcharColumn, nvarcharColumn);
-            criteria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft = new QuerySystemStringContainsCriteria(isToCompareNtextColumn, ntextColumn);
+            criteria.OrganizationQueryCriteriaCommon.ParentId = new QuerySystemInt64EqualsCriteria(isToCompareParentId, parentId);
+            criteria.OrganizationQueryCriteriaCommon.IsSystemBuiltIn = new QuerySystemBooleanEqualsCriteria(isToCompareIsSystemBuiltIn, isSystemBuiltIn);
+            criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeRange = new QuerySystemDateTimeRangeCriteria(isToCompareCreatedDateTimeRange, isToCompareCreatedDateTimeRangeLow, createdDateTimeRangeLow, isToCompareCreatedDateTimeRangeHigh, createdDateTimeRangeHigh);
+            criteria.OrganizationQueryCriteriaCommon.BitColumn = new QuerySystemBooleanEqualsCriteria(isToCompareBitColumn, bitColumn);
+            criteria.OrganizationQueryCriteriaCommon.DatetimeColumnRange = new QuerySystemDateTimeRangeCriteria(isToCompareDatetimeColumnRange, isToCompareDatetimeColumnRangeLow, datetimeColumnRangeLow, isToCompareDatetimeColumnRangeHigh, datetimeColumnRangeHigh);
+            criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnRange = new QuerySystemDateTimeRangeCriteria(isToCompareDatetime2ColumnRange, isToCompareDatetime2ColumnRangeLow, datetime2ColumnRangeLow, isToCompareDatetime2ColumnRangeHigh, datetime2ColumnRangeHigh);
+            criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnRange = new QuerySystemDateTimeRangeCriteria(isToCompareSmalldatetimeColumnRange, isToCompareSmalldatetimeColumnRangeLow, smalldatetimeColumnRangeLow, isToCompareSmalldatetimeColumnRangeHigh, smalldatetimeColumnRangeHigh);
+            criteria.OrganizationQueryCriteriaCommon.DateColumnRange = new QuerySystemDateTimeRangeCriteria(isToCompareDateColumnRange, isToCompareDateColumnRangeLow, dateColumnRangeLow, isToCompareDateColumnRangeHigh, dateColumnRangeHigh);
+            criteria.OrganizationQueryCriteriaCommon.Name = new QuerySystemStringContainsCriteria(isToCompareName, name);
+            criteria.OrganizationQueryCriteriaCommon.CharColumn = new QuerySystemStringContainsCriteria(isToCompareCharColumn, charColumn);
+            criteria.OrganizationQueryCriteriaCommon.VarcharColumn = new QuerySystemStringContainsCriteria(isToCompareVarcharColumn, varcharColumn);
+            criteria.OrganizationQueryCriteriaCommon.TextColumn = new QuerySystemStringContainsCriteria(isToCompareTextColumn, textColumn);
+            criteria.OrganizationQueryCriteriaCommon.NcharColumn = new QuerySystemStringContainsCriteria(isToCompareNcharColumn, ncharColumn);
+            criteria.OrganizationQueryCriteriaCommon.NvarcharColumn = new QuerySystemStringContainsCriteria(isToCompareNvarcharColumn, nvarcharColumn);
+            criteria.OrganizationQueryCriteriaCommon.NtextColumn = new QuerySystemStringContainsCriteria(isToCompareNtextColumn, ntextColumn);
             return criteria;
         }
 
@@ -618,7 +618,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             )
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByFKOnly();
-            criteria.OrganizationQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2 = new QuerySystemInt64EqualsCriteria(isToCompareParentId, parentId);
+            criteria.OrganizationQueryCriteriaByFKOnly.ParentId = new QuerySystemInt64EqualsCriteria(isToCompareParentId, parentId);
             return criteria;
         }
 
@@ -636,7 +636,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             )
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaByIdentifier();
-            criteria.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft = new QuerySystemInt64EqualsCriteria(isToCompareId, id);
+            criteria.OrganizationQueryCriteriaByIdentifier.Id = new QuerySystemInt64EqualsCriteria(isToCompareId, id);
             return criteria;
         }
 
@@ -654,7 +654,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             )
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier();
-            criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOft = new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifier, uniqueIdentifier);
+            criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifier = new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifier, uniqueIdentifier);
             return criteria;
         }
 
@@ -672,7 +672,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             )
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn();
-            criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOft = new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumn, uniqueidentifierColumn);
+            criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumn = new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumn, uniqueidentifierColumn);
             return criteria;
         }
 
@@ -696,9 +696,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             )
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint();
-            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.IdIdentifierAndUniqueConstraintOft = new QuerySystemInt64EqualsCriteria(isToCompareId, id);
-            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifierIdentifierAndUniqueConstraintOft = new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifier, uniqueIdentifier);
-            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumnIdentifierAndUniqueConstraintOft = new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumn, uniqueidentifierColumn);
+            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.Id = new QuerySystemInt64EqualsCriteria(isToCompareId, id);
+            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifier = new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifier, uniqueIdentifier);
+            criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumn = new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumn, uniqueidentifierColumn);
             return criteria;
         }
 

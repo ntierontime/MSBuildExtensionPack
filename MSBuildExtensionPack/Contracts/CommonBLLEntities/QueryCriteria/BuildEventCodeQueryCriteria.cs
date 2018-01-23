@@ -17,8 +17,8 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         {
         }
 
-        public QuerySystemStringContainsCriteria EventCodeCommonOft { get; set; } = new QuerySystemStringContainsCriteria();
-        public QuerySystemStringContainsCriteria DescriptionCommonOft { get; set; } = new QuerySystemStringContainsCriteria();
+        public QuerySystemStringContainsCriteria EventCode { get; set; } = new QuerySystemStringContainsCriteria();
+        public QuerySystemStringContainsCriteria Description { get; set; } = new QuerySystemStringContainsCriteria();
     }
 
     /// <summary>
@@ -41,7 +41,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         {
         }
 
-        public QuerySystemInt32EqualsCriteria IdByIdentifierOft { get; set; } = new QuerySystemInt32EqualsCriteria();
+        public QuerySystemInt32EqualsCriteria Id { get; set; } = new QuerySystemInt32EqualsCriteria();
     }
 
 }

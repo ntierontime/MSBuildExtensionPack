@@ -287,12 +287,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             )
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaCommon();
-            criteria.BuildQueryCriteriaCommon.IdCommonOfSolution_1 = new QuerySystemInt32EqualsCriteria(isToCompareSolutionId, solutionId);
-            criteria.BuildQueryCriteriaCommon.IdCommonOfOrganization_1 = new QuerySystemInt64EqualsCriteria(isToCompareOrganization_1Id, organization_1Id);
-            criteria.BuildQueryCriteriaCommon.IdCommonOfOrganization_2 = new QuerySystemInt64EqualsCriteria(isToCompareOrganization_2Id, organization_2Id);
-            criteria.BuildQueryCriteriaCommon.BuildStartTimeCommonOft = new QuerySystemDateTimeRangeCriteria(isToCompareBuildStartTimeRange, isToCompareBuildStartTimeRangeLow, buildStartTimeRangeLow, isToCompareBuildStartTimeRangeHigh, buildStartTimeRangeHigh);
-            criteria.BuildQueryCriteriaCommon.NameCommonOft = new QuerySystemStringContainsCriteria(isToCompareName, name);
-            criteria.BuildQueryCriteriaCommon.DescriptionCommonOft = new QuerySystemStringContainsCriteria(isToCompareDescription, description);
+            criteria.BuildQueryCriteriaCommon.SolutionId = new QuerySystemInt32EqualsCriteria(isToCompareSolutionId, solutionId);
+            criteria.BuildQueryCriteriaCommon.Organization_1Id = new QuerySystemInt64EqualsCriteria(isToCompareOrganization_1Id, organization_1Id);
+            criteria.BuildQueryCriteriaCommon.Organization_2Id = new QuerySystemInt64EqualsCriteria(isToCompareOrganization_2Id, organization_2Id);
+            criteria.BuildQueryCriteriaCommon.BuildStartTimeRange = new QuerySystemDateTimeRangeCriteria(isToCompareBuildStartTimeRange, isToCompareBuildStartTimeRangeLow, buildStartTimeRangeLow, isToCompareBuildStartTimeRangeHigh, buildStartTimeRangeHigh);
+            criteria.BuildQueryCriteriaCommon.Name = new QuerySystemStringContainsCriteria(isToCompareName, name);
+            criteria.BuildQueryCriteriaCommon.Description = new QuerySystemStringContainsCriteria(isToCompareDescription, description);
             return criteria;
         }
 
@@ -333,9 +333,9 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             )
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByFKOnly();
-            criteria.BuildQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1 = new QuerySystemInt32EqualsCriteria(isToCompareSolutionId, solutionId);
-            criteria.BuildQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1 = new QuerySystemInt64EqualsCriteria(isToCompareOrganization_1Id, organization_1Id);
-            criteria.BuildQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2 = new QuerySystemInt64EqualsCriteria(isToCompareOrganization_2Id, organization_2Id);
+            criteria.BuildQueryCriteriaByFKOnly.SolutionId = new QuerySystemInt32EqualsCriteria(isToCompareSolutionId, solutionId);
+            criteria.BuildQueryCriteriaByFKOnly.Organization_1Id = new QuerySystemInt64EqualsCriteria(isToCompareOrganization_1Id, organization_1Id);
+            criteria.BuildQueryCriteriaByFKOnly.Organization_2Id = new QuerySystemInt64EqualsCriteria(isToCompareOrganization_2Id, organization_2Id);
             return criteria;
         }
 
@@ -353,7 +353,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             )
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier();
-            criteria.BuildQueryCriteriaByIdentifier.IdByIdentifierOft = new QuerySystemInt64EqualsCriteria(isToCompareId, id);
+            criteria.BuildQueryCriteriaByIdentifier.Id = new QuerySystemInt64EqualsCriteria(isToCompareId, id);
             return criteria;
         }
 

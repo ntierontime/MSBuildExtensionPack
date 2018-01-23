@@ -301,7 +301,7 @@ System.Int32? id)
 System.Int32? id)
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier();
-            criteria.SolutionQueryCriteriaByIdentifier.IdByIdentifierOft.NullableValueToCompare = id;
+            criteria.SolutionQueryCriteriaByIdentifier.Id.NullableValueToCompare = id;
             MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfSolutionVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfSolutionVM(criteria);
             retval.LoadData();
             return retval;

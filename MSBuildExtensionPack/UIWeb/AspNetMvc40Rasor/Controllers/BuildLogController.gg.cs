@@ -115,7 +115,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         public ActionResult WPEntityRelatedOfBuildLog(System.Int64? id)
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier();
-            criteria.BuildLogQueryCriteriaByIdentifier.IdByIdentifierOft.NullableValueToCompare = id;
+            criteria.BuildLogQueryCriteriaByIdentifier.Id.NullableValueToCompare = id;
             MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildLogVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildLogVM(criteria);
             vm.LoadData();
 

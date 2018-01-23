@@ -281,11 +281,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             )
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon();
-            criteria.SolutionQueryCriteriaCommon.IdCommonOfOrganization_1 = new QuerySystemInt64EqualsCriteria(isToCompareOrganizationId, organizationId);
-            criteria.SolutionQueryCriteriaCommon.IdCommonOfOrganization_2 = new QuerySystemInt64EqualsCriteria(isToCompareOrganization_2Id, organization_2Id);
-            criteria.SolutionQueryCriteriaCommon.ExternalParentIdCommonOft = new QuerySystemStringContainsCriteria(isToCompareExternalParentId, externalParentId);
-            criteria.SolutionQueryCriteriaCommon.NameCommonOft = new QuerySystemStringContainsCriteria(isToCompareName, name);
-            criteria.SolutionQueryCriteriaCommon.DescriptionCommonOft = new QuerySystemStringContainsCriteria(isToCompareDescription, description);
+            criteria.SolutionQueryCriteriaCommon.OrganizationId = new QuerySystemInt64EqualsCriteria(isToCompareOrganizationId, organizationId);
+            criteria.SolutionQueryCriteriaCommon.Organization_2Id = new QuerySystemInt64EqualsCriteria(isToCompareOrganization_2Id, organization_2Id);
+            criteria.SolutionQueryCriteriaCommon.ExternalParentId = new QuerySystemStringContainsCriteria(isToCompareExternalParentId, externalParentId);
+            criteria.SolutionQueryCriteriaCommon.Name = new QuerySystemStringContainsCriteria(isToCompareName, name);
+            criteria.SolutionQueryCriteriaCommon.Description = new QuerySystemStringContainsCriteria(isToCompareDescription, description);
             return criteria;
         }
 
@@ -323,8 +323,8 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             )
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByFKOnly();
-            criteria.SolutionQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1 = new QuerySystemInt64EqualsCriteria(isToCompareOrganizationId, organizationId);
-            criteria.SolutionQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2 = new QuerySystemInt64EqualsCriteria(isToCompareOrganization_2Id, organization_2Id);
+            criteria.SolutionQueryCriteriaByFKOnly.OrganizationId = new QuerySystemInt64EqualsCriteria(isToCompareOrganizationId, organizationId);
+            criteria.SolutionQueryCriteriaByFKOnly.Organization_2Id = new QuerySystemInt64EqualsCriteria(isToCompareOrganization_2Id, organization_2Id);
             return criteria;
         }
 
@@ -342,7 +342,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             )
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier();
-            criteria.SolutionQueryCriteriaByIdentifier.IdByIdentifierOft = new QuerySystemInt32EqualsCriteria(isToCompareId, id);
+            criteria.SolutionQueryCriteriaByIdentifier.Id = new QuerySystemInt32EqualsCriteria(isToCompareId, id);
             return criteria;
         }
 

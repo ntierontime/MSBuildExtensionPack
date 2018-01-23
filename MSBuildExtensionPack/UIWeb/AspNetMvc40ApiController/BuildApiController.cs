@@ -309,7 +309,7 @@ System.Int64? id)
 System.Int64? id)
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier();
-            criteria.BuildQueryCriteriaByIdentifier.IdByIdentifierOft.NullableValueToCompare = id;
+            criteria.BuildQueryCriteriaByIdentifier.Id.NullableValueToCompare = id;
             MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildVM(criteria);
             retval.LoadData();
             return retval;
@@ -328,7 +328,7 @@ System.Int64? id
             )
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier();
-            criteria.BuildQueryCriteriaByIdentifier.IdByIdentifierOft.NullableValueToCompare = id;
+            criteria.BuildQueryCriteriaByIdentifier.Id.NullableValueToCompare = id;
 
             var vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPUpdateNameOnlyOfBuildVM();
             vm.CriteriaOfMasterEntity =  criteria;

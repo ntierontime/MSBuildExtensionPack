@@ -115,7 +115,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         public ActionResult WPEntityRelatedOfSolution(System.Int32? id)
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier();
-            criteria.SolutionQueryCriteriaByIdentifier.IdByIdentifierOft.NullableValueToCompare = id;
+            criteria.SolutionQueryCriteriaByIdentifier.Id.NullableValueToCompare = id;
             MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfSolutionVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfSolutionVM(criteria);
             vm.LoadData();
 

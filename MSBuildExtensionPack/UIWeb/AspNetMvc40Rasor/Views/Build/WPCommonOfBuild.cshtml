@@ -56,11 +56,11 @@
 </div>
 <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_1OfCommon</label>
-    @Html.DropDownListFor(model => model.Criteria.BuildQueryCriteriaCommon.Organization_1Id.NullableValueToCompare, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" }, { "onchange", "FetchSolution_1();" }, { "data-bind", string.Format(@"options:selectListOfvalueToCompareIdCommonOfOrganization_1OfCommon,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedvalueToCompareIdCommonOfOrganization_1OfCommon", MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____) } })
+    @Html.DropDownListFor(model => model.Criteria.BuildQueryCriteriaCommon.Organization_1Id.NullableValueToCompare, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" }, { "onchange", "FetchSolution_1();" }, { "data-bind", string.Format(@"options:selectListOfOrganization_1,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedvalueOrganization_1", MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____) } })
 </div>
 <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon</label>
-    @Html.DropDownListFor(model => model.Criteria.BuildQueryCriteriaCommon.SolutionId.NullableValueToCompare, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Please_select_Solution____, new Dictionary<string,Object>{ { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfvalueToCompareIdCommonOfSolution_1OfCommon,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedvalueToCompareIdCommonOfSolution_1OfCommon", MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Please_select_Solution____) } })
+    @Html.DropDownListFor(model => model.Criteria.BuildQueryCriteriaCommon.SolutionId.NullableValueToCompare, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Please_select_Solution____, new Dictionary<string,Object>{ { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfSolution_1,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedvalueSolution_1", MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Please_select_Solution____) } })
 </div>
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareBuildStartTimeCommonOftOfCommon</label>
     @Html.DropDownListFor(model => model.Criteria.BuildQueryCriteriaCommon.BuildStartTimeRange.PreDefinedDateTimeRange, Model.UISharedViewModel.PreDefinedDateTimeRangeList, new Dictionary<string, Object> { { "class", "form-control" } } )
@@ -238,18 +238,18 @@
             try {
                 var params = BuildCriteriaForFetchOrganization_1();
                 $.getJSON(url, params, function (data) {
-                    objVM.selectListOfvalueToCompareIdCommonOfOrganization_1OfCommon(data);
-                    objVM.selectedvalueToCompareIdCommonOfOrganization_1OfCommon(@Model.Criteria.BuildQueryCriteriaCommon.Organization_1Id.ValueToCompare);
+                    objVM.selectListOfOrganization_1(data);
+                    objVM.selectedOrganization_1(@Model.Criteria.BuildQueryCriteriaCommon.Organization_1Id.ValueToCompare);
                 });
             }
             catch (e) {
             }
         }
         function BuildCriteriaForFetchOrganization_1() {
-            var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $('select[name="Criteria.BuildQueryCriteriaCommon.Organization_2Id.NullableValueToCompare"]').val();
+            var selectedvalueOrganization_2Id = $('select[name="Criteria.BuildQueryCriteriaCommon.Organization_2Id.NullableValueToCompare"]').val();
             var params = {
-                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: true,
-                valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly,
+                isToCompareOrganization_2Id: true,
+                organization_2Id: selectedvalueOrganization_2Id,
                 currentIndex: -1,
                 pageSize: -1,
                 queryOrderByExpression: null
@@ -261,21 +261,21 @@
             try {
                 var params = BuildCriteriaForFetchSolution_1();
                 $.getJSON(url, params, function (data) {
-                    objVM.selectListOfvalueToCompareIdCommonOfSolution_1OfCommon(data);
-                    objVM.selectedvalueToCompareIdCommonOfSolution_1OfCommon(@Model.Criteria.BuildQueryCriteriaCommon.SolutionId.ValueToCompare);
+                    objVM.selectListOfSolution_1(data);
+                    objVM.selectedSolution_1(@Model.Criteria.BuildQueryCriteriaCommon.SolutionId.ValueToCompare);
                 });
             }
             catch (e) {
             }
         }
         function BuildCriteriaForFetchSolution_1() {
-            var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $('select[name="Criteria.BuildQueryCriteriaCommon.Organization_2Id.NullableValueToCompare"]').val();
-            var selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly = $('select[name="Criteria.BuildQueryCriteriaCommon.Organization_1Id.NullableValueToCompare"]').val();
+            var selectedvalueOrganization_2Id = $('select[name="Criteria.BuildQueryCriteriaCommon.Organization_2Id.NullableValueToCompare"]').val();
+            var selectedvalueOrganization_1Id = $('select[name="Criteria.BuildQueryCriteriaCommon.Organization_1Id.NullableValueToCompare"]').val();
             var params = {
-                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: true,
-                valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly,
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly: true,
-                valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly,
+                isToCompareOrganization_2Id: true,
+                organization_2Id: selectedvalueOrganization_2Id,
+                isToCompareOrganization_1Id: true,
+                organization_1Id: selectedvalueOrganization_1Id,
                 currentIndex: -1,
                 pageSize: -1,
                 queryOrderByExpression: null
@@ -285,10 +285,10 @@
         //cascaded dropdownlist by knockoutjs
         function CascadingDDLViewModel() {
             var self = this;
-            self.selectListOfvalueToCompareIdCommonOfOrganization_1OfCommon = ko.observableArray([]);
-            self.selectedvalueToCompareIdCommonOfOrganization_1OfCommon = ko.observable();
-            self.selectListOfvalueToCompareIdCommonOfSolution_1OfCommon = ko.observableArray([]);
-            self.selectedvalueToCompareIdCommonOfSolution_1OfCommon = ko.observable();
+            self.selectListOfOrganization_1 = ko.observableArray([]);
+            self.selectedvalueOrganization_1 = ko.observable();
+            self.selectListOfSolution_1 = ko.observableArray([]);
+            self.selectedvalueSolution_1 = ko.observable();
         }
         var objVM = new CascadingDDLViewModel();
         ko.applyBindings(objVM);
