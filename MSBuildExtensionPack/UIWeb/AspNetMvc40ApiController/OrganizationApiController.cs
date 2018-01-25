@@ -160,10 +160,10 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         public Framework.NameValueCollection GetCollectionOfNameValuePairOfAll(
             int currentIndex
             , int pageSize
-            , string queryOrderByExpression
-            )
+            , string queryOrderByExpression)
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairOfAll(                currentIndex
+            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairOfAll(
+                currentIndex
                 , pageSize
                 , queryOrderByExpression);
         }
@@ -180,10 +180,11 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfAll(
             int currentIndex
             , int pageSize
-            , string queryOrderByExpression        )
+            , string queryOrderByExpression)
 
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfNameValuePairOfAll(                currentIndex
+            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfNameValuePairOfAll(
+                currentIndex
                 , pageSize
                 , queryOrderByExpression);
         }
@@ -203,13 +204,13 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
         [HttpGet, ActionName("GetCollectionOfNameValuePairOfByFKOnly")]
         public Framework.NameValueCollection GetCollectionOfNameValuePairOfByFKOnly(
-            bool isToCompareParentId, System.Int64? parentId
+            System.Int64? parentId
             , int currentIndex
             , int pageSize
-            , string queryOrderByExpression
-            )
+            , string queryOrderByExpression)
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairOfByFKOnly(                isToCompareParentId, parentId
+            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairOfByFKOnly(
+                parentId.HasValue, parentId
                 , currentIndex
                 , pageSize
                 , queryOrderByExpression);
@@ -226,13 +227,14 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
         [HttpGet, ActionName("GetMessageOfNameValuePairOfByFKOnly")]
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfByFKOnly(
-            bool isToCompareParentId, System.Int64? parentId
+            System.Int64? parentId
             , int currentIndex
             , int pageSize
-            , string queryOrderByExpression        )
+            , string queryOrderByExpression)
 
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfNameValuePairOfByFKOnly(                isToCompareParentId, parentId
+            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfNameValuePairOfByFKOnly(
+                parentId.HasValue, parentId
                 , currentIndex
                 , pageSize
                 , queryOrderByExpression);
@@ -253,13 +255,13 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
         [HttpGet, ActionName("GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier")]
         public Framework.NameValueCollection GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            bool isToCompareUniqueIdentifier, System.Guid? uniqueIdentifier
+            System.Guid? uniqueIdentifier
             , int currentIndex
             , int pageSize
-            , string queryOrderByExpression
-            )
+            , string queryOrderByExpression)
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(                isToCompareUniqueIdentifier, uniqueIdentifier
+            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                uniqueIdentifier.HasValue, uniqueIdentifier
                 , currentIndex
                 , pageSize
                 , queryOrderByExpression);
@@ -276,13 +278,14 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
         [HttpGet, ActionName("GetMessageOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier")]
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            bool isToCompareUniqueIdentifier, System.Guid? uniqueIdentifier
+            System.Guid? uniqueIdentifier
             , int currentIndex
             , int pageSize
-            , string queryOrderByExpression        )
+            , string queryOrderByExpression)
 
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(                isToCompareUniqueIdentifier, uniqueIdentifier
+            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                uniqueIdentifier.HasValue, uniqueIdentifier
                 , currentIndex
                 , pageSize
                 , queryOrderByExpression);
@@ -303,13 +306,13 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
         [HttpGet, ActionName("GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn")]
         public Framework.NameValueCollection GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            bool isToCompareUniqueidentifierColumn, System.Guid? uniqueidentifierColumn
+            System.Guid? uniqueidentifierColumn
             , int currentIndex
             , int pageSize
-            , string queryOrderByExpression
-            )
+            , string queryOrderByExpression)
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(                isToCompareUniqueidentifierColumn, uniqueidentifierColumn
+            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                uniqueidentifierColumn.HasValue, uniqueidentifierColumn
                 , currentIndex
                 , pageSize
                 , queryOrderByExpression);
@@ -326,13 +329,14 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
         [HttpGet, ActionName("GetMessageOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn")]
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            bool isToCompareUniqueidentifierColumn, System.Guid? uniqueidentifierColumn
+            System.Guid? uniqueidentifierColumn
             , int currentIndex
             , int pageSize
-            , string queryOrderByExpression        )
+            , string queryOrderByExpression)
 
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(                isToCompareUniqueidentifierColumn, uniqueidentifierColumn
+            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                uniqueidentifierColumn.HasValue, uniqueidentifierColumn
                 , currentIndex
                 , pageSize
                 , queryOrderByExpression);

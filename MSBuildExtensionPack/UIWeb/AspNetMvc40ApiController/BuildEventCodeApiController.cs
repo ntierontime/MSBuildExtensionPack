@@ -160,10 +160,10 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         public Framework.NameValueCollection GetCollectionOfNameValuePairOfAll(
             int currentIndex
             , int pageSize
-            , string queryOrderByExpression
-            )
+            , string queryOrderByExpression)
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.GetCollectionOfNameValuePairOfAll(                currentIndex
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.GetCollectionOfNameValuePairOfAll(
+                currentIndex
                 , pageSize
                 , queryOrderByExpression);
         }
@@ -180,10 +180,11 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfAll(
             int currentIndex
             , int pageSize
-            , string queryOrderByExpression        )
+            , string queryOrderByExpression)
 
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.GetMessageOfNameValuePairOfAll(                currentIndex
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.GetMessageOfNameValuePairOfAll(
+                currentIndex
                 , pageSize
                 , queryOrderByExpression);
         }

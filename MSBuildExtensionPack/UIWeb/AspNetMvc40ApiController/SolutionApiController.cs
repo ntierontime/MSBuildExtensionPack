@@ -160,10 +160,10 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         public Framework.NameValueCollection GetCollectionOfNameValuePairOfAll(
             int currentIndex
             , int pageSize
-            , string queryOrderByExpression
-            )
+            , string queryOrderByExpression)
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetCollectionOfNameValuePairOfAll(                currentIndex
+            return MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetCollectionOfNameValuePairOfAll(
+                currentIndex
                 , pageSize
                 , queryOrderByExpression);
         }
@@ -180,10 +180,11 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfAll(
             int currentIndex
             , int pageSize
-            , string queryOrderByExpression        )
+            , string queryOrderByExpression)
 
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfNameValuePairOfAll(                currentIndex
+            return MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfNameValuePairOfAll(
+                currentIndex
                 , pageSize
                 , queryOrderByExpression);
         }
@@ -205,15 +206,15 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
         [HttpGet, ActionName("GetCollectionOfNameValuePairOfByFKOnly")]
         public Framework.NameValueCollection GetCollectionOfNameValuePairOfByFKOnly(
-            bool isToCompareOrganizationId, System.Int64? organizationId
-            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
+            System.Int64? organizationId
+            , System.Int64? organization_2Id
             , int currentIndex
             , int pageSize
-            , string queryOrderByExpression
-            )
+            , string queryOrderByExpression)
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetCollectionOfNameValuePairOfByFKOnly(                isToCompareOrganizationId, organizationId
-                , isToCompareOrganization_2Id, organization_2Id
+            return MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetCollectionOfNameValuePairOfByFKOnly(
+                organizationId.HasValue, organizationId
+                , organization_2Id.HasValue, organization_2Id
                 , currentIndex
                 , pageSize
                 , queryOrderByExpression);
@@ -232,15 +233,16 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
         [HttpGet, ActionName("GetMessageOfNameValuePairOfByFKOnly")]
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfByFKOnly(
-            bool isToCompareOrganizationId, System.Int64? organizationId
-            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
+            System.Int64? organizationId
+            , System.Int64? organization_2Id
             , int currentIndex
             , int pageSize
-            , string queryOrderByExpression        )
+            , string queryOrderByExpression)
 
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfNameValuePairOfByFKOnly(                isToCompareOrganizationId, organizationId
-                , isToCompareOrganization_2Id, organization_2Id
+            return MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfNameValuePairOfByFKOnly(
+                organizationId.HasValue, organizationId
+                , organization_2Id.HasValue, organization_2Id
                 , currentIndex
                 , pageSize
                 , queryOrderByExpression);

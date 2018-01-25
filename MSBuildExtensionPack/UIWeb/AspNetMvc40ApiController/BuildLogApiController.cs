@@ -160,10 +160,10 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         public Framework.NameValueCollection GetCollectionOfNameValuePairOfAll(
             int currentIndex
             , int pageSize
-            , string queryOrderByExpression
-            )
+            , string queryOrderByExpression)
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetCollectionOfNameValuePairOfAll(                currentIndex
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetCollectionOfNameValuePairOfAll(
+                currentIndex
                 , pageSize
                 , queryOrderByExpression);
         }
@@ -180,10 +180,11 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfAll(
             int currentIndex
             , int pageSize
-            , string queryOrderByExpression        )
+            , string queryOrderByExpression)
 
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfNameValuePairOfAll(                currentIndex
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfNameValuePairOfAll(
+                currentIndex
                 , pageSize
                 , queryOrderByExpression);
         }
@@ -211,21 +212,21 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
         [HttpGet, ActionName("GetCollectionOfNameValuePairOfByFKOnly")]
         public Framework.NameValueCollection GetCollectionOfNameValuePairOfByFKOnly(
-            bool isToCompareBuildId, System.Int64? buildId
-            , bool isToCompareSolution_1Id, System.Int32? solution_1Id
-            , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
-            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
-            , bool isToCompareBuildEventCodeId, System.Int32? buildEventCodeId
+            System.Int64? buildId
+            , System.Int32? solution_1Id
+            , System.Int64? organization_1Id
+            , System.Int64? organization_2Id
+            , System.Int32? buildEventCodeId
             , int currentIndex
             , int pageSize
-            , string queryOrderByExpression
-            )
+            , string queryOrderByExpression)
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetCollectionOfNameValuePairOfByFKOnly(                isToCompareBuildId, buildId
-                , isToCompareSolution_1Id, solution_1Id
-                , isToCompareOrganization_1Id, organization_1Id
-                , isToCompareOrganization_2Id, organization_2Id
-                , isToCompareBuildEventCodeId, buildEventCodeId
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetCollectionOfNameValuePairOfByFKOnly(
+                buildId.HasValue, buildId
+                , solution_1Id.HasValue, solution_1Id
+                , organization_1Id.HasValue, organization_1Id
+                , organization_2Id.HasValue, organization_2Id
+                , buildEventCodeId.HasValue, buildEventCodeId
                 , currentIndex
                 , pageSize
                 , queryOrderByExpression);
@@ -250,21 +251,22 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
         [HttpGet, ActionName("GetMessageOfNameValuePairOfByFKOnly")]
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfByFKOnly(
-            bool isToCompareBuildId, System.Int64? buildId
-            , bool isToCompareSolution_1Id, System.Int32? solution_1Id
-            , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
-            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
-            , bool isToCompareBuildEventCodeId, System.Int32? buildEventCodeId
+            System.Int64? buildId
+            , System.Int32? solution_1Id
+            , System.Int64? organization_1Id
+            , System.Int64? organization_2Id
+            , System.Int32? buildEventCodeId
             , int currentIndex
             , int pageSize
-            , string queryOrderByExpression        )
+            , string queryOrderByExpression)
 
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfNameValuePairOfByFKOnly(                isToCompareBuildId, buildId
-                , isToCompareSolution_1Id, solution_1Id
-                , isToCompareOrganization_1Id, organization_1Id
-                , isToCompareOrganization_2Id, organization_2Id
-                , isToCompareBuildEventCodeId, buildEventCodeId
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfNameValuePairOfByFKOnly(
+                buildId.HasValue, buildId
+                , solution_1Id.HasValue, solution_1Id
+                , organization_1Id.HasValue, organization_1Id
+                , organization_2Id.HasValue, organization_2Id
+                , buildEventCodeId.HasValue, buildEventCodeId
                 , currentIndex
                 , pageSize
                 , queryOrderByExpression);
