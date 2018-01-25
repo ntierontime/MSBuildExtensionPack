@@ -14,7 +14,6 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
         public WPEntityRelatedOfBuildEventCodeVM(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaByIdentifier criteriaOfMasterEntity)
             : base(criteriaOfMasterEntity)
         {
-
         }
 
         public void LoadData(
@@ -23,21 +22,20 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
         {
             // 1. master on accessory part - Aside UIWorkspaceItemSetting
             var masterEntityResult = MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.GetMessageOfEntityOfByIdentifier(this.CriteriaOfMasterEntity, this.QueryPagingSettingOneRecord, null);
-
             this.StatusOfMasterEntity = masterEntityResult.BusinessLogicLayerResponseStatus;
 
             if (masterEntityResult.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 this.MasterEntity = masterEntityResult.Message[0];
 
-                // 2. accessory part - Aside UIWorkspaceItemSetting
+                // 2. accessory part - Aside UIWorkspaceItemSetting -- RelatedEntityWhenMasterViewIsFKEntity
 
-                // 3. Major part - Article UIWorkspaceItemSetting - EntityReference/FK downtree
-                            // FK_BuildLog_BuildEventCode
+                // 3. Major part - Article UIWorkspaceItemSetting - EntityReference/FK downtree -- RelatedEntityWhenMasterViewIsPKEntity
+
+                // MSBuildExtensionPack.BuildLog
                 if(isToLoadFK_BuildLog_BuildEventCode)
                 {
-                    this.CriteriaOfFK_BuildLog_BuildEventCode.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1.IsToCompare = true;
-                    this.CriteriaOfFK_BuildLog_BuildEventCode.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1.ValueToCompare = this.MasterEntity.Id;
+                    this.CriteriaOfFK_BuildLog_BuildEventCode.BuildLogQueryCriteriaByFKOnly.BuildEventCodeId = new Framework.EntityContracts.QuerySystemInt32EqualsCriteria(this.MasterEntity.Id);
                     var resultFK_BuildLog_BuildEventCode = MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfDefaultOfByFKOnly(this.CriteriaOfFK_BuildLog_BuildEventCode, this.QueryPagingSetting, null);
                     this.StatusOfFK_BuildLog_BuildEventCode = resultFK_BuildLog_BuildEventCode.BusinessLogicLayerResponseStatus;
                     if (resultFK_BuildLog_BuildEventCode.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -53,7 +51,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
                     }
                 }
 
-                // 4. Major part - Article UIWorkspaceItemSetting - EntityReference/FK CrossJoin
+                // 4. Major part - Article UIWorkspaceItemSetting - EntityReference/FK CrossJoin -- RelatedEntityWhenMasterViewIsPKEntityViaCrossJoin
 
             }
             else

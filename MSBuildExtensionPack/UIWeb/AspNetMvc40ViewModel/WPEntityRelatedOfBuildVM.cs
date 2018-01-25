@@ -14,7 +14,6 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
         public WPEntityRelatedOfBuildVM(MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier criteriaOfMasterEntity)
             : base(criteriaOfMasterEntity)
         {
-
         }
 
         public void LoadData(
@@ -26,19 +25,18 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
         {
             // 1. master on accessory part - Aside UIWorkspaceItemSetting
             var masterEntityResult = MSBuildExtensionPack.CommonBLLIoC.IoCBuild.GetMessageOfDefaultOfByIdentifier(this.CriteriaOfMasterEntity, this.QueryPagingSettingOneRecord, null);
-
             this.StatusOfMasterEntity = masterEntityResult.BusinessLogicLayerResponseStatus;
 
             if (masterEntityResult.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 this.MasterEntity = masterEntityResult.Message[0];
 
-                // 2. accessory part - Aside UIWorkspaceItemSetting
-                            // MSBuildExtensionPack.CommonBLLIoC.IoCSolution
+                // 2. accessory part - Aside UIWorkspaceItemSetting -- RelatedEntityWhenMasterViewIsFKEntity
+
+                // MSBuildExtensionPack.Solution
                 if(isToLoadSolution_1)
                 {
-                    this.CriteriaOfSolution_1.SolutionQueryCriteriaByIdentifier.IdByIdentifierOft.IsToCompare = true;
-                    this.CriteriaOfSolution_1.SolutionQueryCriteriaByIdentifier.IdByIdentifierOft.ValueToCompare = this.MasterEntity.SolutionId;
+                    this.CriteriaOfSolution_1.SolutionQueryCriteriaByIdentifier.Id = new Framework.EntityContracts.QuerySystemInt32EqualsCriteria(this.MasterEntity.SolutionId);
                     var resultSolution_1 = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfKeyInformationOfByIdentifier(this.CriteriaOfSolution_1, this.QueryPagingSettingOneRecord, null);
                     this.StatusOfSolution_1 = resultSolution_1.BusinessLogicLayerResponseStatus;
                     if (resultSolution_1.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -54,11 +52,10 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
                     }
                 }
 
-                            // MSBuildExtensionPack.CommonBLLIoC.IoCOrganization
+                // MSBuildExtensionPack.Organization
                 if(isToLoadOrganization_1)
                 {
-                    this.CriteriaOfOrganization_1.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft.IsToCompare = true;
-                    this.CriteriaOfOrganization_1.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft.ValueToCompare = this.MasterEntity.Organization_1Id;
+                    this.CriteriaOfOrganization_1.OrganizationQueryCriteriaByIdentifier.Id = new Framework.EntityContracts.QuerySystemInt64EqualsCriteria(this.MasterEntity.Organization_1Id);
                     var resultOrganization_1 = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfKeyInformationOfByIdentifier(this.CriteriaOfOrganization_1, this.QueryPagingSettingOneRecord, null);
                     this.StatusOfOrganization_1 = resultOrganization_1.BusinessLogicLayerResponseStatus;
                     if (resultOrganization_1.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -74,11 +71,10 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
                     }
                 }
 
-                            // MSBuildExtensionPack.CommonBLLIoC.IoCOrganization
+                // MSBuildExtensionPack.Organization
                 if(isToLoadOrganization_2)
                 {
-                    this.CriteriaOfOrganization_2.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft.IsToCompare = true;
-                    this.CriteriaOfOrganization_2.OrganizationQueryCriteriaByIdentifier.IdByIdentifierOft.ValueToCompare = this.MasterEntity.Organization_2Id;
+                    this.CriteriaOfOrganization_2.OrganizationQueryCriteriaByIdentifier.Id = new Framework.EntityContracts.QuerySystemInt64EqualsCriteria(this.MasterEntity.Organization_2Id);
                     var resultOrganization_2 = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfKeyInformationOfByIdentifier(this.CriteriaOfOrganization_2, this.QueryPagingSettingOneRecord, null);
                     this.StatusOfOrganization_2 = resultOrganization_2.BusinessLogicLayerResponseStatus;
                     if (resultOrganization_2.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -94,12 +90,12 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
                     }
                 }
 
-                // 3. Major part - Article UIWorkspaceItemSetting - EntityReference/FK downtree
-                            // FK_BuildLog_Build
+                // 3. Major part - Article UIWorkspaceItemSetting - EntityReference/FK downtree -- RelatedEntityWhenMasterViewIsPKEntity
+
+                // MSBuildExtensionPack.BuildLog
                 if(isToLoadFK_BuildLog_Build)
                 {
-                    this.CriteriaOfFK_BuildLog_Build.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1.IsToCompare = true;
-                    this.CriteriaOfFK_BuildLog_Build.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1.ValueToCompare = this.MasterEntity.Id;
+                    this.CriteriaOfFK_BuildLog_Build.BuildLogQueryCriteriaByFKOnly.BuildId = new Framework.EntityContracts.QuerySystemInt64EqualsCriteria(this.MasterEntity.Id);
                     var resultFK_BuildLog_Build = MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfDefaultOfByFKOnly(this.CriteriaOfFK_BuildLog_Build, this.QueryPagingSetting, null);
                     this.StatusOfFK_BuildLog_Build = resultFK_BuildLog_Build.BusinessLogicLayerResponseStatus;
                     if (resultFK_BuildLog_Build.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -115,7 +111,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
                     }
                 }
 
-                // 4. Major part - Article UIWorkspaceItemSetting - EntityReference/FK CrossJoin
+                // 4. Major part - Article UIWorkspaceItemSetting - EntityReference/FK CrossJoin -- RelatedEntityWhenMasterViewIsPKEntityViaCrossJoin
 
             }
             else
