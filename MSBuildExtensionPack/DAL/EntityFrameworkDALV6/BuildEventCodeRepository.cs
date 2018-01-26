@@ -16,6 +16,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
     /// 1. Insert, Update and Delete
     /// 2. Batch Insert, Update and Delete
     /// 3. Queries
+    /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
+    /// *internal _GetQueryOfEntityOf...(...) gives the Linq Query
+    /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
+    /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
+    /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
+    /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
+    /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
+    /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
     /// </summary>
     public class BuildEventCodeRepository
         : MSBuildExtensionPack.DALContracts.IBuildEventCodeRepository//<MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection, MSBuildExtensionPack.DataSourceEntities.BuildEventCode, MSBuildExtensionPack.DataSourceEntities.BuildEventCodeIdentifier>
@@ -315,19 +323,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         #region Query Methods Of Entity of Common
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// *internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
         internal IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _GetQueryOfEntityOfCommon(
@@ -363,22 +358,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// *private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>true if any in database, otherwise false</returns>
         private bool _ExistsOfEntityOfCommon(
             Framework.EntityContracts.QuerySystemStringContainsCriteria eventCode
             ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
@@ -397,23 +376,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// *private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="currentIndex">current page index</param>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>count of this query criteria</returns>
         private int _GetCountOfEntityOfCommon(
             Framework.EntityContracts.QuerySystemStringContainsCriteria eventCode
             ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
@@ -440,23 +402,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// *public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="currentIndex">current page index</param>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfCommon(
             Framework.EntityContracts.QuerySystemStringContainsCriteria eventCode
             ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
@@ -490,23 +435,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retMessage;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// *public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="currentIndex">current page index</param>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfCommon(
             Framework.EntityContracts.QuerySystemStringContainsCriteria eventCode
             ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
@@ -540,21 +468,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retMessage;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// *public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>result message with single entity</returns>
         public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode GetSingleOfEntityOfCommon(
             Framework.EntityContracts.QuerySystemStringContainsCriteria eventCode
             ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
@@ -603,23 +516,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retMessage;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common query set is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// *public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="currentIndex">current page index</param>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>result message with entity collection</returns>
         public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode GetCollectionOfEntityOfCommon(
             Framework.EntityContracts.QuerySystemStringContainsCriteria eventCode
             ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
@@ -688,19 +584,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         #region Query Methods Of Entity of All
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// *internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
         internal IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _GetQueryOfEntityOfAll(
@@ -726,22 +609,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// *private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>true if any in database, otherwise false</returns>
         private bool _ExistsOfEntityOfAll(
             int currentIndex
             ,int pageSize
@@ -756,23 +623,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// *private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="currentIndex">current page index</param>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>count of this query criteria</returns>
         private int _GetCountOfEntityOfAll(
             int currentIndex
             ,int pageSize
@@ -795,23 +645,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// *public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="currentIndex">current page index</param>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfAll(
             int currentIndex
             ,int pageSize
@@ -841,23 +674,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retMessage;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// *public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="currentIndex">current page index</param>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfAll(
             int currentIndex
             ,int pageSize
@@ -887,21 +703,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retMessage;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// *public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>result message with single entity</returns>
         public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode GetSingleOfEntityOfAll(
             Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
@@ -944,23 +745,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retMessage;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common query set is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// *public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="currentIndex">current page index</param>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>result message with entity collection</returns>
         public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode GetCollectionOfEntityOfAll(
             int currentIndex
             ,int pageSize
@@ -1023,19 +807,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         #region Query Methods Of NameValuePair of All
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// *internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
         internal IQueryable<Framework.NameValuePair> _GetQueryOfNameValuePairOfAll(
@@ -1061,22 +832,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// *private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>true if any in database, otherwise false</returns>
         private bool _ExistsOfNameValuePairOfAll(
             int currentIndex
             ,int pageSize
@@ -1091,23 +846,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// *private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="currentIndex">current page index</param>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>count of this query criteria</returns>
         private int _GetCountOfNameValuePairOfAll(
             int currentIndex
             ,int pageSize
@@ -1130,23 +868,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// *public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="currentIndex">current page index</param>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfNameValuePairOfAll(
             int currentIndex
             ,int pageSize
@@ -1176,23 +897,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retMessage;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// *public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="currentIndex">current page index</param>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfNameValuePairOfAll(
             int currentIndex
             ,int pageSize
@@ -1222,21 +926,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retMessage;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// *public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>result message with single entity</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity GetSingleOfNameValuePairOfAll(
             Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
@@ -1279,23 +968,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retMessage;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common query set is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// *public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="currentIndex">current page index</param>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>result message with entity collection</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection GetCollectionOfNameValuePairOfAll(
             int currentIndex
             ,int pageSize
@@ -1358,19 +1030,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         #region Query Methods Of RssItem of All
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// *internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
         internal IQueryable<Framework.RssItem> _GetQueryOfRssItemOfAll(
@@ -1396,22 +1055,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// *private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>true if any in database, otherwise false</returns>
         private bool _ExistsOfRssItemOfAll(
             int currentIndex
             ,int pageSize
@@ -1426,23 +1069,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// *private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="currentIndex">current page index</param>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>count of this query criteria</returns>
         private int _GetCountOfRssItemOfAll(
             int currentIndex
             ,int pageSize
@@ -1465,23 +1091,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// *public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="currentIndex">current page index</param>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfRssItemOfAll(
             int currentIndex
             ,int pageSize
@@ -1511,23 +1120,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retMessage;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// *public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="currentIndex">current page index</param>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfRssItemOfAll(
             int currentIndex
             ,int pageSize
@@ -1557,21 +1149,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retMessage;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// *public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>result message with single entity</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageRssItem GetSingleOfRssItemOfAll(
             Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
@@ -1614,23 +1191,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retMessage;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common query set is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// *public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="currentIndex">current page index</param>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>result message with entity collection</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection GetCollectionOfRssItemOfAll(
             int currentIndex
             ,int pageSize
@@ -1693,19 +1253,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         #region Query Methods Of Entity of ByIdentifier
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// *internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
         internal IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _GetQueryOfEntityOfByIdentifier(
@@ -1738,22 +1285,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// *private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>true if any in database, otherwise false</returns>
         private bool _ExistsOfEntityOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
@@ -1770,23 +1301,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// *private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="currentIndex">current page index</param>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>count of this query criteria</returns>
         private int _GetCountOfEntityOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
@@ -1811,23 +1325,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// *public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="currentIndex">current page index</param>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
@@ -1859,23 +1356,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retMessage;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// *public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="currentIndex">current page index</param>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
@@ -1907,21 +1387,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retMessage;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// *public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>result message with single entity</returns>
         public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode GetSingleOfEntityOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1967,23 +1432,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retMessage;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common query set is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// *public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="currentIndex">current page index</param>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>result message with entity collection</returns>
         public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode GetCollectionOfEntityOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
@@ -2049,19 +1497,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         #region Query Methods Of KeyInformation of ByIdentifier
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// *internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
         internal IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation> _GetQueryOfKeyInformationOfByIdentifier(
@@ -2094,22 +1529,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// *private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>true if any in database, otherwise false</returns>
         private bool _ExistsOfKeyInformationOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
@@ -2126,23 +1545,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// *private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="currentIndex">current page index</param>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>count of this query criteria</returns>
         private int _GetCountOfKeyInformationOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
@@ -2167,23 +1569,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// *public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="currentIndex">current page index</param>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfKeyInformationOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
@@ -2215,23 +1600,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retMessage;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// *public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="currentIndex">current page index</param>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfKeyInformationOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
@@ -2263,21 +1631,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retMessage;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// *public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>result message with single entity</returns>
         public MSBuildExtensionPack.DataSourceEntities.BuildEventCode.DataAccessLayerMessageOfKeyInformation GetSingleOfKeyInformationOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2323,23 +1676,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retMessage;
         }
 
-        /// <summary>
-        /// The return value of this set of query is: <see cref="ASPNETDB_CACHE.DataSourceEntities.AspNet_SqlCacheTablesForChangeNotification"/>
-        /// The key query criteria of this set of query is: Common.
-        /// Common query set is a built-in set of query criteria, which will query all foreign keys, string/text value, and range of datatime
-        /// There are 7 methods, 1 internal, 2 private and 4 public, for one set of return value and query criteria:
-        /// internal _GetQueryOfEntityOf...(...) gives the Linq Query
-        /// private _ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// private _GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public GetCountOfEntityOf...(...) returns count if there is any records meets Query Criteria, otherwise 0
-        /// public ExistsOfEntityOf...(...) returns true if there is any records meets Query Criteria, otherwise false
-        /// public GetSingleOfEntityOf...(...) returns the first record if there is any records meets Query Criteria, otherwise null
-        /// *public GetCollectionOfEntityOf...(...) returns all records if there is any records meets Query Criteria, otherwise null
-        /// </summary>
-        /// <param name="currentIndex">current page index</param>
-        /// <param name="pageSize">page size</param>
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>result message with entity collection</returns>
         public MSBuildExtensionPack.DataSourceEntities.BuildEventCode.DataAccessLayerMessageOfKeyInformationCollection GetCollectionOfKeyInformationOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
