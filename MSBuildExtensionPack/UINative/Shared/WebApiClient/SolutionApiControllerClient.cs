@@ -194,25 +194,23 @@ namespace MSBuildExtensionPack.WebApiClient
         /// Gets the collection of entity of common.
         /// http://[host]/api/SolutionApi/GetCollectionOfNameValuePairOfByFKOnly
         /// </summary>
-        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
         /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
-        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
         /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
         public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfByFKOnlyAsync(
-            bool isToCompareOrganizationId, System.Int64? organizationId
-            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
+            System.Int64? organizationId
+            , System.Int64? organization_2Id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
             )
         {
             Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("isToCompareOrganizationId", isToCompareOrganizationId.ToString()); parameters.Add("organizationId", organizationId.ToString());
-            parameters.Add("isToCompareOrganization_2Id", isToCompareOrganization_2Id.ToString()); parameters.Add("organization_2Id", organization_2Id.ToString());
+            parameters.Add("organizationId", organizationId.ToString());
+            parameters.Add("organization_2Id", organization_2Id.ToString());
             parameters.Add("currentIndex", currentIndex.ToString());
             parameters.Add("pageSize", pageSize.ToString());
             parameters.Add("queryOrderByExpression", queryOrderByExpression);

@@ -194,37 +194,32 @@ namespace MSBuildExtensionPack.WebApiClient
         /// Gets the collection of entity of common.
         /// http://[host]/api/BuildLogApi/GetCollectionOfNameValuePairOfByFKOnly
         /// </summary>
-        /// <param name="isToCompareBuildId">will compare/filter buildId property/field/column if true, otherwise false</param>
         /// <param name="buildId">value to compare/filter with buildId property/field/column</param>
-        /// <param name="isToCompareSolution_1Id">will compare/filter solution_1Id property/field/column if true, otherwise false</param>
         /// <param name="solution_1Id">value to compare/filter with solution_1Id property/field/column</param>
-        /// <param name="isToCompareOrganization_1Id">will compare/filter organization_1Id property/field/column if true, otherwise false</param>
         /// <param name="organization_1Id">value to compare/filter with organization_1Id property/field/column</param>
-        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
         /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
-        /// <param name="isToCompareBuildEventCodeId">will compare/filter buildEventCodeId property/field/column if true, otherwise false</param>
         /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
         public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfByFKOnlyAsync(
-            bool isToCompareBuildId, System.Int64? buildId
-            , bool isToCompareSolution_1Id, System.Int32? solution_1Id
-            , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
-            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
-            , bool isToCompareBuildEventCodeId, System.Int32? buildEventCodeId
+            System.Int64? buildId
+            , System.Int32? solution_1Id
+            , System.Int64? organization_1Id
+            , System.Int64? organization_2Id
+            , System.Int32? buildEventCodeId
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
             )
         {
             Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("isToCompareBuildId", isToCompareBuildId.ToString()); parameters.Add("buildId", buildId.ToString());
-            parameters.Add("isToCompareSolution_1Id", isToCompareSolution_1Id.ToString()); parameters.Add("solution_1Id", solution_1Id.ToString());
-            parameters.Add("isToCompareOrganization_1Id", isToCompareOrganization_1Id.ToString()); parameters.Add("organization_1Id", organization_1Id.ToString());
-            parameters.Add("isToCompareOrganization_2Id", isToCompareOrganization_2Id.ToString()); parameters.Add("organization_2Id", organization_2Id.ToString());
-            parameters.Add("isToCompareBuildEventCodeId", isToCompareBuildEventCodeId.ToString()); parameters.Add("buildEventCodeId", buildEventCodeId.ToString());
+            parameters.Add("buildId", buildId.ToString());
+            parameters.Add("solution_1Id", solution_1Id.ToString());
+            parameters.Add("organization_1Id", organization_1Id.ToString());
+            parameters.Add("organization_2Id", organization_2Id.ToString());
+            parameters.Add("buildEventCodeId", buildEventCodeId.ToString());
             parameters.Add("currentIndex", currentIndex.ToString());
             parameters.Add("pageSize", pageSize.ToString());
             parameters.Add("queryOrderByExpression", queryOrderByExpression);

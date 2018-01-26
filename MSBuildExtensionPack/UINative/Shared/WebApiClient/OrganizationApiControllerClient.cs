@@ -194,21 +194,20 @@ namespace MSBuildExtensionPack.WebApiClient
         /// Gets the collection of entity of common.
         /// http://[host]/api/OrganizationApi/GetCollectionOfNameValuePairOfByFKOnly
         /// </summary>
-        /// <param name="isToCompareParentId">will compare/filter parentId property/field/column if true, otherwise false</param>
         /// <param name="parentId">value to compare/filter with parentId property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
         public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfByFKOnlyAsync(
-            bool isToCompareParentId, System.Int64? parentId
+            System.Int64? parentId
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
             )
         {
             Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("isToCompareParentId", isToCompareParentId.ToString()); parameters.Add("parentId", parentId.ToString());
+            parameters.Add("parentId", parentId.ToString());
             parameters.Add("currentIndex", currentIndex.ToString());
             parameters.Add("pageSize", pageSize.ToString());
             parameters.Add("queryOrderByExpression", queryOrderByExpression);
@@ -226,21 +225,20 @@ namespace MSBuildExtensionPack.WebApiClient
         /// Gets the collection of entity of common.
         /// http://[host]/api/OrganizationApi/GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier
         /// </summary>
-        /// <param name="isToCompareUniqueIdentifier">will compare/filter uniqueIdentifier property/field/column if true, otherwise false</param>
         /// <param name="uniqueIdentifier">value to compare/filter with uniqueIdentifier property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
         public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierAsync(
-            bool isToCompareUniqueIdentifier, System.Guid? uniqueIdentifier
+            System.Guid? uniqueIdentifier
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
             )
         {
             Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("isToCompareUniqueIdentifier", isToCompareUniqueIdentifier.ToString()); parameters.Add("uniqueIdentifier", uniqueIdentifier.ToString());
+            parameters.Add("uniqueIdentifier", uniqueIdentifier.ToString());
             parameters.Add("currentIndex", currentIndex.ToString());
             parameters.Add("pageSize", pageSize.ToString());
             parameters.Add("queryOrderByExpression", queryOrderByExpression);
@@ -258,21 +256,20 @@ namespace MSBuildExtensionPack.WebApiClient
         /// Gets the collection of entity of common.
         /// http://[host]/api/OrganizationApi/GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
         /// </summary>
-        /// <param name="isToCompareUniqueidentifierColumn">will compare/filter uniqueidentifierColumn property/field/column if true, otherwise false</param>
         /// <param name="uniqueidentifierColumn">value to compare/filter with uniqueidentifierColumn property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
         public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnAsync(
-            bool isToCompareUniqueidentifierColumn, System.Guid? uniqueidentifierColumn
+            System.Guid? uniqueidentifierColumn
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
             )
         {
             Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("isToCompareUniqueidentifierColumn", isToCompareUniqueidentifierColumn.ToString()); parameters.Add("uniqueidentifierColumn", uniqueidentifierColumn.ToString());
+            parameters.Add("uniqueidentifierColumn", uniqueidentifierColumn.ToString());
             parameters.Add("currentIndex", currentIndex.ToString());
             parameters.Add("pageSize", pageSize.ToString());
             parameters.Add("queryOrderByExpression", queryOrderByExpression);

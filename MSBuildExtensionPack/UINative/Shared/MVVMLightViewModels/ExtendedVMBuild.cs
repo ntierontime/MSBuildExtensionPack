@@ -91,7 +91,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 if (input != null)
                 {
                     var client = new MSBuildExtensionPack.WebApiClient.SolutionApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-                    var result = Task.Run(() => client.GetCollectionOfNameValuePairOfByFKOnlyAsync(true, input.Value,false, default(System.Int64), -1, -1, null)).Result;
+                    var result = Task.Run(() => client.GetCollectionOfNameValuePairOfByFKOnlyAsync(input.Value,null, -1, -1, null)).Result;
 
                     var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                     dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
@@ -179,7 +179,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 if (input != null)
                 {
                     var client = new MSBuildExtensionPack.WebApiClient.OrganizationApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
-                    var result = Task.Run(() => client.GetCollectionOfNameValuePairOfByFKOnlyAsync(true, input.Value, -1, -1, null)).Result;
+                    var result = Task.Run(() => client.GetCollectionOfNameValuePairOfByFKOnlyAsync(input.Value, -1, -1, null)).Result;
 
                     var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
                     dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
