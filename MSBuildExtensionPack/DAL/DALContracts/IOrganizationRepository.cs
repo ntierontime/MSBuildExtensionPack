@@ -50,21 +50,21 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfCommon(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria criteriaOfIsSystemBuiltInOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfCreatedDateTimeOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria criteriaOfBitColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfDatetimeColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfDatetime2ColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfSmalldatetimeColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfDateColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfCharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfVarcharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfTextColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNcharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNvarcharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNtextColumnOftOfCommonOfCommonOfCommon
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
+            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria isSystemBuiltIn
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria createdDateTimeRange
+            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria bitColumn
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria datetimeColumnRange
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria datetime2ColumnRange
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria smalldatetimeColumnRange
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria dateColumnRange
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria charColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria varcharColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria textColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria ncharColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria nvarcharColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria ntextColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -88,21 +88,21 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfCommon(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria criteriaOfIsSystemBuiltInOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfCreatedDateTimeOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria criteriaOfBitColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfDatetimeColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfDatetime2ColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfSmalldatetimeColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfDateColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfCharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfVarcharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfTextColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNcharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNvarcharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNtextColumnOftOfCommonOfCommonOfCommon
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
+            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria isSystemBuiltIn
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria createdDateTimeRange
+            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria bitColumn
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria datetimeColumnRange
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria datetime2ColumnRange
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria smalldatetimeColumnRange
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria dateColumnRange
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria charColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria varcharColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria textColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria ncharColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria nvarcharColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria ntextColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -124,21 +124,21 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization GetSingleOfEntityOfCommon(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria criteriaOfIsSystemBuiltInOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfCreatedDateTimeOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria criteriaOfBitColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfDatetimeColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfDatetime2ColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfSmalldatetimeColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfDateColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfCharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfVarcharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfTextColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNcharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNvarcharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNtextColumnOftOfCommonOfCommonOfCommon
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
+            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria isSystemBuiltIn
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria createdDateTimeRange
+            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria bitColumn
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria datetimeColumnRange
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria datetime2ColumnRange
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria smalldatetimeColumnRange
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria dateColumnRange
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria charColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria varcharColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria textColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria ncharColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria nvarcharColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria ntextColumn
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
@@ -160,21 +160,21 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization GetCollectionOfEntityOfCommon(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria criteriaOfIsSystemBuiltInOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfCreatedDateTimeOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria criteriaOfBitColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfDatetimeColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfDatetime2ColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfSmalldatetimeColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfDateColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfCharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfVarcharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfTextColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNcharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNvarcharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNtextColumnOftOfCommonOfCommonOfCommon
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
+            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria isSystemBuiltIn
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria createdDateTimeRange
+            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria bitColumn
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria datetimeColumnRange
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria datetime2ColumnRange
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria smalldatetimeColumnRange
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria dateColumnRange
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria charColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria varcharColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria textColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria ncharColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria nvarcharColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria ntextColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -202,21 +202,21 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultOfCommon(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria criteriaOfIsSystemBuiltInOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfCreatedDateTimeOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria criteriaOfBitColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfDatetimeColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfDatetime2ColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfSmalldatetimeColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfDateColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfCharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfVarcharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfTextColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNcharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNvarcharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNtextColumnOftOfCommonOfCommonOfCommon
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
+            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria isSystemBuiltIn
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria createdDateTimeRange
+            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria bitColumn
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria datetimeColumnRange
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria datetime2ColumnRange
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria smalldatetimeColumnRange
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria dateColumnRange
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria charColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria varcharColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria textColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria ncharColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria nvarcharColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria ntextColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -240,21 +240,21 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultOfCommon(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria criteriaOfIsSystemBuiltInOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfCreatedDateTimeOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria criteriaOfBitColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfDatetimeColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfDatetime2ColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfSmalldatetimeColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfDateColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfCharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfVarcharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfTextColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNcharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNvarcharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNtextColumnOftOfCommonOfCommonOfCommon
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
+            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria isSystemBuiltIn
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria createdDateTimeRange
+            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria bitColumn
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria datetimeColumnRange
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria datetime2ColumnRange
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria smalldatetimeColumnRange
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria dateColumnRange
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria charColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria varcharColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria textColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria ncharColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria nvarcharColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria ntextColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -276,21 +276,21 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault GetSingleOfDefaultOfCommon(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria criteriaOfIsSystemBuiltInOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfCreatedDateTimeOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria criteriaOfBitColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfDatetimeColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfDatetime2ColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfSmalldatetimeColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfDateColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfCharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfVarcharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfTextColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNcharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNvarcharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNtextColumnOftOfCommonOfCommonOfCommon
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
+            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria isSystemBuiltIn
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria createdDateTimeRange
+            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria bitColumn
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria datetimeColumnRange
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria datetime2ColumnRange
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria smalldatetimeColumnRange
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria dateColumnRange
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria charColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria varcharColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria textColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria ncharColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria nvarcharColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria ntextColumn
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
@@ -312,21 +312,21 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection GetCollectionOfDefaultOfCommon(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria criteriaOfIsSystemBuiltInOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfCreatedDateTimeOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria criteriaOfBitColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfDatetimeColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfDatetime2ColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfSmalldatetimeColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria criteriaOfDateColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfCharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfVarcharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfTextColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNcharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNvarcharColumnOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNtextColumnOftOfCommonOfCommonOfCommon
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
+            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria isSystemBuiltIn
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria createdDateTimeRange
+            ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria bitColumn
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria datetimeColumnRange
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria datetime2ColumnRange
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria smalldatetimeColumnRange
+            ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria dateColumnRange
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria charColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria varcharColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria textColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria ncharColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria nvarcharColumn
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria ntextColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -630,7 +630,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -654,7 +654,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -676,7 +676,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization GetSingleOfEntityOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
@@ -698,7 +698,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization GetCollectionOfEntityOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -726,7 +726,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfNameValuePairOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -750,7 +750,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfNameValuePairOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -772,7 +772,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity GetSingleOfNameValuePairOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
@@ -794,7 +794,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection GetCollectionOfNameValuePairOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -822,7 +822,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfRssItemOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -846,7 +846,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfRssItemOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -868,7 +868,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageRssItem GetSingleOfRssItemOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
@@ -890,7 +890,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection GetCollectionOfRssItemOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -918,7 +918,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -942,7 +942,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -964,7 +964,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault GetSingleOfDefaultOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
@@ -986,7 +986,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection GetCollectionOfDefaultOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1014,7 +1014,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultGroupedDataViewOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1038,7 +1038,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultGroupedDataViewOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1060,7 +1060,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultGroupedDataView GetSingleOfDefaultGroupedDataViewOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
@@ -1082,7 +1082,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultGroupedDataViewCollection GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1110,7 +1110,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1134,7 +1134,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1156,7 +1156,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization GetSingleOfEntityOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
@@ -1178,7 +1178,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization GetCollectionOfEntityOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1206,7 +1206,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1230,7 +1230,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1252,7 +1252,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault GetSingleOfDefaultOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
@@ -1274,7 +1274,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection GetCollectionOfDefaultOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1302,7 +1302,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfKeyInformationOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1326,7 +1326,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfKeyInformationOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1348,7 +1348,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformation GetSingleOfKeyInformationOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
@@ -1370,7 +1370,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformationCollection GetCollectionOfKeyInformationOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1398,7 +1398,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+            Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1422,7 +1422,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+            Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1444,7 +1444,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+            Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
@@ -1466,7 +1466,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+            Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1494,7 +1494,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+            Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1518,7 +1518,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+            Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1540,7 +1540,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+            Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
@@ -1562,7 +1562,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+            Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1590,7 +1590,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+            Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1614,7 +1614,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+            Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1636,7 +1636,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+            Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
@@ -1658,7 +1658,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifierOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+            Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1686,7 +1686,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+            Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1710,7 +1710,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+            Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1732,7 +1732,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+            Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
@@ -1754,7 +1754,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+            Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1782,7 +1782,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+            Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1806,7 +1806,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+            Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1828,7 +1828,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+            Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
@@ -1850,7 +1850,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+            Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1878,7 +1878,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+            Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1902,7 +1902,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+            Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1924,7 +1924,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+            Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
@@ -1946,7 +1946,7 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+            Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1974,9 +1974,9 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfIdentifierAndUniqueConstraint(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueIdentifierOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueidentifierColumnOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
+            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
+            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2000,9 +2000,9 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfIdentifierAndUniqueConstraint(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueIdentifierOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueidentifierColumnOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
+            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
+            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2024,9 +2024,9 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization GetSingleOfEntityOfIdentifierAndUniqueConstraint(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueIdentifierOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueidentifierColumnOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
+            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
+            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
@@ -2048,9 +2048,9 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization GetCollectionOfEntityOfIdentifierAndUniqueConstraint(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueIdentifierOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueidentifierColumnOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
+            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
+            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2078,9 +2078,9 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultOfIdentifierAndUniqueConstraint(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueIdentifierOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueidentifierColumnOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
+            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
+            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2104,9 +2104,9 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultOfIdentifierAndUniqueConstraint(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueIdentifierOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueidentifierColumnOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
+            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
+            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2128,9 +2128,9 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault GetSingleOfDefaultOfIdentifierAndUniqueConstraint(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueIdentifierOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueidentifierColumnOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
+            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
+            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
@@ -2152,9 +2152,9 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection GetCollectionOfDefaultOfIdentifierAndUniqueConstraint(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueIdentifierOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueidentifierColumnOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
+            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
+            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2182,9 +2182,9 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfKeyInformationOfIdentifierAndUniqueConstraint(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueIdentifierOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueidentifierColumnOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
+            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
+            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2208,9 +2208,9 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueIdentifierOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueidentifierColumnOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
+            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
+            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2232,9 +2232,9 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformation GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueIdentifierOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueidentifierColumnOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
+            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
+            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
@@ -2256,9 +2256,9 @@ namespace MSBuildExtensionPack.DALContracts
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformationCollection GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueIdentifierOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria criteriaOfUniqueidentifierColumnOftOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraintOfIdentifierAndUniqueConstraint
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
+            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
+            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection

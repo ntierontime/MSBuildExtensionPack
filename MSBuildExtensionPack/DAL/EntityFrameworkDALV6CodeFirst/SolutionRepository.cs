@@ -335,11 +335,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
         internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution> _GetQueryOfEntityOfCommon(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria externalParentId
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -351,17 +351,17 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     where
                         (
                             (
-                            (criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon.IsToCompare && Organization_1.Id == criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon.ValueToCompare)
+                            (organizationId.IsToCompare == false || organizationId.IsToCompare && Organization_1.Id == organizationId.ValueToCompare)
                             &&
-                            (criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon.IsToCompare && Organization_2.Id == criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon.ValueToCompare)
+                            (organization_2Id.IsToCompare == false || organization_2Id.IsToCompare && Organization_2.Id == organization_2Id.ValueToCompare)
                             )
                         &&
                             (
-                            (criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon.IsToCompare && t.ExternalParentId.Contains(criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon.ValueToBeContained))
+                            (externalParentId.IsToCompare == false || externalParentId.IsToCompare && t.ExternalParentId.Contains(externalParentId.ValueToBeContained))
                             &&
-                            (criteriaOfNameOftOfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfNameOftOfCommonOfCommonOfCommon.IsToCompare && t.Name.Contains(criteriaOfNameOftOfCommonOfCommonOfCommon.ValueToBeContained))
+                            (name.IsToCompare == false || name.IsToCompare && t.Name.Contains(name.ValueToBeContained))
                             &&
-                            (criteriaOfDescriptionOftOfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfDescriptionOftOfCommonOfCommonOfCommon.IsToCompare && t.Description.Contains(criteriaOfDescriptionOftOfCommonOfCommonOfCommon.ValueToBeContained))
+                            (description.IsToCompare == false || description.IsToCompare && t.Description.Contains(description.ValueToBeContained))
                             )
                         )
                     select new MSBuildExtensionPack.DataSourceEntities.Solution { Id = t.Id, ExternalParentId = t.ExternalParentId, Name = t.Name, Description = t.Description, OrganizationId = t.OrganizationId } into x
@@ -397,22 +397,22 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>true if any in database, otherwise false</returns>
         private bool _ExistsOfEntityOfCommon(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria externalParentId
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
             int _Count = _GetCountOfEntityOfCommon(
-                criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-                ,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-                ,criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-                ,criteriaOfNameOftOfCommonOfCommonOfCommon
-                ,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+                organizationId
+                ,organization_2Id
+                ,externalParentId
+                ,name
+                ,description
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -438,11 +438,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>count of this query criteria</returns>
         private int _GetCountOfEntityOfCommon(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria externalParentId
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -450,11 +450,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         {
             IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution> _Query = _GetQueryOfEntityOfCommon(
-                criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-                ,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-                ,criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-                ,criteriaOfNameOftOfCommonOfCommonOfCommon
-                ,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+                organizationId
+                ,organization_2Id
+                ,externalParentId
+                ,name
+                ,description
                 ,queryOrderBySettingCollection
             );
             int _Count;
@@ -487,11 +487,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfCommon(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria externalParentId
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -502,11 +502,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 int _retval = _GetCountOfEntityOfCommon(
-                criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-                ,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-                ,criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-                ,criteriaOfNameOftOfCommonOfCommonOfCommon
-                ,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+                organizationId
+                ,organization_2Id
+                ,externalParentId
+                ,name
+                ,description
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -543,11 +543,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfCommon(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria externalParentId
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -558,11 +558,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _retval = _ExistsOfEntityOfCommon(
-                criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-                ,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-                ,criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-                ,criteriaOfNameOftOfCommonOfCommonOfCommon
-                ,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+                organizationId
+                ,organization_2Id
+                ,externalParentId
+                ,name
+                ,description
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -597,11 +597,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntitySolution GetSingleOfEntityOfCommon(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria externalParentId
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -610,11 +610,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _Exists = _ExistsOfEntityOfCommon(
-                criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-                ,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-                ,criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-                ,criteriaOfNameOftOfCommonOfCommonOfCommon
-                ,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+                organizationId
+                ,organization_2Id
+                ,externalParentId
+                ,name
+                ,description
                 ,-1
                 ,-1
                 ,queryOrderBySettingCollection
@@ -623,11 +623,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 if (_Exists)
                 {
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution> _Query = _GetQueryOfEntityOfCommon(
-                criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-                ,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-                ,criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-                ,criteriaOfNameOftOfCommonOfCommonOfCommon
-                ,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+                organizationId
+                ,organization_2Id
+                ,externalParentId
+                ,name
+                ,description
                 ,queryOrderBySettingCollection
             );
 
@@ -671,11 +671,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionSolution GetCollectionOfEntityOfCommon(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria externalParentId
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -687,11 +687,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _Exists = _ExistsOfEntityOfCommon(
-                criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-                ,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-                ,criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-                ,criteriaOfNameOftOfCommonOfCommonOfCommon
-                ,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+                organizationId
+                ,organization_2Id
+                ,externalParentId
+                ,name
+                ,description
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -700,11 +700,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 if (_Exists)
                 {
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution> _Query = _GetQueryOfEntityOfCommon(
-                criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-                ,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-                ,criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-                ,criteriaOfNameOftOfCommonOfCommonOfCommon
-                ,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+                organizationId
+                ,organization_2Id
+                ,externalParentId
+                ,name
+                ,description
                 ,queryOrderBySettingCollection
             );
 
@@ -763,11 +763,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
         internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution.Default> _GetQueryOfDefaultOfCommon(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria externalParentId
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -779,17 +779,17 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     where
                         (
                             (
-                            (criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon.IsToCompare && Organization_1.Id == criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon.ValueToCompare)
+                            (organizationId.IsToCompare == false || organizationId.IsToCompare && Organization_1.Id == organizationId.ValueToCompare)
                             &&
-                            (criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon.IsToCompare && Organization_2.Id == criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon.ValueToCompare)
+                            (organization_2Id.IsToCompare == false || organization_2Id.IsToCompare && Organization_2.Id == organization_2Id.ValueToCompare)
                             )
                         &&
                             (
-                            (criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon.IsToCompare && t.ExternalParentId.Contains(criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon.ValueToBeContained))
+                            (externalParentId.IsToCompare == false || externalParentId.IsToCompare && t.ExternalParentId.Contains(externalParentId.ValueToBeContained))
                             &&
-                            (criteriaOfNameOftOfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfNameOftOfCommonOfCommonOfCommon.IsToCompare && t.Name.Contains(criteriaOfNameOftOfCommonOfCommonOfCommon.ValueToBeContained))
+                            (name.IsToCompare == false || name.IsToCompare && t.Name.Contains(name.ValueToBeContained))
                             &&
-                            (criteriaOfDescriptionOftOfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfDescriptionOftOfCommonOfCommonOfCommon.IsToCompare && t.Description.Contains(criteriaOfDescriptionOftOfCommonOfCommonOfCommon.ValueToBeContained))
+                            (description.IsToCompare == false || description.IsToCompare && t.Description.Contains(description.ValueToBeContained))
                             )
                         )
                     select new MSBuildExtensionPack.DataSourceEntities.Solution.Default { Organization_1_UniqueIdentifier = Organization_1.UniqueIdentifier, Organization_1_UniqueidentifierColumn = Organization_1.UniqueidentifierColumn, Organization_1_Name = Organization_1.Name, Id = t.Id, Organization_2Id = Organization_2.Id, Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_UniqueidentifierColumn = Organization_2.UniqueidentifierColumn, Organization_2_Name = Organization_2.Name, ExternalParentId = t.ExternalParentId, Name = t.Name, Description = t.Description, OrganizationId = t.OrganizationId } into vD2
@@ -825,22 +825,22 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>true if any in database, otherwise false</returns>
         private bool _ExistsOfDefaultOfCommon(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria externalParentId
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
             int _Count = _GetCountOfDefaultOfCommon(
-                criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-                ,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-                ,criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-                ,criteriaOfNameOftOfCommonOfCommonOfCommon
-                ,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+                organizationId
+                ,organization_2Id
+                ,externalParentId
+                ,name
+                ,description
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -866,11 +866,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>count of this query criteria</returns>
         private int _GetCountOfDefaultOfCommon(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria externalParentId
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -878,11 +878,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         {
             IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution.Default> _Query = _GetQueryOfDefaultOfCommon(
-                criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-                ,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-                ,criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-                ,criteriaOfNameOftOfCommonOfCommonOfCommon
-                ,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+                organizationId
+                ,organization_2Id
+                ,externalParentId
+                ,name
+                ,description
                 ,queryOrderBySettingCollection
             );
             int _Count;
@@ -915,11 +915,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultOfCommon(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria externalParentId
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -930,11 +930,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 int _retval = _GetCountOfDefaultOfCommon(
-                criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-                ,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-                ,criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-                ,criteriaOfNameOftOfCommonOfCommonOfCommon
-                ,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+                organizationId
+                ,organization_2Id
+                ,externalParentId
+                ,name
+                ,description
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -971,11 +971,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultOfCommon(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria externalParentId
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -986,11 +986,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _retval = _ExistsOfDefaultOfCommon(
-                criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-                ,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-                ,criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-                ,criteriaOfNameOftOfCommonOfCommonOfCommon
-                ,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+                organizationId
+                ,organization_2Id
+                ,externalParentId
+                ,name
+                ,description
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -1025,11 +1025,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         public MSBuildExtensionPack.DataSourceEntities.Solution.DataAccessLayerMessageOfDefault GetSingleOfDefaultOfCommon(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria externalParentId
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -1038,11 +1038,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _Exists = _ExistsOfDefaultOfCommon(
-                criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-                ,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-                ,criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-                ,criteriaOfNameOftOfCommonOfCommonOfCommon
-                ,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+                organizationId
+                ,organization_2Id
+                ,externalParentId
+                ,name
+                ,description
                 ,-1
                 ,-1
                 ,queryOrderBySettingCollection
@@ -1051,11 +1051,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 if (_Exists)
                 {
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution.Default> _Query = _GetQueryOfDefaultOfCommon(
-                criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-                ,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-                ,criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-                ,criteriaOfNameOftOfCommonOfCommonOfCommon
-                ,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+                organizationId
+                ,organization_2Id
+                ,externalParentId
+                ,name
+                ,description
                 ,queryOrderBySettingCollection
             );
 
@@ -1099,11 +1099,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         public MSBuildExtensionPack.DataSourceEntities.Solution.DataAccessLayerMessageOfDefaultCollection GetCollectionOfDefaultOfCommon(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfNameOftOfCommonOfCommonOfCommon
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria externalParentId
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -1115,11 +1115,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _Exists = _ExistsOfDefaultOfCommon(
-                criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-                ,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-                ,criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-                ,criteriaOfNameOftOfCommonOfCommonOfCommon
-                ,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+                organizationId
+                ,organization_2Id
+                ,externalParentId
+                ,name
+                ,description
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -1128,11 +1128,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 if (_Exists)
                 {
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution.Default> _Query = _GetQueryOfDefaultOfCommon(
-                criteriaOfIdOfOrganization_1OfCommonOfCommonOfCommon
-                ,criteriaOfIdOfOrganization_2OfCommonOfCommonOfCommon
-                ,criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon
-                ,criteriaOfNameOftOfCommonOfCommonOfCommon
-                ,criteriaOfDescriptionOftOfCommonOfCommonOfCommon
+                organizationId
+                ,organization_2Id
+                ,externalParentId
+                ,name
+                ,description
                 ,queryOrderBySettingCollection
             );
 
@@ -2202,8 +2202,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
         internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution> _GetQueryOfEntityOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -2215,9 +2215,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     where
                         (
                             (
-                            (criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_1.Id == criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
+                            (organizationId.IsToCompare == false || organizationId.IsToCompare && Organization_1.Id == organizationId.ValueToCompare)
                             &&
-                            (criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_2.Id == criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
+                            (organization_2Id.IsToCompare == false || organization_2Id.IsToCompare && Organization_2.Id == organization_2Id.ValueToCompare)
                             )
                         )
                     select new MSBuildExtensionPack.DataSourceEntities.Solution { Id = t.Id, ExternalParentId = t.ExternalParentId, Name = t.Name, Description = t.Description, OrganizationId = t.OrganizationId } into x
@@ -2253,16 +2253,16 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>true if any in database, otherwise false</returns>
         private bool _ExistsOfEntityOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
             int _Count = _GetCountOfEntityOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -2288,8 +2288,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>count of this query criteria</returns>
         private int _GetCountOfEntityOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2297,8 +2297,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         {
             IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution> _Query = _GetQueryOfEntityOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,queryOrderBySettingCollection
             );
             int _Count;
@@ -2331,8 +2331,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2343,8 +2343,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 int _retval = _GetCountOfEntityOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -2381,8 +2381,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2393,8 +2393,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _retval = _ExistsOfEntityOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -2429,8 +2429,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntitySolution GetSingleOfEntityOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -2439,8 +2439,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _Exists = _ExistsOfEntityOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,-1
                 ,-1
                 ,queryOrderBySettingCollection
@@ -2449,8 +2449,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 if (_Exists)
                 {
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution> _Query = _GetQueryOfEntityOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,queryOrderBySettingCollection
             );
 
@@ -2494,8 +2494,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionSolution GetCollectionOfEntityOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2507,8 +2507,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _Exists = _ExistsOfEntityOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -2517,8 +2517,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 if (_Exists)
                 {
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution> _Query = _GetQueryOfEntityOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,queryOrderBySettingCollection
             );
 
@@ -2577,8 +2577,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
         internal IQueryable<Framework.NameValuePair> _GetQueryOfNameValuePairOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -2590,9 +2590,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     where
                         (
                             (
-                            (criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_1.Id == criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
+                            (organizationId.IsToCompare == false || organizationId.IsToCompare && Organization_1.Id == organizationId.ValueToCompare)
                             &&
-                            (criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_2.Id == criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
+                            (organization_2Id.IsToCompare == false || organization_2Id.IsToCompare && Organization_2.Id == organization_2Id.ValueToCompare)
                             )
                         )
                     select new Framework.NameValuePair { Value = t.Id.ToString(), Name = t.Name } into vD0
@@ -2628,16 +2628,16 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>true if any in database, otherwise false</returns>
         private bool _ExistsOfNameValuePairOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
             int _Count = _GetCountOfNameValuePairOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -2663,8 +2663,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>count of this query criteria</returns>
         private int _GetCountOfNameValuePairOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2672,8 +2672,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         {
             IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,queryOrderBySettingCollection
             );
             int _Count;
@@ -2706,8 +2706,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfNameValuePairOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2718,8 +2718,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 int _retval = _GetCountOfNameValuePairOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -2756,8 +2756,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfNameValuePairOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2768,8 +2768,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _retval = _ExistsOfNameValuePairOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -2804,8 +2804,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity GetSingleOfNameValuePairOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -2814,8 +2814,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _Exists = _ExistsOfNameValuePairOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,-1
                 ,-1
                 ,queryOrderBySettingCollection
@@ -2824,8 +2824,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 if (_Exists)
                 {
                     IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,queryOrderBySettingCollection
             );
 
@@ -2869,8 +2869,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection GetCollectionOfNameValuePairOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2882,8 +2882,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _Exists = _ExistsOfNameValuePairOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -2892,8 +2892,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 if (_Exists)
                 {
                     IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,queryOrderBySettingCollection
             );
 
@@ -2952,8 +2952,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
         internal IQueryable<Framework.RssItem> _GetQueryOfRssItemOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -2965,9 +2965,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     where
                         (
                             (
-                            (criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_1.Id == criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
+                            (organizationId.IsToCompare == false || organizationId.IsToCompare && Organization_1.Id == organizationId.ValueToCompare)
                             &&
-                            (criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_2.Id == criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
+                            (organization_2Id.IsToCompare == false || organization_2Id.IsToCompare && Organization_2.Id == organization_2Id.ValueToCompare)
                             )
                         )
                     select new Framework.RssItem { IdentifierInString = t.Id.ToString(), Title = t.Name, Description = t.ExternalParentId } into vD1
@@ -3003,16 +3003,16 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>true if any in database, otherwise false</returns>
         private bool _ExistsOfRssItemOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
             int _Count = _GetCountOfRssItemOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -3038,8 +3038,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>count of this query criteria</returns>
         private int _GetCountOfRssItemOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -3047,8 +3047,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         {
             IQueryable<Framework.RssItem> _Query = _GetQueryOfRssItemOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,queryOrderBySettingCollection
             );
             int _Count;
@@ -3081,8 +3081,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfRssItemOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -3093,8 +3093,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 int _retval = _GetCountOfRssItemOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -3131,8 +3131,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfRssItemOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -3143,8 +3143,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _retval = _ExistsOfRssItemOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -3179,8 +3179,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageRssItem GetSingleOfRssItemOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -3189,8 +3189,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _Exists = _ExistsOfRssItemOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,-1
                 ,-1
                 ,queryOrderBySettingCollection
@@ -3199,8 +3199,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 if (_Exists)
                 {
                     IQueryable<Framework.RssItem> _Query = _GetQueryOfRssItemOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,queryOrderBySettingCollection
             );
 
@@ -3244,8 +3244,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection GetCollectionOfRssItemOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -3257,8 +3257,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _Exists = _ExistsOfRssItemOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -3267,8 +3267,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 if (_Exists)
                 {
                     IQueryable<Framework.RssItem> _Query = _GetQueryOfRssItemOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,queryOrderBySettingCollection
             );
 
@@ -3327,8 +3327,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
         internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution.Default> _GetQueryOfDefaultOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -3340,9 +3340,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     where
                         (
                             (
-                            (criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_1.Id == criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
+                            (organizationId.IsToCompare == false || organizationId.IsToCompare && Organization_1.Id == organizationId.ValueToCompare)
                             &&
-                            (criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_2.Id == criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
+                            (organization_2Id.IsToCompare == false || organization_2Id.IsToCompare && Organization_2.Id == organization_2Id.ValueToCompare)
                             )
                         )
                     select new MSBuildExtensionPack.DataSourceEntities.Solution.Default { Organization_1_UniqueIdentifier = Organization_1.UniqueIdentifier, Organization_1_UniqueidentifierColumn = Organization_1.UniqueidentifierColumn, Organization_1_Name = Organization_1.Name, Id = t.Id, Organization_2Id = Organization_2.Id, Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_UniqueidentifierColumn = Organization_2.UniqueidentifierColumn, Organization_2_Name = Organization_2.Name, ExternalParentId = t.ExternalParentId, Name = t.Name, Description = t.Description, OrganizationId = t.OrganizationId } into vD2
@@ -3378,16 +3378,16 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>true if any in database, otherwise false</returns>
         private bool _ExistsOfDefaultOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
             int _Count = _GetCountOfDefaultOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -3413,8 +3413,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>count of this query criteria</returns>
         private int _GetCountOfDefaultOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -3422,8 +3422,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         {
             IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution.Default> _Query = _GetQueryOfDefaultOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,queryOrderBySettingCollection
             );
             int _Count;
@@ -3456,8 +3456,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -3468,8 +3468,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 int _retval = _GetCountOfDefaultOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -3506,8 +3506,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -3518,8 +3518,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _retval = _ExistsOfDefaultOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -3554,8 +3554,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         public MSBuildExtensionPack.DataSourceEntities.Solution.DataAccessLayerMessageOfDefault GetSingleOfDefaultOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -3564,8 +3564,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _Exists = _ExistsOfDefaultOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,-1
                 ,-1
                 ,queryOrderBySettingCollection
@@ -3574,8 +3574,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 if (_Exists)
                 {
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution.Default> _Query = _GetQueryOfDefaultOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,queryOrderBySettingCollection
             );
 
@@ -3619,8 +3619,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         public MSBuildExtensionPack.DataSourceEntities.Solution.DataAccessLayerMessageOfDefaultCollection GetCollectionOfDefaultOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -3632,8 +3632,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _Exists = _ExistsOfDefaultOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -3642,8 +3642,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 if (_Exists)
                 {
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution.Default> _Query = _GetQueryOfDefaultOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,queryOrderBySettingCollection
             );
 
@@ -3702,8 +3702,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
         internal IEnumerable<MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataView> _GetQueryOfDefaultGroupedDataViewOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -3715,9 +3715,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     where
                         (
                             (
-                            (criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_1.Id == criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
+                            (organizationId.IsToCompare == false || organizationId.IsToCompare && Organization_1.Id == organizationId.ValueToCompare)
                             &&
-                            (criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare == false || criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.IsToCompare && Organization_2.Id == criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly.ValueToCompare)
+                            (organization_2Id.IsToCompare == false || organization_2Id.IsToCompare && Organization_2.Id == organization_2Id.ValueToCompare)
                             )
                         )
                     group t by new { OrganizationId = t.OrganizationId, Organization_2Id = Organization_2.Id, Name = string.Concat(new string[] { Organization_1.Name," - ",Organization_2.Name }) } into tG
@@ -3755,16 +3755,16 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>true if any in database, otherwise false</returns>
         private bool _ExistsOfDefaultGroupedDataViewOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
             int _Count = _GetCountOfDefaultGroupedDataViewOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -3790,8 +3790,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>count of this query criteria</returns>
         private int _GetCountOfDefaultGroupedDataViewOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -3799,8 +3799,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         {
             IEnumerable<MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataView> _Query = _GetQueryOfDefaultGroupedDataViewOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,queryOrderBySettingCollection
             );
             int _Count;
@@ -3833,8 +3833,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultGroupedDataViewOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -3845,8 +3845,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 int _retval = _GetCountOfDefaultGroupedDataViewOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -3883,8 +3883,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultGroupedDataViewOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -3895,8 +3895,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _retval = _ExistsOfDefaultGroupedDataViewOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -3931,8 +3931,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         public MSBuildExtensionPack.DataSourceEntities.Solution.DataAccessLayerMessageOfDefaultGroupedDataView GetSingleOfDefaultGroupedDataViewOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -3941,8 +3941,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _Exists = _ExistsOfDefaultGroupedDataViewOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,-1
                 ,-1
                 ,queryOrderBySettingCollection
@@ -3951,8 +3951,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 if (_Exists)
                 {
                     IEnumerable<MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataView> _Query = _GetQueryOfDefaultGroupedDataViewOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,queryOrderBySettingCollection
             );
 
@@ -3996,8 +3996,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         public MSBuildExtensionPack.DataSourceEntities.Solution.DataAccessLayerMessageOfDefaultGroupedDataViewCollection GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -4009,8 +4009,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _Exists = _ExistsOfDefaultGroupedDataViewOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -4019,8 +4019,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 if (_Exists)
                 {
                     IEnumerable<MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataView> _Query = _GetQueryOfDefaultGroupedDataViewOfByFKOnly(
-                criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
-                ,criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+                organizationId
+                ,organization_2Id
                 ,queryOrderBySettingCollection
             );
 
@@ -4079,7 +4079,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
         internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution> _GetQueryOfEntityOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -4091,7 +4091,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     where
                         (
                             (
-                            (criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.IsToCompare == false || criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.IsToCompare && t.Id == criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.ValueToCompare)
+                            (id.IsToCompare == false || id.IsToCompare && t.Id == id.ValueToCompare)
                             )
                         )
                     select new MSBuildExtensionPack.DataSourceEntities.Solution { Id = t.Id, ExternalParentId = t.ExternalParentId, Name = t.Name, Description = t.Description, OrganizationId = t.OrganizationId } into x
@@ -4127,14 +4127,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>true if any in database, otherwise false</returns>
         private bool _ExistsOfEntityOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
             int _Count = _GetCountOfEntityOfByIdentifier(
-                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -4160,7 +4160,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>count of this query criteria</returns>
         private int _GetCountOfEntityOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -4168,7 +4168,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         {
             IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution> _Query = _GetQueryOfEntityOfByIdentifier(
-                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                id
                 ,queryOrderBySettingCollection
             );
             int _Count;
@@ -4201,7 +4201,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -4212,7 +4212,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 int _retval = _GetCountOfEntityOfByIdentifier(
-                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -4249,7 +4249,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -4260,7 +4260,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _retval = _ExistsOfEntityOfByIdentifier(
-                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -4295,7 +4295,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntitySolution GetSingleOfEntityOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -4304,7 +4304,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _Exists = _ExistsOfEntityOfByIdentifier(
-                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                id
                 ,-1
                 ,-1
                 ,queryOrderBySettingCollection
@@ -4313,7 +4313,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 if (_Exists)
                 {
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution> _Query = _GetQueryOfEntityOfByIdentifier(
-                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                id
                 ,queryOrderBySettingCollection
             );
 
@@ -4357,7 +4357,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionSolution GetCollectionOfEntityOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -4369,7 +4369,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _Exists = _ExistsOfEntityOfByIdentifier(
-                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -4378,7 +4378,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 if (_Exists)
                 {
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution> _Query = _GetQueryOfEntityOfByIdentifier(
-                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                id
                 ,queryOrderBySettingCollection
             );
 
@@ -4437,7 +4437,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
         internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution.Default> _GetQueryOfDefaultOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -4449,7 +4449,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     where
                         (
                             (
-                            (criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.IsToCompare == false || criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.IsToCompare && t.Id == criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.ValueToCompare)
+                            (id.IsToCompare == false || id.IsToCompare && t.Id == id.ValueToCompare)
                             )
                         )
                     select new MSBuildExtensionPack.DataSourceEntities.Solution.Default { Organization_1_UniqueIdentifier = Organization_1.UniqueIdentifier, Organization_1_UniqueidentifierColumn = Organization_1.UniqueidentifierColumn, Organization_1_Name = Organization_1.Name, Id = t.Id, Organization_2Id = Organization_2.Id, Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_UniqueidentifierColumn = Organization_2.UniqueidentifierColumn, Organization_2_Name = Organization_2.Name, ExternalParentId = t.ExternalParentId, Name = t.Name, Description = t.Description, OrganizationId = t.OrganizationId } into vD2
@@ -4485,14 +4485,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>true if any in database, otherwise false</returns>
         private bool _ExistsOfDefaultOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
             int _Count = _GetCountOfDefaultOfByIdentifier(
-                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -4518,7 +4518,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>count of this query criteria</returns>
         private int _GetCountOfDefaultOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -4526,7 +4526,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         {
             IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution.Default> _Query = _GetQueryOfDefaultOfByIdentifier(
-                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                id
                 ,queryOrderBySettingCollection
             );
             int _Count;
@@ -4559,7 +4559,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -4570,7 +4570,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 int _retval = _GetCountOfDefaultOfByIdentifier(
-                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -4607,7 +4607,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -4618,7 +4618,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _retval = _ExistsOfDefaultOfByIdentifier(
-                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -4653,7 +4653,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         public MSBuildExtensionPack.DataSourceEntities.Solution.DataAccessLayerMessageOfDefault GetSingleOfDefaultOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -4662,7 +4662,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _Exists = _ExistsOfDefaultOfByIdentifier(
-                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                id
                 ,-1
                 ,-1
                 ,queryOrderBySettingCollection
@@ -4671,7 +4671,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 if (_Exists)
                 {
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution.Default> _Query = _GetQueryOfDefaultOfByIdentifier(
-                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                id
                 ,queryOrderBySettingCollection
             );
 
@@ -4715,7 +4715,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         public MSBuildExtensionPack.DataSourceEntities.Solution.DataAccessLayerMessageOfDefaultCollection GetCollectionOfDefaultOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -4727,7 +4727,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _Exists = _ExistsOfDefaultOfByIdentifier(
-                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -4736,7 +4736,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 if (_Exists)
                 {
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution.Default> _Query = _GetQueryOfDefaultOfByIdentifier(
-                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                id
                 ,queryOrderBySettingCollection
             );
 
@@ -4795,7 +4795,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
         internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution.KeyInformation> _GetQueryOfKeyInformationOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -4807,7 +4807,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     where
                         (
                             (
-                            (criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.IsToCompare == false || criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.IsToCompare && t.Id == criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier.ValueToCompare)
+                            (id.IsToCompare == false || id.IsToCompare && t.Id == id.ValueToCompare)
                             )
                         )
                     select new MSBuildExtensionPack.DataSourceEntities.Solution.KeyInformation { Id = t.Id, Name = t.Name } into vD4
@@ -4843,14 +4843,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>true if any in database, otherwise false</returns>
         private bool _ExistsOfKeyInformationOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
             int _Count = _GetCountOfKeyInformationOfByIdentifier(
-                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -4876,7 +4876,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>count of this query criteria</returns>
         private int _GetCountOfKeyInformationOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -4884,7 +4884,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         {
             IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution.KeyInformation> _Query = _GetQueryOfKeyInformationOfByIdentifier(
-                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                id
                 ,queryOrderBySettingCollection
             );
             int _Count;
@@ -4917,7 +4917,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>Result property will be the count of records in database, 0 if no record in database</returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfKeyInformationOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -4928,7 +4928,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 int _retval = _GetCountOfKeyInformationOfByIdentifier(
-                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -4965,7 +4965,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>an instance of <see cref="Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean"/></returns>
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfKeyInformationOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -4976,7 +4976,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _retval = _ExistsOfKeyInformationOfByIdentifier(
-                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -5011,7 +5011,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with single entity</returns>
         public MSBuildExtensionPack.DataSourceEntities.Solution.DataAccessLayerMessageOfKeyInformation GetSingleOfKeyInformationOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -5020,7 +5020,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _Exists = _ExistsOfKeyInformationOfByIdentifier(
-                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                id
                 ,-1
                 ,-1
                 ,queryOrderBySettingCollection
@@ -5029,7 +5029,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 if (_Exists)
                 {
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution.KeyInformation> _Query = _GetQueryOfKeyInformationOfByIdentifier(
-                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                id
                 ,queryOrderBySettingCollection
             );
 
@@ -5073,7 +5073,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>result message with entity collection</returns>
         public MSBuildExtensionPack.DataSourceEntities.Solution.DataAccessLayerMessageOfKeyInformationCollection GetCollectionOfKeyInformationOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -5085,7 +5085,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             try
             {
                 bool _Exists = _ExistsOfKeyInformationOfByIdentifier(
-                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                id
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -5094,7 +5094,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 if (_Exists)
                 {
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.Solution.KeyInformation> _Query = _GetQueryOfKeyInformationOfByIdentifier(
-                criteriaOfIdOftOfByIdentifierOfByIdentifierOfByIdentifier
+                id
                 ,queryOrderBySettingCollection
             );
 
