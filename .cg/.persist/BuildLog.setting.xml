@@ -46,19 +46,19 @@
     <Description>Query by Identifier</Description>
     <QueryUnitGroups>ByIdentifier</QueryUnitGroups>
   </Query>
-  <DataQueryOnDataViewSetting Key="Entity" DataQueryKey="Common" />
-  <DataQueryOnDataViewSetting Key="CalculatedEntity" DataQueryKey="Common" DataViewKey="Default" />
-  <DataQueryOnDataViewSetting Key="Entity" DataQueryKey="All" />
-  <DataQueryOnDataViewSetting Key="CalculatedEntity" DataQueryKey="All" DataViewKey="NameValuePair" />
-  <DataQueryOnDataViewSetting Key="CalculatedEntity" DataQueryKey="All" DataViewKey="RssItem" />
-  <DataQueryOnDataViewSetting Key="Entity" DataQueryKey="ByFKOnly" />
-  <DataQueryOnDataViewSetting Key="CalculatedEntity" DataQueryKey="ByFKOnly" DataViewKey="NameValuePair" />
-  <DataQueryOnDataViewSetting Key="CalculatedEntity" DataQueryKey="ByFKOnly" DataViewKey="RssItem" />
-  <DataQueryOnDataViewSetting Key="CalculatedEntity" DataQueryKey="ByFKOnly" DataViewKey="Default" />
-  <DataQueryOnDataViewSetting Key="CalculatedEntity" DataQueryKey="ByFKOnly" DataViewKey="DefaultGroupedDataView" />
-  <DataQueryOnDataViewSetting Key="Entity" DataQueryKey="ByIdentifier" />
-  <DataQueryOnDataViewSetting Key="CalculatedEntity" DataQueryKey="ByIdentifier" DataViewKey="Default" />
-  <DataQueryOnDataViewSetting Key="CalculatedEntity" DataQueryKey="ByIdentifier" DataViewKey="KeyInformation" />
+  <DataQueryOnDataViewSetting Key="EntityOfCommon" DataQueryKey="Common" />
+  <DataQueryOnDataViewSetting Key="DefaultOfCommon" DataQueryKey="Common" DataViewKey="Default" />
+  <DataQueryOnDataViewSetting Key="EntityOfAll" DataQueryKey="All" />
+  <DataQueryOnDataViewSetting Key="NameValuePairOfAll" DataQueryKey="All" DataViewKey="NameValuePair" />
+  <DataQueryOnDataViewSetting Key="RssItemOfAll" DataQueryKey="All" DataViewKey="RssItem" />
+  <DataQueryOnDataViewSetting Key="EntityOfByFKOnly" DataQueryKey="ByFKOnly" />
+  <DataQueryOnDataViewSetting Key="NameValuePairOfByFKOnly" DataQueryKey="ByFKOnly" DataViewKey="NameValuePair" />
+  <DataQueryOnDataViewSetting Key="RssItemOfByFKOnly" DataQueryKey="ByFKOnly" DataViewKey="RssItem" />
+  <DataQueryOnDataViewSetting Key="DefaultOfByFKOnly" DataQueryKey="ByFKOnly" DataViewKey="Default" />
+  <DataQueryOnDataViewSetting Key="DefaultGroupedDataViewOfByFKOnly" DataQueryKey="ByFKOnly" DataViewKey="DefaultGroupedDataView" />
+  <DataQueryOnDataViewSetting Key="EntityOfByIdentifier" DataQueryKey="ByIdentifier" />
+  <DataQueryOnDataViewSetting Key="DefaultOfByIdentifier" DataQueryKey="ByIdentifier" DataViewKey="Default" />
+  <DataQueryOnDataViewSetting Key="KeyInformationOfByIdentifier" DataQueryKey="ByIdentifier" DataViewKey="KeyInformation" />
   <QueryUnitGroup Key="Common" DataQueryPerQueryKnownKey="Common" SourceTypeDeclarationFullName="MSBuildExtensionPack.BuildLog" ConditionOperator="AND">
     <Description>Query by EntityReference, String, Bool, Order By DateTime</Description>
     <QueryUnits Key="Common" ConditionOperator="AND" Description="Query by EntityReference, Bool, DateTime">BuildId=\BuildId:Id.Equals;Solution_1Id=\BuildId\SolutionId:Id.Equals;Organization_1Id=\BuildId\SolutionId\OrganizationId:Id.Equals;Organization_2Id=\BuildId\SolutionId\OrganizationId\ParentId:Id.Equals;BuildEventCodeId=\BuildEventCodeId:Id.Equals;EventTimeRange=:EventTime.Range</QueryUnits>

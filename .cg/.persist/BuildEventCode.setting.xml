@@ -30,12 +30,12 @@
     <Description>Query by Identifier</Description>
     <QueryUnitGroups>ByIdentifier</QueryUnitGroups>
   </Query>
-  <DataQueryOnDataViewSetting Key="Entity" DataQueryKey="Common" />
-  <DataQueryOnDataViewSetting Key="Entity" DataQueryKey="All" />
-  <DataQueryOnDataViewSetting Key="CalculatedEntity" DataQueryKey="All" DataViewKey="NameValuePair" />
-  <DataQueryOnDataViewSetting Key="CalculatedEntity" DataQueryKey="All" DataViewKey="RssItem" />
-  <DataQueryOnDataViewSetting Key="Entity" DataQueryKey="ByIdentifier" />
-  <DataQueryOnDataViewSetting Key="CalculatedEntity" DataQueryKey="ByIdentifier" DataViewKey="KeyInformation" />
+  <DataQueryOnDataViewSetting Key="EntityOfCommon" DataQueryKey="Common" />
+  <DataQueryOnDataViewSetting Key="EntityOfAll" DataQueryKey="All" />
+  <DataQueryOnDataViewSetting Key="NameValuePairOfAll" DataQueryKey="All" DataViewKey="NameValuePair" />
+  <DataQueryOnDataViewSetting Key="RssItemOfAll" DataQueryKey="All" DataViewKey="RssItem" />
+  <DataQueryOnDataViewSetting Key="EntityOfByIdentifier" DataQueryKey="ByIdentifier" />
+  <DataQueryOnDataViewSetting Key="KeyInformationOfByIdentifier" DataQueryKey="ByIdentifier" DataViewKey="KeyInformation" />
   <QueryUnitGroup Key="Common" DataQueryPerQueryKnownKey="Common" SourceTypeDeclarationFullName="MSBuildExtensionPack.BuildEventCode" ConditionOperator="AND">
     <Description>Query by EntityReference, String, Bool, Order By DateTime</Description>
     <QueryUnits Key="Common" ConditionOperator="AND" Description="Query by EntityReference, Bool, DateTime" />
