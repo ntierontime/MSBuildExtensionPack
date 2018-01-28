@@ -88,7 +88,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             {
                 vmFromTempData = (Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaCommon>)TempData[TempDataKey_WPCommonOfOrganization];
 
-                var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.__GetMessageOfDefaultOfCommon(
+                var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfDefaultOfCommon(
                     vmFromTempData.Criteria
                     , new Framework.EntityContracts.QueryPagingSetting(-1, -1)
                     , new Framework.EntityContracts.QueryOrderBySettingCollection(vmFromTempData.QueryOrderBySettingCollecionInString)
@@ -273,7 +273,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             , System.Guid? uniqueidentifierColumn)
         {
             var _Response =
-                MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.__GetMessageOfDefaultOfIdentifierAndUniqueConstraint(id.HasValue, id, uniqueIdentifier.HasValue, uniqueIdentifier, uniqueidentifierColumn.HasValue, uniqueidentifierColumn, -1, -1, null);
+                MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfDefaultOfIdentifierAndUniqueConstraint(id.HasValue, id, uniqueIdentifier.HasValue, uniqueIdentifier, uniqueidentifierColumn.HasValue, uniqueidentifierColumn, -1, -1, null);
 
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -376,7 +376,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             try
             {
                 log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Started.ToString()));
-                var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.__ExistsOfDefaultOfIdentifierAndUniqueConstraint(id.HasValue, id, uniqueIdentifier.HasValue, uniqueIdentifier, uniqueidentifierColumn.HasValue, uniqueidentifierColumn, -1, -1, null);
+                var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.ExistsOfDefaultOfIdentifierAndUniqueConstraint(id.HasValue, id, uniqueIdentifier.HasValue, uniqueIdentifier, uniqueidentifierColumn.HasValue, uniqueidentifierColumn, -1, -1, null);
                 if (_Response)
                 {
                     MSBuildExtensionPack.DataSourceEntities.Organization entity = MSBuildExtensionPack.EntityContracts.IOrganizationHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization>(vm.Item);

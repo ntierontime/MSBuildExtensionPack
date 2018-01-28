@@ -234,7 +234,7 @@
             $('input[name="Criteria.BuildQueryCriteriaCommon.BuildStartTimeRange.NullableUpperBound"]').prop('disabled', true);
         }));
         function FetchOrganization_1() {
-            var url = "/api/OrganizationApi/__GetCollectionOfNameValuePairOfByFKOnly";
+            var url = "/api/OrganizationApi/GetCollectionOfNameValuePairOfByFKOnly";
             try {
                 var params = BuildCriteriaForFetchOrganization_1();
                 $.getJSON(url, params, function (data) {
@@ -256,7 +256,7 @@
             return params;
         }
         function FetchSolution_1() {
-            var url = "/api/SolutionApi/__GetCollectionOfNameValuePairOfByFKOnly";
+            var url = "/api/SolutionApi/GetCollectionOfNameValuePairOfByFKOnly";
             try {
                 var params = BuildCriteriaForFetchSolution_1();
                 $.getJSON(url, params, function (data) {

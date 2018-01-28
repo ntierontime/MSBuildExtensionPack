@@ -88,7 +88,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             {
                 vmFromTempData = (Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon>)TempData[TempDataKey_WPCommonOfSolution];
 
-                var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.__GetMessageOfDefaultOfCommon(
+                var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfDefaultOfCommon(
                     vmFromTempData.Criteria
                     , new Framework.EntityContracts.QueryPagingSetting(-1, -1)
                     , new Framework.EntityContracts.QueryOrderBySettingCollection(vmFromTempData.QueryOrderBySettingCollecionInString)
@@ -265,7 +265,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         public ActionResult Copy(System.Int32? id)
         {
             var _Response =
-                MSBuildExtensionPack.CommonBLLIoC.IoCSolution.__GetMessageOfDefaultOfByIdentifier(id.HasValue, id, -1, -1, null);
+                MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfDefaultOfByIdentifier(id.HasValue, id, -1, -1, null);
 
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -362,7 +362,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             try
             {
                 log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Started.ToString()));
-                var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.__ExistsOfDefaultOfByIdentifier(id.HasValue, id, -1, -1, null);
+                var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.ExistsOfDefaultOfByIdentifier(id.HasValue, id, -1, -1, null);
                 if (_Response)
                 {
                     MSBuildExtensionPack.DataSourceEntities.Solution entity = MSBuildExtensionPack.EntityContracts.ISolutionHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution.Default, MSBuildExtensionPack.DataSourceEntities.Solution>(vm.Item);

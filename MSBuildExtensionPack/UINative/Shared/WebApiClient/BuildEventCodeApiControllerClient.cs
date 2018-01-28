@@ -159,17 +159,17 @@ namespace MSBuildExtensionPack.WebApiClient
 
         #region Query Methods Of NameValuePair of All per criteria, queryPagingSetting and queryOrderBySettingCollection
 
-        public const string ActionName___GetCollectionOfNameValuePairOfAll = "__GetCollectionOfNameValuePairOfAll";
+        public const string ActionName_GetCollectionOfNameValuePairOfAll = "GetCollectionOfNameValuePairOfAll";
         /// <summary>
         /// Gets the collection of entity of common.
-        /// http://[host]/api/BuildEventCodeApi/__GetCollectionOfNameValuePairOfAll
+        /// http://[host]/api/BuildEventCodeApi/GetCollectionOfNameValuePairOfAll
         /// </summary>
 
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        public async Task<Framework.NameValueCollection> __GetCollectionOfNameValuePairOfAllAsync(
+        public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfAllAsync(
             int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -181,7 +181,7 @@ namespace MSBuildExtensionPack.WebApiClient
             parameters.Add("pageSize", pageSize.ToString());
             parameters.Add("queryOrderByExpression", queryOrderByExpression);
 
-            string url = GetHttpRequestUrl(ActionName___GetCollectionOfNameValuePairOfAll, parameters);
+            string url = GetHttpRequestUrl(ActionName_GetCollectionOfNameValuePairOfAll, parameters);
             return await Get<Framework.NameValueCollection>(url);
         }
 

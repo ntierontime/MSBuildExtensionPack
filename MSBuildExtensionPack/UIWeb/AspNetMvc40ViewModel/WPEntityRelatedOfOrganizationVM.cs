@@ -23,7 +23,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
             )
         {
             // 1. master on accessory part - Aside UIWorkspaceItemSetting
-            var masterEntityResult = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.__GetMessageOfDefaultOfIdentifierAndUniqueConstraint(this.CriteriaOfMasterEntity, this.QueryPagingSettingOneRecord, null);
+            var masterEntityResult = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfDefaultOfIdentifierAndUniqueConstraint(this.CriteriaOfMasterEntity, this.QueryPagingSettingOneRecord, null);
             this.StatusOfMasterEntity = masterEntityResult.BusinessLogicLayerResponseStatus;
 
             if (masterEntityResult.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -36,7 +36,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
                 if(isToLoadOrganization_2)
                 {
                     this.CriteriaOfOrganization_2.OrganizationQueryCriteriaByIdentifier.Id = new Framework.EntityContracts.QuerySystemInt64EqualsCriteria(this.MasterEntity.ParentId);
-                    var resultOrganization_2 = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.__GetMessageOfKeyInformationOfByIdentifier(this.CriteriaOfOrganization_2, this.QueryPagingSettingOneRecord, null);
+                    var resultOrganization_2 = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfKeyInformationOfByIdentifier(this.CriteriaOfOrganization_2, this.QueryPagingSettingOneRecord, null);
                     this.StatusOfOrganization_2 = resultOrganization_2.BusinessLogicLayerResponseStatus;
                     if (resultOrganization_2.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
                     {
@@ -46,7 +46,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
                     {
                         this.StatusMessageOfOrganization_2 = resultOrganization_2.GetStatusMessage();
     #if DEBUG
-                        this.StatusMessageOfOrganization_2 = string.Format("MSBuildExtensionPack.CommonBLLIoC.IoCOrganization __GetMessageOfKeyInformationOfByIdentifier", this.StatusMessageOfOrganization_2, resultOrganization_2.ServerErrorMessage);
+                        this.StatusMessageOfOrganization_2 = string.Format("MSBuildExtensionPack.CommonBLLIoC.IoCOrganization GetMessageOfKeyInformationOfByIdentifier", this.StatusMessageOfOrganization_2, resultOrganization_2.ServerErrorMessage);
     #endif
                     }
                 }
@@ -57,7 +57,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
                 if(isToLoadFK_Organization_ParentId)
                 {
                     this.CriteriaOfFK_Organization_ParentId.OrganizationQueryCriteriaByFKOnly.ParentId = new Framework.EntityContracts.QuerySystemInt64EqualsCriteria(this.MasterEntity.Id);
-                    var resultFK_Organization_ParentId = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.__GetMessageOfDefaultOfByFKOnly(this.CriteriaOfFK_Organization_ParentId, this.QueryPagingSetting, null);
+                    var resultFK_Organization_ParentId = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfDefaultOfByFKOnly(this.CriteriaOfFK_Organization_ParentId, this.QueryPagingSetting, null);
                     this.StatusOfFK_Organization_ParentId = resultFK_Organization_ParentId.BusinessLogicLayerResponseStatus;
                     if (resultFK_Organization_ParentId.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
                     {
@@ -76,7 +76,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
                 if(isToLoadFK_Solution_OrganizationId)
                 {
                     this.CriteriaOfFK_Solution_OrganizationId.SolutionQueryCriteriaByFKOnly.OrganizationId = new Framework.EntityContracts.QuerySystemInt64EqualsCriteria(this.MasterEntity.Id);
-                    var resultFK_Solution_OrganizationId = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.__GetMessageOfDefaultOfByFKOnly(this.CriteriaOfFK_Solution_OrganizationId, this.QueryPagingSetting, null);
+                    var resultFK_Solution_OrganizationId = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfDefaultOfByFKOnly(this.CriteriaOfFK_Solution_OrganizationId, this.QueryPagingSetting, null);
                     this.StatusOfFK_Solution_OrganizationId = resultFK_Solution_OrganizationId.BusinessLogicLayerResponseStatus;
                     if (resultFK_Solution_OrganizationId.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
                     {
