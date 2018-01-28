@@ -159,17 +159,17 @@ namespace MSBuildExtensionPack.WebApiClient
 
         #region Query Methods Of NameValuePair of All per criteria, queryPagingSetting and queryOrderBySettingCollection
 
-        public const string ActionName_GetCollectionOfNameValuePairOfAll = "GetCollectionOfNameValuePairOfAll";
+        public const string ActionName___GetCollectionOfNameValuePairOfAll = "__GetCollectionOfNameValuePairOfAll";
         /// <summary>
         /// Gets the collection of entity of common.
-        /// http://[host]/api/OrganizationApi/GetCollectionOfNameValuePairOfAll
+        /// http://[host]/api/OrganizationApi/__GetCollectionOfNameValuePairOfAll
         /// </summary>
 
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfAllAsync(
+        public async Task<Framework.NameValueCollection> __GetCollectionOfNameValuePairOfAllAsync(
             int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -181,7 +181,7 @@ namespace MSBuildExtensionPack.WebApiClient
             parameters.Add("pageSize", pageSize.ToString());
             parameters.Add("queryOrderByExpression", queryOrderByExpression);
 
-            string url = GetHttpRequestUrl(ActionName_GetCollectionOfNameValuePairOfAll, parameters);
+            string url = GetHttpRequestUrl(ActionName___GetCollectionOfNameValuePairOfAll, parameters);
             return await Get<Framework.NameValueCollection>(url);
         }
 
@@ -189,17 +189,17 @@ namespace MSBuildExtensionPack.WebApiClient
 
         #region Query Methods Of NameValuePair of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
 
-        public const string ActionName_GetCollectionOfNameValuePairOfByFKOnly = "GetCollectionOfNameValuePairOfByFKOnly";
+        public const string ActionName___GetCollectionOfNameValuePairOfByFKOnly = "__GetCollectionOfNameValuePairOfByFKOnly";
         /// <summary>
         /// Gets the collection of entity of common.
-        /// http://[host]/api/OrganizationApi/GetCollectionOfNameValuePairOfByFKOnly
+        /// http://[host]/api/OrganizationApi/__GetCollectionOfNameValuePairOfByFKOnly
         /// </summary>
         /// <param name="parentId">value to compare/filter with parentId property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfByFKOnlyAsync(
+        public async Task<Framework.NameValueCollection> __GetCollectionOfNameValuePairOfByFKOnlyAsync(
             System.Int64? parentId
             , int currentIndex
             , int pageSize
@@ -212,7 +212,7 @@ namespace MSBuildExtensionPack.WebApiClient
             parameters.Add("pageSize", pageSize.ToString());
             parameters.Add("queryOrderByExpression", queryOrderByExpression);
 
-            string url = GetHttpRequestUrl(ActionName_GetCollectionOfNameValuePairOfByFKOnly, parameters);
+            string url = GetHttpRequestUrl(ActionName___GetCollectionOfNameValuePairOfByFKOnly, parameters);
             return await Get<Framework.NameValueCollection>(url);
         }
 
@@ -220,17 +220,17 @@ namespace MSBuildExtensionPack.WebApiClient
 
         #region Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueIdentifier per criteria, queryPagingSetting and queryOrderBySettingCollection
 
-        public const string ActionName_GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier = "GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier";
+        public const string ActionName___GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier = "__GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier";
         /// <summary>
         /// Gets the collection of entity of common.
-        /// http://[host]/api/OrganizationApi/GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+        /// http://[host]/api/OrganizationApi/__GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier
         /// </summary>
         /// <param name="uniqueIdentifier">value to compare/filter with uniqueIdentifier property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierAsync(
+        public async Task<Framework.NameValueCollection> __GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierAsync(
             System.Guid? uniqueIdentifier
             , int currentIndex
             , int pageSize
@@ -243,7 +243,7 @@ namespace MSBuildExtensionPack.WebApiClient
             parameters.Add("pageSize", pageSize.ToString());
             parameters.Add("queryOrderByExpression", queryOrderByExpression);
 
-            string url = GetHttpRequestUrl(ActionName_GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier, parameters);
+            string url = GetHttpRequestUrl(ActionName___GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier, parameters);
             return await Get<Framework.NameValueCollection>(url);
         }
 
@@ -251,17 +251,17 @@ namespace MSBuildExtensionPack.WebApiClient
 
         #region Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueidentifierColumn per criteria, queryPagingSetting and queryOrderBySettingCollection
 
-        public const string ActionName_GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn = "GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn";
+        public const string ActionName___GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn = "__GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn";
         /// <summary>
         /// Gets the collection of entity of common.
-        /// http://[host]/api/OrganizationApi/GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        /// http://[host]/api/OrganizationApi/__GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
         /// </summary>
         /// <param name="uniqueidentifierColumn">value to compare/filter with uniqueidentifierColumn property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnAsync(
+        public async Task<Framework.NameValueCollection> __GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnAsync(
             System.Guid? uniqueidentifierColumn
             , int currentIndex
             , int pageSize
@@ -274,7 +274,7 @@ namespace MSBuildExtensionPack.WebApiClient
             parameters.Add("pageSize", pageSize.ToString());
             parameters.Add("queryOrderByExpression", queryOrderByExpression);
 
-            string url = GetHttpRequestUrl(ActionName_GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, parameters);
+            string url = GetHttpRequestUrl(ActionName___GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn, parameters);
             return await Get<Framework.NameValueCollection>(url);
         }
 

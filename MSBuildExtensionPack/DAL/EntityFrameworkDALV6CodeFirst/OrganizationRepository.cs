@@ -383,7 +383,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _GetQueryOfEntityOfCommon(
+        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> ___GetQueryOfEntityOfCommon(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria isSystemBuiltIn
             ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria createdDateTimeRange
@@ -458,7 +458,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfEntityOfCommon(
+        private bool ___ExistsOfEntityOfCommon(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria isSystemBuiltIn
             ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria createdDateTimeRange
@@ -479,7 +479,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfEntityOfCommon(
+            int _Count = ___GetCountOfEntityOfCommon(
                 parentId
                 ,isSystemBuiltIn
                 ,createdDateTimeRange
@@ -502,7 +502,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfEntityOfCommon(
+        private int ___GetCountOfEntityOfCommon(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria isSystemBuiltIn
             ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria createdDateTimeRange
@@ -524,7 +524,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             )
 
         {
-            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = _GetQueryOfEntityOfCommon(
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = ___GetQueryOfEntityOfCommon(
                 parentId
                 ,isSystemBuiltIn
                 ,createdDateTimeRange
@@ -554,7 +554,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfCommon(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfEntityOfCommon(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria isSystemBuiltIn
             ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria createdDateTimeRange
@@ -575,11 +575,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfEntityOfCommon(
+                int _retval = ___GetCountOfEntityOfCommon(
                 parentId
                 ,isSystemBuiltIn
                 ,createdDateTimeRange
@@ -607,13 +607,13 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfCommon(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfEntityOfCommon(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria isSystemBuiltIn
             ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria createdDateTimeRange
@@ -634,11 +634,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfEntityOfCommon(
+                bool _retval = ___ExistsOfEntityOfCommon(
                 parentId
                 ,isSystemBuiltIn
                 ,createdDateTimeRange
@@ -666,13 +666,13 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization GetSingleOfEntityOfCommon(
+        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization __GetSingleOfEntityOfCommon(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria isSystemBuiltIn
             ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria createdDateTimeRange
@@ -691,11 +691,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _retMessage = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization();
             try
             {
-                bool _Exists = _ExistsOfEntityOfCommon(
+                bool _Exists = ___ExistsOfEntityOfCommon(
                 parentId
                 ,isSystemBuiltIn
                 ,createdDateTimeRange
@@ -718,7 +718,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = _GetQueryOfEntityOfCommon(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = ___GetQueryOfEntityOfCommon(
                 parentId
                 ,isSystemBuiltIn
                 ,createdDateTimeRange
@@ -753,13 +753,13 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization GetCollectionOfEntityOfCommon(
+        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization __GetCollectionOfEntityOfCommon(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria isSystemBuiltIn
             ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria createdDateTimeRange
@@ -780,12 +780,12 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _retMessage = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization();
             try
             {
-                bool _Exists = _ExistsOfEntityOfCommon(
+                bool _Exists = ___ExistsOfEntityOfCommon(
                 parentId
                 ,isSystemBuiltIn
                 ,createdDateTimeRange
@@ -808,7 +808,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = _GetQueryOfEntityOfCommon(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = ___GetQueryOfEntityOfCommon(
                 parentId
                 ,isSystemBuiltIn
                 ,createdDateTimeRange
@@ -857,9 +857,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of Entity of Common
@@ -868,7 +868,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _GetQueryOfDefaultOfCommon(
+        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> ___GetQueryOfDefaultOfCommon(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria isSystemBuiltIn
             ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria createdDateTimeRange
@@ -943,7 +943,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfDefaultOfCommon(
+        private bool ___ExistsOfDefaultOfCommon(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria isSystemBuiltIn
             ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria createdDateTimeRange
@@ -964,7 +964,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfDefaultOfCommon(
+            int _Count = ___GetCountOfDefaultOfCommon(
                 parentId
                 ,isSystemBuiltIn
                 ,createdDateTimeRange
@@ -987,7 +987,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfDefaultOfCommon(
+        private int ___GetCountOfDefaultOfCommon(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria isSystemBuiltIn
             ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria createdDateTimeRange
@@ -1009,7 +1009,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             )
 
         {
-            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = _GetQueryOfDefaultOfCommon(
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = ___GetQueryOfDefaultOfCommon(
                 parentId
                 ,isSystemBuiltIn
                 ,createdDateTimeRange
@@ -1039,7 +1039,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultOfCommon(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfDefaultOfCommon(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria isSystemBuiltIn
             ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria createdDateTimeRange
@@ -1060,11 +1060,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfDefaultOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfDefaultOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfDefaultOfCommon(
+                int _retval = ___GetCountOfDefaultOfCommon(
                 parentId
                 ,isSystemBuiltIn
                 ,createdDateTimeRange
@@ -1092,13 +1092,13 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfDefaultOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfDefaultOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfDefaultOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfDefaultOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultOfCommon(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfDefaultOfCommon(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria isSystemBuiltIn
             ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria createdDateTimeRange
@@ -1119,11 +1119,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfDefaultOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfDefaultOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfDefaultOfCommon(
+                bool _retval = ___ExistsOfDefaultOfCommon(
                 parentId
                 ,isSystemBuiltIn
                 ,createdDateTimeRange
@@ -1151,13 +1151,13 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfDefaultOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfDefaultOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfDefaultOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfDefaultOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault GetSingleOfDefaultOfCommon(
+        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault __GetSingleOfDefaultOfCommon(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria isSystemBuiltIn
             ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria createdDateTimeRange
@@ -1176,11 +1176,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfDefaultOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfDefaultOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault _retMessage = new MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault();
             try
             {
-                bool _Exists = _ExistsOfDefaultOfCommon(
+                bool _Exists = ___ExistsOfDefaultOfCommon(
                 parentId
                 ,isSystemBuiltIn
                 ,createdDateTimeRange
@@ -1203,7 +1203,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = _GetQueryOfDefaultOfCommon(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = ___GetQueryOfDefaultOfCommon(
                 parentId
                 ,isSystemBuiltIn
                 ,createdDateTimeRange
@@ -1238,13 +1238,13 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfDefaultOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfDefaultOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfDefaultOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfDefaultOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection GetCollectionOfDefaultOfCommon(
+        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection __GetCollectionOfDefaultOfCommon(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QuerySystemBooleanEqualsCriteria isSystemBuiltIn
             ,Framework.EntityContracts.QuerySystemDateTimeRangeCriteria createdDateTimeRange
@@ -1265,12 +1265,12 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfDefaultOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection _retMessage = new MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection();
             try
             {
-                bool _Exists = _ExistsOfDefaultOfCommon(
+                bool _Exists = ___ExistsOfDefaultOfCommon(
                 parentId
                 ,isSystemBuiltIn
                 ,createdDateTimeRange
@@ -1293,7 +1293,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = _GetQueryOfDefaultOfCommon(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = ___GetQueryOfDefaultOfCommon(
                 parentId
                 ,isSystemBuiltIn
                 ,createdDateTimeRange
@@ -1342,9 +1342,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfDefaultOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfDefaultOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfDefaultOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of Default of Common
@@ -1353,7 +1353,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _GetQueryOfEntityOfAll(
+        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> ___GetQueryOfEntityOfAll(
             Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -1377,13 +1377,13 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfEntityOfAll(
+        private bool ___ExistsOfEntityOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfEntityOfAll(
+            int _Count = ___GetCountOfEntityOfAll(
                 currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -1391,14 +1391,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfEntityOfAll(
+        private int ___GetCountOfEntityOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
 
         {
-            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = _GetQueryOfEntityOfAll(
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = ___GetQueryOfEntityOfAll(
                 queryOrderBySettingCollection
             );
             int _Count;
@@ -1413,17 +1413,17 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfAll(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfEntityOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfEntityOfAll(
+                int _retval = ___GetCountOfEntityOfAll(
                 currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -1436,23 +1436,23 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfAll(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfEntityOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfEntityOfAll(
+                bool _retval = ___ExistsOfEntityOfAll(
                 currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -1465,21 +1465,21 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization GetSingleOfEntityOfAll(
+        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization __GetSingleOfEntityOfAll(
             Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _retMessage = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization();
             try
             {
-                bool _Exists = _ExistsOfEntityOfAll(
+                bool _Exists = ___ExistsOfEntityOfAll(
                 -1
                 ,-1
                 ,queryOrderBySettingCollection
@@ -1487,7 +1487,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = _GetQueryOfEntityOfAll(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = ___GetQueryOfEntityOfAll(
                 queryOrderBySettingCollection
             );
 
@@ -1507,24 +1507,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization GetCollectionOfEntityOfAll(
+        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization __GetCollectionOfEntityOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _retMessage = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization();
             try
             {
-                bool _Exists = _ExistsOfEntityOfAll(
+                bool _Exists = ___ExistsOfEntityOfAll(
                 currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -1532,7 +1532,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = _GetQueryOfEntityOfAll(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = ___GetQueryOfEntityOfAll(
                 queryOrderBySettingCollection
             );
 
@@ -1566,9 +1566,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of Entity of All
@@ -1577,7 +1577,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<Framework.NameValuePair> _GetQueryOfNameValuePairOfAll(
+        internal IQueryable<Framework.NameValuePair> ___GetQueryOfNameValuePairOfAll(
             Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -1601,13 +1601,13 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfNameValuePairOfAll(
+        private bool ___ExistsOfNameValuePairOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfNameValuePairOfAll(
+            int _Count = ___GetCountOfNameValuePairOfAll(
                 currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -1615,14 +1615,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfNameValuePairOfAll(
+        private int ___GetCountOfNameValuePairOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
 
         {
-            IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairOfAll(
+            IQueryable<Framework.NameValuePair> _Query = ___GetQueryOfNameValuePairOfAll(
                 queryOrderBySettingCollection
             );
             int _Count;
@@ -1637,17 +1637,17 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfNameValuePairOfAll(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfNameValuePairOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfNameValuePairOfAll(
+                int _retval = ___GetCountOfNameValuePairOfAll(
                 currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -1660,23 +1660,23 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfNameValuePairOfAll(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfNameValuePairOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfNameValuePairOfAll(
+                bool _retval = ___ExistsOfNameValuePairOfAll(
                 currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -1689,21 +1689,21 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity GetSingleOfNameValuePairOfAll(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity __GetSingleOfNameValuePairOfAll(
             Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity();
             try
             {
-                bool _Exists = _ExistsOfNameValuePairOfAll(
+                bool _Exists = ___ExistsOfNameValuePairOfAll(
                 -1
                 ,-1
                 ,queryOrderBySettingCollection
@@ -1711,7 +1711,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairOfAll(
+                    IQueryable<Framework.NameValuePair> _Query = ___GetQueryOfNameValuePairOfAll(
                 queryOrderBySettingCollection
             );
 
@@ -1731,24 +1731,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection GetCollectionOfNameValuePairOfAll(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection __GetCollectionOfNameValuePairOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection();
             try
             {
-                bool _Exists = _ExistsOfNameValuePairOfAll(
+                bool _Exists = ___ExistsOfNameValuePairOfAll(
                 currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -1756,7 +1756,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairOfAll(
+                    IQueryable<Framework.NameValuePair> _Query = ___GetQueryOfNameValuePairOfAll(
                 queryOrderBySettingCollection
             );
 
@@ -1790,9 +1790,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of NameValuePair of All
@@ -1801,7 +1801,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<Framework.RssItem> _GetQueryOfRssItemOfAll(
+        internal IQueryable<Framework.RssItem> ___GetQueryOfRssItemOfAll(
             Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -1825,13 +1825,13 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfRssItemOfAll(
+        private bool ___ExistsOfRssItemOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfRssItemOfAll(
+            int _Count = ___GetCountOfRssItemOfAll(
                 currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -1839,14 +1839,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfRssItemOfAll(
+        private int ___GetCountOfRssItemOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
 
         {
-            IQueryable<Framework.RssItem> _Query = _GetQueryOfRssItemOfAll(
+            IQueryable<Framework.RssItem> _Query = ___GetQueryOfRssItemOfAll(
                 queryOrderBySettingCollection
             );
             int _Count;
@@ -1861,17 +1861,17 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfRssItemOfAll(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfRssItemOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfRssItemOfAll(
+                int _retval = ___GetCountOfRssItemOfAll(
                 currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -1884,23 +1884,23 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfRssItemOfAll(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfRssItemOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfRssItemOfAll(
+                bool _retval = ___ExistsOfRssItemOfAll(
                 currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -1913,21 +1913,21 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageRssItem GetSingleOfRssItemOfAll(
+        public Framework.DataSourceEntities.DataAccessLayerMessageRssItem __GetSingleOfRssItemOfAll(
             Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageRssItem _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageRssItem();
             try
             {
-                bool _Exists = _ExistsOfRssItemOfAll(
+                bool _Exists = ___ExistsOfRssItemOfAll(
                 -1
                 ,-1
                 ,queryOrderBySettingCollection
@@ -1935,7 +1935,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<Framework.RssItem> _Query = _GetQueryOfRssItemOfAll(
+                    IQueryable<Framework.RssItem> _Query = ___GetQueryOfRssItemOfAll(
                 queryOrderBySettingCollection
             );
 
@@ -1955,24 +1955,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection GetCollectionOfRssItemOfAll(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection __GetCollectionOfRssItemOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection();
             try
             {
-                bool _Exists = _ExistsOfRssItemOfAll(
+                bool _Exists = ___ExistsOfRssItemOfAll(
                 currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -1980,7 +1980,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<Framework.RssItem> _Query = _GetQueryOfRssItemOfAll(
+                    IQueryable<Framework.RssItem> _Query = ___GetQueryOfRssItemOfAll(
                 queryOrderBySettingCollection
             );
 
@@ -2014,9 +2014,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of RssItem of All
@@ -2025,7 +2025,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _GetQueryOfEntityOfByFKOnly(
+        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> ___GetQueryOfEntityOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
@@ -2056,14 +2056,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfEntityOfByFKOnly(
+        private bool ___ExistsOfEntityOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfEntityOfByFKOnly(
+            int _Count = ___GetCountOfEntityOfByFKOnly(
                 parentId
                 ,currentIndex
                 ,pageSize
@@ -2072,7 +2072,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfEntityOfByFKOnly(
+        private int ___GetCountOfEntityOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
@@ -2080,7 +2080,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             )
 
         {
-            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = _GetQueryOfEntityOfByFKOnly(
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = ___GetQueryOfEntityOfByFKOnly(
                 parentId
                 ,queryOrderBySettingCollection
             );
@@ -2096,18 +2096,18 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfByFKOnly(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfEntityOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfEntityOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfEntityOfByFKOnly(
+                int _retval = ___GetCountOfEntityOfByFKOnly(
                 parentId
                 ,currentIndex
                 ,pageSize
@@ -2121,24 +2121,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfEntityOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfEntityOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfEntityOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfByFKOnly(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfEntityOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfEntityOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfEntityOfByFKOnly(
+                bool _retval = ___ExistsOfEntityOfByFKOnly(
                 parentId
                 ,currentIndex
                 ,pageSize
@@ -2152,22 +2152,22 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfEntityOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfEntityOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfEntityOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization GetSingleOfEntityOfByFKOnly(
+        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization __GetSingleOfEntityOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfEntityOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _retMessage = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization();
             try
             {
-                bool _Exists = _ExistsOfEntityOfByFKOnly(
+                bool _Exists = ___ExistsOfEntityOfByFKOnly(
                 parentId
                 ,-1
                 ,-1
@@ -2176,7 +2176,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = _GetQueryOfEntityOfByFKOnly(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = ___GetQueryOfEntityOfByFKOnly(
                 parentId
                 ,queryOrderBySettingCollection
             );
@@ -2197,25 +2197,25 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfEntityOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfEntityOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfEntityOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization GetCollectionOfEntityOfByFKOnly(
+        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization __GetCollectionOfEntityOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _retMessage = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization();
             try
             {
-                bool _Exists = _ExistsOfEntityOfByFKOnly(
+                bool _Exists = ___ExistsOfEntityOfByFKOnly(
                 parentId
                 ,currentIndex
                 ,pageSize
@@ -2224,7 +2224,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = _GetQueryOfEntityOfByFKOnly(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = ___GetQueryOfEntityOfByFKOnly(
                 parentId
                 ,queryOrderBySettingCollection
             );
@@ -2259,9 +2259,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfEntityOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfEntityOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of Entity of ByFKOnly
@@ -2270,7 +2270,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<Framework.NameValuePair> _GetQueryOfNameValuePairOfByFKOnly(
+        internal IQueryable<Framework.NameValuePair> ___GetQueryOfNameValuePairOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
@@ -2301,14 +2301,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfNameValuePairOfByFKOnly(
+        private bool ___ExistsOfNameValuePairOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfNameValuePairOfByFKOnly(
+            int _Count = ___GetCountOfNameValuePairOfByFKOnly(
                 parentId
                 ,currentIndex
                 ,pageSize
@@ -2317,7 +2317,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfNameValuePairOfByFKOnly(
+        private int ___GetCountOfNameValuePairOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
@@ -2325,7 +2325,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             )
 
         {
-            IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairOfByFKOnly(
+            IQueryable<Framework.NameValuePair> _Query = ___GetQueryOfNameValuePairOfByFKOnly(
                 parentId
                 ,queryOrderBySettingCollection
             );
@@ -2341,18 +2341,18 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfNameValuePairOfByFKOnly(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfNameValuePairOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfNameValuePairOfByFKOnly(
+                int _retval = ___GetCountOfNameValuePairOfByFKOnly(
                 parentId
                 ,currentIndex
                 ,pageSize
@@ -2366,24 +2366,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfNameValuePairOfByFKOnly(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfNameValuePairOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfNameValuePairOfByFKOnly(
+                bool _retval = ___ExistsOfNameValuePairOfByFKOnly(
                 parentId
                 ,currentIndex
                 ,pageSize
@@ -2397,22 +2397,22 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity GetSingleOfNameValuePairOfByFKOnly(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity __GetSingleOfNameValuePairOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity();
             try
             {
-                bool _Exists = _ExistsOfNameValuePairOfByFKOnly(
+                bool _Exists = ___ExistsOfNameValuePairOfByFKOnly(
                 parentId
                 ,-1
                 ,-1
@@ -2421,7 +2421,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairOfByFKOnly(
+                    IQueryable<Framework.NameValuePair> _Query = ___GetQueryOfNameValuePairOfByFKOnly(
                 parentId
                 ,queryOrderBySettingCollection
             );
@@ -2442,25 +2442,25 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection GetCollectionOfNameValuePairOfByFKOnly(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection __GetCollectionOfNameValuePairOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection();
             try
             {
-                bool _Exists = _ExistsOfNameValuePairOfByFKOnly(
+                bool _Exists = ___ExistsOfNameValuePairOfByFKOnly(
                 parentId
                 ,currentIndex
                 ,pageSize
@@ -2469,7 +2469,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairOfByFKOnly(
+                    IQueryable<Framework.NameValuePair> _Query = ___GetQueryOfNameValuePairOfByFKOnly(
                 parentId
                 ,queryOrderBySettingCollection
             );
@@ -2504,9 +2504,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of NameValuePair of ByFKOnly
@@ -2515,7 +2515,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<Framework.RssItem> _GetQueryOfRssItemOfByFKOnly(
+        internal IQueryable<Framework.RssItem> ___GetQueryOfRssItemOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
@@ -2546,14 +2546,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfRssItemOfByFKOnly(
+        private bool ___ExistsOfRssItemOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfRssItemOfByFKOnly(
+            int _Count = ___GetCountOfRssItemOfByFKOnly(
                 parentId
                 ,currentIndex
                 ,pageSize
@@ -2562,7 +2562,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfRssItemOfByFKOnly(
+        private int ___GetCountOfRssItemOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
@@ -2570,7 +2570,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             )
 
         {
-            IQueryable<Framework.RssItem> _Query = _GetQueryOfRssItemOfByFKOnly(
+            IQueryable<Framework.RssItem> _Query = ___GetQueryOfRssItemOfByFKOnly(
                 parentId
                 ,queryOrderBySettingCollection
             );
@@ -2586,18 +2586,18 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfRssItemOfByFKOnly(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfRssItemOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfRssItemOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfRssItemOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfRssItemOfByFKOnly(
+                int _retval = ___GetCountOfRssItemOfByFKOnly(
                 parentId
                 ,currentIndex
                 ,pageSize
@@ -2611,24 +2611,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfRssItemOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfRssItemOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfRssItemOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfRssItemOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfRssItemOfByFKOnly(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfRssItemOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfRssItemOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfRssItemOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfRssItemOfByFKOnly(
+                bool _retval = ___ExistsOfRssItemOfByFKOnly(
                 parentId
                 ,currentIndex
                 ,pageSize
@@ -2642,22 +2642,22 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfRssItemOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfRssItemOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfRssItemOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfRssItemOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageRssItem GetSingleOfRssItemOfByFKOnly(
+        public Framework.DataSourceEntities.DataAccessLayerMessageRssItem __GetSingleOfRssItemOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfRssItemOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfRssItemOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageRssItem _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageRssItem();
             try
             {
-                bool _Exists = _ExistsOfRssItemOfByFKOnly(
+                bool _Exists = ___ExistsOfRssItemOfByFKOnly(
                 parentId
                 ,-1
                 ,-1
@@ -2666,7 +2666,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<Framework.RssItem> _Query = _GetQueryOfRssItemOfByFKOnly(
+                    IQueryable<Framework.RssItem> _Query = ___GetQueryOfRssItemOfByFKOnly(
                 parentId
                 ,queryOrderBySettingCollection
             );
@@ -2687,25 +2687,25 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfRssItemOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfRssItemOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfRssItemOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfRssItemOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection GetCollectionOfRssItemOfByFKOnly(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection __GetCollectionOfRssItemOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfRssItemOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfRssItemOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection();
             try
             {
-                bool _Exists = _ExistsOfRssItemOfByFKOnly(
+                bool _Exists = ___ExistsOfRssItemOfByFKOnly(
                 parentId
                 ,currentIndex
                 ,pageSize
@@ -2714,7 +2714,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<Framework.RssItem> _Query = _GetQueryOfRssItemOfByFKOnly(
+                    IQueryable<Framework.RssItem> _Query = ___GetQueryOfRssItemOfByFKOnly(
                 parentId
                 ,queryOrderBySettingCollection
             );
@@ -2749,9 +2749,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfRssItemOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfRssItemOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfRssItemOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfRssItemOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of RssItem of ByFKOnly
@@ -2760,7 +2760,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _GetQueryOfDefaultOfByFKOnly(
+        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> ___GetQueryOfDefaultOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
@@ -2791,14 +2791,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfDefaultOfByFKOnly(
+        private bool ___ExistsOfDefaultOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfDefaultOfByFKOnly(
+            int _Count = ___GetCountOfDefaultOfByFKOnly(
                 parentId
                 ,currentIndex
                 ,pageSize
@@ -2807,7 +2807,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfDefaultOfByFKOnly(
+        private int ___GetCountOfDefaultOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
@@ -2815,7 +2815,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             )
 
         {
-            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = _GetQueryOfDefaultOfByFKOnly(
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = ___GetQueryOfDefaultOfByFKOnly(
                 parentId
                 ,queryOrderBySettingCollection
             );
@@ -2831,18 +2831,18 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultOfByFKOnly(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfDefaultOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfDefaultOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfDefaultOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfDefaultOfByFKOnly(
+                int _retval = ___GetCountOfDefaultOfByFKOnly(
                 parentId
                 ,currentIndex
                 ,pageSize
@@ -2856,24 +2856,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfDefaultOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfDefaultOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfDefaultOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfDefaultOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultOfByFKOnly(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfDefaultOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfDefaultOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfDefaultOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfDefaultOfByFKOnly(
+                bool _retval = ___ExistsOfDefaultOfByFKOnly(
                 parentId
                 ,currentIndex
                 ,pageSize
@@ -2887,22 +2887,22 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfDefaultOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfDefaultOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfDefaultOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfDefaultOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault GetSingleOfDefaultOfByFKOnly(
+        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault __GetSingleOfDefaultOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfDefaultOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfDefaultOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault _retMessage = new MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault();
             try
             {
-                bool _Exists = _ExistsOfDefaultOfByFKOnly(
+                bool _Exists = ___ExistsOfDefaultOfByFKOnly(
                 parentId
                 ,-1
                 ,-1
@@ -2911,7 +2911,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = _GetQueryOfDefaultOfByFKOnly(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = ___GetQueryOfDefaultOfByFKOnly(
                 parentId
                 ,queryOrderBySettingCollection
             );
@@ -2932,25 +2932,25 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfDefaultOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfDefaultOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfDefaultOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfDefaultOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection GetCollectionOfDefaultOfByFKOnly(
+        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection __GetCollectionOfDefaultOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfDefaultOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection _retMessage = new MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection();
             try
             {
-                bool _Exists = _ExistsOfDefaultOfByFKOnly(
+                bool _Exists = ___ExistsOfDefaultOfByFKOnly(
                 parentId
                 ,currentIndex
                 ,pageSize
@@ -2959,7 +2959,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = _GetQueryOfDefaultOfByFKOnly(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = ___GetQueryOfDefaultOfByFKOnly(
                 parentId
                 ,queryOrderBySettingCollection
             );
@@ -2994,9 +2994,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfDefaultOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfDefaultOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfDefaultOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of Default of ByFKOnly
@@ -3005,7 +3005,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IEnumerable<MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView> _GetQueryOfDefaultGroupedDataViewOfByFKOnly(
+        internal IEnumerable<MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView> ___GetQueryOfDefaultGroupedDataViewOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
@@ -3038,14 +3038,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfDefaultGroupedDataViewOfByFKOnly(
+        private bool ___ExistsOfDefaultGroupedDataViewOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfDefaultGroupedDataViewOfByFKOnly(
+            int _Count = ___GetCountOfDefaultGroupedDataViewOfByFKOnly(
                 parentId
                 ,currentIndex
                 ,pageSize
@@ -3054,7 +3054,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfDefaultGroupedDataViewOfByFKOnly(
+        private int ___GetCountOfDefaultGroupedDataViewOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
@@ -3062,7 +3062,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             )
 
         {
-            IEnumerable<MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView> _Query = _GetQueryOfDefaultGroupedDataViewOfByFKOnly(
+            IEnumerable<MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView> _Query = ___GetQueryOfDefaultGroupedDataViewOfByFKOnly(
                 parentId
                 ,queryOrderBySettingCollection
             );
@@ -3078,18 +3078,18 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultGroupedDataViewOfByFKOnly(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfDefaultGroupedDataViewOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfDefaultGroupedDataViewOfByFKOnly(
+                int _retval = ___GetCountOfDefaultGroupedDataViewOfByFKOnly(
                 parentId
                 ,currentIndex
                 ,pageSize
@@ -3103,24 +3103,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultGroupedDataViewOfByFKOnly(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfDefaultGroupedDataViewOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfDefaultGroupedDataViewOfByFKOnly(
+                bool _retval = ___ExistsOfDefaultGroupedDataViewOfByFKOnly(
                 parentId
                 ,currentIndex
                 ,pageSize
@@ -3134,22 +3134,22 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultGroupedDataView GetSingleOfDefaultGroupedDataViewOfByFKOnly(
+        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultGroupedDataView __GetSingleOfDefaultGroupedDataViewOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultGroupedDataView _retMessage = new MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultGroupedDataView();
             try
             {
-                bool _Exists = _ExistsOfDefaultGroupedDataViewOfByFKOnly(
+                bool _Exists = ___ExistsOfDefaultGroupedDataViewOfByFKOnly(
                 parentId
                 ,-1
                 ,-1
@@ -3158,7 +3158,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IEnumerable<MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView> _Query = _GetQueryOfDefaultGroupedDataViewOfByFKOnly(
+                    IEnumerable<MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView> _Query = ___GetQueryOfDefaultGroupedDataViewOfByFKOnly(
                 parentId
                 ,queryOrderBySettingCollection
             );
@@ -3179,25 +3179,25 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultGroupedDataViewCollection GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
+        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultGroupedDataViewCollection __GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultGroupedDataViewCollection _retMessage = new MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultGroupedDataViewCollection();
             try
             {
-                bool _Exists = _ExistsOfDefaultGroupedDataViewOfByFKOnly(
+                bool _Exists = ___ExistsOfDefaultGroupedDataViewOfByFKOnly(
                 parentId
                 ,currentIndex
                 ,pageSize
@@ -3206,7 +3206,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IEnumerable<MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView> _Query = _GetQueryOfDefaultGroupedDataViewOfByFKOnly(
+                    IEnumerable<MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView> _Query = ___GetQueryOfDefaultGroupedDataViewOfByFKOnly(
                 parentId
                 ,queryOrderBySettingCollection
             );
@@ -3241,9 +3241,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of DefaultGroupedDataView of ByFKOnly
@@ -3252,7 +3252,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _GetQueryOfEntityOfByIdentifier(
+        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> ___GetQueryOfEntityOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
@@ -3283,14 +3283,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfEntityOfByIdentifier(
+        private bool ___ExistsOfEntityOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfEntityOfByIdentifier(
+            int _Count = ___GetCountOfEntityOfByIdentifier(
                 id
                 ,currentIndex
                 ,pageSize
@@ -3299,7 +3299,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfEntityOfByIdentifier(
+        private int ___GetCountOfEntityOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
@@ -3307,7 +3307,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             )
 
         {
-            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = _GetQueryOfEntityOfByIdentifier(
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = ___GetQueryOfEntityOfByIdentifier(
                 id
                 ,queryOrderBySettingCollection
             );
@@ -3323,18 +3323,18 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfByIdentifier(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfEntityOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfEntityOfByIdentifier(
+                int _retval = ___GetCountOfEntityOfByIdentifier(
                 id
                 ,currentIndex
                 ,pageSize
@@ -3348,24 +3348,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfByIdentifier(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfEntityOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfEntityOfByIdentifier(
+                bool _retval = ___ExistsOfEntityOfByIdentifier(
                 id
                 ,currentIndex
                 ,pageSize
@@ -3379,22 +3379,22 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization GetSingleOfEntityOfByIdentifier(
+        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization __GetSingleOfEntityOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _retMessage = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization();
             try
             {
-                bool _Exists = _ExistsOfEntityOfByIdentifier(
+                bool _Exists = ___ExistsOfEntityOfByIdentifier(
                 id
                 ,-1
                 ,-1
@@ -3403,7 +3403,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = _GetQueryOfEntityOfByIdentifier(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = ___GetQueryOfEntityOfByIdentifier(
                 id
                 ,queryOrderBySettingCollection
             );
@@ -3424,25 +3424,25 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization GetCollectionOfEntityOfByIdentifier(
+        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization __GetCollectionOfEntityOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _retMessage = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization();
             try
             {
-                bool _Exists = _ExistsOfEntityOfByIdentifier(
+                bool _Exists = ___ExistsOfEntityOfByIdentifier(
                 id
                 ,currentIndex
                 ,pageSize
@@ -3451,7 +3451,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = _GetQueryOfEntityOfByIdentifier(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = ___GetQueryOfEntityOfByIdentifier(
                 id
                 ,queryOrderBySettingCollection
             );
@@ -3486,9 +3486,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of Entity of ByIdentifier
@@ -3497,7 +3497,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _GetQueryOfDefaultOfByIdentifier(
+        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> ___GetQueryOfDefaultOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
@@ -3528,14 +3528,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfDefaultOfByIdentifier(
+        private bool ___ExistsOfDefaultOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfDefaultOfByIdentifier(
+            int _Count = ___GetCountOfDefaultOfByIdentifier(
                 id
                 ,currentIndex
                 ,pageSize
@@ -3544,7 +3544,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfDefaultOfByIdentifier(
+        private int ___GetCountOfDefaultOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
@@ -3552,7 +3552,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             )
 
         {
-            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = _GetQueryOfDefaultOfByIdentifier(
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = ___GetQueryOfDefaultOfByIdentifier(
                 id
                 ,queryOrderBySettingCollection
             );
@@ -3568,18 +3568,18 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultOfByIdentifier(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfDefaultOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfDefaultOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfDefaultOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfDefaultOfByIdentifier(
+                int _retval = ___GetCountOfDefaultOfByIdentifier(
                 id
                 ,currentIndex
                 ,pageSize
@@ -3593,24 +3593,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfDefaultOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfDefaultOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfDefaultOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfDefaultOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultOfByIdentifier(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfDefaultOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfDefaultOfByIdentifier(
+                bool _retval = ___ExistsOfDefaultOfByIdentifier(
                 id
                 ,currentIndex
                 ,pageSize
@@ -3624,22 +3624,22 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault GetSingleOfDefaultOfByIdentifier(
+        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault __GetSingleOfDefaultOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfDefaultOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfDefaultOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault _retMessage = new MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault();
             try
             {
-                bool _Exists = _ExistsOfDefaultOfByIdentifier(
+                bool _Exists = ___ExistsOfDefaultOfByIdentifier(
                 id
                 ,-1
                 ,-1
@@ -3648,7 +3648,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = _GetQueryOfDefaultOfByIdentifier(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = ___GetQueryOfDefaultOfByIdentifier(
                 id
                 ,queryOrderBySettingCollection
             );
@@ -3669,25 +3669,25 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfDefaultOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfDefaultOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfDefaultOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfDefaultOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection GetCollectionOfDefaultOfByIdentifier(
+        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection __GetCollectionOfDefaultOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfDefaultOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection _retMessage = new MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection();
             try
             {
-                bool _Exists = _ExistsOfDefaultOfByIdentifier(
+                bool _Exists = ___ExistsOfDefaultOfByIdentifier(
                 id
                 ,currentIndex
                 ,pageSize
@@ -3696,7 +3696,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = _GetQueryOfDefaultOfByIdentifier(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = ___GetQueryOfDefaultOfByIdentifier(
                 id
                 ,queryOrderBySettingCollection
             );
@@ -3731,9 +3731,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfDefaultOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfDefaultOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfDefaultOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of Default of ByIdentifier
@@ -3742,7 +3742,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation> _GetQueryOfKeyInformationOfByIdentifier(
+        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation> ___GetQueryOfKeyInformationOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
@@ -3773,14 +3773,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfKeyInformationOfByIdentifier(
+        private bool ___ExistsOfKeyInformationOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfKeyInformationOfByIdentifier(
+            int _Count = ___GetCountOfKeyInformationOfByIdentifier(
                 id
                 ,currentIndex
                 ,pageSize
@@ -3789,7 +3789,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfKeyInformationOfByIdentifier(
+        private int ___GetCountOfKeyInformationOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
@@ -3797,7 +3797,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             )
 
         {
-            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation> _Query = _GetQueryOfKeyInformationOfByIdentifier(
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation> _Query = ___GetQueryOfKeyInformationOfByIdentifier(
                 id
                 ,queryOrderBySettingCollection
             );
@@ -3813,18 +3813,18 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfKeyInformationOfByIdentifier(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfKeyInformationOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfKeyInformationOfByIdentifier(
+                int _retval = ___GetCountOfKeyInformationOfByIdentifier(
                 id
                 ,currentIndex
                 ,pageSize
@@ -3838,24 +3838,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfKeyInformationOfByIdentifier(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfKeyInformationOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfKeyInformationOfByIdentifier(
+                bool _retval = ___ExistsOfKeyInformationOfByIdentifier(
                 id
                 ,currentIndex
                 ,pageSize
@@ -3869,22 +3869,22 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformation GetSingleOfKeyInformationOfByIdentifier(
+        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformation __GetSingleOfKeyInformationOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformation _retMessage = new MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformation();
             try
             {
-                bool _Exists = _ExistsOfKeyInformationOfByIdentifier(
+                bool _Exists = ___ExistsOfKeyInformationOfByIdentifier(
                 id
                 ,-1
                 ,-1
@@ -3893,7 +3893,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation> _Query = _GetQueryOfKeyInformationOfByIdentifier(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation> _Query = ___GetQueryOfKeyInformationOfByIdentifier(
                 id
                 ,queryOrderBySettingCollection
             );
@@ -3914,25 +3914,25 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformationCollection GetCollectionOfKeyInformationOfByIdentifier(
+        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformationCollection __GetCollectionOfKeyInformationOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformationCollection _retMessage = new MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformationCollection();
             try
             {
-                bool _Exists = _ExistsOfKeyInformationOfByIdentifier(
+                bool _Exists = ___ExistsOfKeyInformationOfByIdentifier(
                 id
                 ,currentIndex
                 ,pageSize
@@ -3941,7 +3941,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation> _Query = _GetQueryOfKeyInformationOfByIdentifier(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation> _Query = ___GetQueryOfKeyInformationOfByIdentifier(
                 id
                 ,queryOrderBySettingCollection
             );
@@ -3976,9 +3976,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of KeyInformation of ByIdentifier
@@ -3987,7 +3987,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _GetQueryOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> ___GetQueryOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
@@ -4018,14 +4018,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        private bool ___ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            int _Count = ___GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 uniqueIdentifier
                 ,currentIndex
                 ,pageSize
@@ -4034,7 +4034,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        private int ___GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,int currentIndex
             ,int pageSize
@@ -4042,7 +4042,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             )
 
         {
-            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = _GetQueryOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = ___GetQueryOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 uniqueIdentifier
                 ,queryOrderBySettingCollection
             );
@@ -4058,18 +4058,18 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                int _retval = ___GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 uniqueIdentifier
                 ,currentIndex
                 ,pageSize
@@ -4083,24 +4083,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                bool _retval = ___ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 uniqueIdentifier
                 ,currentIndex
                 ,pageSize
@@ -4114,22 +4114,22 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization __GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _retMessage = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization();
             try
             {
-                bool _Exists = _ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                bool _Exists = ___ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 uniqueIdentifier
                 ,-1
                 ,-1
@@ -4138,7 +4138,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = _GetQueryOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = ___GetQueryOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 uniqueIdentifier
                 ,queryOrderBySettingCollection
             );
@@ -4159,25 +4159,25 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization __GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _retMessage = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization();
             try
             {
-                bool _Exists = _ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                bool _Exists = ___ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 uniqueIdentifier
                 ,currentIndex
                 ,pageSize
@@ -4186,7 +4186,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = _GetQueryOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = ___GetQueryOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 uniqueIdentifier
                 ,queryOrderBySettingCollection
             );
@@ -4221,9 +4221,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueIdentifier
@@ -4232,7 +4232,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<Framework.NameValuePair> _GetQueryOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        internal IQueryable<Framework.NameValuePair> ___GetQueryOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
@@ -4263,14 +4263,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        private bool ___ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            int _Count = ___GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 uniqueIdentifier
                 ,currentIndex
                 ,pageSize
@@ -4279,7 +4279,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        private int ___GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,int currentIndex
             ,int pageSize
@@ -4287,7 +4287,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             )
 
         {
-            IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            IQueryable<Framework.NameValuePair> _Query = ___GetQueryOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 uniqueIdentifier
                 ,queryOrderBySettingCollection
             );
@@ -4303,18 +4303,18 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                int _retval = ___GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 uniqueIdentifier
                 ,currentIndex
                 ,pageSize
@@ -4328,24 +4328,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                bool _retval = ___ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 uniqueIdentifier
                 ,currentIndex
                 ,pageSize
@@ -4359,22 +4359,22 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity __GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity();
             try
             {
-                bool _Exists = _ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                bool _Exists = ___ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 uniqueIdentifier
                 ,-1
                 ,-1
@@ -4383,7 +4383,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                    IQueryable<Framework.NameValuePair> _Query = ___GetQueryOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 uniqueIdentifier
                 ,queryOrderBySettingCollection
             );
@@ -4404,25 +4404,25 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection __GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection();
             try
             {
-                bool _Exists = _ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                bool _Exists = ___ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 uniqueIdentifier
                 ,currentIndex
                 ,pageSize
@@ -4431,7 +4431,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                    IQueryable<Framework.NameValuePair> _Query = ___GetQueryOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 uniqueIdentifier
                 ,queryOrderBySettingCollection
             );
@@ -4466,9 +4466,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueIdentifier
@@ -4477,7 +4477,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _GetQueryOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> ___GetQueryOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
@@ -4508,14 +4508,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        private bool ___ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            int _Count = ___GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 uniqueIdentifier
                 ,currentIndex
                 ,pageSize
@@ -4524,7 +4524,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        private int ___GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,int currentIndex
             ,int pageSize
@@ -4532,7 +4532,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             )
 
         {
-            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = _GetQueryOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = ___GetQueryOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 uniqueIdentifier
                 ,queryOrderBySettingCollection
             );
@@ -4548,18 +4548,18 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                int _retval = ___GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 uniqueIdentifier
                 ,currentIndex
                 ,pageSize
@@ -4573,24 +4573,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                bool _retval = ___ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 uniqueIdentifier
                 ,currentIndex
                 ,pageSize
@@ -4604,22 +4604,22 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault __GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault _retMessage = new MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault();
             try
             {
-                bool _Exists = _ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                bool _Exists = ___ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 uniqueIdentifier
                 ,-1
                 ,-1
@@ -4628,7 +4628,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = _GetQueryOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = ___GetQueryOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 uniqueIdentifier
                 ,queryOrderBySettingCollection
             );
@@ -4649,25 +4649,25 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection __GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection _retMessage = new MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection();
             try
             {
-                bool _Exists = _ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                bool _Exists = ___ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 uniqueIdentifier
                 ,currentIndex
                 ,pageSize
@@ -4676,7 +4676,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = _GetQueryOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = ___GetQueryOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 uniqueIdentifier
                 ,queryOrderBySettingCollection
             );
@@ -4711,9 +4711,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueIdentifier
@@ -4722,7 +4722,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _GetQueryOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> ___GetQueryOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
@@ -4753,14 +4753,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        private bool ___ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            int _Count = ___GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 uniqueidentifierColumn
                 ,currentIndex
                 ,pageSize
@@ -4769,7 +4769,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        private int ___GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
@@ -4777,7 +4777,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             )
 
         {
-            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = _GetQueryOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = ___GetQueryOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 uniqueidentifierColumn
                 ,queryOrderBySettingCollection
             );
@@ -4793,18 +4793,18 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                int _retval = ___GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 uniqueidentifierColumn
                 ,currentIndex
                 ,pageSize
@@ -4818,24 +4818,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                bool _retval = ___ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 uniqueidentifierColumn
                 ,currentIndex
                 ,pageSize
@@ -4849,22 +4849,22 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization __GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _retMessage = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization();
             try
             {
-                bool _Exists = _ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                bool _Exists = ___ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 uniqueidentifierColumn
                 ,-1
                 ,-1
@@ -4873,7 +4873,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = _GetQueryOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = ___GetQueryOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 uniqueidentifierColumn
                 ,queryOrderBySettingCollection
             );
@@ -4894,25 +4894,25 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization __GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _retMessage = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization();
             try
             {
-                bool _Exists = _ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                bool _Exists = ___ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 uniqueidentifierColumn
                 ,currentIndex
                 ,pageSize
@@ -4921,7 +4921,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = _GetQueryOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = ___GetQueryOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 uniqueidentifierColumn
                 ,queryOrderBySettingCollection
             );
@@ -4956,9 +4956,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
@@ -4967,7 +4967,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<Framework.NameValuePair> _GetQueryOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        internal IQueryable<Framework.NameValuePair> ___GetQueryOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
@@ -4998,14 +4998,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        private bool ___ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            int _Count = ___GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 uniqueidentifierColumn
                 ,currentIndex
                 ,pageSize
@@ -5014,7 +5014,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        private int ___GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
@@ -5022,7 +5022,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             )
 
         {
-            IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            IQueryable<Framework.NameValuePair> _Query = ___GetQueryOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 uniqueidentifierColumn
                 ,queryOrderBySettingCollection
             );
@@ -5038,18 +5038,18 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                int _retval = ___GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 uniqueidentifierColumn
                 ,currentIndex
                 ,pageSize
@@ -5063,24 +5063,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                bool _retval = ___ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 uniqueidentifierColumn
                 ,currentIndex
                 ,pageSize
@@ -5094,22 +5094,22 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity __GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity();
             try
             {
-                bool _Exists = _ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                bool _Exists = ___ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 uniqueidentifierColumn
                 ,-1
                 ,-1
@@ -5118,7 +5118,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                    IQueryable<Framework.NameValuePair> _Query = ___GetQueryOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 uniqueidentifierColumn
                 ,queryOrderBySettingCollection
             );
@@ -5139,25 +5139,25 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection __GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection();
             try
             {
-                bool _Exists = _ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                bool _Exists = ___ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 uniqueidentifierColumn
                 ,currentIndex
                 ,pageSize
@@ -5166,7 +5166,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                    IQueryable<Framework.NameValuePair> _Query = ___GetQueryOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 uniqueidentifierColumn
                 ,queryOrderBySettingCollection
             );
@@ -5201,9 +5201,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
@@ -5212,7 +5212,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _GetQueryOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> ___GetQueryOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
@@ -5243,14 +5243,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        private bool ___ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            int _Count = ___GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 uniqueidentifierColumn
                 ,currentIndex
                 ,pageSize
@@ -5259,7 +5259,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        private int ___GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
@@ -5267,7 +5267,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             )
 
         {
-            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = _GetQueryOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = ___GetQueryOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 uniqueidentifierColumn
                 ,queryOrderBySettingCollection
             );
@@ -5283,18 +5283,18 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                int _retval = ___GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 uniqueidentifierColumn
                 ,currentIndex
                 ,pageSize
@@ -5308,24 +5308,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                bool _retval = ___ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 uniqueidentifierColumn
                 ,currentIndex
                 ,pageSize
@@ -5339,22 +5339,22 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault __GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault _retMessage = new MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault();
             try
             {
-                bool _Exists = _ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                bool _Exists = ___ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 uniqueidentifierColumn
                 ,-1
                 ,-1
@@ -5363,7 +5363,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = _GetQueryOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = ___GetQueryOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 uniqueidentifierColumn
                 ,queryOrderBySettingCollection
             );
@@ -5384,25 +5384,25 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection __GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection _retMessage = new MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection();
             try
             {
-                bool _Exists = _ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                bool _Exists = ___ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 uniqueidentifierColumn
                 ,currentIndex
                 ,pageSize
@@ -5411,7 +5411,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = _GetQueryOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = ___GetQueryOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 uniqueidentifierColumn
                 ,queryOrderBySettingCollection
             );
@@ -5446,9 +5446,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
@@ -5457,7 +5457,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _GetQueryOfEntityOfIdentifierAndUniqueConstraint(
+        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> ___GetQueryOfEntityOfIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
@@ -5494,7 +5494,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfEntityOfIdentifierAndUniqueConstraint(
+        private bool ___ExistsOfEntityOfIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
@@ -5503,7 +5503,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfEntityOfIdentifierAndUniqueConstraint(
+            int _Count = ___GetCountOfEntityOfIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
                 ,uniqueidentifierColumn
@@ -5514,7 +5514,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfEntityOfIdentifierAndUniqueConstraint(
+        private int ___GetCountOfEntityOfIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
@@ -5524,7 +5524,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             )
 
         {
-            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = _GetQueryOfEntityOfIdentifierAndUniqueConstraint(
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = ___GetQueryOfEntityOfIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
                 ,uniqueidentifierColumn
@@ -5542,7 +5542,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfIdentifierAndUniqueConstraint(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfEntityOfIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
@@ -5551,11 +5551,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfEntityOfIdentifierAndUniqueConstraint(
+                int _retval = ___GetCountOfEntityOfIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
                 ,uniqueidentifierColumn
@@ -5571,13 +5571,13 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfIdentifierAndUniqueConstraint(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfEntityOfIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
@@ -5586,11 +5586,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfEntityOfIdentifierAndUniqueConstraint(
+                bool _retval = ___ExistsOfEntityOfIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
                 ,uniqueidentifierColumn
@@ -5606,24 +5606,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization GetSingleOfEntityOfIdentifierAndUniqueConstraint(
+        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization __GetSingleOfEntityOfIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _retMessage = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization();
             try
             {
-                bool _Exists = _ExistsOfEntityOfIdentifierAndUniqueConstraint(
+                bool _Exists = ___ExistsOfEntityOfIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
                 ,uniqueidentifierColumn
@@ -5634,7 +5634,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = _GetQueryOfEntityOfIdentifierAndUniqueConstraint(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = ___GetQueryOfEntityOfIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
                 ,uniqueidentifierColumn
@@ -5657,13 +5657,13 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization GetCollectionOfEntityOfIdentifierAndUniqueConstraint(
+        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization __GetCollectionOfEntityOfIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
@@ -5672,12 +5672,12 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _retMessage = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization();
             try
             {
-                bool _Exists = _ExistsOfEntityOfIdentifierAndUniqueConstraint(
+                bool _Exists = ___ExistsOfEntityOfIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
                 ,uniqueidentifierColumn
@@ -5688,7 +5688,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = _GetQueryOfEntityOfIdentifierAndUniqueConstraint(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = ___GetQueryOfEntityOfIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
                 ,uniqueidentifierColumn
@@ -5725,9 +5725,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of Entity of IdentifierAndUniqueConstraint
@@ -5736,7 +5736,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _GetQueryOfDefaultOfIdentifierAndUniqueConstraint(
+        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> ___GetQueryOfDefaultOfIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
@@ -5773,7 +5773,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfDefaultOfIdentifierAndUniqueConstraint(
+        private bool ___ExistsOfDefaultOfIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
@@ -5782,7 +5782,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfDefaultOfIdentifierAndUniqueConstraint(
+            int _Count = ___GetCountOfDefaultOfIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
                 ,uniqueidentifierColumn
@@ -5793,7 +5793,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfDefaultOfIdentifierAndUniqueConstraint(
+        private int ___GetCountOfDefaultOfIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
@@ -5803,7 +5803,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             )
 
         {
-            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = _GetQueryOfDefaultOfIdentifierAndUniqueConstraint(
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = ___GetQueryOfDefaultOfIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
                 ,uniqueidentifierColumn
@@ -5821,7 +5821,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultOfIdentifierAndUniqueConstraint(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfDefaultOfIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
@@ -5830,11 +5830,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfDefaultOfIdentifierAndUniqueConstraint(
+                int _retval = ___GetCountOfDefaultOfIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
                 ,uniqueidentifierColumn
@@ -5850,13 +5850,13 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultOfIdentifierAndUniqueConstraint(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfDefaultOfIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
@@ -5865,11 +5865,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfDefaultOfIdentifierAndUniqueConstraint(
+                bool _retval = ___ExistsOfDefaultOfIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
                 ,uniqueidentifierColumn
@@ -5885,24 +5885,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault GetSingleOfDefaultOfIdentifierAndUniqueConstraint(
+        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault __GetSingleOfDefaultOfIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault _retMessage = new MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault();
             try
             {
-                bool _Exists = _ExistsOfDefaultOfIdentifierAndUniqueConstraint(
+                bool _Exists = ___ExistsOfDefaultOfIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
                 ,uniqueidentifierColumn
@@ -5913,7 +5913,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = _GetQueryOfDefaultOfIdentifierAndUniqueConstraint(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = ___GetQueryOfDefaultOfIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
                 ,uniqueidentifierColumn
@@ -5936,13 +5936,13 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection GetCollectionOfDefaultOfIdentifierAndUniqueConstraint(
+        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection __GetCollectionOfDefaultOfIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
@@ -5951,12 +5951,12 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection _retMessage = new MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection();
             try
             {
-                bool _Exists = _ExistsOfDefaultOfIdentifierAndUniqueConstraint(
+                bool _Exists = ___ExistsOfDefaultOfIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
                 ,uniqueidentifierColumn
@@ -5967,7 +5967,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = _GetQueryOfDefaultOfIdentifierAndUniqueConstraint(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = ___GetQueryOfDefaultOfIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
                 ,uniqueidentifierColumn
@@ -6004,9 +6004,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of Default of IdentifierAndUniqueConstraint
@@ -6015,7 +6015,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation> _GetQueryOfKeyInformationOfIdentifierAndUniqueConstraint(
+        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation> ___GetQueryOfKeyInformationOfIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
@@ -6052,7 +6052,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(
+        private bool ___ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
@@ -6061,7 +6061,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfKeyInformationOfIdentifierAndUniqueConstraint(
+            int _Count = ___GetCountOfKeyInformationOfIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
                 ,uniqueidentifierColumn
@@ -6072,7 +6072,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfKeyInformationOfIdentifierAndUniqueConstraint(
+        private int ___GetCountOfKeyInformationOfIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
@@ -6082,7 +6082,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             )
 
         {
-            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation> _Query = _GetQueryOfKeyInformationOfIdentifierAndUniqueConstraint(
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation> _Query = ___GetQueryOfKeyInformationOfIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
                 ,uniqueidentifierColumn
@@ -6100,7 +6100,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfKeyInformationOfIdentifierAndUniqueConstraint(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfKeyInformationOfIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
@@ -6109,11 +6109,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfKeyInformationOfIdentifierAndUniqueConstraint(
+                int _retval = ___GetCountOfKeyInformationOfIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
                 ,uniqueidentifierColumn
@@ -6129,13 +6129,13 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
@@ -6144,11 +6144,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(
+                bool _retval = ___ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
                 ,uniqueidentifierColumn
@@ -6164,24 +6164,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformation GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint(
+        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformation __GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformation _retMessage = new MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformation();
             try
             {
-                bool _Exists = _ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(
+                bool _Exists = ___ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
                 ,uniqueidentifierColumn
@@ -6192,7 +6192,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation> _Query = _GetQueryOfKeyInformationOfIdentifierAndUniqueConstraint(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation> _Query = ___GetQueryOfKeyInformationOfIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
                 ,uniqueidentifierColumn
@@ -6215,13 +6215,13 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformationCollection GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint(
+        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformationCollection __GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
@@ -6230,12 +6230,12 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformationCollection _retMessage = new MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformationCollection();
             try
             {
-                bool _Exists = _ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(
+                bool _Exists = ___ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
                 ,uniqueidentifierColumn
@@ -6246,7 +6246,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation> _Query = _GetQueryOfKeyInformationOfIdentifierAndUniqueConstraint(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation> _Query = ___GetQueryOfKeyInformationOfIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
                 ,uniqueidentifierColumn
@@ -6283,9 +6283,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of KeyInformation of IdentifierAndUniqueConstraint

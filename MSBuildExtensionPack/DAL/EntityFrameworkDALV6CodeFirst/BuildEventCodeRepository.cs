@@ -325,7 +325,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _GetQueryOfEntityOfCommon(
+        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> ___GetQueryOfEntityOfCommon(
             Framework.EntityContracts.QuerySystemStringContainsCriteria eventCode
             ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -358,7 +358,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfEntityOfCommon(
+        private bool ___ExistsOfEntityOfCommon(
             Framework.EntityContracts.QuerySystemStringContainsCriteria eventCode
             ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
             ,int currentIndex
@@ -366,7 +366,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfEntityOfCommon(
+            int _Count = ___GetCountOfEntityOfCommon(
                 eventCode
                 ,description
                 ,currentIndex
@@ -376,7 +376,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfEntityOfCommon(
+        private int ___GetCountOfEntityOfCommon(
             Framework.EntityContracts.QuerySystemStringContainsCriteria eventCode
             ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
             ,int currentIndex
@@ -385,7 +385,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             )
 
         {
-            IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = _GetQueryOfEntityOfCommon(
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = ___GetQueryOfEntityOfCommon(
                 eventCode
                 ,description
                 ,queryOrderBySettingCollection
@@ -402,7 +402,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfCommon(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfEntityOfCommon(
             Framework.EntityContracts.QuerySystemStringContainsCriteria eventCode
             ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
             ,int currentIndex
@@ -410,11 +410,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfEntityOfCommon(
+                int _retval = ___GetCountOfEntityOfCommon(
                 eventCode
                 ,description
                 ,currentIndex
@@ -429,13 +429,13 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfCommon(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfEntityOfCommon(
             Framework.EntityContracts.QuerySystemStringContainsCriteria eventCode
             ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
             ,int currentIndex
@@ -443,11 +443,11 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfEntityOfCommon(
+                bool _retval = ___ExistsOfEntityOfCommon(
                 eventCode
                 ,description
                 ,currentIndex
@@ -462,23 +462,23 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode GetSingleOfEntityOfCommon(
+        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode __GetSingleOfEntityOfCommon(
             Framework.EntityContracts.QuerySystemStringContainsCriteria eventCode
             ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode _retMessage = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode();
             try
             {
-                bool _Exists = _ExistsOfEntityOfCommon(
+                bool _Exists = ___ExistsOfEntityOfCommon(
                 eventCode
                 ,description
                 ,-1
@@ -488,7 +488,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = _GetQueryOfEntityOfCommon(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = ___GetQueryOfEntityOfCommon(
                 eventCode
                 ,description
                 ,queryOrderBySettingCollection
@@ -510,13 +510,13 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode GetCollectionOfEntityOfCommon(
+        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode __GetCollectionOfEntityOfCommon(
             Framework.EntityContracts.QuerySystemStringContainsCriteria eventCode
             ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
             ,int currentIndex
@@ -524,12 +524,12 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode _retMessage = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode();
             try
             {
-                bool _Exists = _ExistsOfEntityOfCommon(
+                bool _Exists = ___ExistsOfEntityOfCommon(
                 eventCode
                 ,description
                 ,currentIndex
@@ -539,7 +539,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = _GetQueryOfEntityOfCommon(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = ___GetQueryOfEntityOfCommon(
                 eventCode
                 ,description
                 ,queryOrderBySettingCollection
@@ -575,9 +575,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of Entity of Common
@@ -586,7 +586,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _GetQueryOfEntityOfAll(
+        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> ___GetQueryOfEntityOfAll(
             Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -609,13 +609,13 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfEntityOfAll(
+        private bool ___ExistsOfEntityOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfEntityOfAll(
+            int _Count = ___GetCountOfEntityOfAll(
                 currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -623,14 +623,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfEntityOfAll(
+        private int ___GetCountOfEntityOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
 
         {
-            IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = _GetQueryOfEntityOfAll(
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = ___GetQueryOfEntityOfAll(
                 queryOrderBySettingCollection
             );
             int _Count;
@@ -645,17 +645,17 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfAll(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfEntityOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfEntityOfAll(
+                int _retval = ___GetCountOfEntityOfAll(
                 currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -668,23 +668,23 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfAll(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfEntityOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfEntityOfAll(
+                bool _retval = ___ExistsOfEntityOfAll(
                 currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -697,21 +697,21 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode GetSingleOfEntityOfAll(
+        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode __GetSingleOfEntityOfAll(
             Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode _retMessage = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode();
             try
             {
-                bool _Exists = _ExistsOfEntityOfAll(
+                bool _Exists = ___ExistsOfEntityOfAll(
                 -1
                 ,-1
                 ,queryOrderBySettingCollection
@@ -719,7 +719,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = _GetQueryOfEntityOfAll(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = ___GetQueryOfEntityOfAll(
                 queryOrderBySettingCollection
             );
 
@@ -739,24 +739,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode GetCollectionOfEntityOfAll(
+        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode __GetCollectionOfEntityOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode _retMessage = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode();
             try
             {
-                bool _Exists = _ExistsOfEntityOfAll(
+                bool _Exists = ___ExistsOfEntityOfAll(
                 currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -764,7 +764,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = _GetQueryOfEntityOfAll(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = ___GetQueryOfEntityOfAll(
                 queryOrderBySettingCollection
             );
 
@@ -798,9 +798,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of Entity of All
@@ -809,7 +809,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<Framework.NameValuePair> _GetQueryOfNameValuePairOfAll(
+        internal IQueryable<Framework.NameValuePair> ___GetQueryOfNameValuePairOfAll(
             Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -832,13 +832,13 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfNameValuePairOfAll(
+        private bool ___ExistsOfNameValuePairOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfNameValuePairOfAll(
+            int _Count = ___GetCountOfNameValuePairOfAll(
                 currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -846,14 +846,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfNameValuePairOfAll(
+        private int ___GetCountOfNameValuePairOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
 
         {
-            IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairOfAll(
+            IQueryable<Framework.NameValuePair> _Query = ___GetQueryOfNameValuePairOfAll(
                 queryOrderBySettingCollection
             );
             int _Count;
@@ -868,17 +868,17 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfNameValuePairOfAll(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfNameValuePairOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfNameValuePairOfAll(
+                int _retval = ___GetCountOfNameValuePairOfAll(
                 currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -891,23 +891,23 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfNameValuePairOfAll(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfNameValuePairOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfNameValuePairOfAll(
+                bool _retval = ___ExistsOfNameValuePairOfAll(
                 currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -920,21 +920,21 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity GetSingleOfNameValuePairOfAll(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity __GetSingleOfNameValuePairOfAll(
             Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity();
             try
             {
-                bool _Exists = _ExistsOfNameValuePairOfAll(
+                bool _Exists = ___ExistsOfNameValuePairOfAll(
                 -1
                 ,-1
                 ,queryOrderBySettingCollection
@@ -942,7 +942,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairOfAll(
+                    IQueryable<Framework.NameValuePair> _Query = ___GetQueryOfNameValuePairOfAll(
                 queryOrderBySettingCollection
             );
 
@@ -962,24 +962,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection GetCollectionOfNameValuePairOfAll(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection __GetCollectionOfNameValuePairOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection();
             try
             {
-                bool _Exists = _ExistsOfNameValuePairOfAll(
+                bool _Exists = ___ExistsOfNameValuePairOfAll(
                 currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -987,7 +987,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairOfAll(
+                    IQueryable<Framework.NameValuePair> _Query = ___GetQueryOfNameValuePairOfAll(
                 queryOrderBySettingCollection
             );
 
@@ -1021,9 +1021,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of NameValuePair of All
@@ -1032,7 +1032,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<Framework.RssItem> _GetQueryOfRssItemOfAll(
+        internal IQueryable<Framework.RssItem> ___GetQueryOfRssItemOfAll(
             Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -1055,13 +1055,13 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfRssItemOfAll(
+        private bool ___ExistsOfRssItemOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfRssItemOfAll(
+            int _Count = ___GetCountOfRssItemOfAll(
                 currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -1069,14 +1069,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfRssItemOfAll(
+        private int ___GetCountOfRssItemOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
 
         {
-            IQueryable<Framework.RssItem> _Query = _GetQueryOfRssItemOfAll(
+            IQueryable<Framework.RssItem> _Query = ___GetQueryOfRssItemOfAll(
                 queryOrderBySettingCollection
             );
             int _Count;
@@ -1091,17 +1091,17 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfRssItemOfAll(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfRssItemOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfRssItemOfAll(
+                int _retval = ___GetCountOfRssItemOfAll(
                 currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -1114,23 +1114,23 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfRssItemOfAll(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfRssItemOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfRssItemOfAll(
+                bool _retval = ___ExistsOfRssItemOfAll(
                 currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -1143,21 +1143,21 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageRssItem GetSingleOfRssItemOfAll(
+        public Framework.DataSourceEntities.DataAccessLayerMessageRssItem __GetSingleOfRssItemOfAll(
             Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageRssItem _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageRssItem();
             try
             {
-                bool _Exists = _ExistsOfRssItemOfAll(
+                bool _Exists = ___ExistsOfRssItemOfAll(
                 -1
                 ,-1
                 ,queryOrderBySettingCollection
@@ -1165,7 +1165,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<Framework.RssItem> _Query = _GetQueryOfRssItemOfAll(
+                    IQueryable<Framework.RssItem> _Query = ___GetQueryOfRssItemOfAll(
                 queryOrderBySettingCollection
             );
 
@@ -1185,24 +1185,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection GetCollectionOfRssItemOfAll(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection __GetCollectionOfRssItemOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection();
             try
             {
-                bool _Exists = _ExistsOfRssItemOfAll(
+                bool _Exists = ___ExistsOfRssItemOfAll(
                 currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -1210,7 +1210,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<Framework.RssItem> _Query = _GetQueryOfRssItemOfAll(
+                    IQueryable<Framework.RssItem> _Query = ___GetQueryOfRssItemOfAll(
                 queryOrderBySettingCollection
             );
 
@@ -1244,9 +1244,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of RssItem of All
@@ -1255,7 +1255,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _GetQueryOfEntityOfByIdentifier(
+        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> ___GetQueryOfEntityOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
@@ -1285,14 +1285,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfEntityOfByIdentifier(
+        private bool ___ExistsOfEntityOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfEntityOfByIdentifier(
+            int _Count = ___GetCountOfEntityOfByIdentifier(
                 id
                 ,currentIndex
                 ,pageSize
@@ -1301,7 +1301,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfEntityOfByIdentifier(
+        private int ___GetCountOfEntityOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
@@ -1309,7 +1309,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             )
 
         {
-            IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = _GetQueryOfEntityOfByIdentifier(
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = ___GetQueryOfEntityOfByIdentifier(
                 id
                 ,queryOrderBySettingCollection
             );
@@ -1325,18 +1325,18 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfByIdentifier(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfEntityOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfEntityOfByIdentifier(
+                int _retval = ___GetCountOfEntityOfByIdentifier(
                 id
                 ,currentIndex
                 ,pageSize
@@ -1350,24 +1350,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfByIdentifier(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfEntityOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfEntityOfByIdentifier(
+                bool _retval = ___ExistsOfEntityOfByIdentifier(
                 id
                 ,currentIndex
                 ,pageSize
@@ -1381,22 +1381,22 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode GetSingleOfEntityOfByIdentifier(
+        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode __GetSingleOfEntityOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode _retMessage = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode();
             try
             {
-                bool _Exists = _ExistsOfEntityOfByIdentifier(
+                bool _Exists = ___ExistsOfEntityOfByIdentifier(
                 id
                 ,-1
                 ,-1
@@ -1405,7 +1405,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = _GetQueryOfEntityOfByIdentifier(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = ___GetQueryOfEntityOfByIdentifier(
                 id
                 ,queryOrderBySettingCollection
             );
@@ -1426,25 +1426,25 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode GetCollectionOfEntityOfByIdentifier(
+        public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode __GetCollectionOfEntityOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode _retMessage = new MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode();
             try
             {
-                bool _Exists = _ExistsOfEntityOfByIdentifier(
+                bool _Exists = ___ExistsOfEntityOfByIdentifier(
                 id
                 ,currentIndex
                 ,pageSize
@@ -1453,7 +1453,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = _GetQueryOfEntityOfByIdentifier(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode> _Query = ___GetQueryOfEntityOfByIdentifier(
                 id
                 ,queryOrderBySettingCollection
             );
@@ -1488,9 +1488,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of Entity of ByIdentifier
@@ -1499,7 +1499,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation> _GetQueryOfKeyInformationOfByIdentifier(
+        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation> ___GetQueryOfKeyInformationOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
@@ -1529,14 +1529,14 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _retval1;
         }
 
-        private bool _ExistsOfKeyInformationOfByIdentifier(
+        private bool ___ExistsOfKeyInformationOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfKeyInformationOfByIdentifier(
+            int _Count = ___GetCountOfKeyInformationOfByIdentifier(
                 id
                 ,currentIndex
                 ,pageSize
@@ -1545,7 +1545,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count > 0;
         }
 
-        private int _GetCountOfKeyInformationOfByIdentifier(
+        private int ___GetCountOfKeyInformationOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
@@ -1553,7 +1553,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             )
 
         {
-            IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation> _Query = _GetQueryOfKeyInformationOfByIdentifier(
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation> _Query = ___GetQueryOfKeyInformationOfByIdentifier(
                 id
                 ,queryOrderBySettingCollection
             );
@@ -1569,18 +1569,18 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             return _Count;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfKeyInformationOfByIdentifier(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfKeyInformationOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
             try
             {
-                int _retval = _GetCountOfKeyInformationOfByIdentifier(
+                int _retval = ___GetCountOfKeyInformationOfByIdentifier(
                 id
                 ,currentIndex
                 ,pageSize
@@ -1594,24 +1594,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = 0;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfKeyInformationOfByIdentifier(
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfKeyInformationOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
             try
             {
-                bool _retval = _ExistsOfKeyInformationOfByIdentifier(
+                bool _retval = ___ExistsOfKeyInformationOfByIdentifier(
                 id
                 ,currentIndex
                 ,pageSize
@@ -1625,22 +1625,22 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = false;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.BuildEventCode.DataAccessLayerMessageOfKeyInformation GetSingleOfKeyInformationOfByIdentifier(
+        public MSBuildExtensionPack.DataSourceEntities.BuildEventCode.DataAccessLayerMessageOfKeyInformation __GetSingleOfKeyInformationOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
             MSBuildExtensionPack.DataSourceEntities.BuildEventCode.DataAccessLayerMessageOfKeyInformation _retMessage = new MSBuildExtensionPack.DataSourceEntities.BuildEventCode.DataAccessLayerMessageOfKeyInformation();
             try
             {
-                bool _Exists = _ExistsOfKeyInformationOfByIdentifier(
+                bool _Exists = ___ExistsOfKeyInformationOfByIdentifier(
                 id
                 ,-1
                 ,-1
@@ -1649,7 +1649,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation> _Query = _GetQueryOfKeyInformationOfByIdentifier(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation> _Query = ___GetQueryOfKeyInformationOfByIdentifier(
                 id
                 ,queryOrderBySettingCollection
             );
@@ -1670,25 +1670,25 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
 
-        public MSBuildExtensionPack.DataSourceEntities.BuildEventCode.DataAccessLayerMessageOfKeyInformationCollection GetCollectionOfKeyInformationOfByIdentifier(
+        public MSBuildExtensionPack.DataSourceEntities.BuildEventCode.DataAccessLayerMessageOfKeyInformationCollection __GetCollectionOfKeyInformationOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            log.Info(string.Format("{0}: GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
 
             MSBuildExtensionPack.DataSourceEntities.BuildEventCode.DataAccessLayerMessageOfKeyInformationCollection _retMessage = new MSBuildExtensionPack.DataSourceEntities.BuildEventCode.DataAccessLayerMessageOfKeyInformationCollection();
             try
             {
-                bool _Exists = _ExistsOfKeyInformationOfByIdentifier(
+                bool _Exists = ___ExistsOfKeyInformationOfByIdentifier(
                 id
                 ,currentIndex
                 ,pageSize
@@ -1697,7 +1697,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
                 if (_Exists)
                 {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation> _Query = _GetQueryOfKeyInformationOfByIdentifier(
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation> _Query = ___GetQueryOfKeyInformationOfByIdentifier(
                 id
                 ,queryOrderBySettingCollection
             );
@@ -1732,9 +1732,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
                 _retMessage.Result = null;
                 _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+                log.Error(string.Format("{0}: __GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
             }
-            log.Info(string.Format("{0}: GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
         #endregion Query Methods Of KeyInformation of ByIdentifier

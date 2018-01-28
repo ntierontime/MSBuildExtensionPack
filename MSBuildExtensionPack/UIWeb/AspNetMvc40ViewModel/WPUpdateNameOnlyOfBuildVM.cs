@@ -24,7 +24,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
         public void LoadData()
         {
             // 1. master on accessory part - Aside UIWorkspaceItemSetting
-            var masterEntityResult = MSBuildExtensionPack.CommonBLLIoC.IoCBuild.GetMessageOfUpdateNameRequestOfByIdentifier(this.CriteriaOfMasterEntity, this.QueryPagingSettingOneRecord, null);
+            var masterEntityResult = MSBuildExtensionPack.CommonBLLIoC.IoCBuild.__GetMessageOfUpdateNameRequestOfByIdentifier(this.CriteriaOfMasterEntity, this.QueryPagingSettingOneRecord, null);
 
             this.StatusOfMasterEntity = masterEntityResult.BusinessLogicLayerResponseStatus;
 

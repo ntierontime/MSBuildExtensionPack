@@ -38,7 +38,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 
             }
 
-            var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.GetMessageOfEntityOfCommon(
+            var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.__GetMessageOfEntityOfCommon(
                 this.Criteria
                 , this.QueryPagingSetting
                 , this.QueryOrderBySettingCollection);

@@ -40,7 +40,7 @@ namespace MSBuildExtensionPack.DALContracts
 
         #region Query Methods Of Entity of Common
 
-        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfCommon(
+        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfEntityOfCommon(
             Framework.EntityContracts.QuerySystemStringContainsCriteria eventCode
             ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
             ,int currentIndex
@@ -48,7 +48,7 @@ namespace MSBuildExtensionPack.DALContracts
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfCommon(
+        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfEntityOfCommon(
             Framework.EntityContracts.QuerySystemStringContainsCriteria eventCode
             ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
             ,int currentIndex
@@ -56,13 +56,13 @@ namespace MSBuildExtensionPack.DALContracts
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode GetSingleOfEntityOfCommon(
+        MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode __GetSingleOfEntityOfCommon(
             Framework.EntityContracts.QuerySystemStringContainsCriteria eventCode
             ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode GetCollectionOfEntityOfCommon(
+        MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode __GetCollectionOfEntityOfCommon(
             Framework.EntityContracts.QuerySystemStringContainsCriteria eventCode
             ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
             ,int currentIndex
@@ -74,23 +74,23 @@ namespace MSBuildExtensionPack.DALContracts
 
         #region Query Methods Of Entity of All
 
-        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfAll(
+        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfEntityOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfAll(
+        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfEntityOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode GetSingleOfEntityOfAll(
+        MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode __GetSingleOfEntityOfAll(
             Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode GetCollectionOfEntityOfAll(
+        MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode __GetCollectionOfEntityOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -100,23 +100,23 @@ namespace MSBuildExtensionPack.DALContracts
 
         #region Query Methods Of NameValuePair of All
 
-        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfNameValuePairOfAll(
+        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfNameValuePairOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfNameValuePairOfAll(
+        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfNameValuePairOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity GetSingleOfNameValuePairOfAll(
+        Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity __GetSingleOfNameValuePairOfAll(
             Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection GetCollectionOfNameValuePairOfAll(
+        Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection __GetCollectionOfNameValuePairOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -126,23 +126,23 @@ namespace MSBuildExtensionPack.DALContracts
 
         #region Query Methods Of RssItem of All
 
-        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfRssItemOfAll(
+        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfRssItemOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfRssItemOfAll(
+        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfRssItemOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        Framework.DataSourceEntities.DataAccessLayerMessageRssItem GetSingleOfRssItemOfAll(
+        Framework.DataSourceEntities.DataAccessLayerMessageRssItem __GetSingleOfRssItemOfAll(
             Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection GetCollectionOfRssItemOfAll(
+        Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection __GetCollectionOfRssItemOfAll(
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -152,26 +152,26 @@ namespace MSBuildExtensionPack.DALContracts
 
         #region Query Methods Of Entity of ByIdentifier
 
-        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfByIdentifier(
+        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfEntityOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfByIdentifier(
+        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfEntityOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode GetSingleOfEntityOfByIdentifier(
+        MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode __GetSingleOfEntityOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode GetCollectionOfEntityOfByIdentifier(
+        MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode __GetCollectionOfEntityOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
@@ -182,26 +182,26 @@ namespace MSBuildExtensionPack.DALContracts
 
         #region Query Methods Of KeyInformation of ByIdentifier
 
-        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfKeyInformationOfByIdentifier(
+        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger __GetCountOfKeyInformationOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfKeyInformationOfByIdentifier(
+        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean __ExistsOfKeyInformationOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        MSBuildExtensionPack.DataSourceEntities.BuildEventCode.DataAccessLayerMessageOfKeyInformation GetSingleOfKeyInformationOfByIdentifier(
+        MSBuildExtensionPack.DataSourceEntities.BuildEventCode.DataAccessLayerMessageOfKeyInformation __GetSingleOfKeyInformationOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        MSBuildExtensionPack.DataSourceEntities.BuildEventCode.DataAccessLayerMessageOfKeyInformationCollection GetCollectionOfKeyInformationOfByIdentifier(
+        MSBuildExtensionPack.DataSourceEntities.BuildEventCode.DataAccessLayerMessageOfKeyInformationCollection __GetCollectionOfKeyInformationOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize

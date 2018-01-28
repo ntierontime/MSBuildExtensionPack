@@ -378,16 +378,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>an array with all available page numbers</returns>
-        public static int[] GetPageNumberListOfEntityOfCommon(
+        public static int[] __GetPageNumberListOfEntityOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetPageNumberListOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageNumberListOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfEntityOfCommon for GetPageNumberListOfEntityOfCommon"
+                , "__GetCountOfEntityOfCommon for __GetPageNumberListOfEntityOfCommon"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -404,7 +404,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
             int pageSize = queryPagingSetting == null ? 0 : queryPagingSetting.PageSize;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfCommon(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
@@ -415,19 +415,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                     {
                         _retval.Add(i);
                     }
-                    //log.Info(string.Format("{0}: GetPageNumberListOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    //log.Info(string.Format("{0}: __GetPageNumberListOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                     return _retval.ToArray();
                 }
                 else
                 {
-                    //log.Error(string.Format("{0}: GetPageNumberListOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                     return null;
                 }
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                    //log.Error(string.Format("{0}: GetPageNumberListOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -439,16 +439,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>total pages</returns>
-        public static int GetPageCountOfEntityOfCommon(
+        public static int __GetPageCountOfEntityOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetPageCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfEntityOfCommon for GetPageCountOfEntityOfCommon"
+                , "__GetCountOfEntityOfCommon for __GetPageCountOfEntityOfCommon"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -464,17 +464,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
             int pageSize = queryPagingSetting == null ? 0 : queryPagingSetting.PageSize;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfCommon(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
-                //log.Info(string.Format("{0}: GetPageCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetPageCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
             else
             {
-                //log.Error(string.Format("{0}: GetPageCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                //.Process("IoCBuildLog", "GetCountOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetPageCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -486,16 +486,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns></returns>
-        public static int GetCountOfEntityOfCommon(
+        public static int __GetCountOfEntityOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfEntityOfCommon"
+                , "__GetCountOfEntityOfCommon"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -510,16 +510,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfCommon(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
         }
@@ -531,16 +531,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>true if meets criteria, otherwise false</returns>
-        public static bool ExistsOfEntityOfCommon(
+        public static bool __ExistsOfEntityOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: ExistsOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __ExistsOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "ExistsOfEntityOfCommon"
+                , "__ExistsOfEntityOfCommon"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -555,16 +555,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfCommon(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.__ExistsOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: ExistsOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __ExistsOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "ExistsOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: ExistsOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__ExistsOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __ExistsOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
         }
@@ -576,16 +576,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection GetCollectionOfEntityOfCommon(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection __GetCollectionOfEntityOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetCollectionOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCollectionOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfEntityOfCommon"
+                , "__GetCollectionOfEntityOfCommon"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -600,16 +600,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfCommon(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.__GetCollectionOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCollectionOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCollectionOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCollectionOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCollectionOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCollectionOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCollectionOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -621,12 +621,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn GetMessageOfEntityOfCommon(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn __GetMessageOfEntityOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            return GetMessageOfEntityOfCommon(
+            return __GetMessageOfEntityOfCommon(
                 criteria
                 , queryPagingSetting
                 , queryOrderBySettingCollection
@@ -640,17 +640,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn GetMessageOfEntityOfCommon(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn __GetMessageOfEntityOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             , Framework.DataServiceTypes dataServiceType)
         {
-            //log.Info(string.Format("{0}: GetMessageOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetMessageOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetMessageOfEntityOfCommon"
+                , "__GetMessageOfEntityOfCommon"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -666,7 +666,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
             _Request.DataServiceType = dataServiceType;
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfCommon(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.__GetCollectionOfEntityOfCommon(_Request);
             return _Response;
         }
 
@@ -677,16 +677,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection GetSingleOfEntityOfCommon(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection __GetSingleOfEntityOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetSingleOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetSingleOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetSingleOfEntityOfCommon"
+                , "__GetSingleOfEntityOfCommon"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -701,16 +701,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfCommon(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.__GetSingleOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetSingleOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetSingleOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetSingleOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetSingleOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetSingleOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetSingleOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -741,7 +741,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="message" > value to compare/filter with message property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
-        public static int[] GetPageNumberListOfEntityOfCommon(
+        public static int[] __GetPageNumberListOfEntityOfCommon(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -752,11 +752,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , int pageSize
             )
         {
-            //log.Info(string.Format("{0}: GetPageNumberListOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageNumberListOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfEntityOfCommon for GetPageNumberListOfEntityOfCommon"
+                , "__GetCountOfEntityOfCommon for __GetPageNumberListOfEntityOfCommon"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -771,7 +771,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareEventTimeRange, isToCompareEventTimeRangeLow, eventTimeRangeLow, isToCompareEventTimeRangeHigh, eventTimeRangeHigh
                 , isToCompareMessage, message
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfCommon(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
@@ -782,19 +782,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                     {
                         _retval.Add(i);
                     }
-                    //log.Info(string.Format("{0}: GetPageNumberListOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    //log.Info(string.Format("{0}: __GetPageNumberListOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                     return _retval.ToArray();
                 }
                 else
                 {
-                    //log.Error(string.Format("{0}: GetPageNumberListOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                     return null;
                 }
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                    //log.Error(string.Format("{0}: GetPageNumberListOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -821,7 +821,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="message" > value to compare/filter with message property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
-        public static int GetPageCountOfEntityOfCommon(
+        public static int __GetPageCountOfEntityOfCommon(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -832,11 +832,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , int pageSize
             )
         {
-            //log.Info(string.Format("{0}: GetPageCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfEntityOfCommon for GetPageCountOfEntityOfCommon"
+                , "__GetCountOfEntityOfCommon for __GetPageCountOfEntityOfCommon"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -851,17 +851,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareEventTimeRange, isToCompareEventTimeRangeLow, eventTimeRangeLow, isToCompareEventTimeRangeHigh, eventTimeRangeHigh
                 , isToCompareMessage, message
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfCommon(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
-                //log.Info(string.Format("{0}: GetPageCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetPageCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
             else
             {
-                //log.Error(string.Format("{0}: GetPageCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                //.Process("IoCBuildLog", "GetCountOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetPageCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -889,7 +889,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
-        public static int GetCountOfEntityOfCommon(
+        public static int __GetCountOfEntityOfCommon(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -902,11 +902,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: GetCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfEntityOfCommon"
+                , "__GetCountOfEntityOfCommon"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -921,16 +921,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareEventTimeRange, isToCompareEventTimeRangeLow, eventTimeRangeLow, isToCompareEventTimeRangeHigh, eventTimeRangeHigh
                 , isToCompareMessage, message
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfCommon(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
         }
@@ -959,7 +959,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>true if meets criteria, otherwise false</returns>
-        public static bool ExistsOfEntityOfCommon(
+        public static bool __ExistsOfEntityOfCommon(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -972,11 +972,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: ExistsOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __ExistsOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "ExistsOfEntityOfCommon"
+                , "__ExistsOfEntityOfCommon"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -991,16 +991,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareEventTimeRange, isToCompareEventTimeRangeLow, eventTimeRangeLow, isToCompareEventTimeRangeHigh, eventTimeRangeHigh
                 , isToCompareMessage, message
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfCommon(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.__ExistsOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: ExistsOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __ExistsOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "ExistsOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: ExistsOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__ExistsOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __ExistsOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
         }
@@ -1029,7 +1029,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection GetCollectionOfEntityOfCommon(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection __GetCollectionOfEntityOfCommon(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -1042,11 +1042,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: GetCollectionOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCollectionOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfEntityOfCommon"
+                , "__GetCollectionOfEntityOfCommon"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -1061,16 +1061,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareEventTimeRange, isToCompareEventTimeRangeLow, eventTimeRangeLow, isToCompareEventTimeRangeHigh, eventTimeRangeHigh
                 , isToCompareMessage, message
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfCommon(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.__GetCollectionOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCollectionOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCollectionOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCollectionOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCollectionOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCollectionOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCollectionOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -1099,7 +1099,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn GetMessageOfEntityOfCommon(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn __GetMessageOfEntityOfCommon(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -1115,7 +1115,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfEntityOfCommon"
+                , "__GetCollectionOfEntityOfCommon"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -1130,7 +1130,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareEventTimeRange, isToCompareEventTimeRangeLow, eventTimeRangeLow, isToCompareEventTimeRangeHigh, eventTimeRangeHigh
                 , isToCompareMessage, message
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfCommon(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.__GetCollectionOfEntityOfCommon(_Request);
             return _Response;
         }
 
@@ -1155,7 +1155,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="isToCompareMessage">will compare/filter message property/field/column if true, otherwise false</param>
         /// <param name="message" > value to compare/filter with message property/field/column</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection GetSingleOfEntityOfCommon(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection __GetSingleOfEntityOfCommon(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -1167,11 +1167,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             )
 
         {
-            //log.Info(string.Format("{0}: GetSingleOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetSingleOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetSingleOfEntityOfCommon"
+                , "__GetSingleOfEntityOfCommon"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -1186,16 +1186,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareEventTimeRange, isToCompareEventTimeRangeLow, eventTimeRangeLow, isToCompareEventTimeRangeHigh, eventTimeRangeHigh
                 , isToCompareMessage, message
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfCommon(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.__GetSingleOfEntityOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetSingleOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetSingleOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetSingleOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetSingleOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetSingleOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetSingleOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -1211,16 +1211,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>an array with all available page numbers</returns>
-        public static int[] GetPageNumberListOfDefaultOfCommon(
+        public static int[] __GetPageNumberListOfDefaultOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetPageNumberListOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageNumberListOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfDefaultOfCommon for GetPageNumberListOfDefaultOfCommon"
+                , "__GetCountOfDefaultOfCommon for __GetPageNumberListOfDefaultOfCommon"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -1237,7 +1237,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
             int pageSize = queryPagingSetting == null ? 0 : queryPagingSetting.PageSize;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfCommon(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
@@ -1248,19 +1248,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                     {
                         _retval.Add(i);
                     }
-                    //log.Info(string.Format("{0}: GetPageNumberListOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    //log.Info(string.Format("{0}: __GetPageNumberListOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                     return _retval.ToArray();
                 }
                 else
                 {
-                    //log.Error(string.Format("{0}: GetPageNumberListOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                     return null;
                 }
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfDefaultOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                    //log.Error(string.Format("{0}: GetPageNumberListOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfDefaultOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -1272,16 +1272,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>total pages</returns>
-        public static int GetPageCountOfDefaultOfCommon(
+        public static int __GetPageCountOfDefaultOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetPageCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfDefaultOfCommon for GetPageCountOfDefaultOfCommon"
+                , "__GetCountOfDefaultOfCommon for __GetPageCountOfDefaultOfCommon"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -1297,17 +1297,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
             int pageSize = queryPagingSetting == null ? 0 : queryPagingSetting.PageSize;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfCommon(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
-                //log.Info(string.Format("{0}: GetPageCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetPageCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
             else
             {
-                //log.Error(string.Format("{0}: GetPageCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                //.Process("IoCBuildLog", "GetCountOfDefaultOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetPageCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfDefaultOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -1319,16 +1319,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns></returns>
-        public static int GetCountOfDefaultOfCommon(
+        public static int __GetCountOfDefaultOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfDefaultOfCommon"
+                , "__GetCountOfDefaultOfCommon"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -1343,16 +1343,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfCommon(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfDefaultOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfDefaultOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
         }
@@ -1364,16 +1364,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>true if meets criteria, otherwise false</returns>
-        public static bool ExistsOfDefaultOfCommon(
+        public static bool __ExistsOfDefaultOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: ExistsOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __ExistsOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "ExistsOfDefaultOfCommon"
+                , "__ExistsOfDefaultOfCommon"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -1388,16 +1388,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultOfCommon(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.__ExistsOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: ExistsOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __ExistsOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "ExistsOfDefaultOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: ExistsOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__ExistsOfDefaultOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __ExistsOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
         }
@@ -1409,16 +1409,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection GetCollectionOfDefaultOfCommon(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection __GetCollectionOfDefaultOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetCollectionOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCollectionOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfDefaultOfCommon"
+                , "__GetCollectionOfDefaultOfCommon"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -1433,16 +1433,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfCommon(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.__GetCollectionOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCollectionOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCollectionOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCollectionOfDefaultOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCollectionOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCollectionOfDefaultOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCollectionOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -1454,12 +1454,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default GetMessageOfDefaultOfCommon(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default __GetMessageOfDefaultOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            return GetMessageOfDefaultOfCommon(
+            return __GetMessageOfDefaultOfCommon(
                 criteria
                 , queryPagingSetting
                 , queryOrderBySettingCollection
@@ -1473,17 +1473,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default GetMessageOfDefaultOfCommon(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default __GetMessageOfDefaultOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             , Framework.DataServiceTypes dataServiceType)
         {
-            //log.Info(string.Format("{0}: GetMessageOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetMessageOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetMessageOfDefaultOfCommon"
+                , "__GetMessageOfDefaultOfCommon"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -1499,7 +1499,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
             _Request.DataServiceType = dataServiceType;
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfCommon(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.__GetCollectionOfDefaultOfCommon(_Request);
             return _Response;
         }
 
@@ -1510,16 +1510,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection GetSingleOfDefaultOfCommon(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection __GetSingleOfDefaultOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetSingleOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetSingleOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetSingleOfDefaultOfCommon"
+                , "__GetSingleOfDefaultOfCommon"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -1534,16 +1534,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetSingleOfDefaultOfCommon(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.__GetSingleOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetSingleOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetSingleOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetSingleOfDefaultOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetSingleOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetSingleOfDefaultOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetSingleOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -1574,7 +1574,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="message" > value to compare/filter with message property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
-        public static int[] GetPageNumberListOfDefaultOfCommon(
+        public static int[] __GetPageNumberListOfDefaultOfCommon(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -1585,11 +1585,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , int pageSize
             )
         {
-            //log.Info(string.Format("{0}: GetPageNumberListOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageNumberListOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfDefaultOfCommon for GetPageNumberListOfDefaultOfCommon"
+                , "__GetCountOfDefaultOfCommon for __GetPageNumberListOfDefaultOfCommon"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -1604,7 +1604,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareEventTimeRange, isToCompareEventTimeRangeLow, eventTimeRangeLow, isToCompareEventTimeRangeHigh, eventTimeRangeHigh
                 , isToCompareMessage, message
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfCommon(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
@@ -1615,19 +1615,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                     {
                         _retval.Add(i);
                     }
-                    //log.Info(string.Format("{0}: GetPageNumberListOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    //log.Info(string.Format("{0}: __GetPageNumberListOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                     return _retval.ToArray();
                 }
                 else
                 {
-                    //log.Error(string.Format("{0}: GetPageNumberListOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                     return null;
                 }
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfDefaultOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                    //log.Error(string.Format("{0}: GetPageNumberListOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfDefaultOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -1654,7 +1654,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="message" > value to compare/filter with message property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
-        public static int GetPageCountOfDefaultOfCommon(
+        public static int __GetPageCountOfDefaultOfCommon(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -1665,11 +1665,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , int pageSize
             )
         {
-            //log.Info(string.Format("{0}: GetPageCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfDefaultOfCommon for GetPageCountOfDefaultOfCommon"
+                , "__GetCountOfDefaultOfCommon for __GetPageCountOfDefaultOfCommon"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -1684,17 +1684,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareEventTimeRange, isToCompareEventTimeRangeLow, eventTimeRangeLow, isToCompareEventTimeRangeHigh, eventTimeRangeHigh
                 , isToCompareMessage, message
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfCommon(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
-                //log.Info(string.Format("{0}: GetPageCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetPageCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
             else
             {
-                //log.Error(string.Format("{0}: GetPageCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                //.Process("IoCBuildLog", "GetCountOfDefaultOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetPageCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfDefaultOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -1722,7 +1722,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
-        public static int GetCountOfDefaultOfCommon(
+        public static int __GetCountOfDefaultOfCommon(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -1735,11 +1735,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: GetCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfDefaultOfCommon"
+                , "__GetCountOfDefaultOfCommon"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -1754,16 +1754,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareEventTimeRange, isToCompareEventTimeRangeLow, eventTimeRangeLow, isToCompareEventTimeRangeHigh, eventTimeRangeHigh
                 , isToCompareMessage, message
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfCommon(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfDefaultOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfDefaultOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCountOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
         }
@@ -1792,7 +1792,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>true if meets criteria, otherwise false</returns>
-        public static bool ExistsOfDefaultOfCommon(
+        public static bool __ExistsOfDefaultOfCommon(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -1805,11 +1805,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: ExistsOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __ExistsOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "ExistsOfDefaultOfCommon"
+                , "__ExistsOfDefaultOfCommon"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -1824,16 +1824,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareEventTimeRange, isToCompareEventTimeRangeLow, eventTimeRangeLow, isToCompareEventTimeRangeHigh, eventTimeRangeHigh
                 , isToCompareMessage, message
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultOfCommon(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.__ExistsOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: ExistsOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __ExistsOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "ExistsOfDefaultOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: ExistsOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__ExistsOfDefaultOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __ExistsOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
         }
@@ -1862,7 +1862,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection GetCollectionOfDefaultOfCommon(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection __GetCollectionOfDefaultOfCommon(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -1875,11 +1875,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: GetCollectionOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCollectionOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfDefaultOfCommon"
+                , "__GetCollectionOfDefaultOfCommon"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -1894,16 +1894,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareEventTimeRange, isToCompareEventTimeRangeLow, eventTimeRangeLow, isToCompareEventTimeRangeHigh, eventTimeRangeHigh
                 , isToCompareMessage, message
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfCommon(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.__GetCollectionOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCollectionOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCollectionOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCollectionOfDefaultOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCollectionOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCollectionOfDefaultOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCollectionOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -1932,7 +1932,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default GetMessageOfDefaultOfCommon(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default __GetMessageOfDefaultOfCommon(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -1948,7 +1948,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfDefaultOfCommon"
+                , "__GetCollectionOfDefaultOfCommon"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -1963,7 +1963,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareEventTimeRange, isToCompareEventTimeRangeLow, eventTimeRangeLow, isToCompareEventTimeRangeHigh, eventTimeRangeHigh
                 , isToCompareMessage, message
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfCommon(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.__GetCollectionOfDefaultOfCommon(_Request);
             return _Response;
         }
 
@@ -1988,7 +1988,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="isToCompareMessage">will compare/filter message property/field/column if true, otherwise false</param>
         /// <param name="message" > value to compare/filter with message property/field/column</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection GetSingleOfDefaultOfCommon(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection __GetSingleOfDefaultOfCommon(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -2000,11 +2000,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             )
 
         {
-            //log.Info(string.Format("{0}: GetSingleOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetSingleOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetSingleOfDefaultOfCommon"
+                , "__GetSingleOfDefaultOfCommon"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -2019,16 +2019,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareEventTimeRange, isToCompareEventTimeRangeLow, eventTimeRangeLow, isToCompareEventTimeRangeHigh, eventTimeRangeHigh
                 , isToCompareMessage, message
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetSingleOfDefaultOfCommon(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.__GetSingleOfDefaultOfCommon(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetSingleOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetSingleOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetSingleOfDefaultOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetSingleOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetSingleOfDefaultOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetSingleOfDefaultOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -2044,16 +2044,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>an array with all available page numbers</returns>
-        public static int[] GetPageNumberListOfEntityOfAll(
+        public static int[] __GetPageNumberListOfEntityOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetPageNumberListOfEntityOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageNumberListOfEntityOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfEntityOfAll for GetPageNumberListOfEntityOfAll"
+                , "__GetCountOfEntityOfAll for __GetPageNumberListOfEntityOfAll"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -2070,7 +2070,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
             int pageSize = queryPagingSetting == null ? 0 : queryPagingSetting.PageSize;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
@@ -2081,19 +2081,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                     {
                         _retval.Add(i);
                     }
-                    //log.Info(string.Format("{0}: GetPageNumberListOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    //log.Info(string.Format("{0}: __GetPageNumberListOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                     return _retval.ToArray();
                 }
                 else
                 {
-                    //log.Error(string.Format("{0}: GetPageNumberListOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                     return null;
                 }
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                    //log.Error(string.Format("{0}: GetPageNumberListOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -2105,16 +2105,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>total pages</returns>
-        public static int GetPageCountOfEntityOfAll(
+        public static int __GetPageCountOfEntityOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetPageCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfEntityOfAll for GetPageCountOfEntityOfAll"
+                , "__GetCountOfEntityOfAll for __GetPageCountOfEntityOfAll"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -2130,17 +2130,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
             int pageSize = queryPagingSetting == null ? 0 : queryPagingSetting.PageSize;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
-                //log.Info(string.Format("{0}: GetPageCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetPageCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
             else
             {
-                //log.Error(string.Format("{0}: GetPageCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                //.Process("IoCBuildLog", "GetCountOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetPageCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -2152,16 +2152,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns></returns>
-        public static int GetCountOfEntityOfAll(
+        public static int __GetCountOfEntityOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfEntityOfAll"
+                , "__GetCountOfEntityOfAll"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -2176,16 +2176,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
         }
@@ -2197,16 +2197,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>true if meets criteria, otherwise false</returns>
-        public static bool ExistsOfEntityOfAll(
+        public static bool __ExistsOfEntityOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: ExistsOfEntityOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __ExistsOfEntityOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "ExistsOfEntityOfAll"
+                , "__ExistsOfEntityOfAll"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -2221,16 +2221,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.__ExistsOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: ExistsOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __ExistsOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "ExistsOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: ExistsOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__ExistsOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __ExistsOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
         }
@@ -2242,16 +2242,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection GetCollectionOfEntityOfAll(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection __GetCollectionOfEntityOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetCollectionOfEntityOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCollectionOfEntityOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfEntityOfAll"
+                , "__GetCollectionOfEntityOfAll"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -2266,16 +2266,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfAll(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.__GetCollectionOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCollectionOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCollectionOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCollectionOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCollectionOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCollectionOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCollectionOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -2287,12 +2287,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn GetMessageOfEntityOfAll(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn __GetMessageOfEntityOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            return GetMessageOfEntityOfAll(
+            return __GetMessageOfEntityOfAll(
                 criteria
                 , queryPagingSetting
                 , queryOrderBySettingCollection
@@ -2306,17 +2306,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn GetMessageOfEntityOfAll(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn __GetMessageOfEntityOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             , Framework.DataServiceTypes dataServiceType)
         {
-            //log.Info(string.Format("{0}: GetMessageOfEntityOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetMessageOfEntityOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetMessageOfEntityOfAll"
+                , "__GetMessageOfEntityOfAll"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -2332,7 +2332,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
             _Request.DataServiceType = dataServiceType;
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfAll(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.__GetCollectionOfEntityOfAll(_Request);
             return _Response;
         }
 
@@ -2343,16 +2343,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection GetSingleOfEntityOfAll(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection __GetSingleOfEntityOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetSingleOfEntityOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetSingleOfEntityOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetSingleOfEntityOfAll"
+                , "__GetSingleOfEntityOfAll"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -2367,16 +2367,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfAll(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.__GetSingleOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetSingleOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetSingleOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetSingleOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetSingleOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetSingleOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetSingleOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -2391,15 +2391,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
-        public static int[] GetPageNumberListOfEntityOfAll(
+        public static int[] __GetPageNumberListOfEntityOfAll(
             int pageSize
             )
         {
-            //log.Info(string.Format("{0}: GetPageNumberListOfEntityOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageNumberListOfEntityOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfEntityOfAll for GetPageNumberListOfEntityOfAll"
+                , "__GetCountOfEntityOfAll for __GetPageNumberListOfEntityOfAll"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -2408,7 +2408,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
@@ -2419,19 +2419,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                     {
                         _retval.Add(i);
                     }
-                    //log.Info(string.Format("{0}: GetPageNumberListOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    //log.Info(string.Format("{0}: __GetPageNumberListOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                     return _retval.ToArray();
                 }
                 else
                 {
-                    //log.Error(string.Format("{0}: GetPageNumberListOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                     return null;
                 }
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                    //log.Error(string.Format("{0}: GetPageNumberListOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -2442,15 +2442,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
-        public static int GetPageCountOfEntityOfAll(
+        public static int __GetPageCountOfEntityOfAll(
             int pageSize
             )
         {
-            //log.Info(string.Format("{0}: GetPageCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfEntityOfAll for GetPageCountOfEntityOfAll"
+                , "__GetCountOfEntityOfAll for __GetPageCountOfEntityOfAll"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -2459,17 +2459,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
-                //log.Info(string.Format("{0}: GetPageCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetPageCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
             else
             {
-                //log.Error(string.Format("{0}: GetPageCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                //.Process("IoCBuildLog", "GetCountOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetPageCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -2481,17 +2481,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
-        public static int GetCountOfEntityOfAll(
+        public static int __GetCountOfEntityOfAll(
             int currentIndex
             , int pageSize
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: GetCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfEntityOfAll"
+                , "__GetCountOfEntityOfAll"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -2500,16 +2500,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
         }
@@ -2522,17 +2522,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>true if meets criteria, otherwise false</returns>
-        public static bool ExistsOfEntityOfAll(
+        public static bool __ExistsOfEntityOfAll(
             int currentIndex
             , int pageSize
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: ExistsOfEntityOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __ExistsOfEntityOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "ExistsOfEntityOfAll"
+                , "__ExistsOfEntityOfAll"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -2541,16 +2541,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.__ExistsOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: ExistsOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __ExistsOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "ExistsOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: ExistsOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__ExistsOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __ExistsOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
         }
@@ -2563,17 +2563,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection GetCollectionOfEntityOfAll(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection __GetCollectionOfEntityOfAll(
             int currentIndex
             , int pageSize
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: GetCollectionOfEntityOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCollectionOfEntityOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfEntityOfAll"
+                , "__GetCollectionOfEntityOfAll"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -2582,16 +2582,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfAll(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.__GetCollectionOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCollectionOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCollectionOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCollectionOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCollectionOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCollectionOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCollectionOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -2604,7 +2604,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn GetMessageOfEntityOfAll(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn __GetMessageOfEntityOfAll(
             int currentIndex
             , int pageSize
             , string queryOrderByExpression        )
@@ -2613,7 +2613,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfEntityOfAll"
+                , "__GetCollectionOfEntityOfAll"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -2622,7 +2622,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfAll(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.__GetCollectionOfEntityOfAll(_Request);
             return _Response;
         }
 
@@ -2631,16 +2631,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// </summary>
 
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection GetSingleOfEntityOfAll(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection __GetSingleOfEntityOfAll(
             string queryOrderByExpression
             )
 
         {
-            //log.Info(string.Format("{0}: GetSingleOfEntityOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetSingleOfEntityOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetSingleOfEntityOfAll"
+                , "__GetSingleOfEntityOfAll"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -2649,16 +2649,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfAll(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.__GetSingleOfEntityOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetSingleOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetSingleOfEntityOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetSingleOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetSingleOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetSingleOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetSingleOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -2674,16 +2674,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>an array with all available page numbers</returns>
-        public static int[] GetPageNumberListOfNameValuePairOfAll(
+        public static int[] __GetPageNumberListOfNameValuePairOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetPageNumberListOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageNumberListOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfNameValuePairOfAll for GetPageNumberListOfNameValuePairOfAll"
+                , "__GetCountOfNameValuePairOfAll for __GetPageNumberListOfNameValuePairOfAll"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -2700,7 +2700,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
             int pageSize = queryPagingSetting == null ? 0 : queryPagingSetting.PageSize;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
@@ -2711,19 +2711,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                     {
                         _retval.Add(i);
                     }
-                    //log.Info(string.Format("{0}: GetPageNumberListOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    //log.Info(string.Format("{0}: __GetPageNumberListOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                     return _retval.ToArray();
                 }
                 else
                 {
-                    //log.Error(string.Format("{0}: GetPageNumberListOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                     return null;
                 }
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                    //log.Error(string.Format("{0}: GetPageNumberListOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -2735,16 +2735,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>total pages</returns>
-        public static int GetPageCountOfNameValuePairOfAll(
+        public static int __GetPageCountOfNameValuePairOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetPageCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfNameValuePairOfAll for GetPageCountOfNameValuePairOfAll"
+                , "__GetCountOfNameValuePairOfAll for __GetPageCountOfNameValuePairOfAll"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -2760,17 +2760,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
             int pageSize = queryPagingSetting == null ? 0 : queryPagingSetting.PageSize;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
-                //log.Info(string.Format("{0}: GetPageCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetPageCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
             else
             {
-                //log.Error(string.Format("{0}: GetPageCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                //.Process("IoCBuildLog", "GetCountOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetPageCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -2782,16 +2782,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns></returns>
-        public static int GetCountOfNameValuePairOfAll(
+        public static int __GetCountOfNameValuePairOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfNameValuePairOfAll"
+                , "__GetCountOfNameValuePairOfAll"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -2806,16 +2806,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
         }
@@ -2827,16 +2827,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>true if meets criteria, otherwise false</returns>
-        public static bool ExistsOfNameValuePairOfAll(
+        public static bool __ExistsOfNameValuePairOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: ExistsOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __ExistsOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "ExistsOfNameValuePairOfAll"
+                , "__ExistsOfNameValuePairOfAll"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -2851,16 +2851,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfNameValuePairOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.__ExistsOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: ExistsOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __ExistsOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "ExistsOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: ExistsOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__ExistsOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __ExistsOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
         }
@@ -2872,16 +2872,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        public static Framework.NameValueCollection GetCollectionOfNameValuePairOfAll(
+        public static Framework.NameValueCollection __GetCollectionOfNameValuePairOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfNameValuePairOfAll"
+                , "__GetCollectionOfNameValuePairOfAll"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -2896,16 +2896,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.__GetCollectionOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCollectionOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCollectionOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -2917,12 +2917,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>business layer built-in message <see cref="Framework.NameValueCollection"/></returns>
-        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfAll(
+        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetMessageOfNameValuePairOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            return GetMessageOfNameValuePairOfAll(
+            return __GetMessageOfNameValuePairOfAll(
                 criteria
                 , queryPagingSetting
                 , queryOrderBySettingCollection
@@ -2936,17 +2936,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>business layer built-in message <see cref="Framework.NameValueCollection"/></returns>
-        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfAll(
+        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetMessageOfNameValuePairOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             , Framework.DataServiceTypes dataServiceType)
         {
-            //log.Info(string.Format("{0}: GetMessageOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetMessageOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetMessageOfNameValuePairOfAll"
+                , "__GetMessageOfNameValuePairOfAll"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -2962,7 +2962,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
             _Request.DataServiceType = dataServiceType;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.__GetCollectionOfNameValuePairOfAll(_Request);
             return _Response;
         }
 
@@ -2973,16 +2973,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        public static Framework.NameValueCollection GetSingleOfNameValuePairOfAll(
+        public static Framework.NameValueCollection __GetSingleOfNameValuePairOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetSingleOfNameValuePairOfAll"
+                , "__GetSingleOfNameValuePairOfAll"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -2997,16 +2997,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetSingleOfNameValuePairOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.__GetSingleOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetSingleOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetSingleOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -3021,15 +3021,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
-        public static int[] GetPageNumberListOfNameValuePairOfAll(
+        public static int[] __GetPageNumberListOfNameValuePairOfAll(
             int pageSize
             )
         {
-            //log.Info(string.Format("{0}: GetPageNumberListOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageNumberListOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfNameValuePairOfAll for GetPageNumberListOfNameValuePairOfAll"
+                , "__GetCountOfNameValuePairOfAll for __GetPageNumberListOfNameValuePairOfAll"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -3038,7 +3038,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
@@ -3049,19 +3049,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                     {
                         _retval.Add(i);
                     }
-                    //log.Info(string.Format("{0}: GetPageNumberListOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    //log.Info(string.Format("{0}: __GetPageNumberListOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                     return _retval.ToArray();
                 }
                 else
                 {
-                    //log.Error(string.Format("{0}: GetPageNumberListOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                     return null;
                 }
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                    //log.Error(string.Format("{0}: GetPageNumberListOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -3072,15 +3072,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
-        public static int GetPageCountOfNameValuePairOfAll(
+        public static int __GetPageCountOfNameValuePairOfAll(
             int pageSize
             )
         {
-            //log.Info(string.Format("{0}: GetPageCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfNameValuePairOfAll for GetPageCountOfNameValuePairOfAll"
+                , "__GetCountOfNameValuePairOfAll for __GetPageCountOfNameValuePairOfAll"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -3089,17 +3089,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
-                //log.Info(string.Format("{0}: GetPageCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetPageCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
             else
             {
-                //log.Error(string.Format("{0}: GetPageCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                //.Process("IoCBuildLog", "GetCountOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetPageCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -3111,17 +3111,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
-        public static int GetCountOfNameValuePairOfAll(
+        public static int __GetCountOfNameValuePairOfAll(
             int currentIndex
             , int pageSize
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: GetCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfNameValuePairOfAll"
+                , "__GetCountOfNameValuePairOfAll"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -3130,16 +3130,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
         }
@@ -3152,17 +3152,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>true if meets criteria, otherwise false</returns>
-        public static bool ExistsOfNameValuePairOfAll(
+        public static bool __ExistsOfNameValuePairOfAll(
             int currentIndex
             , int pageSize
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: ExistsOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __ExistsOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "ExistsOfNameValuePairOfAll"
+                , "__ExistsOfNameValuePairOfAll"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -3171,16 +3171,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfNameValuePairOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.__ExistsOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: ExistsOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __ExistsOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "ExistsOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: ExistsOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__ExistsOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __ExistsOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
         }
@@ -3193,17 +3193,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        public static Framework.NameValueCollection GetCollectionOfNameValuePairOfAll(
+        public static Framework.NameValueCollection __GetCollectionOfNameValuePairOfAll(
             int currentIndex
             , int pageSize
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfNameValuePairOfAll"
+                , "__GetCollectionOfNameValuePairOfAll"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -3212,16 +3212,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.__GetCollectionOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCollectionOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCollectionOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -3234,7 +3234,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
-        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfAll(
+        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetMessageOfNameValuePairOfAll(
             int currentIndex
             , int pageSize
             , string queryOrderByExpression        )
@@ -3243,7 +3243,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfNameValuePairOfAll"
+                , "__GetCollectionOfNameValuePairOfAll"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -3252,7 +3252,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.__GetCollectionOfNameValuePairOfAll(_Request);
             return _Response;
         }
 
@@ -3261,16 +3261,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// </summary>
 
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        public static Framework.NameValueCollection GetSingleOfNameValuePairOfAll(
+        public static Framework.NameValueCollection __GetSingleOfNameValuePairOfAll(
             string queryOrderByExpression
             )
 
         {
-            //log.Info(string.Format("{0}: GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetSingleOfNameValuePairOfAll"
+                , "__GetSingleOfNameValuePairOfAll"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -3279,16 +3279,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetSingleOfNameValuePairOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.__GetSingleOfNameValuePairOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetSingleOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetSingleOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -3304,16 +3304,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>an array with all available page numbers</returns>
-        public static int[] GetPageNumberListOfRssItemOfAll(
+        public static int[] __GetPageNumberListOfRssItemOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetPageNumberListOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageNumberListOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfRssItemOfAll for GetPageNumberListOfRssItemOfAll"
+                , "__GetCountOfRssItemOfAll for __GetPageNumberListOfRssItemOfAll"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -3330,7 +3330,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
             int pageSize = queryPagingSetting == null ? 0 : queryPagingSetting.PageSize;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
@@ -3341,19 +3341,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                     {
                         _retval.Add(i);
                     }
-                    //log.Info(string.Format("{0}: GetPageNumberListOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    //log.Info(string.Format("{0}: __GetPageNumberListOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                     return _retval.ToArray();
                 }
                 else
                 {
-                    //log.Error(string.Format("{0}: GetPageNumberListOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                     return null;
                 }
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                    //log.Error(string.Format("{0}: GetPageNumberListOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -3365,16 +3365,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>total pages</returns>
-        public static int GetPageCountOfRssItemOfAll(
+        public static int __GetPageCountOfRssItemOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetPageCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfRssItemOfAll for GetPageCountOfRssItemOfAll"
+                , "__GetCountOfRssItemOfAll for __GetPageCountOfRssItemOfAll"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -3390,17 +3390,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
             int pageSize = queryPagingSetting == null ? 0 : queryPagingSetting.PageSize;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
-                //log.Info(string.Format("{0}: GetPageCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetPageCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
             else
             {
-                //log.Error(string.Format("{0}: GetPageCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                //.Process("IoCBuildLog", "GetCountOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetPageCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -3412,16 +3412,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns></returns>
-        public static int GetCountOfRssItemOfAll(
+        public static int __GetCountOfRssItemOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfRssItemOfAll"
+                , "__GetCountOfRssItemOfAll"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -3436,16 +3436,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
         }
@@ -3457,16 +3457,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>true if meets criteria, otherwise false</returns>
-        public static bool ExistsOfRssItemOfAll(
+        public static bool __ExistsOfRssItemOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: ExistsOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __ExistsOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "ExistsOfRssItemOfAll"
+                , "__ExistsOfRssItemOfAll"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -3481,16 +3481,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfRssItemOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.__ExistsOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: ExistsOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __ExistsOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "ExistsOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: ExistsOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__ExistsOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __ExistsOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
         }
@@ -3502,16 +3502,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>the collection of type <see cref="Framework.RssItemCollection"/></returns>
-        public static Framework.RssItemCollection GetCollectionOfRssItemOfAll(
+        public static Framework.RssItemCollection __GetCollectionOfRssItemOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetCollectionOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCollectionOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfRssItemOfAll"
+                , "__GetCollectionOfRssItemOfAll"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -3526,16 +3526,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfRssItemOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.__GetCollectionOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCollectionOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCollectionOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCollectionOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCollectionOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCollectionOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCollectionOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -3547,12 +3547,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>business layer built-in message <see cref="Framework.RssItemCollection"/></returns>
-        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetMessageOfRssItemOfAll(
+        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection __GetMessageOfRssItemOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            return GetMessageOfRssItemOfAll(
+            return __GetMessageOfRssItemOfAll(
                 criteria
                 , queryPagingSetting
                 , queryOrderBySettingCollection
@@ -3566,17 +3566,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>business layer built-in message <see cref="Framework.RssItemCollection"/></returns>
-        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetMessageOfRssItemOfAll(
+        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection __GetMessageOfRssItemOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             , Framework.DataServiceTypes dataServiceType)
         {
-            //log.Info(string.Format("{0}: GetMessageOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetMessageOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetMessageOfRssItemOfAll"
+                , "__GetMessageOfRssItemOfAll"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -3592,7 +3592,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
             _Request.DataServiceType = dataServiceType;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfRssItemOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.__GetCollectionOfRssItemOfAll(_Request);
             return _Response;
         }
 
@@ -3603,16 +3603,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>the collection of type <see cref="Framework.RssItemCollection"/></returns>
-        public static Framework.RssItemCollection GetSingleOfRssItemOfAll(
+        public static Framework.RssItemCollection __GetSingleOfRssItemOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaAll criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetSingleOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetSingleOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetSingleOfRssItemOfAll"
+                , "__GetSingleOfRssItemOfAll"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -3627,16 +3627,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetSingleOfRssItemOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.__GetSingleOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetSingleOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetSingleOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetSingleOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetSingleOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetSingleOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetSingleOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -3651,15 +3651,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
-        public static int[] GetPageNumberListOfRssItemOfAll(
+        public static int[] __GetPageNumberListOfRssItemOfAll(
             int pageSize
             )
         {
-            //log.Info(string.Format("{0}: GetPageNumberListOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageNumberListOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfRssItemOfAll for GetPageNumberListOfRssItemOfAll"
+                , "__GetCountOfRssItemOfAll for __GetPageNumberListOfRssItemOfAll"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -3668,7 +3668,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
@@ -3679,19 +3679,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                     {
                         _retval.Add(i);
                     }
-                    //log.Info(string.Format("{0}: GetPageNumberListOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    //log.Info(string.Format("{0}: __GetPageNumberListOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                     return _retval.ToArray();
                 }
                 else
                 {
-                    //log.Error(string.Format("{0}: GetPageNumberListOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                     return null;
                 }
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                    //log.Error(string.Format("{0}: GetPageNumberListOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -3702,15 +3702,15 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
-        public static int GetPageCountOfRssItemOfAll(
+        public static int __GetPageCountOfRssItemOfAll(
             int pageSize
             )
         {
-            //log.Info(string.Format("{0}: GetPageCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfRssItemOfAll for GetPageCountOfRssItemOfAll"
+                , "__GetCountOfRssItemOfAll for __GetPageCountOfRssItemOfAll"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -3719,17 +3719,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
-                //log.Info(string.Format("{0}: GetPageCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetPageCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
             else
             {
-                //log.Error(string.Format("{0}: GetPageCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                //.Process("IoCBuildLog", "GetCountOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetPageCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -3741,17 +3741,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
-        public static int GetCountOfRssItemOfAll(
+        public static int __GetCountOfRssItemOfAll(
             int currentIndex
             , int pageSize
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: GetCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfRssItemOfAll"
+                , "__GetCountOfRssItemOfAll"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -3760,16 +3760,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
         }
@@ -3782,17 +3782,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>true if meets criteria, otherwise false</returns>
-        public static bool ExistsOfRssItemOfAll(
+        public static bool __ExistsOfRssItemOfAll(
             int currentIndex
             , int pageSize
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: ExistsOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __ExistsOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "ExistsOfRssItemOfAll"
+                , "__ExistsOfRssItemOfAll"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -3801,16 +3801,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfRssItemOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.__ExistsOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: ExistsOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __ExistsOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "ExistsOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: ExistsOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__ExistsOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __ExistsOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
         }
@@ -3823,17 +3823,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.RssItemCollection"/></returns>
-        public static Framework.RssItemCollection GetCollectionOfRssItemOfAll(
+        public static Framework.RssItemCollection __GetCollectionOfRssItemOfAll(
             int currentIndex
             , int pageSize
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: GetCollectionOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCollectionOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfRssItemOfAll"
+                , "__GetCollectionOfRssItemOfAll"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -3842,16 +3842,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfRssItemOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.__GetCollectionOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCollectionOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCollectionOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCollectionOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCollectionOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCollectionOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCollectionOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -3864,7 +3864,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection"/></returns>
-        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetMessageOfRssItemOfAll(
+        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection __GetMessageOfRssItemOfAll(
             int currentIndex
             , int pageSize
             , string queryOrderByExpression        )
@@ -3873,7 +3873,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfRssItemOfAll"
+                , "__GetCollectionOfRssItemOfAll"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -3882,7 +3882,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfRssItemOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.__GetCollectionOfRssItemOfAll(_Request);
             return _Response;
         }
 
@@ -3891,16 +3891,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// </summary>
 
         /// <returns>the collection of type <see cref="Framework.RssItemCollection"/></returns>
-        public static Framework.RssItemCollection GetSingleOfRssItemOfAll(
+        public static Framework.RssItemCollection __GetSingleOfRssItemOfAll(
             string queryOrderByExpression
             )
 
         {
-            //log.Info(string.Format("{0}: GetSingleOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetSingleOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetSingleOfRssItemOfAll"
+                , "__GetSingleOfRssItemOfAll"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -3909,16 +3909,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaAll(
 
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetSingleOfRssItemOfAll(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.__GetSingleOfRssItemOfAll(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetSingleOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetSingleOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetSingleOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetSingleOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetSingleOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetSingleOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -3934,16 +3934,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>an array with all available page numbers</returns>
-        public static int[] GetPageNumberListOfEntityOfByFKOnly(
+        public static int[] __GetPageNumberListOfEntityOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetPageNumberListOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageNumberListOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfEntityOfByFKOnly for GetPageNumberListOfEntityOfByFKOnly"
+                , "__GetCountOfEntityOfByFKOnly for __GetPageNumberListOfEntityOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -3960,7 +3960,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
             int pageSize = queryPagingSetting == null ? 0 : queryPagingSetting.PageSize;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
@@ -3971,19 +3971,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                     {
                         _retval.Add(i);
                     }
-                    //log.Info(string.Format("{0}: GetPageNumberListOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    //log.Info(string.Format("{0}: __GetPageNumberListOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                     return _retval.ToArray();
                 }
                 else
                 {
-                    //log.Error(string.Format("{0}: GetPageNumberListOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                     return null;
                 }
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfEntityOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                    //log.Error(string.Format("{0}: GetPageNumberListOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfEntityOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -3995,16 +3995,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>total pages</returns>
-        public static int GetPageCountOfEntityOfByFKOnly(
+        public static int __GetPageCountOfEntityOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetPageCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfEntityOfByFKOnly for GetPageCountOfEntityOfByFKOnly"
+                , "__GetCountOfEntityOfByFKOnly for __GetPageCountOfEntityOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -4020,17 +4020,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
             int pageSize = queryPagingSetting == null ? 0 : queryPagingSetting.PageSize;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
-                //log.Info(string.Format("{0}: GetPageCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetPageCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
             else
             {
-                //log.Error(string.Format("{0}: GetPageCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                //.Process("IoCBuildLog", "GetCountOfEntityOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetPageCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfEntityOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -4042,16 +4042,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns></returns>
-        public static int GetCountOfEntityOfByFKOnly(
+        public static int __GetCountOfEntityOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfEntityOfByFKOnly"
+                , "__GetCountOfEntityOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -4066,16 +4066,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfEntityOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfEntityOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
         }
@@ -4087,16 +4087,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>true if meets criteria, otherwise false</returns>
-        public static bool ExistsOfEntityOfByFKOnly(
+        public static bool __ExistsOfEntityOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: ExistsOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __ExistsOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "ExistsOfEntityOfByFKOnly"
+                , "__ExistsOfEntityOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -4111,16 +4111,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.__ExistsOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: ExistsOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __ExistsOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "ExistsOfEntityOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: ExistsOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__ExistsOfEntityOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __ExistsOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
         }
@@ -4132,16 +4132,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection GetCollectionOfEntityOfByFKOnly(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection __GetCollectionOfEntityOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetCollectionOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCollectionOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfEntityOfByFKOnly"
+                , "__GetCollectionOfEntityOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -4156,16 +4156,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfByFKOnly(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.__GetCollectionOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCollectionOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCollectionOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCollectionOfEntityOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCollectionOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCollectionOfEntityOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCollectionOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -4177,12 +4177,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn GetMessageOfEntityOfByFKOnly(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn __GetMessageOfEntityOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            return GetMessageOfEntityOfByFKOnly(
+            return __GetMessageOfEntityOfByFKOnly(
                 criteria
                 , queryPagingSetting
                 , queryOrderBySettingCollection
@@ -4196,17 +4196,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn GetMessageOfEntityOfByFKOnly(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn __GetMessageOfEntityOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             , Framework.DataServiceTypes dataServiceType)
         {
-            //log.Info(string.Format("{0}: GetMessageOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetMessageOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetMessageOfEntityOfByFKOnly"
+                , "__GetMessageOfEntityOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -4222,7 +4222,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
             _Request.DataServiceType = dataServiceType;
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfByFKOnly(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.__GetCollectionOfEntityOfByFKOnly(_Request);
             return _Response;
         }
 
@@ -4233,16 +4233,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection GetSingleOfEntityOfByFKOnly(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection __GetSingleOfEntityOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetSingleOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetSingleOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetSingleOfEntityOfByFKOnly"
+                , "__GetSingleOfEntityOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -4257,16 +4257,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfByFKOnly(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.__GetSingleOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetSingleOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetSingleOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetSingleOfEntityOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetSingleOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetSingleOfEntityOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetSingleOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -4290,7 +4290,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
-        public static int[] GetPageNumberListOfEntityOfByFKOnly(
+        public static int[] __GetPageNumberListOfEntityOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -4299,11 +4299,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , int pageSize
             )
         {
-            //log.Info(string.Format("{0}: GetPageNumberListOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageNumberListOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfEntityOfByFKOnly for GetPageNumberListOfEntityOfByFKOnly"
+                , "__GetCountOfEntityOfByFKOnly for __GetPageNumberListOfEntityOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -4316,7 +4316,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
@@ -4327,19 +4327,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                     {
                         _retval.Add(i);
                     }
-                    //log.Info(string.Format("{0}: GetPageNumberListOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    //log.Info(string.Format("{0}: __GetPageNumberListOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                     return _retval.ToArray();
                 }
                 else
                 {
-                    //log.Error(string.Format("{0}: GetPageNumberListOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                     return null;
                 }
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfEntityOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                    //log.Error(string.Format("{0}: GetPageNumberListOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfEntityOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -4359,7 +4359,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
-        public static int GetPageCountOfEntityOfByFKOnly(
+        public static int __GetPageCountOfEntityOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -4368,11 +4368,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , int pageSize
             )
         {
-            //log.Info(string.Format("{0}: GetPageCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfEntityOfByFKOnly for GetPageCountOfEntityOfByFKOnly"
+                , "__GetCountOfEntityOfByFKOnly for __GetPageCountOfEntityOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -4385,17 +4385,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
-                //log.Info(string.Format("{0}: GetPageCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetPageCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
             else
             {
-                //log.Error(string.Format("{0}: GetPageCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                //.Process("IoCBuildLog", "GetCountOfEntityOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetPageCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfEntityOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -4416,7 +4416,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
-        public static int GetCountOfEntityOfByFKOnly(
+        public static int __GetCountOfEntityOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -4427,11 +4427,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: GetCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfEntityOfByFKOnly"
+                , "__GetCountOfEntityOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -4444,16 +4444,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfEntityOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfEntityOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCountOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
         }
@@ -4475,7 +4475,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>true if meets criteria, otherwise false</returns>
-        public static bool ExistsOfEntityOfByFKOnly(
+        public static bool __ExistsOfEntityOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -4486,11 +4486,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: ExistsOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __ExistsOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "ExistsOfEntityOfByFKOnly"
+                , "__ExistsOfEntityOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -4503,16 +4503,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.__ExistsOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: ExistsOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __ExistsOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "ExistsOfEntityOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: ExistsOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__ExistsOfEntityOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __ExistsOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
         }
@@ -4534,7 +4534,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection GetCollectionOfEntityOfByFKOnly(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection __GetCollectionOfEntityOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -4545,11 +4545,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: GetCollectionOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCollectionOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfEntityOfByFKOnly"
+                , "__GetCollectionOfEntityOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -4562,16 +4562,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfByFKOnly(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.__GetCollectionOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCollectionOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCollectionOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCollectionOfEntityOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCollectionOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCollectionOfEntityOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCollectionOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -4593,7 +4593,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn GetMessageOfEntityOfByFKOnly(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn __GetMessageOfEntityOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -4607,7 +4607,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfEntityOfByFKOnly"
+                , "__GetCollectionOfEntityOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -4620,7 +4620,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfByFKOnly(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.__GetCollectionOfEntityOfByFKOnly(_Request);
             return _Response;
         }
 
@@ -4638,7 +4638,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="isToCompareBuildEventCodeId">will compare/filter buildEventCodeId property/field/column if true, otherwise false</param>
         /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection GetSingleOfEntityOfByFKOnly(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection __GetSingleOfEntityOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -4648,11 +4648,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             )
 
         {
-            //log.Info(string.Format("{0}: GetSingleOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetSingleOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetSingleOfEntityOfByFKOnly"
+                , "__GetSingleOfEntityOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -4665,16 +4665,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfByFKOnly(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.__GetSingleOfEntityOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetSingleOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetSingleOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetSingleOfEntityOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetSingleOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetSingleOfEntityOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetSingleOfEntityOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -4690,16 +4690,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>an array with all available page numbers</returns>
-        public static int[] GetPageNumberListOfNameValuePairOfByFKOnly(
+        public static int[] __GetPageNumberListOfNameValuePairOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetPageNumberListOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageNumberListOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfNameValuePairOfByFKOnly for GetPageNumberListOfNameValuePairOfByFKOnly"
+                , "__GetCountOfNameValuePairOfByFKOnly for __GetPageNumberListOfNameValuePairOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -4716,7 +4716,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
             int pageSize = queryPagingSetting == null ? 0 : queryPagingSetting.PageSize;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
@@ -4727,19 +4727,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                     {
                         _retval.Add(i);
                     }
-                    //log.Info(string.Format("{0}: GetPageNumberListOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    //log.Info(string.Format("{0}: __GetPageNumberListOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                     return _retval.ToArray();
                 }
                 else
                 {
-                    //log.Error(string.Format("{0}: GetPageNumberListOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                     return null;
                 }
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfNameValuePairOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                    //log.Error(string.Format("{0}: GetPageNumberListOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfNameValuePairOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -4751,16 +4751,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>total pages</returns>
-        public static int GetPageCountOfNameValuePairOfByFKOnly(
+        public static int __GetPageCountOfNameValuePairOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetPageCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfNameValuePairOfByFKOnly for GetPageCountOfNameValuePairOfByFKOnly"
+                , "__GetCountOfNameValuePairOfByFKOnly for __GetPageCountOfNameValuePairOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -4776,17 +4776,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
             int pageSize = queryPagingSetting == null ? 0 : queryPagingSetting.PageSize;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
-                //log.Info(string.Format("{0}: GetPageCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetPageCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
             else
             {
-                //log.Error(string.Format("{0}: GetPageCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                //.Process("IoCBuildLog", "GetCountOfNameValuePairOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetPageCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfNameValuePairOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -4798,16 +4798,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns></returns>
-        public static int GetCountOfNameValuePairOfByFKOnly(
+        public static int __GetCountOfNameValuePairOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfNameValuePairOfByFKOnly"
+                , "__GetCountOfNameValuePairOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -4822,16 +4822,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfNameValuePairOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfNameValuePairOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
         }
@@ -4843,16 +4843,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>true if meets criteria, otherwise false</returns>
-        public static bool ExistsOfNameValuePairOfByFKOnly(
+        public static bool __ExistsOfNameValuePairOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: ExistsOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __ExistsOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "ExistsOfNameValuePairOfByFKOnly"
+                , "__ExistsOfNameValuePairOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -4867,16 +4867,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfNameValuePairOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.__ExistsOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: ExistsOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __ExistsOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "ExistsOfNameValuePairOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: ExistsOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__ExistsOfNameValuePairOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __ExistsOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
         }
@@ -4888,16 +4888,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        public static Framework.NameValueCollection GetCollectionOfNameValuePairOfByFKOnly(
+        public static Framework.NameValueCollection __GetCollectionOfNameValuePairOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCollectionOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfNameValuePairOfByFKOnly"
+                , "__GetCollectionOfNameValuePairOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -4912,16 +4912,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.__GetCollectionOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCollectionOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCollectionOfNameValuePairOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCollectionOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCollectionOfNameValuePairOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCollectionOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -4933,12 +4933,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>business layer built-in message <see cref="Framework.NameValueCollection"/></returns>
-        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfByFKOnly(
+        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetMessageOfNameValuePairOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            return GetMessageOfNameValuePairOfByFKOnly(
+            return __GetMessageOfNameValuePairOfByFKOnly(
                 criteria
                 , queryPagingSetting
                 , queryOrderBySettingCollection
@@ -4952,17 +4952,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>business layer built-in message <see cref="Framework.NameValueCollection"/></returns>
-        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfByFKOnly(
+        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetMessageOfNameValuePairOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             , Framework.DataServiceTypes dataServiceType)
         {
-            //log.Info(string.Format("{0}: GetMessageOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetMessageOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetMessageOfNameValuePairOfByFKOnly"
+                , "__GetMessageOfNameValuePairOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -4978,7 +4978,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
             _Request.DataServiceType = dataServiceType;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.__GetCollectionOfNameValuePairOfByFKOnly(_Request);
             return _Response;
         }
 
@@ -4989,16 +4989,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        public static Framework.NameValueCollection GetSingleOfNameValuePairOfByFKOnly(
+        public static Framework.NameValueCollection __GetSingleOfNameValuePairOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetSingleOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetSingleOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetSingleOfNameValuePairOfByFKOnly"
+                , "__GetSingleOfNameValuePairOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -5013,16 +5013,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetSingleOfNameValuePairOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.__GetSingleOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetSingleOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetSingleOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetSingleOfNameValuePairOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetSingleOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetSingleOfNameValuePairOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetSingleOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -5046,7 +5046,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
-        public static int[] GetPageNumberListOfNameValuePairOfByFKOnly(
+        public static int[] __GetPageNumberListOfNameValuePairOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -5055,11 +5055,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , int pageSize
             )
         {
-            //log.Info(string.Format("{0}: GetPageNumberListOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageNumberListOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfNameValuePairOfByFKOnly for GetPageNumberListOfNameValuePairOfByFKOnly"
+                , "__GetCountOfNameValuePairOfByFKOnly for __GetPageNumberListOfNameValuePairOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -5072,7 +5072,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
@@ -5083,19 +5083,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                     {
                         _retval.Add(i);
                     }
-                    //log.Info(string.Format("{0}: GetPageNumberListOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    //log.Info(string.Format("{0}: __GetPageNumberListOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                     return _retval.ToArray();
                 }
                 else
                 {
-                    //log.Error(string.Format("{0}: GetPageNumberListOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                     return null;
                 }
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfNameValuePairOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                    //log.Error(string.Format("{0}: GetPageNumberListOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfNameValuePairOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -5115,7 +5115,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
-        public static int GetPageCountOfNameValuePairOfByFKOnly(
+        public static int __GetPageCountOfNameValuePairOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -5124,11 +5124,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , int pageSize
             )
         {
-            //log.Info(string.Format("{0}: GetPageCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfNameValuePairOfByFKOnly for GetPageCountOfNameValuePairOfByFKOnly"
+                , "__GetCountOfNameValuePairOfByFKOnly for __GetPageCountOfNameValuePairOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -5141,17 +5141,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
-                //log.Info(string.Format("{0}: GetPageCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetPageCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
             else
             {
-                //log.Error(string.Format("{0}: GetPageCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                //.Process("IoCBuildLog", "GetCountOfNameValuePairOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetPageCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfNameValuePairOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -5172,7 +5172,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
-        public static int GetCountOfNameValuePairOfByFKOnly(
+        public static int __GetCountOfNameValuePairOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -5183,11 +5183,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: GetCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfNameValuePairOfByFKOnly"
+                , "__GetCountOfNameValuePairOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -5200,16 +5200,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfNameValuePairOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfNameValuePairOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfNameValuePairOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
         }
@@ -5231,7 +5231,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>true if meets criteria, otherwise false</returns>
-        public static bool ExistsOfNameValuePairOfByFKOnly(
+        public static bool __ExistsOfNameValuePairOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -5242,11 +5242,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: ExistsOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __ExistsOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "ExistsOfNameValuePairOfByFKOnly"
+                , "__ExistsOfNameValuePairOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -5259,16 +5259,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfNameValuePairOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.__ExistsOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: ExistsOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __ExistsOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "ExistsOfNameValuePairOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: ExistsOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__ExistsOfNameValuePairOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __ExistsOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
         }
@@ -5290,7 +5290,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        public static Framework.NameValueCollection GetCollectionOfNameValuePairOfByFKOnly(
+        public static Framework.NameValueCollection __GetCollectionOfNameValuePairOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -5301,11 +5301,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCollectionOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfNameValuePairOfByFKOnly"
+                , "__GetCollectionOfNameValuePairOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -5318,16 +5318,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.__GetCollectionOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCollectionOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCollectionOfNameValuePairOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCollectionOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCollectionOfNameValuePairOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCollectionOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -5349,7 +5349,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
-        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfByFKOnly(
+        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetMessageOfNameValuePairOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -5363,7 +5363,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfNameValuePairOfByFKOnly"
+                , "__GetCollectionOfNameValuePairOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -5376,7 +5376,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.__GetCollectionOfNameValuePairOfByFKOnly(_Request);
             return _Response;
         }
 
@@ -5394,7 +5394,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="isToCompareBuildEventCodeId">will compare/filter buildEventCodeId property/field/column if true, otherwise false</param>
         /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        public static Framework.NameValueCollection GetSingleOfNameValuePairOfByFKOnly(
+        public static Framework.NameValueCollection __GetSingleOfNameValuePairOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -5404,11 +5404,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             )
 
         {
-            //log.Info(string.Format("{0}: GetSingleOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetSingleOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetSingleOfNameValuePairOfByFKOnly"
+                , "__GetSingleOfNameValuePairOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -5421,16 +5421,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetSingleOfNameValuePairOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.__GetSingleOfNameValuePairOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetSingleOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetSingleOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetSingleOfNameValuePairOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetSingleOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetSingleOfNameValuePairOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetSingleOfNameValuePairOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -5446,16 +5446,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>an array with all available page numbers</returns>
-        public static int[] GetPageNumberListOfRssItemOfByFKOnly(
+        public static int[] __GetPageNumberListOfRssItemOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetPageNumberListOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageNumberListOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfRssItemOfByFKOnly for GetPageNumberListOfRssItemOfByFKOnly"
+                , "__GetCountOfRssItemOfByFKOnly for __GetPageNumberListOfRssItemOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -5472,7 +5472,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
             int pageSize = queryPagingSetting == null ? 0 : queryPagingSetting.PageSize;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
@@ -5483,19 +5483,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                     {
                         _retval.Add(i);
                     }
-                    //log.Info(string.Format("{0}: GetPageNumberListOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    //log.Info(string.Format("{0}: __GetPageNumberListOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                     return _retval.ToArray();
                 }
                 else
                 {
-                    //log.Error(string.Format("{0}: GetPageNumberListOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                     return null;
                 }
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfRssItemOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                    //log.Error(string.Format("{0}: GetPageNumberListOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfRssItemOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -5507,16 +5507,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>total pages</returns>
-        public static int GetPageCountOfRssItemOfByFKOnly(
+        public static int __GetPageCountOfRssItemOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetPageCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfRssItemOfByFKOnly for GetPageCountOfRssItemOfByFKOnly"
+                , "__GetCountOfRssItemOfByFKOnly for __GetPageCountOfRssItemOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -5532,17 +5532,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
             int pageSize = queryPagingSetting == null ? 0 : queryPagingSetting.PageSize;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
-                //log.Info(string.Format("{0}: GetPageCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetPageCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
             else
             {
-                //log.Error(string.Format("{0}: GetPageCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                //.Process("IoCBuildLog", "GetCountOfRssItemOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetPageCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfRssItemOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -5554,16 +5554,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns></returns>
-        public static int GetCountOfRssItemOfByFKOnly(
+        public static int __GetCountOfRssItemOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfRssItemOfByFKOnly"
+                , "__GetCountOfRssItemOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -5578,16 +5578,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfRssItemOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfRssItemOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
         }
@@ -5599,16 +5599,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>true if meets criteria, otherwise false</returns>
-        public static bool ExistsOfRssItemOfByFKOnly(
+        public static bool __ExistsOfRssItemOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: ExistsOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __ExistsOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "ExistsOfRssItemOfByFKOnly"
+                , "__ExistsOfRssItemOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -5623,16 +5623,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfRssItemOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.__ExistsOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: ExistsOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __ExistsOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "ExistsOfRssItemOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: ExistsOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__ExistsOfRssItemOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __ExistsOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
         }
@@ -5644,16 +5644,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>the collection of type <see cref="Framework.RssItemCollection"/></returns>
-        public static Framework.RssItemCollection GetCollectionOfRssItemOfByFKOnly(
+        public static Framework.RssItemCollection __GetCollectionOfRssItemOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetCollectionOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCollectionOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfRssItemOfByFKOnly"
+                , "__GetCollectionOfRssItemOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -5668,16 +5668,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfRssItemOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.__GetCollectionOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCollectionOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCollectionOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCollectionOfRssItemOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCollectionOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCollectionOfRssItemOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCollectionOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -5689,12 +5689,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>business layer built-in message <see cref="Framework.RssItemCollection"/></returns>
-        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetMessageOfRssItemOfByFKOnly(
+        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection __GetMessageOfRssItemOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            return GetMessageOfRssItemOfByFKOnly(
+            return __GetMessageOfRssItemOfByFKOnly(
                 criteria
                 , queryPagingSetting
                 , queryOrderBySettingCollection
@@ -5708,17 +5708,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>business layer built-in message <see cref="Framework.RssItemCollection"/></returns>
-        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetMessageOfRssItemOfByFKOnly(
+        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection __GetMessageOfRssItemOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             , Framework.DataServiceTypes dataServiceType)
         {
-            //log.Info(string.Format("{0}: GetMessageOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetMessageOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetMessageOfRssItemOfByFKOnly"
+                , "__GetMessageOfRssItemOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -5734,7 +5734,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
             _Request.DataServiceType = dataServiceType;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfRssItemOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.__GetCollectionOfRssItemOfByFKOnly(_Request);
             return _Response;
         }
 
@@ -5745,16 +5745,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>the collection of type <see cref="Framework.RssItemCollection"/></returns>
-        public static Framework.RssItemCollection GetSingleOfRssItemOfByFKOnly(
+        public static Framework.RssItemCollection __GetSingleOfRssItemOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetSingleOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetSingleOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetSingleOfRssItemOfByFKOnly"
+                , "__GetSingleOfRssItemOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -5769,16 +5769,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetSingleOfRssItemOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.__GetSingleOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetSingleOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetSingleOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetSingleOfRssItemOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetSingleOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetSingleOfRssItemOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetSingleOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -5802,7 +5802,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
-        public static int[] GetPageNumberListOfRssItemOfByFKOnly(
+        public static int[] __GetPageNumberListOfRssItemOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -5811,11 +5811,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , int pageSize
             )
         {
-            //log.Info(string.Format("{0}: GetPageNumberListOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageNumberListOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfRssItemOfByFKOnly for GetPageNumberListOfRssItemOfByFKOnly"
+                , "__GetCountOfRssItemOfByFKOnly for __GetPageNumberListOfRssItemOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -5828,7 +5828,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
@@ -5839,19 +5839,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                     {
                         _retval.Add(i);
                     }
-                    //log.Info(string.Format("{0}: GetPageNumberListOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    //log.Info(string.Format("{0}: __GetPageNumberListOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                     return _retval.ToArray();
                 }
                 else
                 {
-                    //log.Error(string.Format("{0}: GetPageNumberListOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                     return null;
                 }
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfRssItemOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                    //log.Error(string.Format("{0}: GetPageNumberListOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfRssItemOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -5871,7 +5871,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
-        public static int GetPageCountOfRssItemOfByFKOnly(
+        public static int __GetPageCountOfRssItemOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -5880,11 +5880,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , int pageSize
             )
         {
-            //log.Info(string.Format("{0}: GetPageCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfRssItemOfByFKOnly for GetPageCountOfRssItemOfByFKOnly"
+                , "__GetCountOfRssItemOfByFKOnly for __GetPageCountOfRssItemOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -5897,17 +5897,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
-                //log.Info(string.Format("{0}: GetPageCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetPageCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
             else
             {
-                //log.Error(string.Format("{0}: GetPageCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                //.Process("IoCBuildLog", "GetCountOfRssItemOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetPageCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfRssItemOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -5928,7 +5928,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
-        public static int GetCountOfRssItemOfByFKOnly(
+        public static int __GetCountOfRssItemOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -5939,11 +5939,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: GetCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfRssItemOfByFKOnly"
+                , "__GetCountOfRssItemOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -5956,16 +5956,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfRssItemOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfRssItemOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfRssItemOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCountOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
         }
@@ -5987,7 +5987,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>true if meets criteria, otherwise false</returns>
-        public static bool ExistsOfRssItemOfByFKOnly(
+        public static bool __ExistsOfRssItemOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -5998,11 +5998,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: ExistsOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __ExistsOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "ExistsOfRssItemOfByFKOnly"
+                , "__ExistsOfRssItemOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -6015,16 +6015,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfRssItemOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.__ExistsOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: ExistsOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __ExistsOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "ExistsOfRssItemOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: ExistsOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__ExistsOfRssItemOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __ExistsOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
         }
@@ -6046,7 +6046,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.RssItemCollection"/></returns>
-        public static Framework.RssItemCollection GetCollectionOfRssItemOfByFKOnly(
+        public static Framework.RssItemCollection __GetCollectionOfRssItemOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -6057,11 +6057,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: GetCollectionOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCollectionOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfRssItemOfByFKOnly"
+                , "__GetCollectionOfRssItemOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -6074,16 +6074,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfRssItemOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.__GetCollectionOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCollectionOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCollectionOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCollectionOfRssItemOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCollectionOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCollectionOfRssItemOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCollectionOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -6105,7 +6105,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection"/></returns>
-        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetMessageOfRssItemOfByFKOnly(
+        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection __GetMessageOfRssItemOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -6119,7 +6119,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfRssItemOfByFKOnly"
+                , "__GetCollectionOfRssItemOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -6132,7 +6132,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfRssItemOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.__GetCollectionOfRssItemOfByFKOnly(_Request);
             return _Response;
         }
 
@@ -6150,7 +6150,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="isToCompareBuildEventCodeId">will compare/filter buildEventCodeId property/field/column if true, otherwise false</param>
         /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
         /// <returns>the collection of type <see cref="Framework.RssItemCollection"/></returns>
-        public static Framework.RssItemCollection GetSingleOfRssItemOfByFKOnly(
+        public static Framework.RssItemCollection __GetSingleOfRssItemOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -6160,11 +6160,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             )
 
         {
-            //log.Info(string.Format("{0}: GetSingleOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetSingleOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetSingleOfRssItemOfByFKOnly"
+                , "__GetSingleOfRssItemOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -6177,16 +6177,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.GetSingleOfRssItemOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _Response = _BusinessLogicLayerInstance.__GetSingleOfRssItemOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetSingleOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetSingleOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetSingleOfRssItemOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetSingleOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetSingleOfRssItemOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetSingleOfRssItemOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -6202,16 +6202,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>an array with all available page numbers</returns>
-        public static int[] GetPageNumberListOfDefaultOfByFKOnly(
+        public static int[] __GetPageNumberListOfDefaultOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetPageNumberListOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageNumberListOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfDefaultOfByFKOnly for GetPageNumberListOfDefaultOfByFKOnly"
+                , "__GetCountOfDefaultOfByFKOnly for __GetPageNumberListOfDefaultOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -6228,7 +6228,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
             int pageSize = queryPagingSetting == null ? 0 : queryPagingSetting.PageSize;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
@@ -6239,19 +6239,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                     {
                         _retval.Add(i);
                     }
-                    //log.Info(string.Format("{0}: GetPageNumberListOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    //log.Info(string.Format("{0}: __GetPageNumberListOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                     return _retval.ToArray();
                 }
                 else
                 {
-                    //log.Error(string.Format("{0}: GetPageNumberListOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                     return null;
                 }
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfDefaultOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                    //log.Error(string.Format("{0}: GetPageNumberListOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfDefaultOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -6263,16 +6263,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>total pages</returns>
-        public static int GetPageCountOfDefaultOfByFKOnly(
+        public static int __GetPageCountOfDefaultOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetPageCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfDefaultOfByFKOnly for GetPageCountOfDefaultOfByFKOnly"
+                , "__GetCountOfDefaultOfByFKOnly for __GetPageCountOfDefaultOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -6288,17 +6288,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
             int pageSize = queryPagingSetting == null ? 0 : queryPagingSetting.PageSize;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
-                //log.Info(string.Format("{0}: GetPageCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetPageCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
             else
             {
-                //log.Error(string.Format("{0}: GetPageCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                //.Process("IoCBuildLog", "GetCountOfDefaultOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetPageCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfDefaultOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -6310,16 +6310,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns></returns>
-        public static int GetCountOfDefaultOfByFKOnly(
+        public static int __GetCountOfDefaultOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfDefaultOfByFKOnly"
+                , "__GetCountOfDefaultOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -6334,16 +6334,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfDefaultOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfDefaultOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
         }
@@ -6355,16 +6355,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>true if meets criteria, otherwise false</returns>
-        public static bool ExistsOfDefaultOfByFKOnly(
+        public static bool __ExistsOfDefaultOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: ExistsOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __ExistsOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "ExistsOfDefaultOfByFKOnly"
+                , "__ExistsOfDefaultOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -6379,16 +6379,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.__ExistsOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: ExistsOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __ExistsOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "ExistsOfDefaultOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: ExistsOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__ExistsOfDefaultOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __ExistsOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
         }
@@ -6400,16 +6400,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection GetCollectionOfDefaultOfByFKOnly(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection __GetCollectionOfDefaultOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetCollectionOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCollectionOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfDefaultOfByFKOnly"
+                , "__GetCollectionOfDefaultOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -6424,16 +6424,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfByFKOnly(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.__GetCollectionOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCollectionOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCollectionOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCollectionOfDefaultOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCollectionOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCollectionOfDefaultOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCollectionOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -6445,12 +6445,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default GetMessageOfDefaultOfByFKOnly(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default __GetMessageOfDefaultOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            return GetMessageOfDefaultOfByFKOnly(
+            return __GetMessageOfDefaultOfByFKOnly(
                 criteria
                 , queryPagingSetting
                 , queryOrderBySettingCollection
@@ -6464,17 +6464,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default GetMessageOfDefaultOfByFKOnly(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default __GetMessageOfDefaultOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             , Framework.DataServiceTypes dataServiceType)
         {
-            //log.Info(string.Format("{0}: GetMessageOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetMessageOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetMessageOfDefaultOfByFKOnly"
+                , "__GetMessageOfDefaultOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -6490,7 +6490,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
             _Request.DataServiceType = dataServiceType;
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfByFKOnly(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.__GetCollectionOfDefaultOfByFKOnly(_Request);
             return _Response;
         }
 
@@ -6501,16 +6501,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection GetSingleOfDefaultOfByFKOnly(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection __GetSingleOfDefaultOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetSingleOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetSingleOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetSingleOfDefaultOfByFKOnly"
+                , "__GetSingleOfDefaultOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -6525,16 +6525,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetSingleOfDefaultOfByFKOnly(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.__GetSingleOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetSingleOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetSingleOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetSingleOfDefaultOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetSingleOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetSingleOfDefaultOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetSingleOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -6558,7 +6558,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
-        public static int[] GetPageNumberListOfDefaultOfByFKOnly(
+        public static int[] __GetPageNumberListOfDefaultOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -6567,11 +6567,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , int pageSize
             )
         {
-            //log.Info(string.Format("{0}: GetPageNumberListOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageNumberListOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfDefaultOfByFKOnly for GetPageNumberListOfDefaultOfByFKOnly"
+                , "__GetCountOfDefaultOfByFKOnly for __GetPageNumberListOfDefaultOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -6584,7 +6584,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
@@ -6595,19 +6595,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                     {
                         _retval.Add(i);
                     }
-                    //log.Info(string.Format("{0}: GetPageNumberListOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    //log.Info(string.Format("{0}: __GetPageNumberListOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                     return _retval.ToArray();
                 }
                 else
                 {
-                    //log.Error(string.Format("{0}: GetPageNumberListOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                     return null;
                 }
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfDefaultOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                    //log.Error(string.Format("{0}: GetPageNumberListOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfDefaultOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -6627,7 +6627,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
-        public static int GetPageCountOfDefaultOfByFKOnly(
+        public static int __GetPageCountOfDefaultOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -6636,11 +6636,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , int pageSize
             )
         {
-            //log.Info(string.Format("{0}: GetPageCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfDefaultOfByFKOnly for GetPageCountOfDefaultOfByFKOnly"
+                , "__GetCountOfDefaultOfByFKOnly for __GetPageCountOfDefaultOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -6653,17 +6653,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
-                //log.Info(string.Format("{0}: GetPageCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetPageCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
             else
             {
-                //log.Error(string.Format("{0}: GetPageCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                //.Process("IoCBuildLog", "GetCountOfDefaultOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetPageCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfDefaultOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -6684,7 +6684,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
-        public static int GetCountOfDefaultOfByFKOnly(
+        public static int __GetCountOfDefaultOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -6695,11 +6695,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: GetCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfDefaultOfByFKOnly"
+                , "__GetCountOfDefaultOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -6712,16 +6712,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfDefaultOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfDefaultOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCountOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
         }
@@ -6743,7 +6743,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>true if meets criteria, otherwise false</returns>
-        public static bool ExistsOfDefaultOfByFKOnly(
+        public static bool __ExistsOfDefaultOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -6754,11 +6754,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: ExistsOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __ExistsOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "ExistsOfDefaultOfByFKOnly"
+                , "__ExistsOfDefaultOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -6771,16 +6771,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.__ExistsOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: ExistsOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __ExistsOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "ExistsOfDefaultOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: ExistsOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__ExistsOfDefaultOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __ExistsOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
         }
@@ -6802,7 +6802,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection GetCollectionOfDefaultOfByFKOnly(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection __GetCollectionOfDefaultOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -6813,11 +6813,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: GetCollectionOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCollectionOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfDefaultOfByFKOnly"
+                , "__GetCollectionOfDefaultOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -6830,16 +6830,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfByFKOnly(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.__GetCollectionOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCollectionOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCollectionOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCollectionOfDefaultOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCollectionOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCollectionOfDefaultOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCollectionOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -6861,7 +6861,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default GetMessageOfDefaultOfByFKOnly(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default __GetMessageOfDefaultOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -6875,7 +6875,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfDefaultOfByFKOnly"
+                , "__GetCollectionOfDefaultOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -6888,7 +6888,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfByFKOnly(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.__GetCollectionOfDefaultOfByFKOnly(_Request);
             return _Response;
         }
 
@@ -6906,7 +6906,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="isToCompareBuildEventCodeId">will compare/filter buildEventCodeId property/field/column if true, otherwise false</param>
         /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection GetSingleOfDefaultOfByFKOnly(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection __GetSingleOfDefaultOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -6916,11 +6916,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             )
 
         {
-            //log.Info(string.Format("{0}: GetSingleOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetSingleOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetSingleOfDefaultOfByFKOnly"
+                , "__GetSingleOfDefaultOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -6933,16 +6933,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetSingleOfDefaultOfByFKOnly(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.__GetSingleOfDefaultOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetSingleOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetSingleOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetSingleOfDefaultOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetSingleOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetSingleOfDefaultOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetSingleOfDefaultOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -6958,16 +6958,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>an array with all available page numbers</returns>
-        public static int[] GetPageNumberListOfDefaultGroupedDataViewOfByFKOnly(
+        public static int[] __GetPageNumberListOfDefaultGroupedDataViewOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetPageNumberListOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageNumberListOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfDefaultGroupedDataViewOfByFKOnly for GetPageNumberListOfDefaultGroupedDataViewOfByFKOnly"
+                , "__GetCountOfDefaultGroupedDataViewOfByFKOnly for __GetPageNumberListOfDefaultGroupedDataViewOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -6984,7 +6984,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
             int pageSize = queryPagingSetting == null ? 0 : queryPagingSetting.PageSize;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
@@ -6995,19 +6995,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                     {
                         _retval.Add(i);
                     }
-                    //log.Info(string.Format("{0}: GetPageNumberListOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    //log.Info(string.Format("{0}: __GetPageNumberListOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                     return _retval.ToArray();
                 }
                 else
                 {
-                    //log.Error(string.Format("{0}: GetPageNumberListOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                     return null;
                 }
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfDefaultGroupedDataViewOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                    //log.Error(string.Format("{0}: GetPageNumberListOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfDefaultGroupedDataViewOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -7019,16 +7019,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>total pages</returns>
-        public static int GetPageCountOfDefaultGroupedDataViewOfByFKOnly(
+        public static int __GetPageCountOfDefaultGroupedDataViewOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetPageCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfDefaultGroupedDataViewOfByFKOnly for GetPageCountOfDefaultGroupedDataViewOfByFKOnly"
+                , "__GetCountOfDefaultGroupedDataViewOfByFKOnly for __GetPageCountOfDefaultGroupedDataViewOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -7044,17 +7044,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
             int pageSize = queryPagingSetting == null ? 0 : queryPagingSetting.PageSize;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
-                //log.Info(string.Format("{0}: GetPageCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetPageCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
             else
             {
-                //log.Error(string.Format("{0}: GetPageCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                //.Process("IoCBuildLog", "GetCountOfDefaultGroupedDataViewOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetPageCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfDefaultGroupedDataViewOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -7066,16 +7066,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns></returns>
-        public static int GetCountOfDefaultGroupedDataViewOfByFKOnly(
+        public static int __GetCountOfDefaultGroupedDataViewOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfDefaultGroupedDataViewOfByFKOnly"
+                , "__GetCountOfDefaultGroupedDataViewOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -7090,16 +7090,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfDefaultGroupedDataViewOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfDefaultGroupedDataViewOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
         }
@@ -7111,16 +7111,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>true if meets criteria, otherwise false</returns>
-        public static bool ExistsOfDefaultGroupedDataViewOfByFKOnly(
+        public static bool __ExistsOfDefaultGroupedDataViewOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: ExistsOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __ExistsOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "ExistsOfDefaultGroupedDataViewOfByFKOnly"
+                , "__ExistsOfDefaultGroupedDataViewOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -7135,16 +7135,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultGroupedDataViewOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.__ExistsOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: ExistsOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __ExistsOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "ExistsOfDefaultGroupedDataViewOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: ExistsOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__ExistsOfDefaultGroupedDataViewOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __ExistsOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
         }
@@ -7156,16 +7156,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataViewCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataViewCollection GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataViewCollection __GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfDefaultGroupedDataViewOfByFKOnly"
+                , "__GetCollectionOfDefaultGroupedDataViewOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -7180,16 +7180,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultGroupedDataViewOfByFKOnly(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView _Response = _BusinessLogicLayerInstance.__GetCollectionOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCollectionOfDefaultGroupedDataViewOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCollectionOfDefaultGroupedDataViewOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -7201,12 +7201,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataViewCollection"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView GetMessageOfDefaultGroupedDataViewOfByFKOnly(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView __GetMessageOfDefaultGroupedDataViewOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            return GetMessageOfDefaultGroupedDataViewOfByFKOnly(
+            return __GetMessageOfDefaultGroupedDataViewOfByFKOnly(
                 criteria
                 , queryPagingSetting
                 , queryOrderBySettingCollection
@@ -7220,17 +7220,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataViewCollection"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView GetMessageOfDefaultGroupedDataViewOfByFKOnly(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView __GetMessageOfDefaultGroupedDataViewOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             , Framework.DataServiceTypes dataServiceType)
         {
-            //log.Info(string.Format("{0}: GetMessageOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetMessageOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetMessageOfDefaultGroupedDataViewOfByFKOnly"
+                , "__GetMessageOfDefaultGroupedDataViewOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -7246,7 +7246,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
             _Request.DataServiceType = dataServiceType;
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultGroupedDataViewOfByFKOnly(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView _Response = _BusinessLogicLayerInstance.__GetCollectionOfDefaultGroupedDataViewOfByFKOnly(_Request);
             return _Response;
         }
 
@@ -7257,16 +7257,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataViewCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataViewCollection GetSingleOfDefaultGroupedDataViewOfByFKOnly(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataViewCollection __GetSingleOfDefaultGroupedDataViewOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByFKOnly criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetSingleOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetSingleOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetSingleOfDefaultGroupedDataViewOfByFKOnly"
+                , "__GetSingleOfDefaultGroupedDataViewOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -7281,16 +7281,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView _Response = _BusinessLogicLayerInstance.GetSingleOfDefaultGroupedDataViewOfByFKOnly(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView _Response = _BusinessLogicLayerInstance.__GetSingleOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetSingleOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetSingleOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetSingleOfDefaultGroupedDataViewOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetSingleOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetSingleOfDefaultGroupedDataViewOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetSingleOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -7314,7 +7314,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
-        public static int[] GetPageNumberListOfDefaultGroupedDataViewOfByFKOnly(
+        public static int[] __GetPageNumberListOfDefaultGroupedDataViewOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -7323,11 +7323,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , int pageSize
             )
         {
-            //log.Info(string.Format("{0}: GetPageNumberListOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageNumberListOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfDefaultGroupedDataViewOfByFKOnly for GetPageNumberListOfDefaultGroupedDataViewOfByFKOnly"
+                , "__GetCountOfDefaultGroupedDataViewOfByFKOnly for __GetPageNumberListOfDefaultGroupedDataViewOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -7340,7 +7340,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
@@ -7351,19 +7351,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                     {
                         _retval.Add(i);
                     }
-                    //log.Info(string.Format("{0}: GetPageNumberListOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    //log.Info(string.Format("{0}: __GetPageNumberListOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                     return _retval.ToArray();
                 }
                 else
                 {
-                    //log.Error(string.Format("{0}: GetPageNumberListOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                     return null;
                 }
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfDefaultGroupedDataViewOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                    //log.Error(string.Format("{0}: GetPageNumberListOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfDefaultGroupedDataViewOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -7383,7 +7383,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
-        public static int GetPageCountOfDefaultGroupedDataViewOfByFKOnly(
+        public static int __GetPageCountOfDefaultGroupedDataViewOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -7392,11 +7392,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , int pageSize
             )
         {
-            //log.Info(string.Format("{0}: GetPageCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfDefaultGroupedDataViewOfByFKOnly for GetPageCountOfDefaultGroupedDataViewOfByFKOnly"
+                , "__GetCountOfDefaultGroupedDataViewOfByFKOnly for __GetPageCountOfDefaultGroupedDataViewOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -7409,17 +7409,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
-                //log.Info(string.Format("{0}: GetPageCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetPageCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
             else
             {
-                //log.Error(string.Format("{0}: GetPageCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                //.Process("IoCBuildLog", "GetCountOfDefaultGroupedDataViewOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetPageCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfDefaultGroupedDataViewOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -7440,7 +7440,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
-        public static int GetCountOfDefaultGroupedDataViewOfByFKOnly(
+        public static int __GetCountOfDefaultGroupedDataViewOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -7451,11 +7451,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: GetCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfDefaultGroupedDataViewOfByFKOnly"
+                , "__GetCountOfDefaultGroupedDataViewOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -7468,16 +7468,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfDefaultGroupedDataViewOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfDefaultGroupedDataViewOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
         }
@@ -7499,7 +7499,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>true if meets criteria, otherwise false</returns>
-        public static bool ExistsOfDefaultGroupedDataViewOfByFKOnly(
+        public static bool __ExistsOfDefaultGroupedDataViewOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -7510,11 +7510,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: ExistsOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __ExistsOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "ExistsOfDefaultGroupedDataViewOfByFKOnly"
+                , "__ExistsOfDefaultGroupedDataViewOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -7527,16 +7527,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultGroupedDataViewOfByFKOnly(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.__ExistsOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: ExistsOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __ExistsOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "ExistsOfDefaultGroupedDataViewOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: ExistsOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__ExistsOfDefaultGroupedDataViewOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __ExistsOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
         }
@@ -7558,7 +7558,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataViewCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataViewCollection GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataViewCollection __GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -7569,11 +7569,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfDefaultGroupedDataViewOfByFKOnly"
+                , "__GetCollectionOfDefaultGroupedDataViewOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -7586,16 +7586,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultGroupedDataViewOfByFKOnly(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView _Response = _BusinessLogicLayerInstance.__GetCollectionOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCollectionOfDefaultGroupedDataViewOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCollectionOfDefaultGroupedDataViewOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -7617,7 +7617,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView GetMessageOfDefaultGroupedDataViewOfByFKOnly(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView __GetMessageOfDefaultGroupedDataViewOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -7631,7 +7631,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfDefaultGroupedDataViewOfByFKOnly"
+                , "__GetCollectionOfDefaultGroupedDataViewOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -7644,7 +7644,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultGroupedDataViewOfByFKOnly(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView _Response = _BusinessLogicLayerInstance.__GetCollectionOfDefaultGroupedDataViewOfByFKOnly(_Request);
             return _Response;
         }
 
@@ -7662,7 +7662,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="isToCompareBuildEventCodeId">will compare/filter buildEventCodeId property/field/column if true, otherwise false</param>
         /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataViewCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataViewCollection GetSingleOfDefaultGroupedDataViewOfByFKOnly(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataViewCollection __GetSingleOfDefaultGroupedDataViewOfByFKOnly(
             bool isToCompareBuildId, System.Int64? buildId
             , bool isToCompareSolution_1Id, System.Int32? solution_1Id
             , bool isToCompareOrganization_1Id, System.Int64? organization_1Id
@@ -7672,11 +7672,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             )
 
         {
-            //log.Info(string.Format("{0}: GetSingleOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetSingleOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetSingleOfDefaultGroupedDataViewOfByFKOnly"
+                , "__GetSingleOfDefaultGroupedDataViewOfByFKOnly"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -7689,16 +7689,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 , isToCompareOrganization_2Id, organization_2Id
                 , isToCompareBuildEventCodeId, buildEventCodeId
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView _Response = _BusinessLogicLayerInstance.GetSingleOfDefaultGroupedDataViewOfByFKOnly(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView _Response = _BusinessLogicLayerInstance.__GetSingleOfDefaultGroupedDataViewOfByFKOnly(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetSingleOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetSingleOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetSingleOfDefaultGroupedDataViewOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetSingleOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetSingleOfDefaultGroupedDataViewOfByFKOnly", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetSingleOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -7714,16 +7714,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>an array with all available page numbers</returns>
-        public static int[] GetPageNumberListOfEntityOfByIdentifier(
+        public static int[] __GetPageNumberListOfEntityOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetPageNumberListOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageNumberListOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfEntityOfByIdentifier for GetPageNumberListOfEntityOfByIdentifier"
+                , "__GetCountOfEntityOfByIdentifier for __GetPageNumberListOfEntityOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -7740,7 +7740,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
             int pageSize = queryPagingSetting == null ? 0 : queryPagingSetting.PageSize;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByIdentifier(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
@@ -7751,19 +7751,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                     {
                         _retval.Add(i);
                     }
-                    //log.Info(string.Format("{0}: GetPageNumberListOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    //log.Info(string.Format("{0}: __GetPageNumberListOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                     return _retval.ToArray();
                 }
                 else
                 {
-                    //log.Error(string.Format("{0}: GetPageNumberListOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                     return null;
                 }
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                    //log.Error(string.Format("{0}: GetPageNumberListOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -7775,16 +7775,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>total pages</returns>
-        public static int GetPageCountOfEntityOfByIdentifier(
+        public static int __GetPageCountOfEntityOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetPageCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfEntityOfByIdentifier for GetPageCountOfEntityOfByIdentifier"
+                , "__GetCountOfEntityOfByIdentifier for __GetPageCountOfEntityOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -7800,17 +7800,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
             int pageSize = queryPagingSetting == null ? 0 : queryPagingSetting.PageSize;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByIdentifier(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
-                //log.Info(string.Format("{0}: GetPageCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetPageCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
             else
             {
-                //log.Error(string.Format("{0}: GetPageCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                //.Process("IoCBuildLog", "GetCountOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetPageCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -7822,16 +7822,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns></returns>
-        public static int GetCountOfEntityOfByIdentifier(
+        public static int __GetCountOfEntityOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfEntityOfByIdentifier"
+                , "__GetCountOfEntityOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -7846,16 +7846,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByIdentifier(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
         }
@@ -7867,16 +7867,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>true if meets criteria, otherwise false</returns>
-        public static bool ExistsOfEntityOfByIdentifier(
+        public static bool __ExistsOfEntityOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "ExistsOfEntityOfByIdentifier"
+                , "__ExistsOfEntityOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -7891,16 +7891,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfByIdentifier(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.__ExistsOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "ExistsOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__ExistsOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
         }
@@ -7912,16 +7912,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection GetCollectionOfEntityOfByIdentifier(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection __GetCollectionOfEntityOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfEntityOfByIdentifier"
+                , "__GetCollectionOfEntityOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -7936,16 +7936,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfByIdentifier(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.__GetCollectionOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCollectionOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCollectionOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -7957,12 +7957,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn GetMessageOfEntityOfByIdentifier(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn __GetMessageOfEntityOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            return GetMessageOfEntityOfByIdentifier(
+            return __GetMessageOfEntityOfByIdentifier(
                 criteria
                 , queryPagingSetting
                 , queryOrderBySettingCollection
@@ -7976,17 +7976,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn GetMessageOfEntityOfByIdentifier(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn __GetMessageOfEntityOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             , Framework.DataServiceTypes dataServiceType)
         {
-            //log.Info(string.Format("{0}: GetMessageOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetMessageOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetMessageOfEntityOfByIdentifier"
+                , "__GetMessageOfEntityOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -8002,7 +8002,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
             _Request.DataServiceType = dataServiceType;
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfByIdentifier(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.__GetCollectionOfEntityOfByIdentifier(_Request);
             return _Response;
         }
 
@@ -8013,16 +8013,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection GetSingleOfEntityOfByIdentifier(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection __GetSingleOfEntityOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetSingleOfEntityOfByIdentifier"
+                , "__GetSingleOfEntityOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -8037,16 +8037,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfByIdentifier(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.__GetSingleOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetSingleOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetSingleOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -8062,16 +8062,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
-        public static int[] GetPageNumberListOfEntityOfByIdentifier(
+        public static int[] __GetPageNumberListOfEntityOfByIdentifier(
             bool isToCompareId, System.Int64? id
             , int pageSize
             )
         {
-            //log.Info(string.Format("{0}: GetPageNumberListOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageNumberListOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfEntityOfByIdentifier for GetPageNumberListOfEntityOfByIdentifier"
+                , "__GetCountOfEntityOfByIdentifier for __GetPageNumberListOfEntityOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -8080,7 +8080,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
                 isToCompareId, id
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByIdentifier(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
@@ -8091,19 +8091,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                     {
                         _retval.Add(i);
                     }
-                    //log.Info(string.Format("{0}: GetPageNumberListOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    //log.Info(string.Format("{0}: __GetPageNumberListOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                     return _retval.ToArray();
                 }
                 else
                 {
-                    //log.Error(string.Format("{0}: GetPageNumberListOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                     return null;
                 }
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                    //log.Error(string.Format("{0}: GetPageNumberListOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -8115,16 +8115,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
-        public static int GetPageCountOfEntityOfByIdentifier(
+        public static int __GetPageCountOfEntityOfByIdentifier(
             bool isToCompareId, System.Int64? id
             , int pageSize
             )
         {
-            //log.Info(string.Format("{0}: GetPageCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfEntityOfByIdentifier for GetPageCountOfEntityOfByIdentifier"
+                , "__GetCountOfEntityOfByIdentifier for __GetPageCountOfEntityOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -8133,17 +8133,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
                 isToCompareId, id
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByIdentifier(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
-                //log.Info(string.Format("{0}: GetPageCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetPageCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
             else
             {
-                //log.Error(string.Format("{0}: GetPageCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                //.Process("IoCBuildLog", "GetCountOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetPageCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -8156,18 +8156,18 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
-        public static int GetCountOfEntityOfByIdentifier(
+        public static int __GetCountOfEntityOfByIdentifier(
             bool isToCompareId, System.Int64? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfEntityOfByIdentifier"
+                , "__GetCountOfEntityOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -8176,16 +8176,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
                 isToCompareId, id
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfEntityOfByIdentifier(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
         }
@@ -8199,18 +8199,18 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>true if meets criteria, otherwise false</returns>
-        public static bool ExistsOfEntityOfByIdentifier(
+        public static bool __ExistsOfEntityOfByIdentifier(
             bool isToCompareId, System.Int64? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "ExistsOfEntityOfByIdentifier"
+                , "__ExistsOfEntityOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -8219,16 +8219,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
                 isToCompareId, id
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfByIdentifier(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.__ExistsOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "ExistsOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__ExistsOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
         }
@@ -8242,18 +8242,18 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection GetCollectionOfEntityOfByIdentifier(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection __GetCollectionOfEntityOfByIdentifier(
             bool isToCompareId, System.Int64? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfEntityOfByIdentifier"
+                , "__GetCollectionOfEntityOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -8262,16 +8262,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
                 isToCompareId, id
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfByIdentifier(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.__GetCollectionOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCollectionOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCollectionOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -8285,7 +8285,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn GetMessageOfEntityOfByIdentifier(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn __GetMessageOfEntityOfByIdentifier(
             bool isToCompareId, System.Int64? id
             , int currentIndex
             , int pageSize
@@ -8295,7 +8295,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfEntityOfByIdentifier"
+                , "__GetCollectionOfEntityOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -8304,7 +8304,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
                 isToCompareId, id
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityOfByIdentifier(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.__GetCollectionOfEntityOfByIdentifier(_Request);
             return _Response;
         }
 
@@ -8314,17 +8314,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
         /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection GetSingleOfEntityOfByIdentifier(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLogCollection __GetSingleOfEntityOfByIdentifier(
             bool isToCompareId, System.Int64? id
             , string queryOrderByExpression
             )
 
         {
-            //log.Info(string.Format("{0}: GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetSingleOfEntityOfByIdentifier"
+                , "__GetSingleOfEntityOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -8333,16 +8333,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
                 isToCompareId, id
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetSingleOfEntityOfByIdentifier(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.__GetSingleOfEntityOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetSingleOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetSingleOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -8358,16 +8358,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>an array with all available page numbers</returns>
-        public static int[] GetPageNumberListOfDefaultOfByIdentifier(
+        public static int[] __GetPageNumberListOfDefaultOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetPageNumberListOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageNumberListOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfDefaultOfByIdentifier for GetPageNumberListOfDefaultOfByIdentifier"
+                , "__GetCountOfDefaultOfByIdentifier for __GetPageNumberListOfDefaultOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -8384,7 +8384,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
             int pageSize = queryPagingSetting == null ? 0 : queryPagingSetting.PageSize;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByIdentifier(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
@@ -8395,19 +8395,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                     {
                         _retval.Add(i);
                     }
-                    //log.Info(string.Format("{0}: GetPageNumberListOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    //log.Info(string.Format("{0}: __GetPageNumberListOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                     return _retval.ToArray();
                 }
                 else
                 {
-                    //log.Error(string.Format("{0}: GetPageNumberListOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                     return null;
                 }
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfDefaultOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                    //log.Error(string.Format("{0}: GetPageNumberListOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfDefaultOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -8419,16 +8419,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>total pages</returns>
-        public static int GetPageCountOfDefaultOfByIdentifier(
+        public static int __GetPageCountOfDefaultOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetPageCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfDefaultOfByIdentifier for GetPageCountOfDefaultOfByIdentifier"
+                , "__GetCountOfDefaultOfByIdentifier for __GetPageCountOfDefaultOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -8444,17 +8444,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
             int pageSize = queryPagingSetting == null ? 0 : queryPagingSetting.PageSize;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByIdentifier(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
-                //log.Info(string.Format("{0}: GetPageCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetPageCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
             else
             {
-                //log.Error(string.Format("{0}: GetPageCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                //.Process("IoCBuildLog", "GetCountOfDefaultOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetPageCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfDefaultOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -8466,16 +8466,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns></returns>
-        public static int GetCountOfDefaultOfByIdentifier(
+        public static int __GetCountOfDefaultOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfDefaultOfByIdentifier"
+                , "__GetCountOfDefaultOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -8490,16 +8490,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByIdentifier(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfDefaultOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfDefaultOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
         }
@@ -8511,16 +8511,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>true if meets criteria, otherwise false</returns>
-        public static bool ExistsOfDefaultOfByIdentifier(
+        public static bool __ExistsOfDefaultOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "ExistsOfDefaultOfByIdentifier"
+                , "__ExistsOfDefaultOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -8535,16 +8535,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultOfByIdentifier(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.__ExistsOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "ExistsOfDefaultOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__ExistsOfDefaultOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
         }
@@ -8556,16 +8556,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection GetCollectionOfDefaultOfByIdentifier(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection __GetCollectionOfDefaultOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetCollectionOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCollectionOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfDefaultOfByIdentifier"
+                , "__GetCollectionOfDefaultOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -8580,16 +8580,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfByIdentifier(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.__GetCollectionOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCollectionOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCollectionOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCollectionOfDefaultOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCollectionOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCollectionOfDefaultOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCollectionOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -8601,12 +8601,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default GetMessageOfDefaultOfByIdentifier(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default __GetMessageOfDefaultOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            return GetMessageOfDefaultOfByIdentifier(
+            return __GetMessageOfDefaultOfByIdentifier(
                 criteria
                 , queryPagingSetting
                 , queryOrderBySettingCollection
@@ -8620,17 +8620,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default GetMessageOfDefaultOfByIdentifier(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default __GetMessageOfDefaultOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             , Framework.DataServiceTypes dataServiceType)
         {
-            //log.Info(string.Format("{0}: GetMessageOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetMessageOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetMessageOfDefaultOfByIdentifier"
+                , "__GetMessageOfDefaultOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -8646,7 +8646,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
             _Request.DataServiceType = dataServiceType;
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfByIdentifier(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.__GetCollectionOfDefaultOfByIdentifier(_Request);
             return _Response;
         }
 
@@ -8657,16 +8657,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection GetSingleOfDefaultOfByIdentifier(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection __GetSingleOfDefaultOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetSingleOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetSingleOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetSingleOfDefaultOfByIdentifier"
+                , "__GetSingleOfDefaultOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -8681,16 +8681,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetSingleOfDefaultOfByIdentifier(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.__GetSingleOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetSingleOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetSingleOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetSingleOfDefaultOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetSingleOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetSingleOfDefaultOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetSingleOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -8706,16 +8706,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
-        public static int[] GetPageNumberListOfDefaultOfByIdentifier(
+        public static int[] __GetPageNumberListOfDefaultOfByIdentifier(
             bool isToCompareId, System.Int64? id
             , int pageSize
             )
         {
-            //log.Info(string.Format("{0}: GetPageNumberListOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageNumberListOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfDefaultOfByIdentifier for GetPageNumberListOfDefaultOfByIdentifier"
+                , "__GetCountOfDefaultOfByIdentifier for __GetPageNumberListOfDefaultOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -8724,7 +8724,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
                 isToCompareId, id
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByIdentifier(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
@@ -8735,19 +8735,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                     {
                         _retval.Add(i);
                     }
-                    //log.Info(string.Format("{0}: GetPageNumberListOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    //log.Info(string.Format("{0}: __GetPageNumberListOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                     return _retval.ToArray();
                 }
                 else
                 {
-                    //log.Error(string.Format("{0}: GetPageNumberListOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                     return null;
                 }
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfDefaultOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                    //log.Error(string.Format("{0}: GetPageNumberListOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfDefaultOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -8759,16 +8759,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
-        public static int GetPageCountOfDefaultOfByIdentifier(
+        public static int __GetPageCountOfDefaultOfByIdentifier(
             bool isToCompareId, System.Int64? id
             , int pageSize
             )
         {
-            //log.Info(string.Format("{0}: GetPageCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfDefaultOfByIdentifier for GetPageCountOfDefaultOfByIdentifier"
+                , "__GetCountOfDefaultOfByIdentifier for __GetPageCountOfDefaultOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -8777,17 +8777,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
                 isToCompareId, id
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByIdentifier(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
-                //log.Info(string.Format("{0}: GetPageCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetPageCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
             else
             {
-                //log.Error(string.Format("{0}: GetPageCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                //.Process("IoCBuildLog", "GetCountOfDefaultOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetPageCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfDefaultOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -8800,18 +8800,18 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
-        public static int GetCountOfDefaultOfByIdentifier(
+        public static int __GetCountOfDefaultOfByIdentifier(
             bool isToCompareId, System.Int64? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: GetCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfDefaultOfByIdentifier"
+                , "__GetCountOfDefaultOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -8820,16 +8820,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
                 isToCompareId, id
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfDefaultOfByIdentifier(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfDefaultOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfDefaultOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCountOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
         }
@@ -8843,18 +8843,18 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>true if meets criteria, otherwise false</returns>
-        public static bool ExistsOfDefaultOfByIdentifier(
+        public static bool __ExistsOfDefaultOfByIdentifier(
             bool isToCompareId, System.Int64? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "ExistsOfDefaultOfByIdentifier"
+                , "__ExistsOfDefaultOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -8863,16 +8863,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
                 isToCompareId, id
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultOfByIdentifier(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.__ExistsOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "ExistsOfDefaultOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__ExistsOfDefaultOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
         }
@@ -8886,18 +8886,18 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection GetCollectionOfDefaultOfByIdentifier(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection __GetCollectionOfDefaultOfByIdentifier(
             bool isToCompareId, System.Int64? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: GetCollectionOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCollectionOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfDefaultOfByIdentifier"
+                , "__GetCollectionOfDefaultOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -8906,16 +8906,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
                 isToCompareId, id
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfByIdentifier(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.__GetCollectionOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCollectionOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCollectionOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCollectionOfDefaultOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCollectionOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCollectionOfDefaultOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCollectionOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -8929,7 +8929,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default GetMessageOfDefaultOfByIdentifier(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default __GetMessageOfDefaultOfByIdentifier(
             bool isToCompareId, System.Int64? id
             , int currentIndex
             , int pageSize
@@ -8939,7 +8939,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfDefaultOfByIdentifier"
+                , "__GetCollectionOfDefaultOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -8948,7 +8948,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
                 isToCompareId, id
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultOfByIdentifier(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.__GetCollectionOfDefaultOfByIdentifier(_Request);
             return _Response;
         }
 
@@ -8958,17 +8958,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
         /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection GetSingleOfDefaultOfByIdentifier(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection __GetSingleOfDefaultOfByIdentifier(
             bool isToCompareId, System.Int64? id
             , string queryOrderByExpression
             )
 
         {
-            //log.Info(string.Format("{0}: GetSingleOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetSingleOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetSingleOfDefaultOfByIdentifier"
+                , "__GetSingleOfDefaultOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -8977,16 +8977,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
                 isToCompareId, id
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetSingleOfDefaultOfByIdentifier(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.__GetSingleOfDefaultOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetSingleOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetSingleOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetSingleOfDefaultOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetSingleOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetSingleOfDefaultOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetSingleOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -9002,16 +9002,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>an array with all available page numbers</returns>
-        public static int[] GetPageNumberListOfKeyInformationOfByIdentifier(
+        public static int[] __GetPageNumberListOfKeyInformationOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetPageNumberListOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageNumberListOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfKeyInformationOfByIdentifier for GetPageNumberListOfKeyInformationOfByIdentifier"
+                , "__GetCountOfKeyInformationOfByIdentifier for __GetPageNumberListOfKeyInformationOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -9028,7 +9028,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
             int pageSize = queryPagingSetting == null ? 0 : queryPagingSetting.PageSize;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfByIdentifier(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
@@ -9039,19 +9039,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                     {
                         _retval.Add(i);
                     }
-                    //log.Info(string.Format("{0}: GetPageNumberListOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    //log.Info(string.Format("{0}: __GetPageNumberListOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                     return _retval.ToArray();
                 }
                 else
                 {
-                    //log.Error(string.Format("{0}: GetPageNumberListOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                     return null;
                 }
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                    //log.Error(string.Format("{0}: GetPageNumberListOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -9063,16 +9063,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>total pages</returns>
-        public static int GetPageCountOfKeyInformationOfByIdentifier(
+        public static int __GetPageCountOfKeyInformationOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetPageCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfKeyInformationOfByIdentifier for GetPageCountOfKeyInformationOfByIdentifier"
+                , "__GetCountOfKeyInformationOfByIdentifier for __GetPageCountOfKeyInformationOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -9088,17 +9088,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
             int pageSize = queryPagingSetting == null ? 0 : queryPagingSetting.PageSize;
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfByIdentifier(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
-                //log.Info(string.Format("{0}: GetPageCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetPageCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
             else
             {
-                //log.Error(string.Format("{0}: GetPageCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                //.Process("IoCBuildLog", "GetCountOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetPageCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -9110,16 +9110,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns></returns>
-        public static int GetCountOfKeyInformationOfByIdentifier(
+        public static int __GetCountOfKeyInformationOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfKeyInformationOfByIdentifier"
+                , "__GetCountOfKeyInformationOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -9134,16 +9134,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfByIdentifier(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
         }
@@ -9155,16 +9155,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>true if meets criteria, otherwise false</returns>
-        public static bool ExistsOfKeyInformationOfByIdentifier(
+        public static bool __ExistsOfKeyInformationOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "ExistsOfKeyInformationOfByIdentifier"
+                , "__ExistsOfKeyInformationOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -9179,16 +9179,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfKeyInformationOfByIdentifier(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.__ExistsOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "ExistsOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__ExistsOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
         }
@@ -9200,16 +9200,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformationCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformationCollection GetCollectionOfKeyInformationOfByIdentifier(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformationCollection __GetCollectionOfKeyInformationOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfKeyInformationOfByIdentifier"
+                , "__GetCollectionOfKeyInformationOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -9224,16 +9224,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetCollectionOfKeyInformationOfByIdentifier(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.__GetCollectionOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCollectionOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCollectionOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -9245,12 +9245,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformationCollection"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation GetMessageOfKeyInformationOfByIdentifier(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation __GetMessageOfKeyInformationOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            return GetMessageOfKeyInformationOfByIdentifier(
+            return __GetMessageOfKeyInformationOfByIdentifier(
                 criteria
                 , queryPagingSetting
                 , queryOrderBySettingCollection
@@ -9264,17 +9264,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformationCollection"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation GetMessageOfKeyInformationOfByIdentifier(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation __GetMessageOfKeyInformationOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             , Framework.DataServiceTypes dataServiceType)
         {
-            //log.Info(string.Format("{0}: GetMessageOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetMessageOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetMessageOfKeyInformationOfByIdentifier"
+                , "__GetMessageOfKeyInformationOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -9290,7 +9290,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             }
             _Request.DataServiceType = dataServiceType;
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetCollectionOfKeyInformationOfByIdentifier(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.__GetCollectionOfKeyInformationOfByIdentifier(_Request);
             return _Response;
         }
 
@@ -9301,16 +9301,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="queryPagingSetting"></param>
         /// <param name="queryOrderBySettingCollection"></param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformationCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformationCollection GetSingleOfKeyInformationOfByIdentifier(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformationCollection __GetSingleOfKeyInformationOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier criteria
             , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
             , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
         {
-            //log.Info(string.Format("{0}: GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetSingleOfKeyInformationOfByIdentifier"
+                , "__GetSingleOfKeyInformationOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 );
             _Request.Criteria = criteria;
@@ -9325,16 +9325,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                 _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
             }
 
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetSingleOfKeyInformationOfByIdentifier(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.__GetSingleOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetSingleOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetSingleOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -9350,16 +9350,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>an array with all available page numbers</returns>
-        public static int[] GetPageNumberListOfKeyInformationOfByIdentifier(
+        public static int[] __GetPageNumberListOfKeyInformationOfByIdentifier(
             bool isToCompareId, System.Int64? id
             , int pageSize
             )
         {
-            //log.Info(string.Format("{0}: GetPageNumberListOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageNumberListOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfKeyInformationOfByIdentifier for GetPageNumberListOfKeyInformationOfByIdentifier"
+                , "__GetCountOfKeyInformationOfByIdentifier for __GetPageNumberListOfKeyInformationOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -9368,7 +9368,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
                 isToCompareId, id
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfByIdentifier(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
@@ -9379,19 +9379,19 @@ namespace MSBuildExtensionPack.CommonBLLIoC
                     {
                         _retval.Add(i);
                     }
-                    //log.Info(string.Format("{0}: GetPageNumberListOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                    //log.Info(string.Format("{0}: __GetPageNumberListOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                     return _retval.ToArray();
                 }
                 else
                 {
-                    //log.Error(string.Format("{0}: GetPageNumberListOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                     return null;
                 }
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                    //log.Error(string.Format("{0}: GetPageNumberListOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                    //log.Error(string.Format("{0}: __GetPageNumberListOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -9403,16 +9403,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns>total pages</returns>
-        public static int GetPageCountOfKeyInformationOfByIdentifier(
+        public static int __GetPageCountOfKeyInformationOfByIdentifier(
             bool isToCompareId, System.Int64? id
             , int pageSize
             )
         {
-            //log.Info(string.Format("{0}: GetPageCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetPageCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfKeyInformationOfByIdentifier for GetPageCountOfKeyInformationOfByIdentifier"
+                , "__GetCountOfKeyInformationOfByIdentifier for __GetPageCountOfKeyInformationOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -9421,17 +9421,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
                 isToCompareId, id
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfByIdentifier(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
                 int _PageCount = Framework.EntityContracts.QueryPagingSetting.GetPageCount(pageSize, _Response.Message);
-                //log.Info(string.Format("{0}: GetPageCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetPageCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _PageCount;
             }
             else
             {
-                //log.Error(string.Format("{0}: GetPageCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                //.Process("IoCBuildLog", "GetCountOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetPageCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -9444,18 +9444,18 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
-        public static int GetCountOfKeyInformationOfByIdentifier(
+        public static int __GetCountOfKeyInformationOfByIdentifier(
             bool isToCompareId, System.Int64? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCountOfKeyInformationOfByIdentifier"
+                , "__GetCountOfKeyInformationOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -9464,16 +9464,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
                 isToCompareId, id
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.GetCountOfKeyInformationOfByIdentifier(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _Response = _BusinessLogicLayerInstance.__GetCountOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCountOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCountOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
         }
@@ -9487,18 +9487,18 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>true if meets criteria, otherwise false</returns>
-        public static bool ExistsOfKeyInformationOfByIdentifier(
+        public static bool __ExistsOfKeyInformationOfByIdentifier(
             bool isToCompareId, System.Int64? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "ExistsOfKeyInformationOfByIdentifier"
+                , "__ExistsOfKeyInformationOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -9507,16 +9507,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
                 isToCompareId, id
                 );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfKeyInformationOfByIdentifier(_Request);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.__ExistsOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "ExistsOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__ExistsOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
         }
@@ -9530,18 +9530,18 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformationCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformationCollection GetCollectionOfKeyInformationOfByIdentifier(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformationCollection __GetCollectionOfKeyInformationOfByIdentifier(
             bool isToCompareId, System.Int64? id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
             )
         {
-            //log.Info(string.Format("{0}: GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfKeyInformationOfByIdentifier"
+                , "__GetCollectionOfKeyInformationOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -9550,16 +9550,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
                 isToCompareId, id
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetCollectionOfKeyInformationOfByIdentifier(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.__GetCollectionOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetCollectionOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetCollectionOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }
@@ -9573,7 +9573,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation"/></returns>
-        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation GetMessageOfKeyInformationOfByIdentifier(
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation __GetMessageOfKeyInformationOfByIdentifier(
             bool isToCompareId, System.Int64? id
             , int currentIndex
             , int pageSize
@@ -9583,7 +9583,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfKeyInformationOfByIdentifier"
+                , "__GetCollectionOfKeyInformationOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 , currentIndex
                 , pageSize
@@ -9592,7 +9592,7 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
                 isToCompareId, id
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetCollectionOfKeyInformationOfByIdentifier(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.__GetCollectionOfKeyInformationOfByIdentifier(_Request);
             return _Response;
         }
 
@@ -9602,17 +9602,17 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
         /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformationCollection"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformationCollection GetSingleOfKeyInformationOfByIdentifier(
+        public static MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformationCollection __GetSingleOfKeyInformationOfByIdentifier(
             bool isToCompareId, System.Int64? id
             , string queryOrderByExpression
             )
 
         {
-            //log.Info(string.Format("{0}: GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            //log.Info(string.Format("{0}: __GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
             MSBuildExtensionPack.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuildLog();
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier(
                 Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetSingleOfKeyInformationOfByIdentifier"
+                , "__GetSingleOfKeyInformationOfByIdentifier"
                 , Guid.NewGuid().ToString()
                 , -1
                 , -1
@@ -9621,16 +9621,16 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetBuildLogChainedQueryCriteriaByIdentifier(
                 isToCompareId, id
                 );
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetSingleOfKeyInformationOfByIdentifier(_Request);
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.__GetSingleOfKeyInformationOfByIdentifier(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
-                //log.Info(string.Format("{0}: GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                //log.Info(string.Format("{0}: __GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
                 return _Response.Message;
             }
             else
             {
-                //.Process("IoCBuildLog", "GetSingleOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
-                //log.Error(string.Format("{0}: GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                //.Process("IoCBuildLog", "__GetSingleOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //log.Error(string.Format("{0}: __GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
         }

@@ -88,7 +88,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             {
                 vmFromTempData = (Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon>)TempData[TempDataKey_WPCommonOfBuildLog];
 
-                var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfDefaultOfCommon(
+                var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.__GetMessageOfDefaultOfCommon(
                     vmFromTempData.Criteria
                     , new Framework.EntityContracts.QueryPagingSetting(-1, -1)
                     , new Framework.EntityContracts.QueryOrderBySettingCollection(vmFromTempData.QueryOrderBySettingCollecionInString)
@@ -264,8 +264,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Copy)]
         public ActionResult Copy(System.Int64? id)
         {
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response =
-                MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfDefaultOfByIdentifier(id.HasValue, id, -1, -1, null);
+            var _Response =
+                MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.__GetMessageOfDefaultOfByIdentifier(id.HasValue, id, -1, -1, null);
 
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -362,7 +362,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             try
             {
                 log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Started.ToString()));
-                var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.ExistsOfDefaultOfByIdentifier(id.HasValue, id, -1, -1, null);
+                var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.__ExistsOfDefaultOfByIdentifier(id.HasValue, id, -1, -1, null);
                 if (_Response)
                 {
                     MSBuildExtensionPack.DataSourceEntities.BuildLog entity = MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLog>(vm.Item);

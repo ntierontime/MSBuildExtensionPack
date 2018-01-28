@@ -343,11 +343,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfCommon(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfEntityOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
         {
-            log.Info(string.Format("{0}: GetCountOfEntityOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfEntityOfCommon(
+            log.Info(string.Format("{0}: __GetCountOfEntityOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.__GetCountOfEntityOfCommon(
                 request.Criteria.OrganizationQueryCriteriaCommon.ParentId
                 , request.Criteria.OrganizationQueryCriteriaCommon.IsSystemBuiltIn
                 , request.Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeRange
@@ -370,7 +370,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<int>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: GetCountOfEntityOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -379,11 +379,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfCommon(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfEntityOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
         {
-            log.Info(string.Format("{0}: ExistsOfEntityOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfEntityOfCommon(
+            log.Info(string.Format("{0}: __ExistsOfEntityOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.__ExistsOfEntityOfCommon(
                 request.Criteria.OrganizationQueryCriteriaCommon.ParentId
                 , request.Criteria.OrganizationQueryCriteriaCommon.IsSystemBuiltIn
                 , request.Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeRange
@@ -406,7 +406,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: ExistsOfEntityOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -415,11 +415,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfCommon(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetCollectionOfEntityOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
         {
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _resultFromDAL = this.DALClassInstance.GetCollectionOfEntityOfCommon(
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _resultFromDAL = this.DALClassInstance.__GetCollectionOfEntityOfCommon(
                 request.Criteria.OrganizationQueryCriteriaCommon.ParentId
                 , request.Criteria.OrganizationQueryCriteriaCommon.IsSystemBuiltIn
                 , request.Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeRange
@@ -453,7 +453,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization, MSBuildExtensionPack.DataSourceEntities.OrganizationCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService());
             }
 
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -462,11 +462,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfCommon(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetSingleOfEntityOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
         {
-            log.Info(string.Format("{0}: GetSingleOfEntityOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _resultFromDAL = this.DALClassInstance.GetSingleOfEntityOfCommon(
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _resultFromDAL = this.DALClassInstance.__GetSingleOfEntityOfCommon(
                 request.Criteria.OrganizationQueryCriteriaCommon.ParentId                , request.Criteria.OrganizationQueryCriteriaCommon.IsSystemBuiltIn                , request.Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeRange                , request.Criteria.OrganizationQueryCriteriaCommon.BitColumn                , request.Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnRange                , request.Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnRange                , request.Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnRange                , request.Criteria.OrganizationQueryCriteriaCommon.DateColumnRange                , request.Criteria.OrganizationQueryCriteriaCommon.Name                , request.Criteria.OrganizationQueryCriteriaCommon.CharColumn                , request.Criteria.OrganizationQueryCriteriaCommon.VarcharColumn                , request.Criteria.OrganizationQueryCriteriaCommon.TextColumn                , request.Criteria.OrganizationQueryCriteriaCommon.NcharColumn                , request.Criteria.OrganizationQueryCriteriaCommon.NvarcharColumn                , request.Criteria.OrganizationQueryCriteriaCommon.NtextColumn                , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -480,7 +480,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization, MSBuildExtensionPack.DataSourceEntities.OrganizationCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService());
             }
 
-            log.Info(string.Format("{0}: GetSingleOfEntityOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -493,11 +493,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultOfCommon(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfDefaultOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
         {
-            log.Info(string.Format("{0}: GetCountOfDefaultOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfDefaultOfCommon(
+            log.Info(string.Format("{0}: __GetCountOfDefaultOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.__GetCountOfDefaultOfCommon(
                 request.Criteria.OrganizationQueryCriteriaCommon.ParentId
                 , request.Criteria.OrganizationQueryCriteriaCommon.IsSystemBuiltIn
                 , request.Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeRange
@@ -520,7 +520,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<int>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: GetCountOfDefaultOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfDefaultOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -529,11 +529,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfCommon(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfDefaultOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
         {
-            log.Info(string.Format("{0}: ExistsOfDefaultOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfDefaultOfCommon(
+            log.Info(string.Format("{0}: __ExistsOfDefaultOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.__ExistsOfDefaultOfCommon(
                 request.Criteria.OrganizationQueryCriteriaCommon.ParentId
                 , request.Criteria.OrganizationQueryCriteriaCommon.IsSystemBuiltIn
                 , request.Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeRange
@@ -556,7 +556,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: ExistsOfDefaultOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfDefaultOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -565,11 +565,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfCommon(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default __GetCollectionOfDefaultOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
         {
-            log.Info(string.Format("{0}: GetCollectionOfDefaultOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfDefaultOfCommon(
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection _resultFromDAL = this.DALClassInstance.__GetCollectionOfDefaultOfCommon(
                 request.Criteria.OrganizationQueryCriteriaCommon.ParentId
                 , request.Criteria.OrganizationQueryCriteriaCommon.IsSystemBuiltIn
                 , request.Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeRange
@@ -603,7 +603,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization.DefaultCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.Default());
             }
 
-            log.Info(string.Format("{0}: GetCollectionOfDefaultOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -612,11 +612,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfCommon(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default __GetSingleOfDefaultOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
         {
-            log.Info(string.Format("{0}: GetSingleOfDefaultOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault _resultFromDAL = this.DALClassInstance.GetSingleOfDefaultOfCommon(
+            log.Info(string.Format("{0}: __GetSingleOfDefaultOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault _resultFromDAL = this.DALClassInstance.__GetSingleOfDefaultOfCommon(
                 request.Criteria.OrganizationQueryCriteriaCommon.ParentId                , request.Criteria.OrganizationQueryCriteriaCommon.IsSystemBuiltIn                , request.Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeRange                , request.Criteria.OrganizationQueryCriteriaCommon.BitColumn                , request.Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnRange                , request.Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnRange                , request.Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnRange                , request.Criteria.OrganizationQueryCriteriaCommon.DateColumnRange                , request.Criteria.OrganizationQueryCriteriaCommon.Name                , request.Criteria.OrganizationQueryCriteriaCommon.CharColumn                , request.Criteria.OrganizationQueryCriteriaCommon.VarcharColumn                , request.Criteria.OrganizationQueryCriteriaCommon.TextColumn                , request.Criteria.OrganizationQueryCriteriaCommon.NcharColumn                , request.Criteria.OrganizationQueryCriteriaCommon.NvarcharColumn                , request.Criteria.OrganizationQueryCriteriaCommon.NtextColumn                , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -630,7 +630,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization.DefaultCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.Default());
             }
 
-            log.Info(string.Format("{0}: GetSingleOfDefaultOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfDefaultOfCommon", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -643,11 +643,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfEntityOfAll(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
         {
-            log.Info(string.Format("{0}: GetCountOfEntityOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfEntityOfAll(
+            log.Info(string.Format("{0}: __GetCountOfEntityOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.__GetCountOfEntityOfAll(
                 request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -655,7 +655,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<int>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: GetCountOfEntityOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -664,11 +664,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfEntityOfAll(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
         {
-            log.Info(string.Format("{0}: ExistsOfEntityOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfEntityOfAll(
+            log.Info(string.Format("{0}: __ExistsOfEntityOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.__ExistsOfEntityOfAll(
                 request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -676,7 +676,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: ExistsOfEntityOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -685,11 +685,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfAll(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetCollectionOfEntityOfAll(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
         {
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _resultFromDAL = this.DALClassInstance.GetCollectionOfEntityOfAll(
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _resultFromDAL = this.DALClassInstance.__GetCollectionOfEntityOfAll(
                 request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -708,7 +708,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization, MSBuildExtensionPack.DataSourceEntities.OrganizationCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService());
             }
 
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -717,11 +717,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfAll(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetSingleOfEntityOfAll(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
         {
-            log.Info(string.Format("{0}: GetSingleOfEntityOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _resultFromDAL = this.DALClassInstance.GetSingleOfEntityOfAll(
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _resultFromDAL = this.DALClassInstance.__GetSingleOfEntityOfAll(
                 request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -735,7 +735,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization, MSBuildExtensionPack.DataSourceEntities.OrganizationCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService());
             }
 
-            log.Info(string.Format("{0}: GetSingleOfEntityOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -748,11 +748,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfNameValuePairOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfNameValuePairOfAll(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
         {
-            log.Info(string.Format("{0}: GetCountOfNameValuePairOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfNameValuePairOfAll(
+            log.Info(string.Format("{0}: __GetCountOfNameValuePairOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.__GetCountOfNameValuePairOfAll(
                 request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -760,7 +760,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<int>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: GetCountOfNameValuePairOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfNameValuePairOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -769,11 +769,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfNameValuePairOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfNameValuePairOfAll(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
         {
-            log.Info(string.Format("{0}: ExistsOfNameValuePairOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfNameValuePairOfAll(
+            log.Info(string.Format("{0}: __ExistsOfNameValuePairOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.__ExistsOfNameValuePairOfAll(
                 request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -781,7 +781,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: ExistsOfNameValuePairOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfNameValuePairOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -790,11 +790,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection if any</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetCollectionOfNameValuePairOfAll(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
         {
-            log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfNameValuePairOfAll(
+            log.Info(string.Format("{0}: __GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection _resultFromDAL = this.DALClassInstance.__GetCollectionOfNameValuePairOfAll(
                 request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -813,7 +813,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.NameValuePair, Framework.NameValueCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.NameValuePair());
             }
 
-            log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -822,11 +822,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection if any</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetSingleOfNameValuePairOfAll(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
         {
-            log.Info(string.Format("{0}: GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity _resultFromDAL = this.DALClassInstance.GetSingleOfNameValuePairOfAll(
+            log.Info(string.Format("{0}: __GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity _resultFromDAL = this.DALClassInstance.__GetSingleOfNameValuePairOfAll(
                 request.QueryOrderBySettingCollection);
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _retval = new Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -840,7 +840,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.NameValuePair, Framework.NameValueCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.NameValuePair());
             }
 
-            log.Info(string.Format("{0}: GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -853,11 +853,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfRssItemOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfRssItemOfAll(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
         {
-            log.Info(string.Format("{0}: GetCountOfRssItemOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfRssItemOfAll(
+            log.Info(string.Format("{0}: __GetCountOfRssItemOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.__GetCountOfRssItemOfAll(
                 request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -865,7 +865,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<int>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: GetCountOfRssItemOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfRssItemOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -874,11 +874,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfRssItemOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfRssItemOfAll(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
         {
-            log.Info(string.Format("{0}: ExistsOfRssItemOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfRssItemOfAll(
+            log.Info(string.Format("{0}: __ExistsOfRssItemOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.__ExistsOfRssItemOfAll(
                 request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection);
@@ -886,7 +886,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: ExistsOfRssItemOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfRssItemOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -895,11 +895,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection if any</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetCollectionOfRssItemOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection __GetCollectionOfRssItemOfAll(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
         {
-            log.Info(string.Format("{0}: GetCollectionOfRssItemOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfRssItemOfAll(
+            log.Info(string.Format("{0}: __GetCollectionOfRssItemOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection _resultFromDAL = this.DALClassInstance.__GetCollectionOfRssItemOfAll(
                 request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
                 , request.QueryOrderBySettingCollection
@@ -918,7 +918,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.RssItem, Framework.RssItemCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.RssItem());
             }
 
-            log.Info(string.Format("{0}: GetCollectionOfRssItemOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfRssItemOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -927,11 +927,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection if any</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetSingleOfRssItemOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection __GetSingleOfRssItemOfAll(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
         {
-            log.Info(string.Format("{0}: GetSingleOfRssItemOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageRssItem _resultFromDAL = this.DALClassInstance.GetSingleOfRssItemOfAll(
+            log.Info(string.Format("{0}: __GetSingleOfRssItemOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageRssItem _resultFromDAL = this.DALClassInstance.__GetSingleOfRssItemOfAll(
                 request.QueryOrderBySettingCollection);
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _retval = new Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -945,7 +945,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.RssItem, Framework.RssItemCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.RssItem());
             }
 
-            log.Info(string.Format("{0}: GetSingleOfRssItemOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfRssItemOfAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -958,11 +958,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfEntityOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            log.Info(string.Format("{0}: GetCountOfEntityOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfEntityOfByFKOnly(
+            log.Info(string.Format("{0}: __GetCountOfEntityOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.__GetCountOfEntityOfByFKOnly(
                 request.Criteria.OrganizationQueryCriteriaByFKOnly.ParentId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -971,7 +971,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<int>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: GetCountOfEntityOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -980,11 +980,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfEntityOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            log.Info(string.Format("{0}: ExistsOfEntityOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfEntityOfByFKOnly(
+            log.Info(string.Format("{0}: __ExistsOfEntityOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.__ExistsOfEntityOfByFKOnly(
                 request.Criteria.OrganizationQueryCriteriaByFKOnly.ParentId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -993,7 +993,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: ExistsOfEntityOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1002,11 +1002,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfByFKOnly(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetCollectionOfEntityOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _resultFromDAL = this.DALClassInstance.GetCollectionOfEntityOfByFKOnly(
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _resultFromDAL = this.DALClassInstance.__GetCollectionOfEntityOfByFKOnly(
                 request.Criteria.OrganizationQueryCriteriaByFKOnly.ParentId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1026,7 +1026,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization, MSBuildExtensionPack.DataSourceEntities.OrganizationCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService());
             }
 
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1035,11 +1035,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfByFKOnly(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetSingleOfEntityOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            log.Info(string.Format("{0}: GetSingleOfEntityOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _resultFromDAL = this.DALClassInstance.GetSingleOfEntityOfByFKOnly(
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _resultFromDAL = this.DALClassInstance.__GetSingleOfEntityOfByFKOnly(
                 request.Criteria.OrganizationQueryCriteriaByFKOnly.ParentId                , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -1053,7 +1053,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization, MSBuildExtensionPack.DataSourceEntities.OrganizationCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService());
             }
 
-            log.Info(string.Format("{0}: GetSingleOfEntityOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1066,11 +1066,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfNameValuePairOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfNameValuePairOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            log.Info(string.Format("{0}: GetCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfNameValuePairOfByFKOnly(
+            log.Info(string.Format("{0}: __GetCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.__GetCountOfNameValuePairOfByFKOnly(
                 request.Criteria.OrganizationQueryCriteriaByFKOnly.ParentId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1079,7 +1079,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<int>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: GetCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1088,11 +1088,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfNameValuePairOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfNameValuePairOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            log.Info(string.Format("{0}: ExistsOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfNameValuePairOfByFKOnly(
+            log.Info(string.Format("{0}: __ExistsOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.__ExistsOfNameValuePairOfByFKOnly(
                 request.Criteria.OrganizationQueryCriteriaByFKOnly.ParentId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1101,7 +1101,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: ExistsOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1110,11 +1110,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection if any</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetCollectionOfNameValuePairOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfNameValuePairOfByFKOnly(
+            log.Info(string.Format("{0}: __GetCollectionOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection _resultFromDAL = this.DALClassInstance.__GetCollectionOfNameValuePairOfByFKOnly(
                 request.Criteria.OrganizationQueryCriteriaByFKOnly.ParentId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1134,7 +1134,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.NameValuePair, Framework.NameValueCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.NameValuePair());
             }
 
-            log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1143,11 +1143,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection if any</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetSingleOfNameValuePairOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            log.Info(string.Format("{0}: GetSingleOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity _resultFromDAL = this.DALClassInstance.GetSingleOfNameValuePairOfByFKOnly(
+            log.Info(string.Format("{0}: __GetSingleOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity _resultFromDAL = this.DALClassInstance.__GetSingleOfNameValuePairOfByFKOnly(
                 request.Criteria.OrganizationQueryCriteriaByFKOnly.ParentId                , request.QueryOrderBySettingCollection);
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _retval = new Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -1161,7 +1161,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.NameValuePair, Framework.NameValueCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.NameValuePair());
             }
 
-            log.Info(string.Format("{0}: GetSingleOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1174,11 +1174,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfRssItemOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfRssItemOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            log.Info(string.Format("{0}: GetCountOfRssItemOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfRssItemOfByFKOnly(
+            log.Info(string.Format("{0}: __GetCountOfRssItemOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.__GetCountOfRssItemOfByFKOnly(
                 request.Criteria.OrganizationQueryCriteriaByFKOnly.ParentId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1187,7 +1187,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<int>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: GetCountOfRssItemOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfRssItemOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1196,11 +1196,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfRssItemOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfRssItemOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            log.Info(string.Format("{0}: ExistsOfRssItemOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfRssItemOfByFKOnly(
+            log.Info(string.Format("{0}: __ExistsOfRssItemOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.__ExistsOfRssItemOfByFKOnly(
                 request.Criteria.OrganizationQueryCriteriaByFKOnly.ParentId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1209,7 +1209,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: ExistsOfRssItemOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfRssItemOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1218,11 +1218,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection if any</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetCollectionOfRssItemOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection __GetCollectionOfRssItemOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            log.Info(string.Format("{0}: GetCollectionOfRssItemOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfRssItemOfByFKOnly(
+            log.Info(string.Format("{0}: __GetCollectionOfRssItemOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection _resultFromDAL = this.DALClassInstance.__GetCollectionOfRssItemOfByFKOnly(
                 request.Criteria.OrganizationQueryCriteriaByFKOnly.ParentId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1242,7 +1242,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.RssItem, Framework.RssItemCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.RssItem());
             }
 
-            log.Info(string.Format("{0}: GetCollectionOfRssItemOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfRssItemOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1251,11 +1251,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection if any</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetSingleOfRssItemOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection __GetSingleOfRssItemOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            log.Info(string.Format("{0}: GetSingleOfRssItemOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageRssItem _resultFromDAL = this.DALClassInstance.GetSingleOfRssItemOfByFKOnly(
+            log.Info(string.Format("{0}: __GetSingleOfRssItemOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageRssItem _resultFromDAL = this.DALClassInstance.__GetSingleOfRssItemOfByFKOnly(
                 request.Criteria.OrganizationQueryCriteriaByFKOnly.ParentId                , request.QueryOrderBySettingCollection);
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _retval = new Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -1269,7 +1269,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.RssItem, Framework.RssItemCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.RssItem());
             }
 
-            log.Info(string.Format("{0}: GetSingleOfRssItemOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfRssItemOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1282,11 +1282,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfDefaultOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            log.Info(string.Format("{0}: GetCountOfDefaultOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfDefaultOfByFKOnly(
+            log.Info(string.Format("{0}: __GetCountOfDefaultOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.__GetCountOfDefaultOfByFKOnly(
                 request.Criteria.OrganizationQueryCriteriaByFKOnly.ParentId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1295,7 +1295,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<int>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: GetCountOfDefaultOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfDefaultOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1304,11 +1304,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfDefaultOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            log.Info(string.Format("{0}: ExistsOfDefaultOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfDefaultOfByFKOnly(
+            log.Info(string.Format("{0}: __ExistsOfDefaultOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.__ExistsOfDefaultOfByFKOnly(
                 request.Criteria.OrganizationQueryCriteriaByFKOnly.ParentId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1317,7 +1317,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: ExistsOfDefaultOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfDefaultOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1326,11 +1326,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfByFKOnly(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default __GetCollectionOfDefaultOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            log.Info(string.Format("{0}: GetCollectionOfDefaultOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfDefaultOfByFKOnly(
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection _resultFromDAL = this.DALClassInstance.__GetCollectionOfDefaultOfByFKOnly(
                 request.Criteria.OrganizationQueryCriteriaByFKOnly.ParentId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1350,7 +1350,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization.DefaultCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.Default());
             }
 
-            log.Info(string.Format("{0}: GetCollectionOfDefaultOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1359,11 +1359,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfByFKOnly(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default __GetSingleOfDefaultOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            log.Info(string.Format("{0}: GetSingleOfDefaultOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault _resultFromDAL = this.DALClassInstance.GetSingleOfDefaultOfByFKOnly(
+            log.Info(string.Format("{0}: __GetSingleOfDefaultOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault _resultFromDAL = this.DALClassInstance.__GetSingleOfDefaultOfByFKOnly(
                 request.Criteria.OrganizationQueryCriteriaByFKOnly.ParentId                , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -1377,7 +1377,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization.DefaultCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.Default());
             }
 
-            log.Info(string.Format("{0}: GetSingleOfDefaultOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfDefaultOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1390,11 +1390,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultGroupedDataViewOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfDefaultGroupedDataViewOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            log.Info(string.Format("{0}: GetCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfDefaultGroupedDataViewOfByFKOnly(
+            log.Info(string.Format("{0}: __GetCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.__GetCountOfDefaultGroupedDataViewOfByFKOnly(
                 request.Criteria.OrganizationQueryCriteriaByFKOnly.ParentId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1403,7 +1403,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<int>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: GetCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1412,11 +1412,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultGroupedDataViewOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfDefaultGroupedDataViewOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            log.Info(string.Format("{0}: ExistsOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfDefaultGroupedDataViewOfByFKOnly(
+            log.Info(string.Format("{0}: __ExistsOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.__ExistsOfDefaultGroupedDataViewOfByFKOnly(
                 request.Criteria.OrganizationQueryCriteriaByFKOnly.ParentId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1425,7 +1425,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: ExistsOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1434,11 +1434,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView __GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            log.Info(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultGroupedDataViewCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultGroupedDataViewCollection _resultFromDAL = this.DALClassInstance.__GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
                 request.Criteria.OrganizationQueryCriteriaByFKOnly.ParentId
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1458,7 +1458,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView, MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataViewCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.DefaultGroupedDataView());
             }
 
-            log.Info(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1467,11 +1467,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView GetSingleOfDefaultGroupedDataViewOfByFKOnly(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView __GetSingleOfDefaultGroupedDataViewOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            log.Info(string.Format("{0}: GetSingleOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultGroupedDataView _resultFromDAL = this.DALClassInstance.GetSingleOfDefaultGroupedDataViewOfByFKOnly(
+            log.Info(string.Format("{0}: __GetSingleOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultGroupedDataView _resultFromDAL = this.DALClassInstance.__GetSingleOfDefaultGroupedDataViewOfByFKOnly(
                 request.Criteria.OrganizationQueryCriteriaByFKOnly.ParentId                , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -1485,7 +1485,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView, MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataViewCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.DefaultGroupedDataView());
             }
 
-            log.Info(string.Format("{0}: GetSingleOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1498,11 +1498,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfByIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfEntityOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
         {
-            log.Info(string.Format("{0}: GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfEntityOfByIdentifier(
+            log.Info(string.Format("{0}: __GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.__GetCountOfEntityOfByIdentifier(
                 request.Criteria.OrganizationQueryCriteriaByIdentifier.Id
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1511,7 +1511,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<int>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1520,11 +1520,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfByIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfEntityOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
         {
-            log.Info(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfEntityOfByIdentifier(
+            log.Info(string.Format("{0}: __ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.__ExistsOfEntityOfByIdentifier(
                 request.Criteria.OrganizationQueryCriteriaByIdentifier.Id
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1533,7 +1533,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1542,11 +1542,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfByIdentifier(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetCollectionOfEntityOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
         {
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _resultFromDAL = this.DALClassInstance.GetCollectionOfEntityOfByIdentifier(
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _resultFromDAL = this.DALClassInstance.__GetCollectionOfEntityOfByIdentifier(
                 request.Criteria.OrganizationQueryCriteriaByIdentifier.Id
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1566,7 +1566,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization, MSBuildExtensionPack.DataSourceEntities.OrganizationCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService());
             }
 
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1575,11 +1575,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfByIdentifier(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetSingleOfEntityOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
         {
-            log.Info(string.Format("{0}: GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _resultFromDAL = this.DALClassInstance.GetSingleOfEntityOfByIdentifier(
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _resultFromDAL = this.DALClassInstance.__GetSingleOfEntityOfByIdentifier(
                 request.Criteria.OrganizationQueryCriteriaByIdentifier.Id                , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -1593,7 +1593,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization, MSBuildExtensionPack.DataSourceEntities.OrganizationCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService());
             }
 
-            log.Info(string.Format("{0}: GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1606,11 +1606,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultOfByIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfDefaultOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
         {
-            log.Info(string.Format("{0}: GetCountOfDefaultOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfDefaultOfByIdentifier(
+            log.Info(string.Format("{0}: __GetCountOfDefaultOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.__GetCountOfDefaultOfByIdentifier(
                 request.Criteria.OrganizationQueryCriteriaByIdentifier.Id
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1619,7 +1619,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<int>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: GetCountOfDefaultOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfDefaultOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1628,11 +1628,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfByIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfDefaultOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
         {
-            log.Info(string.Format("{0}: ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfDefaultOfByIdentifier(
+            log.Info(string.Format("{0}: __ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.__ExistsOfDefaultOfByIdentifier(
                 request.Criteria.OrganizationQueryCriteriaByIdentifier.Id
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1641,7 +1641,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1650,11 +1650,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfByIdentifier(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default __GetCollectionOfDefaultOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
         {
-            log.Info(string.Format("{0}: GetCollectionOfDefaultOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfDefaultOfByIdentifier(
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection _resultFromDAL = this.DALClassInstance.__GetCollectionOfDefaultOfByIdentifier(
                 request.Criteria.OrganizationQueryCriteriaByIdentifier.Id
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1674,7 +1674,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization.DefaultCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.Default());
             }
 
-            log.Info(string.Format("{0}: GetCollectionOfDefaultOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1683,11 +1683,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfByIdentifier(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default __GetSingleOfDefaultOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
         {
-            log.Info(string.Format("{0}: GetSingleOfDefaultOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault _resultFromDAL = this.DALClassInstance.GetSingleOfDefaultOfByIdentifier(
+            log.Info(string.Format("{0}: __GetSingleOfDefaultOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault _resultFromDAL = this.DALClassInstance.__GetSingleOfDefaultOfByIdentifier(
                 request.Criteria.OrganizationQueryCriteriaByIdentifier.Id                , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -1701,7 +1701,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization.DefaultCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.Default());
             }
 
-            log.Info(string.Format("{0}: GetSingleOfDefaultOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfDefaultOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1714,11 +1714,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfKeyInformationOfByIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfKeyInformationOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
         {
-            log.Info(string.Format("{0}: GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfKeyInformationOfByIdentifier(
+            log.Info(string.Format("{0}: __GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.__GetCountOfKeyInformationOfByIdentifier(
                 request.Criteria.OrganizationQueryCriteriaByIdentifier.Id
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1727,7 +1727,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<int>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1736,11 +1736,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationOfByIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfKeyInformationOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
         {
-            log.Info(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfKeyInformationOfByIdentifier(
+            log.Info(string.Format("{0}: __ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.__ExistsOfKeyInformationOfByIdentifier(
                 request.Criteria.OrganizationQueryCriteriaByIdentifier.Id
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1749,7 +1749,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1758,11 +1758,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation GetCollectionOfKeyInformationOfByIdentifier(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation __GetCollectionOfKeyInformationOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
         {
-            log.Info(string.Format("{0}: GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformationCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfKeyInformationOfByIdentifier(
+            log.Info(string.Format("{0}: __GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformationCollection _resultFromDAL = this.DALClassInstance.__GetCollectionOfKeyInformationOfByIdentifier(
                 request.Criteria.OrganizationQueryCriteriaByIdentifier.Id
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1782,7 +1782,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation, MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformationCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.KeyInformation());
             }
 
-            log.Info(string.Format("{0}: GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1791,11 +1791,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation GetSingleOfKeyInformationOfByIdentifier(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation __GetSingleOfKeyInformationOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
         {
-            log.Info(string.Format("{0}: GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformation _resultFromDAL = this.DALClassInstance.GetSingleOfKeyInformationOfByIdentifier(
+            log.Info(string.Format("{0}: __GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformation _resultFromDAL = this.DALClassInstance.__GetSingleOfKeyInformationOfByIdentifier(
                 request.Criteria.OrganizationQueryCriteriaByIdentifier.Id                , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -1809,7 +1809,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation, MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformationCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.KeyInformation());
             }
 
-            log.Info(string.Format("{0}: GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1822,11 +1822,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
         {
-            log.Info(string.Format("{0}: GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            log.Info(string.Format("{0}: __GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.__GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifier
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1835,7 +1835,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<int>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1844,11 +1844,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
         {
-            log.Info(string.Format("{0}: ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            log.Info(string.Format("{0}: __ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.__ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifier
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1857,7 +1857,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1866,11 +1866,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
         {
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _resultFromDAL = this.DALClassInstance.GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _resultFromDAL = this.DALClassInstance.__GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifier
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1890,7 +1890,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization, MSBuildExtensionPack.DataSourceEntities.OrganizationCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService());
             }
 
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1899,11 +1899,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
         {
-            log.Info(string.Format("{0}: GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _resultFromDAL = this.DALClassInstance.GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _resultFromDAL = this.DALClassInstance.__GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifier                , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -1917,7 +1917,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization, MSBuildExtensionPack.DataSourceEntities.OrganizationCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService());
             }
 
-            log.Info(string.Format("{0}: GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1930,11 +1930,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
         {
-            log.Info(string.Format("{0}: GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            log.Info(string.Format("{0}: __GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.__GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifier
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1943,7 +1943,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<int>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1952,11 +1952,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
         {
-            log.Info(string.Format("{0}: ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            log.Info(string.Format("{0}: __ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.__ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifier
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1965,7 +1965,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -1974,11 +1974,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection if any</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
         {
-            log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            log.Info(string.Format("{0}: __GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection _resultFromDAL = this.DALClassInstance.__GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifier
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -1998,7 +1998,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.NameValuePair, Framework.NameValueCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.NameValuePair());
             }
 
-            log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2007,11 +2007,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection if any</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
         {
-            log.Info(string.Format("{0}: GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity _resultFromDAL = this.DALClassInstance.GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            log.Info(string.Format("{0}: __GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity _resultFromDAL = this.DALClassInstance.__GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifier                , request.QueryOrderBySettingCollection);
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _retval = new Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -2025,7 +2025,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.NameValuePair, Framework.NameValueCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.NameValuePair());
             }
 
-            log.Info(string.Format("{0}: GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2038,11 +2038,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
         {
-            log.Info(string.Format("{0}: GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            log.Info(string.Format("{0}: __GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.__GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifier
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -2051,7 +2051,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<int>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2060,11 +2060,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
         {
-            log.Info(string.Format("{0}: ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            log.Info(string.Format("{0}: __ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.__ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifier
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -2073,7 +2073,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2082,11 +2082,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default __GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
         {
-            log.Info(string.Format("{0}: GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection _resultFromDAL = this.DALClassInstance.__GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifier
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -2106,7 +2106,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization.DefaultCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.Default());
             }
 
-            log.Info(string.Format("{0}: GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2115,11 +2115,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default __GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
         {
-            log.Info(string.Format("{0}: GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault _resultFromDAL = this.DALClassInstance.GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            log.Info(string.Format("{0}: __GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault _resultFromDAL = this.DALClassInstance.__GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
                 request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier.UniqueIdentifier                , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -2133,7 +2133,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization.DefaultCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.Default());
             }
 
-            log.Info(string.Format("{0}: GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2146,11 +2146,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
         {
-            log.Info(string.Format("{0}: GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            log.Info(string.Format("{0}: __GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.__GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumn
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -2159,7 +2159,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<int>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2168,11 +2168,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
         {
-            log.Info(string.Format("{0}: ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            log.Info(string.Format("{0}: __ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.__ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumn
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -2181,7 +2181,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2190,11 +2190,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
         {
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _resultFromDAL = this.DALClassInstance.GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _resultFromDAL = this.DALClassInstance.__GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumn
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -2214,7 +2214,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization, MSBuildExtensionPack.DataSourceEntities.OrganizationCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService());
             }
 
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2223,11 +2223,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
         {
-            log.Info(string.Format("{0}: GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _resultFromDAL = this.DALClassInstance.GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _resultFromDAL = this.DALClassInstance.__GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumn                , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -2241,7 +2241,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization, MSBuildExtensionPack.DataSourceEntities.OrganizationCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService());
             }
 
-            log.Info(string.Format("{0}: GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2254,11 +2254,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
         {
-            log.Info(string.Format("{0}: GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            log.Info(string.Format("{0}: __GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.__GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumn
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -2267,7 +2267,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<int>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2276,11 +2276,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
         {
-            log.Info(string.Format("{0}: ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            log.Info(string.Format("{0}: __ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.__ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumn
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -2289,7 +2289,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2298,11 +2298,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection if any</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
         {
-            log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            log.Info(string.Format("{0}: __GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection _resultFromDAL = this.DALClassInstance.__GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumn
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -2322,7 +2322,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.NameValuePair, Framework.NameValueCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.NameValuePair());
             }
 
-            log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2331,11 +2331,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection if any</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
         {
-            log.Info(string.Format("{0}: GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity _resultFromDAL = this.DALClassInstance.GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            log.Info(string.Format("{0}: __GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity _resultFromDAL = this.DALClassInstance.__GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumn                , request.QueryOrderBySettingCollection);
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _retval = new Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -2349,7 +2349,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.NameValuePair, Framework.NameValueCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.NameValuePair());
             }
 
-            log.Info(string.Format("{0}: GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2362,11 +2362,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
         {
-            log.Info(string.Format("{0}: GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            log.Info(string.Format("{0}: __GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.__GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumn
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -2375,7 +2375,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<int>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2384,11 +2384,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
         {
-            log.Info(string.Format("{0}: ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            log.Info(string.Format("{0}: __ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.__ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumn
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -2397,7 +2397,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2406,11 +2406,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default __GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
         {
-            log.Info(string.Format("{0}: GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection _resultFromDAL = this.DALClassInstance.__GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumn
                 , request.QueryPagingSetting.CurrentIndex
                 , request.QueryPagingSetting.PageSize
@@ -2430,7 +2430,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization.DefaultCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.Default());
             }
 
-            log.Info(string.Format("{0}: GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2439,11 +2439,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default __GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
         {
-            log.Info(string.Format("{0}: GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault _resultFromDAL = this.DALClassInstance.GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            log.Info(string.Format("{0}: __GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault _resultFromDAL = this.DALClassInstance.__GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
                 request.Criteria.OrganizationQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn.UniqueidentifierColumn                , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -2457,7 +2457,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization.DefaultCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.Default());
             }
 
-            log.Info(string.Format("{0}: GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2470,11 +2470,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfIdentifierAndUniqueConstraint(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfEntityOfIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            log.Info(string.Format("{0}: GetCountOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfEntityOfIdentifierAndUniqueConstraint(
+            log.Info(string.Format("{0}: __GetCountOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.__GetCountOfEntityOfIdentifierAndUniqueConstraint(
                 request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.Id
                 , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifier
                 , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumn
@@ -2485,7 +2485,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<int>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: GetCountOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2494,11 +2494,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfIdentifierAndUniqueConstraint(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfEntityOfIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            log.Info(string.Format("{0}: ExistsOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfEntityOfIdentifierAndUniqueConstraint(
+            log.Info(string.Format("{0}: __ExistsOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.__ExistsOfEntityOfIdentifierAndUniqueConstraint(
                 request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.Id
                 , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifier
                 , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumn
@@ -2509,7 +2509,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: ExistsOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2518,11 +2518,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfIdentifierAndUniqueConstraint(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetCollectionOfEntityOfIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _resultFromDAL = this.DALClassInstance.GetCollectionOfEntityOfIdentifierAndUniqueConstraint(
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization _resultFromDAL = this.DALClassInstance.__GetCollectionOfEntityOfIdentifierAndUniqueConstraint(
                 request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.Id
                 , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifier
                 , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumn
@@ -2544,7 +2544,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization, MSBuildExtensionPack.DataSourceEntities.OrganizationCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService());
             }
 
-            log.Info(string.Format("{0}: GetCollectionOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2553,11 +2553,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfIdentifierAndUniqueConstraint(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetSingleOfEntityOfIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            log.Info(string.Format("{0}: GetSingleOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _resultFromDAL = this.DALClassInstance.GetSingleOfEntityOfIdentifierAndUniqueConstraint(
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityOrganization _resultFromDAL = this.DALClassInstance.__GetSingleOfEntityOfIdentifierAndUniqueConstraint(
                 request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.Id                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifier                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumn                , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -2571,7 +2571,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization, MSBuildExtensionPack.DataSourceEntities.OrganizationCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService());
             }
 
-            log.Info(string.Format("{0}: GetSingleOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfEntityOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2584,11 +2584,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultOfIdentifierAndUniqueConstraint(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfDefaultOfIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            log.Info(string.Format("{0}: GetCountOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfDefaultOfIdentifierAndUniqueConstraint(
+            log.Info(string.Format("{0}: __GetCountOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.__GetCountOfDefaultOfIdentifierAndUniqueConstraint(
                 request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.Id
                 , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifier
                 , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumn
@@ -2599,7 +2599,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<int>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: GetCountOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2608,11 +2608,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfIdentifierAndUniqueConstraint(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfDefaultOfIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            log.Info(string.Format("{0}: ExistsOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfDefaultOfIdentifierAndUniqueConstraint(
+            log.Info(string.Format("{0}: __ExistsOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.__ExistsOfDefaultOfIdentifierAndUniqueConstraint(
                 request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.Id
                 , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifier
                 , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumn
@@ -2623,7 +2623,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: ExistsOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2632,11 +2632,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfIdentifierAndUniqueConstraint(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default __GetCollectionOfDefaultOfIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            log.Info(string.Format("{0}: GetCollectionOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfDefaultOfIdentifierAndUniqueConstraint(
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection _resultFromDAL = this.DALClassInstance.__GetCollectionOfDefaultOfIdentifierAndUniqueConstraint(
                 request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.Id
                 , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifier
                 , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumn
@@ -2658,7 +2658,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization.DefaultCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.Default());
             }
 
-            log.Info(string.Format("{0}: GetCollectionOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2667,11 +2667,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfIdentifierAndUniqueConstraint(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default __GetSingleOfDefaultOfIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            log.Info(string.Format("{0}: GetSingleOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault _resultFromDAL = this.DALClassInstance.GetSingleOfDefaultOfIdentifierAndUniqueConstraint(
+            log.Info(string.Format("{0}: __GetSingleOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefault _resultFromDAL = this.DALClassInstance.__GetSingleOfDefaultOfIdentifierAndUniqueConstraint(
                 request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.Id                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifier                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumn                , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -2685,7 +2685,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization.DefaultCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.Default());
             }
 
-            log.Info(string.Format("{0}: GetSingleOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfDefaultOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2698,11 +2698,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfKeyInformationOfIdentifierAndUniqueConstraint(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfKeyInformationOfIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            log.Info(string.Format("{0}: GetCountOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfKeyInformationOfIdentifierAndUniqueConstraint(
+            log.Info(string.Format("{0}: __GetCountOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.__GetCountOfKeyInformationOfIdentifierAndUniqueConstraint(
                 request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.Id
                 , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifier
                 , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumn
@@ -2713,7 +2713,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<int>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: GetCountOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCountOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2722,11 +2722,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            log.Info(string.Format("{0}: ExistsOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(
+            log.Info(string.Format("{0}: __ExistsOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.__ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(
                 request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.Id
                 , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifier
                 , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumn
@@ -2737,7 +2737,7 @@ namespace MSBuildExtensionPack.CommonBLL
 
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: ExistsOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __ExistsOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2746,11 +2746,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation __GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            log.Info(string.Format("{0}: GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformationCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint(
+            log.Info(string.Format("{0}: __GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformationCollection _resultFromDAL = this.DALClassInstance.__GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint(
                 request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.Id
                 , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifier
                 , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumn
@@ -2772,7 +2772,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation, MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformationCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.KeyInformation());
             }
 
-            log.Info(string.Format("{0}: GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 
@@ -2781,11 +2781,11 @@ namespace MSBuildExtensionPack.CommonBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation __GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            log.Info(string.Format("{0}: GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformation _resultFromDAL = this.DALClassInstance.GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint(
+            log.Info(string.Format("{0}: __GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformation _resultFromDAL = this.DALClassInstance.__GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint(
                 request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.Id                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueIdentifier                , request.Criteria.OrganizationQueryCriteriaIdentifierAndUniqueConstraint.UniqueidentifierColumn                , request.QueryOrderBySettingCollection);
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation _retval = new MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation();
             _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
@@ -2799,7 +2799,7 @@ namespace MSBuildExtensionPack.CommonBLL
                 Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation, MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformationCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.OrganizationDataStreamService.KeyInformation());
             }
 
-            log.Info(string.Format("{0}: GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            log.Info(string.Format("{0}: __GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
             return _retval;
         }
 

@@ -21,7 +21,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
             )
         {
             // 1. master on accessory part - Aside UIWorkspaceItemSetting
-            var masterEntityResult = MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.GetMessageOfEntityOfByIdentifier(this.CriteriaOfMasterEntity, this.QueryPagingSettingOneRecord, null);
+            var masterEntityResult = MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.__GetMessageOfEntityOfByIdentifier(this.CriteriaOfMasterEntity, this.QueryPagingSettingOneRecord, null);
             this.StatusOfMasterEntity = masterEntityResult.BusinessLogicLayerResponseStatus;
 
             if (masterEntityResult.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -36,7 +36,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
                 if(isToLoadFK_BuildLog_BuildEventCode)
                 {
                     this.CriteriaOfFK_BuildLog_BuildEventCode.BuildLogQueryCriteriaByFKOnly.BuildEventCodeId = new Framework.EntityContracts.QuerySystemInt32EqualsCriteria(this.MasterEntity.Id);
-                    var resultFK_BuildLog_BuildEventCode = MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfDefaultOfByFKOnly(this.CriteriaOfFK_BuildLog_BuildEventCode, this.QueryPagingSetting, null);
+                    var resultFK_BuildLog_BuildEventCode = MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.__GetMessageOfDefaultOfByFKOnly(this.CriteriaOfFK_BuildLog_BuildEventCode, this.QueryPagingSetting, null);
                     this.StatusOfFK_BuildLog_BuildEventCode = resultFK_BuildLog_BuildEventCode.BusinessLogicLayerResponseStatus;
                     if (resultFK_BuildLog_BuildEventCode.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
                     {

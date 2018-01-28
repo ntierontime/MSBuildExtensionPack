@@ -22,7 +22,7 @@ namespace MSBuildExtensionPack.CommonBLL
             var request = new MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll();
             request.QueryPagingSetting = new Framework.EntityContracts.QueryPagingSetting(1, 10);
             request.QueryOrderBySettingCollection = new Framework.EntityContracts.QueryOrderBySettingCollection("LastModifiedDateTime:DESC");
-            var fromDataSource = instance.GetCollectionOfRssItemOfAll(request);
+            var fromDataSource = instance.__GetCollectionOfRssItemOfAll(request);
 
             List<SyndicationItem> items = new List<SyndicationItem>();
             if (fromDataSource.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -58,7 +58,7 @@ namespace MSBuildExtensionPack.CommonBLL
             var request = new MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll();
             request.QueryPagingSetting = new Framework.EntityContracts.QueryPagingSetting(1, 10);
             request.QueryOrderBySettingCollection = new Framework.EntityContracts.QueryOrderBySettingCollection("LastModifiedDateTime:DESC");
-            var fromDataSource = instance.GetCollectionOfRssItemOfAll(request);
+            var fromDataSource = instance.__GetCollectionOfRssItemOfAll(request);
 
             List<SyndicationItem> items = new List<SyndicationItem>();
             if (fromDataSource.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -94,7 +94,7 @@ namespace MSBuildExtensionPack.CommonBLL
             var request = new MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll();
             request.QueryPagingSetting = new Framework.EntityContracts.QueryPagingSetting(1, 10);
             request.QueryOrderBySettingCollection = new Framework.EntityContracts.QueryOrderBySettingCollection("LastModifiedDateTime:DESC");
-            var fromDataSource = instance.GetCollectionOfRssItemOfAll(request);
+            var fromDataSource = instance.__GetCollectionOfRssItemOfAll(request);
 
             List<SyndicationItem> items = new List<SyndicationItem>();
             if (fromDataSource.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -130,7 +130,7 @@ namespace MSBuildExtensionPack.CommonBLL
             var request = new MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll();
             request.QueryPagingSetting = new Framework.EntityContracts.QueryPagingSetting(1, 10);
             request.QueryOrderBySettingCollection = new Framework.EntityContracts.QueryOrderBySettingCollection("LastModifiedDateTime:DESC");
-            var fromDataSource = instance.GetCollectionOfRssItemOfAll(request);
+            var fromDataSource = instance.__GetCollectionOfRssItemOfAll(request);
 
             List<SyndicationItem> items = new List<SyndicationItem>();
             if (fromDataSource.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -166,7 +166,7 @@ namespace MSBuildExtensionPack.CommonBLL
             var request = new MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfAll();
             request.QueryPagingSetting = new Framework.EntityContracts.QueryPagingSetting(1, 10);
             request.QueryOrderBySettingCollection = new Framework.EntityContracts.QueryOrderBySettingCollection("LastModifiedDateTime:DESC");
-            var fromDataSource = instance.GetCollectionOfRssItemOfAll(request);
+            var fromDataSource = instance.__GetCollectionOfRssItemOfAll(request);
 
             List<SyndicationItem> items = new List<SyndicationItem>();
             if (fromDataSource.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)

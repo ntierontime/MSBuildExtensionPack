@@ -156,13 +156,13 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        [HttpGet, ActionName("GetCollectionOfNameValuePairOfAll")]
-        public Framework.NameValueCollection GetCollectionOfNameValuePairOfAll(
+        [HttpGet, ActionName("__GetCollectionOfNameValuePairOfAll")]
+        public Framework.NameValueCollection __GetCollectionOfNameValuePairOfAll(
             int currentIndex
             , int pageSize
             , string queryOrderByExpression)
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.GetCollectionOfNameValuePairOfAll(
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.__GetCollectionOfNameValuePairOfAll(
                 currentIndex
                 , pageSize
                 , queryOrderByExpression);
@@ -176,14 +176,14 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
-        [HttpGet, ActionName("GetMessageOfNameValuePairOfAll")]
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfAll(
+        [HttpGet, ActionName("__GetMessageOfNameValuePairOfAll")]
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetMessageOfNameValuePairOfAll(
             int currentIndex
             , int pageSize
             , string queryOrderByExpression)
 
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.GetMessageOfNameValuePairOfAll(
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.__GetMessageOfNameValuePairOfAll(
                 currentIndex
                 , pageSize
                 , queryOrderByExpression);

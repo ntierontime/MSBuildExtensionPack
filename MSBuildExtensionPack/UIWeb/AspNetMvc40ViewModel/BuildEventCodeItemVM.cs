@@ -22,8 +22,8 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
             {
                 log.Info(string.Format("{0}: Details", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-                MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn _Response =
-                    MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.GetMessageOfEntityOfByIdentifier(isToCompareId, id, -1, -1, null);
+                var _Response =
+                    MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.__GetMessageOfEntityOfByIdentifier(isToCompareId, id, -1, -1, null);
 
                 if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK || _Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
                 {

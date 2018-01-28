@@ -110,7 +110,7 @@
             });
         }));
         function FetchOrganization_1() {
-            var url = "/api/OrganizationApi/GetCollectionOfNameValuePairOfByFKOnly";
+            var url = "/api/OrganizationApi/__GetCollectionOfNameValuePairOfByFKOnly";
             try {
                 var params = BuildCriteriaForFetchOrganization_1();
                 $.getJSON(url, params, function (data) {
@@ -133,7 +133,7 @@
             return params;
         }
         function FetchSolution_1() {
-            var url = "/api/SolutionApi/GetCollectionOfNameValuePairOfByFKOnly";
+            var url = "/api/SolutionApi/__GetCollectionOfNameValuePairOfByFKOnly";
             try {
                 var params = BuildCriteriaForFetchSolution_1();
                 $.getJSON(url, params, function (data) {
@@ -159,7 +159,7 @@
             return params;
         }
         function FetchBuild_1() {
-            var url = "/api/BuildApi/GetCollectionOfNameValuePairOfByFKOnly";
+            var url = "/api/BuildApi/__GetCollectionOfNameValuePairOfByFKOnly";
             try {
                 var params = BuildCriteriaForFetchBuild_1();
                 $.getJSON(url, params, function (data) {

@@ -156,13 +156,13 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        [HttpGet, ActionName("GetCollectionOfNameValuePairOfAll")]
-        public Framework.NameValueCollection GetCollectionOfNameValuePairOfAll(
+        [HttpGet, ActionName("__GetCollectionOfNameValuePairOfAll")]
+        public Framework.NameValueCollection __GetCollectionOfNameValuePairOfAll(
             int currentIndex
             , int pageSize
             , string queryOrderByExpression)
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetCollectionOfNameValuePairOfAll(
+            return MSBuildExtensionPack.CommonBLLIoC.IoCSolution.__GetCollectionOfNameValuePairOfAll(
                 currentIndex
                 , pageSize
                 , queryOrderByExpression);
@@ -176,14 +176,14 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
-        [HttpGet, ActionName("GetMessageOfNameValuePairOfAll")]
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfAll(
+        [HttpGet, ActionName("__GetMessageOfNameValuePairOfAll")]
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetMessageOfNameValuePairOfAll(
             int currentIndex
             , int pageSize
             , string queryOrderByExpression)
 
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfNameValuePairOfAll(
+            return MSBuildExtensionPack.CommonBLLIoC.IoCSolution.__GetMessageOfNameValuePairOfAll(
                 currentIndex
                 , pageSize
                 , queryOrderByExpression);
@@ -204,15 +204,15 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        [HttpGet, ActionName("GetCollectionOfNameValuePairOfByFKOnly")]
-        public Framework.NameValueCollection GetCollectionOfNameValuePairOfByFKOnly(
+        [HttpGet, ActionName("__GetCollectionOfNameValuePairOfByFKOnly")]
+        public Framework.NameValueCollection __GetCollectionOfNameValuePairOfByFKOnly(
             System.Int64? organizationId
             , System.Int64? organization_2Id
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression)
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetCollectionOfNameValuePairOfByFKOnly(
+            return MSBuildExtensionPack.CommonBLLIoC.IoCSolution.__GetCollectionOfNameValuePairOfByFKOnly(
                 organizationId.HasValue, organizationId
                 , organization_2Id.HasValue, organization_2Id
                 , currentIndex
@@ -231,8 +231,8 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
-        [HttpGet, ActionName("GetMessageOfNameValuePairOfByFKOnly")]
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfByFKOnly(
+        [HttpGet, ActionName("__GetMessageOfNameValuePairOfByFKOnly")]
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetMessageOfNameValuePairOfByFKOnly(
             System.Int64? organizationId
             , System.Int64? organization_2Id
             , int currentIndex
@@ -240,7 +240,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
             , string queryOrderByExpression)
 
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfNameValuePairOfByFKOnly(
+            return MSBuildExtensionPack.CommonBLLIoC.IoCSolution.__GetMessageOfNameValuePairOfByFKOnly(
                 organizationId.HasValue, organizationId
                 , organization_2Id.HasValue, organization_2Id
                 , currentIndex

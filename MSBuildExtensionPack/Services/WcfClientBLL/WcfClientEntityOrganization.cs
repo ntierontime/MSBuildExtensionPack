@@ -153,10 +153,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfCommon(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfEntityOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
         {
-            return base.Channel.GetCountOfEntityOfCommon(request);
+            return base.Channel.__GetCountOfEntityOfCommon(request);
         }
 
         /// <summary>
@@ -164,10 +164,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfCommon(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfEntityOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
         {
-            return base.Channel.ExistsOfEntityOfCommon(request);
+            return base.Channel.__ExistsOfEntityOfCommon(request);
         }
 
         /// <summary>
@@ -175,10 +175,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfCommon(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetCollectionOfEntityOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
         {
-            return base.Channel.GetCollectionOfEntityOfCommon(request);
+            return base.Channel.__GetCollectionOfEntityOfCommon(request);
         }
 
         /// <summary>
@@ -186,10 +186,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfCommon(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetSingleOfEntityOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
         {
-            return base.Channel.GetSingleOfEntityOfCommon(request);
+            return base.Channel.__GetSingleOfEntityOfCommon(request);
         }
 
         #endregion Query Methods Of Entity of Common
@@ -201,10 +201,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultOfCommon(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfDefaultOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
         {
-            return base.Channel.GetCountOfDefaultOfCommon(request);
+            return base.Channel.__GetCountOfDefaultOfCommon(request);
         }
 
         /// <summary>
@@ -212,10 +212,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfCommon(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfDefaultOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
         {
-            return base.Channel.ExistsOfDefaultOfCommon(request);
+            return base.Channel.__ExistsOfDefaultOfCommon(request);
         }
 
         /// <summary>
@@ -223,10 +223,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfCommon(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default __GetCollectionOfDefaultOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
         {
-            return base.Channel.GetCollectionOfDefaultOfCommon(request);
+            return base.Channel.__GetCollectionOfDefaultOfCommon(request);
         }
 
         /// <summary>
@@ -234,10 +234,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfCommon(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default __GetSingleOfDefaultOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
         {
-            return base.Channel.GetSingleOfDefaultOfCommon(request);
+            return base.Channel.__GetSingleOfDefaultOfCommon(request);
         }
 
         #endregion Query Methods Of Default of Common
@@ -249,10 +249,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfEntityOfAll(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
         {
-            return base.Channel.GetCountOfEntityOfAll(request);
+            return base.Channel.__GetCountOfEntityOfAll(request);
         }
 
         /// <summary>
@@ -260,10 +260,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfEntityOfAll(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
         {
-            return base.Channel.ExistsOfEntityOfAll(request);
+            return base.Channel.__ExistsOfEntityOfAll(request);
         }
 
         /// <summary>
@@ -271,10 +271,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfAll(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetCollectionOfEntityOfAll(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
         {
-            return base.Channel.GetCollectionOfEntityOfAll(request);
+            return base.Channel.__GetCollectionOfEntityOfAll(request);
         }
 
         /// <summary>
@@ -282,10 +282,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfAll(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetSingleOfEntityOfAll(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
         {
-            return base.Channel.GetSingleOfEntityOfAll(request);
+            return base.Channel.__GetSingleOfEntityOfAll(request);
         }
 
         #endregion Query Methods Of Entity of All
@@ -297,10 +297,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfNameValuePairOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfNameValuePairOfAll(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
         {
-            return base.Channel.GetCountOfNameValuePairOfAll(request);
+            return base.Channel.__GetCountOfNameValuePairOfAll(request);
         }
 
         /// <summary>
@@ -308,10 +308,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfNameValuePairOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfNameValuePairOfAll(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
         {
-            return base.Channel.ExistsOfNameValuePairOfAll(request);
+            return base.Channel.__ExistsOfNameValuePairOfAll(request);
         }
 
         /// <summary>
@@ -319,10 +319,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetCollectionOfNameValuePairOfAll(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
         {
-            return base.Channel.GetCollectionOfNameValuePairOfAll(request);
+            return base.Channel.__GetCollectionOfNameValuePairOfAll(request);
         }
 
         /// <summary>
@@ -330,10 +330,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetSingleOfNameValuePairOfAll(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
         {
-            return base.Channel.GetSingleOfNameValuePairOfAll(request);
+            return base.Channel.__GetSingleOfNameValuePairOfAll(request);
         }
 
         #endregion Query Methods Of NameValuePair of All
@@ -345,10 +345,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfRssItemOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfRssItemOfAll(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
         {
-            return base.Channel.GetCountOfRssItemOfAll(request);
+            return base.Channel.__GetCountOfRssItemOfAll(request);
         }
 
         /// <summary>
@@ -356,10 +356,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfRssItemOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfRssItemOfAll(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
         {
-            return base.Channel.ExistsOfRssItemOfAll(request);
+            return base.Channel.__ExistsOfRssItemOfAll(request);
         }
 
         /// <summary>
@@ -367,10 +367,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetCollectionOfRssItemOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection __GetCollectionOfRssItemOfAll(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
         {
-            return base.Channel.GetCollectionOfRssItemOfAll(request);
+            return base.Channel.__GetCollectionOfRssItemOfAll(request);
         }
 
         /// <summary>
@@ -378,10 +378,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetSingleOfRssItemOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection __GetSingleOfRssItemOfAll(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
         {
-            return base.Channel.GetSingleOfRssItemOfAll(request);
+            return base.Channel.__GetSingleOfRssItemOfAll(request);
         }
 
         #endregion Query Methods Of RssItem of All
@@ -393,10 +393,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfEntityOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            return base.Channel.GetCountOfEntityOfByFKOnly(request);
+            return base.Channel.__GetCountOfEntityOfByFKOnly(request);
         }
 
         /// <summary>
@@ -404,10 +404,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfEntityOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            return base.Channel.ExistsOfEntityOfByFKOnly(request);
+            return base.Channel.__ExistsOfEntityOfByFKOnly(request);
         }
 
         /// <summary>
@@ -415,10 +415,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfByFKOnly(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetCollectionOfEntityOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            return base.Channel.GetCollectionOfEntityOfByFKOnly(request);
+            return base.Channel.__GetCollectionOfEntityOfByFKOnly(request);
         }
 
         /// <summary>
@@ -426,10 +426,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfByFKOnly(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetSingleOfEntityOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            return base.Channel.GetSingleOfEntityOfByFKOnly(request);
+            return base.Channel.__GetSingleOfEntityOfByFKOnly(request);
         }
 
         #endregion Query Methods Of Entity of ByFKOnly
@@ -441,10 +441,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfNameValuePairOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfNameValuePairOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            return base.Channel.GetCountOfNameValuePairOfByFKOnly(request);
+            return base.Channel.__GetCountOfNameValuePairOfByFKOnly(request);
         }
 
         /// <summary>
@@ -452,10 +452,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfNameValuePairOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfNameValuePairOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            return base.Channel.ExistsOfNameValuePairOfByFKOnly(request);
+            return base.Channel.__ExistsOfNameValuePairOfByFKOnly(request);
         }
 
         /// <summary>
@@ -463,10 +463,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetCollectionOfNameValuePairOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            return base.Channel.GetCollectionOfNameValuePairOfByFKOnly(request);
+            return base.Channel.__GetCollectionOfNameValuePairOfByFKOnly(request);
         }
 
         /// <summary>
@@ -474,10 +474,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetSingleOfNameValuePairOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            return base.Channel.GetSingleOfNameValuePairOfByFKOnly(request);
+            return base.Channel.__GetSingleOfNameValuePairOfByFKOnly(request);
         }
 
         #endregion Query Methods Of NameValuePair of ByFKOnly
@@ -489,10 +489,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfRssItemOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfRssItemOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            return base.Channel.GetCountOfRssItemOfByFKOnly(request);
+            return base.Channel.__GetCountOfRssItemOfByFKOnly(request);
         }
 
         /// <summary>
@@ -500,10 +500,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfRssItemOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfRssItemOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            return base.Channel.ExistsOfRssItemOfByFKOnly(request);
+            return base.Channel.__ExistsOfRssItemOfByFKOnly(request);
         }
 
         /// <summary>
@@ -511,10 +511,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetCollectionOfRssItemOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection __GetCollectionOfRssItemOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            return base.Channel.GetCollectionOfRssItemOfByFKOnly(request);
+            return base.Channel.__GetCollectionOfRssItemOfByFKOnly(request);
         }
 
         /// <summary>
@@ -522,10 +522,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetSingleOfRssItemOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection __GetSingleOfRssItemOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            return base.Channel.GetSingleOfRssItemOfByFKOnly(request);
+            return base.Channel.__GetSingleOfRssItemOfByFKOnly(request);
         }
 
         #endregion Query Methods Of RssItem of ByFKOnly
@@ -537,10 +537,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfDefaultOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            return base.Channel.GetCountOfDefaultOfByFKOnly(request);
+            return base.Channel.__GetCountOfDefaultOfByFKOnly(request);
         }
 
         /// <summary>
@@ -548,10 +548,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfDefaultOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            return base.Channel.ExistsOfDefaultOfByFKOnly(request);
+            return base.Channel.__ExistsOfDefaultOfByFKOnly(request);
         }
 
         /// <summary>
@@ -559,10 +559,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfByFKOnly(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default __GetCollectionOfDefaultOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            return base.Channel.GetCollectionOfDefaultOfByFKOnly(request);
+            return base.Channel.__GetCollectionOfDefaultOfByFKOnly(request);
         }
 
         /// <summary>
@@ -570,10 +570,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfByFKOnly(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default __GetSingleOfDefaultOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            return base.Channel.GetSingleOfDefaultOfByFKOnly(request);
+            return base.Channel.__GetSingleOfDefaultOfByFKOnly(request);
         }
 
         #endregion Query Methods Of Default of ByFKOnly
@@ -585,10 +585,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultGroupedDataViewOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfDefaultGroupedDataViewOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            return base.Channel.GetCountOfDefaultGroupedDataViewOfByFKOnly(request);
+            return base.Channel.__GetCountOfDefaultGroupedDataViewOfByFKOnly(request);
         }
 
         /// <summary>
@@ -596,10 +596,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultGroupedDataViewOfByFKOnly(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfDefaultGroupedDataViewOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            return base.Channel.ExistsOfDefaultGroupedDataViewOfByFKOnly(request);
+            return base.Channel.__ExistsOfDefaultGroupedDataViewOfByFKOnly(request);
         }
 
         /// <summary>
@@ -607,10 +607,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView __GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            return base.Channel.GetCollectionOfDefaultGroupedDataViewOfByFKOnly(request);
+            return base.Channel.__GetCollectionOfDefaultGroupedDataViewOfByFKOnly(request);
         }
 
         /// <summary>
@@ -618,10 +618,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView GetSingleOfDefaultGroupedDataViewOfByFKOnly(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView __GetSingleOfDefaultGroupedDataViewOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
         {
-            return base.Channel.GetSingleOfDefaultGroupedDataViewOfByFKOnly(request);
+            return base.Channel.__GetSingleOfDefaultGroupedDataViewOfByFKOnly(request);
         }
 
         #endregion Query Methods Of DefaultGroupedDataView of ByFKOnly
@@ -633,10 +633,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfByIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfEntityOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
         {
-            return base.Channel.GetCountOfEntityOfByIdentifier(request);
+            return base.Channel.__GetCountOfEntityOfByIdentifier(request);
         }
 
         /// <summary>
@@ -644,10 +644,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfByIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfEntityOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
         {
-            return base.Channel.ExistsOfEntityOfByIdentifier(request);
+            return base.Channel.__ExistsOfEntityOfByIdentifier(request);
         }
 
         /// <summary>
@@ -655,10 +655,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfByIdentifier(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetCollectionOfEntityOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
         {
-            return base.Channel.GetCollectionOfEntityOfByIdentifier(request);
+            return base.Channel.__GetCollectionOfEntityOfByIdentifier(request);
         }
 
         /// <summary>
@@ -666,10 +666,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfByIdentifier(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetSingleOfEntityOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
         {
-            return base.Channel.GetSingleOfEntityOfByIdentifier(request);
+            return base.Channel.__GetSingleOfEntityOfByIdentifier(request);
         }
 
         #endregion Query Methods Of Entity of ByIdentifier
@@ -681,10 +681,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultOfByIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfDefaultOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
         {
-            return base.Channel.GetCountOfDefaultOfByIdentifier(request);
+            return base.Channel.__GetCountOfDefaultOfByIdentifier(request);
         }
 
         /// <summary>
@@ -692,10 +692,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfByIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfDefaultOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
         {
-            return base.Channel.ExistsOfDefaultOfByIdentifier(request);
+            return base.Channel.__ExistsOfDefaultOfByIdentifier(request);
         }
 
         /// <summary>
@@ -703,10 +703,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfByIdentifier(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default __GetCollectionOfDefaultOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
         {
-            return base.Channel.GetCollectionOfDefaultOfByIdentifier(request);
+            return base.Channel.__GetCollectionOfDefaultOfByIdentifier(request);
         }
 
         /// <summary>
@@ -714,10 +714,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfByIdentifier(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default __GetSingleOfDefaultOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
         {
-            return base.Channel.GetSingleOfDefaultOfByIdentifier(request);
+            return base.Channel.__GetSingleOfDefaultOfByIdentifier(request);
         }
 
         #endregion Query Methods Of Default of ByIdentifier
@@ -729,10 +729,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfKeyInformationOfByIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfKeyInformationOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
         {
-            return base.Channel.GetCountOfKeyInformationOfByIdentifier(request);
+            return base.Channel.__GetCountOfKeyInformationOfByIdentifier(request);
         }
 
         /// <summary>
@@ -740,10 +740,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationOfByIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfKeyInformationOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
         {
-            return base.Channel.ExistsOfKeyInformationOfByIdentifier(request);
+            return base.Channel.__ExistsOfKeyInformationOfByIdentifier(request);
         }
 
         /// <summary>
@@ -751,10 +751,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation GetCollectionOfKeyInformationOfByIdentifier(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation __GetCollectionOfKeyInformationOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
         {
-            return base.Channel.GetCollectionOfKeyInformationOfByIdentifier(request);
+            return base.Channel.__GetCollectionOfKeyInformationOfByIdentifier(request);
         }
 
         /// <summary>
@@ -762,10 +762,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation GetSingleOfKeyInformationOfByIdentifier(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation __GetSingleOfKeyInformationOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
         {
-            return base.Channel.GetSingleOfKeyInformationOfByIdentifier(request);
+            return base.Channel.__GetSingleOfKeyInformationOfByIdentifier(request);
         }
 
         #endregion Query Methods Of KeyInformation of ByIdentifier
@@ -777,10 +777,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
         {
-            return base.Channel.GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
+            return base.Channel.__GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
         }
 
         /// <summary>
@@ -788,10 +788,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
         {
-            return base.Channel.ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
+            return base.Channel.__ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
         }
 
         /// <summary>
@@ -799,10 +799,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
         {
-            return base.Channel.GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
+            return base.Channel.__GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
         }
 
         /// <summary>
@@ -810,10 +810,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
         {
-            return base.Channel.GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
+            return base.Channel.__GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
         }
 
         #endregion Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueIdentifier
@@ -825,10 +825,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
         {
-            return base.Channel.GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
+            return base.Channel.__GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
         }
 
         /// <summary>
@@ -836,10 +836,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
         {
-            return base.Channel.ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
+            return base.Channel.__ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
         }
 
         /// <summary>
@@ -847,10 +847,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
         {
-            return base.Channel.GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
+            return base.Channel.__GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
         }
 
         /// <summary>
@@ -858,10 +858,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
         {
-            return base.Channel.GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
+            return base.Channel.__GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
         }
 
         #endregion Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueIdentifier
@@ -873,10 +873,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
         {
-            return base.Channel.GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
+            return base.Channel.__GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
         }
 
         /// <summary>
@@ -884,10 +884,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
         {
-            return base.Channel.ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
+            return base.Channel.__ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
         }
 
         /// <summary>
@@ -895,10 +895,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default __GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
         {
-            return base.Channel.GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
+            return base.Channel.__GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
         }
 
         /// <summary>
@@ -906,10 +906,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default __GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
         {
-            return base.Channel.GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
+            return base.Channel.__GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
         }
 
         #endregion Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueIdentifier
@@ -921,10 +921,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
         {
-            return base.Channel.GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
+            return base.Channel.__GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
         }
 
         /// <summary>
@@ -932,10 +932,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
         {
-            return base.Channel.ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
+            return base.Channel.__ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
         }
 
         /// <summary>
@@ -943,10 +943,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
         {
-            return base.Channel.GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
+            return base.Channel.__GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
         }
 
         /// <summary>
@@ -954,10 +954,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
         {
-            return base.Channel.GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
+            return base.Channel.__GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
         }
 
         #endregion Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
@@ -969,10 +969,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
         {
-            return base.Channel.GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
+            return base.Channel.__GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
         }
 
         /// <summary>
@@ -980,10 +980,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
         {
-            return base.Channel.ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
+            return base.Channel.__ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
         }
 
         /// <summary>
@@ -991,10 +991,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
         {
-            return base.Channel.GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
+            return base.Channel.__GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
         }
 
         /// <summary>
@@ -1002,10 +1002,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
         {
-            return base.Channel.GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
+            return base.Channel.__GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
         }
 
         #endregion Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
@@ -1017,10 +1017,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
         {
-            return base.Channel.GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
+            return base.Channel.__GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
         }
 
         /// <summary>
@@ -1028,10 +1028,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
         {
-            return base.Channel.ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
+            return base.Channel.__ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
         }
 
         /// <summary>
@@ -1039,10 +1039,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default __GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
         {
-            return base.Channel.GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
+            return base.Channel.__GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
         }
 
         /// <summary>
@@ -1050,10 +1050,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default __GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
         {
-            return base.Channel.GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
+            return base.Channel.__GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
         }
 
         #endregion Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
@@ -1065,10 +1065,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfIdentifierAndUniqueConstraint(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfEntityOfIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            return base.Channel.GetCountOfEntityOfIdentifierAndUniqueConstraint(request);
+            return base.Channel.__GetCountOfEntityOfIdentifierAndUniqueConstraint(request);
         }
 
         /// <summary>
@@ -1076,10 +1076,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfIdentifierAndUniqueConstraint(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfEntityOfIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            return base.Channel.ExistsOfEntityOfIdentifierAndUniqueConstraint(request);
+            return base.Channel.__ExistsOfEntityOfIdentifierAndUniqueConstraint(request);
         }
 
         /// <summary>
@@ -1087,10 +1087,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfIdentifierAndUniqueConstraint(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetCollectionOfEntityOfIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            return base.Channel.GetCollectionOfEntityOfIdentifierAndUniqueConstraint(request);
+            return base.Channel.__GetCollectionOfEntityOfIdentifierAndUniqueConstraint(request);
         }
 
         /// <summary>
@@ -1098,10 +1098,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfIdentifierAndUniqueConstraint(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn __GetSingleOfEntityOfIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            return base.Channel.GetSingleOfEntityOfIdentifierAndUniqueConstraint(request);
+            return base.Channel.__GetSingleOfEntityOfIdentifierAndUniqueConstraint(request);
         }
 
         #endregion Query Methods Of Entity of IdentifierAndUniqueConstraint
@@ -1113,10 +1113,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultOfIdentifierAndUniqueConstraint(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfDefaultOfIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            return base.Channel.GetCountOfDefaultOfIdentifierAndUniqueConstraint(request);
+            return base.Channel.__GetCountOfDefaultOfIdentifierAndUniqueConstraint(request);
         }
 
         /// <summary>
@@ -1124,10 +1124,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfIdentifierAndUniqueConstraint(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfDefaultOfIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            return base.Channel.ExistsOfDefaultOfIdentifierAndUniqueConstraint(request);
+            return base.Channel.__ExistsOfDefaultOfIdentifierAndUniqueConstraint(request);
         }
 
         /// <summary>
@@ -1135,10 +1135,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfIdentifierAndUniqueConstraint(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default __GetCollectionOfDefaultOfIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            return base.Channel.GetCollectionOfDefaultOfIdentifierAndUniqueConstraint(request);
+            return base.Channel.__GetCollectionOfDefaultOfIdentifierAndUniqueConstraint(request);
         }
 
         /// <summary>
@@ -1146,10 +1146,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfIdentifierAndUniqueConstraint(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default __GetSingleOfDefaultOfIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            return base.Channel.GetSingleOfDefaultOfIdentifierAndUniqueConstraint(request);
+            return base.Channel.__GetSingleOfDefaultOfIdentifierAndUniqueConstraint(request);
         }
 
         #endregion Query Methods Of Default of IdentifierAndUniqueConstraint
@@ -1161,10 +1161,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfKeyInformationOfIdentifierAndUniqueConstraint(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfKeyInformationOfIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            return base.Channel.GetCountOfKeyInformationOfIdentifierAndUniqueConstraint(request);
+            return base.Channel.__GetCountOfKeyInformationOfIdentifierAndUniqueConstraint(request);
         }
 
         /// <summary>
@@ -1172,10 +1172,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            return base.Channel.ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(request);
+            return base.Channel.__ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(request);
         }
 
         /// <summary>
@@ -1183,10 +1183,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation __GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            return base.Channel.GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint(request);
+            return base.Channel.__GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint(request);
         }
 
         /// <summary>
@@ -1194,10 +1194,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation __GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            return base.Channel.GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint(request);
+            return base.Channel.__GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint(request);
         }
 
         #endregion Query Methods Of KeyInformation of IdentifierAndUniqueConstraint

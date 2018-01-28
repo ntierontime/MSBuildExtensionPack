@@ -208,12 +208,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class GetCountOfEntityOfCommonCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        public partial class __GetCountOfEntityOfCommonCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
         {
 
             private object[] results;
 
-            public GetCountOfEntityOfCommonCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            public __GetCountOfEntityOfCommonCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
                 base(exception, cancelled, userState)
             {
                 this.results = results;
@@ -231,12 +231,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class ExistsOfEntityOfCommonCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        public partial class __ExistsOfEntityOfCommonCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
         {
 
             private object[] results;
 
-            public ExistsOfEntityOfCommonCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            public __ExistsOfEntityOfCommonCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
                 base(exception, cancelled, userState)
             {
                 this.results = results;
@@ -254,12 +254,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class GetCollectionOfEntityOfCommonCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        public partial class __GetCollectionOfEntityOfCommonCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
         {
 
             private object[] results;
 
-            public GetCollectionOfEntityOfCommonCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            public __GetCollectionOfEntityOfCommonCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
                 base(exception, cancelled, userState)
             {
                 this.results = results;
@@ -277,12 +277,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class GetSingleOfEntityOfCommonCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        public partial class __GetSingleOfEntityOfCommonCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
         {
 
             private object[] results;
 
-            public GetSingleOfEntityOfCommonCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            public __GetSingleOfEntityOfCommonCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
                 base(exception, cancelled, userState)
             {
                 this.results = results;
@@ -298,29 +298,29 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
-        private BeginOperationDelegate onBeginGetCountOfEntityOfCommonDelegate;
+        private BeginOperationDelegate onBegin__GetCountOfEntityOfCommonDelegate;
 
-        private EndOperationDelegate onEndGetCountOfEntityOfCommonDelegate;
+        private EndOperationDelegate onEnd__GetCountOfEntityOfCommonDelegate;
 
-        private System.Threading.SendOrPostCallback onGetCountOfEntityOfCommonCompletedDelegate;
+        private System.Threading.SendOrPostCallback on__GetCountOfEntityOfCommonCompletedDelegate;
 
-        private BeginOperationDelegate onBeginExistsOfEntityOfCommonDelegate;
+        private BeginOperationDelegate onBegin__ExistsOfEntityOfCommonDelegate;
 
-        private EndOperationDelegate onEndExistsOfEntityOfCommonDelegate;
+        private EndOperationDelegate onEnd__ExistsOfEntityOfCommonDelegate;
 
-        private System.Threading.SendOrPostCallback onExistsOfEntityOfCommonCompletedDelegate;
+        private System.Threading.SendOrPostCallback on__ExistsOfEntityOfCommonCompletedDelegate;
 
-        private BeginOperationDelegate onBeginGetCollectionOfEntityOfCommonDelegate;
+        private BeginOperationDelegate onBegin__GetCollectionOfEntityOfCommonDelegate;
 
-        private EndOperationDelegate onEndGetCollectionOfEntityOfCommonDelegate;
+        private EndOperationDelegate onEnd__GetCollectionOfEntityOfCommonDelegate;
 
-        private System.Threading.SendOrPostCallback onGetCollectionOfEntityOfCommonCompletedDelegate;
+        private System.Threading.SendOrPostCallback on__GetCollectionOfEntityOfCommonCompletedDelegate;
 
-        private BeginOperationDelegate onBeginGetSingleOfEntityOfCommonDelegate;
+        private BeginOperationDelegate onBegin__GetSingleOfEntityOfCommonDelegate;
 
-        private EndOperationDelegate onEndGetSingleOfEntityOfCommonDelegate;
+        private EndOperationDelegate onEnd__GetSingleOfEntityOfCommonDelegate;
 
-        private System.Threading.SendOrPostCallback onGetSingleOfEntityOfCommonCompletedDelegate;
+        private System.Threading.SendOrPostCallback on__GetSingleOfEntityOfCommonCompletedDelegate;
 
         #endregion Query Methods Of Entity of Common
 
@@ -328,12 +328,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class GetCountOfEntityOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        public partial class __GetCountOfEntityOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
         {
 
             private object[] results;
 
-            public GetCountOfEntityOfAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            public __GetCountOfEntityOfAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
                 base(exception, cancelled, userState)
             {
                 this.results = results;
@@ -351,12 +351,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class ExistsOfEntityOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        public partial class __ExistsOfEntityOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
         {
 
             private object[] results;
 
-            public ExistsOfEntityOfAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            public __ExistsOfEntityOfAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
                 base(exception, cancelled, userState)
             {
                 this.results = results;
@@ -374,12 +374,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class GetCollectionOfEntityOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        public partial class __GetCollectionOfEntityOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
         {
 
             private object[] results;
 
-            public GetCollectionOfEntityOfAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            public __GetCollectionOfEntityOfAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
                 base(exception, cancelled, userState)
             {
                 this.results = results;
@@ -397,12 +397,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class GetSingleOfEntityOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        public partial class __GetSingleOfEntityOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
         {
 
             private object[] results;
 
-            public GetSingleOfEntityOfAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            public __GetSingleOfEntityOfAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
                 base(exception, cancelled, userState)
             {
                 this.results = results;
@@ -418,29 +418,29 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
-        private BeginOperationDelegate onBeginGetCountOfEntityOfAllDelegate;
+        private BeginOperationDelegate onBegin__GetCountOfEntityOfAllDelegate;
 
-        private EndOperationDelegate onEndGetCountOfEntityOfAllDelegate;
+        private EndOperationDelegate onEnd__GetCountOfEntityOfAllDelegate;
 
-        private System.Threading.SendOrPostCallback onGetCountOfEntityOfAllCompletedDelegate;
+        private System.Threading.SendOrPostCallback on__GetCountOfEntityOfAllCompletedDelegate;
 
-        private BeginOperationDelegate onBeginExistsOfEntityOfAllDelegate;
+        private BeginOperationDelegate onBegin__ExistsOfEntityOfAllDelegate;
 
-        private EndOperationDelegate onEndExistsOfEntityOfAllDelegate;
+        private EndOperationDelegate onEnd__ExistsOfEntityOfAllDelegate;
 
-        private System.Threading.SendOrPostCallback onExistsOfEntityOfAllCompletedDelegate;
+        private System.Threading.SendOrPostCallback on__ExistsOfEntityOfAllCompletedDelegate;
 
-        private BeginOperationDelegate onBeginGetCollectionOfEntityOfAllDelegate;
+        private BeginOperationDelegate onBegin__GetCollectionOfEntityOfAllDelegate;
 
-        private EndOperationDelegate onEndGetCollectionOfEntityOfAllDelegate;
+        private EndOperationDelegate onEnd__GetCollectionOfEntityOfAllDelegate;
 
-        private System.Threading.SendOrPostCallback onGetCollectionOfEntityOfAllCompletedDelegate;
+        private System.Threading.SendOrPostCallback on__GetCollectionOfEntityOfAllCompletedDelegate;
 
-        private BeginOperationDelegate onBeginGetSingleOfEntityOfAllDelegate;
+        private BeginOperationDelegate onBegin__GetSingleOfEntityOfAllDelegate;
 
-        private EndOperationDelegate onEndGetSingleOfEntityOfAllDelegate;
+        private EndOperationDelegate onEnd__GetSingleOfEntityOfAllDelegate;
 
-        private System.Threading.SendOrPostCallback onGetSingleOfEntityOfAllCompletedDelegate;
+        private System.Threading.SendOrPostCallback on__GetSingleOfEntityOfAllCompletedDelegate;
 
         #endregion Query Methods Of Entity of All
 
@@ -448,12 +448,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class GetCountOfNameValuePairOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        public partial class __GetCountOfNameValuePairOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
         {
 
             private object[] results;
 
-            public GetCountOfNameValuePairOfAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            public __GetCountOfNameValuePairOfAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
                 base(exception, cancelled, userState)
             {
                 this.results = results;
@@ -471,12 +471,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class ExistsOfNameValuePairOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        public partial class __ExistsOfNameValuePairOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
         {
 
             private object[] results;
 
-            public ExistsOfNameValuePairOfAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            public __ExistsOfNameValuePairOfAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
                 base(exception, cancelled, userState)
             {
                 this.results = results;
@@ -494,12 +494,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class GetCollectionOfNameValuePairOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        public partial class __GetCollectionOfNameValuePairOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
         {
 
             private object[] results;
 
-            public GetCollectionOfNameValuePairOfAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            public __GetCollectionOfNameValuePairOfAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
                 base(exception, cancelled, userState)
             {
                 this.results = results;
@@ -517,12 +517,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class GetSingleOfNameValuePairOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        public partial class __GetSingleOfNameValuePairOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
         {
 
             private object[] results;
 
-            public GetSingleOfNameValuePairOfAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            public __GetSingleOfNameValuePairOfAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
                 base(exception, cancelled, userState)
             {
                 this.results = results;
@@ -538,29 +538,29 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
-        private BeginOperationDelegate onBeginGetCountOfNameValuePairOfAllDelegate;
+        private BeginOperationDelegate onBegin__GetCountOfNameValuePairOfAllDelegate;
 
-        private EndOperationDelegate onEndGetCountOfNameValuePairOfAllDelegate;
+        private EndOperationDelegate onEnd__GetCountOfNameValuePairOfAllDelegate;
 
-        private System.Threading.SendOrPostCallback onGetCountOfNameValuePairOfAllCompletedDelegate;
+        private System.Threading.SendOrPostCallback on__GetCountOfNameValuePairOfAllCompletedDelegate;
 
-        private BeginOperationDelegate onBeginExistsOfNameValuePairOfAllDelegate;
+        private BeginOperationDelegate onBegin__ExistsOfNameValuePairOfAllDelegate;
 
-        private EndOperationDelegate onEndExistsOfNameValuePairOfAllDelegate;
+        private EndOperationDelegate onEnd__ExistsOfNameValuePairOfAllDelegate;
 
-        private System.Threading.SendOrPostCallback onExistsOfNameValuePairOfAllCompletedDelegate;
+        private System.Threading.SendOrPostCallback on__ExistsOfNameValuePairOfAllCompletedDelegate;
 
-        private BeginOperationDelegate onBeginGetCollectionOfNameValuePairOfAllDelegate;
+        private BeginOperationDelegate onBegin__GetCollectionOfNameValuePairOfAllDelegate;
 
-        private EndOperationDelegate onEndGetCollectionOfNameValuePairOfAllDelegate;
+        private EndOperationDelegate onEnd__GetCollectionOfNameValuePairOfAllDelegate;
 
-        private System.Threading.SendOrPostCallback onGetCollectionOfNameValuePairOfAllCompletedDelegate;
+        private System.Threading.SendOrPostCallback on__GetCollectionOfNameValuePairOfAllCompletedDelegate;
 
-        private BeginOperationDelegate onBeginGetSingleOfNameValuePairOfAllDelegate;
+        private BeginOperationDelegate onBegin__GetSingleOfNameValuePairOfAllDelegate;
 
-        private EndOperationDelegate onEndGetSingleOfNameValuePairOfAllDelegate;
+        private EndOperationDelegate onEnd__GetSingleOfNameValuePairOfAllDelegate;
 
-        private System.Threading.SendOrPostCallback onGetSingleOfNameValuePairOfAllCompletedDelegate;
+        private System.Threading.SendOrPostCallback on__GetSingleOfNameValuePairOfAllCompletedDelegate;
 
         #endregion Query Methods Of NameValuePair of All
 
@@ -568,12 +568,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class GetCountOfRssItemOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        public partial class __GetCountOfRssItemOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
         {
 
             private object[] results;
 
-            public GetCountOfRssItemOfAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            public __GetCountOfRssItemOfAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
                 base(exception, cancelled, userState)
             {
                 this.results = results;
@@ -591,12 +591,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class ExistsOfRssItemOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        public partial class __ExistsOfRssItemOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
         {
 
             private object[] results;
 
-            public ExistsOfRssItemOfAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            public __ExistsOfRssItemOfAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
                 base(exception, cancelled, userState)
             {
                 this.results = results;
@@ -614,12 +614,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class GetCollectionOfRssItemOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        public partial class __GetCollectionOfRssItemOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
         {
 
             private object[] results;
 
-            public GetCollectionOfRssItemOfAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            public __GetCollectionOfRssItemOfAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
                 base(exception, cancelled, userState)
             {
                 this.results = results;
@@ -637,12 +637,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class GetSingleOfRssItemOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        public partial class __GetSingleOfRssItemOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
         {
 
             private object[] results;
 
-            public GetSingleOfRssItemOfAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            public __GetSingleOfRssItemOfAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
                 base(exception, cancelled, userState)
             {
                 this.results = results;
@@ -658,29 +658,29 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
-        private BeginOperationDelegate onBeginGetCountOfRssItemOfAllDelegate;
+        private BeginOperationDelegate onBegin__GetCountOfRssItemOfAllDelegate;
 
-        private EndOperationDelegate onEndGetCountOfRssItemOfAllDelegate;
+        private EndOperationDelegate onEnd__GetCountOfRssItemOfAllDelegate;
 
-        private System.Threading.SendOrPostCallback onGetCountOfRssItemOfAllCompletedDelegate;
+        private System.Threading.SendOrPostCallback on__GetCountOfRssItemOfAllCompletedDelegate;
 
-        private BeginOperationDelegate onBeginExistsOfRssItemOfAllDelegate;
+        private BeginOperationDelegate onBegin__ExistsOfRssItemOfAllDelegate;
 
-        private EndOperationDelegate onEndExistsOfRssItemOfAllDelegate;
+        private EndOperationDelegate onEnd__ExistsOfRssItemOfAllDelegate;
 
-        private System.Threading.SendOrPostCallback onExistsOfRssItemOfAllCompletedDelegate;
+        private System.Threading.SendOrPostCallback on__ExistsOfRssItemOfAllCompletedDelegate;
 
-        private BeginOperationDelegate onBeginGetCollectionOfRssItemOfAllDelegate;
+        private BeginOperationDelegate onBegin__GetCollectionOfRssItemOfAllDelegate;
 
-        private EndOperationDelegate onEndGetCollectionOfRssItemOfAllDelegate;
+        private EndOperationDelegate onEnd__GetCollectionOfRssItemOfAllDelegate;
 
-        private System.Threading.SendOrPostCallback onGetCollectionOfRssItemOfAllCompletedDelegate;
+        private System.Threading.SendOrPostCallback on__GetCollectionOfRssItemOfAllCompletedDelegate;
 
-        private BeginOperationDelegate onBeginGetSingleOfRssItemOfAllDelegate;
+        private BeginOperationDelegate onBegin__GetSingleOfRssItemOfAllDelegate;
 
-        private EndOperationDelegate onEndGetSingleOfRssItemOfAllDelegate;
+        private EndOperationDelegate onEnd__GetSingleOfRssItemOfAllDelegate;
 
-        private System.Threading.SendOrPostCallback onGetSingleOfRssItemOfAllCompletedDelegate;
+        private System.Threading.SendOrPostCallback on__GetSingleOfRssItemOfAllCompletedDelegate;
 
         #endregion Query Methods Of RssItem of All
 
@@ -688,12 +688,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class GetCountOfEntityOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        public partial class __GetCountOfEntityOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
         {
 
             private object[] results;
 
-            public GetCountOfEntityOfByIdentifierCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            public __GetCountOfEntityOfByIdentifierCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
                 base(exception, cancelled, userState)
             {
                 this.results = results;
@@ -711,12 +711,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class ExistsOfEntityOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        public partial class __ExistsOfEntityOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
         {
 
             private object[] results;
 
-            public ExistsOfEntityOfByIdentifierCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            public __ExistsOfEntityOfByIdentifierCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
                 base(exception, cancelled, userState)
             {
                 this.results = results;
@@ -734,12 +734,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class GetCollectionOfEntityOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        public partial class __GetCollectionOfEntityOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
         {
 
             private object[] results;
 
-            public GetCollectionOfEntityOfByIdentifierCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            public __GetCollectionOfEntityOfByIdentifierCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
                 base(exception, cancelled, userState)
             {
                 this.results = results;
@@ -757,12 +757,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class GetSingleOfEntityOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        public partial class __GetSingleOfEntityOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
         {
 
             private object[] results;
 
-            public GetSingleOfEntityOfByIdentifierCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            public __GetSingleOfEntityOfByIdentifierCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
                 base(exception, cancelled, userState)
             {
                 this.results = results;
@@ -778,29 +778,29 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
-        private BeginOperationDelegate onBeginGetCountOfEntityOfByIdentifierDelegate;
+        private BeginOperationDelegate onBegin__GetCountOfEntityOfByIdentifierDelegate;
 
-        private EndOperationDelegate onEndGetCountOfEntityOfByIdentifierDelegate;
+        private EndOperationDelegate onEnd__GetCountOfEntityOfByIdentifierDelegate;
 
-        private System.Threading.SendOrPostCallback onGetCountOfEntityOfByIdentifierCompletedDelegate;
+        private System.Threading.SendOrPostCallback on__GetCountOfEntityOfByIdentifierCompletedDelegate;
 
-        private BeginOperationDelegate onBeginExistsOfEntityOfByIdentifierDelegate;
+        private BeginOperationDelegate onBegin__ExistsOfEntityOfByIdentifierDelegate;
 
-        private EndOperationDelegate onEndExistsOfEntityOfByIdentifierDelegate;
+        private EndOperationDelegate onEnd__ExistsOfEntityOfByIdentifierDelegate;
 
-        private System.Threading.SendOrPostCallback onExistsOfEntityOfByIdentifierCompletedDelegate;
+        private System.Threading.SendOrPostCallback on__ExistsOfEntityOfByIdentifierCompletedDelegate;
 
-        private BeginOperationDelegate onBeginGetCollectionOfEntityOfByIdentifierDelegate;
+        private BeginOperationDelegate onBegin__GetCollectionOfEntityOfByIdentifierDelegate;
 
-        private EndOperationDelegate onEndGetCollectionOfEntityOfByIdentifierDelegate;
+        private EndOperationDelegate onEnd__GetCollectionOfEntityOfByIdentifierDelegate;
 
-        private System.Threading.SendOrPostCallback onGetCollectionOfEntityOfByIdentifierCompletedDelegate;
+        private System.Threading.SendOrPostCallback on__GetCollectionOfEntityOfByIdentifierCompletedDelegate;
 
-        private BeginOperationDelegate onBeginGetSingleOfEntityOfByIdentifierDelegate;
+        private BeginOperationDelegate onBegin__GetSingleOfEntityOfByIdentifierDelegate;
 
-        private EndOperationDelegate onEndGetSingleOfEntityOfByIdentifierDelegate;
+        private EndOperationDelegate onEnd__GetSingleOfEntityOfByIdentifierDelegate;
 
-        private System.Threading.SendOrPostCallback onGetSingleOfEntityOfByIdentifierCompletedDelegate;
+        private System.Threading.SendOrPostCallback on__GetSingleOfEntityOfByIdentifierCompletedDelegate;
 
         #endregion Query Methods Of Entity of ByIdentifier
 
@@ -808,12 +808,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class GetCountOfKeyInformationOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        public partial class __GetCountOfKeyInformationOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
         {
 
             private object[] results;
 
-            public GetCountOfKeyInformationOfByIdentifierCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            public __GetCountOfKeyInformationOfByIdentifierCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
                 base(exception, cancelled, userState)
             {
                 this.results = results;
@@ -831,12 +831,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class ExistsOfKeyInformationOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        public partial class __ExistsOfKeyInformationOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
         {
 
             private object[] results;
 
-            public ExistsOfKeyInformationOfByIdentifierCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            public __ExistsOfKeyInformationOfByIdentifierCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
                 base(exception, cancelled, userState)
             {
                 this.results = results;
@@ -854,12 +854,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class GetCollectionOfKeyInformationOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        public partial class __GetCollectionOfKeyInformationOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
         {
 
             private object[] results;
 
-            public GetCollectionOfKeyInformationOfByIdentifierCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            public __GetCollectionOfKeyInformationOfByIdentifierCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
                 base(exception, cancelled, userState)
             {
                 this.results = results;
@@ -877,12 +877,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class GetSingleOfKeyInformationOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        public partial class __GetSingleOfKeyInformationOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
         {
 
             private object[] results;
 
-            public GetSingleOfKeyInformationOfByIdentifierCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+            public __GetSingleOfKeyInformationOfByIdentifierCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
                 base(exception, cancelled, userState)
             {
                 this.results = results;
@@ -898,29 +898,29 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
-        private BeginOperationDelegate onBeginGetCountOfKeyInformationOfByIdentifierDelegate;
+        private BeginOperationDelegate onBegin__GetCountOfKeyInformationOfByIdentifierDelegate;
 
-        private EndOperationDelegate onEndGetCountOfKeyInformationOfByIdentifierDelegate;
+        private EndOperationDelegate onEnd__GetCountOfKeyInformationOfByIdentifierDelegate;
 
-        private System.Threading.SendOrPostCallback onGetCountOfKeyInformationOfByIdentifierCompletedDelegate;
+        private System.Threading.SendOrPostCallback on__GetCountOfKeyInformationOfByIdentifierCompletedDelegate;
 
-        private BeginOperationDelegate onBeginExistsOfKeyInformationOfByIdentifierDelegate;
+        private BeginOperationDelegate onBegin__ExistsOfKeyInformationOfByIdentifierDelegate;
 
-        private EndOperationDelegate onEndExistsOfKeyInformationOfByIdentifierDelegate;
+        private EndOperationDelegate onEnd__ExistsOfKeyInformationOfByIdentifierDelegate;
 
-        private System.Threading.SendOrPostCallback onExistsOfKeyInformationOfByIdentifierCompletedDelegate;
+        private System.Threading.SendOrPostCallback on__ExistsOfKeyInformationOfByIdentifierCompletedDelegate;
 
-        private BeginOperationDelegate onBeginGetCollectionOfKeyInformationOfByIdentifierDelegate;
+        private BeginOperationDelegate onBegin__GetCollectionOfKeyInformationOfByIdentifierDelegate;
 
-        private EndOperationDelegate onEndGetCollectionOfKeyInformationOfByIdentifierDelegate;
+        private EndOperationDelegate onEnd__GetCollectionOfKeyInformationOfByIdentifierDelegate;
 
-        private System.Threading.SendOrPostCallback onGetCollectionOfKeyInformationOfByIdentifierCompletedDelegate;
+        private System.Threading.SendOrPostCallback on__GetCollectionOfKeyInformationOfByIdentifierCompletedDelegate;
 
-        private BeginOperationDelegate onBeginGetSingleOfKeyInformationOfByIdentifierDelegate;
+        private BeginOperationDelegate onBegin__GetSingleOfKeyInformationOfByIdentifierDelegate;
 
-        private EndOperationDelegate onEndGetSingleOfKeyInformationOfByIdentifierDelegate;
+        private EndOperationDelegate onEnd__GetSingleOfKeyInformationOfByIdentifierDelegate;
 
-        private System.Threading.SendOrPostCallback onGetSingleOfKeyInformationOfByIdentifierCompletedDelegate;
+        private System.Threading.SendOrPostCallback on__GetSingleOfKeyInformationOfByIdentifierCompletedDelegate;
 
         #endregion Query Methods Of KeyInformation of ByIdentifier
 
@@ -1032,73 +1032,73 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #region Query Methods Of Entity of Common
 
-        public event System.EventHandler<GetCountOfEntityOfCommonCompletedEventArgs> GetCountOfEntityOfCommonCompleted;
+        public event System.EventHandler<__GetCountOfEntityOfCommonCompletedEventArgs> __GetCountOfEntityOfCommonCompleted;
 
-        public event System.EventHandler<ExistsOfEntityOfCommonCompletedEventArgs> ExistsOfEntityOfCommonCompleted;
+        public event System.EventHandler<__ExistsOfEntityOfCommonCompletedEventArgs> __ExistsOfEntityOfCommonCompleted;
 
-        public event System.EventHandler<GetCollectionOfEntityOfCommonCompletedEventArgs> GetCollectionOfEntityOfCommonCompleted;
+        public event System.EventHandler<__GetCollectionOfEntityOfCommonCompletedEventArgs> __GetCollectionOfEntityOfCommonCompleted;
 
-        public event System.EventHandler<GetSingleOfEntityOfCommonCompletedEventArgs> GetSingleOfEntityOfCommonCompleted;
+        public event System.EventHandler<__GetSingleOfEntityOfCommonCompletedEventArgs> __GetSingleOfEntityOfCommonCompleted;
 
         #endregion Query Methods Of Entity of Common
 
         #region Query Methods Of Entity of All
 
-        public event System.EventHandler<GetCountOfEntityOfAllCompletedEventArgs> GetCountOfEntityOfAllCompleted;
+        public event System.EventHandler<__GetCountOfEntityOfAllCompletedEventArgs> __GetCountOfEntityOfAllCompleted;
 
-        public event System.EventHandler<ExistsOfEntityOfAllCompletedEventArgs> ExistsOfEntityOfAllCompleted;
+        public event System.EventHandler<__ExistsOfEntityOfAllCompletedEventArgs> __ExistsOfEntityOfAllCompleted;
 
-        public event System.EventHandler<GetCollectionOfEntityOfAllCompletedEventArgs> GetCollectionOfEntityOfAllCompleted;
+        public event System.EventHandler<__GetCollectionOfEntityOfAllCompletedEventArgs> __GetCollectionOfEntityOfAllCompleted;
 
-        public event System.EventHandler<GetSingleOfEntityOfAllCompletedEventArgs> GetSingleOfEntityOfAllCompleted;
+        public event System.EventHandler<__GetSingleOfEntityOfAllCompletedEventArgs> __GetSingleOfEntityOfAllCompleted;
 
         #endregion Query Methods Of Entity of All
 
         #region Query Methods Of NameValuePair of All
 
-        public event System.EventHandler<GetCountOfNameValuePairOfAllCompletedEventArgs> GetCountOfNameValuePairOfAllCompleted;
+        public event System.EventHandler<__GetCountOfNameValuePairOfAllCompletedEventArgs> __GetCountOfNameValuePairOfAllCompleted;
 
-        public event System.EventHandler<ExistsOfNameValuePairOfAllCompletedEventArgs> ExistsOfNameValuePairOfAllCompleted;
+        public event System.EventHandler<__ExistsOfNameValuePairOfAllCompletedEventArgs> __ExistsOfNameValuePairOfAllCompleted;
 
-        public event System.EventHandler<GetCollectionOfNameValuePairOfAllCompletedEventArgs> GetCollectionOfNameValuePairOfAllCompleted;
+        public event System.EventHandler<__GetCollectionOfNameValuePairOfAllCompletedEventArgs> __GetCollectionOfNameValuePairOfAllCompleted;
 
-        public event System.EventHandler<GetSingleOfNameValuePairOfAllCompletedEventArgs> GetSingleOfNameValuePairOfAllCompleted;
+        public event System.EventHandler<__GetSingleOfNameValuePairOfAllCompletedEventArgs> __GetSingleOfNameValuePairOfAllCompleted;
 
         #endregion Query Methods Of NameValuePair of All
 
         #region Query Methods Of RssItem of All
 
-        public event System.EventHandler<GetCountOfRssItemOfAllCompletedEventArgs> GetCountOfRssItemOfAllCompleted;
+        public event System.EventHandler<__GetCountOfRssItemOfAllCompletedEventArgs> __GetCountOfRssItemOfAllCompleted;
 
-        public event System.EventHandler<ExistsOfRssItemOfAllCompletedEventArgs> ExistsOfRssItemOfAllCompleted;
+        public event System.EventHandler<__ExistsOfRssItemOfAllCompletedEventArgs> __ExistsOfRssItemOfAllCompleted;
 
-        public event System.EventHandler<GetCollectionOfRssItemOfAllCompletedEventArgs> GetCollectionOfRssItemOfAllCompleted;
+        public event System.EventHandler<__GetCollectionOfRssItemOfAllCompletedEventArgs> __GetCollectionOfRssItemOfAllCompleted;
 
-        public event System.EventHandler<GetSingleOfRssItemOfAllCompletedEventArgs> GetSingleOfRssItemOfAllCompleted;
+        public event System.EventHandler<__GetSingleOfRssItemOfAllCompletedEventArgs> __GetSingleOfRssItemOfAllCompleted;
 
         #endregion Query Methods Of RssItem of All
 
         #region Query Methods Of Entity of ByIdentifier
 
-        public event System.EventHandler<GetCountOfEntityOfByIdentifierCompletedEventArgs> GetCountOfEntityOfByIdentifierCompleted;
+        public event System.EventHandler<__GetCountOfEntityOfByIdentifierCompletedEventArgs> __GetCountOfEntityOfByIdentifierCompleted;
 
-        public event System.EventHandler<ExistsOfEntityOfByIdentifierCompletedEventArgs> ExistsOfEntityOfByIdentifierCompleted;
+        public event System.EventHandler<__ExistsOfEntityOfByIdentifierCompletedEventArgs> __ExistsOfEntityOfByIdentifierCompleted;
 
-        public event System.EventHandler<GetCollectionOfEntityOfByIdentifierCompletedEventArgs> GetCollectionOfEntityOfByIdentifierCompleted;
+        public event System.EventHandler<__GetCollectionOfEntityOfByIdentifierCompletedEventArgs> __GetCollectionOfEntityOfByIdentifierCompleted;
 
-        public event System.EventHandler<GetSingleOfEntityOfByIdentifierCompletedEventArgs> GetSingleOfEntityOfByIdentifierCompleted;
+        public event System.EventHandler<__GetSingleOfEntityOfByIdentifierCompletedEventArgs> __GetSingleOfEntityOfByIdentifierCompleted;
 
         #endregion Query Methods Of Entity of ByIdentifier
 
         #region Query Methods Of KeyInformation of ByIdentifier
 
-        public event System.EventHandler<GetCountOfKeyInformationOfByIdentifierCompletedEventArgs> GetCountOfKeyInformationOfByIdentifierCompleted;
+        public event System.EventHandler<__GetCountOfKeyInformationOfByIdentifierCompletedEventArgs> __GetCountOfKeyInformationOfByIdentifierCompleted;
 
-        public event System.EventHandler<ExistsOfKeyInformationOfByIdentifierCompletedEventArgs> ExistsOfKeyInformationOfByIdentifierCompleted;
+        public event System.EventHandler<__ExistsOfKeyInformationOfByIdentifierCompletedEventArgs> __ExistsOfKeyInformationOfByIdentifierCompleted;
 
-        public event System.EventHandler<GetCollectionOfKeyInformationOfByIdentifierCompletedEventArgs> GetCollectionOfKeyInformationOfByIdentifierCompleted;
+        public event System.EventHandler<__GetCollectionOfKeyInformationOfByIdentifierCompletedEventArgs> __GetCollectionOfKeyInformationOfByIdentifierCompleted;
 
-        public event System.EventHandler<GetSingleOfKeyInformationOfByIdentifierCompletedEventArgs> GetSingleOfKeyInformationOfByIdentifierCompleted;
+        public event System.EventHandler<__GetSingleOfKeyInformationOfByIdentifierCompletedEventArgs> __GetSingleOfKeyInformationOfByIdentifierCompleted;
 
         #endregion Query Methods Of KeyInformation of ByIdentifier
 
@@ -1602,10 +1602,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfCommon(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfEntityOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request)
         {
-            return base.Channel.GetCountOfEntityOfCommon(request);
+            return base.Channel.__GetCountOfEntityOfCommon(request);
         }
 
         /// <summary>
@@ -1613,10 +1613,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfCommon(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfEntityOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request)
         {
-            return base.Channel.ExistsOfEntityOfCommon(request);
+            return base.Channel.__ExistsOfEntityOfCommon(request);
         }
 
         /// <summary>
@@ -1624,10 +1624,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn GetCollectionOfEntityOfCommon(
+        public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn __GetCollectionOfEntityOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request)
         {
-            return base.Channel.GetCollectionOfEntityOfCommon(request);
+            return base.Channel.__GetCollectionOfEntityOfCommon(request);
         }
 
         /// <summary>
@@ -1635,238 +1635,238 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn GetSingleOfEntityOfCommon(
+        public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn __GetSingleOfEntityOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request)
         {
-            return base.Channel.GetSingleOfEntityOfCommon(request);
+            return base.Channel.__GetSingleOfEntityOfCommon(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginGetCountOfEntityOfCommon(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.Begin__GetCountOfEntityOfCommon(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
         {
-            return base.Channel.BeginGetCountOfEntityOfCommon(request, callback, asyncState);
+            return base.Channel.Begin__GetCountOfEntityOfCommon(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndGetCountOfEntityOfCommon(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.End__GetCountOfEntityOfCommon(System.IAsyncResult result)
         {
-            return base.Channel.EndGetCountOfEntityOfCommon(result);
+            return base.Channel.End__GetCountOfEntityOfCommon(result);
         }
 
-        private System.IAsyncResult OnBeginGetCountOfEntityOfCommon(object[] inValues, System.AsyncCallback callback, object asyncState)
+        private System.IAsyncResult OnBegin__GetCountOfEntityOfCommon(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginGetCountOfEntityOfCommon(request, callback, asyncState);
+            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).Begin__GetCountOfEntityOfCommon(request, callback, asyncState);
         }
 
-        private object[] OnEndGetCountOfEntityOfCommon(System.IAsyncResult result)
+        private object[] OnEnd__GetCountOfEntityOfCommon(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndGetCountOfEntityOfCommon(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).End__GetCountOfEntityOfCommon(result);
             return new object[] {
                     retVal};
         }
 
-        private void OnGetCountOfEntityOfCommonCompleted(object state)
+        private void On__GetCountOfEntityOfCommonCompleted(object state)
         {
-            if ((this.GetCountOfEntityOfCommonCompleted != null))
+            if ((this.__GetCountOfEntityOfCommonCompleted != null))
             {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetCountOfEntityOfCommonCompleted(this, new GetCountOfEntityOfCommonCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.__GetCountOfEntityOfCommonCompleted(this, new __GetCountOfEntityOfCommonCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
 
-        public void GetCountOfEntityOfCommonAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request)
+        public void __GetCountOfEntityOfCommonAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request)
         {
-            this.GetCountOfEntityOfCommonAsync(request, null);
+            this.__GetCountOfEntityOfCommonAsync(request, null);
         }
 
-        public void GetCountOfEntityOfCommonAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request, object userState)
+        public void __GetCountOfEntityOfCommonAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request, object userState)
         {
-            if ((this.onBeginGetCountOfEntityOfCommonDelegate == null))
+            if ((this.onBegin__GetCountOfEntityOfCommonDelegate == null))
             {
-                this.onBeginGetCountOfEntityOfCommonDelegate = new BeginOperationDelegate(this.OnBeginGetCountOfEntityOfCommon);
+                this.onBegin__GetCountOfEntityOfCommonDelegate = new BeginOperationDelegate(this.OnBegin__GetCountOfEntityOfCommon);
             }
-            if ((this.onEndGetCountOfEntityOfCommonDelegate == null))
+            if ((this.onEnd__GetCountOfEntityOfCommonDelegate == null))
             {
-                this.onEndGetCountOfEntityOfCommonDelegate = new EndOperationDelegate(this.OnEndGetCountOfEntityOfCommon);
+                this.onEnd__GetCountOfEntityOfCommonDelegate = new EndOperationDelegate(this.OnEnd__GetCountOfEntityOfCommon);
             }
-            if ((this.onGetCountOfEntityOfCommonCompletedDelegate == null))
+            if ((this.on__GetCountOfEntityOfCommonCompletedDelegate == null))
             {
-                this.onGetCountOfEntityOfCommonCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCountOfEntityOfCommonCompleted);
+                this.on__GetCountOfEntityOfCommonCompletedDelegate = new System.Threading.SendOrPostCallback(this.On__GetCountOfEntityOfCommonCompleted);
             }
-            base.InvokeAsync(this.onBeginGetCountOfEntityOfCommonDelegate, new object[] {
-                        request}, this.onEndGetCountOfEntityOfCommonDelegate, this.onGetCountOfEntityOfCommonCompletedDelegate, userState);
+            base.InvokeAsync(this.onBegin__GetCountOfEntityOfCommonDelegate, new object[] {
+                        request}, this.onEnd__GetCountOfEntityOfCommonDelegate, this.on__GetCountOfEntityOfCommonCompletedDelegate, userState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginExistsOfEntityOfCommon(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.Begin__ExistsOfEntityOfCommon(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
         {
-            return base.Channel.BeginExistsOfEntityOfCommon(request, callback, asyncState);
+            return base.Channel.Begin__ExistsOfEntityOfCommon(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndExistsOfEntityOfCommon(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.End__ExistsOfEntityOfCommon(System.IAsyncResult result)
         {
-            return base.Channel.EndExistsOfEntityOfCommon(result);
+            return base.Channel.End__ExistsOfEntityOfCommon(result);
         }
 
-        private System.IAsyncResult OnBeginExistsOfEntityOfCommon(object[] inValues, System.AsyncCallback callback, object asyncState)
+        private System.IAsyncResult OnBegin__ExistsOfEntityOfCommon(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginExistsOfEntityOfCommon(request, callback, asyncState);
+            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).Begin__ExistsOfEntityOfCommon(request, callback, asyncState);
         }
 
-        private object[] OnEndExistsOfEntityOfCommon(System.IAsyncResult result)
+        private object[] OnEnd__ExistsOfEntityOfCommon(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndExistsOfEntityOfCommon(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).End__ExistsOfEntityOfCommon(result);
             return new object[] {
                     retVal};
         }
 
-        private void OnExistsOfEntityOfCommonCompleted(object state)
+        private void On__ExistsOfEntityOfCommonCompleted(object state)
         {
-            if ((this.ExistsOfEntityOfCommonCompleted != null))
+            if ((this.__ExistsOfEntityOfCommonCompleted != null))
             {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.ExistsOfEntityOfCommonCompleted(this, new ExistsOfEntityOfCommonCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.__ExistsOfEntityOfCommonCompleted(this, new __ExistsOfEntityOfCommonCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
 
-        public void ExistsOfEntityOfCommonAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request)
+        public void __ExistsOfEntityOfCommonAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request)
         {
-            this.ExistsOfEntityOfCommonAsync(request, null);
+            this.__ExistsOfEntityOfCommonAsync(request, null);
         }
 
-        public void ExistsOfEntityOfCommonAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request, object userState)
+        public void __ExistsOfEntityOfCommonAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request, object userState)
         {
-            if ((this.onBeginExistsOfEntityOfCommonDelegate == null))
+            if ((this.onBegin__ExistsOfEntityOfCommonDelegate == null))
             {
-                this.onBeginExistsOfEntityOfCommonDelegate = new BeginOperationDelegate(this.OnBeginExistsOfEntityOfCommon);
+                this.onBegin__ExistsOfEntityOfCommonDelegate = new BeginOperationDelegate(this.OnBegin__ExistsOfEntityOfCommon);
             }
-            if ((this.onEndExistsOfEntityOfCommonDelegate == null))
+            if ((this.onEnd__ExistsOfEntityOfCommonDelegate == null))
             {
-                this.onEndExistsOfEntityOfCommonDelegate = new EndOperationDelegate(this.OnEndExistsOfEntityOfCommon);
+                this.onEnd__ExistsOfEntityOfCommonDelegate = new EndOperationDelegate(this.OnEnd__ExistsOfEntityOfCommon);
             }
-            if ((this.onExistsOfEntityOfCommonCompletedDelegate == null))
+            if ((this.on__ExistsOfEntityOfCommonCompletedDelegate == null))
             {
-                this.onExistsOfEntityOfCommonCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnExistsOfEntityOfCommonCompleted);
+                this.on__ExistsOfEntityOfCommonCompletedDelegate = new System.Threading.SendOrPostCallback(this.On__ExistsOfEntityOfCommonCompleted);
             }
-            base.InvokeAsync(this.onBeginExistsOfEntityOfCommonDelegate, new object[] {
-                        request}, this.onEndExistsOfEntityOfCommonDelegate, this.onExistsOfEntityOfCommonCompletedDelegate, userState);
+            base.InvokeAsync(this.onBegin__ExistsOfEntityOfCommonDelegate, new object[] {
+                        request}, this.onEnd__ExistsOfEntityOfCommonDelegate, this.on__ExistsOfEntityOfCommonCompletedDelegate, userState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginGetCollectionOfEntityOfCommon(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.Begin__GetCollectionOfEntityOfCommon(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
         {
-            return base.Channel.BeginGetCollectionOfEntityOfCommon(request, callback, asyncState);
+            return base.Channel.Begin__GetCollectionOfEntityOfCommon(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndGetCollectionOfEntityOfCommon(System.IAsyncResult result)
+        MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.End__GetCollectionOfEntityOfCommon(System.IAsyncResult result)
         {
-            return base.Channel.EndGetCollectionOfEntityOfCommon(result);
+            return base.Channel.End__GetCollectionOfEntityOfCommon(result);
         }
 
-        private System.IAsyncResult OnBeginGetCollectionOfEntityOfCommon(object[] inValues, System.AsyncCallback callback, object asyncState)
+        private System.IAsyncResult OnBegin__GetCollectionOfEntityOfCommon(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginGetCollectionOfEntityOfCommon(request, callback, asyncState);
+            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).Begin__GetCollectionOfEntityOfCommon(request, callback, asyncState);
         }
 
-        private object[] OnEndGetCollectionOfEntityOfCommon(System.IAsyncResult result)
+        private object[] OnEnd__GetCollectionOfEntityOfCommon(System.IAsyncResult result)
         {
-            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndGetCollectionOfEntityOfCommon(result);
+            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).End__GetCollectionOfEntityOfCommon(result);
             return new object[] {
                     retVal};
         }
 
-        private void OnGetCollectionOfEntityOfCommonCompleted(object state)
+        private void On__GetCollectionOfEntityOfCommonCompleted(object state)
         {
-            if ((this.GetCollectionOfEntityOfCommonCompleted != null))
+            if ((this.__GetCollectionOfEntityOfCommonCompleted != null))
             {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetCollectionOfEntityOfCommonCompleted(this, new GetCollectionOfEntityOfCommonCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.__GetCollectionOfEntityOfCommonCompleted(this, new __GetCollectionOfEntityOfCommonCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
 
-        public void GetCollectionOfEntityOfCommonAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request)
+        public void __GetCollectionOfEntityOfCommonAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request)
         {
-            this.GetCollectionOfEntityOfCommonAsync(request, null);
+            this.__GetCollectionOfEntityOfCommonAsync(request, null);
         }
 
-        public void GetCollectionOfEntityOfCommonAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request, object userState)
+        public void __GetCollectionOfEntityOfCommonAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request, object userState)
         {
-            if ((this.onBeginGetCollectionOfEntityOfCommonDelegate == null))
+            if ((this.onBegin__GetCollectionOfEntityOfCommonDelegate == null))
             {
-                this.onBeginGetCollectionOfEntityOfCommonDelegate = new BeginOperationDelegate(this.OnBeginGetCollectionOfEntityOfCommon);
+                this.onBegin__GetCollectionOfEntityOfCommonDelegate = new BeginOperationDelegate(this.OnBegin__GetCollectionOfEntityOfCommon);
             }
-            if ((this.onEndGetCollectionOfEntityOfCommonDelegate == null))
+            if ((this.onEnd__GetCollectionOfEntityOfCommonDelegate == null))
             {
-                this.onEndGetCollectionOfEntityOfCommonDelegate = new EndOperationDelegate(this.OnEndGetCollectionOfEntityOfCommon);
+                this.onEnd__GetCollectionOfEntityOfCommonDelegate = new EndOperationDelegate(this.OnEnd__GetCollectionOfEntityOfCommon);
             }
-            if ((this.onGetCollectionOfEntityOfCommonCompletedDelegate == null))
+            if ((this.on__GetCollectionOfEntityOfCommonCompletedDelegate == null))
             {
-                this.onGetCollectionOfEntityOfCommonCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCollectionOfEntityOfCommonCompleted);
+                this.on__GetCollectionOfEntityOfCommonCompletedDelegate = new System.Threading.SendOrPostCallback(this.On__GetCollectionOfEntityOfCommonCompleted);
             }
-            base.InvokeAsync(this.onBeginGetCollectionOfEntityOfCommonDelegate, new object[] {
-                        request}, this.onEndGetCollectionOfEntityOfCommonDelegate, this.onGetCollectionOfEntityOfCommonCompletedDelegate, userState);
+            base.InvokeAsync(this.onBegin__GetCollectionOfEntityOfCommonDelegate, new object[] {
+                        request}, this.onEnd__GetCollectionOfEntityOfCommonDelegate, this.on__GetCollectionOfEntityOfCommonCompletedDelegate, userState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginGetSingleOfEntityOfCommon(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.Begin__GetSingleOfEntityOfCommon(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
         {
-            return base.Channel.BeginGetSingleOfEntityOfCommon(request, callback, asyncState);
+            return base.Channel.Begin__GetSingleOfEntityOfCommon(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndGetSingleOfEntityOfCommon(System.IAsyncResult result)
+        MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.End__GetSingleOfEntityOfCommon(System.IAsyncResult result)
         {
-            return base.Channel.EndGetSingleOfEntityOfCommon(result);
+            return base.Channel.End__GetSingleOfEntityOfCommon(result);
         }
 
-        private System.IAsyncResult OnBeginGetSingleOfEntityOfCommon(object[] inValues, System.AsyncCallback callback, object asyncState)
+        private System.IAsyncResult OnBegin__GetSingleOfEntityOfCommon(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginGetSingleOfEntityOfCommon(request, callback, asyncState);
+            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).Begin__GetSingleOfEntityOfCommon(request, callback, asyncState);
         }
 
-        private object[] OnEndGetSingleOfEntityOfCommon(System.IAsyncResult result)
+        private object[] OnEnd__GetSingleOfEntityOfCommon(System.IAsyncResult result)
         {
-            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndGetSingleOfEntityOfCommon(result);
+            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).End__GetSingleOfEntityOfCommon(result);
             return new object[] {
                     retVal};
         }
 
-        private void OnGetSingleOfEntityOfCommonCompleted(object state)
+        private void On__GetSingleOfEntityOfCommonCompleted(object state)
         {
-            if ((this.GetSingleOfEntityOfCommonCompleted != null))
+            if ((this.__GetSingleOfEntityOfCommonCompleted != null))
             {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetSingleOfEntityOfCommonCompleted(this, new GetSingleOfEntityOfCommonCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.__GetSingleOfEntityOfCommonCompleted(this, new __GetSingleOfEntityOfCommonCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
 
-        public void GetSingleOfEntityOfCommonAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request)
+        public void __GetSingleOfEntityOfCommonAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request)
         {
-            this.GetSingleOfEntityOfCommonAsync(request, null);
+            this.__GetSingleOfEntityOfCommonAsync(request, null);
         }
 
-        public void GetSingleOfEntityOfCommonAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request, object userState)
+        public void __GetSingleOfEntityOfCommonAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request, object userState)
         {
-            if ((this.onBeginGetSingleOfEntityOfCommonDelegate == null))
+            if ((this.onBegin__GetSingleOfEntityOfCommonDelegate == null))
             {
-                this.onBeginGetSingleOfEntityOfCommonDelegate = new BeginOperationDelegate(this.OnBeginGetSingleOfEntityOfCommon);
+                this.onBegin__GetSingleOfEntityOfCommonDelegate = new BeginOperationDelegate(this.OnBegin__GetSingleOfEntityOfCommon);
             }
-            if ((this.onEndGetSingleOfEntityOfCommonDelegate == null))
+            if ((this.onEnd__GetSingleOfEntityOfCommonDelegate == null))
             {
-                this.onEndGetSingleOfEntityOfCommonDelegate = new EndOperationDelegate(this.OnEndGetSingleOfEntityOfCommon);
+                this.onEnd__GetSingleOfEntityOfCommonDelegate = new EndOperationDelegate(this.OnEnd__GetSingleOfEntityOfCommon);
             }
-            if ((this.onGetSingleOfEntityOfCommonCompletedDelegate == null))
+            if ((this.on__GetSingleOfEntityOfCommonCompletedDelegate == null))
             {
-                this.onGetSingleOfEntityOfCommonCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetSingleOfEntityOfCommonCompleted);
+                this.on__GetSingleOfEntityOfCommonCompletedDelegate = new System.Threading.SendOrPostCallback(this.On__GetSingleOfEntityOfCommonCompleted);
             }
-            base.InvokeAsync(this.onBeginGetSingleOfEntityOfCommonDelegate, new object[] {
-                        request}, this.onEndGetSingleOfEntityOfCommonDelegate, this.onGetSingleOfEntityOfCommonCompletedDelegate, userState);
+            base.InvokeAsync(this.onBegin__GetSingleOfEntityOfCommonDelegate, new object[] {
+                        request}, this.onEnd__GetSingleOfEntityOfCommonDelegate, this.on__GetSingleOfEntityOfCommonCompletedDelegate, userState);
         }
 
         #endregion Query Methods Of Entity of Common
@@ -1878,10 +1878,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfEntityOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
         {
-            return base.Channel.GetCountOfEntityOfAll(request);
+            return base.Channel.__GetCountOfEntityOfAll(request);
         }
 
         /// <summary>
@@ -1889,10 +1889,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfEntityOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
         {
-            return base.Channel.ExistsOfEntityOfAll(request);
+            return base.Channel.__ExistsOfEntityOfAll(request);
         }
 
         /// <summary>
@@ -1900,10 +1900,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn GetCollectionOfEntityOfAll(
+        public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn __GetCollectionOfEntityOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
         {
-            return base.Channel.GetCollectionOfEntityOfAll(request);
+            return base.Channel.__GetCollectionOfEntityOfAll(request);
         }
 
         /// <summary>
@@ -1911,238 +1911,238 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn GetSingleOfEntityOfAll(
+        public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn __GetSingleOfEntityOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
         {
-            return base.Channel.GetSingleOfEntityOfAll(request);
+            return base.Channel.__GetSingleOfEntityOfAll(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginGetCountOfEntityOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.Begin__GetCountOfEntityOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
-            return base.Channel.BeginGetCountOfEntityOfAll(request, callback, asyncState);
+            return base.Channel.Begin__GetCountOfEntityOfAll(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndGetCountOfEntityOfAll(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.End__GetCountOfEntityOfAll(System.IAsyncResult result)
         {
-            return base.Channel.EndGetCountOfEntityOfAll(result);
+            return base.Channel.End__GetCountOfEntityOfAll(result);
         }
 
-        private System.IAsyncResult OnBeginGetCountOfEntityOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
+        private System.IAsyncResult OnBegin__GetCountOfEntityOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginGetCountOfEntityOfAll(request, callback, asyncState);
+            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).Begin__GetCountOfEntityOfAll(request, callback, asyncState);
         }
 
-        private object[] OnEndGetCountOfEntityOfAll(System.IAsyncResult result)
+        private object[] OnEnd__GetCountOfEntityOfAll(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndGetCountOfEntityOfAll(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).End__GetCountOfEntityOfAll(result);
             return new object[] {
                     retVal};
         }
 
-        private void OnGetCountOfEntityOfAllCompleted(object state)
+        private void On__GetCountOfEntityOfAllCompleted(object state)
         {
-            if ((this.GetCountOfEntityOfAllCompleted != null))
+            if ((this.__GetCountOfEntityOfAllCompleted != null))
             {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetCountOfEntityOfAllCompleted(this, new GetCountOfEntityOfAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.__GetCountOfEntityOfAllCompleted(this, new __GetCountOfEntityOfAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
 
-        public void GetCountOfEntityOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
+        public void __GetCountOfEntityOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
         {
-            this.GetCountOfEntityOfAllAsync(request, null);
+            this.__GetCountOfEntityOfAllAsync(request, null);
         }
 
-        public void GetCountOfEntityOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
+        public void __GetCountOfEntityOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
         {
-            if ((this.onBeginGetCountOfEntityOfAllDelegate == null))
+            if ((this.onBegin__GetCountOfEntityOfAllDelegate == null))
             {
-                this.onBeginGetCountOfEntityOfAllDelegate = new BeginOperationDelegate(this.OnBeginGetCountOfEntityOfAll);
+                this.onBegin__GetCountOfEntityOfAllDelegate = new BeginOperationDelegate(this.OnBegin__GetCountOfEntityOfAll);
             }
-            if ((this.onEndGetCountOfEntityOfAllDelegate == null))
+            if ((this.onEnd__GetCountOfEntityOfAllDelegate == null))
             {
-                this.onEndGetCountOfEntityOfAllDelegate = new EndOperationDelegate(this.OnEndGetCountOfEntityOfAll);
+                this.onEnd__GetCountOfEntityOfAllDelegate = new EndOperationDelegate(this.OnEnd__GetCountOfEntityOfAll);
             }
-            if ((this.onGetCountOfEntityOfAllCompletedDelegate == null))
+            if ((this.on__GetCountOfEntityOfAllCompletedDelegate == null))
             {
-                this.onGetCountOfEntityOfAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCountOfEntityOfAllCompleted);
+                this.on__GetCountOfEntityOfAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.On__GetCountOfEntityOfAllCompleted);
             }
-            base.InvokeAsync(this.onBeginGetCountOfEntityOfAllDelegate, new object[] {
-                        request}, this.onEndGetCountOfEntityOfAllDelegate, this.onGetCountOfEntityOfAllCompletedDelegate, userState);
+            base.InvokeAsync(this.onBegin__GetCountOfEntityOfAllDelegate, new object[] {
+                        request}, this.onEnd__GetCountOfEntityOfAllDelegate, this.on__GetCountOfEntityOfAllCompletedDelegate, userState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginExistsOfEntityOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.Begin__ExistsOfEntityOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
-            return base.Channel.BeginExistsOfEntityOfAll(request, callback, asyncState);
+            return base.Channel.Begin__ExistsOfEntityOfAll(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndExistsOfEntityOfAll(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.End__ExistsOfEntityOfAll(System.IAsyncResult result)
         {
-            return base.Channel.EndExistsOfEntityOfAll(result);
+            return base.Channel.End__ExistsOfEntityOfAll(result);
         }
 
-        private System.IAsyncResult OnBeginExistsOfEntityOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
+        private System.IAsyncResult OnBegin__ExistsOfEntityOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginExistsOfEntityOfAll(request, callback, asyncState);
+            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).Begin__ExistsOfEntityOfAll(request, callback, asyncState);
         }
 
-        private object[] OnEndExistsOfEntityOfAll(System.IAsyncResult result)
+        private object[] OnEnd__ExistsOfEntityOfAll(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndExistsOfEntityOfAll(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).End__ExistsOfEntityOfAll(result);
             return new object[] {
                     retVal};
         }
 
-        private void OnExistsOfEntityOfAllCompleted(object state)
+        private void On__ExistsOfEntityOfAllCompleted(object state)
         {
-            if ((this.ExistsOfEntityOfAllCompleted != null))
+            if ((this.__ExistsOfEntityOfAllCompleted != null))
             {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.ExistsOfEntityOfAllCompleted(this, new ExistsOfEntityOfAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.__ExistsOfEntityOfAllCompleted(this, new __ExistsOfEntityOfAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
 
-        public void ExistsOfEntityOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
+        public void __ExistsOfEntityOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
         {
-            this.ExistsOfEntityOfAllAsync(request, null);
+            this.__ExistsOfEntityOfAllAsync(request, null);
         }
 
-        public void ExistsOfEntityOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
+        public void __ExistsOfEntityOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
         {
-            if ((this.onBeginExistsOfEntityOfAllDelegate == null))
+            if ((this.onBegin__ExistsOfEntityOfAllDelegate == null))
             {
-                this.onBeginExistsOfEntityOfAllDelegate = new BeginOperationDelegate(this.OnBeginExistsOfEntityOfAll);
+                this.onBegin__ExistsOfEntityOfAllDelegate = new BeginOperationDelegate(this.OnBegin__ExistsOfEntityOfAll);
             }
-            if ((this.onEndExistsOfEntityOfAllDelegate == null))
+            if ((this.onEnd__ExistsOfEntityOfAllDelegate == null))
             {
-                this.onEndExistsOfEntityOfAllDelegate = new EndOperationDelegate(this.OnEndExistsOfEntityOfAll);
+                this.onEnd__ExistsOfEntityOfAllDelegate = new EndOperationDelegate(this.OnEnd__ExistsOfEntityOfAll);
             }
-            if ((this.onExistsOfEntityOfAllCompletedDelegate == null))
+            if ((this.on__ExistsOfEntityOfAllCompletedDelegate == null))
             {
-                this.onExistsOfEntityOfAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnExistsOfEntityOfAllCompleted);
+                this.on__ExistsOfEntityOfAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.On__ExistsOfEntityOfAllCompleted);
             }
-            base.InvokeAsync(this.onBeginExistsOfEntityOfAllDelegate, new object[] {
-                        request}, this.onEndExistsOfEntityOfAllDelegate, this.onExistsOfEntityOfAllCompletedDelegate, userState);
+            base.InvokeAsync(this.onBegin__ExistsOfEntityOfAllDelegate, new object[] {
+                        request}, this.onEnd__ExistsOfEntityOfAllDelegate, this.on__ExistsOfEntityOfAllCompletedDelegate, userState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginGetCollectionOfEntityOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.Begin__GetCollectionOfEntityOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
-            return base.Channel.BeginGetCollectionOfEntityOfAll(request, callback, asyncState);
+            return base.Channel.Begin__GetCollectionOfEntityOfAll(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndGetCollectionOfEntityOfAll(System.IAsyncResult result)
+        MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.End__GetCollectionOfEntityOfAll(System.IAsyncResult result)
         {
-            return base.Channel.EndGetCollectionOfEntityOfAll(result);
+            return base.Channel.End__GetCollectionOfEntityOfAll(result);
         }
 
-        private System.IAsyncResult OnBeginGetCollectionOfEntityOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
+        private System.IAsyncResult OnBegin__GetCollectionOfEntityOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginGetCollectionOfEntityOfAll(request, callback, asyncState);
+            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).Begin__GetCollectionOfEntityOfAll(request, callback, asyncState);
         }
 
-        private object[] OnEndGetCollectionOfEntityOfAll(System.IAsyncResult result)
+        private object[] OnEnd__GetCollectionOfEntityOfAll(System.IAsyncResult result)
         {
-            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndGetCollectionOfEntityOfAll(result);
+            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).End__GetCollectionOfEntityOfAll(result);
             return new object[] {
                     retVal};
         }
 
-        private void OnGetCollectionOfEntityOfAllCompleted(object state)
+        private void On__GetCollectionOfEntityOfAllCompleted(object state)
         {
-            if ((this.GetCollectionOfEntityOfAllCompleted != null))
+            if ((this.__GetCollectionOfEntityOfAllCompleted != null))
             {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetCollectionOfEntityOfAllCompleted(this, new GetCollectionOfEntityOfAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.__GetCollectionOfEntityOfAllCompleted(this, new __GetCollectionOfEntityOfAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
 
-        public void GetCollectionOfEntityOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
+        public void __GetCollectionOfEntityOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
         {
-            this.GetCollectionOfEntityOfAllAsync(request, null);
+            this.__GetCollectionOfEntityOfAllAsync(request, null);
         }
 
-        public void GetCollectionOfEntityOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
+        public void __GetCollectionOfEntityOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
         {
-            if ((this.onBeginGetCollectionOfEntityOfAllDelegate == null))
+            if ((this.onBegin__GetCollectionOfEntityOfAllDelegate == null))
             {
-                this.onBeginGetCollectionOfEntityOfAllDelegate = new BeginOperationDelegate(this.OnBeginGetCollectionOfEntityOfAll);
+                this.onBegin__GetCollectionOfEntityOfAllDelegate = new BeginOperationDelegate(this.OnBegin__GetCollectionOfEntityOfAll);
             }
-            if ((this.onEndGetCollectionOfEntityOfAllDelegate == null))
+            if ((this.onEnd__GetCollectionOfEntityOfAllDelegate == null))
             {
-                this.onEndGetCollectionOfEntityOfAllDelegate = new EndOperationDelegate(this.OnEndGetCollectionOfEntityOfAll);
+                this.onEnd__GetCollectionOfEntityOfAllDelegate = new EndOperationDelegate(this.OnEnd__GetCollectionOfEntityOfAll);
             }
-            if ((this.onGetCollectionOfEntityOfAllCompletedDelegate == null))
+            if ((this.on__GetCollectionOfEntityOfAllCompletedDelegate == null))
             {
-                this.onGetCollectionOfEntityOfAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCollectionOfEntityOfAllCompleted);
+                this.on__GetCollectionOfEntityOfAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.On__GetCollectionOfEntityOfAllCompleted);
             }
-            base.InvokeAsync(this.onBeginGetCollectionOfEntityOfAllDelegate, new object[] {
-                        request}, this.onEndGetCollectionOfEntityOfAllDelegate, this.onGetCollectionOfEntityOfAllCompletedDelegate, userState);
+            base.InvokeAsync(this.onBegin__GetCollectionOfEntityOfAllDelegate, new object[] {
+                        request}, this.onEnd__GetCollectionOfEntityOfAllDelegate, this.on__GetCollectionOfEntityOfAllCompletedDelegate, userState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginGetSingleOfEntityOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.Begin__GetSingleOfEntityOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
-            return base.Channel.BeginGetSingleOfEntityOfAll(request, callback, asyncState);
+            return base.Channel.Begin__GetSingleOfEntityOfAll(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndGetSingleOfEntityOfAll(System.IAsyncResult result)
+        MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.End__GetSingleOfEntityOfAll(System.IAsyncResult result)
         {
-            return base.Channel.EndGetSingleOfEntityOfAll(result);
+            return base.Channel.End__GetSingleOfEntityOfAll(result);
         }
 
-        private System.IAsyncResult OnBeginGetSingleOfEntityOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
+        private System.IAsyncResult OnBegin__GetSingleOfEntityOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginGetSingleOfEntityOfAll(request, callback, asyncState);
+            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).Begin__GetSingleOfEntityOfAll(request, callback, asyncState);
         }
 
-        private object[] OnEndGetSingleOfEntityOfAll(System.IAsyncResult result)
+        private object[] OnEnd__GetSingleOfEntityOfAll(System.IAsyncResult result)
         {
-            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndGetSingleOfEntityOfAll(result);
+            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).End__GetSingleOfEntityOfAll(result);
             return new object[] {
                     retVal};
         }
 
-        private void OnGetSingleOfEntityOfAllCompleted(object state)
+        private void On__GetSingleOfEntityOfAllCompleted(object state)
         {
-            if ((this.GetSingleOfEntityOfAllCompleted != null))
+            if ((this.__GetSingleOfEntityOfAllCompleted != null))
             {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetSingleOfEntityOfAllCompleted(this, new GetSingleOfEntityOfAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.__GetSingleOfEntityOfAllCompleted(this, new __GetSingleOfEntityOfAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
 
-        public void GetSingleOfEntityOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
+        public void __GetSingleOfEntityOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
         {
-            this.GetSingleOfEntityOfAllAsync(request, null);
+            this.__GetSingleOfEntityOfAllAsync(request, null);
         }
 
-        public void GetSingleOfEntityOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
+        public void __GetSingleOfEntityOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
         {
-            if ((this.onBeginGetSingleOfEntityOfAllDelegate == null))
+            if ((this.onBegin__GetSingleOfEntityOfAllDelegate == null))
             {
-                this.onBeginGetSingleOfEntityOfAllDelegate = new BeginOperationDelegate(this.OnBeginGetSingleOfEntityOfAll);
+                this.onBegin__GetSingleOfEntityOfAllDelegate = new BeginOperationDelegate(this.OnBegin__GetSingleOfEntityOfAll);
             }
-            if ((this.onEndGetSingleOfEntityOfAllDelegate == null))
+            if ((this.onEnd__GetSingleOfEntityOfAllDelegate == null))
             {
-                this.onEndGetSingleOfEntityOfAllDelegate = new EndOperationDelegate(this.OnEndGetSingleOfEntityOfAll);
+                this.onEnd__GetSingleOfEntityOfAllDelegate = new EndOperationDelegate(this.OnEnd__GetSingleOfEntityOfAll);
             }
-            if ((this.onGetSingleOfEntityOfAllCompletedDelegate == null))
+            if ((this.on__GetSingleOfEntityOfAllCompletedDelegate == null))
             {
-                this.onGetSingleOfEntityOfAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetSingleOfEntityOfAllCompleted);
+                this.on__GetSingleOfEntityOfAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.On__GetSingleOfEntityOfAllCompleted);
             }
-            base.InvokeAsync(this.onBeginGetSingleOfEntityOfAllDelegate, new object[] {
-                        request}, this.onEndGetSingleOfEntityOfAllDelegate, this.onGetSingleOfEntityOfAllCompletedDelegate, userState);
+            base.InvokeAsync(this.onBegin__GetSingleOfEntityOfAllDelegate, new object[] {
+                        request}, this.onEnd__GetSingleOfEntityOfAllDelegate, this.on__GetSingleOfEntityOfAllCompletedDelegate, userState);
         }
 
         #endregion Query Methods Of Entity of All
@@ -2154,10 +2154,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfNameValuePairOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfNameValuePairOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
         {
-            return base.Channel.GetCountOfNameValuePairOfAll(request);
+            return base.Channel.__GetCountOfNameValuePairOfAll(request);
         }
 
         /// <summary>
@@ -2165,10 +2165,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfNameValuePairOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfNameValuePairOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
         {
-            return base.Channel.ExistsOfNameValuePairOfAll(request);
+            return base.Channel.__ExistsOfNameValuePairOfAll(request);
         }
 
         /// <summary>
@@ -2176,10 +2176,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetCollectionOfNameValuePairOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
         {
-            return base.Channel.GetCollectionOfNameValuePairOfAll(request);
+            return base.Channel.__GetCollectionOfNameValuePairOfAll(request);
         }
 
         /// <summary>
@@ -2187,238 +2187,238 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection __GetSingleOfNameValuePairOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
         {
-            return base.Channel.GetSingleOfNameValuePairOfAll(request);
+            return base.Channel.__GetSingleOfNameValuePairOfAll(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginGetCountOfNameValuePairOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.Begin__GetCountOfNameValuePairOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
-            return base.Channel.BeginGetCountOfNameValuePairOfAll(request, callback, asyncState);
+            return base.Channel.Begin__GetCountOfNameValuePairOfAll(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndGetCountOfNameValuePairOfAll(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.End__GetCountOfNameValuePairOfAll(System.IAsyncResult result)
         {
-            return base.Channel.EndGetCountOfNameValuePairOfAll(result);
+            return base.Channel.End__GetCountOfNameValuePairOfAll(result);
         }
 
-        private System.IAsyncResult OnBeginGetCountOfNameValuePairOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
+        private System.IAsyncResult OnBegin__GetCountOfNameValuePairOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginGetCountOfNameValuePairOfAll(request, callback, asyncState);
+            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).Begin__GetCountOfNameValuePairOfAll(request, callback, asyncState);
         }
 
-        private object[] OnEndGetCountOfNameValuePairOfAll(System.IAsyncResult result)
+        private object[] OnEnd__GetCountOfNameValuePairOfAll(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndGetCountOfNameValuePairOfAll(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).End__GetCountOfNameValuePairOfAll(result);
             return new object[] {
                     retVal};
         }
 
-        private void OnGetCountOfNameValuePairOfAllCompleted(object state)
+        private void On__GetCountOfNameValuePairOfAllCompleted(object state)
         {
-            if ((this.GetCountOfNameValuePairOfAllCompleted != null))
+            if ((this.__GetCountOfNameValuePairOfAllCompleted != null))
             {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetCountOfNameValuePairOfAllCompleted(this, new GetCountOfNameValuePairOfAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.__GetCountOfNameValuePairOfAllCompleted(this, new __GetCountOfNameValuePairOfAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
 
-        public void GetCountOfNameValuePairOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
+        public void __GetCountOfNameValuePairOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
         {
-            this.GetCountOfNameValuePairOfAllAsync(request, null);
+            this.__GetCountOfNameValuePairOfAllAsync(request, null);
         }
 
-        public void GetCountOfNameValuePairOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
+        public void __GetCountOfNameValuePairOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
         {
-            if ((this.onBeginGetCountOfNameValuePairOfAllDelegate == null))
+            if ((this.onBegin__GetCountOfNameValuePairOfAllDelegate == null))
             {
-                this.onBeginGetCountOfNameValuePairOfAllDelegate = new BeginOperationDelegate(this.OnBeginGetCountOfNameValuePairOfAll);
+                this.onBegin__GetCountOfNameValuePairOfAllDelegate = new BeginOperationDelegate(this.OnBegin__GetCountOfNameValuePairOfAll);
             }
-            if ((this.onEndGetCountOfNameValuePairOfAllDelegate == null))
+            if ((this.onEnd__GetCountOfNameValuePairOfAllDelegate == null))
             {
-                this.onEndGetCountOfNameValuePairOfAllDelegate = new EndOperationDelegate(this.OnEndGetCountOfNameValuePairOfAll);
+                this.onEnd__GetCountOfNameValuePairOfAllDelegate = new EndOperationDelegate(this.OnEnd__GetCountOfNameValuePairOfAll);
             }
-            if ((this.onGetCountOfNameValuePairOfAllCompletedDelegate == null))
+            if ((this.on__GetCountOfNameValuePairOfAllCompletedDelegate == null))
             {
-                this.onGetCountOfNameValuePairOfAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCountOfNameValuePairOfAllCompleted);
+                this.on__GetCountOfNameValuePairOfAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.On__GetCountOfNameValuePairOfAllCompleted);
             }
-            base.InvokeAsync(this.onBeginGetCountOfNameValuePairOfAllDelegate, new object[] {
-                        request}, this.onEndGetCountOfNameValuePairOfAllDelegate, this.onGetCountOfNameValuePairOfAllCompletedDelegate, userState);
+            base.InvokeAsync(this.onBegin__GetCountOfNameValuePairOfAllDelegate, new object[] {
+                        request}, this.onEnd__GetCountOfNameValuePairOfAllDelegate, this.on__GetCountOfNameValuePairOfAllCompletedDelegate, userState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginExistsOfNameValuePairOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.Begin__ExistsOfNameValuePairOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
-            return base.Channel.BeginExistsOfNameValuePairOfAll(request, callback, asyncState);
+            return base.Channel.Begin__ExistsOfNameValuePairOfAll(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndExistsOfNameValuePairOfAll(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.End__ExistsOfNameValuePairOfAll(System.IAsyncResult result)
         {
-            return base.Channel.EndExistsOfNameValuePairOfAll(result);
+            return base.Channel.End__ExistsOfNameValuePairOfAll(result);
         }
 
-        private System.IAsyncResult OnBeginExistsOfNameValuePairOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
+        private System.IAsyncResult OnBegin__ExistsOfNameValuePairOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginExistsOfNameValuePairOfAll(request, callback, asyncState);
+            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).Begin__ExistsOfNameValuePairOfAll(request, callback, asyncState);
         }
 
-        private object[] OnEndExistsOfNameValuePairOfAll(System.IAsyncResult result)
+        private object[] OnEnd__ExistsOfNameValuePairOfAll(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndExistsOfNameValuePairOfAll(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).End__ExistsOfNameValuePairOfAll(result);
             return new object[] {
                     retVal};
         }
 
-        private void OnExistsOfNameValuePairOfAllCompleted(object state)
+        private void On__ExistsOfNameValuePairOfAllCompleted(object state)
         {
-            if ((this.ExistsOfNameValuePairOfAllCompleted != null))
+            if ((this.__ExistsOfNameValuePairOfAllCompleted != null))
             {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.ExistsOfNameValuePairOfAllCompleted(this, new ExistsOfNameValuePairOfAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.__ExistsOfNameValuePairOfAllCompleted(this, new __ExistsOfNameValuePairOfAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
 
-        public void ExistsOfNameValuePairOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
+        public void __ExistsOfNameValuePairOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
         {
-            this.ExistsOfNameValuePairOfAllAsync(request, null);
+            this.__ExistsOfNameValuePairOfAllAsync(request, null);
         }
 
-        public void ExistsOfNameValuePairOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
+        public void __ExistsOfNameValuePairOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
         {
-            if ((this.onBeginExistsOfNameValuePairOfAllDelegate == null))
+            if ((this.onBegin__ExistsOfNameValuePairOfAllDelegate == null))
             {
-                this.onBeginExistsOfNameValuePairOfAllDelegate = new BeginOperationDelegate(this.OnBeginExistsOfNameValuePairOfAll);
+                this.onBegin__ExistsOfNameValuePairOfAllDelegate = new BeginOperationDelegate(this.OnBegin__ExistsOfNameValuePairOfAll);
             }
-            if ((this.onEndExistsOfNameValuePairOfAllDelegate == null))
+            if ((this.onEnd__ExistsOfNameValuePairOfAllDelegate == null))
             {
-                this.onEndExistsOfNameValuePairOfAllDelegate = new EndOperationDelegate(this.OnEndExistsOfNameValuePairOfAll);
+                this.onEnd__ExistsOfNameValuePairOfAllDelegate = new EndOperationDelegate(this.OnEnd__ExistsOfNameValuePairOfAll);
             }
-            if ((this.onExistsOfNameValuePairOfAllCompletedDelegate == null))
+            if ((this.on__ExistsOfNameValuePairOfAllCompletedDelegate == null))
             {
-                this.onExistsOfNameValuePairOfAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnExistsOfNameValuePairOfAllCompleted);
+                this.on__ExistsOfNameValuePairOfAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.On__ExistsOfNameValuePairOfAllCompleted);
             }
-            base.InvokeAsync(this.onBeginExistsOfNameValuePairOfAllDelegate, new object[] {
-                        request}, this.onEndExistsOfNameValuePairOfAllDelegate, this.onExistsOfNameValuePairOfAllCompletedDelegate, userState);
+            base.InvokeAsync(this.onBegin__ExistsOfNameValuePairOfAllDelegate, new object[] {
+                        request}, this.onEnd__ExistsOfNameValuePairOfAllDelegate, this.on__ExistsOfNameValuePairOfAllCompletedDelegate, userState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginGetCollectionOfNameValuePairOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.Begin__GetCollectionOfNameValuePairOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
-            return base.Channel.BeginGetCollectionOfNameValuePairOfAll(request, callback, asyncState);
+            return base.Channel.Begin__GetCollectionOfNameValuePairOfAll(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndGetCollectionOfNameValuePairOfAll(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.End__GetCollectionOfNameValuePairOfAll(System.IAsyncResult result)
         {
-            return base.Channel.EndGetCollectionOfNameValuePairOfAll(result);
+            return base.Channel.End__GetCollectionOfNameValuePairOfAll(result);
         }
 
-        private System.IAsyncResult OnBeginGetCollectionOfNameValuePairOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
+        private System.IAsyncResult OnBegin__GetCollectionOfNameValuePairOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginGetCollectionOfNameValuePairOfAll(request, callback, asyncState);
+            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).Begin__GetCollectionOfNameValuePairOfAll(request, callback, asyncState);
         }
 
-        private object[] OnEndGetCollectionOfNameValuePairOfAll(System.IAsyncResult result)
+        private object[] OnEnd__GetCollectionOfNameValuePairOfAll(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndGetCollectionOfNameValuePairOfAll(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).End__GetCollectionOfNameValuePairOfAll(result);
             return new object[] {
                     retVal};
         }
 
-        private void OnGetCollectionOfNameValuePairOfAllCompleted(object state)
+        private void On__GetCollectionOfNameValuePairOfAllCompleted(object state)
         {
-            if ((this.GetCollectionOfNameValuePairOfAllCompleted != null))
+            if ((this.__GetCollectionOfNameValuePairOfAllCompleted != null))
             {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetCollectionOfNameValuePairOfAllCompleted(this, new GetCollectionOfNameValuePairOfAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.__GetCollectionOfNameValuePairOfAllCompleted(this, new __GetCollectionOfNameValuePairOfAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
 
-        public void GetCollectionOfNameValuePairOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
+        public void __GetCollectionOfNameValuePairOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
         {
-            this.GetCollectionOfNameValuePairOfAllAsync(request, null);
+            this.__GetCollectionOfNameValuePairOfAllAsync(request, null);
         }
 
-        public void GetCollectionOfNameValuePairOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
+        public void __GetCollectionOfNameValuePairOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
         {
-            if ((this.onBeginGetCollectionOfNameValuePairOfAllDelegate == null))
+            if ((this.onBegin__GetCollectionOfNameValuePairOfAllDelegate == null))
             {
-                this.onBeginGetCollectionOfNameValuePairOfAllDelegate = new BeginOperationDelegate(this.OnBeginGetCollectionOfNameValuePairOfAll);
+                this.onBegin__GetCollectionOfNameValuePairOfAllDelegate = new BeginOperationDelegate(this.OnBegin__GetCollectionOfNameValuePairOfAll);
             }
-            if ((this.onEndGetCollectionOfNameValuePairOfAllDelegate == null))
+            if ((this.onEnd__GetCollectionOfNameValuePairOfAllDelegate == null))
             {
-                this.onEndGetCollectionOfNameValuePairOfAllDelegate = new EndOperationDelegate(this.OnEndGetCollectionOfNameValuePairOfAll);
+                this.onEnd__GetCollectionOfNameValuePairOfAllDelegate = new EndOperationDelegate(this.OnEnd__GetCollectionOfNameValuePairOfAll);
             }
-            if ((this.onGetCollectionOfNameValuePairOfAllCompletedDelegate == null))
+            if ((this.on__GetCollectionOfNameValuePairOfAllCompletedDelegate == null))
             {
-                this.onGetCollectionOfNameValuePairOfAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCollectionOfNameValuePairOfAllCompleted);
+                this.on__GetCollectionOfNameValuePairOfAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.On__GetCollectionOfNameValuePairOfAllCompleted);
             }
-            base.InvokeAsync(this.onBeginGetCollectionOfNameValuePairOfAllDelegate, new object[] {
-                        request}, this.onEndGetCollectionOfNameValuePairOfAllDelegate, this.onGetCollectionOfNameValuePairOfAllCompletedDelegate, userState);
+            base.InvokeAsync(this.onBegin__GetCollectionOfNameValuePairOfAllDelegate, new object[] {
+                        request}, this.onEnd__GetCollectionOfNameValuePairOfAllDelegate, this.on__GetCollectionOfNameValuePairOfAllCompletedDelegate, userState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginGetSingleOfNameValuePairOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.Begin__GetSingleOfNameValuePairOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
-            return base.Channel.BeginGetSingleOfNameValuePairOfAll(request, callback, asyncState);
+            return base.Channel.Begin__GetSingleOfNameValuePairOfAll(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndGetSingleOfNameValuePairOfAll(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.End__GetSingleOfNameValuePairOfAll(System.IAsyncResult result)
         {
-            return base.Channel.EndGetSingleOfNameValuePairOfAll(result);
+            return base.Channel.End__GetSingleOfNameValuePairOfAll(result);
         }
 
-        private System.IAsyncResult OnBeginGetSingleOfNameValuePairOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
+        private System.IAsyncResult OnBegin__GetSingleOfNameValuePairOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginGetSingleOfNameValuePairOfAll(request, callback, asyncState);
+            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).Begin__GetSingleOfNameValuePairOfAll(request, callback, asyncState);
         }
 
-        private object[] OnEndGetSingleOfNameValuePairOfAll(System.IAsyncResult result)
+        private object[] OnEnd__GetSingleOfNameValuePairOfAll(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndGetSingleOfNameValuePairOfAll(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).End__GetSingleOfNameValuePairOfAll(result);
             return new object[] {
                     retVal};
         }
 
-        private void OnGetSingleOfNameValuePairOfAllCompleted(object state)
+        private void On__GetSingleOfNameValuePairOfAllCompleted(object state)
         {
-            if ((this.GetSingleOfNameValuePairOfAllCompleted != null))
+            if ((this.__GetSingleOfNameValuePairOfAllCompleted != null))
             {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetSingleOfNameValuePairOfAllCompleted(this, new GetSingleOfNameValuePairOfAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.__GetSingleOfNameValuePairOfAllCompleted(this, new __GetSingleOfNameValuePairOfAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
 
-        public void GetSingleOfNameValuePairOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
+        public void __GetSingleOfNameValuePairOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
         {
-            this.GetSingleOfNameValuePairOfAllAsync(request, null);
+            this.__GetSingleOfNameValuePairOfAllAsync(request, null);
         }
 
-        public void GetSingleOfNameValuePairOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
+        public void __GetSingleOfNameValuePairOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
         {
-            if ((this.onBeginGetSingleOfNameValuePairOfAllDelegate == null))
+            if ((this.onBegin__GetSingleOfNameValuePairOfAllDelegate == null))
             {
-                this.onBeginGetSingleOfNameValuePairOfAllDelegate = new BeginOperationDelegate(this.OnBeginGetSingleOfNameValuePairOfAll);
+                this.onBegin__GetSingleOfNameValuePairOfAllDelegate = new BeginOperationDelegate(this.OnBegin__GetSingleOfNameValuePairOfAll);
             }
-            if ((this.onEndGetSingleOfNameValuePairOfAllDelegate == null))
+            if ((this.onEnd__GetSingleOfNameValuePairOfAllDelegate == null))
             {
-                this.onEndGetSingleOfNameValuePairOfAllDelegate = new EndOperationDelegate(this.OnEndGetSingleOfNameValuePairOfAll);
+                this.onEnd__GetSingleOfNameValuePairOfAllDelegate = new EndOperationDelegate(this.OnEnd__GetSingleOfNameValuePairOfAll);
             }
-            if ((this.onGetSingleOfNameValuePairOfAllCompletedDelegate == null))
+            if ((this.on__GetSingleOfNameValuePairOfAllCompletedDelegate == null))
             {
-                this.onGetSingleOfNameValuePairOfAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetSingleOfNameValuePairOfAllCompleted);
+                this.on__GetSingleOfNameValuePairOfAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.On__GetSingleOfNameValuePairOfAllCompleted);
             }
-            base.InvokeAsync(this.onBeginGetSingleOfNameValuePairOfAllDelegate, new object[] {
-                        request}, this.onEndGetSingleOfNameValuePairOfAllDelegate, this.onGetSingleOfNameValuePairOfAllCompletedDelegate, userState);
+            base.InvokeAsync(this.onBegin__GetSingleOfNameValuePairOfAllDelegate, new object[] {
+                        request}, this.onEnd__GetSingleOfNameValuePairOfAllDelegate, this.on__GetSingleOfNameValuePairOfAllCompletedDelegate, userState);
         }
 
         #endregion Query Methods Of NameValuePair of All
@@ -2430,10 +2430,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfRssItemOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfRssItemOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
         {
-            return base.Channel.GetCountOfRssItemOfAll(request);
+            return base.Channel.__GetCountOfRssItemOfAll(request);
         }
 
         /// <summary>
@@ -2441,10 +2441,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfRssItemOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfRssItemOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
         {
-            return base.Channel.ExistsOfRssItemOfAll(request);
+            return base.Channel.__ExistsOfRssItemOfAll(request);
         }
 
         /// <summary>
@@ -2452,10 +2452,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetCollectionOfRssItemOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection __GetCollectionOfRssItemOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
         {
-            return base.Channel.GetCollectionOfRssItemOfAll(request);
+            return base.Channel.__GetCollectionOfRssItemOfAll(request);
         }
 
         /// <summary>
@@ -2463,238 +2463,238 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetSingleOfRssItemOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection __GetSingleOfRssItemOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
         {
-            return base.Channel.GetSingleOfRssItemOfAll(request);
+            return base.Channel.__GetSingleOfRssItemOfAll(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginGetCountOfRssItemOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.Begin__GetCountOfRssItemOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
-            return base.Channel.BeginGetCountOfRssItemOfAll(request, callback, asyncState);
+            return base.Channel.Begin__GetCountOfRssItemOfAll(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndGetCountOfRssItemOfAll(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.End__GetCountOfRssItemOfAll(System.IAsyncResult result)
         {
-            return base.Channel.EndGetCountOfRssItemOfAll(result);
+            return base.Channel.End__GetCountOfRssItemOfAll(result);
         }
 
-        private System.IAsyncResult OnBeginGetCountOfRssItemOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
+        private System.IAsyncResult OnBegin__GetCountOfRssItemOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginGetCountOfRssItemOfAll(request, callback, asyncState);
+            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).Begin__GetCountOfRssItemOfAll(request, callback, asyncState);
         }
 
-        private object[] OnEndGetCountOfRssItemOfAll(System.IAsyncResult result)
+        private object[] OnEnd__GetCountOfRssItemOfAll(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndGetCountOfRssItemOfAll(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).End__GetCountOfRssItemOfAll(result);
             return new object[] {
                     retVal};
         }
 
-        private void OnGetCountOfRssItemOfAllCompleted(object state)
+        private void On__GetCountOfRssItemOfAllCompleted(object state)
         {
-            if ((this.GetCountOfRssItemOfAllCompleted != null))
+            if ((this.__GetCountOfRssItemOfAllCompleted != null))
             {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetCountOfRssItemOfAllCompleted(this, new GetCountOfRssItemOfAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.__GetCountOfRssItemOfAllCompleted(this, new __GetCountOfRssItemOfAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
 
-        public void GetCountOfRssItemOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
+        public void __GetCountOfRssItemOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
         {
-            this.GetCountOfRssItemOfAllAsync(request, null);
+            this.__GetCountOfRssItemOfAllAsync(request, null);
         }
 
-        public void GetCountOfRssItemOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
+        public void __GetCountOfRssItemOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
         {
-            if ((this.onBeginGetCountOfRssItemOfAllDelegate == null))
+            if ((this.onBegin__GetCountOfRssItemOfAllDelegate == null))
             {
-                this.onBeginGetCountOfRssItemOfAllDelegate = new BeginOperationDelegate(this.OnBeginGetCountOfRssItemOfAll);
+                this.onBegin__GetCountOfRssItemOfAllDelegate = new BeginOperationDelegate(this.OnBegin__GetCountOfRssItemOfAll);
             }
-            if ((this.onEndGetCountOfRssItemOfAllDelegate == null))
+            if ((this.onEnd__GetCountOfRssItemOfAllDelegate == null))
             {
-                this.onEndGetCountOfRssItemOfAllDelegate = new EndOperationDelegate(this.OnEndGetCountOfRssItemOfAll);
+                this.onEnd__GetCountOfRssItemOfAllDelegate = new EndOperationDelegate(this.OnEnd__GetCountOfRssItemOfAll);
             }
-            if ((this.onGetCountOfRssItemOfAllCompletedDelegate == null))
+            if ((this.on__GetCountOfRssItemOfAllCompletedDelegate == null))
             {
-                this.onGetCountOfRssItemOfAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCountOfRssItemOfAllCompleted);
+                this.on__GetCountOfRssItemOfAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.On__GetCountOfRssItemOfAllCompleted);
             }
-            base.InvokeAsync(this.onBeginGetCountOfRssItemOfAllDelegate, new object[] {
-                        request}, this.onEndGetCountOfRssItemOfAllDelegate, this.onGetCountOfRssItemOfAllCompletedDelegate, userState);
+            base.InvokeAsync(this.onBegin__GetCountOfRssItemOfAllDelegate, new object[] {
+                        request}, this.onEnd__GetCountOfRssItemOfAllDelegate, this.on__GetCountOfRssItemOfAllCompletedDelegate, userState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginExistsOfRssItemOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.Begin__ExistsOfRssItemOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
-            return base.Channel.BeginExistsOfRssItemOfAll(request, callback, asyncState);
+            return base.Channel.Begin__ExistsOfRssItemOfAll(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndExistsOfRssItemOfAll(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.End__ExistsOfRssItemOfAll(System.IAsyncResult result)
         {
-            return base.Channel.EndExistsOfRssItemOfAll(result);
+            return base.Channel.End__ExistsOfRssItemOfAll(result);
         }
 
-        private System.IAsyncResult OnBeginExistsOfRssItemOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
+        private System.IAsyncResult OnBegin__ExistsOfRssItemOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginExistsOfRssItemOfAll(request, callback, asyncState);
+            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).Begin__ExistsOfRssItemOfAll(request, callback, asyncState);
         }
 
-        private object[] OnEndExistsOfRssItemOfAll(System.IAsyncResult result)
+        private object[] OnEnd__ExistsOfRssItemOfAll(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndExistsOfRssItemOfAll(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).End__ExistsOfRssItemOfAll(result);
             return new object[] {
                     retVal};
         }
 
-        private void OnExistsOfRssItemOfAllCompleted(object state)
+        private void On__ExistsOfRssItemOfAllCompleted(object state)
         {
-            if ((this.ExistsOfRssItemOfAllCompleted != null))
+            if ((this.__ExistsOfRssItemOfAllCompleted != null))
             {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.ExistsOfRssItemOfAllCompleted(this, new ExistsOfRssItemOfAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.__ExistsOfRssItemOfAllCompleted(this, new __ExistsOfRssItemOfAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
 
-        public void ExistsOfRssItemOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
+        public void __ExistsOfRssItemOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
         {
-            this.ExistsOfRssItemOfAllAsync(request, null);
+            this.__ExistsOfRssItemOfAllAsync(request, null);
         }
 
-        public void ExistsOfRssItemOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
+        public void __ExistsOfRssItemOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
         {
-            if ((this.onBeginExistsOfRssItemOfAllDelegate == null))
+            if ((this.onBegin__ExistsOfRssItemOfAllDelegate == null))
             {
-                this.onBeginExistsOfRssItemOfAllDelegate = new BeginOperationDelegate(this.OnBeginExistsOfRssItemOfAll);
+                this.onBegin__ExistsOfRssItemOfAllDelegate = new BeginOperationDelegate(this.OnBegin__ExistsOfRssItemOfAll);
             }
-            if ((this.onEndExistsOfRssItemOfAllDelegate == null))
+            if ((this.onEnd__ExistsOfRssItemOfAllDelegate == null))
             {
-                this.onEndExistsOfRssItemOfAllDelegate = new EndOperationDelegate(this.OnEndExistsOfRssItemOfAll);
+                this.onEnd__ExistsOfRssItemOfAllDelegate = new EndOperationDelegate(this.OnEnd__ExistsOfRssItemOfAll);
             }
-            if ((this.onExistsOfRssItemOfAllCompletedDelegate == null))
+            if ((this.on__ExistsOfRssItemOfAllCompletedDelegate == null))
             {
-                this.onExistsOfRssItemOfAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnExistsOfRssItemOfAllCompleted);
+                this.on__ExistsOfRssItemOfAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.On__ExistsOfRssItemOfAllCompleted);
             }
-            base.InvokeAsync(this.onBeginExistsOfRssItemOfAllDelegate, new object[] {
-                        request}, this.onEndExistsOfRssItemOfAllDelegate, this.onExistsOfRssItemOfAllCompletedDelegate, userState);
+            base.InvokeAsync(this.onBegin__ExistsOfRssItemOfAllDelegate, new object[] {
+                        request}, this.onEnd__ExistsOfRssItemOfAllDelegate, this.on__ExistsOfRssItemOfAllCompletedDelegate, userState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginGetCollectionOfRssItemOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.Begin__GetCollectionOfRssItemOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
-            return base.Channel.BeginGetCollectionOfRssItemOfAll(request, callback, asyncState);
+            return base.Channel.Begin__GetCollectionOfRssItemOfAll(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndGetCollectionOfRssItemOfAll(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.End__GetCollectionOfRssItemOfAll(System.IAsyncResult result)
         {
-            return base.Channel.EndGetCollectionOfRssItemOfAll(result);
+            return base.Channel.End__GetCollectionOfRssItemOfAll(result);
         }
 
-        private System.IAsyncResult OnBeginGetCollectionOfRssItemOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
+        private System.IAsyncResult OnBegin__GetCollectionOfRssItemOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginGetCollectionOfRssItemOfAll(request, callback, asyncState);
+            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).Begin__GetCollectionOfRssItemOfAll(request, callback, asyncState);
         }
 
-        private object[] OnEndGetCollectionOfRssItemOfAll(System.IAsyncResult result)
+        private object[] OnEnd__GetCollectionOfRssItemOfAll(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndGetCollectionOfRssItemOfAll(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).End__GetCollectionOfRssItemOfAll(result);
             return new object[] {
                     retVal};
         }
 
-        private void OnGetCollectionOfRssItemOfAllCompleted(object state)
+        private void On__GetCollectionOfRssItemOfAllCompleted(object state)
         {
-            if ((this.GetCollectionOfRssItemOfAllCompleted != null))
+            if ((this.__GetCollectionOfRssItemOfAllCompleted != null))
             {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetCollectionOfRssItemOfAllCompleted(this, new GetCollectionOfRssItemOfAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.__GetCollectionOfRssItemOfAllCompleted(this, new __GetCollectionOfRssItemOfAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
 
-        public void GetCollectionOfRssItemOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
+        public void __GetCollectionOfRssItemOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
         {
-            this.GetCollectionOfRssItemOfAllAsync(request, null);
+            this.__GetCollectionOfRssItemOfAllAsync(request, null);
         }
 
-        public void GetCollectionOfRssItemOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
+        public void __GetCollectionOfRssItemOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
         {
-            if ((this.onBeginGetCollectionOfRssItemOfAllDelegate == null))
+            if ((this.onBegin__GetCollectionOfRssItemOfAllDelegate == null))
             {
-                this.onBeginGetCollectionOfRssItemOfAllDelegate = new BeginOperationDelegate(this.OnBeginGetCollectionOfRssItemOfAll);
+                this.onBegin__GetCollectionOfRssItemOfAllDelegate = new BeginOperationDelegate(this.OnBegin__GetCollectionOfRssItemOfAll);
             }
-            if ((this.onEndGetCollectionOfRssItemOfAllDelegate == null))
+            if ((this.onEnd__GetCollectionOfRssItemOfAllDelegate == null))
             {
-                this.onEndGetCollectionOfRssItemOfAllDelegate = new EndOperationDelegate(this.OnEndGetCollectionOfRssItemOfAll);
+                this.onEnd__GetCollectionOfRssItemOfAllDelegate = new EndOperationDelegate(this.OnEnd__GetCollectionOfRssItemOfAll);
             }
-            if ((this.onGetCollectionOfRssItemOfAllCompletedDelegate == null))
+            if ((this.on__GetCollectionOfRssItemOfAllCompletedDelegate == null))
             {
-                this.onGetCollectionOfRssItemOfAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCollectionOfRssItemOfAllCompleted);
+                this.on__GetCollectionOfRssItemOfAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.On__GetCollectionOfRssItemOfAllCompleted);
             }
-            base.InvokeAsync(this.onBeginGetCollectionOfRssItemOfAllDelegate, new object[] {
-                        request}, this.onEndGetCollectionOfRssItemOfAllDelegate, this.onGetCollectionOfRssItemOfAllCompletedDelegate, userState);
+            base.InvokeAsync(this.onBegin__GetCollectionOfRssItemOfAllDelegate, new object[] {
+                        request}, this.onEnd__GetCollectionOfRssItemOfAllDelegate, this.on__GetCollectionOfRssItemOfAllCompletedDelegate, userState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginGetSingleOfRssItemOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.Begin__GetSingleOfRssItemOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
-            return base.Channel.BeginGetSingleOfRssItemOfAll(request, callback, asyncState);
+            return base.Channel.Begin__GetSingleOfRssItemOfAll(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndGetSingleOfRssItemOfAll(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.End__GetSingleOfRssItemOfAll(System.IAsyncResult result)
         {
-            return base.Channel.EndGetSingleOfRssItemOfAll(result);
+            return base.Channel.End__GetSingleOfRssItemOfAll(result);
         }
 
-        private System.IAsyncResult OnBeginGetSingleOfRssItemOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
+        private System.IAsyncResult OnBegin__GetSingleOfRssItemOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginGetSingleOfRssItemOfAll(request, callback, asyncState);
+            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).Begin__GetSingleOfRssItemOfAll(request, callback, asyncState);
         }
 
-        private object[] OnEndGetSingleOfRssItemOfAll(System.IAsyncResult result)
+        private object[] OnEnd__GetSingleOfRssItemOfAll(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndGetSingleOfRssItemOfAll(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).End__GetSingleOfRssItemOfAll(result);
             return new object[] {
                     retVal};
         }
 
-        private void OnGetSingleOfRssItemOfAllCompleted(object state)
+        private void On__GetSingleOfRssItemOfAllCompleted(object state)
         {
-            if ((this.GetSingleOfRssItemOfAllCompleted != null))
+            if ((this.__GetSingleOfRssItemOfAllCompleted != null))
             {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetSingleOfRssItemOfAllCompleted(this, new GetSingleOfRssItemOfAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.__GetSingleOfRssItemOfAllCompleted(this, new __GetSingleOfRssItemOfAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
 
-        public void GetSingleOfRssItemOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
+        public void __GetSingleOfRssItemOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
         {
-            this.GetSingleOfRssItemOfAllAsync(request, null);
+            this.__GetSingleOfRssItemOfAllAsync(request, null);
         }
 
-        public void GetSingleOfRssItemOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
+        public void __GetSingleOfRssItemOfAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
         {
-            if ((this.onBeginGetSingleOfRssItemOfAllDelegate == null))
+            if ((this.onBegin__GetSingleOfRssItemOfAllDelegate == null))
             {
-                this.onBeginGetSingleOfRssItemOfAllDelegate = new BeginOperationDelegate(this.OnBeginGetSingleOfRssItemOfAll);
+                this.onBegin__GetSingleOfRssItemOfAllDelegate = new BeginOperationDelegate(this.OnBegin__GetSingleOfRssItemOfAll);
             }
-            if ((this.onEndGetSingleOfRssItemOfAllDelegate == null))
+            if ((this.onEnd__GetSingleOfRssItemOfAllDelegate == null))
             {
-                this.onEndGetSingleOfRssItemOfAllDelegate = new EndOperationDelegate(this.OnEndGetSingleOfRssItemOfAll);
+                this.onEnd__GetSingleOfRssItemOfAllDelegate = new EndOperationDelegate(this.OnEnd__GetSingleOfRssItemOfAll);
             }
-            if ((this.onGetSingleOfRssItemOfAllCompletedDelegate == null))
+            if ((this.on__GetSingleOfRssItemOfAllCompletedDelegate == null))
             {
-                this.onGetSingleOfRssItemOfAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetSingleOfRssItemOfAllCompleted);
+                this.on__GetSingleOfRssItemOfAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.On__GetSingleOfRssItemOfAllCompleted);
             }
-            base.InvokeAsync(this.onBeginGetSingleOfRssItemOfAllDelegate, new object[] {
-                        request}, this.onEndGetSingleOfRssItemOfAllDelegate, this.onGetSingleOfRssItemOfAllCompletedDelegate, userState);
+            base.InvokeAsync(this.onBegin__GetSingleOfRssItemOfAllDelegate, new object[] {
+                        request}, this.onEnd__GetSingleOfRssItemOfAllDelegate, this.on__GetSingleOfRssItemOfAllCompletedDelegate, userState);
         }
 
         #endregion Query Methods Of RssItem of All
@@ -2706,10 +2706,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfByIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfEntityOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request)
         {
-            return base.Channel.GetCountOfEntityOfByIdentifier(request);
+            return base.Channel.__GetCountOfEntityOfByIdentifier(request);
         }
 
         /// <summary>
@@ -2717,10 +2717,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfByIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfEntityOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request)
         {
-            return base.Channel.ExistsOfEntityOfByIdentifier(request);
+            return base.Channel.__ExistsOfEntityOfByIdentifier(request);
         }
 
         /// <summary>
@@ -2728,10 +2728,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn GetCollectionOfEntityOfByIdentifier(
+        public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn __GetCollectionOfEntityOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request)
         {
-            return base.Channel.GetCollectionOfEntityOfByIdentifier(request);
+            return base.Channel.__GetCollectionOfEntityOfByIdentifier(request);
         }
 
         /// <summary>
@@ -2739,238 +2739,238 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn GetSingleOfEntityOfByIdentifier(
+        public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn __GetSingleOfEntityOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request)
         {
-            return base.Channel.GetSingleOfEntityOfByIdentifier(request);
+            return base.Channel.__GetSingleOfEntityOfByIdentifier(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginGetCountOfEntityOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.Begin__GetCountOfEntityOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
         {
-            return base.Channel.BeginGetCountOfEntityOfByIdentifier(request, callback, asyncState);
+            return base.Channel.Begin__GetCountOfEntityOfByIdentifier(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndGetCountOfEntityOfByIdentifier(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.End__GetCountOfEntityOfByIdentifier(System.IAsyncResult result)
         {
-            return base.Channel.EndGetCountOfEntityOfByIdentifier(result);
+            return base.Channel.End__GetCountOfEntityOfByIdentifier(result);
         }
 
-        private System.IAsyncResult OnBeginGetCountOfEntityOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
+        private System.IAsyncResult OnBegin__GetCountOfEntityOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginGetCountOfEntityOfByIdentifier(request, callback, asyncState);
+            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).Begin__GetCountOfEntityOfByIdentifier(request, callback, asyncState);
         }
 
-        private object[] OnEndGetCountOfEntityOfByIdentifier(System.IAsyncResult result)
+        private object[] OnEnd__GetCountOfEntityOfByIdentifier(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndGetCountOfEntityOfByIdentifier(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).End__GetCountOfEntityOfByIdentifier(result);
             return new object[] {
                     retVal};
         }
 
-        private void OnGetCountOfEntityOfByIdentifierCompleted(object state)
+        private void On__GetCountOfEntityOfByIdentifierCompleted(object state)
         {
-            if ((this.GetCountOfEntityOfByIdentifierCompleted != null))
+            if ((this.__GetCountOfEntityOfByIdentifierCompleted != null))
             {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetCountOfEntityOfByIdentifierCompleted(this, new GetCountOfEntityOfByIdentifierCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.__GetCountOfEntityOfByIdentifierCompleted(this, new __GetCountOfEntityOfByIdentifierCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
 
-        public void GetCountOfEntityOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request)
+        public void __GetCountOfEntityOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request)
         {
-            this.GetCountOfEntityOfByIdentifierAsync(request, null);
+            this.__GetCountOfEntityOfByIdentifierAsync(request, null);
         }
 
-        public void GetCountOfEntityOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, object userState)
+        public void __GetCountOfEntityOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, object userState)
         {
-            if ((this.onBeginGetCountOfEntityOfByIdentifierDelegate == null))
+            if ((this.onBegin__GetCountOfEntityOfByIdentifierDelegate == null))
             {
-                this.onBeginGetCountOfEntityOfByIdentifierDelegate = new BeginOperationDelegate(this.OnBeginGetCountOfEntityOfByIdentifier);
+                this.onBegin__GetCountOfEntityOfByIdentifierDelegate = new BeginOperationDelegate(this.OnBegin__GetCountOfEntityOfByIdentifier);
             }
-            if ((this.onEndGetCountOfEntityOfByIdentifierDelegate == null))
+            if ((this.onEnd__GetCountOfEntityOfByIdentifierDelegate == null))
             {
-                this.onEndGetCountOfEntityOfByIdentifierDelegate = new EndOperationDelegate(this.OnEndGetCountOfEntityOfByIdentifier);
+                this.onEnd__GetCountOfEntityOfByIdentifierDelegate = new EndOperationDelegate(this.OnEnd__GetCountOfEntityOfByIdentifier);
             }
-            if ((this.onGetCountOfEntityOfByIdentifierCompletedDelegate == null))
+            if ((this.on__GetCountOfEntityOfByIdentifierCompletedDelegate == null))
             {
-                this.onGetCountOfEntityOfByIdentifierCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCountOfEntityOfByIdentifierCompleted);
+                this.on__GetCountOfEntityOfByIdentifierCompletedDelegate = new System.Threading.SendOrPostCallback(this.On__GetCountOfEntityOfByIdentifierCompleted);
             }
-            base.InvokeAsync(this.onBeginGetCountOfEntityOfByIdentifierDelegate, new object[] {
-                        request}, this.onEndGetCountOfEntityOfByIdentifierDelegate, this.onGetCountOfEntityOfByIdentifierCompletedDelegate, userState);
+            base.InvokeAsync(this.onBegin__GetCountOfEntityOfByIdentifierDelegate, new object[] {
+                        request}, this.onEnd__GetCountOfEntityOfByIdentifierDelegate, this.on__GetCountOfEntityOfByIdentifierCompletedDelegate, userState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginExistsOfEntityOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.Begin__ExistsOfEntityOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
         {
-            return base.Channel.BeginExistsOfEntityOfByIdentifier(request, callback, asyncState);
+            return base.Channel.Begin__ExistsOfEntityOfByIdentifier(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndExistsOfEntityOfByIdentifier(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.End__ExistsOfEntityOfByIdentifier(System.IAsyncResult result)
         {
-            return base.Channel.EndExistsOfEntityOfByIdentifier(result);
+            return base.Channel.End__ExistsOfEntityOfByIdentifier(result);
         }
 
-        private System.IAsyncResult OnBeginExistsOfEntityOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
+        private System.IAsyncResult OnBegin__ExistsOfEntityOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginExistsOfEntityOfByIdentifier(request, callback, asyncState);
+            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).Begin__ExistsOfEntityOfByIdentifier(request, callback, asyncState);
         }
 
-        private object[] OnEndExistsOfEntityOfByIdentifier(System.IAsyncResult result)
+        private object[] OnEnd__ExistsOfEntityOfByIdentifier(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndExistsOfEntityOfByIdentifier(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).End__ExistsOfEntityOfByIdentifier(result);
             return new object[] {
                     retVal};
         }
 
-        private void OnExistsOfEntityOfByIdentifierCompleted(object state)
+        private void On__ExistsOfEntityOfByIdentifierCompleted(object state)
         {
-            if ((this.ExistsOfEntityOfByIdentifierCompleted != null))
+            if ((this.__ExistsOfEntityOfByIdentifierCompleted != null))
             {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.ExistsOfEntityOfByIdentifierCompleted(this, new ExistsOfEntityOfByIdentifierCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.__ExistsOfEntityOfByIdentifierCompleted(this, new __ExistsOfEntityOfByIdentifierCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
 
-        public void ExistsOfEntityOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request)
+        public void __ExistsOfEntityOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request)
         {
-            this.ExistsOfEntityOfByIdentifierAsync(request, null);
+            this.__ExistsOfEntityOfByIdentifierAsync(request, null);
         }
 
-        public void ExistsOfEntityOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, object userState)
+        public void __ExistsOfEntityOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, object userState)
         {
-            if ((this.onBeginExistsOfEntityOfByIdentifierDelegate == null))
+            if ((this.onBegin__ExistsOfEntityOfByIdentifierDelegate == null))
             {
-                this.onBeginExistsOfEntityOfByIdentifierDelegate = new BeginOperationDelegate(this.OnBeginExistsOfEntityOfByIdentifier);
+                this.onBegin__ExistsOfEntityOfByIdentifierDelegate = new BeginOperationDelegate(this.OnBegin__ExistsOfEntityOfByIdentifier);
             }
-            if ((this.onEndExistsOfEntityOfByIdentifierDelegate == null))
+            if ((this.onEnd__ExistsOfEntityOfByIdentifierDelegate == null))
             {
-                this.onEndExistsOfEntityOfByIdentifierDelegate = new EndOperationDelegate(this.OnEndExistsOfEntityOfByIdentifier);
+                this.onEnd__ExistsOfEntityOfByIdentifierDelegate = new EndOperationDelegate(this.OnEnd__ExistsOfEntityOfByIdentifier);
             }
-            if ((this.onExistsOfEntityOfByIdentifierCompletedDelegate == null))
+            if ((this.on__ExistsOfEntityOfByIdentifierCompletedDelegate == null))
             {
-                this.onExistsOfEntityOfByIdentifierCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnExistsOfEntityOfByIdentifierCompleted);
+                this.on__ExistsOfEntityOfByIdentifierCompletedDelegate = new System.Threading.SendOrPostCallback(this.On__ExistsOfEntityOfByIdentifierCompleted);
             }
-            base.InvokeAsync(this.onBeginExistsOfEntityOfByIdentifierDelegate, new object[] {
-                        request}, this.onEndExistsOfEntityOfByIdentifierDelegate, this.onExistsOfEntityOfByIdentifierCompletedDelegate, userState);
+            base.InvokeAsync(this.onBegin__ExistsOfEntityOfByIdentifierDelegate, new object[] {
+                        request}, this.onEnd__ExistsOfEntityOfByIdentifierDelegate, this.on__ExistsOfEntityOfByIdentifierCompletedDelegate, userState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginGetCollectionOfEntityOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.Begin__GetCollectionOfEntityOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
         {
-            return base.Channel.BeginGetCollectionOfEntityOfByIdentifier(request, callback, asyncState);
+            return base.Channel.Begin__GetCollectionOfEntityOfByIdentifier(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndGetCollectionOfEntityOfByIdentifier(System.IAsyncResult result)
+        MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.End__GetCollectionOfEntityOfByIdentifier(System.IAsyncResult result)
         {
-            return base.Channel.EndGetCollectionOfEntityOfByIdentifier(result);
+            return base.Channel.End__GetCollectionOfEntityOfByIdentifier(result);
         }
 
-        private System.IAsyncResult OnBeginGetCollectionOfEntityOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
+        private System.IAsyncResult OnBegin__GetCollectionOfEntityOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginGetCollectionOfEntityOfByIdentifier(request, callback, asyncState);
+            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).Begin__GetCollectionOfEntityOfByIdentifier(request, callback, asyncState);
         }
 
-        private object[] OnEndGetCollectionOfEntityOfByIdentifier(System.IAsyncResult result)
+        private object[] OnEnd__GetCollectionOfEntityOfByIdentifier(System.IAsyncResult result)
         {
-            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndGetCollectionOfEntityOfByIdentifier(result);
+            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).End__GetCollectionOfEntityOfByIdentifier(result);
             return new object[] {
                     retVal};
         }
 
-        private void OnGetCollectionOfEntityOfByIdentifierCompleted(object state)
+        private void On__GetCollectionOfEntityOfByIdentifierCompleted(object state)
         {
-            if ((this.GetCollectionOfEntityOfByIdentifierCompleted != null))
+            if ((this.__GetCollectionOfEntityOfByIdentifierCompleted != null))
             {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetCollectionOfEntityOfByIdentifierCompleted(this, new GetCollectionOfEntityOfByIdentifierCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.__GetCollectionOfEntityOfByIdentifierCompleted(this, new __GetCollectionOfEntityOfByIdentifierCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
 
-        public void GetCollectionOfEntityOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request)
+        public void __GetCollectionOfEntityOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request)
         {
-            this.GetCollectionOfEntityOfByIdentifierAsync(request, null);
+            this.__GetCollectionOfEntityOfByIdentifierAsync(request, null);
         }
 
-        public void GetCollectionOfEntityOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, object userState)
+        public void __GetCollectionOfEntityOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, object userState)
         {
-            if ((this.onBeginGetCollectionOfEntityOfByIdentifierDelegate == null))
+            if ((this.onBegin__GetCollectionOfEntityOfByIdentifierDelegate == null))
             {
-                this.onBeginGetCollectionOfEntityOfByIdentifierDelegate = new BeginOperationDelegate(this.OnBeginGetCollectionOfEntityOfByIdentifier);
+                this.onBegin__GetCollectionOfEntityOfByIdentifierDelegate = new BeginOperationDelegate(this.OnBegin__GetCollectionOfEntityOfByIdentifier);
             }
-            if ((this.onEndGetCollectionOfEntityOfByIdentifierDelegate == null))
+            if ((this.onEnd__GetCollectionOfEntityOfByIdentifierDelegate == null))
             {
-                this.onEndGetCollectionOfEntityOfByIdentifierDelegate = new EndOperationDelegate(this.OnEndGetCollectionOfEntityOfByIdentifier);
+                this.onEnd__GetCollectionOfEntityOfByIdentifierDelegate = new EndOperationDelegate(this.OnEnd__GetCollectionOfEntityOfByIdentifier);
             }
-            if ((this.onGetCollectionOfEntityOfByIdentifierCompletedDelegate == null))
+            if ((this.on__GetCollectionOfEntityOfByIdentifierCompletedDelegate == null))
             {
-                this.onGetCollectionOfEntityOfByIdentifierCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCollectionOfEntityOfByIdentifierCompleted);
+                this.on__GetCollectionOfEntityOfByIdentifierCompletedDelegate = new System.Threading.SendOrPostCallback(this.On__GetCollectionOfEntityOfByIdentifierCompleted);
             }
-            base.InvokeAsync(this.onBeginGetCollectionOfEntityOfByIdentifierDelegate, new object[] {
-                        request}, this.onEndGetCollectionOfEntityOfByIdentifierDelegate, this.onGetCollectionOfEntityOfByIdentifierCompletedDelegate, userState);
+            base.InvokeAsync(this.onBegin__GetCollectionOfEntityOfByIdentifierDelegate, new object[] {
+                        request}, this.onEnd__GetCollectionOfEntityOfByIdentifierDelegate, this.on__GetCollectionOfEntityOfByIdentifierCompletedDelegate, userState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginGetSingleOfEntityOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.Begin__GetSingleOfEntityOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
         {
-            return base.Channel.BeginGetSingleOfEntityOfByIdentifier(request, callback, asyncState);
+            return base.Channel.Begin__GetSingleOfEntityOfByIdentifier(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndGetSingleOfEntityOfByIdentifier(System.IAsyncResult result)
+        MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.End__GetSingleOfEntityOfByIdentifier(System.IAsyncResult result)
         {
-            return base.Channel.EndGetSingleOfEntityOfByIdentifier(result);
+            return base.Channel.End__GetSingleOfEntityOfByIdentifier(result);
         }
 
-        private System.IAsyncResult OnBeginGetSingleOfEntityOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
+        private System.IAsyncResult OnBegin__GetSingleOfEntityOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginGetSingleOfEntityOfByIdentifier(request, callback, asyncState);
+            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).Begin__GetSingleOfEntityOfByIdentifier(request, callback, asyncState);
         }
 
-        private object[] OnEndGetSingleOfEntityOfByIdentifier(System.IAsyncResult result)
+        private object[] OnEnd__GetSingleOfEntityOfByIdentifier(System.IAsyncResult result)
         {
-            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndGetSingleOfEntityOfByIdentifier(result);
+            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).End__GetSingleOfEntityOfByIdentifier(result);
             return new object[] {
                     retVal};
         }
 
-        private void OnGetSingleOfEntityOfByIdentifierCompleted(object state)
+        private void On__GetSingleOfEntityOfByIdentifierCompleted(object state)
         {
-            if ((this.GetSingleOfEntityOfByIdentifierCompleted != null))
+            if ((this.__GetSingleOfEntityOfByIdentifierCompleted != null))
             {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetSingleOfEntityOfByIdentifierCompleted(this, new GetSingleOfEntityOfByIdentifierCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.__GetSingleOfEntityOfByIdentifierCompleted(this, new __GetSingleOfEntityOfByIdentifierCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
 
-        public void GetSingleOfEntityOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request)
+        public void __GetSingleOfEntityOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request)
         {
-            this.GetSingleOfEntityOfByIdentifierAsync(request, null);
+            this.__GetSingleOfEntityOfByIdentifierAsync(request, null);
         }
 
-        public void GetSingleOfEntityOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, object userState)
+        public void __GetSingleOfEntityOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, object userState)
         {
-            if ((this.onBeginGetSingleOfEntityOfByIdentifierDelegate == null))
+            if ((this.onBegin__GetSingleOfEntityOfByIdentifierDelegate == null))
             {
-                this.onBeginGetSingleOfEntityOfByIdentifierDelegate = new BeginOperationDelegate(this.OnBeginGetSingleOfEntityOfByIdentifier);
+                this.onBegin__GetSingleOfEntityOfByIdentifierDelegate = new BeginOperationDelegate(this.OnBegin__GetSingleOfEntityOfByIdentifier);
             }
-            if ((this.onEndGetSingleOfEntityOfByIdentifierDelegate == null))
+            if ((this.onEnd__GetSingleOfEntityOfByIdentifierDelegate == null))
             {
-                this.onEndGetSingleOfEntityOfByIdentifierDelegate = new EndOperationDelegate(this.OnEndGetSingleOfEntityOfByIdentifier);
+                this.onEnd__GetSingleOfEntityOfByIdentifierDelegate = new EndOperationDelegate(this.OnEnd__GetSingleOfEntityOfByIdentifier);
             }
-            if ((this.onGetSingleOfEntityOfByIdentifierCompletedDelegate == null))
+            if ((this.on__GetSingleOfEntityOfByIdentifierCompletedDelegate == null))
             {
-                this.onGetSingleOfEntityOfByIdentifierCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetSingleOfEntityOfByIdentifierCompleted);
+                this.on__GetSingleOfEntityOfByIdentifierCompletedDelegate = new System.Threading.SendOrPostCallback(this.On__GetSingleOfEntityOfByIdentifierCompleted);
             }
-            base.InvokeAsync(this.onBeginGetSingleOfEntityOfByIdentifierDelegate, new object[] {
-                        request}, this.onEndGetSingleOfEntityOfByIdentifierDelegate, this.onGetSingleOfEntityOfByIdentifierCompletedDelegate, userState);
+            base.InvokeAsync(this.onBegin__GetSingleOfEntityOfByIdentifierDelegate, new object[] {
+                        request}, this.onEnd__GetSingleOfEntityOfByIdentifierDelegate, this.on__GetSingleOfEntityOfByIdentifierCompletedDelegate, userState);
         }
 
         #endregion Query Methods Of Entity of ByIdentifier
@@ -2982,10 +2982,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfKeyInformationOfByIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger __GetCountOfKeyInformationOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request)
         {
-            return base.Channel.GetCountOfKeyInformationOfByIdentifier(request);
+            return base.Channel.__GetCountOfKeyInformationOfByIdentifier(request);
         }
 
         /// <summary>
@@ -2993,10 +2993,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationOfByIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean __ExistsOfKeyInformationOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request)
         {
-            return base.Channel.ExistsOfKeyInformationOfByIdentifier(request);
+            return base.Channel.__ExistsOfKeyInformationOfByIdentifier(request);
         }
 
         /// <summary>
@@ -3004,10 +3004,10 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation GetCollectionOfKeyInformationOfByIdentifier(
+        public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation __GetCollectionOfKeyInformationOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request)
         {
-            return base.Channel.GetCollectionOfKeyInformationOfByIdentifier(request);
+            return base.Channel.__GetCollectionOfKeyInformationOfByIdentifier(request);
         }
 
         /// <summary>
@@ -3015,238 +3015,238 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation GetSingleOfKeyInformationOfByIdentifier(
+        public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation __GetSingleOfKeyInformationOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request)
         {
-            return base.Channel.GetSingleOfKeyInformationOfByIdentifier(request);
+            return base.Channel.__GetSingleOfKeyInformationOfByIdentifier(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginGetCountOfKeyInformationOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.Begin__GetCountOfKeyInformationOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
         {
-            return base.Channel.BeginGetCountOfKeyInformationOfByIdentifier(request, callback, asyncState);
+            return base.Channel.Begin__GetCountOfKeyInformationOfByIdentifier(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndGetCountOfKeyInformationOfByIdentifier(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.End__GetCountOfKeyInformationOfByIdentifier(System.IAsyncResult result)
         {
-            return base.Channel.EndGetCountOfKeyInformationOfByIdentifier(result);
+            return base.Channel.End__GetCountOfKeyInformationOfByIdentifier(result);
         }
 
-        private System.IAsyncResult OnBeginGetCountOfKeyInformationOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
+        private System.IAsyncResult OnBegin__GetCountOfKeyInformationOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginGetCountOfKeyInformationOfByIdentifier(request, callback, asyncState);
+            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).Begin__GetCountOfKeyInformationOfByIdentifier(request, callback, asyncState);
         }
 
-        private object[] OnEndGetCountOfKeyInformationOfByIdentifier(System.IAsyncResult result)
+        private object[] OnEnd__GetCountOfKeyInformationOfByIdentifier(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndGetCountOfKeyInformationOfByIdentifier(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).End__GetCountOfKeyInformationOfByIdentifier(result);
             return new object[] {
                     retVal};
         }
 
-        private void OnGetCountOfKeyInformationOfByIdentifierCompleted(object state)
+        private void On__GetCountOfKeyInformationOfByIdentifierCompleted(object state)
         {
-            if ((this.GetCountOfKeyInformationOfByIdentifierCompleted != null))
+            if ((this.__GetCountOfKeyInformationOfByIdentifierCompleted != null))
             {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetCountOfKeyInformationOfByIdentifierCompleted(this, new GetCountOfKeyInformationOfByIdentifierCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.__GetCountOfKeyInformationOfByIdentifierCompleted(this, new __GetCountOfKeyInformationOfByIdentifierCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
 
-        public void GetCountOfKeyInformationOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request)
+        public void __GetCountOfKeyInformationOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request)
         {
-            this.GetCountOfKeyInformationOfByIdentifierAsync(request, null);
+            this.__GetCountOfKeyInformationOfByIdentifierAsync(request, null);
         }
 
-        public void GetCountOfKeyInformationOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, object userState)
+        public void __GetCountOfKeyInformationOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, object userState)
         {
-            if ((this.onBeginGetCountOfKeyInformationOfByIdentifierDelegate == null))
+            if ((this.onBegin__GetCountOfKeyInformationOfByIdentifierDelegate == null))
             {
-                this.onBeginGetCountOfKeyInformationOfByIdentifierDelegate = new BeginOperationDelegate(this.OnBeginGetCountOfKeyInformationOfByIdentifier);
+                this.onBegin__GetCountOfKeyInformationOfByIdentifierDelegate = new BeginOperationDelegate(this.OnBegin__GetCountOfKeyInformationOfByIdentifier);
             }
-            if ((this.onEndGetCountOfKeyInformationOfByIdentifierDelegate == null))
+            if ((this.onEnd__GetCountOfKeyInformationOfByIdentifierDelegate == null))
             {
-                this.onEndGetCountOfKeyInformationOfByIdentifierDelegate = new EndOperationDelegate(this.OnEndGetCountOfKeyInformationOfByIdentifier);
+                this.onEnd__GetCountOfKeyInformationOfByIdentifierDelegate = new EndOperationDelegate(this.OnEnd__GetCountOfKeyInformationOfByIdentifier);
             }
-            if ((this.onGetCountOfKeyInformationOfByIdentifierCompletedDelegate == null))
+            if ((this.on__GetCountOfKeyInformationOfByIdentifierCompletedDelegate == null))
             {
-                this.onGetCountOfKeyInformationOfByIdentifierCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCountOfKeyInformationOfByIdentifierCompleted);
+                this.on__GetCountOfKeyInformationOfByIdentifierCompletedDelegate = new System.Threading.SendOrPostCallback(this.On__GetCountOfKeyInformationOfByIdentifierCompleted);
             }
-            base.InvokeAsync(this.onBeginGetCountOfKeyInformationOfByIdentifierDelegate, new object[] {
-                        request}, this.onEndGetCountOfKeyInformationOfByIdentifierDelegate, this.onGetCountOfKeyInformationOfByIdentifierCompletedDelegate, userState);
+            base.InvokeAsync(this.onBegin__GetCountOfKeyInformationOfByIdentifierDelegate, new object[] {
+                        request}, this.onEnd__GetCountOfKeyInformationOfByIdentifierDelegate, this.on__GetCountOfKeyInformationOfByIdentifierCompletedDelegate, userState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginExistsOfKeyInformationOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.Begin__ExistsOfKeyInformationOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
         {
-            return base.Channel.BeginExistsOfKeyInformationOfByIdentifier(request, callback, asyncState);
+            return base.Channel.Begin__ExistsOfKeyInformationOfByIdentifier(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndExistsOfKeyInformationOfByIdentifier(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.End__ExistsOfKeyInformationOfByIdentifier(System.IAsyncResult result)
         {
-            return base.Channel.EndExistsOfKeyInformationOfByIdentifier(result);
+            return base.Channel.End__ExistsOfKeyInformationOfByIdentifier(result);
         }
 
-        private System.IAsyncResult OnBeginExistsOfKeyInformationOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
+        private System.IAsyncResult OnBegin__ExistsOfKeyInformationOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginExistsOfKeyInformationOfByIdentifier(request, callback, asyncState);
+            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).Begin__ExistsOfKeyInformationOfByIdentifier(request, callback, asyncState);
         }
 
-        private object[] OnEndExistsOfKeyInformationOfByIdentifier(System.IAsyncResult result)
+        private object[] OnEnd__ExistsOfKeyInformationOfByIdentifier(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndExistsOfKeyInformationOfByIdentifier(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).End__ExistsOfKeyInformationOfByIdentifier(result);
             return new object[] {
                     retVal};
         }
 
-        private void OnExistsOfKeyInformationOfByIdentifierCompleted(object state)
+        private void On__ExistsOfKeyInformationOfByIdentifierCompleted(object state)
         {
-            if ((this.ExistsOfKeyInformationOfByIdentifierCompleted != null))
+            if ((this.__ExistsOfKeyInformationOfByIdentifierCompleted != null))
             {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.ExistsOfKeyInformationOfByIdentifierCompleted(this, new ExistsOfKeyInformationOfByIdentifierCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.__ExistsOfKeyInformationOfByIdentifierCompleted(this, new __ExistsOfKeyInformationOfByIdentifierCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
 
-        public void ExistsOfKeyInformationOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request)
+        public void __ExistsOfKeyInformationOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request)
         {
-            this.ExistsOfKeyInformationOfByIdentifierAsync(request, null);
+            this.__ExistsOfKeyInformationOfByIdentifierAsync(request, null);
         }
 
-        public void ExistsOfKeyInformationOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, object userState)
+        public void __ExistsOfKeyInformationOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, object userState)
         {
-            if ((this.onBeginExistsOfKeyInformationOfByIdentifierDelegate == null))
+            if ((this.onBegin__ExistsOfKeyInformationOfByIdentifierDelegate == null))
             {
-                this.onBeginExistsOfKeyInformationOfByIdentifierDelegate = new BeginOperationDelegate(this.OnBeginExistsOfKeyInformationOfByIdentifier);
+                this.onBegin__ExistsOfKeyInformationOfByIdentifierDelegate = new BeginOperationDelegate(this.OnBegin__ExistsOfKeyInformationOfByIdentifier);
             }
-            if ((this.onEndExistsOfKeyInformationOfByIdentifierDelegate == null))
+            if ((this.onEnd__ExistsOfKeyInformationOfByIdentifierDelegate == null))
             {
-                this.onEndExistsOfKeyInformationOfByIdentifierDelegate = new EndOperationDelegate(this.OnEndExistsOfKeyInformationOfByIdentifier);
+                this.onEnd__ExistsOfKeyInformationOfByIdentifierDelegate = new EndOperationDelegate(this.OnEnd__ExistsOfKeyInformationOfByIdentifier);
             }
-            if ((this.onExistsOfKeyInformationOfByIdentifierCompletedDelegate == null))
+            if ((this.on__ExistsOfKeyInformationOfByIdentifierCompletedDelegate == null))
             {
-                this.onExistsOfKeyInformationOfByIdentifierCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnExistsOfKeyInformationOfByIdentifierCompleted);
+                this.on__ExistsOfKeyInformationOfByIdentifierCompletedDelegate = new System.Threading.SendOrPostCallback(this.On__ExistsOfKeyInformationOfByIdentifierCompleted);
             }
-            base.InvokeAsync(this.onBeginExistsOfKeyInformationOfByIdentifierDelegate, new object[] {
-                        request}, this.onEndExistsOfKeyInformationOfByIdentifierDelegate, this.onExistsOfKeyInformationOfByIdentifierCompletedDelegate, userState);
+            base.InvokeAsync(this.onBegin__ExistsOfKeyInformationOfByIdentifierDelegate, new object[] {
+                        request}, this.onEnd__ExistsOfKeyInformationOfByIdentifierDelegate, this.on__ExistsOfKeyInformationOfByIdentifierCompletedDelegate, userState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginGetCollectionOfKeyInformationOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.Begin__GetCollectionOfKeyInformationOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
         {
-            return base.Channel.BeginGetCollectionOfKeyInformationOfByIdentifier(request, callback, asyncState);
+            return base.Channel.Begin__GetCollectionOfKeyInformationOfByIdentifier(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndGetCollectionOfKeyInformationOfByIdentifier(System.IAsyncResult result)
+        MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.End__GetCollectionOfKeyInformationOfByIdentifier(System.IAsyncResult result)
         {
-            return base.Channel.EndGetCollectionOfKeyInformationOfByIdentifier(result);
+            return base.Channel.End__GetCollectionOfKeyInformationOfByIdentifier(result);
         }
 
-        private System.IAsyncResult OnBeginGetCollectionOfKeyInformationOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
+        private System.IAsyncResult OnBegin__GetCollectionOfKeyInformationOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginGetCollectionOfKeyInformationOfByIdentifier(request, callback, asyncState);
+            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).Begin__GetCollectionOfKeyInformationOfByIdentifier(request, callback, asyncState);
         }
 
-        private object[] OnEndGetCollectionOfKeyInformationOfByIdentifier(System.IAsyncResult result)
+        private object[] OnEnd__GetCollectionOfKeyInformationOfByIdentifier(System.IAsyncResult result)
         {
-            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndGetCollectionOfKeyInformationOfByIdentifier(result);
+            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).End__GetCollectionOfKeyInformationOfByIdentifier(result);
             return new object[] {
                     retVal};
         }
 
-        private void OnGetCollectionOfKeyInformationOfByIdentifierCompleted(object state)
+        private void On__GetCollectionOfKeyInformationOfByIdentifierCompleted(object state)
         {
-            if ((this.GetCollectionOfKeyInformationOfByIdentifierCompleted != null))
+            if ((this.__GetCollectionOfKeyInformationOfByIdentifierCompleted != null))
             {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetCollectionOfKeyInformationOfByIdentifierCompleted(this, new GetCollectionOfKeyInformationOfByIdentifierCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.__GetCollectionOfKeyInformationOfByIdentifierCompleted(this, new __GetCollectionOfKeyInformationOfByIdentifierCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
 
-        public void GetCollectionOfKeyInformationOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request)
+        public void __GetCollectionOfKeyInformationOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request)
         {
-            this.GetCollectionOfKeyInformationOfByIdentifierAsync(request, null);
+            this.__GetCollectionOfKeyInformationOfByIdentifierAsync(request, null);
         }
 
-        public void GetCollectionOfKeyInformationOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, object userState)
+        public void __GetCollectionOfKeyInformationOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, object userState)
         {
-            if ((this.onBeginGetCollectionOfKeyInformationOfByIdentifierDelegate == null))
+            if ((this.onBegin__GetCollectionOfKeyInformationOfByIdentifierDelegate == null))
             {
-                this.onBeginGetCollectionOfKeyInformationOfByIdentifierDelegate = new BeginOperationDelegate(this.OnBeginGetCollectionOfKeyInformationOfByIdentifier);
+                this.onBegin__GetCollectionOfKeyInformationOfByIdentifierDelegate = new BeginOperationDelegate(this.OnBegin__GetCollectionOfKeyInformationOfByIdentifier);
             }
-            if ((this.onEndGetCollectionOfKeyInformationOfByIdentifierDelegate == null))
+            if ((this.onEnd__GetCollectionOfKeyInformationOfByIdentifierDelegate == null))
             {
-                this.onEndGetCollectionOfKeyInformationOfByIdentifierDelegate = new EndOperationDelegate(this.OnEndGetCollectionOfKeyInformationOfByIdentifier);
+                this.onEnd__GetCollectionOfKeyInformationOfByIdentifierDelegate = new EndOperationDelegate(this.OnEnd__GetCollectionOfKeyInformationOfByIdentifier);
             }
-            if ((this.onGetCollectionOfKeyInformationOfByIdentifierCompletedDelegate == null))
+            if ((this.on__GetCollectionOfKeyInformationOfByIdentifierCompletedDelegate == null))
             {
-                this.onGetCollectionOfKeyInformationOfByIdentifierCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCollectionOfKeyInformationOfByIdentifierCompleted);
+                this.on__GetCollectionOfKeyInformationOfByIdentifierCompletedDelegate = new System.Threading.SendOrPostCallback(this.On__GetCollectionOfKeyInformationOfByIdentifierCompleted);
             }
-            base.InvokeAsync(this.onBeginGetCollectionOfKeyInformationOfByIdentifierDelegate, new object[] {
-                        request}, this.onEndGetCollectionOfKeyInformationOfByIdentifierDelegate, this.onGetCollectionOfKeyInformationOfByIdentifierCompletedDelegate, userState);
+            base.InvokeAsync(this.onBegin__GetCollectionOfKeyInformationOfByIdentifierDelegate, new object[] {
+                        request}, this.onEnd__GetCollectionOfKeyInformationOfByIdentifierDelegate, this.on__GetCollectionOfKeyInformationOfByIdentifierCompletedDelegate, userState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginGetSingleOfKeyInformationOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.Begin__GetSingleOfKeyInformationOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
         {
-            return base.Channel.BeginGetSingleOfKeyInformationOfByIdentifier(request, callback, asyncState);
+            return base.Channel.Begin__GetSingleOfKeyInformationOfByIdentifier(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndGetSingleOfKeyInformationOfByIdentifier(System.IAsyncResult result)
+        MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.End__GetSingleOfKeyInformationOfByIdentifier(System.IAsyncResult result)
         {
-            return base.Channel.EndGetSingleOfKeyInformationOfByIdentifier(result);
+            return base.Channel.End__GetSingleOfKeyInformationOfByIdentifier(result);
         }
 
-        private System.IAsyncResult OnBeginGetSingleOfKeyInformationOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
+        private System.IAsyncResult OnBegin__GetSingleOfKeyInformationOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
             MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginGetSingleOfKeyInformationOfByIdentifier(request, callback, asyncState);
+            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).Begin__GetSingleOfKeyInformationOfByIdentifier(request, callback, asyncState);
         }
 
-        private object[] OnEndGetSingleOfKeyInformationOfByIdentifier(System.IAsyncResult result)
+        private object[] OnEnd__GetSingleOfKeyInformationOfByIdentifier(System.IAsyncResult result)
         {
-            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndGetSingleOfKeyInformationOfByIdentifier(result);
+            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).End__GetSingleOfKeyInformationOfByIdentifier(result);
             return new object[] {
                     retVal};
         }
 
-        private void OnGetSingleOfKeyInformationOfByIdentifierCompleted(object state)
+        private void On__GetSingleOfKeyInformationOfByIdentifierCompleted(object state)
         {
-            if ((this.GetSingleOfKeyInformationOfByIdentifierCompleted != null))
+            if ((this.__GetSingleOfKeyInformationOfByIdentifierCompleted != null))
             {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetSingleOfKeyInformationOfByIdentifierCompleted(this, new GetSingleOfKeyInformationOfByIdentifierCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.__GetSingleOfKeyInformationOfByIdentifierCompleted(this, new __GetSingleOfKeyInformationOfByIdentifierCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
 
-        public void GetSingleOfKeyInformationOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request)
+        public void __GetSingleOfKeyInformationOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request)
         {
-            this.GetSingleOfKeyInformationOfByIdentifierAsync(request, null);
+            this.__GetSingleOfKeyInformationOfByIdentifierAsync(request, null);
         }
 
-        public void GetSingleOfKeyInformationOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, object userState)
+        public void __GetSingleOfKeyInformationOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, object userState)
         {
-            if ((this.onBeginGetSingleOfKeyInformationOfByIdentifierDelegate == null))
+            if ((this.onBegin__GetSingleOfKeyInformationOfByIdentifierDelegate == null))
             {
-                this.onBeginGetSingleOfKeyInformationOfByIdentifierDelegate = new BeginOperationDelegate(this.OnBeginGetSingleOfKeyInformationOfByIdentifier);
+                this.onBegin__GetSingleOfKeyInformationOfByIdentifierDelegate = new BeginOperationDelegate(this.OnBegin__GetSingleOfKeyInformationOfByIdentifier);
             }
-            if ((this.onEndGetSingleOfKeyInformationOfByIdentifierDelegate == null))
+            if ((this.onEnd__GetSingleOfKeyInformationOfByIdentifierDelegate == null))
             {
-                this.onEndGetSingleOfKeyInformationOfByIdentifierDelegate = new EndOperationDelegate(this.OnEndGetSingleOfKeyInformationOfByIdentifier);
+                this.onEnd__GetSingleOfKeyInformationOfByIdentifierDelegate = new EndOperationDelegate(this.OnEnd__GetSingleOfKeyInformationOfByIdentifier);
             }
-            if ((this.onGetSingleOfKeyInformationOfByIdentifierCompletedDelegate == null))
+            if ((this.on__GetSingleOfKeyInformationOfByIdentifierCompletedDelegate == null))
             {
-                this.onGetSingleOfKeyInformationOfByIdentifierCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetSingleOfKeyInformationOfByIdentifierCompleted);
+                this.on__GetSingleOfKeyInformationOfByIdentifierCompletedDelegate = new System.Threading.SendOrPostCallback(this.On__GetSingleOfKeyInformationOfByIdentifierCompleted);
             }
-            base.InvokeAsync(this.onBeginGetSingleOfKeyInformationOfByIdentifierDelegate, new object[] {
-                        request}, this.onEndGetSingleOfKeyInformationOfByIdentifierDelegate, this.onGetSingleOfKeyInformationOfByIdentifierCompletedDelegate, userState);
+            base.InvokeAsync(this.onBegin__GetSingleOfKeyInformationOfByIdentifierDelegate, new object[] {
+                        request}, this.onEnd__GetSingleOfKeyInformationOfByIdentifierDelegate, this.on__GetSingleOfKeyInformationOfByIdentifierCompletedDelegate, userState);
         }
 
         #endregion Query Methods Of KeyInformation of ByIdentifier
@@ -3481,63 +3481,63 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
             #region Query Methods Of Entity of Common
 
-            public System.IAsyncResult BeginGetCountOfEntityOfCommon(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult Begin__GetCountOfEntityOfCommon(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("GetCountOfEntityOfCommon", _args, callback, asyncState);
+                System.IAsyncResult _result = base.BeginInvoke("__GetCountOfEntityOfCommon", _args, callback, asyncState);
                 return _result;
             }
 
-            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger EndGetCountOfEntityOfCommon(System.IAsyncResult result)
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger End__GetCountOfEntityOfCommon(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger)(base.EndInvoke("GetCountOfEntityOfCommon", _args, result)));
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger)(base.EndInvoke("__GetCountOfEntityOfCommon", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginExistsOfEntityOfCommon(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult Begin__ExistsOfEntityOfCommon(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("ExistsOfEntityOfCommon", _args, callback, asyncState);
+                System.IAsyncResult _result = base.BeginInvoke("__ExistsOfEntityOfCommon", _args, callback, asyncState);
                 return _result;
             }
 
-            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean EndExistsOfEntityOfCommon(System.IAsyncResult result)
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean End__ExistsOfEntityOfCommon(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean)(base.EndInvoke("ExistsOfEntityOfCommon", _args, result)));
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean)(base.EndInvoke("__ExistsOfEntityOfCommon", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetCollectionOfEntityOfCommon(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult Begin__GetCollectionOfEntityOfCommon(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("GetCollectionOfEntityOfCommon", _args, callback, asyncState);
+                System.IAsyncResult _result = base.BeginInvoke("__GetCollectionOfEntityOfCommon", _args, callback, asyncState);
                 return _result;
             }
 
-            public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn EndGetCollectionOfEntityOfCommon(System.IAsyncResult result)
+            public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn End__GetCollectionOfEntityOfCommon(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn _result = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn)(base.EndInvoke("GetCollectionOfEntityOfCommon", _args, result)));
+                MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn _result = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn)(base.EndInvoke("__GetCollectionOfEntityOfCommon", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetSingleOfEntityOfCommon(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult Begin__GetSingleOfEntityOfCommon(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("GetSingleOfEntityOfCommon", _args, callback, asyncState);
+                System.IAsyncResult _result = base.BeginInvoke("__GetSingleOfEntityOfCommon", _args, callback, asyncState);
                 return _result;
             }
 
-            public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn EndGetSingleOfEntityOfCommon(System.IAsyncResult result)
+            public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn End__GetSingleOfEntityOfCommon(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn _result = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn)(base.EndInvoke("GetSingleOfEntityOfCommon", _args, result)));
+                MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn _result = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn)(base.EndInvoke("__GetSingleOfEntityOfCommon", _args, result)));
                 return _result;
             }
 
@@ -3545,63 +3545,63 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
             #region Query Methods Of Entity of All
 
-            public System.IAsyncResult BeginGetCountOfEntityOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult Begin__GetCountOfEntityOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("GetCountOfEntityOfAll", _args, callback, asyncState);
+                System.IAsyncResult _result = base.BeginInvoke("__GetCountOfEntityOfAll", _args, callback, asyncState);
                 return _result;
             }
 
-            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger EndGetCountOfEntityOfAll(System.IAsyncResult result)
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger End__GetCountOfEntityOfAll(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger)(base.EndInvoke("GetCountOfEntityOfAll", _args, result)));
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger)(base.EndInvoke("__GetCountOfEntityOfAll", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginExistsOfEntityOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult Begin__ExistsOfEntityOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("ExistsOfEntityOfAll", _args, callback, asyncState);
+                System.IAsyncResult _result = base.BeginInvoke("__ExistsOfEntityOfAll", _args, callback, asyncState);
                 return _result;
             }
 
-            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean EndExistsOfEntityOfAll(System.IAsyncResult result)
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean End__ExistsOfEntityOfAll(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean)(base.EndInvoke("ExistsOfEntityOfAll", _args, result)));
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean)(base.EndInvoke("__ExistsOfEntityOfAll", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetCollectionOfEntityOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult Begin__GetCollectionOfEntityOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("GetCollectionOfEntityOfAll", _args, callback, asyncState);
+                System.IAsyncResult _result = base.BeginInvoke("__GetCollectionOfEntityOfAll", _args, callback, asyncState);
                 return _result;
             }
 
-            public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn EndGetCollectionOfEntityOfAll(System.IAsyncResult result)
+            public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn End__GetCollectionOfEntityOfAll(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn _result = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn)(base.EndInvoke("GetCollectionOfEntityOfAll", _args, result)));
+                MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn _result = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn)(base.EndInvoke("__GetCollectionOfEntityOfAll", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetSingleOfEntityOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult Begin__GetSingleOfEntityOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("GetSingleOfEntityOfAll", _args, callback, asyncState);
+                System.IAsyncResult _result = base.BeginInvoke("__GetSingleOfEntityOfAll", _args, callback, asyncState);
                 return _result;
             }
 
-            public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn EndGetSingleOfEntityOfAll(System.IAsyncResult result)
+            public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn End__GetSingleOfEntityOfAll(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn _result = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn)(base.EndInvoke("GetSingleOfEntityOfAll", _args, result)));
+                MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn _result = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn)(base.EndInvoke("__GetSingleOfEntityOfAll", _args, result)));
                 return _result;
             }
 
@@ -3609,63 +3609,63 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
             #region Query Methods Of NameValuePair of All
 
-            public System.IAsyncResult BeginGetCountOfNameValuePairOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult Begin__GetCountOfNameValuePairOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("GetCountOfNameValuePairOfAll", _args, callback, asyncState);
+                System.IAsyncResult _result = base.BeginInvoke("__GetCountOfNameValuePairOfAll", _args, callback, asyncState);
                 return _result;
             }
 
-            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger EndGetCountOfNameValuePairOfAll(System.IAsyncResult result)
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger End__GetCountOfNameValuePairOfAll(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger)(base.EndInvoke("GetCountOfNameValuePairOfAll", _args, result)));
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger)(base.EndInvoke("__GetCountOfNameValuePairOfAll", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginExistsOfNameValuePairOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult Begin__ExistsOfNameValuePairOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("ExistsOfNameValuePairOfAll", _args, callback, asyncState);
+                System.IAsyncResult _result = base.BeginInvoke("__ExistsOfNameValuePairOfAll", _args, callback, asyncState);
                 return _result;
             }
 
-            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean EndExistsOfNameValuePairOfAll(System.IAsyncResult result)
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean End__ExistsOfNameValuePairOfAll(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean)(base.EndInvoke("ExistsOfNameValuePairOfAll", _args, result)));
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean)(base.EndInvoke("__ExistsOfNameValuePairOfAll", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetCollectionOfNameValuePairOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult Begin__GetCollectionOfNameValuePairOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("GetCollectionOfNameValuePairOfAll", _args, callback, asyncState);
+                System.IAsyncResult _result = base.BeginInvoke("__GetCollectionOfNameValuePairOfAll", _args, callback, asyncState);
                 return _result;
             }
 
-            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection EndGetCollectionOfNameValuePairOfAll(System.IAsyncResult result)
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection End__GetCollectionOfNameValuePairOfAll(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection)(base.EndInvoke("GetCollectionOfNameValuePairOfAll", _args, result)));
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection)(base.EndInvoke("__GetCollectionOfNameValuePairOfAll", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetSingleOfNameValuePairOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult Begin__GetSingleOfNameValuePairOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("GetSingleOfNameValuePairOfAll", _args, callback, asyncState);
+                System.IAsyncResult _result = base.BeginInvoke("__GetSingleOfNameValuePairOfAll", _args, callback, asyncState);
                 return _result;
             }
 
-            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection EndGetSingleOfNameValuePairOfAll(System.IAsyncResult result)
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection End__GetSingleOfNameValuePairOfAll(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection)(base.EndInvoke("GetSingleOfNameValuePairOfAll", _args, result)));
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection)(base.EndInvoke("__GetSingleOfNameValuePairOfAll", _args, result)));
                 return _result;
             }
 
@@ -3673,63 +3673,63 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
             #region Query Methods Of RssItem of All
 
-            public System.IAsyncResult BeginGetCountOfRssItemOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult Begin__GetCountOfRssItemOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("GetCountOfRssItemOfAll", _args, callback, asyncState);
+                System.IAsyncResult _result = base.BeginInvoke("__GetCountOfRssItemOfAll", _args, callback, asyncState);
                 return _result;
             }
 
-            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger EndGetCountOfRssItemOfAll(System.IAsyncResult result)
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger End__GetCountOfRssItemOfAll(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger)(base.EndInvoke("GetCountOfRssItemOfAll", _args, result)));
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger)(base.EndInvoke("__GetCountOfRssItemOfAll", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginExistsOfRssItemOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult Begin__ExistsOfRssItemOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("ExistsOfRssItemOfAll", _args, callback, asyncState);
+                System.IAsyncResult _result = base.BeginInvoke("__ExistsOfRssItemOfAll", _args, callback, asyncState);
                 return _result;
             }
 
-            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean EndExistsOfRssItemOfAll(System.IAsyncResult result)
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean End__ExistsOfRssItemOfAll(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean)(base.EndInvoke("ExistsOfRssItemOfAll", _args, result)));
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean)(base.EndInvoke("__ExistsOfRssItemOfAll", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetCollectionOfRssItemOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult Begin__GetCollectionOfRssItemOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("GetCollectionOfRssItemOfAll", _args, callback, asyncState);
+                System.IAsyncResult _result = base.BeginInvoke("__GetCollectionOfRssItemOfAll", _args, callback, asyncState);
                 return _result;
             }
 
-            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection EndGetCollectionOfRssItemOfAll(System.IAsyncResult result)
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection End__GetCollectionOfRssItemOfAll(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection)(base.EndInvoke("GetCollectionOfRssItemOfAll", _args, result)));
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection)(base.EndInvoke("__GetCollectionOfRssItemOfAll", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetSingleOfRssItemOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult Begin__GetSingleOfRssItemOfAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("GetSingleOfRssItemOfAll", _args, callback, asyncState);
+                System.IAsyncResult _result = base.BeginInvoke("__GetSingleOfRssItemOfAll", _args, callback, asyncState);
                 return _result;
             }
 
-            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection EndGetSingleOfRssItemOfAll(System.IAsyncResult result)
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection End__GetSingleOfRssItemOfAll(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection)(base.EndInvoke("GetSingleOfRssItemOfAll", _args, result)));
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection)(base.EndInvoke("__GetSingleOfRssItemOfAll", _args, result)));
                 return _result;
             }
 
@@ -3737,63 +3737,63 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
             #region Query Methods Of Entity of ByIdentifier
 
-            public System.IAsyncResult BeginGetCountOfEntityOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult Begin__GetCountOfEntityOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("GetCountOfEntityOfByIdentifier", _args, callback, asyncState);
+                System.IAsyncResult _result = base.BeginInvoke("__GetCountOfEntityOfByIdentifier", _args, callback, asyncState);
                 return _result;
             }
 
-            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger EndGetCountOfEntityOfByIdentifier(System.IAsyncResult result)
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger End__GetCountOfEntityOfByIdentifier(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger)(base.EndInvoke("GetCountOfEntityOfByIdentifier", _args, result)));
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger)(base.EndInvoke("__GetCountOfEntityOfByIdentifier", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginExistsOfEntityOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult Begin__ExistsOfEntityOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("ExistsOfEntityOfByIdentifier", _args, callback, asyncState);
+                System.IAsyncResult _result = base.BeginInvoke("__ExistsOfEntityOfByIdentifier", _args, callback, asyncState);
                 return _result;
             }
 
-            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean EndExistsOfEntityOfByIdentifier(System.IAsyncResult result)
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean End__ExistsOfEntityOfByIdentifier(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean)(base.EndInvoke("ExistsOfEntityOfByIdentifier", _args, result)));
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean)(base.EndInvoke("__ExistsOfEntityOfByIdentifier", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetCollectionOfEntityOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult Begin__GetCollectionOfEntityOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("GetCollectionOfEntityOfByIdentifier", _args, callback, asyncState);
+                System.IAsyncResult _result = base.BeginInvoke("__GetCollectionOfEntityOfByIdentifier", _args, callback, asyncState);
                 return _result;
             }
 
-            public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn EndGetCollectionOfEntityOfByIdentifier(System.IAsyncResult result)
+            public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn End__GetCollectionOfEntityOfByIdentifier(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn _result = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn)(base.EndInvoke("GetCollectionOfEntityOfByIdentifier", _args, result)));
+                MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn _result = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn)(base.EndInvoke("__GetCollectionOfEntityOfByIdentifier", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetSingleOfEntityOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult Begin__GetSingleOfEntityOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("GetSingleOfEntityOfByIdentifier", _args, callback, asyncState);
+                System.IAsyncResult _result = base.BeginInvoke("__GetSingleOfEntityOfByIdentifier", _args, callback, asyncState);
                 return _result;
             }
 
-            public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn EndGetSingleOfEntityOfByIdentifier(System.IAsyncResult result)
+            public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn End__GetSingleOfEntityOfByIdentifier(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn _result = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn)(base.EndInvoke("GetSingleOfEntityOfByIdentifier", _args, result)));
+                MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn _result = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn)(base.EndInvoke("__GetSingleOfEntityOfByIdentifier", _args, result)));
                 return _result;
             }
 
@@ -3801,63 +3801,63 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
             #region Query Methods Of KeyInformation of ByIdentifier
 
-            public System.IAsyncResult BeginGetCountOfKeyInformationOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult Begin__GetCountOfKeyInformationOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("GetCountOfKeyInformationOfByIdentifier", _args, callback, asyncState);
+                System.IAsyncResult _result = base.BeginInvoke("__GetCountOfKeyInformationOfByIdentifier", _args, callback, asyncState);
                 return _result;
             }
 
-            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger EndGetCountOfKeyInformationOfByIdentifier(System.IAsyncResult result)
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger End__GetCountOfKeyInformationOfByIdentifier(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger)(base.EndInvoke("GetCountOfKeyInformationOfByIdentifier", _args, result)));
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger)(base.EndInvoke("__GetCountOfKeyInformationOfByIdentifier", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginExistsOfKeyInformationOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult Begin__ExistsOfKeyInformationOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("ExistsOfKeyInformationOfByIdentifier", _args, callback, asyncState);
+                System.IAsyncResult _result = base.BeginInvoke("__ExistsOfKeyInformationOfByIdentifier", _args, callback, asyncState);
                 return _result;
             }
 
-            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean EndExistsOfKeyInformationOfByIdentifier(System.IAsyncResult result)
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean End__ExistsOfKeyInformationOfByIdentifier(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean)(base.EndInvoke("ExistsOfKeyInformationOfByIdentifier", _args, result)));
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean)(base.EndInvoke("__ExistsOfKeyInformationOfByIdentifier", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetCollectionOfKeyInformationOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult Begin__GetCollectionOfKeyInformationOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("GetCollectionOfKeyInformationOfByIdentifier", _args, callback, asyncState);
+                System.IAsyncResult _result = base.BeginInvoke("__GetCollectionOfKeyInformationOfByIdentifier", _args, callback, asyncState);
                 return _result;
             }
 
-            public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation EndGetCollectionOfKeyInformationOfByIdentifier(System.IAsyncResult result)
+            public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation End__GetCollectionOfKeyInformationOfByIdentifier(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation _result = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation)(base.EndInvoke("GetCollectionOfKeyInformationOfByIdentifier", _args, result)));
+                MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation _result = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation)(base.EndInvoke("__GetCollectionOfKeyInformationOfByIdentifier", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetSingleOfKeyInformationOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult Begin__GetSingleOfKeyInformationOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("GetSingleOfKeyInformationOfByIdentifier", _args, callback, asyncState);
+                System.IAsyncResult _result = base.BeginInvoke("__GetSingleOfKeyInformationOfByIdentifier", _args, callback, asyncState);
                 return _result;
             }
 
-            public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation EndGetSingleOfKeyInformationOfByIdentifier(System.IAsyncResult result)
+            public MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation End__GetSingleOfKeyInformationOfByIdentifier(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation _result = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation)(base.EndInvoke("GetSingleOfKeyInformationOfByIdentifier", _args, result)));
+                MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation _result = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation)(base.EndInvoke("__GetSingleOfKeyInformationOfByIdentifier", _args, result)));
                 return _result;
             }
 
