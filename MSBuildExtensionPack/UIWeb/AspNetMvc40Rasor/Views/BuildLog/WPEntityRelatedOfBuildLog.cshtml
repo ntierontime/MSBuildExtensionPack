@@ -66,23 +66,23 @@
                 </div>
                 <div class="form-group" >
                     @Html.LabelFor(model => model.MasterEntity.Organization_2Id, new { @class = "control-label" })
-                        @Html.ActionLink(Model.MasterEntity.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Organization_2Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Organization_2_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Organization_2_UniqueidentifierColumn }, null)
+                        @Html.ActionLink(Model.MasterEntity.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.MasterEntity.Organization_2Id, uniqueIdentifier = Model.MasterEntity.Organization_2_UniqueIdentifier, uniqueidentifierColumn = Model.MasterEntity.Organization_2_UniqueidentifierColumn }, null)
                 </div>
                 <div class="form-group" >
                     @Html.LabelFor(model => model.MasterEntity.Organization_1Id, new { @class = "control-label" })
-                        @Html.ActionLink(Model.MasterEntity.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Organization_1Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Organization_1_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Organization_1_UniqueidentifierColumn }, null)
+                        @Html.ActionLink(Model.MasterEntity.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.MasterEntity.Organization_1Id, uniqueIdentifier = Model.MasterEntity.Organization_1_UniqueIdentifier, uniqueidentifierColumn = Model.MasterEntity.Organization_1_UniqueidentifierColumn }, null)
                 </div>
                 <div class="form-group" >
                     @Html.LabelFor(model => model.MasterEntity.Solution_1Id, new { @class = "control-label" })
-                        @Html.ActionLink(Model.MasterEntity.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Solution_1Id }, null)
+                        @Html.ActionLink(Model.MasterEntity.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { id = Model.MasterEntity.Solution_1Id }, null)
                 </div>
                 <div class="form-group" >
                     @Html.LabelFor(model => model.MasterEntity.BuildId, new { @class = "control-label" })
-                        @Html.ActionLink(Model.MasterEntity.Build_1_Name, UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareByIdentifierOftOfByIdentifier=true, valueToCompareByIdentifierOftOfByIdentifier = Model.MasterEntity.BuildId }, null)
+                        @Html.ActionLink(Model.MasterEntity.Build_1_Name, UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { id = Model.MasterEntity.BuildId }, null)
                 </div>
                 <div class="form-group" >
                     @Html.LabelFor(model => model.MasterEntity.BuildEventCodeId, new { @class = "control-label" })
-                        @Html.ActionLink(Model.MasterEntity.BuildEventCode_1_Name, UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareByIdentifierOftOfByIdentifier=true, valueToCompareByIdentifierOftOfByIdentifier = Model.MasterEntity.BuildEventCodeId }, null)
+                        @Html.ActionLink(Model.MasterEntity.BuildEventCode_1_Name, UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { id = Model.MasterEntity.BuildEventCodeId }, null)
                 </div>
                 <div class="form-group" >
                     @Html.LabelFor(model => model.MasterEntity.Message, new { @class = "control-label" })

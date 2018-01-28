@@ -216,7 +216,7 @@
 </td>
 <td class="hidden-sm">@Html.DisplayFor(model => model.Result[i].Id)</td>
 <td>@Html.DisplayFor(model => model.Result[i].CreatedDateTime)</td>
-<td>@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].Organization_2_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].Organization_2_UniqueidentifierColumn, isToCompareIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].ParentId }, null)</td>
+<td>@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].ParentId, uniqueIdentifier = Model.Result[i].Organization_2_UniqueIdentifier, uniqueidentifierColumn = Model.Result[i].Organization_2_UniqueidentifierColumn }, null)</td>
 <td>@Html.DisplayFor(model => model.Result[i].IsSystemBuiltIn)</td>
 <td class="hidden-xs">@Html.DisplayFor(model => model.Result[i].BitColumn)</td>
 <td class="hidden-xs">@Html.DisplayFor(model => model.Result[i].Name)</td>
