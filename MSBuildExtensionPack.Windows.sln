@@ -22,7 +22,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared.X", "Shared.X", "{62
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts.X", "Contracts.X", "{E87AD1F4-4EAB-4E06-9FB8-F767F7355CF4}"
 EndProject
-
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtensionPack.AspNetMvc40ApiController", "MSBuildExtensionPack\UIWeb\AspNetMvc40ApiController\MSBuildExtensionPack.AspNetMvc40ApiController.csproj", "{C73CA3E4-B671-4777-9833-70C92FC944D0}"
 	ProjectSection(ProjectDependencies) = postProject
 		{77AC979E-6122-469C-9F77-2B69227CCB6B} = {77AC979E-6122-469C-9F77-2B69227CCB6B}
@@ -2319,7 +2318,7 @@ Global
 		{494492D9-F9CD-485A-873A-9AA9123739E6}.Release|x64.Build.0 = Release|Any CPU
 		{494492D9-F9CD-485A-873A-9AA9123739E6}.Release|x86.ActiveCfg = Release|Any CPU
 		{494492D9-F9CD-485A-873A-9AA9123739E6}.Release|x86.Build.0 = Release|Any CPU
- EndGlobalSection
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
@@ -2380,5 +2379,5 @@ Global
 		{55D8BCD1-9292-49F9-8E25-7427F62FC990} = {E87AD1F4-4EAB-4E06-9FB8-F767F7355CF4}
 		{BB96843F-C9B6-4395-B9B7-BFC8937C7693} = {E87AD1F4-4EAB-4E06-9FB8-F767F7355CF4}
 		{02C37C45-72B4-47B0-B928-825333B30CED} = {6253AECF-2757-497F-A871-4911709D2389}
-  EndGlobalSection
+	EndGlobalSection
 EndGlobal
