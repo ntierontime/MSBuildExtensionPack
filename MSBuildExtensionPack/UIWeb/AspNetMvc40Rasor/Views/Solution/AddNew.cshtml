@@ -89,10 +89,9 @@
             }
         }
         function BuildCriteriaForFetchOrganization_1() {
-            var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $('select[name="Item.Organization_2Id"]').val();
+            var selectedvalueOrganization_2 = $('select[name="Item.Organization_2Id"]').val();
             var params = {
-                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: true,
-                valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly,
+                ParentId: selectedvalueOrganization_2,
                 currentIndex: -1,
                 pageSize: -1,
                 queryOrderByExpression: null

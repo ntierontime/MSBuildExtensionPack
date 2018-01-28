@@ -116,10 +116,9 @@
             }
         }
         function BuildCriteriaForFetchOrganization_1() {
-            var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $('select[name="Item.Organization_2Id"]').val();
+            var selectedvalueOrganization_2 = $('select[name="Item.Organization_2Id"]').val();
             var params = {
-                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: true,
-                valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly,
+                ParentId: selectedvalueOrganization_2,
                 currentIndex: -1,
                 pageSize: -1,
                 queryOrderByExpression: null
@@ -139,13 +138,11 @@
             }
         }
         function BuildCriteriaForFetchSolution_1() {
-            var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $('select[name="Item.Organization_2Id"]').val();
-            var selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly = $('select[name="Item.Organization_1Id"]').val();
+            var selectedvalueOrganization_2 = $('select[name="Item.Organization_2Id"]').val();
+            var selectedvalueOrganization_1 = $('select[name="Item.Organization_1Id"]').val();
             var params = {
-                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: true,
-                valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly,
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly: true,
-                valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly,
+                Organization_2Id: selectedvalueOrganization_2,
+                OrganizationId: selectedvalueOrganization_1,
                 currentIndex: -1,
                 pageSize: -1,
                 queryOrderByExpression: null
