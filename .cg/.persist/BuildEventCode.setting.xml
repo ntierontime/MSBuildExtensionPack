@@ -30,12 +30,25 @@
     <Description>Query by Identifier</Description>
     <QueryUnitGroups>ByIdentifier</QueryUnitGroups>
   </Query>
-  <DataQueryOnDataViewSetting Key="EntityOfCommon" DataQueryKey="Common" />
+  <DataQueryOnDataViewSetting Key="EntityOfCommon" DataQueryKey="Common">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasGetCollectionMethod="true" />
+  </DataQueryOnDataViewSetting>
   <DataQueryOnDataViewSetting Key="EntityOfAll" DataQueryKey="All" />
-  <DataQueryOnDataViewSetting Key="NameValuePairOfAll" DataQueryKey="All" DataViewKey="NameValuePair" />
+  <DataQueryOnDataViewSetting Key="NameValuePairOfAll" DataQueryKey="All" DataViewKey="NameValuePair">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasGetCollectionMethod="true" />
+    <WebApiMethodSetting HasGetCollectionMethod="true" />
+  </DataQueryOnDataViewSetting>
   <DataQueryOnDataViewSetting Key="RssItemOfAll" DataQueryKey="All" DataViewKey="RssItem" />
-  <DataQueryOnDataViewSetting Key="EntityOfByIdentifier" DataQueryKey="ByIdentifier" />
-  <DataQueryOnDataViewSetting Key="KeyInformationOfByIdentifier" DataQueryKey="ByIdentifier" DataViewKey="KeyInformation" />
+  <DataQueryOnDataViewSetting Key="EntityOfByIdentifier" DataQueryKey="ByIdentifier">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
+  </DataQueryOnDataViewSetting>
+  <DataQueryOnDataViewSetting Key="KeyInformationOfByIdentifier" DataQueryKey="ByIdentifier" DataViewKey="KeyInformation">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
+  </DataQueryOnDataViewSetting>
   <QueryUnitGroup Key="Common" DataQueryPerQueryKnownKey="Common" SourceTypeDeclarationFullName="MSBuildExtensionPack.BuildEventCode" ConditionOperator="AND">
     <Description>Query by EntityReference, String, Bool, Order By DateTime</Description>
     <QueryUnits Key="Common" ConditionOperator="AND" Description="Query by EntityReference, Bool, DateTime" />

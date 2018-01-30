@@ -345,10 +345,10 @@ namespace MSBuildExtensionPack.CommonBLL
 
         #region DataQueryPerQuerySettingCollection
 
-        #region Query Methods Of Entity of Common
+        #region Query Methods Of EntityOfCommon
 
         /// <summary>
-        /// Gets the count of entity of Entity of Common .
+        /// Gets the count of entity of EntityOfCommon .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
@@ -375,7 +375,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Exists the of entity of Entity of Common .
+        /// Exists the of entity of EntityOfCommon .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
@@ -402,7 +402,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of Entity of Common .
+        /// Gets the collection of entity of EntityOfCommon .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn if any</returns>
@@ -440,7 +440,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of Entity of Common .
+        /// Gets the collection of entity of EntityOfCommon .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn if any</returns>
@@ -466,12 +466,12 @@ namespace MSBuildExtensionPack.CommonBLL
             return _retval;
         }
 
-        #endregion Query Methods Of Entity of Common
+        #endregion Query Methods Of EntityOfCommon
 
-        #region Query Methods Of Default of Common
+        #region Query Methods Of DefaultOfCommon
 
         /// <summary>
-        /// Gets the count of entity of Default of Common .
+        /// Gets the count of entity of DefaultOfCommon .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
@@ -498,7 +498,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Exists the of entity of Default of Common .
+        /// Exists the of entity of DefaultOfCommon .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
@@ -525,7 +525,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of Default of Common .
+        /// Gets the collection of entity of DefaultOfCommon .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.Default if any</returns>
@@ -563,7 +563,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of Default of Common .
+        /// Gets the collection of entity of DefaultOfCommon .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.Default if any</returns>
@@ -589,12 +589,12 @@ namespace MSBuildExtensionPack.CommonBLL
             return _retval;
         }
 
-        #endregion Query Methods Of Default of Common
+        #endregion Query Methods Of DefaultOfCommon
 
-        #region Query Methods Of Entity of All
+        #region Query Methods Of EntityOfAll
 
         /// <summary>
-        /// Gets the count of entity of Entity of All .
+        /// Gets the count of entity of EntityOfAll .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
@@ -615,7 +615,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Exists the of entity of Entity of All .
+        /// Exists the of entity of EntityOfAll .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
@@ -636,7 +636,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of Entity of All .
+        /// Gets the collection of entity of EntityOfAll .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn if any</returns>
@@ -668,7 +668,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of Entity of All .
+        /// Gets the collection of entity of EntityOfAll .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn if any</returns>
@@ -694,12 +694,12 @@ namespace MSBuildExtensionPack.CommonBLL
             return _retval;
         }
 
-        #endregion Query Methods Of Entity of All
+        #endregion Query Methods Of EntityOfAll
 
-        #region Query Methods Of NameValuePair of All
+        #region Query Methods Of NameValuePairOfAll
 
         /// <summary>
-        /// Gets the count of entity of NameValuePair of All .
+        /// Gets the count of entity of NameValuePairOfAll .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
@@ -720,7 +720,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Exists the of entity of NameValuePair of All .
+        /// Exists the of entity of NameValuePairOfAll .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
@@ -741,7 +741,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of NameValuePair of All .
+        /// Gets the collection of entity of NameValuePairOfAll .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection if any</returns>
@@ -773,7 +773,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of NameValuePair of All .
+        /// Gets the collection of entity of NameValuePairOfAll .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection if any</returns>
@@ -799,12 +799,12 @@ namespace MSBuildExtensionPack.CommonBLL
             return _retval;
         }
 
-        #endregion Query Methods Of NameValuePair of All
+        #endregion Query Methods Of NameValuePairOfAll
 
-        #region Query Methods Of RssItem of All
+        #region Query Methods Of RssItemOfAll
 
         /// <summary>
-        /// Gets the count of entity of RssItem of All .
+        /// Gets the count of entity of RssItemOfAll .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
@@ -825,7 +825,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Exists the of entity of RssItem of All .
+        /// Exists the of entity of RssItemOfAll .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
@@ -846,7 +846,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of RssItem of All .
+        /// Gets the collection of entity of RssItemOfAll .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection if any</returns>
@@ -878,7 +878,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of RssItem of All .
+        /// Gets the collection of entity of RssItemOfAll .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection if any</returns>
@@ -904,12 +904,12 @@ namespace MSBuildExtensionPack.CommonBLL
             return _retval;
         }
 
-        #endregion Query Methods Of RssItem of All
+        #endregion Query Methods Of RssItemOfAll
 
-        #region Query Methods Of Entity of ByFKOnly
+        #region Query Methods Of EntityOfByFKOnly
 
         /// <summary>
-        /// Gets the count of entity of Entity of ByFKOnly .
+        /// Gets the count of entity of EntityOfByFKOnly .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
@@ -933,7 +933,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Exists the of entity of Entity of ByFKOnly .
+        /// Exists the of entity of EntityOfByFKOnly .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
@@ -957,7 +957,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of Entity of ByFKOnly .
+        /// Gets the collection of entity of EntityOfByFKOnly .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn if any</returns>
@@ -992,7 +992,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of Entity of ByFKOnly .
+        /// Gets the collection of entity of EntityOfByFKOnly .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn if any</returns>
@@ -1018,12 +1018,12 @@ namespace MSBuildExtensionPack.CommonBLL
             return _retval;
         }
 
-        #endregion Query Methods Of Entity of ByFKOnly
+        #endregion Query Methods Of EntityOfByFKOnly
 
-        #region Query Methods Of NameValuePair of ByFKOnly
+        #region Query Methods Of NameValuePairOfByFKOnly
 
         /// <summary>
-        /// Gets the count of entity of NameValuePair of ByFKOnly .
+        /// Gets the count of entity of NameValuePairOfByFKOnly .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
@@ -1047,7 +1047,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Exists the of entity of NameValuePair of ByFKOnly .
+        /// Exists the of entity of NameValuePairOfByFKOnly .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
@@ -1071,7 +1071,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of NameValuePair of ByFKOnly .
+        /// Gets the collection of entity of NameValuePairOfByFKOnly .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection if any</returns>
@@ -1106,7 +1106,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of NameValuePair of ByFKOnly .
+        /// Gets the collection of entity of NameValuePairOfByFKOnly .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection if any</returns>
@@ -1132,12 +1132,12 @@ namespace MSBuildExtensionPack.CommonBLL
             return _retval;
         }
 
-        #endregion Query Methods Of NameValuePair of ByFKOnly
+        #endregion Query Methods Of NameValuePairOfByFKOnly
 
-        #region Query Methods Of RssItem of ByFKOnly
+        #region Query Methods Of RssItemOfByFKOnly
 
         /// <summary>
-        /// Gets the count of entity of RssItem of ByFKOnly .
+        /// Gets the count of entity of RssItemOfByFKOnly .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
@@ -1161,7 +1161,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Exists the of entity of RssItem of ByFKOnly .
+        /// Exists the of entity of RssItemOfByFKOnly .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
@@ -1185,7 +1185,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of RssItem of ByFKOnly .
+        /// Gets the collection of entity of RssItemOfByFKOnly .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection if any</returns>
@@ -1220,7 +1220,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of RssItem of ByFKOnly .
+        /// Gets the collection of entity of RssItemOfByFKOnly .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection if any</returns>
@@ -1246,12 +1246,12 @@ namespace MSBuildExtensionPack.CommonBLL
             return _retval;
         }
 
-        #endregion Query Methods Of RssItem of ByFKOnly
+        #endregion Query Methods Of RssItemOfByFKOnly
 
-        #region Query Methods Of Default of ByFKOnly
+        #region Query Methods Of DefaultOfByFKOnly
 
         /// <summary>
-        /// Gets the count of entity of Default of ByFKOnly .
+        /// Gets the count of entity of DefaultOfByFKOnly .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
@@ -1275,7 +1275,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Exists the of entity of Default of ByFKOnly .
+        /// Exists the of entity of DefaultOfByFKOnly .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
@@ -1299,7 +1299,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of Default of ByFKOnly .
+        /// Gets the collection of entity of DefaultOfByFKOnly .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.Default if any</returns>
@@ -1334,7 +1334,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of Default of ByFKOnly .
+        /// Gets the collection of entity of DefaultOfByFKOnly .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.Default if any</returns>
@@ -1360,12 +1360,12 @@ namespace MSBuildExtensionPack.CommonBLL
             return _retval;
         }
 
-        #endregion Query Methods Of Default of ByFKOnly
+        #endregion Query Methods Of DefaultOfByFKOnly
 
-        #region Query Methods Of DefaultGroupedDataView of ByFKOnly
+        #region Query Methods Of DefaultGroupedDataViewOfByFKOnly
 
         /// <summary>
-        /// Gets the count of entity of DefaultGroupedDataView of ByFKOnly .
+        /// Gets the count of entity of DefaultGroupedDataViewOfByFKOnly .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
@@ -1389,7 +1389,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Exists the of entity of DefaultGroupedDataView of ByFKOnly .
+        /// Exists the of entity of DefaultGroupedDataViewOfByFKOnly .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
@@ -1413,7 +1413,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of DefaultGroupedDataView of ByFKOnly .
+        /// Gets the collection of entity of DefaultGroupedDataViewOfByFKOnly .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.DefaultGroupedDataView if any</returns>
@@ -1448,7 +1448,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of DefaultGroupedDataView of ByFKOnly .
+        /// Gets the collection of entity of DefaultGroupedDataViewOfByFKOnly .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.DefaultGroupedDataView if any</returns>
@@ -1474,12 +1474,12 @@ namespace MSBuildExtensionPack.CommonBLL
             return _retval;
         }
 
-        #endregion Query Methods Of DefaultGroupedDataView of ByFKOnly
+        #endregion Query Methods Of DefaultGroupedDataViewOfByFKOnly
 
-        #region Query Methods Of Entity of ByIdentifier
+        #region Query Methods Of EntityOfByIdentifier
 
         /// <summary>
-        /// Gets the count of entity of Entity of ByIdentifier .
+        /// Gets the count of entity of EntityOfByIdentifier .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
@@ -1501,7 +1501,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Exists the of entity of Entity of ByIdentifier .
+        /// Exists the of entity of EntityOfByIdentifier .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
@@ -1523,7 +1523,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of Entity of ByIdentifier .
+        /// Gets the collection of entity of EntityOfByIdentifier .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn if any</returns>
@@ -1556,7 +1556,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of Entity of ByIdentifier .
+        /// Gets the collection of entity of EntityOfByIdentifier .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn if any</returns>
@@ -1582,12 +1582,12 @@ namespace MSBuildExtensionPack.CommonBLL
             return _retval;
         }
 
-        #endregion Query Methods Of Entity of ByIdentifier
+        #endregion Query Methods Of EntityOfByIdentifier
 
-        #region Query Methods Of Default of ByIdentifier
+        #region Query Methods Of DefaultOfByIdentifier
 
         /// <summary>
-        /// Gets the count of entity of Default of ByIdentifier .
+        /// Gets the count of entity of DefaultOfByIdentifier .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
@@ -1609,7 +1609,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Exists the of entity of Default of ByIdentifier .
+        /// Exists the of entity of DefaultOfByIdentifier .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
@@ -1631,7 +1631,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of Default of ByIdentifier .
+        /// Gets the collection of entity of DefaultOfByIdentifier .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.Default if any</returns>
@@ -1664,7 +1664,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of Default of ByIdentifier .
+        /// Gets the collection of entity of DefaultOfByIdentifier .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.Default if any</returns>
@@ -1690,12 +1690,12 @@ namespace MSBuildExtensionPack.CommonBLL
             return _retval;
         }
 
-        #endregion Query Methods Of Default of ByIdentifier
+        #endregion Query Methods Of DefaultOfByIdentifier
 
-        #region Query Methods Of UpdateNameRequest of ByIdentifier
+        #region Query Methods Of UpdateNameRequestOfByIdentifier
 
         /// <summary>
-        /// Gets the count of entity of UpdateNameRequest of ByIdentifier .
+        /// Gets the count of entity of UpdateNameRequestOfByIdentifier .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
@@ -1717,7 +1717,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Exists the of entity of UpdateNameRequest of ByIdentifier .
+        /// Exists the of entity of UpdateNameRequestOfByIdentifier .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
@@ -1739,7 +1739,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of UpdateNameRequest of ByIdentifier .
+        /// Gets the collection of entity of UpdateNameRequestOfByIdentifier .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest if any</returns>
@@ -1772,7 +1772,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of UpdateNameRequest of ByIdentifier .
+        /// Gets the collection of entity of UpdateNameRequestOfByIdentifier .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest if any</returns>
@@ -1798,12 +1798,12 @@ namespace MSBuildExtensionPack.CommonBLL
             return _retval;
         }
 
-        #endregion Query Methods Of UpdateNameRequest of ByIdentifier
+        #endregion Query Methods Of UpdateNameRequestOfByIdentifier
 
-        #region Query Methods Of KeyInformation of ByIdentifier
+        #region Query Methods Of KeyInformationOfByIdentifier
 
         /// <summary>
-        /// Gets the count of entity of KeyInformation of ByIdentifier .
+        /// Gets the count of entity of KeyInformationOfByIdentifier .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
@@ -1825,7 +1825,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Exists the of entity of KeyInformation of ByIdentifier .
+        /// Exists the of entity of KeyInformationOfByIdentifier .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
@@ -1847,7 +1847,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of KeyInformation of ByIdentifier .
+        /// Gets the collection of entity of KeyInformationOfByIdentifier .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation if any</returns>
@@ -1880,7 +1880,7 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         /// <summary>
-        /// Gets the collection of entity of KeyInformation of ByIdentifier .
+        /// Gets the collection of entity of KeyInformationOfByIdentifier .
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation if any</returns>
@@ -1906,7 +1906,7 @@ namespace MSBuildExtensionPack.CommonBLL
             return _retval;
         }
 
-        #endregion Query Methods Of KeyInformation of ByIdentifier
+        #endregion Query Methods Of KeyInformationOfByIdentifier
 
         #endregion DataQueryPerQuerySettingCollection
 

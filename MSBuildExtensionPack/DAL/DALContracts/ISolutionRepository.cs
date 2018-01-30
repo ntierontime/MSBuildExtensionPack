@@ -38,7 +38,7 @@ namespace MSBuildExtensionPack.DALContracts
 
         #endregion Binary Columns
 
-        #region Query Methods Of Entity of Common
+        #region Query Methods Of EntityOfCommon
 
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfCommon(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
@@ -82,9 +82,9 @@ namespace MSBuildExtensionPack.DALContracts
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        #endregion Query Methods Of Entity of Common
+        #endregion Query Methods Of EntityOfCommon
 
-        #region Query Methods Of Default of Common
+        #region Query Methods Of DefaultOfCommon
 
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultOfCommon(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
@@ -128,9 +128,9 @@ namespace MSBuildExtensionPack.DALContracts
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        #endregion Query Methods Of Default of Common
+        #endregion Query Methods Of DefaultOfCommon
 
-        #region Query Methods Of Entity of All
+        #region Query Methods Of EntityOfAll
 
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfAll(
             int currentIndex
@@ -154,9 +154,9 @@ namespace MSBuildExtensionPack.DALContracts
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        #endregion Query Methods Of Entity of All
+        #endregion Query Methods Of EntityOfAll
 
-        #region Query Methods Of NameValuePair of All
+        #region Query Methods Of NameValuePairOfAll
 
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfNameValuePairOfAll(
             int currentIndex
@@ -180,9 +180,9 @@ namespace MSBuildExtensionPack.DALContracts
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        #endregion Query Methods Of NameValuePair of All
+        #endregion Query Methods Of NameValuePairOfAll
 
-        #region Query Methods Of RssItem of All
+        #region Query Methods Of RssItemOfAll
 
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfRssItemOfAll(
             int currentIndex
@@ -206,9 +206,9 @@ namespace MSBuildExtensionPack.DALContracts
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        #endregion Query Methods Of RssItem of All
+        #endregion Query Methods Of RssItemOfAll
 
-        #region Query Methods Of Entity of ByFKOnly
+        #region Query Methods Of EntityOfByFKOnly
 
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
@@ -240,9 +240,9 @@ namespace MSBuildExtensionPack.DALContracts
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        #endregion Query Methods Of Entity of ByFKOnly
+        #endregion Query Methods Of EntityOfByFKOnly
 
-        #region Query Methods Of NameValuePair of ByFKOnly
+        #region Query Methods Of NameValuePairOfByFKOnly
 
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfNameValuePairOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
@@ -274,9 +274,9 @@ namespace MSBuildExtensionPack.DALContracts
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        #endregion Query Methods Of NameValuePair of ByFKOnly
+        #endregion Query Methods Of NameValuePairOfByFKOnly
 
-        #region Query Methods Of RssItem of ByFKOnly
+        #region Query Methods Of RssItemOfByFKOnly
 
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfRssItemOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
@@ -308,9 +308,9 @@ namespace MSBuildExtensionPack.DALContracts
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        #endregion Query Methods Of RssItem of ByFKOnly
+        #endregion Query Methods Of RssItemOfByFKOnly
 
-        #region Query Methods Of Default of ByFKOnly
+        #region Query Methods Of DefaultOfByFKOnly
 
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
@@ -342,9 +342,9 @@ namespace MSBuildExtensionPack.DALContracts
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        #endregion Query Methods Of Default of ByFKOnly
+        #endregion Query Methods Of DefaultOfByFKOnly
 
-        #region Query Methods Of DefaultGroupedDataView of ByFKOnly
+        #region Query Methods Of DefaultGroupedDataViewOfByFKOnly
 
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultGroupedDataViewOfByFKOnly(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
@@ -376,9 +376,9 @@ namespace MSBuildExtensionPack.DALContracts
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        #endregion Query Methods Of DefaultGroupedDataView of ByFKOnly
+        #endregion Query Methods Of DefaultGroupedDataViewOfByFKOnly
 
-        #region Query Methods Of Entity of ByIdentifier
+        #region Query Methods Of EntityOfByIdentifier
 
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
@@ -406,9 +406,9 @@ namespace MSBuildExtensionPack.DALContracts
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        #endregion Query Methods Of Entity of ByIdentifier
+        #endregion Query Methods Of EntityOfByIdentifier
 
-        #region Query Methods Of Default of ByIdentifier
+        #region Query Methods Of DefaultOfByIdentifier
 
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
@@ -436,9 +436,9 @@ namespace MSBuildExtensionPack.DALContracts
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        #endregion Query Methods Of Default of ByIdentifier
+        #endregion Query Methods Of DefaultOfByIdentifier
 
-        #region Query Methods Of KeyInformation of ByIdentifier
+        #region Query Methods Of KeyInformationOfByIdentifier
 
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfKeyInformationOfByIdentifier(
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
@@ -466,7 +466,7 @@ namespace MSBuildExtensionPack.DALContracts
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        #endregion Query Methods Of KeyInformation of ByIdentifier
+        #endregion Query Methods Of KeyInformationOfByIdentifier
 
     }
 }

@@ -204,7 +204,7 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #region DataQueryPerQuerySettingCollection
 
-        #region Query Methods Of Entity of Common
+        #region Query Methods Of EntityOfCommon
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -322,9 +322,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         private System.Threading.SendOrPostCallback onGetSingleOfEntityOfCommonCompletedDelegate;
 
-        #endregion Query Methods Of Entity of Common
+        #endregion Query Methods Of EntityOfCommon
 
-        #region Query Methods Of Default of Common
+        #region Query Methods Of DefaultOfCommon
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -442,9 +442,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         private System.Threading.SendOrPostCallback onGetSingleOfDefaultOfCommonCompletedDelegate;
 
-        #endregion Query Methods Of Default of Common
+        #endregion Query Methods Of DefaultOfCommon
 
-        #region Query Methods Of Entity of All
+        #region Query Methods Of EntityOfAll
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -562,9 +562,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         private System.Threading.SendOrPostCallback onGetSingleOfEntityOfAllCompletedDelegate;
 
-        #endregion Query Methods Of Entity of All
+        #endregion Query Methods Of EntityOfAll
 
-        #region Query Methods Of NameValuePair of All
+        #region Query Methods Of NameValuePairOfAll
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -682,9 +682,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         private System.Threading.SendOrPostCallback onGetSingleOfNameValuePairOfAllCompletedDelegate;
 
-        #endregion Query Methods Of NameValuePair of All
+        #endregion Query Methods Of NameValuePairOfAll
 
-        #region Query Methods Of RssItem of All
+        #region Query Methods Of RssItemOfAll
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -802,9 +802,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         private System.Threading.SendOrPostCallback onGetSingleOfRssItemOfAllCompletedDelegate;
 
-        #endregion Query Methods Of RssItem of All
+        #endregion Query Methods Of RssItemOfAll
 
-        #region Query Methods Of Entity of ByFKOnly
+        #region Query Methods Of EntityOfByFKOnly
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -922,9 +922,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         private System.Threading.SendOrPostCallback onGetSingleOfEntityOfByFKOnlyCompletedDelegate;
 
-        #endregion Query Methods Of Entity of ByFKOnly
+        #endregion Query Methods Of EntityOfByFKOnly
 
-        #region Query Methods Of NameValuePair of ByFKOnly
+        #region Query Methods Of NameValuePairOfByFKOnly
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1042,9 +1042,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         private System.Threading.SendOrPostCallback onGetSingleOfNameValuePairOfByFKOnlyCompletedDelegate;
 
-        #endregion Query Methods Of NameValuePair of ByFKOnly
+        #endregion Query Methods Of NameValuePairOfByFKOnly
 
-        #region Query Methods Of RssItem of ByFKOnly
+        #region Query Methods Of RssItemOfByFKOnly
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1162,9 +1162,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         private System.Threading.SendOrPostCallback onGetSingleOfRssItemOfByFKOnlyCompletedDelegate;
 
-        #endregion Query Methods Of RssItem of ByFKOnly
+        #endregion Query Methods Of RssItemOfByFKOnly
 
-        #region Query Methods Of Default of ByFKOnly
+        #region Query Methods Of DefaultOfByFKOnly
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1282,9 +1282,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         private System.Threading.SendOrPostCallback onGetSingleOfDefaultOfByFKOnlyCompletedDelegate;
 
-        #endregion Query Methods Of Default of ByFKOnly
+        #endregion Query Methods Of DefaultOfByFKOnly
 
-        #region Query Methods Of DefaultGroupedDataView of ByFKOnly
+        #region Query Methods Of DefaultGroupedDataViewOfByFKOnly
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1402,9 +1402,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         private System.Threading.SendOrPostCallback onGetSingleOfDefaultGroupedDataViewOfByFKOnlyCompletedDelegate;
 
-        #endregion Query Methods Of DefaultGroupedDataView of ByFKOnly
+        #endregion Query Methods Of DefaultGroupedDataViewOfByFKOnly
 
-        #region Query Methods Of Entity of ByIdentifier
+        #region Query Methods Of EntityOfByIdentifier
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1522,9 +1522,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         private System.Threading.SendOrPostCallback onGetSingleOfEntityOfByIdentifierCompletedDelegate;
 
-        #endregion Query Methods Of Entity of ByIdentifier
+        #endregion Query Methods Of EntityOfByIdentifier
 
-        #region Query Methods Of Default of ByIdentifier
+        #region Query Methods Of DefaultOfByIdentifier
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1642,9 +1642,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         private System.Threading.SendOrPostCallback onGetSingleOfDefaultOfByIdentifierCompletedDelegate;
 
-        #endregion Query Methods Of Default of ByIdentifier
+        #endregion Query Methods Of DefaultOfByIdentifier
 
-        #region Query Methods Of KeyInformation of ByIdentifier
+        #region Query Methods Of KeyInformationOfByIdentifier
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1762,9 +1762,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         private System.Threading.SendOrPostCallback onGetSingleOfKeyInformationOfByIdentifierCompletedDelegate;
 
-        #endregion Query Methods Of KeyInformation of ByIdentifier
+        #endregion Query Methods Of KeyInformationOfByIdentifier
 
-        #region Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #region Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1882,9 +1882,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         private System.Threading.SendOrPostCallback onGetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate;
 
-        #endregion Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #endregion Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
-        #region Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #region Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2002,9 +2002,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         private System.Threading.SendOrPostCallback onGetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate;
 
-        #endregion Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #endregion Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
-        #region Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #region Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2122,9 +2122,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         private System.Threading.SendOrPostCallback onGetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate;
 
-        #endregion Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #endregion Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
-        #region Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #region Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2242,9 +2242,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         private System.Threading.SendOrPostCallback onGetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate;
 
-        #endregion Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #endregion Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
-        #region Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #region Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2362,9 +2362,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         private System.Threading.SendOrPostCallback onGetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate;
 
-        #endregion Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #endregion Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
-        #region Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #region Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2482,9 +2482,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         private System.Threading.SendOrPostCallback onGetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate;
 
-        #endregion Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #endregion Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
-        #region Query Methods Of Entity of IdentifierAndUniqueConstraint
+        #region Query Methods Of EntityOfIdentifierAndUniqueConstraint
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2602,9 +2602,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         private System.Threading.SendOrPostCallback onGetSingleOfEntityOfIdentifierAndUniqueConstraintCompletedDelegate;
 
-        #endregion Query Methods Of Entity of IdentifierAndUniqueConstraint
+        #endregion Query Methods Of EntityOfIdentifierAndUniqueConstraint
 
-        #region Query Methods Of Default of IdentifierAndUniqueConstraint
+        #region Query Methods Of DefaultOfIdentifierAndUniqueConstraint
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2722,9 +2722,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         private System.Threading.SendOrPostCallback onGetSingleOfDefaultOfIdentifierAndUniqueConstraintCompletedDelegate;
 
-        #endregion Query Methods Of Default of IdentifierAndUniqueConstraint
+        #endregion Query Methods Of DefaultOfIdentifierAndUniqueConstraint
 
-        #region Query Methods Of KeyInformation of IdentifierAndUniqueConstraint
+        #region Query Methods Of KeyInformationOfIdentifierAndUniqueConstraint
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2842,7 +2842,7 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         private System.Threading.SendOrPostCallback onGetSingleOfKeyInformationOfIdentifierAndUniqueConstraintCompletedDelegate;
 
-        #endregion Query Methods Of KeyInformation of IdentifierAndUniqueConstraint
+        #endregion Query Methods Of KeyInformationOfIdentifierAndUniqueConstraint
 
         #endregion DataQueryPerQuerySettingCollection
 
@@ -3004,7 +3004,7 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #region DataQueryPerQuerySettingCollection
 
-        #region Query Methods Of Entity of Common
+        #region Query Methods Of EntityOfCommon
 
         public event System.EventHandler<GetCountOfEntityOfCommonCompletedEventArgs> GetCountOfEntityOfCommonCompleted;
 
@@ -3014,9 +3014,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         public event System.EventHandler<GetSingleOfEntityOfCommonCompletedEventArgs> GetSingleOfEntityOfCommonCompleted;
 
-        #endregion Query Methods Of Entity of Common
+        #endregion Query Methods Of EntityOfCommon
 
-        #region Query Methods Of Default of Common
+        #region Query Methods Of DefaultOfCommon
 
         public event System.EventHandler<GetCountOfDefaultOfCommonCompletedEventArgs> GetCountOfDefaultOfCommonCompleted;
 
@@ -3026,9 +3026,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         public event System.EventHandler<GetSingleOfDefaultOfCommonCompletedEventArgs> GetSingleOfDefaultOfCommonCompleted;
 
-        #endregion Query Methods Of Default of Common
+        #endregion Query Methods Of DefaultOfCommon
 
-        #region Query Methods Of Entity of All
+        #region Query Methods Of EntityOfAll
 
         public event System.EventHandler<GetCountOfEntityOfAllCompletedEventArgs> GetCountOfEntityOfAllCompleted;
 
@@ -3038,9 +3038,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         public event System.EventHandler<GetSingleOfEntityOfAllCompletedEventArgs> GetSingleOfEntityOfAllCompleted;
 
-        #endregion Query Methods Of Entity of All
+        #endregion Query Methods Of EntityOfAll
 
-        #region Query Methods Of NameValuePair of All
+        #region Query Methods Of NameValuePairOfAll
 
         public event System.EventHandler<GetCountOfNameValuePairOfAllCompletedEventArgs> GetCountOfNameValuePairOfAllCompleted;
 
@@ -3050,9 +3050,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         public event System.EventHandler<GetSingleOfNameValuePairOfAllCompletedEventArgs> GetSingleOfNameValuePairOfAllCompleted;
 
-        #endregion Query Methods Of NameValuePair of All
+        #endregion Query Methods Of NameValuePairOfAll
 
-        #region Query Methods Of RssItem of All
+        #region Query Methods Of RssItemOfAll
 
         public event System.EventHandler<GetCountOfRssItemOfAllCompletedEventArgs> GetCountOfRssItemOfAllCompleted;
 
@@ -3062,9 +3062,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         public event System.EventHandler<GetSingleOfRssItemOfAllCompletedEventArgs> GetSingleOfRssItemOfAllCompleted;
 
-        #endregion Query Methods Of RssItem of All
+        #endregion Query Methods Of RssItemOfAll
 
-        #region Query Methods Of Entity of ByFKOnly
+        #region Query Methods Of EntityOfByFKOnly
 
         public event System.EventHandler<GetCountOfEntityOfByFKOnlyCompletedEventArgs> GetCountOfEntityOfByFKOnlyCompleted;
 
@@ -3074,9 +3074,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         public event System.EventHandler<GetSingleOfEntityOfByFKOnlyCompletedEventArgs> GetSingleOfEntityOfByFKOnlyCompleted;
 
-        #endregion Query Methods Of Entity of ByFKOnly
+        #endregion Query Methods Of EntityOfByFKOnly
 
-        #region Query Methods Of NameValuePair of ByFKOnly
+        #region Query Methods Of NameValuePairOfByFKOnly
 
         public event System.EventHandler<GetCountOfNameValuePairOfByFKOnlyCompletedEventArgs> GetCountOfNameValuePairOfByFKOnlyCompleted;
 
@@ -3086,9 +3086,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         public event System.EventHandler<GetSingleOfNameValuePairOfByFKOnlyCompletedEventArgs> GetSingleOfNameValuePairOfByFKOnlyCompleted;
 
-        #endregion Query Methods Of NameValuePair of ByFKOnly
+        #endregion Query Methods Of NameValuePairOfByFKOnly
 
-        #region Query Methods Of RssItem of ByFKOnly
+        #region Query Methods Of RssItemOfByFKOnly
 
         public event System.EventHandler<GetCountOfRssItemOfByFKOnlyCompletedEventArgs> GetCountOfRssItemOfByFKOnlyCompleted;
 
@@ -3098,9 +3098,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         public event System.EventHandler<GetSingleOfRssItemOfByFKOnlyCompletedEventArgs> GetSingleOfRssItemOfByFKOnlyCompleted;
 
-        #endregion Query Methods Of RssItem of ByFKOnly
+        #endregion Query Methods Of RssItemOfByFKOnly
 
-        #region Query Methods Of Default of ByFKOnly
+        #region Query Methods Of DefaultOfByFKOnly
 
         public event System.EventHandler<GetCountOfDefaultOfByFKOnlyCompletedEventArgs> GetCountOfDefaultOfByFKOnlyCompleted;
 
@@ -3110,9 +3110,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         public event System.EventHandler<GetSingleOfDefaultOfByFKOnlyCompletedEventArgs> GetSingleOfDefaultOfByFKOnlyCompleted;
 
-        #endregion Query Methods Of Default of ByFKOnly
+        #endregion Query Methods Of DefaultOfByFKOnly
 
-        #region Query Methods Of DefaultGroupedDataView of ByFKOnly
+        #region Query Methods Of DefaultGroupedDataViewOfByFKOnly
 
         public event System.EventHandler<GetCountOfDefaultGroupedDataViewOfByFKOnlyCompletedEventArgs> GetCountOfDefaultGroupedDataViewOfByFKOnlyCompleted;
 
@@ -3122,9 +3122,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         public event System.EventHandler<GetSingleOfDefaultGroupedDataViewOfByFKOnlyCompletedEventArgs> GetSingleOfDefaultGroupedDataViewOfByFKOnlyCompleted;
 
-        #endregion Query Methods Of DefaultGroupedDataView of ByFKOnly
+        #endregion Query Methods Of DefaultGroupedDataViewOfByFKOnly
 
-        #region Query Methods Of Entity of ByIdentifier
+        #region Query Methods Of EntityOfByIdentifier
 
         public event System.EventHandler<GetCountOfEntityOfByIdentifierCompletedEventArgs> GetCountOfEntityOfByIdentifierCompleted;
 
@@ -3134,9 +3134,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         public event System.EventHandler<GetSingleOfEntityOfByIdentifierCompletedEventArgs> GetSingleOfEntityOfByIdentifierCompleted;
 
-        #endregion Query Methods Of Entity of ByIdentifier
+        #endregion Query Methods Of EntityOfByIdentifier
 
-        #region Query Methods Of Default of ByIdentifier
+        #region Query Methods Of DefaultOfByIdentifier
 
         public event System.EventHandler<GetCountOfDefaultOfByIdentifierCompletedEventArgs> GetCountOfDefaultOfByIdentifierCompleted;
 
@@ -3146,9 +3146,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         public event System.EventHandler<GetSingleOfDefaultOfByIdentifierCompletedEventArgs> GetSingleOfDefaultOfByIdentifierCompleted;
 
-        #endregion Query Methods Of Default of ByIdentifier
+        #endregion Query Methods Of DefaultOfByIdentifier
 
-        #region Query Methods Of KeyInformation of ByIdentifier
+        #region Query Methods Of KeyInformationOfByIdentifier
 
         public event System.EventHandler<GetCountOfKeyInformationOfByIdentifierCompletedEventArgs> GetCountOfKeyInformationOfByIdentifierCompleted;
 
@@ -3158,9 +3158,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         public event System.EventHandler<GetSingleOfKeyInformationOfByIdentifierCompletedEventArgs> GetSingleOfKeyInformationOfByIdentifierCompleted;
 
-        #endregion Query Methods Of KeyInformation of ByIdentifier
+        #endregion Query Methods Of KeyInformationOfByIdentifier
 
-        #region Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #region Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
         public event System.EventHandler<GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedEventArgs> GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompleted;
 
@@ -3170,9 +3170,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         public event System.EventHandler<GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedEventArgs> GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompleted;
 
-        #endregion Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #endregion Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
-        #region Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #region Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
         public event System.EventHandler<GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedEventArgs> GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompleted;
 
@@ -3182,9 +3182,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         public event System.EventHandler<GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedEventArgs> GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompleted;
 
-        #endregion Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #endregion Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
-        #region Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #region Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
         public event System.EventHandler<GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedEventArgs> GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompleted;
 
@@ -3194,9 +3194,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         public event System.EventHandler<GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedEventArgs> GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompleted;
 
-        #endregion Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #endregion Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
-        #region Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #region Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
         public event System.EventHandler<GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedEventArgs> GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompleted;
 
@@ -3206,9 +3206,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         public event System.EventHandler<GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedEventArgs> GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompleted;
 
-        #endregion Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #endregion Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
-        #region Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #region Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
         public event System.EventHandler<GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedEventArgs> GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompleted;
 
@@ -3218,9 +3218,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         public event System.EventHandler<GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedEventArgs> GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompleted;
 
-        #endregion Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #endregion Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
-        #region Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #region Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
         public event System.EventHandler<GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedEventArgs> GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompleted;
 
@@ -3230,9 +3230,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         public event System.EventHandler<GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedEventArgs> GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompleted;
 
-        #endregion Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #endregion Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
-        #region Query Methods Of Entity of IdentifierAndUniqueConstraint
+        #region Query Methods Of EntityOfIdentifierAndUniqueConstraint
 
         public event System.EventHandler<GetCountOfEntityOfIdentifierAndUniqueConstraintCompletedEventArgs> GetCountOfEntityOfIdentifierAndUniqueConstraintCompleted;
 
@@ -3242,9 +3242,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         public event System.EventHandler<GetSingleOfEntityOfIdentifierAndUniqueConstraintCompletedEventArgs> GetSingleOfEntityOfIdentifierAndUniqueConstraintCompleted;
 
-        #endregion Query Methods Of Entity of IdentifierAndUniqueConstraint
+        #endregion Query Methods Of EntityOfIdentifierAndUniqueConstraint
 
-        #region Query Methods Of Default of IdentifierAndUniqueConstraint
+        #region Query Methods Of DefaultOfIdentifierAndUniqueConstraint
 
         public event System.EventHandler<GetCountOfDefaultOfIdentifierAndUniqueConstraintCompletedEventArgs> GetCountOfDefaultOfIdentifierAndUniqueConstraintCompleted;
 
@@ -3254,9 +3254,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         public event System.EventHandler<GetSingleOfDefaultOfIdentifierAndUniqueConstraintCompletedEventArgs> GetSingleOfDefaultOfIdentifierAndUniqueConstraintCompleted;
 
-        #endregion Query Methods Of Default of IdentifierAndUniqueConstraint
+        #endregion Query Methods Of DefaultOfIdentifierAndUniqueConstraint
 
-        #region Query Methods Of KeyInformation of IdentifierAndUniqueConstraint
+        #region Query Methods Of KeyInformationOfIdentifierAndUniqueConstraint
 
         public event System.EventHandler<GetCountOfKeyInformationOfIdentifierAndUniqueConstraintCompletedEventArgs> GetCountOfKeyInformationOfIdentifierAndUniqueConstraintCompleted;
 
@@ -3266,7 +3266,7 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         public event System.EventHandler<GetSingleOfKeyInformationOfIdentifierAndUniqueConstraintCompletedEventArgs> GetSingleOfKeyInformationOfIdentifierAndUniqueConstraintCompleted;
 
-        #endregion Query Methods Of KeyInformation of IdentifierAndUniqueConstraint
+        #endregion Query Methods Of KeyInformationOfIdentifierAndUniqueConstraint
 
         #endregion DataQueryPerQuerySettingCollection
 
@@ -3769,7 +3769,7 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #region DataQueryPerQuerySettingCollection
 
-        #region Query Methods Of Entity of Common
+        #region Query Methods Of EntityOfCommon
 
         /// <summary>
         /// Gets the count of entity of "Common".
@@ -4043,9 +4043,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndGetSingleOfEntityOfCommonDelegate, this.onGetSingleOfEntityOfCommonCompletedDelegate, userState);
         }
 
-        #endregion Query Methods Of Entity of Common
+        #endregion Query Methods Of EntityOfCommon
 
-        #region Query Methods Of Default of Common
+        #region Query Methods Of DefaultOfCommon
 
         /// <summary>
         /// Gets the count of entity of "Common".
@@ -4319,9 +4319,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndGetSingleOfDefaultOfCommonDelegate, this.onGetSingleOfDefaultOfCommonCompletedDelegate, userState);
         }
 
-        #endregion Query Methods Of Default of Common
+        #endregion Query Methods Of DefaultOfCommon
 
-        #region Query Methods Of Entity of All
+        #region Query Methods Of EntityOfAll
 
         /// <summary>
         /// Gets the count of entity of "All".
@@ -4595,9 +4595,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndGetSingleOfEntityOfAllDelegate, this.onGetSingleOfEntityOfAllCompletedDelegate, userState);
         }
 
-        #endregion Query Methods Of Entity of All
+        #endregion Query Methods Of EntityOfAll
 
-        #region Query Methods Of NameValuePair of All
+        #region Query Methods Of NameValuePairOfAll
 
         /// <summary>
         /// Gets the count of entity of "All".
@@ -4871,9 +4871,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndGetSingleOfNameValuePairOfAllDelegate, this.onGetSingleOfNameValuePairOfAllCompletedDelegate, userState);
         }
 
-        #endregion Query Methods Of NameValuePair of All
+        #endregion Query Methods Of NameValuePairOfAll
 
-        #region Query Methods Of RssItem of All
+        #region Query Methods Of RssItemOfAll
 
         /// <summary>
         /// Gets the count of entity of "All".
@@ -5147,9 +5147,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndGetSingleOfRssItemOfAllDelegate, this.onGetSingleOfRssItemOfAllCompletedDelegate, userState);
         }
 
-        #endregion Query Methods Of RssItem of All
+        #endregion Query Methods Of RssItemOfAll
 
-        #region Query Methods Of Entity of ByFKOnly
+        #region Query Methods Of EntityOfByFKOnly
 
         /// <summary>
         /// Gets the count of entity of "ByFKOnly".
@@ -5423,9 +5423,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndGetSingleOfEntityOfByFKOnlyDelegate, this.onGetSingleOfEntityOfByFKOnlyCompletedDelegate, userState);
         }
 
-        #endregion Query Methods Of Entity of ByFKOnly
+        #endregion Query Methods Of EntityOfByFKOnly
 
-        #region Query Methods Of NameValuePair of ByFKOnly
+        #region Query Methods Of NameValuePairOfByFKOnly
 
         /// <summary>
         /// Gets the count of entity of "ByFKOnly".
@@ -5699,9 +5699,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndGetSingleOfNameValuePairOfByFKOnlyDelegate, this.onGetSingleOfNameValuePairOfByFKOnlyCompletedDelegate, userState);
         }
 
-        #endregion Query Methods Of NameValuePair of ByFKOnly
+        #endregion Query Methods Of NameValuePairOfByFKOnly
 
-        #region Query Methods Of RssItem of ByFKOnly
+        #region Query Methods Of RssItemOfByFKOnly
 
         /// <summary>
         /// Gets the count of entity of "ByFKOnly".
@@ -5975,9 +5975,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndGetSingleOfRssItemOfByFKOnlyDelegate, this.onGetSingleOfRssItemOfByFKOnlyCompletedDelegate, userState);
         }
 
-        #endregion Query Methods Of RssItem of ByFKOnly
+        #endregion Query Methods Of RssItemOfByFKOnly
 
-        #region Query Methods Of Default of ByFKOnly
+        #region Query Methods Of DefaultOfByFKOnly
 
         /// <summary>
         /// Gets the count of entity of "ByFKOnly".
@@ -6251,9 +6251,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndGetSingleOfDefaultOfByFKOnlyDelegate, this.onGetSingleOfDefaultOfByFKOnlyCompletedDelegate, userState);
         }
 
-        #endregion Query Methods Of Default of ByFKOnly
+        #endregion Query Methods Of DefaultOfByFKOnly
 
-        #region Query Methods Of DefaultGroupedDataView of ByFKOnly
+        #region Query Methods Of DefaultGroupedDataViewOfByFKOnly
 
         /// <summary>
         /// Gets the count of entity of "ByFKOnly".
@@ -6527,9 +6527,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndGetSingleOfDefaultGroupedDataViewOfByFKOnlyDelegate, this.onGetSingleOfDefaultGroupedDataViewOfByFKOnlyCompletedDelegate, userState);
         }
 
-        #endregion Query Methods Of DefaultGroupedDataView of ByFKOnly
+        #endregion Query Methods Of DefaultGroupedDataViewOfByFKOnly
 
-        #region Query Methods Of Entity of ByIdentifier
+        #region Query Methods Of EntityOfByIdentifier
 
         /// <summary>
         /// Gets the count of entity of "ByIdentifier".
@@ -6803,9 +6803,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndGetSingleOfEntityOfByIdentifierDelegate, this.onGetSingleOfEntityOfByIdentifierCompletedDelegate, userState);
         }
 
-        #endregion Query Methods Of Entity of ByIdentifier
+        #endregion Query Methods Of EntityOfByIdentifier
 
-        #region Query Methods Of Default of ByIdentifier
+        #region Query Methods Of DefaultOfByIdentifier
 
         /// <summary>
         /// Gets the count of entity of "ByIdentifier".
@@ -7079,9 +7079,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndGetSingleOfDefaultOfByIdentifierDelegate, this.onGetSingleOfDefaultOfByIdentifierCompletedDelegate, userState);
         }
 
-        #endregion Query Methods Of Default of ByIdentifier
+        #endregion Query Methods Of DefaultOfByIdentifier
 
-        #region Query Methods Of KeyInformation of ByIdentifier
+        #region Query Methods Of KeyInformationOfByIdentifier
 
         /// <summary>
         /// Gets the count of entity of "ByIdentifier".
@@ -7355,9 +7355,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndGetSingleOfKeyInformationOfByIdentifierDelegate, this.onGetSingleOfKeyInformationOfByIdentifierCompletedDelegate, userState);
         }
 
-        #endregion Query Methods Of KeyInformation of ByIdentifier
+        #endregion Query Methods Of KeyInformationOfByIdentifier
 
-        #region Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #region Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
         /// <summary>
         /// Gets the count of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
@@ -7631,9 +7631,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndGetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate, this.onGetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate, userState);
         }
 
-        #endregion Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #endregion Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
-        #region Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #region Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
         /// <summary>
         /// Gets the count of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
@@ -7907,9 +7907,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndGetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate, this.onGetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate, userState);
         }
 
-        #endregion Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #endregion Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
-        #region Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #region Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
         /// <summary>
         /// Gets the count of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
@@ -8183,9 +8183,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndGetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate, this.onGetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate, userState);
         }
 
-        #endregion Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #endregion Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
-        #region Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #region Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
         /// <summary>
         /// Gets the count of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
@@ -8459,9 +8459,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndGetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate, this.onGetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate, userState);
         }
 
-        #endregion Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #endregion Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
-        #region Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #region Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
         /// <summary>
         /// Gets the count of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
@@ -8735,9 +8735,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndGetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate, this.onGetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate, userState);
         }
 
-        #endregion Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #endregion Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
-        #region Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #region Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
         /// <summary>
         /// Gets the count of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
@@ -9011,9 +9011,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndGetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate, this.onGetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate, userState);
         }
 
-        #endregion Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #endregion Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
-        #region Query Methods Of Entity of IdentifierAndUniqueConstraint
+        #region Query Methods Of EntityOfIdentifierAndUniqueConstraint
 
         /// <summary>
         /// Gets the count of entity of "IdentifierAndUniqueConstraint".
@@ -9287,9 +9287,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndGetSingleOfEntityOfIdentifierAndUniqueConstraintDelegate, this.onGetSingleOfEntityOfIdentifierAndUniqueConstraintCompletedDelegate, userState);
         }
 
-        #endregion Query Methods Of Entity of IdentifierAndUniqueConstraint
+        #endregion Query Methods Of EntityOfIdentifierAndUniqueConstraint
 
-        #region Query Methods Of Default of IdentifierAndUniqueConstraint
+        #region Query Methods Of DefaultOfIdentifierAndUniqueConstraint
 
         /// <summary>
         /// Gets the count of entity of "IdentifierAndUniqueConstraint".
@@ -9563,9 +9563,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndGetSingleOfDefaultOfIdentifierAndUniqueConstraintDelegate, this.onGetSingleOfDefaultOfIdentifierAndUniqueConstraintCompletedDelegate, userState);
         }
 
-        #endregion Query Methods Of Default of IdentifierAndUniqueConstraint
+        #endregion Query Methods Of DefaultOfIdentifierAndUniqueConstraint
 
-        #region Query Methods Of KeyInformation of IdentifierAndUniqueConstraint
+        #region Query Methods Of KeyInformationOfIdentifierAndUniqueConstraint
 
         /// <summary>
         /// Gets the count of entity of "IdentifierAndUniqueConstraint".
@@ -9839,7 +9839,7 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndGetSingleOfKeyInformationOfIdentifierAndUniqueConstraintDelegate, this.onGetSingleOfKeyInformationOfIdentifierAndUniqueConstraintCompletedDelegate, userState);
         }
 
-        #endregion Query Methods Of KeyInformation of IdentifierAndUniqueConstraint
+        #endregion Query Methods Of KeyInformationOfIdentifierAndUniqueConstraint
 
         #endregion DataQueryPerQuerySettingCollection
 
@@ -10185,7 +10185,7 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
             #region DataQueryPerQuerySettingCollection
 
-            #region Query Methods Of Entity of Common
+            #region Query Methods Of EntityOfCommon
 
             public System.IAsyncResult BeginGetCountOfEntityOfCommon(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
             {
@@ -10247,9 +10247,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of Entity of Common
+            #endregion Query Methods Of EntityOfCommon
 
-            #region Query Methods Of Default of Common
+            #region Query Methods Of DefaultOfCommon
 
             public System.IAsyncResult BeginGetCountOfDefaultOfCommon(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
             {
@@ -10311,9 +10311,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of Default of Common
+            #endregion Query Methods Of DefaultOfCommon
 
-            #region Query Methods Of Entity of All
+            #region Query Methods Of EntityOfAll
 
             public System.IAsyncResult BeginGetCountOfEntityOfAll(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
@@ -10375,9 +10375,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of Entity of All
+            #endregion Query Methods Of EntityOfAll
 
-            #region Query Methods Of NameValuePair of All
+            #region Query Methods Of NameValuePairOfAll
 
             public System.IAsyncResult BeginGetCountOfNameValuePairOfAll(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
@@ -10439,9 +10439,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of NameValuePair of All
+            #endregion Query Methods Of NameValuePairOfAll
 
-            #region Query Methods Of RssItem of All
+            #region Query Methods Of RssItemOfAll
 
             public System.IAsyncResult BeginGetCountOfRssItemOfAll(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
@@ -10503,9 +10503,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of RssItem of All
+            #endregion Query Methods Of RssItemOfAll
 
-            #region Query Methods Of Entity of ByFKOnly
+            #region Query Methods Of EntityOfByFKOnly
 
             public System.IAsyncResult BeginGetCountOfEntityOfByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
@@ -10567,9 +10567,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of Entity of ByFKOnly
+            #endregion Query Methods Of EntityOfByFKOnly
 
-            #region Query Methods Of NameValuePair of ByFKOnly
+            #region Query Methods Of NameValuePairOfByFKOnly
 
             public System.IAsyncResult BeginGetCountOfNameValuePairOfByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
@@ -10631,9 +10631,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of NameValuePair of ByFKOnly
+            #endregion Query Methods Of NameValuePairOfByFKOnly
 
-            #region Query Methods Of RssItem of ByFKOnly
+            #region Query Methods Of RssItemOfByFKOnly
 
             public System.IAsyncResult BeginGetCountOfRssItemOfByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
@@ -10695,9 +10695,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of RssItem of ByFKOnly
+            #endregion Query Methods Of RssItemOfByFKOnly
 
-            #region Query Methods Of Default of ByFKOnly
+            #region Query Methods Of DefaultOfByFKOnly
 
             public System.IAsyncResult BeginGetCountOfDefaultOfByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
@@ -10759,9 +10759,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of Default of ByFKOnly
+            #endregion Query Methods Of DefaultOfByFKOnly
 
-            #region Query Methods Of DefaultGroupedDataView of ByFKOnly
+            #region Query Methods Of DefaultGroupedDataViewOfByFKOnly
 
             public System.IAsyncResult BeginGetCountOfDefaultGroupedDataViewOfByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
@@ -10823,9 +10823,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of DefaultGroupedDataView of ByFKOnly
+            #endregion Query Methods Of DefaultGroupedDataViewOfByFKOnly
 
-            #region Query Methods Of Entity of ByIdentifier
+            #region Query Methods Of EntityOfByIdentifier
 
             public System.IAsyncResult BeginGetCountOfEntityOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
             {
@@ -10887,9 +10887,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of Entity of ByIdentifier
+            #endregion Query Methods Of EntityOfByIdentifier
 
-            #region Query Methods Of Default of ByIdentifier
+            #region Query Methods Of DefaultOfByIdentifier
 
             public System.IAsyncResult BeginGetCountOfDefaultOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
             {
@@ -10951,9 +10951,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of Default of ByIdentifier
+            #endregion Query Methods Of DefaultOfByIdentifier
 
-            #region Query Methods Of KeyInformation of ByIdentifier
+            #region Query Methods Of KeyInformationOfByIdentifier
 
             public System.IAsyncResult BeginGetCountOfKeyInformationOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
             {
@@ -11015,9 +11015,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of KeyInformation of ByIdentifier
+            #endregion Query Methods Of KeyInformationOfByIdentifier
 
-            #region Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueIdentifier
+            #region Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
             public System.IAsyncResult BeginGetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request, System.AsyncCallback callback, object asyncState)
             {
@@ -11079,9 +11079,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueIdentifier
+            #endregion Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
-            #region Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueIdentifier
+            #region Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
             public System.IAsyncResult BeginGetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request, System.AsyncCallback callback, object asyncState)
             {
@@ -11143,9 +11143,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueIdentifier
+            #endregion Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
-            #region Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueIdentifier
+            #region Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
             public System.IAsyncResult BeginGetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request, System.AsyncCallback callback, object asyncState)
             {
@@ -11207,9 +11207,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueIdentifier
+            #endregion Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
-            #region Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+            #region Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
             public System.IAsyncResult BeginGetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request, System.AsyncCallback callback, object asyncState)
             {
@@ -11271,9 +11271,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+            #endregion Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
-            #region Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+            #region Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
             public System.IAsyncResult BeginGetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request, System.AsyncCallback callback, object asyncState)
             {
@@ -11335,9 +11335,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+            #endregion Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
-            #region Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+            #region Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
             public System.IAsyncResult BeginGetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request, System.AsyncCallback callback, object asyncState)
             {
@@ -11399,9 +11399,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+            #endregion Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
-            #region Query Methods Of Entity of IdentifierAndUniqueConstraint
+            #region Query Methods Of EntityOfIdentifierAndUniqueConstraint
 
             public System.IAsyncResult BeginGetCountOfEntityOfIdentifierAndUniqueConstraint(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, System.AsyncCallback callback, object asyncState)
             {
@@ -11463,9 +11463,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of Entity of IdentifierAndUniqueConstraint
+            #endregion Query Methods Of EntityOfIdentifierAndUniqueConstraint
 
-            #region Query Methods Of Default of IdentifierAndUniqueConstraint
+            #region Query Methods Of DefaultOfIdentifierAndUniqueConstraint
 
             public System.IAsyncResult BeginGetCountOfDefaultOfIdentifierAndUniqueConstraint(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, System.AsyncCallback callback, object asyncState)
             {
@@ -11527,9 +11527,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of Default of IdentifierAndUniqueConstraint
+            #endregion Query Methods Of DefaultOfIdentifierAndUniqueConstraint
 
-            #region Query Methods Of KeyInformation of IdentifierAndUniqueConstraint
+            #region Query Methods Of KeyInformationOfIdentifierAndUniqueConstraint
 
             public System.IAsyncResult BeginGetCountOfKeyInformationOfIdentifierAndUniqueConstraint(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, System.AsyncCallback callback, object asyncState)
             {
@@ -11591,7 +11591,7 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of KeyInformation of IdentifierAndUniqueConstraint
+            #endregion Query Methods Of KeyInformationOfIdentifierAndUniqueConstraint
 
             #endregion DataQueryPerQuerySettingCollection
 

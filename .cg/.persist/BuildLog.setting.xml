@@ -47,18 +47,34 @@
     <QueryUnitGroups>ByIdentifier</QueryUnitGroups>
   </Query>
   <DataQueryOnDataViewSetting Key="EntityOfCommon" DataQueryKey="Common" />
-  <DataQueryOnDataViewSetting Key="DefaultOfCommon" DataQueryKey="Common" DataViewKey="Default" />
+  <DataQueryOnDataViewSetting Key="DefaultOfCommon" DataQueryKey="Common" DataViewKey="Default">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasGetCollectionMethod="true" />
+  </DataQueryOnDataViewSetting>
   <DataQueryOnDataViewSetting Key="EntityOfAll" DataQueryKey="All" />
   <DataQueryOnDataViewSetting Key="NameValuePairOfAll" DataQueryKey="All" DataViewKey="NameValuePair" />
   <DataQueryOnDataViewSetting Key="RssItemOfAll" DataQueryKey="All" DataViewKey="RssItem" />
   <DataQueryOnDataViewSetting Key="EntityOfByFKOnly" DataQueryKey="ByFKOnly" />
-  <DataQueryOnDataViewSetting Key="NameValuePairOfByFKOnly" DataQueryKey="ByFKOnly" DataViewKey="NameValuePair" />
+  <DataQueryOnDataViewSetting Key="NameValuePairOfByFKOnly" DataQueryKey="ByFKOnly" DataViewKey="NameValuePair">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasGetCollectionMethod="true" />
+    <WebApiMethodSetting HasGetCollectionMethod="true" />
+  </DataQueryOnDataViewSetting>
   <DataQueryOnDataViewSetting Key="RssItemOfByFKOnly" DataQueryKey="ByFKOnly" DataViewKey="RssItem" />
   <DataQueryOnDataViewSetting Key="DefaultOfByFKOnly" DataQueryKey="ByFKOnly" DataViewKey="Default" />
   <DataQueryOnDataViewSetting Key="DefaultGroupedDataViewOfByFKOnly" DataQueryKey="ByFKOnly" DataViewKey="DefaultGroupedDataView" />
-  <DataQueryOnDataViewSetting Key="EntityOfByIdentifier" DataQueryKey="ByIdentifier" />
-  <DataQueryOnDataViewSetting Key="DefaultOfByIdentifier" DataQueryKey="ByIdentifier" DataViewKey="Default" />
-  <DataQueryOnDataViewSetting Key="KeyInformationOfByIdentifier" DataQueryKey="ByIdentifier" DataViewKey="KeyInformation" />
+  <DataQueryOnDataViewSetting Key="EntityOfByIdentifier" DataQueryKey="ByIdentifier">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
+  </DataQueryOnDataViewSetting>
+  <DataQueryOnDataViewSetting Key="DefaultOfByIdentifier" DataQueryKey="ByIdentifier" DataViewKey="Default">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
+  </DataQueryOnDataViewSetting>
+  <DataQueryOnDataViewSetting Key="KeyInformationOfByIdentifier" DataQueryKey="ByIdentifier" DataViewKey="KeyInformation">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
+  </DataQueryOnDataViewSetting>
   <QueryUnitGroup Key="Common" DataQueryPerQueryKnownKey="Common" SourceTypeDeclarationFullName="MSBuildExtensionPack.BuildLog" ConditionOperator="AND">
     <Description>Query by EntityReference, String, Bool, Order By DateTime</Description>
     <QueryUnits Key="Common" ConditionOperator="AND" Description="Query by EntityReference, Bool, DateTime">BuildId=\BuildId:Id.Equals;Solution_1Id=\BuildId\SolutionId:Id.Equals;Organization_1Id=\BuildId\SolutionId\OrganizationId:Id.Equals;Organization_2Id=\BuildId\SolutionId\OrganizationId\ParentId:Id.Equals;BuildEventCodeId=\BuildEventCodeId:Id.Equals;EventTimeRange=:EventTime.Range</QueryUnits>

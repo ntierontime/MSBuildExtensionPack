@@ -146,7 +146,7 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Framework.DAL.DataAccessLayerContractBase<MSBuildExtensionPack.DataSourceEntities.OrganizationCollection,MSBuildExtensionPack.DataSourceEntities.Organization,MSBuildExtensionPack.DataSourceEntities.OrganizationIdentifier> Members
 
-        #region Query Methods Of Entity of Common
+        #region Query Methods Of EntityOfCommon
 
         /// <summary>
         /// Gets the count of entity of "Common".
@@ -192,9 +192,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfEntityOfCommon(request);
         }
 
-        #endregion Query Methods Of Entity of Common
+        #endregion Query Methods Of EntityOfCommon
 
-        #region Query Methods Of Default of Common
+        #region Query Methods Of DefaultOfCommon
 
         /// <summary>
         /// Gets the count of entity of "Common".
@@ -240,9 +240,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfDefaultOfCommon(request);
         }
 
-        #endregion Query Methods Of Default of Common
+        #endregion Query Methods Of DefaultOfCommon
 
-        #region Query Methods Of Entity of All
+        #region Query Methods Of EntityOfAll
 
         /// <summary>
         /// Gets the count of entity of "All".
@@ -288,9 +288,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfEntityOfAll(request);
         }
 
-        #endregion Query Methods Of Entity of All
+        #endregion Query Methods Of EntityOfAll
 
-        #region Query Methods Of NameValuePair of All
+        #region Query Methods Of NameValuePairOfAll
 
         /// <summary>
         /// Gets the count of entity of "All".
@@ -336,9 +336,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfNameValuePairOfAll(request);
         }
 
-        #endregion Query Methods Of NameValuePair of All
+        #endregion Query Methods Of NameValuePairOfAll
 
-        #region Query Methods Of RssItem of All
+        #region Query Methods Of RssItemOfAll
 
         /// <summary>
         /// Gets the count of entity of "All".
@@ -384,9 +384,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfRssItemOfAll(request);
         }
 
-        #endregion Query Methods Of RssItem of All
+        #endregion Query Methods Of RssItemOfAll
 
-        #region Query Methods Of Entity of ByFKOnly
+        #region Query Methods Of EntityOfByFKOnly
 
         /// <summary>
         /// Gets the count of entity of "ByFKOnly".
@@ -432,9 +432,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfEntityOfByFKOnly(request);
         }
 
-        #endregion Query Methods Of Entity of ByFKOnly
+        #endregion Query Methods Of EntityOfByFKOnly
 
-        #region Query Methods Of NameValuePair of ByFKOnly
+        #region Query Methods Of NameValuePairOfByFKOnly
 
         /// <summary>
         /// Gets the count of entity of "ByFKOnly".
@@ -480,9 +480,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfNameValuePairOfByFKOnly(request);
         }
 
-        #endregion Query Methods Of NameValuePair of ByFKOnly
+        #endregion Query Methods Of NameValuePairOfByFKOnly
 
-        #region Query Methods Of RssItem of ByFKOnly
+        #region Query Methods Of RssItemOfByFKOnly
 
         /// <summary>
         /// Gets the count of entity of "ByFKOnly".
@@ -528,9 +528,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfRssItemOfByFKOnly(request);
         }
 
-        #endregion Query Methods Of RssItem of ByFKOnly
+        #endregion Query Methods Of RssItemOfByFKOnly
 
-        #region Query Methods Of Default of ByFKOnly
+        #region Query Methods Of DefaultOfByFKOnly
 
         /// <summary>
         /// Gets the count of entity of "ByFKOnly".
@@ -576,9 +576,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfDefaultOfByFKOnly(request);
         }
 
-        #endregion Query Methods Of Default of ByFKOnly
+        #endregion Query Methods Of DefaultOfByFKOnly
 
-        #region Query Methods Of DefaultGroupedDataView of ByFKOnly
+        #region Query Methods Of DefaultGroupedDataViewOfByFKOnly
 
         /// <summary>
         /// Gets the count of entity of "ByFKOnly".
@@ -624,9 +624,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfDefaultGroupedDataViewOfByFKOnly(request);
         }
 
-        #endregion Query Methods Of DefaultGroupedDataView of ByFKOnly
+        #endregion Query Methods Of DefaultGroupedDataViewOfByFKOnly
 
-        #region Query Methods Of Entity of ByIdentifier
+        #region Query Methods Of EntityOfByIdentifier
 
         /// <summary>
         /// Gets the count of entity of "ByIdentifier".
@@ -672,9 +672,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfEntityOfByIdentifier(request);
         }
 
-        #endregion Query Methods Of Entity of ByIdentifier
+        #endregion Query Methods Of EntityOfByIdentifier
 
-        #region Query Methods Of Default of ByIdentifier
+        #region Query Methods Of DefaultOfByIdentifier
 
         /// <summary>
         /// Gets the count of entity of "ByIdentifier".
@@ -720,9 +720,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfDefaultOfByIdentifier(request);
         }
 
-        #endregion Query Methods Of Default of ByIdentifier
+        #endregion Query Methods Of DefaultOfByIdentifier
 
-        #region Query Methods Of KeyInformation of ByIdentifier
+        #region Query Methods Of KeyInformationOfByIdentifier
 
         /// <summary>
         /// Gets the count of entity of "ByIdentifier".
@@ -768,9 +768,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfKeyInformationOfByIdentifier(request);
         }
 
-        #endregion Query Methods Of KeyInformation of ByIdentifier
+        #endregion Query Methods Of KeyInformationOfByIdentifier
 
-        #region Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #region Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
         /// <summary>
         /// Gets the count of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
@@ -816,9 +816,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
         }
 
-        #endregion Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #endregion Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
-        #region Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #region Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
         /// <summary>
         /// Gets the count of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
@@ -864,9 +864,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
         }
 
-        #endregion Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #endregion Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
-        #region Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #region Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
         /// <summary>
         /// Gets the count of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
@@ -912,9 +912,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
         }
 
-        #endregion Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #endregion Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
-        #region Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #region Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
         /// <summary>
         /// Gets the count of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
@@ -960,9 +960,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
         }
 
-        #endregion Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #endregion Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
-        #region Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #region Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
         /// <summary>
         /// Gets the count of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
@@ -1008,9 +1008,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
         }
 
-        #endregion Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #endregion Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
-        #region Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #region Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
         /// <summary>
         /// Gets the count of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
@@ -1056,9 +1056,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
         }
 
-        #endregion Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #endregion Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
-        #region Query Methods Of Entity of IdentifierAndUniqueConstraint
+        #region Query Methods Of EntityOfIdentifierAndUniqueConstraint
 
         /// <summary>
         /// Gets the count of entity of "IdentifierAndUniqueConstraint".
@@ -1104,9 +1104,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfEntityOfIdentifierAndUniqueConstraint(request);
         }
 
-        #endregion Query Methods Of Entity of IdentifierAndUniqueConstraint
+        #endregion Query Methods Of EntityOfIdentifierAndUniqueConstraint
 
-        #region Query Methods Of Default of IdentifierAndUniqueConstraint
+        #region Query Methods Of DefaultOfIdentifierAndUniqueConstraint
 
         /// <summary>
         /// Gets the count of entity of "IdentifierAndUniqueConstraint".
@@ -1152,9 +1152,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfDefaultOfIdentifierAndUniqueConstraint(request);
         }
 
-        #endregion Query Methods Of Default of IdentifierAndUniqueConstraint
+        #endregion Query Methods Of DefaultOfIdentifierAndUniqueConstraint
 
-        #region Query Methods Of KeyInformation of IdentifierAndUniqueConstraint
+        #region Query Methods Of KeyInformationOfIdentifierAndUniqueConstraint
 
         /// <summary>
         /// Gets the count of entity of "IdentifierAndUniqueConstraint".
@@ -1200,7 +1200,7 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint(request);
         }
 
-        #endregion Query Methods Of KeyInformation of IdentifierAndUniqueConstraint
+        #endregion Query Methods Of KeyInformationOfIdentifierAndUniqueConstraint
 
         #region GetAscendantOfParentIdOfMSBuildExtensionPack_Organization && GetDescendantOfParentIdOfMSBuildExtensionPack_Organization
 

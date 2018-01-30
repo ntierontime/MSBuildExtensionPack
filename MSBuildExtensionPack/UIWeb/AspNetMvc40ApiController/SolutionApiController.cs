@@ -146,7 +146,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
 
         #endregion batch insert, update and delete in an entity collection
 
-        #region Query Methods Of NameValuePair of All per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of NameValuePairOfAll per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the collection of entity of common.
@@ -189,9 +189,9 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
                 , queryOrderByExpression);
         }
 
-        #endregion Query Methods Of NameValuePair of All per value type
+        #endregion Query Methods Of NameValuePairOfAll per value type
 
-        #region Query Methods Of NameValuePair of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of NameValuePairOfByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         /// <summary>
         /// Gets the collection of entity of common.
@@ -248,7 +248,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
                 , queryOrderByExpression);
         }
 
-        #endregion Query Methods Of NameValuePair of ByFKOnly per value type
+        #endregion Query Methods Of NameValuePairOfByFKOnly per value type
 
         /// <summary>
         /// Gets the Item View Model of MSBuildExtensionPack.Solution.

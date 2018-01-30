@@ -325,7 +325,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         #endregion Binary Columns
 
-        #region Query Methods Of Entity of Common
+        #region Query Methods Of EntityOfCommon
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
@@ -397,7 +397,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfEntityOfCommon(
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildLog> _Query = _GetQueryOfEntityOfCommon(
                 buildId
                 ,solution_1Id
                 ,organization_1Id
@@ -405,11 +405,18 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 ,buildEventCodeId
                 ,eventTimeRange
                 ,message
-                ,currentIndex
-                ,pageSize
                 ,queryOrderBySettingCollection
             );
-            return _Count > 0;
+            bool result;
+            if (currentIndex == -1 || pageSize == -1)
+            {
+                result = _Query.Any();
+            }
+            else
+            {
+                result = _Query.Skip(currentIndex).Take(pageSize).Any();
+            }
+            return result;
         }
 
         private int _GetCountOfEntityOfCommon(
@@ -676,9 +683,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             log.Info(string.Format("{0}: GetCollectionOfEntityOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
-        #endregion Query Methods Of Entity of Common
+        #endregion Query Methods Of EntityOfCommon
 
-        #region Query Methods Of Default of Common
+        #region Query Methods Of DefaultOfCommon
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
@@ -750,7 +757,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfDefaultOfCommon(
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default> _Query = _GetQueryOfDefaultOfCommon(
                 buildId
                 ,solution_1Id
                 ,organization_1Id
@@ -758,11 +765,18 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 ,buildEventCodeId
                 ,eventTimeRange
                 ,message
-                ,currentIndex
-                ,pageSize
                 ,queryOrderBySettingCollection
             );
-            return _Count > 0;
+            bool result;
+            if (currentIndex == -1 || pageSize == -1)
+            {
+                result = _Query.Any();
+            }
+            else
+            {
+                result = _Query.Skip(currentIndex).Take(pageSize).Any();
+            }
+            return result;
         }
 
         private int _GetCountOfDefaultOfCommon(
@@ -1029,9 +1043,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             log.Info(string.Format("{0}: GetCollectionOfDefaultOfCommon", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
-        #endregion Query Methods Of Default of Common
+        #endregion Query Methods Of DefaultOfCommon
 
-        #region Query Methods Of Entity of All
+        #region Query Methods Of EntityOfAll
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
@@ -1069,12 +1083,19 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfEntityOfAll(
-                currentIndex
-                ,pageSize
-                ,queryOrderBySettingCollection
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildLog> _Query = _GetQueryOfEntityOfAll(
+                queryOrderBySettingCollection
             );
-            return _Count > 0;
+            bool result;
+            if (currentIndex == -1 || pageSize == -1)
+            {
+                result = _Query.Any();
+            }
+            else
+            {
+                result = _Query.Skip(currentIndex).Take(pageSize).Any();
+            }
+            return result;
         }
 
         private int _GetCountOfEntityOfAll(
@@ -1257,9 +1278,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             log.Info(string.Format("{0}: GetCollectionOfEntityOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
-        #endregion Query Methods Of Entity of All
+        #endregion Query Methods Of EntityOfAll
 
-        #region Query Methods Of NameValuePair of All
+        #region Query Methods Of NameValuePairOfAll
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
@@ -1297,12 +1318,19 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfNameValuePairOfAll(
-                currentIndex
-                ,pageSize
-                ,queryOrderBySettingCollection
+            IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairOfAll(
+                queryOrderBySettingCollection
             );
-            return _Count > 0;
+            bool result;
+            if (currentIndex == -1 || pageSize == -1)
+            {
+                result = _Query.Any();
+            }
+            else
+            {
+                result = _Query.Skip(currentIndex).Take(pageSize).Any();
+            }
+            return result;
         }
 
         private int _GetCountOfNameValuePairOfAll(
@@ -1485,9 +1513,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
-        #endregion Query Methods Of NameValuePair of All
+        #endregion Query Methods Of NameValuePairOfAll
 
-        #region Query Methods Of RssItem of All
+        #region Query Methods Of RssItemOfAll
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
@@ -1525,12 +1553,19 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfRssItemOfAll(
-                currentIndex
-                ,pageSize
-                ,queryOrderBySettingCollection
+            IQueryable<Framework.RssItem> _Query = _GetQueryOfRssItemOfAll(
+                queryOrderBySettingCollection
             );
-            return _Count > 0;
+            bool result;
+            if (currentIndex == -1 || pageSize == -1)
+            {
+                result = _Query.Any();
+            }
+            else
+            {
+                result = _Query.Skip(currentIndex).Take(pageSize).Any();
+            }
+            return result;
         }
 
         private int _GetCountOfRssItemOfAll(
@@ -1713,9 +1748,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             log.Info(string.Format("{0}: GetCollectionOfRssItemOfAll", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
-        #endregion Query Methods Of RssItem of All
+        #endregion Query Methods Of RssItemOfAll
 
-        #region Query Methods Of Entity of ByFKOnly
+        #region Query Methods Of EntityOfByFKOnly
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
@@ -1777,17 +1812,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfEntityOfByFKOnly(
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildLog> _Query = _GetQueryOfEntityOfByFKOnly(
                 buildId
                 ,solution_1Id
                 ,organization_1Id
                 ,organization_2Id
                 ,buildEventCodeId
-                ,currentIndex
-                ,pageSize
                 ,queryOrderBySettingCollection
             );
-            return _Count > 0;
+            bool result;
+            if (currentIndex == -1 || pageSize == -1)
+            {
+                result = _Query.Any();
+            }
+            else
+            {
+                result = _Query.Skip(currentIndex).Take(pageSize).Any();
+            }
+            return result;
         }
 
         private int _GetCountOfEntityOfByFKOnly(
@@ -2030,9 +2072,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             log.Info(string.Format("{0}: GetCollectionOfEntityOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
-        #endregion Query Methods Of Entity of ByFKOnly
+        #endregion Query Methods Of EntityOfByFKOnly
 
-        #region Query Methods Of NameValuePair of ByFKOnly
+        #region Query Methods Of NameValuePairOfByFKOnly
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
@@ -2094,17 +2136,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfNameValuePairOfByFKOnly(
+            IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairOfByFKOnly(
                 buildId
                 ,solution_1Id
                 ,organization_1Id
                 ,organization_2Id
                 ,buildEventCodeId
-                ,currentIndex
-                ,pageSize
                 ,queryOrderBySettingCollection
             );
-            return _Count > 0;
+            bool result;
+            if (currentIndex == -1 || pageSize == -1)
+            {
+                result = _Query.Any();
+            }
+            else
+            {
+                result = _Query.Skip(currentIndex).Take(pageSize).Any();
+            }
+            return result;
         }
 
         private int _GetCountOfNameValuePairOfByFKOnly(
@@ -2347,9 +2396,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             log.Info(string.Format("{0}: GetCollectionOfNameValuePairOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
-        #endregion Query Methods Of NameValuePair of ByFKOnly
+        #endregion Query Methods Of NameValuePairOfByFKOnly
 
-        #region Query Methods Of RssItem of ByFKOnly
+        #region Query Methods Of RssItemOfByFKOnly
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
@@ -2411,17 +2460,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfRssItemOfByFKOnly(
+            IQueryable<Framework.RssItem> _Query = _GetQueryOfRssItemOfByFKOnly(
                 buildId
                 ,solution_1Id
                 ,organization_1Id
                 ,organization_2Id
                 ,buildEventCodeId
-                ,currentIndex
-                ,pageSize
                 ,queryOrderBySettingCollection
             );
-            return _Count > 0;
+            bool result;
+            if (currentIndex == -1 || pageSize == -1)
+            {
+                result = _Query.Any();
+            }
+            else
+            {
+                result = _Query.Skip(currentIndex).Take(pageSize).Any();
+            }
+            return result;
         }
 
         private int _GetCountOfRssItemOfByFKOnly(
@@ -2664,9 +2720,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             log.Info(string.Format("{0}: GetCollectionOfRssItemOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
-        #endregion Query Methods Of RssItem of ByFKOnly
+        #endregion Query Methods Of RssItemOfByFKOnly
 
-        #region Query Methods Of Default of ByFKOnly
+        #region Query Methods Of DefaultOfByFKOnly
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
@@ -2728,17 +2784,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfDefaultOfByFKOnly(
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default> _Query = _GetQueryOfDefaultOfByFKOnly(
                 buildId
                 ,solution_1Id
                 ,organization_1Id
                 ,organization_2Id
                 ,buildEventCodeId
-                ,currentIndex
-                ,pageSize
                 ,queryOrderBySettingCollection
             );
-            return _Count > 0;
+            bool result;
+            if (currentIndex == -1 || pageSize == -1)
+            {
+                result = _Query.Any();
+            }
+            else
+            {
+                result = _Query.Skip(currentIndex).Take(pageSize).Any();
+            }
+            return result;
         }
 
         private int _GetCountOfDefaultOfByFKOnly(
@@ -2981,9 +3044,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             log.Info(string.Format("{0}: GetCollectionOfDefaultOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
-        #endregion Query Methods Of Default of ByFKOnly
+        #endregion Query Methods Of DefaultOfByFKOnly
 
-        #region Query Methods Of DefaultGroupedDataView of ByFKOnly
+        #region Query Methods Of DefaultGroupedDataViewOfByFKOnly
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
@@ -3047,17 +3110,24 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfDefaultGroupedDataViewOfByFKOnly(
+            IEnumerable<MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataView> _Query = _GetQueryOfDefaultGroupedDataViewOfByFKOnly(
                 buildId
                 ,solution_1Id
                 ,organization_1Id
                 ,organization_2Id
                 ,buildEventCodeId
-                ,currentIndex
-                ,pageSize
                 ,queryOrderBySettingCollection
             );
-            return _Count > 0;
+            bool result;
+            if (currentIndex == -1 || pageSize == -1)
+            {
+                result = _Query.Any();
+            }
+            else
+            {
+                result = _Query.Skip(currentIndex).Take(pageSize).Any();
+            }
+            return result;
         }
 
         private int _GetCountOfDefaultGroupedDataViewOfByFKOnly(
@@ -3300,9 +3370,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             log.Info(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
-        #endregion Query Methods Of DefaultGroupedDataView of ByFKOnly
+        #endregion Query Methods Of DefaultGroupedDataViewOfByFKOnly
 
-        #region Query Methods Of Entity of ByIdentifier
+        #region Query Methods Of EntityOfByIdentifier
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
@@ -3348,13 +3418,20 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfEntityOfByIdentifier(
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildLog> _Query = _GetQueryOfEntityOfByIdentifier(
                 id
-                ,currentIndex
-                ,pageSize
                 ,queryOrderBySettingCollection
             );
-            return _Count > 0;
+            bool result;
+            if (currentIndex == -1 || pageSize == -1)
+            {
+                result = _Query.Any();
+            }
+            else
+            {
+                result = _Query.Skip(currentIndex).Take(pageSize).Any();
+            }
+            return result;
         }
 
         private int _GetCountOfEntityOfByIdentifier(
@@ -3549,9 +3626,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             log.Info(string.Format("{0}: GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
-        #endregion Query Methods Of Entity of ByIdentifier
+        #endregion Query Methods Of EntityOfByIdentifier
 
-        #region Query Methods Of Default of ByIdentifier
+        #region Query Methods Of DefaultOfByIdentifier
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
@@ -3597,13 +3674,20 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfDefaultOfByIdentifier(
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default> _Query = _GetQueryOfDefaultOfByIdentifier(
                 id
-                ,currentIndex
-                ,pageSize
                 ,queryOrderBySettingCollection
             );
-            return _Count > 0;
+            bool result;
+            if (currentIndex == -1 || pageSize == -1)
+            {
+                result = _Query.Any();
+            }
+            else
+            {
+                result = _Query.Skip(currentIndex).Take(pageSize).Any();
+            }
+            return result;
         }
 
         private int _GetCountOfDefaultOfByIdentifier(
@@ -3798,9 +3882,9 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             log.Info(string.Format("{0}: GetCollectionOfDefaultOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
-        #endregion Query Methods Of Default of ByIdentifier
+        #endregion Query Methods Of DefaultOfByIdentifier
 
-        #region Query Methods Of KeyInformation of ByIdentifier
+        #region Query Methods Of KeyInformationOfByIdentifier
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
         /// <returns>IQueryable&lt;...&gt; of Common</returns>
@@ -3846,13 +3930,20 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
-            int _Count = _GetCountOfKeyInformationOfByIdentifier(
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformation> _Query = _GetQueryOfKeyInformationOfByIdentifier(
                 id
-                ,currentIndex
-                ,pageSize
                 ,queryOrderBySettingCollection
             );
-            return _Count > 0;
+            bool result;
+            if (currentIndex == -1 || pageSize == -1)
+            {
+                result = _Query.Any();
+            }
+            else
+            {
+                result = _Query.Skip(currentIndex).Take(pageSize).Any();
+            }
+            return result;
         }
 
         private int _GetCountOfKeyInformationOfByIdentifier(
@@ -4047,7 +4138,7 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             log.Info(string.Format("{0}: GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
             return _retMessage;
         }
-        #endregion Query Methods Of KeyInformation of ByIdentifier
+        #endregion Query Methods Of KeyInformationOfByIdentifier
 
     }
 }

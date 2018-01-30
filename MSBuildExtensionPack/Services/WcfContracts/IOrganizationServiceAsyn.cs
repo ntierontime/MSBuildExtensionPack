@@ -122,7 +122,7 @@ namespace MSBuildExtensionPack.WcfContracts
 
         #endregion
 
-        #region Query Methods Of Entity of Common
+        #region Query Methods Of EntityOfCommon
 
 #if (XAMARIN)
 #else
@@ -188,9 +188,9 @@ namespace MSBuildExtensionPack.WcfContracts
         System.IAsyncResult BeginGetSingleOfEntityOfCommon(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState);
         MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn EndGetSingleOfEntityOfCommon(System.IAsyncResult result);
 
-        #endregion Query Methods Of Entity of Common
+        #endregion Query Methods Of EntityOfCommon
 
-        #region Query Methods Of Default of Common
+        #region Query Methods Of DefaultOfCommon
 
 #if (XAMARIN)
 #else
@@ -256,9 +256,9 @@ namespace MSBuildExtensionPack.WcfContracts
         System.IAsyncResult BeginGetSingleOfDefaultOfCommon(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState);
         MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default EndGetSingleOfDefaultOfCommon(System.IAsyncResult result);
 
-        #endregion Query Methods Of Default of Common
+        #endregion Query Methods Of DefaultOfCommon
 
-        #region Query Methods Of Entity of All
+        #region Query Methods Of EntityOfAll
 
 #if (XAMARIN)
 #else
@@ -324,9 +324,9 @@ namespace MSBuildExtensionPack.WcfContracts
         System.IAsyncResult BeginGetSingleOfEntityOfAll(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState);
         MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn EndGetSingleOfEntityOfAll(System.IAsyncResult result);
 
-        #endregion Query Methods Of Entity of All
+        #endregion Query Methods Of EntityOfAll
 
-        #region Query Methods Of NameValuePair of All
+        #region Query Methods Of NameValuePairOfAll
 
 #if (XAMARIN)
 #else
@@ -392,9 +392,9 @@ namespace MSBuildExtensionPack.WcfContracts
         System.IAsyncResult BeginGetSingleOfNameValuePairOfAll(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState);
         Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection EndGetSingleOfNameValuePairOfAll(System.IAsyncResult result);
 
-        #endregion Query Methods Of NameValuePair of All
+        #endregion Query Methods Of NameValuePairOfAll
 
-        #region Query Methods Of RssItem of All
+        #region Query Methods Of RssItemOfAll
 
 #if (XAMARIN)
 #else
@@ -460,9 +460,9 @@ namespace MSBuildExtensionPack.WcfContracts
         System.IAsyncResult BeginGetSingleOfRssItemOfAll(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState);
         Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection EndGetSingleOfRssItemOfAll(System.IAsyncResult result);
 
-        #endregion Query Methods Of RssItem of All
+        #endregion Query Methods Of RssItemOfAll
 
-        #region Query Methods Of Entity of ByFKOnly
+        #region Query Methods Of EntityOfByFKOnly
 
 #if (XAMARIN)
 #else
@@ -528,9 +528,9 @@ namespace MSBuildExtensionPack.WcfContracts
         System.IAsyncResult BeginGetSingleOfEntityOfByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState);
         MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn EndGetSingleOfEntityOfByFKOnly(System.IAsyncResult result);
 
-        #endregion Query Methods Of Entity of ByFKOnly
+        #endregion Query Methods Of EntityOfByFKOnly
 
-        #region Query Methods Of NameValuePair of ByFKOnly
+        #region Query Methods Of NameValuePairOfByFKOnly
 
 #if (XAMARIN)
 #else
@@ -596,9 +596,9 @@ namespace MSBuildExtensionPack.WcfContracts
         System.IAsyncResult BeginGetSingleOfNameValuePairOfByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState);
         Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection EndGetSingleOfNameValuePairOfByFKOnly(System.IAsyncResult result);
 
-        #endregion Query Methods Of NameValuePair of ByFKOnly
+        #endregion Query Methods Of NameValuePairOfByFKOnly
 
-        #region Query Methods Of RssItem of ByFKOnly
+        #region Query Methods Of RssItemOfByFKOnly
 
 #if (XAMARIN)
 #else
@@ -664,9 +664,9 @@ namespace MSBuildExtensionPack.WcfContracts
         System.IAsyncResult BeginGetSingleOfRssItemOfByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState);
         Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection EndGetSingleOfRssItemOfByFKOnly(System.IAsyncResult result);
 
-        #endregion Query Methods Of RssItem of ByFKOnly
+        #endregion Query Methods Of RssItemOfByFKOnly
 
-        #region Query Methods Of Default of ByFKOnly
+        #region Query Methods Of DefaultOfByFKOnly
 
 #if (XAMARIN)
 #else
@@ -732,9 +732,9 @@ namespace MSBuildExtensionPack.WcfContracts
         System.IAsyncResult BeginGetSingleOfDefaultOfByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState);
         MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default EndGetSingleOfDefaultOfByFKOnly(System.IAsyncResult result);
 
-        #endregion Query Methods Of Default of ByFKOnly
+        #endregion Query Methods Of DefaultOfByFKOnly
 
-        #region Query Methods Of DefaultGroupedDataView of ByFKOnly
+        #region Query Methods Of DefaultGroupedDataViewOfByFKOnly
 
 #if (XAMARIN)
 #else
@@ -800,9 +800,9 @@ namespace MSBuildExtensionPack.WcfContracts
         System.IAsyncResult BeginGetSingleOfDefaultGroupedDataViewOfByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState);
         MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView EndGetSingleOfDefaultGroupedDataViewOfByFKOnly(System.IAsyncResult result);
 
-        #endregion Query Methods Of DefaultGroupedDataView of ByFKOnly
+        #endregion Query Methods Of DefaultGroupedDataViewOfByFKOnly
 
-        #region Query Methods Of Entity of ByIdentifier
+        #region Query Methods Of EntityOfByIdentifier
 
 #if (XAMARIN)
 #else
@@ -868,9 +868,9 @@ namespace MSBuildExtensionPack.WcfContracts
         System.IAsyncResult BeginGetSingleOfEntityOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState);
         MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn EndGetSingleOfEntityOfByIdentifier(System.IAsyncResult result);
 
-        #endregion Query Methods Of Entity of ByIdentifier
+        #endregion Query Methods Of EntityOfByIdentifier
 
-        #region Query Methods Of Default of ByIdentifier
+        #region Query Methods Of DefaultOfByIdentifier
 
 #if (XAMARIN)
 #else
@@ -936,9 +936,9 @@ namespace MSBuildExtensionPack.WcfContracts
         System.IAsyncResult BeginGetSingleOfDefaultOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState);
         MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default EndGetSingleOfDefaultOfByIdentifier(System.IAsyncResult result);
 
-        #endregion Query Methods Of Default of ByIdentifier
+        #endregion Query Methods Of DefaultOfByIdentifier
 
-        #region Query Methods Of KeyInformation of ByIdentifier
+        #region Query Methods Of KeyInformationOfByIdentifier
 
 #if (XAMARIN)
 #else
@@ -1004,9 +1004,9 @@ namespace MSBuildExtensionPack.WcfContracts
         System.IAsyncResult BeginGetSingleOfKeyInformationOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState);
         MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation EndGetSingleOfKeyInformationOfByIdentifier(System.IAsyncResult result);
 
-        #endregion Query Methods Of KeyInformation of ByIdentifier
+        #endregion Query Methods Of KeyInformationOfByIdentifier
 
-        #region Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #region Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
 #if (XAMARIN)
 #else
@@ -1072,9 +1072,9 @@ namespace MSBuildExtensionPack.WcfContracts
         System.IAsyncResult BeginGetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request, System.AsyncCallback callback, object asyncState);
         MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn EndGetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(System.IAsyncResult result);
 
-        #endregion Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #endregion Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
-        #region Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #region Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
 #if (XAMARIN)
 #else
@@ -1140,9 +1140,9 @@ namespace MSBuildExtensionPack.WcfContracts
         System.IAsyncResult BeginGetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request, System.AsyncCallback callback, object asyncState);
         Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection EndGetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(System.IAsyncResult result);
 
-        #endregion Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #endregion Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
-        #region Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #region Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
 #if (XAMARIN)
 #else
@@ -1208,9 +1208,9 @@ namespace MSBuildExtensionPack.WcfContracts
         System.IAsyncResult BeginGetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request, System.AsyncCallback callback, object asyncState);
         MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default EndGetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(System.IAsyncResult result);
 
-        #endregion Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueIdentifier
+        #endregion Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
-        #region Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #region Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
 #if (XAMARIN)
 #else
@@ -1276,9 +1276,9 @@ namespace MSBuildExtensionPack.WcfContracts
         System.IAsyncResult BeginGetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request, System.AsyncCallback callback, object asyncState);
         MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn EndGetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(System.IAsyncResult result);
 
-        #endregion Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #endregion Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
-        #region Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #region Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
 #if (XAMARIN)
 #else
@@ -1344,9 +1344,9 @@ namespace MSBuildExtensionPack.WcfContracts
         System.IAsyncResult BeginGetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request, System.AsyncCallback callback, object asyncState);
         Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection EndGetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(System.IAsyncResult result);
 
-        #endregion Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #endregion Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
-        #region Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #region Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
 #if (XAMARIN)
 #else
@@ -1412,9 +1412,9 @@ namespace MSBuildExtensionPack.WcfContracts
         System.IAsyncResult BeginGetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request, System.AsyncCallback callback, object asyncState);
         MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default EndGetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(System.IAsyncResult result);
 
-        #endregion Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #endregion Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
-        #region Query Methods Of Entity of IdentifierAndUniqueConstraint
+        #region Query Methods Of EntityOfIdentifierAndUniqueConstraint
 
 #if (XAMARIN)
 #else
@@ -1480,9 +1480,9 @@ namespace MSBuildExtensionPack.WcfContracts
         System.IAsyncResult BeginGetSingleOfEntityOfIdentifierAndUniqueConstraint(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, System.AsyncCallback callback, object asyncState);
         MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn EndGetSingleOfEntityOfIdentifierAndUniqueConstraint(System.IAsyncResult result);
 
-        #endregion Query Methods Of Entity of IdentifierAndUniqueConstraint
+        #endregion Query Methods Of EntityOfIdentifierAndUniqueConstraint
 
-        #region Query Methods Of Default of IdentifierAndUniqueConstraint
+        #region Query Methods Of DefaultOfIdentifierAndUniqueConstraint
 
 #if (XAMARIN)
 #else
@@ -1548,9 +1548,9 @@ namespace MSBuildExtensionPack.WcfContracts
         System.IAsyncResult BeginGetSingleOfDefaultOfIdentifierAndUniqueConstraint(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, System.AsyncCallback callback, object asyncState);
         MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default EndGetSingleOfDefaultOfIdentifierAndUniqueConstraint(System.IAsyncResult result);
 
-        #endregion Query Methods Of Default of IdentifierAndUniqueConstraint
+        #endregion Query Methods Of DefaultOfIdentifierAndUniqueConstraint
 
-        #region Query Methods Of KeyInformation of IdentifierAndUniqueConstraint
+        #region Query Methods Of KeyInformationOfIdentifierAndUniqueConstraint
 
 #if (XAMARIN)
 #else
@@ -1616,7 +1616,7 @@ namespace MSBuildExtensionPack.WcfContracts
         System.IAsyncResult BeginGetSingleOfKeyInformationOfIdentifierAndUniqueConstraint(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, System.AsyncCallback callback, object asyncState);
         MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation EndGetSingleOfKeyInformationOfIdentifierAndUniqueConstraint(System.IAsyncResult result);
 
-        #endregion Query Methods Of KeyInformation of IdentifierAndUniqueConstraint
+        #endregion Query Methods Of KeyInformationOfIdentifierAndUniqueConstraint
 
         #region GetAscendantOfParentIdOfMSBuildExtensionPack_Organization && GetDescendantOfParentIdOfMSBuildExtensionPack_Organization
 

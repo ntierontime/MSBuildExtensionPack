@@ -65,29 +65,58 @@
     <QueryUnitGroups>IdentifierAndUniqueConstraint</QueryUnitGroups>
   </Query>
   <DataQueryOnDataViewSetting Key="EntityOfCommon" DataQueryKey="Common" />
-  <DataQueryOnDataViewSetting Key="DefaultOfCommon" DataQueryKey="Common" DataViewKey="Default" />
+  <DataQueryOnDataViewSetting Key="DefaultOfCommon" DataQueryKey="Common" DataViewKey="Default">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasGetCollectionMethod="true" />
+  </DataQueryOnDataViewSetting>
   <DataQueryOnDataViewSetting Key="EntityOfAll" DataQueryKey="All" />
-  <DataQueryOnDataViewSetting Key="NameValuePairOfAll" DataQueryKey="All" DataViewKey="NameValuePair" />
+  <DataQueryOnDataViewSetting Key="NameValuePairOfAll" DataQueryKey="All" DataViewKey="NameValuePair">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasGetCollectionMethod="true" />
+    <WebApiMethodSetting HasGetCollectionMethod="true" />
+  </DataQueryOnDataViewSetting>
   <DataQueryOnDataViewSetting Key="RssItemOfAll" DataQueryKey="All" DataViewKey="RssItem" />
   <DataQueryOnDataViewSetting Key="EntityOfByFKOnly" DataQueryKey="ByFKOnly" />
-  <DataQueryOnDataViewSetting Key="NameValuePairOfByFKOnly" DataQueryKey="ByFKOnly" DataViewKey="NameValuePair" />
+  <DataQueryOnDataViewSetting Key="NameValuePairOfByFKOnly" DataQueryKey="ByFKOnly" DataViewKey="NameValuePair">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasGetCollectionMethod="true" />
+    <WebApiMethodSetting HasGetCollectionMethod="true" />
+  </DataQueryOnDataViewSetting>
   <DataQueryOnDataViewSetting Key="RssItemOfByFKOnly" DataQueryKey="ByFKOnly" DataViewKey="RssItem" />
   <DataQueryOnDataViewSetting Key="DefaultOfByFKOnly" DataQueryKey="ByFKOnly" DataViewKey="Default" />
   <DataQueryOnDataViewSetting Key="DefaultGroupedDataViewOfByFKOnly" DataQueryKey="ByFKOnly" DataViewKey="DefaultGroupedDataView" />
-  <DataQueryOnDataViewSetting Key="EntityOfByIdentifier" DataQueryKey="ByIdentifier" />
-  <DataQueryOnDataViewSetting Key="DefaultOfByIdentifier" DataQueryKey="ByIdentifier" DataViewKey="Default" />
+  <DataQueryOnDataViewSetting Key="EntityOfByIdentifier" DataQueryKey="ByIdentifier">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
+  </DataQueryOnDataViewSetting>
+  <DataQueryOnDataViewSetting Key="DefaultOfByIdentifier" DataQueryKey="ByIdentifier" DataViewKey="Default">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
+  </DataQueryOnDataViewSetting>
   <DataQueryOnDataViewSetting Key="DefaultWithPathOfByIdentifier" DataQueryKey="ByIdentifier" DataViewKey="DefaultWithPath" />
-  <DataQueryOnDataViewSetting Key="KeyInformationOfByIdentifier" DataQueryKey="ByIdentifier" DataViewKey="KeyInformation" />
+  <DataQueryOnDataViewSetting Key="KeyInformationOfByIdentifier" DataQueryKey="ByIdentifier" DataViewKey="KeyInformation">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
+  </DataQueryOnDataViewSetting>
   <DataQueryOnDataViewSetting Key="EntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier" DataQueryKey="UniqueConstraintOfUC_Organization_UniqueIdentifier" />
   <DataQueryOnDataViewSetting Key="NameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier" DataQueryKey="UniqueConstraintOfUC_Organization_UniqueIdentifier" DataViewKey="NameValuePair" />
   <DataQueryOnDataViewSetting Key="DefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier" DataQueryKey="UniqueConstraintOfUC_Organization_UniqueIdentifier" DataViewKey="Default" />
   <DataQueryOnDataViewSetting Key="EntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn" DataQueryKey="UniqueConstraintOfUC_Organization_UniqueidentifierColumn" />
   <DataQueryOnDataViewSetting Key="NameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn" DataQueryKey="UniqueConstraintOfUC_Organization_UniqueidentifierColumn" DataViewKey="NameValuePair" />
   <DataQueryOnDataViewSetting Key="DefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn" DataQueryKey="UniqueConstraintOfUC_Organization_UniqueidentifierColumn" DataViewKey="Default" />
-  <DataQueryOnDataViewSetting Key="EntityOfIdentifierAndUniqueConstraint" DataQueryKey="IdentifierAndUniqueConstraint" />
-  <DataQueryOnDataViewSetting Key="DefaultOfIdentifierAndUniqueConstraint" DataQueryKey="IdentifierAndUniqueConstraint" DataViewKey="Default" />
+  <DataQueryOnDataViewSetting Key="EntityOfIdentifierAndUniqueConstraint" DataQueryKey="IdentifierAndUniqueConstraint">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
+  </DataQueryOnDataViewSetting>
+  <DataQueryOnDataViewSetting Key="DefaultOfIdentifierAndUniqueConstraint" DataQueryKey="IdentifierAndUniqueConstraint" DataViewKey="Default">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
+  </DataQueryOnDataViewSetting>
   <DataQueryOnDataViewSetting Key="DefaultWithPathOfIdentifierAndUniqueConstraint" DataQueryKey="IdentifierAndUniqueConstraint" DataViewKey="DefaultWithPath" />
-  <DataQueryOnDataViewSetting Key="KeyInformationOfIdentifierAndUniqueConstraint" DataQueryKey="IdentifierAndUniqueConstraint" DataViewKey="KeyInformation" />
+  <DataQueryOnDataViewSetting Key="KeyInformationOfIdentifierAndUniqueConstraint" DataQueryKey="IdentifierAndUniqueConstraint" DataViewKey="KeyInformation">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
+  </DataQueryOnDataViewSetting>
   <QueryUnitGroup Key="Common" DataQueryPerQueryKnownKey="Common" SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" ConditionOperator="AND">
     <Description>Query by EntityReference, String, Bool, Order By DateTime</Description>
     <QueryUnits Key="Common" ConditionOperator="AND" Description="Query by EntityReference, Bool, DateTime">ParentId=\ParentId:Id.Equals;IsSystemBuiltIn=:IsSystemBuiltIn.Equals;CreatedDateTimeRange=:CreatedDateTime.Range;BitColumn=:BitColumn.Equals;DatetimeColumnRange=:DatetimeColumn.Range;Datetime2ColumnRange=:Datetime2Column.Range;SmalldatetimeColumnRange=:SmalldatetimeColumn.Range;DateColumnRange=:DateColumn.Range</QueryUnits>

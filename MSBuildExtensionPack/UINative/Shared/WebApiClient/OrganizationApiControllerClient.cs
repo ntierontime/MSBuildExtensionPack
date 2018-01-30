@@ -157,7 +157,7 @@ namespace MSBuildExtensionPack.WebApiClient
 
         #endregion batch insert, update and delete in an entity collection
 
-        #region Query Methods Of NameValuePair of All per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of NameValuePairOfAll per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         public const string ActionName_GetCollectionOfNameValuePairOfAll = "GetCollectionOfNameValuePairOfAll";
         /// <summary>
@@ -185,9 +185,9 @@ namespace MSBuildExtensionPack.WebApiClient
             return await Get<Framework.NameValueCollection>(url);
         }
 
-        #endregion Query Methods Of NameValuePair of All per value type
+        #endregion Query Methods Of NameValuePairOfAll per value type
 
-        #region Query Methods Of NameValuePair of ByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of NameValuePairOfByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         public const string ActionName_GetCollectionOfNameValuePairOfByFKOnly = "GetCollectionOfNameValuePairOfByFKOnly";
         /// <summary>
@@ -216,9 +216,9 @@ namespace MSBuildExtensionPack.WebApiClient
             return await Get<Framework.NameValueCollection>(url);
         }
 
-        #endregion Query Methods Of NameValuePair of ByFKOnly per value type
+        #endregion Query Methods Of NameValuePairOfByFKOnly per value type
 
-        #region Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueIdentifier per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         public const string ActionName_GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier = "GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier";
         /// <summary>
@@ -247,9 +247,9 @@ namespace MSBuildExtensionPack.WebApiClient
             return await Get<Framework.NameValueCollection>(url);
         }
 
-        #endregion Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueIdentifier per value type
+        #endregion Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier per value type
 
-        #region Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueidentifierColumn per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         public const string ActionName_GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn = "GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn";
         /// <summary>
@@ -278,7 +278,7 @@ namespace MSBuildExtensionPack.WebApiClient
             return await Get<Framework.NameValueCollection>(url);
         }
 
-        #endregion Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueidentifierColumn per value type
+        #endregion Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn per value type
 
         public const string ActionName_GetOrganizationItemVM = "GetOrganizationItemVM";
         /// <summary>

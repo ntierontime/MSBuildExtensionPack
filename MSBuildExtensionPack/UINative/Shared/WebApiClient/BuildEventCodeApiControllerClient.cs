@@ -157,7 +157,7 @@ namespace MSBuildExtensionPack.WebApiClient
 
         #endregion batch insert, update and delete in an entity collection
 
-        #region Query Methods Of NameValuePair of All per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of NameValuePairOfAll per criteria, queryPagingSetting and queryOrderBySettingCollection
 
         public const string ActionName_GetCollectionOfNameValuePairOfAll = "GetCollectionOfNameValuePairOfAll";
         /// <summary>
@@ -185,7 +185,7 @@ namespace MSBuildExtensionPack.WebApiClient
             return await Get<Framework.NameValueCollection>(url);
         }
 
-        #endregion Query Methods Of NameValuePair of All per value type
+        #endregion Query Methods Of NameValuePairOfAll per value type
 
         public const string ActionName_GetBuildEventCodeItemVM = "GetBuildEventCodeItemVM";
         /// <summary>

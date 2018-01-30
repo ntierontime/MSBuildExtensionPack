@@ -146,7 +146,7 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Framework.DAL.DataAccessLayerContractBase<MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection,MSBuildExtensionPack.DataSourceEntities.BuildEventCode,MSBuildExtensionPack.DataSourceEntities.BuildEventCodeIdentifier> Members
 
-        #region Query Methods Of Entity of Common
+        #region Query Methods Of EntityOfCommon
 
         /// <summary>
         /// Gets the count of entity of "Common".
@@ -192,9 +192,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfEntityOfCommon(request);
         }
 
-        #endregion Query Methods Of Entity of Common
+        #endregion Query Methods Of EntityOfCommon
 
-        #region Query Methods Of Entity of All
+        #region Query Methods Of EntityOfAll
 
         /// <summary>
         /// Gets the count of entity of "All".
@@ -240,9 +240,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfEntityOfAll(request);
         }
 
-        #endregion Query Methods Of Entity of All
+        #endregion Query Methods Of EntityOfAll
 
-        #region Query Methods Of NameValuePair of All
+        #region Query Methods Of NameValuePairOfAll
 
         /// <summary>
         /// Gets the count of entity of "All".
@@ -288,9 +288,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfNameValuePairOfAll(request);
         }
 
-        #endregion Query Methods Of NameValuePair of All
+        #endregion Query Methods Of NameValuePairOfAll
 
-        #region Query Methods Of RssItem of All
+        #region Query Methods Of RssItemOfAll
 
         /// <summary>
         /// Gets the count of entity of "All".
@@ -336,9 +336,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfRssItemOfAll(request);
         }
 
-        #endregion Query Methods Of RssItem of All
+        #endregion Query Methods Of RssItemOfAll
 
-        #region Query Methods Of Entity of ByIdentifier
+        #region Query Methods Of EntityOfByIdentifier
 
         /// <summary>
         /// Gets the count of entity of "ByIdentifier".
@@ -384,9 +384,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfEntityOfByIdentifier(request);
         }
 
-        #endregion Query Methods Of Entity of ByIdentifier
+        #endregion Query Methods Of EntityOfByIdentifier
 
-        #region Query Methods Of KeyInformation of ByIdentifier
+        #region Query Methods Of KeyInformationOfByIdentifier
 
         /// <summary>
         /// Gets the count of entity of "ByIdentifier".
@@ -432,7 +432,7 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfKeyInformationOfByIdentifier(request);
         }
 
-        #endregion Query Methods Of KeyInformation of ByIdentifier
+        #endregion Query Methods Of KeyInformationOfByIdentifier
 
 #if WINDOWS_PHONE
         protected override MSBuildExtensionPack.WcfContracts.IBuildEventCodeService CreateChannel()

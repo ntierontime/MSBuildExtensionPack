@@ -66,7 +66,7 @@ namespace MSBuildExtensionPack.WcfContracts
 
         #endregion
 
-        #region Query Methods Of Entity of Common
+        #region Query Methods Of EntityOfCommon
 
 #if (XAMARIN)
 #else
@@ -100,9 +100,9 @@ namespace MSBuildExtensionPack.WcfContracts
         MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn GetSingleOfEntityOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request);
 
-        #endregion Query Methods Of Entity of Common
+        #endregion Query Methods Of EntityOfCommon
 
-        #region Query Methods Of Default of Common
+        #region Query Methods Of DefaultOfCommon
 
 #if (XAMARIN)
 #else
@@ -136,9 +136,9 @@ namespace MSBuildExtensionPack.WcfContracts
         MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.Default GetSingleOfDefaultOfCommon(
             MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request);
 
-        #endregion Query Methods Of Default of Common
+        #endregion Query Methods Of DefaultOfCommon
 
-        #region Query Methods Of Entity of All
+        #region Query Methods Of EntityOfAll
 
 #if (XAMARIN)
 #else
@@ -172,9 +172,9 @@ namespace MSBuildExtensionPack.WcfContracts
         MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn GetSingleOfEntityOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request);
 
-        #endregion Query Methods Of Entity of All
+        #endregion Query Methods Of EntityOfAll
 
-        #region Query Methods Of NameValuePair of All
+        #region Query Methods Of NameValuePairOfAll
 
 #if (XAMARIN)
 #else
@@ -208,9 +208,9 @@ namespace MSBuildExtensionPack.WcfContracts
         Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request);
 
-        #endregion Query Methods Of NameValuePair of All
+        #endregion Query Methods Of NameValuePairOfAll
 
-        #region Query Methods Of RssItem of All
+        #region Query Methods Of RssItemOfAll
 
 #if (XAMARIN)
 #else
@@ -244,9 +244,9 @@ namespace MSBuildExtensionPack.WcfContracts
         Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetSingleOfRssItemOfAll(
             MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request);
 
-        #endregion Query Methods Of RssItem of All
+        #endregion Query Methods Of RssItemOfAll
 
-        #region Query Methods Of Entity of ByFKOnly
+        #region Query Methods Of EntityOfByFKOnly
 
 #if (XAMARIN)
 #else
@@ -280,9 +280,9 @@ namespace MSBuildExtensionPack.WcfContracts
         MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn GetSingleOfEntityOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request);
 
-        #endregion Query Methods Of Entity of ByFKOnly
+        #endregion Query Methods Of EntityOfByFKOnly
 
-        #region Query Methods Of NameValuePair of ByFKOnly
+        #region Query Methods Of NameValuePairOfByFKOnly
 
 #if (XAMARIN)
 #else
@@ -316,9 +316,9 @@ namespace MSBuildExtensionPack.WcfContracts
         Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request);
 
-        #endregion Query Methods Of NameValuePair of ByFKOnly
+        #endregion Query Methods Of NameValuePairOfByFKOnly
 
-        #region Query Methods Of RssItem of ByFKOnly
+        #region Query Methods Of RssItemOfByFKOnly
 
 #if (XAMARIN)
 #else
@@ -352,9 +352,9 @@ namespace MSBuildExtensionPack.WcfContracts
         Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetSingleOfRssItemOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request);
 
-        #endregion Query Methods Of RssItem of ByFKOnly
+        #endregion Query Methods Of RssItemOfByFKOnly
 
-        #region Query Methods Of Default of ByFKOnly
+        #region Query Methods Of DefaultOfByFKOnly
 
 #if (XAMARIN)
 #else
@@ -388,9 +388,9 @@ namespace MSBuildExtensionPack.WcfContracts
         MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.Default GetSingleOfDefaultOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request);
 
-        #endregion Query Methods Of Default of ByFKOnly
+        #endregion Query Methods Of DefaultOfByFKOnly
 
-        #region Query Methods Of DefaultGroupedDataView of ByFKOnly
+        #region Query Methods Of DefaultGroupedDataViewOfByFKOnly
 
 #if (XAMARIN)
 #else
@@ -424,9 +424,9 @@ namespace MSBuildExtensionPack.WcfContracts
         MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.DefaultGroupedDataView GetSingleOfDefaultGroupedDataViewOfByFKOnly(
             MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request);
 
-        #endregion Query Methods Of DefaultGroupedDataView of ByFKOnly
+        #endregion Query Methods Of DefaultGroupedDataViewOfByFKOnly
 
-        #region Query Methods Of Entity of ByIdentifier
+        #region Query Methods Of EntityOfByIdentifier
 
 #if (XAMARIN)
 #else
@@ -460,9 +460,9 @@ namespace MSBuildExtensionPack.WcfContracts
         MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn GetSingleOfEntityOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request);
 
-        #endregion Query Methods Of Entity of ByIdentifier
+        #endregion Query Methods Of EntityOfByIdentifier
 
-        #region Query Methods Of Default of ByIdentifier
+        #region Query Methods Of DefaultOfByIdentifier
 
 #if (XAMARIN)
 #else
@@ -496,9 +496,9 @@ namespace MSBuildExtensionPack.WcfContracts
         MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.Default GetSingleOfDefaultOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request);
 
-        #endregion Query Methods Of Default of ByIdentifier
+        #endregion Query Methods Of DefaultOfByIdentifier
 
-        #region Query Methods Of UpdateNameRequest of ByIdentifier
+        #region Query Methods Of UpdateNameRequestOfByIdentifier
 
 #if (XAMARIN)
 #else
@@ -532,9 +532,9 @@ namespace MSBuildExtensionPack.WcfContracts
         MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest GetSingleOfUpdateNameRequestOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request);
 
-        #endregion Query Methods Of UpdateNameRequest of ByIdentifier
+        #endregion Query Methods Of UpdateNameRequestOfByIdentifier
 
-        #region Query Methods Of KeyInformation of ByIdentifier
+        #region Query Methods Of KeyInformationOfByIdentifier
 
 #if (XAMARIN)
 #else
@@ -568,7 +568,7 @@ namespace MSBuildExtensionPack.WcfContracts
         MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation GetSingleOfKeyInformationOfByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request);
 
-        #endregion Query Methods Of KeyInformation of ByIdentifier
+        #endregion Query Methods Of KeyInformationOfByIdentifier
 
         #region EntityUpdateActionSetting - UpdateNameOnly
 

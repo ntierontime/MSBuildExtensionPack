@@ -146,7 +146,7 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Framework.DAL.DataAccessLayerContractBase<MSBuildExtensionPack.DataSourceEntities.SolutionCollection,MSBuildExtensionPack.DataSourceEntities.Solution,MSBuildExtensionPack.DataSourceEntities.SolutionIdentifier> Members
 
-        #region Query Methods Of Entity of Common
+        #region Query Methods Of EntityOfCommon
 
         /// <summary>
         /// Gets the count of entity of "Common".
@@ -192,9 +192,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfEntityOfCommon(request);
         }
 
-        #endregion Query Methods Of Entity of Common
+        #endregion Query Methods Of EntityOfCommon
 
-        #region Query Methods Of Default of Common
+        #region Query Methods Of DefaultOfCommon
 
         /// <summary>
         /// Gets the count of entity of "Common".
@@ -240,9 +240,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfDefaultOfCommon(request);
         }
 
-        #endregion Query Methods Of Default of Common
+        #endregion Query Methods Of DefaultOfCommon
 
-        #region Query Methods Of Entity of All
+        #region Query Methods Of EntityOfAll
 
         /// <summary>
         /// Gets the count of entity of "All".
@@ -288,9 +288,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfEntityOfAll(request);
         }
 
-        #endregion Query Methods Of Entity of All
+        #endregion Query Methods Of EntityOfAll
 
-        #region Query Methods Of NameValuePair of All
+        #region Query Methods Of NameValuePairOfAll
 
         /// <summary>
         /// Gets the count of entity of "All".
@@ -336,9 +336,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfNameValuePairOfAll(request);
         }
 
-        #endregion Query Methods Of NameValuePair of All
+        #endregion Query Methods Of NameValuePairOfAll
 
-        #region Query Methods Of RssItem of All
+        #region Query Methods Of RssItemOfAll
 
         /// <summary>
         /// Gets the count of entity of "All".
@@ -384,9 +384,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfRssItemOfAll(request);
         }
 
-        #endregion Query Methods Of RssItem of All
+        #endregion Query Methods Of RssItemOfAll
 
-        #region Query Methods Of Entity of ByFKOnly
+        #region Query Methods Of EntityOfByFKOnly
 
         /// <summary>
         /// Gets the count of entity of "ByFKOnly".
@@ -432,9 +432,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfEntityOfByFKOnly(request);
         }
 
-        #endregion Query Methods Of Entity of ByFKOnly
+        #endregion Query Methods Of EntityOfByFKOnly
 
-        #region Query Methods Of NameValuePair of ByFKOnly
+        #region Query Methods Of NameValuePairOfByFKOnly
 
         /// <summary>
         /// Gets the count of entity of "ByFKOnly".
@@ -480,9 +480,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfNameValuePairOfByFKOnly(request);
         }
 
-        #endregion Query Methods Of NameValuePair of ByFKOnly
+        #endregion Query Methods Of NameValuePairOfByFKOnly
 
-        #region Query Methods Of RssItem of ByFKOnly
+        #region Query Methods Of RssItemOfByFKOnly
 
         /// <summary>
         /// Gets the count of entity of "ByFKOnly".
@@ -528,9 +528,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfRssItemOfByFKOnly(request);
         }
 
-        #endregion Query Methods Of RssItem of ByFKOnly
+        #endregion Query Methods Of RssItemOfByFKOnly
 
-        #region Query Methods Of Default of ByFKOnly
+        #region Query Methods Of DefaultOfByFKOnly
 
         /// <summary>
         /// Gets the count of entity of "ByFKOnly".
@@ -576,9 +576,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfDefaultOfByFKOnly(request);
         }
 
-        #endregion Query Methods Of Default of ByFKOnly
+        #endregion Query Methods Of DefaultOfByFKOnly
 
-        #region Query Methods Of DefaultGroupedDataView of ByFKOnly
+        #region Query Methods Of DefaultGroupedDataViewOfByFKOnly
 
         /// <summary>
         /// Gets the count of entity of "ByFKOnly".
@@ -624,9 +624,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfDefaultGroupedDataViewOfByFKOnly(request);
         }
 
-        #endregion Query Methods Of DefaultGroupedDataView of ByFKOnly
+        #endregion Query Methods Of DefaultGroupedDataViewOfByFKOnly
 
-        #region Query Methods Of Entity of ByIdentifier
+        #region Query Methods Of EntityOfByIdentifier
 
         /// <summary>
         /// Gets the count of entity of "ByIdentifier".
@@ -672,9 +672,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfEntityOfByIdentifier(request);
         }
 
-        #endregion Query Methods Of Entity of ByIdentifier
+        #endregion Query Methods Of EntityOfByIdentifier
 
-        #region Query Methods Of Default of ByIdentifier
+        #region Query Methods Of DefaultOfByIdentifier
 
         /// <summary>
         /// Gets the count of entity of "ByIdentifier".
@@ -720,9 +720,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfDefaultOfByIdentifier(request);
         }
 
-        #endregion Query Methods Of Default of ByIdentifier
+        #endregion Query Methods Of DefaultOfByIdentifier
 
-        #region Query Methods Of KeyInformation of ByIdentifier
+        #region Query Methods Of KeyInformationOfByIdentifier
 
         /// <summary>
         /// Gets the count of entity of "ByIdentifier".
@@ -768,7 +768,7 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetSingleOfKeyInformationOfByIdentifier(request);
         }
 
-        #endregion Query Methods Of KeyInformation of ByIdentifier
+        #endregion Query Methods Of KeyInformationOfByIdentifier
 
 #if WINDOWS_PHONE
         protected override MSBuildExtensionPack.WcfContracts.ISolutionService CreateChannel()
