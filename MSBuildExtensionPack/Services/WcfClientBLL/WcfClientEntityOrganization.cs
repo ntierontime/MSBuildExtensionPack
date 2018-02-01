@@ -226,6 +226,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
         #region Query Methods Of EntityOfByIdentifier
 
         /// <summary>
+        /// Exists the of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.ExistsOfEntityOfByIdentifier(request);
+        }
+
+        /// <summary>
         /// Gets the collection of entity of "ByIdentifier".
         /// </summary>
         /// <param name="request">The request.</param>
@@ -239,6 +250,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
         #endregion Query Methods Of EntityOfByIdentifier
 
         #region Query Methods Of DefaultOfByIdentifier
+
+        /// <summary>
+        /// Exists the of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.ExistsOfDefaultOfByIdentifier(request);
+        }
 
         /// <summary>
         /// Gets the collection of entity of "ByIdentifier".
@@ -256,6 +278,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
         #region Query Methods Of KeyInformationOfByIdentifier
 
         /// <summary>
+        /// Exists the of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.ExistsOfKeyInformationOfByIdentifier(request);
+        }
+
+        /// <summary>
         /// Gets the collection of entity of "ByIdentifier".
         /// </summary>
         /// <param name="request">The request.</param>
@@ -269,6 +302,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
         #endregion Query Methods Of KeyInformationOfByIdentifier
 
         #region Query Methods Of EntityOfIdentifierAndUniqueConstraint
+
+        /// <summary>
+        /// Exists the of entity of "IdentifierAndUniqueConstraint".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfIdentifierAndUniqueConstraint(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        {
+            return base.Channel.ExistsOfEntityOfIdentifierAndUniqueConstraint(request);
+        }
 
         /// <summary>
         /// Gets the collection of entity of "IdentifierAndUniqueConstraint".
@@ -286,6 +330,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
         #region Query Methods Of DefaultOfIdentifierAndUniqueConstraint
 
         /// <summary>
+        /// Exists the of entity of "IdentifierAndUniqueConstraint".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfIdentifierAndUniqueConstraint(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        {
+            return base.Channel.ExistsOfDefaultOfIdentifierAndUniqueConstraint(request);
+        }
+
+        /// <summary>
         /// Gets the collection of entity of "IdentifierAndUniqueConstraint".
         /// </summary>
         /// <param name="request">The request.</param>
@@ -299,6 +354,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
         #endregion Query Methods Of DefaultOfIdentifierAndUniqueConstraint
 
         #region Query Methods Of KeyInformationOfIdentifierAndUniqueConstraint
+
+        /// <summary>
+        /// Exists the of entity of "IdentifierAndUniqueConstraint".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        {
+            return base.Channel.ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(request);
+        }
 
         /// <summary>
         /// Gets the collection of entity of "IdentifierAndUniqueConstraint".

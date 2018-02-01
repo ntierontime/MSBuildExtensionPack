@@ -211,6 +211,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
         #region Query Methods Of EntityOfByIdentifier
 
         /// <summary>
+        /// Exists the of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.ExistsOfEntityOfByIdentifier(request);
+        }
+
+        /// <summary>
         /// Gets the collection of entity of "ByIdentifier".
         /// </summary>
         /// <param name="request">The request.</param>
@@ -224,6 +235,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
         #endregion Query Methods Of EntityOfByIdentifier
 
         #region Query Methods Of DefaultOfByIdentifier
+
+        /// <summary>
+        /// Exists the of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.ExistsOfDefaultOfByIdentifier(request);
+        }
 
         /// <summary>
         /// Gets the collection of entity of "ByIdentifier".
@@ -254,6 +276,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
         #endregion Query Methods Of UpdateNameRequestOfByIdentifier
 
         #region Query Methods Of KeyInformationOfByIdentifier
+
+        /// <summary>
+        /// Exists the of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.ExistsOfKeyInformationOfByIdentifier(request);
+        }
 
         /// <summary>
         /// Gets the collection of entity of "ByIdentifier".

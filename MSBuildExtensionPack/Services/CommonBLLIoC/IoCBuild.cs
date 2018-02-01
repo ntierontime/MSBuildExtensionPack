@@ -1146,6 +1146,92 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         #region Query Methods Of EntityOfByIdentifier
 
         /// <summary>
+        /// Exists the of entity of common.
+        /// </summary>
+        /// <param name="criteria"></param>
+        /// <param name="queryPagingSetting"></param>
+        /// <param name="queryOrderBySettingCollection"></param>
+        /// <returns>true if meets criteria, otherwise false</returns>
+        public static bool ExistsOfEntityOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier criteria
+            , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
+            , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
+        {
+            //log.Info(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            MSBuildExtensionPack.WcfContracts.IBuildService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuild();
+            var _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier(
+                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
+                , "ExistsOfEntityOfByIdentifier"
+                , Guid.NewGuid().ToString()
+                );
+            _Request.Criteria = criteria;
+            _Request.QueryPagingSetting = queryPagingSetting;
+            if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
+            {
+                _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
+                _Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
+            }
+            else
+            {
+                _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
+            }
+
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfByIdentifier(_Request);
+            if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+            {
+                //log.Info(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                return _Response.Message;
+            }
+            else
+            {
+                //log.Error(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Exists the of entity of common.
+        /// </summary>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>true if meets criteria, otherwise false</returns>
+        public static bool ExistsOfEntityOfByIdentifier(
+            bool isToCompareId, System.Int64? id
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
+        {
+            //log.Info(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            MSBuildExtensionPack.WcfContracts.IBuildService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuild();
+            var _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier(
+                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
+                , "ExistsOfEntityOfByIdentifier"
+                , Guid.NewGuid().ToString()
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression
+                );
+            _Request.Criteria = _GetBuildChainedQueryCriteriaByIdentifier(
+                isToCompareId, id
+                );
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityOfByIdentifier(_Request);
+            if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+            {
+                //log.Info(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                return _Response.Message;
+            }
+            else
+            {
+                //log.Error(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                return false;
+            }
+        }
+
+        /// <summary>
         /// Gets the collection of entity of common.
         /// </summary>
         /// <param name="criteria"></param>
@@ -1322,6 +1408,92 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         #endregion Query Methods Of EntityOfByIdentifier
 
         #region Query Methods Of DefaultOfByIdentifier
+
+        /// <summary>
+        /// Exists the of entity of common.
+        /// </summary>
+        /// <param name="criteria"></param>
+        /// <param name="queryPagingSetting"></param>
+        /// <param name="queryOrderBySettingCollection"></param>
+        /// <returns>true if meets criteria, otherwise false</returns>
+        public static bool ExistsOfDefaultOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier criteria
+            , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
+            , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
+        {
+            //log.Info(string.Format("{0}: ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            MSBuildExtensionPack.WcfContracts.IBuildService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuild();
+            var _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier(
+                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
+                , "ExistsOfDefaultOfByIdentifier"
+                , Guid.NewGuid().ToString()
+                );
+            _Request.Criteria = criteria;
+            _Request.QueryPagingSetting = queryPagingSetting;
+            if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
+            {
+                _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
+                _Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
+            }
+            else
+            {
+                _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
+            }
+
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultOfByIdentifier(_Request);
+            if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+            {
+                //log.Info(string.Format("{0}: ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                return _Response.Message;
+            }
+            else
+            {
+                //log.Error(string.Format("{0}: ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Exists the of entity of common.
+        /// </summary>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>true if meets criteria, otherwise false</returns>
+        public static bool ExistsOfDefaultOfByIdentifier(
+            bool isToCompareId, System.Int64? id
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
+        {
+            //log.Info(string.Format("{0}: ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            MSBuildExtensionPack.WcfContracts.IBuildService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuild();
+            var _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier(
+                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
+                , "ExistsOfDefaultOfByIdentifier"
+                , Guid.NewGuid().ToString()
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression
+                );
+            _Request.Criteria = _GetBuildChainedQueryCriteriaByIdentifier(
+                isToCompareId, id
+                );
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultOfByIdentifier(_Request);
+            if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+            {
+                //log.Info(string.Format("{0}: ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                return _Response.Message;
+            }
+            else
+            {
+                //log.Error(string.Format("{0}: ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                return false;
+            }
+        }
 
         /// <summary>
         /// Gets the collection of entity of common.
@@ -1678,6 +1850,92 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         #endregion Query Methods Of UpdateNameRequestOfByIdentifier
 
         #region Query Methods Of KeyInformationOfByIdentifier
+
+        /// <summary>
+        /// Exists the of entity of common.
+        /// </summary>
+        /// <param name="criteria"></param>
+        /// <param name="queryPagingSetting"></param>
+        /// <param name="queryOrderBySettingCollection"></param>
+        /// <returns>true if meets criteria, otherwise false</returns>
+        public static bool ExistsOfKeyInformationOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier criteria
+            , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
+            , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
+        {
+            //log.Info(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            MSBuildExtensionPack.WcfContracts.IBuildService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuild();
+            var _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier(
+                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
+                , "ExistsOfKeyInformationOfByIdentifier"
+                , Guid.NewGuid().ToString()
+                );
+            _Request.Criteria = criteria;
+            _Request.QueryPagingSetting = queryPagingSetting;
+            if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
+            {
+                _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
+                _Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
+            }
+            else
+            {
+                _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
+            }
+
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfKeyInformationOfByIdentifier(_Request);
+            if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+            {
+                //log.Info(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                return _Response.Message;
+            }
+            else
+            {
+                //log.Error(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Exists the of entity of common.
+        /// </summary>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>true if meets criteria, otherwise false</returns>
+        public static bool ExistsOfKeyInformationOfByIdentifier(
+            bool isToCompareId, System.Int64? id
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
+        {
+            //log.Info(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            MSBuildExtensionPack.WcfContracts.IBuildService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuild();
+            var _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier(
+                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
+                , "ExistsOfKeyInformationOfByIdentifier"
+                , Guid.NewGuid().ToString()
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression
+                );
+            _Request.Criteria = _GetBuildChainedQueryCriteriaByIdentifier(
+                isToCompareId, id
+                );
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfKeyInformationOfByIdentifier(_Request);
+            if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+            {
+                //log.Info(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                return _Response.Message;
+            }
+            else
+            {
+                //log.Error(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                return false;
+            }
+        }
 
         /// <summary>
         /// Gets the collection of entity of common.

@@ -106,6 +106,14 @@ namespace MSBuildExtensionPack.WcfContracts
 
 #if (XAMARIN)
 #else
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.NTIER ON TIME TECHNOLOGIES INC..com/MSBuildExtensionPack/WcfContracts/IBuildEventCodeService/ExistsOfEntityOfByIdentifier",
+            ReplyAction="http://www.NTIER ON TIME TECHNOLOGIES INC..com/MSBuildExtensionPack/WcfContracts/IBuildEventCodeService/ExistsOfEntityOfByIdentifierResponse")]
+#endif
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request);
+
+#if (XAMARIN)
+#else
         [System.ServiceModel.OperationContractAttribute(Action="http://www.NTIER ON TIME TECHNOLOGIES INC..com/MSBuildExtensionPack/WcfContracts/IBuildEventCodeService/GetCollectionOfEntityOfByIdentifier",
             ReplyAction="http://www.NTIER ON TIME TECHNOLOGIES INC..com/MSBuildExtensionPack/WcfContracts/IBuildEventCodeService/GetCollectionOfEntityOfByIdentifierResponse")]
 #endif
@@ -115,6 +123,14 @@ namespace MSBuildExtensionPack.WcfContracts
         #endregion Query Methods Of EntityOfByIdentifier
 
         #region Query Methods Of KeyInformationOfByIdentifier
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.NTIER ON TIME TECHNOLOGIES INC..com/MSBuildExtensionPack/WcfContracts/IBuildEventCodeService/ExistsOfKeyInformationOfByIdentifier",
+            ReplyAction="http://www.NTIER ON TIME TECHNOLOGIES INC..com/MSBuildExtensionPack/WcfContracts/IBuildEventCodeService/ExistsOfKeyInformationOfByIdentifierResponse")]
+#endif
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfByIdentifier request);
 
 #if (XAMARIN)
 #else

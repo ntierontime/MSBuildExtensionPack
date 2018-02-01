@@ -118,6 +118,14 @@ namespace MSBuildExtensionPack.WcfContracts
 
 #if (XAMARIN)
 #else
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.NTIER ON TIME TECHNOLOGIES INC..com/MSBuildExtensionPack/WcfContracts/IBuildLogService/ExistsOfEntityOfByIdentifier",
+            ReplyAction="http://www.NTIER ON TIME TECHNOLOGIES INC..com/MSBuildExtensionPack/WcfContracts/IBuildLogService/ExistsOfEntityOfByIdentifierResponse")]
+#endif
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier request);
+
+#if (XAMARIN)
+#else
         [System.ServiceModel.OperationContractAttribute(Action="http://www.NTIER ON TIME TECHNOLOGIES INC..com/MSBuildExtensionPack/WcfContracts/IBuildLogService/GetCollectionOfEntityOfByIdentifier",
             ReplyAction="http://www.NTIER ON TIME TECHNOLOGIES INC..com/MSBuildExtensionPack/WcfContracts/IBuildLogService/GetCollectionOfEntityOfByIdentifierResponse")]
 #endif
@@ -130,6 +138,14 @@ namespace MSBuildExtensionPack.WcfContracts
 
 #if (XAMARIN)
 #else
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.NTIER ON TIME TECHNOLOGIES INC..com/MSBuildExtensionPack/WcfContracts/IBuildLogService/ExistsOfDefaultOfByIdentifier",
+            ReplyAction="http://www.NTIER ON TIME TECHNOLOGIES INC..com/MSBuildExtensionPack/WcfContracts/IBuildLogService/ExistsOfDefaultOfByIdentifierResponse")]
+#endif
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier request);
+
+#if (XAMARIN)
+#else
         [System.ServiceModel.OperationContractAttribute(Action="http://www.NTIER ON TIME TECHNOLOGIES INC..com/MSBuildExtensionPack/WcfContracts/IBuildLogService/GetCollectionOfDefaultOfByIdentifier",
             ReplyAction="http://www.NTIER ON TIME TECHNOLOGIES INC..com/MSBuildExtensionPack/WcfContracts/IBuildLogService/GetCollectionOfDefaultOfByIdentifierResponse")]
 #endif
@@ -139,6 +155,14 @@ namespace MSBuildExtensionPack.WcfContracts
         #endregion Query Methods Of DefaultOfByIdentifier
 
         #region Query Methods Of KeyInformationOfByIdentifier
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.NTIER ON TIME TECHNOLOGIES INC..com/MSBuildExtensionPack/WcfContracts/IBuildLogService/ExistsOfKeyInformationOfByIdentifier",
+            ReplyAction="http://www.NTIER ON TIME TECHNOLOGIES INC..com/MSBuildExtensionPack/WcfContracts/IBuildLogService/ExistsOfKeyInformationOfByIdentifierResponse")]
+#endif
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier request);
 
 #if (XAMARIN)
 #else

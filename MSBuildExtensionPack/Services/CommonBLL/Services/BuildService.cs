@@ -502,6 +502,28 @@ namespace MSBuildExtensionPack.CommonBLL
         #region Query Methods Of EntityOfByIdentifier
 
         /// <summary>
+        /// Exists the of entity of EntityOfByIdentifier .
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
+        {
+            log.Info(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfEntityOfByIdentifier(
+                request.Criteria.BuildQueryCriteriaByIdentifier.Id
+                , request.QueryPagingSetting.CurrentIndex
+                , request.QueryPagingSetting.PageSize
+                , request.QueryOrderBySettingCollection);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _retval = new Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean();
+
+            _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
+            log.Info(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            return _retval;
+        }
+
+        /// <summary>
         /// Gets the collection of entity of EntityOfByIdentifier .
         /// </summary>
         /// <param name="request">The request.</param>
@@ -537,6 +559,28 @@ namespace MSBuildExtensionPack.CommonBLL
         #endregion Query Methods Of EntityOfByIdentifier
 
         #region Query Methods Of DefaultOfByIdentifier
+
+        /// <summary>
+        /// Exists the of entity of DefaultOfByIdentifier .
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
+        {
+            log.Info(string.Format("{0}: ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfDefaultOfByIdentifier(
+                request.Criteria.BuildQueryCriteriaByIdentifier.Id
+                , request.QueryPagingSetting.CurrentIndex
+                , request.QueryPagingSetting.PageSize
+                , request.QueryOrderBySettingCollection);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _retval = new Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean();
+
+            _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
+            log.Info(string.Format("{0}: ExistsOfDefaultOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            return _retval;
+        }
 
         /// <summary>
         /// Gets the collection of entity of DefaultOfByIdentifier .
@@ -611,6 +655,28 @@ namespace MSBuildExtensionPack.CommonBLL
         #endregion Query Methods Of UpdateNameRequestOfByIdentifier
 
         #region Query Methods Of KeyInformationOfByIdentifier
+
+        /// <summary>
+        /// Exists the of entity of KeyInformationOfByIdentifier .
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
+        {
+            log.Info(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfKeyInformationOfByIdentifier(
+                request.Criteria.BuildQueryCriteriaByIdentifier.Id
+                , request.QueryPagingSetting.CurrentIndex
+                , request.QueryPagingSetting.PageSize
+                , request.QueryOrderBySettingCollection);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _retval = new Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean();
+
+            _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
+            log.Info(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            return _retval;
+        }
 
         /// <summary>
         /// Gets the collection of entity of KeyInformationOfByIdentifier .
