@@ -343,8 +343,6 @@ namespace MSBuildExtensionPack.CommonBLL
 
         #endregion Binary Columns
 
-        #region DataQueryPerQuerySettingCollection
-
         #region Query Methods Of EntityOfCommon
 
         /// <summary>
@@ -1907,8 +1905,6 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         #endregion Query Methods Of KeyInformationOfByIdentifier
-
-        #endregion DataQueryPerQuerySettingCollection
 
         #region GetAscendantAndDescendant
 
