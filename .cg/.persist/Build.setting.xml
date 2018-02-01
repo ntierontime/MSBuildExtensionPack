@@ -59,15 +59,20 @@
   </DataQueryOnDataViewSetting>
   <DataQueryOnDataViewSetting Key="EntityOfAll" DataQueryKey="All" />
   <DataQueryOnDataViewSetting Key="NameValuePairOfAll" DataQueryKey="All" DataViewKey="NameValuePair" />
-  <DataQueryOnDataViewSetting Key="RssItemOfAll" DataQueryKey="All" DataViewKey="RssItem" />
+  <DataQueryOnDataViewSetting Key="RssItemOfAll" DataQueryKey="All" DataViewKey="RssItem">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasGetCollectionMethod="true" />
+  </DataQueryOnDataViewSetting>
   <DataQueryOnDataViewSetting Key="EntityOfByFKOnly" DataQueryKey="ByFKOnly" />
   <DataQueryOnDataViewSetting Key="NameValuePairOfByFKOnly" DataQueryKey="ByFKOnly" DataViewKey="NameValuePair">
     <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
     <BLLMethodSetting HasGetCollectionMethod="true" />
-    <WebApiMethodSetting HasGetCollectionMethod="true" />
   </DataQueryOnDataViewSetting>
   <DataQueryOnDataViewSetting Key="RssItemOfByFKOnly" DataQueryKey="ByFKOnly" DataViewKey="RssItem" />
-  <DataQueryOnDataViewSetting Key="DefaultOfByFKOnly" DataQueryKey="ByFKOnly" DataViewKey="Default" />
+  <DataQueryOnDataViewSetting Key="DefaultOfByFKOnly" DataQueryKey="ByFKOnly" DataViewKey="Default">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasGetCollectionMethod="true" />
+  </DataQueryOnDataViewSetting>
   <DataQueryOnDataViewSetting Key="DefaultGroupedDataViewOfByFKOnly" DataQueryKey="ByFKOnly" DataViewKey="DefaultGroupedDataView" />
   <DataQueryOnDataViewSetting Key="EntityOfByIdentifier" DataQueryKey="ByIdentifier">
     <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />

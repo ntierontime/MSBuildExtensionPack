@@ -20,12 +20,12 @@
   <SolutionVersion>1.0.0.0</SolutionVersion>
   <ExcludedTables>aspnet_*;__RefactorLog;__MigrationHistory</ExcludedTables>
   <IsToBuildSolutionOutputContextOnly>false</IsToBuildSolutionOutputContextOnly>
-  <HasCountMethod>true</HasCountMethod>
-  <HasExistsMethod>true</HasExistsMethod>
-  <HasGetCollectionMethod>true</HasGetCollectionMethod>
-  <HasGetSingleItemMethod>true</HasGetSingleItemMethod>
-  <HasInsertCollectionMethod>true</HasInsertCollectionMethod>
-  <HasInsertMethod>true</HasInsertMethod>
-  <HasUpdateCollectionMethod>true</HasUpdateCollectionMethod>
-  <HasUpdateMethod>true</HasUpdateMethod>
+  <HasCountMethod>false</HasCountMethod>
+  <HasExistsMethod>false</HasExistsMethod>
+  <HasGetCollectionMethod>false</HasGetCollectionMethod>
+  <HasGetSingleItemMethod>false</HasGetSingleItemMethod>
+  <HasInsertCollectionMethod>false</HasInsertCollectionMethod>
+  <HasInsertMethod>false</HasInsertMethod>
+  <HasUpdateCollectionMethod>false</HasUpdateCollectionMethod>
+  <HasUpdateMethod>false</HasUpdateMethod>
 </QuickCodeGenConfigurationCmdLineArg>

@@ -38,9 +38,11 @@
   <DataQueryOnDataViewSetting Key="NameValuePairOfAll" DataQueryKey="All" DataViewKey="NameValuePair">
     <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
     <BLLMethodSetting HasGetCollectionMethod="true" />
-    <WebApiMethodSetting HasGetCollectionMethod="true" />
   </DataQueryOnDataViewSetting>
-  <DataQueryOnDataViewSetting Key="RssItemOfAll" DataQueryKey="All" DataViewKey="RssItem" />
+  <DataQueryOnDataViewSetting Key="RssItemOfAll" DataQueryKey="All" DataViewKey="RssItem">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasGetCollectionMethod="true" />
+  </DataQueryOnDataViewSetting>
   <DataQueryOnDataViewSetting Key="EntityOfByIdentifier" DataQueryKey="ByIdentifier">
     <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
     <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />

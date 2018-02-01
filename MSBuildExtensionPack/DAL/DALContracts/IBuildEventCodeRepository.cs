@@ -64,39 +64,7 @@ namespace MSBuildExtensionPack.DALContracts
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode GetSingleOfEntityOfCommon(
-            Framework.EntityContracts.QuerySystemStringContainsCriteria eventCode
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria description
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            );
-
         #endregion Query Methods Of EntityOfCommon
-
-        #region Query Methods Of EntityOfAll
-
-        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityOfAll(
-            int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            );
-
-        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityOfAll(
-            int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            );
-
-        MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuildEventCode GetCollectionOfEntityOfAll(
-            int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            );
-
-        MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode GetSingleOfEntityOfAll(
-            Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            );
-
-        #endregion Query Methods Of EntityOfAll
 
         #region Query Methods Of NameValuePairOfAll
 
@@ -116,10 +84,6 @@ namespace MSBuildExtensionPack.DALContracts
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            );
-
-        Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntity GetSingleOfNameValuePairOfAll(
-            Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
         #endregion Query Methods Of NameValuePairOfAll
@@ -142,10 +106,6 @@ namespace MSBuildExtensionPack.DALContracts
             int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            );
-
-        Framework.DataSourceEntities.DataAccessLayerMessageRssItem GetSingleOfRssItemOfAll(
-            Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
         #endregion Query Methods Of RssItemOfAll
@@ -173,11 +133,6 @@ namespace MSBuildExtensionPack.DALContracts
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityBuildEventCode GetSingleOfEntityOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            );
-
         #endregion Query Methods Of EntityOfByIdentifier
 
         #region Query Methods Of KeyInformationOfByIdentifier
@@ -200,11 +155,6 @@ namespace MSBuildExtensionPack.DALContracts
             Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,int currentIndex
             ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            );
-
-        MSBuildExtensionPack.DataSourceEntities.BuildEventCode.DataAccessLayerMessageOfKeyInformation GetSingleOfKeyInformationOfByIdentifier(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria id
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
