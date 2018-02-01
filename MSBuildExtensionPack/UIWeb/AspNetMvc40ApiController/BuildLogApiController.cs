@@ -146,7 +146,264 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
 
         #endregion batch insert, update and delete in an entity collection
 
-        #region Query Methods Of NameValuePairOfAll per criteria, queryPagingSetting and queryOrderBySettingCollection
+        // DataQueryPerQuerySettingCollection -- MethodDataQuery -- Start
+
+        #region Query Methods Of EntityOfCommon
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareBuildId">will compare/filter buildId property/field/column if true, otherwise false</param>
+        /// <param name="buildId">value to compare/filter with buildId property/field/column</param>
+        /// <param name="isToCompareSolution_1Id">will compare/filter solution_1Id property/field/column if true, otherwise false</param>
+        /// <param name="solution_1Id">value to compare/filter with solution_1Id property/field/column</param>
+        /// <param name="isToCompareOrganization_1Id">will compare/filter organization_1Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_1Id">value to compare/filter with organization_1Id property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareBuildEventCodeId">will compare/filter buildEventCodeId property/field/column if true, otherwise false</param>
+        /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
+        /// <param name="isToCompareEventTimeRange" > will compare/filter eventTimeRange property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareEventTimeRangeLow" > will compare/filter to lower bound of eventTimeRange property/field/column if true, otherwise false</param>
+        /// <param name="eventTimeRangeLow">value of lower bound</param>
+        /// <param name="isToCompareEventTimeRangeHigh">will compare/filter to upper bound of eventTimeRange property/field/column if true, otherwise false</param>
+        /// <param name="eventTimeRangeHigh">upper bound</param>
+        /// <param name="isToCompareMessage">will compare/filter message property/field/column if true, otherwise false</param>
+        /// <param name="message" > value to compare/filter with message property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
+        [HttpGet, ActionName("GetCollectionOfEntityOfCommon")]
+        public MSBuildExtensionPack.DataSourceEntities.BuildLogCollection GetCollectionOfEntityOfCommon(
+            System.Int64? buildId
+            , System.Int32? solution_1Id
+            , System.Int64? organization_1Id
+            , System.Int64? organization_2Id
+            , System.Int32? buildEventCodeId
+            , System.DateTime? eventTimeRangeLow, System.DateTime? eventTimeRangeHigh
+            , System.String message
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetCollectionOfEntityOfCommon(
+                buildId.HasValue, buildId
+                , solution_1Id.HasValue, solution_1Id
+                , organization_1Id.HasValue, organization_1Id
+                , organization_2Id.HasValue, organization_2Id
+                , buildEventCodeId.HasValue, buildEventCodeId
+                , eventTimeRangeLow.HasValue || eventTimeRangeHigh.HasValue, eventTimeRangeLow.HasValue, eventTimeRangeLow, eventTimeRangeHigh.HasValue, eventTimeRangeHigh
+                , !string.IsNullOrEmpty(message), message
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        /// <summary>
+        /// Gets message of the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareBuildId">will compare/filter buildId property/field/column if true, otherwise false</param>
+        /// <param name="buildId">value to compare/filter with buildId property/field/column</param>
+        /// <param name="isToCompareSolution_1Id">will compare/filter solution_1Id property/field/column if true, otherwise false</param>
+        /// <param name="solution_1Id">value to compare/filter with solution_1Id property/field/column</param>
+        /// <param name="isToCompareOrganization_1Id">will compare/filter organization_1Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_1Id">value to compare/filter with organization_1Id property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareBuildEventCodeId">will compare/filter buildEventCodeId property/field/column if true, otherwise false</param>
+        /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
+        /// <param name="isToCompareEventTimeRange" > will compare/filter eventTimeRange property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareEventTimeRangeLow" > will compare/filter to lower bound of eventTimeRange property/field/column if true, otherwise false</param>
+        /// <param name="eventTimeRangeLow">value of lower bound</param>
+        /// <param name="isToCompareEventTimeRangeHigh">will compare/filter to upper bound of eventTimeRange property/field/column if true, otherwise false</param>
+        /// <param name="eventTimeRangeHigh">upper bound</param>
+        /// <param name="isToCompareMessage">will compare/filter message property/field/column if true, otherwise false</param>
+        /// <param name="message" > value to compare/filter with message property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn"/></returns>
+        [HttpGet, ActionName("GetMessageOfEntityOfCommon")]
+        public MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn GetMessageOfEntityOfCommon(
+            System.Int64? buildId
+            , System.Int32? solution_1Id
+            , System.Int64? organization_1Id
+            , System.Int64? organization_2Id
+            , System.Int32? buildEventCodeId
+            , System.DateTime? eventTimeRangeLow, System.DateTime? eventTimeRangeHigh
+            , System.String message
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfEntityOfCommon(
+                buildId.HasValue, buildId
+                , solution_1Id.HasValue, solution_1Id
+                , organization_1Id.HasValue, organization_1Id
+                , organization_2Id.HasValue, organization_2Id
+                , buildEventCodeId.HasValue, buildEventCodeId
+                , eventTimeRangeLow.HasValue || eventTimeRangeHigh.HasValue, eventTimeRangeLow.HasValue, eventTimeRangeLow, eventTimeRangeHigh.HasValue, eventTimeRangeHigh
+                , !string.IsNullOrEmpty(message), message
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        #endregion Query Methods Of EntityOfCommon
+
+        #region Query Methods Of DefaultOfCommon
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareBuildId">will compare/filter buildId property/field/column if true, otherwise false</param>
+        /// <param name="buildId">value to compare/filter with buildId property/field/column</param>
+        /// <param name="isToCompareSolution_1Id">will compare/filter solution_1Id property/field/column if true, otherwise false</param>
+        /// <param name="solution_1Id">value to compare/filter with solution_1Id property/field/column</param>
+        /// <param name="isToCompareOrganization_1Id">will compare/filter organization_1Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_1Id">value to compare/filter with organization_1Id property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareBuildEventCodeId">will compare/filter buildEventCodeId property/field/column if true, otherwise false</param>
+        /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
+        /// <param name="isToCompareEventTimeRange" > will compare/filter eventTimeRange property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareEventTimeRangeLow" > will compare/filter to lower bound of eventTimeRange property/field/column if true, otherwise false</param>
+        /// <param name="eventTimeRangeLow">value of lower bound</param>
+        /// <param name="isToCompareEventTimeRangeHigh">will compare/filter to upper bound of eventTimeRange property/field/column if true, otherwise false</param>
+        /// <param name="eventTimeRangeHigh">upper bound</param>
+        /// <param name="isToCompareMessage">will compare/filter message property/field/column if true, otherwise false</param>
+        /// <param name="message" > value to compare/filter with message property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection"/></returns>
+        [HttpGet, ActionName("GetCollectionOfDefaultOfCommon")]
+        public MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection GetCollectionOfDefaultOfCommon(
+            System.Int64? buildId
+            , System.Int32? solution_1Id
+            , System.Int64? organization_1Id
+            , System.Int64? organization_2Id
+            , System.Int32? buildEventCodeId
+            , System.DateTime? eventTimeRangeLow, System.DateTime? eventTimeRangeHigh
+            , System.String message
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetCollectionOfDefaultOfCommon(
+                buildId.HasValue, buildId
+                , solution_1Id.HasValue, solution_1Id
+                , organization_1Id.HasValue, organization_1Id
+                , organization_2Id.HasValue, organization_2Id
+                , buildEventCodeId.HasValue, buildEventCodeId
+                , eventTimeRangeLow.HasValue || eventTimeRangeHigh.HasValue, eventTimeRangeLow.HasValue, eventTimeRangeLow, eventTimeRangeHigh.HasValue, eventTimeRangeHigh
+                , !string.IsNullOrEmpty(message), message
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        /// <summary>
+        /// Gets message of the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareBuildId">will compare/filter buildId property/field/column if true, otherwise false</param>
+        /// <param name="buildId">value to compare/filter with buildId property/field/column</param>
+        /// <param name="isToCompareSolution_1Id">will compare/filter solution_1Id property/field/column if true, otherwise false</param>
+        /// <param name="solution_1Id">value to compare/filter with solution_1Id property/field/column</param>
+        /// <param name="isToCompareOrganization_1Id">will compare/filter organization_1Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_1Id">value to compare/filter with organization_1Id property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareBuildEventCodeId">will compare/filter buildEventCodeId property/field/column if true, otherwise false</param>
+        /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
+        /// <param name="isToCompareEventTimeRange" > will compare/filter eventTimeRange property/field/column if true, otherwise false</param>
+        /// <param name="isToCompareEventTimeRangeLow" > will compare/filter to lower bound of eventTimeRange property/field/column if true, otherwise false</param>
+        /// <param name="eventTimeRangeLow">value of lower bound</param>
+        /// <param name="isToCompareEventTimeRangeHigh">will compare/filter to upper bound of eventTimeRange property/field/column if true, otherwise false</param>
+        /// <param name="eventTimeRangeHigh">upper bound</param>
+        /// <param name="isToCompareMessage">will compare/filter message property/field/column if true, otherwise false</param>
+        /// <param name="message" > value to compare/filter with message property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default"/></returns>
+        [HttpGet, ActionName("GetMessageOfDefaultOfCommon")]
+        public MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default GetMessageOfDefaultOfCommon(
+            System.Int64? buildId
+            , System.Int32? solution_1Id
+            , System.Int64? organization_1Id
+            , System.Int64? organization_2Id
+            , System.Int32? buildEventCodeId
+            , System.DateTime? eventTimeRangeLow, System.DateTime? eventTimeRangeHigh
+            , System.String message
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfDefaultOfCommon(
+                buildId.HasValue, buildId
+                , solution_1Id.HasValue, solution_1Id
+                , organization_1Id.HasValue, organization_1Id
+                , organization_2Id.HasValue, organization_2Id
+                , buildEventCodeId.HasValue, buildEventCodeId
+                , eventTimeRangeLow.HasValue || eventTimeRangeHigh.HasValue, eventTimeRangeLow.HasValue, eventTimeRangeLow, eventTimeRangeHigh.HasValue, eventTimeRangeHigh
+                , !string.IsNullOrEmpty(message), message
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        #endregion Query Methods Of DefaultOfCommon
+
+        #region Query Methods Of EntityOfAll
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
+        [HttpGet, ActionName("GetCollectionOfEntityOfAll")]
+        public MSBuildExtensionPack.DataSourceEntities.BuildLogCollection GetCollectionOfEntityOfAll(
+            int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetCollectionOfEntityOfAll(
+                currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        /// <summary>
+        /// Gets message of the collection of entity of common.
+        /// </summary>
+
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn"/></returns>
+        [HttpGet, ActionName("GetMessageOfEntityOfAll")]
+        public MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn GetMessageOfEntityOfAll(
+            int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfEntityOfAll(
+                currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        #endregion Query Methods Of EntityOfAll
+
+        #region Query Methods Of NameValuePairOfAll
 
         /// <summary>
         /// Gets the collection of entity of common.
@@ -189,9 +446,137 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
                 , queryOrderByExpression);
         }
 
-        #endregion Query Methods Of NameValuePairOfAll per value type
+        #endregion Query Methods Of NameValuePairOfAll
 
-        #region Query Methods Of NameValuePairOfByFKOnly per criteria, queryPagingSetting and queryOrderBySettingCollection
+        #region Query Methods Of RssItemOfAll
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="Framework.RssItemCollection"/></returns>
+        [HttpGet, ActionName("GetCollectionOfRssItemOfAll")]
+        public Framework.RssItemCollection GetCollectionOfRssItemOfAll(
+            int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetCollectionOfRssItemOfAll(
+                currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        /// <summary>
+        /// Gets message of the collection of entity of common.
+        /// </summary>
+
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection"/></returns>
+        [HttpGet, ActionName("GetMessageOfRssItemOfAll")]
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetMessageOfRssItemOfAll(
+            int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfRssItemOfAll(
+                currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        #endregion Query Methods Of RssItemOfAll
+
+        #region Query Methods Of EntityOfByFKOnly
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareBuildId">will compare/filter buildId property/field/column if true, otherwise false</param>
+        /// <param name="buildId">value to compare/filter with buildId property/field/column</param>
+        /// <param name="isToCompareSolution_1Id">will compare/filter solution_1Id property/field/column if true, otherwise false</param>
+        /// <param name="solution_1Id">value to compare/filter with solution_1Id property/field/column</param>
+        /// <param name="isToCompareOrganization_1Id">will compare/filter organization_1Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_1Id">value to compare/filter with organization_1Id property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareBuildEventCodeId">will compare/filter buildEventCodeId property/field/column if true, otherwise false</param>
+        /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
+        [HttpGet, ActionName("GetCollectionOfEntityOfByFKOnly")]
+        public MSBuildExtensionPack.DataSourceEntities.BuildLogCollection GetCollectionOfEntityOfByFKOnly(
+            System.Int64? buildId
+            , System.Int32? solution_1Id
+            , System.Int64? organization_1Id
+            , System.Int64? organization_2Id
+            , System.Int32? buildEventCodeId
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetCollectionOfEntityOfByFKOnly(
+                buildId.HasValue, buildId
+                , solution_1Id.HasValue, solution_1Id
+                , organization_1Id.HasValue, organization_1Id
+                , organization_2Id.HasValue, organization_2Id
+                , buildEventCodeId.HasValue, buildEventCodeId
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        /// <summary>
+        /// Gets message of the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareBuildId">will compare/filter buildId property/field/column if true, otherwise false</param>
+        /// <param name="buildId">value to compare/filter with buildId property/field/column</param>
+        /// <param name="isToCompareSolution_1Id">will compare/filter solution_1Id property/field/column if true, otherwise false</param>
+        /// <param name="solution_1Id">value to compare/filter with solution_1Id property/field/column</param>
+        /// <param name="isToCompareOrganization_1Id">will compare/filter organization_1Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_1Id">value to compare/filter with organization_1Id property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareBuildEventCodeId">will compare/filter buildEventCodeId property/field/column if true, otherwise false</param>
+        /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn"/></returns>
+        [HttpGet, ActionName("GetMessageOfEntityOfByFKOnly")]
+        public MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn GetMessageOfEntityOfByFKOnly(
+            System.Int64? buildId
+            , System.Int32? solution_1Id
+            , System.Int64? organization_1Id
+            , System.Int64? organization_2Id
+            , System.Int32? buildEventCodeId
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfEntityOfByFKOnly(
+                buildId.HasValue, buildId
+                , solution_1Id.HasValue, solution_1Id
+                , organization_1Id.HasValue, organization_1Id
+                , organization_2Id.HasValue, organization_2Id
+                , buildEventCodeId.HasValue, buildEventCodeId
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        #endregion Query Methods Of EntityOfByFKOnly
+
+        #region Query Methods Of NameValuePairOfByFKOnly
 
         /// <summary>
         /// Gets the collection of entity of common.
@@ -272,7 +657,411 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
                 , queryOrderByExpression);
         }
 
-        #endregion Query Methods Of NameValuePairOfByFKOnly per value type
+        #endregion Query Methods Of NameValuePairOfByFKOnly
+
+        #region Query Methods Of RssItemOfByFKOnly
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareBuildId">will compare/filter buildId property/field/column if true, otherwise false</param>
+        /// <param name="buildId">value to compare/filter with buildId property/field/column</param>
+        /// <param name="isToCompareSolution_1Id">will compare/filter solution_1Id property/field/column if true, otherwise false</param>
+        /// <param name="solution_1Id">value to compare/filter with solution_1Id property/field/column</param>
+        /// <param name="isToCompareOrganization_1Id">will compare/filter organization_1Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_1Id">value to compare/filter with organization_1Id property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareBuildEventCodeId">will compare/filter buildEventCodeId property/field/column if true, otherwise false</param>
+        /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="Framework.RssItemCollection"/></returns>
+        [HttpGet, ActionName("GetCollectionOfRssItemOfByFKOnly")]
+        public Framework.RssItemCollection GetCollectionOfRssItemOfByFKOnly(
+            System.Int64? buildId
+            , System.Int32? solution_1Id
+            , System.Int64? organization_1Id
+            , System.Int64? organization_2Id
+            , System.Int32? buildEventCodeId
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetCollectionOfRssItemOfByFKOnly(
+                buildId.HasValue, buildId
+                , solution_1Id.HasValue, solution_1Id
+                , organization_1Id.HasValue, organization_1Id
+                , organization_2Id.HasValue, organization_2Id
+                , buildEventCodeId.HasValue, buildEventCodeId
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        /// <summary>
+        /// Gets message of the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareBuildId">will compare/filter buildId property/field/column if true, otherwise false</param>
+        /// <param name="buildId">value to compare/filter with buildId property/field/column</param>
+        /// <param name="isToCompareSolution_1Id">will compare/filter solution_1Id property/field/column if true, otherwise false</param>
+        /// <param name="solution_1Id">value to compare/filter with solution_1Id property/field/column</param>
+        /// <param name="isToCompareOrganization_1Id">will compare/filter organization_1Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_1Id">value to compare/filter with organization_1Id property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareBuildEventCodeId">will compare/filter buildEventCodeId property/field/column if true, otherwise false</param>
+        /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection"/></returns>
+        [HttpGet, ActionName("GetMessageOfRssItemOfByFKOnly")]
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetMessageOfRssItemOfByFKOnly(
+            System.Int64? buildId
+            , System.Int32? solution_1Id
+            , System.Int64? organization_1Id
+            , System.Int64? organization_2Id
+            , System.Int32? buildEventCodeId
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfRssItemOfByFKOnly(
+                buildId.HasValue, buildId
+                , solution_1Id.HasValue, solution_1Id
+                , organization_1Id.HasValue, organization_1Id
+                , organization_2Id.HasValue, organization_2Id
+                , buildEventCodeId.HasValue, buildEventCodeId
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        #endregion Query Methods Of RssItemOfByFKOnly
+
+        #region Query Methods Of DefaultOfByFKOnly
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareBuildId">will compare/filter buildId property/field/column if true, otherwise false</param>
+        /// <param name="buildId">value to compare/filter with buildId property/field/column</param>
+        /// <param name="isToCompareSolution_1Id">will compare/filter solution_1Id property/field/column if true, otherwise false</param>
+        /// <param name="solution_1Id">value to compare/filter with solution_1Id property/field/column</param>
+        /// <param name="isToCompareOrganization_1Id">will compare/filter organization_1Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_1Id">value to compare/filter with organization_1Id property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareBuildEventCodeId">will compare/filter buildEventCodeId property/field/column if true, otherwise false</param>
+        /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection"/></returns>
+        [HttpGet, ActionName("GetCollectionOfDefaultOfByFKOnly")]
+        public MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection GetCollectionOfDefaultOfByFKOnly(
+            System.Int64? buildId
+            , System.Int32? solution_1Id
+            , System.Int64? organization_1Id
+            , System.Int64? organization_2Id
+            , System.Int32? buildEventCodeId
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetCollectionOfDefaultOfByFKOnly(
+                buildId.HasValue, buildId
+                , solution_1Id.HasValue, solution_1Id
+                , organization_1Id.HasValue, organization_1Id
+                , organization_2Id.HasValue, organization_2Id
+                , buildEventCodeId.HasValue, buildEventCodeId
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        /// <summary>
+        /// Gets message of the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareBuildId">will compare/filter buildId property/field/column if true, otherwise false</param>
+        /// <param name="buildId">value to compare/filter with buildId property/field/column</param>
+        /// <param name="isToCompareSolution_1Id">will compare/filter solution_1Id property/field/column if true, otherwise false</param>
+        /// <param name="solution_1Id">value to compare/filter with solution_1Id property/field/column</param>
+        /// <param name="isToCompareOrganization_1Id">will compare/filter organization_1Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_1Id">value to compare/filter with organization_1Id property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareBuildEventCodeId">will compare/filter buildEventCodeId property/field/column if true, otherwise false</param>
+        /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default"/></returns>
+        [HttpGet, ActionName("GetMessageOfDefaultOfByFKOnly")]
+        public MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default GetMessageOfDefaultOfByFKOnly(
+            System.Int64? buildId
+            , System.Int32? solution_1Id
+            , System.Int64? organization_1Id
+            , System.Int64? organization_2Id
+            , System.Int32? buildEventCodeId
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfDefaultOfByFKOnly(
+                buildId.HasValue, buildId
+                , solution_1Id.HasValue, solution_1Id
+                , organization_1Id.HasValue, organization_1Id
+                , organization_2Id.HasValue, organization_2Id
+                , buildEventCodeId.HasValue, buildEventCodeId
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        #endregion Query Methods Of DefaultOfByFKOnly
+
+        #region Query Methods Of DefaultGroupedDataViewOfByFKOnly
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareBuildId">will compare/filter buildId property/field/column if true, otherwise false</param>
+        /// <param name="buildId">value to compare/filter with buildId property/field/column</param>
+        /// <param name="isToCompareSolution_1Id">will compare/filter solution_1Id property/field/column if true, otherwise false</param>
+        /// <param name="solution_1Id">value to compare/filter with solution_1Id property/field/column</param>
+        /// <param name="isToCompareOrganization_1Id">will compare/filter organization_1Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_1Id">value to compare/filter with organization_1Id property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareBuildEventCodeId">will compare/filter buildEventCodeId property/field/column if true, otherwise false</param>
+        /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataViewCollection"/></returns>
+        [HttpGet, ActionName("GetCollectionOfDefaultGroupedDataViewOfByFKOnly")]
+        public MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataViewCollection GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
+            System.Int64? buildId
+            , System.Int32? solution_1Id
+            , System.Int64? organization_1Id
+            , System.Int64? organization_2Id
+            , System.Int32? buildEventCodeId
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
+                buildId.HasValue, buildId
+                , solution_1Id.HasValue, solution_1Id
+                , organization_1Id.HasValue, organization_1Id
+                , organization_2Id.HasValue, organization_2Id
+                , buildEventCodeId.HasValue, buildEventCodeId
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        /// <summary>
+        /// Gets message of the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareBuildId">will compare/filter buildId property/field/column if true, otherwise false</param>
+        /// <param name="buildId">value to compare/filter with buildId property/field/column</param>
+        /// <param name="isToCompareSolution_1Id">will compare/filter solution_1Id property/field/column if true, otherwise false</param>
+        /// <param name="solution_1Id">value to compare/filter with solution_1Id property/field/column</param>
+        /// <param name="isToCompareOrganization_1Id">will compare/filter organization_1Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_1Id">value to compare/filter with organization_1Id property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="isToCompareBuildEventCodeId">will compare/filter buildEventCodeId property/field/column if true, otherwise false</param>
+        /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView"/></returns>
+        [HttpGet, ActionName("GetMessageOfDefaultGroupedDataViewOfByFKOnly")]
+        public MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView GetMessageOfDefaultGroupedDataViewOfByFKOnly(
+            System.Int64? buildId
+            , System.Int32? solution_1Id
+            , System.Int64? organization_1Id
+            , System.Int64? organization_2Id
+            , System.Int32? buildEventCodeId
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfDefaultGroupedDataViewOfByFKOnly(
+                buildId.HasValue, buildId
+                , solution_1Id.HasValue, solution_1Id
+                , organization_1Id.HasValue, organization_1Id
+                , organization_2Id.HasValue, organization_2Id
+                , buildEventCodeId.HasValue, buildEventCodeId
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        #endregion Query Methods Of DefaultGroupedDataViewOfByFKOnly
+
+        #region Query Methods Of EntityOfByIdentifier
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLogCollection"/></returns>
+        [HttpGet, ActionName("GetCollectionOfEntityOfByIdentifier")]
+        public MSBuildExtensionPack.DataSourceEntities.BuildLogCollection GetCollectionOfEntityOfByIdentifier(
+            System.Int64? id
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetCollectionOfEntityOfByIdentifier(
+                id.HasValue, id
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        /// <summary>
+        /// Gets message of the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn"/></returns>
+        [HttpGet, ActionName("GetMessageOfEntityOfByIdentifier")]
+        public MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn GetMessageOfEntityOfByIdentifier(
+            System.Int64? id
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfEntityOfByIdentifier(
+                id.HasValue, id
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        #endregion Query Methods Of EntityOfByIdentifier
+
+        #region Query Methods Of DefaultOfByIdentifier
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection"/></returns>
+        [HttpGet, ActionName("GetCollectionOfDefaultOfByIdentifier")]
+        public MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection GetCollectionOfDefaultOfByIdentifier(
+            System.Int64? id
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetCollectionOfDefaultOfByIdentifier(
+                id.HasValue, id
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        /// <summary>
+        /// Gets message of the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default"/></returns>
+        [HttpGet, ActionName("GetMessageOfDefaultOfByIdentifier")]
+        public MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default GetMessageOfDefaultOfByIdentifier(
+            System.Int64? id
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfDefaultOfByIdentifier(
+                id.HasValue, id
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        #endregion Query Methods Of DefaultOfByIdentifier
+
+        #region Query Methods Of KeyInformationOfByIdentifier
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformationCollection"/></returns>
+        [HttpGet, ActionName("GetCollectionOfKeyInformationOfByIdentifier")]
+        public MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformationCollection GetCollectionOfKeyInformationOfByIdentifier(
+            System.Int64? id
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetCollectionOfKeyInformationOfByIdentifier(
+                id.HasValue, id
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        /// <summary>
+        /// Gets message of the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareId">will compare/filter id property/field/column if true, otherwise false</param>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation"/></returns>
+        [HttpGet, ActionName("GetMessageOfKeyInformationOfByIdentifier")]
+        public MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation GetMessageOfKeyInformationOfByIdentifier(
+            System.Int64? id
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfKeyInformationOfByIdentifier(
+                id.HasValue, id
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        #endregion Query Methods Of KeyInformationOfByIdentifier
+
+        // DataQueryPerQuerySettingCollection -- MethodDataQuery -- End
 
         /// <summary>
         /// Gets the Item View Model of MSBuildExtensionPack.BuildLog.
