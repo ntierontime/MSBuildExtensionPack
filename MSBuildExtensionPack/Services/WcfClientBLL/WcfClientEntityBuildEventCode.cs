@@ -146,6 +146,8 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Framework.DAL.DataAccessLayerContractBase<MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection,MSBuildExtensionPack.DataSourceEntities.BuildEventCode,MSBuildExtensionPack.DataSourceEntities.BuildEventCodeIdentifier> Members
 
+            // DataQueryPerQuerySettingCollection -- MethodDataQuery -- Start
+
         #region Query Methods Of EntityOfCommon
 
         /// <summary>
@@ -433,6 +435,8 @@ namespace MSBuildExtensionPack.WcfClientBLL
         }
 
         #endregion Query Methods Of KeyInformationOfByIdentifier
+
+            // DataQueryPerQuerySettingCollection -- MethodDataQuery -- End
 
 #if WINDOWS_PHONE
         protected override MSBuildExtensionPack.WcfContracts.IBuildEventCodeService CreateChannel()

@@ -146,6 +146,8 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Framework.DAL.DataAccessLayerContractBase<MSBuildExtensionPack.DataSourceEntities.BuildCollection,MSBuildExtensionPack.DataSourceEntities.Build,MSBuildExtensionPack.DataSourceEntities.BuildIdentifier> Members
 
+            // DataQueryPerQuerySettingCollection -- MethodDataQuery -- Start
+
         #region Query Methods Of EntityOfCommon
 
         /// <summary>
@@ -817,6 +819,8 @@ namespace MSBuildExtensionPack.WcfClientBLL
         }
 
         #endregion Query Methods Of KeyInformationOfByIdentifier
+
+            // DataQueryPerQuerySettingCollection -- MethodDataQuery -- End
 
         #region EntityUpdateActionSetting - UpdateNameOnly
 

@@ -146,6 +146,8 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Framework.DAL.DataAccessLayerContractBase<MSBuildExtensionPack.DataSourceEntities.SolutionCollection,MSBuildExtensionPack.DataSourceEntities.Solution,MSBuildExtensionPack.DataSourceEntities.SolutionIdentifier> Members
 
+            // DataQueryPerQuerySettingCollection -- MethodDataQuery -- Start
+
         #region Query Methods Of EntityOfCommon
 
         /// <summary>
@@ -769,6 +771,8 @@ namespace MSBuildExtensionPack.WcfClientBLL
         }
 
         #endregion Query Methods Of KeyInformationOfByIdentifier
+
+            // DataQueryPerQuerySettingCollection -- MethodDataQuery -- End
 
 #if WINDOWS_PHONE
         protected override MSBuildExtensionPack.WcfContracts.ISolutionService CreateChannel()

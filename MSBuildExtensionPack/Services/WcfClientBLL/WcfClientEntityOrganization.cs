@@ -146,6 +146,8 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Framework.DAL.DataAccessLayerContractBase<MSBuildExtensionPack.DataSourceEntities.OrganizationCollection,MSBuildExtensionPack.DataSourceEntities.Organization,MSBuildExtensionPack.DataSourceEntities.OrganizationIdentifier> Members
 
+            // DataQueryPerQuerySettingCollection -- MethodDataQuery -- Start
+
         #region Query Methods Of EntityOfCommon
 
         /// <summary>
@@ -722,6 +724,54 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of DefaultOfByIdentifier
 
+        #region Query Methods Of DefaultWithPathOfByIdentifier
+
+        /// <summary>
+        /// Gets the count of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>the count</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultWithPathOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.GetCountOfDefaultWithPathOfByIdentifier(request);
+        }
+
+        /// <summary>
+        /// Exists the of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultWithPathOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.ExistsOfDefaultWithPathOfByIdentifier(request);
+        }
+
+        /// <summary>
+        /// Gets the collection of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath GetCollectionOfDefaultWithPathOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.GetCollectionOfDefaultWithPathOfByIdentifier(request);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath GetSingleOfDefaultWithPathOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.GetSingleOfDefaultWithPathOfByIdentifier(request);
+        }
+
+        #endregion Query Methods Of DefaultWithPathOfByIdentifier
+
         #region Query Methods Of KeyInformationOfByIdentifier
 
         /// <summary>
@@ -1154,6 +1204,54 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of DefaultOfIdentifierAndUniqueConstraint
 
+        #region Query Methods Of DefaultWithPathOfIdentifierAndUniqueConstraint
+
+        /// <summary>
+        /// Gets the count of entity of "IdentifierAndUniqueConstraint".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>the count</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultWithPathOfIdentifierAndUniqueConstraint(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        {
+            return base.Channel.GetCountOfDefaultWithPathOfIdentifierAndUniqueConstraint(request);
+        }
+
+        /// <summary>
+        /// Exists the of entity of "IdentifierAndUniqueConstraint".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultWithPathOfIdentifierAndUniqueConstraint(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        {
+            return base.Channel.ExistsOfDefaultWithPathOfIdentifierAndUniqueConstraint(request);
+        }
+
+        /// <summary>
+        /// Gets the collection of entity of "IdentifierAndUniqueConstraint".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath GetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraint(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        {
+            return base.Channel.GetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraint(request);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "IdentifierAndUniqueConstraint".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath GetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraint(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        {
+            return base.Channel.GetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraint(request);
+        }
+
+        #endregion Query Methods Of DefaultWithPathOfIdentifierAndUniqueConstraint
+
         #region Query Methods Of KeyInformationOfIdentifierAndUniqueConstraint
 
         /// <summary>
@@ -1201,6 +1299,8 @@ namespace MSBuildExtensionPack.WcfClientBLL
         }
 
         #endregion Query Methods Of KeyInformationOfIdentifierAndUniqueConstraint
+
+            // DataQueryPerQuerySettingCollection -- MethodDataQuery -- End
 
         #region GetAscendantOfParentIdOfMSBuildExtensionPack_Organization && GetDescendantOfParentIdOfMSBuildExtensionPack_Organization
 
