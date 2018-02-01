@@ -157,7 +157,73 @@ namespace MSBuildExtensionPack.WebApiClient
 
         #endregion batch insert, update and delete in an entity collection
 
-        #region Query Methods Of NameValuePairOfAll per criteria, queryPagingSetting and queryOrderBySettingCollection
+        // DataQueryPerQuerySettingCollection -- MethodDataQuery -- Start
+
+        #region Query Methods Of EntityOfCommon
+
+        public const string ActionName_GetCollectionOfEntityOfCommon = "GetCollectionOfEntityOfCommon";
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// http://[host]/api/BuildEventCodeApi/GetCollectionOfEntityOfCommon
+        /// </summary>
+        /// <param name="eventCode" > value to compare/filter with eventCode property/field/column</param>
+        /// <param name="description" > value to compare/filter with description property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection"/></returns>
+        public async Task<MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection> GetCollectionOfEntityOfCommonAsync(
+            System.String eventCode
+            , System.String description
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
+        {
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            parameters.Add("eventCode", eventCode.ToString());
+            parameters.Add("description", description.ToString());
+            parameters.Add("currentIndex", currentIndex.ToString());
+            parameters.Add("pageSize", pageSize.ToString());
+            parameters.Add("queryOrderByExpression", queryOrderByExpression);
+
+            string url = GetHttpRequestUrl(ActionName_GetCollectionOfEntityOfCommon, parameters);
+            return await Get<MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection>(url);
+        }
+
+        #endregion Query Methods Of EntityOfCommon
+
+        #region Query Methods Of EntityOfAll
+
+        public const string ActionName_GetCollectionOfEntityOfAll = "GetCollectionOfEntityOfAll";
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// http://[host]/api/BuildEventCodeApi/GetCollectionOfEntityOfAll
+        /// </summary>
+
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection"/></returns>
+        public async Task<MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection> GetCollectionOfEntityOfAllAsync(
+            int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
+        {
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+
+            parameters.Add("currentIndex", currentIndex.ToString());
+            parameters.Add("pageSize", pageSize.ToString());
+            parameters.Add("queryOrderByExpression", queryOrderByExpression);
+
+            string url = GetHttpRequestUrl(ActionName_GetCollectionOfEntityOfAll, parameters);
+            return await Get<MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection>(url);
+        }
+
+        #endregion Query Methods Of EntityOfAll
+
+        #region Query Methods Of NameValuePairOfAll
 
         public const string ActionName_GetCollectionOfNameValuePairOfAll = "GetCollectionOfNameValuePairOfAll";
         /// <summary>
@@ -185,7 +251,101 @@ namespace MSBuildExtensionPack.WebApiClient
             return await Get<Framework.NameValueCollection>(url);
         }
 
-        #endregion Query Methods Of NameValuePairOfAll per value type
+        #endregion Query Methods Of NameValuePairOfAll
+
+        #region Query Methods Of RssItemOfAll
+
+        public const string ActionName_GetCollectionOfRssItemOfAll = "GetCollectionOfRssItemOfAll";
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// http://[host]/api/BuildEventCodeApi/GetCollectionOfRssItemOfAll
+        /// </summary>
+
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="Framework.RssItemCollection"/></returns>
+        public async Task<Framework.RssItemCollection> GetCollectionOfRssItemOfAllAsync(
+            int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
+        {
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+
+            parameters.Add("currentIndex", currentIndex.ToString());
+            parameters.Add("pageSize", pageSize.ToString());
+            parameters.Add("queryOrderByExpression", queryOrderByExpression);
+
+            string url = GetHttpRequestUrl(ActionName_GetCollectionOfRssItemOfAll, parameters);
+            return await Get<Framework.RssItemCollection>(url);
+        }
+
+        #endregion Query Methods Of RssItemOfAll
+
+        #region Query Methods Of EntityOfByIdentifier
+
+        public const string ActionName_GetCollectionOfEntityOfByIdentifier = "GetCollectionOfEntityOfByIdentifier";
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// http://[host]/api/BuildEventCodeApi/GetCollectionOfEntityOfByIdentifier
+        /// </summary>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection"/></returns>
+        public async Task<MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection> GetCollectionOfEntityOfByIdentifierAsync(
+            System.Int32? id
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
+        {
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            parameters.Add("id", id.ToString());
+            parameters.Add("currentIndex", currentIndex.ToString());
+            parameters.Add("pageSize", pageSize.ToString());
+            parameters.Add("queryOrderByExpression", queryOrderByExpression);
+
+            string url = GetHttpRequestUrl(ActionName_GetCollectionOfEntityOfByIdentifier, parameters);
+            return await Get<MSBuildExtensionPack.DataSourceEntities.BuildEventCodeCollection>(url);
+        }
+
+        #endregion Query Methods Of EntityOfByIdentifier
+
+        #region Query Methods Of KeyInformationOfByIdentifier
+
+        public const string ActionName_GetCollectionOfKeyInformationOfByIdentifier = "GetCollectionOfKeyInformationOfByIdentifier";
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// http://[host]/api/BuildEventCodeApi/GetCollectionOfKeyInformationOfByIdentifier
+        /// </summary>
+        /// <param name="id">value to compare/filter with id property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformationCollection"/></returns>
+        public async Task<MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformationCollection> GetCollectionOfKeyInformationOfByIdentifierAsync(
+            System.Int32? id
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
+        {
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            parameters.Add("id", id.ToString());
+            parameters.Add("currentIndex", currentIndex.ToString());
+            parameters.Add("pageSize", pageSize.ToString());
+            parameters.Add("queryOrderByExpression", queryOrderByExpression);
+
+            string url = GetHttpRequestUrl(ActionName_GetCollectionOfKeyInformationOfByIdentifier, parameters);
+            return await Get<MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformationCollection>(url);
+        }
+
+        #endregion Query Methods Of KeyInformationOfByIdentifier
+
+        // DataQueryPerQuerySettingCollection -- MethodDataQuery -- End
 
         public const string ActionName_GetBuildEventCodeItemVM = "GetBuildEventCodeItemVM";
         /// <summary>
