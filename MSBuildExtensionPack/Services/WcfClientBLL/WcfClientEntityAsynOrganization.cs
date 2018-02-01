@@ -202,7 +202,7 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Binary Columns
 
-        #region DataQueryPerQuerySettingCollection
+        // DataQueryPerQuerySettingCollection -- EventArg Classes And EventHandlers -- start
 
         #region Query Methods Of EntityOfCommon
 
@@ -229,6 +229,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCountOfEntityOfCommonDelegate;
+
+        private EndOperationDelegate onEndGetCountOfEntityOfCommonDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCountOfEntityOfCommonCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class ExistsOfEntityOfCommonCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -251,6 +257,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
+
+        private BeginOperationDelegate onBeginExistsOfEntityOfCommonDelegate;
+
+        private EndOperationDelegate onEndExistsOfEntityOfCommonDelegate;
+
+        private System.Threading.SendOrPostCallback onExistsOfEntityOfCommonCompletedDelegate;
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -275,6 +287,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCollectionOfEntityOfCommonDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfEntityOfCommonDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfEntityOfCommonCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class GetSingleOfEntityOfCommonCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -297,24 +315,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
-
-        private BeginOperationDelegate onBeginGetCountOfEntityOfCommonDelegate;
-
-        private EndOperationDelegate onEndGetCountOfEntityOfCommonDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCountOfEntityOfCommonCompletedDelegate;
-
-        private BeginOperationDelegate onBeginExistsOfEntityOfCommonDelegate;
-
-        private EndOperationDelegate onEndExistsOfEntityOfCommonDelegate;
-
-        private System.Threading.SendOrPostCallback onExistsOfEntityOfCommonCompletedDelegate;
-
-        private BeginOperationDelegate onBeginGetCollectionOfEntityOfCommonDelegate;
-
-        private EndOperationDelegate onEndGetCollectionOfEntityOfCommonDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCollectionOfEntityOfCommonCompletedDelegate;
 
         private BeginOperationDelegate onBeginGetSingleOfEntityOfCommonDelegate;
 
@@ -349,6 +349,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCountOfDefaultOfCommonDelegate;
+
+        private EndOperationDelegate onEndGetCountOfDefaultOfCommonDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCountOfDefaultOfCommonCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class ExistsOfDefaultOfCommonCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -371,6 +377,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
+
+        private BeginOperationDelegate onBeginExistsOfDefaultOfCommonDelegate;
+
+        private EndOperationDelegate onEndExistsOfDefaultOfCommonDelegate;
+
+        private System.Threading.SendOrPostCallback onExistsOfDefaultOfCommonCompletedDelegate;
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -395,6 +407,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCollectionOfDefaultOfCommonDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfDefaultOfCommonDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfDefaultOfCommonCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class GetSingleOfDefaultOfCommonCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -417,24 +435,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
-
-        private BeginOperationDelegate onBeginGetCountOfDefaultOfCommonDelegate;
-
-        private EndOperationDelegate onEndGetCountOfDefaultOfCommonDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCountOfDefaultOfCommonCompletedDelegate;
-
-        private BeginOperationDelegate onBeginExistsOfDefaultOfCommonDelegate;
-
-        private EndOperationDelegate onEndExistsOfDefaultOfCommonDelegate;
-
-        private System.Threading.SendOrPostCallback onExistsOfDefaultOfCommonCompletedDelegate;
-
-        private BeginOperationDelegate onBeginGetCollectionOfDefaultOfCommonDelegate;
-
-        private EndOperationDelegate onEndGetCollectionOfDefaultOfCommonDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCollectionOfDefaultOfCommonCompletedDelegate;
 
         private BeginOperationDelegate onBeginGetSingleOfDefaultOfCommonDelegate;
 
@@ -469,6 +469,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCountOfEntityOfAllDelegate;
+
+        private EndOperationDelegate onEndGetCountOfEntityOfAllDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCountOfEntityOfAllCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class ExistsOfEntityOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -491,6 +497,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
+
+        private BeginOperationDelegate onBeginExistsOfEntityOfAllDelegate;
+
+        private EndOperationDelegate onEndExistsOfEntityOfAllDelegate;
+
+        private System.Threading.SendOrPostCallback onExistsOfEntityOfAllCompletedDelegate;
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -515,6 +527,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCollectionOfEntityOfAllDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfEntityOfAllDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfEntityOfAllCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class GetSingleOfEntityOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -537,24 +555,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
-
-        private BeginOperationDelegate onBeginGetCountOfEntityOfAllDelegate;
-
-        private EndOperationDelegate onEndGetCountOfEntityOfAllDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCountOfEntityOfAllCompletedDelegate;
-
-        private BeginOperationDelegate onBeginExistsOfEntityOfAllDelegate;
-
-        private EndOperationDelegate onEndExistsOfEntityOfAllDelegate;
-
-        private System.Threading.SendOrPostCallback onExistsOfEntityOfAllCompletedDelegate;
-
-        private BeginOperationDelegate onBeginGetCollectionOfEntityOfAllDelegate;
-
-        private EndOperationDelegate onEndGetCollectionOfEntityOfAllDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCollectionOfEntityOfAllCompletedDelegate;
 
         private BeginOperationDelegate onBeginGetSingleOfEntityOfAllDelegate;
 
@@ -589,6 +589,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCountOfNameValuePairOfAllDelegate;
+
+        private EndOperationDelegate onEndGetCountOfNameValuePairOfAllDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCountOfNameValuePairOfAllCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class ExistsOfNameValuePairOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -611,6 +617,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
+
+        private BeginOperationDelegate onBeginExistsOfNameValuePairOfAllDelegate;
+
+        private EndOperationDelegate onEndExistsOfNameValuePairOfAllDelegate;
+
+        private System.Threading.SendOrPostCallback onExistsOfNameValuePairOfAllCompletedDelegate;
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -635,6 +647,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCollectionOfNameValuePairOfAllDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfNameValuePairOfAllDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfNameValuePairOfAllCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class GetSingleOfNameValuePairOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -657,24 +675,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
-
-        private BeginOperationDelegate onBeginGetCountOfNameValuePairOfAllDelegate;
-
-        private EndOperationDelegate onEndGetCountOfNameValuePairOfAllDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCountOfNameValuePairOfAllCompletedDelegate;
-
-        private BeginOperationDelegate onBeginExistsOfNameValuePairOfAllDelegate;
-
-        private EndOperationDelegate onEndExistsOfNameValuePairOfAllDelegate;
-
-        private System.Threading.SendOrPostCallback onExistsOfNameValuePairOfAllCompletedDelegate;
-
-        private BeginOperationDelegate onBeginGetCollectionOfNameValuePairOfAllDelegate;
-
-        private EndOperationDelegate onEndGetCollectionOfNameValuePairOfAllDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCollectionOfNameValuePairOfAllCompletedDelegate;
 
         private BeginOperationDelegate onBeginGetSingleOfNameValuePairOfAllDelegate;
 
@@ -709,6 +709,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCountOfRssItemOfAllDelegate;
+
+        private EndOperationDelegate onEndGetCountOfRssItemOfAllDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCountOfRssItemOfAllCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class ExistsOfRssItemOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -731,6 +737,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
+
+        private BeginOperationDelegate onBeginExistsOfRssItemOfAllDelegate;
+
+        private EndOperationDelegate onEndExistsOfRssItemOfAllDelegate;
+
+        private System.Threading.SendOrPostCallback onExistsOfRssItemOfAllCompletedDelegate;
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -755,6 +767,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCollectionOfRssItemOfAllDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfRssItemOfAllDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfRssItemOfAllCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class GetSingleOfRssItemOfAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -777,24 +795,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
-
-        private BeginOperationDelegate onBeginGetCountOfRssItemOfAllDelegate;
-
-        private EndOperationDelegate onEndGetCountOfRssItemOfAllDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCountOfRssItemOfAllCompletedDelegate;
-
-        private BeginOperationDelegate onBeginExistsOfRssItemOfAllDelegate;
-
-        private EndOperationDelegate onEndExistsOfRssItemOfAllDelegate;
-
-        private System.Threading.SendOrPostCallback onExistsOfRssItemOfAllCompletedDelegate;
-
-        private BeginOperationDelegate onBeginGetCollectionOfRssItemOfAllDelegate;
-
-        private EndOperationDelegate onEndGetCollectionOfRssItemOfAllDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCollectionOfRssItemOfAllCompletedDelegate;
 
         private BeginOperationDelegate onBeginGetSingleOfRssItemOfAllDelegate;
 
@@ -829,6 +829,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCountOfEntityOfByFKOnlyDelegate;
+
+        private EndOperationDelegate onEndGetCountOfEntityOfByFKOnlyDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCountOfEntityOfByFKOnlyCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class ExistsOfEntityOfByFKOnlyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -851,6 +857,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
+
+        private BeginOperationDelegate onBeginExistsOfEntityOfByFKOnlyDelegate;
+
+        private EndOperationDelegate onEndExistsOfEntityOfByFKOnlyDelegate;
+
+        private System.Threading.SendOrPostCallback onExistsOfEntityOfByFKOnlyCompletedDelegate;
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -875,6 +887,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCollectionOfEntityOfByFKOnlyDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfEntityOfByFKOnlyDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfEntityOfByFKOnlyCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class GetSingleOfEntityOfByFKOnlyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -897,24 +915,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
-
-        private BeginOperationDelegate onBeginGetCountOfEntityOfByFKOnlyDelegate;
-
-        private EndOperationDelegate onEndGetCountOfEntityOfByFKOnlyDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCountOfEntityOfByFKOnlyCompletedDelegate;
-
-        private BeginOperationDelegate onBeginExistsOfEntityOfByFKOnlyDelegate;
-
-        private EndOperationDelegate onEndExistsOfEntityOfByFKOnlyDelegate;
-
-        private System.Threading.SendOrPostCallback onExistsOfEntityOfByFKOnlyCompletedDelegate;
-
-        private BeginOperationDelegate onBeginGetCollectionOfEntityOfByFKOnlyDelegate;
-
-        private EndOperationDelegate onEndGetCollectionOfEntityOfByFKOnlyDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCollectionOfEntityOfByFKOnlyCompletedDelegate;
 
         private BeginOperationDelegate onBeginGetSingleOfEntityOfByFKOnlyDelegate;
 
@@ -949,6 +949,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCountOfNameValuePairOfByFKOnlyDelegate;
+
+        private EndOperationDelegate onEndGetCountOfNameValuePairOfByFKOnlyDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCountOfNameValuePairOfByFKOnlyCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class ExistsOfNameValuePairOfByFKOnlyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -971,6 +977,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
+
+        private BeginOperationDelegate onBeginExistsOfNameValuePairOfByFKOnlyDelegate;
+
+        private EndOperationDelegate onEndExistsOfNameValuePairOfByFKOnlyDelegate;
+
+        private System.Threading.SendOrPostCallback onExistsOfNameValuePairOfByFKOnlyCompletedDelegate;
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -995,6 +1007,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCollectionOfNameValuePairOfByFKOnlyDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfNameValuePairOfByFKOnlyDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfNameValuePairOfByFKOnlyCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class GetSingleOfNameValuePairOfByFKOnlyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -1017,24 +1035,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
-
-        private BeginOperationDelegate onBeginGetCountOfNameValuePairOfByFKOnlyDelegate;
-
-        private EndOperationDelegate onEndGetCountOfNameValuePairOfByFKOnlyDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCountOfNameValuePairOfByFKOnlyCompletedDelegate;
-
-        private BeginOperationDelegate onBeginExistsOfNameValuePairOfByFKOnlyDelegate;
-
-        private EndOperationDelegate onEndExistsOfNameValuePairOfByFKOnlyDelegate;
-
-        private System.Threading.SendOrPostCallback onExistsOfNameValuePairOfByFKOnlyCompletedDelegate;
-
-        private BeginOperationDelegate onBeginGetCollectionOfNameValuePairOfByFKOnlyDelegate;
-
-        private EndOperationDelegate onEndGetCollectionOfNameValuePairOfByFKOnlyDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCollectionOfNameValuePairOfByFKOnlyCompletedDelegate;
 
         private BeginOperationDelegate onBeginGetSingleOfNameValuePairOfByFKOnlyDelegate;
 
@@ -1069,6 +1069,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCountOfRssItemOfByFKOnlyDelegate;
+
+        private EndOperationDelegate onEndGetCountOfRssItemOfByFKOnlyDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCountOfRssItemOfByFKOnlyCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class ExistsOfRssItemOfByFKOnlyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -1091,6 +1097,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
+
+        private BeginOperationDelegate onBeginExistsOfRssItemOfByFKOnlyDelegate;
+
+        private EndOperationDelegate onEndExistsOfRssItemOfByFKOnlyDelegate;
+
+        private System.Threading.SendOrPostCallback onExistsOfRssItemOfByFKOnlyCompletedDelegate;
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1115,6 +1127,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCollectionOfRssItemOfByFKOnlyDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfRssItemOfByFKOnlyDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfRssItemOfByFKOnlyCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class GetSingleOfRssItemOfByFKOnlyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -1137,24 +1155,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
-
-        private BeginOperationDelegate onBeginGetCountOfRssItemOfByFKOnlyDelegate;
-
-        private EndOperationDelegate onEndGetCountOfRssItemOfByFKOnlyDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCountOfRssItemOfByFKOnlyCompletedDelegate;
-
-        private BeginOperationDelegate onBeginExistsOfRssItemOfByFKOnlyDelegate;
-
-        private EndOperationDelegate onEndExistsOfRssItemOfByFKOnlyDelegate;
-
-        private System.Threading.SendOrPostCallback onExistsOfRssItemOfByFKOnlyCompletedDelegate;
-
-        private BeginOperationDelegate onBeginGetCollectionOfRssItemOfByFKOnlyDelegate;
-
-        private EndOperationDelegate onEndGetCollectionOfRssItemOfByFKOnlyDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCollectionOfRssItemOfByFKOnlyCompletedDelegate;
 
         private BeginOperationDelegate onBeginGetSingleOfRssItemOfByFKOnlyDelegate;
 
@@ -1189,6 +1189,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCountOfDefaultOfByFKOnlyDelegate;
+
+        private EndOperationDelegate onEndGetCountOfDefaultOfByFKOnlyDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCountOfDefaultOfByFKOnlyCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class ExistsOfDefaultOfByFKOnlyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -1211,6 +1217,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
+
+        private BeginOperationDelegate onBeginExistsOfDefaultOfByFKOnlyDelegate;
+
+        private EndOperationDelegate onEndExistsOfDefaultOfByFKOnlyDelegate;
+
+        private System.Threading.SendOrPostCallback onExistsOfDefaultOfByFKOnlyCompletedDelegate;
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1235,6 +1247,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCollectionOfDefaultOfByFKOnlyDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfDefaultOfByFKOnlyDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfDefaultOfByFKOnlyCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class GetSingleOfDefaultOfByFKOnlyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -1257,24 +1275,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
-
-        private BeginOperationDelegate onBeginGetCountOfDefaultOfByFKOnlyDelegate;
-
-        private EndOperationDelegate onEndGetCountOfDefaultOfByFKOnlyDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCountOfDefaultOfByFKOnlyCompletedDelegate;
-
-        private BeginOperationDelegate onBeginExistsOfDefaultOfByFKOnlyDelegate;
-
-        private EndOperationDelegate onEndExistsOfDefaultOfByFKOnlyDelegate;
-
-        private System.Threading.SendOrPostCallback onExistsOfDefaultOfByFKOnlyCompletedDelegate;
-
-        private BeginOperationDelegate onBeginGetCollectionOfDefaultOfByFKOnlyDelegate;
-
-        private EndOperationDelegate onEndGetCollectionOfDefaultOfByFKOnlyDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCollectionOfDefaultOfByFKOnlyCompletedDelegate;
 
         private BeginOperationDelegate onBeginGetSingleOfDefaultOfByFKOnlyDelegate;
 
@@ -1309,6 +1309,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCountOfDefaultGroupedDataViewOfByFKOnlyDelegate;
+
+        private EndOperationDelegate onEndGetCountOfDefaultGroupedDataViewOfByFKOnlyDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCountOfDefaultGroupedDataViewOfByFKOnlyCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class ExistsOfDefaultGroupedDataViewOfByFKOnlyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -1331,6 +1337,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
+
+        private BeginOperationDelegate onBeginExistsOfDefaultGroupedDataViewOfByFKOnlyDelegate;
+
+        private EndOperationDelegate onEndExistsOfDefaultGroupedDataViewOfByFKOnlyDelegate;
+
+        private System.Threading.SendOrPostCallback onExistsOfDefaultGroupedDataViewOfByFKOnlyCompletedDelegate;
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1355,6 +1367,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCollectionOfDefaultGroupedDataViewOfByFKOnlyDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfDefaultGroupedDataViewOfByFKOnlyDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfDefaultGroupedDataViewOfByFKOnlyCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class GetSingleOfDefaultGroupedDataViewOfByFKOnlyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -1377,24 +1395,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
-
-        private BeginOperationDelegate onBeginGetCountOfDefaultGroupedDataViewOfByFKOnlyDelegate;
-
-        private EndOperationDelegate onEndGetCountOfDefaultGroupedDataViewOfByFKOnlyDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCountOfDefaultGroupedDataViewOfByFKOnlyCompletedDelegate;
-
-        private BeginOperationDelegate onBeginExistsOfDefaultGroupedDataViewOfByFKOnlyDelegate;
-
-        private EndOperationDelegate onEndExistsOfDefaultGroupedDataViewOfByFKOnlyDelegate;
-
-        private System.Threading.SendOrPostCallback onExistsOfDefaultGroupedDataViewOfByFKOnlyCompletedDelegate;
-
-        private BeginOperationDelegate onBeginGetCollectionOfDefaultGroupedDataViewOfByFKOnlyDelegate;
-
-        private EndOperationDelegate onEndGetCollectionOfDefaultGroupedDataViewOfByFKOnlyDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCollectionOfDefaultGroupedDataViewOfByFKOnlyCompletedDelegate;
 
         private BeginOperationDelegate onBeginGetSingleOfDefaultGroupedDataViewOfByFKOnlyDelegate;
 
@@ -1429,6 +1429,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCountOfEntityOfByIdentifierDelegate;
+
+        private EndOperationDelegate onEndGetCountOfEntityOfByIdentifierDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCountOfEntityOfByIdentifierCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class ExistsOfEntityOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -1451,6 +1457,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
+
+        private BeginOperationDelegate onBeginExistsOfEntityOfByIdentifierDelegate;
+
+        private EndOperationDelegate onEndExistsOfEntityOfByIdentifierDelegate;
+
+        private System.Threading.SendOrPostCallback onExistsOfEntityOfByIdentifierCompletedDelegate;
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1475,6 +1487,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCollectionOfEntityOfByIdentifierDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfEntityOfByIdentifierDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfEntityOfByIdentifierCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class GetSingleOfEntityOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -1497,24 +1515,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
-
-        private BeginOperationDelegate onBeginGetCountOfEntityOfByIdentifierDelegate;
-
-        private EndOperationDelegate onEndGetCountOfEntityOfByIdentifierDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCountOfEntityOfByIdentifierCompletedDelegate;
-
-        private BeginOperationDelegate onBeginExistsOfEntityOfByIdentifierDelegate;
-
-        private EndOperationDelegate onEndExistsOfEntityOfByIdentifierDelegate;
-
-        private System.Threading.SendOrPostCallback onExistsOfEntityOfByIdentifierCompletedDelegate;
-
-        private BeginOperationDelegate onBeginGetCollectionOfEntityOfByIdentifierDelegate;
-
-        private EndOperationDelegate onEndGetCollectionOfEntityOfByIdentifierDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCollectionOfEntityOfByIdentifierCompletedDelegate;
 
         private BeginOperationDelegate onBeginGetSingleOfEntityOfByIdentifierDelegate;
 
@@ -1549,6 +1549,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCountOfDefaultOfByIdentifierDelegate;
+
+        private EndOperationDelegate onEndGetCountOfDefaultOfByIdentifierDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCountOfDefaultOfByIdentifierCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class ExistsOfDefaultOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -1571,6 +1577,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
+
+        private BeginOperationDelegate onBeginExistsOfDefaultOfByIdentifierDelegate;
+
+        private EndOperationDelegate onEndExistsOfDefaultOfByIdentifierDelegate;
+
+        private System.Threading.SendOrPostCallback onExistsOfDefaultOfByIdentifierCompletedDelegate;
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1595,6 +1607,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCollectionOfDefaultOfByIdentifierDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfDefaultOfByIdentifierDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfDefaultOfByIdentifierCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class GetSingleOfDefaultOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -1618,24 +1636,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
-        private BeginOperationDelegate onBeginGetCountOfDefaultOfByIdentifierDelegate;
-
-        private EndOperationDelegate onEndGetCountOfDefaultOfByIdentifierDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCountOfDefaultOfByIdentifierCompletedDelegate;
-
-        private BeginOperationDelegate onBeginExistsOfDefaultOfByIdentifierDelegate;
-
-        private EndOperationDelegate onEndExistsOfDefaultOfByIdentifierDelegate;
-
-        private System.Threading.SendOrPostCallback onExistsOfDefaultOfByIdentifierCompletedDelegate;
-
-        private BeginOperationDelegate onBeginGetCollectionOfDefaultOfByIdentifierDelegate;
-
-        private EndOperationDelegate onEndGetCollectionOfDefaultOfByIdentifierDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCollectionOfDefaultOfByIdentifierCompletedDelegate;
-
         private BeginOperationDelegate onBeginGetSingleOfDefaultOfByIdentifierDelegate;
 
         private EndOperationDelegate onEndGetSingleOfDefaultOfByIdentifierDelegate;
@@ -1643,6 +1643,126 @@ namespace MSBuildExtensionPack.WcfClientBLL
         private System.Threading.SendOrPostCallback onGetSingleOfDefaultOfByIdentifierCompletedDelegate;
 
         #endregion Query Methods Of DefaultOfByIdentifier
+
+        #region Query Methods Of DefaultWithPathOfByIdentifier
+
+        [System.Diagnostics.DebuggerStepThroughAttribute()]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+        public partial class GetCountOfDefaultWithPathOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        {
+
+            private object[] results;
+
+            public GetCountOfDefaultWithPathOfByIdentifierCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+                base(exception, cancelled, userState)
+            {
+                this.results = results;
+            }
+
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger Result
+            {
+                get
+                {
+                    base.RaiseExceptionIfNecessary();
+                    return ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger)(this.results[0]));
+                }
+            }
+        }
+
+        private BeginOperationDelegate onBeginGetCountOfDefaultWithPathOfByIdentifierDelegate;
+
+        private EndOperationDelegate onEndGetCountOfDefaultWithPathOfByIdentifierDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCountOfDefaultWithPathOfByIdentifierCompletedDelegate;
+
+        [System.Diagnostics.DebuggerStepThroughAttribute()]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+        public partial class ExistsOfDefaultWithPathOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        {
+
+            private object[] results;
+
+            public ExistsOfDefaultWithPathOfByIdentifierCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+                base(exception, cancelled, userState)
+            {
+                this.results = results;
+            }
+
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean Result
+            {
+                get
+                {
+                    base.RaiseExceptionIfNecessary();
+                    return ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean)(this.results[0]));
+                }
+            }
+        }
+
+        private BeginOperationDelegate onBeginExistsOfDefaultWithPathOfByIdentifierDelegate;
+
+        private EndOperationDelegate onEndExistsOfDefaultWithPathOfByIdentifierDelegate;
+
+        private System.Threading.SendOrPostCallback onExistsOfDefaultWithPathOfByIdentifierCompletedDelegate;
+
+        [System.Diagnostics.DebuggerStepThroughAttribute()]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+        public partial class GetCollectionOfDefaultWithPathOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        {
+
+            private object[] results;
+
+            public GetCollectionOfDefaultWithPathOfByIdentifierCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+                base(exception, cancelled, userState)
+            {
+                this.results = results;
+            }
+
+            public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath Result
+            {
+                get
+                {
+                    base.RaiseExceptionIfNecessary();
+                    return ((MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath)(this.results[0]));
+                }
+            }
+        }
+
+        private BeginOperationDelegate onBeginGetCollectionOfDefaultWithPathOfByIdentifierDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfDefaultWithPathOfByIdentifierDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfDefaultWithPathOfByIdentifierCompletedDelegate;
+
+        [System.Diagnostics.DebuggerStepThroughAttribute()]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+        public partial class GetSingleOfDefaultWithPathOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        {
+
+            private object[] results;
+
+            public GetSingleOfDefaultWithPathOfByIdentifierCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+                base(exception, cancelled, userState)
+            {
+                this.results = results;
+            }
+
+            public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath Result
+            {
+                get
+                {
+                    base.RaiseExceptionIfNecessary();
+                    return ((MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath)(this.results[0]));
+                }
+            }
+        }
+
+        private BeginOperationDelegate onBeginGetSingleOfDefaultWithPathOfByIdentifierDelegate;
+
+        private EndOperationDelegate onEndGetSingleOfDefaultWithPathOfByIdentifierDelegate;
+
+        private System.Threading.SendOrPostCallback onGetSingleOfDefaultWithPathOfByIdentifierCompletedDelegate;
+
+        #endregion Query Methods Of DefaultWithPathOfByIdentifier
 
         #region Query Methods Of KeyInformationOfByIdentifier
 
@@ -1669,6 +1789,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCountOfKeyInformationOfByIdentifierDelegate;
+
+        private EndOperationDelegate onEndGetCountOfKeyInformationOfByIdentifierDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCountOfKeyInformationOfByIdentifierCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class ExistsOfKeyInformationOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -1691,6 +1817,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
+
+        private BeginOperationDelegate onBeginExistsOfKeyInformationOfByIdentifierDelegate;
+
+        private EndOperationDelegate onEndExistsOfKeyInformationOfByIdentifierDelegate;
+
+        private System.Threading.SendOrPostCallback onExistsOfKeyInformationOfByIdentifierCompletedDelegate;
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1715,6 +1847,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCollectionOfKeyInformationOfByIdentifierDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfKeyInformationOfByIdentifierDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfKeyInformationOfByIdentifierCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class GetSingleOfKeyInformationOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -1737,24 +1875,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
-
-        private BeginOperationDelegate onBeginGetCountOfKeyInformationOfByIdentifierDelegate;
-
-        private EndOperationDelegate onEndGetCountOfKeyInformationOfByIdentifierDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCountOfKeyInformationOfByIdentifierCompletedDelegate;
-
-        private BeginOperationDelegate onBeginExistsOfKeyInformationOfByIdentifierDelegate;
-
-        private EndOperationDelegate onEndExistsOfKeyInformationOfByIdentifierDelegate;
-
-        private System.Threading.SendOrPostCallback onExistsOfKeyInformationOfByIdentifierCompletedDelegate;
-
-        private BeginOperationDelegate onBeginGetCollectionOfKeyInformationOfByIdentifierDelegate;
-
-        private EndOperationDelegate onEndGetCollectionOfKeyInformationOfByIdentifierDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCollectionOfKeyInformationOfByIdentifierCompletedDelegate;
 
         private BeginOperationDelegate onBeginGetSingleOfKeyInformationOfByIdentifierDelegate;
 
@@ -1789,6 +1909,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
+
+        private EndOperationDelegate onEndGetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -1811,6 +1937,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
+
+        private BeginOperationDelegate onBeginExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
+
+        private EndOperationDelegate onEndExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
+
+        private System.Threading.SendOrPostCallback onExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate;
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1835,6 +1967,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -1857,24 +1995,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
-
-        private BeginOperationDelegate onBeginGetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
-
-        private EndOperationDelegate onEndGetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate;
-
-        private BeginOperationDelegate onBeginExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
-
-        private EndOperationDelegate onEndExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
-
-        private System.Threading.SendOrPostCallback onExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate;
-
-        private BeginOperationDelegate onBeginGetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
-
-        private EndOperationDelegate onEndGetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate;
 
         private BeginOperationDelegate onBeginGetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
 
@@ -1909,6 +2029,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
+
+        private EndOperationDelegate onEndGetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -1931,6 +2057,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
+
+        private BeginOperationDelegate onBeginExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
+
+        private EndOperationDelegate onEndExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
+
+        private System.Threading.SendOrPostCallback onExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate;
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1955,6 +2087,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -1977,24 +2115,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
-
-        private BeginOperationDelegate onBeginGetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
-
-        private EndOperationDelegate onEndGetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate;
-
-        private BeginOperationDelegate onBeginExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
-
-        private EndOperationDelegate onEndExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
-
-        private System.Threading.SendOrPostCallback onExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate;
-
-        private BeginOperationDelegate onBeginGetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
-
-        private EndOperationDelegate onEndGetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate;
 
         private BeginOperationDelegate onBeginGetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
 
@@ -2029,6 +2149,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
+
+        private EndOperationDelegate onEndGetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -2051,6 +2177,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
+
+        private BeginOperationDelegate onBeginExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
+
+        private EndOperationDelegate onEndExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
+
+        private System.Threading.SendOrPostCallback onExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate;
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2075,6 +2207,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -2097,24 +2235,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
-
-        private BeginOperationDelegate onBeginGetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
-
-        private EndOperationDelegate onEndGetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate;
-
-        private BeginOperationDelegate onBeginExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
-
-        private EndOperationDelegate onEndExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
-
-        private System.Threading.SendOrPostCallback onExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate;
-
-        private BeginOperationDelegate onBeginGetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
-
-        private EndOperationDelegate onEndGetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate;
 
         private BeginOperationDelegate onBeginGetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate;
 
@@ -2149,6 +2269,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
+
+        private EndOperationDelegate onEndGetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -2171,6 +2297,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
+
+        private BeginOperationDelegate onBeginExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
+
+        private EndOperationDelegate onEndExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
+
+        private System.Threading.SendOrPostCallback onExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate;
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2195,6 +2327,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -2217,24 +2355,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
-
-        private BeginOperationDelegate onBeginGetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
-
-        private EndOperationDelegate onEndGetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate;
-
-        private BeginOperationDelegate onBeginExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
-
-        private EndOperationDelegate onEndExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
-
-        private System.Threading.SendOrPostCallback onExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate;
-
-        private BeginOperationDelegate onBeginGetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
-
-        private EndOperationDelegate onEndGetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate;
 
         private BeginOperationDelegate onBeginGetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
 
@@ -2269,6 +2389,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
+
+        private EndOperationDelegate onEndGetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -2291,6 +2417,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
+
+        private BeginOperationDelegate onBeginExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
+
+        private EndOperationDelegate onEndExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
+
+        private System.Threading.SendOrPostCallback onExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate;
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2315,6 +2447,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -2337,24 +2475,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
-
-        private BeginOperationDelegate onBeginGetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
-
-        private EndOperationDelegate onEndGetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate;
-
-        private BeginOperationDelegate onBeginExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
-
-        private EndOperationDelegate onEndExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
-
-        private System.Threading.SendOrPostCallback onExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate;
-
-        private BeginOperationDelegate onBeginGetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
-
-        private EndOperationDelegate onEndGetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate;
 
         private BeginOperationDelegate onBeginGetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
 
@@ -2389,6 +2509,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
+
+        private EndOperationDelegate onEndGetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -2411,6 +2537,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
+
+        private BeginOperationDelegate onBeginExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
+
+        private EndOperationDelegate onEndExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
+
+        private System.Threading.SendOrPostCallback onExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate;
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2435,6 +2567,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -2457,24 +2595,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
-
-        private BeginOperationDelegate onBeginGetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
-
-        private EndOperationDelegate onEndGetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate;
-
-        private BeginOperationDelegate onBeginExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
-
-        private EndOperationDelegate onEndExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
-
-        private System.Threading.SendOrPostCallback onExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate;
-
-        private BeginOperationDelegate onBeginGetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
-
-        private EndOperationDelegate onEndGetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate;
 
         private BeginOperationDelegate onBeginGetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate;
 
@@ -2509,6 +2629,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCountOfEntityOfIdentifierAndUniqueConstraintDelegate;
+
+        private EndOperationDelegate onEndGetCountOfEntityOfIdentifierAndUniqueConstraintDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCountOfEntityOfIdentifierAndUniqueConstraintCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class ExistsOfEntityOfIdentifierAndUniqueConstraintCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -2531,6 +2657,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
+
+        private BeginOperationDelegate onBeginExistsOfEntityOfIdentifierAndUniqueConstraintDelegate;
+
+        private EndOperationDelegate onEndExistsOfEntityOfIdentifierAndUniqueConstraintDelegate;
+
+        private System.Threading.SendOrPostCallback onExistsOfEntityOfIdentifierAndUniqueConstraintCompletedDelegate;
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2555,6 +2687,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCollectionOfEntityOfIdentifierAndUniqueConstraintDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfEntityOfIdentifierAndUniqueConstraintDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfEntityOfIdentifierAndUniqueConstraintCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class GetSingleOfEntityOfIdentifierAndUniqueConstraintCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -2577,24 +2715,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
-
-        private BeginOperationDelegate onBeginGetCountOfEntityOfIdentifierAndUniqueConstraintDelegate;
-
-        private EndOperationDelegate onEndGetCountOfEntityOfIdentifierAndUniqueConstraintDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCountOfEntityOfIdentifierAndUniqueConstraintCompletedDelegate;
-
-        private BeginOperationDelegate onBeginExistsOfEntityOfIdentifierAndUniqueConstraintDelegate;
-
-        private EndOperationDelegate onEndExistsOfEntityOfIdentifierAndUniqueConstraintDelegate;
-
-        private System.Threading.SendOrPostCallback onExistsOfEntityOfIdentifierAndUniqueConstraintCompletedDelegate;
-
-        private BeginOperationDelegate onBeginGetCollectionOfEntityOfIdentifierAndUniqueConstraintDelegate;
-
-        private EndOperationDelegate onEndGetCollectionOfEntityOfIdentifierAndUniqueConstraintDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCollectionOfEntityOfIdentifierAndUniqueConstraintCompletedDelegate;
 
         private BeginOperationDelegate onBeginGetSingleOfEntityOfIdentifierAndUniqueConstraintDelegate;
 
@@ -2629,6 +2749,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCountOfDefaultOfIdentifierAndUniqueConstraintDelegate;
+
+        private EndOperationDelegate onEndGetCountOfDefaultOfIdentifierAndUniqueConstraintDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCountOfDefaultOfIdentifierAndUniqueConstraintCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class ExistsOfDefaultOfIdentifierAndUniqueConstraintCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -2651,6 +2777,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
+
+        private BeginOperationDelegate onBeginExistsOfDefaultOfIdentifierAndUniqueConstraintDelegate;
+
+        private EndOperationDelegate onEndExistsOfDefaultOfIdentifierAndUniqueConstraintDelegate;
+
+        private System.Threading.SendOrPostCallback onExistsOfDefaultOfIdentifierAndUniqueConstraintCompletedDelegate;
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2675,6 +2807,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCollectionOfDefaultOfIdentifierAndUniqueConstraintDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfDefaultOfIdentifierAndUniqueConstraintDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfDefaultOfIdentifierAndUniqueConstraintCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class GetSingleOfDefaultOfIdentifierAndUniqueConstraintCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -2698,24 +2836,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
-        private BeginOperationDelegate onBeginGetCountOfDefaultOfIdentifierAndUniqueConstraintDelegate;
-
-        private EndOperationDelegate onEndGetCountOfDefaultOfIdentifierAndUniqueConstraintDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCountOfDefaultOfIdentifierAndUniqueConstraintCompletedDelegate;
-
-        private BeginOperationDelegate onBeginExistsOfDefaultOfIdentifierAndUniqueConstraintDelegate;
-
-        private EndOperationDelegate onEndExistsOfDefaultOfIdentifierAndUniqueConstraintDelegate;
-
-        private System.Threading.SendOrPostCallback onExistsOfDefaultOfIdentifierAndUniqueConstraintCompletedDelegate;
-
-        private BeginOperationDelegate onBeginGetCollectionOfDefaultOfIdentifierAndUniqueConstraintDelegate;
-
-        private EndOperationDelegate onEndGetCollectionOfDefaultOfIdentifierAndUniqueConstraintDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCollectionOfDefaultOfIdentifierAndUniqueConstraintCompletedDelegate;
-
         private BeginOperationDelegate onBeginGetSingleOfDefaultOfIdentifierAndUniqueConstraintDelegate;
 
         private EndOperationDelegate onEndGetSingleOfDefaultOfIdentifierAndUniqueConstraintDelegate;
@@ -2723,6 +2843,126 @@ namespace MSBuildExtensionPack.WcfClientBLL
         private System.Threading.SendOrPostCallback onGetSingleOfDefaultOfIdentifierAndUniqueConstraintCompletedDelegate;
 
         #endregion Query Methods Of DefaultOfIdentifierAndUniqueConstraint
+
+        #region Query Methods Of DefaultWithPathOfIdentifierAndUniqueConstraint
+
+        [System.Diagnostics.DebuggerStepThroughAttribute()]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+        public partial class GetCountOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        {
+
+            private object[] results;
+
+            public GetCountOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+                base(exception, cancelled, userState)
+            {
+                this.results = results;
+            }
+
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger Result
+            {
+                get
+                {
+                    base.RaiseExceptionIfNecessary();
+                    return ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger)(this.results[0]));
+                }
+            }
+        }
+
+        private BeginOperationDelegate onBeginGetCountOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate;
+
+        private EndOperationDelegate onEndGetCountOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCountOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedDelegate;
+
+        [System.Diagnostics.DebuggerStepThroughAttribute()]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+        public partial class ExistsOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        {
+
+            private object[] results;
+
+            public ExistsOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+                base(exception, cancelled, userState)
+            {
+                this.results = results;
+            }
+
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean Result
+            {
+                get
+                {
+                    base.RaiseExceptionIfNecessary();
+                    return ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean)(this.results[0]));
+                }
+            }
+        }
+
+        private BeginOperationDelegate onBeginExistsOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate;
+
+        private EndOperationDelegate onEndExistsOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate;
+
+        private System.Threading.SendOrPostCallback onExistsOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedDelegate;
+
+        [System.Diagnostics.DebuggerStepThroughAttribute()]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+        public partial class GetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        {
+
+            private object[] results;
+
+            public GetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+                base(exception, cancelled, userState)
+            {
+                this.results = results;
+            }
+
+            public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath Result
+            {
+                get
+                {
+                    base.RaiseExceptionIfNecessary();
+                    return ((MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath)(this.results[0]));
+                }
+            }
+        }
+
+        private BeginOperationDelegate onBeginGetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedDelegate;
+
+        [System.Diagnostics.DebuggerStepThroughAttribute()]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+        public partial class GetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        {
+
+            private object[] results;
+
+            public GetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+                base(exception, cancelled, userState)
+            {
+                this.results = results;
+            }
+
+            public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath Result
+            {
+                get
+                {
+                    base.RaiseExceptionIfNecessary();
+                    return ((MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath)(this.results[0]));
+                }
+            }
+        }
+
+        private BeginOperationDelegate onBeginGetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate;
+
+        private EndOperationDelegate onEndGetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate;
+
+        private System.Threading.SendOrPostCallback onGetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedDelegate;
+
+        #endregion Query Methods Of DefaultWithPathOfIdentifierAndUniqueConstraint
 
         #region Query Methods Of KeyInformationOfIdentifierAndUniqueConstraint
 
@@ -2749,6 +2989,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCountOfKeyInformationOfIdentifierAndUniqueConstraintDelegate;
+
+        private EndOperationDelegate onEndGetCountOfKeyInformationOfIdentifierAndUniqueConstraintDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCountOfKeyInformationOfIdentifierAndUniqueConstraintCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class ExistsOfKeyInformationOfIdentifierAndUniqueConstraintCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -2771,6 +3017,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 }
             }
         }
+
+        private BeginOperationDelegate onBeginExistsOfKeyInformationOfIdentifierAndUniqueConstraintDelegate;
+
+        private EndOperationDelegate onEndExistsOfKeyInformationOfIdentifierAndUniqueConstraintDelegate;
+
+        private System.Threading.SendOrPostCallback onExistsOfKeyInformationOfIdentifierAndUniqueConstraintCompletedDelegate;
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2795,6 +3047,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
+        private BeginOperationDelegate onBeginGetCollectionOfKeyInformationOfIdentifierAndUniqueConstraintDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfKeyInformationOfIdentifierAndUniqueConstraintDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfKeyInformationOfIdentifierAndUniqueConstraintCompletedDelegate;
+
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
         public partial class GetSingleOfKeyInformationOfIdentifierAndUniqueConstraintCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -2818,24 +3076,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
         }
 
-        private BeginOperationDelegate onBeginGetCountOfKeyInformationOfIdentifierAndUniqueConstraintDelegate;
-
-        private EndOperationDelegate onEndGetCountOfKeyInformationOfIdentifierAndUniqueConstraintDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCountOfKeyInformationOfIdentifierAndUniqueConstraintCompletedDelegate;
-
-        private BeginOperationDelegate onBeginExistsOfKeyInformationOfIdentifierAndUniqueConstraintDelegate;
-
-        private EndOperationDelegate onEndExistsOfKeyInformationOfIdentifierAndUniqueConstraintDelegate;
-
-        private System.Threading.SendOrPostCallback onExistsOfKeyInformationOfIdentifierAndUniqueConstraintCompletedDelegate;
-
-        private BeginOperationDelegate onBeginGetCollectionOfKeyInformationOfIdentifierAndUniqueConstraintDelegate;
-
-        private EndOperationDelegate onEndGetCollectionOfKeyInformationOfIdentifierAndUniqueConstraintDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCollectionOfKeyInformationOfIdentifierAndUniqueConstraintCompletedDelegate;
-
         private BeginOperationDelegate onBeginGetSingleOfKeyInformationOfIdentifierAndUniqueConstraintDelegate;
 
         private EndOperationDelegate onEndGetSingleOfKeyInformationOfIdentifierAndUniqueConstraintDelegate;
@@ -2844,7 +3084,7 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of KeyInformationOfIdentifierAndUniqueConstraint
 
-        #endregion DataQueryPerQuerySettingCollection
+        // DataQueryPerQuerySettingCollection -- EventArg Classes And EventHandlers -- end
 
         #region GetAscendantAndDescendant
 
@@ -3002,7 +3242,7 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Binary Columns
 
-        #region DataQueryPerQuerySettingCollection
+        // DataQueryPerQuerySettingCollection -- EventHandlers -- Start
 
         #region Query Methods Of EntityOfCommon
 
@@ -3148,6 +3388,18 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of DefaultOfByIdentifier
 
+        #region Query Methods Of DefaultWithPathOfByIdentifier
+
+        public event System.EventHandler<GetCountOfDefaultWithPathOfByIdentifierCompletedEventArgs> GetCountOfDefaultWithPathOfByIdentifierCompleted;
+
+        public event System.EventHandler<ExistsOfDefaultWithPathOfByIdentifierCompletedEventArgs> ExistsOfDefaultWithPathOfByIdentifierCompleted;
+
+        public event System.EventHandler<GetCollectionOfDefaultWithPathOfByIdentifierCompletedEventArgs> GetCollectionOfDefaultWithPathOfByIdentifierCompleted;
+
+        public event System.EventHandler<GetSingleOfDefaultWithPathOfByIdentifierCompletedEventArgs> GetSingleOfDefaultWithPathOfByIdentifierCompleted;
+
+        #endregion Query Methods Of DefaultWithPathOfByIdentifier
+
         #region Query Methods Of KeyInformationOfByIdentifier
 
         public event System.EventHandler<GetCountOfKeyInformationOfByIdentifierCompletedEventArgs> GetCountOfKeyInformationOfByIdentifierCompleted;
@@ -3256,6 +3508,18 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of DefaultOfIdentifierAndUniqueConstraint
 
+        #region Query Methods Of DefaultWithPathOfIdentifierAndUniqueConstraint
+
+        public event System.EventHandler<GetCountOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedEventArgs> GetCountOfDefaultWithPathOfIdentifierAndUniqueConstraintCompleted;
+
+        public event System.EventHandler<ExistsOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedEventArgs> ExistsOfDefaultWithPathOfIdentifierAndUniqueConstraintCompleted;
+
+        public event System.EventHandler<GetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedEventArgs> GetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraintCompleted;
+
+        public event System.EventHandler<GetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedEventArgs> GetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraintCompleted;
+
+        #endregion Query Methods Of DefaultWithPathOfIdentifierAndUniqueConstraint
+
         #region Query Methods Of KeyInformationOfIdentifierAndUniqueConstraint
 
         public event System.EventHandler<GetCountOfKeyInformationOfIdentifierAndUniqueConstraintCompletedEventArgs> GetCountOfKeyInformationOfIdentifierAndUniqueConstraintCompleted;
@@ -3268,7 +3532,7 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of KeyInformationOfIdentifierAndUniqueConstraint
 
-        #endregion DataQueryPerQuerySettingCollection
+        // DataQueryPerQuerySettingCollection -- EventHandlers -- End
 
         #region GetAscendantAndDescendant
 
@@ -3767,7 +4031,7 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Binary Columns
 
-        #region DataQueryPerQuerySettingCollection
+        // DataQueryPerQuerySettingCollection -- InClient -- Start
 
         #region Query Methods Of EntityOfCommon
 
@@ -3780,39 +4044,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
         {
             return base.Channel.GetCountOfEntityOfCommon(request);
-        }
-
-        /// <summary>
-        /// Exists the of entity of "Common".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfCommon(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
-        {
-            return base.Channel.ExistsOfEntityOfCommon(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "Common".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfCommon(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
-        {
-            return base.Channel.GetCollectionOfEntityOfCommon(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "Common".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfCommon(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
-        {
-            return base.Channel.GetSingleOfEntityOfCommon(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3872,6 +4103,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndGetCountOfEntityOfCommonDelegate, this.onGetCountOfEntityOfCommonCompletedDelegate, userState);
         }
 
+        /// <summary>
+        /// Exists the of entity of "Common".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfCommon(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
+        {
+            return base.Channel.ExistsOfEntityOfCommon(request);
+        }
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginExistsOfEntityOfCommon(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
         {
@@ -3929,6 +4171,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndExistsOfEntityOfCommonDelegate, this.onExistsOfEntityOfCommonCompletedDelegate, userState);
         }
 
+        /// <summary>
+        /// Gets the collection of entity of "Common".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfCommon(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
+        {
+            return base.Channel.GetCollectionOfEntityOfCommon(request);
+        }
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCollectionOfEntityOfCommon(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
         {
@@ -3984,6 +4237,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCollectionOfEntityOfCommonDelegate, new object[] {
                         request}, this.onEndGetCollectionOfEntityOfCommonDelegate, this.onGetCollectionOfEntityOfCommonCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "Common".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfCommon(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
+        {
+            return base.Channel.GetSingleOfEntityOfCommon(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4058,39 +4322,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetCountOfDefaultOfCommon(request);
         }
 
-        /// <summary>
-        /// Exists the of entity of "Common".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfCommon(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
-        {
-            return base.Channel.ExistsOfDefaultOfCommon(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "Common".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfCommon(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
-        {
-            return base.Channel.GetCollectionOfDefaultOfCommon(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "Common".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfCommon(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
-        {
-            return base.Channel.GetSingleOfDefaultOfCommon(request);
-        }
-
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCountOfDefaultOfCommon(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
         {
@@ -4146,6 +4377,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCountOfDefaultOfCommonDelegate, new object[] {
                         request}, this.onEndGetCountOfDefaultOfCommonDelegate, this.onGetCountOfDefaultOfCommonCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Exists the of entity of "Common".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfCommon(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
+        {
+            return base.Channel.ExistsOfDefaultOfCommon(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4205,6 +4447,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndExistsOfDefaultOfCommonDelegate, this.onExistsOfDefaultOfCommonCompletedDelegate, userState);
         }
 
+        /// <summary>
+        /// Gets the collection of entity of "Common".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfCommon(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
+        {
+            return base.Channel.GetCollectionOfDefaultOfCommon(request);
+        }
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCollectionOfDefaultOfCommon(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
         {
@@ -4260,6 +4513,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCollectionOfDefaultOfCommonDelegate, new object[] {
                         request}, this.onEndGetCollectionOfDefaultOfCommonDelegate, this.onGetCollectionOfDefaultOfCommonCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "Common".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfCommon(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
+        {
+            return base.Channel.GetSingleOfDefaultOfCommon(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4334,39 +4598,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetCountOfEntityOfAll(request);
         }
 
-        /// <summary>
-        /// Exists the of entity of "All".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfAll(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
-        {
-            return base.Channel.ExistsOfEntityOfAll(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "All".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfAll(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
-        {
-            return base.Channel.GetCollectionOfEntityOfAll(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "All".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfAll(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
-        {
-            return base.Channel.GetSingleOfEntityOfAll(request);
-        }
-
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCountOfEntityOfAll(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
@@ -4422,6 +4653,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCountOfEntityOfAllDelegate, new object[] {
                         request}, this.onEndGetCountOfEntityOfAllDelegate, this.onGetCountOfEntityOfAllCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Exists the of entity of "All".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfAll(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
+        {
+            return base.Channel.ExistsOfEntityOfAll(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4481,6 +4723,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndExistsOfEntityOfAllDelegate, this.onExistsOfEntityOfAllCompletedDelegate, userState);
         }
 
+        /// <summary>
+        /// Gets the collection of entity of "All".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfAll(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
+        {
+            return base.Channel.GetCollectionOfEntityOfAll(request);
+        }
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCollectionOfEntityOfAll(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
@@ -4536,6 +4789,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCollectionOfEntityOfAllDelegate, new object[] {
                         request}, this.onEndGetCollectionOfEntityOfAllDelegate, this.onGetCollectionOfEntityOfAllCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "All".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfAll(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
+        {
+            return base.Channel.GetSingleOfEntityOfAll(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4610,39 +4874,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetCountOfNameValuePairOfAll(request);
         }
 
-        /// <summary>
-        /// Exists the of entity of "All".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfNameValuePairOfAll(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
-        {
-            return base.Channel.ExistsOfNameValuePairOfAll(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "All".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairOfAll(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
-        {
-            return base.Channel.GetCollectionOfNameValuePairOfAll(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "All".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfAll(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
-        {
-            return base.Channel.GetSingleOfNameValuePairOfAll(request);
-        }
-
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCountOfNameValuePairOfAll(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
@@ -4698,6 +4929,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCountOfNameValuePairOfAllDelegate, new object[] {
                         request}, this.onEndGetCountOfNameValuePairOfAllDelegate, this.onGetCountOfNameValuePairOfAllCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Exists the of entity of "All".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfNameValuePairOfAll(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
+        {
+            return base.Channel.ExistsOfNameValuePairOfAll(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4757,6 +4999,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndExistsOfNameValuePairOfAllDelegate, this.onExistsOfNameValuePairOfAllCompletedDelegate, userState);
         }
 
+        /// <summary>
+        /// Gets the collection of entity of "All".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairOfAll(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
+        {
+            return base.Channel.GetCollectionOfNameValuePairOfAll(request);
+        }
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCollectionOfNameValuePairOfAll(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
@@ -4812,6 +5065,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCollectionOfNameValuePairOfAllDelegate, new object[] {
                         request}, this.onEndGetCollectionOfNameValuePairOfAllDelegate, this.onGetCollectionOfNameValuePairOfAllCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "All".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfAll(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
+        {
+            return base.Channel.GetSingleOfNameValuePairOfAll(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4886,39 +5150,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetCountOfRssItemOfAll(request);
         }
 
-        /// <summary>
-        /// Exists the of entity of "All".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfRssItemOfAll(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
-        {
-            return base.Channel.ExistsOfRssItemOfAll(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "All".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetCollectionOfRssItemOfAll(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
-        {
-            return base.Channel.GetCollectionOfRssItemOfAll(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "All".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetSingleOfRssItemOfAll(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
-        {
-            return base.Channel.GetSingleOfRssItemOfAll(request);
-        }
-
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCountOfRssItemOfAll(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
@@ -4974,6 +5205,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCountOfRssItemOfAllDelegate, new object[] {
                         request}, this.onEndGetCountOfRssItemOfAllDelegate, this.onGetCountOfRssItemOfAllCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Exists the of entity of "All".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfRssItemOfAll(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
+        {
+            return base.Channel.ExistsOfRssItemOfAll(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5033,6 +5275,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndExistsOfRssItemOfAllDelegate, this.onExistsOfRssItemOfAllCompletedDelegate, userState);
         }
 
+        /// <summary>
+        /// Gets the collection of entity of "All".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetCollectionOfRssItemOfAll(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
+        {
+            return base.Channel.GetCollectionOfRssItemOfAll(request);
+        }
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCollectionOfRssItemOfAll(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
@@ -5088,6 +5341,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCollectionOfRssItemOfAllDelegate, new object[] {
                         request}, this.onEndGetCollectionOfRssItemOfAllDelegate, this.onGetCollectionOfRssItemOfAllCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "All".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetSingleOfRssItemOfAll(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
+        {
+            return base.Channel.GetSingleOfRssItemOfAll(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5162,39 +5426,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetCountOfEntityOfByFKOnly(request);
         }
 
-        /// <summary>
-        /// Exists the of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.ExistsOfEntityOfByFKOnly(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.GetCollectionOfEntityOfByFKOnly(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.GetSingleOfEntityOfByFKOnly(request);
-        }
-
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCountOfEntityOfByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
@@ -5250,6 +5481,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCountOfEntityOfByFKOnlyDelegate, new object[] {
                         request}, this.onEndGetCountOfEntityOfByFKOnlyDelegate, this.onGetCountOfEntityOfByFKOnlyCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Exists the of entity of "ByFKOnly".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
+        {
+            return base.Channel.ExistsOfEntityOfByFKOnly(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5309,6 +5551,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndExistsOfEntityOfByFKOnlyDelegate, this.onExistsOfEntityOfByFKOnlyCompletedDelegate, userState);
         }
 
+        /// <summary>
+        /// Gets the collection of entity of "ByFKOnly".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
+        {
+            return base.Channel.GetCollectionOfEntityOfByFKOnly(request);
+        }
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCollectionOfEntityOfByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
@@ -5364,6 +5617,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCollectionOfEntityOfByFKOnlyDelegate, new object[] {
                         request}, this.onEndGetCollectionOfEntityOfByFKOnlyDelegate, this.onGetCollectionOfEntityOfByFKOnlyCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "ByFKOnly".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
+        {
+            return base.Channel.GetSingleOfEntityOfByFKOnly(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5438,39 +5702,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetCountOfNameValuePairOfByFKOnly(request);
         }
 
-        /// <summary>
-        /// Exists the of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfNameValuePairOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.ExistsOfNameValuePairOfByFKOnly(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.GetCollectionOfNameValuePairOfByFKOnly(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.GetSingleOfNameValuePairOfByFKOnly(request);
-        }
-
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCountOfNameValuePairOfByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
@@ -5526,6 +5757,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCountOfNameValuePairOfByFKOnlyDelegate, new object[] {
                         request}, this.onEndGetCountOfNameValuePairOfByFKOnlyDelegate, this.onGetCountOfNameValuePairOfByFKOnlyCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Exists the of entity of "ByFKOnly".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfNameValuePairOfByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
+        {
+            return base.Channel.ExistsOfNameValuePairOfByFKOnly(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5585,6 +5827,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndExistsOfNameValuePairOfByFKOnlyDelegate, this.onExistsOfNameValuePairOfByFKOnlyCompletedDelegate, userState);
         }
 
+        /// <summary>
+        /// Gets the collection of entity of "ByFKOnly".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairOfByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
+        {
+            return base.Channel.GetCollectionOfNameValuePairOfByFKOnly(request);
+        }
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCollectionOfNameValuePairOfByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
@@ -5640,6 +5893,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCollectionOfNameValuePairOfByFKOnlyDelegate, new object[] {
                         request}, this.onEndGetCollectionOfNameValuePairOfByFKOnlyDelegate, this.onGetCollectionOfNameValuePairOfByFKOnlyCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "ByFKOnly".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
+        {
+            return base.Channel.GetSingleOfNameValuePairOfByFKOnly(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5714,39 +5978,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetCountOfRssItemOfByFKOnly(request);
         }
 
-        /// <summary>
-        /// Exists the of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfRssItemOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.ExistsOfRssItemOfByFKOnly(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetCollectionOfRssItemOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.GetCollectionOfRssItemOfByFKOnly(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetSingleOfRssItemOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.GetSingleOfRssItemOfByFKOnly(request);
-        }
-
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCountOfRssItemOfByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
@@ -5802,6 +6033,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCountOfRssItemOfByFKOnlyDelegate, new object[] {
                         request}, this.onEndGetCountOfRssItemOfByFKOnlyDelegate, this.onGetCountOfRssItemOfByFKOnlyCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Exists the of entity of "ByFKOnly".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfRssItemOfByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
+        {
+            return base.Channel.ExistsOfRssItemOfByFKOnly(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5861,6 +6103,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndExistsOfRssItemOfByFKOnlyDelegate, this.onExistsOfRssItemOfByFKOnlyCompletedDelegate, userState);
         }
 
+        /// <summary>
+        /// Gets the collection of entity of "ByFKOnly".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetCollectionOfRssItemOfByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
+        {
+            return base.Channel.GetCollectionOfRssItemOfByFKOnly(request);
+        }
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCollectionOfRssItemOfByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
@@ -5916,6 +6169,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCollectionOfRssItemOfByFKOnlyDelegate, new object[] {
                         request}, this.onEndGetCollectionOfRssItemOfByFKOnlyDelegate, this.onGetCollectionOfRssItemOfByFKOnlyCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "ByFKOnly".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetSingleOfRssItemOfByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
+        {
+            return base.Channel.GetSingleOfRssItemOfByFKOnly(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5990,39 +6254,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetCountOfDefaultOfByFKOnly(request);
         }
 
-        /// <summary>
-        /// Exists the of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.ExistsOfDefaultOfByFKOnly(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.GetCollectionOfDefaultOfByFKOnly(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.GetSingleOfDefaultOfByFKOnly(request);
-        }
-
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCountOfDefaultOfByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
@@ -6078,6 +6309,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCountOfDefaultOfByFKOnlyDelegate, new object[] {
                         request}, this.onEndGetCountOfDefaultOfByFKOnlyDelegate, this.onGetCountOfDefaultOfByFKOnlyCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Exists the of entity of "ByFKOnly".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
+        {
+            return base.Channel.ExistsOfDefaultOfByFKOnly(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6137,6 +6379,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndExistsOfDefaultOfByFKOnlyDelegate, this.onExistsOfDefaultOfByFKOnlyCompletedDelegate, userState);
         }
 
+        /// <summary>
+        /// Gets the collection of entity of "ByFKOnly".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
+        {
+            return base.Channel.GetCollectionOfDefaultOfByFKOnly(request);
+        }
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCollectionOfDefaultOfByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
@@ -6192,6 +6445,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCollectionOfDefaultOfByFKOnlyDelegate, new object[] {
                         request}, this.onEndGetCollectionOfDefaultOfByFKOnlyDelegate, this.onGetCollectionOfDefaultOfByFKOnlyCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "ByFKOnly".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
+        {
+            return base.Channel.GetSingleOfDefaultOfByFKOnly(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6266,39 +6530,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetCountOfDefaultGroupedDataViewOfByFKOnly(request);
         }
 
-        /// <summary>
-        /// Exists the of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultGroupedDataViewOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.ExistsOfDefaultGroupedDataViewOfByFKOnly(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.GetCollectionOfDefaultGroupedDataViewOfByFKOnly(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView GetSingleOfDefaultGroupedDataViewOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.GetSingleOfDefaultGroupedDataViewOfByFKOnly(request);
-        }
-
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCountOfDefaultGroupedDataViewOfByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
@@ -6354,6 +6585,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCountOfDefaultGroupedDataViewOfByFKOnlyDelegate, new object[] {
                         request}, this.onEndGetCountOfDefaultGroupedDataViewOfByFKOnlyDelegate, this.onGetCountOfDefaultGroupedDataViewOfByFKOnlyCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Exists the of entity of "ByFKOnly".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultGroupedDataViewOfByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
+        {
+            return base.Channel.ExistsOfDefaultGroupedDataViewOfByFKOnly(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6413,6 +6655,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndExistsOfDefaultGroupedDataViewOfByFKOnlyDelegate, this.onExistsOfDefaultGroupedDataViewOfByFKOnlyCompletedDelegate, userState);
         }
 
+        /// <summary>
+        /// Gets the collection of entity of "ByFKOnly".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
+        {
+            return base.Channel.GetCollectionOfDefaultGroupedDataViewOfByFKOnly(request);
+        }
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCollectionOfDefaultGroupedDataViewOfByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
@@ -6468,6 +6721,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCollectionOfDefaultGroupedDataViewOfByFKOnlyDelegate, new object[] {
                         request}, this.onEndGetCollectionOfDefaultGroupedDataViewOfByFKOnlyDelegate, this.onGetCollectionOfDefaultGroupedDataViewOfByFKOnlyCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "ByFKOnly".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView GetSingleOfDefaultGroupedDataViewOfByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
+        {
+            return base.Channel.GetSingleOfDefaultGroupedDataViewOfByFKOnly(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6542,39 +6806,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetCountOfEntityOfByIdentifier(request);
         }
 
-        /// <summary>
-        /// Exists the of entity of "ByIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfByIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
-        {
-            return base.Channel.ExistsOfEntityOfByIdentifier(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "ByIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfByIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
-        {
-            return base.Channel.GetCollectionOfEntityOfByIdentifier(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "ByIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfByIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
-        {
-            return base.Channel.GetSingleOfEntityOfByIdentifier(request);
-        }
-
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCountOfEntityOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
         {
@@ -6630,6 +6861,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCountOfEntityOfByIdentifierDelegate, new object[] {
                         request}, this.onEndGetCountOfEntityOfByIdentifierDelegate, this.onGetCountOfEntityOfByIdentifierCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Exists the of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.ExistsOfEntityOfByIdentifier(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6689,6 +6931,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndExistsOfEntityOfByIdentifierDelegate, this.onExistsOfEntityOfByIdentifierCompletedDelegate, userState);
         }
 
+        /// <summary>
+        /// Gets the collection of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.GetCollectionOfEntityOfByIdentifier(request);
+        }
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCollectionOfEntityOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
         {
@@ -6744,6 +6997,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCollectionOfEntityOfByIdentifierDelegate, new object[] {
                         request}, this.onEndGetCollectionOfEntityOfByIdentifierDelegate, this.onGetCollectionOfEntityOfByIdentifierCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.GetSingleOfEntityOfByIdentifier(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6818,39 +7082,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetCountOfDefaultOfByIdentifier(request);
         }
 
-        /// <summary>
-        /// Exists the of entity of "ByIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfByIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
-        {
-            return base.Channel.ExistsOfDefaultOfByIdentifier(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "ByIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfByIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
-        {
-            return base.Channel.GetCollectionOfDefaultOfByIdentifier(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "ByIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfByIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
-        {
-            return base.Channel.GetSingleOfDefaultOfByIdentifier(request);
-        }
-
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCountOfDefaultOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
         {
@@ -6906,6 +7137,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCountOfDefaultOfByIdentifierDelegate, new object[] {
                         request}, this.onEndGetCountOfDefaultOfByIdentifierDelegate, this.onGetCountOfDefaultOfByIdentifierCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Exists the of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.ExistsOfDefaultOfByIdentifier(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6965,6 +7207,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndExistsOfDefaultOfByIdentifierDelegate, this.onExistsOfDefaultOfByIdentifierCompletedDelegate, userState);
         }
 
+        /// <summary>
+        /// Gets the collection of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.GetCollectionOfDefaultOfByIdentifier(request);
+        }
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCollectionOfDefaultOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
         {
@@ -7020,6 +7273,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCollectionOfDefaultOfByIdentifierDelegate, new object[] {
                         request}, this.onEndGetCollectionOfDefaultOfByIdentifierDelegate, this.onGetCollectionOfDefaultOfByIdentifierCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.GetSingleOfDefaultOfByIdentifier(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7081,6 +7345,282 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of DefaultOfByIdentifier
 
+        #region Query Methods Of DefaultWithPathOfByIdentifier
+
+        /// <summary>
+        /// Gets the count of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>the count</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultWithPathOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.GetCountOfDefaultWithPathOfByIdentifier(request);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCountOfDefaultWithPathOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        {
+            return base.Channel.BeginGetCountOfDefaultWithPathOfByIdentifier(request, callback, asyncState);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.EndGetCountOfDefaultWithPathOfByIdentifier(System.IAsyncResult result)
+        {
+            return base.Channel.EndGetCountOfDefaultWithPathOfByIdentifier(result);
+        }
+
+        private System.IAsyncResult OnBeginGetCountOfDefaultWithPathOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
+        {
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request = ((MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
+            return ((MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn)(this)).BeginGetCountOfDefaultWithPathOfByIdentifier(request, callback, asyncState);
+        }
+
+        private object[] OnEndGetCountOfDefaultWithPathOfByIdentifier(System.IAsyncResult result)
+        {
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn)(this)).EndGetCountOfDefaultWithPathOfByIdentifier(result);
+            return new object[] {
+                    retVal};
+        }
+
+        private void OnGetCountOfDefaultWithPathOfByIdentifierCompleted(object state)
+        {
+            if ((this.GetCountOfDefaultWithPathOfByIdentifierCompleted != null))
+            {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.GetCountOfDefaultWithPathOfByIdentifierCompleted(this, new GetCountOfDefaultWithPathOfByIdentifierCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+
+        public void GetCountOfDefaultWithPathOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
+        {
+            this.GetCountOfDefaultWithPathOfByIdentifierAsync(request, null);
+        }
+
+        public void GetCountOfDefaultWithPathOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, object userState)
+        {
+            if ((this.onBeginGetCountOfDefaultWithPathOfByIdentifierDelegate == null))
+            {
+                this.onBeginGetCountOfDefaultWithPathOfByIdentifierDelegate = new BeginOperationDelegate(this.OnBeginGetCountOfDefaultWithPathOfByIdentifier);
+            }
+            if ((this.onEndGetCountOfDefaultWithPathOfByIdentifierDelegate == null))
+            {
+                this.onEndGetCountOfDefaultWithPathOfByIdentifierDelegate = new EndOperationDelegate(this.OnEndGetCountOfDefaultWithPathOfByIdentifier);
+            }
+            if ((this.onGetCountOfDefaultWithPathOfByIdentifierCompletedDelegate == null))
+            {
+                this.onGetCountOfDefaultWithPathOfByIdentifierCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCountOfDefaultWithPathOfByIdentifierCompleted);
+            }
+            base.InvokeAsync(this.onBeginGetCountOfDefaultWithPathOfByIdentifierDelegate, new object[] {
+                        request}, this.onEndGetCountOfDefaultWithPathOfByIdentifierDelegate, this.onGetCountOfDefaultWithPathOfByIdentifierCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Exists the of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultWithPathOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.ExistsOfDefaultWithPathOfByIdentifier(request);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginExistsOfDefaultWithPathOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        {
+            return base.Channel.BeginExistsOfDefaultWithPathOfByIdentifier(request, callback, asyncState);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.EndExistsOfDefaultWithPathOfByIdentifier(System.IAsyncResult result)
+        {
+            return base.Channel.EndExistsOfDefaultWithPathOfByIdentifier(result);
+        }
+
+        private System.IAsyncResult OnBeginExistsOfDefaultWithPathOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
+        {
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request = ((MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
+            return ((MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn)(this)).BeginExistsOfDefaultWithPathOfByIdentifier(request, callback, asyncState);
+        }
+
+        private object[] OnEndExistsOfDefaultWithPathOfByIdentifier(System.IAsyncResult result)
+        {
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn)(this)).EndExistsOfDefaultWithPathOfByIdentifier(result);
+            return new object[] {
+                    retVal};
+        }
+
+        private void OnExistsOfDefaultWithPathOfByIdentifierCompleted(object state)
+        {
+            if ((this.ExistsOfDefaultWithPathOfByIdentifierCompleted != null))
+            {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ExistsOfDefaultWithPathOfByIdentifierCompleted(this, new ExistsOfDefaultWithPathOfByIdentifierCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+
+        public void ExistsOfDefaultWithPathOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
+        {
+            this.ExistsOfDefaultWithPathOfByIdentifierAsync(request, null);
+        }
+
+        public void ExistsOfDefaultWithPathOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, object userState)
+        {
+            if ((this.onBeginExistsOfDefaultWithPathOfByIdentifierDelegate == null))
+            {
+                this.onBeginExistsOfDefaultWithPathOfByIdentifierDelegate = new BeginOperationDelegate(this.OnBeginExistsOfDefaultWithPathOfByIdentifier);
+            }
+            if ((this.onEndExistsOfDefaultWithPathOfByIdentifierDelegate == null))
+            {
+                this.onEndExistsOfDefaultWithPathOfByIdentifierDelegate = new EndOperationDelegate(this.OnEndExistsOfDefaultWithPathOfByIdentifier);
+            }
+            if ((this.onExistsOfDefaultWithPathOfByIdentifierCompletedDelegate == null))
+            {
+                this.onExistsOfDefaultWithPathOfByIdentifierCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnExistsOfDefaultWithPathOfByIdentifierCompleted);
+            }
+            base.InvokeAsync(this.onBeginExistsOfDefaultWithPathOfByIdentifierDelegate, new object[] {
+                        request}, this.onEndExistsOfDefaultWithPathOfByIdentifierDelegate, this.onExistsOfDefaultWithPathOfByIdentifierCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the collection of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath GetCollectionOfDefaultWithPathOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.GetCollectionOfDefaultWithPathOfByIdentifier(request);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCollectionOfDefaultWithPathOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        {
+            return base.Channel.BeginGetCollectionOfDefaultWithPathOfByIdentifier(request, callback, asyncState);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.EndGetCollectionOfDefaultWithPathOfByIdentifier(System.IAsyncResult result)
+        {
+            return base.Channel.EndGetCollectionOfDefaultWithPathOfByIdentifier(result);
+        }
+
+        private System.IAsyncResult OnBeginGetCollectionOfDefaultWithPathOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
+        {
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request = ((MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
+            return ((MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn)(this)).BeginGetCollectionOfDefaultWithPathOfByIdentifier(request, callback, asyncState);
+        }
+
+        private object[] OnEndGetCollectionOfDefaultWithPathOfByIdentifier(System.IAsyncResult result)
+        {
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath retVal = ((MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn)(this)).EndGetCollectionOfDefaultWithPathOfByIdentifier(result);
+            return new object[] {
+                    retVal};
+        }
+
+        private void OnGetCollectionOfDefaultWithPathOfByIdentifierCompleted(object state)
+        {
+            if ((this.GetCollectionOfDefaultWithPathOfByIdentifierCompleted != null))
+            {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.GetCollectionOfDefaultWithPathOfByIdentifierCompleted(this, new GetCollectionOfDefaultWithPathOfByIdentifierCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+
+        public void GetCollectionOfDefaultWithPathOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
+        {
+            this.GetCollectionOfDefaultWithPathOfByIdentifierAsync(request, null);
+        }
+
+        public void GetCollectionOfDefaultWithPathOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, object userState)
+        {
+            if ((this.onBeginGetCollectionOfDefaultWithPathOfByIdentifierDelegate == null))
+            {
+                this.onBeginGetCollectionOfDefaultWithPathOfByIdentifierDelegate = new BeginOperationDelegate(this.OnBeginGetCollectionOfDefaultWithPathOfByIdentifier);
+            }
+            if ((this.onEndGetCollectionOfDefaultWithPathOfByIdentifierDelegate == null))
+            {
+                this.onEndGetCollectionOfDefaultWithPathOfByIdentifierDelegate = new EndOperationDelegate(this.OnEndGetCollectionOfDefaultWithPathOfByIdentifier);
+            }
+            if ((this.onGetCollectionOfDefaultWithPathOfByIdentifierCompletedDelegate == null))
+            {
+                this.onGetCollectionOfDefaultWithPathOfByIdentifierCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCollectionOfDefaultWithPathOfByIdentifierCompleted);
+            }
+            base.InvokeAsync(this.onBeginGetCollectionOfDefaultWithPathOfByIdentifierDelegate, new object[] {
+                        request}, this.onEndGetCollectionOfDefaultWithPathOfByIdentifierDelegate, this.onGetCollectionOfDefaultWithPathOfByIdentifierCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath GetSingleOfDefaultWithPathOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.GetSingleOfDefaultWithPathOfByIdentifier(request);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetSingleOfDefaultWithPathOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        {
+            return base.Channel.BeginGetSingleOfDefaultWithPathOfByIdentifier(request, callback, asyncState);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.EndGetSingleOfDefaultWithPathOfByIdentifier(System.IAsyncResult result)
+        {
+            return base.Channel.EndGetSingleOfDefaultWithPathOfByIdentifier(result);
+        }
+
+        private System.IAsyncResult OnBeginGetSingleOfDefaultWithPathOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
+        {
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request = ((MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
+            return ((MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn)(this)).BeginGetSingleOfDefaultWithPathOfByIdentifier(request, callback, asyncState);
+        }
+
+        private object[] OnEndGetSingleOfDefaultWithPathOfByIdentifier(System.IAsyncResult result)
+        {
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath retVal = ((MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn)(this)).EndGetSingleOfDefaultWithPathOfByIdentifier(result);
+            return new object[] {
+                    retVal};
+        }
+
+        private void OnGetSingleOfDefaultWithPathOfByIdentifierCompleted(object state)
+        {
+            if ((this.GetSingleOfDefaultWithPathOfByIdentifierCompleted != null))
+            {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.GetSingleOfDefaultWithPathOfByIdentifierCompleted(this, new GetSingleOfDefaultWithPathOfByIdentifierCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+
+        public void GetSingleOfDefaultWithPathOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
+        {
+            this.GetSingleOfDefaultWithPathOfByIdentifierAsync(request, null);
+        }
+
+        public void GetSingleOfDefaultWithPathOfByIdentifierAsync(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, object userState)
+        {
+            if ((this.onBeginGetSingleOfDefaultWithPathOfByIdentifierDelegate == null))
+            {
+                this.onBeginGetSingleOfDefaultWithPathOfByIdentifierDelegate = new BeginOperationDelegate(this.OnBeginGetSingleOfDefaultWithPathOfByIdentifier);
+            }
+            if ((this.onEndGetSingleOfDefaultWithPathOfByIdentifierDelegate == null))
+            {
+                this.onEndGetSingleOfDefaultWithPathOfByIdentifierDelegate = new EndOperationDelegate(this.OnEndGetSingleOfDefaultWithPathOfByIdentifier);
+            }
+            if ((this.onGetSingleOfDefaultWithPathOfByIdentifierCompletedDelegate == null))
+            {
+                this.onGetSingleOfDefaultWithPathOfByIdentifierCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetSingleOfDefaultWithPathOfByIdentifierCompleted);
+            }
+            base.InvokeAsync(this.onBeginGetSingleOfDefaultWithPathOfByIdentifierDelegate, new object[] {
+                        request}, this.onEndGetSingleOfDefaultWithPathOfByIdentifierDelegate, this.onGetSingleOfDefaultWithPathOfByIdentifierCompletedDelegate, userState);
+        }
+
+        #endregion Query Methods Of DefaultWithPathOfByIdentifier
+
         #region Query Methods Of KeyInformationOfByIdentifier
 
         /// <summary>
@@ -7092,39 +7632,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
         {
             return base.Channel.GetCountOfKeyInformationOfByIdentifier(request);
-        }
-
-        /// <summary>
-        /// Exists the of entity of "ByIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationOfByIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
-        {
-            return base.Channel.ExistsOfKeyInformationOfByIdentifier(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "ByIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation GetCollectionOfKeyInformationOfByIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
-        {
-            return base.Channel.GetCollectionOfKeyInformationOfByIdentifier(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "ByIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation GetSingleOfKeyInformationOfByIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
-        {
-            return base.Channel.GetSingleOfKeyInformationOfByIdentifier(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7184,6 +7691,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndGetCountOfKeyInformationOfByIdentifierDelegate, this.onGetCountOfKeyInformationOfByIdentifierCompletedDelegate, userState);
         }
 
+        /// <summary>
+        /// Exists the of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.ExistsOfKeyInformationOfByIdentifier(request);
+        }
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginExistsOfKeyInformationOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
         {
@@ -7241,6 +7759,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndExistsOfKeyInformationOfByIdentifierDelegate, this.onExistsOfKeyInformationOfByIdentifierCompletedDelegate, userState);
         }
 
+        /// <summary>
+        /// Gets the collection of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation GetCollectionOfKeyInformationOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.GetCollectionOfKeyInformationOfByIdentifier(request);
+        }
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCollectionOfKeyInformationOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
         {
@@ -7296,6 +7825,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCollectionOfKeyInformationOfByIdentifierDelegate, new object[] {
                         request}, this.onEndGetCollectionOfKeyInformationOfByIdentifierDelegate, this.onGetCollectionOfKeyInformationOfByIdentifierCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation GetSingleOfKeyInformationOfByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.GetSingleOfKeyInformationOfByIdentifier(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7370,39 +7910,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
         }
 
-        /// <summary>
-        /// Exists the of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
-        {
-            return base.Channel.ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
-        {
-            return base.Channel.GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
-        {
-            return base.Channel.GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
-        }
-
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request, System.AsyncCallback callback, object asyncState)
         {
@@ -7458,6 +7965,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate, new object[] {
                         request}, this.onEndGetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate, this.onGetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Exists the of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
+        {
+            return base.Channel.ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7517,6 +8035,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate, this.onExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate, userState);
         }
 
+        /// <summary>
+        /// Gets the collection of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
+        {
+            return base.Channel.GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
+        }
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request, System.AsyncCallback callback, object asyncState)
         {
@@ -7572,6 +8101,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate, new object[] {
                         request}, this.onEndGetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate, this.onGetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
+        {
+            return base.Channel.GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7646,39 +8186,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
         }
 
-        /// <summary>
-        /// Exists the of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
-        {
-            return base.Channel.ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
-        {
-            return base.Channel.GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
-        {
-            return base.Channel.GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
-        }
-
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request, System.AsyncCallback callback, object asyncState)
         {
@@ -7734,6 +8241,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate, new object[] {
                         request}, this.onEndGetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate, this.onGetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Exists the of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
+        {
+            return base.Channel.ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7793,6 +8311,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate, this.onExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate, userState);
         }
 
+        /// <summary>
+        /// Gets the collection of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
+        {
+            return base.Channel.GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
+        }
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request, System.AsyncCallback callback, object asyncState)
         {
@@ -7848,6 +8377,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate, new object[] {
                         request}, this.onEndGetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate, this.onGetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
+        {
+            return base.Channel.GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7922,39 +8462,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
         }
 
-        /// <summary>
-        /// Exists the of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
-        {
-            return base.Channel.ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
-        {
-            return base.Channel.GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
-        {
-            return base.Channel.GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
-        }
-
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request, System.AsyncCallback callback, object asyncState)
         {
@@ -8010,6 +8517,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate, new object[] {
                         request}, this.onEndGetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate, this.onGetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Exists the of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
+        {
+            return base.Channel.ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8069,6 +8587,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate, this.onExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate, userState);
         }
 
+        /// <summary>
+        /// Gets the collection of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
+        {
+            return base.Channel.GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
+        }
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request, System.AsyncCallback callback, object asyncState)
         {
@@ -8124,6 +8653,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate, new object[] {
                         request}, this.onEndGetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierDelegate, this.onGetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifierCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
+        {
+            return base.Channel.GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8198,39 +8738,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
         }
 
-        /// <summary>
-        /// Exists the of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
-        {
-            return base.Channel.ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
-        {
-            return base.Channel.GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
-        {
-            return base.Channel.GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
-        }
-
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request, System.AsyncCallback callback, object asyncState)
         {
@@ -8286,6 +8793,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate, new object[] {
                         request}, this.onEndGetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate, this.onGetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Exists the of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
+        {
+            return base.Channel.ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8345,6 +8863,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate, this.onExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate, userState);
         }
 
+        /// <summary>
+        /// Gets the collection of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
+        {
+            return base.Channel.GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
+        }
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request, System.AsyncCallback callback, object asyncState)
         {
@@ -8400,6 +8929,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate, new object[] {
                         request}, this.onEndGetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate, this.onGetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
+        {
+            return base.Channel.GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8474,39 +9014,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
         }
 
-        /// <summary>
-        /// Exists the of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
-        {
-            return base.Channel.ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
-        {
-            return base.Channel.GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
-        {
-            return base.Channel.GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
-        }
-
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request, System.AsyncCallback callback, object asyncState)
         {
@@ -8562,6 +9069,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate, new object[] {
                         request}, this.onEndGetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate, this.onGetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Exists the of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
+        {
+            return base.Channel.ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8621,6 +9139,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate, this.onExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate, userState);
         }
 
+        /// <summary>
+        /// Gets the collection of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
+        {
+            return base.Channel.GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
+        }
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request, System.AsyncCallback callback, object asyncState)
         {
@@ -8676,6 +9205,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate, new object[] {
                         request}, this.onEndGetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate, this.onGetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
+        {
+            return base.Channel.GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8750,39 +9290,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
         }
 
-        /// <summary>
-        /// Exists the of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
-        {
-            return base.Channel.ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
-        {
-            return base.Channel.GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
-        {
-            return base.Channel.GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
-        }
-
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request, System.AsyncCallback callback, object asyncState)
         {
@@ -8838,6 +9345,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate, new object[] {
                         request}, this.onEndGetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate, this.onGetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Exists the of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
+        {
+            return base.Channel.ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8897,6 +9415,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate, this.onExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate, userState);
         }
 
+        /// <summary>
+        /// Gets the collection of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
+        {
+            return base.Channel.GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
+        }
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request, System.AsyncCallback callback, object asyncState)
         {
@@ -8952,6 +9481,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate, new object[] {
                         request}, this.onEndGetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnDelegate, this.onGetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumnCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
+        {
+            return base.Channel.GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -9026,39 +9566,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetCountOfEntityOfIdentifierAndUniqueConstraint(request);
         }
 
-        /// <summary>
-        /// Exists the of entity of "IdentifierAndUniqueConstraint".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfIdentifierAndUniqueConstraint(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
-        {
-            return base.Channel.ExistsOfEntityOfIdentifierAndUniqueConstraint(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "IdentifierAndUniqueConstraint".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfIdentifierAndUniqueConstraint(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
-        {
-            return base.Channel.GetCollectionOfEntityOfIdentifierAndUniqueConstraint(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "IdentifierAndUniqueConstraint".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfIdentifierAndUniqueConstraint(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
-        {
-            return base.Channel.GetSingleOfEntityOfIdentifierAndUniqueConstraint(request);
-        }
-
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCountOfEntityOfIdentifierAndUniqueConstraint(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, System.AsyncCallback callback, object asyncState)
         {
@@ -9114,6 +9621,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCountOfEntityOfIdentifierAndUniqueConstraintDelegate, new object[] {
                         request}, this.onEndGetCountOfEntityOfIdentifierAndUniqueConstraintDelegate, this.onGetCountOfEntityOfIdentifierAndUniqueConstraintCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Exists the of entity of "IdentifierAndUniqueConstraint".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfIdentifierAndUniqueConstraint(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        {
+            return base.Channel.ExistsOfEntityOfIdentifierAndUniqueConstraint(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -9173,6 +9691,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndExistsOfEntityOfIdentifierAndUniqueConstraintDelegate, this.onExistsOfEntityOfIdentifierAndUniqueConstraintCompletedDelegate, userState);
         }
 
+        /// <summary>
+        /// Gets the collection of entity of "IdentifierAndUniqueConstraint".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfIdentifierAndUniqueConstraint(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        {
+            return base.Channel.GetCollectionOfEntityOfIdentifierAndUniqueConstraint(request);
+        }
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCollectionOfEntityOfIdentifierAndUniqueConstraint(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, System.AsyncCallback callback, object asyncState)
         {
@@ -9228,6 +9757,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCollectionOfEntityOfIdentifierAndUniqueConstraintDelegate, new object[] {
                         request}, this.onEndGetCollectionOfEntityOfIdentifierAndUniqueConstraintDelegate, this.onGetCollectionOfEntityOfIdentifierAndUniqueConstraintCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "IdentifierAndUniqueConstraint".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfIdentifierAndUniqueConstraint(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        {
+            return base.Channel.GetSingleOfEntityOfIdentifierAndUniqueConstraint(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -9302,39 +9842,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetCountOfDefaultOfIdentifierAndUniqueConstraint(request);
         }
 
-        /// <summary>
-        /// Exists the of entity of "IdentifierAndUniqueConstraint".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfIdentifierAndUniqueConstraint(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
-        {
-            return base.Channel.ExistsOfDefaultOfIdentifierAndUniqueConstraint(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "IdentifierAndUniqueConstraint".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfIdentifierAndUniqueConstraint(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
-        {
-            return base.Channel.GetCollectionOfDefaultOfIdentifierAndUniqueConstraint(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "IdentifierAndUniqueConstraint".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfIdentifierAndUniqueConstraint(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
-        {
-            return base.Channel.GetSingleOfDefaultOfIdentifierAndUniqueConstraint(request);
-        }
-
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCountOfDefaultOfIdentifierAndUniqueConstraint(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, System.AsyncCallback callback, object asyncState)
         {
@@ -9390,6 +9897,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCountOfDefaultOfIdentifierAndUniqueConstraintDelegate, new object[] {
                         request}, this.onEndGetCountOfDefaultOfIdentifierAndUniqueConstraintDelegate, this.onGetCountOfDefaultOfIdentifierAndUniqueConstraintCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Exists the of entity of "IdentifierAndUniqueConstraint".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfIdentifierAndUniqueConstraint(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        {
+            return base.Channel.ExistsOfDefaultOfIdentifierAndUniqueConstraint(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -9449,6 +9967,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndExistsOfDefaultOfIdentifierAndUniqueConstraintDelegate, this.onExistsOfDefaultOfIdentifierAndUniqueConstraintCompletedDelegate, userState);
         }
 
+        /// <summary>
+        /// Gets the collection of entity of "IdentifierAndUniqueConstraint".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfIdentifierAndUniqueConstraint(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        {
+            return base.Channel.GetCollectionOfDefaultOfIdentifierAndUniqueConstraint(request);
+        }
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCollectionOfDefaultOfIdentifierAndUniqueConstraint(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, System.AsyncCallback callback, object asyncState)
         {
@@ -9504,6 +10033,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCollectionOfDefaultOfIdentifierAndUniqueConstraintDelegate, new object[] {
                         request}, this.onEndGetCollectionOfDefaultOfIdentifierAndUniqueConstraintDelegate, this.onGetCollectionOfDefaultOfIdentifierAndUniqueConstraintCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "IdentifierAndUniqueConstraint".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfIdentifierAndUniqueConstraint(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        {
+            return base.Channel.GetSingleOfDefaultOfIdentifierAndUniqueConstraint(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -9565,6 +10105,282 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of DefaultOfIdentifierAndUniqueConstraint
 
+        #region Query Methods Of DefaultWithPathOfIdentifierAndUniqueConstraint
+
+        /// <summary>
+        /// Gets the count of entity of "IdentifierAndUniqueConstraint".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>the count</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultWithPathOfIdentifierAndUniqueConstraint(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        {
+            return base.Channel.GetCountOfDefaultWithPathOfIdentifierAndUniqueConstraint(request);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCountOfDefaultWithPathOfIdentifierAndUniqueConstraint(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, System.AsyncCallback callback, object asyncState)
+        {
+            return base.Channel.BeginGetCountOfDefaultWithPathOfIdentifierAndUniqueConstraint(request, callback, asyncState);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.EndGetCountOfDefaultWithPathOfIdentifierAndUniqueConstraint(System.IAsyncResult result)
+        {
+            return base.Channel.EndGetCountOfDefaultWithPathOfIdentifierAndUniqueConstraint(result);
+        }
+
+        private System.IAsyncResult OnBeginGetCountOfDefaultWithPathOfIdentifierAndUniqueConstraint(object[] inValues, System.AsyncCallback callback, object asyncState)
+        {
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request = ((MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint )(inValues[0]));
+            return ((MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn)(this)).BeginGetCountOfDefaultWithPathOfIdentifierAndUniqueConstraint(request, callback, asyncState);
+        }
+
+        private object[] OnEndGetCountOfDefaultWithPathOfIdentifierAndUniqueConstraint(System.IAsyncResult result)
+        {
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn)(this)).EndGetCountOfDefaultWithPathOfIdentifierAndUniqueConstraint(result);
+            return new object[] {
+                    retVal};
+        }
+
+        private void OnGetCountOfDefaultWithPathOfIdentifierAndUniqueConstraintCompleted(object state)
+        {
+            if ((this.GetCountOfDefaultWithPathOfIdentifierAndUniqueConstraintCompleted != null))
+            {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.GetCountOfDefaultWithPathOfIdentifierAndUniqueConstraintCompleted(this, new GetCountOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+
+        public void GetCountOfDefaultWithPathOfIdentifierAndUniqueConstraintAsync(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        {
+            this.GetCountOfDefaultWithPathOfIdentifierAndUniqueConstraintAsync(request, null);
+        }
+
+        public void GetCountOfDefaultWithPathOfIdentifierAndUniqueConstraintAsync(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, object userState)
+        {
+            if ((this.onBeginGetCountOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate == null))
+            {
+                this.onBeginGetCountOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate = new BeginOperationDelegate(this.OnBeginGetCountOfDefaultWithPathOfIdentifierAndUniqueConstraint);
+            }
+            if ((this.onEndGetCountOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate == null))
+            {
+                this.onEndGetCountOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate = new EndOperationDelegate(this.OnEndGetCountOfDefaultWithPathOfIdentifierAndUniqueConstraint);
+            }
+            if ((this.onGetCountOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedDelegate == null))
+            {
+                this.onGetCountOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCountOfDefaultWithPathOfIdentifierAndUniqueConstraintCompleted);
+            }
+            base.InvokeAsync(this.onBeginGetCountOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate, new object[] {
+                        request}, this.onEndGetCountOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate, this.onGetCountOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Exists the of entity of "IdentifierAndUniqueConstraint".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultWithPathOfIdentifierAndUniqueConstraint(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        {
+            return base.Channel.ExistsOfDefaultWithPathOfIdentifierAndUniqueConstraint(request);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginExistsOfDefaultWithPathOfIdentifierAndUniqueConstraint(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, System.AsyncCallback callback, object asyncState)
+        {
+            return base.Channel.BeginExistsOfDefaultWithPathOfIdentifierAndUniqueConstraint(request, callback, asyncState);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.EndExistsOfDefaultWithPathOfIdentifierAndUniqueConstraint(System.IAsyncResult result)
+        {
+            return base.Channel.EndExistsOfDefaultWithPathOfIdentifierAndUniqueConstraint(result);
+        }
+
+        private System.IAsyncResult OnBeginExistsOfDefaultWithPathOfIdentifierAndUniqueConstraint(object[] inValues, System.AsyncCallback callback, object asyncState)
+        {
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request = ((MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint )(inValues[0]));
+            return ((MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn)(this)).BeginExistsOfDefaultWithPathOfIdentifierAndUniqueConstraint(request, callback, asyncState);
+        }
+
+        private object[] OnEndExistsOfDefaultWithPathOfIdentifierAndUniqueConstraint(System.IAsyncResult result)
+        {
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn)(this)).EndExistsOfDefaultWithPathOfIdentifierAndUniqueConstraint(result);
+            return new object[] {
+                    retVal};
+        }
+
+        private void OnExistsOfDefaultWithPathOfIdentifierAndUniqueConstraintCompleted(object state)
+        {
+            if ((this.ExistsOfDefaultWithPathOfIdentifierAndUniqueConstraintCompleted != null))
+            {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ExistsOfDefaultWithPathOfIdentifierAndUniqueConstraintCompleted(this, new ExistsOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+
+        public void ExistsOfDefaultWithPathOfIdentifierAndUniqueConstraintAsync(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        {
+            this.ExistsOfDefaultWithPathOfIdentifierAndUniqueConstraintAsync(request, null);
+        }
+
+        public void ExistsOfDefaultWithPathOfIdentifierAndUniqueConstraintAsync(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, object userState)
+        {
+            if ((this.onBeginExistsOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate == null))
+            {
+                this.onBeginExistsOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate = new BeginOperationDelegate(this.OnBeginExistsOfDefaultWithPathOfIdentifierAndUniqueConstraint);
+            }
+            if ((this.onEndExistsOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate == null))
+            {
+                this.onEndExistsOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate = new EndOperationDelegate(this.OnEndExistsOfDefaultWithPathOfIdentifierAndUniqueConstraint);
+            }
+            if ((this.onExistsOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedDelegate == null))
+            {
+                this.onExistsOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnExistsOfDefaultWithPathOfIdentifierAndUniqueConstraintCompleted);
+            }
+            base.InvokeAsync(this.onBeginExistsOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate, new object[] {
+                        request}, this.onEndExistsOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate, this.onExistsOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the collection of entity of "IdentifierAndUniqueConstraint".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath GetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraint(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        {
+            return base.Channel.GetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraint(request);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraint(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, System.AsyncCallback callback, object asyncState)
+        {
+            return base.Channel.BeginGetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraint(request, callback, asyncState);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.EndGetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraint(System.IAsyncResult result)
+        {
+            return base.Channel.EndGetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraint(result);
+        }
+
+        private System.IAsyncResult OnBeginGetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraint(object[] inValues, System.AsyncCallback callback, object asyncState)
+        {
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request = ((MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint )(inValues[0]));
+            return ((MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn)(this)).BeginGetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraint(request, callback, asyncState);
+        }
+
+        private object[] OnEndGetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraint(System.IAsyncResult result)
+        {
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath retVal = ((MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn)(this)).EndGetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraint(result);
+            return new object[] {
+                    retVal};
+        }
+
+        private void OnGetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraintCompleted(object state)
+        {
+            if ((this.GetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraintCompleted != null))
+            {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.GetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraintCompleted(this, new GetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+
+        public void GetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraintAsync(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        {
+            this.GetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraintAsync(request, null);
+        }
+
+        public void GetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraintAsync(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, object userState)
+        {
+            if ((this.onBeginGetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate == null))
+            {
+                this.onBeginGetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate = new BeginOperationDelegate(this.OnBeginGetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraint);
+            }
+            if ((this.onEndGetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate == null))
+            {
+                this.onEndGetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate = new EndOperationDelegate(this.OnEndGetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraint);
+            }
+            if ((this.onGetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedDelegate == null))
+            {
+                this.onGetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraintCompleted);
+            }
+            base.InvokeAsync(this.onBeginGetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate, new object[] {
+                        request}, this.onEndGetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate, this.onGetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "IdentifierAndUniqueConstraint".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath GetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraint(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        {
+            return base.Channel.GetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraint(request);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraint(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, System.AsyncCallback callback, object asyncState)
+        {
+            return base.Channel.BeginGetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraint(request, callback, asyncState);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.EndGetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraint(System.IAsyncResult result)
+        {
+            return base.Channel.EndGetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraint(result);
+        }
+
+        private System.IAsyncResult OnBeginGetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraint(object[] inValues, System.AsyncCallback callback, object asyncState)
+        {
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request = ((MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint )(inValues[0]));
+            return ((MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn)(this)).BeginGetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraint(request, callback, asyncState);
+        }
+
+        private object[] OnEndGetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraint(System.IAsyncResult result)
+        {
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath retVal = ((MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn)(this)).EndGetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraint(result);
+            return new object[] {
+                    retVal};
+        }
+
+        private void OnGetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraintCompleted(object state)
+        {
+            if ((this.GetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraintCompleted != null))
+            {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.GetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraintCompleted(this, new GetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+
+        public void GetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraintAsync(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        {
+            this.GetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraintAsync(request, null);
+        }
+
+        public void GetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraintAsync(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, object userState)
+        {
+            if ((this.onBeginGetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate == null))
+            {
+                this.onBeginGetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate = new BeginOperationDelegate(this.OnBeginGetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraint);
+            }
+            if ((this.onEndGetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate == null))
+            {
+                this.onEndGetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate = new EndOperationDelegate(this.OnEndGetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraint);
+            }
+            if ((this.onGetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedDelegate == null))
+            {
+                this.onGetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraintCompleted);
+            }
+            base.InvokeAsync(this.onBeginGetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate, new object[] {
+                        request}, this.onEndGetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraintDelegate, this.onGetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraintCompletedDelegate, userState);
+        }
+
+        #endregion Query Methods Of DefaultWithPathOfIdentifierAndUniqueConstraint
+
         #region Query Methods Of KeyInformationOfIdentifierAndUniqueConstraint
 
         /// <summary>
@@ -9576,39 +10392,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
             return base.Channel.GetCountOfKeyInformationOfIdentifierAndUniqueConstraint(request);
-        }
-
-        /// <summary>
-        /// Exists the of entity of "IdentifierAndUniqueConstraint".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
-        {
-            return base.Channel.ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "IdentifierAndUniqueConstraint".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
-        {
-            return base.Channel.GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "IdentifierAndUniqueConstraint".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
-        {
-            return base.Channel.GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -9668,6 +10451,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndGetCountOfKeyInformationOfIdentifierAndUniqueConstraintDelegate, this.onGetCountOfKeyInformationOfIdentifierAndUniqueConstraintCompletedDelegate, userState);
         }
 
+        /// <summary>
+        /// Exists the of entity of "IdentifierAndUniqueConstraint".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        {
+            return base.Channel.ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(request);
+        }
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginExistsOfKeyInformationOfIdentifierAndUniqueConstraint(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, System.AsyncCallback callback, object asyncState)
         {
@@ -9725,6 +10519,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
                         request}, this.onEndExistsOfKeyInformationOfIdentifierAndUniqueConstraintDelegate, this.onExistsOfKeyInformationOfIdentifierAndUniqueConstraintCompletedDelegate, userState);
         }
 
+        /// <summary>
+        /// Gets the collection of entity of "IdentifierAndUniqueConstraint".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        {
+            return base.Channel.GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint(request);
+        }
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult MSBuildExtensionPack.WcfContracts.IOrganizationServiceAsyn.BeginGetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, System.AsyncCallback callback, object asyncState)
         {
@@ -9780,6 +10585,17 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
             base.InvokeAsync(this.onBeginGetCollectionOfKeyInformationOfIdentifierAndUniqueConstraintDelegate, new object[] {
                         request}, this.onEndGetCollectionOfKeyInformationOfIdentifierAndUniqueConstraintDelegate, this.onGetCollectionOfKeyInformationOfIdentifierAndUniqueConstraintCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "IdentifierAndUniqueConstraint".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        {
+            return base.Channel.GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -9841,7 +10657,7 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of KeyInformationOfIdentifierAndUniqueConstraint
 
-        #endregion DataQueryPerQuerySettingCollection
+        // DataQueryPerQuerySettingCollection -- InClient -- End
 
         #region GetAscendantAndDescendant
 
@@ -10183,9 +10999,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Binary Columns
 
-            #region DataQueryPerQuerySettingCollection
+            // DataQueryPerQuerySettingCollection -- InChannelForWINDOWS_PHONE -- Start
 
-            #region Query Methods Of EntityOfCommon
+        #region Query Methods Of EntityOfCommon
 
             public System.IAsyncResult BeginGetCountOfEntityOfCommon(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
             {
@@ -10247,9 +11063,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of EntityOfCommon
+        #endregion Query Methods Of EntityOfCommon
 
-            #region Query Methods Of DefaultOfCommon
+        #region Query Methods Of DefaultOfCommon
 
             public System.IAsyncResult BeginGetCountOfDefaultOfCommon(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
             {
@@ -10311,9 +11127,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of DefaultOfCommon
+        #endregion Query Methods Of DefaultOfCommon
 
-            #region Query Methods Of EntityOfAll
+        #region Query Methods Of EntityOfAll
 
             public System.IAsyncResult BeginGetCountOfEntityOfAll(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
@@ -10375,9 +11191,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of EntityOfAll
+        #endregion Query Methods Of EntityOfAll
 
-            #region Query Methods Of NameValuePairOfAll
+        #region Query Methods Of NameValuePairOfAll
 
             public System.IAsyncResult BeginGetCountOfNameValuePairOfAll(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
@@ -10439,9 +11255,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of NameValuePairOfAll
+        #endregion Query Methods Of NameValuePairOfAll
 
-            #region Query Methods Of RssItemOfAll
+        #region Query Methods Of RssItemOfAll
 
             public System.IAsyncResult BeginGetCountOfRssItemOfAll(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
@@ -10503,9 +11319,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of RssItemOfAll
+        #endregion Query Methods Of RssItemOfAll
 
-            #region Query Methods Of EntityOfByFKOnly
+        #region Query Methods Of EntityOfByFKOnly
 
             public System.IAsyncResult BeginGetCountOfEntityOfByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
@@ -10567,9 +11383,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of EntityOfByFKOnly
+        #endregion Query Methods Of EntityOfByFKOnly
 
-            #region Query Methods Of NameValuePairOfByFKOnly
+        #region Query Methods Of NameValuePairOfByFKOnly
 
             public System.IAsyncResult BeginGetCountOfNameValuePairOfByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
@@ -10631,9 +11447,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of NameValuePairOfByFKOnly
+        #endregion Query Methods Of NameValuePairOfByFKOnly
 
-            #region Query Methods Of RssItemOfByFKOnly
+        #region Query Methods Of RssItemOfByFKOnly
 
             public System.IAsyncResult BeginGetCountOfRssItemOfByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
@@ -10695,9 +11511,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of RssItemOfByFKOnly
+        #endregion Query Methods Of RssItemOfByFKOnly
 
-            #region Query Methods Of DefaultOfByFKOnly
+        #region Query Methods Of DefaultOfByFKOnly
 
             public System.IAsyncResult BeginGetCountOfDefaultOfByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
@@ -10759,9 +11575,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of DefaultOfByFKOnly
+        #endregion Query Methods Of DefaultOfByFKOnly
 
-            #region Query Methods Of DefaultGroupedDataViewOfByFKOnly
+        #region Query Methods Of DefaultGroupedDataViewOfByFKOnly
 
             public System.IAsyncResult BeginGetCountOfDefaultGroupedDataViewOfByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
@@ -10823,9 +11639,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of DefaultGroupedDataViewOfByFKOnly
+        #endregion Query Methods Of DefaultGroupedDataViewOfByFKOnly
 
-            #region Query Methods Of EntityOfByIdentifier
+        #region Query Methods Of EntityOfByIdentifier
 
             public System.IAsyncResult BeginGetCountOfEntityOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
             {
@@ -10887,9 +11703,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of EntityOfByIdentifier
+        #endregion Query Methods Of EntityOfByIdentifier
 
-            #region Query Methods Of DefaultOfByIdentifier
+        #region Query Methods Of DefaultOfByIdentifier
 
             public System.IAsyncResult BeginGetCountOfDefaultOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
             {
@@ -10951,9 +11767,73 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of DefaultOfByIdentifier
+        #endregion Query Methods Of DefaultOfByIdentifier
 
-            #region Query Methods Of KeyInformationOfByIdentifier
+        #region Query Methods Of DefaultWithPathOfByIdentifier
+
+            public System.IAsyncResult BeginGetCountOfDefaultWithPathOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            {
+                object[] _args = new object[1];
+                _args[0] = request;
+                System.IAsyncResult _result = base.BeginInvoke("GetCountOfDefaultWithPathOfByIdentifier", _args, callback, asyncState);
+                return _result;
+            }
+
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger EndGetCountOfDefaultWithPathOfByIdentifier(System.IAsyncResult result)
+            {
+                object[] _args = new object[0];
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger)(base.EndInvoke("GetCountOfDefaultWithPathOfByIdentifier", _args, result)));
+                return _result;
+            }
+
+            public System.IAsyncResult BeginExistsOfDefaultWithPathOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            {
+                object[] _args = new object[1];
+                _args[0] = request;
+                System.IAsyncResult _result = base.BeginInvoke("ExistsOfDefaultWithPathOfByIdentifier", _args, callback, asyncState);
+                return _result;
+            }
+
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean EndExistsOfDefaultWithPathOfByIdentifier(System.IAsyncResult result)
+            {
+                object[] _args = new object[0];
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean)(base.EndInvoke("ExistsOfDefaultWithPathOfByIdentifier", _args, result)));
+                return _result;
+            }
+
+            public System.IAsyncResult BeginGetCollectionOfDefaultWithPathOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            {
+                object[] _args = new object[1];
+                _args[0] = request;
+                System.IAsyncResult _result = base.BeginInvoke("GetCollectionOfDefaultWithPathOfByIdentifier", _args, callback, asyncState);
+                return _result;
+            }
+
+            public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath EndGetCollectionOfDefaultWithPathOfByIdentifier(System.IAsyncResult result)
+            {
+                object[] _args = new object[0];
+                MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath _result = ((MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath)(base.EndInvoke("GetCollectionOfDefaultWithPathOfByIdentifier", _args, result)));
+                return _result;
+            }
+
+            public System.IAsyncResult BeginGetSingleOfDefaultWithPathOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            {
+                object[] _args = new object[1];
+                _args[0] = request;
+                System.IAsyncResult _result = base.BeginInvoke("GetSingleOfDefaultWithPathOfByIdentifier", _args, callback, asyncState);
+                return _result;
+            }
+
+            public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath EndGetSingleOfDefaultWithPathOfByIdentifier(System.IAsyncResult result)
+            {
+                object[] _args = new object[0];
+                MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath _result = ((MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath)(base.EndInvoke("GetSingleOfDefaultWithPathOfByIdentifier", _args, result)));
+                return _result;
+            }
+
+        #endregion Query Methods Of DefaultWithPathOfByIdentifier
+
+        #region Query Methods Of KeyInformationOfByIdentifier
 
             public System.IAsyncResult BeginGetCountOfKeyInformationOfByIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
             {
@@ -11015,9 +11895,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of KeyInformationOfByIdentifier
+        #endregion Query Methods Of KeyInformationOfByIdentifier
 
-            #region Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+        #region Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
             public System.IAsyncResult BeginGetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request, System.AsyncCallback callback, object asyncState)
             {
@@ -11079,9 +11959,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+        #endregion Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
-            #region Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+        #region Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
             public System.IAsyncResult BeginGetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request, System.AsyncCallback callback, object asyncState)
             {
@@ -11143,9 +12023,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+        #endregion Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
-            #region Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+        #region Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
             public System.IAsyncResult BeginGetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request, System.AsyncCallback callback, object asyncState)
             {
@@ -11207,9 +12087,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier
+        #endregion Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier
 
-            #region Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #region Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
             public System.IAsyncResult BeginGetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request, System.AsyncCallback callback, object asyncState)
             {
@@ -11271,9 +12151,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #endregion Query Methods Of EntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
-            #region Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #region Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
             public System.IAsyncResult BeginGetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request, System.AsyncCallback callback, object asyncState)
             {
@@ -11335,9 +12215,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #endregion Query Methods Of NameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
-            #region Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #region Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
             public System.IAsyncResult BeginGetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request, System.AsyncCallback callback, object asyncState)
             {
@@ -11399,9 +12279,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
+        #endregion Query Methods Of DefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
 
-            #region Query Methods Of EntityOfIdentifierAndUniqueConstraint
+        #region Query Methods Of EntityOfIdentifierAndUniqueConstraint
 
             public System.IAsyncResult BeginGetCountOfEntityOfIdentifierAndUniqueConstraint(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, System.AsyncCallback callback, object asyncState)
             {
@@ -11463,9 +12343,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of EntityOfIdentifierAndUniqueConstraint
+        #endregion Query Methods Of EntityOfIdentifierAndUniqueConstraint
 
-            #region Query Methods Of DefaultOfIdentifierAndUniqueConstraint
+        #region Query Methods Of DefaultOfIdentifierAndUniqueConstraint
 
             public System.IAsyncResult BeginGetCountOfDefaultOfIdentifierAndUniqueConstraint(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, System.AsyncCallback callback, object asyncState)
             {
@@ -11527,9 +12407,73 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of DefaultOfIdentifierAndUniqueConstraint
+        #endregion Query Methods Of DefaultOfIdentifierAndUniqueConstraint
 
-            #region Query Methods Of KeyInformationOfIdentifierAndUniqueConstraint
+        #region Query Methods Of DefaultWithPathOfIdentifierAndUniqueConstraint
+
+            public System.IAsyncResult BeginGetCountOfDefaultWithPathOfIdentifierAndUniqueConstraint(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, System.AsyncCallback callback, object asyncState)
+            {
+                object[] _args = new object[1];
+                _args[0] = request;
+                System.IAsyncResult _result = base.BeginInvoke("GetCountOfDefaultWithPathOfIdentifierAndUniqueConstraint", _args, callback, asyncState);
+                return _result;
+            }
+
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger EndGetCountOfDefaultWithPathOfIdentifierAndUniqueConstraint(System.IAsyncResult result)
+            {
+                object[] _args = new object[0];
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger)(base.EndInvoke("GetCountOfDefaultWithPathOfIdentifierAndUniqueConstraint", _args, result)));
+                return _result;
+            }
+
+            public System.IAsyncResult BeginExistsOfDefaultWithPathOfIdentifierAndUniqueConstraint(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, System.AsyncCallback callback, object asyncState)
+            {
+                object[] _args = new object[1];
+                _args[0] = request;
+                System.IAsyncResult _result = base.BeginInvoke("ExistsOfDefaultWithPathOfIdentifierAndUniqueConstraint", _args, callback, asyncState);
+                return _result;
+            }
+
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean EndExistsOfDefaultWithPathOfIdentifierAndUniqueConstraint(System.IAsyncResult result)
+            {
+                object[] _args = new object[0];
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean)(base.EndInvoke("ExistsOfDefaultWithPathOfIdentifierAndUniqueConstraint", _args, result)));
+                return _result;
+            }
+
+            public System.IAsyncResult BeginGetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraint(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, System.AsyncCallback callback, object asyncState)
+            {
+                object[] _args = new object[1];
+                _args[0] = request;
+                System.IAsyncResult _result = base.BeginInvoke("GetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraint", _args, callback, asyncState);
+                return _result;
+            }
+
+            public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath EndGetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraint(System.IAsyncResult result)
+            {
+                object[] _args = new object[0];
+                MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath _result = ((MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath)(base.EndInvoke("GetCollectionOfDefaultWithPathOfIdentifierAndUniqueConstraint", _args, result)));
+                return _result;
+            }
+
+            public System.IAsyncResult BeginGetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraint(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, System.AsyncCallback callback, object asyncState)
+            {
+                object[] _args = new object[1];
+                _args[0] = request;
+                System.IAsyncResult _result = base.BeginInvoke("GetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraint", _args, callback, asyncState);
+                return _result;
+            }
+
+            public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath EndGetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraint(System.IAsyncResult result)
+            {
+                object[] _args = new object[0];
+                MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath _result = ((MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultWithPath)(base.EndInvoke("GetSingleOfDefaultWithPathOfIdentifierAndUniqueConstraint", _args, result)));
+                return _result;
+            }
+
+        #endregion Query Methods Of DefaultWithPathOfIdentifierAndUniqueConstraint
+
+        #region Query Methods Of KeyInformationOfIdentifierAndUniqueConstraint
 
             public System.IAsyncResult BeginGetCountOfKeyInformationOfIdentifierAndUniqueConstraint(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request, System.AsyncCallback callback, object asyncState)
             {
@@ -11591,9 +12535,9 @@ namespace MSBuildExtensionPack.WcfClientBLL
                 return _result;
             }
 
-            #endregion Query Methods Of KeyInformationOfIdentifierAndUniqueConstraint
+        #endregion Query Methods Of KeyInformationOfIdentifierAndUniqueConstraint
 
-            #endregion DataQueryPerQuerySettingCollection
+            // DataQueryPerQuerySettingCollection -- InChannelForWINDOWS_PHONE -- End
 
             #region GetAscendantAndDescendant
 
