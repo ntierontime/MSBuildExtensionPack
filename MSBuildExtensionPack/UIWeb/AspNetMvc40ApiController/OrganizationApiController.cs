@@ -148,6 +148,102 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
 
         // DataQueryPerQuerySettingCollection -- MethodDataQuery -- Start
 
+        #region Query Methods Of NameValuePairOfAll
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
+        [HttpGet, ActionName("GetCollectionOfNameValuePairOfAll")]
+        public Framework.NameValueCollection GetCollectionOfNameValuePairOfAll(
+            int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairOfAll(
+                currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        /// <summary>
+        /// Gets message of the collection of entity of common.
+        /// </summary>
+
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
+        [HttpGet, ActionName("GetMessageOfNameValuePairOfAll")]
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfAll(
+            int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfNameValuePairOfAll(
+                currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        #endregion Query Methods Of NameValuePairOfAll
+
+        #region Query Methods Of NameValuePairOfByFKOnly
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareParentId">will compare/filter parentId property/field/column if true, otherwise false</param>
+        /// <param name="parentId">value to compare/filter with parentId property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
+        [HttpGet, ActionName("GetCollectionOfNameValuePairOfByFKOnly")]
+        public Framework.NameValueCollection GetCollectionOfNameValuePairOfByFKOnly(
+            System.Int64? parentId
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairOfByFKOnly(
+                parentId.HasValue, parentId
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        /// <summary>
+        /// Gets message of the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareParentId">will compare/filter parentId property/field/column if true, otherwise false</param>
+        /// <param name="parentId">value to compare/filter with parentId property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
+        [HttpGet, ActionName("GetMessageOfNameValuePairOfByFKOnly")]
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfByFKOnly(
+            System.Int64? parentId
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfNameValuePairOfByFKOnly(
+                parentId.HasValue, parentId
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        #endregion Query Methods Of NameValuePairOfByFKOnly
+
         // DataQueryPerQuerySettingCollection -- MethodDataQuery -- End
 
         /// <summary>

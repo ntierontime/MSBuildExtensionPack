@@ -159,6 +159,43 @@ namespace MSBuildExtensionPack.WebApiClient
 
         // DataQueryPerQuerySettingCollection -- MethodDataQuery -- Start
 
+        #region Query Methods Of NameValuePairOfByFKOnly
+
+        public const string ActionName_GetCollectionOfNameValuePairOfByFKOnly = "GetCollectionOfNameValuePairOfByFKOnly";
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// http://[host]/api/BuildApi/GetCollectionOfNameValuePairOfByFKOnly
+        /// </summary>
+        /// <param name="solutionId">value to compare/filter with solutionId property/field/column</param>
+        /// <param name="organization_1Id">value to compare/filter with organization_1Id property/field/column</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
+        public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfByFKOnlyAsync(
+            System.Int32? solutionId
+            , System.Int64? organization_1Id
+            , System.Int64? organization_2Id
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
+        {
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            parameters.Add("solutionId", solutionId.ToString());
+            parameters.Add("organization_1Id", organization_1Id.ToString());
+            parameters.Add("organization_2Id", organization_2Id.ToString());
+            parameters.Add("currentIndex", currentIndex.ToString());
+            parameters.Add("pageSize", pageSize.ToString());
+            parameters.Add("queryOrderByExpression", queryOrderByExpression);
+
+            string url = GetHttpRequestUrl(ActionName_GetCollectionOfNameValuePairOfByFKOnly, parameters);
+            return await Get<Framework.NameValueCollection>(url);
+        }
+
+        #endregion Query Methods Of NameValuePairOfByFKOnly
+
         // DataQueryPerQuerySettingCollection -- MethodDataQuery -- End
 
         public const string ActionName_GetBuildItemVM = "GetBuildItemVM";

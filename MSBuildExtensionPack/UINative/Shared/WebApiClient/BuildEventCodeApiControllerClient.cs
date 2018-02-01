@@ -159,6 +159,36 @@ namespace MSBuildExtensionPack.WebApiClient
 
         // DataQueryPerQuerySettingCollection -- MethodDataQuery -- Start
 
+        #region Query Methods Of NameValuePairOfAll
+
+        public const string ActionName_GetCollectionOfNameValuePairOfAll = "GetCollectionOfNameValuePairOfAll";
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// http://[host]/api/BuildEventCodeApi/GetCollectionOfNameValuePairOfAll
+        /// </summary>
+
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
+        public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfAllAsync(
+            int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
+        {
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+
+            parameters.Add("currentIndex", currentIndex.ToString());
+            parameters.Add("pageSize", pageSize.ToString());
+            parameters.Add("queryOrderByExpression", queryOrderByExpression);
+
+            string url = GetHttpRequestUrl(ActionName_GetCollectionOfNameValuePairOfAll, parameters);
+            return await Get<Framework.NameValueCollection>(url);
+        }
+
+        #endregion Query Methods Of NameValuePairOfAll
+
         // DataQueryPerQuerySettingCollection -- MethodDataQuery -- End
 
         public const string ActionName_GetBuildEventCodeItemVM = "GetBuildEventCodeItemVM";

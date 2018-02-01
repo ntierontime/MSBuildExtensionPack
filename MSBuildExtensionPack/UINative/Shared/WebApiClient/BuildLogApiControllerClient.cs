@@ -159,6 +159,49 @@ namespace MSBuildExtensionPack.WebApiClient
 
         // DataQueryPerQuerySettingCollection -- MethodDataQuery -- Start
 
+        #region Query Methods Of NameValuePairOfByFKOnly
+
+        public const string ActionName_GetCollectionOfNameValuePairOfByFKOnly = "GetCollectionOfNameValuePairOfByFKOnly";
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// http://[host]/api/BuildLogApi/GetCollectionOfNameValuePairOfByFKOnly
+        /// </summary>
+        /// <param name="buildId">value to compare/filter with buildId property/field/column</param>
+        /// <param name="solution_1Id">value to compare/filter with solution_1Id property/field/column</param>
+        /// <param name="organization_1Id">value to compare/filter with organization_1Id property/field/column</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="buildEventCodeId">value to compare/filter with buildEventCodeId property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
+        public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfByFKOnlyAsync(
+            System.Int64? buildId
+            , System.Int32? solution_1Id
+            , System.Int64? organization_1Id
+            , System.Int64? organization_2Id
+            , System.Int32? buildEventCodeId
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
+        {
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            parameters.Add("buildId", buildId.ToString());
+            parameters.Add("solution_1Id", solution_1Id.ToString());
+            parameters.Add("organization_1Id", organization_1Id.ToString());
+            parameters.Add("organization_2Id", organization_2Id.ToString());
+            parameters.Add("buildEventCodeId", buildEventCodeId.ToString());
+            parameters.Add("currentIndex", currentIndex.ToString());
+            parameters.Add("pageSize", pageSize.ToString());
+            parameters.Add("queryOrderByExpression", queryOrderByExpression);
+
+            string url = GetHttpRequestUrl(ActionName_GetCollectionOfNameValuePairOfByFKOnly, parameters);
+            return await Get<Framework.NameValueCollection>(url);
+        }
+
+        #endregion Query Methods Of NameValuePairOfByFKOnly
+
         // DataQueryPerQuerySettingCollection -- MethodDataQuery -- End
 
         public const string ActionName_GetBuildLogItemVM = "GetBuildLogItemVM";

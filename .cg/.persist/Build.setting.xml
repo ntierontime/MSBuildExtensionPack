@@ -67,6 +67,7 @@
   <DataQueryOnDataViewSetting Key="NameValuePairOfByFKOnly" DataQueryKey="ByFKOnly" DataViewKey="NameValuePair">
     <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
     <BLLMethodSetting HasGetCollectionMethod="true" />
+    <WebApiMethodSetting HasGetCollectionMethod="true" />
   </DataQueryOnDataViewSetting>
   <DataQueryOnDataViewSetting Key="RssItemOfByFKOnly" DataQueryKey="ByFKOnly" DataViewKey="RssItem" />
   <DataQueryOnDataViewSetting Key="DefaultOfByFKOnly" DataQueryKey="ByFKOnly" DataViewKey="Default">

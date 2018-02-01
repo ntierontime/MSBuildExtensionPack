@@ -148,6 +148,73 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
 
         // DataQueryPerQuerySettingCollection -- MethodDataQuery -- Start
 
+        #region Query Methods Of NameValuePairOfByFKOnly
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareSolutionId">will compare/filter solutionId property/field/column if true, otherwise false</param>
+        /// <param name="solutionId">value to compare/filter with solutionId property/field/column</param>
+        /// <param name="isToCompareOrganization_1Id">will compare/filter organization_1Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_1Id">value to compare/filter with organization_1Id property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
+        [HttpGet, ActionName("GetCollectionOfNameValuePairOfByFKOnly")]
+        public Framework.NameValueCollection GetCollectionOfNameValuePairOfByFKOnly(
+            System.Int32? solutionId
+            , System.Int64? organization_1Id
+            , System.Int64? organization_2Id
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuild.GetCollectionOfNameValuePairOfByFKOnly(
+                solutionId.HasValue, solutionId
+                , organization_1Id.HasValue, organization_1Id
+                , organization_2Id.HasValue, organization_2Id
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        /// <summary>
+        /// Gets message of the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareSolutionId">will compare/filter solutionId property/field/column if true, otherwise false</param>
+        /// <param name="solutionId">value to compare/filter with solutionId property/field/column</param>
+        /// <param name="isToCompareOrganization_1Id">will compare/filter organization_1Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_1Id">value to compare/filter with organization_1Id property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
+        [HttpGet, ActionName("GetMessageOfNameValuePairOfByFKOnly")]
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfByFKOnly(
+            System.Int32? solutionId
+            , System.Int64? organization_1Id
+            , System.Int64? organization_2Id
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression)
+
+        {
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuild.GetMessageOfNameValuePairOfByFKOnly(
+                solutionId.HasValue, solutionId
+                , organization_1Id.HasValue, organization_1Id
+                , organization_2Id.HasValue, organization_2Id
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression);
+        }
+
+        #endregion Query Methods Of NameValuePairOfByFKOnly
+
         // DataQueryPerQuerySettingCollection -- MethodDataQuery -- End
 
         /// <summary>

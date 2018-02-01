@@ -159,6 +159,40 @@ namespace MSBuildExtensionPack.WebApiClient
 
         // DataQueryPerQuerySettingCollection -- MethodDataQuery -- Start
 
+        #region Query Methods Of NameValuePairOfByFKOnly
+
+        public const string ActionName_GetCollectionOfNameValuePairOfByFKOnly = "GetCollectionOfNameValuePairOfByFKOnly";
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// http://[host]/api/SolutionApi/GetCollectionOfNameValuePairOfByFKOnly
+        /// </summary>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
+        public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfByFKOnlyAsync(
+            System.Int64? organizationId
+            , System.Int64? organization_2Id
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
+        {
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            parameters.Add("organizationId", organizationId.ToString());
+            parameters.Add("organization_2Id", organization_2Id.ToString());
+            parameters.Add("currentIndex", currentIndex.ToString());
+            parameters.Add("pageSize", pageSize.ToString());
+            parameters.Add("queryOrderByExpression", queryOrderByExpression);
+
+            string url = GetHttpRequestUrl(ActionName_GetCollectionOfNameValuePairOfByFKOnly, parameters);
+            return await Get<Framework.NameValueCollection>(url);
+        }
+
+        #endregion Query Methods Of NameValuePairOfByFKOnly
+
         // DataQueryPerQuerySettingCollection -- MethodDataQuery -- End
 
         public const string ActionName_GetSolutionItemVM = "GetSolutionItemVM";
