@@ -166,15 +166,6 @@
   <data name="ToolTip_Of_TabbedCommon_of_MSBuildExtensionPack_Build" xml:space="preserve">
     <value>ToolTip Of TabbedCommon of MSBuildExtensionPack.Build</value>
   </data>
-  <data name="Description_Of_UpdateNameOnly_of_MSBuildExtensionPack_Build" xml:space="preserve">
-    <value>Description Of UpdateNameOnly of MSBuildExtensionPack.Build</value>
-  </data>
-  <data name="UpdateNameOnly_of_MSBuildExtensionPack_Build" xml:space="preserve">
-    <value>UpdateNameOnly of MSBuildExtensionPack.Build</value>
-  </data>
-  <data name="ToolTip_Of_UpdateNameOnly_of_MSBuildExtensionPack_Build" xml:space="preserve">
-    <value>ToolTip Of UpdateNameOnly of MSBuildExtensionPack.Build</value>
-  </data>
   <data name="Description_Of_Common_of_MSBuildExtensionPack_BuildEventCode" xml:space="preserve">
     <value>Description Of Common of MSBuildExtensionPack.BuildEventCode</value>
   </data>

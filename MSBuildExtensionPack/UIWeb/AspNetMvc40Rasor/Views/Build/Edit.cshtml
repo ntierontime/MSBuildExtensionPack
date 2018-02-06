@@ -67,7 +67,7 @@
                         </button>
                     </div>
                     <div class="btn-group">
-                        <a href="@Url.Action(UrlStringsAlias.ActionName_Build_Edit, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Id })" class="btn btn-default" role="button" type="button">
+                        <a href="@Url.Action(UrlStringsAlias.ActionName_Build_Edit, new { isToCompareIdIdentifierOftOfIdentifier=true, valueToCompareIdIdentifierOftOfIdentifier = Model.Item.Id })" class="btn btn-default" role="button" type="button">
                             <span class="glyphicon glyphicon-refresh"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.Refresh</span>
                         </a>
                     </div>
@@ -107,7 +107,7 @@
             });
         }));
         function FetchOrganization_1() {
-            var url = "/api/OrganizationApi/GetCollectionOfNameValuePairOfByFKOnly";
+            var url = "/api/OrganizationApi/GetCollectionOfNameValuePairByFKOnly";
             try {
                 var params = BuildCriteriaForFetchOrganization_1();
                 $.getJSON(url, params, function (data) {
@@ -119,10 +119,9 @@
             }
         }
         function BuildCriteriaForFetchOrganization_1() {
-            var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $('select[name="Item.Organization_2Id"]').val();
+            var selectedvalueParentId = $('select[name="Item.Organization_2Id"]').val();
             var params = {
-                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: true,
-                valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly,
+                parentId: selectedvalueParentId,
                 currentIndex: -1,
                 pageSize: -1,
                 queryOrderByExpression: null
@@ -130,25 +129,23 @@
             return params;
         }
         function FetchSolution_1() {
-            var url = "/api/SolutionApi/GetCollectionOfNameValuePairOfByFKOnly";
+            var url = "/api/SolutionApi/GetCollectionOfNameValuePairByFKOnly";
             try {
                 var params = BuildCriteriaForFetchSolution_1();
                 $.getJSON(url, params, function (data) {
                     objVM.selectListOfSolution_1(data);
-                    objVM.selectedSolution_1(@Model.Item.SolutionId);
+                    objVM.selectedSolution_1('@Model.Item.SolutionId');
                 });
             }
             catch (e) {
             }
         }
         function BuildCriteriaForFetchSolution_1() {
-            var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $('select[name="Item.Organization_2Id"]').val();
-            var selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly = $('select[name="Item.Organization_1Id"]').val();
+            var selectedvalueOrganization_2Id = $('select[name="Item.Organization_2Id"]').val();
+            var selectedvalueOrganizationId = $('select[name="Item.Organization_1Id"]').val();
             var params = {
-                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: true,
-                valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly,
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly: true,
-                valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly,
+                organization_2Id: selectedvalueOrganization_2Id,
+                organizationId: selectedvalueOrganizationId,
                 currentIndex: -1,
                 pageSize: -1,
                 queryOrderByExpression: null

@@ -115,28 +115,28 @@ namespace MSBuildExtensionPack.CommonBLLEntities
     }
 
     /// <summary>
-    /// BusinessLogicLayerRequestMessageUserDefined, with Key=ByFKOnly
+    /// BusinessLogicLayerRequestMessageUserDefined, with Key=FKOnly
     /// </summary>
-    public partial class BuildRequestMessageUserDefinedOfByFKOnly
-        : Framework.CommonBLLEntities.BusinessLogicLayerRequestMessageBase<BuildChainedQueryCriteriaByFKOnly>
+    public partial class BuildRequestMessageUserDefinedOfFKOnly
+        : Framework.CommonBLLEntities.BusinessLogicLayerRequestMessageBase<BuildChainedQueryCriteriaFKOnly>
     {
         #region constructors
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BuildRequestMessageUserDefinedOfByFKOnly"/> class.
+        /// Initializes a new instance of the <see cref="BuildRequestMessageUserDefinedOfFKOnly"/> class.
         /// </summary>
-        public BuildRequestMessageUserDefinedOfByFKOnly()
+        public BuildRequestMessageUserDefinedOfFKOnly()
             : base()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BuildRequestMessageUserDefinedOfByFKOnly"/> class.
+        /// Initializes a new instance of the <see cref="BuildRequestMessageUserDefinedOfFKOnly"/> class.
         /// </summary>
         /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
         /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
         /// <param name="businessLogicLayerRequestID">The business logic layer request ID.</param>
-        public BuildRequestMessageUserDefinedOfByFKOnly(
+        public BuildRequestMessageUserDefinedOfFKOnly(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID)
@@ -145,7 +145,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BuildRequestMessageUserDefinedOfByFKOnly"/> class.
+        /// Initializes a new instance of the <see cref="BuildRequestMessageUserDefinedOfFKOnly"/> class.
         /// </summary>
         /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
         /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
@@ -153,7 +153,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
-        public BuildRequestMessageUserDefinedOfByFKOnly(
+        public BuildRequestMessageUserDefinedOfFKOnly(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID
@@ -169,28 +169,28 @@ namespace MSBuildExtensionPack.CommonBLLEntities
     }
 
     /// <summary>
-    /// BusinessLogicLayerRequestMessageUserDefined, with Key=ByIdentifier
+    /// BusinessLogicLayerRequestMessageUserDefined, with Key=Identifier
     /// </summary>
-    public partial class BuildRequestMessageUserDefinedOfByIdentifier
-        : Framework.CommonBLLEntities.BusinessLogicLayerRequestMessageBase<BuildChainedQueryCriteriaByIdentifier>
+    public partial class BuildRequestMessageUserDefinedOfIdentifier
+        : Framework.CommonBLLEntities.BusinessLogicLayerRequestMessageBase<BuildChainedQueryCriteriaIdentifier>
     {
         #region constructors
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BuildRequestMessageUserDefinedOfByIdentifier"/> class.
+        /// Initializes a new instance of the <see cref="BuildRequestMessageUserDefinedOfIdentifier"/> class.
         /// </summary>
-        public BuildRequestMessageUserDefinedOfByIdentifier()
+        public BuildRequestMessageUserDefinedOfIdentifier()
             : base()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BuildRequestMessageUserDefinedOfByIdentifier"/> class.
+        /// Initializes a new instance of the <see cref="BuildRequestMessageUserDefinedOfIdentifier"/> class.
         /// </summary>
         /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
         /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
         /// <param name="businessLogicLayerRequestID">The business logic layer request ID.</param>
-        public BuildRequestMessageUserDefinedOfByIdentifier(
+        public BuildRequestMessageUserDefinedOfIdentifier(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID)
@@ -199,7 +199,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BuildRequestMessageUserDefinedOfByIdentifier"/> class.
+        /// Initializes a new instance of the <see cref="BuildRequestMessageUserDefinedOfIdentifier"/> class.
         /// </summary>
         /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
         /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
@@ -207,7 +207,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
-        public BuildRequestMessageUserDefinedOfByIdentifier(
+        public BuildRequestMessageUserDefinedOfIdentifier(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID
@@ -221,43 +221,6 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 
         #endregion constructors
     }
-
-    #region EntityUpdateActionSetting - UpdateNameOnly
-
-    /// <summary>
-    /// BuildRequestMessageUserDefinedUpdateNameOnly, with ActionName:UpdateNameOnly;DataViewKey:UpdateNameRequest;PropertyList:Name;Description:;
-    /// </summary>
-    public partial class BuildRequestMessageUserDefinedUpdateNameOnly
-        : Framework.CommonBLLEntities.BusinessLogicLayerRequestMessageBase<MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest>
-    {
-        #region constructors
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BuildRequestMessageUserDefinedUpdateNameOnly"/> class.
-        /// </summary>
-        public BuildRequestMessageUserDefinedUpdateNameOnly()
-            : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BuildRequestMessageUserDefinedUpdateNameOnly"/> class.
-        /// </summary>
-        /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
-        /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
-        /// <param name="businessLogicLayerRequestID">The business logic layer request ID.</param>
-        public BuildRequestMessageUserDefinedUpdateNameOnly(
-            Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
-            , string businessLogicLayerRequestTypeKey
-            , string businessLogicLayerRequestID)
-            : base(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID)
-        {
-        }
-
-        #endregion constructors
-    }
-
-    #endregion EntityUpdateActionSetting - UpdateNameOnly
 
 }
 

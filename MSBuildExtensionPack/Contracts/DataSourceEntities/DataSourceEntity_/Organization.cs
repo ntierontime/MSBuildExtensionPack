@@ -80,10 +80,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         #endregion Storage Fields
 
-        #region constructors
-
         /// <summary>
-        /// default constructor
         /// Initializes a new instance of the <see cref=" Organization"/> class.
         /// </summary>
         public Organization()
@@ -234,8 +231,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
         {
             MSBuildExtensionPack.EntityContracts.IOrganizationHelper.Copy<MSBuildExtensionPack.EntityContracts.IOrganization, Organization>(item, this);
         }
-
-        #endregion constructors
 
         #region properties
 
@@ -794,9 +789,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
             #region Storage Fields
 
-        System.Guid m_Organization_2_UniqueidentifierColumn;
-
         System.Guid m_Organization_2_UniqueIdentifier;
+
+        System.Guid m_Organization_2_UniqueidentifierColumn;
 
         System.String m_Organization_2_Name;
 
@@ -874,8 +869,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IOrganization"/></param>
             public Default()
             {
-                this.Organization_2_UniqueidentifierColumn = new Guid();
                 this.Organization_2_UniqueIdentifier = new Guid();
+                this.Organization_2_UniqueidentifierColumn = new Guid();
                 this.Organization_2_Name = null;
                 this.Id = default(long);
                 this.ParentId = default(long);
@@ -925,20 +920,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
             #region properties
 
                     [DataMember]
-        [Display(Name = "Organization_2_UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Guid Organization_2_UniqueidentifierColumn
-        {
-            get
-            {
-                return m_Organization_2_UniqueidentifierColumn;
-            }
-            set
-            {
-                m_Organization_2_UniqueidentifierColumn = value;
-                RaisePropertyChanged("Organization_2_UniqueidentifierColumn");
-            }
-        }
-
-                    [DataMember]
         [Display(Name = "Organization_2_UniqueIdentifier", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Guid Organization_2_UniqueIdentifier
         {
             get
@@ -949,6 +930,20 @@ namespace MSBuildExtensionPack.DataSourceEntities
             {
                 m_Organization_2_UniqueIdentifier = value;
                 RaisePropertyChanged("Organization_2_UniqueIdentifier");
+            }
+        }
+
+                    [DataMember]
+        [Display(Name = "Organization_2_UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Guid Organization_2_UniqueidentifierColumn
+        {
+            get
+            {
+                return m_Organization_2_UniqueidentifierColumn;
+            }
+            set
+            {
+                m_Organization_2_UniqueidentifierColumn = value;
+                RaisePropertyChanged("Organization_2_UniqueidentifierColumn");
             }
         }
 
@@ -982,7 +977,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
                     [DataMember]
-        [Display(Name = "ParentId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Int64 ParentId
+        [Display(Name = "ParentId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="ParentId_is_required")]        public System.Int64 ParentId
         {
             get
             {
@@ -1457,8 +1453,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
             {
                 Default cloned = new Default();
 
-            cloned.m_Organization_2_UniqueidentifierColumn = m_Organization_2_UniqueidentifierColumn;
             cloned.m_Organization_2_UniqueIdentifier = m_Organization_2_UniqueIdentifier;
+            cloned.m_Organization_2_UniqueidentifierColumn = m_Organization_2_UniqueidentifierColumn;
             cloned.m_Organization_2_Name = m_Organization_2_Name;
             cloned.m_Id = m_Id;
             cloned.m_ParentId = m_ParentId;
@@ -2561,22 +2557,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         #endregion Nested Views classes and their collection classes 4
     }
-
-/*
-    /// <summary>
-    /// a property defined when <see cref="Organization"/> is used in other classes.
-    /// </summary>
-    public interface WithEntityContractOrganization
-    {
-        /// <summary>
-        /// Gets or sets Organization.
-        /// </summary>
-        /// <value>
-        /// The Organization
-        /// </value>
-        Organization Organization { get; set; }
-    }
-*/
 
     /// <summary>
     /// message definition, pass single entry, pulled from database, to business logic layer. <see cref="Organization"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>

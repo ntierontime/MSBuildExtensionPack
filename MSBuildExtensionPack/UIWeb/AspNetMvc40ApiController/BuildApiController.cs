@@ -146,78 +146,33 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
 
         #endregion batch insert, update and delete in an entity collection
 
-        #region Query Methods Of NameValuePair of All per critieria, queryPagingSetting and queryOrderBySettingCollection
+        // DataQueryPerQuerySettingCollection -- MethodDataQuery -- Start
+
+        #region Query Methods Of NameValuePairByFKOnly
 
         /// <summary>
         /// Gets the collection of entity of common.
         /// </summary>
-
+        /// <param name="solutionId">value to compare/filter with solutionId property/field/column</param>
+        /// <param name="organization_1Id">value to compare/filter with organization_1Id property/field/column</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        [HttpGet, ActionName("GetCollectionOfNameValuePairOfAll")]
-        public Framework.NameValueCollection GetCollectionOfNameValuePairOfAll(
-            int currentIndex
-            , int pageSize
-            , string queryOrderByExpression
-            )
-        {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCBuild.GetCollectionOfNameValuePairOfAll(                currentIndex
-                , pageSize
-                , queryOrderByExpression);
-        }
-
-        /// <summary>
-        /// Gets message of the collection of entity of common.
-        /// </summary>
-
-        /// <param name="currentIndex">Index of the current.</param>
-        /// <param name="pageSize">Size of the page.</param>
-        /// <param name="queryOrderByExpression">The query order by expression.</param>
-        /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
-        [HttpGet, ActionName("GetMessageOfNameValuePairOfAll")]
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfAll(
-            int currentIndex
-            , int pageSize
-            , string queryOrderByExpression        )
-
-        {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCBuild.GetMessageOfNameValuePairOfAll(                currentIndex
-                , pageSize
-                , queryOrderByExpression);
-        }
-
-        #endregion Query Methods Of NameValuePair of All per value type
-
-        #region Query Methods Of NameValuePair of ByFKOnly per critieria, queryPagingSetting and queryOrderBySettingCollection
-
-        /// <summary>
-        /// Gets the collection of entity of common.
-        /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfSolution_1OfByFKOnly">will compare/filter IdByFKOnlyOfSolution_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfSolution_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
-        /// <param name="currentIndex">Index of the current.</param>
-        /// <param name="pageSize">Size of the page.</param>
-        /// <param name="queryOrderByExpression">The query order by expression.</param>
-        /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        [HttpGet, ActionName("GetCollectionOfNameValuePairOfByFKOnly")]
-        public Framework.NameValueCollection GetCollectionOfNameValuePairOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, System.Int32? valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+        [HttpGet, ActionName("GetCollectionOfNameValuePairByFKOnly")]
+        public Framework.NameValueCollection GetCollectionOfNameValuePairByFKOnly(
+            System.Int32? solutionId
+            , System.Int64? organization_1Id
+            , System.Int64? organization_2Id
             , int currentIndex
             , int pageSize
-            , string queryOrderByExpression
-            )
+            , string queryOrderByExpression)
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCBuild.GetCollectionOfNameValuePairOfByFKOnly(                isToCompareIdByFKOnlyOfSolution_1OfByFKOnly && valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly != default(System.Int32), valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly && valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly != default(System.Int64), valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly && valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly != default(System.Int64), valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuild.GetCollectionOfNameValuePairByFKOnly(
+                solutionId.HasValue, solutionId
+                , organization_1Id.HasValue, organization_1Id
+                , organization_2Id.HasValue, organization_2Id
                 , currentIndex
                 , pageSize
                 , queryOrderByExpression);
@@ -226,35 +181,35 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <summary>
         /// Gets message of the collection of entity of common.
         /// </summary>
-        /// <param name="isToCompareIdByFKOnlyOfSolution_1OfByFKOnly">will compare/filter IdByFKOnlyOfSolution_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfSolution_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_1OfByFKOnly property/field/column</param>
-        /// <param name="isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">will compare/filter IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column if true, otherwise false</param>
-        /// <param name="valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly">value to compare/filter with IdByFKOnlyOfOrganization_2OfByFKOnly property/field/column</param>
+        /// <param name="solutionId">value to compare/filter with solutionId property/field/column</param>
+        /// <param name="organization_1Id">value to compare/filter with organization_1Id property/field/column</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
-        [HttpGet, ActionName("GetMessageOfNameValuePairOfByFKOnly")]
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfByFKOnly(
-            bool isToCompareIdByFKOnlyOfSolution_1OfByFKOnly, System.Int32? valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-            , bool isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly, System.Int64? valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+        [HttpGet, ActionName("GetMessageOfNameValuePairByFKOnly")]
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairByFKOnly(
+            System.Int32? solutionId
+            , System.Int64? organization_1Id
+            , System.Int64? organization_2Id
             , int currentIndex
             , int pageSize
-            , string queryOrderByExpression        )
+            , string queryOrderByExpression)
 
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCBuild.GetMessageOfNameValuePairOfByFKOnly(                isToCompareIdByFKOnlyOfSolution_1OfByFKOnly && valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly != default(System.Int32), valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly && valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly != default(System.Int64), valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly
-                , isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly && valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly != default(System.Int64), valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuild.GetMessageOfNameValuePairByFKOnly(
+                solutionId.HasValue, solutionId
+                , organization_1Id.HasValue, organization_1Id
+                , organization_2Id.HasValue, organization_2Id
                 , currentIndex
                 , pageSize
                 , queryOrderByExpression);
         }
 
-        #endregion Query Methods Of NameValuePair of ByFKOnly per value type
+        #endregion Query Methods Of NameValuePairByFKOnly
+
+        // DataQueryPerQuerySettingCollection -- MethodDataQuery -- End
 
         /// <summary>
         /// Gets the Item View Model of MSBuildExtensionPack.Build.
@@ -263,10 +218,10 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <returns></returns>
         [HttpGet]
         public MSBuildExtensionPack.ViewModelData.BuildItemVM GetBuildItemVM(
-            System.Int64 id)
+System.Int64? id)
         {
             MSBuildExtensionPack.AspNetMvc40ViewModel.BuildItemVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.BuildItemVM();
-            retval.Load(true, id, Framework.UIAction.ViewDetails);
+            retval.Load(id.HasValue, id, Framework.UIAction.ViewDetails);
             return retval;
         }
 
@@ -306,48 +261,14 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <returns></returns>
         [HttpGet, ActionName("GetWPEntityRelatedOfBuildVM")]
         public MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfBuildVM GetWPEntityRelatedOfBuildVM(
-            System.Int64 id)
+System.Int64? id)
         {
-            MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildVM(new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier(true, id));
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaIdentifier();
+            criteria.Identifier.Id.NullableValueToCompare = id;
+            MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildVM(criteria);
             retval.LoadData();
             return retval;
         }
-
-        #region EntityUpdateActionSetting - UpdateNameOnly
-
-        /// <summary>
-        /// Gets UpdateNameOnly view model of MSBuildExtensionPack.Build: WPUpdateNameOnlyOfBuild.
-        /// http://[host]/api/BuildApi/WPUpdateNameOnlyOfBuildVM?
-        /// </summary>
-        /// <returns></returns>
-        [HttpGet, ActionName("GetWPUpdateNameOnlyOfBuildVM")]
-        public MSBuildExtensionPack.ViewModelData.WPUpdateNameOnlyOfBuildVM GetWPUpdateNameOnlyOfBuildVM(
-            System.Int64 id
-            )
-        {
-            MSBuildExtensionPack.AspNetMvc40ViewModel.WPUpdateNameOnlyOfBuildVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPUpdateNameOnlyOfBuildVM();
-            vm.CriteriaOfMasterEntity = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier(true, id);
-            vm.LoadData();
-            return vm;
-        }
-
-        /// <summary>
-        /// Post method WPUpdateNameOnlyOfBuild.
-        /// http://[host]/api/BuildApi/WPUpdateNameOnlyOfBuildVM
-        /// </summary>
-        /// <param name="input">The input.</param>
-        /// <returns></returns>
-        [HttpPost, ActionName("WPUpdateNameOnlyOfBuildVM")]
-        public MSBuildExtensionPack.ViewModelData.WPUpdateNameOnlyOfBuildVM WPUpdateNameOnlyOfBuildVM(MSBuildExtensionPack.ViewModelData.WPUpdateNameOnlyOfBuildVM input)
-        {
-            MSBuildExtensionPack.AspNetMvc40ViewModel.WPUpdateNameOnlyOfBuildVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPUpdateNameOnlyOfBuildVM(input.CriteriaOfMasterEntity);
-            vm.MasterEntity = input.MasterEntity;
-            vm.SaveData();
-
-            return vm;
-        }
-
-        #endregion EntityUpdateActionSetting - UpdateNameOnlyVM
 
         /// <summary>
         /// HearBeat.

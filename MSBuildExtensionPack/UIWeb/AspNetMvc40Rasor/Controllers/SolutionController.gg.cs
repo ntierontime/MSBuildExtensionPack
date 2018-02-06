@@ -88,7 +88,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             {
                 vmFromTempData = (Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaCommon>)TempData[TempDataKey_WPCommonOfSolution];
 
-                var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfDefaultOfCommon(
+                var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfDefaultByCommon(
                     vmFromTempData.Criteria
                     , new Framework.EntityContracts.QueryPagingSetting(-1, -1)
                     , new Framework.EntityContracts.QueryOrderBySettingCollection(vmFromTempData.QueryOrderBySettingCollecionInString)
@@ -112,9 +112,11 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Solution_WPEntityRelatedOfSolution)]
-        public ActionResult WPEntityRelatedOfSolution(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier)
+        public ActionResult WPEntityRelatedOfSolution(System.Int32? id)
         {
-            MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfSolutionVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfSolutionVM(new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaIdentifier();
+            criteria.Identifier.Id.NullableValueToCompare = id;
+            MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfSolutionVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfSolutionVM(criteria);
             vm.LoadData();
 
             return View(vm);
@@ -178,7 +180,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 
         #endregion Index()
 
-        #region ActionResult Details(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier)
+        #region ActionResult Details(System.Int32? id)
 
         /// <summary>
         /// GET method of details page, based on identifier or unique constraint, this entity only, no related entities.
@@ -186,18 +188,18 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Solution_Details)]
-        public ActionResult Details(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier)
+        public ActionResult Details(System.Int32? id)
         {
             Framework.UIAction uiAction = Framework.UIAction.ViewDetails;
             MSBuildExtensionPack.AspNetMvc40ViewModel.SolutionItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.SolutionItemVM();
-            vm.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
+            vm.Load(id.HasValue, id, uiAction);
             vm.ContentData.Title = Framework.Resx.UIStringResource.Details;
             vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Details_Solution;
 
             return View(vm);
         }
 
-        #endregion ActionResult Details(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier)
+        #endregion ActionResult Details(System.Int32? id)
 
         #region ActionResult AddNew()
 
@@ -260,10 +262,10 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Solution_Copy)]
-        public ActionResult Copy(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier)
+        public ActionResult Copy(System.Int32? id)
         {
-            MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.Default _Response =
-                MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfDefaultOfByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
+            var _Response =
+                MSBuildExtensionPack.CommonBLLIoC.IoCSolution.GetMessageOfDefaultByIdentifier(id.HasValue, id, -1, -1, null);
 
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -276,7 +278,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 
         #endregion ActionResult AddNew()
 
-        #region ActionResult Edit(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier)
+        #region ActionResult Edit(System.Int32? id)
 
         /// <summary>
         /// GET method of editing page of <see cref="MSBuildExtensionPack.Solution"/>.
@@ -284,11 +286,11 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Solution_Edit)]
-        public ActionResult Edit(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier)
+        public ActionResult Edit(System.Int32? id)
         {
             Framework.UIAction uiAction = Framework.UIAction.Update;
             MSBuildExtensionPack.AspNetMvc40ViewModel.SolutionItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.SolutionItemVM();
-            vm.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
+            vm.Load(id.HasValue, id, uiAction);
             vm.ContentData.Title = Framework.Resx.UIStringResource.Edit;
             vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Edit_Solution;
 
@@ -328,9 +330,9 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             }
         }
 
-        #endregion ActionResult Edit(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier)
+        #endregion ActionResult Edit(System.Int32? id)
 
-        #region ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier)
+        #region ActionResult Delete(System.Int32? id)
 
         /// <summary>
         /// GET method of delete page of <see cref="MSBuildExtensionPack.Solution"/>
@@ -338,11 +340,11 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Solution_Delete)]
-        public ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier)
+        public ActionResult Delete(System.Int32? id)
         {
             Framework.UIAction uiAction = Framework.UIAction.Delete;
             MSBuildExtensionPack.AspNetMvc40ViewModel.SolutionItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.SolutionItemVM();
-            vm.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
+            vm.Load(id.HasValue, id, uiAction);
             vm.ContentData.Title = Framework.Resx.UIStringResource.Delete;
             vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Delete_Solution;
             return View(vm);
@@ -355,12 +357,12 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// <returns></returns>
         [HttpPost]
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Solution_Delete)]
-        public ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier, MSBuildExtensionPack.AspNetMvc40ViewModel.SolutionItemVM vm, FormCollection collection)
+        public ActionResult Delete(System.Int32? id, MSBuildExtensionPack.AspNetMvc40ViewModel.SolutionItemVM vm, FormCollection collection)
         {
             try
             {
                 log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Started.ToString()));
-                var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.ExistsOfDefaultOfByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
+                var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCSolution.ExistsOfDefaultByIdentifier(id.HasValue, id, -1, -1, null);
                 if (_Response)
                 {
                     MSBuildExtensionPack.DataSourceEntities.Solution entity = MSBuildExtensionPack.EntityContracts.ISolutionHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution.Default, MSBuildExtensionPack.DataSourceEntities.Solution>(vm.Item);
@@ -388,7 +390,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             }
         }
 
-        #endregion ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32? valueToCompareIdByIdentifierOftOfByIdentifier)
+        #endregion ActionResult Delete(System.Int32? id)
 
         #region Binary Columns
 

@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{960E0564-9487-4C39-9F6A-EF730D96C18E}</ProjectGuid>
+    <ProjectGuid>{FD138435-0F7C-4B72-B9D3-987E7FE69F80}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildExtensionPack.Resx</RootNamespace>
@@ -32,8 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="ResourceFileFactory.cs" />
     <EmbeddedResource Include="UIStringResourcePerApp.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -89,6 +87,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UIStringResourcePerEntitySolution.resx</DependentUpon>
     </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
     <None Include="map.2.A.2.vsd" />
     <None Include="map.2.A.2.vsd.png" />
   </ItemGroup>

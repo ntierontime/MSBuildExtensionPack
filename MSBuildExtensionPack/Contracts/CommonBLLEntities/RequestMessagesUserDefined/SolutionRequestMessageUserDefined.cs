@@ -115,28 +115,28 @@ namespace MSBuildExtensionPack.CommonBLLEntities
     }
 
     /// <summary>
-    /// BusinessLogicLayerRequestMessageUserDefined, with Key=ByFKOnly
+    /// BusinessLogicLayerRequestMessageUserDefined, with Key=FKOnly
     /// </summary>
-    public partial class SolutionRequestMessageUserDefinedOfByFKOnly
-        : Framework.CommonBLLEntities.BusinessLogicLayerRequestMessageBase<SolutionChainedQueryCriteriaByFKOnly>
+    public partial class SolutionRequestMessageUserDefinedOfFKOnly
+        : Framework.CommonBLLEntities.BusinessLogicLayerRequestMessageBase<SolutionChainedQueryCriteriaFKOnly>
     {
         #region constructors
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SolutionRequestMessageUserDefinedOfByFKOnly"/> class.
+        /// Initializes a new instance of the <see cref="SolutionRequestMessageUserDefinedOfFKOnly"/> class.
         /// </summary>
-        public SolutionRequestMessageUserDefinedOfByFKOnly()
+        public SolutionRequestMessageUserDefinedOfFKOnly()
             : base()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SolutionRequestMessageUserDefinedOfByFKOnly"/> class.
+        /// Initializes a new instance of the <see cref="SolutionRequestMessageUserDefinedOfFKOnly"/> class.
         /// </summary>
         /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
         /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
         /// <param name="businessLogicLayerRequestID">The business logic layer request ID.</param>
-        public SolutionRequestMessageUserDefinedOfByFKOnly(
+        public SolutionRequestMessageUserDefinedOfFKOnly(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID)
@@ -145,7 +145,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SolutionRequestMessageUserDefinedOfByFKOnly"/> class.
+        /// Initializes a new instance of the <see cref="SolutionRequestMessageUserDefinedOfFKOnly"/> class.
         /// </summary>
         /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
         /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
@@ -153,7 +153,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
-        public SolutionRequestMessageUserDefinedOfByFKOnly(
+        public SolutionRequestMessageUserDefinedOfFKOnly(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID
@@ -169,28 +169,28 @@ namespace MSBuildExtensionPack.CommonBLLEntities
     }
 
     /// <summary>
-    /// BusinessLogicLayerRequestMessageUserDefined, with Key=ByIdentifier
+    /// BusinessLogicLayerRequestMessageUserDefined, with Key=Identifier
     /// </summary>
-    public partial class SolutionRequestMessageUserDefinedOfByIdentifier
-        : Framework.CommonBLLEntities.BusinessLogicLayerRequestMessageBase<SolutionChainedQueryCriteriaByIdentifier>
+    public partial class SolutionRequestMessageUserDefinedOfIdentifier
+        : Framework.CommonBLLEntities.BusinessLogicLayerRequestMessageBase<SolutionChainedQueryCriteriaIdentifier>
     {
         #region constructors
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SolutionRequestMessageUserDefinedOfByIdentifier"/> class.
+        /// Initializes a new instance of the <see cref="SolutionRequestMessageUserDefinedOfIdentifier"/> class.
         /// </summary>
-        public SolutionRequestMessageUserDefinedOfByIdentifier()
+        public SolutionRequestMessageUserDefinedOfIdentifier()
             : base()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SolutionRequestMessageUserDefinedOfByIdentifier"/> class.
+        /// Initializes a new instance of the <see cref="SolutionRequestMessageUserDefinedOfIdentifier"/> class.
         /// </summary>
         /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
         /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
         /// <param name="businessLogicLayerRequestID">The business logic layer request ID.</param>
-        public SolutionRequestMessageUserDefinedOfByIdentifier(
+        public SolutionRequestMessageUserDefinedOfIdentifier(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID)
@@ -199,7 +199,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SolutionRequestMessageUserDefinedOfByIdentifier"/> class.
+        /// Initializes a new instance of the <see cref="SolutionRequestMessageUserDefinedOfIdentifier"/> class.
         /// </summary>
         /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
         /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
@@ -207,7 +207,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
-        public SolutionRequestMessageUserDefinedOfByIdentifier(
+        public SolutionRequestMessageUserDefinedOfIdentifier(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID

@@ -26,10 +26,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         #endregion Storage Fields
 
-        #region constructors
-
         /// <summary>
-        /// default constructor
         /// Initializes a new instance of the <see cref=" Solution"/> class.
         /// </summary>
         public Solution()
@@ -72,8 +69,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
         {
             MSBuildExtensionPack.EntityContracts.ISolutionHelper.Copy<MSBuildExtensionPack.EntityContracts.ISolution, Solution>(item, this);
         }
-
-        #endregion constructors
 
         #region properties
 
@@ -814,22 +809,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         #endregion Nested Views classes and their collection classes 3
     }
-
-/*
-    /// <summary>
-    /// a property defined when <see cref="Solution"/> is used in other classes.
-    /// </summary>
-    public interface WithEntityContractSolution
-    {
-        /// <summary>
-        /// Gets or sets Solution.
-        /// </summary>
-        /// <value>
-        /// The Solution
-        /// </value>
-        Solution Solution { get; set; }
-    }
-*/
 
     /// <summary>
     /// message definition, pass single entry, pulled from database, to business logic layer. <see cref="Solution"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>

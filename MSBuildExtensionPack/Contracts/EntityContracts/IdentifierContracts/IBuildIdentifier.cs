@@ -29,14 +29,5 @@ namespace MSBuildExtensionPack.EntityContracts
 ;
         }
     }
-
-    /// <summary>
-    ///  a property defined when <see cref="BuildIdentifier"/> is used in other classes.
-    /// </summary>
-    public partial interface WithIdentifierContractBuild<T>
-        where T : IBuildIdentifier
-    {
-        T BuildIdentifier { get; set; }
-    }
 }
 

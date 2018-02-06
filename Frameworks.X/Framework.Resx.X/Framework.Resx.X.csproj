@@ -5,7 +5,7 @@
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{810AECD3-7A0A-498F-A5D3-D49CC08C7B57}</ProjectGuid>
+    <ProjectGuid>{F1E49E74-FEC1-43F1-9013-3C17CDFF28B4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Framework.Resx</RootNamespace>

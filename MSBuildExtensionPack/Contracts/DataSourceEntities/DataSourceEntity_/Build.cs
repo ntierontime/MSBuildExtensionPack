@@ -26,10 +26,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         #endregion Storage Fields
 
-        #region constructors
-
         /// <summary>
-        /// default constructor
         /// Initializes a new instance of the <see cref=" Build"/> class.
         /// </summary>
         public Build()
@@ -72,8 +69,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
         {
             MSBuildExtensionPack.EntityContracts.IBuildHelper.Copy<MSBuildExtensionPack.EntityContracts.IBuild, Build>(item, this);
         }
-
-        #endregion constructors
 
         #region properties
 
@@ -218,7 +213,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         #endregion Method of Build GetAClone()
 
-        #region Nested Views classes and their collection classes 4
+        #region Nested Views classes and their collection classes 3
 
         /// <summary>
         /// View "Default" class of <see cref="Build"/>, used across the solution.
@@ -437,7 +432,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
                     [DataMember]
-        [Display(Name = "SolutionId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild))]        public System.Int32 SolutionId
+        [Display(Name = "SolutionId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild), ErrorMessageResourceName="SolutionId_is_required")]        public System.Int32 SolutionId
         {
             get
             {
@@ -576,11 +572,11 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         System.Int64 m_Organization_1Id;
 
+        System.Int64 m_Organization_2Id;
+
         System.Int64 m_CountPerFK;
 
         System.String m_Name;
-
-        System.Int64 m_Organization_2Id;
 
             #endregion Storage Fields
 
@@ -594,9 +590,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             {
                 this.SolutionId = default(int);
                 this.Organization_1Id = default(long);
+                this.Organization_2Id = default(long);
                 this.CountPerFK = default(long);
                 this.Name = null;
-                this.Organization_2Id = default(long);
             }
             /*
             /// <summary>
@@ -642,6 +638,20 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
                     [DataMember]
+        [Display(Name = "Organization_2Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild))]        public System.Int64 Organization_2Id
+        {
+            get
+            {
+                return m_Organization_2Id;
+            }
+            set
+            {
+                m_Organization_2Id = value;
+                RaisePropertyChanged("Organization_2Id");
+            }
+        }
+
+                    [DataMember]
         [Display(Name = "CountPerFK", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild))]        public System.Int64 CountPerFK
         {
             get
@@ -669,20 +679,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-                    [DataMember]
-        [Display(Name = "Organization_2Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild))]        public System.Int64 Organization_2Id
-        {
-            get
-            {
-                return m_Organization_2Id;
-            }
-            set
-            {
-                m_Organization_2Id = value;
-                RaisePropertyChanged("Organization_2Id");
-            }
-        }
-
             #endregion properties
 
             #region Method of Build.DefaultGroupedDataView  GetAClone()
@@ -697,9 +693,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
             cloned.m_SolutionId = m_SolutionId;
             cloned.m_Organization_1Id = m_Organization_1Id;
+            cloned.m_Organization_2Id = m_Organization_2Id;
             cloned.m_CountPerFK = m_CountPerFK;
             cloned.m_Name = m_Name;
-            cloned.m_Organization_2Id = m_Organization_2Id;
 
                 return cloned;
             }
@@ -739,132 +735,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
         /// </summary>
         public class DataAccessLayerMessageOfDefaultGroupedDataViewCollection
             : Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultGroupedDataViewCollection>
-        {
-        }
-
-        /// <summary>
-        /// View "UpdateNameRequest" class of <see cref="Build"/>, used across the solution.
-        /// </summary>
-        public partial class UpdateNameRequest :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IBuildIdentifier, Framework.EntityContracts.IClone<UpdateNameRequest>
-        {
-
-            #region Storage Fields
-
-        System.Int64 m_Id;
-
-        System.String m_Name;
-
-            #endregion Storage Fields
-
-            #region Constructors
-
-            /// <summary>
-            /// Initializes/clone a new instance of the <see cref=" Build"/> class.
-            /// </summary>
-            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IBuild"/></param>
-            public UpdateNameRequest()
-            {
-                this.Id = default(long);
-                this.Name = null;
-            }
-            /*
-            /// <summary>
-            /// Initializes/clone a new instance of the <see cref=" Build"/> class.
-            /// </summary>
-            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IBuild"/></param>
-            public UpdateNameRequest(MSBuildExtensionPack.EntityContracts.IBuild item)
-            {
-                MSBuildExtensionPack.EntityContracts.IBuildHelper.Copy<MSBuildExtensionPack.EntityContracts.IBuild, UpdateNameRequest>(item, this);
-            }
-            */
-            #endregion Constructors
-
-            #region properties
-
-                    [DataMember]
-        [Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild))]
-        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild), ErrorMessageResourceName="Id_is_required")]        public System.Int64 Id
-        {
-            get
-            {
-                return m_Id;
-            }
-            set
-            {
-                m_Id = value;
-                RaisePropertyChanged("Id");
-            }
-        }
-
-                    [DataMember]
-        [Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild))]
-        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild), ErrorMessageResourceName="Name_is_required")]
-        [StringLengthAttribute(100, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_100")]        public System.String Name
-        {
-            get
-            {
-                return m_Name;
-            }
-            set
-            {
-                m_Name = value;
-                RaisePropertyChanged("Name");
-            }
-        }
-
-            #endregion properties
-
-            #region Method of Build.UpdateNameRequest  GetAClone()
-
-            /// <summary>
-            /// Gets the A clone.
-            /// </summary>
-            /// <returns>a new instance with same value</returns>
-            public UpdateNameRequest GetAClone()
-            {
-                UpdateNameRequest cloned = new UpdateNameRequest();
-
-            cloned.m_Id = m_Id;
-            cloned.m_Name = m_Name;
-
-                return cloned;
-            }
-
-            /// <summary>
-            /// Gets the A clone.
-            /// </summary>
-            /// <returns>a new instance with same value</returns>
-            public UpdateNameRequest GetACloneWithoutIdentifier()
-            {
-                UpdateNameRequest cloned = GetAClone();
-
-                return cloned;
-            }
-
-            #endregion Method of Build.UpdateNameRequest  GetAClone()
-        }
-
-        /// <summary>
-        /// View "UpdateNameRequest" class of <see cref="Build"/>, used across the solution.
-        /// </summary>
-        public partial class UpdateNameRequestCollection
-            :  List<UpdateNameRequest>
-        {
-        }
-
-        /// <summary>
-        /// message definition of "UpdateNameRequest", pass single entry, from database, to business logic layer. <see cref="Build"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
-        /// </summary>
-        public class DataAccessLayerMessageOfUpdateNameRequest
-            : Framework.DataSourceEntities.DataAccessLayerMessageBase<UpdateNameRequest>
-        {
-        }
-
-        /// <summary>
-        /// message definition of "UpdateNameRequest", pass a collection of instances, from database, to business logic layer. <see cref="Build"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
-        /// </summary>
-        public class DataAccessLayerMessageOfUpdateNameRequestCollection
-            : Framework.DataSourceEntities.DataAccessLayerMessageBase<UpdateNameRequestCollection>
         {
         }
 
@@ -994,24 +864,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         {
         }
 
-        #endregion Nested Views classes and their collection classes 4
+        #endregion Nested Views classes and their collection classes 3
     }
-
-/*
-    /// <summary>
-    /// a property defined when <see cref="Build"/> is used in other classes.
-    /// </summary>
-    public interface WithEntityContractBuild
-    {
-        /// <summary>
-        /// Gets or sets Build.
-        /// </summary>
-        /// <value>
-        /// The Build
-        /// </value>
-        Build Build { get; set; }
-    }
-*/
 
     /// <summary>
     /// message definition, pass single entry, pulled from database, to business logic layer. <see cref="Build"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>

@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{70D67203-03A5-417A-A27B-15C447A78C21}</ProjectGuid>
+    <ProjectGuid>{8D2D7E8F-8415-424C-AF9C-967113BE5136}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildExtensionPack.WPF4App</RootNamespace>
@@ -54,8 +54,6 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="Logging.config" />
     <Page Include="Pages\Build\Create.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -374,75 +372,77 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <SubType>RESXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Page Include="Pages\WPCommonOfBuild.xaml">
+    <None Include="Logging.config" />
+    <Page Include="Pages\Build\WPCommonOfBuild.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\WPCommonOfBuild.xaml.cs">
+    <Compile Include="Pages\Build\WPCommonOfBuild.xaml.cs">
       <DependentUpon>WPCommonOfBuild.xaml</DependentUpon>
     </Compile>
-    <Page Include="Pages\WPCommonOfBuildEventCode.xaml">
+    <Page Include="Pages\BuildEventCode\WPCommonOfBuildEventCode.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\WPCommonOfBuildEventCode.xaml.cs">
+    <Compile Include="Pages\BuildEventCode\WPCommonOfBuildEventCode.xaml.cs">
       <DependentUpon>WPCommonOfBuildEventCode.xaml</DependentUpon>
     </Compile>
-    <Page Include="Pages\WPCommonOfBuildLog.xaml">
+    <Page Include="Pages\BuildLog\WPCommonOfBuildLog.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\WPCommonOfBuildLog.xaml.cs">
+    <Compile Include="Pages\BuildLog\WPCommonOfBuildLog.xaml.cs">
       <DependentUpon>WPCommonOfBuildLog.xaml</DependentUpon>
     </Compile>
-    <Page Include="Pages\WPCommonOfOrganization.xaml">
+    <Page Include="Pages\Organization\WPCommonOfOrganization.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\WPCommonOfOrganization.xaml.cs">
+    <Compile Include="Pages\Organization\WPCommonOfOrganization.xaml.cs">
       <DependentUpon>WPCommonOfOrganization.xaml</DependentUpon>
     </Compile>
-    <Page Include="Pages\WPCommonOfSolution.xaml">
+    <Page Include="Pages\Solution\WPCommonOfSolution.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\WPCommonOfSolution.xaml.cs">
+    <Compile Include="Pages\Solution\WPCommonOfSolution.xaml.cs">
       <DependentUpon>WPCommonOfSolution.xaml</DependentUpon>
     </Compile>
-    <Page Include="UserControls\UCCommonOfBuild.xaml">
+    <Page Include="UserControls\Build\UCCommonOfBuild.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\UCCommonOfBuild.xaml.cs">
+    <Compile Include="UserControls\Build\UCCommonOfBuild.xaml.cs">
       <DependentUpon>UCCommonOfBuild.xaml</DependentUpon>
     </Compile>
-    <Page Include="UserControls\UCCommonOfBuildEventCode.xaml">
+    <Page Include="UserControls\BuildEventCode\UCCommonOfBuildEventCode.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\UCCommonOfBuildEventCode.xaml.cs">
+    <Compile Include="UserControls\BuildEventCode\UCCommonOfBuildEventCode.xaml.cs">
       <DependentUpon>UCCommonOfBuildEventCode.xaml</DependentUpon>
     </Compile>
-    <Page Include="UserControls\UCCommonOfBuildLog.xaml">
+    <Page Include="UserControls\BuildLog\UCCommonOfBuildLog.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\UCCommonOfBuildLog.xaml.cs">
+    <Compile Include="UserControls\BuildLog\UCCommonOfBuildLog.xaml.cs">
       <DependentUpon>UCCommonOfBuildLog.xaml</DependentUpon>
     </Compile>
-    <Page Include="UserControls\UCCommonOfOrganization.xaml">
+    <Page Include="UserControls\Organization\UCCommonOfOrganization.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\UCCommonOfOrganization.xaml.cs">
+    <Compile Include="UserControls\Organization\UCCommonOfOrganization.xaml.cs">
       <DependentUpon>UCCommonOfOrganization.xaml</DependentUpon>
     </Compile>
-    <Page Include="UserControls\UCCommonOfSolution.xaml">
+    <Page Include="UserControls\Solution\UCCommonOfSolution.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\UCCommonOfSolution.xaml.cs">
+    <Compile Include="UserControls\Solution\UCCommonOfSolution.xaml.cs">
       <DependentUpon>UCCommonOfSolution.xaml</DependentUpon>
     </Compile>
     <None Include="map.2.D.2.vsd" />
@@ -458,15 +458,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Contracts\CommonBLLEntities\MSBuildExtensionPack.CommonBLLEntities.csproj">
-      <Project>{1863424e-9841-4647-97a2-4cc17a4bc7ba}</Project>
+      <Project>{6a520483-5254-4978-ad53-3147addeffb6}</Project>
       <Name>MSBuildExtensionPack.CommonBLLEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Contracts\DataSourceEntities\MSBuildExtensionPack.DataSourceEntities.csproj">
-      <Project>{3a8f1415-88ef-4b9e-8fef-4296bf953f31}</Project>
+      <Project>{d0b33cdd-97c7-4d99-a579-8fc566de7153}</Project>
       <Name>MSBuildExtensionPack.DataSourceEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Contracts\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj">
-      <Project>{9abeb016-fb34-40ab-b469-3b00f0048d27}</Project>
+      <Project>{d79953a8-febc-4b13-9cda-f7675a233481}</Project>
       <Name>MSBuildExtensionPack.EntityContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks\Framework\Framework.csproj">
@@ -498,19 +498,19 @@
       <Name>Framework.Xaml</Name>
     </ProjectReference>
     <ProjectReference Include="..\Shared\MVVMLightViewModels\MSBuildExtensionPack.MVVMLightViewModels.csproj">
-      <Project>{37677547-9cc8-4641-8b4e-20a8771b8964}</Project>
+      <Project>{aeba199a-084c-4ffc-b215-d080e50c81df}</Project>
       <Name>MSBuildExtensionPack.MVVMLightViewModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Contracts\Resx\MSBuildExtensionPack.Resx.csproj">
-      <Project>{960e0564-9487-4c39-9f6a-ef730d96c18e}</Project>
+      <Project>{fd138435-0f7c-4b72-b9d3-987e7fe69f80}</Project>
       <Name>MSBuildExtensionPack.Resx</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Contracts\ViewModelData\MSBuildExtensionPack.ViewModelData.csproj">
-      <Project>{e9d59ccd-7122-40ba-93b2-2d2e40b09662}</Project>
+      <Project>{59622778-b13c-464e-98f7-ea662653af27}</Project>
       <Name>MSBuildExtensionPack.ViewModelData</Name>
     </ProjectReference>
     <ProjectReference Include="..\Shared\WebApiClient\MSBuildExtensionPack.WebApiClient.csproj">
-      <Project>{3d7f434b-49df-4e21-8fdd-4f88907f14a3}</Project>
+      <Project>{c126ea08-56e0-4aa7-85d3-1fe40fed592d}</Project>
       <Name>MSBuildExtensionPack.WebApiClient</Name>
     </ProjectReference>
   </ItemGroup>

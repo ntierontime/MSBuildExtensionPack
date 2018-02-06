@@ -205,33 +205,6 @@ namespace MSBuildExtensionPack.Resx {
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of UpdateNameOnly of MSBuildExtensionPack.Build"".
-        /// </summary>
-        public static string Description_Of_UpdateNameOnly_of_MSBuildExtensionPack_Build {
-            get {
-                return ResourceManager.GetString("Description_Of_UpdateNameOnly_of_MSBuildExtensionPack_Build", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "UpdateNameOnly of MSBuildExtensionPack.Build"".
-        /// </summary>
-        public static string UpdateNameOnly_of_MSBuildExtensionPack_Build {
-            get {
-                return ResourceManager.GetString("UpdateNameOnly_of_MSBuildExtensionPack_Build", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of UpdateNameOnly of MSBuildExtensionPack.Build"".
-        /// </summary>
-        public static string ToolTip_Of_UpdateNameOnly_of_MSBuildExtensionPack_Build {
-            get {
-                return ResourceManager.GetString("ToolTip_Of_UpdateNameOnly_of_MSBuildExtensionPack_Build", resourceCulture);
-            }
-        }
-
-        /// <summary>
         ///   Looks up a localized string similar to "Description Of Common of MSBuildExtensionPack.BuildEventCode"".
         /// </summary>
         public static string Description_Of_Common_of_MSBuildExtensionPack_BuildEventCode {

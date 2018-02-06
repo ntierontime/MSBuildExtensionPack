@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{11CC9717-71A4-41E7-B27E-D59A54D221DD}</ProjectGuid>
+    <ProjectGuid>{54D13C75-9E50-4ED3-B265-9FC6819EA35E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildExtensionPack.DALContracts</RootNamespace>
@@ -32,24 +32,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="IBuildRepository.cs" />
     <Compile Include="IBuildEventCodeRepository.cs" />
     <Compile Include="IBuildLogRepository.cs" />
     <Compile Include="IOrganizationRepository.cs" />
     <Compile Include="ISolutionRepository.cs" />
     <Compile Include="DataAccessLayerFactoryContract.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <None Include="map.2.A.1.vsd" />
     <None Include="map.2.A.1.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Contracts\DataSourceEntities\MSBuildExtensionPack.DataSourceEntities.csproj">
-      <Project>{3a8f1415-88ef-4b9e-8fef-4296bf953f31}</Project>
+      <Project>{d0b33cdd-97c7-4d99-a579-8fc566de7153}</Project>
       <Name>MSBuildExtensionPack.DataSourceEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Contracts\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj">
-      <Project>{9abeb016-fb34-40ab-b469-3b00f0048d27}</Project>
+      <Project>{d79953a8-febc-4b13-9cda-f7675a233481}</Project>
       <Name>MSBuildExtensionPack.EntityContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks\Framework\Framework.csproj">

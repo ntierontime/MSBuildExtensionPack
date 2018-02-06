@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("NTIER ON TIME TECHNOLOGIES INC.")]
 [assembly: AssemblyProduct("MSBuildExtensionPack")]
-[assembly: AssemblyCopyright("Copyright © NTIER ON TIME TECHNOLOGIES INC. 2017")]
+[assembly: AssemblyCopyright("Copyright © NTIER ON TIME TECHNOLOGIES INC. 2018")]
 [assembly: AssemblyTrademark("MSBuildExtensionPack")]
 [assembly: AssemblyCulture("")]
 
@@ -21,7 +21,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("9abeb016-fb34-40ab-b469-3b00f0048d27")]
+[assembly: Guid("d79953a8-febc-4b13-9cda-f7675a233481")]
 
 // Version information for an assembly consists of the following four values:
 //

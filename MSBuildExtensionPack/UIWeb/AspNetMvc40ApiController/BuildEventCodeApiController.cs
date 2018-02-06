@@ -146,7 +146,9 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
 
         #endregion batch insert, update and delete in an entity collection
 
-        #region Query Methods Of NameValuePair of All per critieria, queryPagingSetting and queryOrderBySettingCollection
+        // DataQueryPerQuerySettingCollection -- MethodDataQuery -- Start
+
+        #region Query Methods Of NameValuePairByAll
 
         /// <summary>
         /// Gets the collection of entity of common.
@@ -156,14 +158,14 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        [HttpGet, ActionName("GetCollectionOfNameValuePairOfAll")]
-        public Framework.NameValueCollection GetCollectionOfNameValuePairOfAll(
+        [HttpGet, ActionName("GetCollectionOfNameValuePairByAll")]
+        public Framework.NameValueCollection GetCollectionOfNameValuePairByAll(
             int currentIndex
             , int pageSize
-            , string queryOrderByExpression
-            )
+            , string queryOrderByExpression)
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.GetCollectionOfNameValuePairOfAll(                currentIndex
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.GetCollectionOfNameValuePairByAll(
+                currentIndex
                 , pageSize
                 , queryOrderByExpression);
         }
@@ -176,19 +178,22 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
-        [HttpGet, ActionName("GetMessageOfNameValuePairOfAll")]
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairOfAll(
+        [HttpGet, ActionName("GetMessageOfNameValuePairByAll")]
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairByAll(
             int currentIndex
             , int pageSize
-            , string queryOrderByExpression        )
+            , string queryOrderByExpression)
 
         {
-            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.GetMessageOfNameValuePairOfAll(                currentIndex
+            return MSBuildExtensionPack.CommonBLLIoC.IoCBuildEventCode.GetMessageOfNameValuePairByAll(
+                currentIndex
                 , pageSize
                 , queryOrderByExpression);
         }
 
-        #endregion Query Methods Of NameValuePair of All per value type
+        #endregion Query Methods Of NameValuePairByAll
+
+        // DataQueryPerQuerySettingCollection -- MethodDataQuery -- End
 
         /// <summary>
         /// Gets the Item View Model of MSBuildExtensionPack.BuildEventCode.
@@ -197,10 +202,10 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <returns></returns>
         [HttpGet]
         public MSBuildExtensionPack.ViewModelData.BuildEventCodeItemVM GetBuildEventCodeItemVM(
-            System.Int32 id)
+System.Int32? id)
         {
             MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.BuildEventCodeItemVM();
-            retval.Load(true, id, Framework.UIAction.ViewDetails);
+            retval.Load(id.HasValue, id, Framework.UIAction.ViewDetails);
             return retval;
         }
 
@@ -240,9 +245,11 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         /// <returns></returns>
         [HttpGet, ActionName("GetWPEntityRelatedOfBuildEventCodeVM")]
         public MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfBuildEventCodeVM GetWPEntityRelatedOfBuildEventCodeVM(
-            System.Int32 id)
+System.Int32? id)
         {
-            MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildEventCodeVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildEventCodeVM(new MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaByIdentifier(true, id));
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaIdentifier();
+            criteria.Identifier.Id.NullableValueToCompare = id;
+            MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildEventCodeVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildEventCodeVM(criteria);
             retval.LoadData();
             return retval;
         }

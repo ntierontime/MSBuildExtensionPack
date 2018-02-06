@@ -409,18 +409,6 @@
   <data name="Value_Validation_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Build" xml:space="preserve">
     <value>Value Validation Error Message of property CountPerFK of MSBuildExtensionPack.Build</value>
   </data>
-  <data name="UpdateNameOnly_ButtonText" xml:space="preserve">
-    <value>UpdateNameOnly</value>
-  </data>
-  <data name="UpdateNameOnly_Description" xml:space="preserve">
-    <value>UpdateNameOnly</value>
-  </data>
-  <data name="UpdateNameOnly_Success" xml:space="preserve">
-    <value>UpdateNameOnly success.</value>
-  </data>
-  <data name="UpdateNameOnly_Failed" xml:space="preserve">
-    <value>UpdateNameOnly failed.</value>
-  </data>
   <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon" xml:space="preserve">
     <value>Solution</value>
   </data>
@@ -556,76 +544,76 @@
   <data name="Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedDescriptionCommonOftOfCommon" xml:space="preserve">
     <value>Tooltip of Description of Build</value>
   </data>
-  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_1OfByFKOnly" xml:space="preserve">
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfSolution_1OfFKOnly" xml:space="preserve">
     <value>Solution</value>
   </data>
-  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_1OfByFKOnly" xml:space="preserve">
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfSolution_1OfFKOnly" xml:space="preserve">
     <value>Description of Id of Solution</value>
   </data>
-  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_1OfByFKOnly" xml:space="preserve">
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfSolution_1OfFKOnly" xml:space="preserve">
     <value>Tooltip of Id of Solution</value>
   </data>
-  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly" xml:space="preserve">
+  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfSolution_1OfFKOnly" xml:space="preserve">
     <value>Id of Solution</value>
   </data>
-  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly" xml:space="preserve">
+  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfSolution_1OfFKOnly" xml:space="preserve">
     <value>Description of Id of Solution</value>
   </data>
-  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly" xml:space="preserve">
+  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfSolution_1OfFKOnly" xml:space="preserve">
     <value>Tooltip of Id of Solution</value>
   </data>
-  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly" xml:space="preserve">
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfOrganization_1OfFKOnly" xml:space="preserve">
     <value>Organization</value>
   </data>
-  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly" xml:space="preserve">
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfOrganization_1OfFKOnly" xml:space="preserve">
     <value>Description of Id of Organization</value>
   </data>
-  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly" xml:space="preserve">
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfOrganization_1OfFKOnly" xml:space="preserve">
     <value>Tooltip of Id of Organization</value>
   </data>
-  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly" xml:space="preserve">
+  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfOrganization_1OfFKOnly" xml:space="preserve">
     <value>Id of Organization</value>
   </data>
-  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly" xml:space="preserve">
+  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfOrganization_1OfFKOnly" xml:space="preserve">
     <value>Description of Id of Organization</value>
   </data>
-  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly" xml:space="preserve">
+  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfOrganization_1OfFKOnly" xml:space="preserve">
     <value>Tooltip of Id of Organization</value>
   </data>
-  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly" xml:space="preserve">
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfOrganization_2OfFKOnly" xml:space="preserve">
     <value>Organization</value>
   </data>
-  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly" xml:space="preserve">
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfOrganization_2OfFKOnly" xml:space="preserve">
     <value>Description of Id of Organization</value>
   </data>
-  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly" xml:space="preserve">
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfOrganization_2OfFKOnly" xml:space="preserve">
     <value>Tooltip of Id of Organization</value>
   </data>
-  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly" xml:space="preserve">
+  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfOrganization_2OfFKOnly" xml:space="preserve">
     <value>Id of Organization</value>
   </data>
-  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly" xml:space="preserve">
+  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfOrganization_2OfFKOnly" xml:space="preserve">
     <value>Description of Id of Organization</value>
   </data>
-  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly" xml:space="preserve">
+  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfOrganization_2OfFKOnly" xml:space="preserve">
     <value>Tooltip of Id of Organization</value>
   </data>
-  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdIdentifierOftOfIdentifier" xml:space="preserve">
     <value>Id</value>
   </data>
-  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdIdentifierOftOfIdentifier" xml:space="preserve">
     <value>Description of Id</value>
   </data>
-  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdIdentifierOftOfIdentifier" xml:space="preserve">
     <value>Tooltip of Id</value>
   </data>
-  <data name="ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+  <data name="ValueToCompare_ID_Unknown_Search_valueToCompareIdIdentifierOftOfIdentifier" xml:space="preserve">
     <value>Id of Build</value>
   </data>
-  <data name="Description_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+  <data name="Description_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdIdentifierOftOfIdentifier" xml:space="preserve">
     <value>Description of Id of Build</value>
   </data>
-  <data name="Tooltip_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+  <data name="Tooltip_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdIdentifierOftOfIdentifier" xml:space="preserve">
     <value>Tooltip of Id of Build</value>
   </data>
 

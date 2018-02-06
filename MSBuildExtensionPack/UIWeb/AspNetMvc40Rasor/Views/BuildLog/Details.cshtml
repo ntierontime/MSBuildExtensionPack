@@ -26,23 +26,23 @@
                 </div>
                 <div class="form-group" >
                     @Html.LabelFor(model => model.Item.Organization_2Id, new { @class = "control-label" })
-                        @Html.ActionLink(Model.Item.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Organization_2_UniqueidentifierColumn, isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Organization_2Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Organization_2_UniqueIdentifier }, null)
+                        @Html.ActionLink(Model.Item.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Item.Organization_2Id, uniqueIdentifier = Model.Item.Organization_2_UniqueIdentifier, uniqueidentifierColumn = Model.Item.Organization_2_UniqueidentifierColumn }, null)
                 </div>
                 <div class="form-group" >
                     @Html.LabelFor(model => model.Item.Organization_1Id, new { @class = "control-label" })
-                        @Html.ActionLink(Model.Item.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Organization_1_UniqueidentifierColumn, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Organization_1_UniqueIdentifier, isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Organization_1Id }, null)
+                        @Html.ActionLink(Model.Item.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Item.Organization_1Id, uniqueIdentifier = Model.Item.Organization_1_UniqueIdentifier, uniqueidentifierColumn = Model.Item.Organization_1_UniqueidentifierColumn }, null)
                 </div>
                 <div class="form-group" >
                     @Html.LabelFor(model => model.Item.Solution_1Id, new { @class = "control-label" })
-                        @Html.ActionLink(Model.Item.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Solution_1Id }, null)
+                        @Html.ActionLink(Model.Item.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { id = Model.Item.Solution_1Id }, null)
                 </div>
                 <div class="form-group" >
                     @Html.LabelFor(model => model.Item.BuildId, new { @class = "control-label" })
-                        @Html.ActionLink(Model.Item.Build_1_Name, UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareByIdentifierOftOfByIdentifier=true, valueToCompareByIdentifierOftOfByIdentifier = Model.Item.BuildId }, null)
+                        @Html.ActionLink(Model.Item.Build_1_Name, UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { id = Model.Item.BuildId }, null)
                 </div>
                 <div class="form-group" >
                     @Html.LabelFor(model => model.Item.BuildEventCodeId, new { @class = "control-label" })
-                        @Html.ActionLink(Model.Item.BuildEventCode_1_Name, UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareByIdentifierOftOfByIdentifier=true, valueToCompareByIdentifierOftOfByIdentifier = Model.Item.BuildEventCodeId }, null)
+                        @Html.ActionLink(Model.Item.BuildEventCode_1_Name, UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { id = Model.Item.BuildEventCodeId }, null)
                 </div>
                 <div class="form-group" >
                     @Html.LabelFor(model => model.Item.Message, new { @class = "control-label" })
@@ -54,12 +54,12 @@
             <div class="panel-footer nopadding">
                 <div class="btn-group btn-group-justified" role="group" aria-label="...">
                     <div class="btn-group">
-                        <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Edit, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Id })" class="btn btn-default" role="button" type="button">
+                        <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Edit, new { isToCompareIdIdentifierOftOfIdentifier=true, valueToCompareIdIdentifierOftOfIdentifier = Model.Item.Id })" class="btn btn-default" role="button" type="button">
                             <span class="glyphicon glyphicon-edit"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.Edit</span>
                         </a>
                     </div>
                     <div class="btn-group">
-                        <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Delete, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Id })" class="btn btn-default" role="button" type="button">
+                        <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Delete, new { isToCompareIdIdentifierOftOfIdentifier=true, valueToCompareIdIdentifierOftOfIdentifier = Model.Item.Id })" class="btn btn-default" role="button" type="button">
                             <span class="glyphicon glyphicon-trash"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.Delete</span>
                         </a>
                     </div>
@@ -69,7 +69,7 @@
                         </a>
                     </div>
                     <div class="btn-group">
-                        <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Copy, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Id })" class="btn btn-default" role="button" type="button">
+                        <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Copy, new { isToCompareIdIdentifierOftOfIdentifier=true, valueToCompareIdIdentifierOftOfIdentifier = Model.Item.Id })" class="btn btn-default" role="button" type="button">
                             <span class="glyphicon glyphicon-copy"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.Copy</span>
                         </a>
                     </div>

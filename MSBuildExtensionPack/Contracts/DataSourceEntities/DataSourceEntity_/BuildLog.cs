@@ -26,10 +26,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         #endregion Storage Fields
 
-        #region constructors
-
         /// <summary>
-        /// default constructor
         /// Initializes a new instance of the <see cref=" BuildLog"/> class.
         /// </summary>
         public BuildLog()
@@ -72,8 +69,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
         {
             MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Copy<MSBuildExtensionPack.EntityContracts.IBuildLog, BuildLog>(item, this);
         }
-
-        #endregion constructors
 
         #region properties
 
@@ -235,19 +230,19 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         System.String m_Solution_1_Name;
 
-        System.Guid m_Organization_1_UniqueidentifierColumn;
+        System.Int64 m_Organization_1Id;
 
         System.Guid m_Organization_1_UniqueIdentifier;
 
-        System.Int64 m_Organization_1Id;
+        System.Guid m_Organization_1_UniqueidentifierColumn;
 
         System.String m_Organization_1_Name;
-
-        System.Guid m_Organization_2_UniqueidentifierColumn;
 
         System.Int64 m_Organization_2Id;
 
         System.Guid m_Organization_2_UniqueIdentifier;
+
+        System.Guid m_Organization_2_UniqueidentifierColumn;
 
         System.String m_Organization_2_Name;
 
@@ -275,13 +270,13 @@ namespace MSBuildExtensionPack.DataSourceEntities
                 this.Id = default(long);
                 this.Solution_1Id = default(int);
                 this.Solution_1_Name = null;
-                this.Organization_1_UniqueidentifierColumn = new Guid();
-                this.Organization_1_UniqueIdentifier = new Guid();
                 this.Organization_1Id = default(long);
+                this.Organization_1_UniqueIdentifier = new Guid();
+                this.Organization_1_UniqueidentifierColumn = new Guid();
                 this.Organization_1_Name = null;
-                this.Organization_2_UniqueidentifierColumn = new Guid();
                 this.Organization_2Id = default(long);
                 this.Organization_2_UniqueIdentifier = new Guid();
+                this.Organization_2_UniqueidentifierColumn = new Guid();
                 this.Organization_2_Name = null;
                 this.BuildEventCode_1_Name = null;
                 this.BuildId = default(long);
@@ -361,16 +356,16 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
                     [DataMember]
-        [Display(Name = "Organization_1_UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]        public System.Guid Organization_1_UniqueidentifierColumn
+        [Display(Name = "Organization_1Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]        public System.Int64 Organization_1Id
         {
             get
             {
-                return m_Organization_1_UniqueidentifierColumn;
+                return m_Organization_1Id;
             }
             set
             {
-                m_Organization_1_UniqueidentifierColumn = value;
-                RaisePropertyChanged("Organization_1_UniqueidentifierColumn");
+                m_Organization_1Id = value;
+                RaisePropertyChanged("Organization_1Id");
             }
         }
 
@@ -389,16 +384,16 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
                     [DataMember]
-        [Display(Name = "Organization_1Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]        public System.Int64 Organization_1Id
+        [Display(Name = "Organization_1_UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]        public System.Guid Organization_1_UniqueidentifierColumn
         {
             get
             {
-                return m_Organization_1Id;
+                return m_Organization_1_UniqueidentifierColumn;
             }
             set
             {
-                m_Organization_1Id = value;
-                RaisePropertyChanged("Organization_1Id");
+                m_Organization_1_UniqueidentifierColumn = value;
+                RaisePropertyChanged("Organization_1_UniqueidentifierColumn");
             }
         }
 
@@ -413,20 +408,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
             {
                 m_Organization_1_Name = value;
                 RaisePropertyChanged("Organization_1_Name");
-            }
-        }
-
-                    [DataMember]
-        [Display(Name = "Organization_2_UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]        public System.Guid Organization_2_UniqueidentifierColumn
-        {
-            get
-            {
-                return m_Organization_2_UniqueidentifierColumn;
-            }
-            set
-            {
-                m_Organization_2_UniqueidentifierColumn = value;
-                RaisePropertyChanged("Organization_2_UniqueidentifierColumn");
             }
         }
 
@@ -459,6 +440,20 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
                     [DataMember]
+        [Display(Name = "Organization_2_UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]        public System.Guid Organization_2_UniqueidentifierColumn
+        {
+            get
+            {
+                return m_Organization_2_UniqueidentifierColumn;
+            }
+            set
+            {
+                m_Organization_2_UniqueidentifierColumn = value;
+                RaisePropertyChanged("Organization_2_UniqueidentifierColumn");
+            }
+        }
+
+                    [DataMember]
         [Display(Name = "Organization_2_Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]        public System.String Organization_2_Name
         {
             get
@@ -487,7 +482,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
                     [DataMember]
-        [Display(Name = "BuildId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]        public System.Int64 BuildId
+        [Display(Name = "BuildId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="BuildId_is_required")]        public System.Int64 BuildId
         {
             get
             {
@@ -501,7 +497,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
                     [DataMember]
-        [Display(Name = "BuildEventCodeId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]        public System.Int32 BuildEventCodeId
+        [Display(Name = "BuildEventCodeId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="BuildEventCodeId_is_required")]        public System.Int32 BuildEventCodeId
         {
             get
             {
@@ -560,13 +557,13 @@ namespace MSBuildExtensionPack.DataSourceEntities
             cloned.m_Id = m_Id;
             cloned.m_Solution_1Id = m_Solution_1Id;
             cloned.m_Solution_1_Name = m_Solution_1_Name;
-            cloned.m_Organization_1_UniqueidentifierColumn = m_Organization_1_UniqueidentifierColumn;
-            cloned.m_Organization_1_UniqueIdentifier = m_Organization_1_UniqueIdentifier;
             cloned.m_Organization_1Id = m_Organization_1Id;
+            cloned.m_Organization_1_UniqueIdentifier = m_Organization_1_UniqueIdentifier;
+            cloned.m_Organization_1_UniqueidentifierColumn = m_Organization_1_UniqueidentifierColumn;
             cloned.m_Organization_1_Name = m_Organization_1_Name;
-            cloned.m_Organization_2_UniqueidentifierColumn = m_Organization_2_UniqueidentifierColumn;
             cloned.m_Organization_2Id = m_Organization_2Id;
             cloned.m_Organization_2_UniqueIdentifier = m_Organization_2_UniqueIdentifier;
+            cloned.m_Organization_2_UniqueidentifierColumn = m_Organization_2_UniqueidentifierColumn;
             cloned.m_Organization_2_Name = m_Organization_2_Name;
             cloned.m_BuildEventCode_1_Name = m_BuildEventCode_1_Name;
             cloned.m_BuildId = m_BuildId;
@@ -627,15 +624,15 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         System.Int32 m_BuildEventCodeId;
 
-        System.Int64 m_CountPerFK;
-
-        System.String m_Name;
-
         System.Int32 m_Solution_1Id;
 
         System.Int64 m_Organization_1Id;
 
         System.Int64 m_Organization_2Id;
+
+        System.Int64 m_CountPerFK;
+
+        System.String m_Name;
 
             #endregion Storage Fields
 
@@ -649,11 +646,11 @@ namespace MSBuildExtensionPack.DataSourceEntities
             {
                 this.BuildId = default(long);
                 this.BuildEventCodeId = default(int);
-                this.CountPerFK = default(long);
-                this.Name = null;
                 this.Solution_1Id = default(int);
                 this.Organization_1Id = default(long);
                 this.Organization_2Id = default(long);
+                this.CountPerFK = default(long);
+                this.Name = null;
             }
             /*
             /// <summary>
@@ -700,34 +697,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
                     [DataMember]
-        [Display(Name = "CountPerFK", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]        public System.Int64 CountPerFK
-        {
-            get
-            {
-                return m_CountPerFK;
-            }
-            set
-            {
-                m_CountPerFK = value;
-                RaisePropertyChanged("CountPerFK");
-            }
-        }
-
-                    [DataMember]
-        [Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]        public System.String Name
-        {
-            get
-            {
-                return m_Name;
-            }
-            set
-            {
-                m_Name = value;
-                RaisePropertyChanged("Name");
-            }
-        }
-
-                    [DataMember]
         [Display(Name = "Solution_1Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]        public System.Int32 Solution_1Id
         {
             get
@@ -769,6 +738,34 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
+                    [DataMember]
+        [Display(Name = "CountPerFK", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]        public System.Int64 CountPerFK
+        {
+            get
+            {
+                return m_CountPerFK;
+            }
+            set
+            {
+                m_CountPerFK = value;
+                RaisePropertyChanged("CountPerFK");
+            }
+        }
+
+                    [DataMember]
+        [Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]        public System.String Name
+        {
+            get
+            {
+                return m_Name;
+            }
+            set
+            {
+                m_Name = value;
+                RaisePropertyChanged("Name");
+            }
+        }
+
             #endregion properties
 
             #region Method of BuildLog.DefaultGroupedDataView  GetAClone()
@@ -783,11 +780,11 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
             cloned.m_BuildId = m_BuildId;
             cloned.m_BuildEventCodeId = m_BuildEventCodeId;
-            cloned.m_CountPerFK = m_CountPerFK;
-            cloned.m_Name = m_Name;
             cloned.m_Solution_1Id = m_Solution_1Id;
             cloned.m_Organization_1Id = m_Organization_1Id;
             cloned.m_Organization_2Id = m_Organization_2Id;
+            cloned.m_CountPerFK = m_CountPerFK;
+            cloned.m_Name = m_Name;
 
                 return cloned;
             }
@@ -885,7 +882,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
                     [DataMember]
-        [Display(Name = "BuildEventCodeId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]        public System.Int32 BuildEventCodeId
+        [Display(Name = "BuildEventCodeId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="BuildEventCodeId_is_required")]        public System.Int32 BuildEventCodeId
         {
             get
             {
@@ -956,22 +954,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         #endregion Nested Views classes and their collection classes 3
     }
-
-/*
-    /// <summary>
-    /// a property defined when <see cref="BuildLog"/> is used in other classes.
-    /// </summary>
-    public interface WithEntityContractBuildLog
-    {
-        /// <summary>
-        /// Gets or sets BuildLog.
-        /// </summary>
-        /// <value>
-        /// The BuildLog
-        /// </value>
-        BuildLog BuildLog { get; set; }
-    }
-*/
 
     /// <summary>
     /// message definition, pass single entry, pulled from database, to business logic layer. <see cref="BuildLog"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>

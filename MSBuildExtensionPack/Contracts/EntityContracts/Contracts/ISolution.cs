@@ -18,21 +18,5 @@ namespace MSBuildExtensionPack.EntityContracts
         System.String Description { get; set; }
 
     }
-
-    /// <summary>
-    /// a property defined when <see cref="WithEntityContractSolution"/> is used in other classes.
-    /// </summary>
-    /// <typeparam name="T">a type inherits from <see cref="WithEntityContractSolution"/></typeparam>
-    public partial interface WithEntityContractSolution<T>
-        where T : ISolution
-    {
-        /// <summary>
-        /// Gets or sets the Solution
-        /// </summary>
-        /// <value>
-        /// The Solution
-        /// </value>
-        T Solution { get; set; }
-    }
 }
 

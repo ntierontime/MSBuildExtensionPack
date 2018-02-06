@@ -2313,33 +2313,6 @@ namespace MSBuildExtensionPack.Resx {
         /// <summary>
         ///   Looks up a localized string similar to "Organization"".
         /// </summary>
-        public static string Organization_2_UniqueidentifierColumn {
-            get {
-                return ResourceManager.GetString("Organization_2_UniqueidentifierColumn", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Required Field Error Message of property Organization_2_UniqueidentifierColumn of MSBuildExtensionPack.Organization"".
-        /// </summary>
-        public static string Required_Field_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization {
-            get {
-                return ResourceManager.GetString("Required_Field_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Value Validation Error Message of property Organization_2_UniqueidentifierColumn of MSBuildExtensionPack.Organization"".
-        /// </summary>
-        public static string Value_Validation_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization {
-            get {
-                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Organization"".
-        /// </summary>
         public static string Organization_2_UniqueIdentifier {
             get {
                 return ResourceManager.GetString("Organization_2_UniqueIdentifier", resourceCulture);
@@ -2361,6 +2334,33 @@ namespace MSBuildExtensionPack.Resx {
         public static string Value_Validation_Error_Message_of_property_Organization_2_UniqueIdentifier_of_MSBuildExtensionPack_Organization {
             get {
                 return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Organization_2_UniqueIdentifier_of_MSBuildExtensionPack_Organization", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Organization"".
+        /// </summary>
+        public static string Organization_2_UniqueidentifierColumn {
+            get {
+                return ResourceManager.GetString("Organization_2_UniqueidentifierColumn", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Required Field Error Message of property Organization_2_UniqueidentifierColumn of MSBuildExtensionPack.Organization"".
+        /// </summary>
+        public static string Required_Field_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization {
+            get {
+                return ResourceManager.GetString("Required_Field_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Value Validation Error Message of property Organization_2_UniqueidentifierColumn of MSBuildExtensionPack.Organization"".
+        /// </summary>
+        public static string Value_Validation_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization {
+            get {
+                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization", resourceCulture);
             }
         }
 
@@ -4221,216 +4221,216 @@ namespace MSBuildExtensionPack.Resx {
         /// <summary>
         ///   Looks up a localized string similar to "Organization"".
         /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly {
+        public static string IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfOrganization_2OfFKOnly {
             get {
-                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly", resourceCulture);
+                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfOrganization_2OfFKOnly", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Description of Id of Organization"".
         /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly {
+        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfOrganization_2OfFKOnly {
             get {
-                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly", resourceCulture);
+                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfOrganization_2OfFKOnly", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Tooltip of Id of Organization"".
         /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly {
+        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfOrganization_2OfFKOnly {
             get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly", resourceCulture);
+                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfOrganization_2OfFKOnly", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Id of Organization"".
         /// </summary>
-        public static string ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly {
+        public static string ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfOrganization_2OfFKOnly {
             get {
-                return ResourceManager.GetString("ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly", resourceCulture);
+                return ResourceManager.GetString("ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfOrganization_2OfFKOnly", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Description of Id of Organization"".
         /// </summary>
-        public static string Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly {
+        public static string Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfOrganization_2OfFKOnly {
             get {
-                return ResourceManager.GetString("Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly", resourceCulture);
+                return ResourceManager.GetString("Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfOrganization_2OfFKOnly", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Tooltip of Id of Organization"".
         /// </summary>
-        public static string Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly {
+        public static string Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfOrganization_2OfFKOnly {
             get {
-                return ResourceManager.GetString("Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly", resourceCulture);
+                return ResourceManager.GetString("Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfOrganization_2OfFKOnly", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Id"".
         /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier {
+        public static string IsToCompare_ID_CheckBox_Search_isToCompareIdIdentifierOftOfIdentifier {
             get {
-                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier", resourceCulture);
+                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareIdIdentifierOftOfIdentifier", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Description of Id"".
         /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier {
+        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdIdentifierOftOfIdentifier {
             get {
-                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier", resourceCulture);
+                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdIdentifierOftOfIdentifier", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Tooltip of Id"".
         /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier {
+        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdIdentifierOftOfIdentifier {
             get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier", resourceCulture);
+                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdIdentifierOftOfIdentifier", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Id of Organization"".
         /// </summary>
-        public static string ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier {
+        public static string ValueToCompare_ID_Unknown_Search_valueToCompareIdIdentifierOftOfIdentifier {
             get {
-                return ResourceManager.GetString("ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier", resourceCulture);
+                return ResourceManager.GetString("ValueToCompare_ID_Unknown_Search_valueToCompareIdIdentifierOftOfIdentifier", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Description of Id of Organization"".
         /// </summary>
-        public static string Description_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier {
+        public static string Description_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdIdentifierOftOfIdentifier {
             get {
-                return ResourceManager.GetString("Description_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier", resourceCulture);
+                return ResourceManager.GetString("Description_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdIdentifierOftOfIdentifier", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Tooltip of Id of Organization"".
         /// </summary>
-        public static string Tooltip_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier {
+        public static string Tooltip_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdIdentifierOftOfIdentifier {
             get {
-                return ResourceManager.GetString("Tooltip_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier", resourceCulture);
+                return ResourceManager.GetString("Tooltip_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdIdentifierOftOfIdentifier", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "UniqueIdentifier"".
         /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier {
+        public static string IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier {
             get {
-                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier", resourceCulture);
+                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Description of UniqueIdentifier"".
         /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier {
+        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier {
             get {
-                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier", resourceCulture);
+                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Tooltip of UniqueIdentifier"".
         /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier {
+        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier {
             get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier", resourceCulture);
+                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "UniqueIdentifier of Organization"".
         /// </summary>
-        public static string ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier {
+        public static string ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier {
             get {
-                return ResourceManager.GetString("ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier", resourceCulture);
+                return ResourceManager.GetString("ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Description of UniqueIdentifier of Organization"".
         /// </summary>
-        public static string Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier {
+        public static string Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier {
             get {
-                return ResourceManager.GetString("Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier", resourceCulture);
+                return ResourceManager.GetString("Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Tooltip of UniqueIdentifier of Organization"".
         /// </summary>
-        public static string Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier {
+        public static string Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier {
             get {
-                return ResourceManager.GetString("Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintOfUC_Organization_UniqueIdentifier", resourceCulture);
+                return ResourceManager.GetString("Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "UniqueidentifierColumn"".
         /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn {
+        public static string IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn {
             get {
-                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", resourceCulture);
+                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Description of UniqueidentifierColumn"".
         /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn {
+        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn {
             get {
-                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", resourceCulture);
+                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Tooltip of UniqueidentifierColumn"".
         /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn {
+        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn {
             get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", resourceCulture);
+                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "UniqueidentifierColumn of Organization"".
         /// </summary>
-        public static string ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn {
+        public static string ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn {
             get {
-                return ResourceManager.GetString("ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", resourceCulture);
+                return ResourceManager.GetString("ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Description of UniqueidentifierColumn of Organization"".
         /// </summary>
-        public static string Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn {
+        public static string Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn {
             get {
-                return ResourceManager.GetString("Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", resourceCulture);
+                return ResourceManager.GetString("Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Tooltip of UniqueidentifierColumn of Organization"".
         /// </summary>
-        public static string Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn {
+        public static string Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn {
             get {
-                return ResourceManager.GetString("Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn", resourceCulture);
+                return ResourceManager.GetString("Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn", resourceCulture);
             }
         }
 
@@ -4593,1275 +4593,6 @@ namespace MSBuildExtensionPack.Resx {
         public static string Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint {
             get {
                 return ResourceManager.GetString("Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Organization"".
-        /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of UniqueIdentifier of Organization"".
-        /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of UniqueIdentifier of Organization"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "UniqueIdentifier of Organization"".
-        /// </summary>
-        public static string ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of UniqueIdentifier of Organization"".
-        /// </summary>
-        public static string Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of UniqueIdentifier of Organization"".
-        /// </summary>
-        public static string Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Organization"".
-        /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of UniqueidentifierColumn of Organization"".
-        /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of UniqueidentifierColumn of Organization"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "UniqueidentifierColumn of Organization"".
-        /// </summary>
-        public static string ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of UniqueidentifierColumn of Organization"".
-        /// </summary>
-        public static string Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of UniqueidentifierColumn of Organization"".
-        /// </summary>
-        public static string Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintsWithCommonOfOrganization_2OfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "IsSystemBuiltIn"".
-        /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of IsSystemBuiltIn"".
-        /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of IsSystemBuiltIn"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "IsSystemBuiltIn of Organization"".
-        /// </summary>
-        public static string ValueToCompare_ID_CheckBox_Search_valueToCompareIsSystemBuiltInUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("ValueToCompare_ID_CheckBox_Search_valueToCompareIsSystemBuiltInUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of IsSystemBuiltIn of Organization"".
-        /// </summary>
-        public static string Description_of_ValueToCompare_ID_CheckBox_Search_valueToCompareIsSystemBuiltInUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_ValueToCompare_ID_CheckBox_Search_valueToCompareIsSystemBuiltInUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of IsSystemBuiltIn of Organization"".
-        /// </summary>
-        public static string Tooltip_of_ValueToCompare_ID_CheckBox_Search_valueToCompareIsSystemBuiltInUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_ValueToCompare_ID_CheckBox_Search_valueToCompareIsSystemBuiltInUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "CreatedDateTime"".
-        /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of CreatedDateTime"".
-        /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of CreatedDateTime"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "From"".
-        /// </summary>
-        public static string IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of From"".
-        /// </summary>
-        public static string Description_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of From"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "From"".
-        /// </summary>
-        public static string LowerBound_ID_TextBox_Search_lowerBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("LowerBound_ID_TextBox_Search_lowerBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of From"".
-        /// </summary>
-        public static string Description_of_LowerBound_ID_TextBox_Search_lowerBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_LowerBound_ID_TextBox_Search_lowerBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of From"".
-        /// </summary>
-        public static string Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "To"".
-        /// </summary>
-        public static string IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of To"".
-        /// </summary>
-        public static string Description_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of To"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "To"".
-        /// </summary>
-        public static string UpperBound_ID_TextBox_Search_upperBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("UpperBound_ID_TextBox_Search_upperBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of To"".
-        /// </summary>
-        public static string Description_of_UpperBound_ID_TextBox_Search_upperBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_UpperBound_ID_TextBox_Search_upperBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of To"".
-        /// </summary>
-        public static string Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundCreatedDateTimeUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "BitColumn"".
-        /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareBitColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareBitColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of BitColumn"".
-        /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareBitColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareBitColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of BitColumn"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareBitColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareBitColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "BitColumn of Organization"".
-        /// </summary>
-        public static string ValueToCompare_ID_CheckBox_Search_valueToCompareBitColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("ValueToCompare_ID_CheckBox_Search_valueToCompareBitColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of BitColumn of Organization"".
-        /// </summary>
-        public static string Description_of_ValueToCompare_ID_CheckBox_Search_valueToCompareBitColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_ValueToCompare_ID_CheckBox_Search_valueToCompareBitColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of BitColumn of Organization"".
-        /// </summary>
-        public static string Tooltip_of_ValueToCompare_ID_CheckBox_Search_valueToCompareBitColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_ValueToCompare_ID_CheckBox_Search_valueToCompareBitColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "DatetimeColumn"".
-        /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of DatetimeColumn"".
-        /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of DatetimeColumn"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "From"".
-        /// </summary>
-        public static string IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of From"".
-        /// </summary>
-        public static string Description_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of From"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "From"".
-        /// </summary>
-        public static string LowerBound_ID_TextBox_Search_lowerBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("LowerBound_ID_TextBox_Search_lowerBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of From"".
-        /// </summary>
-        public static string Description_of_LowerBound_ID_TextBox_Search_lowerBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_LowerBound_ID_TextBox_Search_lowerBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of From"".
-        /// </summary>
-        public static string Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "To"".
-        /// </summary>
-        public static string IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of To"".
-        /// </summary>
-        public static string Description_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of To"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "To"".
-        /// </summary>
-        public static string UpperBound_ID_TextBox_Search_upperBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("UpperBound_ID_TextBox_Search_upperBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of To"".
-        /// </summary>
-        public static string Description_of_UpperBound_ID_TextBox_Search_upperBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_UpperBound_ID_TextBox_Search_upperBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of To"".
-        /// </summary>
-        public static string Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundDatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Datetime2Column"".
-        /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of Datetime2Column"".
-        /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of Datetime2Column"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "From"".
-        /// </summary>
-        public static string IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of From"".
-        /// </summary>
-        public static string Description_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of From"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "From"".
-        /// </summary>
-        public static string LowerBound_ID_TextBox_Search_lowerBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("LowerBound_ID_TextBox_Search_lowerBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of From"".
-        /// </summary>
-        public static string Description_of_LowerBound_ID_TextBox_Search_lowerBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_LowerBound_ID_TextBox_Search_lowerBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of From"".
-        /// </summary>
-        public static string Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "To"".
-        /// </summary>
-        public static string IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of To"".
-        /// </summary>
-        public static string Description_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of To"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "To"".
-        /// </summary>
-        public static string UpperBound_ID_TextBox_Search_upperBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("UpperBound_ID_TextBox_Search_upperBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of To"".
-        /// </summary>
-        public static string Description_of_UpperBound_ID_TextBox_Search_upperBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_UpperBound_ID_TextBox_Search_upperBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of To"".
-        /// </summary>
-        public static string Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundDatetime2ColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "SmalldatetimeColumn"".
-        /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of SmalldatetimeColumn"".
-        /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of SmalldatetimeColumn"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "From"".
-        /// </summary>
-        public static string IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of From"".
-        /// </summary>
-        public static string Description_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of From"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "From"".
-        /// </summary>
-        public static string LowerBound_ID_TextBox_Search_lowerBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("LowerBound_ID_TextBox_Search_lowerBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of From"".
-        /// </summary>
-        public static string Description_of_LowerBound_ID_TextBox_Search_lowerBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_LowerBound_ID_TextBox_Search_lowerBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of From"".
-        /// </summary>
-        public static string Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "To"".
-        /// </summary>
-        public static string IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of To"".
-        /// </summary>
-        public static string Description_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of To"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "To"".
-        /// </summary>
-        public static string UpperBound_ID_TextBox_Search_upperBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("UpperBound_ID_TextBox_Search_upperBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of To"".
-        /// </summary>
-        public static string Description_of_UpperBound_ID_TextBox_Search_upperBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_UpperBound_ID_TextBox_Search_upperBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of To"".
-        /// </summary>
-        public static string Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundSmalldatetimeColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "DateColumn"".
-        /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of DateColumn"".
-        /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of DateColumn"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "From"".
-        /// </summary>
-        public static string IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of From"".
-        /// </summary>
-        public static string Description_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of From"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "From"".
-        /// </summary>
-        public static string LowerBound_ID_TextBox_Search_lowerBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("LowerBound_ID_TextBox_Search_lowerBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of From"".
-        /// </summary>
-        public static string Description_of_LowerBound_ID_TextBox_Search_lowerBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_LowerBound_ID_TextBox_Search_lowerBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of From"".
-        /// </summary>
-        public static string Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "To"".
-        /// </summary>
-        public static string IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of To"".
-        /// </summary>
-        public static string Description_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of To"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "To"".
-        /// </summary>
-        public static string UpperBound_ID_TextBox_Search_upperBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("UpperBound_ID_TextBox_Search_upperBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of To"".
-        /// </summary>
-        public static string Description_of_UpperBound_ID_TextBox_Search_upperBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_UpperBound_ID_TextBox_Search_upperBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of To"".
-        /// </summary>
-        public static string Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundDateColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Name"".
-        /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareNameUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareNameUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of Name"".
-        /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareNameUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareNameUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of Name"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNameUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNameUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Name of Organization"".
-        /// </summary>
-        public static string ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of Name of Organization"".
-        /// </summary>
-        public static string Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of Name of Organization"".
-        /// </summary>
-        public static string Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "CharColumn"".
-        /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareCharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareCharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of CharColumn"".
-        /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareCharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareCharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of CharColumn"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareCharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareCharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "CharColumn of Organization"".
-        /// </summary>
-        public static string ValueToBeContained_ID_TextBox_Search_valueToBeContainedCharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("ValueToBeContained_ID_TextBox_Search_valueToBeContainedCharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of CharColumn of Organization"".
-        /// </summary>
-        public static string Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedCharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedCharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of CharColumn of Organization"".
-        /// </summary>
-        public static string Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedCharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedCharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "VarcharColumn"".
-        /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareVarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareVarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of VarcharColumn"".
-        /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareVarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareVarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of VarcharColumn"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareVarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareVarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "VarcharColumn of Organization"".
-        /// </summary>
-        public static string ValueToBeContained_ID_TextBox_Search_valueToBeContainedVarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("ValueToBeContained_ID_TextBox_Search_valueToBeContainedVarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of VarcharColumn of Organization"".
-        /// </summary>
-        public static string Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedVarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedVarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of VarcharColumn of Organization"".
-        /// </summary>
-        public static string Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedVarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedVarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "TextColumn"".
-        /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareTextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareTextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of TextColumn"".
-        /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareTextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareTextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of TextColumn"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareTextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareTextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "TextColumn of Organization"".
-        /// </summary>
-        public static string ValueToBeContained_ID_TextBox_Search_valueToBeContainedTextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("ValueToBeContained_ID_TextBox_Search_valueToBeContainedTextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of TextColumn of Organization"".
-        /// </summary>
-        public static string Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedTextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedTextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of TextColumn of Organization"".
-        /// </summary>
-        public static string Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedTextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedTextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "NcharColumn"".
-        /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareNcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareNcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of NcharColumn"".
-        /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareNcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareNcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of NcharColumn"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "NcharColumn of Organization"".
-        /// </summary>
-        public static string ValueToBeContained_ID_TextBox_Search_valueToBeContainedNcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("ValueToBeContained_ID_TextBox_Search_valueToBeContainedNcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of NcharColumn of Organization"".
-        /// </summary>
-        public static string Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of NcharColumn of Organization"".
-        /// </summary>
-        public static string Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "NvarcharColumn"".
-        /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareNvarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareNvarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of NvarcharColumn"".
-        /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareNvarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareNvarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of NvarcharColumn"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNvarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNvarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "NvarcharColumn of Organization"".
-        /// </summary>
-        public static string ValueToBeContained_ID_TextBox_Search_valueToBeContainedNvarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("ValueToBeContained_ID_TextBox_Search_valueToBeContainedNvarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of NvarcharColumn of Organization"".
-        /// </summary>
-        public static string Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNvarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNvarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of NvarcharColumn of Organization"".
-        /// </summary>
-        public static string Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNvarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNvarcharColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "NtextColumn"".
-        /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareNtextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareNtextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of NtextColumn"".
-        /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareNtextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareNtextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of NtextColumn"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNtextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNtextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "NtextColumn of Organization"".
-        /// </summary>
-        public static string ValueToBeContained_ID_TextBox_Search_valueToBeContainedNtextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("ValueToBeContained_ID_TextBox_Search_valueToBeContainedNtextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of NtextColumn of Organization"".
-        /// </summary>
-        public static string Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNtextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNtextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of NtextColumn of Organization"".
-        /// </summary>
-        public static string Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNtextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon {
-            get {
-                return ResourceManager.GetString("Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNtextColumnUniqueConstraintsWithCommonOftOfUniqueConstraintsWithCommon", resourceCulture);
             }
         }
 

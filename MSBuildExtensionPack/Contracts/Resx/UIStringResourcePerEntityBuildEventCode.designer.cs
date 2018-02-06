@@ -612,54 +612,54 @@ namespace MSBuildExtensionPack.Resx {
         /// <summary>
         ///   Looks up a localized string similar to "Id"".
         /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier {
+        public static string IsToCompare_ID_CheckBox_Search_isToCompareIdIdentifierOftOfIdentifier {
             get {
-                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier", resourceCulture);
+                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareIdIdentifierOftOfIdentifier", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Description of Id"".
         /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier {
+        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdIdentifierOftOfIdentifier {
             get {
-                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier", resourceCulture);
+                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdIdentifierOftOfIdentifier", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Tooltip of Id"".
         /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier {
+        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdIdentifierOftOfIdentifier {
             get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier", resourceCulture);
+                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdIdentifierOftOfIdentifier", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Id of BuildEventCode"".
         /// </summary>
-        public static string ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier {
+        public static string ValueToCompare_ID_Unknown_Search_valueToCompareIdIdentifierOftOfIdentifier {
             get {
-                return ResourceManager.GetString("ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier", resourceCulture);
+                return ResourceManager.GetString("ValueToCompare_ID_Unknown_Search_valueToCompareIdIdentifierOftOfIdentifier", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Description of Id of BuildEventCode"".
         /// </summary>
-        public static string Description_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier {
+        public static string Description_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdIdentifierOftOfIdentifier {
             get {
-                return ResourceManager.GetString("Description_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier", resourceCulture);
+                return ResourceManager.GetString("Description_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdIdentifierOftOfIdentifier", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Tooltip of Id of BuildEventCode"".
         /// </summary>
-        public static string Tooltip_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier {
+        public static string Tooltip_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdIdentifierOftOfIdentifier {
             get {
-                return ResourceManager.GetString("Tooltip_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier", resourceCulture);
+                return ResourceManager.GetString("Tooltip_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdIdentifierOftOfIdentifier", resourceCulture);
             }
         }
 

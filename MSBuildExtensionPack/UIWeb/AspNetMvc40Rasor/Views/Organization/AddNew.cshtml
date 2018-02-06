@@ -31,8 +31,8 @@
                 </div>
                 <div class="form-group" >
                     @Html.LabelFor(model => model.Item.ParentId, new { @class = "control-label" })
-                        @Html.HiddenFor(model => model.Item.Organization_2_UniqueidentifierColumn)
                         @Html.HiddenFor(model => model.Item.Organization_2_UniqueIdentifier)
+                        @Html.HiddenFor(model => model.Item.Organization_2_UniqueidentifierColumn)
                         @Html.HiddenFor(model => model.Item.ParentId)
                         @Html.DropDownListFor(model => model.Item.ParentId, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Organization, MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" } })
                 </div>

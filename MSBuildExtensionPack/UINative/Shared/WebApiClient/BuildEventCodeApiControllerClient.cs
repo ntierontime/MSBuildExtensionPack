@@ -157,19 +157,21 @@ namespace MSBuildExtensionPack.WebApiClient
 
         #endregion batch insert, update and delete in an entity collection
 
-        #region Query Methods Of NameValuePair of All per critieria, queryPagingSetting and queryOrderBySettingCollection
+        // DataQueryPerQuerySettingCollection -- MethodDataQuery -- Start
 
-        public const string ActionName_GetCollectionOfNameValuePairOfAll = "GetCollectionOfNameValuePairOfAll";
+        #region Query Methods Of NameValuePairByAll
+
+        public const string ActionName_GetCollectionOfNameValuePairByAll = "GetCollectionOfNameValuePairByAll";
         /// <summary>
         /// Gets the collection of entity of common.
-        /// http://[host]/api/BuildEventCodeApi/GetCollectionOfNameValuePairOfAll
+        /// http://[host]/api/BuildEventCodeApi/GetCollectionOfNameValuePairByAll
         /// </summary>
 
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairOfAllAsync(
+        public async Task<Framework.NameValueCollection> GetCollectionOfNameValuePairByAllAsync(
             int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -181,11 +183,13 @@ namespace MSBuildExtensionPack.WebApiClient
             parameters.Add("pageSize", pageSize.ToString());
             parameters.Add("queryOrderByExpression", queryOrderByExpression);
 
-            string url = GetHttpRequestUrl(ActionName_GetCollectionOfNameValuePairOfAll, parameters);
+            string url = GetHttpRequestUrl(ActionName_GetCollectionOfNameValuePairByAll, parameters);
             return await Get<Framework.NameValueCollection>(url);
         }
 
-        #endregion Query Methods Of NameValuePair of All per value type
+        #endregion Query Methods Of NameValuePairByAll
+
+        // DataQueryPerQuerySettingCollection -- MethodDataQuery -- End
 
         public const string ActionName_GetBuildEventCodeItemVM = "GetBuildEventCodeItemVM";
         /// <summary>

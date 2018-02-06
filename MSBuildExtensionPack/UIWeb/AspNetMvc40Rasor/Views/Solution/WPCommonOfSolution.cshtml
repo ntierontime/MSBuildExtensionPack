@@ -52,23 +52,23 @@
                 <div class="panel-body">
  <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon</label>
-    @Html.DropDownListFor(model => model.Criteria.SolutionQueryCriteriaCommon.IdCommonOfOrganization_2.NullableValueToCompare, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Organization, MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" }, { "onchange", "FetchOrganization_1();" } })
+    @Html.DropDownListFor(model => model.Criteria.Common.Organization_2Id.NullableValueToCompare, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Organization, MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" }, { "onchange", "FetchOrganization_1();" } })
 </div>
 <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_1OfCommon</label>
-    @Html.DropDownListFor(model => model.Criteria.SolutionQueryCriteriaCommon.IdCommonOfOrganization_1.NullableValueToCompare, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfvalueToCompareIdCommonOfOrganization_1OfCommon,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedvalueToCompareIdCommonOfOrganization_1OfCommon", MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____) } })
+    @Html.DropDownListFor(model => model.Criteria.Common.OrganizationId.NullableValueToCompare, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfOrganization_1,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedvalueOrganization_1", MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____) } })
 </div>
 <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareExternalParentIdCommonOftOfCommon</label>
-    @Html.TextBoxFor(model=>model.Criteria.SolutionQueryCriteriaCommon.ExternalParentIdCommonOft.NullableValueToBeContained, new { @class = "form-control" })
+    @Html.TextBoxFor(model=>model.Criteria.Common.ExternalParentId.NullableValueToBeContained, new { @class = "form-control" })
 </div>
 <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon</label>
-    @Html.TextBoxFor(model=>model.Criteria.SolutionQueryCriteriaCommon.NameCommonOft.NullableValueToBeContained, new { @class = "form-control" })
+    @Html.TextBoxFor(model=>model.Criteria.Common.Name.NullableValueToBeContained, new { @class = "form-control" })
 </div>
 <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon</label>
-    @Html.TextBoxFor(model=>model.Criteria.SolutionQueryCriteriaCommon.DescriptionCommonOft.NullableValueToBeContained, new { @class = "form-control" })
+    @Html.TextBoxFor(model=>model.Criteria.Common.Description.NullableValueToBeContained, new { @class = "form-control" })
 </div>
                     <div class="form-group form-inline">
                         <label class="control-label">Items per page : </label>
@@ -137,20 +137,20 @@
             <tr>
 <td><div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Result[i].Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetails">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdIdentifierOftOfIdentifier=true, valueToCompareIdIdentifierOftOfIdentifier = Model.Result[i].Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetails">
         <span class="glyphicon glyphicon-briefcase"></span>
     </a>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_Solution_Edit, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Result[i].Id })" class="btn btn-default" role="button" type="button" name="EditToolBarRightInList" title="@Framework.Resx.UIStringResource.Edit">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Solution_Edit, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdIdentifierOftOfIdentifier=true, valueToCompareIdIdentifierOftOfIdentifier = Model.Result[i].Id })" class="btn btn-default" role="button" type="button" name="EditToolBarRightInList" title="@Framework.Resx.UIStringResource.Edit">
         <span class="glyphicon glyphicon-edit"></span>
     </a>
 </div>
 </div>
 </td>
 <td class="hidden-sm">@Html.DisplayFor(model => model.Result[i].Id)</td>
-<td>@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].Organization_2Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].Organization_2_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].Organization_2_UniqueidentifierColumn }, null)</td>
-<td>@Html.ActionLink(Model.Result[i].Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].Organization_1_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].Organization_1_UniqueidentifierColumn, isToCompareIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].OrganizationId }, null)</td>
+<td>@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].Organization_2Id, uniqueIdentifier = Model.Result[i].Organization_2_UniqueIdentifier, uniqueidentifierColumn = Model.Result[i].Organization_2_UniqueidentifierColumn }, null)</td>
+<td>@Html.ActionLink(Model.Result[i].Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].OrganizationId, uniqueIdentifier = Model.Result[i].Organization_1_UniqueIdentifier, uniqueidentifierColumn = Model.Result[i].Organization_1_UniqueidentifierColumn }, null)</td>
 <td>@Html.DisplayFor(model => model.Result[i].ExternalParentId)</td>
 <td class="hidden-xs">@Html.DisplayFor(model => model.Result[i].Name)</td>
 <td class="hidden-xs">@Html.DisplayFor(model => model.Result[i].Description)</td>
@@ -180,22 +180,21 @@
 @section Scripts {
    <script type="text/javascript">
         function FetchOrganization_1() {
-            var url = "/api/OrganizationApi/GetCollectionOfNameValuePairOfByFKOnly";
+            var url = "/api/OrganizationApi/GetCollectionOfNameValuePairByFKOnly";
             try {
                 var params = BuildCriteriaForFetchOrganization_1();
                 $.getJSON(url, params, function (data) {
-                    objVM.selectListOfvalueToCompareIdCommonOfOrganization_1OfCommon(data);
-                    objVM.selectedvalueToCompareIdCommonOfOrganization_1OfCommon(@Model.Criteria.SolutionQueryCriteriaCommon.IdCommonOfOrganization_1.ValueToCompare);
+                    objVM.selectListOfOrganization_1(data);
+                    objVM.selectedOrganization_1('@Model.Criteria.Common.OrganizationId.ValueToCompare');
                 });
             }
             catch (e) {
             }
         }
         function BuildCriteriaForFetchOrganization_1() {
-            var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $('select[name="Criteria.SolutionQueryCriteriaCommon.IdCommonOfOrganization_2.NullableValueToCompare"]').val();
+            var selectedvalueOrganization_2Id = $('select[name="Criteria.Common.Organization_2Id.NullableValueToCompare"]').val();
             var params = {
-                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: true,
-                valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly,
+                parentId: selectedvalueOrganization_2Id,
                 currentIndex: -1,
                 pageSize: -1,
                 queryOrderByExpression: null
@@ -205,11 +204,11 @@
         //cascaded dropdownlist by knockoutjs
         function CascadingDDLViewModel() {
             var self = this;
-            self.selectListOfvalueToCompareIdCommonOfOrganization_1OfCommon = ko.observableArray([]);
-            self.selectedvalueToCompareIdCommonOfOrganization_1OfCommon = ko.observable();
+            self.selectListOfOrganization_1 = ko.observableArray([]);
+            self.selectedvalueOrganization_1 = ko.observable();
         }
         var objVM = new CascadingDDLViewModel();
         ko.applyBindings(objVM);
-        $('select[name="Criteria.SolutionQueryCriteriaCommon.IdCommonOfOrganization_2.NullableValueToCompare"]').change();
+        $('select[name="Criteria.Common.Organization_2Id.NullableValueToCompare"]').change();
     </script>
 }

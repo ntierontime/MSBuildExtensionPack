@@ -30,105 +30,105 @@
                 <Picker
                     ItemDisplayBinding="{Binding Name}"
                     ItemsSource="{Binding Path=Main.PredefinedBooleanSelectedValueList, Source={StaticResource Locator}}"
-                    SelectedItem="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.IsSystemBuiltInCommonOft.PredefinedBooleanSelectedValue, Converter={StaticResource EnumToNameValuePairConverter}}"
+                    SelectedItem="{Binding Path=Criteria.Common.IsSystemBuiltIn.PredefinedBooleanSelectedValue, Converter={StaticResource EnumToNameValuePairConverter}}"
                     HorizontalOptions="FillAndExpand">
                 </Picker>
                 <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareCreatedDateTimeCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
                 <Picker
                     ItemDisplayBinding="{Binding Name}"
                     ItemsSource="{Binding Path=Main.PreDefinedDateTimeRangeList, Source={StaticResource Locator}}"
-                    SelectedItem="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.PreDefinedDateTimeRange, Converter={StaticResource EnumToNameValuePairConverter}}"
+                    SelectedItem="{Binding Path=Criteria.Common.CreatedDateTimeRange.PreDefinedDateTimeRange, Converter={StaticResource EnumToNameValuePairConverter}}"
                     HorizontalOptions="FillAndExpand">
                 </Picker>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="{i18n:Translate Text=From, ResourceId=Framework.Resx.UIStringResource}" FontSize="Small"  VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
-                    <DatePicker IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.IsCustomEditor}" IsVisible="True" Format="F" Date="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.LowerBound}" />
+                    <DatePicker IsEnabled="{Binding Path=Criteria.Common.CreatedDateTimeRange.IsCustomEditor}" IsVisible="True" Format="F" Date="{Binding Path=Criteria.Common.CreatedDateTimeRange.LowerBound}" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="{i18n:Translate Text=To, ResourceId=Framework.Resx.UIStringResource}" FontSize="Small"  VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
-                    <DatePicker IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.IsCustomEditor}" IsVisible="True" Format="F" Date="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.UpperBound}" />
+                    <DatePicker IsEnabled="{Binding Path=Criteria.Common.CreatedDateTimeRange.IsCustomEditor}" IsVisible="True" Format="F" Date="{Binding Path=Criteria.Common.CreatedDateTimeRange.UpperBound}" />
                 </StackLayout>
                 <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareBitColumnCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
                 <Picker
                     ItemDisplayBinding="{Binding Name}"
                     ItemsSource="{Binding Path=Main.PredefinedBooleanSelectedValueList, Source={StaticResource Locator}}"
-                    SelectedItem="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.BitColumnCommonOft.PredefinedBooleanSelectedValue, Converter={StaticResource EnumToNameValuePairConverter}}"
+                    SelectedItem="{Binding Path=Criteria.Common.BitColumn.PredefinedBooleanSelectedValue, Converter={StaticResource EnumToNameValuePairConverter}}"
                     HorizontalOptions="FillAndExpand">
                 </Picker>
                 <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareDatetimeColumnCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
                 <Picker
                     ItemDisplayBinding="{Binding Name}"
                     ItemsSource="{Binding Path=Main.PreDefinedDateTimeRangeList, Source={StaticResource Locator}}"
-                    SelectedItem="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.PreDefinedDateTimeRange, Converter={StaticResource EnumToNameValuePairConverter}}"
+                    SelectedItem="{Binding Path=Criteria.Common.DatetimeColumnRange.PreDefinedDateTimeRange, Converter={StaticResource EnumToNameValuePairConverter}}"
                     HorizontalOptions="FillAndExpand">
                 </Picker>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="{i18n:Translate Text=From, ResourceId=Framework.Resx.UIStringResource}" FontSize="Small"  VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
-                    <DatePicker IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.IsCustomEditor}" IsVisible="True" Format="F" Date="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.LowerBound}" />
+                    <DatePicker IsEnabled="{Binding Path=Criteria.Common.DatetimeColumnRange.IsCustomEditor}" IsVisible="True" Format="F" Date="{Binding Path=Criteria.Common.DatetimeColumnRange.LowerBound}" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="{i18n:Translate Text=To, ResourceId=Framework.Resx.UIStringResource}" FontSize="Small"  VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
-                    <DatePicker IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.IsCustomEditor}" IsVisible="True" Format="F" Date="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.UpperBound}" />
+                    <DatePicker IsEnabled="{Binding Path=Criteria.Common.DatetimeColumnRange.IsCustomEditor}" IsVisible="True" Format="F" Date="{Binding Path=Criteria.Common.DatetimeColumnRange.UpperBound}" />
                 </StackLayout>
                 <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareDatetime2ColumnCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
                 <Picker
                     ItemDisplayBinding="{Binding Name}"
                     ItemsSource="{Binding Path=Main.PreDefinedDateTimeRangeList, Source={StaticResource Locator}}"
-                    SelectedItem="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.PreDefinedDateTimeRange, Converter={StaticResource EnumToNameValuePairConverter}}"
+                    SelectedItem="{Binding Path=Criteria.Common.Datetime2ColumnRange.PreDefinedDateTimeRange, Converter={StaticResource EnumToNameValuePairConverter}}"
                     HorizontalOptions="FillAndExpand">
                 </Picker>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="{i18n:Translate Text=From, ResourceId=Framework.Resx.UIStringResource}" FontSize="Small"  VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
-                    <DatePicker IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.IsCustomEditor}" IsVisible="True" Format="F" Date="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.LowerBound}" />
+                    <DatePicker IsEnabled="{Binding Path=Criteria.Common.Datetime2ColumnRange.IsCustomEditor}" IsVisible="True" Format="F" Date="{Binding Path=Criteria.Common.Datetime2ColumnRange.LowerBound}" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="{i18n:Translate Text=To, ResourceId=Framework.Resx.UIStringResource}" FontSize="Small"  VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
-                    <DatePicker IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.IsCustomEditor}" IsVisible="True" Format="F" Date="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.UpperBound}" />
+                    <DatePicker IsEnabled="{Binding Path=Criteria.Common.Datetime2ColumnRange.IsCustomEditor}" IsVisible="True" Format="F" Date="{Binding Path=Criteria.Common.Datetime2ColumnRange.UpperBound}" />
                 </StackLayout>
                 <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareSmalldatetimeColumnCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
                 <Picker
                     ItemDisplayBinding="{Binding Name}"
                     ItemsSource="{Binding Path=Main.PreDefinedDateTimeRangeList, Source={StaticResource Locator}}"
-                    SelectedItem="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.PreDefinedDateTimeRange, Converter={StaticResource EnumToNameValuePairConverter}}"
+                    SelectedItem="{Binding Path=Criteria.Common.SmalldatetimeColumnRange.PreDefinedDateTimeRange, Converter={StaticResource EnumToNameValuePairConverter}}"
                     HorizontalOptions="FillAndExpand">
                 </Picker>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="{i18n:Translate Text=From, ResourceId=Framework.Resx.UIStringResource}" FontSize="Small"  VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
-                    <DatePicker IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.IsCustomEditor}" IsVisible="True" Format="F" Date="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.LowerBound}" />
+                    <DatePicker IsEnabled="{Binding Path=Criteria.Common.SmalldatetimeColumnRange.IsCustomEditor}" IsVisible="True" Format="F" Date="{Binding Path=Criteria.Common.SmalldatetimeColumnRange.LowerBound}" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="{i18n:Translate Text=To, ResourceId=Framework.Resx.UIStringResource}" FontSize="Small"  VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
-                    <DatePicker IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.IsCustomEditor}" IsVisible="True" Format="F" Date="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.UpperBound}" />
+                    <DatePicker IsEnabled="{Binding Path=Criteria.Common.SmalldatetimeColumnRange.IsCustomEditor}" IsVisible="True" Format="F" Date="{Binding Path=Criteria.Common.SmalldatetimeColumnRange.UpperBound}" />
                 </StackLayout>
                 <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareDateColumnCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
                 <Picker
                     ItemDisplayBinding="{Binding Name}"
                     ItemsSource="{Binding Path=Main.PreDefinedDateTimeRangeList, Source={StaticResource Locator}}"
-                    SelectedItem="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.PreDefinedDateTimeRange, Converter={StaticResource EnumToNameValuePairConverter}}"
+                    SelectedItem="{Binding Path=Criteria.Common.DateColumnRange.PreDefinedDateTimeRange, Converter={StaticResource EnumToNameValuePairConverter}}"
                     HorizontalOptions="FillAndExpand">
                 </Picker>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="{i18n:Translate Text=From, ResourceId=Framework.Resx.UIStringResource}" FontSize="Small"  VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
-                    <DatePicker IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.IsCustomEditor}" IsVisible="True" Format="F" Date="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.LowerBound}" />
+                    <DatePicker IsEnabled="{Binding Path=Criteria.Common.DateColumnRange.IsCustomEditor}" IsVisible="True" Format="F" Date="{Binding Path=Criteria.Common.DateColumnRange.LowerBound}" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="{i18n:Translate Text=To, ResourceId=Framework.Resx.UIStringResource}" FontSize="Small"  VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
-                    <DatePicker IsEnabled="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.IsCustomEditor}" IsVisible="True" Format="F" Date="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.UpperBound}" />
+                    <DatePicker IsEnabled="{Binding Path=Criteria.Common.DateColumnRange.IsCustomEditor}" IsVisible="True" Format="F" Date="{Binding Path=Criteria.Common.DateColumnRange.UpperBound}" />
                 </StackLayout>
                 <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-                <Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.NameCommonOft.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+                <Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" Text="{Binding Path=Criteria.Common.Name.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
                 <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareCharColumnCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-                <Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedCharColumnCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.CharColumnCommonOft.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+                <Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedCharColumnCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" Text="{Binding Path=Criteria.Common.CharColumn.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
                 <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareVarcharColumnCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-                <Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedVarcharColumnCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.VarcharColumnCommonOft.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+                <Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedVarcharColumnCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" Text="{Binding Path=Criteria.Common.VarcharColumn.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
                 <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareTextColumnCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-                <Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedTextColumnCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.TextColumnCommonOft.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+                <Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedTextColumnCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" Text="{Binding Path=Criteria.Common.TextColumn.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
                 <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareNcharColumnCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-                <Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNcharColumnCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.NcharColumnCommonOft.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+                <Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNcharColumnCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" Text="{Binding Path=Criteria.Common.NcharColumn.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
                 <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareNvarcharColumnCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-                <Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNvarcharColumnCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.NvarcharColumnCommonOft.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+                <Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNvarcharColumnCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" Text="{Binding Path=Criteria.Common.NvarcharColumn.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
                 <Label Text="{i18n:Translate Text=IsToCompare_ID_CheckBox_Search_isToCompareNtextColumnCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
-                <Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNtextColumnCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" Text="{Binding Path=Criteria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+                <Entry Placeholder="{i18n:Translate Text=Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNtextColumnCommonOftOfCommon, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" Text="{Binding Path=Criteria.Common.NtextColumn.NullableValueToBeContained}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
     </StackLayout>
     </ContentPage.Content>
     <ContentPage.ToolbarItems>

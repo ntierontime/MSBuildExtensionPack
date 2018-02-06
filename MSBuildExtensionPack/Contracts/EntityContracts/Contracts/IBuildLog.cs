@@ -18,21 +18,5 @@ namespace MSBuildExtensionPack.EntityContracts
         System.DateTime EventTime { get; set; }
 
     }
-
-    /// <summary>
-    /// a property defined when <see cref="WithEntityContractBuildLog"/> is used in other classes.
-    /// </summary>
-    /// <typeparam name="T">a type inherits from <see cref="WithEntityContractBuildLog"/></typeparam>
-    public partial interface WithEntityContractBuildLog<T>
-        where T : IBuildLog
-    {
-        /// <summary>
-        /// Gets or sets the BuildLog
-        /// </summary>
-        /// <value>
-        /// The BuildLog
-        /// </value>
-        T BuildLog { get; set; }
-    }
 }
 

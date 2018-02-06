@@ -57,10 +57,6 @@ namespace MSBuildExtensionPack.EntityContracts
             to.UniqueidentifierColumn = from.UniqueidentifierColumn;
         }
 
-        #region special copy
-
-        #endregion special copy
-
         /// <summary>
         /// Equals the specified from.
         /// </summary>

@@ -28,10 +28,6 @@ namespace MSBuildExtensionPack.EntityContracts
             to.Description = from.Description;
         }
 
-        #region special copy
-
-        #endregion special copy
-
         /// <summary>
         /// Equals the specified from.
         /// </summary>

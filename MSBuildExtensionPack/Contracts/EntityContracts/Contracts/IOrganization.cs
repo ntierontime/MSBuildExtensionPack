@@ -72,21 +72,5 @@ namespace MSBuildExtensionPack.EntityContracts
         System.Guid UniqueidentifierColumn { get; set; }
 
     }
-
-    /// <summary>
-    /// a property defined when <see cref="WithEntityContractOrganization"/> is used in other classes.
-    /// </summary>
-    /// <typeparam name="T">a type inherits from <see cref="WithEntityContractOrganization"/></typeparam>
-    public partial interface WithEntityContractOrganization<T>
-        where T : IOrganization
-    {
-        /// <summary>
-        /// Gets or sets the Organization
-        /// </summary>
-        /// <value>
-        /// The Organization
-        /// </value>
-        T Organization { get; set; }
-    }
 }
 

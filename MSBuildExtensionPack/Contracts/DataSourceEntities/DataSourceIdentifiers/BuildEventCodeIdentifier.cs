@@ -102,19 +102,5 @@ System.Int32 id)
 
         #endregion Method of BuildEventCodeIdentifier GetAClone()
     }
-
-    /// <summary>
-    ///  a property defined when <see cref="WithIdentifierContractBuildEventCode"/> is used in other classes.
-    /// </summary>
-    public partial interface WithIdentifierContractBuildEventCode
-    {
-        /// <summary>
-        /// Gets or sets the BuildEventCodeIdentifier
-        /// </summary>
-        /// <value>
-        /// The BuildEventCodeIdentifier
-        /// </value>
-        BuildEventCodeIdentifier BuildEventCodeIdentifier { get; set; }
-    }
 }
 

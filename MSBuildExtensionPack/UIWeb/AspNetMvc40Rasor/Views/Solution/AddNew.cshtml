@@ -77,7 +77,7 @@
 @section Scripts {
    <script type="text/javascript">
         function FetchOrganization_1() {
-            var url = "/api/OrganizationApi/GetCollectionOfNameValuePairOfByFKOnly";
+            var url = "/api/OrganizationApi/GetCollectionOfNameValuePairByFKOnly";
             try {
                 var params = BuildCriteriaForFetchOrganization_1();
                 $.getJSON(url, params, function (data) {
@@ -89,10 +89,9 @@
             }
         }
         function BuildCriteriaForFetchOrganization_1() {
-            var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $('select[name="Item.Organization_2Id"]').val();
+            var selectedvalueParentId = $('select[name="Item.Organization_2Id"]').val();
             var params = {
-                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: true,
-                valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly,
+                parentId: selectedvalueParentId,
                 currentIndex: -1,
                 pageSize: -1,
                 queryOrderByExpression: null

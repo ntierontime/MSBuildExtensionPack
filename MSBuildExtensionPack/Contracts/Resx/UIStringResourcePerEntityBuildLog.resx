@@ -337,14 +337,14 @@
   <data name="Value_Validation_Error_Message_of_property_Solution_1_Name_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
     <value>Value Validation Error Message of property Solution_1_Name of MSBuildExtensionPack.BuildLog</value>
   </data>
-  <data name="Organization_1_UniqueidentifierColumn" xml:space="preserve">
+  <data name="Organization_1Id" xml:space="preserve">
     <value>Organization</value>
   </data>
-  <data name="Required_Field_Error_Message_of_property_Organization_1_UniqueidentifierColumn_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
-    <value>Required Field Error Message of property Organization_1_UniqueidentifierColumn of MSBuildExtensionPack.BuildLog</value>
+  <data name="Required_Field_Error_Message_of_property_Organization_1Id_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
+    <value>Required Field Error Message of property Organization_1Id of MSBuildExtensionPack.BuildLog</value>
   </data>
-  <data name="Value_Validation_Error_Message_of_property_Organization_1_UniqueidentifierColumn_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
-    <value>Value Validation Error Message of property Organization_1_UniqueidentifierColumn of MSBuildExtensionPack.BuildLog</value>
+  <data name="Value_Validation_Error_Message_of_property_Organization_1Id_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
+    <value>Value Validation Error Message of property Organization_1Id of MSBuildExtensionPack.BuildLog</value>
   </data>
   <data name="Organization_1_UniqueIdentifier" xml:space="preserve">
     <value>Organization</value>
@@ -355,14 +355,14 @@
   <data name="Value_Validation_Error_Message_of_property_Organization_1_UniqueIdentifier_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
     <value>Value Validation Error Message of property Organization_1_UniqueIdentifier of MSBuildExtensionPack.BuildLog</value>
   </data>
-  <data name="Organization_1Id" xml:space="preserve">
+  <data name="Organization_1_UniqueidentifierColumn" xml:space="preserve">
     <value>Organization</value>
   </data>
-  <data name="Required_Field_Error_Message_of_property_Organization_1Id_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
-    <value>Required Field Error Message of property Organization_1Id of MSBuildExtensionPack.BuildLog</value>
+  <data name="Required_Field_Error_Message_of_property_Organization_1_UniqueidentifierColumn_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
+    <value>Required Field Error Message of property Organization_1_UniqueidentifierColumn of MSBuildExtensionPack.BuildLog</value>
   </data>
-  <data name="Value_Validation_Error_Message_of_property_Organization_1Id_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
-    <value>Value Validation Error Message of property Organization_1Id of MSBuildExtensionPack.BuildLog</value>
+  <data name="Value_Validation_Error_Message_of_property_Organization_1_UniqueidentifierColumn_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
+    <value>Value Validation Error Message of property Organization_1_UniqueidentifierColumn of MSBuildExtensionPack.BuildLog</value>
   </data>
   <data name="Organization_1_Name" xml:space="preserve">
     <value>Organization</value>
@@ -372,15 +372,6 @@
   </data>
   <data name="Value_Validation_Error_Message_of_property_Organization_1_Name_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
     <value>Value Validation Error Message of property Organization_1_Name of MSBuildExtensionPack.BuildLog</value>
-  </data>
-  <data name="Organization_2_UniqueidentifierColumn" xml:space="preserve">
-    <value>Organization</value>
-  </data>
-  <data name="Required_Field_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
-    <value>Required Field Error Message of property Organization_2_UniqueidentifierColumn of MSBuildExtensionPack.BuildLog</value>
-  </data>
-  <data name="Value_Validation_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
-    <value>Value Validation Error Message of property Organization_2_UniqueidentifierColumn of MSBuildExtensionPack.BuildLog</value>
   </data>
   <data name="Organization_2Id" xml:space="preserve">
     <value>Organization</value>
@@ -399,6 +390,15 @@
   </data>
   <data name="Value_Validation_Error_Message_of_property_Organization_2_UniqueIdentifier_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
     <value>Value Validation Error Message of property Organization_2_UniqueIdentifier of MSBuildExtensionPack.BuildLog</value>
+  </data>
+  <data name="Organization_2_UniqueidentifierColumn" xml:space="preserve">
+    <value>Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
+    <value>Required Field Error Message of property Organization_2_UniqueidentifierColumn of MSBuildExtensionPack.BuildLog</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_BuildLog" xml:space="preserve">
+    <value>Value Validation Error Message of property Organization_2_UniqueidentifierColumn of MSBuildExtensionPack.BuildLog</value>
   </data>
   <data name="Organization_2_Name" xml:space="preserve">
     <value>Organization</value>
@@ -604,112 +604,112 @@
   <data name="Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedMessageCommonOftOfCommon" xml:space="preserve">
     <value>Tooltip of Message of BuildLog</value>
   </data>
-  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfBuild_1OfByFKOnly" xml:space="preserve">
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfBuild_1OfFKOnly" xml:space="preserve">
     <value>Build</value>
   </data>
-  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfBuild_1OfByFKOnly" xml:space="preserve">
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfBuild_1OfFKOnly" xml:space="preserve">
     <value>Description of Id of Build</value>
   </data>
-  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfBuild_1OfByFKOnly" xml:space="preserve">
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfBuild_1OfFKOnly" xml:space="preserve">
     <value>Tooltip of Id of Build</value>
   </data>
-  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly" xml:space="preserve">
+  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfBuild_1OfFKOnly" xml:space="preserve">
     <value>Id of Build</value>
   </data>
-  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly" xml:space="preserve">
+  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfBuild_1OfFKOnly" xml:space="preserve">
     <value>Description of Id of Build</value>
   </data>
-  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly" xml:space="preserve">
+  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfBuild_1OfFKOnly" xml:space="preserve">
     <value>Tooltip of Id of Build</value>
   </data>
-  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_1OfByFKOnly" xml:space="preserve">
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfSolution_1OfFKOnly" xml:space="preserve">
     <value>Solution</value>
   </data>
-  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_1OfByFKOnly" xml:space="preserve">
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfSolution_1OfFKOnly" xml:space="preserve">
     <value>Description of Id of Solution</value>
   </data>
-  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_1OfByFKOnly" xml:space="preserve">
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfSolution_1OfFKOnly" xml:space="preserve">
     <value>Tooltip of Id of Solution</value>
   </data>
-  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly" xml:space="preserve">
+  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfSolution_1OfFKOnly" xml:space="preserve">
     <value>Id of Solution</value>
   </data>
-  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly" xml:space="preserve">
+  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfSolution_1OfFKOnly" xml:space="preserve">
     <value>Description of Id of Solution</value>
   </data>
-  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly" xml:space="preserve">
+  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfSolution_1OfFKOnly" xml:space="preserve">
     <value>Tooltip of Id of Solution</value>
   </data>
-  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly" xml:space="preserve">
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfOrganization_1OfFKOnly" xml:space="preserve">
     <value>Organization</value>
   </data>
-  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly" xml:space="preserve">
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfOrganization_1OfFKOnly" xml:space="preserve">
     <value>Description of Id of Organization</value>
   </data>
-  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly" xml:space="preserve">
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfOrganization_1OfFKOnly" xml:space="preserve">
     <value>Tooltip of Id of Organization</value>
   </data>
-  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly" xml:space="preserve">
+  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfOrganization_1OfFKOnly" xml:space="preserve">
     <value>Id of Organization</value>
   </data>
-  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly" xml:space="preserve">
+  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfOrganization_1OfFKOnly" xml:space="preserve">
     <value>Description of Id of Organization</value>
   </data>
-  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly" xml:space="preserve">
+  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfOrganization_1OfFKOnly" xml:space="preserve">
     <value>Tooltip of Id of Organization</value>
   </data>
-  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly" xml:space="preserve">
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfOrganization_2OfFKOnly" xml:space="preserve">
     <value>Organization</value>
   </data>
-  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly" xml:space="preserve">
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfOrganization_2OfFKOnly" xml:space="preserve">
     <value>Description of Id of Organization</value>
   </data>
-  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly" xml:space="preserve">
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfOrganization_2OfFKOnly" xml:space="preserve">
     <value>Tooltip of Id of Organization</value>
   </data>
-  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly" xml:space="preserve">
+  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfOrganization_2OfFKOnly" xml:space="preserve">
     <value>Id of Organization</value>
   </data>
-  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly" xml:space="preserve">
+  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfOrganization_2OfFKOnly" xml:space="preserve">
     <value>Description of Id of Organization</value>
   </data>
-  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly" xml:space="preserve">
+  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfOrganization_2OfFKOnly" xml:space="preserve">
     <value>Tooltip of Id of Organization</value>
   </data>
-  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly" xml:space="preserve">
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfBuildEventCode_1OfFKOnly" xml:space="preserve">
     <value>BuildEventCode</value>
   </data>
-  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly" xml:space="preserve">
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfBuildEventCode_1OfFKOnly" xml:space="preserve">
     <value>Description of Id of BuildEventCode</value>
   </data>
-  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly" xml:space="preserve">
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdFKOnlyOfBuildEventCode_1OfFKOnly" xml:space="preserve">
     <value>Tooltip of Id of BuildEventCode</value>
   </data>
-  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly" xml:space="preserve">
+  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfBuildEventCode_1OfFKOnly" xml:space="preserve">
     <value>Id of BuildEventCode</value>
   </data>
-  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly" xml:space="preserve">
+  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfBuildEventCode_1OfFKOnly" xml:space="preserve">
     <value>Description of Id of BuildEventCode</value>
   </data>
-  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly" xml:space="preserve">
+  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdFKOnlyOfBuildEventCode_1OfFKOnly" xml:space="preserve">
     <value>Tooltip of Id of BuildEventCode</value>
   </data>
-  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdIdentifierOftOfIdentifier" xml:space="preserve">
     <value>Id</value>
   </data>
-  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdIdentifierOftOfIdentifier" xml:space="preserve">
     <value>Description of Id</value>
   </data>
-  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdIdentifierOftOfIdentifier" xml:space="preserve">
     <value>Tooltip of Id</value>
   </data>
-  <data name="ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+  <data name="ValueToCompare_ID_Unknown_Search_valueToCompareIdIdentifierOftOfIdentifier" xml:space="preserve">
     <value>Id of BuildLog</value>
   </data>
-  <data name="Description_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+  <data name="Description_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdIdentifierOftOfIdentifier" xml:space="preserve">
     <value>Description of Id of BuildLog</value>
   </data>
-  <data name="Tooltip_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+  <data name="Tooltip_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdIdentifierOftOfIdentifier" xml:space="preserve">
     <value>Tooltip of Id of BuildLog</value>
   </data>
 

@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{25082160-7E27-40C0-BE53-778C977B758C}</ProjectGuid>
+    <ProjectGuid>{66F1C60F-BFF8-4795-9C1D-9A413801E080}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildExtensionPack.EntityFrameworkContext</RootNamespace>
@@ -32,7 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="App.config" />
         <EntityDeploy Include="EFEntityDataModel.edmx" />
 
@@ -51,13 +50,14 @@
     </Compile>
     <Compile Include="EFEntityDataModel.Generated.cs" />
     <None Include="EFEntityDataModel.txt" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <None Include="map.2.A.1.vsd" />
     <None Include="map.2.A.1.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Contracts\EntityContracts\MSBuildExtensionPack.EntityContracts.csproj">
-      <Project>{9abeb016-fb34-40ab-b469-3b00f0048d27}</Project>
+      <Project>{d79953a8-febc-4b13-9cda-f7675a233481}</Project>
       <Name>MSBuildExtensionPack.EntityContracts</Name>
     </ProjectReference>
   </ItemGroup>

@@ -146,940 +146,172 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Framework.DAL.DataAccessLayerContractBase<MSBuildExtensionPack.DataSourceEntities.OrganizationCollection,MSBuildExtensionPack.DataSourceEntities.Organization,MSBuildExtensionPack.DataSourceEntities.OrganizationIdentifier> Members
 
-        #region Query Methods Of Entity of Common
+            // DataQueryPerQuerySettingCollection -- MethodDataQuery -- Start
 
-        /// <summary>
-        /// Gets the count of entity of "Common".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfCommon(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
-        {
-            return base.Channel.GetCountOfEntityOfCommon(request);
-        }
-
-        /// <summary>
-        /// Exists the of entity of "Common".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfCommon(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
-        {
-            return base.Channel.ExistsOfEntityOfCommon(request);
-        }
+        #region Query Methods Of DefaultByCommon
 
         /// <summary>
         /// Gets the collection of entity of "Common".
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfCommon(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultByCommon(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
         {
-            return base.Channel.GetCollectionOfEntityOfCommon(request);
+            return base.Channel.GetCollectionOfDefaultByCommon(request);
         }
 
-        /// <summary>
-        /// Gets the single of entity of "Common".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfCommon(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
-        {
-            return base.Channel.GetSingleOfEntityOfCommon(request);
-        }
+        #endregion Query Methods Of DefaultByCommon
 
-        #endregion Query Methods Of Entity of Common
-
-        #region Query Methods Of Default of Common
-
-        /// <summary>
-        /// Gets the count of entity of "Common".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultOfCommon(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
-        {
-            return base.Channel.GetCountOfDefaultOfCommon(request);
-        }
-
-        /// <summary>
-        /// Exists the of entity of "Common".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfCommon(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
-        {
-            return base.Channel.ExistsOfDefaultOfCommon(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "Common".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfCommon(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
-        {
-            return base.Channel.GetCollectionOfDefaultOfCommon(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "Common".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfCommon(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfCommon request)
-        {
-            return base.Channel.GetSingleOfDefaultOfCommon(request);
-        }
-
-        #endregion Query Methods Of Default of Common
-
-        #region Query Methods Of Entity of All
-
-        /// <summary>
-        /// Gets the count of entity of "All".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfAll(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
-        {
-            return base.Channel.GetCountOfEntityOfAll(request);
-        }
-
-        /// <summary>
-        /// Exists the of entity of "All".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfAll(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
-        {
-            return base.Channel.ExistsOfEntityOfAll(request);
-        }
+        #region Query Methods Of NameValuePairByAll
 
         /// <summary>
         /// Gets the collection of entity of "All".
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByAll(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
         {
-            return base.Channel.GetCollectionOfEntityOfAll(request);
+            return base.Channel.GetCollectionOfNameValuePairByAll(request);
         }
 
-        /// <summary>
-        /// Gets the single of entity of "All".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfAll(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
-        {
-            return base.Channel.GetSingleOfEntityOfAll(request);
-        }
+        #endregion Query Methods Of NameValuePairByAll
 
-        #endregion Query Methods Of Entity of All
-
-        #region Query Methods Of NameValuePair of All
-
-        /// <summary>
-        /// Gets the count of entity of "All".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfNameValuePairOfAll(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
-        {
-            return base.Channel.GetCountOfNameValuePairOfAll(request);
-        }
-
-        /// <summary>
-        /// Exists the of entity of "All".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfNameValuePairOfAll(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
-        {
-            return base.Channel.ExistsOfNameValuePairOfAll(request);
-        }
+        #region Query Methods Of RssItemByAll
 
         /// <summary>
         /// Gets the collection of entity of "All".
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairOfAll(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetCollectionOfRssItemByAll(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
         {
-            return base.Channel.GetCollectionOfNameValuePairOfAll(request);
+            return base.Channel.GetCollectionOfRssItemByAll(request);
         }
 
+        #endregion Query Methods Of RssItemByAll
+
+        #region Query Methods Of NameValuePairByFKOnly
+
         /// <summary>
-        /// Gets the single of entity of "All".
+        /// Gets the collection of entity of "FKOnly".
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfAll(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly request)
         {
-            return base.Channel.GetSingleOfNameValuePairOfAll(request);
+            return base.Channel.GetCollectionOfNameValuePairByFKOnly(request);
         }
 
-        #endregion Query Methods Of NameValuePair of All
+        #endregion Query Methods Of NameValuePairByFKOnly
 
-        #region Query Methods Of RssItem of All
+        #region Query Methods Of DefaultByFKOnly
 
         /// <summary>
-        /// Gets the count of entity of "All".
+        /// Gets the collection of entity of "FKOnly".
         /// </summary>
         /// <param name="request">The request.</param>
-        /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfRssItemOfAll(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly request)
         {
-            return base.Channel.GetCountOfRssItemOfAll(request);
+            return base.Channel.GetCollectionOfDefaultByFKOnly(request);
         }
 
+        #endregion Query Methods Of DefaultByFKOnly
+
+        #region Query Methods Of EntityByIdentifier
+
         /// <summary>
-        /// Exists the of entity of "All".
+        /// Exists the of entity of "Identifier".
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfRssItemOfAll(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifier request)
         {
-            return base.Channel.ExistsOfRssItemOfAll(request);
+            return base.Channel.ExistsOfEntityByIdentifier(request);
         }
 
         /// <summary>
-        /// Gets the collection of entity of "All".
+        /// Gets the collection of entity of "Identifier".
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetCollectionOfRssItemOfAll(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifier request)
         {
-            return base.Channel.GetCollectionOfRssItemOfAll(request);
+            return base.Channel.GetCollectionOfEntityByIdentifier(request);
         }
 
-        /// <summary>
-        /// Gets the single of entity of "All".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetSingleOfRssItemOfAll(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
-        {
-            return base.Channel.GetSingleOfRssItemOfAll(request);
-        }
+        #endregion Query Methods Of EntityByIdentifier
 
-        #endregion Query Methods Of RssItem of All
-
-        #region Query Methods Of Entity of ByFKOnly
+        #region Query Methods Of DefaultByIdentifier
 
         /// <summary>
-        /// Gets the count of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.GetCountOfEntityOfByFKOnly(request);
-        }
-
-        /// <summary>
-        /// Exists the of entity of "ByFKOnly".
+        /// Exists the of entity of "Identifier".
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifier request)
         {
-            return base.Channel.ExistsOfEntityOfByFKOnly(request);
+            return base.Channel.ExistsOfDefaultByIdentifier(request);
         }
 
         /// <summary>
-        /// Gets the collection of entity of "ByFKOnly".
+        /// Gets the collection of entity of "Identifier".
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifier request)
         {
-            return base.Channel.GetCollectionOfEntityOfByFKOnly(request);
+            return base.Channel.GetCollectionOfDefaultByIdentifier(request);
         }
 
-        /// <summary>
-        /// Gets the single of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.GetSingleOfEntityOfByFKOnly(request);
-        }
+        #endregion Query Methods Of DefaultByIdentifier
 
-        #endregion Query Methods Of Entity of ByFKOnly
-
-        #region Query Methods Of NameValuePair of ByFKOnly
+        #region Query Methods Of KeyInformationByIdentifier
 
         /// <summary>
-        /// Gets the count of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfNameValuePairOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.GetCountOfNameValuePairOfByFKOnly(request);
-        }
-
-        /// <summary>
-        /// Exists the of entity of "ByFKOnly".
+        /// Exists the of entity of "Identifier".
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfNameValuePairOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifier request)
         {
-            return base.Channel.ExistsOfNameValuePairOfByFKOnly(request);
+            return base.Channel.ExistsOfKeyInformationByIdentifier(request);
         }
 
         /// <summary>
-        /// Gets the collection of entity of "ByFKOnly".
+        /// Gets the collection of entity of "Identifier".
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation GetCollectionOfKeyInformationByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifier request)
         {
-            return base.Channel.GetCollectionOfNameValuePairOfByFKOnly(request);
+            return base.Channel.GetCollectionOfKeyInformationByIdentifier(request);
         }
 
-        /// <summary>
-        /// Gets the single of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.GetSingleOfNameValuePairOfByFKOnly(request);
-        }
+        #endregion Query Methods Of KeyInformationByIdentifier
 
-        #endregion Query Methods Of NameValuePair of ByFKOnly
-
-        #region Query Methods Of RssItem of ByFKOnly
-
-        /// <summary>
-        /// Gets the count of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfRssItemOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.GetCountOfRssItemOfByFKOnly(request);
-        }
-
-        /// <summary>
-        /// Exists the of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfRssItemOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.ExistsOfRssItemOfByFKOnly(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetCollectionOfRssItemOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.GetCollectionOfRssItemOfByFKOnly(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetSingleOfRssItemOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.GetSingleOfRssItemOfByFKOnly(request);
-        }
-
-        #endregion Query Methods Of RssItem of ByFKOnly
-
-        #region Query Methods Of Default of ByFKOnly
-
-        /// <summary>
-        /// Gets the count of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.GetCountOfDefaultOfByFKOnly(request);
-        }
-
-        /// <summary>
-        /// Exists the of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.ExistsOfDefaultOfByFKOnly(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.GetCollectionOfDefaultOfByFKOnly(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.GetSingleOfDefaultOfByFKOnly(request);
-        }
-
-        #endregion Query Methods Of Default of ByFKOnly
-
-        #region Query Methods Of DefaultGroupedDataView of ByFKOnly
-
-        /// <summary>
-        /// Gets the count of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultGroupedDataViewOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.GetCountOfDefaultGroupedDataViewOfByFKOnly(request);
-        }
-
-        /// <summary>
-        /// Exists the of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultGroupedDataViewOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.ExistsOfDefaultGroupedDataViewOfByFKOnly(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.GetCollectionOfDefaultGroupedDataViewOfByFKOnly(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "ByFKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView GetSingleOfDefaultGroupedDataViewOfByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByFKOnly request)
-        {
-            return base.Channel.GetSingleOfDefaultGroupedDataViewOfByFKOnly(request);
-        }
-
-        #endregion Query Methods Of DefaultGroupedDataView of ByFKOnly
-
-        #region Query Methods Of Entity of ByIdentifier
-
-        /// <summary>
-        /// Gets the count of entity of "ByIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfByIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
-        {
-            return base.Channel.GetCountOfEntityOfByIdentifier(request);
-        }
-
-        /// <summary>
-        /// Exists the of entity of "ByIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfByIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
-        {
-            return base.Channel.ExistsOfEntityOfByIdentifier(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "ByIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfByIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
-        {
-            return base.Channel.GetCollectionOfEntityOfByIdentifier(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "ByIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfByIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
-        {
-            return base.Channel.GetSingleOfEntityOfByIdentifier(request);
-        }
-
-        #endregion Query Methods Of Entity of ByIdentifier
-
-        #region Query Methods Of Default of ByIdentifier
-
-        /// <summary>
-        /// Gets the count of entity of "ByIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultOfByIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
-        {
-            return base.Channel.GetCountOfDefaultOfByIdentifier(request);
-        }
-
-        /// <summary>
-        /// Exists the of entity of "ByIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfByIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
-        {
-            return base.Channel.ExistsOfDefaultOfByIdentifier(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "ByIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfByIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
-        {
-            return base.Channel.GetCollectionOfDefaultOfByIdentifier(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "ByIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfByIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
-        {
-            return base.Channel.GetSingleOfDefaultOfByIdentifier(request);
-        }
-
-        #endregion Query Methods Of Default of ByIdentifier
-
-        #region Query Methods Of KeyInformation of ByIdentifier
-
-        /// <summary>
-        /// Gets the count of entity of "ByIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfKeyInformationOfByIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
-        {
-            return base.Channel.GetCountOfKeyInformationOfByIdentifier(request);
-        }
-
-        /// <summary>
-        /// Exists the of entity of "ByIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationOfByIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
-        {
-            return base.Channel.ExistsOfKeyInformationOfByIdentifier(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "ByIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation GetCollectionOfKeyInformationOfByIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
-        {
-            return base.Channel.GetCollectionOfKeyInformationOfByIdentifier(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "ByIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation GetSingleOfKeyInformationOfByIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfByIdentifier request)
-        {
-            return base.Channel.GetSingleOfKeyInformationOfByIdentifier(request);
-        }
-
-        #endregion Query Methods Of KeyInformation of ByIdentifier
-
-        #region Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueIdentifier
-
-        /// <summary>
-        /// Gets the count of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
-        {
-            return base.Channel.GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
-        }
-
-        /// <summary>
-        /// Exists the of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
-        {
-            return base.Channel.ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
-        {
-            return base.Channel.GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
-        {
-            return base.Channel.GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
-        }
-
-        #endregion Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueIdentifier
-
-        #region Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueIdentifier
-
-        /// <summary>
-        /// Gets the count of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
-        {
-            return base.Channel.GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
-        }
-
-        /// <summary>
-        /// Exists the of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
-        {
-            return base.Channel.ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
-        {
-            return base.Channel.GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
-        {
-            return base.Channel.GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
-        }
-
-        #endregion Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueIdentifier
-
-        #region Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueIdentifier
-
-        /// <summary>
-        /// Gets the count of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
-        {
-            return base.Channel.GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
-        }
-
-        /// <summary>
-        /// Exists the of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
-        {
-            return base.Channel.ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
-        {
-            return base.Channel.GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "UniqueConstraintOfUC_Organization_UniqueIdentifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier request)
-        {
-            return base.Channel.GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueIdentifier(request);
-        }
-
-        #endregion Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueIdentifier
-
-        #region Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
-
-        /// <summary>
-        /// Gets the count of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
-        {
-            return base.Channel.GetCountOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
-        }
-
-        /// <summary>
-        /// Exists the of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
-        {
-            return base.Channel.ExistsOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
-        {
-            return base.Channel.GetCollectionOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
-        {
-            return base.Channel.GetSingleOfEntityOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
-        }
-
-        #endregion Query Methods Of Entity of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
-
-        #region Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
-
-        /// <summary>
-        /// Gets the count of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
-        {
-            return base.Channel.GetCountOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
-        }
-
-        /// <summary>
-        /// Exists the of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
-        {
-            return base.Channel.ExistsOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
-        {
-            return base.Channel.GetCollectionOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
-        {
-            return base.Channel.GetSingleOfNameValuePairOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
-        }
-
-        #endregion Query Methods Of NameValuePair of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
-
-        #region Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
-
-        /// <summary>
-        /// Gets the count of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
-        {
-            return base.Channel.GetCountOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
-        }
-
-        /// <summary>
-        /// Exists the of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
-        {
-            return base.Channel.ExistsOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
-        {
-            return base.Channel.GetCollectionOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "UniqueConstraintOfUC_Organization_UniqueidentifierColumn".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn request)
-        {
-            return base.Channel.GetSingleOfDefaultOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(request);
-        }
-
-        #endregion Query Methods Of Default of UniqueConstraintOfUC_Organization_UniqueidentifierColumn
-
-        #region Query Methods Of Entity of IdentifierAndUniqueConstraint
-
-        /// <summary>
-        /// Gets the count of entity of "IdentifierAndUniqueConstraint".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfIdentifierAndUniqueConstraint(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
-        {
-            return base.Channel.GetCountOfEntityOfIdentifierAndUniqueConstraint(request);
-        }
+        #region Query Methods Of EntityByIdentifierAndUniqueConstraint
 
         /// <summary>
         /// Exists the of entity of "IdentifierAndUniqueConstraint".
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfIdentifierAndUniqueConstraint(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityByIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            return base.Channel.ExistsOfEntityOfIdentifierAndUniqueConstraint(request);
+            return base.Channel.ExistsOfEntityByIdentifierAndUniqueConstraint(request);
         }
 
         /// <summary>
@@ -1087,47 +319,25 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfIdentifierAndUniqueConstraint(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityByIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            return base.Channel.GetCollectionOfEntityOfIdentifierAndUniqueConstraint(request);
+            return base.Channel.GetCollectionOfEntityByIdentifierAndUniqueConstraint(request);
         }
 
-        /// <summary>
-        /// Gets the single of entity of "IdentifierAndUniqueConstraint".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfIdentifierAndUniqueConstraint(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
-        {
-            return base.Channel.GetSingleOfEntityOfIdentifierAndUniqueConstraint(request);
-        }
+        #endregion Query Methods Of EntityByIdentifierAndUniqueConstraint
 
-        #endregion Query Methods Of Entity of IdentifierAndUniqueConstraint
-
-        #region Query Methods Of Default of IdentifierAndUniqueConstraint
-
-        /// <summary>
-        /// Gets the count of entity of "IdentifierAndUniqueConstraint".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultOfIdentifierAndUniqueConstraint(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
-        {
-            return base.Channel.GetCountOfDefaultOfIdentifierAndUniqueConstraint(request);
-        }
+        #region Query Methods Of DefaultByIdentifierAndUniqueConstraint
 
         /// <summary>
         /// Exists the of entity of "IdentifierAndUniqueConstraint".
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfIdentifierAndUniqueConstraint(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultByIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            return base.Channel.ExistsOfDefaultOfIdentifierAndUniqueConstraint(request);
+            return base.Channel.ExistsOfDefaultByIdentifierAndUniqueConstraint(request);
         }
 
         /// <summary>
@@ -1135,47 +345,25 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfIdentifierAndUniqueConstraint(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultByIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            return base.Channel.GetCollectionOfDefaultOfIdentifierAndUniqueConstraint(request);
+            return base.Channel.GetCollectionOfDefaultByIdentifierAndUniqueConstraint(request);
         }
 
-        /// <summary>
-        /// Gets the single of entity of "IdentifierAndUniqueConstraint".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfIdentifierAndUniqueConstraint(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
-        {
-            return base.Channel.GetSingleOfDefaultOfIdentifierAndUniqueConstraint(request);
-        }
+        #endregion Query Methods Of DefaultByIdentifierAndUniqueConstraint
 
-        #endregion Query Methods Of Default of IdentifierAndUniqueConstraint
-
-        #region Query Methods Of KeyInformation of IdentifierAndUniqueConstraint
-
-        /// <summary>
-        /// Gets the count of entity of "IdentifierAndUniqueConstraint".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfKeyInformationOfIdentifierAndUniqueConstraint(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
-        {
-            return base.Channel.GetCountOfKeyInformationOfIdentifierAndUniqueConstraint(request);
-        }
+        #region Query Methods Of KeyInformationByIdentifierAndUniqueConstraint
 
         /// <summary>
         /// Exists the of entity of "IdentifierAndUniqueConstraint".
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationByIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            return base.Channel.ExistsOfKeyInformationOfIdentifierAndUniqueConstraint(request);
+            return base.Channel.ExistsOfKeyInformationByIdentifierAndUniqueConstraint(request);
         }
 
         /// <summary>
@@ -1183,120 +371,15 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation GetCollectionOfKeyInformationByIdentifierAndUniqueConstraint(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
         {
-            return base.Channel.GetCollectionOfKeyInformationOfIdentifierAndUniqueConstraint(request);
+            return base.Channel.GetCollectionOfKeyInformationByIdentifierAndUniqueConstraint(request);
         }
 
-        /// <summary>
-        /// Gets the single of entity of "IdentifierAndUniqueConstraint".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
-        {
-            return base.Channel.GetSingleOfKeyInformationOfIdentifierAndUniqueConstraint(request);
-        }
+        #endregion Query Methods Of KeyInformationByIdentifierAndUniqueConstraint
 
-        #endregion Query Methods Of KeyInformation of IdentifierAndUniqueConstraint
-
-        #region Query Methods Of Entity of UniqueConstraintsWithCommon
-
-        /// <summary>
-        /// Gets the count of entity of "UniqueConstraintsWithCommon".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfUniqueConstraintsWithCommon(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintsWithCommon request)
-        {
-            return base.Channel.GetCountOfEntityOfUniqueConstraintsWithCommon(request);
-        }
-
-        /// <summary>
-        /// Exists the of entity of "UniqueConstraintsWithCommon".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfUniqueConstraintsWithCommon(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintsWithCommon request)
-        {
-            return base.Channel.ExistsOfEntityOfUniqueConstraintsWithCommon(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "UniqueConstraintsWithCommon".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityOfUniqueConstraintsWithCommon(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintsWithCommon request)
-        {
-            return base.Channel.GetCollectionOfEntityOfUniqueConstraintsWithCommon(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "UniqueConstraintsWithCommon".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetSingleOfEntityOfUniqueConstraintsWithCommon(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintsWithCommon request)
-        {
-            return base.Channel.GetSingleOfEntityOfUniqueConstraintsWithCommon(request);
-        }
-
-        #endregion Query Methods Of Entity of UniqueConstraintsWithCommon
-
-        #region Query Methods Of Default of UniqueConstraintsWithCommon
-
-        /// <summary>
-        /// Gets the count of entity of "UniqueConstraintsWithCommon".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>the count</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultOfUniqueConstraintsWithCommon(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintsWithCommon request)
-        {
-            return base.Channel.GetCountOfDefaultOfUniqueConstraintsWithCommon(request);
-        }
-
-        /// <summary>
-        /// Exists the of entity of "UniqueConstraintsWithCommon".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfUniqueConstraintsWithCommon(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintsWithCommon request)
-        {
-            return base.Channel.ExistsOfDefaultOfUniqueConstraintsWithCommon(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "UniqueConstraintsWithCommon".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultOfUniqueConstraintsWithCommon(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintsWithCommon request)
-        {
-            return base.Channel.GetCollectionOfDefaultOfUniqueConstraintsWithCommon(request);
-        }
-
-        /// <summary>
-        /// Gets the single of entity of "UniqueConstraintsWithCommon".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetSingleOfDefaultOfUniqueConstraintsWithCommon(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfUniqueConstraintsWithCommon request)
-        {
-            return base.Channel.GetSingleOfDefaultOfUniqueConstraintsWithCommon(request);
-        }
-
-        #endregion Query Methods Of Default of UniqueConstraintsWithCommon
+            // DataQueryPerQuerySettingCollection -- MethodDataQuery -- End
 
         #region GetAscendantOfParentIdOfMSBuildExtensionPack_Organization && GetDescendantOfParentIdOfMSBuildExtensionPack_Organization
 

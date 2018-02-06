@@ -17,15 +17,15 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 
                 public List<SelectListItem> SelectListOfMSBuildExtensionPack_Organization { get; set; }
 
-        public void Load(bool isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Int64? valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, bool isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, System.Guid? valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint
+        public void Load(bool isToCompareId, System.Int64? id, bool isToCompareUniqueIdentifier, System.Guid? uniqueIdentifier, bool isToCompareUniqueidentifierColumn, System.Guid? uniqueidentifierColumn
             , Framework.UIAction uiAction)
         {
             try
             {
                 log.Info(string.Format("{0}: Details", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-                MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _Response =
-                    MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfDefaultOfIdentifierAndUniqueConstraint(isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint && valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint != default(System.Int64), valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint && valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint != default(System.Guid), valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint && valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint != default(System.Guid), valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint, -1, -1, null);
+                var _Response =
+                    MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfDefaultByIdentifierAndUniqueConstraint(isToCompareId, id, isToCompareUniqueIdentifier, uniqueIdentifier, isToCompareUniqueidentifierColumn, uniqueidentifierColumn, -1, -1, null);
 
                 if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK || _Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
                 {
@@ -69,7 +69,7 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
         {
             if (uiAction != Framework.UIAction.ViewDetails)
             {
-                this.NameValueCollectionOfMSBuildExtensionPack_Organization = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairOfAll(new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(), new Framework.EntityContracts.QueryPagingSetting(), null);
+                this.NameValueCollectionOfMSBuildExtensionPack_Organization = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetCollectionOfNameValuePairByAll(new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaAll(), new Framework.EntityContracts.QueryPagingSetting(), null);
                 this.SelectListOfMSBuildExtensionPack_Organization = Framework.Mvc.MvcHelper.BuildListOfSelectListItem(this.NameValueCollectionOfMSBuildExtensionPack_Organization);
 
             }

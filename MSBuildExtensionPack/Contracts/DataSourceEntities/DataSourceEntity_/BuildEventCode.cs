@@ -22,10 +22,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         #endregion Storage Fields
 
-        #region constructors
-
         /// <summary>
-        /// default constructor
         /// Initializes a new instance of the <see cref=" BuildEventCode"/> class.
         /// </summary>
         public BuildEventCode()
@@ -60,8 +57,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
         {
             MSBuildExtensionPack.EntityContracts.IBuildEventCodeHelper.Copy<MSBuildExtensionPack.EntityContracts.IBuildEventCode, BuildEventCode>(item, this);
         }
-
-        #endregion constructors
 
         #region properties
 
@@ -306,22 +301,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         #endregion Nested Views classes and their collection classes 1
     }
-
-/*
-    /// <summary>
-    /// a property defined when <see cref="BuildEventCode"/> is used in other classes.
-    /// </summary>
-    public interface WithEntityContractBuildEventCode
-    {
-        /// <summary>
-        /// Gets or sets BuildEventCode.
-        /// </summary>
-        /// <value>
-        /// The BuildEventCode
-        /// </value>
-        BuildEventCode BuildEventCode { get; set; }
-    }
-*/
 
     /// <summary>
     /// message definition, pass single entry, pulled from database, to business logic layer. <see cref="BuildEventCode"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>

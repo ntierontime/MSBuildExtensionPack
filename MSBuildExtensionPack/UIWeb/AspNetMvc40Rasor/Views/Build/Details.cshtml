@@ -26,15 +26,15 @@
                 </div>
                 <div class="form-group" >
                     @Html.LabelFor(model => model.Item.Organization_2Id, new { @class = "control-label" })
-                        @Html.ActionLink(Model.Item.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Organization_2Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Organization_2_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Organization_2_UniqueidentifierColumn }, null)
+                        @Html.ActionLink(Model.Item.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Item.Organization_2Id, uniqueIdentifier = Model.Item.Organization_2_UniqueIdentifier, uniqueidentifierColumn = Model.Item.Organization_2_UniqueidentifierColumn }, null)
                 </div>
                 <div class="form-group" >
                     @Html.LabelFor(model => model.Item.Organization_1Id, new { @class = "control-label" })
-                        @Html.ActionLink(Model.Item.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Organization_1Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Organization_1_UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Organization_1_UniqueidentifierColumn }, null)
+                        @Html.ActionLink(Model.Item.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Item.Organization_1Id, uniqueIdentifier = Model.Item.Organization_1_UniqueIdentifier, uniqueidentifierColumn = Model.Item.Organization_1_UniqueidentifierColumn }, null)
                 </div>
                 <div class="form-group" >
                     @Html.LabelFor(model => model.Item.SolutionId, new { @class = "control-label" })
-                        @Html.ActionLink(Model.Item.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareByIdentifierOftOfByIdentifier=true, valueToCompareByIdentifierOftOfByIdentifier = Model.Item.SolutionId }, null)
+                        @Html.ActionLink(Model.Item.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { id = Model.Item.SolutionId }, null)
                 </div>
                 <div class="form-group" >
                     @Html.LabelFor(model => model.Item.Name, new { @class = "control-label" })
@@ -52,12 +52,12 @@
             <div class="panel-footer nopadding">
                 <div class="btn-group btn-group-justified" role="group" aria-label="...">
                     <div class="btn-group">
-                        <a href="@Url.Action(UrlStringsAlias.ActionName_Build_Edit, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Id })" class="btn btn-default" role="button" type="button">
+                        <a href="@Url.Action(UrlStringsAlias.ActionName_Build_Edit, new { isToCompareIdIdentifierOftOfIdentifier=true, valueToCompareIdIdentifierOftOfIdentifier = Model.Item.Id })" class="btn btn-default" role="button" type="button">
                             <span class="glyphicon glyphicon-edit"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.Edit</span>
                         </a>
                     </div>
                     <div class="btn-group">
-                        <a href="@Url.Action(UrlStringsAlias.ActionName_Build_Delete, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Id })" class="btn btn-default" role="button" type="button">
+                        <a href="@Url.Action(UrlStringsAlias.ActionName_Build_Delete, new { isToCompareIdIdentifierOftOfIdentifier=true, valueToCompareIdIdentifierOftOfIdentifier = Model.Item.Id })" class="btn btn-default" role="button" type="button">
                             <span class="glyphicon glyphicon-trash"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.Delete</span>
                         </a>
                     </div>
@@ -67,7 +67,7 @@
                         </a>
                     </div>
                     <div class="btn-group">
-                        <a href="@Url.Action(UrlStringsAlias.ActionName_Build_Copy, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Id })" class="btn btn-default" role="button" type="button">
+                        <a href="@Url.Action(UrlStringsAlias.ActionName_Build_Copy, new { isToCompareIdIdentifierOftOfIdentifier=true, valueToCompareIdIdentifierOftOfIdentifier = Model.Item.Id })" class="btn btn-default" role="button" type="button">
                             <span class="glyphicon glyphicon-copy"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.Copy</span>
                         </a>
                     </div>

@@ -20,7 +20,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
 
         #endregion 1. Controller names
 
-        #region 2.1. Action Names -- UIWorkspaceTypes.Wrapper
+        #region 2.1. Action Names -- UIWorkspaceTypes.SearchResult
 
         public const string ActionName_Build_WPCommonOfBuild = "WPCommonOfBuild";
         public const string ActionName_Build_WPCommonOfBuild_Export = "WPCommonOfBuild_Export";
@@ -37,7 +37,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
         public const string ActionName_Solution_WPCommonOfSolution = "WPCommonOfSolution";
         public const string ActionName_Solution_WPCommonOfSolution_Export = "WPCommonOfSolution_Export";
 
-        #endregion 2.1. Action Names -- UIWorkspaceTypes.Wrapper
+        #endregion 2.1. Action Names -- UIWorkspaceTypes.SearchResult
 
         #region 2.2. Action Names -- UIWorkspaceTypes.EntityRelated
 
@@ -54,8 +54,6 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
         #endregion 2.2. Action Names -- UIWorkspaceTypes.EntityRelated
 
         #region 2.3. Action Names -- UIWorkspaceTypes.EntityUpdateActionForm
-
-        public const string ActionName_Build_WPUpdateNameOnlyOfBuild = "WPUpdateNameOnlyOfBuild";
 
         #endregion 2.3. Action Names -- UIWorkspaceTypes.EntityUpdateActionForm
 

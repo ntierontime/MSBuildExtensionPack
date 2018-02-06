@@ -10,3 +10,11 @@ Shared.X,Shared.X,UI\MVVMLight\Shared.X,UI\MVVMLight,1b0953f7-2436-4d7b-a914-f05
 Wcf,Wcf,Wcf,,f51d9774-9ab2-4aab-8ab2-173d01241ae0,
 Core.X,Core.X,Core.X,,758bd2ba-f9a6-44f5-82a9-7a6d29989b43,
 Web.X,Web.X,UI\Web.X,UI,27abf16b-86ae-488e-b704-cebf988649d0,326b0cd4-25f2-4b34-9932-f1f48d932cb8
+UIWeb,UIWeb,UIWeb,,9ec78806-64b4-4eb8-aaf2-cb36d7f26bb7,
+Services,Services,Services,,dcde859d-fd64-494e-be0f-ccfb1eea7729,
+Contracts,Contracts,Contracts,,963beca1-37da-428d-9f5f-33645ae1f070,
+DAL,DAL,DAL,,1e9d0dca-6652-4df8-ad5d-8a1b29212383,
+UINative,UINative,UINative,,a7247041-3fe2-4ab3-9024-5d6f0eb0dee0,
+Shared,Shared,UINative\Shared,UINative,6773d919-c512-4d71-a023-1e74360731e1,a7247041-3fe2-4ab3-9024-5d6f0eb0dee0
+Shared.X,Shared.X,UINative\Shared.X,UINative,612e1c40-4bf0-4612-8316-645c67a82ae5,a7247041-3fe2-4ab3-9024-5d6f0eb0dee0
+Contracts.X,Contracts.X,Contracts.X,,f2eef15e-bc4c-4be4-bb1a-d683128f5363,

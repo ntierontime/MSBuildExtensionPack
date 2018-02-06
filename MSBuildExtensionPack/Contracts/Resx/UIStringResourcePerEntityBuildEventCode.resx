@@ -301,22 +301,22 @@
   <data name="Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedDescriptionCommonOftOfCommon" xml:space="preserve">
     <value>Tooltip of Description of BuildEventCode</value>
   </data>
-  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdIdentifierOftOfIdentifier" xml:space="preserve">
     <value>Id</value>
   </data>
-  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdIdentifierOftOfIdentifier" xml:space="preserve">
     <value>Description of Id</value>
   </data>
-  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdIdentifierOftOfIdentifier" xml:space="preserve">
     <value>Tooltip of Id</value>
   </data>
-  <data name="ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+  <data name="ValueToCompare_ID_Unknown_Search_valueToCompareIdIdentifierOftOfIdentifier" xml:space="preserve">
     <value>Id of BuildEventCode</value>
   </data>
-  <data name="Description_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+  <data name="Description_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdIdentifierOftOfIdentifier" xml:space="preserve">
     <value>Description of Id of BuildEventCode</value>
   </data>
-  <data name="Tooltip_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+  <data name="Tooltip_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdIdentifierOftOfIdentifier" xml:space="preserve">
     <value>Tooltip of Id of BuildEventCode</value>
   </data>
 

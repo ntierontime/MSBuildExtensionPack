@@ -223,10 +223,10 @@ namespace MSBuildExtensionPack.CommonBLL
 
                 string cellKey;
                 cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
-            worksheet.Cell(cellKey).Value = "Organization_2_UniqueidentifierColumn";
+            worksheet.Cell(cellKey).Value = "Organization_2_UniqueIdentifier";
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
-            worksheet.Cell(cellKey).Value = "Organization_2_UniqueIdentifier";
+            worksheet.Cell(cellKey).Value = "Organization_2_UniqueidentifierColumn";
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = "Organization_2_Name";
@@ -335,10 +335,10 @@ namespace MSBuildExtensionPack.CommonBLL
 
                 string cellKey;
                 cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
-            worksheet.Cell(cellKey).Value = dataItem.Organization_2_UniqueidentifierColumn;
+            worksheet.Cell(cellKey).Value = dataItem.Organization_2_UniqueIdentifier;
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
-            worksheet.Cell(cellKey).Value = dataItem.Organization_2_UniqueIdentifier;
+            worksheet.Cell(cellKey).Value = dataItem.Organization_2_UniqueidentifierColumn;
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.Organization_2_Name;

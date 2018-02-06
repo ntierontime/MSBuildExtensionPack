@@ -115,28 +115,28 @@ namespace MSBuildExtensionPack.CommonBLLEntities
     }
 
     /// <summary>
-    /// BusinessLogicLayerRequestMessageUserDefined, with Key=ByIdentifier
+    /// BusinessLogicLayerRequestMessageUserDefined, with Key=Identifier
     /// </summary>
-    public partial class BuildEventCodeRequestMessageUserDefinedOfByIdentifier
-        : Framework.CommonBLLEntities.BusinessLogicLayerRequestMessageBase<BuildEventCodeChainedQueryCriteriaByIdentifier>
+    public partial class BuildEventCodeRequestMessageUserDefinedOfIdentifier
+        : Framework.CommonBLLEntities.BusinessLogicLayerRequestMessageBase<BuildEventCodeChainedQueryCriteriaIdentifier>
     {
         #region constructors
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BuildEventCodeRequestMessageUserDefinedOfByIdentifier"/> class.
+        /// Initializes a new instance of the <see cref="BuildEventCodeRequestMessageUserDefinedOfIdentifier"/> class.
         /// </summary>
-        public BuildEventCodeRequestMessageUserDefinedOfByIdentifier()
+        public BuildEventCodeRequestMessageUserDefinedOfIdentifier()
             : base()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BuildEventCodeRequestMessageUserDefinedOfByIdentifier"/> class.
+        /// Initializes a new instance of the <see cref="BuildEventCodeRequestMessageUserDefinedOfIdentifier"/> class.
         /// </summary>
         /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
         /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
         /// <param name="businessLogicLayerRequestID">The business logic layer request ID.</param>
-        public BuildEventCodeRequestMessageUserDefinedOfByIdentifier(
+        public BuildEventCodeRequestMessageUserDefinedOfIdentifier(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID)
@@ -145,7 +145,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BuildEventCodeRequestMessageUserDefinedOfByIdentifier"/> class.
+        /// Initializes a new instance of the <see cref="BuildEventCodeRequestMessageUserDefinedOfIdentifier"/> class.
         /// </summary>
         /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
         /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
@@ -153,7 +153,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
-        public BuildEventCodeRequestMessageUserDefinedOfByIdentifier(
+        public BuildEventCodeRequestMessageUserDefinedOfIdentifier(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID

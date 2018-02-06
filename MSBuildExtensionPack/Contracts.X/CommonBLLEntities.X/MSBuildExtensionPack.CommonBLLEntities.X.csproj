@@ -5,7 +5,7 @@
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{43FC15B7-2CC9-41CD-932E-B24EE8DC4A85}</ProjectGuid>
+    <ProjectGuid>{3097E99F-B10C-4335-9D39-25F53642B272}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildExtensionPack.CommonBLLEntities</RootNamespace>
@@ -131,27 +131,27 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataSourceEntities.X\MSBuildExtensionPack.DataSourceEntities.X.csproj">
-      <Project>{5656d29d-e7fe-4624-8efb-d3251f683a4f}</Project>
+      <Project>{7a9ed7b9-4cb5-40df-89df-4293bfb4de22}</Project>
       <Name>MSBuildExtensionPack.DataSourceEntities.X</Name>
     </ProjectReference>
     <ProjectReference Include="..\EntityContracts.X\MSBuildExtensionPack.EntityContracts.X.csproj">
-      <Project>{fe8476f3-e114-49b6-bf21-0d69ad7a0544}</Project>
+      <Project>{9b54200d-20f0-4380-bd15-f6211718853a}</Project>
       <Name>MSBuildExtensionPack.EntityContracts.X</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.X\Framework.X\Framework.X.csproj">
-      <Project>{e10855c7-201c-43c3-940a-a7275fd2b804}</Project>
+      <Project>{cab19f30-0455-443c-b7a3-ba943aaa9d15}</Project>
       <Name>Framework.X</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.X\Framework.CommonBLLEntities.X\Framework.CommonBLLEntities.X.csproj">
-      <Project>{91ddf7e6-ad38-4020-84a3-6a55b245c0ed}</Project>
+      <Project>{bd3f8de3-cf0f-4187-915c-b5d9f76c2d67}</Project>
       <Name>Framework.CommonBLLEntities.X</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.X\Framework.DataSourceEntities.X\Framework.DataSourceEntities.X.csproj">
-      <Project>{801a91e0-b9fc-4808-8045-36560d6af1c3}</Project>
+      <Project>{b9131050-fd8e-404d-a135-11e210cdd438}</Project>
       <Name>Framework.DataSourceEntities.X</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.X\Framework.EntityContracts.X\Framework.EntityContracts.X.csproj">
-      <Project>{d8aafb54-4c8d-4352-9ffd-eaea3d77b200}</Project>
+      <Project>{81863781-aa71-4530-a59c-04d2153ddd30}</Project>
       <Name>Framework.EntityContracts.X</Name>
     </ProjectReference>
   </ItemGroup>

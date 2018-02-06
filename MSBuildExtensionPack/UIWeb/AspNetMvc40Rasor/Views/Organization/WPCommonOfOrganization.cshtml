@@ -52,63 +52,63 @@
                 <div class="panel-body">
  <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon</label>
-    @Html.DropDownListFor(model => model.Criteria.OrganizationQueryCriteriaCommon.IdCommonOfOrganization_2.NullableValueToCompare, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Organization, MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" } })
+    @Html.DropDownListFor(model => model.Criteria.Common.ParentId.NullableValueToCompare, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Organization, MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" } })
 </div>
  <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareIsSystemBuiltInCommonOftOfCommon</label>
-    @Html.DropDownListFor(model => model.Criteria.OrganizationQueryCriteriaCommon.IsSystemBuiltInCommonOft.PredefinedBooleanSelectedValue, (List<SelectListItem>)Model.UISharedViewModel.PredefinedBooleanSelectionList, new Dictionary<string, Object> { { "class", "form-control" } })
+    @Html.DropDownListFor(model => model.Criteria.Common.IsSystemBuiltIn.PredefinedBooleanSelectedValue, (List<SelectListItem>)Model.UISharedViewModel.PredefinedBooleanSelectionList, new Dictionary<string, Object> { { "class", "form-control" } })
 </div>
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareCreatedDateTimeCommonOftOfCommon</label>
-    @Html.DropDownListFor(model => model.Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.PreDefinedDateTimeRange, Model.UISharedViewModel.PreDefinedDateTimeRangeList, new Dictionary<string, Object> { { "class", "form-control" } } )
-    @Html.TextBoxFor(model => model.Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.NullableLowerBound, new { @readonly = "readonly", @class = "form-control" })
-    @Html.TextBoxFor(model => model.Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.NullableUpperBound, new { @readonly = "readonly", @class = "form-control" })
+    @Html.DropDownListFor(model => model.Criteria.Common.CreatedDateTimeRange.PreDefinedDateTimeRange, Model.UISharedViewModel.PreDefinedDateTimeRangeList, new Dictionary<string, Object> { { "class", "form-control" } } )
+    @Html.TextBoxFor(model => model.Criteria.Common.CreatedDateTimeRange.NullableLowerBound, new { @readonly = "readonly", @class = "form-control" })
+    @Html.TextBoxFor(model => model.Criteria.Common.CreatedDateTimeRange.NullableUpperBound, new { @readonly = "readonly", @class = "form-control" })
  <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareBitColumnCommonOftOfCommon</label>
-    @Html.DropDownListFor(model => model.Criteria.OrganizationQueryCriteriaCommon.BitColumnCommonOft.PredefinedBooleanSelectedValue, (List<SelectListItem>)Model.UISharedViewModel.PredefinedBooleanSelectionList, new Dictionary<string, Object> { { "class", "form-control" } })
+    @Html.DropDownListFor(model => model.Criteria.Common.BitColumn.PredefinedBooleanSelectedValue, (List<SelectListItem>)Model.UISharedViewModel.PredefinedBooleanSelectionList, new Dictionary<string, Object> { { "class", "form-control" } })
 </div>
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareDatetimeColumnCommonOftOfCommon</label>
-    @Html.DropDownListFor(model => model.Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.PreDefinedDateTimeRange, Model.UISharedViewModel.PreDefinedDateTimeRangeList, new Dictionary<string, Object> { { "class", "form-control" } } )
-    @Html.TextBoxFor(model => model.Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.NullableLowerBound, new { @readonly = "readonly", @class = "form-control" })
-    @Html.TextBoxFor(model => model.Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.NullableUpperBound, new { @readonly = "readonly", @class = "form-control" })
+    @Html.DropDownListFor(model => model.Criteria.Common.DatetimeColumnRange.PreDefinedDateTimeRange, Model.UISharedViewModel.PreDefinedDateTimeRangeList, new Dictionary<string, Object> { { "class", "form-control" } } )
+    @Html.TextBoxFor(model => model.Criteria.Common.DatetimeColumnRange.NullableLowerBound, new { @readonly = "readonly", @class = "form-control" })
+    @Html.TextBoxFor(model => model.Criteria.Common.DatetimeColumnRange.NullableUpperBound, new { @readonly = "readonly", @class = "form-control" })
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareDatetime2ColumnCommonOftOfCommon</label>
-    @Html.DropDownListFor(model => model.Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.PreDefinedDateTimeRange, Model.UISharedViewModel.PreDefinedDateTimeRangeList, new Dictionary<string, Object> { { "class", "form-control" } } )
-    @Html.TextBoxFor(model => model.Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.NullableLowerBound, new { @readonly = "readonly", @class = "form-control" })
-    @Html.TextBoxFor(model => model.Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.NullableUpperBound, new { @readonly = "readonly", @class = "form-control" })
+    @Html.DropDownListFor(model => model.Criteria.Common.Datetime2ColumnRange.PreDefinedDateTimeRange, Model.UISharedViewModel.PreDefinedDateTimeRangeList, new Dictionary<string, Object> { { "class", "form-control" } } )
+    @Html.TextBoxFor(model => model.Criteria.Common.Datetime2ColumnRange.NullableLowerBound, new { @readonly = "readonly", @class = "form-control" })
+    @Html.TextBoxFor(model => model.Criteria.Common.Datetime2ColumnRange.NullableUpperBound, new { @readonly = "readonly", @class = "form-control" })
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareSmalldatetimeColumnCommonOftOfCommon</label>
-    @Html.DropDownListFor(model => model.Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.PreDefinedDateTimeRange, Model.UISharedViewModel.PreDefinedDateTimeRangeList, new Dictionary<string, Object> { { "class", "form-control" } } )
-    @Html.TextBoxFor(model => model.Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.NullableLowerBound, new { @readonly = "readonly", @class = "form-control" })
-    @Html.TextBoxFor(model => model.Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.NullableUpperBound, new { @readonly = "readonly", @class = "form-control" })
+    @Html.DropDownListFor(model => model.Criteria.Common.SmalldatetimeColumnRange.PreDefinedDateTimeRange, Model.UISharedViewModel.PreDefinedDateTimeRangeList, new Dictionary<string, Object> { { "class", "form-control" } } )
+    @Html.TextBoxFor(model => model.Criteria.Common.SmalldatetimeColumnRange.NullableLowerBound, new { @readonly = "readonly", @class = "form-control" })
+    @Html.TextBoxFor(model => model.Criteria.Common.SmalldatetimeColumnRange.NullableUpperBound, new { @readonly = "readonly", @class = "form-control" })
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareDateColumnCommonOftOfCommon</label>
-    @Html.DropDownListFor(model => model.Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.PreDefinedDateTimeRange, Model.UISharedViewModel.PreDefinedDateTimeRangeList, new Dictionary<string, Object> { { "class", "form-control" } } )
-    @Html.TextBoxFor(model => model.Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.NullableLowerBound, new { @readonly = "readonly", @class = "form-control" })
-    @Html.TextBoxFor(model => model.Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.NullableUpperBound, new { @readonly = "readonly", @class = "form-control" })
+    @Html.DropDownListFor(model => model.Criteria.Common.DateColumnRange.PreDefinedDateTimeRange, Model.UISharedViewModel.PreDefinedDateTimeRangeList, new Dictionary<string, Object> { { "class", "form-control" } } )
+    @Html.TextBoxFor(model => model.Criteria.Common.DateColumnRange.NullableLowerBound, new { @readonly = "readonly", @class = "form-control" })
+    @Html.TextBoxFor(model => model.Criteria.Common.DateColumnRange.NullableUpperBound, new { @readonly = "readonly", @class = "form-control" })
 <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon</label>
-    @Html.TextBoxFor(model=>model.Criteria.OrganizationQueryCriteriaCommon.NameCommonOft.NullableValueToBeContained, new { @class = "form-control" })
+    @Html.TextBoxFor(model=>model.Criteria.Common.Name.NullableValueToBeContained, new { @class = "form-control" })
 </div>
 <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareCharColumnCommonOftOfCommon</label>
-    @Html.TextBoxFor(model=>model.Criteria.OrganizationQueryCriteriaCommon.CharColumnCommonOft.NullableValueToBeContained, new { @class = "form-control" })
+    @Html.TextBoxFor(model=>model.Criteria.Common.CharColumn.NullableValueToBeContained, new { @class = "form-control" })
 </div>
 <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareVarcharColumnCommonOftOfCommon</label>
-    @Html.TextBoxFor(model=>model.Criteria.OrganizationQueryCriteriaCommon.VarcharColumnCommonOft.NullableValueToBeContained, new { @class = "form-control" })
+    @Html.TextBoxFor(model=>model.Criteria.Common.VarcharColumn.NullableValueToBeContained, new { @class = "form-control" })
 </div>
 <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareTextColumnCommonOftOfCommon</label>
-    @Html.TextBoxFor(model=>model.Criteria.OrganizationQueryCriteriaCommon.TextColumnCommonOft.NullableValueToBeContained, new { @class = "form-control" })
+    @Html.TextBoxFor(model=>model.Criteria.Common.TextColumn.NullableValueToBeContained, new { @class = "form-control" })
 </div>
 <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareNcharColumnCommonOftOfCommon</label>
-    @Html.TextBoxFor(model=>model.Criteria.OrganizationQueryCriteriaCommon.NcharColumnCommonOft.NullableValueToBeContained, new { @class = "form-control" })
+    @Html.TextBoxFor(model=>model.Criteria.Common.NcharColumn.NullableValueToBeContained, new { @class = "form-control" })
 </div>
 <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareNvarcharColumnCommonOftOfCommon</label>
-    @Html.TextBoxFor(model=>model.Criteria.OrganizationQueryCriteriaCommon.NvarcharColumnCommonOft.NullableValueToBeContained, new { @class = "form-control" })
+    @Html.TextBoxFor(model=>model.Criteria.Common.NvarcharColumn.NullableValueToBeContained, new { @class = "form-control" })
 </div>
 <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.IsToCompare_ID_CheckBox_Search_isToCompareNtextColumnCommonOftOfCommon</label>
-    @Html.TextBoxFor(model=>model.Criteria.OrganizationQueryCriteriaCommon.NtextColumnCommonOft.NullableValueToBeContained, new { @class = "form-control" })
+    @Html.TextBoxFor(model=>model.Criteria.Common.NtextColumn.NullableValueToBeContained, new { @class = "form-control" })
 </div>
                     <div class="form-group form-inline">
                         <label class="control-label">Items per page : </label>
@@ -216,7 +216,7 @@
 </td>
 <td class="hidden-sm">@Html.DisplayFor(model => model.Result[i].Id)</td>
 <td>@Html.DisplayFor(model => model.Result[i].CreatedDateTime)</td>
-<td>@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].Organization_2_UniqueidentifierColumn, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].Organization_2_UniqueIdentifier, isToCompareIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].ParentId }, null)</td>
+<td>@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].ParentId, uniqueIdentifier = Model.Result[i].Organization_2_UniqueIdentifier, uniqueidentifierColumn = Model.Result[i].Organization_2_UniqueidentifierColumn }, null)</td>
 <td>@Html.DisplayFor(model => model.Result[i].IsSystemBuiltIn)</td>
 <td class="hidden-xs">@Html.DisplayFor(model => model.Result[i].BitColumn)</td>
 <td class="hidden-xs">@Html.DisplayFor(model => model.Result[i].Name)</td>
@@ -272,11 +272,11 @@
 @section Scripts {
    <script type="text/javascript">
         $(document).ready($(function() {
-            $('select[name="Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.PreDefinedDateTimeRange"]').change(function () {
-                preDefinedDateTimeRangeChanged('Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft');
+            $('select[name="Criteria.Common.CreatedDateTimeRange.PreDefinedDateTimeRange"]').change(function () {
+                preDefinedDateTimeRangeChanged('Criteria.Common.CreatedDateTimeRange');
             });
-            preDefinedDateTimeRangeChanged('Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft');
-            $('input[name="Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.NullableLowerBound"]').datepicker({
+            preDefinedDateTimeRangeChanged('Criteria.Common.CreatedDateTimeRange');
+            $('input[name="Criteria.Common.CreatedDateTimeRange.NullableLowerBound"]').datepicker({
                 autoclose: true,
                 beforeShowDay: $.noop,
                 calendarWeeks: false,
@@ -296,7 +296,7 @@
                 todayHighlight: false,
                 weekStart: 0
             });
-            $('input[name="Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.NullableUpperBound"]').datepicker({
+            $('input[name="Criteria.Common.CreatedDateTimeRange.NullableUpperBound"]').datepicker({
                 autoclose: true,
                 beforeShowDay: $.noop,
                 calendarWeeks: false,
@@ -316,13 +316,13 @@
                 todayHighlight: false,
                 weekStart: 0
             });
-            $('input[name="Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.NullableLowerBound"]').prop('disabled', true);
-            $('input[name="Criteria.OrganizationQueryCriteriaCommon.CreatedDateTimeCommonOft.NullableUpperBound"]').prop('disabled', true);
-            $('select[name="Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.PreDefinedDateTimeRange"]').change(function () {
-                preDefinedDateTimeRangeChanged('Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft');
+            $('input[name="Criteria.Common.CreatedDateTimeRange.NullableLowerBound"]').prop('disabled', true);
+            $('input[name="Criteria.Common.CreatedDateTimeRange.NullableUpperBound"]').prop('disabled', true);
+            $('select[name="Criteria.Common.DatetimeColumnRange.PreDefinedDateTimeRange"]').change(function () {
+                preDefinedDateTimeRangeChanged('Criteria.Common.DatetimeColumnRange');
             });
-            preDefinedDateTimeRangeChanged('Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft');
-            $('input[name="Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.NullableLowerBound"]').datepicker({
+            preDefinedDateTimeRangeChanged('Criteria.Common.DatetimeColumnRange');
+            $('input[name="Criteria.Common.DatetimeColumnRange.NullableLowerBound"]').datepicker({
                 autoclose: true,
                 beforeShowDay: $.noop,
                 calendarWeeks: false,
@@ -342,7 +342,7 @@
                 todayHighlight: false,
                 weekStart: 0
             });
-            $('input[name="Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.NullableUpperBound"]').datepicker({
+            $('input[name="Criteria.Common.DatetimeColumnRange.NullableUpperBound"]').datepicker({
                 autoclose: true,
                 beforeShowDay: $.noop,
                 calendarWeeks: false,
@@ -362,13 +362,13 @@
                 todayHighlight: false,
                 weekStart: 0
             });
-            $('input[name="Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.NullableLowerBound"]').prop('disabled', true);
-            $('input[name="Criteria.OrganizationQueryCriteriaCommon.DatetimeColumnCommonOft.NullableUpperBound"]').prop('disabled', true);
-            $('select[name="Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.PreDefinedDateTimeRange"]').change(function () {
-                preDefinedDateTimeRangeChanged('Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft');
+            $('input[name="Criteria.Common.DatetimeColumnRange.NullableLowerBound"]').prop('disabled', true);
+            $('input[name="Criteria.Common.DatetimeColumnRange.NullableUpperBound"]').prop('disabled', true);
+            $('select[name="Criteria.Common.Datetime2ColumnRange.PreDefinedDateTimeRange"]').change(function () {
+                preDefinedDateTimeRangeChanged('Criteria.Common.Datetime2ColumnRange');
             });
-            preDefinedDateTimeRangeChanged('Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft');
-            $('input[name="Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.NullableLowerBound"]').datepicker({
+            preDefinedDateTimeRangeChanged('Criteria.Common.Datetime2ColumnRange');
+            $('input[name="Criteria.Common.Datetime2ColumnRange.NullableLowerBound"]').datepicker({
                 autoclose: true,
                 beforeShowDay: $.noop,
                 calendarWeeks: false,
@@ -388,7 +388,7 @@
                 todayHighlight: false,
                 weekStart: 0
             });
-            $('input[name="Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.NullableUpperBound"]').datepicker({
+            $('input[name="Criteria.Common.Datetime2ColumnRange.NullableUpperBound"]').datepicker({
                 autoclose: true,
                 beforeShowDay: $.noop,
                 calendarWeeks: false,
@@ -408,13 +408,13 @@
                 todayHighlight: false,
                 weekStart: 0
             });
-            $('input[name="Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.NullableLowerBound"]').prop('disabled', true);
-            $('input[name="Criteria.OrganizationQueryCriteriaCommon.Datetime2ColumnCommonOft.NullableUpperBound"]').prop('disabled', true);
-            $('select[name="Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.PreDefinedDateTimeRange"]').change(function () {
-                preDefinedDateTimeRangeChanged('Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft');
+            $('input[name="Criteria.Common.Datetime2ColumnRange.NullableLowerBound"]').prop('disabled', true);
+            $('input[name="Criteria.Common.Datetime2ColumnRange.NullableUpperBound"]').prop('disabled', true);
+            $('select[name="Criteria.Common.SmalldatetimeColumnRange.PreDefinedDateTimeRange"]').change(function () {
+                preDefinedDateTimeRangeChanged('Criteria.Common.SmalldatetimeColumnRange');
             });
-            preDefinedDateTimeRangeChanged('Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft');
-            $('input[name="Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.NullableLowerBound"]').datepicker({
+            preDefinedDateTimeRangeChanged('Criteria.Common.SmalldatetimeColumnRange');
+            $('input[name="Criteria.Common.SmalldatetimeColumnRange.NullableLowerBound"]').datepicker({
                 autoclose: true,
                 beforeShowDay: $.noop,
                 calendarWeeks: false,
@@ -434,7 +434,7 @@
                 todayHighlight: false,
                 weekStart: 0
             });
-            $('input[name="Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.NullableUpperBound"]').datepicker({
+            $('input[name="Criteria.Common.SmalldatetimeColumnRange.NullableUpperBound"]').datepicker({
                 autoclose: true,
                 beforeShowDay: $.noop,
                 calendarWeeks: false,
@@ -454,13 +454,13 @@
                 todayHighlight: false,
                 weekStart: 0
             });
-            $('input[name="Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.NullableLowerBound"]').prop('disabled', true);
-            $('input[name="Criteria.OrganizationQueryCriteriaCommon.SmalldatetimeColumnCommonOft.NullableUpperBound"]').prop('disabled', true);
-            $('select[name="Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.PreDefinedDateTimeRange"]').change(function () {
-                preDefinedDateTimeRangeChanged('Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft');
+            $('input[name="Criteria.Common.SmalldatetimeColumnRange.NullableLowerBound"]').prop('disabled', true);
+            $('input[name="Criteria.Common.SmalldatetimeColumnRange.NullableUpperBound"]').prop('disabled', true);
+            $('select[name="Criteria.Common.DateColumnRange.PreDefinedDateTimeRange"]').change(function () {
+                preDefinedDateTimeRangeChanged('Criteria.Common.DateColumnRange');
             });
-            preDefinedDateTimeRangeChanged('Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft');
-            $('input[name="Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.NullableLowerBound"]').datepicker({
+            preDefinedDateTimeRangeChanged('Criteria.Common.DateColumnRange');
+            $('input[name="Criteria.Common.DateColumnRange.NullableLowerBound"]').datepicker({
                 autoclose: true,
                 beforeShowDay: $.noop,
                 calendarWeeks: false,
@@ -480,7 +480,7 @@
                 todayHighlight: false,
                 weekStart: 0
             });
-            $('input[name="Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.NullableUpperBound"]').datepicker({
+            $('input[name="Criteria.Common.DateColumnRange.NullableUpperBound"]').datepicker({
                 autoclose: true,
                 beforeShowDay: $.noop,
                 calendarWeeks: false,
@@ -500,8 +500,8 @@
                 todayHighlight: false,
                 weekStart: 0
             });
-            $('input[name="Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.NullableLowerBound"]').prop('disabled', true);
-            $('input[name="Criteria.OrganizationQueryCriteriaCommon.DateColumnCommonOft.NullableUpperBound"]').prop('disabled', true);
+            $('input[name="Criteria.Common.DateColumnRange.NullableLowerBound"]').prop('disabled', true);
+            $('input[name="Criteria.Common.DateColumnRange.NullableUpperBound"]').prop('disabled', true);
         }));
     </script>
 }

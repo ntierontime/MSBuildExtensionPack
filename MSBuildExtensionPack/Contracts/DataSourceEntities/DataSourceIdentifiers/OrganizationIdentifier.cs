@@ -102,19 +102,5 @@ System.Int64 id)
 
         #endregion Method of OrganizationIdentifier GetAClone()
     }
-
-    /// <summary>
-    ///  a property defined when <see cref="WithIdentifierContractOrganization"/> is used in other classes.
-    /// </summary>
-    public partial interface WithIdentifierContractOrganization
-    {
-        /// <summary>
-        /// Gets or sets the OrganizationIdentifier
-        /// </summary>
-        /// <value>
-        /// The OrganizationIdentifier
-        /// </value>
-        OrganizationIdentifier OrganizationIdentifier { get; set; }
-    }
 }
 

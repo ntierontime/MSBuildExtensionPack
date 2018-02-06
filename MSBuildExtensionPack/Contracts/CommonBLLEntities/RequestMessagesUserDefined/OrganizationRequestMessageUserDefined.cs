@@ -115,28 +115,28 @@ namespace MSBuildExtensionPack.CommonBLLEntities
     }
 
     /// <summary>
-    /// BusinessLogicLayerRequestMessageUserDefined, with Key=ByFKOnly
+    /// BusinessLogicLayerRequestMessageUserDefined, with Key=FKOnly
     /// </summary>
-    public partial class OrganizationRequestMessageUserDefinedOfByFKOnly
-        : Framework.CommonBLLEntities.BusinessLogicLayerRequestMessageBase<OrganizationChainedQueryCriteriaByFKOnly>
+    public partial class OrganizationRequestMessageUserDefinedOfFKOnly
+        : Framework.CommonBLLEntities.BusinessLogicLayerRequestMessageBase<OrganizationChainedQueryCriteriaFKOnly>
     {
         #region constructors
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfByFKOnly"/> class.
+        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfFKOnly"/> class.
         /// </summary>
-        public OrganizationRequestMessageUserDefinedOfByFKOnly()
+        public OrganizationRequestMessageUserDefinedOfFKOnly()
             : base()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfByFKOnly"/> class.
+        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfFKOnly"/> class.
         /// </summary>
         /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
         /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
         /// <param name="businessLogicLayerRequestID">The business logic layer request ID.</param>
-        public OrganizationRequestMessageUserDefinedOfByFKOnly(
+        public OrganizationRequestMessageUserDefinedOfFKOnly(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID)
@@ -145,7 +145,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfByFKOnly"/> class.
+        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfFKOnly"/> class.
         /// </summary>
         /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
         /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
@@ -153,7 +153,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
-        public OrganizationRequestMessageUserDefinedOfByFKOnly(
+        public OrganizationRequestMessageUserDefinedOfFKOnly(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID
@@ -169,28 +169,28 @@ namespace MSBuildExtensionPack.CommonBLLEntities
     }
 
     /// <summary>
-    /// BusinessLogicLayerRequestMessageUserDefined, with Key=ByIdentifier
+    /// BusinessLogicLayerRequestMessageUserDefined, with Key=Identifier
     /// </summary>
-    public partial class OrganizationRequestMessageUserDefinedOfByIdentifier
-        : Framework.CommonBLLEntities.BusinessLogicLayerRequestMessageBase<OrganizationChainedQueryCriteriaByIdentifier>
+    public partial class OrganizationRequestMessageUserDefinedOfIdentifier
+        : Framework.CommonBLLEntities.BusinessLogicLayerRequestMessageBase<OrganizationChainedQueryCriteriaIdentifier>
     {
         #region constructors
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfByIdentifier"/> class.
+        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfIdentifier"/> class.
         /// </summary>
-        public OrganizationRequestMessageUserDefinedOfByIdentifier()
+        public OrganizationRequestMessageUserDefinedOfIdentifier()
             : base()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfByIdentifier"/> class.
+        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfIdentifier"/> class.
         /// </summary>
         /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
         /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
         /// <param name="businessLogicLayerRequestID">The business logic layer request ID.</param>
-        public OrganizationRequestMessageUserDefinedOfByIdentifier(
+        public OrganizationRequestMessageUserDefinedOfIdentifier(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID)
@@ -199,7 +199,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfByIdentifier"/> class.
+        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfIdentifier"/> class.
         /// </summary>
         /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
         /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
@@ -207,7 +207,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
-        public OrganizationRequestMessageUserDefinedOfByIdentifier(
+        public OrganizationRequestMessageUserDefinedOfIdentifier(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID
@@ -223,28 +223,28 @@ namespace MSBuildExtensionPack.CommonBLLEntities
     }
 
     /// <summary>
-    /// BusinessLogicLayerRequestMessageUserDefined, with Key=UniqueConstraintOfUC_Organization_UniqueIdentifier
+    /// BusinessLogicLayerRequestMessageUserDefined, with Key=UniqueConstraintByUC_Organization_UniqueIdentifier
     /// </summary>
-    public partial class OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier
-        : Framework.CommonBLLEntities.BusinessLogicLayerRequestMessageBase<OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueIdentifier>
+    public partial class OrganizationRequestMessageUserDefinedOfUniqueConstraintByUC_Organization_UniqueIdentifier
+        : Framework.CommonBLLEntities.BusinessLogicLayerRequestMessageBase<OrganizationChainedQueryCriteriaUniqueConstraintByUC_Organization_UniqueIdentifier>
     {
         #region constructors
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier"/> class.
+        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfUniqueConstraintByUC_Organization_UniqueIdentifier"/> class.
         /// </summary>
-        public OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier()
+        public OrganizationRequestMessageUserDefinedOfUniqueConstraintByUC_Organization_UniqueIdentifier()
             : base()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier"/> class.
+        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfUniqueConstraintByUC_Organization_UniqueIdentifier"/> class.
         /// </summary>
         /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
         /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
         /// <param name="businessLogicLayerRequestID">The business logic layer request ID.</param>
-        public OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public OrganizationRequestMessageUserDefinedOfUniqueConstraintByUC_Organization_UniqueIdentifier(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID)
@@ -253,7 +253,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier"/> class.
+        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfUniqueConstraintByUC_Organization_UniqueIdentifier"/> class.
         /// </summary>
         /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
         /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
@@ -261,7 +261,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
-        public OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueIdentifier(
+        public OrganizationRequestMessageUserDefinedOfUniqueConstraintByUC_Organization_UniqueIdentifier(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID
@@ -277,28 +277,28 @@ namespace MSBuildExtensionPack.CommonBLLEntities
     }
 
     /// <summary>
-    /// BusinessLogicLayerRequestMessageUserDefined, with Key=UniqueConstraintOfUC_Organization_UniqueidentifierColumn
+    /// BusinessLogicLayerRequestMessageUserDefined, with Key=UniqueConstraintByUC_Organization_UniqueidentifierColumn
     /// </summary>
-    public partial class OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn
-        : Framework.CommonBLLEntities.BusinessLogicLayerRequestMessageBase<OrganizationChainedQueryCriteriaUniqueConstraintOfUC_Organization_UniqueidentifierColumn>
+    public partial class OrganizationRequestMessageUserDefinedOfUniqueConstraintByUC_Organization_UniqueidentifierColumn
+        : Framework.CommonBLLEntities.BusinessLogicLayerRequestMessageBase<OrganizationChainedQueryCriteriaUniqueConstraintByUC_Organization_UniqueidentifierColumn>
     {
         #region constructors
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn"/> class.
+        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfUniqueConstraintByUC_Organization_UniqueidentifierColumn"/> class.
         /// </summary>
-        public OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn()
+        public OrganizationRequestMessageUserDefinedOfUniqueConstraintByUC_Organization_UniqueidentifierColumn()
             : base()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn"/> class.
+        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfUniqueConstraintByUC_Organization_UniqueidentifierColumn"/> class.
         /// </summary>
         /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
         /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
         /// <param name="businessLogicLayerRequestID">The business logic layer request ID.</param>
-        public OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public OrganizationRequestMessageUserDefinedOfUniqueConstraintByUC_Organization_UniqueidentifierColumn(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID)
@@ -307,7 +307,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn"/> class.
+        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfUniqueConstraintByUC_Organization_UniqueidentifierColumn"/> class.
         /// </summary>
         /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
         /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
@@ -315,7 +315,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
-        public OrganizationRequestMessageUserDefinedOfUniqueConstraintOfUC_Organization_UniqueidentifierColumn(
+        public OrganizationRequestMessageUserDefinedOfUniqueConstraintByUC_Organization_UniqueidentifierColumn(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID
@@ -370,60 +370,6 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         public OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint(
-            Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
-            , string businessLogicLayerRequestTypeKey
-            , string businessLogicLayerRequestID
-            , int currentIndex
-            , int pageSize
-            , string queryOrderByExpression
-            )
-            : base(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID, currentIndex, pageSize, queryOrderByExpression)
-        {
-        }
-
-        #endregion constructors
-    }
-
-    /// <summary>
-    /// BusinessLogicLayerRequestMessageUserDefined, with Key=UniqueConstraintsWithCommon
-    /// </summary>
-    public partial class OrganizationRequestMessageUserDefinedOfUniqueConstraintsWithCommon
-        : Framework.CommonBLLEntities.BusinessLogicLayerRequestMessageBase<OrganizationChainedQueryCriteriaUniqueConstraintsWithCommon>
-    {
-        #region constructors
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfUniqueConstraintsWithCommon"/> class.
-        /// </summary>
-        public OrganizationRequestMessageUserDefinedOfUniqueConstraintsWithCommon()
-            : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfUniqueConstraintsWithCommon"/> class.
-        /// </summary>
-        /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
-        /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
-        /// <param name="businessLogicLayerRequestID">The business logic layer request ID.</param>
-        public OrganizationRequestMessageUserDefinedOfUniqueConstraintsWithCommon(
-            Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
-            , string businessLogicLayerRequestTypeKey
-            , string businessLogicLayerRequestID)
-            : base(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="OrganizationRequestMessageUserDefinedOfUniqueConstraintsWithCommon"/> class.
-        /// </summary>
-        /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
-        /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
-        /// <param name="businessLogicLayerRequestID">The business logic layer request ID.</param>
-        /// <param name="currentIndex">Index of the current.</param>
-        /// <param name="pageSize">Size of the page.</param>
-        /// <param name="queryOrderByExpression">The query order by expression.</param>
-        public OrganizationRequestMessageUserDefinedOfUniqueConstraintsWithCommon(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID

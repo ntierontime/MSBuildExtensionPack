@@ -52,31 +52,31 @@
                 <div class="panel-body">
  <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon</label>
-    @Html.DropDownListFor(model => model.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_2.NullableValueToCompare, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Organization, MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" }, { "onchange", "FetchOrganization_1();" } })
+    @Html.DropDownListFor(model => model.Criteria.Common.Organization_2Id.NullableValueToCompare, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Organization, MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" }, { "onchange", "FetchOrganization_1();" } })
 </div>
 <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_1OfCommon</label>
-    @Html.DropDownListFor(model => model.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_1.NullableValueToCompare, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" }, { "onchange", "FetchSolution_1();" }, { "data-bind", string.Format(@"options:selectListOfvalueToCompareIdCommonOfOrganization_1OfCommon,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedvalueToCompareIdCommonOfOrganization_1OfCommon", MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____) } })
+    @Html.DropDownListFor(model => model.Criteria.Common.Organization_1Id.NullableValueToCompare, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" }, { "onchange", "FetchSolution_1();" }, { "data-bind", string.Format(@"options:selectListOfOrganization_1,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedvalueOrganization_1", MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____) } })
 </div>
 <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon</label>
-    @Html.DropDownListFor(model => model.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.NullableValueToCompare, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Please_select_Solution____, new Dictionary<string,Object>{ { "class", "form-control" }, { "onchange", "FetchBuild_1();" }, { "data-bind", string.Format(@"options:selectListOfvalueToCompareIdCommonOfSolution_1OfCommon,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedvalueToCompareIdCommonOfSolution_1OfCommon", MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Please_select_Solution____) } })
+    @Html.DropDownListFor(model => model.Criteria.Common.Solution_1Id.NullableValueToCompare, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Please_select_Solution____, new Dictionary<string,Object>{ { "class", "form-control" }, { "onchange", "FetchBuild_1();" }, { "data-bind", string.Format(@"options:selectListOfSolution_1,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedvalueSolution_1", MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Please_select_Solution____) } })
 </div>
 <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon</label>
-    @Html.DropDownListFor(model => model.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.NullableValueToCompare, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Please_select_Build____, new Dictionary<string,Object>{ { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfvalueToCompareIdCommonOfBuild_1OfCommon,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedvalueToCompareIdCommonOfBuild_1OfCommon", MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Please_select_Build____) } })
+    @Html.DropDownListFor(model => model.Criteria.Common.BuildId.NullableValueToCompare, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Please_select_Build____, new Dictionary<string,Object>{ { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfBuild_1,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedvalueBuild_1", MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Please_select_Build____) } })
 </div>
 <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuildEventCode_1OfCommon</label>
-    @Html.DropDownListFor(model => model.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuildEventCode_1.NullableValueToCompare, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_BuildEventCode, MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.Please_select_BuildEventCode____, new Dictionary<string,Object>{ { "class", "form-control" } })
+    @Html.DropDownListFor(model => model.Criteria.Common.BuildEventCodeId.NullableValueToCompare, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_BuildEventCode, MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.Please_select_BuildEventCode____, new Dictionary<string,Object>{ { "class", "form-control" } })
 </div>
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareEventTimeCommonOftOfCommon</label>
-    @Html.DropDownListFor(model => model.Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.PreDefinedDateTimeRange, Model.UISharedViewModel.PreDefinedDateTimeRangeList, new Dictionary<string, Object> { { "class", "form-control" } } )
-    @Html.TextBoxFor(model => model.Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.NullableLowerBound, new { @readonly = "readonly", @class = "form-control" })
-    @Html.TextBoxFor(model => model.Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.NullableUpperBound, new { @readonly = "readonly", @class = "form-control" })
+    @Html.DropDownListFor(model => model.Criteria.Common.EventTimeRange.PreDefinedDateTimeRange, Model.UISharedViewModel.PreDefinedDateTimeRangeList, new Dictionary<string, Object> { { "class", "form-control" } } )
+    @Html.TextBoxFor(model => model.Criteria.Common.EventTimeRange.NullableLowerBound, new { @readonly = "readonly", @class = "form-control" })
+    @Html.TextBoxFor(model => model.Criteria.Common.EventTimeRange.NullableUpperBound, new { @readonly = "readonly", @class = "form-control" })
 <div class="form-group">
     <label class="control-label">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareMessageCommonOftOfCommon</label>
-    @Html.TextBoxFor(model=>model.Criteria.BuildLogQueryCriteriaCommon.MessageCommonOft.NullableValueToBeContained, new { @class = "form-control" })
+    @Html.TextBoxFor(model=>model.Criteria.Common.Message.NullableValueToBeContained, new { @class = "form-control" })
 </div>
                     <div class="form-group form-inline">
                         <label class="control-label">Items per page : </label>
@@ -147,12 +147,12 @@
             <tr>
 <td><div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPEntityRelatedOfBuildLog, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Result[i].Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetails">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPEntityRelatedOfBuildLog, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdIdentifierOftOfIdentifier=true, valueToCompareIdIdentifierOftOfIdentifier = Model.Result[i].Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetails">
         <span class="glyphicon glyphicon-briefcase"></span>
     </a>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Edit, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Result[i].Id })" class="btn btn-default" role="button" type="button" name="EditToolBarRightInList" title="@Framework.Resx.UIStringResource.Edit">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Edit, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdIdentifierOftOfIdentifier=true, valueToCompareIdIdentifierOftOfIdentifier = Model.Result[i].Id })" class="btn btn-default" role="button" type="button" name="EditToolBarRightInList" title="@Framework.Resx.UIStringResource.Edit">
         <span class="glyphicon glyphicon-edit"></span>
     </a>
 </div>
@@ -160,11 +160,11 @@
 </td>
 <td class="hidden-sm">@Html.DisplayFor(model => model.Result[i].Id)</td>
 <td>@Html.DisplayFor(model => model.Result[i].EventTime)</td>
-<td>@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].Organization_2_UniqueidentifierColumn, isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].Organization_2Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].Organization_2_UniqueIdentifier }, null)</td>
-<td>@Html.ActionLink(Model.Result[i].Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].Organization_1_UniqueidentifierColumn, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].Organization_1_UniqueIdentifier, isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].Organization_1Id }, null)</td>
-<td class="hidden-xs">@Html.ActionLink(Model.Result[i].Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Result[i].Solution_1Id }, null)</td>
-<td class="hidden-xs">@Html.ActionLink(Model.Result[i].Build_1_Name, UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareByIdentifierOftOfByIdentifier=true, valueToCompareByIdentifierOftOfByIdentifier = Model.Result[i].BuildId }, null)</td>
-<td class="hidden-sm">@Html.ActionLink(Model.Result[i].BuildEventCode_1_Name, UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareByIdentifierOftOfByIdentifier=true, valueToCompareByIdentifierOftOfByIdentifier = Model.Result[i].BuildEventCodeId }, null)</td>
+<td>@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].Organization_2Id, uniqueIdentifier = Model.Result[i].Organization_2_UniqueIdentifier, uniqueidentifierColumn = Model.Result[i].Organization_2_UniqueidentifierColumn }, null)</td>
+<td>@Html.ActionLink(Model.Result[i].Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].Organization_1Id, uniqueIdentifier = Model.Result[i].Organization_1_UniqueIdentifier, uniqueidentifierColumn = Model.Result[i].Organization_1_UniqueidentifierColumn }, null)</td>
+<td class="hidden-xs">@Html.ActionLink(Model.Result[i].Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { id = Model.Result[i].Solution_1Id }, null)</td>
+<td class="hidden-xs">@Html.ActionLink(Model.Result[i].Build_1_Name, UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { id = Model.Result[i].BuildId }, null)</td>
+<td class="hidden-sm">@Html.ActionLink(Model.Result[i].BuildEventCode_1_Name, UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { id = Model.Result[i].BuildEventCodeId }, null)</td>
 <td class="hidden-sm">@Html.DisplayFor(model => model.Result[i].Message)</td>
             </tr>
         }
@@ -192,11 +192,11 @@
 @section Scripts {
    <script type="text/javascript">
         $(document).ready($(function() {
-            $('select[name="Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.PreDefinedDateTimeRange"]').change(function () {
-                preDefinedDateTimeRangeChanged('Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft');
+            $('select[name="Criteria.Common.EventTimeRange.PreDefinedDateTimeRange"]').change(function () {
+                preDefinedDateTimeRangeChanged('Criteria.Common.EventTimeRange');
             });
-            preDefinedDateTimeRangeChanged('Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft');
-            $('input[name="Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.NullableLowerBound"]').datepicker({
+            preDefinedDateTimeRangeChanged('Criteria.Common.EventTimeRange');
+            $('input[name="Criteria.Common.EventTimeRange.NullableLowerBound"]').datepicker({
                 autoclose: true,
                 beforeShowDay: $.noop,
                 calendarWeeks: false,
@@ -216,7 +216,7 @@
                 todayHighlight: false,
                 weekStart: 0
             });
-            $('input[name="Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.NullableUpperBound"]').datepicker({
+            $('input[name="Criteria.Common.EventTimeRange.NullableUpperBound"]').datepicker({
                 autoclose: true,
                 beforeShowDay: $.noop,
                 calendarWeeks: false,
@@ -236,26 +236,25 @@
                 todayHighlight: false,
                 weekStart: 0
             });
-            $('input[name="Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.NullableLowerBound"]').prop('disabled', true);
-            $('input[name="Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.NullableUpperBound"]').prop('disabled', true);
+            $('input[name="Criteria.Common.EventTimeRange.NullableLowerBound"]').prop('disabled', true);
+            $('input[name="Criteria.Common.EventTimeRange.NullableUpperBound"]').prop('disabled', true);
         }));
         function FetchOrganization_1() {
-            var url = "/api/OrganizationApi/GetCollectionOfNameValuePairOfByFKOnly";
+            var url = "/api/OrganizationApi/GetCollectionOfNameValuePairByFKOnly";
             try {
                 var params = BuildCriteriaForFetchOrganization_1();
                 $.getJSON(url, params, function (data) {
-                    objVM.selectListOfvalueToCompareIdCommonOfOrganization_1OfCommon(data);
-                    objVM.selectedvalueToCompareIdCommonOfOrganization_1OfCommon(@Model.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_1.ValueToCompare);
+                    objVM.selectListOfOrganization_1(data);
+                    objVM.selectedOrganization_1('@Model.Criteria.Common.Organization_1Id.ValueToCompare');
                 });
             }
             catch (e) {
             }
         }
         function BuildCriteriaForFetchOrganization_1() {
-            var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $('select[name="Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_2.NullableValueToCompare"]').val();
+            var selectedvalueOrganization_2Id = $('select[name="Criteria.Common.Organization_2Id.NullableValueToCompare"]').val();
             var params = {
-                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: true,
-                valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly,
+                parentId: selectedvalueOrganization_2Id,
                 currentIndex: -1,
                 pageSize: -1,
                 queryOrderByExpression: null
@@ -263,25 +262,23 @@
             return params;
         }
         function FetchSolution_1() {
-            var url = "/api/SolutionApi/GetCollectionOfNameValuePairOfByFKOnly";
+            var url = "/api/SolutionApi/GetCollectionOfNameValuePairByFKOnly";
             try {
                 var params = BuildCriteriaForFetchSolution_1();
                 $.getJSON(url, params, function (data) {
-                    objVM.selectListOfvalueToCompareIdCommonOfSolution_1OfCommon(data);
-                    objVM.selectedvalueToCompareIdCommonOfSolution_1OfCommon(@Model.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.ValueToCompare);
+                    objVM.selectListOfSolution_1(data);
+                    objVM.selectedSolution_1('@Model.Criteria.Common.Solution_1Id.ValueToCompare');
                 });
             }
             catch (e) {
             }
         }
         function BuildCriteriaForFetchSolution_1() {
-            var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $('select[name="Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_2.NullableValueToCompare"]').val();
-            var selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly = $('select[name="Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_1.NullableValueToCompare"]').val();
+            var selectedvalueOrganization_2Id = $('select[name="Criteria.Common.Organization_2Id.NullableValueToCompare"]').val();
+            var selectedvalueOrganization_1Id = $('select[name="Criteria.Common.Organization_1Id.NullableValueToCompare"]').val();
             var params = {
-                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: true,
-                valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly,
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly: true,
-                valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly,
+                organization_2Id: selectedvalueOrganization_2Id,
+                organizationId: selectedvalueOrganization_1Id,
                 currentIndex: -1,
                 pageSize: -1,
                 queryOrderByExpression: null
@@ -289,28 +286,25 @@
             return params;
         }
         function FetchBuild_1() {
-            var url = "/api/BuildApi/GetCollectionOfNameValuePairOfByFKOnly";
+            var url = "/api/BuildApi/GetCollectionOfNameValuePairByFKOnly";
             try {
                 var params = BuildCriteriaForFetchBuild_1();
                 $.getJSON(url, params, function (data) {
-                    objVM.selectListOfvalueToCompareIdCommonOfBuild_1OfCommon(data);
-                    objVM.selectedvalueToCompareIdCommonOfBuild_1OfCommon(@Model.Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.ValueToCompare);
+                    objVM.selectListOfBuild_1(data);
+                    objVM.selectedBuild_1('@Model.Criteria.Common.BuildId.ValueToCompare');
                 });
             }
             catch (e) {
             }
         }
         function BuildCriteriaForFetchBuild_1() {
-            var selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly = $('select[name="Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_2.NullableValueToCompare"]').val();
-            var selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly = $('select[name="Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_1.NullableValueToCompare"]').val();
-            var selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly = $('select[name="Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.NullableValueToCompare"]').val();
+            var selectedvalueOrganization_2Id = $('select[name="Criteria.Common.Organization_2Id.NullableValueToCompare"]').val();
+            var selectedvalueOrganization_1Id = $('select[name="Criteria.Common.Organization_1Id.NullableValueToCompare"]').val();
+            var selectedvalueSolution_1Id = $('select[name="Criteria.Common.Solution_1Id.NullableValueToCompare"]').val();
             var params = {
-                isToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: true,
-                valueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_2OfByFKOnly,
-                isToCompareIdByFKOnlyOfOrganization_1OfByFKOnly: true,
-                valueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfOrganization_1OfByFKOnly,
-                isToCompareIdByFKOnlyOfSolution_1OfByFKOnly: true,
-                valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly,
+                organization_2Id: selectedvalueOrganization_2Id,
+                organization_1Id: selectedvalueOrganization_1Id,
+                solutionId: selectedvalueSolution_1Id,
                 currentIndex: -1,
                 pageSize: -1,
                 queryOrderByExpression: null
@@ -320,15 +314,15 @@
         //cascaded dropdownlist by knockoutjs
         function CascadingDDLViewModel() {
             var self = this;
-            self.selectListOfvalueToCompareIdCommonOfOrganization_1OfCommon = ko.observableArray([]);
-            self.selectedvalueToCompareIdCommonOfOrganization_1OfCommon = ko.observable();
-            self.selectListOfvalueToCompareIdCommonOfSolution_1OfCommon = ko.observableArray([]);
-            self.selectedvalueToCompareIdCommonOfSolution_1OfCommon = ko.observable();
-            self.selectListOfvalueToCompareIdCommonOfBuild_1OfCommon = ko.observableArray([]);
-            self.selectedvalueToCompareIdCommonOfBuild_1OfCommon = ko.observable();
+            self.selectListOfOrganization_1 = ko.observableArray([]);
+            self.selectedvalueOrganization_1 = ko.observable();
+            self.selectListOfSolution_1 = ko.observableArray([]);
+            self.selectedvalueSolution_1 = ko.observable();
+            self.selectListOfBuild_1 = ko.observableArray([]);
+            self.selectedvalueBuild_1 = ko.observable();
         }
         var objVM = new CascadingDDLViewModel();
         ko.applyBindings(objVM);
-        $('select[name="Criteria.BuildLogQueryCriteriaCommon.IdCommonOfOrganization_2.NullableValueToCompare"]').change();
+        $('select[name="Criteria.Common.Organization_2Id.NullableValueToCompare"]').change();
     </script>
 }
