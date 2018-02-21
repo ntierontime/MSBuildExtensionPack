@@ -82,28 +82,28 @@ namespace MSBuildExtensionPack.WcfClientBLL
 #if NETFX_CORE && DEBUG
 //  for WinRT/NETFX_CORE debug, because no app.config file
 
-        public const string Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynBuild = "http://localhost:10805/WcfMarkupBuild.svc";
+        public const string Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynBuild = "http://localhost:10801/WcfMarkupBuild.svc";
 
-        public const string Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynBuildEventCode = "http://localhost:10805/WcfMarkupBuildEventCode.svc";
+        public const string Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynBuildEventCode = "http://localhost:10801/WcfMarkupBuildEventCode.svc";
 
-        public const string Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynBuildLog = "http://localhost:10805/WcfMarkupBuildLog.svc";
+        public const string Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynBuildLog = "http://localhost:10801/WcfMarkupBuildLog.svc";
 
-        public const string Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynOrganization = "http://localhost:10805/WcfMarkupOrganization.svc";
+        public const string Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynOrganization = "http://localhost:10801/WcfMarkupOrganization.svc";
 
-        public const string Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynSolution = "http://localhost:10805/WcfMarkupSolution.svc";
+        public const string Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynSolution = "http://localhost:10801/WcfMarkupSolution.svc";
 
 #elif NETFX_CORE
 // for WinRT/NETFX_CORE release, because no app.config file
 
-        public const string Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynBuild = "http://localhost:10805/WcfMarkupBuild.svc";
+        public const string Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynBuild = "http://localhost:10801/WcfMarkupBuild.svc";
 
-        public const string Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynBuildEventCode = "http://localhost:10805/WcfMarkupBuildEventCode.svc";
+        public const string Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynBuildEventCode = "http://localhost:10801/WcfMarkupBuildEventCode.svc";
 
-        public const string Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynBuildLog = "http://localhost:10805/WcfMarkupBuildLog.svc";
+        public const string Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynBuildLog = "http://localhost:10801/WcfMarkupBuildLog.svc";
 
-        public const string Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynOrganization = "http://localhost:10805/WcfMarkupOrganization.svc";
+        public const string Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynOrganization = "http://localhost:10801/WcfMarkupOrganization.svc";
 
-        public const string Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynSolution = "http://localhost:10805/WcfMarkupSolution.svc";
+        public const string Url_MSBuildExtensionPack_WcfClientBLL_WcfClientEntityAsynSolution = "http://localhost:10801/WcfMarkupSolution.svc";
 
 #endif
 

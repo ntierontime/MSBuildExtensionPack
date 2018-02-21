@@ -42,6 +42,8 @@ namespace Framework
         /// </summary>
         Result,
 
+        Close,
+
         Home,
     }
 }

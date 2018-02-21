@@ -19,25 +19,25 @@ namespace MSBuildExtensionPack.XamarinForms.Pages.Build
         {
             InitializeComponent();
 
-        BindingContext = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM_Static;
+        //BindingContext = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM_Static;
 
-            this.Appearing += (object sender, EventArgs e) => {
-                MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM_Static.SearchCommand.Execute(null);
-            };
+        //    this.Appearing += (object sender, EventArgs e) => {
+        //        MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM_Static.SearchCommand.Execute(null);
+        //    };
 
-            //TODO: The following code can replace the "Load More" button. ItemAppearing event is not working properly in UWP, but working in Android emulator/Windows phone emulator, IOs not tested.
-            //this.ResultView.ItemAppearing += (object sender, ItemVisibilityEventArgs e) => {
-            //    var viewCellDetails = e.Item as MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation;
-            //    if (viewCellDetails == MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM_Static.EntityCollection[MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM_Static.EntityCollection.Count - 1])
-            //    {
-            //        MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM_Static.LoadMoreCommand.Execute(null);
-            //    }
-            //};
+        //    //TODO: The following code can replace the "Load More" button. ItemAppearing event is not working properly in UWP, but working in Android emulator/Windows phone emulator, IOs not tested.
+        //    //this.ResultView.ItemAppearing += (object sender, ItemVisibilityEventArgs e) => {
+        //    //    var viewCellDetails = e.Item as MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation;
+        //    //    if (viewCellDetails == MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM_Static.EntityCollection[MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM_Static.EntityCollection.Count - 1])
+        //    //    {
+        //    //        MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM_Static.LoadMoreCommand.Execute(null);
+        //    //    }
+        //    //};
 
-            this.ResultView.ItemTapped += (object sender, ItemTappedEventArgs e) => {
-                var viewCellDetails = e.Item as MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation;
-                MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild_Static.LaunchDetailsViewCommand.Execute(viewCellDetails);
-            };
+        //    this.ResultView.ItemTapped += (object sender, ItemTappedEventArgs e) => {
+        //        var viewCellDetails = e.Item as MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation;
+        //        MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild_Static.LaunchDetailsViewCommand.Execute(viewCellDetails);
+        //    };
 
         }
     }
