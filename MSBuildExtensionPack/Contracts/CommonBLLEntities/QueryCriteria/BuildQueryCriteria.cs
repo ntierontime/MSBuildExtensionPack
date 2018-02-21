@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Framework.EntityContracts;
 using Framework;
+using Framework.EntityContracts;
 
 namespace MSBuildExtensionPack.CommonBLLEntities
 {
@@ -60,6 +60,23 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         }
 
         public QuerySystemInt64EqualsCriteria Id { get; set; } = new QuerySystemInt64EqualsCriteria();
+    }
+
+    /// <summary>
+    /// BusinessLogicLayerQueryCriteria, key=FKStringContains
+    /// </summary>
+    public partial class BuildQueryCriteriaFKStringContains
+    {
+        public BuildQueryCriteriaFKStringContains()
+        {
+        }
+
+        public QuerySystemStringContainsCriteria SolutionName { get; set; } = new QuerySystemStringContainsCriteria();
+        public QuerySystemStringContainsCriteria SolutionDescription { get; set; } = new QuerySystemStringContainsCriteria();
+        public QuerySystemStringContainsCriteria Organization_1Name { get; set; } = new QuerySystemStringContainsCriteria();
+        public QuerySystemStringContainsCriteria Organization_2Name { get; set; } = new QuerySystemStringContainsCriteria();
+        public QuerySystemStringContainsCriteria BuildName { get; set; } = new QuerySystemStringContainsCriteria();
+        public QuerySystemStringContainsCriteria BuildDescription { get; set; } = new QuerySystemStringContainsCriteria();
     }
 
 }

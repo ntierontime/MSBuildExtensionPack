@@ -227,20 +227,20 @@ namespace MSBuildExtensionPack.WebApiClient
             return await Post<MSBuildExtensionPack.ViewModelData.WPCommonOfSolutionVM>(url, vm);
         }
 
-        public const string ActionName_GetWPEntityRelatedOfSolutionVM = "GetWPEntityRelatedOfSolutionVM";
+        public const string ActionName_GetWPFullDetailsOfSolutionVM = "GetWPFullDetailsOfSolutionVM";
         /// <summary>
         /// Gets the wp entity related of build log.
-        /// http://[host]/api/SolutionApi/GetWPEntityRelatedOfSolutionVM?id=1
+        /// http://[host]/api/SolutionApi/GetWPFullDetailsOfSolutionVM?id=1
         /// </summary>
         /// <returns></returns>
-        public async Task<MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfSolutionVM> GetWPEntityRelatedOfSolutionVMAsync(
+        public async Task<MSBuildExtensionPack.ViewModelData.WPFullDetailsOfSolutionVM> GetWPFullDetailsOfSolutionVMAsync(
             System.Int32 id)
         {
             Dictionary<string, string> parameters = new Dictionary<string, string>();
             parameters.Add("id", id.ToString());
-            string url = GetHttpRequestUrl(ActionName_GetWPEntityRelatedOfSolutionVM, parameters);
+            string url = GetHttpRequestUrl(ActionName_GetWPFullDetailsOfSolutionVM, parameters);
 
-            return await GetEntityRelated<MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfSolutionVM>(url);
+            return await GetEntityRelated<MSBuildExtensionPack.ViewModelData.WPFullDetailsOfSolutionVM>(url);
         }
 
         public const string ActionName_HeartBeat = "HeartBeat";

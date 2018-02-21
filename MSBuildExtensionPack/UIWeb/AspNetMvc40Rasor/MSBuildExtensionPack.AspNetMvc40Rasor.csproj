@@ -139,15 +139,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <Content Include="Views\Build\WPCommonOfBuild.cshtml" />
-    <Content Include="Views\Build\WPEntityRelatedOfBuild.cshtml" />
+    <Content Include="Views\Build\WPFullDetailsOfBuild.cshtml" />
+    <Content Include="Views\Build\WPsomethingOfBuild.cshtml" />
+    <Content Include="Views\Build\WPelsesomethingOfBuild.cshtml" />
+    <Content Include="Views\Build\WPelseA1AsomethingOfBuild.cshtml" />
+    <Content Include="Views\Build\WPxTabSomethingOfBuild.cshtml" />
+    <Content Include="Views\Build\WPxTabFullDetailsMasterViewAsideKeyInformationOfBuild.cshtml" />
+    <Content Include="Views\Build\WPxTabFullDetailsOfBuild.cshtml" />
     <Content Include="Views\BuildEventCode\WPCommonOfBuildEventCode.cshtml" />
-    <Content Include="Views\BuildEventCode\WPEntityRelatedOfBuildEventCode.cshtml" />
+    <Content Include="Views\BuildEventCode\WPFullDetailsOfBuildEventCode.cshtml" />
     <Content Include="Views\BuildLog\WPCommonOfBuildLog.cshtml" />
-    <Content Include="Views\BuildLog\WPEntityRelatedOfBuildLog.cshtml" />
+    <Content Include="Views\BuildLog\WPFullDetailsOfBuildLog.cshtml" />
     <Content Include="Views\Organization\WPCommonOfOrganization.cshtml" />
-    <Content Include="Views\Organization\WPEntityRelatedOfOrganization.cshtml" />
+    <Content Include="Views\Organization\WPFullDetailsOfOrganization.cshtml" />
     <Content Include="Views\Solution\WPCommonOfSolution.cshtml" />
-    <Content Include="Views\Solution\WPEntityRelatedOfSolution.cshtml" />
+    <Content Include="Views\Solution\WPFullDetailsOfSolution.cshtml" />
     <None Include="map.2.D.2.vsd" />
     <None Include="map.2.D.2.vsd.png" />
     <Content Include="Content\awesome-bootstrap-checkbox.mvcmodified.css" />
@@ -480,9 +486,9 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>10812</DevelopmentServerPort>
+          <DevelopmentServerPort>10800</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:10812/</IISUrl>
+          <IISUrl>http://localhost:10800/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

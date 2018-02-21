@@ -70,677 +70,1127 @@ namespace MSBuildExtensionPack.Resx {
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of Common of MSBuildExtensionPack.Build"".
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_Common"".
         /// </summary>
-        public static string Description_Of_Common_of_MSBuildExtensionPack_Build {
+        public static string Description_Of_MSBuildExtensionPack_Build_Common {
             get {
-                return ResourceManager.GetString("Description_Of_Common_of_MSBuildExtensionPack_Build", resourceCulture);
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_Common", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Common of MSBuildExtensionPack.Build"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_Common"".
         /// </summary>
-        public static string Common_of_MSBuildExtensionPack_Build {
+        public static string MSBuildExtensionPack_Build_Common {
             get {
-                return ResourceManager.GetString("Common_of_MSBuildExtensionPack_Build", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_Common", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of Common of MSBuildExtensionPack.Build"".
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_Common"".
         /// </summary>
-        public static string ToolTip_Of_Common_of_MSBuildExtensionPack_Build {
+        public static string ToolTip_Of_MSBuildExtensionPack_Build_Common {
             get {
-                return ResourceManager.GetString("ToolTip_Of_Common_of_MSBuildExtensionPack_Build", resourceCulture);
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_Common", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of EntityRelated of MSBuildExtensionPack.Build"".
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_FullDetails"".
         /// </summary>
-        public static string Description_Of_EntityRelated_of_MSBuildExtensionPack_Build {
+        public static string Description_Of_MSBuildExtensionPack_Build_FullDetails {
             get {
-                return ResourceManager.GetString("Description_Of_EntityRelated_of_MSBuildExtensionPack_Build", resourceCulture);
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_FullDetails", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "EntityRelated of MSBuildExtensionPack.Build"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_FullDetails"".
         /// </summary>
-        public static string EntityRelated_of_MSBuildExtensionPack_Build {
+        public static string MSBuildExtensionPack_Build_FullDetails {
             get {
-                return ResourceManager.GetString("EntityRelated_of_MSBuildExtensionPack_Build", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_FullDetails", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of EntityRelated of MSBuildExtensionPack.Build"".
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_FullDetails"".
         /// </summary>
-        public static string ToolTip_Of_EntityRelated_of_MSBuildExtensionPack_Build {
+        public static string ToolTip_Of_MSBuildExtensionPack_Build_FullDetails {
             get {
-                return ResourceManager.GetString("ToolTip_Of_EntityRelated_of_MSBuildExtensionPack_Build", resourceCulture);
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_FullDetails", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of CommonSearchView of MSBuildExtensionPack.Build"".
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_CommonSearchView"".
         /// </summary>
-        public static string Description_Of_CommonSearchView_of_MSBuildExtensionPack_Build {
+        public static string Description_Of_MSBuildExtensionPack_Build_CommonSearchView {
             get {
-                return ResourceManager.GetString("Description_Of_CommonSearchView_of_MSBuildExtensionPack_Build", resourceCulture);
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_CommonSearchView", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "CommonSearchView of MSBuildExtensionPack.Build"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_CommonSearchView"".
         /// </summary>
-        public static string CommonSearchView_of_MSBuildExtensionPack_Build {
+        public static string MSBuildExtensionPack_Build_CommonSearchView {
             get {
-                return ResourceManager.GetString("CommonSearchView_of_MSBuildExtensionPack_Build", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_CommonSearchView", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of CommonSearchView of MSBuildExtensionPack.Build"".
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_CommonSearchView"".
         /// </summary>
-        public static string ToolTip_Of_CommonSearchView_of_MSBuildExtensionPack_Build {
+        public static string ToolTip_Of_MSBuildExtensionPack_Build_CommonSearchView {
             get {
-                return ResourceManager.GetString("ToolTip_Of_CommonSearchView_of_MSBuildExtensionPack_Build", resourceCulture);
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_CommonSearchView", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of CommonResultView of MSBuildExtensionPack.Build"".
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_CommonResultView"".
         /// </summary>
-        public static string Description_Of_CommonResultView_of_MSBuildExtensionPack_Build {
+        public static string Description_Of_MSBuildExtensionPack_Build_CommonResultView {
             get {
-                return ResourceManager.GetString("Description_Of_CommonResultView_of_MSBuildExtensionPack_Build", resourceCulture);
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_CommonResultView", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "CommonResultView of MSBuildExtensionPack.Build"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_CommonResultView"".
         /// </summary>
-        public static string CommonResultView_of_MSBuildExtensionPack_Build {
+        public static string MSBuildExtensionPack_Build_CommonResultView {
             get {
-                return ResourceManager.GetString("CommonResultView_of_MSBuildExtensionPack_Build", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_CommonResultView", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of CommonResultView of MSBuildExtensionPack.Build"".
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_CommonResultView"".
         /// </summary>
-        public static string ToolTip_Of_CommonResultView_of_MSBuildExtensionPack_Build {
+        public static string ToolTip_Of_MSBuildExtensionPack_Build_CommonResultView {
             get {
-                return ResourceManager.GetString("ToolTip_Of_CommonResultView_of_MSBuildExtensionPack_Build", resourceCulture);
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_CommonResultView", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of TabbedCommon of MSBuildExtensionPack.Build"".
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_TabbedCommon"".
         /// </summary>
-        public static string Description_Of_TabbedCommon_of_MSBuildExtensionPack_Build {
+        public static string Description_Of_MSBuildExtensionPack_Build_TabbedCommon {
             get {
-                return ResourceManager.GetString("Description_Of_TabbedCommon_of_MSBuildExtensionPack_Build", resourceCulture);
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_TabbedCommon", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "TabbedCommon of MSBuildExtensionPack.Build"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_TabbedCommon"".
         /// </summary>
-        public static string TabbedCommon_of_MSBuildExtensionPack_Build {
+        public static string MSBuildExtensionPack_Build_TabbedCommon {
             get {
-                return ResourceManager.GetString("TabbedCommon_of_MSBuildExtensionPack_Build", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_TabbedCommon", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of TabbedCommon of MSBuildExtensionPack.Build"".
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_TabbedCommon"".
         /// </summary>
-        public static string ToolTip_Of_TabbedCommon_of_MSBuildExtensionPack_Build {
+        public static string ToolTip_Of_MSBuildExtensionPack_Build_TabbedCommon {
             get {
-                return ResourceManager.GetString("ToolTip_Of_TabbedCommon_of_MSBuildExtensionPack_Build", resourceCulture);
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_TabbedCommon", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of Common of MSBuildExtensionPack.BuildEventCode"".
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_something"".
         /// </summary>
-        public static string Description_Of_Common_of_MSBuildExtensionPack_BuildEventCode {
+        public static string Description_Of_MSBuildExtensionPack_Build_something {
             get {
-                return ResourceManager.GetString("Description_Of_Common_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_something", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Common of MSBuildExtensionPack.BuildEventCode"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_something"".
         /// </summary>
-        public static string Common_of_MSBuildExtensionPack_BuildEventCode {
+        public static string MSBuildExtensionPack_Build_something {
             get {
-                return ResourceManager.GetString("Common_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_something", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of Common of MSBuildExtensionPack.BuildEventCode"".
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_something"".
         /// </summary>
-        public static string ToolTip_Of_Common_of_MSBuildExtensionPack_BuildEventCode {
+        public static string ToolTip_Of_MSBuildExtensionPack_Build_something {
             get {
-                return ResourceManager.GetString("ToolTip_Of_Common_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_something", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of EntityRelated of MSBuildExtensionPack.BuildEventCode"".
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_elsesomething"".
         /// </summary>
-        public static string Description_Of_EntityRelated_of_MSBuildExtensionPack_BuildEventCode {
+        public static string Description_Of_MSBuildExtensionPack_Build_elsesomething {
             get {
-                return ResourceManager.GetString("Description_Of_EntityRelated_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_elsesomething", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "EntityRelated of MSBuildExtensionPack.BuildEventCode"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_elsesomething"".
         /// </summary>
-        public static string EntityRelated_of_MSBuildExtensionPack_BuildEventCode {
+        public static string MSBuildExtensionPack_Build_elsesomething {
             get {
-                return ResourceManager.GetString("EntityRelated_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_elsesomething", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of EntityRelated of MSBuildExtensionPack.BuildEventCode"".
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_elsesomething"".
         /// </summary>
-        public static string ToolTip_Of_EntityRelated_of_MSBuildExtensionPack_BuildEventCode {
+        public static string ToolTip_Of_MSBuildExtensionPack_Build_elsesomething {
             get {
-                return ResourceManager.GetString("ToolTip_Of_EntityRelated_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_elsesomething", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of CommonSearchView of MSBuildExtensionPack.BuildEventCode"".
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_elseA1Asomething"".
         /// </summary>
-        public static string Description_Of_CommonSearchView_of_MSBuildExtensionPack_BuildEventCode {
+        public static string Description_Of_MSBuildExtensionPack_Build_elseA1Asomething {
             get {
-                return ResourceManager.GetString("Description_Of_CommonSearchView_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_elseA1Asomething", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "CommonSearchView of MSBuildExtensionPack.BuildEventCode"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_elseA1Asomething"".
         /// </summary>
-        public static string CommonSearchView_of_MSBuildExtensionPack_BuildEventCode {
+        public static string MSBuildExtensionPack_Build_elseA1Asomething {
             get {
-                return ResourceManager.GetString("CommonSearchView_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_elseA1Asomething", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of CommonSearchView of MSBuildExtensionPack.BuildEventCode"".
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_elseA1Asomething"".
         /// </summary>
-        public static string ToolTip_Of_CommonSearchView_of_MSBuildExtensionPack_BuildEventCode {
+        public static string ToolTip_Of_MSBuildExtensionPack_Build_elseA1Asomething {
             get {
-                return ResourceManager.GetString("ToolTip_Of_CommonSearchView_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_elseA1Asomething", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of CommonResultView of MSBuildExtensionPack.BuildEventCode"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_elseA1Asomething"".
         /// </summary>
-        public static string Description_Of_CommonResultView_of_MSBuildExtensionPack_BuildEventCode {
+        public static string MSBuildExtensionPack_Build_elseA1Asomething_ButtonText {
             get {
-                return ResourceManager.GetString("Description_Of_CommonResultView_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_elseA1Asomething_ButtonText", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "CommonResultView of MSBuildExtensionPack.BuildEventCode"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_elseA1Asomething"".
         /// </summary>
-        public static string CommonResultView_of_MSBuildExtensionPack_BuildEventCode {
+        public static string MSBuildExtensionPack_Build_elseA1Asomething_Description {
             get {
-                return ResourceManager.GetString("CommonResultView_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_elseA1Asomething_Description", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of CommonResultView of MSBuildExtensionPack.BuildEventCode"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_elseA1Asomething success."".
         /// </summary>
-        public static string ToolTip_Of_CommonResultView_of_MSBuildExtensionPack_BuildEventCode {
+        public static string MSBuildExtensionPack_Build_elseA1Asomething_Success {
             get {
-                return ResourceManager.GetString("ToolTip_Of_CommonResultView_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_elseA1Asomething_Success", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of TabbedCommon of MSBuildExtensionPack.BuildEventCode"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_elseA1Asomething failed."".
         /// </summary>
-        public static string Description_Of_TabbedCommon_of_MSBuildExtensionPack_BuildEventCode {
+        public static string MSBuildExtensionPack_Build_elseA1Asomething_Failed {
             get {
-                return ResourceManager.GetString("Description_Of_TabbedCommon_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_elseA1Asomething_Failed", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "TabbedCommon of MSBuildExtensionPack.BuildEventCode"".
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_somethingSearch"".
         /// </summary>
-        public static string TabbedCommon_of_MSBuildExtensionPack_BuildEventCode {
+        public static string Description_Of_MSBuildExtensionPack_Build_somethingSearch {
             get {
-                return ResourceManager.GetString("TabbedCommon_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_somethingSearch", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of TabbedCommon of MSBuildExtensionPack.BuildEventCode"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_somethingSearch"".
         /// </summary>
-        public static string ToolTip_Of_TabbedCommon_of_MSBuildExtensionPack_BuildEventCode {
+        public static string MSBuildExtensionPack_Build_somethingSearch {
             get {
-                return ResourceManager.GetString("ToolTip_Of_TabbedCommon_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_somethingSearch", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of Common of MSBuildExtensionPack.BuildLog"".
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_somethingSearch"".
         /// </summary>
-        public static string Description_Of_Common_of_MSBuildExtensionPack_BuildLog {
+        public static string ToolTip_Of_MSBuildExtensionPack_Build_somethingSearch {
             get {
-                return ResourceManager.GetString("Description_Of_Common_of_MSBuildExtensionPack_BuildLog", resourceCulture);
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_somethingSearch", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Common of MSBuildExtensionPack.BuildLog"".
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_somethingResult"".
         /// </summary>
-        public static string Common_of_MSBuildExtensionPack_BuildLog {
+        public static string Description_Of_MSBuildExtensionPack_Build_somethingResult {
             get {
-                return ResourceManager.GetString("Common_of_MSBuildExtensionPack_BuildLog", resourceCulture);
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_somethingResult", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of Common of MSBuildExtensionPack.BuildLog"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_somethingResult"".
         /// </summary>
-        public static string ToolTip_Of_Common_of_MSBuildExtensionPack_BuildLog {
+        public static string MSBuildExtensionPack_Build_somethingResult {
             get {
-                return ResourceManager.GetString("ToolTip_Of_Common_of_MSBuildExtensionPack_BuildLog", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_somethingResult", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of EntityRelated of MSBuildExtensionPack.BuildLog"".
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_somethingResult"".
         /// </summary>
-        public static string Description_Of_EntityRelated_of_MSBuildExtensionPack_BuildLog {
+        public static string ToolTip_Of_MSBuildExtensionPack_Build_somethingResult {
             get {
-                return ResourceManager.GetString("Description_Of_EntityRelated_of_MSBuildExtensionPack_BuildLog", resourceCulture);
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_somethingResult", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "EntityRelated of MSBuildExtensionPack.BuildLog"".
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_somethingTab"".
         /// </summary>
-        public static string EntityRelated_of_MSBuildExtensionPack_BuildLog {
+        public static string Description_Of_MSBuildExtensionPack_Build_somethingTab {
             get {
-                return ResourceManager.GetString("EntityRelated_of_MSBuildExtensionPack_BuildLog", resourceCulture);
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_somethingTab", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of EntityRelated of MSBuildExtensionPack.BuildLog"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_somethingTab"".
         /// </summary>
-        public static string ToolTip_Of_EntityRelated_of_MSBuildExtensionPack_BuildLog {
+        public static string MSBuildExtensionPack_Build_somethingTab {
             get {
-                return ResourceManager.GetString("ToolTip_Of_EntityRelated_of_MSBuildExtensionPack_BuildLog", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_somethingTab", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of CommonSearchView of MSBuildExtensionPack.BuildLog"".
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_somethingTab"".
         /// </summary>
-        public static string Description_Of_CommonSearchView_of_MSBuildExtensionPack_BuildLog {
+        public static string ToolTip_Of_MSBuildExtensionPack_Build_somethingTab {
             get {
-                return ResourceManager.GetString("Description_Of_CommonSearchView_of_MSBuildExtensionPack_BuildLog", resourceCulture);
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_somethingTab", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "CommonSearchView of MSBuildExtensionPack.BuildLog"".
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_xTabSomethingSearch"".
         /// </summary>
-        public static string CommonSearchView_of_MSBuildExtensionPack_BuildLog {
+        public static string Description_Of_MSBuildExtensionPack_Build_xTabSomethingSearch {
             get {
-                return ResourceManager.GetString("CommonSearchView_of_MSBuildExtensionPack_BuildLog", resourceCulture);
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_xTabSomethingSearch", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of CommonSearchView of MSBuildExtensionPack.BuildLog"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_xTabSomethingSearch"".
         /// </summary>
-        public static string ToolTip_Of_CommonSearchView_of_MSBuildExtensionPack_BuildLog {
+        public static string MSBuildExtensionPack_Build_xTabSomethingSearch {
             get {
-                return ResourceManager.GetString("ToolTip_Of_CommonSearchView_of_MSBuildExtensionPack_BuildLog", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_xTabSomethingSearch", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of CommonResultView of MSBuildExtensionPack.BuildLog"".
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_xTabSomethingSearch"".
         /// </summary>
-        public static string Description_Of_CommonResultView_of_MSBuildExtensionPack_BuildLog {
+        public static string ToolTip_Of_MSBuildExtensionPack_Build_xTabSomethingSearch {
             get {
-                return ResourceManager.GetString("Description_Of_CommonResultView_of_MSBuildExtensionPack_BuildLog", resourceCulture);
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_xTabSomethingSearch", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "CommonResultView of MSBuildExtensionPack.BuildLog"".
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_xTabSomethingResults"".
         /// </summary>
-        public static string CommonResultView_of_MSBuildExtensionPack_BuildLog {
+        public static string Description_Of_MSBuildExtensionPack_Build_xTabSomethingResults {
             get {
-                return ResourceManager.GetString("CommonResultView_of_MSBuildExtensionPack_BuildLog", resourceCulture);
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_xTabSomethingResults", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of CommonResultView of MSBuildExtensionPack.BuildLog"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_xTabSomethingResults"".
         /// </summary>
-        public static string ToolTip_Of_CommonResultView_of_MSBuildExtensionPack_BuildLog {
+        public static string MSBuildExtensionPack_Build_xTabSomethingResults {
             get {
-                return ResourceManager.GetString("ToolTip_Of_CommonResultView_of_MSBuildExtensionPack_BuildLog", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_xTabSomethingResults", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of TabbedCommon of MSBuildExtensionPack.BuildLog"".
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_xTabSomethingResults"".
         /// </summary>
-        public static string Description_Of_TabbedCommon_of_MSBuildExtensionPack_BuildLog {
+        public static string ToolTip_Of_MSBuildExtensionPack_Build_xTabSomethingResults {
             get {
-                return ResourceManager.GetString("Description_Of_TabbedCommon_of_MSBuildExtensionPack_BuildLog", resourceCulture);
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_xTabSomethingResults", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "TabbedCommon of MSBuildExtensionPack.BuildLog"".
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_xTabSomethingTabContainer"".
         /// </summary>
-        public static string TabbedCommon_of_MSBuildExtensionPack_BuildLog {
+        public static string Description_Of_MSBuildExtensionPack_Build_xTabSomethingTabContainer {
             get {
-                return ResourceManager.GetString("TabbedCommon_of_MSBuildExtensionPack_BuildLog", resourceCulture);
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_xTabSomethingTabContainer", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of TabbedCommon of MSBuildExtensionPack.BuildLog"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_xTabSomethingTabContainer"".
         /// </summary>
-        public static string ToolTip_Of_TabbedCommon_of_MSBuildExtensionPack_BuildLog {
+        public static string MSBuildExtensionPack_Build_xTabSomethingTabContainer {
             get {
-                return ResourceManager.GetString("ToolTip_Of_TabbedCommon_of_MSBuildExtensionPack_BuildLog", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_xTabSomethingTabContainer", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of Common of MSBuildExtensionPack.Organization"".
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_xTabSomethingTabContainer"".
         /// </summary>
-        public static string Description_Of_Common_of_MSBuildExtensionPack_Organization {
+        public static string ToolTip_Of_MSBuildExtensionPack_Build_xTabSomethingTabContainer {
             get {
-                return ResourceManager.GetString("Description_Of_Common_of_MSBuildExtensionPack_Organization", resourceCulture);
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_xTabSomethingTabContainer", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Common of MSBuildExtensionPack.Organization"".
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_xTabSomething"".
         /// </summary>
-        public static string Common_of_MSBuildExtensionPack_Organization {
+        public static string Description_Of_MSBuildExtensionPack_Build_xTabSomething {
             get {
-                return ResourceManager.GetString("Common_of_MSBuildExtensionPack_Organization", resourceCulture);
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_xTabSomething", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of Common of MSBuildExtensionPack.Organization"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_xTabSomething"".
         /// </summary>
-        public static string ToolTip_Of_Common_of_MSBuildExtensionPack_Organization {
+        public static string MSBuildExtensionPack_Build_xTabSomething {
             get {
-                return ResourceManager.GetString("ToolTip_Of_Common_of_MSBuildExtensionPack_Organization", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_xTabSomething", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of EntityRelated of MSBuildExtensionPack.Organization"".
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_xTabSomething"".
         /// </summary>
-        public static string Description_Of_EntityRelated_of_MSBuildExtensionPack_Organization {
+        public static string ToolTip_Of_MSBuildExtensionPack_Build_xTabSomething {
             get {
-                return ResourceManager.GetString("Description_Of_EntityRelated_of_MSBuildExtensionPack_Organization", resourceCulture);
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_xTabSomething", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "EntityRelated of MSBuildExtensionPack.Organization"".
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_xTabFullDetailsMasterViewAsideKeyInformation"".
         /// </summary>
-        public static string EntityRelated_of_MSBuildExtensionPack_Organization {
+        public static string Description_Of_MSBuildExtensionPack_Build_xTabFullDetailsMasterViewAsideKeyInformation {
             get {
-                return ResourceManager.GetString("EntityRelated_of_MSBuildExtensionPack_Organization", resourceCulture);
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_xTabFullDetailsMasterViewAsideKeyInformation", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of EntityRelated of MSBuildExtensionPack.Organization"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_xTabFullDetailsMasterViewAsideKeyInformation"".
         /// </summary>
-        public static string ToolTip_Of_EntityRelated_of_MSBuildExtensionPack_Organization {
+        public static string MSBuildExtensionPack_Build_xTabFullDetailsMasterViewAsideKeyInformation {
             get {
-                return ResourceManager.GetString("ToolTip_Of_EntityRelated_of_MSBuildExtensionPack_Organization", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_xTabFullDetailsMasterViewAsideKeyInformation", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of CommonSearchView of MSBuildExtensionPack.Organization"".
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_xTabFullDetailsMasterViewAsideKeyInformation"".
         /// </summary>
-        public static string Description_Of_CommonSearchView_of_MSBuildExtensionPack_Organization {
+        public static string ToolTip_Of_MSBuildExtensionPack_Build_xTabFullDetailsMasterViewAsideKeyInformation {
             get {
-                return ResourceManager.GetString("Description_Of_CommonSearchView_of_MSBuildExtensionPack_Organization", resourceCulture);
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_xTabFullDetailsMasterViewAsideKeyInformation", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "CommonSearchView of MSBuildExtensionPack.Organization"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_xTabFullDetailsMasterViewAsideKeyInformation"".
         /// </summary>
-        public static string CommonSearchView_of_MSBuildExtensionPack_Organization {
+        public static string MSBuildExtensionPack_Build_xTabFullDetailsMasterViewAsideKeyInformation_ButtonText {
             get {
-                return ResourceManager.GetString("CommonSearchView_of_MSBuildExtensionPack_Organization", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_xTabFullDetailsMasterViewAsideKeyInformation_ButtonText", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of CommonSearchView of MSBuildExtensionPack.Organization"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_xTabFullDetailsMasterViewAsideKeyInformation"".
         /// </summary>
-        public static string ToolTip_Of_CommonSearchView_of_MSBuildExtensionPack_Organization {
+        public static string MSBuildExtensionPack_Build_xTabFullDetailsMasterViewAsideKeyInformation_Description {
             get {
-                return ResourceManager.GetString("ToolTip_Of_CommonSearchView_of_MSBuildExtensionPack_Organization", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_xTabFullDetailsMasterViewAsideKeyInformation_Description", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of CommonResultView of MSBuildExtensionPack.Organization"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_xTabFullDetailsMasterViewAsideKeyInformation success."".
         /// </summary>
-        public static string Description_Of_CommonResultView_of_MSBuildExtensionPack_Organization {
+        public static string MSBuildExtensionPack_Build_xTabFullDetailsMasterViewAsideKeyInformation_Success {
             get {
-                return ResourceManager.GetString("Description_Of_CommonResultView_of_MSBuildExtensionPack_Organization", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_xTabFullDetailsMasterViewAsideKeyInformation_Success", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "CommonResultView of MSBuildExtensionPack.Organization"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_xTabFullDetailsMasterViewAsideKeyInformation failed."".
         /// </summary>
-        public static string CommonResultView_of_MSBuildExtensionPack_Organization {
+        public static string MSBuildExtensionPack_Build_xTabFullDetailsMasterViewAsideKeyInformation_Failed {
             get {
-                return ResourceManager.GetString("CommonResultView_of_MSBuildExtensionPack_Organization", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_xTabFullDetailsMasterViewAsideKeyInformation_Failed", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of CommonResultView of MSBuildExtensionPack.Organization"".
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_xTabFullDetailsRelatedEntityWhenMasterViewIsPKEntityFK_BuildLog_Build"".
         /// </summary>
-        public static string ToolTip_Of_CommonResultView_of_MSBuildExtensionPack_Organization {
+        public static string Description_Of_MSBuildExtensionPack_Build_xTabFullDetailsRelatedEntityWhenMasterViewIsPKEntityFK_BuildLog_Build {
             get {
-                return ResourceManager.GetString("ToolTip_Of_CommonResultView_of_MSBuildExtensionPack_Organization", resourceCulture);
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_xTabFullDetailsRelatedEntityWhenMasterViewIsPKEntityFK_BuildLog_Build", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of TabbedCommon of MSBuildExtensionPack.Organization"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_xTabFullDetailsRelatedEntityWhenMasterViewIsPKEntityFK_BuildLog_Build"".
         /// </summary>
-        public static string Description_Of_TabbedCommon_of_MSBuildExtensionPack_Organization {
+        public static string MSBuildExtensionPack_Build_xTabFullDetailsRelatedEntityWhenMasterViewIsPKEntityFK_BuildLog_Build {
             get {
-                return ResourceManager.GetString("Description_Of_TabbedCommon_of_MSBuildExtensionPack_Organization", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_xTabFullDetailsRelatedEntityWhenMasterViewIsPKEntityFK_BuildLog_Build", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "TabbedCommon of MSBuildExtensionPack.Organization"".
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_xTabFullDetailsRelatedEntityWhenMasterViewIsPKEntityFK_BuildLog_Build"".
         /// </summary>
-        public static string TabbedCommon_of_MSBuildExtensionPack_Organization {
+        public static string ToolTip_Of_MSBuildExtensionPack_Build_xTabFullDetailsRelatedEntityWhenMasterViewIsPKEntityFK_BuildLog_Build {
             get {
-                return ResourceManager.GetString("TabbedCommon_of_MSBuildExtensionPack_Organization", resourceCulture);
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_xTabFullDetailsRelatedEntityWhenMasterViewIsPKEntityFK_BuildLog_Build", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of TabbedCommon of MSBuildExtensionPack.Organization"".
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_xTabFullDetailsTabContainer"".
         /// </summary>
-        public static string ToolTip_Of_TabbedCommon_of_MSBuildExtensionPack_Organization {
+        public static string Description_Of_MSBuildExtensionPack_Build_xTabFullDetailsTabContainer {
             get {
-                return ResourceManager.GetString("ToolTip_Of_TabbedCommon_of_MSBuildExtensionPack_Organization", resourceCulture);
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_xTabFullDetailsTabContainer", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of Common of MSBuildExtensionPack.Solution"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_xTabFullDetailsTabContainer"".
         /// </summary>
-        public static string Description_Of_Common_of_MSBuildExtensionPack_Solution {
+        public static string MSBuildExtensionPack_Build_xTabFullDetailsTabContainer {
             get {
-                return ResourceManager.GetString("Description_Of_Common_of_MSBuildExtensionPack_Solution", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_xTabFullDetailsTabContainer", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Common of MSBuildExtensionPack.Solution"".
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_xTabFullDetailsTabContainer"".
         /// </summary>
-        public static string Common_of_MSBuildExtensionPack_Solution {
+        public static string ToolTip_Of_MSBuildExtensionPack_Build_xTabFullDetailsTabContainer {
             get {
-                return ResourceManager.GetString("Common_of_MSBuildExtensionPack_Solution", resourceCulture);
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_xTabFullDetailsTabContainer", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of Common of MSBuildExtensionPack.Solution"".
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_xTabFullDetails"".
         /// </summary>
-        public static string ToolTip_Of_Common_of_MSBuildExtensionPack_Solution {
+        public static string Description_Of_MSBuildExtensionPack_Build_xTabFullDetails {
             get {
-                return ResourceManager.GetString("ToolTip_Of_Common_of_MSBuildExtensionPack_Solution", resourceCulture);
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_xTabFullDetails", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of EntityRelated of MSBuildExtensionPack.Solution"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_xTabFullDetails"".
         /// </summary>
-        public static string Description_Of_EntityRelated_of_MSBuildExtensionPack_Solution {
+        public static string MSBuildExtensionPack_Build_xTabFullDetails {
             get {
-                return ResourceManager.GetString("Description_Of_EntityRelated_of_MSBuildExtensionPack_Solution", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_xTabFullDetails", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "EntityRelated of MSBuildExtensionPack.Solution"".
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_xTabFullDetails"".
         /// </summary>
-        public static string EntityRelated_of_MSBuildExtensionPack_Solution {
+        public static string ToolTip_Of_MSBuildExtensionPack_Build_xTabFullDetails {
             get {
-                return ResourceManager.GetString("EntityRelated_of_MSBuildExtensionPack_Solution", resourceCulture);
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_xTabFullDetails", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of EntityRelated of MSBuildExtensionPack.Solution"".
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_BuildEventCode_Common"".
         /// </summary>
-        public static string ToolTip_Of_EntityRelated_of_MSBuildExtensionPack_Solution {
+        public static string Description_Of_MSBuildExtensionPack_BuildEventCode_Common {
             get {
-                return ResourceManager.GetString("ToolTip_Of_EntityRelated_of_MSBuildExtensionPack_Solution", resourceCulture);
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_BuildEventCode_Common", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of CommonSearchView of MSBuildExtensionPack.Solution"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_BuildEventCode_Common"".
         /// </summary>
-        public static string Description_Of_CommonSearchView_of_MSBuildExtensionPack_Solution {
+        public static string MSBuildExtensionPack_BuildEventCode_Common {
             get {
-                return ResourceManager.GetString("Description_Of_CommonSearchView_of_MSBuildExtensionPack_Solution", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_BuildEventCode_Common", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "CommonSearchView of MSBuildExtensionPack.Solution"".
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_BuildEventCode_Common"".
         /// </summary>
-        public static string CommonSearchView_of_MSBuildExtensionPack_Solution {
+        public static string ToolTip_Of_MSBuildExtensionPack_BuildEventCode_Common {
             get {
-                return ResourceManager.GetString("CommonSearchView_of_MSBuildExtensionPack_Solution", resourceCulture);
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_BuildEventCode_Common", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of CommonSearchView of MSBuildExtensionPack.Solution"".
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_BuildEventCode_FullDetails"".
         /// </summary>
-        public static string ToolTip_Of_CommonSearchView_of_MSBuildExtensionPack_Solution {
+        public static string Description_Of_MSBuildExtensionPack_BuildEventCode_FullDetails {
             get {
-                return ResourceManager.GetString("ToolTip_Of_CommonSearchView_of_MSBuildExtensionPack_Solution", resourceCulture);
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_BuildEventCode_FullDetails", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of CommonResultView of MSBuildExtensionPack.Solution"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_BuildEventCode_FullDetails"".
         /// </summary>
-        public static string Description_Of_CommonResultView_of_MSBuildExtensionPack_Solution {
+        public static string MSBuildExtensionPack_BuildEventCode_FullDetails {
             get {
-                return ResourceManager.GetString("Description_Of_CommonResultView_of_MSBuildExtensionPack_Solution", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_BuildEventCode_FullDetails", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "CommonResultView of MSBuildExtensionPack.Solution"".
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_BuildEventCode_FullDetails"".
         /// </summary>
-        public static string CommonResultView_of_MSBuildExtensionPack_Solution {
+        public static string ToolTip_Of_MSBuildExtensionPack_BuildEventCode_FullDetails {
             get {
-                return ResourceManager.GetString("CommonResultView_of_MSBuildExtensionPack_Solution", resourceCulture);
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_BuildEventCode_FullDetails", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of CommonResultView of MSBuildExtensionPack.Solution"".
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_BuildEventCode_CommonSearchView"".
         /// </summary>
-        public static string ToolTip_Of_CommonResultView_of_MSBuildExtensionPack_Solution {
+        public static string Description_Of_MSBuildExtensionPack_BuildEventCode_CommonSearchView {
             get {
-                return ResourceManager.GetString("ToolTip_Of_CommonResultView_of_MSBuildExtensionPack_Solution", resourceCulture);
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_BuildEventCode_CommonSearchView", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of TabbedCommon of MSBuildExtensionPack.Solution"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_BuildEventCode_CommonSearchView"".
         /// </summary>
-        public static string Description_Of_TabbedCommon_of_MSBuildExtensionPack_Solution {
+        public static string MSBuildExtensionPack_BuildEventCode_CommonSearchView {
             get {
-                return ResourceManager.GetString("Description_Of_TabbedCommon_of_MSBuildExtensionPack_Solution", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_BuildEventCode_CommonSearchView", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "TabbedCommon of MSBuildExtensionPack.Solution"".
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_BuildEventCode_CommonSearchView"".
         /// </summary>
-        public static string TabbedCommon_of_MSBuildExtensionPack_Solution {
+        public static string ToolTip_Of_MSBuildExtensionPack_BuildEventCode_CommonSearchView {
             get {
-                return ResourceManager.GetString("TabbedCommon_of_MSBuildExtensionPack_Solution", resourceCulture);
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_BuildEventCode_CommonSearchView", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of TabbedCommon of MSBuildExtensionPack.Solution"".
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_BuildEventCode_CommonResultView"".
         /// </summary>
-        public static string ToolTip_Of_TabbedCommon_of_MSBuildExtensionPack_Solution {
+        public static string Description_Of_MSBuildExtensionPack_BuildEventCode_CommonResultView {
             get {
-                return ResourceManager.GetString("ToolTip_Of_TabbedCommon_of_MSBuildExtensionPack_Solution", resourceCulture);
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_BuildEventCode_CommonResultView", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_BuildEventCode_CommonResultView"".
+        /// </summary>
+        public static string MSBuildExtensionPack_BuildEventCode_CommonResultView {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_BuildEventCode_CommonResultView", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_BuildEventCode_CommonResultView"".
+        /// </summary>
+        public static string ToolTip_Of_MSBuildExtensionPack_BuildEventCode_CommonResultView {
+            get {
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_BuildEventCode_CommonResultView", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_BuildEventCode_TabbedCommon"".
+        /// </summary>
+        public static string Description_Of_MSBuildExtensionPack_BuildEventCode_TabbedCommon {
+            get {
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_BuildEventCode_TabbedCommon", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_BuildEventCode_TabbedCommon"".
+        /// </summary>
+        public static string MSBuildExtensionPack_BuildEventCode_TabbedCommon {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_BuildEventCode_TabbedCommon", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_BuildEventCode_TabbedCommon"".
+        /// </summary>
+        public static string ToolTip_Of_MSBuildExtensionPack_BuildEventCode_TabbedCommon {
+            get {
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_BuildEventCode_TabbedCommon", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_BuildLog_Common"".
+        /// </summary>
+        public static string Description_Of_MSBuildExtensionPack_BuildLog_Common {
+            get {
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_BuildLog_Common", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_BuildLog_Common"".
+        /// </summary>
+        public static string MSBuildExtensionPack_BuildLog_Common {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_BuildLog_Common", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_BuildLog_Common"".
+        /// </summary>
+        public static string ToolTip_Of_MSBuildExtensionPack_BuildLog_Common {
+            get {
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_BuildLog_Common", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_BuildLog_FullDetails"".
+        /// </summary>
+        public static string Description_Of_MSBuildExtensionPack_BuildLog_FullDetails {
+            get {
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_BuildLog_FullDetails", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_BuildLog_FullDetails"".
+        /// </summary>
+        public static string MSBuildExtensionPack_BuildLog_FullDetails {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_BuildLog_FullDetails", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_BuildLog_FullDetails"".
+        /// </summary>
+        public static string ToolTip_Of_MSBuildExtensionPack_BuildLog_FullDetails {
+            get {
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_BuildLog_FullDetails", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_BuildLog_CommonSearchView"".
+        /// </summary>
+        public static string Description_Of_MSBuildExtensionPack_BuildLog_CommonSearchView {
+            get {
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_BuildLog_CommonSearchView", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_BuildLog_CommonSearchView"".
+        /// </summary>
+        public static string MSBuildExtensionPack_BuildLog_CommonSearchView {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_BuildLog_CommonSearchView", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_BuildLog_CommonSearchView"".
+        /// </summary>
+        public static string ToolTip_Of_MSBuildExtensionPack_BuildLog_CommonSearchView {
+            get {
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_BuildLog_CommonSearchView", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_BuildLog_CommonResultView"".
+        /// </summary>
+        public static string Description_Of_MSBuildExtensionPack_BuildLog_CommonResultView {
+            get {
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_BuildLog_CommonResultView", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_BuildLog_CommonResultView"".
+        /// </summary>
+        public static string MSBuildExtensionPack_BuildLog_CommonResultView {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_BuildLog_CommonResultView", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_BuildLog_CommonResultView"".
+        /// </summary>
+        public static string ToolTip_Of_MSBuildExtensionPack_BuildLog_CommonResultView {
+            get {
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_BuildLog_CommonResultView", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_BuildLog_TabbedCommon"".
+        /// </summary>
+        public static string Description_Of_MSBuildExtensionPack_BuildLog_TabbedCommon {
+            get {
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_BuildLog_TabbedCommon", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_BuildLog_TabbedCommon"".
+        /// </summary>
+        public static string MSBuildExtensionPack_BuildLog_TabbedCommon {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_BuildLog_TabbedCommon", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_BuildLog_TabbedCommon"".
+        /// </summary>
+        public static string ToolTip_Of_MSBuildExtensionPack_BuildLog_TabbedCommon {
+            get {
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_BuildLog_TabbedCommon", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Organization_Common"".
+        /// </summary>
+        public static string Description_Of_MSBuildExtensionPack_Organization_Common {
+            get {
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Organization_Common", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Organization_Common"".
+        /// </summary>
+        public static string MSBuildExtensionPack_Organization_Common {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_Organization_Common", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Organization_Common"".
+        /// </summary>
+        public static string ToolTip_Of_MSBuildExtensionPack_Organization_Common {
+            get {
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Organization_Common", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Organization_FullDetails"".
+        /// </summary>
+        public static string Description_Of_MSBuildExtensionPack_Organization_FullDetails {
+            get {
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Organization_FullDetails", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Organization_FullDetails"".
+        /// </summary>
+        public static string MSBuildExtensionPack_Organization_FullDetails {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_Organization_FullDetails", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Organization_FullDetails"".
+        /// </summary>
+        public static string ToolTip_Of_MSBuildExtensionPack_Organization_FullDetails {
+            get {
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Organization_FullDetails", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Organization_CommonSearchView"".
+        /// </summary>
+        public static string Description_Of_MSBuildExtensionPack_Organization_CommonSearchView {
+            get {
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Organization_CommonSearchView", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Organization_CommonSearchView"".
+        /// </summary>
+        public static string MSBuildExtensionPack_Organization_CommonSearchView {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_Organization_CommonSearchView", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Organization_CommonSearchView"".
+        /// </summary>
+        public static string ToolTip_Of_MSBuildExtensionPack_Organization_CommonSearchView {
+            get {
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Organization_CommonSearchView", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Organization_CommonResultView"".
+        /// </summary>
+        public static string Description_Of_MSBuildExtensionPack_Organization_CommonResultView {
+            get {
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Organization_CommonResultView", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Organization_CommonResultView"".
+        /// </summary>
+        public static string MSBuildExtensionPack_Organization_CommonResultView {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_Organization_CommonResultView", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Organization_CommonResultView"".
+        /// </summary>
+        public static string ToolTip_Of_MSBuildExtensionPack_Organization_CommonResultView {
+            get {
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Organization_CommonResultView", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Organization_TabbedCommon"".
+        /// </summary>
+        public static string Description_Of_MSBuildExtensionPack_Organization_TabbedCommon {
+            get {
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Organization_TabbedCommon", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Organization_TabbedCommon"".
+        /// </summary>
+        public static string MSBuildExtensionPack_Organization_TabbedCommon {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_Organization_TabbedCommon", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Organization_TabbedCommon"".
+        /// </summary>
+        public static string ToolTip_Of_MSBuildExtensionPack_Organization_TabbedCommon {
+            get {
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Organization_TabbedCommon", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Solution_Common"".
+        /// </summary>
+        public static string Description_Of_MSBuildExtensionPack_Solution_Common {
+            get {
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Solution_Common", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Solution_Common"".
+        /// </summary>
+        public static string MSBuildExtensionPack_Solution_Common {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_Solution_Common", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Solution_Common"".
+        /// </summary>
+        public static string ToolTip_Of_MSBuildExtensionPack_Solution_Common {
+            get {
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Solution_Common", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Solution_FullDetails"".
+        /// </summary>
+        public static string Description_Of_MSBuildExtensionPack_Solution_FullDetails {
+            get {
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Solution_FullDetails", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Solution_FullDetails"".
+        /// </summary>
+        public static string MSBuildExtensionPack_Solution_FullDetails {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_Solution_FullDetails", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Solution_FullDetails"".
+        /// </summary>
+        public static string ToolTip_Of_MSBuildExtensionPack_Solution_FullDetails {
+            get {
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Solution_FullDetails", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Solution_CommonSearchView"".
+        /// </summary>
+        public static string Description_Of_MSBuildExtensionPack_Solution_CommonSearchView {
+            get {
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Solution_CommonSearchView", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Solution_CommonSearchView"".
+        /// </summary>
+        public static string MSBuildExtensionPack_Solution_CommonSearchView {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_Solution_CommonSearchView", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Solution_CommonSearchView"".
+        /// </summary>
+        public static string ToolTip_Of_MSBuildExtensionPack_Solution_CommonSearchView {
+            get {
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Solution_CommonSearchView", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Solution_CommonResultView"".
+        /// </summary>
+        public static string Description_Of_MSBuildExtensionPack_Solution_CommonResultView {
+            get {
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Solution_CommonResultView", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Solution_CommonResultView"".
+        /// </summary>
+        public static string MSBuildExtensionPack_Solution_CommonResultView {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_Solution_CommonResultView", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Solution_CommonResultView"".
+        /// </summary>
+        public static string ToolTip_Of_MSBuildExtensionPack_Solution_CommonResultView {
+            get {
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Solution_CommonResultView", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Solution_TabbedCommon"".
+        /// </summary>
+        public static string Description_Of_MSBuildExtensionPack_Solution_TabbedCommon {
+            get {
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Solution_TabbedCommon", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Solution_TabbedCommon"".
+        /// </summary>
+        public static string MSBuildExtensionPack_Solution_TabbedCommon {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_Solution_TabbedCommon", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Solution_TabbedCommon"".
+        /// </summary>
+        public static string ToolTip_Of_MSBuildExtensionPack_Solution_TabbedCommon {
+            get {
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Solution_TabbedCommon", resourceCulture);
             }
         }
 

@@ -14,23 +14,33 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
         public const string PermissionName_Build_WPCommonOfBuild = null;// "; // "Build_WPCommonOfBuild";
         // 1.2. Build.WPCommonOfBuild_Export
         public const string PermissionName_Build_WPCommonOfBuild_Export = null;// "; // "Build_WPCommonOfBuild_Export";
-        // 1.3. Build.WPEntityRelatedOfBuild
-        public const string PermissionName_Build_WPEntityRelatedOfBuild = null;// "; // "Build_WPEntityRelatedOfBuild";
-        // 1.4. Build.Import
+        // 1.3. Build.WPsomethingOfBuild
+        public const string PermissionName_Build_WPsomethingOfBuild = null;// "; // "Build_WPsomethingOfBuild";
+        // 1.4. Build.WPsomethingOfBuild_Export
+        public const string PermissionName_Build_WPsomethingOfBuild_Export = null;// "; // "Build_WPsomethingOfBuild_Export";
+        // 1.5. Build.WPFullDetailsOfBuild
+        public const string PermissionName_Build_WPFullDetailsOfBuild = null;// "; // "Build_WPFullDetailsOfBuild";
+        // 1.6. Build.WPelsesomethingOfBuild
+        public const string PermissionName_Build_WPelsesomethingOfBuild = null;// "; // "Build_WPelsesomethingOfBuild";
+        // 1.7. Build.WPelseA1AsomethingOfBuild
+        public const string PermissionName_Build_WPelseA1AsomethingOfBuild = null;// "; // "Build_WPelseA1AsomethingOfBuild";
+        // 1.8. Build.WPxTabFullDetailsMasterViewAsideKeyInformationOfBuild
+        public const string PermissionName_Build_WPxTabFullDetailsMasterViewAsideKeyInformationOfBuild = null;// "; // "Build_WPxTabFullDetailsMasterViewAsideKeyInformationOfBuild";
+        // 1.9. Build.Import
         public const string PermissionName_Build_Import = null;// "; // "Build_Import";
-        // 1.5. Build.Index
+        // 1.10. Build.Index
         public const string PermissionName_Build_Index = null;// "; // "Build_Index";
-        // 1.6. Build.Details
+        // 1.11. Build.Details
         public const string PermissionName_Build_Details = null;// "; // "Build_Details";
-        // 1.7. Build.AddNew
+        // 1.12. Build.AddNew
         public const string PermissionName_Build_AddNew = null;// "; // "Build_AddNew";
-        // 1.8. Build.Copy
+        // 1.13. Build.Copy
         public const string PermissionName_Build_Copy = null;// "; // "Build_Copy";
-        // 1.9. Build.Edit
+        // 1.14. Build.Edit
         public const string PermissionName_Build_Edit = null;// "; // "Build_Edit";
-        // 1.10. Build.Delete
+        // 1.15. Build.Delete
         public const string PermissionName_Build_Delete = null;// "; // "Build_Delete";
-        // 1.11. Build.GoBackList
+        // 1.16. Build.GoBackList
         public const string PermissionName_Build_GoBackList = null;// "; // "Build_GoBackList";
 
         #endregion 1. Build
@@ -41,8 +51,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
         public const string PermissionName_BuildEventCode_WPCommonOfBuildEventCode = null;// "; // "BuildEventCode_WPCommonOfBuildEventCode";
         // 2.2. BuildEventCode.WPCommonOfBuildEventCode_Export
         public const string PermissionName_BuildEventCode_WPCommonOfBuildEventCode_Export = null;// "; // "BuildEventCode_WPCommonOfBuildEventCode_Export";
-        // 2.3. BuildEventCode.WPEntityRelatedOfBuildEventCode
-        public const string PermissionName_BuildEventCode_WPEntityRelatedOfBuildEventCode = null;// "; // "BuildEventCode_WPEntityRelatedOfBuildEventCode";
+        // 2.3. BuildEventCode.WPFullDetailsOfBuildEventCode
+        public const string PermissionName_BuildEventCode_WPFullDetailsOfBuildEventCode = null;// "; // "BuildEventCode_WPFullDetailsOfBuildEventCode";
         // 2.4. BuildEventCode.Import
         public const string PermissionName_BuildEventCode_Import = null;// "; // "BuildEventCode_Import";
         // 2.5. BuildEventCode.Index
@@ -68,8 +78,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
         public const string PermissionName_BuildLog_WPCommonOfBuildLog = null;// "; // "BuildLog_WPCommonOfBuildLog";
         // 3.2. BuildLog.WPCommonOfBuildLog_Export
         public const string PermissionName_BuildLog_WPCommonOfBuildLog_Export = null;// "; // "BuildLog_WPCommonOfBuildLog_Export";
-        // 3.3. BuildLog.WPEntityRelatedOfBuildLog
-        public const string PermissionName_BuildLog_WPEntityRelatedOfBuildLog = null;// "; // "BuildLog_WPEntityRelatedOfBuildLog";
+        // 3.3. BuildLog.WPFullDetailsOfBuildLog
+        public const string PermissionName_BuildLog_WPFullDetailsOfBuildLog = null;// "; // "BuildLog_WPFullDetailsOfBuildLog";
         // 3.4. BuildLog.Import
         public const string PermissionName_BuildLog_Import = null;// "; // "BuildLog_Import";
         // 3.5. BuildLog.Index
@@ -95,8 +105,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
         public const string PermissionName_Organization_WPCommonOfOrganization = null;// "; // "Organization_WPCommonOfOrganization";
         // 4.2. Organization.WPCommonOfOrganization_Export
         public const string PermissionName_Organization_WPCommonOfOrganization_Export = null;// "; // "Organization_WPCommonOfOrganization_Export";
-        // 4.3. Organization.WPEntityRelatedOfOrganization
-        public const string PermissionName_Organization_WPEntityRelatedOfOrganization = null;// "; // "Organization_WPEntityRelatedOfOrganization";
+        // 4.3. Organization.WPFullDetailsOfOrganization
+        public const string PermissionName_Organization_WPFullDetailsOfOrganization = null;// "; // "Organization_WPFullDetailsOfOrganization";
         // 4.4. Organization.Import
         public const string PermissionName_Organization_Import = null;// "; // "Organization_Import";
         // 4.5. Organization.Index
@@ -122,8 +132,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
         public const string PermissionName_Solution_WPCommonOfSolution = null;// "; // "Solution_WPCommonOfSolution";
         // 5.2. Solution.WPCommonOfSolution_Export
         public const string PermissionName_Solution_WPCommonOfSolution_Export = null;// "; // "Solution_WPCommonOfSolution_Export";
-        // 5.3. Solution.WPEntityRelatedOfSolution
-        public const string PermissionName_Solution_WPEntityRelatedOfSolution = null;// "; // "Solution_WPEntityRelatedOfSolution";
+        // 5.3. Solution.WPFullDetailsOfSolution
+        public const string PermissionName_Solution_WPFullDetailsOfSolution = null;// "; // "Solution_WPFullDetailsOfSolution";
         // 5.4. Solution.Import
         public const string PermissionName_Solution_Import = null;// "; // "Solution_Import";
         // 5.5. Solution.Index

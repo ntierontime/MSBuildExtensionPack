@@ -36,155 +36,155 @@
     <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
     <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
   </DataView>
-  <Query Key="Common" SourceTypeFullName="MSBuildExtensionPack.Organization">
+  <Criteria Key="Common" SourceTypeFullName="MSBuildExtensionPack.Organization">
     <Description>Query by EntityReference, String, Bool, Order By DateTime</Description>
-    <QueryUnitGroups>Common</QueryUnitGroups>
-  </Query>
-  <Query Key="All" SourceTypeFullName="MSBuildExtensionPack.Organization">
+    <Queries>Common</Queries>
+  </Criteria>
+  <Criteria Key="All" SourceTypeFullName="MSBuildExtensionPack.Organization">
     <Description>Without condition, Order By DateTime</Description>
-    <QueryUnitGroups>All</QueryUnitGroups>
-  </Query>
-  <Query Key="FKOnly" SourceTypeFullName="MSBuildExtensionPack.Organization">
+    <Queries>All</Queries>
+  </Criteria>
+  <Criteria Key="FKOnly" SourceTypeFullName="MSBuildExtensionPack.Organization">
     <Description>Query by EntityReference</Description>
-    <QueryUnitGroups>FKOnly</QueryUnitGroups>
-  </Query>
-  <Query Key="Identifier" SourceTypeFullName="MSBuildExtensionPack.Organization">
+    <Queries>FKOnly</Queries>
+  </Criteria>
+  <Criteria Key="Identifier" SourceTypeFullName="MSBuildExtensionPack.Organization">
     <Description>Query by Identifier</Description>
-    <QueryUnitGroups>Identifier</QueryUnitGroups>
-  </Query>
-  <Query Key="UniqueConstraintByUC_Organization_UniqueIdentifier" SourceTypeFullName="MSBuildExtensionPack.Organization">
+    <Queries>Identifier</Queries>
+  </Criteria>
+  <Criteria Key="UniqueConstraintByUC_Organization_UniqueIdentifier" SourceTypeFullName="MSBuildExtensionPack.Organization">
     <Description>Query by UniqueConstrain of UC_Organization_UniqueIdentifier</Description>
-    <QueryUnitGroups>UniqueConstraintByUC_Organization_UniqueIdentifier</QueryUnitGroups>
-  </Query>
-  <Query Key="UniqueConstraintByUC_Organization_UniqueidentifierColumn" SourceTypeFullName="MSBuildExtensionPack.Organization">
+    <Queries>UniqueConstraintByUC_Organization_UniqueIdentifier</Queries>
+  </Criteria>
+  <Criteria Key="UniqueConstraintByUC_Organization_UniqueidentifierColumn" SourceTypeFullName="MSBuildExtensionPack.Organization">
     <Description>Query by UniqueConstrain of UC_Organization_UniqueidentifierColumn</Description>
-    <QueryUnitGroups>UniqueConstraintByUC_Organization_UniqueidentifierColumn</QueryUnitGroups>
-  </Query>
-  <Query Key="IdentifierAndUniqueConstraint" SourceTypeFullName="MSBuildExtensionPack.Organization">
+    <Queries>UniqueConstraintByUC_Organization_UniqueidentifierColumn</Queries>
+  </Criteria>
+  <Criteria Key="IdentifierAndUniqueConstraint" SourceTypeFullName="MSBuildExtensionPack.Organization">
     <Description>Query by Identifier and UniqueConstraints</Description>
-    <QueryUnitGroups>IdentifierAndUniqueConstraint</QueryUnitGroups>
-  </Query>
-  <DataQueryOnDataViewSetting Key="EntityByCommon" DataQueryKey="Common" />
-  <DataQueryOnDataViewSetting Key="DefaultByCommon" DataQueryKey="Common" DataViewKey="Default">
-    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
-    <BLLMethodSetting HasGetCollectionMethod="true" />
-  </DataQueryOnDataViewSetting>
-  <DataQueryOnDataViewSetting Key="EntityByAll" DataQueryKey="All" />
-  <DataQueryOnDataViewSetting Key="NameValuePairByAll" DataQueryKey="All" DataViewKey="NameValuePair">
-    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
-    <BLLMethodSetting HasGetCollectionMethod="true" />
-    <WebApiMethodSetting HasGetCollectionMethod="true" />
-  </DataQueryOnDataViewSetting>
-  <DataQueryOnDataViewSetting Key="RssItemByAll" DataQueryKey="All" DataViewKey="RssItem">
-    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
-    <BLLMethodSetting HasGetCollectionMethod="true" />
-  </DataQueryOnDataViewSetting>
-  <DataQueryOnDataViewSetting Key="EntityByFKOnly" DataQueryKey="FKOnly" />
-  <DataQueryOnDataViewSetting Key="NameValuePairByFKOnly" DataQueryKey="FKOnly" DataViewKey="NameValuePair">
-    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
-    <BLLMethodSetting HasGetCollectionMethod="true" />
-    <WebApiMethodSetting HasGetCollectionMethod="true" />
-  </DataQueryOnDataViewSetting>
-  <DataQueryOnDataViewSetting Key="RssItemByFKOnly" DataQueryKey="FKOnly" DataViewKey="RssItem" />
-  <DataQueryOnDataViewSetting Key="DefaultByFKOnly" DataQueryKey="FKOnly" DataViewKey="Default">
-    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
-    <BLLMethodSetting HasGetCollectionMethod="true" />
-  </DataQueryOnDataViewSetting>
-  <DataQueryOnDataViewSetting Key="DefaultGroupedDataViewByFKOnly" DataQueryKey="FKOnly" DataViewKey="DefaultGroupedDataView" />
-  <DataQueryOnDataViewSetting Key="EntityByIdentifier" DataQueryKey="Identifier">
-    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
-    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
-  </DataQueryOnDataViewSetting>
-  <DataQueryOnDataViewSetting Key="DefaultByIdentifier" DataQueryKey="Identifier" DataViewKey="Default">
-    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
-    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
-  </DataQueryOnDataViewSetting>
-  <DataQueryOnDataViewSetting Key="DefaultWithPathByIdentifier" DataQueryKey="Identifier" DataViewKey="DefaultWithPath" />
-  <DataQueryOnDataViewSetting Key="KeyInformationByIdentifier" DataQueryKey="Identifier" DataViewKey="KeyInformation">
-    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
-    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
-  </DataQueryOnDataViewSetting>
-  <DataQueryOnDataViewSetting Key="EntityByUniqueConstraintByUC_Organization_UniqueIdentifier" DataQueryKey="UniqueConstraintByUC_Organization_UniqueIdentifier" />
-  <DataQueryOnDataViewSetting Key="NameValuePairByUniqueConstraintByUC_Organization_UniqueIdentifier" DataQueryKey="UniqueConstraintByUC_Organization_UniqueIdentifier" DataViewKey="NameValuePair" />
-  <DataQueryOnDataViewSetting Key="DefaultByUniqueConstraintByUC_Organization_UniqueIdentifier" DataQueryKey="UniqueConstraintByUC_Organization_UniqueIdentifier" DataViewKey="Default" />
-  <DataQueryOnDataViewSetting Key="EntityByUniqueConstraintByUC_Organization_UniqueidentifierColumn" DataQueryKey="UniqueConstraintByUC_Organization_UniqueidentifierColumn" />
-  <DataQueryOnDataViewSetting Key="NameValuePairByUniqueConstraintByUC_Organization_UniqueidentifierColumn" DataQueryKey="UniqueConstraintByUC_Organization_UniqueidentifierColumn" DataViewKey="NameValuePair" />
-  <DataQueryOnDataViewSetting Key="DefaultByUniqueConstraintByUC_Organization_UniqueidentifierColumn" DataQueryKey="UniqueConstraintByUC_Organization_UniqueidentifierColumn" DataViewKey="Default" />
-  <DataQueryOnDataViewSetting Key="EntityByIdentifierAndUniqueConstraint" DataQueryKey="IdentifierAndUniqueConstraint">
-    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
-    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
-  </DataQueryOnDataViewSetting>
-  <DataQueryOnDataViewSetting Key="DefaultByIdentifierAndUniqueConstraint" DataQueryKey="IdentifierAndUniqueConstraint" DataViewKey="Default">
-    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
-    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
-  </DataQueryOnDataViewSetting>
-  <DataQueryOnDataViewSetting Key="DefaultWithPathByIdentifierAndUniqueConstraint" DataQueryKey="IdentifierAndUniqueConstraint" DataViewKey="DefaultWithPath" />
-  <DataQueryOnDataViewSetting Key="KeyInformationByIdentifierAndUniqueConstraint" DataQueryKey="IdentifierAndUniqueConstraint" DataViewKey="KeyInformation">
-    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
-    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
-  </DataQueryOnDataViewSetting>
-  <QueryUnitGroup Key="Common" DataQueryPerQueryKnownKey="Common" SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" ConditionOperator="AND">
+    <Queries>IdentifierAndUniqueConstraint</Queries>
+  </Criteria>
+  <Query Key="Common" DataQueryPerQueryKnownKey="Common" SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" ConditionOperator="AND">
     <Description>Query by EntityReference, String, Bool, Order By DateTime</Description>
     <QueryUnits Key="Common" ConditionOperator="AND" Description="Query by EntityReference, Bool, DateTime">ParentId=\ParentId:Id.Equals;IsSystemBuiltIn=:IsSystemBuiltIn.Equals;CreatedDateTimeRange=:CreatedDateTime.Range;BitColumn=:BitColumn.Equals;DatetimeColumnRange=:DatetimeColumn.Range;Datetime2ColumnRange=:Datetime2Column.Range;SmalldatetimeColumnRange=:SmalldatetimeColumn.Range;DateColumnRange=:DateColumn.Range</QueryUnits>
     <QueryUnits Key="Common" ConditionOperator="AND" Description="Query by String">Name=:Name.Contains;CharColumn=:CharColumn.Contains;VarcharColumn=:VarcharColumn.Contains;TextColumn=:TextColumn.Contains;NcharColumn=:NcharColumn.Contains;NvarcharColumn=:NvarcharColumn.Contains;NtextColumn=:NtextColumn.Contains</QueryUnits>
-  </QueryUnitGroup>
-  <QueryUnitGroup Key="All" DataQueryPerQueryKnownKey="All" SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" ConditionOperator="AND">
+  </Query>
+  <Query Key="All" DataQueryPerQueryKnownKey="All" SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" ConditionOperator="AND">
     <Description>Without condition, Order By DateTime</Description>
     <QueryUnits Key="All" ConditionOperator="AND" Description="Without condition, Order By DateTime" />
-  </QueryUnitGroup>
-  <QueryUnitGroup Key="FKOnly" DataQueryPerQueryKnownKey="FKOnly" SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" ConditionOperator="AND">
+  </Query>
+  <Query Key="FKOnly" DataQueryPerQueryKnownKey="FKOnly" SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" ConditionOperator="AND">
     <Description>Query by EntityReference</Description>
     <QueryUnits Key="FKOnly" ConditionOperator="AND" Description="Query by EntityReference, Order By DateTime">ParentId=\ParentId:Id.Equals</QueryUnits>
-  </QueryUnitGroup>
-  <QueryUnitGroup Key="Identifier" DataQueryPerQueryKnownKey="Identifier" SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" ConditionOperator="AND">
+  </Query>
+  <Query Key="Identifier" DataQueryPerQueryKnownKey="Identifier" SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" ConditionOperator="AND">
     <Description>Query by Identifier</Description>
     <QueryUnits Key="Identifier" ConditionOperator="AND" Description="Query by Identifier">Id=:Id.Equals</QueryUnits>
-  </QueryUnitGroup>
-  <QueryUnitGroup Key="UniqueConstraintByUC_Organization_UniqueIdentifier" DataQueryPerQueryKnownKey="UniqueConstraint" SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" ConditionOperator="AND">
+  </Query>
+  <Query Key="UniqueConstraintByUC_Organization_UniqueIdentifier" DataQueryPerQueryKnownKey="UniqueConstraint" SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" ConditionOperator="AND">
     <Description>Query by UniqueConstrain of UC_Organization_UniqueIdentifier</Description>
     <QueryUnits Key="UniqueConstraintOfUC_Organization_UniqueIdentifier" ConditionOperator="AND" Description="Query by UniqueConstrain of UC_Organization_UniqueIdentifier">UniqueIdentifier=:UniqueIdentifier.Equals</QueryUnits>
-  </QueryUnitGroup>
-  <QueryUnitGroup Key="UniqueConstraintByUC_Organization_UniqueidentifierColumn" DataQueryPerQueryKnownKey="UniqueConstraint" SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" ConditionOperator="AND">
+  </Query>
+  <Query Key="UniqueConstraintByUC_Organization_UniqueidentifierColumn" DataQueryPerQueryKnownKey="UniqueConstraint" SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" ConditionOperator="AND">
     <Description>Query by UniqueConstrain of UC_Organization_UniqueidentifierColumn</Description>
     <QueryUnits Key="UniqueConstraintOfUC_Organization_UniqueidentifierColumn" ConditionOperator="AND" Description="Query by UniqueConstrain of UC_Organization_UniqueidentifierColumn">UniqueidentifierColumn=:UniqueidentifierColumn.Equals</QueryUnits>
-  </QueryUnitGroup>
-  <QueryUnitGroup Key="IdentifierAndUniqueConstraint" DataQueryPerQueryKnownKey="IdentifierAndUniqueConstraint" SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" ConditionOperator="AND">
+  </Query>
+  <Query Key="IdentifierAndUniqueConstraint" DataQueryPerQueryKnownKey="IdentifierAndUniqueConstraint" SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" ConditionOperator="AND">
     <Description>Query by Identifier and UniqueConstraints</Description>
     <QueryUnits Key="IdentifierAndUniqueConstraint" ConditionOperator="AND" Description="Query by Identifier and UniqueConstraints">Id=:Id.Equals;UniqueIdentifier=:UniqueIdentifier.Equals;UniqueidentifierColumn=:UniqueidentifierColumn.Equals</QueryUnits>
-  </QueryUnitGroup>
-  <Workspace MasterTypeFullName="MSBuildExtensionPack.Organization" Key="Common" UIWorkspaceType="SearchResult" DataViewKey="Default" QueryKey="Common" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+  </Query>
+  <QueryResult Key="EntityByCommon" CriteriaKey="Common" />
+  <QueryResult Key="DefaultByCommon" CriteriaKey="Common" DataViewKey="Default">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasGetCollectionMethod="true" />
+  </QueryResult>
+  <QueryResult Key="EntityByAll" CriteriaKey="All" />
+  <QueryResult Key="NameValuePairByAll" CriteriaKey="All" DataViewKey="NameValuePair">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasGetCollectionMethod="true" />
+    <WebApiMethodSetting HasGetCollectionMethod="true" />
+  </QueryResult>
+  <QueryResult Key="RssItemByAll" CriteriaKey="All" DataViewKey="RssItem">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasGetCollectionMethod="true" />
+  </QueryResult>
+  <QueryResult Key="EntityByFKOnly" CriteriaKey="FKOnly" />
+  <QueryResult Key="NameValuePairByFKOnly" CriteriaKey="FKOnly" DataViewKey="NameValuePair">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasGetCollectionMethod="true" />
+    <WebApiMethodSetting HasGetCollectionMethod="true" />
+  </QueryResult>
+  <QueryResult Key="RssItemByFKOnly" CriteriaKey="FKOnly" DataViewKey="RssItem" />
+  <QueryResult Key="DefaultByFKOnly" CriteriaKey="FKOnly" DataViewKey="Default">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasGetCollectionMethod="true" />
+  </QueryResult>
+  <QueryResult Key="DefaultGroupedDataViewByFKOnly" CriteriaKey="FKOnly" DataViewKey="DefaultGroupedDataView" />
+  <QueryResult Key="EntityByIdentifier" CriteriaKey="Identifier">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
+  </QueryResult>
+  <QueryResult Key="DefaultByIdentifier" CriteriaKey="Identifier" DataViewKey="Default">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
+  </QueryResult>
+  <QueryResult Key="DefaultWithPathByIdentifier" CriteriaKey="Identifier" DataViewKey="DefaultWithPath" />
+  <QueryResult Key="KeyInformationByIdentifier" CriteriaKey="Identifier" DataViewKey="KeyInformation">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
+  </QueryResult>
+  <QueryResult Key="EntityByUniqueConstraintByUC_Organization_UniqueIdentifier" CriteriaKey="UniqueConstraintByUC_Organization_UniqueIdentifier" />
+  <QueryResult Key="NameValuePairByUniqueConstraintByUC_Organization_UniqueIdentifier" CriteriaKey="UniqueConstraintByUC_Organization_UniqueIdentifier" DataViewKey="NameValuePair" />
+  <QueryResult Key="DefaultByUniqueConstraintByUC_Organization_UniqueIdentifier" CriteriaKey="UniqueConstraintByUC_Organization_UniqueIdentifier" DataViewKey="Default" />
+  <QueryResult Key="EntityByUniqueConstraintByUC_Organization_UniqueidentifierColumn" CriteriaKey="UniqueConstraintByUC_Organization_UniqueidentifierColumn" />
+  <QueryResult Key="NameValuePairByUniqueConstraintByUC_Organization_UniqueidentifierColumn" CriteriaKey="UniqueConstraintByUC_Organization_UniqueidentifierColumn" DataViewKey="NameValuePair" />
+  <QueryResult Key="DefaultByUniqueConstraintByUC_Organization_UniqueidentifierColumn" CriteriaKey="UniqueConstraintByUC_Organization_UniqueidentifierColumn" DataViewKey="Default" />
+  <QueryResult Key="EntityByIdentifierAndUniqueConstraint" CriteriaKey="IdentifierAndUniqueConstraint">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
+  </QueryResult>
+  <QueryResult Key="DefaultByIdentifierAndUniqueConstraint" CriteriaKey="IdentifierAndUniqueConstraint" DataViewKey="Default">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
+  </QueryResult>
+  <QueryResult Key="DefaultWithPathByIdentifierAndUniqueConstraint" CriteriaKey="IdentifierAndUniqueConstraint" DataViewKey="DefaultWithPath" />
+  <QueryResult Key="KeyInformationByIdentifierAndUniqueConstraint" CriteriaKey="IdentifierAndUniqueConstraint" DataViewKey="KeyInformation">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
+  </QueryResult>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Organization" Key="Common" UIViewType="SearchResult" DataViewKey="Default" CriteriaKey="Common" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
     <Description>Workspace of Common</Description>
-  </Workspace>
-  <Workspace MasterTypeFullName="MSBuildExtensionPack.Organization" Key="EntityRelated" UIWorkspaceType="EntityRelated" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Organization" Key="FullDetails" UIViewType="FullDetails" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
     <Description>Workspace of Identifier</Description>
-    <View SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" Group="Article" Key="V_Organization_Via_ParentId" UIViewType="RelatedEntityWhenMasterViewIsPKEntity" QueryKey="FKOnly" DataViewKey="Default" EntityReferenceName="FK_Organization_ParentId" Name="View of MSBuildExtensionPack.Organization via ParentId">
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" Group="Article" Key="V_Organization_Via_ParentId" UIViewType="RelatedEntityWhenMasterViewIsPKEntity" CriteriaKey="FKOnly" DataViewKey="Default" EntityReferenceName="FK_Organization_ParentId" Name="View of MSBuildExtensionPack.Organization via ParentId">
       <Description>View of MSBuildExtensionPack.Organization via ParentId</Description>
-    </View>
-    <View SourceTypeDeclarationFullName="MSBuildExtensionPack.Solution" Group="Article" Key="V_Solution_Via_OrganizationId" UIViewType="RelatedEntityWhenMasterViewIsPKEntity" QueryKey="FKOnly" DataViewKey="Default" EntityReferenceName="FK_Solution_OrganizationId" Name="View of MSBuildExtensionPack.Solution via OrganizationId">
+    </PartialView>
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Solution" Group="Article" Key="V_Solution_Via_OrganizationId" UIViewType="RelatedEntityWhenMasterViewIsPKEntity" CriteriaKey="FKOnly" DataViewKey="Default" EntityReferenceName="FK_Solution_OrganizationId" Name="View of MSBuildExtensionPack.Solution via OrganizationId">
       <Description>View of MSBuildExtensionPack.Solution via OrganizationId</Description>
-    </View>
-    <View SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" Group="Aside" Key="V_Organization_Via_This" UIViewType="MasterViewAsideKeyInformation" QueryKey="IdentifierAndUniqueConstraint" DataViewKey="Default" EntityReferenceSimpleFullPath="" EntityReferenceName="" Name="View of MSBuildExtensionPack.Organization via This">
+    </PartialView>
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" Group="Aside" Key="V_Organization_Via_This" UIViewType="MasterViewAsideKeyInformation" CriteriaKey="IdentifierAndUniqueConstraint" DataViewKey="Default" EntityReferenceSimpleFullPath="" EntityReferenceName="" Name="View of MSBuildExtensionPack.Organization via This">
       <Description>View of MSBuildExtensionPack.Organization via This</Description>
-    </View>
-    <View SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" Group="Aside" Key="V_Organization_Via_ParentId" UIViewType="RelatedEntityWhenMasterViewIsFKEntity" QueryKey="Identifier" DataViewKey="KeyInformation" EntityReferenceSimpleFullPath="\ParentId" Name="View of MSBuildExtensionPack.Organization via ParentId">
+    </PartialView>
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" Group="Aside" Key="V_Organization_Via_ParentId" UIViewType="RelatedEntityWhenMasterViewIsFKEntity" CriteriaKey="Identifier" DataViewKey="KeyInformation" EntityReferenceSimpleFullPath="\ParentId" Name="View of MSBuildExtensionPack.Organization via ParentId">
       <Description>View of MSBuildExtensionPack.Organization via ParentId</Description>
-    </View>
-  </Workspace>
-  <Workspace MasterTypeFullName="MSBuildExtensionPack.Organization" Key="CommonSearchView" UIWorkspaceType="Search" DataViewKey="Default" QueryKey="Common" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    </PartialView>
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Organization" Key="CommonSearchView" UIViewType="Search" DataViewKey="Default" CriteriaKey="Common" KeyReferencedViewModel="Common" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
     <Description>Workspace of CommonSearchView</Description>
-  </Workspace>
-  <Workspace MasterTypeFullName="MSBuildExtensionPack.Organization" Key="CommonResultView" UIWorkspaceType="Results" DataViewKey="Default" QueryKey="Common" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Organization" Key="CommonResultView" UIViewType="Results" DataViewKey="Default" CriteriaKey="Common" KeyReferencedViewModel="Common" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
     <Description>Workspace of CommonResultView</Description>
-  </Workspace>
-  <Workspace MasterTypeFullName="MSBuildExtensionPack.Organization" Key="TabbedCommon" UIWorkspaceType="TabbedSearch" DataViewKey="" QueryKey="" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Organization" Key="TabbedCommon" UIViewType="TabContainer" DataViewKey="" CriteriaKey="" KeyReferencedViewModel="Common" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
     <Description>Workspace of TabbedCommon</Description>
-    <ViewReference Group="OnlyOneArticle" Key="WSI_TabbedCommon" ReferencedKeyOfUIWorkspace="CommonSearchView" Name="WorkspaceItem of TabbedCommon">
+    <PartialViewReference Group="OnlyOneArticle" Key="WSI_TabbedCommon" ReferencedKeyOfUIWorkspace="CommonSearchView" Name="WorkspaceItem of TabbedCommon">
       <Description>WorkspaceItem of TabbedCommon</Description>
-    </ViewReference>
-    <ViewReference Group="OnlyOneArticle" Key="WSI_TabbedCommon" ReferencedKeyOfUIWorkspace="CommonResultView" Name="WorkspaceItem of TabbedCommon">
+    </PartialViewReference>
+    <PartialViewReference Group="OnlyOneArticle" Key="WSI_TabbedCommon" ReferencedKeyOfUIWorkspace="CommonResultView" Name="WorkspaceItem of TabbedCommon">
       <Description>WorkspaceItem of TabbedCommon</Description>
-    </ViewReference>
-  </Workspace>
+    </PartialViewReference>
+  </UIView>
   <ForeignKeyPersistList>
     <ForeignKeyPersist>
       <EntityReferenceResultForPersistAliaType>DownTree</EntityReferenceResultForPersistAliaType>

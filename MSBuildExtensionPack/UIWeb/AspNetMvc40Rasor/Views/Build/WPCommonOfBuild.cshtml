@@ -142,7 +142,7 @@
             <tr>
 <td><div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdIdentifierOftOfIdentifier=true, valueToCompareIdIdentifierOftOfIdentifier = Model.Result[i].Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetails">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Build_WPFullDetailsOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdIdentifierOftOfIdentifier=true, valueToCompareIdIdentifierOftOfIdentifier = Model.Result[i].Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetails">
         <span class="glyphicon glyphicon-briefcase"></span>
     </a>
 </div>
@@ -155,9 +155,9 @@
 </td>
 <td class="hidden-sm">@Html.DisplayFor(model => model.Result[i].Id)</td>
 <td>@Html.DisplayFor(model => model.Result[i].BuildStartTime)</td>
-<td>@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].Organization_2Id, uniqueIdentifier = Model.Result[i].Organization_2_UniqueIdentifier, uniqueidentifierColumn = Model.Result[i].Organization_2_UniqueidentifierColumn }, null)</td>
-<td>@Html.ActionLink(Model.Result[i].Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPEntityRelatedOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].Organization_1Id, uniqueIdentifier = Model.Result[i].Organization_1_UniqueIdentifier, uniqueidentifierColumn = Model.Result[i].Organization_1_UniqueidentifierColumn }, null)</td>
-<td class="hidden-xs">@Html.ActionLink(Model.Result[i].Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { id = Model.Result[i].SolutionId }, null)</td>
+<td>@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].Organization_2Id, uniqueIdentifier = Model.Result[i].Organization_2_UniqueIdentifier, uniqueidentifierColumn = Model.Result[i].Organization_2_UniqueidentifierColumn }, null)</td>
+<td>@Html.ActionLink(Model.Result[i].Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].Organization_1Id, uniqueIdentifier = Model.Result[i].Organization_1_UniqueIdentifier, uniqueidentifierColumn = Model.Result[i].Organization_1_UniqueidentifierColumn }, null)</td>
+<td class="hidden-xs">@Html.ActionLink(Model.Result[i].Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPFullDetailsOfSolution, UrlStringsAlias.ControllerName_Solution, new { id = Model.Result[i].SolutionId }, null)</td>
 <td class="hidden-xs">@Html.DisplayFor(model => model.Result[i].Name)</td>
 <td class="hidden-sm">@Html.DisplayFor(model => model.Result[i].Description)</td>
             </tr>

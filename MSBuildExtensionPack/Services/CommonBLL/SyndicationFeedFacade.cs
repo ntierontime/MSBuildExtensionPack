@@ -29,7 +29,7 @@ namespace MSBuildExtensionPack.CommonBLL
             {
                 foreach (var datasourceItem in fromDataSource.Message)
                 {
-                    //string urlOfEntityRelated = string.Format("{0}{1}/{2}?{3}", MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.HomeOwner, "Build", "WPEntityRelatedOfBuild", "{Query String Parameters}");
+                    //string urlOfEntityRelated = string.Format("{0}{1}/{2}?{3}", MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.HomeOwner, "Build", "WPFullDetailsOfBuild", "{Query String Parameters}");
                     SyndicationItem item1 = new SyndicationItem(
                         datasourceItem.Title,
                         datasourceItem.Description,
@@ -65,7 +65,7 @@ namespace MSBuildExtensionPack.CommonBLL
             {
                 foreach (var datasourceItem in fromDataSource.Message)
                 {
-                    //string urlOfEntityRelated = string.Format("{0}{1}/{2}?{3}", MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.HomeOwner, "BuildEventCode", "WPEntityRelatedOfBuildEventCode", "{Query String Parameters}");
+                    //string urlOfEntityRelated = string.Format("{0}{1}/{2}?{3}", MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode.HomeOwner, "BuildEventCode", "WPFullDetailsOfBuildEventCode", "{Query String Parameters}");
                     SyndicationItem item1 = new SyndicationItem(
                         datasourceItem.Title,
                         datasourceItem.Description,
@@ -101,7 +101,7 @@ namespace MSBuildExtensionPack.CommonBLL
             {
                 foreach (var datasourceItem in fromDataSource.Message)
                 {
-                    //string urlOfEntityRelated = string.Format("{0}{1}/{2}?{3}", MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.HomeOwner, "BuildLog", "WPEntityRelatedOfBuildLog", "{Query String Parameters}");
+                    //string urlOfEntityRelated = string.Format("{0}{1}/{2}?{3}", MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.HomeOwner, "BuildLog", "WPFullDetailsOfBuildLog", "{Query String Parameters}");
                     SyndicationItem item1 = new SyndicationItem(
                         datasourceItem.Title,
                         datasourceItem.Description,
@@ -137,7 +137,7 @@ namespace MSBuildExtensionPack.CommonBLL
             {
                 foreach (var datasourceItem in fromDataSource.Message)
                 {
-                    //string urlOfEntityRelated = string.Format("{0}{1}/{2}?{3}", MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.HomeOwner, "Organization", "WPEntityRelatedOfOrganization", "{Query String Parameters}");
+                    //string urlOfEntityRelated = string.Format("{0}{1}/{2}?{3}", MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.HomeOwner, "Organization", "WPFullDetailsOfOrganization", "{Query String Parameters}");
                     SyndicationItem item1 = new SyndicationItem(
                         datasourceItem.Title,
                         datasourceItem.Description,
@@ -173,7 +173,7 @@ namespace MSBuildExtensionPack.CommonBLL
             {
                 foreach (var datasourceItem in fromDataSource.Message)
                 {
-                    //string urlOfEntityRelated = string.Format("{0}{1}/{2}?{3}", MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.HomeOwner, "Solution", "WPEntityRelatedOfSolution", "{Query String Parameters}");
+                    //string urlOfEntityRelated = string.Format("{0}{1}/{2}?{3}", MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.HomeOwner, "Solution", "WPFullDetailsOfSolution", "{Query String Parameters}");
                     SyndicationItem item1 = new SyndicationItem(
                         datasourceItem.Title,
                         datasourceItem.Description,

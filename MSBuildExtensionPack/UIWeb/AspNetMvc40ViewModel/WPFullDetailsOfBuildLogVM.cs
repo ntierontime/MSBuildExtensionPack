@@ -7,11 +7,11 @@ using System.Web.Mvc;
 
 namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 {
-    public partial class WPEntityRelatedOfBuildLogVM
-        : MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfBuildLogVM
+    public partial class WPFullDetailsOfBuildLogVM
+        : MSBuildExtensionPack.ViewModelData.WPFullDetailsOfBuildLogVM
         //: Framework.ViewModels.ViewModelEntityRelatedBase<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaIdentifier, Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus>
     {
-        public WPEntityRelatedOfBuildLogVM(MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaIdentifier criteriaOfMasterEntity)
+        public WPFullDetailsOfBuildLogVM(MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaIdentifier criteriaOfMasterEntity)
             : base(criteriaOfMasterEntity)
         {
         }

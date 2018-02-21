@@ -27,7 +27,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 
         public const string TempDataKey_WPCommonOfOrganization = "TempDataKey_WPCommonOfOrganization";
         /// <summary>
-        /// Controller Method of View WPCommonOfOrganization : Description Of Common of MSBuildExtensionPack.Organization
+        /// Controller Method of View WPCommonOfOrganization : Description Of MSBuildExtensionPack_Organization_Common
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_WPCommonOfOrganization)]
@@ -111,8 +111,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// Display one entity and all related entities if any, either single item or a list, based on foreign keys
         /// </summary>
         /// <returns></returns>
-        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_WPEntityRelatedOfOrganization)]
-        public ActionResult WPEntityRelatedOfOrganization(System.Int64? id
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_WPFullDetailsOfOrganization)]
+        public ActionResult WPFullDetailsOfOrganization(System.Int64? id
             , System.Guid? uniqueIdentifier
             , System.Guid? uniqueidentifierColumn)
         {
@@ -120,7 +120,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             criteria.IdentifierAndUniqueConstraint.Id.NullableValueToCompare = id;
             criteria.IdentifierAndUniqueConstraint.UniqueIdentifier.NullableValueToCompare = uniqueIdentifier;
             criteria.IdentifierAndUniqueConstraint.UniqueidentifierColumn.NullableValueToCompare = uniqueidentifierColumn;
-            MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfOrganizationVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfOrganizationVM(criteria);
+            MSBuildExtensionPack.AspNetMvc40ViewModel.WPFullDetailsOfOrganizationVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPFullDetailsOfOrganizationVM(criteria);
             vm.LoadData();
 
             return View(vm);

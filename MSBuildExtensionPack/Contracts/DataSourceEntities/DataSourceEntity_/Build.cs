@@ -213,7 +213,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         #endregion Method of Build GetAClone()
 
-        #region Nested Views classes and their collection classes 3
+        #region Nested Views classes and their collection classes 4
 
         /// <summary>
         /// View "Default" class of <see cref="Build"/>, used across the solution.
@@ -864,7 +864,133 @@ namespace MSBuildExtensionPack.DataSourceEntities
         {
         }
 
-        #endregion Nested Views classes and their collection classes 3
+        /// <summary>
+        /// View "UpdateNameRequest" class of <see cref="Build"/>, used across the solution.
+        /// </summary>
+        public partial class UpdateNameRequest :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IBuildIdentifier, Framework.EntityContracts.IClone<UpdateNameRequest>
+        {
+
+            #region Storage Fields
+
+        System.String m_Name;
+
+        System.Int64 m_Id;
+
+            #endregion Storage Fields
+
+            #region Constructors
+
+            /// <summary>
+            /// Initializes/clone a new instance of the <see cref=" Build"/> class.
+            /// </summary>
+            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IBuild"/></param>
+            public UpdateNameRequest()
+            {
+                this.Name = null;
+                this.Id = default(long);
+            }
+            /*
+            /// <summary>
+            /// Initializes/clone a new instance of the <see cref=" Build"/> class.
+            /// </summary>
+            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IBuild"/></param>
+            public UpdateNameRequest(MSBuildExtensionPack.EntityContracts.IBuild item)
+            {
+                MSBuildExtensionPack.EntityContracts.IBuildHelper.Copy<MSBuildExtensionPack.EntityContracts.IBuild, UpdateNameRequest>(item, this);
+            }
+            */
+            #endregion Constructors
+
+            #region properties
+
+                    [DataMember]
+        [Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild), ErrorMessageResourceName="Name_is_required")]
+        [StringLengthAttribute(100, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_100")]        public System.String Name
+        {
+            get
+            {
+                return m_Name;
+            }
+            set
+            {
+                m_Name = value;
+                RaisePropertyChanged("Name");
+            }
+        }
+
+                    [DataMember]
+        [Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild), ErrorMessageResourceName="Id_is_required")]        public System.Int64 Id
+        {
+            get
+            {
+                return m_Id;
+            }
+            set
+            {
+                m_Id = value;
+                RaisePropertyChanged("Id");
+            }
+        }
+
+            #endregion properties
+
+            #region Method of Build.UpdateNameRequest  GetAClone()
+
+            /// <summary>
+            /// Gets the A clone.
+            /// </summary>
+            /// <returns>a new instance with same value</returns>
+            public UpdateNameRequest GetAClone()
+            {
+                UpdateNameRequest cloned = new UpdateNameRequest();
+
+            cloned.m_Name = m_Name;
+            cloned.m_Id = m_Id;
+
+                return cloned;
+            }
+
+            /// <summary>
+            /// Gets the A clone.
+            /// </summary>
+            /// <returns>a new instance with same value</returns>
+            public UpdateNameRequest GetACloneWithoutIdentifier()
+            {
+                UpdateNameRequest cloned = GetAClone();
+
+                return cloned;
+            }
+
+            #endregion Method of Build.UpdateNameRequest  GetAClone()
+        }
+
+        /// <summary>
+        /// View "UpdateNameRequest" class of <see cref="Build"/>, used across the solution.
+        /// </summary>
+        public partial class UpdateNameRequestCollection
+            :  List<UpdateNameRequest>
+        {
+        }
+
+        /// <summary>
+        /// message definition of "UpdateNameRequest", pass single entry, from database, to business logic layer. <see cref="Build"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
+        /// </summary>
+        public class DataAccessLayerMessageOfUpdateNameRequest
+            : Framework.DataSourceEntities.DataAccessLayerMessageBase<UpdateNameRequest>
+        {
+        }
+
+        /// <summary>
+        /// message definition of "UpdateNameRequest", pass a collection of instances, from database, to business logic layer. <see cref="Build"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
+        /// </summary>
+        public class DataAccessLayerMessageOfUpdateNameRequestCollection
+            : Framework.DataSourceEntities.DataAccessLayerMessageBase<UpdateNameRequestCollection>
+        {
+        }
+
+        #endregion Nested Views classes and their collection classes 4
     }
 
     /// <summary>

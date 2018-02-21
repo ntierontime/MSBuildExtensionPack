@@ -7,11 +7,11 @@ using System.Web.Mvc;
 
 namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 {
-    public partial class WPEntityRelatedOfBuildEventCodeVM
-        : MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfBuildEventCodeVM
+    public partial class WPFullDetailsOfBuildEventCodeVM
+        : MSBuildExtensionPack.ViewModelData.WPFullDetailsOfBuildEventCodeVM
         //: Framework.ViewModels.ViewModelEntityRelatedBase<MSBuildExtensionPack.DataSourceEntities.BuildEventCode, MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaIdentifier, Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus>
     {
-        public WPEntityRelatedOfBuildEventCodeVM(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaIdentifier criteriaOfMasterEntity)
+        public WPFullDetailsOfBuildEventCodeVM(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaIdentifier criteriaOfMasterEntity)
             : base(criteriaOfMasterEntity)
         {
         }

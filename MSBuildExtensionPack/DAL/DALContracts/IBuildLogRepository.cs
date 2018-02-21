@@ -252,6 +252,43 @@ namespace MSBuildExtensionPack.DALContracts
 
         #endregion Query Methods Of KeyInformationByIdentifier
 
+        #region Query Methods Of KeyInformationByFKOnly
+
+        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfKeyInformationByFKOnly(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria buildId
+            ,Framework.EntityContracts.QuerySystemInt32EqualsCriteria solution_1Id
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_1Id
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,Framework.EntityContracts.QuerySystemInt32EqualsCriteria buildEventCodeId
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            );
+
+        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfKeyInformationByFKOnly(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria buildId
+            ,Framework.EntityContracts.QuerySystemInt32EqualsCriteria solution_1Id
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_1Id
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,Framework.EntityContracts.QuerySystemInt32EqualsCriteria buildEventCodeId
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            );
+
+        MSBuildExtensionPack.DataSourceEntities.BuildLog.DataAccessLayerMessageOfKeyInformationCollection GetCollectionOfKeyInformationByFKOnly(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria buildId
+            ,Framework.EntityContracts.QuerySystemInt32EqualsCriteria solution_1Id
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_1Id
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,Framework.EntityContracts.QuerySystemInt32EqualsCriteria buildEventCodeId
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            );
+
+        #endregion Query Methods Of KeyInformationByFKOnly
+
     }
 }
 

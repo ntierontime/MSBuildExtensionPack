@@ -18,31 +18,31 @@
             <Frame OutlineColor="Yellow" Padding="1">
                 <StackLayout Orientation="Horizontal" >
                     <Label Text="{i18n:Translate Text=Build, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild}" HorizontalOptions="Start" BackgroundColor="LightGray"  WidthRequest="150" HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
-                    <Button Text="TabbedSearch" TextColor="White" BackgroundColor="Green" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM.LaunchSearchViewCommand, Source={StaticResource Locator}}" HorizontalOptions="FillAndExpand" />
+                    <Button Text="TabContainer" TextColor="White" BackgroundColor="Green" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM.LaunchSearchViewCommand, Source={StaticResource Locator}}" HorizontalOptions="FillAndExpand" />
                 </StackLayout>
             </Frame>
             <Frame OutlineColor="Yellow" Padding="1">
                 <StackLayout Orientation="Horizontal" >
                     <Label Text="{i18n:Translate Text=BuildEventCode, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildEventCode}" HorizontalOptions="Start" BackgroundColor="LightGray"  WidthRequest="150" HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
-                    <Button Text="TabbedSearch" TextColor="White" BackgroundColor="Green" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM.LaunchSearchViewCommand, Source={StaticResource Locator}}" HorizontalOptions="FillAndExpand" />
+                    <Button Text="TabContainer" TextColor="White" BackgroundColor="Green" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM.LaunchSearchViewCommand, Source={StaticResource Locator}}" HorizontalOptions="FillAndExpand" />
                 </StackLayout>
             </Frame>
             <Frame OutlineColor="Yellow" Padding="1">
                 <StackLayout Orientation="Horizontal" >
                     <Label Text="{i18n:Translate Text=BuildLog, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog}" HorizontalOptions="Start" BackgroundColor="LightGray"  WidthRequest="150" HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
-                    <Button Text="TabbedSearch" TextColor="White" BackgroundColor="Green" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM.LaunchSearchViewCommand, Source={StaticResource Locator}}" HorizontalOptions="FillAndExpand" />
+                    <Button Text="TabContainer" TextColor="White" BackgroundColor="Green" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM.LaunchSearchViewCommand, Source={StaticResource Locator}}" HorizontalOptions="FillAndExpand" />
                 </StackLayout>
             </Frame>
             <Frame OutlineColor="Yellow" Padding="1">
                 <StackLayout Orientation="Horizontal" >
                     <Label Text="{i18n:Translate Text=Organization, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" HorizontalOptions="Start" BackgroundColor="LightGray"  WidthRequest="150" HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
-                    <Button Text="TabbedSearch" TextColor="White" BackgroundColor="Green" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM.LaunchSearchViewCommand, Source={StaticResource Locator}}" HorizontalOptions="FillAndExpand" />
+                    <Button Text="TabContainer" TextColor="White" BackgroundColor="Green" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM.LaunchSearchViewCommand, Source={StaticResource Locator}}" HorizontalOptions="FillAndExpand" />
                 </StackLayout>
             </Frame>
             <Frame OutlineColor="Yellow" Padding="1">
                 <StackLayout Orientation="Horizontal" >
                     <Label Text="{i18n:Translate Text=Solution, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution}" HorizontalOptions="Start" BackgroundColor="LightGray"  WidthRequest="150" HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
-                    <Button Text="TabbedSearch" TextColor="White" BackgroundColor="Green" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM.LaunchSearchViewCommand, Source={StaticResource Locator}}" HorizontalOptions="FillAndExpand" />
+                    <Button Text="TabContainer" TextColor="White" BackgroundColor="Green" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM.LaunchSearchViewCommand, Source={StaticResource Locator}}" HorizontalOptions="FillAndExpand" />
                 </StackLayout>
             </Frame>
         </StackLayout>

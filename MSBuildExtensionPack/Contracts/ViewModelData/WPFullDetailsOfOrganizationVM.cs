@@ -5,14 +5,14 @@ using System.Text;
 
 namespace MSBuildExtensionPack.ViewModelData
 {
-    public partial class WPEntityRelatedOfOrganizationVM
+    public partial class WPFullDetailsOfOrganizationVM
         : Framework.ViewModels.ViewModelEntityRelatedBase<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint>
     {
-        public WPEntityRelatedOfOrganizationVM()
+        public WPFullDetailsOfOrganizationVM()
             : base(null)
         { }
 
-        public WPEntityRelatedOfOrganizationVM(MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint criteriaOfMasterEntity)
+        public WPFullDetailsOfOrganizationVM(MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint criteriaOfMasterEntity)
             : base(criteriaOfMasterEntity)
         {
             this.CriteriaOfFK_Organization_ParentId = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaFKOnly();

@@ -290,12 +290,12 @@ System.Int64? id
         }
 
         /// <summary>
-        /// Gets entity related view model of MSBuildExtensionPack.Organization: WPEntityRelatedOfOrganizationVM.
-        /// http://[host]/api/OrganizationApi/GetWPEntityRelatedOfOrganizationVM?
+        /// Gets entity related view model of MSBuildExtensionPack.Organization: WPFullDetailsOfOrganizationVM.
+        /// http://[host]/api/OrganizationApi/GetWPFullDetailsOfOrganizationVM?
         /// </summary>
         /// <returns></returns>
-        [HttpGet, ActionName("GetWPEntityRelatedOfOrganizationVM")]
-        public MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfOrganizationVM GetWPEntityRelatedOfOrganizationVM(
+        [HttpGet, ActionName("GetWPFullDetailsOfOrganizationVM")]
+        public MSBuildExtensionPack.ViewModelData.WPFullDetailsOfOrganizationVM GetWPFullDetailsOfOrganizationVM(
 System.Int64? id
             , System.Guid? uniqueIdentifier
             , System.Guid? uniqueidentifierColumn)
@@ -304,7 +304,7 @@ System.Int64? id
             criteria.IdentifierAndUniqueConstraint.Id.NullableValueToCompare = id;
             criteria.IdentifierAndUniqueConstraint.UniqueIdentifier.NullableValueToCompare = uniqueIdentifier;
             criteria.IdentifierAndUniqueConstraint.UniqueidentifierColumn.NullableValueToCompare = uniqueidentifierColumn;
-            MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfOrganizationVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfOrganizationVM(criteria);
+            MSBuildExtensionPack.AspNetMvc40ViewModel.WPFullDetailsOfOrganizationVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPFullDetailsOfOrganizationVM(criteria);
             retval.LoadData();
             return retval;
         }

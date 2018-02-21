@@ -30,110 +30,214 @@
     <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
     <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
   </DataView>
-  <Query Key="Common" SourceTypeFullName="MSBuildExtensionPack.Build">
+  <DataView Key="UpdateNameRequest" DataViewKnownCategory="Custom" IsGroupByResult="false">
+    <Description>UpdateNameRequest</Description>
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemString)Name=Name;(SystemInt64)Id=Id~Identifier</Properties>
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
+  </DataView>
+  <Criteria Key="Common" SourceTypeFullName="MSBuildExtensionPack.Build">
     <Description>Query by EntityReference, String, Bool, Order By DateTime</Description>
-    <QueryUnitGroups>Common</QueryUnitGroups>
-  </Query>
-  <Query Key="All" SourceTypeFullName="MSBuildExtensionPack.Build">
+    <Queries>Common</Queries>
+  </Criteria>
+  <Criteria Key="All" SourceTypeFullName="MSBuildExtensionPack.Build">
     <Description>Without condition, Order By DateTime</Description>
-    <QueryUnitGroups>All</QueryUnitGroups>
-  </Query>
-  <Query Key="FKOnly" SourceTypeFullName="MSBuildExtensionPack.Build">
+    <Queries>All</Queries>
+  </Criteria>
+  <Criteria Key="FKOnly" SourceTypeFullName="MSBuildExtensionPack.Build">
     <Description>Query by EntityReference</Description>
-    <QueryUnitGroups>FKOnly</QueryUnitGroups>
-  </Query>
-  <Query Key="Identifier" SourceTypeFullName="MSBuildExtensionPack.Build">
+    <Queries>FKOnly</Queries>
+  </Criteria>
+  <Criteria Key="Identifier" SourceTypeFullName="MSBuildExtensionPack.Build">
     <Description>Query by Identifier</Description>
-    <QueryUnitGroups>Identifier</QueryUnitGroups>
-  </Query>
-  <DataQueryOnDataViewSetting Key="EntityByCommon" DataQueryKey="Common" />
-  <DataQueryOnDataViewSetting Key="DefaultByCommon" DataQueryKey="Common" DataViewKey="Default">
-    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
-    <BLLMethodSetting HasGetCollectionMethod="true" />
-  </DataQueryOnDataViewSetting>
-  <DataQueryOnDataViewSetting Key="EntityByAll" DataQueryKey="All" />
-  <DataQueryOnDataViewSetting Key="NameValuePairByAll" DataQueryKey="All" DataViewKey="NameValuePair" />
-  <DataQueryOnDataViewSetting Key="RssItemByAll" DataQueryKey="All" DataViewKey="RssItem">
-    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
-    <BLLMethodSetting HasGetCollectionMethod="true" />
-  </DataQueryOnDataViewSetting>
-  <DataQueryOnDataViewSetting Key="EntityByFKOnly" DataQueryKey="FKOnly" />
-  <DataQueryOnDataViewSetting Key="NameValuePairByFKOnly" DataQueryKey="FKOnly" DataViewKey="NameValuePair">
-    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
-    <BLLMethodSetting HasGetCollectionMethod="true" />
-    <WebApiMethodSetting HasGetCollectionMethod="true" />
-  </DataQueryOnDataViewSetting>
-  <DataQueryOnDataViewSetting Key="RssItemByFKOnly" DataQueryKey="FKOnly" DataViewKey="RssItem" />
-  <DataQueryOnDataViewSetting Key="DefaultByFKOnly" DataQueryKey="FKOnly" DataViewKey="Default">
-    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
-    <BLLMethodSetting HasGetCollectionMethod="true" />
-  </DataQueryOnDataViewSetting>
-  <DataQueryOnDataViewSetting Key="DefaultGroupedDataViewByFKOnly" DataQueryKey="FKOnly" DataViewKey="DefaultGroupedDataView" />
-  <DataQueryOnDataViewSetting Key="EntityByIdentifier" DataQueryKey="Identifier">
-    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
-    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
-  </DataQueryOnDataViewSetting>
-  <DataQueryOnDataViewSetting Key="DefaultByIdentifier" DataQueryKey="Identifier" DataViewKey="Default">
-    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
-    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
-  </DataQueryOnDataViewSetting>
-  <DataQueryOnDataViewSetting Key="KeyInformationByIdentifier" DataQueryKey="Identifier" DataViewKey="KeyInformation">
-    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
-    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
-  </DataQueryOnDataViewSetting>
-  <QueryUnitGroup Key="Common" DataQueryPerQueryKnownKey="Common" SourceTypeDeclarationFullName="MSBuildExtensionPack.Build" ConditionOperator="AND">
+    <Queries>Identifier</Queries>
+  </Criteria>
+  <Criteria Key="FKStringContains" SourceTypeFullName="MSBuildExtensionPack.Build">
+    <Description>FKStringContains</Description>
+    <Queries>FKStringContains</Queries>
+  </Criteria>
+  <Query Key="Common" DataQueryPerQueryKnownKey="Common" SourceTypeDeclarationFullName="MSBuildExtensionPack.Build" ConditionOperator="AND">
     <Description>Query by EntityReference, String, Bool, Order By DateTime</Description>
     <QueryUnits Key="Common" ConditionOperator="AND" Description="Query by EntityReference, Bool, DateTime">SolutionId=\SolutionId:Id.Equals;Organization_1Id=\SolutionId\OrganizationId:Id.Equals;Organization_2Id=\SolutionId\OrganizationId\ParentId:Id.Equals;BuildStartTimeRange=:BuildStartTime.Range</QueryUnits>
     <QueryUnits Key="Common" ConditionOperator="AND" Description="Query by String">Name=:Name.Contains;Description=:Description.Contains</QueryUnits>
-  </QueryUnitGroup>
-  <QueryUnitGroup Key="All" DataQueryPerQueryKnownKey="All" SourceTypeDeclarationFullName="MSBuildExtensionPack.Build" ConditionOperator="AND">
+  </Query>
+  <Query Key="All" DataQueryPerQueryKnownKey="All" SourceTypeDeclarationFullName="MSBuildExtensionPack.Build" ConditionOperator="AND">
     <Description>Without condition, Order By DateTime</Description>
     <QueryUnits Key="All" ConditionOperator="AND" Description="Without condition, Order By DateTime" />
-  </QueryUnitGroup>
-  <QueryUnitGroup Key="FKOnly" DataQueryPerQueryKnownKey="FKOnly" SourceTypeDeclarationFullName="MSBuildExtensionPack.Build" ConditionOperator="AND">
+  </Query>
+  <Query Key="FKOnly" DataQueryPerQueryKnownKey="FKOnly" SourceTypeDeclarationFullName="MSBuildExtensionPack.Build" ConditionOperator="AND">
     <Description>Query by EntityReference</Description>
     <QueryUnits Key="FKOnly" ConditionOperator="AND" Description="Query by EntityReference, Order By DateTime">SolutionId=\SolutionId:Id.Equals;Organization_1Id=\SolutionId\OrganizationId:Id.Equals;Organization_2Id=\SolutionId\OrganizationId\ParentId:Id.Equals</QueryUnits>
-  </QueryUnitGroup>
-  <QueryUnitGroup Key="Identifier" DataQueryPerQueryKnownKey="Identifier" SourceTypeDeclarationFullName="MSBuildExtensionPack.Build" ConditionOperator="AND">
+  </Query>
+  <Query Key="Identifier" DataQueryPerQueryKnownKey="Identifier" SourceTypeDeclarationFullName="MSBuildExtensionPack.Build" ConditionOperator="AND">
     <Description>Query by Identifier</Description>
     <QueryUnits Key="Identifier" ConditionOperator="AND" Description="Query by Identifier">Id=:Id.Equals</QueryUnits>
-  </QueryUnitGroup>
-  <Workspace MasterTypeFullName="MSBuildExtensionPack.Build" Key="Common" UIWorkspaceType="SearchResult" DataViewKey="Default" QueryKey="Common" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+  </Query>
+  <Query Key="FKStringContains" DataQueryPerQueryKnownKey="Unknown" SourceTypeDeclarationFullName="MSBuildExtensionPack.Build" ConditionOperator="AND">
+    <Description>FKStringContains</Description>
+    <QueryUnits Key="AncestorsName" ConditionOperator="OR" Description="AncestorsName">SolutionName=\SolutionId:Name.Contains;SolutionDescription=\SolutionId:Description.Contains;Organization_1Name=\SolutionId\OrganizationId:Name.Contains;Organization_2Name=\SolutionId\OrganizationId\ParentId:Name.Contains</QueryUnits>
+    <QueryUnits Key="ThisTable" ConditionOperator="OR" Description="ThisTable">BuildName=:Name.Contains;BuildDescription=:Description.Contains</QueryUnits>
+  </Query>
+  <DataOperation Key="UpdateName" DataViewKey="UpdateNameRequest" DataOperationType="Update" ExposedLayer="WebServices" />
+  <DataOperation Key="InsertName" DataViewKey="UpdateNameRequest" DataOperationType="Insert" ExposedLayer="WebServices" />
+  <QueryResult Key="EntityByCommon" CriteriaKey="Common" />
+  <QueryResult Key="DefaultByCommon" CriteriaKey="Common" DataViewKey="Default">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasGetCollectionMethod="true" />
+  </QueryResult>
+  <QueryResult Key="EntityByAll" CriteriaKey="All" />
+  <QueryResult Key="NameValuePairByAll" CriteriaKey="All" DataViewKey="NameValuePair" />
+  <QueryResult Key="RssItemByAll" CriteriaKey="All" DataViewKey="RssItem">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasGetCollectionMethod="true" />
+  </QueryResult>
+  <QueryResult Key="EntityByFKOnly" CriteriaKey="FKOnly" />
+  <QueryResult Key="NameValuePairByFKOnly" CriteriaKey="FKOnly" DataViewKey="NameValuePair">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasGetCollectionMethod="true" />
+    <WebApiMethodSetting HasGetCollectionMethod="true" />
+  </QueryResult>
+  <QueryResult Key="RssItemByFKOnly" CriteriaKey="FKOnly" DataViewKey="RssItem" />
+  <QueryResult Key="DefaultByFKOnly" CriteriaKey="FKOnly" DataViewKey="Default">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasGetCollectionMethod="true" />
+  </QueryResult>
+  <QueryResult Key="DefaultGroupedDataViewByFKOnly" CriteriaKey="FKOnly" DataViewKey="DefaultGroupedDataView" />
+  <QueryResult Key="EntityByIdentifier" CriteriaKey="Identifier">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
+  </QueryResult>
+  <QueryResult Key="DefaultByIdentifier" CriteriaKey="Identifier" DataViewKey="Default">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
+  </QueryResult>
+  <QueryResult Key="KeyInformationByIdentifier" CriteriaKey="Identifier" DataViewKey="KeyInformation">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
+  </QueryResult>
+  <QueryResult Key="AncestorAndKeyInfo" CriteriaKey="FKStringContains" DataViewKey="KeyInformation">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
+  </QueryResult>
+  <QueryResult Key="KeyInformationByID" CriteriaKey="Identifier" DataViewKey="UpdateNameRequest">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
+  </QueryResult>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="Common" UIViewType="SearchResult" DataViewKey="Default" CriteriaKey="Common" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
     <Description>Workspace of Common</Description>
-  </Workspace>
-  <Workspace MasterTypeFullName="MSBuildExtensionPack.Build" Key="EntityRelated" UIWorkspaceType="EntityRelated" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="FullDetails" UIViewType="FullDetails" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
     <Description>Workspace of Identifier</Description>
-    <View SourceTypeDeclarationFullName="MSBuildExtensionPack.BuildLog" Group="Article" Key="V_BuildLog_Via_BuildId" UIViewType="RelatedEntityWhenMasterViewIsPKEntity" QueryKey="FKOnly" DataViewKey="Default" EntityReferenceName="FK_BuildLog_Build" Name="View of MSBuildExtensionPack.BuildLog via BuildId">
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.BuildLog" Group="Article" Key="V_BuildLog_Via_BuildId" UIViewType="RelatedEntityWhenMasterViewIsPKEntity" CriteriaKey="FKOnly" DataViewKey="Default" EntityReferenceName="FK_BuildLog_Build" Name="View of MSBuildExtensionPack.BuildLog via BuildId">
       <Description>View of MSBuildExtensionPack.BuildLog via BuildId</Description>
-    </View>
-    <View SourceTypeDeclarationFullName="MSBuildExtensionPack.Build" Group="Aside" Key="V_Build_Via_This" UIViewType="MasterViewAsideKeyInformation" QueryKey="Identifier" DataViewKey="Default" EntityReferenceSimpleFullPath="" EntityReferenceName="" Name="View of MSBuildExtensionPack.Build via This">
+    </PartialView>
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Build" Group="Aside" Key="V_Build_Via_This" UIViewType="MasterViewAsideKeyInformation" CriteriaKey="Identifier" DataViewKey="Default" EntityReferenceSimpleFullPath="" EntityReferenceName="" Name="View of MSBuildExtensionPack.Build via This">
       <Description>View of MSBuildExtensionPack.Build via This</Description>
-    </View>
-    <View SourceTypeDeclarationFullName="MSBuildExtensionPack.Solution" Group="Aside" Key="V_Solution_Via_SolutionId" UIViewType="RelatedEntityWhenMasterViewIsFKEntity" QueryKey="Identifier" DataViewKey="KeyInformation" EntityReferenceSimpleFullPath="\SolutionId" Name="View of MSBuildExtensionPack.Solution via SolutionId">
+    </PartialView>
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Solution" Group="Aside" Key="V_Solution_Via_SolutionId" UIViewType="RelatedEntityWhenMasterViewIsFKEntity" CriteriaKey="Identifier" DataViewKey="KeyInformation" EntityReferenceSimpleFullPath="\SolutionId" Name="View of MSBuildExtensionPack.Solution via SolutionId">
       <Description>View of MSBuildExtensionPack.Solution via SolutionId</Description>
-    </View>
-    <View SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" Group="Aside" Key="V_Organization_Via_OrganizationId" UIViewType="RelatedEntityWhenMasterViewIsFKEntity" QueryKey="Identifier" DataViewKey="KeyInformation" EntityReferenceSimpleFullPath="\SolutionId\OrganizationId" Name="View of MSBuildExtensionPack.Organization via OrganizationId">
+    </PartialView>
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" Group="Aside" Key="V_Organization_Via_OrganizationId" UIViewType="RelatedEntityWhenMasterViewIsFKEntity" CriteriaKey="Identifier" DataViewKey="KeyInformation" EntityReferenceSimpleFullPath="\SolutionId\OrganizationId" Name="View of MSBuildExtensionPack.Organization via OrganizationId">
       <Description>View of MSBuildExtensionPack.Organization via OrganizationId</Description>
-    </View>
-    <View SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" Group="Aside" Key="V_Organization_Via_ParentId" UIViewType="RelatedEntityWhenMasterViewIsFKEntity" QueryKey="Identifier" DataViewKey="KeyInformation" EntityReferenceSimpleFullPath="\SolutionId\OrganizationId\ParentId" Name="View of MSBuildExtensionPack.Organization via ParentId">
+    </PartialView>
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" Group="Aside" Key="V_Organization_Via_ParentId" UIViewType="RelatedEntityWhenMasterViewIsFKEntity" CriteriaKey="Identifier" DataViewKey="KeyInformation" EntityReferenceSimpleFullPath="\SolutionId\OrganizationId\ParentId" Name="View of MSBuildExtensionPack.Organization via ParentId">
       <Description>View of MSBuildExtensionPack.Organization via ParentId</Description>
-    </View>
-  </Workspace>
-  <Workspace MasterTypeFullName="MSBuildExtensionPack.Build" Key="CommonSearchView" UIWorkspaceType="Search" DataViewKey="Default" QueryKey="Common" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    </PartialView>
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="CommonSearchView" UIViewType="Search" DataViewKey="Default" CriteriaKey="Common" KeyReferencedViewModel="Common" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
     <Description>Workspace of CommonSearchView</Description>
-  </Workspace>
-  <Workspace MasterTypeFullName="MSBuildExtensionPack.Build" Key="CommonResultView" UIWorkspaceType="Results" DataViewKey="Default" QueryKey="Common" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="CommonResultView" UIViewType="Results" DataViewKey="Default" CriteriaKey="Common" KeyReferencedViewModel="Common" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
     <Description>Workspace of CommonResultView</Description>
-  </Workspace>
-  <Workspace MasterTypeFullName="MSBuildExtensionPack.Build" Key="TabbedCommon" UIWorkspaceType="TabbedSearch" DataViewKey="" QueryKey="" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="TabbedCommon" UIViewType="TabContainer" DataViewKey="" CriteriaKey="" KeyReferencedViewModel="Common" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
     <Description>Workspace of TabbedCommon</Description>
-    <ViewReference Group="OnlyOneArticle" Key="WSI_TabbedCommon" ReferencedKeyOfUIWorkspace="CommonSearchView" Name="WorkspaceItem of TabbedCommon">
+    <PartialViewReference Group="OnlyOneArticle" Key="WSI_TabbedCommon" ReferencedKeyOfUIWorkspace="CommonSearchView" Name="WorkspaceItem of TabbedCommon">
       <Description>WorkspaceItem of TabbedCommon</Description>
-    </ViewReference>
-    <ViewReference Group="OnlyOneArticle" Key="WSI_TabbedCommon" ReferencedKeyOfUIWorkspace="CommonResultView" Name="WorkspaceItem of TabbedCommon">
+    </PartialViewReference>
+    <PartialViewReference Group="OnlyOneArticle" Key="WSI_TabbedCommon" ReferencedKeyOfUIWorkspace="CommonResultView" Name="WorkspaceItem of TabbedCommon">
       <Description>WorkspaceItem of TabbedCommon</Description>
-    </ViewReference>
-  </Workspace>
+    </PartialViewReference>
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="something" UIViewType="SearchResult" DataViewKey="KeyInformation" CriteriaKey="FKStringContains" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>something</Description>
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="elsesomething" UIViewType="FullDetails" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>elsesomething</Description>
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Build" Group="Aside" Key="KeyInformation" UIViewType="MasterViewAsideKeyInformation" CriteriaKey="Identifier" DataViewKey="KeyInformation" EntityReferenceSimpleFullPath="" EntityReferenceName="" />
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Solution" Group="Aside" Key="SolutionView" UIViewType="RelatedEntityWhenMasterViewIsFKEntity" CriteriaKey="Identifier" DataViewKey="Default" EntityReferenceSimpleFullPath="\SolutionId" />
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" Group="Aside" Key="Department" UIViewType="RelatedEntityWhenMasterViewIsFKEntity" CriteriaKey="Identifier" DataViewKey="Default" EntityReferenceSimpleFullPath="\SolutionId\OrganizationId" />
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" Group="Aside" Key="Company" UIViewType="RelatedEntityWhenMasterViewIsFKEntity" CriteriaKey="Identifier" DataViewKey="KeyInformation" EntityReferenceSimpleFullPath="\SolutionId\OrganizationId\ParentId" />
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.BuildLog" Group="Article" Key="FK_BuildLog_Build" UIViewType="RelatedEntityWhenMasterViewIsPKEntity" CriteriaKey="FKOnly" DataViewKey="KeyInformation" EntityReferenceName="FK_BuildLog_Build" />
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="elseA1Asomething" UIViewType="SingleItemForm" DataViewKey="UpdateNameRequest" CriteriaKey="Identifier" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>elseA1Asomething</Description>
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="somethingSearch" UIViewType="Search" DataViewKey="KeyInformation" CriteriaKey="FKStringContains" KeyReferencedViewModel="something" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>somethingSearch</Description>
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="somethingResult" UIViewType="Results" DataViewKey="KeyInformation" CriteriaKey="FKStringContains" KeyReferencedViewModel="something" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>somethingResult</Description>
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="somethingTab" UIViewType="TabContainer" DataViewKey="" CriteriaKey="" KeyReferencedViewModel="something" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>somethingTab</Description>
+    <PartialViewReference Group="OnlyOneArticle" Key="somethingSearch" ReferencedKeyOfUIWorkspace="somethingSearch" Name="somethingSearch">
+      <Description>somethingSearch</Description>
+    </PartialViewReference>
+    <PartialViewReference Group="OnlyOneArticle" Key="somethingResults" ReferencedKeyOfUIWorkspace="somethingResults" Name="somethingResults">
+      <Description>somethingResults</Description>
+    </PartialViewReference>
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="xTabSomethingSearch" UIViewType="Search" DataViewKey="KeyInformation" CriteriaKey="FKStringContains" KeyReferencedViewModel="xTabSomething" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>xTabSomethingSearch</Description>
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="xTabSomethingResults" UIViewType="Results" DataViewKey="KeyInformation" CriteriaKey="FKStringContains" KeyReferencedViewModel="xTabSomething" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>xTabSomethingResults</Description>
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="xTabSomethingTabContainer" UIViewType="TabContainer" DataViewKey="" CriteriaKey="" KeyReferencedViewModel="xTabSomething" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>xTabSomethingTabContainer</Description>
+    <PartialViewReference Group="OnlyOneArticle" Key="xTabSomethingSearch" ReferencedKeyOfUIWorkspace="xTabSomethingSearch" Name="xTabSomethingSearch">
+      <Description>xTabSomethingSearch</Description>
+    </PartialViewReference>
+    <PartialViewReference Group="OnlyOneArticle" Key="xTabSomethingResults" ReferencedKeyOfUIWorkspace="xTabSomethingResults" Name="xTabSomethingResults">
+      <Description>xTabSomethingResults</Description>
+    </PartialViewReference>
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="xTabSomething" UIViewType="TabSearchResult" DataViewKey="KeyInformation" CriteriaKey="FKStringContains" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>xTabSomething</Description>
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="xTabFullDetailsMasterViewAsideKeyInformation" UIViewType="SingleItemForm" DataViewKey="" CriteriaKey="" KeyReferencedViewModel="xTabFullDetails" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>xTabFullDetailsMasterViewAsideKeyInformation</Description>
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="xTabFullDetailsRelatedEntityWhenMasterViewIsFKEntity" UIViewType="SingleItemAggregateForm" KeyReferencedViewModel="xTabFullDetails" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>xTabFullDetailsRelatedEntityWhenMasterViewIsFKEntity</Description>
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Solution" Group="OnlyOneArticle" Key="SolutionView" UIViewType="RelatedEntityWhenMasterViewIsFKEntity" CriteriaKey="Identifier" DataViewKey="Default" EntityReferenceSimpleFullPath="\SolutionId" />
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" Group="OnlyOneArticle" Key="Department" UIViewType="RelatedEntityWhenMasterViewIsFKEntity" CriteriaKey="Identifier" DataViewKey="Default" EntityReferenceSimpleFullPath="\SolutionId\OrganizationId" />
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" Group="OnlyOneArticle" Key="Company" UIViewType="RelatedEntityWhenMasterViewIsFKEntity" CriteriaKey="Identifier" DataViewKey="KeyInformation" EntityReferenceSimpleFullPath="\SolutionId\OrganizationId\ParentId" />
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="xTabFullDetailsRelatedEntityWhenMasterViewIsPKEntityFK_BuildLog_Build" UIViewType="Results" DataViewKey="KeyInformation" CriteriaKey="FKOnly" KeyReferencedViewModel="xTabFullDetails" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>xTabFullDetailsRelatedEntityWhenMasterViewIsPKEntityFK_BuildLog_Build</Description>
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="xTabFullDetailsTabContainer" UIViewType="TabContainer" DataViewKey="" CriteriaKey="" KeyReferencedViewModel="xTabFullDetails" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>xTabFullDetailsTabContainer</Description>
+    <PartialViewReference Group="OnlyOneArticle" Key="xTabFullDetailsMasterViewAsideKeyInformation" ReferencedKeyOfUIWorkspace="xTabFullDetailsMasterViewAsideKeyInformation" Name="xTabFullDetailsMasterViewAsideKeyInformation">
+      <Description>xTabFullDetailsMasterViewAsideKeyInformation</Description>
+    </PartialViewReference>
+    <PartialViewReference Group="OnlyOneArticle" Key="xTabFullDetailsRelatedEntityWhenMasterViewIsFKEntity" ReferencedKeyOfUIWorkspace="xTabFullDetailsRelatedEntityWhenMasterViewIsFKEntity" Name="xTabFullDetailsRelatedEntityWhenMasterViewIsFKEntity">
+      <Description>xTabFullDetailsRelatedEntityWhenMasterViewIsFKEntity</Description>
+    </PartialViewReference>
+    <PartialViewReference Group="OnlyOneArticle" Key="xTabFullDetailsRelatedEntityWhenMasterViewIsPKEntityFK_BuildLog_Build" ReferencedKeyOfUIWorkspace="xTabFullDetailsRelatedEntityWhenMasterViewIsPKEntityFK_BuildLog_Build" Name="xTabFullDetailsRelatedEntityWhenMasterViewIsPKEntityFK_BuildLog_Build">
+      <Description>xTabFullDetailsRelatedEntityWhenMasterViewIsPKEntityFK_BuildLog_Build</Description>
+    </PartialViewReference>
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="xTabFullDetails" UIViewType="TabFullDetails" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>xTabFullDetails</Description>
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Build" Group="Aside" Key="KeyInformation" UIViewType="MasterViewAsideKeyInformation" CriteriaKey="Identifier" DataViewKey="KeyInformation" EntityReferenceSimpleFullPath="" EntityReferenceName="" />
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Solution" Group="Aside" Key="SolutionView" UIViewType="RelatedEntityWhenMasterViewIsFKEntity" CriteriaKey="Identifier" DataViewKey="Default" EntityReferenceSimpleFullPath="\SolutionId" />
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" Group="Aside" Key="Department" UIViewType="RelatedEntityWhenMasterViewIsFKEntity" CriteriaKey="Identifier" DataViewKey="Default" EntityReferenceSimpleFullPath="\SolutionId\OrganizationId" />
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" Group="Aside" Key="Company" UIViewType="RelatedEntityWhenMasterViewIsFKEntity" CriteriaKey="Identifier" DataViewKey="KeyInformation" EntityReferenceSimpleFullPath="\SolutionId\OrganizationId\ParentId" />
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.BuildLog" Group="Article" Key="FK_BuildLog_Build" UIViewType="RelatedEntityWhenMasterViewIsPKEntity" CriteriaKey="FKOnly" DataViewKey="KeyInformation" EntityReferenceName="FK_BuildLog_Build" />
+  </UIView>
   <ForeignKeyPersistList>
     <ForeignKeyPersist>
       <EntityReferenceResultForPersistAliaType>DownTree</EntityReferenceResultForPersistAliaType>
@@ -204,4 +308,6 @@
       <Result>Organization_2</Result>
     </ForeignKeyPersist>
   </ForeignKeyPersistList>
+  <BridgedForeignKeyPersistList />
+  <CrossJoinedForeignKeyPersistList />
 </Entity>

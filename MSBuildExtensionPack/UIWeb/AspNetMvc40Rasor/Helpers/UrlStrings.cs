@@ -25,6 +25,9 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
         public const string ActionName_Build_WPCommonOfBuild = "WPCommonOfBuild";
         public const string ActionName_Build_WPCommonOfBuild_Export = "WPCommonOfBuild_Export";
 
+        public const string ActionName_Build_WPsomethingOfBuild = "WPsomethingOfBuild";
+        public const string ActionName_Build_WPsomethingOfBuild_Export = "WPsomethingOfBuild_Export";
+
         public const string ActionName_BuildEventCode_WPCommonOfBuildEventCode = "WPCommonOfBuildEventCode";
         public const string ActionName_BuildEventCode_WPCommonOfBuildEventCode_Export = "WPCommonOfBuildEventCode_Export";
 
@@ -39,23 +42,29 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
 
         #endregion 2.1. Action Names -- UIWorkspaceTypes.SearchResult
 
-        #region 2.2. Action Names -- UIWorkspaceTypes.EntityRelated
+        #region 2.2. Action Names -- UIWorkspaceTypes.FullDetails
 
-        public const string ActionName_Build_WPEntityRelatedOfBuild = "WPEntityRelatedOfBuild";
+        public const string ActionName_Build_WPFullDetailsOfBuild = "WPFullDetailsOfBuild";
 
-        public const string ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode = "WPEntityRelatedOfBuildEventCode";
+        public const string ActionName_Build_WPelsesomethingOfBuild = "WPelsesomethingOfBuild";
 
-        public const string ActionName_BuildLog_WPEntityRelatedOfBuildLog = "WPEntityRelatedOfBuildLog";
+        public const string ActionName_BuildEventCode_WPFullDetailsOfBuildEventCode = "WPFullDetailsOfBuildEventCode";
 
-        public const string ActionName_Organization_WPEntityRelatedOfOrganization = "WPEntityRelatedOfOrganization";
+        public const string ActionName_BuildLog_WPFullDetailsOfBuildLog = "WPFullDetailsOfBuildLog";
 
-        public const string ActionName_Solution_WPEntityRelatedOfSolution = "WPEntityRelatedOfSolution";
+        public const string ActionName_Organization_WPFullDetailsOfOrganization = "WPFullDetailsOfOrganization";
 
-        #endregion 2.2. Action Names -- UIWorkspaceTypes.EntityRelated
+        public const string ActionName_Solution_WPFullDetailsOfSolution = "WPFullDetailsOfSolution";
 
-        #region 2.3. Action Names -- UIWorkspaceTypes.EntityUpdateActionForm
+        #endregion 2.2. Action Names -- UIWorkspaceTypes.FullDetails
 
-        #endregion 2.3. Action Names -- UIWorkspaceTypes.EntityUpdateActionForm
+        #region 2.3. Action Names -- UIWorkspaceTypes.SingleItemForm
+
+        public const string ActionName_Build_WPelseA1AsomethingOfBuild = "WPelseA1AsomethingOfBuild";
+
+        public const string ActionName_Build_WPxTabFullDetailsMasterViewAsideKeyInformationOfBuild = "WPxTabFullDetailsMasterViewAsideKeyInformationOfBuild";
+
+        #endregion 2.3. Action Names -- UIWorkspaceTypes.SingleItemForm
 
         #region 2.4. Action Names -- UIWorkspaceTypes.MultipleFileUploadForm
 

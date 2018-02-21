@@ -5,14 +5,14 @@ using System.Text;
 
 namespace MSBuildExtensionPack.ViewModelData
 {
-    public partial class WPEntityRelatedOfBuildEventCodeVM
+    public partial class WPFullDetailsOfBuildEventCodeVM
         : Framework.ViewModels.ViewModelEntityRelatedBase<MSBuildExtensionPack.DataSourceEntities.BuildEventCode, MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaIdentifier>
     {
-        public WPEntityRelatedOfBuildEventCodeVM()
+        public WPFullDetailsOfBuildEventCodeVM()
             : base(null)
         { }
 
-        public WPEntityRelatedOfBuildEventCodeVM(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaIdentifier criteriaOfMasterEntity)
+        public WPFullDetailsOfBuildEventCodeVM(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaIdentifier criteriaOfMasterEntity)
             : base(criteriaOfMasterEntity)
         {
             this.CriteriaOfFK_BuildLog_BuildEventCode = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaFKOnly();

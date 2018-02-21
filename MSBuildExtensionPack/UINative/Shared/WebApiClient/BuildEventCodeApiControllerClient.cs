@@ -223,20 +223,20 @@ namespace MSBuildExtensionPack.WebApiClient
             return await Post<MSBuildExtensionPack.ViewModelData.WPCommonOfBuildEventCodeVM>(url, vm);
         }
 
-        public const string ActionName_GetWPEntityRelatedOfBuildEventCodeVM = "GetWPEntityRelatedOfBuildEventCodeVM";
+        public const string ActionName_GetWPFullDetailsOfBuildEventCodeVM = "GetWPFullDetailsOfBuildEventCodeVM";
         /// <summary>
         /// Gets the wp entity related of build log.
-        /// http://[host]/api/BuildEventCodeApi/GetWPEntityRelatedOfBuildEventCodeVM?id=1
+        /// http://[host]/api/BuildEventCodeApi/GetWPFullDetailsOfBuildEventCodeVM?id=1
         /// </summary>
         /// <returns></returns>
-        public async Task<MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfBuildEventCodeVM> GetWPEntityRelatedOfBuildEventCodeVMAsync(
+        public async Task<MSBuildExtensionPack.ViewModelData.WPFullDetailsOfBuildEventCodeVM> GetWPFullDetailsOfBuildEventCodeVMAsync(
             System.Int32 id)
         {
             Dictionary<string, string> parameters = new Dictionary<string, string>();
             parameters.Add("id", id.ToString());
-            string url = GetHttpRequestUrl(ActionName_GetWPEntityRelatedOfBuildEventCodeVM, parameters);
+            string url = GetHttpRequestUrl(ActionName_GetWPFullDetailsOfBuildEventCodeVM, parameters);
 
-            return await GetEntityRelated<MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfBuildEventCodeVM>(url);
+            return await GetEntityRelated<MSBuildExtensionPack.ViewModelData.WPFullDetailsOfBuildEventCodeVM>(url);
         }
 
         public const string ActionName_HeartBeat = "HeartBeat";

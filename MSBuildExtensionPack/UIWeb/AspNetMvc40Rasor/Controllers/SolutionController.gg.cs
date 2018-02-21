@@ -27,7 +27,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 
         public const string TempDataKey_WPCommonOfSolution = "TempDataKey_WPCommonOfSolution";
         /// <summary>
-        /// Controller Method of View WPCommonOfSolution : Description Of Common of MSBuildExtensionPack.Solution
+        /// Controller Method of View WPCommonOfSolution : Description Of MSBuildExtensionPack_Solution_Common
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Solution_WPCommonOfSolution)]
@@ -111,12 +111,12 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// Display one entity and all related entities if any, either single item or a list, based on foreign keys
         /// </summary>
         /// <returns></returns>
-        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Solution_WPEntityRelatedOfSolution)]
-        public ActionResult WPEntityRelatedOfSolution(System.Int32? id)
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Solution_WPFullDetailsOfSolution)]
+        public ActionResult WPFullDetailsOfSolution(System.Int32? id)
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaIdentifier();
             criteria.Identifier.Id.NullableValueToCompare = id;
-            MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfSolutionVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfSolutionVM(criteria);
+            MSBuildExtensionPack.AspNetMvc40ViewModel.WPFullDetailsOfSolutionVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPFullDetailsOfSolutionVM(criteria);
             vm.LoadData();
 
             return View(vm);

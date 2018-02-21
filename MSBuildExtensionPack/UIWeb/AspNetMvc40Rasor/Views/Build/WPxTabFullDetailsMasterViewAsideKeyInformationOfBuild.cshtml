@@ -1,0 +1,140 @@
+@using UrlStringsAlias = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.UrlStrings;
+@using System;
+@using System.Collections.Generic;
+@using System.Linq;
+@using System.Linq.Expressions;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
+@using Framework.Mvc;
+@using PagedList.Mvc;
+@model MSBuildExtensionPack.AspNetMvc40ViewModel.WPxTabFullDetailsMasterViewAsideKeyInformationOfBuildVM
+@{
+    RouteValueDictionary queryStringDictionary = new RouteValueDictionary(Request.QueryString.AllKeys.ToDictionary(key => key, key => (object)Request.QueryString[key]));
+}
+<div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 style="display: inline;">
+                @MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Build
+            </h3>
+        </div>
+@if (Model.StatusOfMasterEntity == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
+{ // EditItem
+    using (Html.BeginForm())
+    {
+        <div class="panel-body">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MasterEntity.Id, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.MasterEntity.Id)
+                        </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MasterEntity.BuildStartTime, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.MasterEntity.BuildStartTime, new { @class = "form-control", @readonly = "readonly" })
+                        @Html.ValidationMessageFor(model => model.MasterEntity.BuildStartTime, null, new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MasterEntity.SolutionId, new { @class = "control-label" })
+                        @Html.HiddenFor(model => model.MasterEntity.SolutionId)
+                        @Html.DropDownListFor(model => model.MasterEntity.SolutionId, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Please_select_Solution____, new Dictionary<string,Object>{ { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfSolution_1,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedSolution_1", MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Please_select_Solution____) } })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MasterEntity.Name, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.MasterEntity.Name, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.MasterEntity.Name, null, new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MasterEntity.Description, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.MasterEntity.Description, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.MasterEntity.Description, null, new { @class = "text-danger" })
+                </div>
+        </div>
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+<div class="btn-group">
+    <button class="btn btn-default" role="button" type="submit" name="SaveButtonGroupBottom">
+        <span class="glyphicon glyphicon-save"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.Save</span>
+    </button>
+</div>
+<div class="btn-group">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Build_Edit, UrlStringsAlias.ControllerName_Build, new { isToCompareIdIdentifierOftOfIdentifier=true, valueToCompareIdIdentifierOftOfIdentifier = Model.MasterEntity.Id })'" class="btn btn-default" role="button" type="button" name="RefreshWhenEditButtonGroupBottom">
+        <span class="glyphicon glyphicon-refresh"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.Refresh</span>
+    </a>
+</div>
+<div class="btn-group">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Build_Index, UrlStringsAlias.ControllerName_Build)" class="btn btn-default" role="button" type="button" name="GotoSearchButtonGroupBottom">
+        <span class="glyphicon glyphicon-search"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.GotoSearch</span>
+    </a>
+</div>
+<div class="btn-group">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Build_WPFullDetailsOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdIdentifierOftOfIdentifier=true, valueToCompareIdIdentifierOftOfIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsButtonGroupBottom">
+        <span class="glyphicon glyphicon-briefcase"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.FullDetails</span>
+    </a>
+</div>
+</div>
+    }
+}
+@if (Model.StatusOfMasterEntity == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+{ // Item
+        <div class="panel-body">
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.MasterEntity.Id, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.MasterEntity.Id)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.MasterEntity.BuildStartTime, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.MasterEntity.BuildStartTime)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.MasterEntity.SolutionId, new { @class = "control-label" })
+                        @Html.ActionLink(Model.MasterEntity.SolutionId, UrlStringsAlias.ActionName_Solution_WPFullDetailsOfSolution, UrlStringsAlias.ControllerName_Solution, new { id = Model.MasterEntity.SolutionId }, null)
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.MasterEntity.Name, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.MasterEntity.Name)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.MasterEntity.Description, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.MasterEntity.Description)
+                        </div>
+                </div>
+        </div>
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+<div class="btn-group">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Build_Index, UrlStringsAlias.ControllerName_Build)" class="btn btn-default" role="button" type="button" name="GotoSearchButtonGroupBottom">
+        <span class="glyphicon glyphicon-search"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.GotoSearch</span>
+    </a>
+</div>
+<div class="btn-group">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Build_WPFullDetailsOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdIdentifierOftOfIdentifier=true, valueToCompareIdIdentifierOftOfIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsButtonGroupBottom">
+        <span class="glyphicon glyphicon-briefcase"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.FullDetails</span>
+    </a>
+</div>
+</div>
+}
+@if (Model.StatusOfMasterEntity != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady && Model.StatusOfMasterEntity != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+{
+<div class="text-danger">@Model.StatusMessageOfMasterEntity</div>
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+<div class="btn-group">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Build_Index, UrlStringsAlias.ControllerName_Build)" class="btn btn-default" role="button" type="button" name="GotoSearchButtonGroupBottom">
+        <span class="glyphicon glyphicon-search"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.GotoSearch</span>
+    </a>
+</div>
+<div class="btn-group">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Build_WPFullDetailsOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdIdentifierOftOfIdentifier=true, valueToCompareIdIdentifierOftOfIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsButtonGroupBottom">
+        <span class="glyphicon glyphicon-briefcase"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.FullDetails</span>
+    </a>
+</div>
+</div>
+}
+    </div>
+</div>

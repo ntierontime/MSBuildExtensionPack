@@ -7,11 +7,11 @@ using System.Web.Mvc;
 
 namespace MSBuildExtensionPack.AspNetMvc40ViewModel
 {
-    public partial class WPEntityRelatedOfOrganizationVM
-        : MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfOrganizationVM
+    public partial class WPFullDetailsOfOrganizationVM
+        : MSBuildExtensionPack.ViewModelData.WPFullDetailsOfOrganizationVM
         //: Framework.ViewModels.ViewModelEntityRelatedBase<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint, Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus>
     {
-        public WPEntityRelatedOfOrganizationVM(MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint criteriaOfMasterEntity)
+        public WPFullDetailsOfOrganizationVM(MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint criteriaOfMasterEntity)
             : base(criteriaOfMasterEntity)
         {
         }

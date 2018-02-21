@@ -27,7 +27,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 
         public const string TempDataKey_WPCommonOfBuildEventCode = "TempDataKey_WPCommonOfBuildEventCode";
         /// <summary>
-        /// Controller Method of View WPCommonOfBuildEventCode : Description Of Common of MSBuildExtensionPack.BuildEventCode
+        /// Controller Method of View WPCommonOfBuildEventCode : Description Of MSBuildExtensionPack_BuildEventCode_Common
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildEventCode_WPCommonOfBuildEventCode)]
@@ -111,12 +111,12 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// Display one entity and all related entities if any, either single item or a list, based on foreign keys
         /// </summary>
         /// <returns></returns>
-        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildEventCode_WPEntityRelatedOfBuildEventCode)]
-        public ActionResult WPEntityRelatedOfBuildEventCode(System.Int32? id)
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildEventCode_WPFullDetailsOfBuildEventCode)]
+        public ActionResult WPFullDetailsOfBuildEventCode(System.Int32? id)
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaIdentifier();
             criteria.Identifier.Id.NullableValueToCompare = id;
-            MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildEventCodeVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildEventCodeVM(criteria);
+            MSBuildExtensionPack.AspNetMvc40ViewModel.WPFullDetailsOfBuildEventCodeVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPFullDetailsOfBuildEventCodeVM(criteria);
             vm.LoadData();
 
             return View(vm);

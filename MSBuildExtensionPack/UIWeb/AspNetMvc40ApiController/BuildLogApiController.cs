@@ -267,17 +267,17 @@ System.Int64? id)
         }
 
         /// <summary>
-        /// Gets entity related view model of MSBuildExtensionPack.BuildLog: WPEntityRelatedOfBuildLogVM.
-        /// http://[host]/api/BuildLogApi/GetWPEntityRelatedOfBuildLogVM?
+        /// Gets entity related view model of MSBuildExtensionPack.BuildLog: WPFullDetailsOfBuildLogVM.
+        /// http://[host]/api/BuildLogApi/GetWPFullDetailsOfBuildLogVM?
         /// </summary>
         /// <returns></returns>
-        [HttpGet, ActionName("GetWPEntityRelatedOfBuildLogVM")]
-        public MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfBuildLogVM GetWPEntityRelatedOfBuildLogVM(
+        [HttpGet, ActionName("GetWPFullDetailsOfBuildLogVM")]
+        public MSBuildExtensionPack.ViewModelData.WPFullDetailsOfBuildLogVM GetWPFullDetailsOfBuildLogVM(
 System.Int64? id)
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaIdentifier();
             criteria.Identifier.Id.NullableValueToCompare = id;
-            MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildLogVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildLogVM(criteria);
+            MSBuildExtensionPack.AspNetMvc40ViewModel.WPFullDetailsOfBuildLogVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPFullDetailsOfBuildLogVM(criteria);
             retval.LoadData();
             return retval;
         }

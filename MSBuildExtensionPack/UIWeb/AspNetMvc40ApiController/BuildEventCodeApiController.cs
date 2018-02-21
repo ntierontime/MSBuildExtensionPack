@@ -239,17 +239,17 @@ System.Int32? id)
         }
 
         /// <summary>
-        /// Gets entity related view model of MSBuildExtensionPack.BuildEventCode: WPEntityRelatedOfBuildEventCodeVM.
-        /// http://[host]/api/BuildEventCodeApi/GetWPEntityRelatedOfBuildEventCodeVM?
+        /// Gets entity related view model of MSBuildExtensionPack.BuildEventCode: WPFullDetailsOfBuildEventCodeVM.
+        /// http://[host]/api/BuildEventCodeApi/GetWPFullDetailsOfBuildEventCodeVM?
         /// </summary>
         /// <returns></returns>
-        [HttpGet, ActionName("GetWPEntityRelatedOfBuildEventCodeVM")]
-        public MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfBuildEventCodeVM GetWPEntityRelatedOfBuildEventCodeVM(
+        [HttpGet, ActionName("GetWPFullDetailsOfBuildEventCodeVM")]
+        public MSBuildExtensionPack.ViewModelData.WPFullDetailsOfBuildEventCodeVM GetWPFullDetailsOfBuildEventCodeVM(
 System.Int32? id)
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaIdentifier();
             criteria.Identifier.Id.NullableValueToCompare = id;
-            MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildEventCodeVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfBuildEventCodeVM(criteria);
+            MSBuildExtensionPack.AspNetMvc40ViewModel.WPFullDetailsOfBuildEventCodeVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPFullDetailsOfBuildEventCodeVM(criteria);
             retval.LoadData();
             return retval;
         }

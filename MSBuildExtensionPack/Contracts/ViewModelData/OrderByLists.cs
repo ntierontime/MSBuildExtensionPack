@@ -9,11 +9,35 @@ namespace MSBuildExtensionPack.ViewModelData
         {
             Framework.NameValueCollection list = new Framework.NameValueCollection();
             list.Add("Solution_1_Name~ASC", "Solution_1_Name A-Z");
-                list.Add("Solution_1_Name~DESC", "Solution_1_Name Z-A");
+            list.Add("Solution_1_Name~DESC", "Solution_1_Name Z-A");
             return list;
         }
 
         #endregion 1.1. MSBuildExtensionPack.Build.WPCommonOfBuild
+
+        #region 1.2. MSBuildExtensionPack.Build.WPsomethingOfBuild
+
+        public static Framework.NameValueCollection WPsomethingOfBuildVM_GetDefaultListOfQueryOrderBySettingCollecionInString()
+        {
+            Framework.NameValueCollection list = new Framework.NameValueCollection();
+            list.Add("Name~ASC", "Name A-Z");
+            list.Add("Name~DESC", "Name Z-A");
+            return list;
+        }
+
+        #endregion 1.2. MSBuildExtensionPack.Build.WPsomethingOfBuild
+
+        #region 1.3. MSBuildExtensionPack.Build.WPxTabSomethingOfBuild
+
+        public static Framework.NameValueCollection WPxTabSomethingOfBuildVM_GetDefaultListOfQueryOrderBySettingCollecionInString()
+        {
+            Framework.NameValueCollection list = new Framework.NameValueCollection();
+            list.Add("Name~ASC", "Name A-Z");
+            list.Add("Name~DESC", "Name Z-A");
+            return list;
+        }
+
+        #endregion 1.3. MSBuildExtensionPack.Build.WPxTabSomethingOfBuild
 
         #region 2.1. MSBuildExtensionPack.BuildEventCode.WPCommonOfBuildEventCode
 
@@ -21,7 +45,7 @@ namespace MSBuildExtensionPack.ViewModelData
         {
             Framework.NameValueCollection list = new Framework.NameValueCollection();
             list.Add("EventCode~ASC", "EventCode A-Z");
-                list.Add("EventCode~DESC", "EventCode Z-A");
+            list.Add("EventCode~DESC", "EventCode Z-A");
             return list;
         }
 
@@ -33,7 +57,7 @@ namespace MSBuildExtensionPack.ViewModelData
         {
             Framework.NameValueCollection list = new Framework.NameValueCollection();
             list.Add("Build_1_Name~ASC", "Build_1_Name A-Z");
-                list.Add("Build_1_Name~DESC", "Build_1_Name Z-A");
+            list.Add("Build_1_Name~DESC", "Build_1_Name Z-A");
             return list;
         }
 
@@ -45,7 +69,7 @@ namespace MSBuildExtensionPack.ViewModelData
         {
             Framework.NameValueCollection list = new Framework.NameValueCollection();
             list.Add("Organization_2_Name~ASC", "Organization_2_Name A-Z");
-                list.Add("Organization_2_Name~DESC", "Organization_2_Name Z-A");
+            list.Add("Organization_2_Name~DESC", "Organization_2_Name Z-A");
             return list;
         }
 
@@ -57,7 +81,7 @@ namespace MSBuildExtensionPack.ViewModelData
         {
             Framework.NameValueCollection list = new Framework.NameValueCollection();
             list.Add("Organization_1_Name~ASC", "Organization_1_Name A-Z");
-                list.Add("Organization_1_Name~DESC", "Organization_1_Name Z-A");
+            list.Add("Organization_1_Name~DESC", "Organization_1_Name Z-A");
             return list;
         }
 

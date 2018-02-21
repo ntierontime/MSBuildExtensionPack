@@ -249,17 +249,17 @@ System.Int32? id)
         }
 
         /// <summary>
-        /// Gets entity related view model of MSBuildExtensionPack.Solution: WPEntityRelatedOfSolutionVM.
-        /// http://[host]/api/SolutionApi/GetWPEntityRelatedOfSolutionVM?
+        /// Gets entity related view model of MSBuildExtensionPack.Solution: WPFullDetailsOfSolutionVM.
+        /// http://[host]/api/SolutionApi/GetWPFullDetailsOfSolutionVM?
         /// </summary>
         /// <returns></returns>
-        [HttpGet, ActionName("GetWPEntityRelatedOfSolutionVM")]
-        public MSBuildExtensionPack.ViewModelData.WPEntityRelatedOfSolutionVM GetWPEntityRelatedOfSolutionVM(
+        [HttpGet, ActionName("GetWPFullDetailsOfSolutionVM")]
+        public MSBuildExtensionPack.ViewModelData.WPFullDetailsOfSolutionVM GetWPFullDetailsOfSolutionVM(
 System.Int32? id)
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaIdentifier();
             criteria.Identifier.Id.NullableValueToCompare = id;
-            MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfSolutionVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPEntityRelatedOfSolutionVM(criteria);
+            MSBuildExtensionPack.AspNetMvc40ViewModel.WPFullDetailsOfSolutionVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPFullDetailsOfSolutionVM(criteria);
             retval.LoadData();
             return retval;
         }
