@@ -283,8 +283,8 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         #region MVVMViewModel #1.15: MSBuildExtensionPack.MVVMLightViewModels.WPxTabFullDetailsOfBuildVM
 
-        private static MSBuildExtensionPack.MVVMLightViewModels.TabFullDetails m_MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM;
-        public static MSBuildExtensionPack.MVVMLightViewModels.TabFullDetails MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM_Static
+        private static MSBuildExtensionPack.MVVMLightViewModels.WPxTabFullDetailsOfBuildVM m_MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM;
+        public static MSBuildExtensionPack.MVVMLightViewModels.WPxTabFullDetailsOfBuildVM MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM_Static
         {
             get
             {
@@ -297,7 +297,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
         }
 
-        public MSBuildExtensionPack.MVVMLightViewModels.TabFullDetails MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM
+        public MSBuildExtensionPack.MVVMLightViewModels.WPxTabFullDetailsOfBuildVM MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM
         {
             get
             {
@@ -324,7 +324,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         {
             if (m_MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM == null)
             {
-                m_MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM = new MSBuildExtensionPack.MVVMLightViewModels.TabFullDetails();
+                m_MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM = new MSBuildExtensionPack.MVVMLightViewModels.WPxTabFullDetailsOfBuildVM();
             }
         }
 
