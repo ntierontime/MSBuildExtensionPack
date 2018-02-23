@@ -9,11 +9,13 @@ using GalaSoft.MvvmLight.Messaging;
 
 namespace Framework.Xaml
 {
-    public abstract class ViewModelEntityRelatedBase<TMasterEntity, TCriteriaOfMasterEntity>
+    public abstract class ViewModelEntityRelatedBase<TMasterEntity, TCriteriaOfMasterEntity, TIdentifier>
         : GalaSoft.MvvmLight.ViewModelBase, Framework.ViewModels.IViewModelEntityRelatedBase<TMasterEntity, TCriteriaOfMasterEntity>
         where TMasterEntity : class, new()
         where TCriteriaOfMasterEntity : class, new()
     {
+        #region properties
+
         public abstract string EntityName { get; }
         public abstract string ViewName { get; }
 
@@ -133,23 +135,45 @@ namespace Framework.Xaml
             }
         }
 
-        public RelayCommand<TCriteriaOfMasterEntity> LaunchDetailsViewCommand { get; protected set; }
-        protected virtual void LaunchView(TCriteriaOfMasterEntity o)
+        #endregion properties
+
+        public ViewModelEntityRelatedBase()
+            : base()
+        {
+            this.SuppressMVVMLightEventToCommandMessage = false;
+
+            this.m_CriteriaOfMasterEntity =new TCriteriaOfMasterEntity();
+
+            this.LaunchViewCommand = new RelayCommand<TIdentifier>(Launch, CanLaunch);
+            this.RefreshViewCommand = new RelayCommand<TIdentifier>(Refresh, CanRefresh);
+            this.CloseViewCommand = new RelayCommand(Close, CanClose);
+        }
+
+        public RelayCommand<TIdentifier> LaunchViewCommand { get; protected set; }
+        protected virtual void Launch(TIdentifier o)
         {
             string viewName = this.ViewName;
             Framework.UIAction uiAction = Framework.UIAction.ViewDetails;
-            this.CriteriaOfMasterEntity = o;
+            this.CriteriaOfMasterEntity = GetCriteria(o);
 
             DoSearch();
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Launch));
         }
-
-        public RelayCommand<TCriteriaOfMasterEntity> RefreshViewCommand { get; protected set; }
-        protected void Refresh(TCriteriaOfMasterEntity o)
+        protected virtual bool CanLaunch(TIdentifier o)
         {
-            this.CriteriaOfMasterEntity = o;
+            return true;
+        }
+
+        public RelayCommand<TIdentifier> RefreshViewCommand { get; protected set; }
+        protected void Refresh(TIdentifier o)
+        {
+            this.CriteriaOfMasterEntity = GetCriteria(o);
             DoSearch();
+        }
+        protected virtual bool CanRefresh(TIdentifier o)
+        {
+            return true;
         }
 
         public RelayCommand CloseViewCommand { get; protected set; }
@@ -160,7 +184,12 @@ namespace Framework.Xaml
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Close));
         }
+        protected virtual bool CanClose()
+        {
+            return true;
+        }
 
+        protected abstract TCriteriaOfMasterEntity GetCriteria(TIdentifier o);
         protected abstract void DoSearch();
 
         public override void Cleanup()

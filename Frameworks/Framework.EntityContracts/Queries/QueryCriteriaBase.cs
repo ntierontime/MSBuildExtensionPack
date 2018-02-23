@@ -38,17 +38,19 @@ namespace Framework.EntityContracts
         /// </value>
         public bool IsToCompare { get; set; }
 
-        protected static Framework.NameValueCollection GetListWithLocalizedResource(string resourcePrefix, Type type)
+        protected static Framework.NameValueCollection GetListWithLocalizedResource(string resourcePrefix, Type type, string[] excludedNames = null)
         {
             string format = "{0}_{2}";
             var results = new Framework.NameValueCollection();
             var prefix = string.IsNullOrWhiteSpace(resourcePrefix) ? type.Name : resourcePrefix;
             foreach (var name in Enum.GetNames(type))
             {
-                string resourceName = string.Format(format, prefix, null, name);
-                string resourceString = Framework.Resx.UIStringResource.ResourceManager.GetString(resourceName);
-                results.Add(name, resourceString);
-
+                if (excludedNames == null || !excludedNames.Contains(name))
+                {
+                    string resourceName = string.Format(format, prefix, null, name);
+                    string resourceString = Framework.Resx.UIStringResource.ResourceManager.GetString(resourceName);
+                    results.Add(name, resourceString);
+                }
             }
 
             return results;
@@ -1579,7 +1581,7 @@ namespace Framework.EntityContracts
         public static Framework.NameValueCollection GetList(string resourcePrefix)
         {
             Type type = typeof(Framework.EntityContracts.PreDefinedDateTimeRanges);
-            return GetListWithLocalizedResource(resourcePrefix, type);
+            return GetListWithLocalizedResource(resourcePrefix, type, new string[] { PreDefinedDateTimeRanges.Unknown.ToString() });
         }
     }
 

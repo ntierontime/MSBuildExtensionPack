@@ -5,11 +5,13 @@ using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
 using System.Threading.Tasks;
+using MSBuildExtensionPack.CommonBLLEntities;
+using MSBuildExtensionPack.EntityContracts;
 
 namespace MSBuildExtensionPack.MVVMLightViewModels
 {
-    public class WPxTabFullDetailsOfBuildVM
-        : Framework.Xaml.ViewModelEntityRelatedBase<MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation, MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaIdentifier>
+    public class TabFullDetails
+        : Framework.Xaml.ViewModelEntityRelatedBase<MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation, MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaIdentifier, MSBuildExtensionPack.EntityContracts.IBuildIdentifier>
     {
         public const string EntityName_Static = "MSBuildExtensionPack.Build";
         public override string EntityName { get { return EntityName_Static; } }
@@ -20,7 +22,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         /// <summary>
         /// Initializes a new instance of the WPxTabSomethingOfBuildVM class.
         /// </summary>
-        public WPxTabFullDetailsOfBuildVM()
+        public TabFullDetails()
         {
             this.CriteriaOfMasterEntity = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaIdentifier();
             this.FK_BuildLog_Build = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformation>();
@@ -277,9 +279,13 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         }
         public ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformation> FK_BuildLog_Build { get; private set; }
 
+        protected override BuildChainedQueryCriteriaIdentifier GetCriteria(IBuildIdentifier o)
+        {
+            return new BuildChainedQueryCriteriaIdentifier { Identifier = new BuildQueryCriteriaIdentifier { Id = new Framework.EntityContracts.QuerySystemInt64EqualsCriteria { NullableValueToCompare = o.Id } } };
+        }
+
         protected override void DoSearch()
         {
-
             this.SearchStatus = Framework.EntityContracts.SearchStatus.Searching;
 
             string viewName = ViewName;
@@ -299,31 +305,38 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
                 dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
                 {
-                    this.StatusOfMasterEntity = vmData.StatusOfMasterEntity;
-                    this.StatusMessageOfMasterEntity = vmData.StatusMessageOfMasterEntity;
+                    this.StatusOfMasterEntity = result.StatusOfMasterEntity;
+                    this.StatusMessageOfMasterEntity = result.StatusMessageOfMasterEntity;
                     if (result.StatusOfMasterEntity == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
                     {
-                        this.MasterEntity = vmData.MasterEntity;
-                        this.CriteriaOfMasterEntity = vmData.CriteriaOfMasterEntity;
-                        this.CriteriaOfSolution_1 = vmData.CriteriaOfSolution_1;
-                        this.StatusOfSolution_1 = vmData.StatusOfSolution_1;
+                        // 1. MasterEntity
+                        this.MasterEntity = result.MasterEntity;
+                        this.CriteriaOfMasterEntity = result.CriteriaOfMasterEntity;
+
+                        // 2. Ancestors
+                        this.CriteriaOfSolution_1 = result.CriteriaOfSolution_1;
+                        this.StatusOfSolution_1 = result.StatusOfSolution_1;
                         this.StatusMessageOfSolution_1 = vmData.StatusMessageOfSolution_1;
-                        this.Solution_1 = vmData.Solution_1;
-                        this.CriteriaOfOrganization_1 = vmData.CriteriaOfOrganization_1;
-                        this.StatusOfOrganization_1 = vmData.StatusOfOrganization_1;
-                        this.StatusMessageOfOrganization_1 = vmData.StatusMessageOfOrganization_1;
-                        this.Organization_1 = vmData.Organization_1;
-                        this.CriteriaOfOrganization_2 = vmData.CriteriaOfOrganization_2;
-                        this.StatusOfOrganization_2 = vmData.StatusOfOrganization_2;
-                        this.StatusMessageOfOrganization_2 = vmData.StatusMessageOfOrganization_2;
-                        this.Organization_2 = vmData.Organization_2;
-                        this.CriteriaOfFK_BuildLog_Build = vmData.CriteriaOfFK_BuildLog_Build;
-                        this.StatusOfFK_BuildLog_Build = vmData.StatusOfFK_BuildLog_Build;
-                        this.StatusMessageOfFK_BuildLog_Build = vmData.StatusMessageOfFK_BuildLog_Build;
+                        this.Solution_1 = result.Solution_1;
+                        this.CriteriaOfOrganization_1 = result.CriteriaOfOrganization_1;
+                        this.StatusOfOrganization_1 = result.StatusOfOrganization_1;
+                        this.StatusMessageOfOrganization_1 = result.StatusMessageOfOrganization_1;
+                        this.Organization_1 = result.Organization_1;
+                        this.CriteriaOfOrganization_2 = result.CriteriaOfOrganization_2;
+                        this.StatusOfOrganization_2 = result.StatusOfOrganization_2;
+                        this.StatusMessageOfOrganization_2 = result.StatusMessageOfOrganization_2;
+                        this.Organization_2 = result.Organization_2;
+
+                        // 3. Children
+                        this.CriteriaOfFK_BuildLog_Build = result.CriteriaOfFK_BuildLog_Build;
+                        this.StatusOfFK_BuildLog_Build = result.StatusOfFK_BuildLog_Build;
+                        this.StatusMessageOfFK_BuildLog_Build = result.StatusMessageOfFK_BuildLog_Build;
                         this.FK_BuildLog_Build.Clear();
-                        if (vmData.StatusOfFK_BuildLog_Build == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+                        if (result.FK_BuildLog_Build != null && 
+                        (result.StatusOfFK_BuildLog_Build == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK ||
+                        result.StatusOfFK_BuildLog_Build == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady))
                         {
-                            foreach (var _FK_BuildLog_BuildItem in vmData.FK_BuildLog_Build)
+                            foreach (var _FK_BuildLog_BuildItem in result.FK_BuildLog_Build)
                             {
                                 this.FK_BuildLog_Build.Add(_FK_BuildLog_BuildItem);
                             }
