@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Framework.ViewModels
 {
-    public class ViewModelEntityRelatedBase<TMasterEntity, TCriteriaOfMasterEntity> : IViewModelEntityRelatedBase<TMasterEntity, TCriteriaOfMasterEntity>
+    public class ViewModelEntityRelatedBase<TMasterEntity, TCriteriaOfMasterEntity> : Framework.ViewModels.IViewModelEntityRelatedBase<TMasterEntity, TCriteriaOfMasterEntity>
         where TMasterEntity : class, new()
         where TCriteriaOfMasterEntity : class, new()
     {

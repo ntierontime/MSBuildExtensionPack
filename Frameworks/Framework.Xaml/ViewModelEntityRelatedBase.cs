@@ -2,8 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Framework.CommonBLLEntities;
-using Framework.EntityContracts;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
 
@@ -53,8 +51,8 @@ namespace Framework.Xaml
                 }
             }
         }
-        public QueryPagingSetting m_QueryPagingSetting;
-        public QueryPagingSetting QueryPagingSetting
+        public Framework.EntityContracts.QueryPagingSetting m_QueryPagingSetting;
+        public Framework.EntityContracts.QueryPagingSetting QueryPagingSetting
         {
             get
             {
@@ -69,8 +67,8 @@ namespace Framework.Xaml
                 }
             }
         }
-        public QueryPagingSetting m_QueryPagingSettingOneRecord;
-        public QueryPagingSetting QueryPagingSettingOneRecord
+        public Framework.EntityContracts.QueryPagingSetting m_QueryPagingSettingOneRecord;
+        public Framework.EntityContracts.QueryPagingSetting QueryPagingSettingOneRecord
         {
             get
             {
@@ -101,8 +99,8 @@ namespace Framework.Xaml
                 }
             }
         }
-        public BusinessLogicLayerResponseStatus m_StatusOfMasterEntity;
-        public BusinessLogicLayerResponseStatus StatusOfMasterEntity
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus m_StatusOfMasterEntity;
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfMasterEntity
         {
             get
             {
@@ -200,3 +198,4 @@ namespace Framework.Xaml
         }
     }
 }
+

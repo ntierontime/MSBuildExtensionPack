@@ -19,10 +19,9 @@ namespace MSBuildExtensionPack.XamarinForms.Pages.Build
         {
             InitializeComponent();
 
-            BindingContext = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM_Static;
+        BindingContext = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM_Static;
 
-            this.Appearing += (object sender, EventArgs e) =>
-            {
+            this.Appearing += (object sender, EventArgs e) => {
                 MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM_Static.SearchCommand.Execute(null);
             };
 
@@ -35,16 +34,11 @@ namespace MSBuildExtensionPack.XamarinForms.Pages.Build
             //    }
             //};
 
-            //this.ResultView.ItemTapped += (object sender, ItemTappedEventArgs e) => {
-            //    var viewCellDetails = e.Item as MSBuildExtensionPack.DataSourceEntities.Build.Default;
-            //    MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild_Static.LaunchDetailsViewCommand.Execute(viewCellDetails);
-            //};
-
-            this.ResultView.ItemTapped += (object sender, ItemTappedEventArgs e) =>
-            {
+            this.ResultView.ItemTapped += (object sender, ItemTappedEventArgs e) => {
                 var viewCellDetails = e.Item as MSBuildExtensionPack.DataSourceEntities.Build.Default;
-                MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM_Static.LaunchViewCommand.Execute(viewCellDetails);
+                MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild_Static.LaunchDetailsViewCommand.Execute(viewCellDetails);
             };
+
         }
     }
 }

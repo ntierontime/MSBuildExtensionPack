@@ -230,38 +230,6 @@ namespace MSBuildExtensionPack.WebApiClient
             return await Post<MSBuildExtensionPack.ViewModelData.WPCommonOfBuildVM>(url, vm);
         }
 
-            public const string ActionName_GetWPsomethingOfBuildVM = "GetWPsomethingOfBuildVM";
-        /// <summary>
-        /// Gets the wp common of build log vm.
-        /// http://[host]/api/BuildApi/GetWPsomethingOfBuildVM
-        /// Content-Type: application/json; charset=utf-8
-        /// </summary>
-        /// <param name="vm">The vm.</param>
-        /// <returns></returns>
-        public async Task<MSBuildExtensionPack.ViewModelData.WPsomethingOfBuildVM> GetWPsomethingOfBuildVMAsync(
-            MSBuildExtensionPack.ViewModelData.WPsomethingOfBuildVM vm)
-        {
-            string url = GetHttpRequestUrl(ActionName_GetWPsomethingOfBuildVM);
-
-            return await Post<MSBuildExtensionPack.ViewModelData.WPsomethingOfBuildVM>(url, vm);
-        }
-
-            public const string ActionName_GetWPxTabSomethingOfBuildVM = "GetWPxTabSomethingOfBuildVM";
-        /// <summary>
-        /// Gets the wp common of build log vm.
-        /// http://[host]/api/BuildApi/GetWPxTabSomethingOfBuildVM
-        /// Content-Type: application/json; charset=utf-8
-        /// </summary>
-        /// <param name="vm">The vm.</param>
-        /// <returns></returns>
-        public async Task<MSBuildExtensionPack.ViewModelData.WPxTabSomethingOfBuildVM> GetWPxTabSomethingOfBuildVMAsync(
-            MSBuildExtensionPack.ViewModelData.WPxTabSomethingOfBuildVM vm)
-        {
-            string url = GetHttpRequestUrl(ActionName_GetWPxTabSomethingOfBuildVM);
-
-            return await Post<MSBuildExtensionPack.ViewModelData.WPxTabSomethingOfBuildVM>(url, vm);
-        }
-
         public const string ActionName_GetWPFullDetailsOfBuildVM = "GetWPFullDetailsOfBuildVM";
         /// <summary>
         /// Gets the wp entity related of build log.
@@ -277,71 +245,6 @@ namespace MSBuildExtensionPack.WebApiClient
 
             return await GetEntityRelated<MSBuildExtensionPack.ViewModelData.WPFullDetailsOfBuildVM>(url);
         }
-
-        public const string ActionName_GetWPelsesomethingOfBuildVM = "GetWPelsesomethingOfBuildVM";
-        /// <summary>
-        /// Gets the wp entity related of build log.
-        /// http://[host]/api/BuildApi/GetWPelsesomethingOfBuildVM?id=1
-        /// </summary>
-        /// <returns></returns>
-        public async Task<MSBuildExtensionPack.ViewModelData.WPelsesomethingOfBuildVM> GetWPelsesomethingOfBuildVMAsync(
-            System.Int64 id)
-        {
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("id", id.ToString());
-            string url = GetHttpRequestUrl(ActionName_GetWPelsesomethingOfBuildVM, parameters);
-
-            return await GetEntityRelated<MSBuildExtensionPack.ViewModelData.WPelsesomethingOfBuildVM>(url);
-        }
-
-        public const string ActionName_GetWPxTabFullDetailsOfBuildVM = "GetWPxTabFullDetailsOfBuildVM";
-        /// <summary>
-        /// Gets the wp entity related of build log.
-        /// http://[host]/api/BuildApi/GetWPxTabFullDetailsOfBuildVM?id=1
-        /// </summary>
-        /// <returns></returns>
-        public async Task<MSBuildExtensionPack.ViewModelData.WPxTabFullDetailsOfBuildVM> GetWPxTabFullDetailsOfBuildVMAsync(
-            System.Int64 id)
-        {
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("id", id.ToString());
-            string url = GetHttpRequestUrl(ActionName_GetWPxTabFullDetailsOfBuildVM, parameters);
-
-            return await GetEntityRelated<MSBuildExtensionPack.ViewModelData.WPxTabFullDetailsOfBuildVM>(url);
-        }
-
-        #region EntityUpdateActionSetting - elseA1Asomething
-
-        public const string ActionName_GetWPelseA1AsomethingOfBuildVM = "GetWPelseA1AsomethingOfBuildVM";
-        /// <summary>
-        /// Hearts the beat asynchronous.
-        /// http://[host]/api/BuildApi/GetWPelseA1AsomethingOfBuildVM
-        /// </summary>
-        /// <returns></returns>
-        public async Task<MSBuildExtensionPack.ViewModelData.WPelseA1AsomethingOfBuildVM> GetWPelseA1AsomethingOfBuildVM(
-            System.Int64 id)
-        {
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("id", id.ToString());
-            string url = GetHttpRequestUrl(ActionName_GetWPelseA1AsomethingOfBuildVM, parameters);
-
-            return await GetEntityRelated<MSBuildExtensionPack.ViewModelData.WPelseA1AsomethingOfBuildVM>(url);
-        }
-
-        public const string ActionName_WPelseA1AsomethingOfBuildVM = "WPelseA1AsomethingOfBuildVM";
-        /// <summary>
-        /// Hearts the beat asynchronous.
-        /// http://[host]/api/BuildApi/WPelseA1AsomethingOfBuildVM
-        /// </summary>
-        /// <returns></returns>
-        public async Task<MSBuildExtensionPack.ViewModelData.WPelseA1AsomethingOfBuildVM> WPelseA1AsomethingOfBuildVM(MSBuildExtensionPack.ViewModelData.WPelseA1AsomethingOfBuildVM vm)
-        {
-            string url = GetHttpRequestUrl(ActionName_WPelseA1AsomethingOfBuildVM);
-
-            return await PostIViewModelEntityRelatedBase<MSBuildExtensionPack.ViewModelData.WPelseA1AsomethingOfBuildVM>(url, vm);
-        }
-
-        #endregion EntityUpdateActionSetting - elseA1Asomething
 
         public const string ActionName_HeartBeat = "HeartBeat";
         /// <summary>

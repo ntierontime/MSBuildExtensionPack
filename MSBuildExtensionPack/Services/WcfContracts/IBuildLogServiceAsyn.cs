@@ -307,41 +307,6 @@ namespace MSBuildExtensionPack.WcfContracts
 
         #endregion Query Methods Of KeyInformationByIdentifier
 
-        #region Query Methods Of KeyInformationByFKOnly
-
-#if (XAMARIN)
-#else
-        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildLogService/ExistsOfKeyInformationByFKOnly",
-            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildLogService/ExistsOfKeyInformationByFKOnlyResponse")]
-#endif
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request);
-#if (XAMARIN)
-#else
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildLogService/ExistsOfKeyInformationByFKOnly",
-            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildLogService/ExistsOfKeyInformationByFKOnlyResponse")]
-#endif
-        System.IAsyncResult BeginExistsOfKeyInformationByFKOnly(MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request, System.AsyncCallback callback, object asyncState);
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean EndExistsOfKeyInformationByFKOnly(System.IAsyncResult result);
-
-#if (XAMARIN)
-#else
-        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildLogService/GetCollectionOfKeyInformationByFKOnly",
-            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildLogService/GetCollectionOfKeyInformationByFKOnlyResponse")]
-#endif
-        MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation GetCollectionOfKeyInformationByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request);
-
-#if (XAMARIN)
-#else
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildLogService/GetCollectionOfKeyInformationByFKOnly",
-            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildLogService/GetCollectionOfKeyInformationByFKOnlyResponse")]
-#endif
-        System.IAsyncResult BeginGetCollectionOfKeyInformationByFKOnly(MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request, System.AsyncCallback callback, object asyncState);
-        MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation EndGetCollectionOfKeyInformationByFKOnly(System.IAsyncResult result);
-
-        #endregion Query Methods Of KeyInformationByFKOnly
-
     }
 }
 

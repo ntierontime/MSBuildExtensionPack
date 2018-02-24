@@ -286,32 +286,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of KeyInformationByIdentifier
 
-        #region Query Methods Of KeyInformationByFKOnly
-
-        /// <summary>
-        /// Exists the of entity of "FKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request)
-        {
-            return base.Channel.ExistsOfKeyInformationByFKOnly(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "FKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation GetCollectionOfKeyInformationByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request)
-        {
-            return base.Channel.GetCollectionOfKeyInformationByFKOnly(request);
-        }
-
-        #endregion Query Methods Of KeyInformationByFKOnly
-
             // DataQueryPerQuerySettingCollection -- MethodDataQuery -- End
 
 #if WINDOWS_PHONE

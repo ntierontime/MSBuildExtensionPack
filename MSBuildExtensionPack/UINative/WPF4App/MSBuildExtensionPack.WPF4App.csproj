@@ -382,20 +382,6 @@
     <Compile Include="Pages\Build\WPCommonOfBuild.xaml.cs">
       <DependentUpon>WPCommonOfBuild.xaml</DependentUpon>
     </Compile>
-    <Page Include="Pages\Build\WPsomethingOfBuild.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="Pages\Build\WPsomethingOfBuild.xaml.cs">
-      <DependentUpon>WPsomethingOfBuild.xaml</DependentUpon>
-    </Compile>
-    <Page Include="Pages\Build\WPxTabSomethingOfBuild.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="Pages\Build\WPxTabSomethingOfBuild.xaml.cs">
-      <DependentUpon>WPxTabSomethingOfBuild.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\BuildEventCode\WPCommonOfBuildEventCode.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -430,20 +416,6 @@
     </Page>
     <Compile Include="UserControls\Build\UCCommonOfBuild.xaml.cs">
       <DependentUpon>UCCommonOfBuild.xaml</DependentUpon>
-    </Compile>
-    <Page Include="UserControls\Build\UCsomethingOfBuild.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="UserControls\Build\UCsomethingOfBuild.xaml.cs">
-      <DependentUpon>UCsomethingOfBuild.xaml</DependentUpon>
-    </Compile>
-    <Page Include="UserControls\Build\UCxTabSomethingOfBuild.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="UserControls\Build\UCxTabSomethingOfBuild.xaml.cs">
-      <DependentUpon>UCxTabSomethingOfBuild.xaml</DependentUpon>
     </Compile>
     <Page Include="UserControls\BuildEventCode\UCCommonOfBuildEventCode.xaml">
       <Generator>MSBuild:Compile</Generator>
