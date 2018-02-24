@@ -357,6 +357,44 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             return criteria;
         }
 
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareSolutionName">will compare/filter solutionName property/field/column if true, otherwise false</param>
+        /// <param name="solutionName" > value to compare/filter with solutionName property/field/column</param>
+        /// <param name="isToCompareSolutionDescription">will compare/filter solutionDescription property/field/column if true, otherwise false</param>
+        /// <param name="solutionDescription" > value to compare/filter with solutionDescription property/field/column</param>
+        /// <param name="isToCompareOrganization_1Name">will compare/filter organization_1Name property/field/column if true, otherwise false</param>
+        /// <param name="organization_1Name" > value to compare/filter with organization_1Name property/field/column</param>
+        /// <param name="isToCompareOrganization_2Name">will compare/filter organization_2Name property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Name" > value to compare/filter with organization_2Name property/field/column</param>
+        /// <param name="isToCompareBuildName">will compare/filter buildName property/field/column if true, otherwise false</param>
+        /// <param name="buildName" > value to compare/filter with buildName property/field/column</param>
+        /// <param name="isToCompareBuildDescription">will compare/filter buildDescription property/field/column if true, otherwise false</param>
+        /// <param name="buildDescription" > value to compare/filter with buildDescription property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns></returns>
+        private static MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaFKStringContains _GetBuildChainedQueryCriteriaFKStringContains(
+            bool isToCompareSolutionName, System.String solutionName
+            , bool isToCompareSolutionDescription, System.String solutionDescription
+            , bool isToCompareOrganization_1Name, System.String organization_1Name
+            , bool isToCompareOrganization_2Name, System.String organization_2Name
+            , bool isToCompareBuildName, System.String buildName
+            , bool isToCompareBuildDescription, System.String buildDescription
+            )
+        {
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaFKStringContains();
+            criteria.FKStringContains.SolutionName = new QuerySystemStringContainsCriteria(isToCompareSolutionName, solutionName);
+            criteria.FKStringContains.SolutionDescription = new QuerySystemStringContainsCriteria(isToCompareSolutionDescription, solutionDescription);
+            criteria.FKStringContains.Organization_1Name = new QuerySystemStringContainsCriteria(isToCompareOrganization_1Name, organization_1Name);
+            criteria.FKStringContains.Organization_2Name = new QuerySystemStringContainsCriteria(isToCompareOrganization_2Name, organization_2Name);
+            criteria.FKStringContains.BuildName = new QuerySystemStringContainsCriteria(isToCompareBuildName, buildName);
+            criteria.FKStringContains.BuildDescription = new QuerySystemStringContainsCriteria(isToCompareBuildDescription, buildDescription);
+            return criteria;
+        }
+
         #region Query Methods Of DefaultByCommon
 
         /// <summary>
@@ -1934,6 +1972,362 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         }
 
         #endregion Query Methods Of KeyInformationByIdentifier
+
+        #region Query Methods Of AncestorAndKeyInfo
+
+        /// <summary>
+        /// Exists the of entity of common.
+        /// </summary>
+        /// <param name="criteria"></param>
+        /// <param name="queryPagingSetting"></param>
+        /// <param name="queryOrderBySettingCollection"></param>
+        /// <returns>true if meets criteria, otherwise false</returns>
+        public static bool ExistsOfAncestorAndKeyInfo(
+            MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaFKStringContains criteria
+            , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
+            , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
+        {
+            //log.Info(string.Format("{0}: ExistsOfAncestorAndKeyInfo", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            MSBuildExtensionPack.WcfContracts.IBuildService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuild();
+            var _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfFKStringContains(
+                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
+                , "ExistsOfAncestorAndKeyInfo"
+                , Guid.NewGuid().ToString()
+                );
+            _Request.Criteria = criteria;
+            _Request.QueryPagingSetting = queryPagingSetting;
+            if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
+            {
+                _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
+                _Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
+            }
+            else
+            {
+                _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
+            }
+
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfAncestorAndKeyInfo(_Request);
+            if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+            {
+                //log.Info(string.Format("{0}: ExistsOfAncestorAndKeyInfo", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                return _Response.Message;
+            }
+            else
+            {
+                //log.Error(string.Format("{0}: ExistsOfAncestorAndKeyInfo", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Exists the of entity of common.
+        /// </summary>
+        /// <param name="isToCompareSolutionName">will compare/filter solutionName property/field/column if true, otherwise false</param>
+        /// <param name="solutionName" > value to compare/filter with solutionName property/field/column</param>
+        /// <param name="isToCompareSolutionDescription">will compare/filter solutionDescription property/field/column if true, otherwise false</param>
+        /// <param name="solutionDescription" > value to compare/filter with solutionDescription property/field/column</param>
+        /// <param name="isToCompareOrganization_1Name">will compare/filter organization_1Name property/field/column if true, otherwise false</param>
+        /// <param name="organization_1Name" > value to compare/filter with organization_1Name property/field/column</param>
+        /// <param name="isToCompareOrganization_2Name">will compare/filter organization_2Name property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Name" > value to compare/filter with organization_2Name property/field/column</param>
+        /// <param name="isToCompareBuildName">will compare/filter buildName property/field/column if true, otherwise false</param>
+        /// <param name="buildName" > value to compare/filter with buildName property/field/column</param>
+        /// <param name="isToCompareBuildDescription">will compare/filter buildDescription property/field/column if true, otherwise false</param>
+        /// <param name="buildDescription" > value to compare/filter with buildDescription property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>true if meets criteria, otherwise false</returns>
+        public static bool ExistsOfAncestorAndKeyInfo(
+            bool isToCompareSolutionName, System.String solutionName
+            , bool isToCompareSolutionDescription, System.String solutionDescription
+            , bool isToCompareOrganization_1Name, System.String organization_1Name
+            , bool isToCompareOrganization_2Name, System.String organization_2Name
+            , bool isToCompareBuildName, System.String buildName
+            , bool isToCompareBuildDescription, System.String buildDescription
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
+        {
+            //log.Info(string.Format("{0}: ExistsOfAncestorAndKeyInfo", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            MSBuildExtensionPack.WcfContracts.IBuildService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuild();
+            var _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfFKStringContains(
+                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
+                , "ExistsOfAncestorAndKeyInfo"
+                , Guid.NewGuid().ToString()
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression
+                );
+            _Request.Criteria = _GetBuildChainedQueryCriteriaFKStringContains(
+                isToCompareSolutionName, solutionName
+                , isToCompareSolutionDescription, solutionDescription
+                , isToCompareOrganization_1Name, organization_1Name
+                , isToCompareOrganization_2Name, organization_2Name
+                , isToCompareBuildName, buildName
+                , isToCompareBuildDescription, buildDescription
+                );
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfAncestorAndKeyInfo(_Request);
+            if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+            {
+                //log.Info(string.Format("{0}: ExistsOfAncestorAndKeyInfo", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                return _Response.Message;
+            }
+            else
+            {
+                //log.Error(string.Format("{0}: ExistsOfAncestorAndKeyInfo", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="criteria"></param>
+        /// <param name="queryPagingSetting"></param>
+        /// <param name="queryOrderBySettingCollection"></param>
+        /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.Build.KeyInformationCollection"/></returns>
+        public static MSBuildExtensionPack.DataSourceEntities.Build.KeyInformationCollection GetCollectionOfAncestorAndKeyInfo(
+            MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaFKStringContains criteria
+            , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
+            , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
+        {
+            //log.Info(string.Format("{0}: GetCollectionOfAncestorAndKeyInfo", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            MSBuildExtensionPack.WcfContracts.IBuildService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuild();
+            var _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfFKStringContains(
+                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
+                , "GetCollectionOfAncestorAndKeyInfo"
+                , Guid.NewGuid().ToString()
+                );
+            _Request.Criteria = criteria;
+            _Request.QueryPagingSetting = queryPagingSetting;
+            if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
+            {
+                _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
+                _Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
+            }
+            else
+            {
+                _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
+            }
+
+            MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetCollectionOfAncestorAndKeyInfo(_Request);
+            if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+            {
+                //log.Info(string.Format("{0}: GetCollectionOfAncestorAndKeyInfo", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                return _Response.Message;
+            }
+            else
+            {
+                //log.Error(string.Format("{0}: GetCollectionOfAncestorAndKeyInfo", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Gets message of the collection of entity of common.
+        /// </summary>
+        /// <param name="criteria"></param>
+        /// <param name="queryPagingSetting"></param>
+        /// <param name="queryOrderBySettingCollection"></param>
+        /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.DataSourceEntities.Build.KeyInformationCollection"/></returns>
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation GetMessageOfAncestorAndKeyInfo(
+            MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaFKStringContains criteria
+            , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
+            , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
+        {
+            return GetMessageOfAncestorAndKeyInfo(
+                criteria
+                , queryPagingSetting
+                , queryOrderBySettingCollection
+                , Framework.DataServiceTypes.DataSourceResult);
+        }
+
+        /// <summary>
+        /// Gets message of the collection of entity of common.
+        /// </summary>
+        /// <param name="criteria"></param>
+        /// <param name="queryPagingSetting"></param>
+        /// <param name="queryOrderBySettingCollection"></param>
+        /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.DataSourceEntities.Build.KeyInformationCollection"/></returns>
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation GetMessageOfAncestorAndKeyInfo(
+            MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaFKStringContains criteria
+            , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
+            , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            , Framework.DataServiceTypes dataServiceType)
+        {
+            //log.Info(string.Format("{0}: GetMessageOfAncestorAndKeyInfo", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            MSBuildExtensionPack.WcfContracts.IBuildService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuild();
+            var _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfFKStringContains(
+                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
+                , "GetMessageOfAncestorAndKeyInfo"
+                , Guid.NewGuid().ToString()
+                );
+            _Request.Criteria = criteria;
+            _Request.QueryPagingSetting = queryPagingSetting;
+            if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
+            {
+                _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
+                _Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
+            }
+            else
+            {
+                _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
+            }
+            _Request.DataServiceType = dataServiceType;
+
+            MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetCollectionOfAncestorAndKeyInfo(_Request);
+            return _Response;
+        }
+
+       /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareSolutionName">will compare/filter solutionName property/field/column if true, otherwise false</param>
+        /// <param name="solutionName" > value to compare/filter with solutionName property/field/column</param>
+        /// <param name="isToCompareSolutionDescription">will compare/filter solutionDescription property/field/column if true, otherwise false</param>
+        /// <param name="solutionDescription" > value to compare/filter with solutionDescription property/field/column</param>
+        /// <param name="isToCompareOrganization_1Name">will compare/filter organization_1Name property/field/column if true, otherwise false</param>
+        /// <param name="organization_1Name" > value to compare/filter with organization_1Name property/field/column</param>
+        /// <param name="isToCompareOrganization_2Name">will compare/filter organization_2Name property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Name" > value to compare/filter with organization_2Name property/field/column</param>
+        /// <param name="isToCompareBuildName">will compare/filter buildName property/field/column if true, otherwise false</param>
+        /// <param name="buildName" > value to compare/filter with buildName property/field/column</param>
+        /// <param name="isToCompareBuildDescription">will compare/filter buildDescription property/field/column if true, otherwise false</param>
+        /// <param name="buildDescription" > value to compare/filter with buildDescription property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.Build.KeyInformationCollection"/></returns>
+        public static MSBuildExtensionPack.DataSourceEntities.Build.KeyInformationCollection GetCollectionOfAncestorAndKeyInfo(
+            bool isToCompareSolutionName, System.String solutionName
+            , bool isToCompareSolutionDescription, System.String solutionDescription
+            , bool isToCompareOrganization_1Name, System.String organization_1Name
+            , bool isToCompareOrganization_2Name, System.String organization_2Name
+            , bool isToCompareBuildName, System.String buildName
+            , bool isToCompareBuildDescription, System.String buildDescription
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
+        {
+            //log.Info(string.Format("{0}: GetCollectionOfAncestorAndKeyInfo", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            MSBuildExtensionPack.WcfContracts.IBuildService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuild();
+            var _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfFKStringContains(
+                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
+                , "GetCollectionOfAncestorAndKeyInfo"
+                , Guid.NewGuid().ToString()
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression
+                );
+            _Request.Criteria = _GetBuildChainedQueryCriteriaFKStringContains(
+                isToCompareSolutionName, solutionName
+                , isToCompareSolutionDescription, solutionDescription
+                , isToCompareOrganization_1Name, organization_1Name
+                , isToCompareOrganization_2Name, organization_2Name
+                , isToCompareBuildName, buildName
+                , isToCompareBuildDescription, buildDescription
+                );
+            MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetCollectionOfAncestorAndKeyInfo(_Request);
+            if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+            {
+                //log.Info(string.Format("{0}: GetCollectionOfAncestorAndKeyInfo", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                return _Response.Message;
+            }
+            else
+            {
+                //log.Error(string.Format("{0}: GetCollectionOfAncestorAndKeyInfo", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Gets message of the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareSolutionName">will compare/filter solutionName property/field/column if true, otherwise false</param>
+        /// <param name="solutionName" > value to compare/filter with solutionName property/field/column</param>
+        /// <param name="isToCompareSolutionDescription">will compare/filter solutionDescription property/field/column if true, otherwise false</param>
+        /// <param name="solutionDescription" > value to compare/filter with solutionDescription property/field/column</param>
+        /// <param name="isToCompareOrganization_1Name">will compare/filter organization_1Name property/field/column if true, otherwise false</param>
+        /// <param name="organization_1Name" > value to compare/filter with organization_1Name property/field/column</param>
+        /// <param name="isToCompareOrganization_2Name">will compare/filter organization_2Name property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Name" > value to compare/filter with organization_2Name property/field/column</param>
+        /// <param name="isToCompareBuildName">will compare/filter buildName property/field/column if true, otherwise false</param>
+        /// <param name="buildName" > value to compare/filter with buildName property/field/column</param>
+        /// <param name="isToCompareBuildDescription">will compare/filter buildDescription property/field/column if true, otherwise false</param>
+        /// <param name="buildDescription" > value to compare/filter with buildDescription property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation"/></returns>
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation GetMessageOfAncestorAndKeyInfo(
+            bool isToCompareSolutionName, System.String solutionName
+            , bool isToCompareSolutionDescription, System.String solutionDescription
+            , bool isToCompareOrganization_1Name, System.String organization_1Name
+            , bool isToCompareOrganization_2Name, System.String organization_2Name
+            , bool isToCompareBuildName, System.String buildName
+            , bool isToCompareBuildDescription, System.String buildDescription
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression        )
+
+        {
+            MSBuildExtensionPack.WcfContracts.IBuildService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuild();
+            var _Request = new MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfFKStringContains(
+                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
+                , "GetCollectionOfAncestorAndKeyInfo"
+                , Guid.NewGuid().ToString()
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression
+                );
+            _Request.Criteria = _GetBuildChainedQueryCriteriaFKStringContains(
+                isToCompareSolutionName, solutionName
+                , isToCompareSolutionDescription, solutionDescription
+                , isToCompareOrganization_1Name, organization_1Name
+                , isToCompareOrganization_2Name, organization_2Name
+                , isToCompareBuildName, buildName
+                , isToCompareBuildDescription, buildDescription
+                );
+            MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetCollectionOfAncestorAndKeyInfo(_Request);
+            return _Response;
+        }
+
+        #endregion Query Methods Of AncestorAndKeyInfo
+
+        #region DataActionMethod -- UpdateName
+
+        /// <summary>
+        /// UpdateName
+        /// Description:
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>a message with action result</returns>
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest UpdateName(MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedUpdateName request)
+        {
+            MSBuildExtensionPack.WcfContracts.IBuildService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuild();
+            return _BusinessLogicLayerInstance.UpdateName(request);
+        }
+
+        #endregion DataActionMethod -- UpdateName
+
+        #region DataActionMethod -- InsertName
+
+        /// <summary>
+        /// InsertName
+        /// Description:
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>a message with action result</returns>
+        public static MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest InsertName(MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedInsertName request)
+        {
+            MSBuildExtensionPack.WcfContracts.IBuildService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceBuild();
+            return _BusinessLogicLayerInstance.InsertName(request);
+        }
+
+        #endregion DataActionMethod -- InsertName
 
     }
 }

@@ -30,6 +30,12 @@
     <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
     <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
   </DataView>
+  <DataView Key="UpdateNameRequest" DataViewKnownCategory="Custom" IsGroupByResult="false">
+    <Description>UpdateNameRequest</Description>
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemString)Name=Name;(SystemInt64)Id=Id~Identifier</Properties>
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
+  </DataView>
   <Criteria Key="Common" SourceTypeFullName="MSBuildExtensionPack.Build">
     <Description>Query by EntityReference, String, Bool, Order By DateTime</Description>
     <Queries>Common</Queries>
@@ -45,6 +51,10 @@
   <Criteria Key="Identifier" SourceTypeFullName="MSBuildExtensionPack.Build">
     <Description>Query by Identifier</Description>
     <Queries>Identifier</Queries>
+  </Criteria>
+  <Criteria Key="FKStringContains" SourceTypeFullName="MSBuildExtensionPack.Build">
+    <Description>FKStringContains</Description>
+    <Queries>FKStringContains</Queries>
   </Criteria>
   <Query Key="Common" DataQueryPerQueryKnownKey="Common" SourceTypeDeclarationFullName="MSBuildExtensionPack.Build" ConditionOperator="AND">
     <Description>Query by EntityReference, String, Bool, Order By DateTime</Description>
@@ -63,6 +73,13 @@
     <Description>Query by Identifier</Description>
     <QueryUnits Key="Identifier" ConditionOperator="AND" Description="Query by Identifier">Id=:Id.Equals</QueryUnits>
   </Query>
+  <Query Key="FKStringContains" DataQueryPerQueryKnownKey="Unknown" SourceTypeDeclarationFullName="MSBuildExtensionPack.Build" ConditionOperator="AND">
+    <Description>FKStringContains</Description>
+    <QueryUnits Key="AncestorsName" ConditionOperator="OR" Description="AncestorsName">SolutionName=\SolutionId:Name.Contains;SolutionDescription=\SolutionId:Description.Contains;Organization_1Name=\SolutionId\OrganizationId:Name.Contains;Organization_2Name=\SolutionId\OrganizationId\ParentId:Name.Contains</QueryUnits>
+    <QueryUnits Key="ThisTable" ConditionOperator="OR" Description="ThisTable">BuildName=:Name.Contains;BuildDescription=:Description.Contains</QueryUnits>
+  </Query>
+  <DataOperation Key="UpdateName" DataViewKey="UpdateNameRequest" DataOperationType="Update" ExposedLayer="WebServices" />
+  <DataOperation Key="InsertName" DataViewKey="UpdateNameRequest" DataOperationType="Insert" ExposedLayer="WebServices" />
   <QueryResult Key="EntityByCommon" CriteriaKey="Common" />
   <QueryResult Key="DefaultByCommon" CriteriaKey="Common" DataViewKey="Default">
     <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
@@ -95,6 +112,10 @@
     <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
   </QueryResult>
   <QueryResult Key="KeyInformationByIdentifier" CriteriaKey="Identifier" DataViewKey="KeyInformation">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
+  </QueryResult>
+  <QueryResult Key="AncestorAndKeyInfo" CriteriaKey="FKStringContains" DataViewKey="KeyInformation">
     <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
     <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
   </QueryResult>
@@ -204,4 +225,6 @@
       <Result>Organization_2</Result>
     </ForeignKeyPersist>
   </ForeignKeyPersistList>
+  <BridgedForeignKeyPersistList />
+  <CrossJoinedForeignKeyPersistList />
 </Entity>
