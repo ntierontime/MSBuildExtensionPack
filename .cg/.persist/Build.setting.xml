@@ -158,6 +158,14 @@
   <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="something" UIViewType="SearchResult" DataViewKey="KeyInformation" CriteriaKey="FKStringContains" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
     <Description>something</Description>
   </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="elsesomething" UIViewType="FullDetails" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>elsesomething</Description>
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Build" Group="Aside" Key="KeyInformation" UIViewType="MasterViewAsideKeyInformation" CriteriaKey="Identifier" DataViewKey="KeyInformation" EntityReferenceSimpleFullPath="" EntityReferenceName="" />
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Solution" Group="Aside" Key="SolutionView" UIViewType="RelatedEntityWhenMasterViewIsFKEntity" CriteriaKey="Identifier" DataViewKey="Default" EntityReferenceSimpleFullPath="\SolutionId" />
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" Group="Aside" Key="Department" UIViewType="RelatedEntityWhenMasterViewIsFKEntity" CriteriaKey="Identifier" DataViewKey="Default" EntityReferenceSimpleFullPath="\SolutionId\OrganizationId" />
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" Group="Aside" Key="Company" UIViewType="RelatedEntityWhenMasterViewIsFKEntity" CriteriaKey="Identifier" DataViewKey="KeyInformation" EntityReferenceSimpleFullPath="\SolutionId\OrganizationId\ParentId" />
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.BuildLog" Group="Article" Key="FK_BuildLog_Build" UIViewType="RelatedEntityWhenMasterViewIsPKEntity" CriteriaKey="FKOnly" DataViewKey="KeyInformation" EntityReferenceName="FK_BuildLog_Build" />
+  </UIView>
   <ForeignKeyPersistList>
     <ForeignKeyPersist>
       <EntityReferenceResultForPersistAliaType>DownTree</EntityReferenceResultForPersistAliaType>

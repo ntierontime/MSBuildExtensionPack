@@ -46,6 +46,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
 
         public const string ActionName_Build_WPFullDetailsOfBuild = "WPFullDetailsOfBuild";
 
+        public const string ActionName_Build_WPelsesomethingOfBuild = "WPelsesomethingOfBuild";
+
         public const string ActionName_BuildEventCode_WPFullDetailsOfBuildEventCode = "WPFullDetailsOfBuildEventCode";
 
         public const string ActionName_BuildLog_WPFullDetailsOfBuildLog = "WPFullDetailsOfBuildLog";

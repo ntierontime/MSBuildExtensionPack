@@ -141,6 +141,7 @@
     <Content Include="Views\Build\WPCommonOfBuild.cshtml" />
     <Content Include="Views\Build\WPFullDetailsOfBuild.cshtml" />
     <Content Include="Views\Build\WPsomethingOfBuild.cshtml" />
+    <Content Include="Views\Build\WPelsesomethingOfBuild.cshtml" />
     <Content Include="Views\BuildEventCode\WPCommonOfBuildEventCode.cshtml" />
     <Content Include="Views\BuildEventCode\WPFullDetailsOfBuildEventCode.cshtml" />
     <Content Include="Views\BuildLog\WPCommonOfBuildLog.cshtml" />

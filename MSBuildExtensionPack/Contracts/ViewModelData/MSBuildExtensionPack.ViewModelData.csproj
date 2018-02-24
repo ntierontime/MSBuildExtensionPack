@@ -43,6 +43,7 @@
     <Compile Include="WPCommonOfBuildVM.cs" />
     <Compile Include="WPFullDetailsOfBuildVM.cs" />
     <Compile Include="WPsomethingOfBuildVM.cs" />
+    <Compile Include="WPelsesomethingOfBuildVM.cs" />
     <Compile Include="WPCommonOfBuildEventCodeVM.cs" />
     <Compile Include="WPFullDetailsOfBuildEventCodeVM.cs" />
     <Compile Include="WPCommonOfBuildLogVM.cs" />

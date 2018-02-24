@@ -262,6 +262,22 @@ namespace MSBuildExtensionPack.WebApiClient
             return await GetEntityRelated<MSBuildExtensionPack.ViewModelData.WPFullDetailsOfBuildVM>(url);
         }
 
+        public const string ActionName_GetWPelsesomethingOfBuildVM = "GetWPelsesomethingOfBuildVM";
+        /// <summary>
+        /// Gets the wp entity related of build log.
+        /// http://[host]/api/BuildApi/GetWPelsesomethingOfBuildVM?id=1
+        /// </summary>
+        /// <returns></returns>
+        public async Task<MSBuildExtensionPack.ViewModelData.WPelsesomethingOfBuildVM> GetWPelsesomethingOfBuildVMAsync(
+            System.Int64 id)
+        {
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            parameters.Add("id", id.ToString());
+            string url = GetHttpRequestUrl(ActionName_GetWPelsesomethingOfBuildVM, parameters);
+
+            return await GetEntityRelated<MSBuildExtensionPack.ViewModelData.WPelsesomethingOfBuildVM>(url);
+        }
+
         public const string ActionName_HeartBeat = "HeartBeat";
         /// <summary>
         /// Hearts the beat asynchronous.

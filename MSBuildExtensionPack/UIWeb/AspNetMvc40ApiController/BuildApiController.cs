@@ -300,6 +300,22 @@ System.Int64? id)
         }
 
         /// <summary>
+        /// Gets entity related view model of MSBuildExtensionPack.Build: WPelsesomethingOfBuildVM.
+        /// http://[host]/api/BuildApi/GetWPelsesomethingOfBuildVM?
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet, ActionName("GetWPelsesomethingOfBuildVM")]
+        public MSBuildExtensionPack.ViewModelData.WPelsesomethingOfBuildVM GetWPelsesomethingOfBuildVM(
+System.Int64? id)
+        {
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaIdentifier();
+            criteria.Identifier.Id.NullableValueToCompare = id;
+            MSBuildExtensionPack.AspNetMvc40ViewModel.WPelsesomethingOfBuildVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPelsesomethingOfBuildVM(criteria);
+            retval.LoadData();
+            return retval;
+        }
+
+        /// <summary>
         /// HearBeat.
         /// http://[host]/api/BuildApi/HearBeat
         /// </summary>

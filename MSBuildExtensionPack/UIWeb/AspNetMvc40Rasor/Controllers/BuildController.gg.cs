@@ -202,6 +202,21 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             return View(vm);
         }
 
+        /// <summary>
+        /// Display one entity and all related entities if any, either single item or a list, based on foreign keys
+        /// </summary>
+        /// <returns></returns>
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Build_WPelsesomethingOfBuild)]
+        public ActionResult WPelsesomethingOfBuild(System.Int64? id)
+        {
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaIdentifier();
+            criteria.Identifier.Id.NullableValueToCompare = id;
+            MSBuildExtensionPack.AspNetMvc40ViewModel.WPelsesomethingOfBuildVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPelsesomethingOfBuildVM(criteria);
+            vm.LoadData();
+
+            return View(vm);
+        }
+
         #region Import()
 
         /// <summary>
