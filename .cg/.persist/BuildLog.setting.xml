@@ -98,6 +98,10 @@
     <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
     <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
   </QueryResult>
+  <QueryResult Key="KeyInformationByFKOnly" CriteriaKey="FKOnly" DataViewKey="KeyInformation">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
+  </QueryResult>
   <UIView MasterTypeFullName="MSBuildExtensionPack.BuildLog" Key="Common" UIViewType="SearchResult" DataViewKey="Default" CriteriaKey="Common" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
     <Description>Workspace of Common</Description>
   </UIView>
@@ -252,4 +256,6 @@
       <Result>BuildEventCode_1</Result>
     </ForeignKeyPersist>
   </ForeignKeyPersistList>
+  <BridgedForeignKeyPersistList />
+  <CrossJoinedForeignKeyPersistList />
 </Entity>

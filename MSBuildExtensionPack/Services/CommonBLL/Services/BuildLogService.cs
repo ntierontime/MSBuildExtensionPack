@@ -672,6 +672,73 @@ namespace MSBuildExtensionPack.CommonBLL
 
         #endregion Query Methods Of KeyInformationByIdentifier
 
+        #region Query Methods Of KeyInformationByFKOnly
+
+        /// <summary>
+        /// Exists the of entity of KeyInformationByFKOnly .
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request)
+        {
+            log.Info(string.Format("{0}: ExistsOfKeyInformationByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfKeyInformationByFKOnly(
+                request.Criteria.FKOnly.BuildId
+                , request.Criteria.FKOnly.Solution_1Id
+                , request.Criteria.FKOnly.Organization_1Id
+                , request.Criteria.FKOnly.Organization_2Id
+                , request.Criteria.FKOnly.BuildEventCodeId
+                , request.QueryPagingSetting.CurrentIndex
+                , request.QueryPagingSetting.PageSize
+                , request.QueryOrderBySettingCollection);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _retval = new Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean();
+
+            _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
+            log.Info(string.Format("{0}: ExistsOfKeyInformationByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            return _retval;
+        }
+
+        /// <summary>
+        /// Gets the collection of entity of KeyInformationByFKOnly .
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation if any</returns>
+        public MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation GetCollectionOfKeyInformationByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request)
+        {
+            log.Info(string.Format("{0}: GetCollectionOfKeyInformationByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.BuildLog.DataAccessLayerMessageOfKeyInformationCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfKeyInformationByFKOnly(
+                request.Criteria.FKOnly.BuildId
+                , request.Criteria.FKOnly.Solution_1Id
+                , request.Criteria.FKOnly.Organization_1Id
+                , request.Criteria.FKOnly.Organization_2Id
+                , request.Criteria.FKOnly.BuildEventCodeId
+                , request.QueryPagingSetting.CurrentIndex
+                , request.QueryPagingSetting.PageSize
+                , request.QueryOrderBySettingCollection
+                );
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation _retval = new MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation();
+            _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
+
+            //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformationCollection>(_resultFromDAL, _retval);
+
+            if (request.DataServiceType == Framework.DataServiceTypes.DataSourceResult)
+            {
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformationCollection>(_resultFromDAL, _retval);
+            }
+            else
+            {
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformation, MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformationCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.BuildLogDataStreamService.KeyInformation());
+            }
+
+            log.Info(string.Format("{0}: GetCollectionOfKeyInformationByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            return _retval;
+        }
+
+        #endregion Query Methods Of KeyInformationByFKOnly
+
         #region GetAscendantAndDescendant
 
         #endregion GetAscendantAndDescendant
