@@ -155,6 +155,9 @@
       <Description>WorkspaceItem of TabbedCommon</Description>
     </PartialViewReference>
   </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="something" UIViewType="SearchResult" DataViewKey="KeyInformation" CriteriaKey="FKStringContains" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>something</Description>
+  </UIView>
   <ForeignKeyPersistList>
     <ForeignKeyPersist>
       <EntityReferenceResultForPersistAliaType>DownTree</EntityReferenceResultForPersistAliaType>

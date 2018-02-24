@@ -255,6 +255,35 @@ System.Int64? id)
         }
 
         /// <summary>
+        /// Gets the Wrapper View Model of MSBuildExtensionPack.Build: WPsomethingOfBuildVM.
+        /// http://[host]/api/BuildApi/GetWPsomethingOfBuildVM
+        /// Content-Type: application/json; charset=utf-8
+        /// </summary>
+        /// <param name="vm">The vm.</param>
+        /// <returns></returns>
+        // [HttpGet, ActionName("GetWPsomethingOfBuildVM")] //although JSON allowed in Http Delete request body, but not allowed in HttpClient
+        [HttpPost, ActionName("GetWPsomethingOfBuildVM")]
+        public MSBuildExtensionPack.ViewModelData.WPsomethingOfBuildVM GetWPsomethingOfBuildVM(
+            [FromBody]MSBuildExtensionPack.ViewModelData.WPsomethingOfBuildVM vm)
+        {
+            MSBuildExtensionPack.AspNetMvc40ViewModel.WPsomethingOfBuildVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPsomethingOfBuildVM();
+            if (vm != null)
+            {
+                retval.Criteria = vm.Criteria;
+                retval.QueryPagingSetting = vm.QueryPagingSetting;
+                retval.QueryOrderBySettingCollecionInString = vm.QueryOrderBySettingCollecionInString;
+            }
+            else
+            {
+                retval.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaFKStringContains();
+                retval.QueryPagingSetting = Framework.EntityContracts.QueryPagingSetting.GetDefault();
+                //retval.QueryOrderBySettingCollecionInString = MSBuildExtensionPack.ViewModelData.OrderByLists.WPsomethingOfBuildVM_GetDefaultListOfQueryOrderBySettingCollecionInString();
+            }
+            retval.LoadData(true);
+            return retval;
+        }
+
+        /// <summary>
         /// Gets entity related view model of MSBuildExtensionPack.Build: WPFullDetailsOfBuildVM.
         /// http://[host]/api/BuildApi/GetWPFullDetailsOfBuildVM?
         /// </summary>

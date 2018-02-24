@@ -15,6 +15,18 @@ namespace MSBuildExtensionPack.ViewModelData
 
         #endregion 1.1. MSBuildExtensionPack.Build.WPCommonOfBuild
 
+        #region 1.2. MSBuildExtensionPack.Build.WPsomethingOfBuild
+
+        public static Framework.NameValueCollection WPsomethingOfBuildVM_GetDefaultListOfQueryOrderBySettingCollecionInString()
+        {
+            Framework.NameValueCollection list = new Framework.NameValueCollection();
+            list.Add("Name~ASC", "Name A-Z");
+            list.Add("Name~DESC", "Name Z-A");
+            return list;
+        }
+
+        #endregion 1.2. MSBuildExtensionPack.Build.WPsomethingOfBuild
+
         #region 2.1. MSBuildExtensionPack.BuildEventCode.WPCommonOfBuildEventCode
 
         public static Framework.NameValueCollection WPCommonOfBuildEventCodeVM_GetDefaultListOfQueryOrderBySettingCollecionInString()

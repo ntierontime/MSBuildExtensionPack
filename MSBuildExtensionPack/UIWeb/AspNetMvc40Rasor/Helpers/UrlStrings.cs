@@ -25,6 +25,9 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
         public const string ActionName_Build_WPCommonOfBuild = "WPCommonOfBuild";
         public const string ActionName_Build_WPCommonOfBuild_Export = "WPCommonOfBuild_Export";
 
+        public const string ActionName_Build_WPsomethingOfBuild = "WPsomethingOfBuild";
+        public const string ActionName_Build_WPsomethingOfBuild_Export = "WPsomethingOfBuild_Export";
+
         public const string ActionName_BuildEventCode_WPCommonOfBuildEventCode = "WPCommonOfBuildEventCode";
         public const string ActionName_BuildEventCode_WPCommonOfBuildEventCode_Export = "WPCommonOfBuildEventCode_Export";
 

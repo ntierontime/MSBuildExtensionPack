@@ -14,23 +14,27 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
         public const string PermissionName_Build_WPCommonOfBuild = null;// "; // "Build_WPCommonOfBuild";
         // 1.2. Build.WPCommonOfBuild_Export
         public const string PermissionName_Build_WPCommonOfBuild_Export = null;// "; // "Build_WPCommonOfBuild_Export";
-        // 1.3. Build.WPFullDetailsOfBuild
+        // 1.3. Build.WPsomethingOfBuild
+        public const string PermissionName_Build_WPsomethingOfBuild = null;// "; // "Build_WPsomethingOfBuild";
+        // 1.4. Build.WPsomethingOfBuild_Export
+        public const string PermissionName_Build_WPsomethingOfBuild_Export = null;// "; // "Build_WPsomethingOfBuild_Export";
+        // 1.5. Build.WPFullDetailsOfBuild
         public const string PermissionName_Build_WPFullDetailsOfBuild = null;// "; // "Build_WPFullDetailsOfBuild";
-        // 1.4. Build.Import
+        // 1.6. Build.Import
         public const string PermissionName_Build_Import = null;// "; // "Build_Import";
-        // 1.5. Build.Index
+        // 1.7. Build.Index
         public const string PermissionName_Build_Index = null;// "; // "Build_Index";
-        // 1.6. Build.Details
+        // 1.8. Build.Details
         public const string PermissionName_Build_Details = null;// "; // "Build_Details";
-        // 1.7. Build.AddNew
+        // 1.9. Build.AddNew
         public const string PermissionName_Build_AddNew = null;// "; // "Build_AddNew";
-        // 1.8. Build.Copy
+        // 1.10. Build.Copy
         public const string PermissionName_Build_Copy = null;// "; // "Build_Copy";
-        // 1.9. Build.Edit
+        // 1.11. Build.Edit
         public const string PermissionName_Build_Edit = null;// "; // "Build_Edit";
-        // 1.10. Build.Delete
+        // 1.12. Build.Delete
         public const string PermissionName_Build_Delete = null;// "; // "Build_Delete";
-        // 1.11. Build.GoBackList
+        // 1.13. Build.GoBackList
         public const string PermissionName_Build_GoBackList = null;// "; // "Build_GoBackList";
 
         #endregion 1. Build

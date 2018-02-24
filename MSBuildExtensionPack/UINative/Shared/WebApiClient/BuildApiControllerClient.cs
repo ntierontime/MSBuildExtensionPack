@@ -230,6 +230,22 @@ namespace MSBuildExtensionPack.WebApiClient
             return await Post<MSBuildExtensionPack.ViewModelData.WPCommonOfBuildVM>(url, vm);
         }
 
+            public const string ActionName_GetWPsomethingOfBuildVM = "GetWPsomethingOfBuildVM";
+        /// <summary>
+        /// Gets the wp common of build log vm.
+        /// http://[host]/api/BuildApi/GetWPsomethingOfBuildVM
+        /// Content-Type: application/json; charset=utf-8
+        /// </summary>
+        /// <param name="vm">The vm.</param>
+        /// <returns></returns>
+        public async Task<MSBuildExtensionPack.ViewModelData.WPsomethingOfBuildVM> GetWPsomethingOfBuildVMAsync(
+            MSBuildExtensionPack.ViewModelData.WPsomethingOfBuildVM vm)
+        {
+            string url = GetHttpRequestUrl(ActionName_GetWPsomethingOfBuildVM);
+
+            return await Post<MSBuildExtensionPack.ViewModelData.WPsomethingOfBuildVM>(url, vm);
+        }
+
         public const string ActionName_GetWPFullDetailsOfBuildVM = "GetWPFullDetailsOfBuildVM";
         /// <summary>
         /// Gets the wp entity related of build log.
