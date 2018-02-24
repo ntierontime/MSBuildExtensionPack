@@ -277,6 +277,31 @@ namespace MSBuildExtensionPack.DALContracts
 
         #endregion Query Methods Of AncestorAndKeyInfo
 
+        #region Query Methods Of KeyInformationByID
+
+        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfKeyInformationByID(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            );
+
+        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfKeyInformationByID(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            );
+
+        MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfUpdateNameRequestCollection GetCollectionOfKeyInformationByID(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            );
+
+        #endregion Query Methods Of KeyInformationByID
+
         #region Query Methods Of UpdateName
 
         /// <summary>

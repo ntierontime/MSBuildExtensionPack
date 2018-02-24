@@ -22,21 +22,23 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
         public const string PermissionName_Build_WPFullDetailsOfBuild = null;// "; // "Build_WPFullDetailsOfBuild";
         // 1.6. Build.WPelsesomethingOfBuild
         public const string PermissionName_Build_WPelsesomethingOfBuild = null;// "; // "Build_WPelsesomethingOfBuild";
-        // 1.7. Build.Import
+        // 1.7. Build.WPelseA1AsomethingOfBuild
+        public const string PermissionName_Build_WPelseA1AsomethingOfBuild = null;// "; // "Build_WPelseA1AsomethingOfBuild";
+        // 1.8. Build.Import
         public const string PermissionName_Build_Import = null;// "; // "Build_Import";
-        // 1.8. Build.Index
+        // 1.9. Build.Index
         public const string PermissionName_Build_Index = null;// "; // "Build_Index";
-        // 1.9. Build.Details
+        // 1.10. Build.Details
         public const string PermissionName_Build_Details = null;// "; // "Build_Details";
-        // 1.10. Build.AddNew
+        // 1.11. Build.AddNew
         public const string PermissionName_Build_AddNew = null;// "; // "Build_AddNew";
-        // 1.11. Build.Copy
+        // 1.12. Build.Copy
         public const string PermissionName_Build_Copy = null;// "; // "Build_Copy";
-        // 1.12. Build.Edit
+        // 1.13. Build.Edit
         public const string PermissionName_Build_Edit = null;// "; // "Build_Edit";
-        // 1.13. Build.Delete
+        // 1.14. Build.Delete
         public const string PermissionName_Build_Delete = null;// "; // "Build_Delete";
-        // 1.14. Build.GoBackList
+        // 1.15. Build.GoBackList
         public const string PermissionName_Build_GoBackList = null;// "; // "Build_GoBackList";
 
         #endregion 1. Build

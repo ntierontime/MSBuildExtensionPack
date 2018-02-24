@@ -60,6 +60,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
 
         #region 2.3. Action Names -- UIWorkspaceTypes.SingleItemForm
 
+        public const string ActionName_Build_WPelseA1AsomethingOfBuild = "WPelseA1AsomethingOfBuild";
+
         #endregion 2.3. Action Names -- UIWorkspaceTypes.SingleItemForm
 
         #region 2.4. Action Names -- UIWorkspaceTypes.MultipleFileUploadForm

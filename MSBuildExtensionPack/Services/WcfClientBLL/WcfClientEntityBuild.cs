@@ -312,6 +312,32 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of AncestorAndKeyInfo
 
+        #region Query Methods Of KeyInformationByID
+
+        /// <summary>
+        /// Exists the of entity of "Identifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationByID(
+            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfIdentifier request)
+        {
+            return base.Channel.ExistsOfKeyInformationByID(request);
+        }
+
+        /// <summary>
+        /// Gets the collection of entity of "Identifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest GetCollectionOfKeyInformationByID(
+            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfIdentifier request)
+        {
+            return base.Channel.GetCollectionOfKeyInformationByID(request);
+        }
+
+        #endregion Query Methods Of KeyInformationByID
+
             // DataQueryPerQuerySettingCollection -- MethodDataQuery -- End
 
         #region DataActionMethod -- UpdateName

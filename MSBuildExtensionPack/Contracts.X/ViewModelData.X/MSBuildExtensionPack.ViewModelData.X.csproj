@@ -68,6 +68,9 @@
     <Compile Include="..\..\Contracts\ViewModelData\WPelsesomethingOfBuildVM.cs">
       <Link>WPelsesomethingOfBuildVM.cs</Link>
     </Compile>
+    <Compile Include="..\..\Contracts\ViewModelData\WPelseA1AsomethingOfBuildVM.cs">
+      <Link>WPelseA1AsomethingOfBuildVM.cs</Link>
+    </Compile>
     <Compile Include="..\..\Contracts\ViewModelData\WPCommonOfBuildEventCodeVM.cs">
       <Link>WPCommonOfBuildEventCodeVM.cs</Link>
     </Compile>

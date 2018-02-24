@@ -278,6 +278,39 @@ namespace MSBuildExtensionPack.WebApiClient
             return await GetEntityRelated<MSBuildExtensionPack.ViewModelData.WPelsesomethingOfBuildVM>(url);
         }
 
+        #region EntityUpdateActionSetting - elseA1Asomething
+
+        public const string ActionName_GetWPelseA1AsomethingOfBuildVM = "GetWPelseA1AsomethingOfBuildVM";
+        /// <summary>
+        /// Hearts the beat asynchronous.
+        /// http://[host]/api/BuildApi/GetWPelseA1AsomethingOfBuildVM
+        /// </summary>
+        /// <returns></returns>
+        public async Task<MSBuildExtensionPack.ViewModelData.WPelseA1AsomethingOfBuildVM> GetWPelseA1AsomethingOfBuildVM(
+            System.Int64 id)
+        {
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            parameters.Add("id", id.ToString());
+            string url = GetHttpRequestUrl(ActionName_GetWPelseA1AsomethingOfBuildVM, parameters);
+
+            return await GetEntityRelated<MSBuildExtensionPack.ViewModelData.WPelseA1AsomethingOfBuildVM>(url);
+        }
+
+        public const string ActionName_WPelseA1AsomethingOfBuildVM = "WPelseA1AsomethingOfBuildVM";
+        /// <summary>
+        /// Hearts the beat asynchronous.
+        /// http://[host]/api/BuildApi/WPelseA1AsomethingOfBuildVM
+        /// </summary>
+        /// <returns></returns>
+        public async Task<MSBuildExtensionPack.ViewModelData.WPelseA1AsomethingOfBuildVM> WPelseA1AsomethingOfBuildVM(MSBuildExtensionPack.ViewModelData.WPelseA1AsomethingOfBuildVM vm)
+        {
+            string url = GetHttpRequestUrl(ActionName_WPelseA1AsomethingOfBuildVM);
+
+            return await PostIViewModelEntityRelatedBase<MSBuildExtensionPack.ViewModelData.WPelseA1AsomethingOfBuildVM>(url, vm);
+        }
+
+        #endregion EntityUpdateActionSetting - elseA1Asomething
+
         public const string ActionName_HeartBeat = "HeartBeat";
         /// <summary>
         /// Hearts the beat asynchronous.

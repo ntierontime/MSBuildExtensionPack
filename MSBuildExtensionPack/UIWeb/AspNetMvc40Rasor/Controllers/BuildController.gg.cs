@@ -217,6 +217,32 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             return View(vm);
         }
 
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Build_WPelseA1AsomethingOfBuild)]
+        public ActionResult WPelseA1AsomethingOfBuild(System.Int64? id)
+        {
+
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaIdentifier();
+            criteria.Identifier.Id.NullableValueToCompare = id;
+            MSBuildExtensionPack.AspNetMvc40ViewModel.WPelseA1AsomethingOfBuildVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPelseA1AsomethingOfBuildVM(criteria);
+            vm.LoadData();
+
+            return View(vm);
+        }
+
+        // POST: /Build/WPelseA1AsomethingOfBuild/5
+        [HttpPost]
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Build_WPelseA1AsomethingOfBuild)]
+        public ActionResult WPelseA1AsomethingOfBuild(System.Int64? id, MSBuildExtensionPack.AspNetMvc40ViewModel.WPelseA1AsomethingOfBuildVM vm)
+        {
+
+            if (vm != null)
+            {
+                vm.SaveData();
+            }
+
+            return View(vm);
+        }
+
         #region Import()
 
         /// <summary>

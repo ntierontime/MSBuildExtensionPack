@@ -259,6 +259,150 @@ namespace MSBuildExtensionPack.Resx {
         }
 
         /// <summary>
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_elseA1Asomething"".
+        /// </summary>
+        public static string Description_Of_MSBuildExtensionPack_Build_elseA1Asomething {
+            get {
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_elseA1Asomething", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_elseA1Asomething"".
+        /// </summary>
+        public static string MSBuildExtensionPack_Build_elseA1Asomething {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_elseA1Asomething", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_elseA1Asomething"".
+        /// </summary>
+        public static string ToolTip_Of_MSBuildExtensionPack_Build_elseA1Asomething {
+            get {
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_elseA1Asomething", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_elseA1Asomething"".
+        /// </summary>
+        public static string MSBuildExtensionPack_Build_elseA1Asomething_ButtonText {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_elseA1Asomething_ButtonText", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_elseA1Asomething"".
+        /// </summary>
+        public static string MSBuildExtensionPack_Build_elseA1Asomething_Description {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_elseA1Asomething_Description", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_elseA1Asomething success."".
+        /// </summary>
+        public static string MSBuildExtensionPack_Build_elseA1Asomething_Success {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_elseA1Asomething_Success", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_elseA1Asomething failed."".
+        /// </summary>
+        public static string MSBuildExtensionPack_Build_elseA1Asomething_Failed {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_elseA1Asomething_Failed", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_somethingSearch"".
+        /// </summary>
+        public static string Description_Of_MSBuildExtensionPack_Build_somethingSearch {
+            get {
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_somethingSearch", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_somethingSearch"".
+        /// </summary>
+        public static string MSBuildExtensionPack_Build_somethingSearch {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_somethingSearch", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_somethingSearch"".
+        /// </summary>
+        public static string ToolTip_Of_MSBuildExtensionPack_Build_somethingSearch {
+            get {
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_somethingSearch", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_somethingResult"".
+        /// </summary>
+        public static string Description_Of_MSBuildExtensionPack_Build_somethingResult {
+            get {
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_somethingResult", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_somethingResult"".
+        /// </summary>
+        public static string MSBuildExtensionPack_Build_somethingResult {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_somethingResult", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_somethingResult"".
+        /// </summary>
+        public static string ToolTip_Of_MSBuildExtensionPack_Build_somethingResult {
+            get {
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_somethingResult", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_somethingTab"".
+        /// </summary>
+        public static string Description_Of_MSBuildExtensionPack_Build_somethingTab {
+            get {
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_somethingTab", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_somethingTab"".
+        /// </summary>
+        public static string MSBuildExtensionPack_Build_somethingTab {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_somethingTab", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_somethingTab"".
+        /// </summary>
+        public static string ToolTip_Of_MSBuildExtensionPack_Build_somethingTab {
+            get {
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_somethingTab", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_BuildEventCode_Common"".
         /// </summary>
         public static string Description_Of_MSBuildExtensionPack_BuildEventCode_Common {

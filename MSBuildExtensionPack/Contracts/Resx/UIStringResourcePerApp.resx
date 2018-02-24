@@ -184,6 +184,54 @@
   <data name="ToolTip_Of_MSBuildExtensionPack_Build_elsesomething" xml:space="preserve">
     <value>ToolTip Of MSBuildExtensionPack_Build_elsesomething</value>
   </data>
+  <data name="Description_Of_MSBuildExtensionPack_Build_elseA1Asomething" xml:space="preserve">
+    <value>Description Of MSBuildExtensionPack_Build_elseA1Asomething</value>
+  </data>
+  <data name="MSBuildExtensionPack_Build_elseA1Asomething" xml:space="preserve">
+    <value>MSBuildExtensionPack_Build_elseA1Asomething</value>
+  </data>
+  <data name="ToolTip_Of_MSBuildExtensionPack_Build_elseA1Asomething" xml:space="preserve">
+    <value>ToolTip Of MSBuildExtensionPack_Build_elseA1Asomething</value>
+  </data>
+  <data name="MSBuildExtensionPack_Build_elseA1Asomething_ButtonText" xml:space="preserve">
+    <value>MSBuildExtensionPack_Build_elseA1Asomething</value>
+  </data>
+  <data name="MSBuildExtensionPack_Build_elseA1Asomething_Description" xml:space="preserve">
+    <value>MSBuildExtensionPack_Build_elseA1Asomething</value>
+  </data>
+  <data name="MSBuildExtensionPack_Build_elseA1Asomething_Success" xml:space="preserve">
+    <value>MSBuildExtensionPack_Build_elseA1Asomething success.</value>
+  </data>
+  <data name="MSBuildExtensionPack_Build_elseA1Asomething_Failed" xml:space="preserve">
+    <value>MSBuildExtensionPack_Build_elseA1Asomething failed.</value>
+  </data>
+  <data name="Description_Of_MSBuildExtensionPack_Build_somethingSearch" xml:space="preserve">
+    <value>Description Of MSBuildExtensionPack_Build_somethingSearch</value>
+  </data>
+  <data name="MSBuildExtensionPack_Build_somethingSearch" xml:space="preserve">
+    <value>MSBuildExtensionPack_Build_somethingSearch</value>
+  </data>
+  <data name="ToolTip_Of_MSBuildExtensionPack_Build_somethingSearch" xml:space="preserve">
+    <value>ToolTip Of MSBuildExtensionPack_Build_somethingSearch</value>
+  </data>
+  <data name="Description_Of_MSBuildExtensionPack_Build_somethingResult" xml:space="preserve">
+    <value>Description Of MSBuildExtensionPack_Build_somethingResult</value>
+  </data>
+  <data name="MSBuildExtensionPack_Build_somethingResult" xml:space="preserve">
+    <value>MSBuildExtensionPack_Build_somethingResult</value>
+  </data>
+  <data name="ToolTip_Of_MSBuildExtensionPack_Build_somethingResult" xml:space="preserve">
+    <value>ToolTip Of MSBuildExtensionPack_Build_somethingResult</value>
+  </data>
+  <data name="Description_Of_MSBuildExtensionPack_Build_somethingTab" xml:space="preserve">
+    <value>Description Of MSBuildExtensionPack_Build_somethingTab</value>
+  </data>
+  <data name="MSBuildExtensionPack_Build_somethingTab" xml:space="preserve">
+    <value>MSBuildExtensionPack_Build_somethingTab</value>
+  </data>
+  <data name="ToolTip_Of_MSBuildExtensionPack_Build_somethingTab" xml:space="preserve">
+    <value>ToolTip Of MSBuildExtensionPack_Build_somethingTab</value>
+  </data>
   <data name="Description_Of_MSBuildExtensionPack_BuildEventCode_Common" xml:space="preserve">
     <value>Description Of MSBuildExtensionPack_BuildEventCode_Common</value>
   </data>

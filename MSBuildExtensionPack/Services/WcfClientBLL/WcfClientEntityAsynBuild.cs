@@ -584,6 +584,68 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of AncestorAndKeyInfo
 
+        #region Query Methods Of KeyInformationByID
+
+        [System.Diagnostics.DebuggerStepThroughAttribute()]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+        public partial class ExistsOfKeyInformationByIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        {
+
+            private object[] results;
+
+            public ExistsOfKeyInformationByIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+                base(exception, cancelled, userState)
+            {
+                this.results = results;
+            }
+
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean Result
+            {
+                get
+                {
+                    base.RaiseExceptionIfNecessary();
+                    return ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean)(this.results[0]));
+                }
+            }
+        }
+
+        private BeginOperationDelegate onBeginExistsOfKeyInformationByIDDelegate;
+
+        private EndOperationDelegate onEndExistsOfKeyInformationByIDDelegate;
+
+        private System.Threading.SendOrPostCallback onExistsOfKeyInformationByIDCompletedDelegate;
+
+        [System.Diagnostics.DebuggerStepThroughAttribute()]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+        public partial class GetCollectionOfKeyInformationByIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        {
+
+            private object[] results;
+
+            public GetCollectionOfKeyInformationByIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+                base(exception, cancelled, userState)
+            {
+                this.results = results;
+            }
+
+            public MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest Result
+            {
+                get
+                {
+                    base.RaiseExceptionIfNecessary();
+                    return ((MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest)(this.results[0]));
+                }
+            }
+        }
+
+        private BeginOperationDelegate onBeginGetCollectionOfKeyInformationByIDDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfKeyInformationByIDDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfKeyInformationByIDCompletedDelegate;
+
+        #endregion Query Methods Of KeyInformationByID
+
         // DataQueryPerQuerySettingCollection -- EventArg Classes And EventHandlers -- end
 
         #region GetAscendantAndDescendant
@@ -745,6 +807,14 @@ namespace MSBuildExtensionPack.WcfClientBLL
         public event System.EventHandler<GetCollectionOfAncestorAndKeyInfoCompletedEventArgs> GetCollectionOfAncestorAndKeyInfoCompleted;
 
         #endregion Query Methods Of AncestorAndKeyInfo
+
+        #region Query Methods Of KeyInformationByID
+
+        public event System.EventHandler<ExistsOfKeyInformationByIDCompletedEventArgs> ExistsOfKeyInformationByIDCompleted;
+
+        public event System.EventHandler<GetCollectionOfKeyInformationByIDCompletedEventArgs> GetCollectionOfKeyInformationByIDCompleted;
+
+        #endregion Query Methods Of KeyInformationByID
 
         // DataQueryPerQuerySettingCollection -- EventHandlers -- End
 
@@ -2087,6 +2157,146 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of AncestorAndKeyInfo
 
+        #region Query Methods Of KeyInformationByID
+
+        /// <summary>
+        /// Exists the of entity of "Identifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationByID(
+            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfIdentifier request)
+        {
+            return base.Channel.ExistsOfKeyInformationByID(request);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildServiceAsyn.BeginExistsOfKeyInformationByID(MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfIdentifier request, System.AsyncCallback callback, object asyncState)
+        {
+            return base.Channel.BeginExistsOfKeyInformationByID(request, callback, asyncState);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildExtensionPack.WcfContracts.IBuildServiceAsyn.EndExistsOfKeyInformationByID(System.IAsyncResult result)
+        {
+            return base.Channel.EndExistsOfKeyInformationByID(result);
+        }
+
+        private System.IAsyncResult OnBeginExistsOfKeyInformationByID(object[] inValues, System.AsyncCallback callback, object asyncState)
+        {
+            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfIdentifier request = ((MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfIdentifier )(inValues[0]));
+            return ((MSBuildExtensionPack.WcfContracts.IBuildServiceAsyn)(this)).BeginExistsOfKeyInformationByID(request, callback, asyncState);
+        }
+
+        private object[] OnEndExistsOfKeyInformationByID(System.IAsyncResult result)
+        {
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildExtensionPack.WcfContracts.IBuildServiceAsyn)(this)).EndExistsOfKeyInformationByID(result);
+            return new object[] {
+                    retVal};
+        }
+
+        private void OnExistsOfKeyInformationByIDCompleted(object state)
+        {
+            if ((this.ExistsOfKeyInformationByIDCompleted != null))
+            {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ExistsOfKeyInformationByIDCompleted(this, new ExistsOfKeyInformationByIDCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+
+        public void ExistsOfKeyInformationByIDAsync(MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfIdentifier request)
+        {
+            this.ExistsOfKeyInformationByIDAsync(request, null);
+        }
+
+        public void ExistsOfKeyInformationByIDAsync(MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfIdentifier request, object userState)
+        {
+            if ((this.onBeginExistsOfKeyInformationByIDDelegate == null))
+            {
+                this.onBeginExistsOfKeyInformationByIDDelegate = new BeginOperationDelegate(this.OnBeginExistsOfKeyInformationByID);
+            }
+            if ((this.onEndExistsOfKeyInformationByIDDelegate == null))
+            {
+                this.onEndExistsOfKeyInformationByIDDelegate = new EndOperationDelegate(this.OnEndExistsOfKeyInformationByID);
+            }
+            if ((this.onExistsOfKeyInformationByIDCompletedDelegate == null))
+            {
+                this.onExistsOfKeyInformationByIDCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnExistsOfKeyInformationByIDCompleted);
+            }
+            base.InvokeAsync(this.onBeginExistsOfKeyInformationByIDDelegate, new object[] {
+                        request}, this.onEndExistsOfKeyInformationByIDDelegate, this.onExistsOfKeyInformationByIDCompletedDelegate, userState);
+        }
+
+        /// <summary>
+        /// Gets the collection of entity of "Identifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest GetCollectionOfKeyInformationByID(
+            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfIdentifier request)
+        {
+            return base.Channel.GetCollectionOfKeyInformationByID(request);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildServiceAsyn.BeginGetCollectionOfKeyInformationByID(MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfIdentifier request, System.AsyncCallback callback, object asyncState)
+        {
+            return base.Channel.BeginGetCollectionOfKeyInformationByID(request, callback, asyncState);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest MSBuildExtensionPack.WcfContracts.IBuildServiceAsyn.EndGetCollectionOfKeyInformationByID(System.IAsyncResult result)
+        {
+            return base.Channel.EndGetCollectionOfKeyInformationByID(result);
+        }
+
+        private System.IAsyncResult OnBeginGetCollectionOfKeyInformationByID(object[] inValues, System.AsyncCallback callback, object asyncState)
+        {
+            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfIdentifier request = ((MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfIdentifier )(inValues[0]));
+            return ((MSBuildExtensionPack.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCollectionOfKeyInformationByID(request, callback, asyncState);
+        }
+
+        private object[] OnEndGetCollectionOfKeyInformationByID(System.IAsyncResult result)
+        {
+            MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest retVal = ((MSBuildExtensionPack.WcfContracts.IBuildServiceAsyn)(this)).EndGetCollectionOfKeyInformationByID(result);
+            return new object[] {
+                    retVal};
+        }
+
+        private void OnGetCollectionOfKeyInformationByIDCompleted(object state)
+        {
+            if ((this.GetCollectionOfKeyInformationByIDCompleted != null))
+            {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.GetCollectionOfKeyInformationByIDCompleted(this, new GetCollectionOfKeyInformationByIDCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+
+        public void GetCollectionOfKeyInformationByIDAsync(MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfIdentifier request)
+        {
+            this.GetCollectionOfKeyInformationByIDAsync(request, null);
+        }
+
+        public void GetCollectionOfKeyInformationByIDAsync(MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfIdentifier request, object userState)
+        {
+            if ((this.onBeginGetCollectionOfKeyInformationByIDDelegate == null))
+            {
+                this.onBeginGetCollectionOfKeyInformationByIDDelegate = new BeginOperationDelegate(this.OnBeginGetCollectionOfKeyInformationByID);
+            }
+            if ((this.onEndGetCollectionOfKeyInformationByIDDelegate == null))
+            {
+                this.onEndGetCollectionOfKeyInformationByIDDelegate = new EndOperationDelegate(this.OnEndGetCollectionOfKeyInformationByID);
+            }
+            if ((this.onGetCollectionOfKeyInformationByIDCompletedDelegate == null))
+            {
+                this.onGetCollectionOfKeyInformationByIDCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCollectionOfKeyInformationByIDCompleted);
+            }
+            base.InvokeAsync(this.onBeginGetCollectionOfKeyInformationByIDDelegate, new object[] {
+                        request}, this.onEndGetCollectionOfKeyInformationByIDDelegate, this.onGetCollectionOfKeyInformationByIDCompletedDelegate, userState);
+        }
+
+        #endregion Query Methods Of KeyInformationByID
+
         // DataQueryPerQuerySettingCollection -- InClient -- End
 
         #region GetAscendantAndDescendant
@@ -2526,6 +2736,40 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
 
         #endregion Query Methods Of AncestorAndKeyInfo
+
+        #region Query Methods Of KeyInformationByID
+
+            public System.IAsyncResult BeginExistsOfKeyInformationByID(MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfIdentifier request, System.AsyncCallback callback, object asyncState)
+            {
+                object[] _args = new object[1];
+                _args[0] = request;
+                System.IAsyncResult _result = base.BeginInvoke("ExistsOfKeyInformationByID", _args, callback, asyncState);
+                return _result;
+            }
+
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean EndExistsOfKeyInformationByID(System.IAsyncResult result)
+            {
+                object[] _args = new object[0];
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean)(base.EndInvoke("ExistsOfKeyInformationByID", _args, result)));
+                return _result;
+            }
+
+            public System.IAsyncResult BeginGetCollectionOfKeyInformationByID(MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfIdentifier request, System.AsyncCallback callback, object asyncState)
+            {
+                object[] _args = new object[1];
+                _args[0] = request;
+                System.IAsyncResult _result = base.BeginInvoke("GetCollectionOfKeyInformationByID", _args, callback, asyncState);
+                return _result;
+            }
+
+            public MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest EndGetCollectionOfKeyInformationByID(System.IAsyncResult result)
+            {
+                object[] _args = new object[0];
+                MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest _result = ((MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest)(base.EndInvoke("GetCollectionOfKeyInformationByID", _args, result)));
+                return _result;
+            }
+
+        #endregion Query Methods Of KeyInformationByID
 
             // DataQueryPerQuerySettingCollection -- InChannelForWINDOWS_PHONE -- End
 
