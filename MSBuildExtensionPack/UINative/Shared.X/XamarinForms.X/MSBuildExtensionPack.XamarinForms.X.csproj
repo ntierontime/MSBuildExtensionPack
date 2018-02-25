@@ -236,6 +236,27 @@
     <Compile Include="Pages\Build\WPsomethingTabOfBuild.xaml.cs">
       <DependentUpon>WPsomethingTabOfBuild.xaml</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Pages\Build\WPxTabSomethingSearchOfBuild.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\Build\WPxTabSomethingSearchOfBuild.xaml.cs">
+      <DependentUpon>WPxTabSomethingSearchOfBuild.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\Build\WPxTabSomethingResultsOfBuild.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\Build\WPxTabSomethingResultsOfBuild.xaml.cs">
+      <DependentUpon>WPxTabSomethingResultsOfBuild.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\Build\WPxTabSomethingTabContainerOfBuild.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\Build\WPxTabSomethingTabContainerOfBuild.xaml.cs">
+      <DependentUpon>WPxTabSomethingTabContainerOfBuild.xaml</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Pages\BuildEventCode\WPCommonSearchViewOfBuildEventCode.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>

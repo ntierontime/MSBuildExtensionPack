@@ -70,6 +70,9 @@ namespace MSBuildExtensionPack.XamarinForms.Pages {
             // MSBuildExtensionPack.Build.TabContainer
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildExtensionPack.MVVMLightViewModels.WPsomethingOfBuildVM.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.WPsomethingOfBuildVM.ViewName_Static, Framework.UIAction.Search,  Framework.UIActionStatus.Launch, Framework.UIAction.Navigate, "/Pages/Build/WPsomethingTabOfBuild.xaml", typeof(MSBuildExtensionPack.XamarinForms.Pages.Build.WPsomethingTabOfBuild));
 
+            // MSBuildExtensionPack.Build.TabContainer
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildExtensionPack.MVVMLightViewModels.WPxTabSomethingOfBuildVM.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.WPxTabSomethingOfBuildVM.ViewName_Static, Framework.UIAction.Search,  Framework.UIActionStatus.Launch, Framework.UIAction.Navigate, "/Pages/Build/WPxTabSomethingTabContainerOfBuild.xaml", typeof(MSBuildExtensionPack.XamarinForms.Pages.Build.WPxTabSomethingTabContainerOfBuild));
+
             // MSBuildExtensionPack.BuildEventCode.TabContainer
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildEventCodeVM.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildEventCodeVM.ViewName_Static, Framework.UIAction.Search,  Framework.UIActionStatus.Launch, Framework.UIAction.Navigate, "/Pages/BuildEventCode/WPTabbedCommonOfBuildEventCode.xaml", typeof(MSBuildExtensionPack.XamarinForms.Pages.BuildEventCode.WPTabbedCommonOfBuildEventCode));
 

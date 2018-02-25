@@ -254,22 +254,6 @@ namespace MSBuildExtensionPack.WebApiClient
             return await Post<MSBuildExtensionPack.ViewModelData.WPCommonOfOrganizationVM>(url, vm);
         }
 
-        public const string ActionName_GetWPFullDetailsOfOrganizationVM = "GetWPFullDetailsOfOrganizationVM";
-        /// <summary>
-        /// Gets the wp entity related of build log.
-        /// http://[host]/api/OrganizationApi/GetWPFullDetailsOfOrganizationVM?id=1
-        /// </summary>
-        /// <returns></returns>
-        public async Task<MSBuildExtensionPack.ViewModelData.WPFullDetailsOfOrganizationVM> GetWPFullDetailsOfOrganizationVMAsync(
-            System.Int64 id)
-        {
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("id", id.ToString());
-            string url = GetHttpRequestUrl(ActionName_GetWPFullDetailsOfOrganizationVM, parameters);
-
-            return await GetEntityRelated<MSBuildExtensionPack.ViewModelData.WPFullDetailsOfOrganizationVM>(url);
-        }
-
         public const string ActionName_HeartBeat = "HeartBeat";
         /// <summary>
         /// Hearts the beat asynchronous.

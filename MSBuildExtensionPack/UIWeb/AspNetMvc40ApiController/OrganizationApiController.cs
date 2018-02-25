@@ -290,26 +290,6 @@ System.Int64? id
         }
 
         /// <summary>
-        /// Gets entity related view model of MSBuildExtensionPack.Organization: WPFullDetailsOfOrganizationVM.
-        /// http://[host]/api/OrganizationApi/GetWPFullDetailsOfOrganizationVM?
-        /// </summary>
-        /// <returns></returns>
-        [HttpGet, ActionName("GetWPFullDetailsOfOrganizationVM")]
-        public MSBuildExtensionPack.ViewModelData.WPFullDetailsOfOrganizationVM GetWPFullDetailsOfOrganizationVM(
-System.Int64? id
-            , System.Guid? uniqueIdentifier
-            , System.Guid? uniqueidentifierColumn)
-        {
-            var criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint();
-            criteria.IdentifierAndUniqueConstraint.Id.NullableValueToCompare = id;
-            criteria.IdentifierAndUniqueConstraint.UniqueIdentifier.NullableValueToCompare = uniqueIdentifier;
-            criteria.IdentifierAndUniqueConstraint.UniqueidentifierColumn.NullableValueToCompare = uniqueidentifierColumn;
-            MSBuildExtensionPack.AspNetMvc40ViewModel.WPFullDetailsOfOrganizationVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPFullDetailsOfOrganizationVM(criteria);
-            retval.LoadData();
-            return retval;
-        }
-
-        /// <summary>
         /// HearBeat.
         /// http://[host]/api/OrganizationApi/HearBeat
         /// </summary>

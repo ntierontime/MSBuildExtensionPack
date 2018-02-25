@@ -188,6 +188,24 @@
       <Description>somethingResults</Description>
     </PartialViewReference>
   </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="xTabSomethingSearch" UIViewType="Search" DataViewKey="KeyInformation" CriteriaKey="FKStringContains" KeyReferencedViewModel="xTabSomething" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>xTabSomethingSearch</Description>
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="xTabSomethingResults" UIViewType="Results" DataViewKey="KeyInformation" CriteriaKey="FKStringContains" KeyReferencedViewModel="xTabSomething" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>xTabSomethingResults</Description>
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="xTabSomethingTabContainer" UIViewType="TabContainer" DataViewKey="" CriteriaKey="" KeyReferencedViewModel="xTabSomething" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>xTabSomethingTabContainer</Description>
+    <PartialViewReference Group="OnlyOneArticle" Key="xTabSomethingSearch" ReferencedKeyOfUIWorkspace="xTabSomethingSearch" Name="xTabSomethingSearch">
+      <Description>xTabSomethingSearch</Description>
+    </PartialViewReference>
+    <PartialViewReference Group="OnlyOneArticle" Key="xTabSomethingResults" ReferencedKeyOfUIWorkspace="xTabSomethingResults" Name="xTabSomethingResults">
+      <Description>xTabSomethingResults</Description>
+    </PartialViewReference>
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="xTabSomething" UIViewType="TabSearchResult" DataViewKey="KeyInformation" CriteriaKey="FKStringContains" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>xTabSomething</Description>
+  </UIView>
   <ForeignKeyPersistList>
     <ForeignKeyPersist>
       <EntityReferenceResultForPersistAliaType>DownTree</EntityReferenceResultForPersistAliaType>

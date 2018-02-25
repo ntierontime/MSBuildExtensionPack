@@ -284,75 +284,33 @@ System.Int64? id)
         }
 
         /// <summary>
-        /// Gets entity related view model of MSBuildExtensionPack.Build: WPFullDetailsOfBuildVM.
-        /// http://[host]/api/BuildApi/GetWPFullDetailsOfBuildVM?
+        /// Gets the Wrapper View Model of MSBuildExtensionPack.Build: WPxTabSomethingOfBuildVM.
+        /// http://[host]/api/BuildApi/GetWPxTabSomethingOfBuildVM
+        /// Content-Type: application/json; charset=utf-8
         /// </summary>
+        /// <param name="vm">The vm.</param>
         /// <returns></returns>
-        [HttpGet, ActionName("GetWPFullDetailsOfBuildVM")]
-        public MSBuildExtensionPack.ViewModelData.WPFullDetailsOfBuildVM GetWPFullDetailsOfBuildVM(
-System.Int64? id)
+        // [HttpGet, ActionName("GetWPxTabSomethingOfBuildVM")] //although JSON allowed in Http Delete request body, but not allowed in HttpClient
+        [HttpPost, ActionName("GetWPxTabSomethingOfBuildVM")]
+        public MSBuildExtensionPack.ViewModelData.WPxTabSomethingOfBuildVM GetWPxTabSomethingOfBuildVM(
+            [FromBody]MSBuildExtensionPack.ViewModelData.WPxTabSomethingOfBuildVM vm)
         {
-            var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaIdentifier();
-            criteria.Identifier.Id.NullableValueToCompare = id;
-            MSBuildExtensionPack.AspNetMvc40ViewModel.WPFullDetailsOfBuildVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPFullDetailsOfBuildVM(criteria);
-            retval.LoadData();
+            MSBuildExtensionPack.AspNetMvc40ViewModel.WPxTabSomethingOfBuildVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPxTabSomethingOfBuildVM();
+            if (vm != null)
+            {
+                retval.Criteria = vm.Criteria;
+                retval.QueryPagingSetting = vm.QueryPagingSetting;
+                retval.QueryOrderBySettingCollecionInString = vm.QueryOrderBySettingCollecionInString;
+            }
+            else
+            {
+                retval.Criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaFKStringContains();
+                retval.QueryPagingSetting = Framework.EntityContracts.QueryPagingSetting.GetDefault();
+                //retval.QueryOrderBySettingCollecionInString = MSBuildExtensionPack.ViewModelData.OrderByLists.WPxTabSomethingOfBuildVM_GetDefaultListOfQueryOrderBySettingCollecionInString();
+            }
+            retval.LoadData(true);
             return retval;
         }
-
-        /// <summary>
-        /// Gets entity related view model of MSBuildExtensionPack.Build: WPelsesomethingOfBuildVM.
-        /// http://[host]/api/BuildApi/GetWPelsesomethingOfBuildVM?
-        /// </summary>
-        /// <returns></returns>
-        [HttpGet, ActionName("GetWPelsesomethingOfBuildVM")]
-        public MSBuildExtensionPack.ViewModelData.WPelsesomethingOfBuildVM GetWPelsesomethingOfBuildVM(
-System.Int64? id)
-        {
-            var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaIdentifier();
-            criteria.Identifier.Id.NullableValueToCompare = id;
-            MSBuildExtensionPack.AspNetMvc40ViewModel.WPelsesomethingOfBuildVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPelsesomethingOfBuildVM(criteria);
-            retval.LoadData();
-            return retval;
-        }
-
-        #region EntityUpdateActionSetting - elseA1Asomething
-
-        /// <summary>
-        /// Gets elseA1Asomething view model of MSBuildExtensionPack.Build: WPelseA1AsomethingOfBuild.
-        /// http://[host]/api/BuildApi/WPelseA1AsomethingOfBuildVM?
-        /// </summary>
-        /// <returns></returns>
-        [HttpGet, ActionName("GetWPelseA1AsomethingOfBuildVM")]
-        public MSBuildExtensionPack.ViewModelData.WPelseA1AsomethingOfBuildVM GetWPelseA1AsomethingOfBuildVM(
-System.Int64? id
-            )
-        {
-            var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaIdentifier();
-            criteria.Identifier.Id.NullableValueToCompare = id;
-
-            var vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPelseA1AsomethingOfBuildVM();
-            vm.CriteriaOfMasterEntity =  criteria;
-            vm.LoadData();
-            return vm;
-        }
-
-        /// <summary>
-        /// Post method WPelseA1AsomethingOfBuild.
-        /// http://[host]/api/BuildApi/WPelseA1AsomethingOfBuildVM
-        /// </summary>
-        /// <param name="input">The input.</param>
-        /// <returns></returns>
-        [HttpPost, ActionName("WPelseA1AsomethingOfBuildVM")]
-        public MSBuildExtensionPack.ViewModelData.WPelseA1AsomethingOfBuildVM WPelseA1AsomethingOfBuildVM(MSBuildExtensionPack.ViewModelData.WPelseA1AsomethingOfBuildVM input)
-        {
-            MSBuildExtensionPack.AspNetMvc40ViewModel.WPelseA1AsomethingOfBuildVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPelseA1AsomethingOfBuildVM(input.CriteriaOfMasterEntity);
-            vm.MasterEntity = input.MasterEntity;
-            vm.SaveData();
-
-            return vm;
-        }
-
-        #endregion EntityUpdateActionSetting - elseA1AsomethingVM
 
         /// <summary>
         /// HearBeat.
