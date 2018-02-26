@@ -313,6 +313,22 @@ System.Int64? id)
         }
 
         /// <summary>
+        /// Gets entity related view model of MSBuildExtensionPack.Build: WPxTabFullDetailsOfBuildVM.
+        /// http://[host]/api/BuildApi/GetWPxTabFullDetailsOfBuildVM?
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet, ActionName("GetWPxTabFullDetailsOfBuildVM")]
+        public MSBuildExtensionPack.ViewModelData.WPxTabFullDetailsOfBuildVM GetWPxTabFullDetailsOfBuildVM(
+System.Int64? id)
+        {
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaIdentifier();
+            criteria.Identifier.Id.NullableValueToCompare = id;
+            MSBuildExtensionPack.AspNetMvc40ViewModel.WPxTabFullDetailsOfBuildVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPxTabFullDetailsOfBuildVM(criteria);
+            retval.LoadData();
+            return retval;
+        }
+
+        /// <summary>
         /// HearBeat.
         /// http://[host]/api/BuildApi/HearBeat
         /// </summary>

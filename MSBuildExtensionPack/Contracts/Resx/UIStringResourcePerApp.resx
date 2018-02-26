@@ -268,6 +268,51 @@
   <data name="ToolTip_Of_MSBuildExtensionPack_Build_xTabSomething" xml:space="preserve">
     <value>ToolTip Of MSBuildExtensionPack_Build_xTabSomething</value>
   </data>
+  <data name="Description_Of_MSBuildExtensionPack_Build_xTabFullDetailsMasterView" xml:space="preserve">
+    <value>Description Of MSBuildExtensionPack_Build_xTabFullDetailsMasterView</value>
+  </data>
+  <data name="MSBuildExtensionPack_Build_xTabFullDetailsMasterView" xml:space="preserve">
+    <value>MSBuildExtensionPack_Build_xTabFullDetailsMasterView</value>
+  </data>
+  <data name="ToolTip_Of_MSBuildExtensionPack_Build_xTabFullDetailsMasterView" xml:space="preserve">
+    <value>ToolTip Of MSBuildExtensionPack_Build_xTabFullDetailsMasterView</value>
+  </data>
+  <data name="Description_Of_MSBuildExtensionPack_Build_xTabFullDetailsAncestors" xml:space="preserve">
+    <value>Description Of MSBuildExtensionPack_Build_xTabFullDetailsAncestors</value>
+  </data>
+  <data name="MSBuildExtensionPack_Build_xTabFullDetailsAncestors" xml:space="preserve">
+    <value>MSBuildExtensionPack_Build_xTabFullDetailsAncestors</value>
+  </data>
+  <data name="ToolTip_Of_MSBuildExtensionPack_Build_xTabFullDetailsAncestors" xml:space="preserve">
+    <value>ToolTip Of MSBuildExtensionPack_Build_xTabFullDetailsAncestors</value>
+  </data>
+  <data name="Description_Of_MSBuildExtensionPack_Build_xTabFullDetailsFK_BuildLog_Build" xml:space="preserve">
+    <value>Description Of MSBuildExtensionPack_Build_xTabFullDetailsFK_BuildLog_Build</value>
+  </data>
+  <data name="MSBuildExtensionPack_Build_xTabFullDetailsFK_BuildLog_Build" xml:space="preserve">
+    <value>MSBuildExtensionPack_Build_xTabFullDetailsFK_BuildLog_Build</value>
+  </data>
+  <data name="ToolTip_Of_MSBuildExtensionPack_Build_xTabFullDetailsFK_BuildLog_Build" xml:space="preserve">
+    <value>ToolTip Of MSBuildExtensionPack_Build_xTabFullDetailsFK_BuildLog_Build</value>
+  </data>
+  <data name="Description_Of_MSBuildExtensionPack_Build_xTabFullDetailsTabContainer" xml:space="preserve">
+    <value>Description Of MSBuildExtensionPack_Build_xTabFullDetailsTabContainer</value>
+  </data>
+  <data name="MSBuildExtensionPack_Build_xTabFullDetailsTabContainer" xml:space="preserve">
+    <value>MSBuildExtensionPack_Build_xTabFullDetailsTabContainer</value>
+  </data>
+  <data name="ToolTip_Of_MSBuildExtensionPack_Build_xTabFullDetailsTabContainer" xml:space="preserve">
+    <value>ToolTip Of MSBuildExtensionPack_Build_xTabFullDetailsTabContainer</value>
+  </data>
+  <data name="Description_Of_MSBuildExtensionPack_Build_xTabFullDetails" xml:space="preserve">
+    <value>Description Of MSBuildExtensionPack_Build_xTabFullDetails</value>
+  </data>
+  <data name="MSBuildExtensionPack_Build_xTabFullDetails" xml:space="preserve">
+    <value>MSBuildExtensionPack_Build_xTabFullDetails</value>
+  </data>
+  <data name="ToolTip_Of_MSBuildExtensionPack_Build_xTabFullDetails" xml:space="preserve">
+    <value>ToolTip Of MSBuildExtensionPack_Build_xTabFullDetails</value>
+  </data>
   <data name="Description_Of_MSBuildExtensionPack_BuildEventCode_Common" xml:space="preserve">
     <value>Description Of MSBuildExtensionPack_BuildEventCode_Common</value>
   </data>

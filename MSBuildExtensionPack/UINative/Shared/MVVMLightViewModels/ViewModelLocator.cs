@@ -281,7 +281,56 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         #endregion MVVMViewModel: MSBuildExtensionPack.MVVMLightViewModels.WPxTabSomethingOfBuildVM
 
-        #region MVVMViewModel #1.4: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildEventCodeVM
+        #region MVVMViewModel #1.6: MSBuildExtensionPack.MVVMLightViewModels.WPxTabFullDetailsOfBuildVM
+
+        private static MSBuildExtensionPack.MVVMLightViewModels.WPxTabFullDetailsOfBuildVM m_MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM;
+        public static MSBuildExtensionPack.MVVMLightViewModels.WPxTabFullDetailsOfBuildVM MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM_Static
+        {
+            get
+            {
+                if (m_MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM == null)
+                {
+                    CreateMSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM();
+                }
+
+                return m_MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM;
+            }
+        }
+
+        public MSBuildExtensionPack.MVVMLightViewModels.WPxTabFullDetailsOfBuildVM MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM
+        {
+            get
+            {
+                return MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM_Static;
+            }
+        }
+
+        /// <summary>
+        /// Provides a deterministic way to delete the MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM property.
+        /// </summary>
+        public static void Clear_MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM()
+        {
+            if (m_MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM != null)
+            {
+                m_MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM.Cleanup();
+                m_MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM = null;
+            }
+        }
+
+        /// <summary>
+        /// Provides a deterministic way to create the MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM property.
+        /// </summary>
+        public static void CreateMSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM()
+        {
+            if (m_MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM == null)
+            {
+                m_MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM = new MSBuildExtensionPack.MVVMLightViewModels.WPxTabFullDetailsOfBuildVM();
+            }
+        }
+
+        #endregion MVVMViewModel: MSBuildExtensionPack.MVVMLightViewModels.WPxTabFullDetailsOfBuildVM
+
+        #region MVVMViewModel #1.7: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildEventCodeVM
 
         private static MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildEventCodeVM m_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM;
         public static MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildEventCodeVM MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM_Static
@@ -330,7 +379,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         #endregion MVVMViewModel: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildEventCodeVM
 
-        #region MVVMViewModel #1.5: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildLogVM
+        #region MVVMViewModel #1.8: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildLogVM
 
         private static MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildLogVM m_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM;
         public static MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildLogVM MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM_Static
@@ -379,7 +428,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         #endregion MVVMViewModel: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildLogVM
 
-        #region MVVMViewModel #1.6: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfOrganizationVM
+        #region MVVMViewModel #1.9: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfOrganizationVM
 
         private static MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfOrganizationVM m_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM;
         public static MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfOrganizationVM MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM_Static
@@ -428,7 +477,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         #endregion MVVMViewModel: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfOrganizationVM
 
-        #region MVVMViewModel #1.7: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfSolutionVM
+        #region MVVMViewModel #1.10: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfSolutionVM
 
         private static MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfSolutionVM m_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM;
         public static MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfSolutionVM MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM_Static
@@ -982,16 +1031,19 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             // #1.3: MSBuildExtensionPack.MVVMLightViewModels.WPxTabSomethingOfBuildVM
             Clear_MSBuildExtensionPack_MVVMLightViewModels_WPxTabSomethingOfBuildVM();
 
-            // #1.4: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildEventCodeVM
+            // #1.6: MSBuildExtensionPack.MVVMLightViewModels.WPxTabFullDetailsOfBuildVM
+            Clear_MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM();
+
+            // #1.7: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildEventCodeVM
             Clear_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM();
 
-            // #1.5: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildLogVM
+            // #1.8: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfBuildLogVM
             Clear_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildLogVM();
 
-            // #1.6: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfOrganizationVM
+            // #1.9: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfOrganizationVM
             Clear_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM();
 
-            // #1.7: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfSolutionVM
+            // #1.10: MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfSolutionVM
             Clear_MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM();
 
             // #2.1: MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuild

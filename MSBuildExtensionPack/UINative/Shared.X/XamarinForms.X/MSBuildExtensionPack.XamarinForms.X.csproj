@@ -257,6 +257,34 @@
     <Compile Include="Pages\Build\WPxTabSomethingTabContainerOfBuild.xaml.cs">
       <DependentUpon>WPxTabSomethingTabContainerOfBuild.xaml</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Pages\Build\WPxTabFullDetailsMasterViewOfBuild.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\Build\WPxTabFullDetailsMasterViewOfBuild.xaml.cs">
+      <DependentUpon>WPxTabFullDetailsMasterViewOfBuild.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\Build\WPxTabFullDetailsAncestorsOfBuild.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\Build\WPxTabFullDetailsAncestorsOfBuild.xaml.cs">
+      <DependentUpon>WPxTabFullDetailsAncestorsOfBuild.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\Build\WPxTabFullDetailsFK_BuildLog_BuildOfBuild.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\Build\WPxTabFullDetailsFK_BuildLog_BuildOfBuild.xaml.cs">
+      <DependentUpon>WPxTabFullDetailsFK_BuildLog_BuildOfBuild.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\Build\WPxTabFullDetailsTabContainerOfBuild.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\Build\WPxTabFullDetailsTabContainerOfBuild.xaml.cs">
+      <DependentUpon>WPxTabFullDetailsTabContainerOfBuild.xaml</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Pages\BuildEventCode\WPCommonSearchViewOfBuildEventCode.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
