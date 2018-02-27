@@ -14,7 +14,10 @@ namespace Framework.Xaml
         where TSearchResultEntityCollection : List<TSearchResultEntityItem>, new()
         where TSearchResultEntityItem : class, new()
     {
-        #region constructor
+
+        public abstract string EntityName { get; }
+
+        public abstract string ViewName { get; }
 
         public ViewModelBaseWithResultAndUIElement()
             : base()
@@ -42,15 +45,7 @@ namespace Framework.Xaml
             SuppressMVVMLightEventToCommandMessage = false;
         }
 
-        #endregion constructor
-
-        #region Suppress MVVMLight EventToCommand Message
-
         public bool SuppressMVVMLightEventToCommandMessage { get; set; }
-
-        #endregion Suppress MVVMLight EventToCommand Message
-
-        #region Business Entity Collection
 
         protected ObservableCollection<TSearchResultEntityItem> m_Result;
 
@@ -69,10 +64,6 @@ namespace Framework.Xaml
             }
         }
 
-        #endregion Business Entity Collection
-
-        #region SearchStatus
-
         public Framework.EntityContracts.SearchStatus m_SearchStatus;
         // should investigate whether can remove RaisePropertyChanged
         public Framework.EntityContracts.SearchStatus SearchStatus
@@ -90,20 +81,6 @@ namespace Framework.Xaml
                 }
             }
         }
-
-        #endregion SearchStatus
-
-        #region string EntityName
-
-        public abstract string EntityName { get; }
-
-        #endregion string EntityName
-
-        #region ViewNames
-
-        public abstract string ViewName { get; }
-
-        #endregion ViewNames
 
         #region QueryPagingSetting
 
@@ -151,7 +128,7 @@ namespace Framework.Xaml
 
         #endregion QueryPagingSetting
 
-        #region Pagination Commands - First Page, Previous Page, Next Page, and Last Page, and Go Command
+        // Start. Pagination Commands - First Page, Previous Page, Next Page, and Last Page, and Go Command
 
         public RelayCommand PaginationFirstPageCommand { get; protected set; }
 
@@ -185,9 +162,9 @@ namespace Framework.Xaml
             this.DoSearch(true);
         }
 
-        #endregion Pagination Commands - First Page, Previous Page, Next Page, and Last Page
+        // End. Pagination Commands - First Page, Previous Page, Next Page, and Last Page
 
-        #region QueryOrderBySettingCollection
+        // Start. QueryOrderBySettingCollection
 
         protected string m_QueryOrderBySettingCollecionInString;
 
@@ -255,7 +232,7 @@ namespace Framework.Xaml
             return null;
         }
 
-        #endregion QueryOrderBySettingCollection
+        // End. QueryOrderBySettingCollection
 
         #region Framework.NameValueCollection ListOfDataExport
 

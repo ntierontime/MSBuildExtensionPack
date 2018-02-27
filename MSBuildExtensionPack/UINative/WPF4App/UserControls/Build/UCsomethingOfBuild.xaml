@@ -56,7 +56,7 @@
                 <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareDescriptionThisTableOftOfFKStringContains, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="5" />
                 <TextBox Text="{Binding Path=Criteria.FKStringContains.BuildDescription.NullableValueToBeContained}" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Stretch"/>
         </Grid>
-        <ListView Name="V_Common" Margin="12,12,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPsomethingOfBuildVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollection}" >
+        <ListView Name="V_Common" Margin="12,12,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPsomethingOfBuildVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=Result}" >
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch"/>

@@ -11,31 +11,13 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
     public class WPCommonOfBuildLogVM
         : Framework.Xaml.ViewModelBaseWithResultAndUIElement<MSBuildExtensionPack.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon, MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection, MSBuildExtensionPack.DataSourceEntities.BuildLog.Default>
     {
-        #region override string EntityName and ViewName
-
         public const string EntityName_Static = "MSBuildExtensionPack.BuildLog";
 
-        public override string EntityName
-        {
-            get
-            {
-                return EntityName_Static;
-            }
-        }
+        public override string EntityName { get { return EntityName_Static; } }
 
         public const string ViewName_Static = "WPCommonOfBuildLogVM";
 
-        public override string ViewName
-        {
-            get
-            {
-                return ViewName_Static;
-            }
-        }
-
-        #endregion override string EntityName and ViewName
-
-        #region Constructor
+        public override string ViewName { get { return ViewName_Static; } }
 
         /// <summary>
         /// Initializes a new instance of the WPCommonOfBuildLogVM class.
@@ -53,27 +35,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             ////    // Code runs "for real": Connect to service, etc...
             ////}
         }
-
-        #endregion Constructor
-
-        #region ClearSearchResult
-
-        /// <summary>
-        /// Clears the search result in this.EntityCollection.
-        /// </summary>
-        protected override void ClearSearchResult()
-        {
-            string viewName = ViewName;
-            Framework.UIAction uiAction = Framework.UIAction.ClearResult;
-
-            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
-
-            this.m_Result.Clear();
-
-            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
-        }
-
-        #endregion ClearSearchResult
 
         protected override void DoSearch(bool isToClearExistingResult)
         {
@@ -139,6 +100,21 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             {
                 Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
             }
+        }
+
+        /// <summary>
+        /// Clears the search result in this.Result.
+        /// </summary>
+        protected override void ClearSearchResult()
+        {
+            string viewName = ViewName;
+            Framework.UIAction uiAction = Framework.UIAction.ClearResult;
+
+            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
+
+            this.m_Result.Clear();
+
+            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
         }
 
         public override Framework.NameValueCollection GetDefaultListOfQueryOrderBySettingCollecionInString()
