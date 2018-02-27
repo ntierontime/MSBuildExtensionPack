@@ -42,7 +42,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         /// </summary>
         public WPCommonOfOrganizationVM()
         {
-            this.EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Organization.Default>();
+            this.Result = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Organization.Default>();
 
             ////if (IsInDesignMode)
             ////{
@@ -68,7 +68,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
 
-            this.m_EntityCollection.Clear();
+            this.m_Result.Clear();
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
         }
@@ -105,19 +105,19 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                     this.StatusOfResult = result.StatusOfResult;
                     if (result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
                     {
-                        if (this.EntityCollection == null)
+                        if (this.Result == null)
                         {
-                            this.EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Organization.Default>();
+                            this.Result = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Organization.Default>();
                         }
                         if (isToClearExistingResult)
                         {
-                            this.EntityCollection = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Organization.Default>(result.Result.ToList());
+                            this.Result = new ObservableCollection<MSBuildExtensionPack.DataSourceEntities.Organization.Default>(result.Result.ToList());
                         }
                         else
                         {
                             foreach (var item in result.Result)
                             {
-                                this.EntityCollection.Add(item);
+                                this.Result.Add(item);
                             }
                         }
 

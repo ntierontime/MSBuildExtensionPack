@@ -52,20 +52,20 @@ namespace Framework.Xaml
 
         #region Business Entity Collection
 
-        protected ObservableCollection<TSearchResultEntityItem> m_EntityCollection;
+        protected ObservableCollection<TSearchResultEntityItem> m_Result;
 
         /// <summary>
         /// Gets or sets the DataSourceEntities list.
         /// should investigate whether can remove RaisePropertyChanged
         /// </summary>
         /// <value>The DataSourceEntities list.</value>
-        public ObservableCollection<TSearchResultEntityItem> EntityCollection
+        public ObservableCollection<TSearchResultEntityItem> Result
         {
-            get { return m_EntityCollection; }
+            get { return m_Result; }
             set
             {
-                m_EntityCollection = value;
-                RaisePropertyChanged("EntityCollection");
+                m_Result = value;
+                RaisePropertyChanged("Result");
             }
         }
 
