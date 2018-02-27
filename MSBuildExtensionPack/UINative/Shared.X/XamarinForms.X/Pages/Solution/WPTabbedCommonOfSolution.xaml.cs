@@ -16,6 +16,7 @@ namespace MSBuildExtensionPack.XamarinForms.Pages.Solution
         public WPTabbedCommonOfSolution()
         {
             InitializeComponent();
+             BindingContext = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM_Static;
 
         }
     }

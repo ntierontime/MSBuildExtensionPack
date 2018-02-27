@@ -18,8 +18,7 @@ namespace MSBuildExtensionPack.XamarinForms.Pages.Build
         public WPCommonResultViewOfBuild()
         {
             InitializeComponent();
-
-        BindingContext = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM_Static;
+             BindingContext = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM_Static;
 
             this.Appearing += (object sender, EventArgs e) => {
                 MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM_Static.SearchCommand.Execute(null);

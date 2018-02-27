@@ -16,6 +16,7 @@ namespace MSBuildExtensionPack.XamarinForms.Pages.Organization
         public WPTabbedCommonOfOrganization()
         {
             InitializeComponent();
+             BindingContext = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfOrganizationVM_Static;
 
         }
     }

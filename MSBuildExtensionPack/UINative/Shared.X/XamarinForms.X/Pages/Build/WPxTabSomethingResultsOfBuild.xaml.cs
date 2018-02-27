@@ -18,8 +18,7 @@ namespace MSBuildExtensionPack.XamarinForms.Pages.Build
         public WPxTabSomethingResultsOfBuild()
         {
             InitializeComponent();
-
-        BindingContext = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPxTabSomethingOfBuildVM_Static;
+             BindingContext = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPxTabSomethingOfBuildVM_Static;
 
             this.Appearing += (object sender, EventArgs e) => {
                 MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPxTabSomethingOfBuildVM_Static.SearchCommand.Execute(null);

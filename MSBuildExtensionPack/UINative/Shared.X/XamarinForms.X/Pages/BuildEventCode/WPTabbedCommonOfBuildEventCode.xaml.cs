@@ -16,6 +16,7 @@ namespace MSBuildExtensionPack.XamarinForms.Pages.BuildEventCode
         public WPTabbedCommonOfBuildEventCode()
         {
             InitializeComponent();
+             BindingContext = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildEventCodeVM_Static;
 
         }
     }

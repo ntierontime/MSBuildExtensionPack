@@ -1,15 +1,6 @@
 ﻿Name,DisplayName,Path,ParentPath,Guid,ParentGuid
-UI,UI,UI,,4c1e7428-7a2f-43bb-bd19-44851bd27a87,
-Web,Web,UI\Web,UI,38734f99-e0af-4327-a122-540057790578,326b0cd4-25f2-4b34-9932-f1f48d932cb8
-Core,Core,Core,,408038f2-abe4-43ce-babc-53ef9b00f386,
 Frameworks,Frameworks,Frameworks,,d85880cd-a108-4f6e-ab9a-1b2d1e1406c4,
 Frameworks.X,Frameworks.X,Frameworks.X,,546ec186-1147-43b2-b56d-b57a65d7956b,
-MVVMLight,MVVMLight,UI\MVVMLight,UI,75dbe5f8-dad4-47c7-844d-acaa7e99b053,326b0cd4-25f2-4b34-9932-f1f48d932cb8
-Shared,Shared,UI\MVVMLight\Shared,UI\MVVMLight,1d2d43fc-2237-4e48-b8a7-abfba4bbe37c,75dbe5f8-dad4-47c7-844d-acaa7e99b053
-Shared.X,Shared.X,UI\MVVMLight\Shared.X,UI\MVVMLight,1b0953f7-2436-4d7b-a914-f0523e450d99,75dbe5f8-dad4-47c7-844d-acaa7e99b053
-Wcf,Wcf,Wcf,,f51d9774-9ab2-4aab-8ab2-173d01241ae0,
-Core.X,Core.X,Core.X,,758bd2ba-f9a6-44f5-82a9-7a6d29989b43,
-Web.X,Web.X,UI\Web.X,UI,27abf16b-86ae-488e-b704-cebf988649d0,326b0cd4-25f2-4b34-9932-f1f48d932cb8
 UIWeb,UIWeb,UIWeb,,9ec78806-64b4-4eb8-aaf2-cb36d7f26bb7,
 Services,Services,Services,,dcde859d-fd64-494e-be0f-ccfb1eea7729,
 Contracts,Contracts,Contracts,,963beca1-37da-428d-9f5f-33645ae1f070,
