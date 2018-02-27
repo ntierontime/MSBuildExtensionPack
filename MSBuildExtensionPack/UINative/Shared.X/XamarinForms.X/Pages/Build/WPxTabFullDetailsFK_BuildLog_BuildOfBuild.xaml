@@ -21,7 +21,7 @@
         <ScrollView>
             <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
         <StackLayout BackgroundColor="#eee" Orientation="Vertical" VerticalOptions="FillAndExpand" Padding="5" Spacing="0">
-            <ListView x:Name="ResultView" ItemsSource="{Binding Path=Result}" VerticalOptions="FillAndExpand" HasUnevenRows="True">
+                    <ListView x:Name="ResultView" ItemsSource="{Binding Path=FK_BuildLog_Build}" VerticalOptions="FillAndExpand" HasUnevenRows="True">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>

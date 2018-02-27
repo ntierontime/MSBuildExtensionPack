@@ -184,7 +184,7 @@
     <PartialViewReference Group="OnlyOneArticle" Key="somethingSearch" ReferencedKeyOfUIWorkspace="somethingSearch" Name="somethingSearch">
       <Description>somethingSearch</Description>
     </PartialViewReference>
-    <PartialViewReference Group="OnlyOneArticle" Key="somethingResults" ReferencedKeyOfUIWorkspace="somethingResults" Name="somethingResults">
+    <PartialViewReference Group="OnlyOneArticle" Key="somethingResult" ReferencedKeyOfUIWorkspace="somethingResult" Name="somethingResult">
       <Description>somethingResults</Description>
     </PartialViewReference>
   </UIView>

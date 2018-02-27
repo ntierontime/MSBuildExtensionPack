@@ -6,7 +6,7 @@
         xmlns:fxr="clr-namespace:Framework.Xamariner;assembly=Framework.Xamariner.X"
         xmlns:fe="clr-namespace:Framework.EntityContracts;assembly=Framework.EntityContracts.X"
         x:Class="MSBuildExtensionPack.XamarinForms.Pages.Build.WPxTabFullDetailsAncestorsOfBuild"
-        Title="{i18n:Translate Text=SingleItemAggregateForm, ResourceId=Framework.Resx.UIStringResource}"
+        Title="abcdefg"
         NavigationPage.HasBackButton="False"
         >
     <NavigationPage.HasNavigationBar>
