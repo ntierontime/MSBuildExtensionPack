@@ -538,29 +538,83 @@ namespace MSBuildExtensionPack.Resx {
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_xTabFullDetailsAncestors"".
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_xTabFullDetailsAncestorsSolution_1"".
         /// </summary>
-        public static string Description_Of_MSBuildExtensionPack_Build_xTabFullDetailsAncestors {
+        public static string Description_Of_MSBuildExtensionPack_Build_xTabFullDetailsAncestorsSolution_1 {
             get {
-                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_xTabFullDetailsAncestors", resourceCulture);
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_xTabFullDetailsAncestorsSolution_1", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_xTabFullDetailsAncestors"".
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_xTabFullDetailsAncestorsSolution_1"".
         /// </summary>
-        public static string MSBuildExtensionPack_Build_xTabFullDetailsAncestors {
+        public static string MSBuildExtensionPack_Build_xTabFullDetailsAncestorsSolution_1 {
             get {
-                return ResourceManager.GetString("MSBuildExtensionPack_Build_xTabFullDetailsAncestors", resourceCulture);
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_xTabFullDetailsAncestorsSolution_1", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_xTabFullDetailsAncestors"".
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_xTabFullDetailsAncestorsSolution_1"".
         /// </summary>
-        public static string ToolTip_Of_MSBuildExtensionPack_Build_xTabFullDetailsAncestors {
+        public static string ToolTip_Of_MSBuildExtensionPack_Build_xTabFullDetailsAncestorsSolution_1 {
             get {
-                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_xTabFullDetailsAncestors", resourceCulture);
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_xTabFullDetailsAncestorsSolution_1", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_1"".
+        /// </summary>
+        public static string Description_Of_MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_1 {
+            get {
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_1", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_1"".
+        /// </summary>
+        public static string MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_1 {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_1", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_1"".
+        /// </summary>
+        public static string ToolTip_Of_MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_1 {
+            get {
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_1", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description Of MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_2"".
+        /// </summary>
+        public static string Description_Of_MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_2 {
+            get {
+                return ResourceManager.GetString("Description_Of_MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_2", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_2"".
+        /// </summary>
+        public static string MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_2 {
+            get {
+                return ResourceManager.GetString("MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_2", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "ToolTip Of MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_2"".
+        /// </summary>
+        public static string ToolTip_Of_MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_2 {
+            get {
+                return ResourceManager.GetString("ToolTip_Of_MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_2", resourceCulture);
             }
         }
 

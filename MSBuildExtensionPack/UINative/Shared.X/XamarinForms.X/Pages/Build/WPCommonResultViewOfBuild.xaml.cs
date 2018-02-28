@@ -27,7 +27,7 @@ namespace MSBuildExtensionPack.XamarinForms.Pages.Build
             //TODO: The following code can replace the "Load More" button. ItemAppearing event is not working properly in UWP, but working in Android emulator/Windows phone emulator, IOs not tested.
             //this.ResultView.ItemAppearing += (object sender, ItemVisibilityEventArgs e) => {
             //    var viewCellDetails = e.Item as MSBuildExtensionPack.DataSourceEntities.Build.Default;
-            //    if (viewCellDetails == MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM_Static.EntityCollection[MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM_Static.EntityCollection.Count - 1])
+            //    if (viewCellDetails == MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM_Static.Result[MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM_Static.EntityCollection.Count - 1])
             //    {
             //        MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM_Static.LoadMoreCommand.Execute(null);
             //    }
@@ -35,7 +35,7 @@ namespace MSBuildExtensionPack.XamarinForms.Pages.Build
 
             this.ResultView.ItemTapped += (object sender, ItemTappedEventArgs e) => {
                 var viewCellDetails = e.Item as MSBuildExtensionPack.DataSourceEntities.Build.Default;
-                MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM_Static.LaunchViewCommand.Execute(viewCellDetails);
+                MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsTabContainerOfBuildVM_Static.LaunchViewCommand.Execute(viewCellDetails);
             };
 
         }

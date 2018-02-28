@@ -277,14 +277,32 @@
   <data name="ToolTip_Of_MSBuildExtensionPack_Build_xTabFullDetailsMasterView" xml:space="preserve">
     <value>ToolTip Of MSBuildExtensionPack_Build_xTabFullDetailsMasterView</value>
   </data>
-  <data name="Description_Of_MSBuildExtensionPack_Build_xTabFullDetailsAncestors" xml:space="preserve">
-    <value>Description Of MSBuildExtensionPack_Build_xTabFullDetailsAncestors</value>
+  <data name="Description_Of_MSBuildExtensionPack_Build_xTabFullDetailsAncestorsSolution_1" xml:space="preserve">
+    <value>Description Of MSBuildExtensionPack_Build_xTabFullDetailsAncestorsSolution_1</value>
   </data>
-  <data name="MSBuildExtensionPack_Build_xTabFullDetailsAncestors" xml:space="preserve">
-    <value>MSBuildExtensionPack_Build_xTabFullDetailsAncestors</value>
+  <data name="MSBuildExtensionPack_Build_xTabFullDetailsAncestorsSolution_1" xml:space="preserve">
+    <value>MSBuildExtensionPack_Build_xTabFullDetailsAncestorsSolution_1</value>
   </data>
-  <data name="ToolTip_Of_MSBuildExtensionPack_Build_xTabFullDetailsAncestors" xml:space="preserve">
-    <value>ToolTip Of MSBuildExtensionPack_Build_xTabFullDetailsAncestors</value>
+  <data name="ToolTip_Of_MSBuildExtensionPack_Build_xTabFullDetailsAncestorsSolution_1" xml:space="preserve">
+    <value>ToolTip Of MSBuildExtensionPack_Build_xTabFullDetailsAncestorsSolution_1</value>
+  </data>
+  <data name="Description_Of_MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_1" xml:space="preserve">
+    <value>Description Of MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_1</value>
+  </data>
+  <data name="MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_1" xml:space="preserve">
+    <value>MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_1</value>
+  </data>
+  <data name="ToolTip_Of_MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_1" xml:space="preserve">
+    <value>ToolTip Of MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_1</value>
+  </data>
+  <data name="Description_Of_MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_2" xml:space="preserve">
+    <value>Description Of MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_2</value>
+  </data>
+  <data name="MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_2" xml:space="preserve">
+    <value>MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_2</value>
+  </data>
+  <data name="ToolTip_Of_MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_2" xml:space="preserve">
+    <value>ToolTip Of MSBuildExtensionPack_Build_xTabFullDetailsAncestorsOrganization_2</value>
   </data>
   <data name="Description_Of_MSBuildExtensionPack_Build_xTabFullDetailsFK_BuildLog_Build" xml:space="preserve">
     <value>Description Of MSBuildExtensionPack_Build_xTabFullDetailsFK_BuildLog_Build</value>

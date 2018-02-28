@@ -27,7 +27,7 @@ namespace MSBuildExtensionPack.XamarinForms.Pages.Solution
             //TODO: The following code can replace the "Load More" button. ItemAppearing event is not working properly in UWP, but working in Android emulator/Windows phone emulator, IOs not tested.
             //this.ResultView.ItemAppearing += (object sender, ItemVisibilityEventArgs e) => {
             //    var viewCellDetails = e.Item as MSBuildExtensionPack.DataSourceEntities.Solution.Default;
-            //    if (viewCellDetails == MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM_Static.EntityCollection[MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM_Static.EntityCollection.Count - 1])
+            //    if (viewCellDetails == MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM_Static.Result[MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM_Static.EntityCollection.Count - 1])
             //    {
             //        MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfSolutionVM_Static.LoadMoreCommand.Execute(null);
             //    }

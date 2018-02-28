@@ -17,6 +17,8 @@
         </OnPlatform>
     </NavigationPage.HasNavigationBar>
 <l:WPxTabFullDetailsMasterViewOfBuild/>
-<l:WPxTabFullDetailsAncestorsOfBuild/>
+<l:WPxTabFullDetailsAncestorsSolution_1OfBuild/>
+<l:WPxTabFullDetailsAncestorsOrganization_1OfBuild/>
+<l:WPxTabFullDetailsAncestorsOrganization_2OfBuild/>
 <l:WPxTabFullDetailsFK_BuildLog_BuildOfBuild/>
 </TabbedPage>

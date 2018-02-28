@@ -10,12 +10,12 @@ using Xamarin.Forms.Xaml;
 namespace MSBuildExtensionPack.XamarinForms.Pages.Build
 {
     /// <summary>
-    /// Interaction logic for WPxTabFullDetailsAncestorsOfBuild.xaml
+    /// Interaction logic for WPxTabFullDetailsAncestorsOrganization_1OfBuild.xaml
     /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class WPxTabFullDetailsAncestorsOfBuild : ContentPage
+    public partial class WPxTabFullDetailsAncestorsOrganization_1OfBuild : ContentPage
     {
-        public WPxTabFullDetailsAncestorsOfBuild()
+        public WPxTabFullDetailsAncestorsOrganization_1OfBuild()
         {
             InitializeComponent();
              BindingContext = MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM_Static;

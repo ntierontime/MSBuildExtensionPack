@@ -264,12 +264,26 @@
     <Compile Include="Pages\Build\WPxTabFullDetailsMasterViewOfBuild.xaml.cs">
       <DependentUpon>WPxTabFullDetailsMasterViewOfBuild.xaml</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Pages\Build\WPxTabFullDetailsAncestorsOfBuild.xaml">
+    <EmbeddedResource Include="Pages\Build\WPxTabFullDetailsAncestorsSolution_1OfBuild.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Pages\Build\WPxTabFullDetailsAncestorsOfBuild.xaml.cs">
-      <DependentUpon>WPxTabFullDetailsAncestorsOfBuild.xaml</DependentUpon>
+    <Compile Include="Pages\Build\WPxTabFullDetailsAncestorsSolution_1OfBuild.xaml.cs">
+      <DependentUpon>WPxTabFullDetailsAncestorsSolution_1OfBuild.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\Build\WPxTabFullDetailsAncestorsOrganization_1OfBuild.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\Build\WPxTabFullDetailsAncestorsOrganization_1OfBuild.xaml.cs">
+      <DependentUpon>WPxTabFullDetailsAncestorsOrganization_1OfBuild.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\Build\WPxTabFullDetailsAncestorsOrganization_2OfBuild.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\Build\WPxTabFullDetailsAncestorsOrganization_2OfBuild.xaml.cs">
+      <DependentUpon>WPxTabFullDetailsAncestorsOrganization_2OfBuild.xaml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Pages\Build\WPxTabFullDetailsFK_BuildLog_BuildOfBuild.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

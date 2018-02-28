@@ -184,7 +184,7 @@
     <PartialViewReference Group="OnlyOneArticle" Key="somethingSearch" ReferencedKeyOfUIWorkspace="somethingSearch" Name="somethingSearch">
       <Description>somethingSearch</Description>
     </PartialViewReference>
-    <PartialViewReference Group="OnlyOneArticle" Key="somethingResult" ReferencedKeyOfUIWorkspace="somethingResult" Name="somethingResult">
+    <PartialViewReference Group="OnlyOneArticle" Key="somethingResults" ReferencedKeyOfUIWorkspace="somethingResults" Name="somethingResults">
       <Description>somethingResults</Description>
     </PartialViewReference>
   </UIView>
@@ -210,22 +210,35 @@
     <Description>xTabFullDetailsMasterView</Description>
     <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Build" Group="OnlyOneArticle" Key="KeyInformation" UIViewType="MasterViewAsideKeyInformation" CriteriaKey="Identifier" DataViewKey="KeyInformation" EntityReferenceSimpleFullPath="" EntityReferenceName="" />
   </UIView>
-  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="xTabFullDetailsAncestors" UIViewType="SingleItemAggregateForm" KeyReferencedViewModel="xTabFullDetails" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
-    <Description>xTabFullDetailsAncestors</Description>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="xTabFullDetailsAncestorsSolution_1" UIViewType="SingleItemAggregateForm" KeyReferencedViewModel="xTabFullDetails" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>xTabFullDetailsAncestorsSolution_1</Description>
     <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Solution" Group="OnlyOneArticle" Key="SolutionView" UIViewType="RelatedEntityWhenMasterViewIsFKEntity" CriteriaKey="Identifier" DataViewKey="Default" EntityReferenceSimpleFullPath="\SolutionId" />
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="xTabFullDetailsAncestorsOrganization_1" UIViewType="SingleItemAggregateForm" KeyReferencedViewModel="xTabFullDetails" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>xTabFullDetailsAncestorsOrganization_1</Description>
     <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" Group="OnlyOneArticle" Key="Department" UIViewType="RelatedEntityWhenMasterViewIsFKEntity" CriteriaKey="Identifier" DataViewKey="Default" EntityReferenceSimpleFullPath="\SolutionId\OrganizationId" />
+  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="xTabFullDetailsAncestorsOrganization_2" UIViewType="SingleItemAggregateForm" KeyReferencedViewModel="xTabFullDetails" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
+    <Description>xTabFullDetailsAncestorsOrganization_2</Description>
     <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.Organization" Group="OnlyOneArticle" Key="Company" UIViewType="RelatedEntityWhenMasterViewIsFKEntity" CriteriaKey="Identifier" DataViewKey="KeyInformation" EntityReferenceSimpleFullPath="\SolutionId\OrganizationId\ParentId" />
   </UIView>
   <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="xTabFullDetailsFK_BuildLog_Build" UIViewType="Results" DataViewKey="KeyInformation" CriteriaKey="FKOnly" KeyReferencedViewModel="xTabFullDetails" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
     <Description>xTabFullDetailsFK_BuildLog_Build</Description>
+    <PartialView Group="Unknown" UIViewType="Unknown" EntityReferenceName="FK_BuildLog_Build" />
   </UIView>
   <UIView MasterTypeFullName="MSBuildExtensionPack.Build" Key="xTabFullDetailsTabContainer" UIViewType="TabContainer" DataViewKey="" CriteriaKey="" KeyReferencedViewModel="xTabFullDetails" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
     <Description>xTabFullDetailsTabContainer</Description>
     <PartialViewReference Group="OnlyOneArticle" Key="xTabFullDetailsMasterView" ReferencedKeyOfUIWorkspace="xTabFullDetailsMasterView" Name="xTabFullDetailsMasterView">
       <Description>xTabFullDetailsMasterView</Description>
     </PartialViewReference>
-    <PartialViewReference Group="OnlyOneArticle" Key="xTabFullDetailsAncestors" ReferencedKeyOfUIWorkspace="xTabFullDetailsAncestors" Name="xTabFullDetailsAncestors">
-      <Description>xTabFullDetailsAncestors</Description>
+    <PartialViewReference Group="OnlyOneArticle" Key="xTabFullDetailsAncestorsSolution_1" ReferencedKeyOfUIWorkspace="xTabFullDetailsAncestorsSolution_1" Name="xTabFullDetailsAncestorsSolution_1">
+      <Description>xTabFullDetailsAncestorsSolution_1</Description>
+    </PartialViewReference>
+    <PartialViewReference Group="OnlyOneArticle" Key="xTabFullDetailsAncestorsOrganization_1" ReferencedKeyOfUIWorkspace="xTabFullDetailsAncestorsOrganization_1" Name="xTabFullDetailsAncestorsOrganization_1">
+      <Description>xTabFullDetailsAncestorsOrganization_1</Description>
+    </PartialViewReference>
+    <PartialViewReference Group="OnlyOneArticle" Key="xTabFullDetailsAncestorsOrganization_2" ReferencedKeyOfUIWorkspace="xTabFullDetailsAncestorsOrganization_2" Name="xTabFullDetailsAncestorsOrganization_2">
+      <Description>xTabFullDetailsAncestorsOrganization_2</Description>
     </PartialViewReference>
     <PartialViewReference Group="OnlyOneArticle" Key="xTabFullDetailsFK_BuildLog_Build" ReferencedKeyOfUIWorkspace="xTabFullDetailsFK_BuildLog_Build" Name="xTabFullDetailsFK_BuildLog_Build">
       <Description>xTabFullDetailsFK_BuildLog_Build</Description>
