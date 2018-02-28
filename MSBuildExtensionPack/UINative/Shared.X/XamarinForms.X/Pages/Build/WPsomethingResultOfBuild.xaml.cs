@@ -35,7 +35,7 @@ namespace MSBuildExtensionPack.XamarinForms.Pages.Build
 
             this.ResultView.ItemTapped += (object sender, ItemTappedEventArgs e) => {
                 var viewCellDetails = e.Item as MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation;
-                MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsTabContainerOfBuildVM_Static.LaunchViewCommand.Execute(viewCellDetails);
+                MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_WPxTabFullDetailsOfBuildVM_Static.LaunchViewCommand.Execute(viewCellDetails);
             };
 
         }
