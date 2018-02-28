@@ -109,6 +109,21 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
                         this.StatusMessageOfFK_BuildLog_Build = string.Format("{0} {1}", this.StatusMessageOfFK_BuildLog_Build, resultFK_BuildLog_Build.ServerErrorMessage);
     #endif
                     }
+
+                    var resultFK_BuildLog_BuildSummary = MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetMessageOfDefaultGroupedDataViewOfByFKOnly(this.CriteriaOfFK_BuildLog_Build, this.QueryPagingSetting, null);
+//                    this.StatusOfFK_BuildLog_Build = resultFK_BuildLog_Build.BusinessLogicLayerResponseStatus;
+//                    if (resultFK_BuildLog_Build.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+//                    {
+//                        this.FK_BuildLog_Build = resultFK_BuildLog_Build.Message;
+//                    }
+//                    else
+//                    {
+//                        this.StatusMessageOfFK_BuildLog_Build = resultFK_BuildLog_Build.GetStatusMessage();
+//#if DEBUG
+//                        this.StatusMessageOfFK_BuildLog_Build = string.Format("{0} {1}", this.StatusMessageOfFK_BuildLog_Build, resultFK_BuildLog_Build.ServerErrorMessage);
+//#endif
+//                    }
+
                 }
 
                 // 4. Major part - Article UIWorkspaceItemSetting - EntityReference/FK CrossJoin -- RelatedEntityWhenMasterViewIsPKEntityViaCrossJoin

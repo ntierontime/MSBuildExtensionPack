@@ -676,6 +676,98 @@ namespace MSBuildExtensionPack.CommonBLL
 
         #endregion GetAscendantAndDescendant
 
+        #region Query Methods Of DefaultGroupedDataView of ByFKOnly
+
+        ///// <summary>
+        ///// Gets the count of entity of DefaultGroupedDataView of ByFKOnly .
+        ///// </summary>
+        ///// <param name="request">The request.</param>
+        ///// <returns>an instance of integer wrapper: <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger"/></returns>
+        //public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultGroupedDataViewOfByFKOnly(
+        //    MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly request)
+        //{
+        //    log.Info(string.Format("{0}: GetCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+        //    Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _resultFromDAL = this.DALClassInstance.GetCountOfDefaultGroupedDataViewOfByFKOnly(
+        //        request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1
+        //        , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1
+        //        , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1
+        //        , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
+        //        , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1
+        //        , request.QueryPagingSetting.CurrentIndex
+        //        , request.QueryPagingSetting.PageSize
+        //        , request.QueryOrderBySettingCollection);
+        //    Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _retval = new Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger();
+
+        //    _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
+        //    Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<int>(_resultFromDAL, _retval);
+        //    log.Info(string.Format("{0}: GetCountOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+        //    return _retval;
+        //}
+
+        ///// <summary>
+        ///// Exists the of entity of DefaultGroupedDataView of ByFKOnly .
+        ///// </summary>
+        ///// <param name="request">The request.</param>
+        ///// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
+        //public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultGroupedDataViewOfByFKOnly(
+        //    MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly request)
+        //{
+        //    log.Info(string.Format("{0}: ExistsOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+        //    Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfDefaultGroupedDataViewOfByFKOnly(
+        //        request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuild_1
+        //        , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfSolution_1
+        //        , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_1
+        //        , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfOrganization_2
+        //        , request.Criteria.BuildLogQueryCriteriaByFKOnly.IdByFKOnlyOfBuildEventCode_1
+        //        , request.QueryPagingSetting.CurrentIndex
+        //        , request.QueryPagingSetting.PageSize
+        //        , request.QueryOrderBySettingCollection);
+        //    Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _retval = new Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean();
+
+        //    _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
+        //    Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
+        //    log.Info(string.Format("{0}: ExistsOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+        //    return _retval;
+        //}
+
+        /// <summary>
+        /// Gets the collection of entity of DefaultGroupedDataView of ByFKOnly .
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView if any</returns>
+        public MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly request)
+        {
+            log.Info(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.BuildLog.DataAccessLayerMessageOfDefaultGroupedDataViewCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
+                request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildId
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Solution_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_1Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.Organization_2Id
+                , request.Criteria.BuildLogQueryCriteriaByFKOnly.BuildEventCodeId
+                , request.QueryPagingSetting.CurrentIndex
+                , request.QueryPagingSetting.PageSize
+                , request.QueryOrderBySettingCollection
+                );
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView _retval = new MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView();
+            _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
+
+            //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataViewCollection>(_resultFromDAL, _retval);
+
+            if (request.DataServiceType == Framework.DataServiceTypes.DataSourceResult)
+            {
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataViewCollection>(_resultFromDAL, _retval);
+            }
+            else
+            {
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataView, MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataViewCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.BuildLogDataStreamService.DefaultGroupedDataView());
+            }
+
+            log.Info(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewOfByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            return _retval;
+        }
+
+        #endregion Query Methods Of DefaultGroupedDataView of ByFKOnly
     }
 }
 

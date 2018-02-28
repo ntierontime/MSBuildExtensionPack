@@ -252,6 +252,18 @@ namespace MSBuildExtensionPack.DALContracts
 
         #endregion Query Methods Of KeyInformationOfByIdentifier
 
+        MSBuildExtensionPack.DataSourceEntities.BuildLog.DataAccessLayerMessageOfDefaultGroupedDataViewCollection GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfBuild_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+            , Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfSolution_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+            , Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+            , Framework.EntityContracts.QuerySystemInt64EqualsCriteria criteriaOfIdOfOrganization_2OfByFKOnlyOfByFKOnlyOfByFKOnly
+            , Framework.EntityContracts.QuerySystemInt32EqualsCriteria criteriaOfIdOfBuildEventCode_1OfByFKOnlyOfByFKOnlyOfByFKOnly
+            , int currentIndex
+            , int pageSize
+            , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            );
+
+
     }
 }
 

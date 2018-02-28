@@ -174,6 +174,8 @@ namespace MSBuildExtensionPack.WcfContracts
 
         #endregion Query Methods Of KeyInformationOfByIdentifier
 
+        MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByFKOnly request);
     }
 }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
 using System.Text;
+using MSBuildExtensionPack.CommonBLLEntities;
 
 namespace MSBuildExtensionPack.WcfClientBLL
 {
@@ -284,9 +285,14 @@ namespace MSBuildExtensionPack.WcfClientBLL
             return base.Channel.GetCollectionOfKeyInformationOfByIdentifier(request);
         }
 
+        public BuildLogResponseMessageBuiltIn.DefaultGroupedDataView GetCollectionOfDefaultGroupedDataViewOfByFKOnly(BuildLogRequestMessageUserDefinedOfByFKOnly request)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion Query Methods Of KeyInformationOfByIdentifier
 
-            // DataQueryPerQuerySettingCollection -- MethodDataQuery -- End
+        // DataQueryPerQuerySettingCollection -- MethodDataQuery -- End
 
 #if WINDOWS_PHONE
         protected override MSBuildExtensionPack.WcfContracts.IBuildLogService CreateChannel()

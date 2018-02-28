@@ -26,6 +26,10 @@ namespace MSBuildExtensionPack.ViewModelData
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfFK_BuildLog_Build { get; set; }
         public string StatusMessageOfFK_BuildLog_Build { get; set; }
         public MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultCollection FK_BuildLog_Build { get; set; }
+
+        // 1.1. FK_BuildLog_Build Summary
+        public MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataViewCollection FK_BuildLog_Build_Summary { get; set; }
+
         //2. Solution_1
         public MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier CriteriaOfSolution_1 { get; set; }
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfSolution_1 { get; set; }
