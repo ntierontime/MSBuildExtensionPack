@@ -215,6 +215,13 @@
     <Compile Include="Pages\Build\WPTabbedCommonOfBuild.xaml.cs">
       <DependentUpon>WPTabbedCommonOfBuild.xaml</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Pages\Build\WPelseA1AsomethingOfBuild.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\Build\WPelseA1AsomethingOfBuild.xaml.cs">
+      <DependentUpon>WPelseA1AsomethingOfBuild.xaml</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Pages\Build\WPsomethingSearchOfBuild.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>

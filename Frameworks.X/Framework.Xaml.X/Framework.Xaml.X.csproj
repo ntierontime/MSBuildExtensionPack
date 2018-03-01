@@ -50,6 +50,9 @@
     <Compile Include="..\..\Frameworks\Framework.Xaml\ViewModelEntityRelatedBase.cs">
       <Link>ViewModelEntityRelatedBase.cs</Link>
     </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Xaml\ViewModelEntityUpdateBase.cs">
+      <Link>ViewModelEntityUpdateBase.cs</Link>
+    </Compile>
     <Compile Include="..\..\Frameworks\Framework.Xaml\ViewModelItemBase.cs">
       <Link>ViewModelItemBase.cs</Link>
     </Compile>

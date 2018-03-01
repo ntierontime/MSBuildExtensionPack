@@ -328,6 +328,45 @@ System.Int64? id)
             return retval;
         }
 
+        #region EntityUpdateActionSetting - elseA1Asomething
+
+        /// <summary>
+        /// Gets elseA1Asomething view model of MSBuildExtensionPack.Build: WPelseA1AsomethingOfBuild.
+        /// http://[host]/api/BuildApi/WPelseA1AsomethingOfBuildVM?
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet, ActionName("GetWPelseA1AsomethingOfBuildVM")]
+        public MSBuildExtensionPack.ViewModelData.WPelseA1AsomethingOfBuildVM GetWPelseA1AsomethingOfBuildVM(
+System.Int64? id
+            )
+        {
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaIdentifier();
+            criteria.Identifier.Id.NullableValueToCompare = id;
+
+            var vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPelseA1AsomethingOfBuildVM();
+            vm.CriteriaOfMasterEntity =  criteria;
+            vm.LoadData();
+            return vm;
+        }
+
+        /// <summary>
+        /// Post method WPelseA1AsomethingOfBuild.
+        /// http://[host]/api/BuildApi/WPelseA1AsomethingOfBuildVM
+        /// </summary>
+        /// <param name="input">The input.</param>
+        /// <returns></returns>
+        [HttpPost, ActionName("WPelseA1AsomethingOfBuildVM")]
+        public MSBuildExtensionPack.ViewModelData.WPelseA1AsomethingOfBuildVM WPelseA1AsomethingOfBuildVM(MSBuildExtensionPack.ViewModelData.WPelseA1AsomethingOfBuildVM input)
+        {
+            MSBuildExtensionPack.AspNetMvc40ViewModel.WPelseA1AsomethingOfBuildVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPelseA1AsomethingOfBuildVM(input.CriteriaOfMasterEntity);
+            vm.MasterEntity = input.MasterEntity;
+            vm.SaveData();
+
+            return vm;
+        }
+
+        #endregion EntityUpdateActionSetting - elseA1AsomethingVM
+
         /// <summary>
         /// HearBeat.
         /// http://[host]/api/BuildApi/HearBeat

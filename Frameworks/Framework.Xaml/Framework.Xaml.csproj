@@ -36,6 +36,7 @@
     <Compile Include="IDispatcherHelperWrapper.cs" />
     <Compile Include="ViewModelBaseWithResultAndUIElement.cs" />
     <Compile Include="ViewModelEntityRelatedBase.cs" />
+    <Compile Include="ViewModelEntityUpdateBase.cs" />
     <Compile Include="ViewModelItemBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />

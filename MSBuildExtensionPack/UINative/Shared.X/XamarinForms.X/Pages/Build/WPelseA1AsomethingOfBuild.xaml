@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+        xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
+        xmlns:fxr="clr-namespace:Framework.Xamariner;assembly=Framework.Xamariner.X"
+        xmlns:fe="clr-namespace:Framework.EntityContracts;assembly=Framework.EntityContracts.X"
+        x:Class="MSBuildExtensionPack.XamarinForms.Pages.Build.WPelseA1AsomethingOfBuild"
+        NavigationPage.HasBackButton="False"
+        >
+    <NavigationPage.HasNavigationBar>
+        <OnPlatform x:TypeArguments="x:Boolean">
+            <On Platform="Android">True</On>
+            <On Platform="iOS">True</On>
+            <On Platform="Windows">False</On>
+            <On Platform="WinPhone">False</On>
+        </OnPlatform>
+    </NavigationPage.HasNavigationBar>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
