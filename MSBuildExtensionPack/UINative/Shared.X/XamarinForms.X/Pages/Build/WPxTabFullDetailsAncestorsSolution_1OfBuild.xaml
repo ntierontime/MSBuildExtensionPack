@@ -37,4 +37,56 @@
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="Edit" Order="Primary" Text="{i18n:Translate Text=Edit, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchEditViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" >
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">@drawable/Edit.png</On>
+                    <On Platform="iOS">Assets/Edit.png</On>
+                    <On Platform="Windows">Assets/Edit.png</On>
+                    <On Platform="WinPhone">Assets/Edit.png</On>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem x:Name="Add" Order="Primary" Text="{i18n:Translate Text=AddNew, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchCreateViewCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">@drawable/Add.png</On>
+                    <On Platform="iOS">Assets/Add.png</On>
+                    <On Platform="Windows">Assets/Add.png</On>
+                    <On Platform="WinPhone">Assets/Add.png</On>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem x:Name="Copy" Order="Primary" Text="{i18n:Translate Text=Copy, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchCopyViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">@drawable/Copy.png</On>
+                    <On Platform="iOS">Assets/Copy.png</On>
+                    <On Platform="Windows">Assets/Copy.png</On>
+                    <On Platform="WinPhone">Assets/Copy.png</On>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem x:Name="EntityUpdateActions" Order="Primary" Text="{i18n:Translate Text=Save, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.SaveCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">@drawable/Save.png</On>
+                    <On Platform="iOS">Assets/Save.png</On>
+                    <On Platform="Windows">Assets/Save.png</On>
+                    <On Platform="WinPhone">Assets/Save.png</On>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem x:Name="Details" Order="Primary" Text="{i18n:Translate Text=Delete, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.DeleteCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">@drawable/Properties.png</On>
+                    <On Platform="iOS">Assets/Properties.png</On>
+                    <On Platform="Windows">Assets/Properties.png</On>
+                    <On Platform="WinPhone">Assets/Properties.png</On>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
 </ContentPage>
