@@ -93,6 +93,9 @@ namespace MSBuildExtensionPack.XamarinForms.Pages {
             // 5.1. TabbedCommon: MSBuildExtensionPack.Solution.SearchResult
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfSolutionVM.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.WPCommonOfSolutionVM.ViewName_Static, Framework.UIAction.Search,  Framework.UIActionStatus.Launch, Framework.UIAction.Navigate, "/Pages/Solution/WPTabbedCommonOfSolution.xaml", typeof(MSBuildExtensionPack.XamarinForms.Pages.Solution.WPTabbedCommonOfSolution));
 
+            // 1.1. elseA1Asomething: MSBuildExtensionPack.Build.SingleItemForm
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildExtensionPack.MVVMLightViewModels.WPelseA1AsomethingOfBuildVM.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.WPelseA1AsomethingOfBuildVM.ViewName_Static, Framework.UIAction.ViewDetails,  Framework.UIActionStatus.Launch, Framework.UIAction.Navigate, "/Pages/Build/WPelseA1AsomethingOfBuild.xaml", typeof(MSBuildExtensionPack.XamarinForms.Pages.Build.WPelseA1AsomethingOfBuild));
+
             #region Create, Update and Delete, Details of MSBuildExtensionPack.Build
 
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuild.EntityName_Static, MSBuildExtensionPack.MVVMLightViewModels.ItemVMBuild.ViewName_Create, Framework.UIAction.Create, Framework.UIActionStatus.Success, Framework.UIAction.Navigate, "/Pages/Build/WPTabbedCommonOfBuild.xaml", typeof(MSBuildExtensionPack.XamarinForms.Pages.Build.WPTabbedCommonOfBuild));

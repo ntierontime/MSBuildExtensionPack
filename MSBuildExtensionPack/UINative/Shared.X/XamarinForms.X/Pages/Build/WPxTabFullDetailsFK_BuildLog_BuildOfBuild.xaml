@@ -45,6 +45,16 @@
         </ScrollView>
     </ContentPage.Content>
     <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="Back" Order="Primary" Text="{i18n:Translate Text=Back, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=Main.GoBackCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">@drawable/Back.png</On>
+                    <On Platform="iOS">Assets/Back.png</On>
+                    <On Platform="Windows">Assets/Back.png</On>
+                    <On Platform="WinPhone">Assets/Back.png</On>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
         <ToolbarItem x:Name="Edit" Order="Primary" Text="{i18n:Translate Text=Edit, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchEditViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding Path=MasterEntity}">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
@@ -75,7 +85,7 @@
                 </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
-        <ToolbarItem x:Name="EntityUpdateAction_elseA1Asomething" Order="Primary" Text="{i18n:Translate Text=Edit, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPelseA1AsomethingOfBuildVM.SaveCommand, Source={StaticResource Locator}}" CommandParameter="{Binding Path=MasterEntity}">
+        <ToolbarItem x:Name="EntityUpdateAction_elseA1Asomething" Order="Primary" Text="{i18n:Translate Text=Edit, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPelseA1AsomethingOfBuildVM.LaunchViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding Path=MasterEntity}">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="Android">@drawable/Edit.png</On>
@@ -85,13 +95,23 @@
                 </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
-        <ToolbarItem x:Name="Details" Order="Primary" Text="{i18n:Translate Text=Delete, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.DeleteCommand, Source={StaticResource Locator}}" CommandParameter="{Binding Path=MasterEntity}">
+        <ToolbarItem x:Name="Details" Order="Primary" Text="{i18n:Translate Text=Details, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchDetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding Path=MasterEntity}">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="Android">@drawable/Properties.png</On>
                     <On Platform="iOS">Assets/Properties.png</On>
                     <On Platform="Windows">Assets/Properties.png</On>
                     <On Platform="WinPhone">Assets/Properties.png</On>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem x:Name="GoHome" Order="Primary" Text="{i18n:Translate Text=Home, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=Main.GoHomeCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">@drawable/Home.png</On>
+                    <On Platform="iOS">Assets/Home.png</On>
+                    <On Platform="Windows">Assets/Home.png</On>
+                    <On Platform="WinPhone">Assets/Home.png</On>
                 </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
