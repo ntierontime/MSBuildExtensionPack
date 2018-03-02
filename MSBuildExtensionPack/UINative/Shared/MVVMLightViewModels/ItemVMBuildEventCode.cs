@@ -15,33 +15,15 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
     /// See http://www.galasoft.ch/mvvm/getstarted
     /// </summary>
     public partial class ItemVMBuildEventCode
-        : Framework.Xaml.ViewModelItemBase<MSBuildExtensionPack.DataSourceEntities.BuildEventCodeIdentifier, MSBuildExtensionPack.DataSourceEntities.BuildEventCode>
+        : Framework.Xaml.ViewModelItemBase<MSBuildExtensionPack.DataSourceEntities.BuildEventCodeIdentifier, MSBuildExtensionPack.EntityContracts.IBuildEventCodeIdentifier, MSBuildExtensionPack.DataSourceEntities.BuildEventCode>
     {
-        #region override string EntityName
-
         public const string EntityName_Static = "MSBuildExtensionPack.BuildEventCode";
+        public override string EntityName { get { return EntityName_Static; } }
 
-        public override string EntityName
-        {
-            get
-            {
-                return EntityName_Static;
-            }
-        }
-
-        #endregion override string EntityName
-
-        #region Constructor
-
-        /// <summary>
-        /// Initializes a new instance of the ItemVMBuildEventCode class.
-        /// </summary>
         public ItemVMBuildEventCode()
             : base()
         {
         }
-
-        #endregion Constructor
 
         protected override void Add()
         {
@@ -141,7 +123,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             this.LoadItem(identifier);
         }
 
-        public override void LoadItem(MSBuildExtensionPack.DataSourceEntities.BuildEventCodeIdentifier identifier)
+        public override void LoadItem(MSBuildExtensionPack.EntityContracts.IBuildEventCodeIdentifier identifier)
         {
             if (identifier != null)
             {

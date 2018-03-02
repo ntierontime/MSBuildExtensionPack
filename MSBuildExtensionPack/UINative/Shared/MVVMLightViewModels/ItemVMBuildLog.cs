@@ -15,33 +15,15 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
     /// See http://www.galasoft.ch/mvvm/getstarted
     /// </summary>
     public partial class ItemVMBuildLog
-        : Framework.Xaml.ViewModelItemBase<MSBuildExtensionPack.DataSourceEntities.BuildLogIdentifier, MSBuildExtensionPack.DataSourceEntities.BuildLog.Default>
+        : Framework.Xaml.ViewModelItemBase<MSBuildExtensionPack.DataSourceEntities.BuildLogIdentifier, MSBuildExtensionPack.EntityContracts.IBuildLogIdentifier, MSBuildExtensionPack.DataSourceEntities.BuildLog.Default>
     {
-        #region override string EntityName
-
         public const string EntityName_Static = "MSBuildExtensionPack.BuildLog";
+        public override string EntityName { get { return EntityName_Static; } }
 
-        public override string EntityName
-        {
-            get
-            {
-                return EntityName_Static;
-            }
-        }
-
-        #endregion override string EntityName
-
-        #region Constructor
-
-        /// <summary>
-        /// Initializes a new instance of the ItemVMBuildLog class.
-        /// </summary>
         public ItemVMBuildLog()
             : base()
         {
         }
-
-        #endregion Constructor
 
         protected override void Add()
         {
@@ -161,7 +143,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             this.LoadItem(identifier);
         }
 
-        public override void LoadItem(MSBuildExtensionPack.DataSourceEntities.BuildLogIdentifier identifier)
+        public override void LoadItem(MSBuildExtensionPack.EntityContracts.IBuildLogIdentifier identifier)
         {
             if (identifier != null)
             {

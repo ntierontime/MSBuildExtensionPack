@@ -15,33 +15,15 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
     /// See http://www.galasoft.ch/mvvm/getstarted
     /// </summary>
     public partial class ItemVMOrganization
-        : Framework.Xaml.ViewModelItemBase<MSBuildExtensionPack.DataSourceEntities.OrganizationIdentifier, MSBuildExtensionPack.DataSourceEntities.Organization.Default>
+        : Framework.Xaml.ViewModelItemBase<MSBuildExtensionPack.DataSourceEntities.OrganizationIdentifier, MSBuildExtensionPack.EntityContracts.IOrganizationIdentifier, MSBuildExtensionPack.DataSourceEntities.Organization.Default>
     {
-        #region override string EntityName
-
         public const string EntityName_Static = "MSBuildExtensionPack.Organization";
+        public override string EntityName { get { return EntityName_Static; } }
 
-        public override string EntityName
-        {
-            get
-            {
-                return EntityName_Static;
-            }
-        }
-
-        #endregion override string EntityName
-
-        #region Constructor
-
-        /// <summary>
-        /// Initializes a new instance of the ItemVMOrganization class.
-        /// </summary>
         public ItemVMOrganization()
             : base()
         {
         }
-
-        #endregion Constructor
 
         protected override void Add()
         {
@@ -145,7 +127,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             this.LoadItem(identifier);
         }
 
-        public override void LoadItem(MSBuildExtensionPack.DataSourceEntities.OrganizationIdentifier identifier)
+        public override void LoadItem(MSBuildExtensionPack.EntityContracts.IOrganizationIdentifier identifier)
         {
             if (identifier != null)
             {

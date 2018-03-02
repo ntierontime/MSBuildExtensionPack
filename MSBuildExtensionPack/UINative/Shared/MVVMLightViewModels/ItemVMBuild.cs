@@ -15,33 +15,15 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
     /// See http://www.galasoft.ch/mvvm/getstarted
     /// </summary>
     public partial class ItemVMBuild
-        : Framework.Xaml.ViewModelItemBase<MSBuildExtensionPack.DataSourceEntities.BuildIdentifier, MSBuildExtensionPack.DataSourceEntities.Build.Default>
+        : Framework.Xaml.ViewModelItemBase<MSBuildExtensionPack.DataSourceEntities.BuildIdentifier, MSBuildExtensionPack.EntityContracts.IBuildIdentifier, MSBuildExtensionPack.DataSourceEntities.Build.Default>
     {
-        #region override string EntityName
-
         public const string EntityName_Static = "MSBuildExtensionPack.Build";
+        public override string EntityName { get { return EntityName_Static; } }
 
-        public override string EntityName
-        {
-            get
-            {
-                return EntityName_Static;
-            }
-        }
-
-        #endregion override string EntityName
-
-        #region Constructor
-
-        /// <summary>
-        /// Initializes a new instance of the ItemVMBuild class.
-        /// </summary>
         public ItemVMBuild()
             : base()
         {
         }
-
-        #endregion Constructor
 
         protected override void Add()
         {
@@ -153,7 +135,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             this.LoadItem(identifier);
         }
 
-        public override void LoadItem(MSBuildExtensionPack.DataSourceEntities.BuildIdentifier identifier)
+        public override void LoadItem(MSBuildExtensionPack.EntityContracts.IBuildIdentifier identifier)
         {
             if (identifier != null)
             {

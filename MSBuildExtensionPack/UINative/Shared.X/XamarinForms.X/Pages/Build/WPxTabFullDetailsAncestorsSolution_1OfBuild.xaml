@@ -68,13 +68,13 @@
                 </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
-        <ToolbarItem x:Name="EntityUpdateActions" Order="Primary" Text="{i18n:Translate Text=Save, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.SaveCommand, Source={StaticResource Locator}}">
+        <ToolbarItem x:Name="EntityUpdateAction_elseA1Asomething" Order="Primary" Text="{i18n:Translate Text=Edit, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPelseA1AsomethingOfBuildVM.SaveCommand, Source={StaticResource Locator}}">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="Android">@drawable/Save.png</On>
-                    <On Platform="iOS">Assets/Save.png</On>
-                    <On Platform="Windows">Assets/Save.png</On>
-                    <On Platform="WinPhone">Assets/Save.png</On>
+                    <On Platform="Android">@drawable/Edit.png</On>
+                    <On Platform="iOS">Assets/Edit.png</On>
+                    <On Platform="Windows">Assets/Edit.png</On>
+                    <On Platform="WinPhone">Assets/Edit.png</On>
                 </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>

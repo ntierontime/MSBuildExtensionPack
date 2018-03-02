@@ -9,13 +9,11 @@ using System.ComponentModel;
 
 namespace Framework.Xaml
 {
-    public abstract class ViewModelItemBase<TSearchCriteria, TItem>
+    public abstract class ViewModelItemBase<TSearchCriteria, TIdentifierContract, TItem>
         : GalaSoft.MvvmLight.ViewModelBase, Framework.ViewModels.IViewModelItemBase<TSearchCriteria, TItem>
-        where TSearchCriteria : class, new()
-        where TItem : class, Framework.EntityContracts.IClone<TItem>, new()
+        where TSearchCriteria : TIdentifierContract, class, new()
+        where TItem : TIdentifierContract, class, Framework.EntityContracts.IClone<TItem>, new()
     {
-        #region constructor
-
         public ViewModelItemBase()
             : base()
         {
@@ -24,12 +22,12 @@ namespace Framework.Xaml
             this.Item = new TItem();
             this.OriginalItem = new TItem();
 
-            this.LaunchCopyViewCommand = new RelayCommand<TItem>(LaunchCopyView);
+            this.LaunchCopyViewCommand = new RelayCommand<TIdentifierContract>(LaunchCopyView);
 
-            this.LaunchDetailsViewCommand = new RelayCommand<TItem>(LaunchDetailsView);
+            this.LaunchDetailsViewCommand = new RelayCommand<TIdentifierContract>(LaunchDetailsView);
             this.CloseDetailsViewCommand = new RelayCommand(CloseDetailsView);
 
-            this.LaunchEditViewCommand = new RelayCommand<TItem>(LaunchEditView);
+            this.LaunchEditViewCommand = new RelayCommand<TIdentifierContract>(LaunchEditView);
             this.CloseEditViewCommand = new RelayCommand(CloseEditView);
             this.SaveCommand = new RelayCommand(Save, CanSave);
 
@@ -37,7 +35,7 @@ namespace Framework.Xaml
             this.CloseCreateViewCommand = new RelayCommand(CloseCreateView);
             this.AddCommand = new RelayCommand(Add, CanAdd);
 
-            this.LaunchDeleteViewCommand = new RelayCommand<TItem>(LaunchDeleteView);
+            this.LaunchDeleteViewCommand = new RelayCommand<TIdentifierContract>(LaunchDeleteView);
             this.CloseDeleteViewCommand = new RelayCommand(CloseDeleteView);
             this.DeleteCommand = new RelayCommand(Delete, CanDelete);
 
@@ -48,8 +46,6 @@ namespace Framework.Xaml
 
             this.RaiseItemPropertyChangedEventCommand = new RelayCommand(this.RaiseItemPropertyChangedEvent);
         }
-
-        #endregion constructor
 
         #region override properties
 
@@ -147,9 +143,9 @@ namespace Framework.Xaml
 
         #region ViewDetails
 
-        public RelayCommand<TItem> LaunchDetailsViewCommand { get; protected set; }
+        public RelayCommand<TIdentifierContract> LaunchDetailsViewCommand { get; protected set; }
 
-        protected virtual void LaunchDetailsView(TItem o)
+        protected virtual void LaunchDetailsView(TIdentifierContract o)
         {
             string viewName = ViewName_Details;
             Framework.UIAction uiAction = Framework.UIAction.ViewDetails;
@@ -173,9 +169,9 @@ namespace Framework.Xaml
 
         #region Copy
 
-        public RelayCommand<TItem> LaunchCopyViewCommand { get; protected set; }
+        public RelayCommand<TIdentifierContract> LaunchCopyViewCommand { get; protected set; }
 
-        protected virtual void LaunchCopyView(TItem o)
+        protected virtual void LaunchCopyView(TIdentifierContract o)
         {
             string viewName = ViewName_Details;
             Framework.UIAction uiAction = Framework.UIAction.Copy;
@@ -189,9 +185,9 @@ namespace Framework.Xaml
 
         #region Save
 
-        public RelayCommand<TItem> LaunchEditViewCommand { get; protected set; }
+        public RelayCommand<TIdentifierContract> LaunchEditViewCommand { get; protected set; }
 
-        protected virtual void LaunchEditView(TItem o)
+        protected virtual void LaunchEditView(TIdentifierContract o)
         {
             string viewName = ViewName_Details;
             Framework.UIAction uiAction = Framework.UIAction.Update;
@@ -276,9 +272,9 @@ namespace Framework.Xaml
 
         #region Delete
 
-        public RelayCommand<TItem> LaunchDeleteViewCommand { get; protected set; }
+        public RelayCommand<TIdentifierContract> LaunchDeleteViewCommand { get; protected set; }
 
-        protected void LaunchDeleteView(TItem o)
+        protected void LaunchDeleteView(TIdentifierContract o)
         {
             string viewName = ViewName_Details;
             Framework.UIAction uiAction = Framework.UIAction.Delete;
