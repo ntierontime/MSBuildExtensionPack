@@ -92,11 +92,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
         }
 
-        protected override void RefreshItemNoMessage()
-        {
-            this.Item = this.OriginalItem.GetAClone();
-        }
-
         protected override void Save()
         {
             string viewName = ViewName_Edit;
@@ -137,9 +132,9 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
         }
 
-        public override void ReLoadItem(MSBuildExtensionPack.DataSourceEntities.BuildLog.Default o)
+        public override void ReLoadItem(MSBuildExtensionPack.EntityContracts.IBuildLogIdentifier o)
         {
-            var identifier = MSBuildExtensionPack.EntityContracts.IBuildLogIdentifierHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default, MSBuildExtensionPack.DataSourceEntities.BuildLogIdentifier>(o);
+            var identifier = MSBuildExtensionPack.EntityContracts.IBuildLogIdentifierHelper.Clone<MSBuildExtensionPack.EntityContracts.IBuildLogIdentifier, MSBuildExtensionPack.DataSourceEntities.BuildLogIdentifier>(o);
             this.LoadItem(identifier);
         }
 
@@ -147,7 +142,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         {
             if (identifier != null)
             {
-                this.Criteria = identifier;
+                this.Criteria = MSBuildExtensionPack.EntityContracts.IBuildLogIdentifierHelper.Clone<MSBuildExtensionPack.EntityContracts.IBuildLogIdentifier, MSBuildExtensionPack.DataSourceEntities.BuildLogIdentifier>(identifier);
             }
             else
             {
@@ -183,8 +178,11 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
         }
 
-        protected override void LaunchDetailsView(MSBuildExtensionPack.DataSourceEntities.BuildLog.Default o)
+        protected override void LaunchDetailsView(MSBuildExtensionPack.EntityContracts.IBuildLogIdentifier oo)
         {
+            var identifier = MSBuildExtensionPack.EntityContracts.IBuildLogIdentifierHelper.Clone<MSBuildExtensionPack.EntityContracts.IBuildLogIdentifier, MSBuildExtensionPack.DataSourceEntities.BuildLogIdentifier>(oo);
+            this.LoadItem(identifier);
+            var o = this.Item;
 
             //MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfBuild_1(new Framework.NameValuePair<System.Int32>(o.Solution_1Id, o.Solution_1_Name));
 
@@ -205,9 +203,11 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             base.LaunchDetailsView(o);
         }
 
-        protected override void LaunchEditView(MSBuildExtensionPack.DataSourceEntities.BuildLog.Default oo)
+        protected override void LaunchEditView(MSBuildExtensionPack.EntityContracts.IBuildLogIdentifier oo)
         {
-            var o = oo == null ? this.Item.GetACloneWithoutIdentifier() : oo.GetACloneWithoutIdentifier();
+            var identifier = MSBuildExtensionPack.EntityContracts.IBuildLogIdentifierHelper.Clone<MSBuildExtensionPack.EntityContracts.IBuildLogIdentifier, MSBuildExtensionPack.DataSourceEntities.BuildLogIdentifier>(oo);
+            this.LoadItem(identifier);
+            var o = this.Item.GetACloneWithoutIdentifier();
 
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfBuild_1(new Framework.NameValuePair<System.Int32>(o.Solution_1Id, o.Solution_1_Name));
 
@@ -228,9 +228,11 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             base.LaunchEditView(o);
         }
 
-        protected override void LaunchCopyView(MSBuildExtensionPack.DataSourceEntities.BuildLog.Default oo)
+        protected override void LaunchCopyView(MSBuildExtensionPack.EntityContracts.IBuildLogIdentifier oo)
         {
-            var o = oo == null ? this.Item.GetACloneWithoutIdentifier() : oo.GetACloneWithoutIdentifier();
+            var identifier = MSBuildExtensionPack.EntityContracts.IBuildLogIdentifierHelper.Clone<MSBuildExtensionPack.EntityContracts.IBuildLogIdentifier, MSBuildExtensionPack.DataSourceEntities.BuildLogIdentifier>(oo);
+            this.LoadItem(identifier);
+            var o = this.Item.GetACloneWithoutIdentifier();
 
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuildLog_Static.GetDropDownContentsOfBuild_1(new Framework.NameValuePair<System.Int32>(o.Solution_1Id, o.Solution_1_Name));
 

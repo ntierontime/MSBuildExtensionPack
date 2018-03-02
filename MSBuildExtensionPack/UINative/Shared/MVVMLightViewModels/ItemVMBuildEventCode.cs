@@ -82,11 +82,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
         }
 
-        protected override void RefreshItemNoMessage()
-        {
-            this.Item = this.OriginalItem.GetAClone();
-        }
-
         protected override void Save()
         {
             string viewName = ViewName_Edit;
@@ -117,9 +112,9 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
         }
 
-        public override void ReLoadItem(MSBuildExtensionPack.DataSourceEntities.BuildEventCode o)
+        public override void ReLoadItem(MSBuildExtensionPack.EntityContracts.IBuildEventCodeIdentifier o)
         {
-            var identifier = MSBuildExtensionPack.EntityContracts.IBuildEventCodeIdentifierHelper.Clone<MSBuildExtensionPack.DataSourceEntities.BuildEventCode, MSBuildExtensionPack.DataSourceEntities.BuildEventCodeIdentifier>(o);
+            var identifier = MSBuildExtensionPack.EntityContracts.IBuildEventCodeIdentifierHelper.Clone<MSBuildExtensionPack.EntityContracts.IBuildEventCodeIdentifier, MSBuildExtensionPack.DataSourceEntities.BuildEventCodeIdentifier>(o);
             this.LoadItem(identifier);
         }
 
@@ -127,7 +122,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         {
             if (identifier != null)
             {
-                this.Criteria = identifier;
+                this.Criteria = MSBuildExtensionPack.EntityContracts.IBuildEventCodeIdentifierHelper.Clone<MSBuildExtensionPack.EntityContracts.IBuildEventCodeIdentifier, MSBuildExtensionPack.DataSourceEntities.BuildEventCodeIdentifier>(identifier);
             }
             else
             {
@@ -163,22 +158,29 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
         }
 
-        protected override void LaunchDetailsView(MSBuildExtensionPack.DataSourceEntities.BuildEventCode o)
+        protected override void LaunchDetailsView(MSBuildExtensionPack.EntityContracts.IBuildEventCodeIdentifier oo)
         {
+            var identifier = MSBuildExtensionPack.EntityContracts.IBuildEventCodeIdentifierHelper.Clone<MSBuildExtensionPack.EntityContracts.IBuildEventCodeIdentifier, MSBuildExtensionPack.DataSourceEntities.BuildEventCodeIdentifier>(oo);
+            this.LoadItem(identifier);
+            var o = this.Item;
 
             base.LaunchDetailsView(o);
         }
 
-        protected override void LaunchEditView(MSBuildExtensionPack.DataSourceEntities.BuildEventCode oo)
+        protected override void LaunchEditView(MSBuildExtensionPack.EntityContracts.IBuildEventCodeIdentifier oo)
         {
-            var o = oo == null ? this.Item.GetACloneWithoutIdentifier() : oo.GetACloneWithoutIdentifier();
+            var identifier = MSBuildExtensionPack.EntityContracts.IBuildEventCodeIdentifierHelper.Clone<MSBuildExtensionPack.EntityContracts.IBuildEventCodeIdentifier, MSBuildExtensionPack.DataSourceEntities.BuildEventCodeIdentifier>(oo);
+            this.LoadItem(identifier);
+            var o = this.Item.GetACloneWithoutIdentifier();
 
             base.LaunchEditView(o);
         }
 
-        protected override void LaunchCopyView(MSBuildExtensionPack.DataSourceEntities.BuildEventCode oo)
+        protected override void LaunchCopyView(MSBuildExtensionPack.EntityContracts.IBuildEventCodeIdentifier oo)
         {
-            var o = oo == null ? this.Item.GetACloneWithoutIdentifier() : oo.GetACloneWithoutIdentifier();
+            var identifier = MSBuildExtensionPack.EntityContracts.IBuildEventCodeIdentifierHelper.Clone<MSBuildExtensionPack.EntityContracts.IBuildEventCodeIdentifier, MSBuildExtensionPack.DataSourceEntities.BuildEventCodeIdentifier>(oo);
+            this.LoadItem(identifier);
+            var o = this.Item.GetACloneWithoutIdentifier();
 
             base.LaunchCopyView(o);
         }

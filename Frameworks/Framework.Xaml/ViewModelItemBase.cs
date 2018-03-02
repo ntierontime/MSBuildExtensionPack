@@ -11,8 +11,8 @@ namespace Framework.Xaml
 {
     public abstract class ViewModelItemBase<TSearchCriteria, TIdentifierContract, TItem>
         : GalaSoft.MvvmLight.ViewModelBase, Framework.ViewModels.IViewModelItemBase<TSearchCriteria, TItem>
-        where TSearchCriteria : TIdentifierContract, class, new()
-        where TItem : TIdentifierContract, class, Framework.EntityContracts.IClone<TItem>, new()
+        where TSearchCriteria : class, TIdentifierContract, new()
+        where TItem : class, TIdentifierContract, Framework.EntityContracts.IClone<TItem>, new()
     {
         public ViewModelItemBase()
             : base()
@@ -20,7 +20,6 @@ namespace Framework.Xaml
             this.SuppressMVVMLightEventToCommandMessage = false;
 
             this.Item = new TItem();
-            this.OriginalItem = new TItem();
 
             this.LaunchCopyViewCommand = new RelayCommand<TIdentifierContract>(LaunchCopyView);
 
@@ -128,18 +127,7 @@ namespace Framework.Xaml
 
         #endregion override properties
 
-        public TItem OriginalItem { get; set; }
-
         public bool SuppressMVVMLightEventToCommandMessage { get; set; }
-
-        protected virtual void PrepareItem(TItem o)
-        {
-            if (o != null)
-            {
-                this.OriginalItem = o;
-                this.Item = o;
-            }
-        }
 
         #region ViewDetails
 
@@ -150,7 +138,7 @@ namespace Framework.Xaml
             string viewName = ViewName_Details;
             Framework.UIAction uiAction = Framework.UIAction.ViewDetails;
 
-            PrepareItem(o);
+            LoadItem(o);
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Launch));
         }
@@ -176,7 +164,7 @@ namespace Framework.Xaml
             string viewName = ViewName_Details;
             Framework.UIAction uiAction = Framework.UIAction.Copy;
 
-            PrepareItem(o);
+            LoadItem(o);
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Launch));
         }
@@ -192,7 +180,7 @@ namespace Framework.Xaml
             string viewName = ViewName_Details;
             Framework.UIAction uiAction = Framework.UIAction.Update;
 
-            PrepareItem(o);
+            LoadItem(o);
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Launch));
 
@@ -279,7 +267,7 @@ namespace Framework.Xaml
             string viewName = ViewName_Details;
             Framework.UIAction uiAction = Framework.UIAction.Delete;
 
-            PrepareItem(o);
+            LoadItem(o);
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Launch));
         }
@@ -324,9 +312,9 @@ namespace Framework.Xaml
             this.LoadItem(this.Criteria);
         }
 
-        public abstract void LoadItem(TSearchCriteria identifier);
+        public abstract void LoadItem(TIdentifierContract identifier);
 
-        public abstract void ReLoadItem(TItem o);
+        public abstract void ReLoadItem(TIdentifierContract o);
 
         #endregion LoadItem
 
@@ -347,7 +335,10 @@ namespace Framework.Xaml
                 Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
         }
 
-        protected abstract void RefreshItemNoMessage();
+        protected void RefreshItemNoMessage()
+        {
+            LoadItem();
+        }
 
         #endregion RefreshCurrentItemCommand
 
@@ -366,7 +357,6 @@ namespace Framework.Xaml
         {
             base.Cleanup();
             this.m_Item = new TItem();
-            this.OriginalItem = new TItem();
         }
 
         public RelayCommand RaiseItemPropertyChangedEventCommand { get; protected set; }

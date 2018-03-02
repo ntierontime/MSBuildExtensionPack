@@ -86,11 +86,6 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
         }
 
-        protected override void RefreshItemNoMessage()
-        {
-            this.Item = this.OriginalItem.GetAClone();
-        }
-
         protected override void Save()
         {
             string viewName = ViewName_Edit;
@@ -125,9 +120,9 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
         }
 
-        public override void ReLoadItem(MSBuildExtensionPack.DataSourceEntities.Solution.Default o)
+        public override void ReLoadItem(MSBuildExtensionPack.EntityContracts.ISolutionIdentifier o)
         {
-            var identifier = MSBuildExtensionPack.EntityContracts.ISolutionIdentifierHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Solution.Default, MSBuildExtensionPack.DataSourceEntities.SolutionIdentifier>(o);
+            var identifier = MSBuildExtensionPack.EntityContracts.ISolutionIdentifierHelper.Clone<MSBuildExtensionPack.EntityContracts.ISolutionIdentifier, MSBuildExtensionPack.DataSourceEntities.SolutionIdentifier>(o);
             this.LoadItem(identifier);
         }
 
@@ -135,7 +130,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         {
             if (identifier != null)
             {
-                this.Criteria = identifier;
+                this.Criteria = MSBuildExtensionPack.EntityContracts.ISolutionIdentifierHelper.Clone<MSBuildExtensionPack.EntityContracts.ISolutionIdentifier, MSBuildExtensionPack.DataSourceEntities.SolutionIdentifier>(identifier);
             }
             else
             {
@@ -171,8 +166,11 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
         }
 
-        protected override void LaunchDetailsView(MSBuildExtensionPack.DataSourceEntities.Solution.Default o)
+        protected override void LaunchDetailsView(MSBuildExtensionPack.EntityContracts.ISolutionIdentifier oo)
         {
+            var identifier = MSBuildExtensionPack.EntityContracts.ISolutionIdentifierHelper.Clone<MSBuildExtensionPack.EntityContracts.ISolutionIdentifier, MSBuildExtensionPack.DataSourceEntities.SolutionIdentifier>(oo);
+            this.LoadItem(identifier);
+            var o = this.Item;
 
             //MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.GetDropDownContentsOfOrganization_1(new Framework.NameValuePair<System.Int64>(o.Organization_2Id, o.Organization_2_Name));
 
@@ -183,9 +181,11 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             base.LaunchDetailsView(o);
         }
 
-        protected override void LaunchEditView(MSBuildExtensionPack.DataSourceEntities.Solution.Default oo)
+        protected override void LaunchEditView(MSBuildExtensionPack.EntityContracts.ISolutionIdentifier oo)
         {
-            var o = oo == null ? this.Item.GetACloneWithoutIdentifier() : oo.GetACloneWithoutIdentifier();
+            var identifier = MSBuildExtensionPack.EntityContracts.ISolutionIdentifierHelper.Clone<MSBuildExtensionPack.EntityContracts.ISolutionIdentifier, MSBuildExtensionPack.DataSourceEntities.SolutionIdentifier>(oo);
+            this.LoadItem(identifier);
+            var o = this.Item.GetACloneWithoutIdentifier();
 
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.GetDropDownContentsOfOrganization_1(new Framework.NameValuePair<System.Int64>(o.Organization_2Id, o.Organization_2_Name));
 
@@ -196,9 +196,11 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             base.LaunchEditView(o);
         }
 
-        protected override void LaunchCopyView(MSBuildExtensionPack.DataSourceEntities.Solution.Default oo)
+        protected override void LaunchCopyView(MSBuildExtensionPack.EntityContracts.ISolutionIdentifier oo)
         {
-            var o = oo == null ? this.Item.GetACloneWithoutIdentifier() : oo.GetACloneWithoutIdentifier();
+            var identifier = MSBuildExtensionPack.EntityContracts.ISolutionIdentifierHelper.Clone<MSBuildExtensionPack.EntityContracts.ISolutionIdentifier, MSBuildExtensionPack.DataSourceEntities.SolutionIdentifier>(oo);
+            this.LoadItem(identifier);
+            var o = this.Item.GetACloneWithoutIdentifier();
 
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution_Static.GetDropDownContentsOfOrganization_1(new Framework.NameValuePair<System.Int64>(o.Organization_2Id, o.Organization_2_Name));
 

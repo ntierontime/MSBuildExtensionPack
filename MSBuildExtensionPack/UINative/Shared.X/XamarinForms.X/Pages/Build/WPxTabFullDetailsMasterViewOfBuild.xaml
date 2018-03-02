@@ -30,7 +30,7 @@
         </ScrollView>
     </ContentPage.Content>
     <ContentPage.ToolbarItems>
-        <ToolbarItem x:Name="Edit" Order="Primary" Text="{i18n:Translate Text=Edit, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchEditViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" >
+        <ToolbarItem x:Name="Edit" Order="Primary" Text="{i18n:Translate Text=Edit, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchEditViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding Path=MasterEntity}">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="Android">@drawable/Edit.png</On>
@@ -50,7 +50,7 @@
                 </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
-        <ToolbarItem x:Name="Copy" Order="Primary" Text="{i18n:Translate Text=Copy, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchCopyViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}">
+        <ToolbarItem x:Name="Copy" Order="Primary" Text="{i18n:Translate Text=Copy, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchCopyViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding Path=MasterEntity}">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="Android">@drawable/Copy.png</On>
@@ -60,7 +60,7 @@
                 </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
-        <ToolbarItem x:Name="EntityUpdateAction_elseA1Asomething" Order="Primary" Text="{i18n:Translate Text=Edit, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPelseA1AsomethingOfBuildVM.SaveCommand, Source={StaticResource Locator}}">
+        <ToolbarItem x:Name="EntityUpdateAction_elseA1Asomething" Order="Primary" Text="{i18n:Translate Text=Edit, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPelseA1AsomethingOfBuildVM.SaveCommand, Source={StaticResource Locator}}" CommandParameter="{Binding Path=MasterEntity}">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="Android">@drawable/Edit.png</On>
@@ -70,7 +70,7 @@
                 </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
-        <ToolbarItem x:Name="Details" Order="Primary" Text="{i18n:Translate Text=Delete, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.DeleteCommand, Source={StaticResource Locator}}">
+        <ToolbarItem x:Name="Delete" Order="Primary" Text="{i18n:Translate Text=Delete, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.DeleteCommand, Source={StaticResource Locator}}" CommandParameter="{Binding Path=MasterEntity}">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="Android">@drawable/Properties.png</On>
