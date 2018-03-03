@@ -30,6 +30,12 @@
     <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
     <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
   </DataView>
+  <DataView Key="BuildLogSummaryPerBuild" DataViewKnownCategory="CustomGrouped" IsGroupByResult="true">
+    <Description>BuildLogSummaryPerBuild</Description>
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemInt32)BuildEventCodeId=BuildEventCodeId~ForeignKey</Properties>
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting">(SystemInt64)CountPerFK=#GroupedResult.Count~#Predicate;(SystemString)Name=#GroupedByColumn~\BuildEventCodeId:EventCode</Properties>
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
+  </DataView>
   <Criteria Key="Common" SourceTypeFullName="MSBuildExtensionPack.BuildLog">
     <Description>Query by EntityReference, String, Bool, Order By DateTime</Description>
     <Queries>Common</Queries>
