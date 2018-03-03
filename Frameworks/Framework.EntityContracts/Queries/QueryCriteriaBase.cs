@@ -1171,7 +1171,7 @@ namespace Framework.EntityContracts
         {
         }
 
-        Framework.EntityContracts.PreDefinedDateTimeRanges m_PreDefinedDateTimeRange = Framework.EntityContracts.PreDefinedDateTimeRanges.Today;
+        Framework.EntityContracts.PreDefinedDateTimeRanges m_PreDefinedDateTimeRange = Framework.EntityContracts.PreDefinedDateTimeRanges.LastTenYears;
 
         public Framework.EntityContracts.PreDefinedDateTimeRanges PreDefinedDateTimeRange
         {

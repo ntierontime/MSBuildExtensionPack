@@ -40,15 +40,11 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 var client = new MSBuildExtensionPack.WebApiClient.OrganizationApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
                 var result = Task.Run(() => client.InsertEntityAsync(MSBuildExtensionPack.EntityContracts.IOrganizationHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization>(this.Item))).Result;
 
-                var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
-                dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
+                if (result.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK || result.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
                 {
-                    if (result.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK || result.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
-                    {
-                        if (!this.SuppressMVVMLightEventToCommandMessage)
-                            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
-                    }
-                });
+                    if (!this.SuppressMVVMLightEventToCommandMessage)
+                        Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
+                }
             }
             catch (Exception ex)
             {
@@ -68,15 +64,11 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 var client = new MSBuildExtensionPack.WebApiClient.OrganizationApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
                 var result = Task.Run(() => client.DeleteEntityAsync(MSBuildExtensionPack.EntityContracts.IOrganizationHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization>(this.Item))).Result;
 
-                var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
-                dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
+                if (result.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK || result.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
                 {
-                    if (result.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK || result.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
-                    {
-                        if (!this.SuppressMVVMLightEventToCommandMessage)
-                            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
-                    }
-                });
+                    if (!this.SuppressMVVMLightEventToCommandMessage)
+                        Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
+                }
             }
             catch (Exception ex)
             {
@@ -99,16 +91,12 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 var client = new MSBuildExtensionPack.WebApiClient.OrganizationApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
                 var result = Task.Run(() => client.UpdateEntityAsync(MSBuildExtensionPack.EntityContracts.IOrganizationHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization>(this.Item))).Result;
 
-                var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
-                dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
+                if (result.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK || result.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
                 {
-                    if (result.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK || result.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
-                    {
-                        if (!this.SuppressMVVMLightEventToCommandMessage)
-                            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
-                        RaisePropertyChanged("Item");
-                    }
-                });
+                    if (!this.SuppressMVVMLightEventToCommandMessage)
+                        Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
+                    RaisePropertyChanged("Item");
+                }
             }
             catch (Exception ex)
             {
@@ -143,18 +131,14 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 var client = new MSBuildExtensionPack.WebApiClient.OrganizationApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
                 var result = Task.Run(() => client.GetOrganizationItemVMAsync(identifier.Id)).Result;
 
-                var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
-                dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
+                this.StatusOfResult = result.StatusOfResult;
+                this.StatusMessageOfResult = result.StatusMessageOfResult;
+                if (result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK || result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
                 {
-                    this.StatusOfResult = result.StatusOfResult;
-                    this.StatusMessageOfResult = result.StatusMessageOfResult;
-                    if (result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK || result.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
-                    {
-                        this.Item = result.Item;
-                        if (!this.SuppressMVVMLightEventToCommandMessage)
-                            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
-                    }
-                });
+                    this.Item = result.Item;
+                    if (!this.SuppressMVVMLightEventToCommandMessage)
+                        Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
+                }
             }
             catch (Exception ex)
             {
@@ -168,6 +152,8 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             this.LoadItem(identifier);
             var o = this.Item;
 
+            //MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization_Static.GetDropDownContentsOfOrganization_2();
+
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization_Static.DropDownContentsOfOrganization_2SelectedItem = new Framework.NameValuePair<System.Int64>(o.ParentId, o.Organization_2_Name);
 
             base.LaunchDetailsView(o);
@@ -177,7 +163,9 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         {
             var identifier = MSBuildExtensionPack.EntityContracts.IOrganizationIdentifierHelper.Clone<MSBuildExtensionPack.EntityContracts.IOrganizationIdentifier, MSBuildExtensionPack.DataSourceEntities.OrganizationIdentifier>(oo);
             this.LoadItem(identifier);
-            var o = this.Item.GetACloneWithoutIdentifier();
+            var o = this.Item;
+
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization_Static.GetDropDownContentsOfOrganization_2();
 
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization_Static.DropDownContentsOfOrganization_2SelectedItem = new Framework.NameValuePair<System.Int64>(o.ParentId, o.Organization_2_Name);
 
@@ -189,6 +177,8 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             var identifier = MSBuildExtensionPack.EntityContracts.IOrganizationIdentifierHelper.Clone<MSBuildExtensionPack.EntityContracts.IOrganizationIdentifier, MSBuildExtensionPack.DataSourceEntities.OrganizationIdentifier>(oo);
             this.LoadItem(identifier);
             var o = this.Item.GetACloneWithoutIdentifier();
+
+            MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization_Static.GetDropDownContentsOfOrganization_2();
 
             MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization_Static.DropDownContentsOfOrganization_2SelectedItem = new Framework.NameValuePair<System.Int64>(o.ParentId, o.Organization_2_Name);
 

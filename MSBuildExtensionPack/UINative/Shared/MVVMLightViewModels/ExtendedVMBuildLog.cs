@@ -106,22 +106,18 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                     var client = new MSBuildExtensionPack.WebApiClient.BuildApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
                     var result = Task.Run(() => client.GetCollectionOfNameValuePairByFKOnlyAsync(input.Value,null,null, -1, -1, null)).Result;
 
-                    var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
-                    dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
+                    this.DropDownContentsOfBuild_1.Clear();
+                    if (result != null)
                     {
-                        this.DropDownContentsOfBuild_1.Clear();
-                        if (result != null)
+                        foreach (var item in result)
                         {
-                            foreach (var item in result)
+                            if(item != null)
                             {
-                                if(item != null)
-                                {
-                                    System.Int64 value = item.ParseToSystemInt64(null);
-                                    this.DropDownContentsOfBuild_1.Add(new Framework.NameValuePair<System.Int64>(value, item.Name));
-                                }
+                                System.Int64 value = item.ParseToSystemInt64(null);
+                                this.DropDownContentsOfBuild_1.Add(new Framework.NameValuePair<System.Int64>(value, item.Name));
                             }
                         }
-                    });
+                    }
                 }
                 else
                 {
@@ -194,22 +190,18 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                     var client = new MSBuildExtensionPack.WebApiClient.SolutionApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
                     var result = Task.Run(() => client.GetCollectionOfNameValuePairByFKOnlyAsync(input.Value,null, -1, -1, null)).Result;
 
-                    var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
-                    dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
+                    this.DropDownContentsOfSolution_1.Clear();
+                    if (result != null)
                     {
-                        this.DropDownContentsOfSolution_1.Clear();
-                        if (result != null)
+                        foreach (var item in result)
                         {
-                            foreach (var item in result)
+                            if(item != null)
                             {
-                                if(item != null)
-                                {
-                                    System.Int32 value = item.ParseToSystemInt32(null);
-                                    this.DropDownContentsOfSolution_1.Add(new Framework.NameValuePair<System.Int32>(value, item.Name));
-                                }
+                                System.Int32 value = item.ParseToSystemInt32(null);
+                                this.DropDownContentsOfSolution_1.Add(new Framework.NameValuePair<System.Int32>(value, item.Name));
                             }
                         }
-                    });
+                    }
                 }
                 else
                 {
@@ -282,22 +274,18 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                     var client = new MSBuildExtensionPack.WebApiClient.OrganizationApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
                     var result = Task.Run(() => client.GetCollectionOfNameValuePairByFKOnlyAsync(input.Value, -1, -1, null)).Result;
 
-                    var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
-                    dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
+                    this.DropDownContentsOfOrganization_1.Clear();
+                    if (result != null)
                     {
-                        this.DropDownContentsOfOrganization_1.Clear();
-                        if (result != null)
+                        foreach (var item in result)
                         {
-                            foreach (var item in result)
+                            if(item != null)
                             {
-                                if(item != null)
-                                {
-                                    System.Int64 value = item.ParseToSystemInt64(null);
-                                    this.DropDownContentsOfOrganization_1.Add(new Framework.NameValuePair<System.Int64>(value, item.Name));
-                                }
+                                System.Int64 value = item.ParseToSystemInt64(null);
+                                this.DropDownContentsOfOrganization_1.Add(new Framework.NameValuePair<System.Int64>(value, item.Name));
                             }
                         }
-                    });
+                    }
                 }
                 else
                 {
@@ -347,7 +335,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
             }
         }
 
-        public const string PropertyName_DropDownContentsOfOrganization_2SelectedItem = "DropDownContentsOfOrganization_2_1SelectedItem";
+        public const string PropertyName_DropDownContentsOfOrganization_2SelectedItem = "DropDownContentsOfOrganization_2SelectedItem";
         public const string PropertyName_DropDownContentsOfOrganization_2 = "DropDownContentsOfOrganization_2";
 
         public ObservableCollection<Framework.NameValuePair<System.Int64>> m_DropDownContentsOfOrganization_2 = new ObservableCollection<Framework.NameValuePair<System.Int64>>();
@@ -369,24 +357,20 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 var client = new MSBuildExtensionPack.WebApiClient.OrganizationApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
                 var result = Task.Run(() => client.GetCollectionOfNameValuePairByAllAsync(-1, -1, null)).Result;
 
-                var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
-                dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
+                this.DropDownContentsOfOrganization_2.Clear();
+                if (result != null)
                 {
-                    this.DropDownContentsOfOrganization_2.Clear();
-                    if (result != null)
+                    foreach (var item in result)
                     {
-                        foreach (var item in result)
+                        if(item != null)
                         {
-                            if(item != null)
-                            {
-                                System.Int64 value = item.ParseToSystemInt64(null);
-                                this.DropDownContentsOfOrganization_2.Add(new Framework.NameValuePair<System.Int64>(value, item.Name));
-                            }
+                            System.Int64 value = item.ParseToSystemInt64(null);
+                            this.DropDownContentsOfOrganization_2.Add(new Framework.NameValuePair<System.Int64>(value, item.Name));
                         }
                     }
+                }
 
-                    RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_2);
-                });
+                RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_2);
             }
             catch (Exception ex)
             {
@@ -451,23 +435,19 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 var client = new MSBuildExtensionPack.WebApiClient.BuildEventCodeApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
                 var result = Task.Run(() => client.GetCollectionOfNameValuePairByAllAsync(-1, -1, null)).Result;
 
-                var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
-                dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
+                this.DropDownContentsOfBuildEventCode_1.Clear();
+                if (result != null)
                 {
-                    this.DropDownContentsOfBuildEventCode_1.Clear();
-                    if (result != null)
+                    foreach (var item in result)
                     {
-                        foreach (var item in result)
+                        if(item != null)
                         {
-                            if(item != null)
-                            {
-                                System.Int32 value = item.ParseToSystemInt32(null);
-                                this.DropDownContentsOfBuildEventCode_1.Add(new Framework.NameValuePair<System.Int32>(value, item.Name));
-                            }
+                            System.Int32 value = item.ParseToSystemInt32(null);
+                            this.DropDownContentsOfBuildEventCode_1.Add(new Framework.NameValuePair<System.Int32>(value, item.Name));
                         }
                     }
-                    RaisePropertyChanged(PropertyName_DropDownContentsOfBuildEventCode_1);
-                });
+                }
+                RaisePropertyChanged(PropertyName_DropDownContentsOfBuildEventCode_1);
             }
             catch (Exception ex)
             {

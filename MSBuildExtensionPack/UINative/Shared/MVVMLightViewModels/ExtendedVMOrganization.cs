@@ -83,23 +83,19 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                 var client = new MSBuildExtensionPack.WebApiClient.OrganizationApiControllerClient(MSBuildExtensionPack.MVVMLightViewModels.ViewModelLocator.WebApiRootUrl);
                 var result = Task.Run(() => client.GetCollectionOfNameValuePairByAllAsync(-1, -1, null)).Result;
 
-                var dispatcherHelper = Framework.Xaml.IDispatcherHelperWrapperService.GetDispatcherHelper();
-                dispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
+                this.DropDownContentsOfOrganization_2.Clear();
+                if (result != null)
                 {
-                    this.DropDownContentsOfOrganization_2.Clear();
-                    if (result != null)
+                    foreach (var item in result)
                     {
-                        foreach (var item in result)
+                        if(item != null)
                         {
-                            if(item != null)
-                            {
-                                System.Int64 value = item.ParseToSystemInt64(null);
-                                this.DropDownContentsOfOrganization_2.Add(new Framework.NameValuePair<System.Int64>(value, item.Name));
-                            }
+                            System.Int64 value = item.ParseToSystemInt64(null);
+                            this.DropDownContentsOfOrganization_2.Add(new Framework.NameValuePair<System.Int64>(value, item.Name));
                         }
                     }
-                    RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_2);
-                });
+                }
+                RaisePropertyChanged(PropertyName_DropDownContentsOfOrganization_2);
             }
             catch (Exception ex)
             {
