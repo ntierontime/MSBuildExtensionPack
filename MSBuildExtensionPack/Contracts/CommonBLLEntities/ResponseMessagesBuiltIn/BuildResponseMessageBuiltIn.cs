@@ -12,7 +12,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         : Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBase<MSBuildExtensionPack.DataSourceEntities.BuildCollection>
     {
 
-        #region Nested Views classes and their collection classes 4
+        #region Nested Views classes and their collection classes 3
 
         /// <summary>
         /// BusinessLogicLayerResponseMessage of of view Default of entity MSBuildExtensionPack.Build
@@ -38,15 +38,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         {
         }
 
-        /// <summary>
-        /// BusinessLogicLayerResponseMessage of of view UpdateNameRequest of entity MSBuildExtensionPack.Build
-        /// </summary>
-        public partial class UpdateNameRequest
-            : Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBase<MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequestCollection>
-        {
-        }
-
-        #endregion Nested Views classes and their collection classes 4
+        #endregion Nested Views classes and their collection classes 3
     }
 }
 

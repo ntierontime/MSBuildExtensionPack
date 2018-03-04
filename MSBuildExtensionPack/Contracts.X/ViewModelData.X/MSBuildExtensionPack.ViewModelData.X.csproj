@@ -62,21 +62,6 @@
     <Compile Include="..\..\Contracts\ViewModelData\WPFullDetailsOfBuildVM.cs">
       <Link>WPFullDetailsOfBuildVM.cs</Link>
     </Compile>
-    <Compile Include="..\..\Contracts\ViewModelData\WPsomethingOfBuildVM.cs">
-      <Link>WPsomethingOfBuildVM.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Contracts\ViewModelData\WPelsesomethingOfBuildVM.cs">
-      <Link>WPelsesomethingOfBuildVM.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Contracts\ViewModelData\WPelseA1AsomethingOfBuildVM.cs">
-      <Link>WPelseA1AsomethingOfBuildVM.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Contracts\ViewModelData\WPxTabSomethingOfBuildVM.cs">
-      <Link>WPxTabSomethingOfBuildVM.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Contracts\ViewModelData\WPxTabFullDetailsOfBuildVM.cs">
-      <Link>WPxTabFullDetailsOfBuildVM.cs</Link>
-    </Compile>
     <Compile Include="..\..\Contracts\ViewModelData\WPCommonOfBuildEventCodeVM.cs">
       <Link>WPCommonOfBuildEventCodeVM.cs</Link>
     </Compile>

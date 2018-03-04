@@ -21,19 +21,13 @@
   <DataView Key="DefaultGroupedDataView" DataViewKnownCategory="DefaultGroupedDataView" IsGroupByResult="true">
     <Description>DefaultGroupedDataView</Description>
     <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemInt64)BuildId=BuildId;(SystemInt32)BuildEventCodeId=BuildEventCodeId;(SystemInt32)Solution_1Id=\BuildId\SolutionId:Id;(SystemInt64)Organization_1Id=\BuildId\SolutionId\OrganizationId:Id;(SystemInt64)Organization_2Id=\BuildId\SolutionId\OrganizationId\ParentId:Id</Properties>
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting">(SystemInt64)CountPerFK=#GroupedResult.Count~#Predicate;(SystemString)Name=#GroupedByColumn~#StringConcat[\BuildId:Name,$" - ",\BuildId\SolutionId:ExternalParentId,$" - ",\BuildId\SolutionId\OrganizationId:Name,$" - ",\BuildId\SolutionId\OrganizationId\ParentId:Name,$" - ",\BuildEventCodeId:EventCode]</Properties>
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting">(SystemInt64)CountPerFK=#Count[];(SystemString)Name=#StringConcat[\BuildId:Name,$" - ",\BuildId\SolutionId:ExternalParentId,$" - ",\BuildId\SolutionId\OrganizationId:Name,$" - ",\BuildId\SolutionId\OrganizationId\ParentId:Name,$" - ",\BuildEventCodeId:EventCode]</Properties>
     <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
   </DataView>
   <DataView Key="KeyInformation" DataViewKnownCategory="KeyInformation" IsGroupByResult="false">
     <Description>KeyInformation</Description>
     <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemInt64)Id=Id~Identifier;(SystemInt32)BuildEventCodeId=BuildEventCodeId~ForeignKey</Properties>
     <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-  </DataView>
-  <DataView Key="BuildLogSummaryPerBuild" DataViewKnownCategory="CustomGrouped" IsGroupByResult="true">
-    <Description>BuildLogSummaryPerBuild</Description>
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemInt32)BuildEventCodeId=BuildEventCodeId~ForeignKey</Properties>
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting">(SystemInt64)CountPerFK=#GroupedResult.Count~#Predicate;(SystemString)Name=#GroupedByColumn~\BuildEventCodeId:EventCode</Properties>
     <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
   </DataView>
   <Criteria Key="Common" SourceTypeFullName="MSBuildExtensionPack.BuildLog">
@@ -101,10 +95,6 @@
     <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
   </QueryResult>
   <QueryResult Key="KeyInformationByIdentifier" CriteriaKey="Identifier" DataViewKey="KeyInformation">
-    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
-    <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
-  </QueryResult>
-  <QueryResult Key="KeyInformationByFKOnly" CriteriaKey="FKOnly" DataViewKey="KeyInformation">
     <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
     <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
   </QueryResult>
@@ -262,6 +252,4 @@
       <Result>BuildEventCode_1</Result>
     </ForeignKeyPersist>
   </ForeignKeyPersistList>
-  <BridgedForeignKeyPersistList />
-  <CrossJoinedForeignKeyPersistList />
 </Entity>

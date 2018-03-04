@@ -199,24 +199,6 @@ System.Int64 id, System.String name
 
         #endregion CreateKeyInformation(...)
 
-        #region CreateUpdateNameRequest(...)
-
-        /// <summary>
-        /// Creates a new instance of view UpdateNameRequest.
-        /// </summary>
-        /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest CreateUpdateNameRequest(
-System.String name, System.Int64 id
-            )
-        {
-            MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest _retval = new MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest();
-                _retval.Name = name;
-                _retval.Id = id;
-            return _retval;
-        }
-
-        #endregion CreateUpdateNameRequest(...)
-
     }
 
 }

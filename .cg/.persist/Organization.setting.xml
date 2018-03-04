@@ -27,7 +27,7 @@
   <DataView Key="DefaultGroupedDataView" DataViewKnownCategory="DefaultGroupedDataView" IsGroupByResult="true">
     <Description>DefaultGroupedDataView</Description>
     <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemInt64)ParentId=ParentId</Properties>
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting">(SystemInt64)CountPerFK=#GroupedResult.Count~#Predicate;(SystemString)Name=#GroupedByColumn~#StringConcat[\ParentId:Name]</Properties>
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting">(SystemInt64)CountPerFK=#Count[];(SystemString)Name=#StringConcat[\ParentId:Name]</Properties>
     <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
   </DataView>
   <DataView Key="KeyInformation" DataViewKnownCategory="KeyInformation" IsGroupByResult="false">

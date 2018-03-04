@@ -522,68 +522,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of KeyInformationByIdentifier
 
-        #region Query Methods Of KeyInformationByFKOnly
-
-        [System.Diagnostics.DebuggerStepThroughAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class ExistsOfKeyInformationByFKOnlyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
-        {
-
-            private object[] results;
-
-            public ExistsOfKeyInformationByFKOnlyCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
-                base(exception, cancelled, userState)
-            {
-                this.results = results;
-            }
-
-            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean Result
-            {
-                get
-                {
-                    base.RaiseExceptionIfNecessary();
-                    return ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean)(this.results[0]));
-                }
-            }
-        }
-
-        private BeginOperationDelegate onBeginExistsOfKeyInformationByFKOnlyDelegate;
-
-        private EndOperationDelegate onEndExistsOfKeyInformationByFKOnlyDelegate;
-
-        private System.Threading.SendOrPostCallback onExistsOfKeyInformationByFKOnlyCompletedDelegate;
-
-        [System.Diagnostics.DebuggerStepThroughAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class GetCollectionOfKeyInformationByFKOnlyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
-        {
-
-            private object[] results;
-
-            public GetCollectionOfKeyInformationByFKOnlyCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
-                base(exception, cancelled, userState)
-            {
-                this.results = results;
-            }
-
-            public MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation Result
-            {
-                get
-                {
-                    base.RaiseExceptionIfNecessary();
-                    return ((MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation)(this.results[0]));
-                }
-            }
-        }
-
-        private BeginOperationDelegate onBeginGetCollectionOfKeyInformationByFKOnlyDelegate;
-
-        private EndOperationDelegate onEndGetCollectionOfKeyInformationByFKOnlyDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCollectionOfKeyInformationByFKOnlyCompletedDelegate;
-
-        #endregion Query Methods Of KeyInformationByFKOnly
-
         // DataQueryPerQuerySettingCollection -- EventArg Classes And EventHandlers -- end
 
         #region GetAscendantAndDescendant
@@ -737,14 +675,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
         public event System.EventHandler<GetCollectionOfKeyInformationByIdentifierCompletedEventArgs> GetCollectionOfKeyInformationByIdentifierCompleted;
 
         #endregion Query Methods Of KeyInformationByIdentifier
-
-        #region Query Methods Of KeyInformationByFKOnly
-
-        public event System.EventHandler<ExistsOfKeyInformationByFKOnlyCompletedEventArgs> ExistsOfKeyInformationByFKOnlyCompleted;
-
-        public event System.EventHandler<GetCollectionOfKeyInformationByFKOnlyCompletedEventArgs> GetCollectionOfKeyInformationByFKOnlyCompleted;
-
-        #endregion Query Methods Of KeyInformationByFKOnly
 
         // DataQueryPerQuerySettingCollection -- EventHandlers -- End
 
@@ -1947,146 +1877,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of KeyInformationByIdentifier
 
-        #region Query Methods Of KeyInformationByFKOnly
-
-        /// <summary>
-        /// Exists the of entity of "FKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request)
-        {
-            return base.Channel.ExistsOfKeyInformationByFKOnly(request);
-        }
-
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildLogServiceAsyn.BeginExistsOfKeyInformationByFKOnly(MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request, System.AsyncCallback callback, object asyncState)
-        {
-            return base.Channel.BeginExistsOfKeyInformationByFKOnly(request, callback, asyncState);
-        }
-
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildExtensionPack.WcfContracts.IBuildLogServiceAsyn.EndExistsOfKeyInformationByFKOnly(System.IAsyncResult result)
-        {
-            return base.Channel.EndExistsOfKeyInformationByFKOnly(result);
-        }
-
-        private System.IAsyncResult OnBeginExistsOfKeyInformationByFKOnly(object[] inValues, System.AsyncCallback callback, object asyncState)
-        {
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request = ((MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildLogServiceAsyn)(this)).BeginExistsOfKeyInformationByFKOnly(request, callback, asyncState);
-        }
-
-        private object[] OnEndExistsOfKeyInformationByFKOnly(System.IAsyncResult result)
-        {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildExtensionPack.WcfContracts.IBuildLogServiceAsyn)(this)).EndExistsOfKeyInformationByFKOnly(result);
-            return new object[] {
-                    retVal};
-        }
-
-        private void OnExistsOfKeyInformationByFKOnlyCompleted(object state)
-        {
-            if ((this.ExistsOfKeyInformationByFKOnlyCompleted != null))
-            {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.ExistsOfKeyInformationByFKOnlyCompleted(this, new ExistsOfKeyInformationByFKOnlyCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-
-        public void ExistsOfKeyInformationByFKOnlyAsync(MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request)
-        {
-            this.ExistsOfKeyInformationByFKOnlyAsync(request, null);
-        }
-
-        public void ExistsOfKeyInformationByFKOnlyAsync(MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request, object userState)
-        {
-            if ((this.onBeginExistsOfKeyInformationByFKOnlyDelegate == null))
-            {
-                this.onBeginExistsOfKeyInformationByFKOnlyDelegate = new BeginOperationDelegate(this.OnBeginExistsOfKeyInformationByFKOnly);
-            }
-            if ((this.onEndExistsOfKeyInformationByFKOnlyDelegate == null))
-            {
-                this.onEndExistsOfKeyInformationByFKOnlyDelegate = new EndOperationDelegate(this.OnEndExistsOfKeyInformationByFKOnly);
-            }
-            if ((this.onExistsOfKeyInformationByFKOnlyCompletedDelegate == null))
-            {
-                this.onExistsOfKeyInformationByFKOnlyCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnExistsOfKeyInformationByFKOnlyCompleted);
-            }
-            base.InvokeAsync(this.onBeginExistsOfKeyInformationByFKOnlyDelegate, new object[] {
-                        request}, this.onEndExistsOfKeyInformationByFKOnlyDelegate, this.onExistsOfKeyInformationByFKOnlyCompletedDelegate, userState);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "FKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation GetCollectionOfKeyInformationByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request)
-        {
-            return base.Channel.GetCollectionOfKeyInformationByFKOnly(request);
-        }
-
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildLogServiceAsyn.BeginGetCollectionOfKeyInformationByFKOnly(MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request, System.AsyncCallback callback, object asyncState)
-        {
-            return base.Channel.BeginGetCollectionOfKeyInformationByFKOnly(request, callback, asyncState);
-        }
-
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation MSBuildExtensionPack.WcfContracts.IBuildLogServiceAsyn.EndGetCollectionOfKeyInformationByFKOnly(System.IAsyncResult result)
-        {
-            return base.Channel.EndGetCollectionOfKeyInformationByFKOnly(result);
-        }
-
-        private System.IAsyncResult OnBeginGetCollectionOfKeyInformationByFKOnly(object[] inValues, System.AsyncCallback callback, object asyncState)
-        {
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request = ((MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildLogServiceAsyn)(this)).BeginGetCollectionOfKeyInformationByFKOnly(request, callback, asyncState);
-        }
-
-        private object[] OnEndGetCollectionOfKeyInformationByFKOnly(System.IAsyncResult result)
-        {
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation retVal = ((MSBuildExtensionPack.WcfContracts.IBuildLogServiceAsyn)(this)).EndGetCollectionOfKeyInformationByFKOnly(result);
-            return new object[] {
-                    retVal};
-        }
-
-        private void OnGetCollectionOfKeyInformationByFKOnlyCompleted(object state)
-        {
-            if ((this.GetCollectionOfKeyInformationByFKOnlyCompleted != null))
-            {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetCollectionOfKeyInformationByFKOnlyCompleted(this, new GetCollectionOfKeyInformationByFKOnlyCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-
-        public void GetCollectionOfKeyInformationByFKOnlyAsync(MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request)
-        {
-            this.GetCollectionOfKeyInformationByFKOnlyAsync(request, null);
-        }
-
-        public void GetCollectionOfKeyInformationByFKOnlyAsync(MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request, object userState)
-        {
-            if ((this.onBeginGetCollectionOfKeyInformationByFKOnlyDelegate == null))
-            {
-                this.onBeginGetCollectionOfKeyInformationByFKOnlyDelegate = new BeginOperationDelegate(this.OnBeginGetCollectionOfKeyInformationByFKOnly);
-            }
-            if ((this.onEndGetCollectionOfKeyInformationByFKOnlyDelegate == null))
-            {
-                this.onEndGetCollectionOfKeyInformationByFKOnlyDelegate = new EndOperationDelegate(this.OnEndGetCollectionOfKeyInformationByFKOnly);
-            }
-            if ((this.onGetCollectionOfKeyInformationByFKOnlyCompletedDelegate == null))
-            {
-                this.onGetCollectionOfKeyInformationByFKOnlyCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCollectionOfKeyInformationByFKOnlyCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetCollectionOfKeyInformationByFKOnlyDelegate, new object[] {
-                        request}, this.onEndGetCollectionOfKeyInformationByFKOnlyDelegate, this.onGetCollectionOfKeyInformationByFKOnlyCompletedDelegate, userState);
-        }
-
-        #endregion Query Methods Of KeyInformationByFKOnly
-
         // DataQueryPerQuerySettingCollection -- InClient -- End
 
         #region GetAscendantAndDescendant
@@ -2492,40 +2282,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
 
         #endregion Query Methods Of KeyInformationByIdentifier
-
-        #region Query Methods Of KeyInformationByFKOnly
-
-            public System.IAsyncResult BeginExistsOfKeyInformationByFKOnly(MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request, System.AsyncCallback callback, object asyncState)
-            {
-                object[] _args = new object[1];
-                _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("ExistsOfKeyInformationByFKOnly", _args, callback, asyncState);
-                return _result;
-            }
-
-            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean EndExistsOfKeyInformationByFKOnly(System.IAsyncResult result)
-            {
-                object[] _args = new object[0];
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean)(base.EndInvoke("ExistsOfKeyInformationByFKOnly", _args, result)));
-                return _result;
-            }
-
-            public System.IAsyncResult BeginGetCollectionOfKeyInformationByFKOnly(MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request, System.AsyncCallback callback, object asyncState)
-            {
-                object[] _args = new object[1];
-                _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("GetCollectionOfKeyInformationByFKOnly", _args, callback, asyncState);
-                return _result;
-            }
-
-            public MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation EndGetCollectionOfKeyInformationByFKOnly(System.IAsyncResult result)
-            {
-                object[] _args = new object[0];
-                MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation _result = ((MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation)(base.EndInvoke("GetCollectionOfKeyInformationByFKOnly", _args, result)));
-                return _result;
-            }
-
-        #endregion Query Methods Of KeyInformationByFKOnly
 
             // DataQueryPerQuerySettingCollection -- InChannelForWINDOWS_PHONE -- End
 
