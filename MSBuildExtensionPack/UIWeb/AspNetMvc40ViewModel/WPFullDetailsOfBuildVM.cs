@@ -109,6 +109,8 @@ namespace MSBuildExtensionPack.AspNetMvc40ViewModel
                         this.StatusMessageOfFK_BuildLog_Build = string.Format("{0} {1}", this.StatusMessageOfFK_BuildLog_Build, resultFK_BuildLog_Build.ServerErrorMessage);
     #endif
                     }
+
+                    this.FK_BuildLog_BuildSummary = MSBuildExtensionPack.CommonBLLIoC.IoCBuildLog.GetCollectionOfDefaultGroupedDataViewByFKOnly(this.CriteriaOfFK_BuildLog_Build, new Framework.EntityContracts.QueryPagingSetting(-1, -1), null);
                 }
 
                 // 4. Major part - Article UIWorkspaceItemSetting - EntityReference/FK CrossJoin -- RelatedEntityWhenMasterViewIsPKEntityViaCrossJoin

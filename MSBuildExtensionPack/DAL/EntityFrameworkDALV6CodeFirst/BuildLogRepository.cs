@@ -1390,25 +1390,26 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                         )
                     group t by new { BuildId = t.BuildId, BuildEventCodeId = t.BuildEventCodeId } into tG
                     let _CountPerFK = tG.Count()
-                    select new MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataView { BuildId = tG.Key.BuildId, BuildEventCodeId = tG.Key.BuildEventCodeId, CountPerFK = _CountPerFK } into vD3
+                    select new { BuildId = tG.Key.BuildId, BuildEventCodeId = tG.Key.BuildEventCodeId, CountPerFK = _CountPerFK } into vD3
                     select vD3
                 );
             var _ResultFromDataSourceWithName =
                 from t in _ResultFromDataSource
             join Build_1 in this.LinqContext.Builds on t.BuildId equals Build_1.Id
             join BuildEventCode_1 in this.LinqContext.BuildEventCodes on t.BuildEventCodeId equals BuildEventCode_1.Id
-            let _Name = string.Concat(new string[] { Build_1.Name," - ",BuildEventCode_1.EventCode })
+            let _Name = string.Concat(new string[] { BuildEventCode_1.EventCode })
             select new MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataView { BuildId = t.BuildId, BuildEventCodeId = t.BuildEventCodeId, CountPerFK = t.CountPerFK, Name = _Name };
             var _retval = _ResultFromDataSourceWithName;
             IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataView> _retval1;
-            if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
-            {
-                _retval1 = _retval;
-            }
-            else
-            {
-                _retval1 = _retval.AsQueryable().OrderBy(queryOrderBySettingCollection.GetOrderByExpression());
-            }
+            _retval1 = _retval;
+            //if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
+            //{
+            //    _retval1 = _retval;
+            //}
+            //else
+            //{
+            //    _retval1 = _retval.AsQueryable().OrderBy(queryOrderBySettingCollection.GetOrderByExpression());
+            //}
             return _retval1;
         }
 

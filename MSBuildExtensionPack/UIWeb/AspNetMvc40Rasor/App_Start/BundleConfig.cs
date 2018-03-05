@@ -16,6 +16,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor
                         , "~/Scripts/jquery.validate.js"
                         , "~/Scripts/jquery.validate.unobtrusive.js"
                         //, "~/Scripts/jquery.unobtrusive-ajax.js"
+                        //, "~/Scripts/chart-2.7.1.js"
                         , "~/Scripts/bootstrap.js"
                         , "~/Scripts/bootstrap-datepicker.js"
                         , "~/Scripts/knockout-{version}.js"
