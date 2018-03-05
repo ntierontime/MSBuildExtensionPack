@@ -1102,6 +1102,192 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of DefaultByFKOnly
 
+        #region Query Methods Of DefaultGroupedDataViewByFKOnly
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="criteria"></param>
+        /// <param name="queryPagingSetting"></param>
+        /// <param name="queryOrderBySettingCollection"></param>
+        /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataViewCollection"/></returns>
+        public static MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataViewCollection GetCollectionOfDefaultGroupedDataViewByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaFKOnly criteria
+            , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
+            , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
+        {
+            //log.Info(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            MSBuildExtensionPack.WcfContracts.ISolutionService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceSolution();
+            var _Request = new MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly(
+                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
+                , "GetCollectionOfDefaultGroupedDataViewByFKOnly"
+                , Guid.NewGuid().ToString()
+                );
+            _Request.Criteria = criteria;
+            _Request.QueryPagingSetting = queryPagingSetting;
+            if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
+            {
+                _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
+                _Request.QueryOrderBySettingCollection.Add("OrganizationId", "Ascending");
+            }
+            else
+            {
+                _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
+            }
+
+            MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultGroupedDataViewByFKOnly(_Request);
+            if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+            {
+                //log.Info(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                return _Response.Message;
+            }
+            else
+            {
+                //log.Error(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Gets message of the collection of entity of common.
+        /// </summary>
+        /// <param name="criteria"></param>
+        /// <param name="queryPagingSetting"></param>
+        /// <param name="queryOrderBySettingCollection"></param>
+        /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataViewCollection"/></returns>
+        public static MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView GetMessageOfDefaultGroupedDataViewByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaFKOnly criteria
+            , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
+            , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
+        {
+            return GetMessageOfDefaultGroupedDataViewByFKOnly(
+                criteria
+                , queryPagingSetting
+                , queryOrderBySettingCollection
+                , Framework.DataServiceTypes.DataSourceResult);
+        }
+
+        /// <summary>
+        /// Gets message of the collection of entity of common.
+        /// </summary>
+        /// <param name="criteria"></param>
+        /// <param name="queryPagingSetting"></param>
+        /// <param name="queryOrderBySettingCollection"></param>
+        /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataViewCollection"/></returns>
+        public static MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView GetMessageOfDefaultGroupedDataViewByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.SolutionChainedQueryCriteriaFKOnly criteria
+            , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
+            , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            , Framework.DataServiceTypes dataServiceType)
+        {
+            //log.Info(string.Format("{0}: GetMessageOfDefaultGroupedDataViewByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            MSBuildExtensionPack.WcfContracts.ISolutionService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceSolution();
+            var _Request = new MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly(
+                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
+                , "GetMessageOfDefaultGroupedDataViewByFKOnly"
+                , Guid.NewGuid().ToString()
+                );
+            _Request.Criteria = criteria;
+            _Request.QueryPagingSetting = queryPagingSetting;
+            if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
+            {
+                _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
+                _Request.QueryOrderBySettingCollection.Add("OrganizationId", "Ascending");
+            }
+            else
+            {
+                _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
+            }
+            _Request.DataServiceType = dataServiceType;
+
+            MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultGroupedDataViewByFKOnly(_Request);
+            return _Response;
+        }
+
+       /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataViewCollection"/></returns>
+        public static MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataViewCollection GetCollectionOfDefaultGroupedDataViewByFKOnly(
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
+        {
+            //log.Info(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            MSBuildExtensionPack.WcfContracts.ISolutionService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceSolution();
+            var _Request = new MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly(
+                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
+                , "GetCollectionOfDefaultGroupedDataViewByFKOnly"
+                , Guid.NewGuid().ToString()
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression
+                );
+            _Request.Criteria = _GetSolutionChainedQueryCriteriaFKOnly(
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
+                );
+            MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultGroupedDataViewByFKOnly(_Request);
+            if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+            {
+                //log.Info(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                return _Response.Message;
+            }
+            else
+            {
+                //log.Error(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Gets message of the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareOrganizationId">will compare/filter organizationId property/field/column if true, otherwise false</param>
+        /// <param name="organizationId">value to compare/filter with organizationId property/field/column</param>
+        /// <param name="isToCompareOrganization_2Id">will compare/filter organization_2Id property/field/column if true, otherwise false</param>
+        /// <param name="organization_2Id">value to compare/filter with organization_2Id property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>business layer built-in message <see cref="MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView"/></returns>
+        public static MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView GetMessageOfDefaultGroupedDataViewByFKOnly(
+            bool isToCompareOrganizationId, System.Int64? organizationId
+            , bool isToCompareOrganization_2Id, System.Int64? organization_2Id
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression        )
+
+        {
+            MSBuildExtensionPack.WcfContracts.ISolutionService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceSolution();
+            var _Request = new MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly(
+                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
+                , "GetCollectionOfDefaultGroupedDataViewByFKOnly"
+                , Guid.NewGuid().ToString()
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression
+                );
+            _Request.Criteria = _GetSolutionChainedQueryCriteriaFKOnly(
+                isToCompareOrganizationId, organizationId
+                , isToCompareOrganization_2Id, organization_2Id
+                );
+            MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultGroupedDataViewByFKOnly(_Request);
+            return _Response;
+        }
+
+        #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
+
         #region Query Methods Of EntityByIdentifier
 
         /// <summary>

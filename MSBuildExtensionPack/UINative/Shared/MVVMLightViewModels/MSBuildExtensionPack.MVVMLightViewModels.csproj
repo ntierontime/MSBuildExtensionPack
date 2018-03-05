@@ -49,6 +49,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <Compile Include="WPCommonOfBuildVM.cs" />
+    <Compile Include="WPsomethingOfBuildVM.cs" />
+    <Compile Include="WPxTabSomethingOfBuildVM.cs" />
+    <Compile Include="WPxTabFullDetailsOfBuildVM.cs" />
+    <Compile Include="WPelseA1AsomethingOfBuildVM.cs" />
     <Compile Include="WPCommonOfBuildEventCodeVM.cs" />
     <Compile Include="WPCommonOfBuildLogVM.cs" />
     <Compile Include="WPCommonOfOrganizationVM.cs" />

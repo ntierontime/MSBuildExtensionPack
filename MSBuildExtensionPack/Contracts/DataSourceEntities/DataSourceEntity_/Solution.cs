@@ -532,8 +532,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         System.Nullable<System.Int64> m_OrganizationId;
 
-        System.Int64 m_Organization_2Id;
-
         System.Int64 m_CountPerFK;
 
         System.String m_Name;
@@ -549,7 +547,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
             public DefaultGroupedDataView()
             {
                 this.OrganizationId = default(long);
-                this.Organization_2Id = default(long);
                 this.CountPerFK = default(long);
                 this.Name = null;
             }
@@ -578,20 +575,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
             {
                 m_OrganizationId = value;
                 RaisePropertyChanged("OrganizationId");
-            }
-        }
-
-                    [DataMember]
-        [Display(Name = "Organization_2Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.Int64 Organization_2Id
-        {
-            get
-            {
-                return m_Organization_2Id;
-            }
-            set
-            {
-                m_Organization_2Id = value;
-                RaisePropertyChanged("Organization_2Id");
             }
         }
 
@@ -636,7 +619,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
                 DefaultGroupedDataView cloned = new DefaultGroupedDataView();
 
             cloned.m_OrganizationId = m_OrganizationId;
-            cloned.m_Organization_2Id = m_Organization_2Id;
             cloned.m_CountPerFK = m_CountPerFK;
             cloned.m_Name = m_Name;
 

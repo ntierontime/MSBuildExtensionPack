@@ -208,6 +208,21 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of DefaultByFKOnly
 
+        #region Query Methods Of DefaultGroupedDataViewByFKOnly
+
+        /// <summary>
+        /// Gets the collection of entity of "FKOnly".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView GetCollectionOfDefaultGroupedDataViewByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request)
+        {
+            return base.Channel.GetCollectionOfDefaultGroupedDataViewByFKOnly(request);
+        }
+
+        #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
+
         #region Query Methods Of EntityByIdentifier
 
         /// <summary>

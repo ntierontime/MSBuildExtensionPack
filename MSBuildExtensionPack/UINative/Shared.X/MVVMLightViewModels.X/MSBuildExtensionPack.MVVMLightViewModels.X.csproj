@@ -83,6 +83,18 @@
     <Compile Include="..\..\..\UINative\Shared\MVVMLightViewModels\WPCommonOfBuildVM.cs">
       <Link>WPCommonOfBuildVM.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\UINative\Shared\MVVMLightViewModels\WPsomethingOfBuildVM.cs">
+      <Link>WPsomethingOfBuildVM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\UINative\Shared\MVVMLightViewModels\WPxTabSomethingOfBuildVM.cs">
+      <Link>WPxTabSomethingOfBuildVM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\UINative\Shared\MVVMLightViewModels\WPxTabFullDetailsOfBuildVM.cs">
+      <Link>WPxTabFullDetailsOfBuildVM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\UINative\Shared\MVVMLightViewModels\WPelseA1AsomethingOfBuildVM.cs">
+      <Link>WPelseA1AsomethingOfBuildVM.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\UINative\Shared\MVVMLightViewModels\WPCommonOfBuildEventCodeVM.cs">
       <Link>WPCommonOfBuildEventCodeVM.cs</Link>
     </Compile>

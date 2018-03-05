@@ -212,7 +212,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         #endregion Method of BuildLog GetAClone()
 
-        #region Nested Views classes and their collection classes 3
+        #region Nested Views classes and their collection classes 4
 
         /// <summary>
         /// View "Default" class of <see cref="BuildLog"/>, used across the solution.
@@ -624,12 +624,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         System.Int32 m_BuildEventCodeId;
 
-        System.Int32 m_Solution_1Id;
-
-        System.Int64 m_Organization_1Id;
-
-        System.Int64 m_Organization_2Id;
-
         System.Int64 m_CountPerFK;
 
         System.String m_Name;
@@ -646,9 +640,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
             {
                 this.BuildId = default(long);
                 this.BuildEventCodeId = default(int);
-                this.Solution_1Id = default(int);
-                this.Organization_1Id = default(long);
-                this.Organization_2Id = default(long);
                 this.CountPerFK = default(long);
                 this.Name = null;
             }
@@ -697,48 +688,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
                     [DataMember]
-        [Display(Name = "Solution_1Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]        public System.Int32 Solution_1Id
-        {
-            get
-            {
-                return m_Solution_1Id;
-            }
-            set
-            {
-                m_Solution_1Id = value;
-                RaisePropertyChanged("Solution_1Id");
-            }
-        }
-
-                    [DataMember]
-        [Display(Name = "Organization_1Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]        public System.Int64 Organization_1Id
-        {
-            get
-            {
-                return m_Organization_1Id;
-            }
-            set
-            {
-                m_Organization_1Id = value;
-                RaisePropertyChanged("Organization_1Id");
-            }
-        }
-
-                    [DataMember]
-        [Display(Name = "Organization_2Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]        public System.Int64 Organization_2Id
-        {
-            get
-            {
-                return m_Organization_2Id;
-            }
-            set
-            {
-                m_Organization_2Id = value;
-                RaisePropertyChanged("Organization_2Id");
-            }
-        }
-
-                    [DataMember]
         [Display(Name = "CountPerFK", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]        public System.Int64 CountPerFK
         {
             get
@@ -780,9 +729,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
             cloned.m_BuildId = m_BuildId;
             cloned.m_BuildEventCodeId = m_BuildEventCodeId;
-            cloned.m_Solution_1Id = m_Solution_1Id;
-            cloned.m_Organization_1Id = m_Organization_1Id;
-            cloned.m_Organization_2Id = m_Organization_2Id;
             cloned.m_CountPerFK = m_CountPerFK;
             cloned.m_Name = m_Name;
 
@@ -952,7 +898,149 @@ namespace MSBuildExtensionPack.DataSourceEntities
         {
         }
 
-        #endregion Nested Views classes and their collection classes 3
+        /// <summary>
+        /// View "BuildLogSummaryPerBuild" class of <see cref="BuildLog"/>, used across the solution.
+        /// </summary>
+        public partial class BuildLogSummaryPerBuild :Framework.PropertyChangedNotifier, Framework.EntityContracts.IClone<BuildLogSummaryPerBuild>
+        {
+
+            #region Storage Fields
+
+        System.Int32 m_BuildEventCodeId;
+
+        System.Int64 m_CountPerFK;
+
+        System.String m_Name;
+
+            #endregion Storage Fields
+
+            #region Constructors
+
+            /// <summary>
+            /// Initializes/clone a new instance of the <see cref=" BuildLog"/> class.
+            /// </summary>
+            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IBuildLog"/></param>
+            public BuildLogSummaryPerBuild()
+            {
+                this.BuildEventCodeId = default(int);
+                this.CountPerFK = default(long);
+                this.Name = null;
+            }
+            /*
+            /// <summary>
+            /// Initializes/clone a new instance of the <see cref=" BuildLog"/> class.
+            /// </summary>
+            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IBuildLog"/></param>
+            public BuildLogSummaryPerBuild(MSBuildExtensionPack.EntityContracts.IBuildLog item)
+            {
+                MSBuildExtensionPack.EntityContracts.IBuildLogHelper.Copy<MSBuildExtensionPack.EntityContracts.IBuildLog, BuildLogSummaryPerBuild>(item, this);
+            }
+            */
+            #endregion Constructors
+
+            #region properties
+
+                    [DataMember]
+        [Display(Name = "BuildEventCodeId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="BuildEventCodeId_is_required")]        public System.Int32 BuildEventCodeId
+        {
+            get
+            {
+                return m_BuildEventCodeId;
+            }
+            set
+            {
+                m_BuildEventCodeId = value;
+                RaisePropertyChanged("BuildEventCodeId");
+            }
+        }
+
+                    [DataMember]
+        [Display(Name = "CountPerFK", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]        public System.Int64 CountPerFK
+        {
+            get
+            {
+                return m_CountPerFK;
+            }
+            set
+            {
+                m_CountPerFK = value;
+                RaisePropertyChanged("CountPerFK");
+            }
+        }
+
+                    [DataMember]
+        [Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]        public System.String Name
+        {
+            get
+            {
+                return m_Name;
+            }
+            set
+            {
+                m_Name = value;
+                RaisePropertyChanged("Name");
+            }
+        }
+
+            #endregion properties
+
+            #region Method of BuildLog.BuildLogSummaryPerBuild  GetAClone()
+
+            /// <summary>
+            /// Gets the A clone.
+            /// </summary>
+            /// <returns>a new instance with same value</returns>
+            public BuildLogSummaryPerBuild GetAClone()
+            {
+                BuildLogSummaryPerBuild cloned = new BuildLogSummaryPerBuild();
+
+            cloned.m_BuildEventCodeId = m_BuildEventCodeId;
+            cloned.m_CountPerFK = m_CountPerFK;
+            cloned.m_Name = m_Name;
+
+                return cloned;
+            }
+
+            /// <summary>
+            /// Gets the A clone.
+            /// </summary>
+            /// <returns>a new instance with same value</returns>
+            public BuildLogSummaryPerBuild GetACloneWithoutIdentifier()
+            {
+                BuildLogSummaryPerBuild cloned = GetAClone();
+
+                return cloned;
+            }
+
+            #endregion Method of BuildLog.BuildLogSummaryPerBuild  GetAClone()
+        }
+
+        /// <summary>
+        /// View "BuildLogSummaryPerBuild" class of <see cref="BuildLog"/>, used across the solution.
+        /// </summary>
+        public partial class BuildLogSummaryPerBuildCollection
+            :  List<BuildLogSummaryPerBuild>
+        {
+        }
+
+        /// <summary>
+        /// message definition of "BuildLogSummaryPerBuild", pass single entry, from database, to business logic layer. <see cref="BuildLog"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
+        /// </summary>
+        public class DataAccessLayerMessageOfBuildLogSummaryPerBuild
+            : Framework.DataSourceEntities.DataAccessLayerMessageBase<BuildLogSummaryPerBuild>
+        {
+        }
+
+        /// <summary>
+        /// message definition of "BuildLogSummaryPerBuild", pass a collection of instances, from database, to business logic layer. <see cref="BuildLog"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
+        /// </summary>
+        public class DataAccessLayerMessageOfBuildLogSummaryPerBuildCollection
+            : Framework.DataSourceEntities.DataAccessLayerMessageBase<BuildLogSummaryPerBuildCollection>
+        {
+        }
+
+        #endregion Nested Views classes and their collection classes 4
     }
 
     /// <summary>

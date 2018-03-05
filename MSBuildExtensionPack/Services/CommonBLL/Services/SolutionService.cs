@@ -487,6 +487,44 @@ namespace MSBuildExtensionPack.CommonBLL
 
         #endregion Query Methods Of DefaultByFKOnly
 
+        #region Query Methods Of DefaultGroupedDataViewByFKOnly
+
+        /// <summary>
+        /// Gets the collection of entity of DefaultGroupedDataViewByFKOnly .
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView if any</returns>
+        public MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView GetCollectionOfDefaultGroupedDataViewByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request)
+        {
+            log.Info(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            MSBuildExtensionPack.DataSourceEntities.Solution.DataAccessLayerMessageOfDefaultGroupedDataViewCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfDefaultGroupedDataViewByFKOnly(
+                request.Criteria.FKOnly.OrganizationId
+                , request.Criteria.FKOnly.Organization_2Id
+                , request.QueryPagingSetting.CurrentIndex
+                , request.QueryPagingSetting.PageSize
+                , request.QueryOrderBySettingCollection
+                );
+            MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView _retval = new MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView();
+            _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
+
+            //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataViewCollection>(_resultFromDAL, _retval);
+
+            if (request.DataServiceType == Framework.DataServiceTypes.DataSourceResult)
+            {
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataViewCollection>(_resultFromDAL, _retval);
+            }
+            else
+            {
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataView, MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataViewCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.SolutionDataStreamService.DefaultGroupedDataView());
+            }
+
+            log.Info(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            return _retval;
+        }
+
+        #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
+
         #region Query Methods Of EntityByIdentifier
 
         /// <summary>

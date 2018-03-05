@@ -187,15 +187,6 @@ namespace MSBuildExtensionPack.CommonBLL
             worksheet.Cell(cellKey).Value = "BuildEventCodeId";
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
-            worksheet.Cell(cellKey).Value = "Solution_1Id";
-
-            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
-            worksheet.Cell(cellKey).Value = "Organization_1Id";
-
-            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
-            worksheet.Cell(cellKey).Value = "Organization_2Id";
-
-            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = "CountPerFK";
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
@@ -213,15 +204,6 @@ namespace MSBuildExtensionPack.CommonBLL
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.BuildEventCodeId;
-
-            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
-            worksheet.Cell(cellKey).Value = dataItem.Solution_1Id;
-
-            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
-            worksheet.Cell(cellKey).Value = dataItem.Organization_1Id;
-
-            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
-            worksheet.Cell(cellKey).Value = dataItem.Organization_2Id;
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.CountPerFK;
@@ -258,6 +240,42 @@ namespace MSBuildExtensionPack.CommonBLL
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.BuildEventCodeId;
+
+            }
+        }
+
+        public class BuildLogSummaryPerBuild
+            : Framework.Services.DataStreamServiceProviderBase<MSBuildExtensionPack.DataSourceEntities.BuildLog.BuildLogSummaryPerBuildCollection, MSBuildExtensionPack.DataSourceEntities.BuildLog.BuildLogSummaryPerBuild>
+        {
+            public override void WriteHeaderLineToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, int row)
+            {
+                char cell = 'A';
+
+                string cellKey;
+                cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = "BuildEventCodeId";
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = "CountPerFK";
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = "Name";
+
+            }
+
+            public override void WriteDataItemToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, MSBuildExtensionPack.DataSourceEntities.BuildLog.BuildLogSummaryPerBuild dataItem, int row)
+            {
+                char cell = 'A';
+
+                string cellKey;
+                cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = dataItem.BuildEventCodeId;
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = dataItem.CountPerFK;
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = dataItem.Name;
 
             }
         }

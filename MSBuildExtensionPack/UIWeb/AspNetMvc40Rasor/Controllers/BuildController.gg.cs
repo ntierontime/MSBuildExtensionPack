@@ -23,7 +23,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 
         #endregion log4net
 
-        #region Workspace Controller Methods : there are 1 workspace(s)
+        #region Workspace Controller Methods : there are 2 workspace(s)
 
         public const string TempDataKey_WPCommonOfBuild = "TempDataKey_WPCommonOfBuild";
         /// <summary>
@@ -105,7 +105,87 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             return null;
         }
 
-        #endregion Workspace Controller Methods : there are 1 workspace(s)
+        public const string TempDataKey_WPsomethingOfBuild = "TempDataKey_WPsomethingOfBuild";
+        /// <summary>
+        /// Controller Method of View WPsomethingOfBuild : Description Of MSBuildExtensionPack_Build_something
+        /// </summary>
+        /// <returns></returns>
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Build_WPsomethingOfBuild)]
+        public ActionResult WPsomethingOfBuild(int currentPage = 1, WPsomethingOfBuildVM viewModel = null)
+        {
+            log.Info(string.Format("{0}: WPsomethingOfBuild", Framework.LoggingOptions.UI_Process_Started.ToString()));
+
+            Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaFKStringContains> vmFromTempData;
+            if (TempData.ContainsKey(TempDataKey_WPsomethingOfBuild))
+            {
+                vmFromTempData = (Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaFKStringContains>)TempData[TempDataKey_WPsomethingOfBuild];
+            }
+            else
+            {
+                vmFromTempData = null;
+            }
+
+            viewModel.PopulateAllUIElements(vmFromTempData, currentPage);
+
+            viewModel.LoadData(true);
+
+            if (viewModel.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+            {
+                TempData[TempDataKey_WPsomethingOfBuild] = viewModel.GetPrimaryInformationEntity();
+                TempData.Keep(TempDataKey_WPsomethingOfBuild);
+            }
+//            else
+//            {
+//                viewModel.StatusMessageOfResult = searchResult.GetStatusMessage();
+//#if DEBUG
+//                viewModel.StatusMessageOfResult = string.Format("{0} {1}", viewModel.StatusMessageOfResult, searchResult.ServerErrorMessage);
+//#endif
+//            }
+
+            if (viewModel.Result != null)
+            {
+                ViewBag.StaticPagedResult = new PagedList.StaticPagedList<MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation>(viewModel.Result, viewModel.QueryPagingSetting.CurrentPage, viewModel.QueryPagingSetting.PageSize, viewModel.QueryPagingSetting.CountOfRecords);
+            }
+
+            viewModel.ContentData.Title = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Build;
+            viewModel.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Description;
+
+            return View(viewModel);
+        }
+
+        /// <summary>
+        /// Export current search result.
+        /// </summary>
+        /// <param name="dataServiceType">Type of the data service.</param>
+        /// <returns></returns>
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Build_WPsomethingOfBuild)]
+        public ActionResult WPsomethingOfBuild_Export(Framework.DataServiceTypes dataServiceType)
+        {
+            log.Info(string.Format("{0}: WPsomethingOfBuild_Export", Framework.LoggingOptions.UI_Process_Started.ToString()));
+
+            Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaFKStringContains> vmFromTempData;
+            if (TempData.ContainsKey(TempDataKey_WPsomethingOfBuild))
+            {
+                vmFromTempData = (Framework.ViewModels.ViewModelBase<MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaFKStringContains>)TempData[TempDataKey_WPsomethingOfBuild];
+
+                var searchResult = MSBuildExtensionPack.CommonBLLIoC.IoCBuild.GetMessageOfAncestorAndKeyInfo(
+                    vmFromTempData.Criteria
+                    , new Framework.EntityContracts.QueryPagingSetting(-1, -1)
+                    , new Framework.EntityContracts.QueryOrderBySettingCollection(vmFromTempData.QueryOrderBySettingCollecionInString)
+                    , dataServiceType);
+
+                var result = searchResult.DataStreamServiceResult;
+
+                TempData[TempDataKey_WPsomethingOfBuild] = vmFromTempData.GetPrimaryInformationEntity();
+                TempData.Keep(TempDataKey_WPsomethingOfBuild);
+
+                return File(result.Result, result.MIMEType, string.Format("WPsomethingOfBuild_Export{0}{1}", result.DataServiceType, result.FileExtension));
+            }
+
+            return null;
+        }
+
+        #endregion Workspace Controller Methods : there are 2 workspace(s)
 
         /// <summary>
         /// Display one entity and all related entities if any, either single item or a list, based on foreign keys
@@ -118,6 +198,47 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             criteria.Identifier.Id.NullableValueToCompare = id;
             MSBuildExtensionPack.AspNetMvc40ViewModel.WPFullDetailsOfBuildVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPFullDetailsOfBuildVM(criteria);
             vm.LoadData();
+
+            return View(vm);
+        }
+
+        /// <summary>
+        /// Display one entity and all related entities if any, either single item or a list, based on foreign keys
+        /// </summary>
+        /// <returns></returns>
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Build_WPelsesomethingOfBuild)]
+        public ActionResult WPelsesomethingOfBuild(System.Int64? id)
+        {
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaIdentifier();
+            criteria.Identifier.Id.NullableValueToCompare = id;
+            MSBuildExtensionPack.AspNetMvc40ViewModel.WPelsesomethingOfBuildVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPelsesomethingOfBuildVM(criteria);
+            vm.LoadData();
+
+            return View(vm);
+        }
+
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Build_WPelseA1AsomethingOfBuild)]
+        public ActionResult WPelseA1AsomethingOfBuild(System.Int64? id)
+        {
+
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaIdentifier();
+            criteria.Identifier.Id.NullableValueToCompare = id;
+            MSBuildExtensionPack.AspNetMvc40ViewModel.WPelseA1AsomethingOfBuildVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPelseA1AsomethingOfBuildVM(criteria);
+            vm.LoadData();
+
+            return View(vm);
+        }
+
+        // POST: /Build/WPelseA1AsomethingOfBuild/5
+        [HttpPost]
+        [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Build_WPelseA1AsomethingOfBuild)]
+        public ActionResult WPelseA1AsomethingOfBuild(System.Int64? id, MSBuildExtensionPack.AspNetMvc40ViewModel.WPelseA1AsomethingOfBuildVM vm)
+        {
+
+            if (vm != null)
+            {
+                vm.SaveData();
+            }
 
             return View(vm);
         }

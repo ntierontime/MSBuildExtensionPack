@@ -222,6 +222,26 @@ namespace MSBuildExtensionPack.WcfContracts
 
         #endregion Query Methods Of DefaultByFKOnly
 
+        #region Query Methods Of DefaultGroupedDataViewByFKOnly
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IOrganizationService/GetCollectionOfDefaultGroupedDataViewByFKOnly",
+            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IOrganizationService/GetCollectionOfDefaultGroupedDataViewByFKOnlyResponse")]
+#endif
+        MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView GetCollectionOfDefaultGroupedDataViewByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly request);
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IOrganizationService/GetCollectionOfDefaultGroupedDataViewByFKOnly",
+            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IOrganizationService/GetCollectionOfDefaultGroupedDataViewByFKOnlyResponse")]
+#endif
+        System.IAsyncResult BeginGetCollectionOfDefaultGroupedDataViewByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly request, System.AsyncCallback callback, object asyncState);
+        MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView EndGetCollectionOfDefaultGroupedDataViewByFKOnly(System.IAsyncResult result);
+
+        #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
+
         #region Query Methods Of EntityByIdentifier
 
 #if (XAMARIN)

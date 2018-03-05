@@ -167,13 +167,11 @@ System.String solution_1_Name, System.Int64 id, System.Int64 organization_1Id, S
         /// </summary>
         /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.Build.DefaultGroupedDataView"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.Build.DefaultGroupedDataView CreateDefaultGroupedDataView(
-System.Int32 solutionId, System.Int64 organization_1Id, System.Int64 organization_2Id, System.Int64 countPerFK, System.String name
+System.Int32 solutionId, System.Int64 countPerFK, System.String name
             )
         {
             MSBuildExtensionPack.DataSourceEntities.Build.DefaultGroupedDataView _retval = new MSBuildExtensionPack.DataSourceEntities.Build.DefaultGroupedDataView();
                 _retval.SolutionId = solutionId;
-                _retval.Organization_1Id = organization_1Id;
-                _retval.Organization_2Id = organization_2Id;
                 _retval.CountPerFK = countPerFK;
                 _retval.Name = name;
             return _retval;
@@ -198,6 +196,24 @@ System.Int64 id, System.String name
         }
 
         #endregion CreateKeyInformation(...)
+
+        #region CreateUpdateNameRequest(...)
+
+        /// <summary>
+        /// Creates a new instance of view UpdateNameRequest.
+        /// </summary>
+        /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest"/></returns>
+        public static MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest CreateUpdateNameRequest(
+System.String name, System.Int64 id
+            )
+        {
+            MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest _retval = new MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest();
+                _retval.Name = name;
+                _retval.Id = id;
+            return _retval;
+        }
+
+        #endregion CreateUpdateNameRequest(...)
 
     }
 

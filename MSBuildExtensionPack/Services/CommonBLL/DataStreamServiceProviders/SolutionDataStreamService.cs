@@ -154,9 +154,6 @@ namespace MSBuildExtensionPack.CommonBLL
             worksheet.Cell(cellKey).Value = "OrganizationId";
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
-            worksheet.Cell(cellKey).Value = "Organization_2Id";
-
-            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = "CountPerFK";
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
@@ -171,9 +168,6 @@ namespace MSBuildExtensionPack.CommonBLL
                 string cellKey;
                 cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.OrganizationId;
-
-            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
-            worksheet.Cell(cellKey).Value = dataItem.Organization_2Id;
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.CountPerFK;

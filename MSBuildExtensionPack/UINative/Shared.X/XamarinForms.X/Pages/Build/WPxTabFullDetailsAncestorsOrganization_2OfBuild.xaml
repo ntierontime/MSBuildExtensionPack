@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+        xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:i18n="clr-namespace:MSBuildExtensionPack.XamarinForms"
+        xmlns:fxr="clr-namespace:Framework.Xamariner;assembly=Framework.Xamariner.X"
+        xmlns:fe="clr-namespace:Framework.EntityContracts;assembly=Framework.EntityContracts.X"
+        x:Class="MSBuildExtensionPack.XamarinForms.Pages.Build.WPxTabFullDetailsAncestorsOrganization_2OfBuild"
+        Title="{i18n:Translate Text=Organization, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}"
+        NavigationPage.HasBackButton="False"
+        >
+    <NavigationPage.HasNavigationBar>
+        <OnPlatform x:TypeArguments="x:Boolean">
+            <On Platform="Android">True</On>
+            <On Platform="iOS">True</On>
+            <On Platform="Windows">False</On>
+            <On Platform="WinPhone">False</On>
+        </OnPlatform>
+    </NavigationPage.HasNavigationBar>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BindingContext="{Binding Path=Organization_2}">
+            <Label Text="{i18n:Translate Text=Id, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=Id, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+           <Switch VerticalOptions="Center" HorizontalOptions="Center" IsToggled="{Binding Path=IsSystemBuiltIn, Mode=OneWay}" IsEnabled="False" />
+           <Switch VerticalOptions="Center" HorizontalOptions="Center" IsToggled="{Binding Path=BitColumn, Mode=OneWay}" IsEnabled="False" />
+            <Label Text="{i18n:Translate Text=Name, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=Name, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=UniqueIdentifier, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=UniqueIdentifier, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Label Text="{i18n:Translate Text=UniqueidentifierColumn, ResourceId=MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization}" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="{Binding Path=UniqueidentifierColumn, Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="Back" Order="Primary" Text="{i18n:Translate Text=Back, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=Main.GoBackCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">@drawable/Back.png</On>
+                    <On Platform="iOS">Assets/Back.png</On>
+                    <On Platform="Windows">Assets/Back.png</On>
+                    <On Platform="WinPhone">Assets/Back.png</On>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem x:Name="Edit" Order="Primary" Text="{i18n:Translate Text=Edit, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchEditViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding Path=MasterEntity}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">@drawable/Edit.png</On>
+                    <On Platform="iOS">Assets/Edit.png</On>
+                    <On Platform="Windows">Assets/Edit.png</On>
+                    <On Platform="WinPhone">Assets/Edit.png</On>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem x:Name="Add" Order="Primary" Text="{i18n:Translate Text=AddNew, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchCreateViewCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">@drawable/Add.png</On>
+                    <On Platform="iOS">Assets/Add.png</On>
+                    <On Platform="Windows">Assets/Add.png</On>
+                    <On Platform="WinPhone">Assets/Add.png</On>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem x:Name="Copy" Order="Primary" Text="{i18n:Translate Text=Copy, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchCopyViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding Path=MasterEntity}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">@drawable/Copy.png</On>
+                    <On Platform="iOS">Assets/Copy.png</On>
+                    <On Platform="Windows">Assets/Copy.png</On>
+                    <On Platform="WinPhone">Assets/Copy.png</On>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem x:Name="EntityUpdateAction_elseA1Asomething" Order="Primary" Text="{i18n:Translate Text=Edit, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPelseA1AsomethingOfBuildVM.LaunchViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding Path=MasterEntity}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">@drawable/Edit.png</On>
+                    <On Platform="iOS">Assets/Edit.png</On>
+                    <On Platform="Windows">Assets/Edit.png</On>
+                    <On Platform="WinPhone">Assets/Edit.png</On>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem x:Name="Details" Order="Primary" Text="{i18n:Translate Text=Details, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchDetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding Path=MasterEntity}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">@drawable/Properties.png</On>
+                    <On Platform="iOS">Assets/Properties.png</On>
+                    <On Platform="Windows">Assets/Properties.png</On>
+                    <On Platform="WinPhone">Assets/Properties.png</On>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem x:Name="GoHome" Order="Primary" Text="{i18n:Translate Text=Home, ResourceId=Framework.Resx.UIStringResource}" Command="{Binding Path=Main.GoHomeCommand, Source={StaticResource Locator}}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android">@drawable/Home.png</On>
+                    <On Platform="iOS">Assets/Home.png</On>
+                    <On Platform="Windows">Assets/Home.png</On>
+                    <On Platform="WinPhone">Assets/Home.png</On>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+</ContentPage>

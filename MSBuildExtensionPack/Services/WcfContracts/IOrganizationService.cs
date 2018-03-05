@@ -126,6 +126,18 @@ namespace MSBuildExtensionPack.WcfContracts
 
         #endregion Query Methods Of DefaultByFKOnly
 
+        #region Query Methods Of DefaultGroupedDataViewByFKOnly
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IOrganizationService/GetCollectionOfDefaultGroupedDataViewByFKOnly",
+            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IOrganizationService/GetCollectionOfDefaultGroupedDataViewByFKOnlyResponse")]
+#endif
+        MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView GetCollectionOfDefaultGroupedDataViewByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly request);
+
+        #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
+
         #region Query Methods Of EntityByIdentifier
 
 #if (XAMARIN)

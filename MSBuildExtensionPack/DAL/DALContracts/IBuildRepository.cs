@@ -162,6 +162,37 @@ namespace MSBuildExtensionPack.DALContracts
 
         #endregion Query Methods Of DefaultByFKOnly
 
+        #region Query Methods Of DefaultGroupedDataViewByFKOnly
+
+        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultGroupedDataViewByFKOnly(
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria solutionId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_1Id
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            );
+
+        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultGroupedDataViewByFKOnly(
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria solutionId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_1Id
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            );
+
+        MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfDefaultGroupedDataViewCollection GetCollectionOfDefaultGroupedDataViewByFKOnly(
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria solutionId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_1Id
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            );
+
+        #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
+
         #region Query Methods Of EntityByIdentifier
 
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityByIdentifier(
@@ -236,6 +267,105 @@ namespace MSBuildExtensionPack.DALContracts
             );
 
         #endregion Query Methods Of KeyInformationByIdentifier
+
+        #region Query Methods Of AncestorAndKeyInfo
+
+        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfAncestorAndKeyInfo(
+            Framework.EntityContracts.QuerySystemStringContainsCriteria solutionName
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria solutionDescription
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria organization_1Name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria organization_2Name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria buildName
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria buildDescription
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            );
+
+        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfAncestorAndKeyInfo(
+            Framework.EntityContracts.QuerySystemStringContainsCriteria solutionName
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria solutionDescription
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria organization_1Name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria organization_2Name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria buildName
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria buildDescription
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            );
+
+        MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfKeyInformationCollection GetCollectionOfAncestorAndKeyInfo(
+            Framework.EntityContracts.QuerySystemStringContainsCriteria solutionName
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria solutionDescription
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria organization_1Name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria organization_2Name
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria buildName
+            ,Framework.EntityContracts.QuerySystemStringContainsCriteria buildDescription
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            );
+
+        #endregion Query Methods Of AncestorAndKeyInfo
+
+        #region Query Methods Of KeyInformationByID
+
+        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfKeyInformationByID(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            );
+
+        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfKeyInformationByID(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            );
+
+        MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfUpdateNameRequestCollection GetCollectionOfKeyInformationByID(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            );
+
+        #endregion Query Methods Of KeyInformationByID
+
+        #region Query Methods Of UpdateName
+
+        /// <summary>
+        /// UpdateName
+        /// Description:
+        /// </summary>
+        /// <param name="input"></param>
+        MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfUpdateNameRequestCollection UpdateName(MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequestCollection input);
+        /// <summary>
+        /// UpdateName
+        /// Description:
+        /// </summary>
+        /// <param name="input"></param>
+        MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfUpdateNameRequestCollection UpdateName(MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest input);
+
+        #endregion Query Methods Of UpdateName
+
+        #region Query Methods Of InsertName
+
+        /// <summary>
+        /// InsertName
+        /// Description:
+        /// </summary>
+        /// <param name="input"></param>
+        MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfUpdateNameRequestCollection InsertName(MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequestCollection input);
+        /// <summary>
+        /// InsertName
+        /// Description:
+        /// </summary>
+        /// <param name="input"></param>
+        MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfUpdateNameRequestCollection InsertName(MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest input);
+
+        #endregion Query Methods Of InsertName
 
     }
 }

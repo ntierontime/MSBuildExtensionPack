@@ -336,6 +336,39 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of DefaultByFKOnly
 
+        #region Query Methods Of DefaultGroupedDataViewByFKOnly
+
+        [System.Diagnostics.DebuggerStepThroughAttribute()]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+        public partial class GetCollectionOfDefaultGroupedDataViewByFKOnlyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        {
+
+            private object[] results;
+
+            public GetCollectionOfDefaultGroupedDataViewByFKOnlyCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+                base(exception, cancelled, userState)
+            {
+                this.results = results;
+            }
+
+            public MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView Result
+            {
+                get
+                {
+                    base.RaiseExceptionIfNecessary();
+                    return ((MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView)(this.results[0]));
+                }
+            }
+        }
+
+        private BeginOperationDelegate onBeginGetCollectionOfDefaultGroupedDataViewByFKOnlyDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfDefaultGroupedDataViewByFKOnlyDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfDefaultGroupedDataViewByFKOnlyCompletedDelegate;
+
+        #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
+
         #region Query Methods Of EntityByIdentifier
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -651,6 +684,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
         public event System.EventHandler<GetCollectionOfDefaultByFKOnlyCompletedEventArgs> GetCollectionOfDefaultByFKOnlyCompleted;
 
         #endregion Query Methods Of DefaultByFKOnly
+
+        #region Query Methods Of DefaultGroupedDataViewByFKOnly
+
+        public event System.EventHandler<GetCollectionOfDefaultGroupedDataViewByFKOnlyCompletedEventArgs> GetCollectionOfDefaultGroupedDataViewByFKOnlyCompleted;
+
+        #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
 
         #region Query Methods Of EntityByIdentifier
 
@@ -1457,6 +1496,78 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of DefaultByFKOnly
 
+        #region Query Methods Of DefaultGroupedDataViewByFKOnly
+
+        /// <summary>
+        /// Gets the collection of entity of "FKOnly".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView GetCollectionOfDefaultGroupedDataViewByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request)
+        {
+            return base.Channel.GetCollectionOfDefaultGroupedDataViewByFKOnly(request);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.ISolutionServiceAsyn.BeginGetCollectionOfDefaultGroupedDataViewByFKOnly(MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request, System.AsyncCallback callback, object asyncState)
+        {
+            return base.Channel.BeginGetCollectionOfDefaultGroupedDataViewByFKOnly(request, callback, asyncState);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView MSBuildExtensionPack.WcfContracts.ISolutionServiceAsyn.EndGetCollectionOfDefaultGroupedDataViewByFKOnly(System.IAsyncResult result)
+        {
+            return base.Channel.EndGetCollectionOfDefaultGroupedDataViewByFKOnly(result);
+        }
+
+        private System.IAsyncResult OnBeginGetCollectionOfDefaultGroupedDataViewByFKOnly(object[] inValues, System.AsyncCallback callback, object asyncState)
+        {
+            MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request = ((MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly )(inValues[0]));
+            return ((MSBuildExtensionPack.WcfContracts.ISolutionServiceAsyn)(this)).BeginGetCollectionOfDefaultGroupedDataViewByFKOnly(request, callback, asyncState);
+        }
+
+        private object[] OnEndGetCollectionOfDefaultGroupedDataViewByFKOnly(System.IAsyncResult result)
+        {
+            MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView retVal = ((MSBuildExtensionPack.WcfContracts.ISolutionServiceAsyn)(this)).EndGetCollectionOfDefaultGroupedDataViewByFKOnly(result);
+            return new object[] {
+                    retVal};
+        }
+
+        private void OnGetCollectionOfDefaultGroupedDataViewByFKOnlyCompleted(object state)
+        {
+            if ((this.GetCollectionOfDefaultGroupedDataViewByFKOnlyCompleted != null))
+            {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.GetCollectionOfDefaultGroupedDataViewByFKOnlyCompleted(this, new GetCollectionOfDefaultGroupedDataViewByFKOnlyCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+
+        public void GetCollectionOfDefaultGroupedDataViewByFKOnlyAsync(MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request)
+        {
+            this.GetCollectionOfDefaultGroupedDataViewByFKOnlyAsync(request, null);
+        }
+
+        public void GetCollectionOfDefaultGroupedDataViewByFKOnlyAsync(MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request, object userState)
+        {
+            if ((this.onBeginGetCollectionOfDefaultGroupedDataViewByFKOnlyDelegate == null))
+            {
+                this.onBeginGetCollectionOfDefaultGroupedDataViewByFKOnlyDelegate = new BeginOperationDelegate(this.OnBeginGetCollectionOfDefaultGroupedDataViewByFKOnly);
+            }
+            if ((this.onEndGetCollectionOfDefaultGroupedDataViewByFKOnlyDelegate == null))
+            {
+                this.onEndGetCollectionOfDefaultGroupedDataViewByFKOnlyDelegate = new EndOperationDelegate(this.OnEndGetCollectionOfDefaultGroupedDataViewByFKOnly);
+            }
+            if ((this.onGetCollectionOfDefaultGroupedDataViewByFKOnlyCompletedDelegate == null))
+            {
+                this.onGetCollectionOfDefaultGroupedDataViewByFKOnlyCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCollectionOfDefaultGroupedDataViewByFKOnlyCompleted);
+            }
+            base.InvokeAsync(this.onBeginGetCollectionOfDefaultGroupedDataViewByFKOnlyDelegate, new object[] {
+                        request}, this.onEndGetCollectionOfDefaultGroupedDataViewByFKOnlyDelegate, this.onGetCollectionOfDefaultGroupedDataViewByFKOnlyCompletedDelegate, userState);
+        }
+
+        #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
+
         #region Query Methods Of EntityByIdentifier
 
         /// <summary>
@@ -2180,6 +2291,25 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
 
         #endregion Query Methods Of DefaultByFKOnly
+
+        #region Query Methods Of DefaultGroupedDataViewByFKOnly
+
+            public System.IAsyncResult BeginGetCollectionOfDefaultGroupedDataViewByFKOnly(MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request, System.AsyncCallback callback, object asyncState)
+            {
+                object[] _args = new object[1];
+                _args[0] = request;
+                System.IAsyncResult _result = base.BeginInvoke("GetCollectionOfDefaultGroupedDataViewByFKOnly", _args, callback, asyncState);
+                return _result;
+            }
+
+            public MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView EndGetCollectionOfDefaultGroupedDataViewByFKOnly(System.IAsyncResult result)
+            {
+                object[] _args = new object[0];
+                MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView _result = ((MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView)(base.EndInvoke("GetCollectionOfDefaultGroupedDataViewByFKOnly", _args, result)));
+                return _result;
+            }
+
+        #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
 
         #region Query Methods Of EntityByIdentifier
 

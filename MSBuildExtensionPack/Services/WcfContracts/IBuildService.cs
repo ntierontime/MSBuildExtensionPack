@@ -114,6 +114,18 @@ namespace MSBuildExtensionPack.WcfContracts
 
         #endregion Query Methods Of DefaultByFKOnly
 
+        #region Query Methods Of DefaultGroupedDataViewByFKOnly
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildService/GetCollectionOfDefaultGroupedDataViewByFKOnly",
+            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildService/GetCollectionOfDefaultGroupedDataViewByFKOnlyResponse")]
+#endif
+        MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.DefaultGroupedDataView GetCollectionOfDefaultGroupedDataViewByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfFKOnly request);
+
+        #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
+
         #region Query Methods Of EntityByIdentifier
 
 #if (XAMARIN)
@@ -173,6 +185,68 @@ namespace MSBuildExtensionPack.WcfContracts
             MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfIdentifier request);
 
         #endregion Query Methods Of KeyInformationByIdentifier
+
+        #region Query Methods Of AncestorAndKeyInfo
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildService/ExistsOfAncestorAndKeyInfo",
+            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildService/ExistsOfAncestorAndKeyInfoResponse")]
+#endif
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfAncestorAndKeyInfo(
+            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfFKStringContains request);
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildService/GetCollectionOfAncestorAndKeyInfo",
+            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildService/GetCollectionOfAncestorAndKeyInfoResponse")]
+#endif
+        MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation GetCollectionOfAncestorAndKeyInfo(
+            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfFKStringContains request);
+
+        #endregion Query Methods Of AncestorAndKeyInfo
+
+        #region Query Methods Of KeyInformationByID
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildService/ExistsOfKeyInformationByID",
+            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildService/ExistsOfKeyInformationByIDResponse")]
+#endif
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationByID(
+            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfIdentifier request);
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildService/GetCollectionOfKeyInformationByID",
+            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildService/GetCollectionOfKeyInformationByIDResponse")]
+#endif
+        MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest GetCollectionOfKeyInformationByID(
+            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfIdentifier request);
+
+        #endregion Query Methods Of KeyInformationByID
+
+        #region Query Methods Of UpdateName
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(Action = "http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildService/UpdateName",
+           ReplyAction = "http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildService/UpdateNameResponse")]
+#endif
+        MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest UpdateName(MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedUpdateName request);
+
+        #endregion Query Methods Of UpdateName
+
+        #region Query Methods Of InsertName
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(Action = "http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildService/InsertName",
+           ReplyAction = "http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildService/InsertNameResponse")]
+#endif
+        MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest InsertName(MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedInsertName request);
+
+        #endregion Query Methods Of InsertName
 
     }
 }

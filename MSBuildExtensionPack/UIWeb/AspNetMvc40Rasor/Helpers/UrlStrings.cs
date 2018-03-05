@@ -25,6 +25,9 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
         public const string ActionName_Build_WPCommonOfBuild = "WPCommonOfBuild";
         public const string ActionName_Build_WPCommonOfBuild_Export = "WPCommonOfBuild_Export";
 
+        public const string ActionName_Build_WPsomethingOfBuild = "WPsomethingOfBuild";
+        public const string ActionName_Build_WPsomethingOfBuild_Export = "WPsomethingOfBuild_Export";
+
         public const string ActionName_BuildEventCode_WPCommonOfBuildEventCode = "WPCommonOfBuildEventCode";
         public const string ActionName_BuildEventCode_WPCommonOfBuildEventCode_Export = "WPCommonOfBuildEventCode_Export";
 
@@ -43,6 +46,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
 
         public const string ActionName_Build_WPFullDetailsOfBuild = "WPFullDetailsOfBuild";
 
+        public const string ActionName_Build_WPelsesomethingOfBuild = "WPelsesomethingOfBuild";
+
         public const string ActionName_BuildEventCode_WPFullDetailsOfBuildEventCode = "WPFullDetailsOfBuildEventCode";
 
         public const string ActionName_BuildLog_WPFullDetailsOfBuildLog = "WPFullDetailsOfBuildLog";
@@ -54,6 +59,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Helpers
         #endregion 2.2. Action Names -- UIWorkspaceTypes.FullDetails
 
         #region 2.3. Action Names -- UIWorkspaceTypes.SingleItemForm
+
+        public const string ActionName_Build_WPelseA1AsomethingOfBuild = "WPelseA1AsomethingOfBuild";
 
         #endregion 2.3. Action Names -- UIWorkspaceTypes.SingleItemForm
 

@@ -1581,6 +1581,221 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         #endregion Query Methods Of DefaultByFKOnly
 
+        #region Query Methods Of DefaultGroupedDataViewByFKOnly
+
+        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
+        /// <returns>IQueryable&lt;...&gt; of Common</returns>
+        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView> _GetQueryOfDefaultGroupedDataViewByFKOnly(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
+        {
+            var _ResultFromDataSource =
+                (
+                    from t in this.LinqContext.Organizations
+                    join Organization_2 in this.LinqContext.Organizations on t.ParentId equals Organization_2.Id
+                    where
+                        (
+                            (
+                            (parentId.IsToCompare == false || parentId.IsToCompare && Organization_2.Id == parentId.ValueToCompare)
+                            )
+                        )
+                    group t by new { ParentId = t.ParentId } into tG
+                    let _CountPerFK = tG.Count()
+                    select new MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView { ParentId = tG.Key.ParentId, CountPerFK = _CountPerFK } into vD4
+                    select vD4
+                );
+            var _ResultFromDataSourceWithName =
+                from t in _ResultFromDataSource
+            join Organization_2 in this.LinqContext.Organizations on t.ParentId equals Organization_2.Id
+            let _Name = string.Concat(new string[] { Organization_2.Name })
+            select new MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView { ParentId = t.ParentId, CountPerFK = t.CountPerFK, Name = _Name };
+            var _retval = _ResultFromDataSourceWithName;
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView> _retval1;
+            if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
+            {
+                _retval1 = _retval;
+            }
+            else
+            {
+                _retval1 = _retval.AsQueryable().OrderBy(queryOrderBySettingCollection.GetOrderByExpression());
+            }
+            return _retval1;
+        }
+
+        private bool _ExistsOfDefaultGroupedDataViewByFKOnly(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
+        {
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView> _Query = _GetQueryOfDefaultGroupedDataViewByFKOnly(
+                parentId
+                ,queryOrderBySettingCollection
+            );
+            bool result;
+            if (currentIndex == -1 || pageSize == -1)
+            {
+                result = _Query.Any();
+            }
+            else
+            {
+                result = _Query.Skip(currentIndex).Take(pageSize).Any();
+            }
+            return result;
+        }
+
+        private int _GetCountOfDefaultGroupedDataViewByFKOnly(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
+
+        {
+            IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView> _Query = _GetQueryOfDefaultGroupedDataViewByFKOnly(
+                parentId
+                ,queryOrderBySettingCollection
+            );
+            int _Count;
+            if (currentIndex == -1 || pageSize == -1)
+            {
+                _Count = _Query.Count();
+            }
+            else
+            {
+                _Count = _Query.Skip(currentIndex).Take(pageSize).Count();
+            }
+            return _Count;
+        }
+
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultGroupedDataViewByFKOnly(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
+        {
+            log.Info(string.Format("{0}: GetCountOfDefaultGroupedDataViewByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
+            try
+            {
+                int _retval = _GetCountOfDefaultGroupedDataViewByFKOnly(
+                parentId
+                ,currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+                    );
+                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
+                _retMessage.Result = _retval;
+            }
+            catch(Exception ex)
+            {
+                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
+                _retMessage.Result = 0;
+                _retMessage.Message = ex.Message;
+                log.Error(string.Format("{0}: GetCountOfDefaultGroupedDataViewByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+            }
+            log.Info(string.Format("{0}: GetCountOfDefaultGroupedDataViewByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            return _retMessage;
+        }
+
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultGroupedDataViewByFKOnly(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
+        {
+            log.Info(string.Format("{0}: ExistsOfDefaultGroupedDataViewByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
+            try
+            {
+                bool _retval = _ExistsOfDefaultGroupedDataViewByFKOnly(
+                parentId
+                ,currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+                    );
+                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
+                _retMessage.Result = _retval;
+            }
+            catch (Exception ex)
+            {
+                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
+                _retMessage.Result = false;
+                _retMessage.Message = ex.Message;
+                log.Error(string.Format("{0}: ExistsOfDefaultGroupedDataViewByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+            }
+            log.Info(string.Format("{0}: ExistsOfDefaultGroupedDataViewByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            return _retMessage;
+        }
+
+        public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultGroupedDataViewCollection GetCollectionOfDefaultGroupedDataViewByFKOnly(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
+        {
+            log.Info(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+
+            MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultGroupedDataViewCollection _retMessage = new MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultGroupedDataViewCollection();
+            try
+            {
+                bool _Exists = _ExistsOfDefaultGroupedDataViewByFKOnly(
+                parentId
+                ,currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+            );
+
+                if (_Exists)
+                {
+                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView> _Query = _GetQueryOfDefaultGroupedDataViewByFKOnly(
+                parentId
+                ,queryOrderBySettingCollection
+            );
+
+                    IEnumerable<MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView> _retval;
+
+                    if (currentIndex == -1 || pageSize == -1)
+                    {
+                        _retval = _Query;
+                    }
+                    else
+                    {
+                        _retval = _Query.Skip(currentIndex).Take(pageSize);
+                    }
+                    _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
+                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
+                    _retMessage.QueryPagingResult.PageSize = pageSize;
+                    _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
+                    _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;
+                    _retMessage.QueryPagingResult.CountOfRecords = _Query.Count();
+                    _retMessage.Result = new MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataViewCollection();
+                    _retMessage.Result.AddRange(_retval);
+                }
+                else
+                {
+                    _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.SuccessButNoResult;
+                    _retMessage.Result = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
+                _retMessage.Result = null;
+                _retMessage.Message = ex.Message;
+                log.Error(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+            }
+            log.Info(string.Format("{0}: GetCollectionOfDefaultGroupedDataViewByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            return _retMessage;
+        }
+
+        #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
+
         #region Query Methods Of EntityByIdentifier
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>

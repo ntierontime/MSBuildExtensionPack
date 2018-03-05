@@ -208,6 +208,21 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of DefaultByFKOnly
 
+        #region Query Methods Of DefaultGroupedDataViewByFKOnly
+
+        /// <summary>
+        /// Gets the collection of entity of "FKOnly".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.DefaultGroupedDataView GetCollectionOfDefaultGroupedDataViewByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request)
+        {
+            return base.Channel.GetCollectionOfDefaultGroupedDataViewByFKOnly(request);
+        }
+
+        #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
+
         #region Query Methods Of EntityByIdentifier
 
         /// <summary>
@@ -285,6 +300,58 @@ namespace MSBuildExtensionPack.WcfClientBLL
         }
 
         #endregion Query Methods Of KeyInformationByIdentifier
+
+        #region Query Methods Of KeyInformationByFKOnly
+
+        /// <summary>
+        /// Exists the of entity of "FKOnly".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request)
+        {
+            return base.Channel.ExistsOfKeyInformationByFKOnly(request);
+        }
+
+        /// <summary>
+        /// Gets the collection of entity of "FKOnly".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation GetCollectionOfKeyInformationByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request)
+        {
+            return base.Channel.GetCollectionOfKeyInformationByFKOnly(request);
+        }
+
+        #endregion Query Methods Of KeyInformationByFKOnly
+
+        #region Query Methods Of BuildLogSummaryPerBuild
+
+        /// <summary>
+        /// Exists the of entity of "FKOnly".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfBuildLogSummaryPerBuild(
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request)
+        {
+            return base.Channel.ExistsOfBuildLogSummaryPerBuild(request);
+        }
+
+        /// <summary>
+        /// Gets the collection of entity of "FKOnly".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.BuildLogSummaryPerBuild GetCollectionOfBuildLogSummaryPerBuild(
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request)
+        {
+            return base.Channel.GetCollectionOfBuildLogSummaryPerBuild(request);
+        }
+
+        #endregion Query Methods Of BuildLogSummaryPerBuild
 
             // DataQueryPerQuerySettingCollection -- MethodDataQuery -- End
 

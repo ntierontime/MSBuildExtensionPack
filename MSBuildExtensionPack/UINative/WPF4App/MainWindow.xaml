@@ -34,6 +34,13 @@
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
             </MenuItem>
+            <MenuItem Header="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.Build, Mode=OneWay, Source={StaticResource LocalizedStrings}}" >
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <cmd:EventToCommand Command="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_WPsomethingOfBuildVM.LaunchSearchViewCommand, Mode=OneWay, Source={StaticResource Locator}}" PassEventArgsToCommand="false" />
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </MenuItem>
             <MenuItem Header="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuildEventCode.BuildEventCode, Mode=OneWay, Source={StaticResource LocalizedStrings}}" >
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Click">

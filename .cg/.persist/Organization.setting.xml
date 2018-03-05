@@ -26,8 +26,8 @@
   </DataView>
   <DataView Key="DefaultGroupedDataView" DataViewKnownCategory="DefaultGroupedDataView" IsGroupByResult="true">
     <Description>DefaultGroupedDataView</Description>
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemInt64)ParentId=ParentId</Properties>
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting">(SystemInt64)CountPerFK=#Count[];(SystemString)Name=#StringConcat[\ParentId:Name]</Properties>
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemInt64)ParentId^=ParentId</Properties>
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting">(SystemInt64)CountPerFK=#Count[];(SystemString)Name*=#StringConcat[\ParentId:Name]</Properties>
     <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
   </DataView>
   <DataView Key="KeyInformation" DataViewKnownCategory="KeyInformation" IsGroupByResult="false">
@@ -119,7 +119,10 @@
     <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
     <BLLMethodSetting HasGetCollectionMethod="true" />
   </QueryResult>
-  <QueryResult Key="DefaultGroupedDataViewByFKOnly" CriteriaKey="FKOnly" DataViewKey="DefaultGroupedDataView" />
+  <QueryResult Key="DefaultGroupedDataViewByFKOnly" CriteriaKey="FKOnly" DataViewKey="DefaultGroupedDataView">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasGetCollectionMethod="true" />
+  </QueryResult>
   <QueryResult Key="EntityByIdentifier" CriteriaKey="Identifier">
     <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
     <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
