@@ -278,6 +278,9 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
         }
         public ObservableCollection<MSBuildExtensionPack.DataSourceEntities.BuildLog.KeyInformation> FK_BuildLog_Build { get; private set; }
 
+        //1.1. FK_BuildLog_Build Summary
+        public MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataViewCollection FK_BuildLog_BuildSummary { get; set; }
+
         protected override MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaIdentifier GetCriteria(MSBuildExtensionPack.EntityContracts.IBuildIdentifier o)
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.BuildChainedQueryCriteriaIdentifier();
@@ -346,6 +349,7 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                                 this.FK_BuildLog_Build.Add(_FK_BuildLog_BuildItem);
                             }
                         }
+                        this.FK_BuildLog_BuildSummary = result.FK_BuildLog_BuildSummary;
 
                     }
                     else

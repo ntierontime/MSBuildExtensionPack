@@ -15,8 +15,8 @@
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="../AppResourceDictionary.xaml" />
-                <ResourceDictionary Source="../Skins/MainSkin.xaml" />
+                <ResourceDictionary Source="../../AppResourceDictionary.xaml" />
+                <ResourceDictionary Source="../../Skins/MainSkin.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>

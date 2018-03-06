@@ -19,6 +19,8 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
 
         public override string ViewName { get { return ViewName_Static; } }
 
+        public MSBuildExtensionPack.DataSourceEntities.Build.Default[] OxyPlotChartBinding { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the WPCommonOfBuildVM class.
         /// </summary>
@@ -83,6 +85,9 @@ namespace MSBuildExtensionPack.MVVMLightViewModels
                                 this.Result.Add(item);
                             }
                         }
+
+                        this.OxyPlotChartBinding = this.Result.Take(10).ToArray();
+                        RaisePropertyChanged(() => this.OxyPlotChartBinding);
 
                         this.QueryPagingSetting = result.QueryPagingSetting;
                         this.OriginalQueryOrderBySettingCollecionInString = this.QueryOrderBySettingCollecionInString;
