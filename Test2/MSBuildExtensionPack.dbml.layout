@@ -1,0 +1,1029 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 20.75, 65.75" name="MSBuildExtensionPack">
+  <DataContextMoniker Name="/MSBuildExtensionPackDataContext" />
+  <nestedChildShapes>
+    <classShape Id="610eefe0-b5f2-4520-90f5-69b19a13f147" absoluteBounds="0.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/AWBuildVersion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f906b2c1-c566-4b1b-9d5a-184b28f65ac2" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dbaaf7e2-7e03-4fb2-b829-f1c7fa6c0aab" absoluteBounds="9.75, 45.375, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/Store" />
+      <nestedChildShapes>
+        <elementListCompartment Id="90d162aa-e398-4ad8-9cb4-7d515774795b" absoluteBounds="9.765, 45.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b45cfe21-d212-45e6-a177-dc150a3a27ee" absoluteBounds="3.75, 0.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/DatabaseLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eb84e9b1-a90b-4b6e-a3c9-4051ba352276" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bf5f72b1-4e30-4282-a432-811e05990666" absoluteBounds="0.75, 4.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/ErrorLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c6e973dc-b55c-406b-9940-d3aed1599e83" absoluteBounds="0.765, 5.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="389c07c8-feaa-4436-8af9-480214c5846e" absoluteBounds="4.25, 38.375, 2, 1.5785953776041595">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/Department" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5733b86f-9067-4520-862d-07c5f83242e7" absoluteBounds="4.265, 38.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="68717f5e-00fa-4d58-846e-24523e50d189" absoluteBounds="4.25, 44.625, 2, 3.5016097005208309">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/Employee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e89cb2b8-925e-4b22-b041-dfbaf4ff1b93" absoluteBounds="4.265, 45.085, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="27b0042c-5f45-4f17-afc2-f27f543953fb" absoluteBounds="7, 39.375, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/EmployeeDepartmentHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ef97825b-e12e-4f4d-835e-70964daafa89" absoluteBounds="7.015, 39.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d257841f-dff4-41e2-b37b-70e5f0b444ed" absoluteBounds="7, 48.625, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/EmployeePayHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6b905380-227c-4197-9389-9e5f3fde4c4f" absoluteBounds="7.015, 49.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="79788c28-1ace-4f3a-ab21-eb54bfbe0ff4" absoluteBounds="7, 42.375, 2, 1.5785953776041595">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/JobCandidate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d1dbd745-d66e-4209-a1a2-386929a25d76" absoluteBounds="7.015, 42.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="600b8126-9e3d-4fe5-b738-d4472e04ef49" absoluteBounds="4.25, 40.625, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/Shift" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d23ecec4-0383-419d-8d46-b24c9b5c67a3" absoluteBounds="4.265, 41.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9d603790-a0d9-4483-8db2-0cd0abd331ed" absoluteBounds="12.5, 54.25, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/Address" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7239d0a1-31f8-4e04-8569-8f76f052e892" absoluteBounds="12.515, 54.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="df0816c9-72d6-4685-8495-73e094e3eb71" absoluteBounds="12.5, 7.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/AddressType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6b23a847-2ca7-4bf2-8fb3-4ffc140ce6fe" absoluteBounds="12.515, 7.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ae14b236-08d1-4ad6-bf57-1c96a3a96d6c" absoluteBounds="6.75, 11.375, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/BusinessEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3eb930b0-8878-4c9d-b390-32e8ada5650d" absoluteBounds="6.765, 11.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b0840742-d663-4a8d-b6ba-8be660544cae" absoluteBounds="15.25, 33.125, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/BusinessEntityAddress" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ff8de66f-8b4a-4732-8cee-02c3343a1b6e" absoluteBounds="15.265, 33.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="66090d26-ae1c-4fc5-94a6-b371816a50a7" absoluteBounds="12.5, 30.875, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/BusinessEntityContact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9563dae8-22b7-413a-8eaa-79d4e7ac0d20" absoluteBounds="12.515, 31.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9ab2357d-b8d5-4698-9a35-acb0607a1ccd" absoluteBounds="9.75, 4.125, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/ContactType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7f1266fc-ade4-4187-b3bf-b04187c352e0" absoluteBounds="9.765, 4.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="af565868-97ee-45c9-88c7-dc012770fbca" absoluteBounds="7, 53, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/CountryRegion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5b387953-9d56-4721-a10a-efefbf32fdbe" absoluteBounds="7.015, 53.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="434e5eb4-6d08-427a-a0e4-9aac61d47936" absoluteBounds="12.5, 50.5, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/EmailAddress" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4655943f-bf1e-4151-8410-e2c72b149d0d" absoluteBounds="12.515, 50.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ff1c27e7-2ff1-4475-9268-a9807f3f2b38" absoluteBounds="12.5, 58, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/Password" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d11df662-012b-44fc-9369-2e2d1cbd673c" absoluteBounds="12.515, 58.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2eb6f4ce-c269-48da-8ed3-3f7575a795d0" absoluteBounds="9.75, 48.875, 2, 3.3093082682291595">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/Person" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e452c1e7-2093-494a-8fde-6512d37fadbf" absoluteBounds="9.765, 49.335, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cdf41f03-9fab-4f3d-9cbb-945131c0fd5c" absoluteBounds="15.5, 50.75, 2, 1.5785953776041595">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/PersonPhone" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4e6300eb-22e1-4058-92c0-2b3de45e15cc" absoluteBounds="15.515, 51.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0ab65e5b-ec25-4366-8dd6-8ee8e05355ff" absoluteBounds="12.75, 60.875, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/PhoneNumberType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="512f026b-c35f-4f23-8295-58dfeb20baeb" absoluteBounds="12.765, 61.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="909612c0-dace-4b14-be83-053a1040b82b" absoluteBounds="9.75, 54.25, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/StateProvince" />
+      <nestedChildShapes>
+        <elementListCompartment Id="78c3b1d6-4978-410b-9f02-945cde3db88b" absoluteBounds="9.765, 54.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d9d99870-e568-42b9-a86a-456ef22b538f" absoluteBounds="3.5, 19.75, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/BillOfMaterial" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fa4a61e2-f988-4b41-b6c6-8a41b8aafa25" absoluteBounds="3.515, 20.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="12d251d1-a338-4a14-bb7f-527e23b10ae4" absoluteBounds="3.75, 29.5, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/Culture" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cd833765-1132-4568-b37f-1f6d846e861b" absoluteBounds="3.765, 29.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4b144018-acbe-4549-9d57-9376e3157764" absoluteBounds="3.75, 26.625, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/Illustration" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0b6306bb-f429-495c-a82d-2a4b104a96a1" absoluteBounds="3.765, 27.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8d2de356-2f3a-4294-a074-258422280190" absoluteBounds="12.25, 10.125, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/Location" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7800e3d1-8cf0-42f0-90e5-44d025bd1a3c" absoluteBounds="12.265, 10.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="90573dbf-018e-45de-900a-83f01212147b" absoluteBounds="6.5, 18.25, 2, 5.6169254557291666">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/Product" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d91b17ea-7c71-4843-9a23-f13fbd76895e" absoluteBounds="6.515, 18.71, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="809dd1b4-0136-4538-bb59-9b0981035310" absoluteBounds="1, 16.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/ProductCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e92b2b35-8fce-4be8-bf85-8ed6087d5902" absoluteBounds="1.0150000000000001, 17.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eacf83bf-92e2-4eec-ae6d-b356455caf91" absoluteBounds="9.25, 19, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/ProductCostHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="854b300d-0e3e-408e-861f-4484831ae1dd" absoluteBounds="9.265, 19.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b6507c15-305d-4336-97a0-80f1c485c628" absoluteBounds="3.75, 31.625, 2, 1.5785953776041701">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/ProductDescription" />
+      <nestedChildShapes>
+        <elementListCompartment Id="645dee9b-5765-4005-8fbf-c9e7a7cfeb16" absoluteBounds="3.765, 32.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1f197445-d101-40ba-bcf2-97981aa67f55" absoluteBounds="12.25, 23, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/ProductInventory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="523c6120-d467-46ba-8f95-0961df1a2ad3" absoluteBounds="12.265, 23.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eab1906c-a2d2-4e22-821f-f70f5285c380" absoluteBounds="9.25, 21.5, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/ProductListPriceHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="07c4e00a-b9f2-476d-ab78-4ee60acde0ce" absoluteBounds="9.265, 21.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1c4f05b0-8024-4083-8d02-ef9f7256fa6c" absoluteBounds="3.75, 23.375, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/ProductModel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="29039e6d-2f48-43b5-a3f3-a75f65de98c3" absoluteBounds="3.765, 23.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="55b4232e-cc6c-4c70-8403-ca47dad2693d" absoluteBounds="6.5, 24.625, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/ProductModelIllustration" />
+      <nestedChildShapes>
+        <elementListCompartment Id="383ed844-9aad-48cd-ac5b-a5da67466f65" absoluteBounds="6.515, 25.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2a6ce0b2-edce-416f-aaa3-74a78639460e" absoluteBounds="6.5, 27.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/ProductModelProductDescriptionCulture" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a9ad93a6-846c-4f32-a147-808ec22684b4" absoluteBounds="6.515, 27.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c1a265cb-7509-4254-93bb-e6c9c1c77b7e" absoluteBounds="9.5, 36.125, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/ProductPhoto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6ebb245e-5ca7-4bb0-8c57-6d60bc0811cf" absoluteBounds="9.515, 36.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="47594db2-b31c-4c61-a212-6a075d60fe99" absoluteBounds="12.25, 20.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/ProductProductPhoto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a2721eb3-7d6b-4ba0-8c13-cb6678b716fa" absoluteBounds="12.265, 20.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c9620725-35ce-49db-8ab4-686f3c43381b" absoluteBounds="9.25, 29.75, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/ProductReview" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e967b9c4-b839-431d-9234-ec7eabb160c3" absoluteBounds="9.265, 30.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2d2f5c4c-8cab-471b-af00-b3b4494b3ad6" absoluteBounds="3.75, 16.875, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/ProductSubcategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6721a18d-2750-466e-9a5f-1c14e158030e" absoluteBounds="3.765, 17.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0212db91-df94-4880-bfbe-a068bbacb4a8" absoluteBounds="6.5, 15.375, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/ScrapReason" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9c5185bd-b29d-4016-91e1-795df1e57f79" absoluteBounds="6.515, 15.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d85f8a43-3736-41b9-af94-eb5cb4c5da63" absoluteBounds="9.25, 32.75, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/TransactionHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="66a3bbb3-0d8d-4fd3-8121-9260d3e95557" absoluteBounds="9.265, 33.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fb29521f-e7a6-416a-b26f-a837eaf0dec1" absoluteBounds="3.75, 4.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/TransactionHistoryArchive" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0c18e44c-9d6b-4d3d-9447-20b6b81b0161" absoluteBounds="3.765, 5.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="288a93b7-b405-4b66-8c3b-604a9cf71e77" absoluteBounds="0.75, 20.375, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/UnitMeasure" />
+      <nestedChildShapes>
+        <elementListCompartment Id="508328e4-bef4-459c-8c63-cfa9dd4f43d3" absoluteBounds="0.765, 20.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0bd2f9cc-18a7-40c6-9446-2ee349f7e584" absoluteBounds="9.25, 14.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/WorkOrder" />
+      <nestedChildShapes>
+        <elementListCompartment Id="06c8b1e5-09e6-4dc5-be87-9b0f6b675c24" absoluteBounds="9.265, 15.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5f188ab6-6532-4427-a4fe-9f8dffe34cb8" absoluteBounds="15, 14.5, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/WorkOrderRouting" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f57a6f13-e729-422c-ba01-72ede98e59c1" absoluteBounds="15.015, 14.96, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="77058a23-f29e-4657-b483-04f64c529428" absoluteBounds="12.25, 13.625, 2, 2.9247054036458309">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/ProductVendor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aa70d93c-fdfd-4f4b-bf67-28e9a811e370" absoluteBounds="12.265, 14.085, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="87f5239c-1be8-415d-be14-8d80dc7a4f49" absoluteBounds="15.25, 19.625, 2, 2.9247054036458309">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/PurchaseOrderDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a3a6a7f0-08e1-4c86-8ba2-51d69c04d5da" absoluteBounds="15.265, 20.085, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fbf96eb8-ec39-4442-b1cd-046d9b69882f" absoluteBounds="12.5, 26.375, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/PurchaseOrderHeader" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8bfab15e-9a89-48f9-975d-80624f571a33" absoluteBounds="12.515, 26.835, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="53ac3610-9457-4389-ab12-9fb87ae6de00" absoluteBounds="12.5, 39, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/ShipMethod" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ea9c1da0-ce95-4671-a4ea-ac24e6443dc9" absoluteBounds="12.515, 39.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ab30e229-6d23-47c3-b8cd-31aa45d52a14" absoluteBounds="9.5, 10.875, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/Vendor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="29e0cfd6-e26c-4a40-bc6b-451103d76826" absoluteBounds="9.515, 11.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7f89bb8a-e46d-4788-ae9c-e1751da2d9e5" absoluteBounds="18.5, 48.5, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/CountryRegionCurrency" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6719c4b8-64b2-4660-9767-e6ae6643d33a" absoluteBounds="18.515, 48.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d418cb11-b069-4816-b3fe-2a677e6de3b9" absoluteBounds="12.5, 36.375, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/CreditCard" />
+      <nestedChildShapes>
+        <elementListCompartment Id="19fce155-92f1-41f8-917b-985329e48fc0" absoluteBounds="12.515, 36.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1695825e-cc07-438e-9476-05da5ed83cfe" absoluteBounds="9.75, 42.125, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/Currency" />
+      <nestedChildShapes>
+        <elementListCompartment Id="567fa60c-6916-424f-974e-4f8d393403aa" absoluteBounds="9.765, 42.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b41a243b-1801-4d4e-a76d-ec1ee8bd7c7e" absoluteBounds="12.5, 41.75, 2, 2.1554996744791595">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/CurrencyRate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aacde7ee-6f29-4fbf-b746-d3361d272354" absoluteBounds="12.515, 42.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="586548a7-6392-4643-8c2c-9c2deec27640" absoluteBounds="12.5, 47.375, 2, 2.1554996744791737">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="70c4b7f7-7ed0-40eb-bb31-51c451560182" absoluteBounds="12.515, 47.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b665ec38-051c-4a9e-a661-8c9c5faf031b" absoluteBounds="15.25, 41.625, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/PersonCreditCard" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d1caac8b-d1ac-43b0-9aa0-300b20693441" absoluteBounds="15.265, 42.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cb3dd81d-126a-4fef-999a-e0b7c34efc22" absoluteBounds="18, 16.625, 2, 2.9247054036458309">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/SalesOrderDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="649f623a-6acc-4299-82a1-6558610c30f7" absoluteBounds="18.015, 17.085, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bea9a107-bec2-4245-81ad-96a9ae5558c5" absoluteBounds="15.25, 44.125, 2, 5.8092268880208309">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/SalesOrderHeader" />
+      <nestedChildShapes>
+        <elementListCompartment Id="191538b0-3134-4716-85a1-f99619bf8a21" absoluteBounds="15.265, 44.585, 1.9700000000000002, 5.249226888020833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7ed30273-157d-43dc-8f03-40512d831d09" absoluteBounds="18, 46.375, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/SalesOrderHeaderSalesReason" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2c3a9830-ecdb-4d90-af73-31ee307d8dbe" absoluteBounds="18.015, 46.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fca533af-e62f-4a08-8998-0778c8c616d9" absoluteBounds="7, 45.125, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/SalesPerson" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a3ea917c-b16f-48ab-8a88-b27bea182d1e" absoluteBounds="7.015, 45.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7214015a-b265-4780-835d-1339b2b07bcd" absoluteBounds="9.75, 39.5, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/SalesPersonQuotaHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cd084c22-9eb0-4986-981f-2ae15dcad6f9" absoluteBounds="9.765, 39.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dd6de070-6819-4e80-be97-602eb588e0cd" absoluteBounds="15.25, 38.25, 2, 1.5785953776041595">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/SalesReason" />
+      <nestedChildShapes>
+        <elementListCompartment Id="62be3a7e-c2b1-4074-bd1b-e76bef910388" absoluteBounds="15.265, 38.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7989fa0d-9b80-461e-b474-4c6c26ce070b" absoluteBounds="12.5, 63.375, 2, 2.1554996744791595">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/SalesTaxRate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8a85a988-8ebc-4c00-84a7-0b7e47bfea86" absoluteBounds="12.515, 63.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="682d8fcd-6e07-4d9e-ad0d-8ffc2d725f62" absoluteBounds="7, 55.125, 2, 2.7324039713541595">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/SalesTerritory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="edb91a80-d19e-4ede-8976-5af49ca0c4ab" absoluteBounds="7.015, 55.585, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6b21b558-dbeb-4a62-b0d5-47623c6c940b" absoluteBounds="15.75, 53.5, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/SalesTerritoryHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="33c48569-96af-433e-9fa6-4ffdfea78210" absoluteBounds="15.765, 53.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dd6faeb7-ff1b-488e-b5d1-a72b22eb03ed" absoluteBounds="9.25, 24.125, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/ShoppingCartItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="55e7895a-673a-4e4e-b2ae-e33c25c2c824" absoluteBounds="9.265, 24.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4619a7e1-8486-4b3b-9062-e4d230461651" absoluteBounds="9.5, 6.625, 2, 2.9247054036458318">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/SpecialOffer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="039a5449-d964-4135-b3f1-f6e54ba3b55f" absoluteBounds="9.515, 7.085, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="98b4196a-c2cf-4a1c-b29e-3f9d66fe3dc5" absoluteBounds="12.25, 17.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MSBuildExtensionPackDataContext/SpecialOfferProduct" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ee59cb1a-a2cd-4b51-b270-06a81541afc2" absoluteBounds="12.265, 17.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.25 : 39.6642976888021); (7 : 39.6642976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Department/Department_EmployeeDepartmentHistory" />
+      <nodes>
+        <classShapeMoniker Id="389c07c8-feaa-4436-8af9-480214c5846e" />
+        <classShapeMoniker Id="27b0042c-5f45-4f17-afc2-f27f543953fb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.20076923076923 : 44.625); (6.625 : 44.2007692307692); (6.625 : 40.5324999654948); (7 : 40.5324999654948)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Employee/Employee_EmployeeDepartmentHistory" />
+      <nodes>
+        <classShapeMoniker Id="68717f5e-00fa-4d58-846e-24523e50d189" />
+        <classShapeMoniker Id="27b0042c-5f45-4f17-afc2-f27f543953fb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.25 : 48.1266097005208); (5.25 : 49.5104484049479); (5.69791916666667 : 49.5104484049479 : JumpStart); (5.86458583333333 : 49.5104484049479 : JumpEnd); (6.54166666666667 : 49.5104484049479 : JumpStart); (6.70833333333333 : 49.5104484049479 : JumpEnd); (7 : 49.5104484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Employee/Employee_EmployeePayHistory" />
+      <nodes>
+        <classShapeMoniker Id="68717f5e-00fa-4d58-846e-24523e50d189" />
+        <classShapeMoniker Id="d257841f-dff4-41e2-b37b-70e5f0b444ed" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.25 : 44.625); (6.8125 : 44.0625); (6.8125 : 43.1642976888021); (7 : 43.1642976888021)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Employee/Employee_JobCandidate" />
+      <nodes>
+        <classShapeMoniker Id="68717f5e-00fa-4d58-846e-24523e50d189" />
+        <classShapeMoniker Id="79788c28-1ace-4f3a-ab21-eb54bfbe0ff4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.25 : 40.9815991210938); (6.54166666666667 : 40.9815991210938 : JumpStart); (6.70833333333333 : 40.9815991210938 : JumpEnd); (7 : 40.9815991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Shift/Shift_EmployeeDepartmentHistory" />
+      <nodes>
+        <classShapeMoniker Id="600b8126-9e3d-4fe5-b738-d4472e04ef49" />
+        <classShapeMoniker Id="27b0042c-5f45-4f17-afc2-f27f543953fb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.75 : 12.7612939453125); (7.75 : 15.125); (8.57291666666667 : 15.125 : JumpStart); (8.73958333333333 : 15.125 : JumpEnd); (8.75 : 15.125); (8.75 : 39.125); (9.25 : 39.125); (9.25 : 46.3565991210938); (9.41666666666667 : 46.3565991210938 : JumpStart); (9.58333333333333 : 46.3565991210938 : JumpEnd); (9.75 : 46.3565991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/BusinessEntity/BusinessEntity_Store" />
+      <nodes>
+        <classShapeMoniker Id="ae14b236-08d1-4ad6-bf57-1c96a3a96d6c" />
+        <classShapeMoniker Id="dbaaf7e2-7e03-4fb2-b829-f1c7fa6c0aab" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.5 : 54.25); (14.875 : 53.875); (14.875 : 34.0104484049479); (14.9791666666667 : 34.0104484049479 : JumpStart); (15.1458333333333 : 34.0104484049479 : JumpEnd); (15.25 : 34.0104484049479)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Address/Address_BusinessEntityAddress" />
+      <nodes>
+        <classShapeMoniker Id="9d603790-a0d9-4483-8db2-0cd0abd331ed" />
+        <classShapeMoniker Id="b0840742-d663-4a8d-b6ba-8be660544cae" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.5 : 8.70359537760417); (13.5 : 9.875); (14.75 : 9.875); (14.75 : 33.536472202474); (14.9791666666667 : 33.536472202474 : JumpStart); (15.1458333333333 : 33.536472202474 : JumpEnd); (15.25 : 33.536472202474)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/AddressType/AddressType_BusinessEntityAddress" />
+      <nodes>
+        <classShapeMoniker Id="df0816c9-72d6-4685-8495-73e094e3eb71" />
+        <classShapeMoniker Id="b0840742-d663-4a8d-b6ba-8be660544cae" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.75 : 12.0681469726562); (9.25 : 12.0681469726562); (9.25 : 13.4728011067708); (11.3229166666667 : 13.4728011067708 : JumpStart); (11.5208358333333 : 13.4728011067708 : JumpEnd); (11.5729166666667 : 13.4728011067708 : JumpStart); (11.7395833333333 : 13.4728011067708 : JumpEnd); (11.9791666666667 : 13.4728011067708 : JumpStart); (12.1458333333333 : 13.4728011067708 : JumpEnd); (14.5416666666667 : 13.4728011067708 : JumpStart); (14.8333333333333 : 13.4728011067708 : JumpEnd); (14.875 : 13.4728011067708); (14.875 : 32.75); (14.9791666666667 : 32.75 : JumpStart); (15.1458333333333 : 32.75 : JumpEnd); (16.25 : 32.75); (16.25 : 33.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/BusinessEntity/BusinessEntity_BusinessEntityAddress" />
+      <nodes>
+        <classShapeMoniker Id="ae14b236-08d1-4ad6-bf57-1c96a3a96d6c" />
+        <classShapeMoniker Id="b0840742-d663-4a8d-b6ba-8be660544cae" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.65625 : 12.7612939453125); (8.65625 : 32.4030989583333); (8.66666666666667 : 32.4030989583333 : JumpStart); (9.08333333333333 : 32.4030989583333 : JumpEnd); (11.3229166666667 : 32.4030989583333 : JumpStart); (11.4895833333333 : 32.4030989583333 : JumpEnd); (12.0416666666667 : 32.4030989583333 : JumpStart); (12.3333333333333 : 32.4030989583333 : JumpEnd); (12.5 : 32.4030989583333)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/BusinessEntity/BusinessEntity_BusinessEntityContact" />
+      <nodes>
+        <classShapeMoniker Id="ae14b236-08d1-4ad6-bf57-1c96a3a96d6c" />
+        <classShapeMoniker Id="66090d26-ae1c-4fc5-94a6-b371816a50a7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.65625 : 5.5112939453125); (11.65625 : 32.2504475325521); (12.0416666666667 : 32.2504475325521 : JumpStart); (12.3333333333333 : 32.2504475325521 : JumpEnd); (12.5 : 32.2504475325521)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/ContactType/ContactType_BusinessEntityContact" />
+      <nodes>
+        <classShapeMoniker Id="9ab2357d-b8d5-4698-9a35-acb0607a1ccd" />
+        <classShapeMoniker Id="66090d26-ae1c-4fc5-94a6-b371816a50a7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.75 : 51.3213525390625); (9.52083333333333 : 51.3213525390625 : JumpStart); (9.29166666666667 : 51.3213525390625 : JumpEnd); (6.70833333333333 : 51.3213525390625 : JumpStart); (6.54166666666667 : 51.3213525390625 : JumpEnd); (5.7812525 : 51.3213525390625); (5.7812525 : 48.1266097005208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Person/Person_Employee" />
+      <nodes>
+        <classShapeMoniker Id="2eb6f4ce-c269-48da-8ed3-3f7575a795d0" />
+        <classShapeMoniker Id="68717f5e-00fa-4d58-846e-24523e50d189" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.75 : 48.875); (12.125 : 48.5); (12.125 : 31.531471766276); (12.1666666666667 : 31.531471766276 : JumpStart); (12.3333333333333 : 31.531471766276 : JumpEnd); (12.5 : 31.531471766276)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Person/Person_BusinessEntityContact" />
+      <nodes>
+        <classShapeMoniker Id="2eb6f4ce-c269-48da-8ed3-3f7575a795d0" />
+        <classShapeMoniker Id="66090d26-ae1c-4fc5-94a6-b371816a50a7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.75 : 51.3421541341146); (12.5 : 51.3421541341146)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Person/Person_EmailAddress" />
+      <nodes>
+        <classShapeMoniker Id="2eb6f4ce-c269-48da-8ed3-3f7575a795d0" />
+        <classShapeMoniker Id="434e5eb4-6d08-427a-a0e4-9aac61d47936" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.75 : 52.1827688066907); (12.125 : 52.5577688066907); (12.125 : 58.8854484049479); (12.5 : 58.8854484049479)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Person/Person_Password" />
+      <nodes>
+        <classShapeMoniker Id="2eb6f4ce-c269-48da-8ed3-3f7575a795d0" />
+        <classShapeMoniker Id="ff1c27e7-2ff1-4475-9268-a9807f3f2b38" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.218748 : 12.7612939453125); (7.218748 : 14.875); (7.66666666666667 : 14.875 : JumpStart); (7.83333333333333 : 14.875 : JumpEnd); (8.57291666666667 : 14.875 : JumpStart); (8.73958333333333 : 14.875 : JumpEnd); (9 : 14.875); (9 : 38.875); (9.5 : 38.875); (9.5 : 50.0669242695312); (9.75 : 50.0669242695312)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/BusinessEntity/BusinessEntity_Person" />
+      <nodes>
+        <classShapeMoniker Id="ae14b236-08d1-4ad6-bf57-1c96a3a96d6c" />
+        <classShapeMoniker Id="2eb6f4ce-c269-48da-8ed3-3f7575a795d0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.75 : 50.2171134440104); (12.1666666666667 : 50.2171134440104 : JumpStart); (12.3333333333333 : 50.2171134440104 : JumpEnd); (14.7916666666667 : 50.2171134440104 : JumpStart); (14.9583333333333 : 50.2171134440104 : JumpEnd); (15.2291641666667 : 50.2171134440104 : JumpStart); (15.4583358333333 : 50.2171134440104 : JumpEnd); (17.40625 : 50.2171134440104); (17.40625 : 50.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Person/Person_PersonPhone" />
+      <nodes>
+        <classShapeMoniker Id="2eb6f4ce-c269-48da-8ed3-3f7575a795d0" />
+        <classShapeMoniker Id="cdf41f03-9fab-4f3d-9cbb-945131c0fd5c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.75 : 61.5681469726563); (15.59375 : 61.5681469726563); (15.59375 : 52.3285953776042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/PhoneNumberType/PhoneNumberType_PersonPhone" />
+      <nodes>
+        <classShapeMoniker Id="0ab65e5b-ec25-4366-8dd6-8ee8e05355ff" />
+        <classShapeMoniker Id="cdf41f03-9fab-4f3d-9cbb-945131c0fd5c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.75 : 55.4239005533854); (12.0416666666667 : 55.4239005533854 : JumpStart); (12.2083333333333 : 55.4239005533854 : JumpEnd); (12.5 : 55.4239005533854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/StateProvince/StateProvince_Address" />
+      <nodes>
+        <classShapeMoniker Id="909612c0-dace-4b14-be83-053a1040b82b" />
+        <classShapeMoniker Id="9d603790-a0d9-4483-8db2-0cd0abd331ed" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9 : 53.6249995); (9.29166666666667 : 53.6249995 : JumpStart); (9.45833333333333 : 53.6249995 : JumpEnd); (10.75 : 53.6249995); (10.75 : 54.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/CountryRegion/CountryRegion_StateProvince" />
+      <nodes>
+        <classShapeMoniker Id="af565868-97ee-45c9-88c7-dc012770fbca" />
+        <classShapeMoniker Id="909612c0-dace-4b14-be83-053a1040b82b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.5 : 21.0200512695313); (5.5 : 21.0200512695313)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Product/Product_BillOfMaterial" />
+      <nodes>
+        <classShapeMoniker Id="90573dbf-018e-45de-900a-83f01212147b" />
+        <classShapeMoniker Id="d9d99870-e568-42b9-a86a-456ef22b538f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.5 : 20.3225256347656); (5.5 : 20.3225256347656)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Product/Product_BillOfMaterial1" />
+      <nodes>
+        <classShapeMoniker Id="90573dbf-018e-45de-900a-83f01212147b" />
+        <classShapeMoniker Id="d9d99870-e568-42b9-a86a-456ef22b538f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 19.8854484049479); (8.57291666666667 : 19.8854484049479 : JumpStart); (8.83333333333333 : 19.8854484049479 : JumpEnd); (8.91666666666667 : 19.8854484049479 : JumpStart); (9.08333333333333 : 19.8854484049479 : JumpEnd); (9.25 : 19.8854484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Product/Product_ProductCostHistory" />
+      <nodes>
+        <classShapeMoniker Id="90573dbf-018e-45de-900a-83f01212147b" />
+        <classShapeMoniker Id="eacf83bf-92e2-4eec-ae6d-b356455caf91" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.25 : 11.8958968098958); (14.625 : 12.2708968098958); (14.625 : 22.625); (14.4651755650989 : 22.7848244349011 : JumpStart); (14.3473244349011 : 22.9026755650989 : JumpEnd); (14.25 : 23)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Location/Location_ProductInventory" />
+      <nodes>
+        <classShapeMoniker Id="8d2de356-2f3a-4294-a074-258422280190" />
+        <classShapeMoniker Id="1f197445-d101-40ba-bcf2-97981aa67f55" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 23.6001611328125); (8.57291666666667 : 23.6001611328125 : JumpStart); (8.83333333333333 : 23.6001611328125 : JumpEnd); (8.91666666666667 : 23.6001611328125 : JumpStart); (9.08333333333333 : 23.6001611328125 : JumpEnd); (11.3229166666667 : 23.6001611328125 : JumpStart); (11.5208358333333 : 23.6001611328125 : JumpEnd); (11.5729166666667 : 23.6001611328125 : JumpStart); (11.7395833333333 : 23.6001611328125 : JumpEnd); (12.25 : 23.6001611328125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Product/Product_ProductInventory" />
+      <nodes>
+        <classShapeMoniker Id="90573dbf-018e-45de-900a-83f01212147b" />
+        <classShapeMoniker Id="1f197445-d101-40ba-bcf2-97981aa67f55" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 22.3854484049479); (8.57291666666667 : 22.3854484049479 : JumpStart); (8.83333333333333 : 22.3854484049479 : JumpEnd); (8.91666666666667 : 22.3854484049479 : JumpStart); (9.08333333333333 : 22.3854484049479 : JumpEnd); (9.25 : 22.3854484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Product/Product_ProductListPriceHistory" />
+      <nodes>
+        <classShapeMoniker Id="90573dbf-018e-45de-900a-83f01212147b" />
+        <classShapeMoniker Id="eab1906c-a2d2-4e22-821f-f70f5285c380" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 23.6209627278646); (6.5 : 23.6209627278646)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/ProductModel/ProductModel_Product" />
+      <nodes>
+        <classShapeMoniker Id="1c4f05b0-8024-4083-8d02-ef9f7256fa6c" />
+        <classShapeMoniker Id="90573dbf-018e-45de-900a-83f01212147b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 26.625); (6.125 : 26.25); (6.125 : 26.3862939453125); (6.25357443490112 : 26.2577195104114 : JumpStart); (6.37142556509888 : 26.1398683802136 : JumpEnd); (6.5 : 26.0112939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Illustration/Illustration_ProductModelIllustration" />
+      <nodes>
+        <classShapeMoniker Id="4b144018-acbe-4549-9d57-9376e3157764" />
+        <classShapeMoniker Id="55b4232e-cc6c-4c70-8403-ca47dad2693d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 24.9815991210938); (6.5 : 24.9815991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/ProductModel/ProductModel_ProductModelIllustration" />
+      <nodes>
+        <classShapeMoniker Id="1c4f05b0-8024-4083-8d02-ef9f7256fa6c" />
+        <classShapeMoniker Id="55b4232e-cc6c-4c70-8403-ca47dad2693d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 30.1931469726563); (6.88541416666667 : 30.1931469726563 : JumpStart); (7.05208083333333 : 30.1931469726563 : JumpEnd); (7.5 : 30.1931469726563); (7.5 : 29.0785953776042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Culture/Culture_ProductModelProductDescriptionCulture" />
+      <nodes>
+        <classShapeMoniker Id="12d251d1-a338-4a14-bb7f-527e23b10ae4" />
+        <classShapeMoniker Id="2a6ce0b2-edce-416f-aaa3-74a78639460e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 32.4142976888021); (6.9687475 : 32.4142976888021); (6.9687475 : 29.0785953776042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/ProductDescription/ProductDescription_ProductModelProductDescriptionCulture" />
+      <nodes>
+        <classShapeMoniker Id="b6507c15-305d-4336-97a0-80f1c485c628" />
+        <classShapeMoniker Id="2a6ce0b2-edce-416f-aaa3-74a78639460e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 25.2762809899339); (6.3125 : 25.8387809899339); (6.3125 : 28.2892976888021); (6.5 : 28.2892976888021)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/ProductModel/ProductModel_ProductModelProductDescriptionCulture" />
+      <nodes>
+        <classShapeMoniker Id="1c4f05b0-8024-4083-8d02-ef9f7256fa6c" />
+        <classShapeMoniker Id="2a6ce0b2-edce-416f-aaa3-74a78639460e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 21.1354484049479); (8.57291666666667 : 21.1354484049479 : JumpStart); (8.83333333333333 : 21.1354484049479 : JumpEnd); (8.91666666666667 : 21.1354484049479 : JumpStart); (9.08333333333333 : 21.1354484049479 : JumpEnd); (11.3541691666667 : 21.1354484049479 : JumpStart); (11.5208358333333 : 21.1354484049479 : JumpEnd); (11.5729166666667 : 21.1354484049479 : JumpStart); (11.7395833333333 : 21.1354484049479 : JumpEnd); (12.25 : 21.1354484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Product/Product_ProductProductPhoto" />
+      <nodes>
+        <classShapeMoniker Id="90573dbf-018e-45de-900a-83f01212147b" />
+        <classShapeMoniker Id="47594db2-b31c-4c61-a212-6a075d60fe99" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.40625 : 36.125); (11.40625 : 21.317726702474); (11.5729166666667 : 21.317726702474 : JumpStart); (11.7395833333333 : 21.317726702474 : JumpEnd); (12.25 : 21.317726702474)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/ProductPhoto/ProductPhoto_ProductProductPhoto" />
+      <nodes>
+        <classShapeMoniker Id="c1a265cb-7509-4254-93bb-e6c9c1c77b7e" />
+        <classShapeMoniker Id="47594db2-b31c-4c61-a212-6a075d60fe99" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 23.8653859941907); (8.59732443490112 : 23.9627104290918 : JumpStart); (8.80892556509888 : 24.1743115592896 : JumpEnd); (8.94107443490112 : 24.3064604290918 : JumpStart); (9.05892556509888 : 24.4243115592896 : JumpEnd); (9.0625 : 24.4278859941907); (9.0625 : 30.9239005533854); (9.25 : 30.9239005533854)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Product/Product_ProductReview" />
+      <nodes>
+        <classShapeMoniker Id="90573dbf-018e-45de-900a-83f01212147b" />
+        <classShapeMoniker Id="c9620725-35ce-49db-8ab4-686f3c43381b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 18.4479484049479); (6.5 : 18.4479484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/ProductSubcategory/ProductSubcategory_Product" />
+      <nodes>
+        <classShapeMoniker Id="2d2f5c4c-8cab-471b-af00-b3b4494b3ad6" />
+        <classShapeMoniker Id="90573dbf-018e-45de-900a-83f01212147b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3 : 17.6642976888021); (3.75 : 17.6642976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/ProductCategory/ProductCategory_ProductSubcategory" />
+      <nodes>
+        <classShapeMoniker Id="809dd1b4-0136-4538-bb59-9b0981035310" />
+        <classShapeMoniker Id="2d2f5c4c-8cab-471b-af00-b3b4494b3ad6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.48153846153846 : 23.8669254557292); (8.59732443490112 : 23.9827114290918 : JumpStart); (8.80892556509888 : 24.1943125592896 : JumpEnd); (8.90625 : 24.2916369941907); (8.90625 : 34.0200512695313); (8.91666666666667 : 34.0200512695313 : JumpStart); (9.08333333333333 : 34.0200512695313 : JumpEnd); (9.25 : 34.0200512695313)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Product/Product_TransactionHistory" />
+      <nodes>
+        <classShapeMoniker Id="90573dbf-018e-45de-900a-83f01212147b" />
+        <classShapeMoniker Id="d85f8a43-3736-41b9-af94-eb5cb4c5da63" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 21.0681469726563); (3.5 : 21.0681469726563)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/UnitMeasure/UnitMeasure_BillOfMaterial" />
+      <nodes>
+        <classShapeMoniker Id="288a93b7-b405-4b66-8c3b-604a9cf71e77" />
+        <classShapeMoniker Id="d9d99870-e568-42b9-a86a-456ef22b538f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 21.7612939453125); (1.75 : 22.8325512695313); (6.5 : 22.8325512695313)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/UnitMeasure/UnitMeasure_Product" />
+      <nodes>
+        <classShapeMoniker Id="288a93b7-b405-4b66-8c3b-604a9cf71e77" />
+        <classShapeMoniker Id="90573dbf-018e-45de-900a-83f01212147b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 21.7612939453125); (2.2812525 : 22.5613244042969); (6.5 : 22.5613244042969)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/UnitMeasure/UnitMeasure_Product1" />
+      <nodes>
+        <classShapeMoniker Id="288a93b7-b405-4b66-8c3b-604a9cf71e77" />
+        <classShapeMoniker Id="90573dbf-018e-45de-900a-83f01212147b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.46769230769231 : 18.25); (8.59732443490112 : 18.1203678727912 : JumpStart); (8.80892556509888 : 17.9087667425934 : JumpEnd); (8.875 : 17.8426923076923); (8.875 : 16.1787014856771); (8.91666666666667 : 16.1787014856771 : JumpStart); (9.08333333333333 : 16.1787014856771 : JumpEnd); (9.25 : 16.1787014856771)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Product/Product_WorkOrder" />
+      <nodes>
+        <classShapeMoniker Id="90573dbf-018e-45de-900a-83f01212147b" />
+        <classShapeMoniker Id="0bd2f9cc-18a7-40c6-9446-2ee349f7e584" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 15.7143507428385); (8.57291666666667 : 15.7143507428385 : JumpStart); (8.83333333333333 : 15.7143507428385 : JumpEnd); (8.91666666666667 : 15.7143507428385 : JumpStart); (9.08333333333333 : 15.7143507428385 : JumpEnd); (9.25 : 15.7143507428385)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/ScrapReason/ScrapReason_WorkOrder" />
+      <nodes>
+        <classShapeMoniker Id="0212db91-df94-4880-bfbe-a068bbacb4a8" />
+        <classShapeMoniker Id="0bd2f9cc-18a7-40c6-9446-2ee349f7e584" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.25 : 10.9791959049479); (14.6666666666667 : 10.9791959049479 : JumpStart); (14.8333333333333 : 10.9791959049479 : JumpEnd); (16 : 10.9791959049479); (16 : 14.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Location/Location_WorkOrderRouting" />
+      <nodes>
+        <classShapeMoniker Id="8d2de356-2f3a-4294-a074-258422280190" />
+        <classShapeMoniker Id="5f188ab6-6532-4427-a4fe-9f8dffe34cb8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 16.8998527018229); (11.3541691666667 : 16.8998527018229 : JumpStart); (11.5208358333333 : 16.8998527018229 : JumpEnd); (11.5729166666667 : 16.8998527018229 : JumpStart); (11.7395833333333 : 16.8998527018229 : JumpEnd); (11.9791666666667 : 16.8998527018229 : JumpStart); (12.1458333333333 : 16.8998527018229 : JumpEnd); (14.5416666666667 : 16.8998527018229 : JumpStart); (14.9583333333333 : 16.8998527018229 : JumpEnd); (15 : 16.8998527018229)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/WorkOrder/WorkOrder_WorkOrderRouting" />
+      <nodes>
+        <classShapeMoniker Id="0bd2f9cc-18a7-40c6-9446-2ee349f7e584" />
+        <classShapeMoniker Id="5f188ab6-6532-4427-a4fe-9f8dffe34cb8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 18.2838451538462); (8.59732443490112 : 18.186520718945 : JumpStart); (8.80892556509888 : 17.9749195887473 : JumpEnd); (8.90884515384615 : 17.875); (8.91666666666667 : 17.875 : JumpStart); (9.08333333333333 : 17.875 : JumpEnd); (11.3541691666667 : 17.875 : JumpStart); (11.5208358333333 : 17.875 : JumpEnd); (11.5729166666667 : 17.875 : JumpStart); (11.7395833333333 : 17.875 : JumpEnd); (11.875 : 17.875); (11.875 : 16.9247054036458); (12.0035744349011 : 16.7961309687447 : JumpStart); (12.1214255650989 : 16.678279838547 : JumpEnd); (12.25 : 16.5497054036458)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Product/Product_ProductVendor" />
+      <nodes>
+        <classShapeMoniker Id="90573dbf-018e-45de-900a-83f01212147b" />
+        <classShapeMoniker Id="77058a23-f29e-4657-b483-04f64c529428" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(0.84375 : 20.375); (0.84375 : 14.15625); (7.13541466666667 : 14.15625 : JumpStart); (7.30208133333333 : 14.15625 : JumpEnd); (7.66666666666667 : 14.15625 : JumpStart); (7.83333333333333 : 14.15625 : JumpEnd); (8.57291666666667 : 14.15625 : JumpStart); (8.73958333333333 : 14.15625 : JumpEnd); (11.3541691666667 : 14.15625 : JumpStart); (11.5208358333333 : 14.15625 : JumpEnd); (11.5729166666667 : 14.15625 : JumpStart); (11.7395833333333 : 14.15625 : JumpEnd); (11.9791666666667 : 14.15625 : JumpStart); (12.1458333333333 : 14.15625 : JumpEnd); (12.25 : 14.15625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/UnitMeasure/UnitMeasure_ProductVendor" />
+      <nodes>
+        <classShapeMoniker Id="288a93b7-b405-4b66-8c3b-604a9cf71e77" />
+        <classShapeMoniker Id="77058a23-f29e-4657-b483-04f64c529428" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 18.9142976888021); (8.57291666666667 : 18.9142976888021 : JumpStart); (8.83333333333333 : 18.9142976888021 : JumpEnd); (8.91666666666667 : 18.9142976888021 : JumpStart); (9.08333333333333 : 18.9142976888021 : JumpEnd); (11.3541691666667 : 18.9142976888021 : JumpStart); (11.5208358333333 : 18.9142976888021 : JumpEnd); (11.5729166666667 : 18.9142976888021 : JumpStart); (11.7395833333333 : 18.9142976888021 : JumpEnd); (14.5416666666667 : 18.9142976888021 : JumpStart); (14.9583333333333 : 18.9142976888021 : JumpEnd); (16.25 : 18.9142976888021); (16.25 : 19.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Product/Product_PurchaseOrderDetail" />
+      <nodes>
+        <classShapeMoniker Id="90573dbf-018e-45de-900a-83f01212147b" />
+        <classShapeMoniker Id="87f5239c-1be8-415d-be14-8d80dc7a4f49" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.40625 : 26.375); (14.40625 : 22.220400390625); (14.5416666666667 : 22.220400390625 : JumpStart); (14.9583333333333 : 22.220400390625 : JumpEnd); (15.25 : 22.220400390625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/PurchaseOrderHeader/PurchaseOrderHeader_PurchaseOrderDetail" />
+      <nodes>
+        <classShapeMoniker Id="fbf96eb8-ec39-4442-b1cd-046d9b69882f" />
+        <classShapeMoniker Id="87f5239c-1be8-415d-be14-8d80dc7a4f49" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.25 : 44.6742297692308); (6.67422976923077 : 44.25); (9.16666666666667 : 44.25 : JumpStart); (9.58333333333333 : 44.25 : JumpEnd); (10.6666666666667 : 44.25 : JumpStart); (10.8333333333333 : 44.25 : JumpEnd); (12.0416666666667 : 44.25 : JumpStart); (12.2083333333333 : 44.25 : JumpEnd); (12.25 : 44.25); (12.25 : 29.9343082682292); (12.5 : 29.6843082682292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Employee/Employee_PurchaseOrderHeader" />
+      <nodes>
+        <classShapeMoniker Id="68717f5e-00fa-4d58-846e-24523e50d189" />
+        <classShapeMoniker Id="fbf96eb8-ec39-4442-b1cd-046d9b69882f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.5 : 39.0634254047476); (14.8160744349011 : 38.7473509698465 : JumpStart); (14.9339255650989 : 38.6294998396487 : JumpEnd); (15.0625 : 38.5009254047476); (15.0625 : 30.2452688066907); (14.9339255650989 : 30.1166943717896 : JumpStart); (14.8160744349011 : 29.9988432415918 : JumpEnd); (14.8089255650989 : 29.9916943717896 : JumpStart); (14.6910744349011 : 29.8738432415918 : JumpEnd); (14.5 : 29.6827688066907)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/ShipMethod/ShipMethod_PurchaseOrderHeader" />
+      <nodes>
+        <classShapeMoniker Id="53ac3610-9457-4389-ab12-9fb87ae6de00" />
+        <classShapeMoniker Id="fbf96eb8-ec39-4442-b1cd-046d9b69882f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.40625 : 13.2228011067708); (11.40625 : 13.8593725); (11.5729166666667 : 13.8593725 : JumpStart); (11.7395833333333 : 13.8593725 : JumpEnd); (11.9791666666667 : 13.8593725 : JumpStart); (12.1458333333333 : 13.8593725 : JumpEnd); (12.25 : 13.8593725)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Vendor/Vendor_ProductVendor" />
+      <nodes>
+        <classShapeMoniker Id="ab30e229-6d23-47c3-b8cd-31aa45d52a14" />
+        <classShapeMoniker Id="77058a23-f29e-4657-b483-04f64c529428" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.4375025 : 13.2228011067708); (11.4375025 : 27.9984016341146); (11.5729166666667 : 27.9984016341146 : JumpStart); (11.7395833333333 : 27.9984016341146 : JumpEnd); (12.5 : 27.9984016341146)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Vendor/Vendor_PurchaseOrderHeader" />
+      <nodes>
+        <classShapeMoniker Id="ab30e229-6d23-47c3-b8cd-31aa45d52a14" />
+        <classShapeMoniker Id="fbf96eb8-ec39-4442-b1cd-046d9b69882f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.75 : 11.6590734863281); (9.5 : 11.6590734863281)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/BusinessEntity/BusinessEntity_Vendor" />
+      <nodes>
+        <classShapeMoniker Id="ae14b236-08d1-4ad6-bf57-1c96a3a96d6c" />
+        <classShapeMoniker Id="ab30e229-6d23-47c3-b8cd-31aa45d52a14" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9 : 53.21875); (9.29166666666667 : 53.21875 : JumpStart); (9.45833333333333 : 53.21875 : JumpEnd); (12.0416666666667 : 53.21875 : JumpStart); (12.2083333333333 : 53.21875 : JumpEnd); (14.7916666666667 : 53.21875 : JumpStart); (14.9583333333333 : 53.21875 : JumpEnd); (15.2291641666667 : 53.21875 : JumpStart); (15.6770833333333 : 53.21875 : JumpEnd); (19.5 : 53.21875); (19.5 : 49.8862939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/CountryRegion/CountryRegion_CountryRegionCurrency" />
+      <nodes>
+        <classShapeMoniker Id="af565868-97ee-45c9-88c7-dc012770fbca" />
+        <classShapeMoniker Id="7f89bb8a-e46d-4788-ae9c-e1751da2d9e5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 43.5112939453125); (10.75 : 45.125); (12.0416666666667 : 45.125 : JumpStart); (12.2083333333333 : 45.125 : JumpEnd); (14.7916666666667 : 45.125 : JumpStart); (14.9895833333333 : 45.125 : JumpEnd); (15 : 45.125); (15 : 50.0592268880208); (15.2291641666667 : 50.0592268880208 : JumpStart); (15.4583358333333 : 50.0592268880208 : JumpEnd); (18.125 : 50.0592268880208); (18.125 : 49.1931469726563); (18.5 : 49.1931469726563)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Currency/Currency_CountryRegionCurrency" />
+      <nodes>
+        <classShapeMoniker Id="1695825e-cc07-438e-9476-05da5ed83cfe" />
+        <classShapeMoniker Id="7f89bb8a-e46d-4788-ae9c-e1751da2d9e5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.75 : 42.8181469726563); (12.0416666666667 : 42.8181469726563 : JumpStart); (12.3333333333333 : 42.8181469726563 : JumpEnd); (12.5 : 42.8181469726563)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Currency/Currency_CurrencyRate" />
+      <nodes>
+        <classShapeMoniker Id="1695825e-cc07-438e-9476-05da5ed83cfe" />
+        <classShapeMoniker Id="b41a243b-1801-4d4e-a76d-ec1ee8bd7c7e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.75 : 42.4090734863281); (12.0416666666667 : 42.4090734863281 : JumpStart); (12.3333333333333 : 42.4090734863281 : JumpEnd); (12.5 : 42.4090734863281)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Currency/Currency_CurrencyRate1" />
+      <nodes>
+        <classShapeMoniker Id="1695825e-cc07-438e-9476-05da5ed83cfe" />
+        <classShapeMoniker Id="b41a243b-1801-4d4e-a76d-ec1ee8bd7c7e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.75 : 49.2340023372396); (12.5 : 49.2340023372396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Person/Person_Customer" />
+      <nodes>
+        <classShapeMoniker Id="2eb6f4ce-c269-48da-8ed3-3f7575a795d0" />
+        <classShapeMoniker Id="586548a7-6392-4643-8c2c-9c2deec27640" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.75 : 46.3565991210938); (12.0416666666667 : 46.3565991210938 : JumpStart); (12.2083333333333 : 46.3565991210938 : JumpEnd); (13.5 : 46.3565991210938); (13.5 : 47.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Store/Store_Customer" />
+      <nodes>
+        <classShapeMoniker Id="dbaaf7e2-7e03-4fb2-b829-f1c7fa6c0aab" />
+        <classShapeMoniker Id="586548a7-6392-4643-8c2c-9c2deec27640" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.5 : 38.2430576350661); (14.8160744349011 : 38.5591320699672 : JumpStart); (14.9339255650989 : 38.676983200165 : JumpEnd); (15 : 38.7430576350661); (15 : 42.3181469726563); (15.25 : 42.3181469726563)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/CreditCard/CreditCard_PersonCreditCard" />
+      <nodes>
+        <classShapeMoniker Id="d418cb11-b069-4816-b3fe-2a677e6de3b9" />
+        <classShapeMoniker Id="b665ec38-051c-4a9e-a661-8c9c5faf031b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.75 : 50.7796337890625); (12.25 : 50.7796337890625); (12.25 : 49.9342268880208); (14.7916666666667 : 49.9342268880208 : JumpStart); (15.0833333333333 : 49.9342268880208 : JumpEnd); (15.125 : 49.9342268880208); (15.125 : 43.3862939453125); (16.25 : 43.3862939453125); (16.25 : 43.0112939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Person/Person_PersonCreditCard" />
+      <nodes>
+        <classShapeMoniker Id="2eb6f4ce-c269-48da-8ed3-3f7575a795d0" />
+        <classShapeMoniker Id="b665ec38-051c-4a9e-a661-8c9c5faf031b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.25 : 44.125); (17.625 : 43.75); (17.625 : 18.0873527018229); (18 : 18.0873527018229)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/SalesOrderHeader/SalesOrderHeader_SalesOrderDetail" />
+      <nodes>
+        <classShapeMoniker Id="bea9a107-bec2-4245-81ad-96a9ae5558c5" />
+        <classShapeMoniker Id="cb3dd81d-126a-4fef-999a-e0b7c34efc22" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.5 : 56.0617496744792); (15.34375 : 56.0617496744792); (15.34375 : 49.9342268880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Address/Address_SalesOrderHeader" />
+      <nodes>
+        <classShapeMoniker Id="9d603790-a0d9-4483-8db2-0cd0abd331ed" />
+        <classShapeMoniker Id="bea9a107-bec2-4245-81ad-96a9ae5558c5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.5 : 55.7624714583333); (15.3124975 : 55.7624714583333); (15.3124975 : 49.9342268880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Address/Address_SalesOrderHeader1" />
+      <nodes>
+        <classShapeMoniker Id="9d603790-a0d9-4483-8db2-0cd0abd331ed" />
+        <classShapeMoniker Id="bea9a107-bec2-4245-81ad-96a9ae5558c5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.5 : 38.3079941923077); (14.8160744349011 : 38.6240686272088 : JumpStart); (14.9339255650989 : 38.7419197574066 : JumpEnd); (14.9375 : 38.7454941923077); (14.9375 : 47.5296129440104); (15.0416666666667 : 47.5296129440104 : JumpStart); (15.2083333333333 : 47.5296129440104 : JumpEnd); (15.25 : 47.5296129440104)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/CreditCard/CreditCard_SalesOrderHeader" />
+      <nodes>
+        <classShapeMoniker Id="d418cb11-b069-4816-b3fe-2a677e6de3b9" />
+        <classShapeMoniker Id="bea9a107-bec2-4245-81ad-96a9ae5558c5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.5 : 43.8731909821715); (14.65625 : 44.0294409821715); (14.65625 : 43.53125); (14.8160744349011 : 43.6910744349011 : JumpStart); (14.9964255650989 : 43.8714255650989 : JumpEnd); (15.0660744349011 : 43.9410744349011 : JumpStart); (15.1839255650989 : 44.0589255650989 : JumpEnd); (15.25 : 44.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/CurrencyRate/CurrencyRate_SalesOrderHeader" />
+      <nodes>
+        <classShapeMoniker Id="b41a243b-1801-4d4e-a76d-ec1ee8bd7c7e" />
+        <classShapeMoniker Id="bea9a107-bec2-4245-81ad-96a9ae5558c5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.5 : 48.5925563092448); (14.7916666666667 : 48.5925563092448 : JumpStart); (15.2083333333333 : 48.5925563092448 : JumpEnd); (15.25 : 48.5925563092448)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Customer/Customer_SalesOrderHeader" />
+      <nodes>
+        <classShapeMoniker Id="586548a7-6392-4643-8c2c-9c2deec27640" />
+        <classShapeMoniker Id="bea9a107-bec2-4245-81ad-96a9ae5558c5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.5 : 40.9329941923077); (14.90625 : 41.3392441923077); (14.90625 : 46.2960539720052); (14.9166666666667 : 46.2960539720052 : JumpStart); (15.2083333333333 : 46.2960539720052 : JumpEnd); (15.25 : 46.2960539720052)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/ShipMethod/ShipMethod_SalesOrderHeader" />
+      <nodes>
+        <classShapeMoniker Id="53ac3610-9457-4389-ab12-9fb87ae6de00" />
+        <classShapeMoniker Id="bea9a107-bec2-4245-81ad-96a9ae5558c5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.25 : 47.0681469726563); (18 : 47.0681469726563)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/SalesOrderHeader/SalesOrderHeader_SalesOrderHeaderSalesReason" />
+      <nodes>
+        <classShapeMoniker Id="bea9a107-bec2-4245-81ad-96a9ae5558c5" />
+        <classShapeMoniker Id="7ed30273-157d-43dc-8f03-40512d831d09" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9 : 45.8032995605469); (9.16666666666667 : 45.8032995605469 : JumpStart); (9.33333333333333 : 45.8032995605469 : JumpEnd); (9.41666666666667 : 45.8032995605469 : JumpStart); (9.58333333333333 : 45.8032995605469 : JumpEnd); (9.75 : 45.8032995605469)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/SalesPerson/SalesPerson_Store" />
+      <nodes>
+        <classShapeMoniker Id="fca533af-e62f-4a08-8998-0778c8c616d9" />
+        <classShapeMoniker Id="dbaaf7e2-7e03-4fb2-b829-f1c7fa6c0aab" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9 : 45.28125); (9.16666666666667 : 45.28125 : JumpStart); (9.33333333333333 : 45.28125 : JumpEnd); (9.41666666666667 : 45.28125 : JumpStart); (9.58333333333333 : 45.28125 : JumpEnd); (12.0416666666667 : 45.28125 : JumpStart); (12.2083333333333 : 45.28125 : JumpEnd); (14.7916666666667 : 45.28125 : JumpStart); (15.2083333333333 : 45.28125 : JumpEnd); (15.25 : 45.28125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/SalesPerson/SalesPerson_SalesOrderHeader" />
+      <nodes>
+        <classShapeMoniker Id="fca533af-e62f-4a08-8998-0778c8c616d9" />
+        <classShapeMoniker Id="bea9a107-bec2-4245-81ad-96a9ae5558c5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.25 : 46.3950512695313); (7 : 46.3950512695313)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Employee/Employee_SalesPerson" />
+      <nodes>
+        <classShapeMoniker Id="68717f5e-00fa-4d58-846e-24523e50d189" />
+        <classShapeMoniker Id="fca533af-e62f-4a08-8998-0778c8c616d9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9 : 45.125); (9.19107443490112 : 44.9339255650989 : JumpStart); (9.30892556509888 : 44.8160744349011 : JumpEnd); (9.375 : 44.75); (9.375 : 40.3854484049479); (9.41666666666667 : 40.3854484049479 : JumpStart); (9.58333333333333 : 40.3854484049479 : JumpEnd); (9.75 : 40.3854484049479)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/SalesPerson/SalesPerson_SalesPersonQuotaHistory" />
+      <nodes>
+        <classShapeMoniker Id="fca533af-e62f-4a08-8998-0778c8c616d9" />
+        <classShapeMoniker Id="7214015a-b265-4780-835d-1339b2b07bcd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.25 : 39.0392976888021); (17.5416666666667 : 39.0392976888021 : JumpStart); (17.7083333333333 : 39.0392976888021 : JumpEnd); (19 : 39.0392976888021); (19 : 46.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/SalesReason/SalesReason_SalesOrderHeaderSalesReason" />
+      <nodes>
+        <classShapeMoniker Id="dd6de070-6819-4e80-be97-602eb588e0cd" />
+        <classShapeMoniker Id="7ed30273-157d-43dc-8f03-40512d831d09" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 56.5978011067708); (10.75 : 64.4527498372396); (12.5 : 64.4527498372396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/StateProvince/StateProvince_SalesTaxRate" />
+      <nodes>
+        <classShapeMoniker Id="909612c0-dace-4b14-be83-053a1040b82b" />
+        <classShapeMoniker Id="7989fa0d-9b80-461e-b474-4c6c26ce070b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9 : 55.8614005533854); (9.75 : 55.8614005533854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/SalesTerritory/SalesTerritory_StateProvince" />
+      <nodes>
+        <classShapeMoniker Id="682d8fcd-6e07-4d9e-ad0d-8ffc2d725f62" />
+        <classShapeMoniker Id="909612c0-dace-4b14-be83-053a1040b82b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9 : 55.125); (9.375 : 54.75); (9.375 : 48.0937505); (9.41666666666667 : 48.0937505 : JumpStart); (9.58333333333333 : 48.0937505 : JumpEnd); (12.0416666666667 : 48.0937505 : JumpStart); (12.2083333333333 : 48.0937505 : JumpEnd); (12.5 : 48.0937505)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/SalesTerritory/SalesTerritory_Customer" />
+      <nodes>
+        <classShapeMoniker Id="682d8fcd-6e07-4d9e-ad0d-8ffc2d725f62" />
+        <classShapeMoniker Id="586548a7-6392-4643-8c2c-9c2deec27640" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9 : 57.2588525390625); (10.6666666666667 : 57.2588525390625 : JumpStart); (10.8333333333333 : 57.2588525390625 : JumpEnd); (12.0416666666667 : 57.2588525390625 : JumpStart); (12.2083333333333 : 57.2588525390625 : JumpEnd); (15.3750025 : 57.2588525390625); (15.3750025 : 49.9342268880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/SalesTerritory/SalesTerritory_SalesOrderHeader" />
+      <nodes>
+        <classShapeMoniker Id="682d8fcd-6e07-4d9e-ad0d-8ffc2d725f62" />
+        <classShapeMoniker Id="bea9a107-bec2-4245-81ad-96a9ae5558c5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7 : 55.125); (6.625 : 54.75); (6.625 : 48.0401025390625); (7 : 47.6651025390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/SalesTerritory/SalesTerritory_SalesPerson" />
+      <nodes>
+        <classShapeMoniker Id="682d8fcd-6e07-4d9e-ad0d-8ffc2d725f62" />
+        <classShapeMoniker Id="fca533af-e62f-4a08-8998-0778c8c616d9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8 : 54.3862939453125); (8 : 55.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/CountryRegion/CountryRegion_SalesTerritory" />
+      <nodes>
+        <classShapeMoniker Id="af565868-97ee-45c9-88c7-dc012770fbca" />
+        <classShapeMoniker Id="682d8fcd-6e07-4d9e-ad0d-8ffc2d725f62" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9 : 47.6020246159856); (9.4375 : 48.0395246159856); (9.4375 : 52.875); (12.0416666666667 : 52.875 : JumpStart); (12.2083333333333 : 52.875 : JumpEnd); (14.7916666666667 : 52.875 : JumpStart); (14.9583333333333 : 52.875 : JumpEnd); (15.126509152494 : 52.875); (15.2535719349011 : 53.0020627824071 : JumpStart); (15.4339280650989 : 53.1824189126049 : JumpEnd); (15.5348244349011 : 53.2833152824071 : JumpStart); (15.6526755650989 : 53.4011664126049 : JumpEnd); (15.751509152494 : 53.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/SalesPerson/SalesPerson_SalesTerritoryHistory" />
+      <nodes>
+        <classShapeMoniker Id="fca533af-e62f-4a08-8998-0778c8c616d9" />
+        <classShapeMoniker Id="6b21b558-dbeb-4a62-b0d5-47623c6c940b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9 : 56.9283243229167); (10.6666666666667 : 56.9283243229167 : JumpStart); (10.8333333333333 : 56.9283243229167 : JumpEnd); (12.0416666666667 : 56.9283243229167 : JumpStart); (12.2083333333333 : 56.9283243229167 : JumpEnd); (15.2916691666667 : 56.9283243229167 : JumpStart); (15.4583358333333 : 56.9283243229167 : JumpEnd); (15.5104166666667 : 56.9283243229167 : JumpStart); (15.6770833333333 : 56.9283243229167 : JumpEnd); (16.75 : 56.9283243229167); (16.75 : 55.4631982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/SalesTerritory/SalesTerritory_SalesTerritoryHistory" />
+      <nodes>
+        <classShapeMoniker Id="682d8fcd-6e07-4d9e-ad0d-8ffc2d725f62" />
+        <classShapeMoniker Id="6b21b558-dbeb-4a62-b0d5-47623c6c940b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 23.8161552249599); (8.59732443490112 : 23.9134796598611 : JumpStart); (8.80892556509888 : 24.1250807900588 : JumpEnd); (8.8125 : 24.1286552249599); (8.8125 : 23.685990847506); (8.94107443490112 : 23.8145652824071 : JumpStart); (9.05892556509888 : 23.9324164126049 : JumpEnd); (9.25150915249399 : 24.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Product/Product_ShoppingCartItem" />
+      <nodes>
+        <classShapeMoniker Id="90573dbf-018e-45de-900a-83f01212147b" />
+        <classShapeMoniker Id="dd6faeb7-ff1b-488e-b5d1-a72b22eb03ed" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.25 : 18.5204740397135); (14.5416666666667 : 18.5204740397135 : JumpStart); (14.9583333333333 : 18.5204740397135 : JumpEnd); (17.5416666666667 : 18.5204740397135 : JumpStart); (17.7083333333333 : 18.5204740397135 : JumpEnd); (18 : 18.5204740397135)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/SpecialOfferProduct/SpecialOfferProduct_SalesOrderDetail" />
+      <nodes>
+        <classShapeMoniker Id="98b4196a-c2cf-4a1c-b29e-3f9d66fe3dc5" />
+        <classShapeMoniker Id="cb3dd81d-126a-4fef-999a-e0b7c34efc22" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 18.5874727657252); (8.57291666666667 : 18.5874727657252 : JumpStart); (8.83333333333333 : 18.5874727657252 : JumpEnd); (8.91666666666667 : 18.5874727657252 : JumpStart); (9.08333333333333 : 18.5874727657252 : JumpEnd); (11.3541691666667 : 18.5874727657252 : JumpStart); (11.5208358333333 : 18.5874727657252 : JumpEnd); (11.5729166666667 : 18.5874727657252 : JumpStart); (11.7395833333333 : 18.5874727657252 : JumpEnd); (12.25 : 18.5874727657252)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/Product/Product_SpecialOfferProduct" />
+      <nodes>
+        <classShapeMoniker Id="90573dbf-018e-45de-900a-83f01212147b" />
+        <classShapeMoniker Id="98b4196a-c2cf-4a1c-b29e-3f9d66fe3dc5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 9.48816594210737); (11.5973244349011 : 9.58549037700849 : JumpStart); (11.7151755650989 : 9.70334150720625 : JumpEnd); (12.0625 : 10.0506659421074); (12.0625 : 18.1999838828626); (12.25 : 18.1999838828626)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MSBuildExtensionPackDataContext/SpecialOffer/SpecialOffer_SpecialOfferProduct" />
+      <nodes>
+        <classShapeMoniker Id="4619a7e1-8486-4b3b-9062-e4d230461651" />
+        <classShapeMoniker Id="98b4196a-c2cf-4a1c-b29e-3f9d66fe3dc5" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
