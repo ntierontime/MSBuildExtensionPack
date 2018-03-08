@@ -19,7 +19,7 @@
             <div class="panel-heading clearfix">
                 <h3 style="display: inline;">@Html.ActionLink(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.BuildLog, "WPCommonOfBuildLog", "BuildLog")</h3>
             </div>
-            @Html.ChartJS("chart123", (ChartTypePie)ViewBag.Chart_FK_BuildLog_BuildSummary)
+            @Html.ChartJSHtml("chart123", (ChartTypePie)ViewBag.Chart_FK_BuildLog_BuildSummary)
             <br />
             <div class="table-responsive">
 <table id="MasterDataControl0" name="MasterDataControl0" class="table table-hover table-bordered table-striped">
@@ -404,3 +404,8 @@
 <!-- Aside.31.End. MSBuildExtensionPack.Organization => RelatedEntityWhenMasterViewIsFKEntity -->
  </div>
  </div>
+@section Scripts {
+    <text>
+    @Html.ChartJSJavascript("chart123", (ChartTypePie)ViewBag.Chart_FK_BuildLog_BuildSummary)
+    </text>
+}
