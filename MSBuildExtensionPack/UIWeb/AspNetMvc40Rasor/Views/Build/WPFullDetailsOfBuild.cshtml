@@ -9,6 +9,7 @@
 @using Framework.Mvc;
 @using PagedList.Mvc;
 @using ChartJS.Helpers.MVC;
+
 @model MSBuildExtensionPack.AspNetMvc40ViewModel.WPFullDetailsOfBuildVM
 @{
     RouteValueDictionary queryStringDictionary = new RouteValueDictionary(Request.QueryString.AllKeys.ToDictionary(key => key, key => (object)Request.QueryString[key]));
