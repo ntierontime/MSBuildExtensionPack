@@ -57,27 +57,15 @@ namespace MSBuildExtensionPack.CommonBLLEntities
     }
 
     /// <summary>
-    /// BusinessLogicLayerChainedQueryCriteria, key=UniqueConstraintByUC_Organization_UniqueIdentifier
+    /// BusinessLogicLayerChainedQueryCriteria, key=UniqueConstraintByUC
     /// </summary>
-    public class OrganizationChainedQueryCriteriaUniqueConstraintByUC_Organization_UniqueIdentifier
+    public class OrganizationChainedQueryCriteriaUniqueConstraintByUC
     {
-        public OrganizationChainedQueryCriteriaUniqueConstraintByUC_Organization_UniqueIdentifier()
+        public OrganizationChainedQueryCriteriaUniqueConstraintByUC()
         {
         }
 
-        public OrganizationQueryCriteriaUniqueConstraintByUC_Organization_UniqueIdentifier UniqueConstraintByUC_Organization_UniqueIdentifier { get; set; } = new OrganizationQueryCriteriaUniqueConstraintByUC_Organization_UniqueIdentifier();
-    }
-
-    /// <summary>
-    /// BusinessLogicLayerChainedQueryCriteria, key=UniqueConstraintByUC_Organization_UniqueidentifierColumn
-    /// </summary>
-    public class OrganizationChainedQueryCriteriaUniqueConstraintByUC_Organization_UniqueidentifierColumn
-    {
-        public OrganizationChainedQueryCriteriaUniqueConstraintByUC_Organization_UniqueidentifierColumn()
-        {
-        }
-
-        public OrganizationQueryCriteriaUniqueConstraintByUC_Organization_UniqueidentifierColumn UniqueConstraintByUC_Organization_UniqueidentifierColumn { get; set; } = new OrganizationQueryCriteriaUniqueConstraintByUC_Organization_UniqueidentifierColumn();
+        public OrganizationQueryCriteriaUniqueConstraintByUC UniqueConstraintByUC { get; set; } = new OrganizationQueryCriteriaUniqueConstraintByUC();
     }
 
     /// <summary>

@@ -20,11 +20,11 @@
                 </div>
                 <div class="form-group" >
                     @Html.LabelFor(model => model.Item.Organization_2Id, new { @class = "control-label" })
-                        @Html.ActionLink(Model.Item.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Item.Organization_2Id, uniqueIdentifier = Model.Item.Organization_2_UniqueIdentifier, uniqueidentifierColumn = Model.Item.Organization_2_UniqueidentifierColumn }, null)
+                        @Html.ActionLink(Model.Item.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Item.Organization_2Id, uniqueIdentifier = Model.Item.Organization_2_UniqueIdentifier }, null)
                 </div>
                 <div class="form-group" >
                     @Html.LabelFor(model => model.Item.OrganizationId, new { @class = "control-label" })
-                        @Html.ActionLink(Model.Item.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Item.OrganizationId, uniqueIdentifier = Model.Item.Organization_1_UniqueIdentifier, uniqueidentifierColumn = Model.Item.Organization_1_UniqueidentifierColumn }, null)
+                        @Html.ActionLink(Model.Item.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Item.OrganizationId, uniqueIdentifier = Model.Item.Organization_1_UniqueIdentifier }, null)
                 </div>
                 <div class="form-group" >
                     @Html.LabelFor(model => model.Item.ExternalParentId, new { @class = "control-label" })

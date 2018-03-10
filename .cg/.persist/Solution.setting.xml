@@ -1,35 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="MSBuildExtensionPack.Solution">
-  <DataView Key="NameValuePair" DataViewKnownCategory="NameValuePair" IsGroupByResult="false">
-    <Description>NameValuePair</Description>
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemString)Value=Id.ToString();(SystemString)Name=Name~Name</Properties>
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-  </DataView>
-  <DataView Key="RssItem" DataViewKnownCategory="RssItem" IsGroupByResult="false">
-    <Description>RssItem</Description>
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemString)IdentifierInString=Id.ToString();(SystemString)Title=Name;(SystemString)Description=ExternalParentId</Properties>
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-  </DataView>
-  <DataView Key="Default" DataViewKnownCategory="Default" IsGroupByResult="false">
-    <Description>Default</Description>
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemGuid)Organization_1_UniqueIdentifier=\OrganizationId:UniqueIdentifier~ParentUniqueConstraint;(SystemGuid)Organization_1_UniqueidentifierColumn=\OrganizationId:UniqueidentifierColumn~ParentUniqueConstraint;(SystemString)Organization_1_Name=\OrganizationId:Name~Name;(SystemInt32)Id=Id~Identifier;(SystemInt64)Organization_2Id=\OrganizationId\ParentId:Id~ForeignKey;(SystemGuid)Organization_2_UniqueIdentifier=\OrganizationId\ParentId:UniqueIdentifier~ParentUniqueConstraint;(SystemGuid)Organization_2_UniqueidentifierColumn=\OrganizationId\ParentId:UniqueidentifierColumn~ParentUniqueConstraint;(SystemString)Organization_2_Name=\OrganizationId\ParentId:Name~Name;(SystemString?)ExternalParentId=ExternalParentId;(SystemString)Name=Name;(SystemString?)Description=Description;(SystemInt64?)OrganizationId=OrganizationId~ForeignKey</Properties>
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-  </DataView>
-  <DataView Key="DefaultGroupedDataView" DataViewKnownCategory="DefaultGroupedDataView" IsGroupByResult="true">
-    <Description>DefaultGroupedDataView</Description>
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemInt64?)OrganizationId^=OrganizationId</Properties>
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting">(SystemInt64)CountPerFK=#Count[];(SystemString)Name*=#StringConcat[\OrganizationId:Name]</Properties>
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-  </DataView>
-  <DataView Key="KeyInformation" DataViewKnownCategory="KeyInformation" IsGroupByResult="false">
-    <Description>KeyInformation</Description>
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemInt32)Id=Id~Identifier;(SystemString)Name=Name</Properties>
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-  </DataView>
   <Criteria Key="Common" SourceTypeFullName="MSBuildExtensionPack.Solution">
     <Description>Query by EntityReference, String, Bool, Order By DateTime</Description>
     <Queries>Common</Queries>
@@ -75,12 +45,6 @@
     <BLLMethodSetting HasGetCollectionMethod="true" />
   </QueryResult>
   <QueryResult Key="EntityByFKOnly" CriteriaKey="FKOnly" />
-  <QueryResult Key="NameValuePairByFKOnly" CriteriaKey="FKOnly" DataViewKey="NameValuePair">
-    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
-    <BLLMethodSetting HasGetCollectionMethod="true" />
-    <WebApiMethodSetting HasGetCollectionMethod="true" />
-  </QueryResult>
-  <QueryResult Key="RssItemByFKOnly" CriteriaKey="FKOnly" DataViewKey="RssItem" />
   <QueryResult Key="DefaultByFKOnly" CriteriaKey="FKOnly" DataViewKey="Default">
     <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
     <BLLMethodSetting HasGetCollectionMethod="true" />
@@ -89,6 +53,12 @@
     <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
     <BLLMethodSetting HasGetCollectionMethod="true" />
   </QueryResult>
+  <QueryResult Key="NameValuePairByFKOnly" CriteriaKey="FKOnly" DataViewKey="NameValuePair">
+    <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
+    <BLLMethodSetting HasGetCollectionMethod="true" />
+    <WebApiMethodSetting HasGetCollectionMethod="true" />
+  </QueryResult>
+  <QueryResult Key="RssItemByFKOnly" CriteriaKey="FKOnly" DataViewKey="RssItem" />
   <QueryResult Key="EntityByIdentifier" CriteriaKey="Identifier">
     <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
     <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />

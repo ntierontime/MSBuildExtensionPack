@@ -12,7 +12,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         : Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBase<MSBuildExtensionPack.DataSourceEntities.BuildLogCollection>
     {
 
-        #region Nested Views classes and their collection classes 4
+        #region Nested Views classes and their collection classes 3
 
         /// <summary>
         /// BusinessLogicLayerResponseMessage of of view Default of entity MSBuildExtensionPack.BuildLog
@@ -38,15 +38,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         {
         }
 
-        /// <summary>
-        /// BusinessLogicLayerResponseMessage of of view BuildLogSummaryPerBuild of entity MSBuildExtensionPack.BuildLog
-        /// </summary>
-        public partial class BuildLogSummaryPerBuild
-            : Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBase<MSBuildExtensionPack.DataSourceEntities.BuildLog.BuildLogSummaryPerBuildCollection>
-        {
-        }
-
-        #endregion Nested Views classes and their collection classes 4
+        #endregion Nested Views classes and their collection classes 3
     }
 }
 

@@ -27,13 +27,11 @@
                     @Html.LabelFor(model => model.Item.Organization_2Id, new { @class = "control-label" })
                         @Html.HiddenFor(model => model.Item.Organization_2Id)
                         @Html.HiddenFor(model => model.Item.Organization_2_UniqueIdentifier)
-                        @Html.HiddenFor(model => model.Item.Organization_2_UniqueidentifierColumn)
                         @Html.DropDownListFor(model => model.Item.Organization_2Id, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Organization, MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "onchange", "FetchOrganization_1();" }, { "class", "form-control" } })
                 </div>
                 <div class="form-group">
                     @Html.LabelFor(model => model.Item.OrganizationId, new { @class = "control-label" })
                         @Html.HiddenFor(model => model.Item.Organization_1_UniqueIdentifier)
-                        @Html.HiddenFor(model => model.Item.Organization_1_UniqueidentifierColumn)
                         @Html.HiddenFor(model => model.Item.OrganizationId)
                         @Html.DropDownListFor(model => model.Item.OrganizationId, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfOrganization_1,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedOrganization_1", MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____) } })
                 </div>

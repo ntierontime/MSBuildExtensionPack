@@ -252,11 +252,10 @@ namespace MSBuildExtensionPack.AspNetMvc40ApiController.ApiControllers
         [HttpGet]
         public MSBuildExtensionPack.ViewModelData.OrganizationItemVM GetOrganizationItemVM(
 System.Int64? id
-            , System.Guid? uniqueIdentifier
-            , System.Guid? uniqueidentifierColumn)
+            , System.Guid? uniqueIdentifier)
         {
             MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM retval = new MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM();
-            retval.Load(id.HasValue, id, uniqueIdentifier.HasValue, uniqueIdentifier, uniqueidentifierColumn.HasValue, uniqueidentifierColumn, Framework.UIAction.ViewDetails);
+            retval.Load(id.HasValue, id, uniqueIdentifier.HasValue, uniqueIdentifier, Framework.UIAction.ViewDetails);
             return retval;
         }
 

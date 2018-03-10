@@ -11,13 +11,12 @@
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:vm="clr-namespace:MSBuildExtensionPack.MVVMLightViewModels;assembly=MSBuildExtensionPack.MVVMLightViewModels"
         xmlns:fvm="clr-namespace:Framework.Xaml;assembly=Framework.Xaml"
-        xmlns:oxy="clr-namespace:OxyPlot.Wpf;assembly=OxyPlot.Wpf" 
         mc:Ignorable="d" >
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="../../AppResourceDictionary.xaml" />
-                <ResourceDictionary Source="../../Skins/MainSkin.xaml" />
+                <ResourceDictionary Source="../AppResourceDictionary.xaml" />
+                <ResourceDictionary Source="../Skins/MainSkin.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
@@ -30,7 +29,6 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" Grid.Column="0" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM, Source={StaticResource Locator}}" HorizontalAlignment="Stretch">
             <Grid.ColumnDefinitions>
@@ -38,7 +36,6 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -89,15 +86,133 @@
                 <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="5" />
                 <TextBox Text="{Binding Path=Criteria.Common.Description.NullableValueToBeContained}" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Stretch"/>
         </Grid>
-        <oxy:Plot Title="World population by continent">
-            <oxy:PieSeries
-                    Grid.Column="0" Grid.Row="1"
-                    InnerDiameter="0.2"
-                    ExplodedDistance="0"
-                    Stroke="Black" StrokeThickness="1"
-                    StartAngle="0" AngleSpan="360"
-                    ItemsSource="{Binding OxyPlotChartBinding}"
-                    LabelField="Name" ValueField="Id" IsExplodedField="IsExploded" />
-        </oxy:Plot>
+        <ListView Name="V_Common" Margin="12,12,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildExtensionPack_MVVMLightViewModels_WPCommonOfBuildVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=Result}" >
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.View>
+                <GridView ColumnHeaderToolTip="BuildLog" AllowsColumnReorder="true">
+                    <GridViewColumn>
+                        <GridViewColumnHeader/>
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+<WrapPanel>
+                <!-- TO-DO: START it is regular details page, to be replaced by full details -->
+                <Button Name="Details" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchDetailsViewCommand, Source={StaticResource Locator}}" Width="45" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.Details, Source={StaticResource LocalizedStrings}}" CommandParameter="{Binding}" >
+                    <StackPanel>
+                        <iconPacks:PackIconOcticons Kind="Briefcase" HorizontalAlignment="Center"/>
+                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.Details, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                </Button>
+                <!-- TO-DO: END it is regular details page, to be replaced by full details -->
+                <Button Name="Edit" Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ItemVMBuild.LaunchEditViewCommand, Source={StaticResource Locator}}" Width="45" Height="45" ToolTip="{Binding Path=Framework_Resx_UIStringResource.Edit, Source={StaticResource LocalizedStrings}}" CommandParameter="{Binding}">
+                    <StackPanel>
+                        <iconPacks:PackIconModern Kind="Edit" HorizontalAlignment="Center"/>
+                        <TextBlock Text="{Binding Path=Framework_Resx_UIStringResource.Edit, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                </Button>
+</WrapPanel>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Width="140">
+                        <GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.Id, Source={StaticResource LocalizedStrings}}" Tag="Id" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Id}" ToolTip="" />
+                                    <TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Id}" ToolTip="" />
+                                    <!-- You can un-comment to enable editing in list -->
+                                    <!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Id}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Width="140">
+                        <GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.BuildStartTime, Source={StaticResource LocalizedStrings}}" Tag="BuildStartTime" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=BuildStartTime}" ToolTip="" />
+                                    <TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=BuildStartTime}" ToolTip="" />
+                                    <!-- You can un-comment to enable editing in list -->
+                                    <!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=BuildStartTime}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Width="140">
+                        <GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.Organization_2_Name, Source={StaticResource LocalizedStrings}}" Tag="Organization_2_Name" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Button Style="{StaticResource LinkButton}" Content="{Binding Path=Organization_2_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.LaunchOrganization_2DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+                                    <!--<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_2_Name}" ToolTip="" />
+                                    <TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_2_Name}" ToolTip="" />-->
+                                    <!-- You can un-comment to enable editing in list -->
+                                    <!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Organization_2_Name}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Width="140">
+                        <GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.Organization_1_Name, Source={StaticResource LocalizedStrings}}" Tag="Organization_1_Name" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Button Style="{StaticResource LinkButton}" Content="{Binding Path=Organization_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.LaunchOrganization_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+                                    <!--<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_1_Name}" ToolTip="" />
+                                    <TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_1_Name}" ToolTip="" />-->
+                                    <!-- You can un-comment to enable editing in list -->
+                                    <!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Organization_1_Name}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Width="140">
+                        <GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.Solution_1_Name, Source={StaticResource LocalizedStrings}}" Tag="Solution_1_Name" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Button Style="{StaticResource LinkButton}" Content="{Binding Path=Solution_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.LaunchSolution_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+                                    <!--<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Solution_1_Name}" ToolTip="" />
+                                    <TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Solution_1_Name}" ToolTip="" />-->
+                                    <!-- You can un-comment to enable editing in list -->
+                                    <!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Solution_1_Name}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Width="140">
+                        <GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.Name, Source={StaticResource LocalizedStrings}}" Tag="Name" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Name}" ToolTip="" />
+                                    <TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Name}" ToolTip="" />
+                                    <!-- You can un-comment to enable editing in list -->
+                                    <!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Name}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Width="140">
+                        <GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.Description, Source={StaticResource LocalizedStrings}}" Tag="Description" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Description}" ToolTip="" />
+                                    <TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Description}" ToolTip="" />
+                                    <!-- You can un-comment to enable editing in list -->
+                                    <!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Description}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </UserControl>

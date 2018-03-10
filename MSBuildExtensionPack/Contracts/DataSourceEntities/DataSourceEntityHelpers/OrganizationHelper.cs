@@ -166,44 +166,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         #endregion AssignEnityReferenceIDs(...)
 
-        #region CreateNameValuePair(...)
-
-        /// <summary>
-        /// Creates a new instance of view NameValuePair.
-        /// </summary>
-        /// <returns>an instance of <see cref="Framework.NameValuePair"/></returns>
-        public static Framework.NameValuePair CreateNameValuePair(
-System.String value, System.String name
-            )
-        {
-            Framework.NameValuePair _retval = new Framework.NameValuePair();
-                _retval.Value = value;
-                _retval.Name = name;
-            return _retval;
-        }
-
-        #endregion CreateNameValuePair(...)
-
-        #region CreateRssItem(...)
-
-        /// <summary>
-        /// Creates a new instance of view RssItem.
-        /// </summary>
-        /// <returns>an instance of <see cref="Framework.RssItem"/></returns>
-        public static Framework.RssItem CreateRssItem(
-System.String identifierInString, System.String title, System.String description, System.DateTime pubDate
-            )
-        {
-            Framework.RssItem _retval = new Framework.RssItem();
-                _retval.IdentifierInString = identifierInString;
-                _retval.Title = title;
-                _retval.Description = description;
-                _retval.PubDate = pubDate;
-            return _retval;
-        }
-
-        #endregion CreateRssItem(...)
-
         #region CreateDefault(...)
 
         /// <summary>
@@ -211,12 +173,11 @@ System.String identifierInString, System.String title, System.String description
         /// </summary>
         /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.Organization.Default"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.Organization.Default CreateDefault(
-System.Guid organization_2_UniqueIdentifier, System.Guid organization_2_UniqueidentifierColumn, System.String organization_2_Name, System.Int64 id, System.Int64 parentId, System.String name, System.Boolean isSystemBuiltIn, System.Guid uniqueIdentifier, System.DateTime createdDateTime, System.String charColumn, System.String varcharColumn, System.String textColumn, System.String ncharColumn, System.String nvarcharColumn, System.String ntextColumn, System.Boolean bitColumn, System.Byte[] binaryColumn, System.Byte[] varbinaryColumn, System.Byte[] imageColumn, System.Byte tinyintColumn, System.Int16 smallintColumn, System.Int32 intColumn, System.Int64 bigintColumn, System.Decimal decimalColumn, System.Decimal numericColumn, System.Decimal smallmoneyColumn, System.Decimal moneyColumn, System.Single floatColumn, System.Single realColumn, System.DateTime datetimeColumn, System.DateTime datetime2Column, System.DateTime smalldatetimeColumn, System.DateTime dateColumn, System.TimeSpan timeColumn, System.Guid uniqueidentifierColumn
+System.Guid organization_2_UniqueIdentifier, System.String organization_2_Name, System.Int64 id, System.Int64 parentId, System.String name, System.Boolean isSystemBuiltIn, System.Guid uniqueIdentifier, System.DateTime createdDateTime, System.String charColumn, System.String varcharColumn, System.String textColumn, System.String ncharColumn, System.String nvarcharColumn, System.String ntextColumn, System.Boolean bitColumn, System.Byte[] binaryColumn, System.Byte[] varbinaryColumn, System.Byte[] imageColumn, System.Byte tinyintColumn, System.Int16 smallintColumn, System.Int32 intColumn, System.Int64 bigintColumn, System.Decimal decimalColumn, System.Decimal numericColumn, System.Decimal smallmoneyColumn, System.Decimal moneyColumn, System.Single floatColumn, System.Single realColumn, System.DateTime datetimeColumn, System.DateTime datetime2Column, System.DateTime smalldatetimeColumn, System.DateTime dateColumn, System.TimeSpan timeColumn, System.Guid uniqueidentifierColumn
             )
         {
             MSBuildExtensionPack.DataSourceEntities.Organization.Default _retval = new MSBuildExtensionPack.DataSourceEntities.Organization.Default();
                 _retval.Organization_2_UniqueIdentifier = organization_2_UniqueIdentifier;
-                _retval.Organization_2_UniqueidentifierColumn = organization_2_UniqueidentifierColumn;
                 _retval.Organization_2_Name = organization_2_Name;
                 _retval.Id = id;
                 _retval.ParentId = parentId;
@@ -254,6 +215,25 @@ System.Guid organization_2_UniqueIdentifier, System.Guid organization_2_Uniqueid
         }
 
         #endregion CreateDefault(...)
+
+        #region CreateDefaultGroupedDataView(...)
+
+        /// <summary>
+        /// Creates a new instance of view DefaultGroupedDataView.
+        /// </summary>
+        /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView"/></returns>
+        public static MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView CreateDefaultGroupedDataView(
+System.Int64 parentId, System.Int64 countPerFK, System.String name
+            )
+        {
+            MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView _retval = new MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView();
+                _retval.ParentId = parentId;
+                _retval.CountPerFK = countPerFK;
+                _retval.Name = name;
+            return _retval;
+        }
+
+        #endregion CreateDefaultGroupedDataView(...)
 
         #region CreateDefaultWithPath(...)
 
@@ -304,25 +284,6 @@ System.Int64 t_Id, System.String t_RecursivePath__, System.Int64 t_ParentId, Sys
 
         #endregion CreateDefaultWithPath(...)
 
-        #region CreateDefaultGroupedDataView(...)
-
-        /// <summary>
-        /// Creates a new instance of view DefaultGroupedDataView.
-        /// </summary>
-        /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView CreateDefaultGroupedDataView(
-System.Int64 parentId, System.Int64 countPerFK, System.String name
-            )
-        {
-            MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView _retval = new MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView();
-                _retval.ParentId = parentId;
-                _retval.CountPerFK = countPerFK;
-                _retval.Name = name;
-            return _retval;
-        }
-
-        #endregion CreateDefaultGroupedDataView(...)
-
         #region CreateKeyInformation(...)
 
         /// <summary>
@@ -330,7 +291,7 @@ System.Int64 parentId, System.Int64 countPerFK, System.String name
         /// </summary>
         /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation CreateKeyInformation(
-System.Int64 id, System.String name, System.Boolean isSystemBuiltIn, System.Guid uniqueIdentifier, System.Boolean bitColumn, System.Guid uniqueidentifierColumn
+System.Int64 id, System.String name, System.Boolean isSystemBuiltIn, System.Guid uniqueIdentifier, System.Boolean bitColumn
             )
         {
             MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation _retval = new MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation();
@@ -339,11 +300,48 @@ System.Int64 id, System.String name, System.Boolean isSystemBuiltIn, System.Guid
                 _retval.IsSystemBuiltIn = isSystemBuiltIn;
                 _retval.UniqueIdentifier = uniqueIdentifier;
                 _retval.BitColumn = bitColumn;
-                _retval.UniqueidentifierColumn = uniqueidentifierColumn;
             return _retval;
         }
 
         #endregion CreateKeyInformation(...)
+
+        #region CreateNameValuePair(...)
+
+        /// <summary>
+        /// Creates a new instance of view NameValuePair.
+        /// </summary>
+        /// <returns>an instance of <see cref="Framework.NameValuePair"/></returns>
+        public static Framework.NameValuePair CreateNameValuePair(
+System.String value, System.String name
+            )
+        {
+            Framework.NameValuePair _retval = new Framework.NameValuePair();
+                _retval.Value = value;
+                _retval.Name = name;
+            return _retval;
+        }
+
+        #endregion CreateNameValuePair(...)
+
+        #region CreateRssItem(...)
+
+        /// <summary>
+        /// Creates a new instance of view RssItem.
+        /// </summary>
+        /// <returns>an instance of <see cref="Framework.RssItem"/></returns>
+        public static Framework.RssItem CreateRssItem(
+System.String identifierInString, System.String title, System.String description, System.DateTime pubDate
+            )
+        {
+            Framework.RssItem _retval = new Framework.RssItem();
+                _retval.IdentifierInString = identifierInString;
+                _retval.Title = title;
+                _retval.Description = description;
+                _retval.PubDate = pubDate;
+            return _retval;
+        }
+
+        #endregion CreateRssItem(...)
 
     }
 

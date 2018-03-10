@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -47,13 +47,8 @@
     <Compile Include="AccountViewModel.cs" />
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="app.config" />
     <None Include="packages.config" />
     <Compile Include="WPCommonOfBuildVM.cs" />
-    <Compile Include="WPsomethingOfBuildVM.cs" />
-    <Compile Include="WPxTabSomethingOfBuildVM.cs" />
-    <Compile Include="WPxTabFullDetailsOfBuildVM.cs" />
-    <Compile Include="WPelseA1AsomethingOfBuildVM.cs" />
     <Compile Include="WPCommonOfBuildEventCodeVM.cs" />
     <Compile Include="WPCommonOfBuildLogVM.cs" />
     <Compile Include="WPCommonOfOrganizationVM.cs" />
@@ -120,14 +115,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="OxyPlot">
-      <HintPath>..\..\..\..\packages\OxyPlot.Core.1.0.0\lib\net45\OxyPlot.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="OxyPlot.Wpf">
-      <HintPath>..\..\..\..\packages\OxyPlot.Wpf.1.0.0\lib\net45\OxyPlot.Wpf.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Net" />
   </ItemGroup>

@@ -143,16 +143,16 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         #endregion PrediacteByFKs
 
-        #region QueryCriteriaByUC_Organization_UniqueIdentifierOfOrganization
+        #region QueryCriteriaByUCOfOrganization
 
 //        /// <summary>
 //        /// Existses the by Unique Constraint.
 //        /// </summary>
 //        /// <param name="criteria">The criteria.</param>
 //        /// <returns>true if any, otherwise false</returns>
-//        public bool ExistsByUC_Organization_UniqueIdentifierOfOrganization(QueryCriteriaByUC_Organization_UniqueIdentifierOfOrganization criteria)
+//        public bool ExistsByUCOfOrganization(QueryCriteriaByUCOfOrganization criteria)
 //        {
-//            MSBuildExtensionPack.EntityContracts.QueryPredicateByUC_Organization_UniqueIdentifierOfOrganization<Organization> _Predicate = new MSBuildExtensionPack.EntityContracts.QueryPredicateByUC_Organization_UniqueIdentifierOfOrganization<Organization>(criteria);
+//            MSBuildExtensionPack.EntityContracts.QueryPredicateByUCOfOrganization<Organization> _Predicate = new MSBuildExtensionPack.EntityContracts.QueryPredicateByUCOfOrganization<Organization>(criteria);
 //            return this.Count(_Predicate.Predicate) > 0;
 //        }
 
@@ -161,39 +161,13 @@ namespace MSBuildExtensionPack.DataSourceEntities
 //        /// </summary>
 //        /// <param name="criteria">The criteria.</param>
 //        /// <returns>the first entity if any, otherwise null</returns>
-//        public Organization GetByUC_Organization_UniqueIdentifierOfOrganization(QueryCriteriaByUC_Organization_UniqueIdentifierOfOrganization criteria)
+//        public Organization GetByUCOfOrganization(QueryCriteriaByUCOfOrganization criteria)
 //        {
-//            MSBuildExtensionPack.EntityContracts.QueryPredicateByUC_Organization_UniqueIdentifierOfOrganization<Organization> _Predicate = new MSBuildExtensionPack.EntityContracts.QueryPredicateByUC_Organization_UniqueIdentifierOfOrganization<Organization>(criteria);
+//            MSBuildExtensionPack.EntityContracts.QueryPredicateByUCOfOrganization<Organization> _Predicate = new MSBuildExtensionPack.EntityContracts.QueryPredicateByUCOfOrganization<Organization>(criteria);
 //            return this.Single(_Predicate.Predicate);
 //        }
 
-        #endregion QueryCriteriaByUC_Organization_UniqueIdentifierOfOrganization
-
-        #region QueryCriteriaByUC_Organization_UniqueidentifierColumnOfOrganization
-
-//        /// <summary>
-//        /// Existses the by Unique Constraint.
-//        /// </summary>
-//        /// <param name="criteria">The criteria.</param>
-//        /// <returns>true if any, otherwise false</returns>
-//        public bool ExistsByUC_Organization_UniqueidentifierColumnOfOrganization(QueryCriteriaByUC_Organization_UniqueidentifierColumnOfOrganization criteria)
-//        {
-//            MSBuildExtensionPack.EntityContracts.QueryPredicateByUC_Organization_UniqueidentifierColumnOfOrganization<Organization> _Predicate = new MSBuildExtensionPack.EntityContracts.QueryPredicateByUC_Organization_UniqueidentifierColumnOfOrganization<Organization>(criteria);
-//            return this.Count(_Predicate.Predicate) > 0;
-//        }
-
-//        /// <summary>
-//        /// Gets the by Unique Constraint.
-//        /// </summary>
-//        /// <param name="criteria">The criteria.</param>
-//        /// <returns>the first entity if any, otherwise null</returns>
-//        public Organization GetByUC_Organization_UniqueidentifierColumnOfOrganization(QueryCriteriaByUC_Organization_UniqueidentifierColumnOfOrganization criteria)
-//        {
-//            MSBuildExtensionPack.EntityContracts.QueryPredicateByUC_Organization_UniqueidentifierColumnOfOrganization<Organization> _Predicate = new MSBuildExtensionPack.EntityContracts.QueryPredicateByUC_Organization_UniqueidentifierColumnOfOrganization<Organization>(criteria);
-//            return this.Single(_Predicate.Predicate);
-//        }
-
-        #endregion QueryCriteriaByUC_Organization_UniqueidentifierColumnOfOrganization
+        #endregion QueryCriteriaByUCOfOrganization
 
     }
 

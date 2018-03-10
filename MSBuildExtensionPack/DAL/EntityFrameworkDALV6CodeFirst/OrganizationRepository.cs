@@ -442,8 +442,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (ntextColumn.IsToCompare == false || ntextColumn.IsToCompare && t.NtextColumn.Contains(ntextColumn.ValueToBeContained))
                             )
                         )
-                    select new MSBuildExtensionPack.DataSourceEntities.Organization.Default { Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_UniqueidentifierColumn = Organization_2.UniqueidentifierColumn, Organization_2_Name = Organization_2.Name, Id = t.Id, ParentId = t.ParentId, Name = t.Name, IsSystemBuiltIn = t.IsSystemBuiltIn, UniqueIdentifier = t.UniqueIdentifier, CreatedDateTime = t.CreatedDateTime, CharColumn = t.CharColumn, VarcharColumn = t.VarcharColumn, TextColumn = t.TextColumn, NcharColumn = t.NcharColumn, NvarcharColumn = t.NvarcharColumn, NtextColumn = t.NtextColumn, BitColumn = t.BitColumn, BinaryColumn = t.BinaryColumn, VarbinaryColumn = t.VarbinaryColumn, ImageColumn = t.ImageColumn, TinyintColumn = t.TinyintColumn, SmallintColumn = t.SmallintColumn, IntColumn = t.IntColumn, BigintColumn = t.BigintColumn, DecimalColumn = t.DecimalColumn, NumericColumn = t.NumericColumn, SmallmoneyColumn = t.SmallmoneyColumn, MoneyColumn = t.MoneyColumn, FloatColumn = t.FloatColumn, RealColumn = t.RealColumn, DatetimeColumn = t.DatetimeColumn, Datetime2Column = t.Datetime2Column, SmalldatetimeColumn = t.SmalldatetimeColumn, DateColumn = t.DateColumn, TimeColumn = t.TimeColumn, UniqueidentifierColumn = t.UniqueidentifierColumn } into vD2
-                    select vD2
+                    select new MSBuildExtensionPack.DataSourceEntities.Organization.Default { Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_Name = Organization_2.Name, Id = t.Id, ParentId = t.ParentId, Name = t.Name, IsSystemBuiltIn = t.IsSystemBuiltIn, UniqueIdentifier = t.UniqueIdentifier, CreatedDateTime = t.CreatedDateTime, CharColumn = t.CharColumn, VarcharColumn = t.VarcharColumn, TextColumn = t.TextColumn, NcharColumn = t.NcharColumn, NvarcharColumn = t.NvarcharColumn, NtextColumn = t.NtextColumn, BitColumn = t.BitColumn, BinaryColumn = t.BinaryColumn, VarbinaryColumn = t.VarbinaryColumn, ImageColumn = t.ImageColumn, TinyintColumn = t.TinyintColumn, SmallintColumn = t.SmallintColumn, IntColumn = t.IntColumn, BigintColumn = t.BigintColumn, DecimalColumn = t.DecimalColumn, NumericColumn = t.NumericColumn, SmallmoneyColumn = t.SmallmoneyColumn, MoneyColumn = t.MoneyColumn, FloatColumn = t.FloatColumn, RealColumn = t.RealColumn, DatetimeColumn = t.DatetimeColumn, Datetime2Column = t.Datetime2Column, SmalldatetimeColumn = t.SmalldatetimeColumn, DateColumn = t.DateColumn, TimeColumn = t.TimeColumn, UniqueidentifierColumn = t.UniqueidentifierColumn } into vD0
+                    select vD0
                 );
             var _retval = _ResultFromDataSource;
             IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _retval1;
@@ -797,8 +797,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 (
                     from t in this.LinqContext.Organizations
                     join Organization_2 in this.LinqContext.Organizations on t.ParentId equals Organization_2.Id
-                    select new Framework.NameValuePair { Value = t.Id.ToString(), Name = t.Name } into vD0
-                    select vD0
+                    select new Framework.NameValuePair { Value = t.Id.ToString(), Name = t.Name } into vD4
+                    select vD4
                 );
             var _retval = _ResultFromDataSource;
             IQueryable<Framework.NameValuePair> _retval1;
@@ -987,8 +987,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 (
                     from t in this.LinqContext.Organizations
                     join Organization_2 in this.LinqContext.Organizations on t.ParentId equals Organization_2.Id
-                    select new Framework.RssItem { IdentifierInString = t.Id.ToString(), Title = t.Name, Description = t.Name, PubDate = t.CreatedDateTime } into vD1
-                    select vD1
+                    select new Framework.RssItem { IdentifierInString = t.Id.ToString(), Title = t.Name, Description = t.Name, PubDate = t.CreatedDateTime } into vD5
+                    select vD5
                 );
             var _retval = _ResultFromDataSource;
             IQueryable<Framework.RssItem> _retval1;
@@ -1165,214 +1165,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         #endregion Query Methods Of RssItemByAll
 
-        #region Query Methods Of NameValuePairByFKOnly
-
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<Framework.NameValuePair> _GetQueryOfNameValuePairByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            )
-        {
-            var _ResultFromDataSource =
-                (
-                    from t in this.LinqContext.Organizations
-                    join Organization_2 in this.LinqContext.Organizations on t.ParentId equals Organization_2.Id
-                    where
-                        (
-                            (
-                            (parentId.IsToCompare == false || parentId.IsToCompare && Organization_2.Id == parentId.ValueToCompare)
-                            )
-                        )
-                    select new Framework.NameValuePair { Value = t.Id.ToString(), Name = t.Name } into vD0
-                    select vD0
-                );
-            var _retval = _ResultFromDataSource;
-            IQueryable<Framework.NameValuePair> _retval1;
-            if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
-            {
-                _retval1 = _retval;
-            }
-            else
-            {
-                _retval1 = _retval.AsQueryable().OrderBy(queryOrderBySettingCollection.GetOrderByExpression());
-            }
-            return _retval1;
-        }
-
-        private bool _ExistsOfNameValuePairByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            )
-        {
-            IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairByFKOnly(
-                parentId
-                ,queryOrderBySettingCollection
-            );
-            bool result;
-            if (currentIndex == -1 || pageSize == -1)
-            {
-                result = _Query.Any();
-            }
-            else
-            {
-                result = _Query.Skip(currentIndex).Take(pageSize).Any();
-            }
-            return result;
-        }
-
-        private int _GetCountOfNameValuePairByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            )
-
-        {
-            IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairByFKOnly(
-                parentId
-                ,queryOrderBySettingCollection
-            );
-            int _Count;
-            if (currentIndex == -1 || pageSize == -1)
-            {
-                _Count = _Query.Count();
-            }
-            else
-            {
-                _Count = _Query.Skip(currentIndex).Take(pageSize).Count();
-            }
-            return _Count;
-        }
-
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfNameValuePairByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            )
-        {
-            log.Info(string.Format("{0}: GetCountOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
-            try
-            {
-                int _retval = _GetCountOfNameValuePairByFKOnly(
-                parentId
-                ,currentIndex
-                ,pageSize
-                ,queryOrderBySettingCollection
-                    );
-                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                _retMessage.Result = _retval;
-            }
-            catch(Exception ex)
-            {
-                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
-                _retMessage.Result = 0;
-                _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
-            }
-            log.Info(string.Format("{0}: GetCountOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
-            return _retMessage;
-        }
-
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfNameValuePairByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            )
-        {
-            log.Info(string.Format("{0}: ExistsOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
-            try
-            {
-                bool _retval = _ExistsOfNameValuePairByFKOnly(
-                parentId
-                ,currentIndex
-                ,pageSize
-                ,queryOrderBySettingCollection
-                    );
-                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                _retMessage.Result = _retval;
-            }
-            catch (Exception ex)
-            {
-                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
-                _retMessage.Result = false;
-                _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
-            }
-            log.Info(string.Format("{0}: ExistsOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
-            return _retMessage;
-        }
-
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection GetCollectionOfNameValuePairByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            )
-        {
-            log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
-
-            Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection();
-            try
-            {
-                bool _Exists = _ExistsOfNameValuePairByFKOnly(
-                parentId
-                ,currentIndex
-                ,pageSize
-                ,queryOrderBySettingCollection
-            );
-
-                if (_Exists)
-                {
-                    IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairByFKOnly(
-                parentId
-                ,queryOrderBySettingCollection
-            );
-
-                    IEnumerable<Framework.NameValuePair> _retval;
-
-                    if (currentIndex == -1 || pageSize == -1)
-                    {
-                        _retval = _Query;
-                    }
-                    else
-                    {
-                        _retval = _Query.Skip(currentIndex).Take(pageSize);
-                    }
-                    _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
-                    _retMessage.QueryPagingResult.PageSize = pageSize;
-                    _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
-                    _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;
-                    _retMessage.QueryPagingResult.CountOfRecords = _Query.Count();
-                    _retMessage.Result = new Framework.NameValueCollection();
-                    _retMessage.Result.AddRange(_retval);
-                }
-                else
-                {
-                    _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.SuccessButNoResult;
-                    _retMessage.Result = null;
-                }
-            }
-            catch (Exception ex)
-            {
-                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
-                _retMessage.Result = null;
-                _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
-            }
-            log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
-            return _retMessage;
-        }
-
-        #endregion Query Methods Of NameValuePairByFKOnly
-
         #region Query Methods Of DefaultByFKOnly
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
@@ -1392,8 +1184,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (parentId.IsToCompare == false || parentId.IsToCompare && Organization_2.Id == parentId.ValueToCompare)
                             )
                         )
-                    select new MSBuildExtensionPack.DataSourceEntities.Organization.Default { Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_UniqueidentifierColumn = Organization_2.UniqueidentifierColumn, Organization_2_Name = Organization_2.Name, Id = t.Id, ParentId = t.ParentId, Name = t.Name, IsSystemBuiltIn = t.IsSystemBuiltIn, UniqueIdentifier = t.UniqueIdentifier, CreatedDateTime = t.CreatedDateTime, CharColumn = t.CharColumn, VarcharColumn = t.VarcharColumn, TextColumn = t.TextColumn, NcharColumn = t.NcharColumn, NvarcharColumn = t.NvarcharColumn, NtextColumn = t.NtextColumn, BitColumn = t.BitColumn, BinaryColumn = t.BinaryColumn, VarbinaryColumn = t.VarbinaryColumn, ImageColumn = t.ImageColumn, TinyintColumn = t.TinyintColumn, SmallintColumn = t.SmallintColumn, IntColumn = t.IntColumn, BigintColumn = t.BigintColumn, DecimalColumn = t.DecimalColumn, NumericColumn = t.NumericColumn, SmallmoneyColumn = t.SmallmoneyColumn, MoneyColumn = t.MoneyColumn, FloatColumn = t.FloatColumn, RealColumn = t.RealColumn, DatetimeColumn = t.DatetimeColumn, Datetime2Column = t.Datetime2Column, SmalldatetimeColumn = t.SmalldatetimeColumn, DateColumn = t.DateColumn, TimeColumn = t.TimeColumn, UniqueidentifierColumn = t.UniqueidentifierColumn } into vD2
-                    select vD2
+                    select new MSBuildExtensionPack.DataSourceEntities.Organization.Default { Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_Name = Organization_2.Name, Id = t.Id, ParentId = t.ParentId, Name = t.Name, IsSystemBuiltIn = t.IsSystemBuiltIn, UniqueIdentifier = t.UniqueIdentifier, CreatedDateTime = t.CreatedDateTime, CharColumn = t.CharColumn, VarcharColumn = t.VarcharColumn, TextColumn = t.TextColumn, NcharColumn = t.NcharColumn, NvarcharColumn = t.NvarcharColumn, NtextColumn = t.NtextColumn, BitColumn = t.BitColumn, BinaryColumn = t.BinaryColumn, VarbinaryColumn = t.VarbinaryColumn, ImageColumn = t.ImageColumn, TinyintColumn = t.TinyintColumn, SmallintColumn = t.SmallintColumn, IntColumn = t.IntColumn, BigintColumn = t.BigintColumn, DecimalColumn = t.DecimalColumn, NumericColumn = t.NumericColumn, SmallmoneyColumn = t.SmallmoneyColumn, MoneyColumn = t.MoneyColumn, FloatColumn = t.FloatColumn, RealColumn = t.RealColumn, DatetimeColumn = t.DatetimeColumn, Datetime2Column = t.Datetime2Column, SmalldatetimeColumn = t.SmalldatetimeColumn, DateColumn = t.DateColumn, TimeColumn = t.TimeColumn, UniqueidentifierColumn = t.UniqueidentifierColumn } into vD0
+                    select vD0
                 );
             var _retval = _ResultFromDataSource;
             IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _retval1;
@@ -1602,8 +1394,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                         )
                     group t by new { ParentId = t.ParentId } into tG
                     let _CountPerFK = tG.Count()
-                    select new MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView { ParentId = tG.Key.ParentId, CountPerFK = _CountPerFK } into vD4
-                    select vD4
+                    select new MSBuildExtensionPack.DataSourceEntities.Organization.DefaultGroupedDataView { ParentId = tG.Key.ParentId, CountPerFK = _CountPerFK } into vD1
+                    select vD1
                 );
             var _ResultFromDataSourceWithName =
                 from t in _ResultFromDataSource
@@ -1795,6 +1587,214 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         }
 
         #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
+
+        #region Query Methods Of NameValuePairByFKOnly
+
+        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
+        /// <returns>IQueryable&lt;...&gt; of Common</returns>
+        internal IQueryable<Framework.NameValuePair> _GetQueryOfNameValuePairByFKOnly(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
+        {
+            var _ResultFromDataSource =
+                (
+                    from t in this.LinqContext.Organizations
+                    join Organization_2 in this.LinqContext.Organizations on t.ParentId equals Organization_2.Id
+                    where
+                        (
+                            (
+                            (parentId.IsToCompare == false || parentId.IsToCompare && Organization_2.Id == parentId.ValueToCompare)
+                            )
+                        )
+                    select new Framework.NameValuePair { Value = t.Id.ToString(), Name = t.Name } into vD4
+                    select vD4
+                );
+            var _retval = _ResultFromDataSource;
+            IQueryable<Framework.NameValuePair> _retval1;
+            if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
+            {
+                _retval1 = _retval;
+            }
+            else
+            {
+                _retval1 = _retval.AsQueryable().OrderBy(queryOrderBySettingCollection.GetOrderByExpression());
+            }
+            return _retval1;
+        }
+
+        private bool _ExistsOfNameValuePairByFKOnly(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
+        {
+            IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairByFKOnly(
+                parentId
+                ,queryOrderBySettingCollection
+            );
+            bool result;
+            if (currentIndex == -1 || pageSize == -1)
+            {
+                result = _Query.Any();
+            }
+            else
+            {
+                result = _Query.Skip(currentIndex).Take(pageSize).Any();
+            }
+            return result;
+        }
+
+        private int _GetCountOfNameValuePairByFKOnly(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
+
+        {
+            IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairByFKOnly(
+                parentId
+                ,queryOrderBySettingCollection
+            );
+            int _Count;
+            if (currentIndex == -1 || pageSize == -1)
+            {
+                _Count = _Query.Count();
+            }
+            else
+            {
+                _Count = _Query.Skip(currentIndex).Take(pageSize).Count();
+            }
+            return _Count;
+        }
+
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfNameValuePairByFKOnly(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
+        {
+            log.Info(string.Format("{0}: GetCountOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
+            try
+            {
+                int _retval = _GetCountOfNameValuePairByFKOnly(
+                parentId
+                ,currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+                    );
+                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
+                _retMessage.Result = _retval;
+            }
+            catch(Exception ex)
+            {
+                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
+                _retMessage.Result = 0;
+                _retMessage.Message = ex.Message;
+                log.Error(string.Format("{0}: GetCountOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+            }
+            log.Info(string.Format("{0}: GetCountOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            return _retMessage;
+        }
+
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfNameValuePairByFKOnly(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
+        {
+            log.Info(string.Format("{0}: ExistsOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
+            try
+            {
+                bool _retval = _ExistsOfNameValuePairByFKOnly(
+                parentId
+                ,currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+                    );
+                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
+                _retMessage.Result = _retval;
+            }
+            catch (Exception ex)
+            {
+                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
+                _retMessage.Result = false;
+                _retMessage.Message = ex.Message;
+                log.Error(string.Format("{0}: ExistsOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+            }
+            log.Info(string.Format("{0}: ExistsOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            return _retMessage;
+        }
+
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection GetCollectionOfNameValuePairByFKOnly(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria parentId
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
+        {
+            log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+
+            Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection();
+            try
+            {
+                bool _Exists = _ExistsOfNameValuePairByFKOnly(
+                parentId
+                ,currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+            );
+
+                if (_Exists)
+                {
+                    IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairByFKOnly(
+                parentId
+                ,queryOrderBySettingCollection
+            );
+
+                    IEnumerable<Framework.NameValuePair> _retval;
+
+                    if (currentIndex == -1 || pageSize == -1)
+                    {
+                        _retval = _Query;
+                    }
+                    else
+                    {
+                        _retval = _Query.Skip(currentIndex).Take(pageSize);
+                    }
+                    _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
+                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
+                    _retMessage.QueryPagingResult.PageSize = pageSize;
+                    _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
+                    _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;
+                    _retMessage.QueryPagingResult.CountOfRecords = _Query.Count();
+                    _retMessage.Result = new Framework.NameValueCollection();
+                    _retMessage.Result.AddRange(_retval);
+                }
+                else
+                {
+                    _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.SuccessButNoResult;
+                    _retMessage.Result = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
+                _retMessage.Result = null;
+                _retMessage.Message = ex.Message;
+                log.Error(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+            }
+            log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            return _retMessage;
+        }
+
+        #endregion Query Methods Of NameValuePairByFKOnly
 
         #region Query Methods Of EntityByIdentifier
 
@@ -2023,8 +2023,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (id.IsToCompare == false || id.IsToCompare && t.Id == id.ValueToCompare)
                             )
                         )
-                    select new MSBuildExtensionPack.DataSourceEntities.Organization.Default { Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_UniqueidentifierColumn = Organization_2.UniqueidentifierColumn, Organization_2_Name = Organization_2.Name, Id = t.Id, ParentId = t.ParentId, Name = t.Name, IsSystemBuiltIn = t.IsSystemBuiltIn, UniqueIdentifier = t.UniqueIdentifier, CreatedDateTime = t.CreatedDateTime, CharColumn = t.CharColumn, VarcharColumn = t.VarcharColumn, TextColumn = t.TextColumn, NcharColumn = t.NcharColumn, NvarcharColumn = t.NvarcharColumn, NtextColumn = t.NtextColumn, BitColumn = t.BitColumn, BinaryColumn = t.BinaryColumn, VarbinaryColumn = t.VarbinaryColumn, ImageColumn = t.ImageColumn, TinyintColumn = t.TinyintColumn, SmallintColumn = t.SmallintColumn, IntColumn = t.IntColumn, BigintColumn = t.BigintColumn, DecimalColumn = t.DecimalColumn, NumericColumn = t.NumericColumn, SmallmoneyColumn = t.SmallmoneyColumn, MoneyColumn = t.MoneyColumn, FloatColumn = t.FloatColumn, RealColumn = t.RealColumn, DatetimeColumn = t.DatetimeColumn, Datetime2Column = t.Datetime2Column, SmalldatetimeColumn = t.SmalldatetimeColumn, DateColumn = t.DateColumn, TimeColumn = t.TimeColumn, UniqueidentifierColumn = t.UniqueidentifierColumn } into vD2
-                    select vD2
+                    select new MSBuildExtensionPack.DataSourceEntities.Organization.Default { Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_Name = Organization_2.Name, Id = t.Id, ParentId = t.ParentId, Name = t.Name, IsSystemBuiltIn = t.IsSystemBuiltIn, UniqueIdentifier = t.UniqueIdentifier, CreatedDateTime = t.CreatedDateTime, CharColumn = t.CharColumn, VarcharColumn = t.VarcharColumn, TextColumn = t.TextColumn, NcharColumn = t.NcharColumn, NvarcharColumn = t.NvarcharColumn, NtextColumn = t.NtextColumn, BitColumn = t.BitColumn, BinaryColumn = t.BinaryColumn, VarbinaryColumn = t.VarbinaryColumn, ImageColumn = t.ImageColumn, TinyintColumn = t.TinyintColumn, SmallintColumn = t.SmallintColumn, IntColumn = t.IntColumn, BigintColumn = t.BigintColumn, DecimalColumn = t.DecimalColumn, NumericColumn = t.NumericColumn, SmallmoneyColumn = t.SmallmoneyColumn, MoneyColumn = t.MoneyColumn, FloatColumn = t.FloatColumn, RealColumn = t.RealColumn, DatetimeColumn = t.DatetimeColumn, Datetime2Column = t.Datetime2Column, SmalldatetimeColumn = t.SmalldatetimeColumn, DateColumn = t.DateColumn, TimeColumn = t.TimeColumn, UniqueidentifierColumn = t.UniqueidentifierColumn } into vD0
+                    select vD0
                 );
             var _retval = _ResultFromDataSource;
             IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _retval1;
@@ -2231,8 +2231,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (id.IsToCompare == false || id.IsToCompare && t.Id == id.ValueToCompare)
                             )
                         )
-                    select new MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation { Id = t.Id, Name = t.Name, IsSystemBuiltIn = t.IsSystemBuiltIn, UniqueIdentifier = t.UniqueIdentifier, BitColumn = t.BitColumn, UniqueidentifierColumn = t.UniqueidentifierColumn } into vD5
-                    select vD5
+                    select new MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation { Id = t.Id, Name = t.Name, IsSystemBuiltIn = t.IsSystemBuiltIn, UniqueIdentifier = t.UniqueIdentifier, BitColumn = t.BitColumn } into vD3
+                    select vD3
                 );
             var _retval = _ResultFromDataSource;
             IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation> _retval1;
@@ -2427,7 +2427,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _GetQueryOfEntityByIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -2441,8 +2440,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (id.IsToCompare == false || id.IsToCompare && t.Id == id.ValueToCompare)
                             &&
                             (uniqueIdentifier.IsToCompare == false || uniqueIdentifier.IsToCompare && t.UniqueIdentifier == uniqueIdentifier.ValueToCompare)
-                            &&
-                            (uniqueidentifierColumn.IsToCompare == false || uniqueidentifierColumn.IsToCompare && t.UniqueidentifierColumn == uniqueidentifierColumn.ValueToCompare)
                             )
                         )
                     select new MSBuildExtensionPack.DataSourceEntities.Organization { Id = t.Id, ParentId = t.ParentId, Name = t.Name, IsSystemBuiltIn = t.IsSystemBuiltIn, UniqueIdentifier = t.UniqueIdentifier, CreatedDateTime = t.CreatedDateTime, CharColumn = t.CharColumn, VarcharColumn = t.VarcharColumn, TextColumn = t.TextColumn, NcharColumn = t.NcharColumn, NvarcharColumn = t.NvarcharColumn, NtextColumn = t.NtextColumn, BitColumn = t.BitColumn, TinyintColumn = t.TinyintColumn, SmallintColumn = t.SmallintColumn, IntColumn = t.IntColumn, BigintColumn = t.BigintColumn, DecimalColumn = t.DecimalColumn, NumericColumn = t.NumericColumn, SmallmoneyColumn = t.SmallmoneyColumn, MoneyColumn = t.MoneyColumn, FloatColumn = t.FloatColumn, RealColumn = t.RealColumn, DatetimeColumn = t.DatetimeColumn, Datetime2Column = t.Datetime2Column, SmalldatetimeColumn = t.SmalldatetimeColumn, DateColumn = t.DateColumn, TimeColumn = t.TimeColumn, UniqueidentifierColumn = t.UniqueidentifierColumn } into x
@@ -2464,7 +2461,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         private bool _ExistsOfEntityByIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2473,7 +2469,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = _GetQueryOfEntityByIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
-                ,uniqueidentifierColumn
                 ,queryOrderBySettingCollection
             );
             bool result;
@@ -2491,7 +2486,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         private int _GetCountOfEntityByIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2501,7 +2495,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = _GetQueryOfEntityByIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
-                ,uniqueidentifierColumn
                 ,queryOrderBySettingCollection
             );
             int _Count;
@@ -2519,7 +2512,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityByIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2532,7 +2524,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 int _retval = _GetCountOfEntityByIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
-                ,uniqueidentifierColumn
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -2554,7 +2545,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityByIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2567,7 +2557,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _retval = _ExistsOfEntityByIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
-                ,uniqueidentifierColumn
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -2589,7 +2578,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionOrganization GetCollectionOfEntityByIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2603,7 +2591,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _Exists = _ExistsOfEntityByIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
-                ,uniqueidentifierColumn
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -2614,7 +2601,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization> _Query = _GetQueryOfEntityByIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
-                ,uniqueidentifierColumn
                 ,queryOrderBySettingCollection
             );
 
@@ -2663,7 +2649,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _GetQueryOfDefaultByIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -2677,12 +2662,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (id.IsToCompare == false || id.IsToCompare && t.Id == id.ValueToCompare)
                             &&
                             (uniqueIdentifier.IsToCompare == false || uniqueIdentifier.IsToCompare && t.UniqueIdentifier == uniqueIdentifier.ValueToCompare)
-                            &&
-                            (uniqueidentifierColumn.IsToCompare == false || uniqueidentifierColumn.IsToCompare && t.UniqueidentifierColumn == uniqueidentifierColumn.ValueToCompare)
                             )
                         )
-                    select new MSBuildExtensionPack.DataSourceEntities.Organization.Default { Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_UniqueidentifierColumn = Organization_2.UniqueidentifierColumn, Organization_2_Name = Organization_2.Name, Id = t.Id, ParentId = t.ParentId, Name = t.Name, IsSystemBuiltIn = t.IsSystemBuiltIn, UniqueIdentifier = t.UniqueIdentifier, CreatedDateTime = t.CreatedDateTime, CharColumn = t.CharColumn, VarcharColumn = t.VarcharColumn, TextColumn = t.TextColumn, NcharColumn = t.NcharColumn, NvarcharColumn = t.NvarcharColumn, NtextColumn = t.NtextColumn, BitColumn = t.BitColumn, BinaryColumn = t.BinaryColumn, VarbinaryColumn = t.VarbinaryColumn, ImageColumn = t.ImageColumn, TinyintColumn = t.TinyintColumn, SmallintColumn = t.SmallintColumn, IntColumn = t.IntColumn, BigintColumn = t.BigintColumn, DecimalColumn = t.DecimalColumn, NumericColumn = t.NumericColumn, SmallmoneyColumn = t.SmallmoneyColumn, MoneyColumn = t.MoneyColumn, FloatColumn = t.FloatColumn, RealColumn = t.RealColumn, DatetimeColumn = t.DatetimeColumn, Datetime2Column = t.Datetime2Column, SmalldatetimeColumn = t.SmalldatetimeColumn, DateColumn = t.DateColumn, TimeColumn = t.TimeColumn, UniqueidentifierColumn = t.UniqueidentifierColumn } into vD2
-                    select vD2
+                    select new MSBuildExtensionPack.DataSourceEntities.Organization.Default { Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_Name = Organization_2.Name, Id = t.Id, ParentId = t.ParentId, Name = t.Name, IsSystemBuiltIn = t.IsSystemBuiltIn, UniqueIdentifier = t.UniqueIdentifier, CreatedDateTime = t.CreatedDateTime, CharColumn = t.CharColumn, VarcharColumn = t.VarcharColumn, TextColumn = t.TextColumn, NcharColumn = t.NcharColumn, NvarcharColumn = t.NvarcharColumn, NtextColumn = t.NtextColumn, BitColumn = t.BitColumn, BinaryColumn = t.BinaryColumn, VarbinaryColumn = t.VarbinaryColumn, ImageColumn = t.ImageColumn, TinyintColumn = t.TinyintColumn, SmallintColumn = t.SmallintColumn, IntColumn = t.IntColumn, BigintColumn = t.BigintColumn, DecimalColumn = t.DecimalColumn, NumericColumn = t.NumericColumn, SmallmoneyColumn = t.SmallmoneyColumn, MoneyColumn = t.MoneyColumn, FloatColumn = t.FloatColumn, RealColumn = t.RealColumn, DatetimeColumn = t.DatetimeColumn, Datetime2Column = t.Datetime2Column, SmalldatetimeColumn = t.SmalldatetimeColumn, DateColumn = t.DateColumn, TimeColumn = t.TimeColumn, UniqueidentifierColumn = t.UniqueidentifierColumn } into vD0
+                    select vD0
                 );
             var _retval = _ResultFromDataSource;
             IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _retval1;
@@ -2700,7 +2683,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         private bool _ExistsOfDefaultByIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2709,7 +2691,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = _GetQueryOfDefaultByIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
-                ,uniqueidentifierColumn
                 ,queryOrderBySettingCollection
             );
             bool result;
@@ -2727,7 +2708,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         private int _GetCountOfDefaultByIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2737,7 +2717,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = _GetQueryOfDefaultByIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
-                ,uniqueidentifierColumn
                 ,queryOrderBySettingCollection
             );
             int _Count;
@@ -2755,7 +2734,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultByIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2768,7 +2746,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 int _retval = _GetCountOfDefaultByIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
-                ,uniqueidentifierColumn
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -2790,7 +2767,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultByIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2803,7 +2779,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _retval = _ExistsOfDefaultByIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
-                ,uniqueidentifierColumn
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -2825,7 +2800,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfDefaultCollection GetCollectionOfDefaultByIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2839,7 +2813,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _Exists = _ExistsOfDefaultByIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
-                ,uniqueidentifierColumn
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -2850,7 +2823,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.Default> _Query = _GetQueryOfDefaultByIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
-                ,uniqueidentifierColumn
                 ,queryOrderBySettingCollection
             );
 
@@ -2899,7 +2871,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation> _GetQueryOfKeyInformationByIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             )
         {
@@ -2913,12 +2884,10 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (id.IsToCompare == false || id.IsToCompare && t.Id == id.ValueToCompare)
                             &&
                             (uniqueIdentifier.IsToCompare == false || uniqueIdentifier.IsToCompare && t.UniqueIdentifier == uniqueIdentifier.ValueToCompare)
-                            &&
-                            (uniqueidentifierColumn.IsToCompare == false || uniqueidentifierColumn.IsToCompare && t.UniqueidentifierColumn == uniqueidentifierColumn.ValueToCompare)
                             )
                         )
-                    select new MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation { Id = t.Id, Name = t.Name, IsSystemBuiltIn = t.IsSystemBuiltIn, UniqueIdentifier = t.UniqueIdentifier, BitColumn = t.BitColumn, UniqueidentifierColumn = t.UniqueidentifierColumn } into vD5
-                    select vD5
+                    select new MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation { Id = t.Id, Name = t.Name, IsSystemBuiltIn = t.IsSystemBuiltIn, UniqueIdentifier = t.UniqueIdentifier, BitColumn = t.BitColumn } into vD3
+                    select vD3
                 );
             var _retval = _ResultFromDataSource;
             IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation> _retval1;
@@ -2936,7 +2905,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         private bool _ExistsOfKeyInformationByIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2945,7 +2913,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation> _Query = _GetQueryOfKeyInformationByIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
-                ,uniqueidentifierColumn
                 ,queryOrderBySettingCollection
             );
             bool result;
@@ -2963,7 +2930,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         private int _GetCountOfKeyInformationByIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -2973,7 +2939,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation> _Query = _GetQueryOfKeyInformationByIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
-                ,uniqueidentifierColumn
                 ,queryOrderBySettingCollection
             );
             int _Count;
@@ -2991,7 +2956,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfKeyInformationByIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -3004,7 +2968,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 int _retval = _GetCountOfKeyInformationByIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
-                ,uniqueidentifierColumn
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -3026,7 +2989,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfKeyInformationByIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -3039,7 +3001,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _retval = _ExistsOfKeyInformationByIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
-                ,uniqueidentifierColumn
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -3061,7 +3022,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         public MSBuildExtensionPack.DataSourceEntities.Organization.DataAccessLayerMessageOfKeyInformationCollection GetCollectionOfKeyInformationByIdentifierAndUniqueConstraint(
             Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueIdentifier
-            ,Framework.EntityContracts.QuerySystemGuidEqualsCriteria uniqueidentifierColumn
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
@@ -3075,7 +3035,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                 bool _Exists = _ExistsOfKeyInformationByIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
-                ,uniqueidentifierColumn
                 ,currentIndex
                 ,pageSize
                 ,queryOrderBySettingCollection
@@ -3086,7 +3045,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     IQueryable<MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformation> _Query = _GetQueryOfKeyInformationByIdentifierAndUniqueConstraint(
                 id
                 ,uniqueIdentifier
-                ,uniqueidentifierColumn
                 ,queryOrderBySettingCollection
             );
 

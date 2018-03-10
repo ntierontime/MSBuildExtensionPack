@@ -60,8 +60,6 @@
     <Compile Include="Controllers\SolutionController.gg.cs">
       <DependentUpon>SolutionController.cs</DependentUpon>
     </Compile>
-    <Content Include="Scripts\chart-2.7.1.js" />
-    <Content Include="Scripts\chart-2.7.1.min.js" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
@@ -136,9 +134,6 @@
     <None Include="packages.config" />
     <Content Include="Views\Build\WPCommonOfBuild.cshtml" />
     <Content Include="Views\Build\WPFullDetailsOfBuild.cshtml" />
-    <Content Include="Views\Build\WPsomethingOfBuild.cshtml" />
-    <Content Include="Views\Build\WPelsesomethingOfBuild.cshtml" />
-    <Content Include="Views\Build\WPelseA1AsomethingOfBuild.cshtml" />
     <Content Include="Views\BuildEventCode\WPCommonOfBuildEventCode.cshtml" />
     <Content Include="Views\BuildEventCode\WPFullDetailsOfBuildEventCode.cshtml" />
     <Content Include="Views\BuildLog\WPCommonOfBuildLog.cshtml" />
@@ -279,6 +274,8 @@
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\App.js" />
+    <Content Include="Scripts\chart-2.7.1.js" />
+    <Content Include="Scripts\chart-2.7.1.min.js" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AspNetMvc40ApiController\MSBuildExtensionPack.AspNetMvc40ApiController.csproj">
@@ -375,14 +372,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="ChartJS.Helpers.MVC">
-      <HintPath>..\..\..\packages\chartjs.helpers.mvc.3.3.1\lib\net45\ChartJS.Helpers.MVC.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Net" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Routing" />

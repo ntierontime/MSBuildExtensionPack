@@ -203,12 +203,12 @@
             <tr>
 <td><div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetails">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].UniqueIdentifier })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetails">
         <span class="glyphicon glyphicon-briefcase"></span>
     </a>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Edit, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="EditToolBarRightInList" title="@Framework.Resx.UIStringResource.Edit">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Edit, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Result[i].UniqueIdentifier })" class="btn btn-default" role="button" type="button" name="EditToolBarRightInList" title="@Framework.Resx.UIStringResource.Edit">
         <span class="glyphicon glyphicon-edit"></span>
     </a>
 </div>
@@ -216,7 +216,7 @@
 </td>
 <td class="hidden-sm">@Html.DisplayFor(model => model.Result[i].Id)</td>
 <td>@Html.DisplayFor(model => model.Result[i].CreatedDateTime)</td>
-<td>@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].ParentId, uniqueIdentifier = Model.Result[i].Organization_2_UniqueIdentifier, uniqueidentifierColumn = Model.Result[i].Organization_2_UniqueidentifierColumn }, null)</td>
+<td>@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].ParentId, uniqueIdentifier = Model.Result[i].Organization_2_UniqueIdentifier }, null)</td>
 <td>@Html.DisplayFor(model => model.Result[i].IsSystemBuiltIn)</td>
 <td class="hidden-xs">@Html.DisplayFor(model => model.Result[i].BitColumn)</td>
 <td class="hidden-xs">@Html.DisplayFor(model => model.Result[i].Name)</td>

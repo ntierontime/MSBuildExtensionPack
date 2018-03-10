@@ -412,45 +412,6 @@ namespace MSBuildExtensionPack.CommonBLL
 
         #endregion Query Methods Of RssItemByAll
 
-        #region Query Methods Of NameValuePairByFKOnly
-
-        /// <summary>
-        /// Gets the collection of entity of NameValuePairByFKOnly .
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>an instance of Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection if any</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfFKOnly request)
-        {
-            log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfNameValuePairByFKOnly(
-                request.Criteria.FKOnly.SolutionId
-                , request.Criteria.FKOnly.Organization_1Id
-                , request.Criteria.FKOnly.Organization_2Id
-                , request.QueryPagingSetting.CurrentIndex
-                , request.QueryPagingSetting.PageSize
-                , request.QueryOrderBySettingCollection
-                );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _retval = new Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection();
-            _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
-
-            //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.NameValueCollection>(_resultFromDAL, _retval);
-
-            if (request.DataServiceType == Framework.DataServiceTypes.DataSourceResult)
-            {
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.NameValueCollection>(_resultFromDAL, _retval);
-            }
-            else
-            {
-                //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.NameValuePair, Framework.NameValueCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.BuildDataStreamService.NameValuePair());
-            }
-
-            log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
-            return _retval;
-        }
-
-        #endregion Query Methods Of NameValuePairByFKOnly
-
         #region Query Methods Of DefaultByFKOnly
 
         /// <summary>
@@ -528,6 +489,45 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
+
+        #region Query Methods Of NameValuePairByFKOnly
+
+        /// <summary>
+        /// Gets the collection of entity of NameValuePairByFKOnly .
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>an instance of Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection if any</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfFKOnly request)
+        {
+            log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfNameValuePairByFKOnly(
+                request.Criteria.FKOnly.SolutionId
+                , request.Criteria.FKOnly.Organization_1Id
+                , request.Criteria.FKOnly.Organization_2Id
+                , request.QueryPagingSetting.CurrentIndex
+                , request.QueryPagingSetting.PageSize
+                , request.QueryOrderBySettingCollection
+                );
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _retval = new Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection();
+            _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
+
+            //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.NameValueCollection>(_resultFromDAL, _retval);
+
+            if (request.DataServiceType == Framework.DataServiceTypes.DataSourceResult)
+            {
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.NameValueCollection>(_resultFromDAL, _retval);
+            }
+            else
+            {
+                //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.NameValuePair, Framework.NameValueCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.BuildDataStreamService.NameValuePair());
+            }
+
+            log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            return _retval;
+        }
+
+        #endregion Query Methods Of NameValuePairByFKOnly
 
         #region Query Methods Of EntityByIdentifier
 
@@ -706,211 +706,9 @@ namespace MSBuildExtensionPack.CommonBLL
 
         #endregion Query Methods Of KeyInformationByIdentifier
 
-        #region Query Methods Of AncestorAndKeyInfo
-
-        /// <summary>
-        /// Exists the of entity of AncestorAndKeyInfo .
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfAncestorAndKeyInfo(
-            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfFKStringContains request)
-        {
-            log.Info(string.Format("{0}: ExistsOfAncestorAndKeyInfo", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfAncestorAndKeyInfo(
-                request.Criteria.FKStringContains.SolutionName
-                , request.Criteria.FKStringContains.SolutionDescription
-                , request.Criteria.FKStringContains.Organization_1Name
-                , request.Criteria.FKStringContains.Organization_2Name
-                , request.Criteria.FKStringContains.BuildName
-                , request.Criteria.FKStringContains.BuildDescription
-                , request.QueryPagingSetting.CurrentIndex
-                , request.QueryPagingSetting.PageSize
-                , request.QueryOrderBySettingCollection);
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _retval = new Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean();
-
-            _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: ExistsOfAncestorAndKeyInfo", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
-            return _retval;
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of AncestorAndKeyInfo .
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation GetCollectionOfAncestorAndKeyInfo(
-            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfFKStringContains request)
-        {
-            log.Info(string.Format("{0}: GetCollectionOfAncestorAndKeyInfo", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfKeyInformationCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfAncestorAndKeyInfo(
-                request.Criteria.FKStringContains.SolutionName
-                , request.Criteria.FKStringContains.SolutionDescription
-                , request.Criteria.FKStringContains.Organization_1Name
-                , request.Criteria.FKStringContains.Organization_2Name
-                , request.Criteria.FKStringContains.BuildName
-                , request.Criteria.FKStringContains.BuildDescription
-                , request.QueryPagingSetting.CurrentIndex
-                , request.QueryPagingSetting.PageSize
-                , request.QueryOrderBySettingCollection
-                );
-            MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation _retval = new MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation();
-            _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
-
-            //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Build.KeyInformationCollection>(_resultFromDAL, _retval);
-
-            if (request.DataServiceType == Framework.DataServiceTypes.DataSourceResult)
-            {
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Build.KeyInformationCollection>(_resultFromDAL, _retval);
-            }
-            else
-            {
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation, MSBuildExtensionPack.DataSourceEntities.Build.KeyInformationCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.BuildDataStreamService.KeyInformation());
-            }
-
-            log.Info(string.Format("{0}: GetCollectionOfAncestorAndKeyInfo", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
-            return _retval;
-        }
-
-        #endregion Query Methods Of AncestorAndKeyInfo
-
-        #region Query Methods Of KeyInformationByID
-
-        /// <summary>
-        /// Exists the of entity of KeyInformationByID .
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns> Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationByID(
-            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfIdentifier request)
-        {
-            log.Info(string.Format("{0}: ExistsOfKeyInformationByID", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _resultFromDAL = this.DALClassInstance.ExistsOfKeyInformationByID(
-                request.Criteria.Identifier.Id
-                , request.QueryPagingSetting.CurrentIndex
-                , request.QueryPagingSetting.PageSize
-                , request.QueryOrderBySettingCollection);
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _retval = new Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean();
-
-            _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<bool>(_resultFromDAL, _retval);
-            log.Info(string.Format("{0}: ExistsOfKeyInformationByID", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
-            return _retval;
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of KeyInformationByID .
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>an instance of MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest if any</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest GetCollectionOfKeyInformationByID(
-            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfIdentifier request)
-        {
-            log.Info(string.Format("{0}: GetCollectionOfKeyInformationByID", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfUpdateNameRequestCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfKeyInformationByID(
-                request.Criteria.Identifier.Id
-                , request.QueryPagingSetting.CurrentIndex
-                , request.QueryPagingSetting.PageSize
-                , request.QueryOrderBySettingCollection
-                );
-            MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest _retval = new MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest();
-            _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
-
-            //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequestCollection>(_resultFromDAL, _retval);
-
-            if (request.DataServiceType == Framework.DataServiceTypes.DataSourceResult)
-            {
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequestCollection>(_resultFromDAL, _retval);
-            }
-            else
-            {
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest, MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequestCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.BuildDataStreamService.UpdateNameRequest());
-            }
-
-            log.Info(string.Format("{0}: GetCollectionOfKeyInformationByID", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
-            return _retval;
-        }
-
-        #endregion Query Methods Of KeyInformationByID
-
         #region GetAscendantAndDescendant
 
         #endregion GetAscendantAndDescendant
-
-        #region DataActionMethod -- UpdateName
-
-        /// <summary>
-        /// UpdateName
-        /// Description:
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>a message with action result</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest UpdateName(MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedUpdateName request)
-        {
-            MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest _retval = new MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest();
-            _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
-
-            UpdateName_Pre(request, _retval);
-
-            if (request != null)
-            {
-                log.Info(string.Format("{0}: UpdateName", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-                MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfUpdateNameRequestCollection _resultFromDAL = this.DALClassInstance.UpdateName(request.Criteria);
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequestCollection>(_resultFromDAL, _retval);
-                log.Info(string.Format("{0}: UpdateName", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
-            }
-            else
-            {
-                _retval.BusinessLogicLayerResponseStatus = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.RequestError;
-            }
-
-            UpdateName_Post(request, _retval);
-
-            return _retval;
-        }
-
-        partial void UpdateName_Pre(MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedUpdateName request, MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest response);
-        partial void UpdateName_Post(MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedUpdateName request, MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest response);
-
-        #endregion DataActionMethod Of UpdateName
-
-        #region DataActionMethod -- InsertName
-
-        /// <summary>
-        /// InsertName
-        /// Description:
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>a message with action result</returns>
-        public MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest InsertName(MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedInsertName request)
-        {
-            MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest _retval = new MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest();
-            _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
-
-            InsertName_Pre(request, _retval);
-
-            if (request != null)
-            {
-                log.Info(string.Format("{0}: InsertName", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-                MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfUpdateNameRequestCollection _resultFromDAL = this.DALClassInstance.InsertName(request.Criteria);
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequestCollection>(_resultFromDAL, _retval);
-                log.Info(string.Format("{0}: InsertName", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
-            }
-            else
-            {
-                _retval.BusinessLogicLayerResponseStatus = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.RequestError;
-            }
-
-            InsertName_Post(request, _retval);
-
-            return _retval;
-        }
-
-        partial void InsertName_Pre(MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedInsertName request, MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest response);
-        partial void InsertName_Post(MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedInsertName request, MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest response);
-
-        #endregion DataActionMethod Of InsertName
 
     }
 }

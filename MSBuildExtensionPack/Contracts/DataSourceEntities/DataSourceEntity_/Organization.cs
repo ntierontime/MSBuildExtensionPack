@@ -791,8 +791,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         System.Guid m_Organization_2_UniqueIdentifier;
 
-        System.Guid m_Organization_2_UniqueidentifierColumn;
-
         System.String m_Organization_2_Name;
 
         System.Int64 m_Id;
@@ -870,7 +868,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
             public Default()
             {
                 this.Organization_2_UniqueIdentifier = new Guid();
-                this.Organization_2_UniqueidentifierColumn = new Guid();
                 this.Organization_2_Name = null;
                 this.Id = default(long);
                 this.ParentId = default(long);
@@ -930,20 +927,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
             {
                 m_Organization_2_UniqueIdentifier = value;
                 RaisePropertyChanged("Organization_2_UniqueIdentifier");
-            }
-        }
-
-                    [DataMember]
-        [Display(Name = "Organization_2_UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Guid Organization_2_UniqueidentifierColumn
-        {
-            get
-            {
-                return m_Organization_2_UniqueidentifierColumn;
-            }
-            set
-            {
-                m_Organization_2_UniqueidentifierColumn = value;
-                RaisePropertyChanged("Organization_2_UniqueidentifierColumn");
             }
         }
 
@@ -1454,7 +1437,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
                 Default cloned = new Default();
 
             cloned.m_Organization_2_UniqueIdentifier = m_Organization_2_UniqueIdentifier;
-            cloned.m_Organization_2_UniqueidentifierColumn = m_Organization_2_UniqueidentifierColumn;
             cloned.m_Organization_2_Name = m_Organization_2_Name;
             cloned.m_Id = m_Id;
             cloned.m_ParentId = m_ParentId;
@@ -1527,6 +1509,148 @@ namespace MSBuildExtensionPack.DataSourceEntities
         /// </summary>
         public class DataAccessLayerMessageOfDefaultCollection
             : Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultCollection>
+        {
+        }
+
+        /// <summary>
+        /// View "DefaultGroupedDataView" class of <see cref="Organization"/>, used across the solution.
+        /// </summary>
+        public partial class DefaultGroupedDataView :Framework.PropertyChangedNotifier, Framework.EntityContracts.IClone<DefaultGroupedDataView>
+        {
+
+            #region Storage Fields
+
+        System.Int64 m_ParentId;
+
+        System.Int64 m_CountPerFK;
+
+        System.String m_Name;
+
+            #endregion Storage Fields
+
+            #region Constructors
+
+            /// <summary>
+            /// Initializes/clone a new instance of the <see cref=" Organization"/> class.
+            /// </summary>
+            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IOrganization"/></param>
+            public DefaultGroupedDataView()
+            {
+                this.ParentId = default(long);
+                this.CountPerFK = default(long);
+                this.Name = null;
+            }
+            /*
+            /// <summary>
+            /// Initializes/clone a new instance of the <see cref=" Organization"/> class.
+            /// </summary>
+            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IOrganization"/></param>
+            public DefaultGroupedDataView(MSBuildExtensionPack.EntityContracts.IOrganization item)
+            {
+                MSBuildExtensionPack.EntityContracts.IOrganizationHelper.Copy<MSBuildExtensionPack.EntityContracts.IOrganization, DefaultGroupedDataView>(item, this);
+            }
+            */
+            #endregion Constructors
+
+            #region properties
+
+                    [DataMember]
+        [Display(Name = "ParentId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="ParentId_is_required")]        public System.Int64 ParentId
+        {
+            get
+            {
+                return m_ParentId;
+            }
+            set
+            {
+                m_ParentId = value;
+                RaisePropertyChanged("ParentId");
+            }
+        }
+
+                    [DataMember]
+        [Display(Name = "CountPerFK", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Int64 CountPerFK
+        {
+            get
+            {
+                return m_CountPerFK;
+            }
+            set
+            {
+                m_CountPerFK = value;
+                RaisePropertyChanged("CountPerFK");
+            }
+        }
+
+                    [DataMember]
+        [Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.String Name
+        {
+            get
+            {
+                return m_Name;
+            }
+            set
+            {
+                m_Name = value;
+                RaisePropertyChanged("Name");
+            }
+        }
+
+            #endregion properties
+
+            #region Method of Organization.DefaultGroupedDataView  GetAClone()
+
+            /// <summary>
+            /// Gets the A clone.
+            /// </summary>
+            /// <returns>a new instance with same value</returns>
+            public DefaultGroupedDataView GetAClone()
+            {
+                DefaultGroupedDataView cloned = new DefaultGroupedDataView();
+
+            cloned.m_ParentId = m_ParentId;
+            cloned.m_CountPerFK = m_CountPerFK;
+            cloned.m_Name = m_Name;
+
+                return cloned;
+            }
+
+            /// <summary>
+            /// Gets the A clone.
+            /// </summary>
+            /// <returns>a new instance with same value</returns>
+            public DefaultGroupedDataView GetACloneWithoutIdentifier()
+            {
+                DefaultGroupedDataView cloned = GetAClone();
+
+                return cloned;
+            }
+
+            #endregion Method of Organization.DefaultGroupedDataView  GetAClone()
+        }
+
+        /// <summary>
+        /// View "DefaultGroupedDataView" class of <see cref="Organization"/>, used across the solution.
+        /// </summary>
+        public partial class DefaultGroupedDataViewCollection
+            :  List<DefaultGroupedDataView>
+        {
+        }
+
+        /// <summary>
+        /// message definition of "DefaultGroupedDataView", pass single entry, from database, to business logic layer. <see cref="Organization"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
+        /// </summary>
+        public class DataAccessLayerMessageOfDefaultGroupedDataView
+            : Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultGroupedDataView>
+        {
+        }
+
+        /// <summary>
+        /// message definition of "DefaultGroupedDataView", pass a collection of instances, from database, to business logic layer. <see cref="Organization"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
+        /// </summary>
+        public class DataAccessLayerMessageOfDefaultGroupedDataViewCollection
+            : Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultGroupedDataViewCollection>
         {
         }
 
@@ -2212,148 +2336,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
         /// <summary>
-        /// View "DefaultGroupedDataView" class of <see cref="Organization"/>, used across the solution.
-        /// </summary>
-        public partial class DefaultGroupedDataView :Framework.PropertyChangedNotifier, Framework.EntityContracts.IClone<DefaultGroupedDataView>
-        {
-
-            #region Storage Fields
-
-        System.Int64 m_ParentId;
-
-        System.Int64 m_CountPerFK;
-
-        System.String m_Name;
-
-            #endregion Storage Fields
-
-            #region Constructors
-
-            /// <summary>
-            /// Initializes/clone a new instance of the <see cref=" Organization"/> class.
-            /// </summary>
-            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IOrganization"/></param>
-            public DefaultGroupedDataView()
-            {
-                this.ParentId = default(long);
-                this.CountPerFK = default(long);
-                this.Name = null;
-            }
-            /*
-            /// <summary>
-            /// Initializes/clone a new instance of the <see cref=" Organization"/> class.
-            /// </summary>
-            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IOrganization"/></param>
-            public DefaultGroupedDataView(MSBuildExtensionPack.EntityContracts.IOrganization item)
-            {
-                MSBuildExtensionPack.EntityContracts.IOrganizationHelper.Copy<MSBuildExtensionPack.EntityContracts.IOrganization, DefaultGroupedDataView>(item, this);
-            }
-            */
-            #endregion Constructors
-
-            #region properties
-
-                    [DataMember]
-        [Display(Name = "ParentId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="ParentId_is_required")]        public System.Int64 ParentId
-        {
-            get
-            {
-                return m_ParentId;
-            }
-            set
-            {
-                m_ParentId = value;
-                RaisePropertyChanged("ParentId");
-            }
-        }
-
-                    [DataMember]
-        [Display(Name = "CountPerFK", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.Int64 CountPerFK
-        {
-            get
-            {
-                return m_CountPerFK;
-            }
-            set
-            {
-                m_CountPerFK = value;
-                RaisePropertyChanged("CountPerFK");
-            }
-        }
-
-                    [DataMember]
-        [Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]        public System.String Name
-        {
-            get
-            {
-                return m_Name;
-            }
-            set
-            {
-                m_Name = value;
-                RaisePropertyChanged("Name");
-            }
-        }
-
-            #endregion properties
-
-            #region Method of Organization.DefaultGroupedDataView  GetAClone()
-
-            /// <summary>
-            /// Gets the A clone.
-            /// </summary>
-            /// <returns>a new instance with same value</returns>
-            public DefaultGroupedDataView GetAClone()
-            {
-                DefaultGroupedDataView cloned = new DefaultGroupedDataView();
-
-            cloned.m_ParentId = m_ParentId;
-            cloned.m_CountPerFK = m_CountPerFK;
-            cloned.m_Name = m_Name;
-
-                return cloned;
-            }
-
-            /// <summary>
-            /// Gets the A clone.
-            /// </summary>
-            /// <returns>a new instance with same value</returns>
-            public DefaultGroupedDataView GetACloneWithoutIdentifier()
-            {
-                DefaultGroupedDataView cloned = GetAClone();
-
-                return cloned;
-            }
-
-            #endregion Method of Organization.DefaultGroupedDataView  GetAClone()
-        }
-
-        /// <summary>
-        /// View "DefaultGroupedDataView" class of <see cref="Organization"/>, used across the solution.
-        /// </summary>
-        public partial class DefaultGroupedDataViewCollection
-            :  List<DefaultGroupedDataView>
-        {
-        }
-
-        /// <summary>
-        /// message definition of "DefaultGroupedDataView", pass single entry, from database, to business logic layer. <see cref="Organization"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
-        /// </summary>
-        public class DataAccessLayerMessageOfDefaultGroupedDataView
-            : Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultGroupedDataView>
-        {
-        }
-
-        /// <summary>
-        /// message definition of "DefaultGroupedDataView", pass a collection of instances, from database, to business logic layer. <see cref="Organization"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
-        /// </summary>
-        public class DataAccessLayerMessageOfDefaultGroupedDataViewCollection
-            : Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultGroupedDataViewCollection>
-        {
-        }
-
-        /// <summary>
         /// View "KeyInformation" class of <see cref="Organization"/>, used across the solution.
         /// </summary>
         public partial class KeyInformation :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IOrganizationIdentifier, Framework.EntityContracts.IClone<KeyInformation>
@@ -2371,8 +2353,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         System.Boolean m_BitColumn;
 
-        System.Guid m_UniqueidentifierColumn;
-
             #endregion Storage Fields
 
             #region Constructors
@@ -2388,7 +2368,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
                 this.IsSystemBuiltIn = true;
                 this.UniqueIdentifier = new Guid();
                 this.BitColumn = true;
-                this.UniqueidentifierColumn = new Guid();
             }
             /*
             /// <summary>
@@ -2480,21 +2459,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
             }
         }
 
-                    [DataMember]
-        [Display(Name = "UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization))]
-        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization), ErrorMessageResourceName="UniqueidentifierColumn_is_required")]        public System.Guid UniqueidentifierColumn
-        {
-            get
-            {
-                return m_UniqueidentifierColumn;
-            }
-            set
-            {
-                m_UniqueidentifierColumn = value;
-                RaisePropertyChanged("UniqueidentifierColumn");
-            }
-        }
-
             #endregion properties
 
             #region Method of Organization.KeyInformation  GetAClone()
@@ -2512,7 +2476,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
             cloned.m_IsSystemBuiltIn = m_IsSystemBuiltIn;
             cloned.m_UniqueIdentifier = m_UniqueIdentifier;
             cloned.m_BitColumn = m_BitColumn;
-            cloned.m_UniqueidentifierColumn = m_UniqueidentifierColumn;
 
                 return cloned;
             }
