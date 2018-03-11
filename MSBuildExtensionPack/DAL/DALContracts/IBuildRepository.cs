@@ -78,28 +78,6 @@ namespace MSBuildExtensionPack.DALContracts
 
         #endregion Query Methods Of DefaultByCommon
 
-        #region Query Methods Of RssItemByAll
-
-        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfRssItemByAll(
-            int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            );
-
-        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfRssItemByAll(
-            int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            );
-
-        Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection GetCollectionOfRssItemByAll(
-            int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            );
-
-        #endregion Query Methods Of RssItemByAll
-
         #region Query Methods Of DefaultByFKOnly
 
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultByFKOnly(
@@ -131,36 +109,80 @@ namespace MSBuildExtensionPack.DALContracts
 
         #endregion Query Methods Of DefaultByFKOnly
 
-        #region Query Methods Of DefaultGroupedDataViewByFKOnly
+        #region Query Methods Of DefaultByIdentifier
 
-        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultGroupedDataViewByFKOnly(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria solutionId
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_1Id
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultByIdentifier(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultGroupedDataViewByFKOnly(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria solutionId
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_1Id
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultByIdentifier(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfDefaultGroupedDataViewCollection GetCollectionOfDefaultGroupedDataViewByFKOnly(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria solutionId
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_1Id
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+        MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfDefaultCollection GetCollectionOfDefaultByIdentifier(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
             ,int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
+        #endregion Query Methods Of DefaultByIdentifier
+
+        #region Query Methods Of EntityByIdentifier
+
+        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityByIdentifier(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            );
+
+        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityByIdentifier(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            );
+
+        MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuild GetCollectionOfEntityByIdentifier(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            );
+
+        #endregion Query Methods Of EntityByIdentifier
+
+        #region Query Methods Of KeyInformationByIdentifier
+
+        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfKeyInformationByIdentifier(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            );
+
+        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfKeyInformationByIdentifier(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            );
+
+        MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfKeyInformationCollection GetCollectionOfKeyInformationByIdentifier(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            );
+
+        #endregion Query Methods Of KeyInformationByIdentifier
 
         #region Query Methods Of NameValuePairByFKOnly
 
@@ -193,80 +215,27 @@ namespace MSBuildExtensionPack.DALContracts
 
         #endregion Query Methods Of NameValuePairByFKOnly
 
-        #region Query Methods Of EntityByIdentifier
+        #region Query Methods Of RssItemByAll
 
-        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfEntityByIdentifier(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
-            ,int currentIndex
+        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfRssItemByAll(
+            int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfEntityByIdentifier(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
-            ,int currentIndex
+        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfRssItemByAll(
+            int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        MSBuildExtensionPack.DataSourceEntities.DataAccessLayerMessageOfEntityCollectionBuild GetCollectionOfEntityByIdentifier(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
-            ,int currentIndex
+        Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection GetCollectionOfRssItemByAll(
+            int currentIndex
             ,int pageSize
             ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
             );
 
-        #endregion Query Methods Of EntityByIdentifier
-
-        #region Query Methods Of DefaultByIdentifier
-
-        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultByIdentifier(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            );
-
-        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfDefaultByIdentifier(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            );
-
-        MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfDefaultCollection GetCollectionOfDefaultByIdentifier(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            );
-
-        #endregion Query Methods Of DefaultByIdentifier
-
-        #region Query Methods Of KeyInformationByIdentifier
-
-        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfKeyInformationByIdentifier(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            );
-
-        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfKeyInformationByIdentifier(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            );
-
-        MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfKeyInformationCollection GetCollectionOfKeyInformationByIdentifier(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            );
-
-        #endregion Query Methods Of KeyInformationByIdentifier
+        #endregion Query Methods Of RssItemByAll
 
     }
 }

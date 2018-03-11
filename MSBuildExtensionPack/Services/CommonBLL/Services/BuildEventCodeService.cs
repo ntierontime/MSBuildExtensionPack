@@ -372,78 +372,6 @@ namespace MSBuildExtensionPack.CommonBLL
 
         #endregion Query Methods Of EntityByCommon
 
-        #region Query Methods Of NameValuePairByAll
-
-        /// <summary>
-        /// Gets the collection of entity of NameValuePairByAll .
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>an instance of Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection if any</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByAll(
-            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
-        {
-            log.Info(string.Format("{0}: GetCollectionOfNameValuePairByAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfNameValuePairByAll(
-                request.QueryPagingSetting.CurrentIndex
-                , request.QueryPagingSetting.PageSize
-                , request.QueryOrderBySettingCollection
-                );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _retval = new Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection();
-            _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
-
-            //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.NameValueCollection>(_resultFromDAL, _retval);
-
-            if (request.DataServiceType == Framework.DataServiceTypes.DataSourceResult)
-            {
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.NameValueCollection>(_resultFromDAL, _retval);
-            }
-            else
-            {
-                //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.NameValuePair, Framework.NameValueCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.BuildEventCodeDataStreamService.NameValuePair());
-            }
-
-            log.Info(string.Format("{0}: GetCollectionOfNameValuePairByAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
-            return _retval;
-        }
-
-        #endregion Query Methods Of NameValuePairByAll
-
-        #region Query Methods Of RssItemByAll
-
-        /// <summary>
-        /// Gets the collection of entity of RssItemByAll .
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>an instance of Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection if any</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetCollectionOfRssItemByAll(
-            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
-        {
-            log.Info(string.Format("{0}: GetCollectionOfRssItemByAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfRssItemByAll(
-                request.QueryPagingSetting.CurrentIndex
-                , request.QueryPagingSetting.PageSize
-                , request.QueryOrderBySettingCollection
-                );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _retval = new Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection();
-            _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
-
-            //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.RssItemCollection>(_resultFromDAL, _retval);
-
-            if (request.DataServiceType == Framework.DataServiceTypes.DataSourceResult)
-            {
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.RssItemCollection>(_resultFromDAL, _retval);
-            }
-            else
-            {
-                //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.RssItem, Framework.RssItemCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.BuildEventCodeDataStreamService.RssItem());
-            }
-
-            log.Info(string.Format("{0}: GetCollectionOfRssItemByAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
-            return _retval;
-        }
-
-        #endregion Query Methods Of RssItemByAll
-
         #region Query Methods Of EntityByIdentifier
 
         /// <summary>
@@ -561,6 +489,78 @@ namespace MSBuildExtensionPack.CommonBLL
         }
 
         #endregion Query Methods Of KeyInformationByIdentifier
+
+        #region Query Methods Of NameValuePairByAll
+
+        /// <summary>
+        /// Gets the collection of entity of NameValuePairByAll .
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>an instance of Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection if any</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByAll(
+            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
+        {
+            log.Info(string.Format("{0}: GetCollectionOfNameValuePairByAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfNameValuePairByAll(
+                request.QueryPagingSetting.CurrentIndex
+                , request.QueryPagingSetting.PageSize
+                , request.QueryOrderBySettingCollection
+                );
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _retval = new Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection();
+            _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
+
+            //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.NameValueCollection>(_resultFromDAL, _retval);
+
+            if (request.DataServiceType == Framework.DataServiceTypes.DataSourceResult)
+            {
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.NameValueCollection>(_resultFromDAL, _retval);
+            }
+            else
+            {
+                //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.NameValuePair, Framework.NameValueCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.BuildEventCodeDataStreamService.NameValuePair());
+            }
+
+            log.Info(string.Format("{0}: GetCollectionOfNameValuePairByAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            return _retval;
+        }
+
+        #endregion Query Methods Of NameValuePairByAll
+
+        #region Query Methods Of RssItemByAll
+
+        /// <summary>
+        /// Gets the collection of entity of RssItemByAll .
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>an instance of Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection if any</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetCollectionOfRssItemByAll(
+            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
+        {
+            log.Info(string.Format("{0}: GetCollectionOfRssItemByAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfRssItemCollection _resultFromDAL = this.DALClassInstance.GetCollectionOfRssItemByAll(
+                request.QueryPagingSetting.CurrentIndex
+                , request.QueryPagingSetting.PageSize
+                , request.QueryOrderBySettingCollection
+                );
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _retval = new Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection();
+            _retval.BusinessLogicLayerRequestID = request.BusinessLogicLayerRequestID;
+
+            //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.RssItemCollection>(_resultFromDAL, _retval);
+
+            if (request.DataServiceType == Framework.DataServiceTypes.DataSourceResult)
+            {
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.RssItemCollection>(_resultFromDAL, _retval);
+            }
+            else
+            {
+                //Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBaseHelper.MapDataAccessLayerMessageToBusinessLogicLayerResponseMessage<Framework.RssItem, Framework.RssItemCollection>(_resultFromDAL, _retval, request.DataServiceType, new MSBuildExtensionPack.CommonBLL.BuildEventCodeDataStreamService.RssItem());
+            }
+
+            log.Info(string.Format("{0}: GetCollectionOfRssItemByAll", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
+            return _retval;
+        }
+
+        #endregion Query Methods Of RssItemByAll
 
         #region GetAscendantAndDescendant
 

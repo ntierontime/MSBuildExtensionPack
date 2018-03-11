@@ -142,26 +142,6 @@ namespace MSBuildExtensionPack.WcfContracts
 
         #endregion Query Methods Of DefaultByCommon
 
-        #region Query Methods Of RssItemByAll
-
-#if (XAMARIN)
-#else
-        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfRssItemByAll",
-            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfRssItemByAllResponse")]
-#endif
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetCollectionOfRssItemByAll(
-            MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfAll request);
-
-#if (XAMARIN)
-#else
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfRssItemByAll",
-            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfRssItemByAllResponse")]
-#endif
-        System.IAsyncResult BeginGetCollectionOfRssItemByAll(MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState);
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection EndGetCollectionOfRssItemByAll(System.IAsyncResult result);
-
-        #endregion Query Methods Of RssItemByAll
-
         #region Query Methods Of DefaultByFKOnly
 
 #if (XAMARIN)
@@ -181,81 +161,6 @@ namespace MSBuildExtensionPack.WcfContracts
         MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.Default EndGetCollectionOfDefaultByFKOnly(System.IAsyncResult result);
 
         #endregion Query Methods Of DefaultByFKOnly
-
-        #region Query Methods Of DefaultGroupedDataViewByFKOnly
-
-#if (XAMARIN)
-#else
-        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfDefaultGroupedDataViewByFKOnly",
-            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfDefaultGroupedDataViewByFKOnlyResponse")]
-#endif
-        MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView GetCollectionOfDefaultGroupedDataViewByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request);
-
-#if (XAMARIN)
-#else
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfDefaultGroupedDataViewByFKOnly",
-            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfDefaultGroupedDataViewByFKOnlyResponse")]
-#endif
-        System.IAsyncResult BeginGetCollectionOfDefaultGroupedDataViewByFKOnly(MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request, System.AsyncCallback callback, object asyncState);
-        MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.DefaultGroupedDataView EndGetCollectionOfDefaultGroupedDataViewByFKOnly(System.IAsyncResult result);
-
-        #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
-
-        #region Query Methods Of NameValuePairByFKOnly
-
-#if (XAMARIN)
-#else
-        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfNameValuePairByFKOnly",
-            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfNameValuePairByFKOnlyResponse")]
-#endif
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request);
-
-#if (XAMARIN)
-#else
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfNameValuePairByFKOnly",
-            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfNameValuePairByFKOnlyResponse")]
-#endif
-        System.IAsyncResult BeginGetCollectionOfNameValuePairByFKOnly(MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request, System.AsyncCallback callback, object asyncState);
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection EndGetCollectionOfNameValuePairByFKOnly(System.IAsyncResult result);
-
-        #endregion Query Methods Of NameValuePairByFKOnly
-
-        #region Query Methods Of EntityByIdentifier
-
-#if (XAMARIN)
-#else
-        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/ExistsOfEntityByIdentifier",
-            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/ExistsOfEntityByIdentifierResponse")]
-#endif
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityByIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfIdentifier request);
-#if (XAMARIN)
-#else
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/ExistsOfEntityByIdentifier",
-            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/ExistsOfEntityByIdentifierResponse")]
-#endif
-        System.IAsyncResult BeginExistsOfEntityByIdentifier(MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfIdentifier request, System.AsyncCallback callback, object asyncState);
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean EndExistsOfEntityByIdentifier(System.IAsyncResult result);
-
-#if (XAMARIN)
-#else
-        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfEntityByIdentifier",
-            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfEntityByIdentifierResponse")]
-#endif
-        MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn GetCollectionOfEntityByIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfIdentifier request);
-
-#if (XAMARIN)
-#else
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfEntityByIdentifier",
-            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfEntityByIdentifierResponse")]
-#endif
-        System.IAsyncResult BeginGetCollectionOfEntityByIdentifier(MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfIdentifier request, System.AsyncCallback callback, object asyncState);
-        MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn EndGetCollectionOfEntityByIdentifier(System.IAsyncResult result);
-
-        #endregion Query Methods Of EntityByIdentifier
 
         #region Query Methods Of DefaultByIdentifier
 
@@ -292,6 +197,41 @@ namespace MSBuildExtensionPack.WcfContracts
 
         #endregion Query Methods Of DefaultByIdentifier
 
+        #region Query Methods Of EntityByIdentifier
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/ExistsOfEntityByIdentifier",
+            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/ExistsOfEntityByIdentifierResponse")]
+#endif
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfIdentifier request);
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/ExistsOfEntityByIdentifier",
+            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/ExistsOfEntityByIdentifierResponse")]
+#endif
+        System.IAsyncResult BeginExistsOfEntityByIdentifier(MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfIdentifier request, System.AsyncCallback callback, object asyncState);
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean EndExistsOfEntityByIdentifier(System.IAsyncResult result);
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfEntityByIdentifier",
+            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfEntityByIdentifierResponse")]
+#endif
+        MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn GetCollectionOfEntityByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfIdentifier request);
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfEntityByIdentifier",
+            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfEntityByIdentifierResponse")]
+#endif
+        System.IAsyncResult BeginGetCollectionOfEntityByIdentifier(MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfIdentifier request, System.AsyncCallback callback, object asyncState);
+        MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn EndGetCollectionOfEntityByIdentifier(System.IAsyncResult result);
+
+        #endregion Query Methods Of EntityByIdentifier
+
         #region Query Methods Of KeyInformationByIdentifier
 
 #if (XAMARIN)
@@ -326,6 +266,46 @@ namespace MSBuildExtensionPack.WcfContracts
         MSBuildExtensionPack.CommonBLLEntities.SolutionResponseMessageBuiltIn.KeyInformation EndGetCollectionOfKeyInformationByIdentifier(System.IAsyncResult result);
 
         #endregion Query Methods Of KeyInformationByIdentifier
+
+        #region Query Methods Of NameValuePairByFKOnly
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfNameValuePairByFKOnly",
+            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfNameValuePairByFKOnlyResponse")]
+#endif
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request);
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfNameValuePairByFKOnly",
+            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfNameValuePairByFKOnlyResponse")]
+#endif
+        System.IAsyncResult BeginGetCollectionOfNameValuePairByFKOnly(MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request, System.AsyncCallback callback, object asyncState);
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection EndGetCollectionOfNameValuePairByFKOnly(System.IAsyncResult result);
+
+        #endregion Query Methods Of NameValuePairByFKOnly
+
+        #region Query Methods Of RssItemByAll
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfRssItemByAll",
+            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfRssItemByAllResponse")]
+#endif
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetCollectionOfRssItemByAll(
+            MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfAll request);
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfRssItemByAll",
+            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/ISolutionService/GetCollectionOfRssItemByAllResponse")]
+#endif
+        System.IAsyncResult BeginGetCollectionOfRssItemByAll(MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState);
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection EndGetCollectionOfRssItemByAll(System.IAsyncResult result);
+
+        #endregion Query Methods Of RssItemByAll
 
     }
 }

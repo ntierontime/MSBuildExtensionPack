@@ -682,33 +682,6 @@ namespace MSBuildExtensionPack.Resx {
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "CountPerFK"".
-        /// </summary>
-        public static string CountPerFK {
-            get {
-                return ResourceManager.GetString("CountPerFK", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Required Field Error Message of property CountPerFK of MSBuildExtensionPack.Solution"".
-        /// </summary>
-        public static string Required_Field_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Solution {
-            get {
-                return ResourceManager.GetString("Required_Field_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Solution", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Value Validation Error Message of property CountPerFK of MSBuildExtensionPack.Solution"".
-        /// </summary>
-        public static string Value_Validation_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Solution {
-            get {
-                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Solution", resourceCulture);
-            }
-        }
-
-        /// <summary>
         ///   Looks up a localized string similar to "Value"".
         /// </summary>
         public static string Value {

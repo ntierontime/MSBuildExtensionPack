@@ -1027,15 +1027,6 @@
   <data name="Value_Validation_Error_Message_of_property_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
     <value>Value Validation Error Message of property UniqueidentifierColumn of MSBuildExtensionPack.Organization</value>
   </data>
-  <data name="CountPerFK" xml:space="preserve">
-    <value>CountPerFK</value>
-  </data>
-  <data name="Required_Field_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Organization" xml:space="preserve">
-    <value>Required Field Error Message of property CountPerFK of MSBuildExtensionPack.Organization</value>
-  </data>
-  <data name="Value_Validation_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Organization" xml:space="preserve">
-    <value>Value Validation Error Message of property CountPerFK of MSBuildExtensionPack.Organization</value>
-  </data>
   <data name="RecursivePath__" xml:space="preserve">
     <value>RecursivePath__</value>
   </data>
@@ -1531,24 +1522,6 @@
   <data name="Tooltip_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdIdentifierOftOfIdentifier" xml:space="preserve">
     <value>Tooltip of Id of Organization</value>
   </data>
-  <data name="IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC" xml:space="preserve">
-    <value>UniqueIdentifier</value>
-  </data>
-  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC" xml:space="preserve">
-    <value>Description of UniqueIdentifier</value>
-  </data>
-  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC" xml:space="preserve">
-    <value>Tooltip of UniqueIdentifier</value>
-  </data>
-  <data name="ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC" xml:space="preserve">
-    <value>UniqueIdentifier of Organization</value>
-  </data>
-  <data name="Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC" xml:space="preserve">
-    <value>Description of UniqueIdentifier of Organization</value>
-  </data>
-  <data name="Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC" xml:space="preserve">
-    <value>Tooltip of UniqueIdentifier of Organization</value>
-  </data>
   <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
     <value>Id</value>
   </data>
@@ -1583,6 +1556,24 @@
     <value>Description of UniqueIdentifier of Organization</value>
   </data>
   <data name="Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
+    <value>Tooltip of UniqueIdentifier of Organization</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC" xml:space="preserve">
+    <value>UniqueIdentifier</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC" xml:space="preserve">
+    <value>Description of UniqueIdentifier</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC" xml:space="preserve">
+    <value>Tooltip of UniqueIdentifier</value>
+  </data>
+  <data name="ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC" xml:space="preserve">
+    <value>UniqueIdentifier of Organization</value>
+  </data>
+  <data name="Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC" xml:space="preserve">
+    <value>Description of UniqueIdentifier of Organization</value>
+  </data>
+  <data name="Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC" xml:space="preserve">
     <value>Tooltip of UniqueIdentifier of Organization</value>
   </data>
 

@@ -142,46 +142,6 @@ namespace MSBuildExtensionPack.WcfContracts
 
         #endregion Query Methods Of EntityByCommon
 
-        #region Query Methods Of NameValuePairByAll
-
-#if (XAMARIN)
-#else
-        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildEventCodeService/GetCollectionOfNameValuePairByAll",
-            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildEventCodeService/GetCollectionOfNameValuePairByAllResponse")]
-#endif
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByAll(
-            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request);
-
-#if (XAMARIN)
-#else
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildEventCodeService/GetCollectionOfNameValuePairByAll",
-            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildEventCodeService/GetCollectionOfNameValuePairByAllResponse")]
-#endif
-        System.IAsyncResult BeginGetCollectionOfNameValuePairByAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState);
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection EndGetCollectionOfNameValuePairByAll(System.IAsyncResult result);
-
-        #endregion Query Methods Of NameValuePairByAll
-
-        #region Query Methods Of RssItemByAll
-
-#if (XAMARIN)
-#else
-        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildEventCodeService/GetCollectionOfRssItemByAll",
-            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildEventCodeService/GetCollectionOfRssItemByAllResponse")]
-#endif
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetCollectionOfRssItemByAll(
-            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request);
-
-#if (XAMARIN)
-#else
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildEventCodeService/GetCollectionOfRssItemByAll",
-            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildEventCodeService/GetCollectionOfRssItemByAllResponse")]
-#endif
-        System.IAsyncResult BeginGetCollectionOfRssItemByAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState);
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection EndGetCollectionOfRssItemByAll(System.IAsyncResult result);
-
-        #endregion Query Methods Of RssItemByAll
-
         #region Query Methods Of EntityByIdentifier
 
 #if (XAMARIN)
@@ -251,6 +211,46 @@ namespace MSBuildExtensionPack.WcfContracts
         MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeResponseMessageBuiltIn.KeyInformation EndGetCollectionOfKeyInformationByIdentifier(System.IAsyncResult result);
 
         #endregion Query Methods Of KeyInformationByIdentifier
+
+        #region Query Methods Of NameValuePairByAll
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildEventCodeService/GetCollectionOfNameValuePairByAll",
+            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildEventCodeService/GetCollectionOfNameValuePairByAllResponse")]
+#endif
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByAll(
+            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request);
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildEventCodeService/GetCollectionOfNameValuePairByAll",
+            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildEventCodeService/GetCollectionOfNameValuePairByAllResponse")]
+#endif
+        System.IAsyncResult BeginGetCollectionOfNameValuePairByAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState);
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection EndGetCollectionOfNameValuePairByAll(System.IAsyncResult result);
+
+        #endregion Query Methods Of NameValuePairByAll
+
+        #region Query Methods Of RssItemByAll
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildEventCodeService/GetCollectionOfRssItemByAll",
+            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildEventCodeService/GetCollectionOfRssItemByAllResponse")]
+#endif
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetCollectionOfRssItemByAll(
+            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request);
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildEventCodeService/GetCollectionOfRssItemByAll",
+            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildEventCodeService/GetCollectionOfRssItemByAllResponse")]
+#endif
+        System.IAsyncResult BeginGetCollectionOfRssItemByAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState);
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection EndGetCollectionOfRssItemByAll(System.IAsyncResult result);
+
+        #endregion Query Methods Of RssItemByAll
 
     }
 }

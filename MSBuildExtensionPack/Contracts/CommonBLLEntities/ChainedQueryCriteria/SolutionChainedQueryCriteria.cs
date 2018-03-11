@@ -9,18 +9,6 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 {
 
     /// <summary>
-    /// BusinessLogicLayerChainedQueryCriteria, key=Common
-    /// </summary>
-    public class SolutionChainedQueryCriteriaCommon
-    {
-        public SolutionChainedQueryCriteriaCommon()
-        {
-        }
-
-        public SolutionQueryCriteriaCommon Common { get; set; } = new SolutionQueryCriteriaCommon();
-    }
-
-    /// <summary>
     /// BusinessLogicLayerChainedQueryCriteria, key=All
     /// </summary>
     public class SolutionChainedQueryCriteriaAll
@@ -30,6 +18,18 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         }
 
         public SolutionQueryCriteriaAll All { get; set; } = new SolutionQueryCriteriaAll();
+    }
+
+    /// <summary>
+    /// BusinessLogicLayerChainedQueryCriteria, key=Common
+    /// </summary>
+    public class SolutionChainedQueryCriteriaCommon
+    {
+        public SolutionChainedQueryCriteriaCommon()
+        {
+        }
+
+        public SolutionQueryCriteriaCommon Common { get; set; } = new SolutionQueryCriteriaCommon();
     }
 
     /// <summary>

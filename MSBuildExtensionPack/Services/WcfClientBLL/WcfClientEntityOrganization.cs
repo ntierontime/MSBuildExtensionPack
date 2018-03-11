@@ -163,36 +163,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of DefaultByCommon
 
-        #region Query Methods Of NameValuePairByAll
-
-        /// <summary>
-        /// Gets the collection of entity of "All".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByAll(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
-        {
-            return base.Channel.GetCollectionOfNameValuePairByAll(request);
-        }
-
-        #endregion Query Methods Of NameValuePairByAll
-
-        #region Query Methods Of RssItemByAll
-
-        /// <summary>
-        /// Gets the collection of entity of "All".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetCollectionOfRssItemByAll(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
-        {
-            return base.Channel.GetCollectionOfRssItemByAll(request);
-        }
-
-        #endregion Query Methods Of RssItemByAll
-
         #region Query Methods Of DefaultByFKOnly
 
         /// <summary>
@@ -207,62 +177,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
         }
 
         #endregion Query Methods Of DefaultByFKOnly
-
-        #region Query Methods Of DefaultGroupedDataViewByFKOnly
-
-        /// <summary>
-        /// Gets the collection of entity of "FKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView GetCollectionOfDefaultGroupedDataViewByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly request)
-        {
-            return base.Channel.GetCollectionOfDefaultGroupedDataViewByFKOnly(request);
-        }
-
-        #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
-
-        #region Query Methods Of NameValuePairByFKOnly
-
-        /// <summary>
-        /// Gets the collection of entity of "FKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly request)
-        {
-            return base.Channel.GetCollectionOfNameValuePairByFKOnly(request);
-        }
-
-        #endregion Query Methods Of NameValuePairByFKOnly
-
-        #region Query Methods Of EntityByIdentifier
-
-        /// <summary>
-        /// Exists the of entity of "Identifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityByIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifier request)
-        {
-            return base.Channel.ExistsOfEntityByIdentifier(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "Identifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityByIdentifier(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifier request)
-        {
-            return base.Channel.GetCollectionOfEntityByIdentifier(request);
-        }
-
-        #endregion Query Methods Of EntityByIdentifier
 
         #region Query Methods Of DefaultByIdentifier
 
@@ -290,17 +204,43 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of DefaultByIdentifier
 
-        #region Query Methods Of KeyInformationByIdentifier
+        #region Query Methods Of DefaultByIdentifierAndUniqueConstraint
+
+        /// <summary>
+        /// Exists the of entity of "IdentifierAndUniqueConstraint".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultByIdentifierAndUniqueConstraint(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        {
+            return base.Channel.ExistsOfDefaultByIdentifierAndUniqueConstraint(request);
+        }
+
+        /// <summary>
+        /// Gets the collection of entity of "IdentifierAndUniqueConstraint".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultByIdentifierAndUniqueConstraint(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        {
+            return base.Channel.GetCollectionOfDefaultByIdentifierAndUniqueConstraint(request);
+        }
+
+        #endregion Query Methods Of DefaultByIdentifierAndUniqueConstraint
+
+        #region Query Methods Of EntityByIdentifier
 
         /// <summary>
         /// Exists the of entity of "Identifier".
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationByIdentifier(
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifier request)
         {
-            return base.Channel.ExistsOfKeyInformationByIdentifier(request);
+            return base.Channel.ExistsOfEntityByIdentifier(request);
         }
 
         /// <summary>
@@ -308,13 +248,13 @@ namespace MSBuildExtensionPack.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation GetCollectionOfKeyInformationByIdentifier(
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetCollectionOfEntityByIdentifier(
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifier request)
         {
-            return base.Channel.GetCollectionOfKeyInformationByIdentifier(request);
+            return base.Channel.GetCollectionOfEntityByIdentifier(request);
         }
 
-        #endregion Query Methods Of KeyInformationByIdentifier
+        #endregion Query Methods Of EntityByIdentifier
 
         #region Query Methods Of EntityByIdentifierAndUniqueConstraint
 
@@ -342,31 +282,31 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of EntityByIdentifierAndUniqueConstraint
 
-        #region Query Methods Of DefaultByIdentifierAndUniqueConstraint
+        #region Query Methods Of KeyInformationByIdentifier
 
         /// <summary>
-        /// Exists the of entity of "IdentifierAndUniqueConstraint".
+        /// Exists the of entity of "Identifier".
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultByIdentifierAndUniqueConstraint(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifier request)
         {
-            return base.Channel.ExistsOfDefaultByIdentifierAndUniqueConstraint(request);
+            return base.Channel.ExistsOfKeyInformationByIdentifier(request);
         }
 
         /// <summary>
-        /// Gets the collection of entity of "IdentifierAndUniqueConstraint".
+        /// Gets the collection of entity of "Identifier".
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetCollectionOfDefaultByIdentifierAndUniqueConstraint(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifierAndUniqueConstraint request)
+        public MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation GetCollectionOfKeyInformationByIdentifier(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfIdentifier request)
         {
-            return base.Channel.GetCollectionOfDefaultByIdentifierAndUniqueConstraint(request);
+            return base.Channel.GetCollectionOfKeyInformationByIdentifier(request);
         }
 
-        #endregion Query Methods Of DefaultByIdentifierAndUniqueConstraint
+        #endregion Query Methods Of KeyInformationByIdentifier
 
         #region Query Methods Of KeyInformationByIdentifierAndUniqueConstraint
 
@@ -393,6 +333,51 @@ namespace MSBuildExtensionPack.WcfClientBLL
         }
 
         #endregion Query Methods Of KeyInformationByIdentifierAndUniqueConstraint
+
+        #region Query Methods Of NameValuePairByAll
+
+        /// <summary>
+        /// Gets the collection of entity of "All".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByAll(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
+        {
+            return base.Channel.GetCollectionOfNameValuePairByAll(request);
+        }
+
+        #endregion Query Methods Of NameValuePairByAll
+
+        #region Query Methods Of NameValuePairByFKOnly
+
+        /// <summary>
+        /// Gets the collection of entity of "FKOnly".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly request)
+        {
+            return base.Channel.GetCollectionOfNameValuePairByFKOnly(request);
+        }
+
+        #endregion Query Methods Of NameValuePairByFKOnly
+
+        #region Query Methods Of RssItemByAll
+
+        /// <summary>
+        /// Gets the collection of entity of "All".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetCollectionOfRssItemByAll(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfAll request)
+        {
+            return base.Channel.GetCollectionOfRssItemByAll(request);
+        }
+
+        #endregion Query Methods Of RssItemByAll
 
             // DataQueryPerQuerySettingCollection -- MethodDataQuery -- End
 

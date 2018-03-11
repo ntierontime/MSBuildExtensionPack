@@ -9,18 +9,6 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 {
 
     /// <summary>
-    /// BusinessLogicLayerChainedQueryCriteria, key=Common
-    /// </summary>
-    public class OrganizationChainedQueryCriteriaCommon
-    {
-        public OrganizationChainedQueryCriteriaCommon()
-        {
-        }
-
-        public OrganizationQueryCriteriaCommon Common { get; set; } = new OrganizationQueryCriteriaCommon();
-    }
-
-    /// <summary>
     /// BusinessLogicLayerChainedQueryCriteria, key=All
     /// </summary>
     public class OrganizationChainedQueryCriteriaAll
@@ -30,6 +18,18 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         }
 
         public OrganizationQueryCriteriaAll All { get; set; } = new OrganizationQueryCriteriaAll();
+    }
+
+    /// <summary>
+    /// BusinessLogicLayerChainedQueryCriteria, key=Common
+    /// </summary>
+    public class OrganizationChainedQueryCriteriaCommon
+    {
+        public OrganizationChainedQueryCriteriaCommon()
+        {
+        }
+
+        public OrganizationQueryCriteriaCommon Common { get; set; } = new OrganizationQueryCriteriaCommon();
     }
 
     /// <summary>
@@ -57,18 +57,6 @@ namespace MSBuildExtensionPack.CommonBLLEntities
     }
 
     /// <summary>
-    /// BusinessLogicLayerChainedQueryCriteria, key=UniqueConstraintByUC
-    /// </summary>
-    public class OrganizationChainedQueryCriteriaUniqueConstraintByUC
-    {
-        public OrganizationChainedQueryCriteriaUniqueConstraintByUC()
-        {
-        }
-
-        public OrganizationQueryCriteriaUniqueConstraintByUC UniqueConstraintByUC { get; set; } = new OrganizationQueryCriteriaUniqueConstraintByUC();
-    }
-
-    /// <summary>
     /// BusinessLogicLayerChainedQueryCriteria, key=IdentifierAndUniqueConstraint
     /// </summary>
     public class OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint
@@ -78,6 +66,18 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         }
 
         public OrganizationQueryCriteriaIdentifierAndUniqueConstraint IdentifierAndUniqueConstraint { get; set; } = new OrganizationQueryCriteriaIdentifierAndUniqueConstraint();
+    }
+
+    /// <summary>
+    /// BusinessLogicLayerChainedQueryCriteria, key=UniqueConstraintByUC
+    /// </summary>
+    public class OrganizationChainedQueryCriteriaUniqueConstraintByUC
+    {
+        public OrganizationChainedQueryCriteriaUniqueConstraintByUC()
+        {
+        }
+
+        public OrganizationQueryCriteriaUniqueConstraintByUC UniqueConstraintByUC { get; set; } = new OrganizationQueryCriteriaUniqueConstraintByUC();
     }
 
 }

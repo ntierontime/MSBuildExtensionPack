@@ -7,60 +7,6 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 {
 
     /// <summary>
-    /// BusinessLogicLayerRequestMessageUserDefined, with Key=Common
-    /// </summary>
-    public partial class BuildEventCodeRequestMessageUserDefinedOfCommon
-        : Framework.CommonBLLEntities.BusinessLogicLayerRequestMessageBase<BuildEventCodeChainedQueryCriteriaCommon>
-    {
-        #region constructors
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BuildEventCodeRequestMessageUserDefinedOfCommon"/> class.
-        /// </summary>
-        public BuildEventCodeRequestMessageUserDefinedOfCommon()
-            : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BuildEventCodeRequestMessageUserDefinedOfCommon"/> class.
-        /// </summary>
-        /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
-        /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
-        /// <param name="businessLogicLayerRequestID">The business logic layer request ID.</param>
-        public BuildEventCodeRequestMessageUserDefinedOfCommon(
-            Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
-            , string businessLogicLayerRequestTypeKey
-            , string businessLogicLayerRequestID)
-            : base(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BuildEventCodeRequestMessageUserDefinedOfCommon"/> class.
-        /// </summary>
-        /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
-        /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
-        /// <param name="businessLogicLayerRequestID">The business logic layer request ID.</param>
-        /// <param name="currentIndex">Index of the current.</param>
-        /// <param name="pageSize">Size of the page.</param>
-        /// <param name="queryOrderByExpression">The query order by expression.</param>
-        public BuildEventCodeRequestMessageUserDefinedOfCommon(
-            Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
-            , string businessLogicLayerRequestTypeKey
-            , string businessLogicLayerRequestID
-            , int currentIndex
-            , int pageSize
-            , string queryOrderByExpression
-            )
-            : base(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID, currentIndex, pageSize, queryOrderByExpression)
-        {
-        }
-
-        #endregion constructors
-    }
-
-    /// <summary>
     /// BusinessLogicLayerRequestMessageUserDefined, with Key=All
     /// </summary>
     public partial class BuildEventCodeRequestMessageUserDefinedOfAll
@@ -100,6 +46,60 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         public BuildEventCodeRequestMessageUserDefinedOfAll(
+            Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
+            , string businessLogicLayerRequestTypeKey
+            , string businessLogicLayerRequestID
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
+            : base(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID, currentIndex, pageSize, queryOrderByExpression)
+        {
+        }
+
+        #endregion constructors
+    }
+
+    /// <summary>
+    /// BusinessLogicLayerRequestMessageUserDefined, with Key=Common
+    /// </summary>
+    public partial class BuildEventCodeRequestMessageUserDefinedOfCommon
+        : Framework.CommonBLLEntities.BusinessLogicLayerRequestMessageBase<BuildEventCodeChainedQueryCriteriaCommon>
+    {
+        #region constructors
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BuildEventCodeRequestMessageUserDefinedOfCommon"/> class.
+        /// </summary>
+        public BuildEventCodeRequestMessageUserDefinedOfCommon()
+            : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BuildEventCodeRequestMessageUserDefinedOfCommon"/> class.
+        /// </summary>
+        /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
+        /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
+        /// <param name="businessLogicLayerRequestID">The business logic layer request ID.</param>
+        public BuildEventCodeRequestMessageUserDefinedOfCommon(
+            Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
+            , string businessLogicLayerRequestTypeKey
+            , string businessLogicLayerRequestID)
+            : base(businessLogicLayerRequestTypes, businessLogicLayerRequestTypeKey, businessLogicLayerRequestID)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BuildEventCodeRequestMessageUserDefinedOfCommon"/> class.
+        /// </summary>
+        /// <param name="businessLogicLayerRequestTypes">The business logic layer request types.</param>
+        /// <param name="businessLogicLayerRequestTypeKey">The business logic layer request type key.</param>
+        /// <param name="businessLogicLayerRequestID">The business logic layer request ID.</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        public BuildEventCodeRequestMessageUserDefinedOfCommon(
             Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes businessLogicLayerRequestTypes
             , string businessLogicLayerRequestTypeKey
             , string businessLogicLayerRequestID

@@ -194,19 +194,19 @@
     <None Include="app.config" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <EmbeddedResource Include="Pages\Build\WPCommonSearchViewOfBuild.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Pages\Build\WPCommonSearchViewOfBuild.xaml.cs">
-      <DependentUpon>WPCommonSearchViewOfBuild.xaml</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Pages\Build\WPCommonResultViewOfBuild.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Pages\Build\WPCommonResultViewOfBuild.xaml.cs">
       <DependentUpon>WPCommonResultViewOfBuild.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\Build\WPCommonSearchViewOfBuild.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\Build\WPCommonSearchViewOfBuild.xaml.cs">
+      <DependentUpon>WPCommonSearchViewOfBuild.xaml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Pages\Build\WPTabbedCommonOfBuild.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -215,19 +215,19 @@
     <Compile Include="Pages\Build\WPTabbedCommonOfBuild.xaml.cs">
       <DependentUpon>WPTabbedCommonOfBuild.xaml</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Pages\BuildEventCode\WPCommonSearchViewOfBuildEventCode.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Pages\BuildEventCode\WPCommonSearchViewOfBuildEventCode.xaml.cs">
-      <DependentUpon>WPCommonSearchViewOfBuildEventCode.xaml</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Pages\BuildEventCode\WPCommonResultViewOfBuildEventCode.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Pages\BuildEventCode\WPCommonResultViewOfBuildEventCode.xaml.cs">
       <DependentUpon>WPCommonResultViewOfBuildEventCode.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\BuildEventCode\WPCommonSearchViewOfBuildEventCode.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\BuildEventCode\WPCommonSearchViewOfBuildEventCode.xaml.cs">
+      <DependentUpon>WPCommonSearchViewOfBuildEventCode.xaml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Pages\BuildEventCode\WPTabbedCommonOfBuildEventCode.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -236,19 +236,19 @@
     <Compile Include="Pages\BuildEventCode\WPTabbedCommonOfBuildEventCode.xaml.cs">
       <DependentUpon>WPTabbedCommonOfBuildEventCode.xaml</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Pages\BuildLog\WPCommonSearchViewOfBuildLog.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Pages\BuildLog\WPCommonSearchViewOfBuildLog.xaml.cs">
-      <DependentUpon>WPCommonSearchViewOfBuildLog.xaml</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Pages\BuildLog\WPCommonResultViewOfBuildLog.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Pages\BuildLog\WPCommonResultViewOfBuildLog.xaml.cs">
       <DependentUpon>WPCommonResultViewOfBuildLog.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\BuildLog\WPCommonSearchViewOfBuildLog.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\BuildLog\WPCommonSearchViewOfBuildLog.xaml.cs">
+      <DependentUpon>WPCommonSearchViewOfBuildLog.xaml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Pages\BuildLog\WPTabbedCommonOfBuildLog.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -257,19 +257,19 @@
     <Compile Include="Pages\BuildLog\WPTabbedCommonOfBuildLog.xaml.cs">
       <DependentUpon>WPTabbedCommonOfBuildLog.xaml</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Pages\Organization\WPCommonSearchViewOfOrganization.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Pages\Organization\WPCommonSearchViewOfOrganization.xaml.cs">
-      <DependentUpon>WPCommonSearchViewOfOrganization.xaml</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Pages\Organization\WPCommonResultViewOfOrganization.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Pages\Organization\WPCommonResultViewOfOrganization.xaml.cs">
       <DependentUpon>WPCommonResultViewOfOrganization.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\Organization\WPCommonSearchViewOfOrganization.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\Organization\WPCommonSearchViewOfOrganization.xaml.cs">
+      <DependentUpon>WPCommonSearchViewOfOrganization.xaml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Pages\Organization\WPTabbedCommonOfOrganization.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -278,19 +278,19 @@
     <Compile Include="Pages\Organization\WPTabbedCommonOfOrganization.xaml.cs">
       <DependentUpon>WPTabbedCommonOfOrganization.xaml</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Pages\Solution\WPCommonSearchViewOfSolution.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Pages\Solution\WPCommonSearchViewOfSolution.xaml.cs">
-      <DependentUpon>WPCommonSearchViewOfSolution.xaml</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Pages\Solution\WPCommonResultViewOfSolution.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Pages\Solution\WPCommonResultViewOfSolution.xaml.cs">
       <DependentUpon>WPCommonResultViewOfSolution.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\Solution\WPCommonSearchViewOfSolution.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Pages\Solution\WPCommonSearchViewOfSolution.xaml.cs">
+      <DependentUpon>WPCommonSearchViewOfSolution.xaml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Pages\Solution\WPTabbedCommonOfSolution.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

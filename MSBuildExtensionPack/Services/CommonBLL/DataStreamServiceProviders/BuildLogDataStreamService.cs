@@ -169,9 +169,6 @@ namespace MSBuildExtensionPack.CommonBLL
 
                 string cellKey;
                 cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
-            worksheet.Cell(cellKey).Value = "BuildId";
-
-            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = "BuildEventCodeId";
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
@@ -188,9 +185,6 @@ namespace MSBuildExtensionPack.CommonBLL
 
                 string cellKey;
                 cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
-            worksheet.Cell(cellKey).Value = dataItem.BuildId;
-
-            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.BuildEventCodeId;
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);

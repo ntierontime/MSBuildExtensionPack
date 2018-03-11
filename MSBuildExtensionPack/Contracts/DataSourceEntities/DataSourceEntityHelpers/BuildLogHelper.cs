@@ -131,11 +131,10 @@ System.String build_1_Name, System.Int64 id, System.Int32 solution_1Id, System.S
         /// </summary>
         /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataView"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataView CreateDefaultGroupedDataView(
-System.Int64 buildId, System.Int32 buildEventCodeId, System.Int64 countPerFK, System.String name
+System.Int32 buildEventCodeId, System.Int64 countPerFK, System.String name
             )
         {
             MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataView _retval = new MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataView();
-                _retval.BuildId = buildId;
                 _retval.BuildEventCodeId = buildEventCodeId;
                 _retval.CountPerFK = countPerFK;
                 _retval.Name = name;

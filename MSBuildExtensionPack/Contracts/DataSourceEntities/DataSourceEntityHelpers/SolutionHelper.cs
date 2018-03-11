@@ -113,25 +113,6 @@ System.Guid organization_1_UniqueIdentifier, System.String organization_1_Name, 
 
         #endregion CreateDefault(...)
 
-        #region CreateDefaultGroupedDataView(...)
-
-        /// <summary>
-        /// Creates a new instance of view DefaultGroupedDataView.
-        /// </summary>
-        /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataView"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataView CreateDefaultGroupedDataView(
-System.Int64 organizationId, System.Int64 countPerFK, System.String name
-            )
-        {
-            MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataView _retval = new MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataView();
-                _retval.OrganizationId = organizationId;
-                _retval.CountPerFK = countPerFK;
-                _retval.Name = name;
-            return _retval;
-        }
-
-        #endregion CreateDefaultGroupedDataView(...)
-
         #region CreateKeyInformation(...)
 
         /// <summary>

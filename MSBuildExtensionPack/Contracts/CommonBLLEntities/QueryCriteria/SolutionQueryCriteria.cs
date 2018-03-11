@@ -9,6 +9,17 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 {
 
     /// <summary>
+    /// BusinessLogicLayerQueryCriteria, key=All
+    /// </summary>
+    public partial class SolutionQueryCriteriaAll
+    {
+        public SolutionQueryCriteriaAll()
+        {
+        }
+
+    }
+
+    /// <summary>
     /// BusinessLogicLayerQueryCriteria, key=Common
     /// </summary>
     public partial class SolutionQueryCriteriaCommon
@@ -22,17 +33,6 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         public QuerySystemStringContainsCriteria ExternalParentId { get; set; } = new QuerySystemStringContainsCriteria();
         public QuerySystemStringContainsCriteria Name { get; set; } = new QuerySystemStringContainsCriteria();
         public QuerySystemStringContainsCriteria Description { get; set; } = new QuerySystemStringContainsCriteria();
-    }
-
-    /// <summary>
-    /// BusinessLogicLayerQueryCriteria, key=All
-    /// </summary>
-    public partial class SolutionQueryCriteriaAll
-    {
-        public SolutionQueryCriteriaAll()
-        {
-        }
-
     }
 
     /// <summary>

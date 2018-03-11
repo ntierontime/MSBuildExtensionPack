@@ -1,2 +1,0 @@
-init -i D:\Test4\WhatEverII\GeneratedCode\B1_Dbmls\MSBuildExtensionPack.dbml -t D:\Github\MSBuildExtensionPack -p 10800 -n NTIER ON TIME TECHNOLOGIES INC. -m ntier.com
-generate solution -t "D:\Github\MSBuildExtensionPack" -h

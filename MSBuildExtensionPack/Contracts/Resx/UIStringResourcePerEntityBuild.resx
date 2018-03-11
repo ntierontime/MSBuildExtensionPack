@@ -346,15 +346,6 @@
   <data name="Value_Validation_Error_Message_of_property_BuildStartTime_of_MSBuildExtensionPack_Build" xml:space="preserve">
     <value>Value Validation Error Message of property BuildStartTime of MSBuildExtensionPack.Build</value>
   </data>
-  <data name="CountPerFK" xml:space="preserve">
-    <value>CountPerFK</value>
-  </data>
-  <data name="Required_Field_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Build" xml:space="preserve">
-    <value>Required Field Error Message of property CountPerFK of MSBuildExtensionPack.Build</value>
-  </data>
-  <data name="Value_Validation_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Build" xml:space="preserve">
-    <value>Value Validation Error Message of property CountPerFK of MSBuildExtensionPack.Build</value>
-  </data>
   <data name="Value" xml:space="preserve">
     <value>Value</value>
   </data>
