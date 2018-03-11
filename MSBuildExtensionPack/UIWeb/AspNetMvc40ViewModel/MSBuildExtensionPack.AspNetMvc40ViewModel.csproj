@@ -38,6 +38,7 @@
     <Compile Include="OrganizationItemVM.cs" />
     <Compile Include="SolutionItemVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="app.config" />
     <None Include="packages.config" />
     <Compile Include="WPCommonOfBuildVM.cs" />
     <Compile Include="WPFullDetailsOfBuildVM.cs" />
