@@ -11,15 +11,15 @@
         <EntityTypeShape EntityType="AdventureWorks2014Model2.Location" Width="1.5" PointX="11.375" PointY="13.125" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2014Model2.Product" Width="1.5" PointX="8.625" PointY="4.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2014Model2.ProductCategory" Width="1.5" PointX="0.5" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AdventureWorks2014Model2.ProductCostHistory" Width="1.5" PointX="6.125" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorks2014Model2.ProductCostHistory" Width="1.5" PointX="6.125" PointY="23.125" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2014Model2.ProductDescription" Width="1.5" PointX="4" PointY="12" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2014Model2.ProductInventory" Width="1.5" PointX="11.375" PointY="16.375" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2014Model2.ProductListPriceHistory" Width="1.5" PointX="6.125" PointY="20.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2014Model2.ProductModel" Width="1.5" PointX="6.125" PointY="8.625" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2014Model2.ProductModelIllustration" Width="1.5" PointX="6.125" PointY="12.125" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2014Model2.ProductModelProductDescriptionCulture" Width="1.5" PointX="4" PointY="9" IsExpanded="true" />
-        <EntityTypeShape EntityType="AdventureWorks2014Model2.ProductPhoto" Width="1.5" PointX="3.375" PointY="23.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="AdventureWorks2014Model2.ProductProductPhoto" Width="1.5" PointX="6.125" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorks2014Model2.ProductPhoto" Width="1.5" PointX="3.375" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorks2014Model2.ProductProductPhoto" Width="1.5" PointX="6.125" PointY="25.625" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2014Model2.ProductReview" Width="1.5" PointX="11.375" PointY="8.625" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2014Model2.ProductSubcategory" Width="1.5" PointX="4.75" PointY="4.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2014Model2.ScrapReason" Width="1.5" PointX="16.375" PointY="9.25" IsExpanded="true" />

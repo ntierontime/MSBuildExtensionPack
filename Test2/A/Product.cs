@@ -17,8 +17,15 @@ namespace Test2.A
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Product()
         {
-            this.ShoppingCartItems = new HashSet<ShoppingCartItem>();
-            this.SpecialOfferProducts = new HashSet<SpecialOfferProduct>();
+            this.BillOfMaterials = new HashSet<BillOfMaterial>();
+            this.BillOfMaterials1 = new HashSet<BillOfMaterial>();
+            this.ProductCostHistories = new HashSet<ProductCostHistory>();
+            this.ProductInventories = new HashSet<ProductInventory>();
+            this.ProductListPriceHistories = new HashSet<ProductListPriceHistory>();
+            this.ProductProductPhotoes = new HashSet<ProductProductPhoto>();
+            this.ProductReviews = new HashSet<ProductReview>();
+            this.TransactionHistories = new HashSet<TransactionHistory>();
+            this.WorkOrders = new HashSet<WorkOrder>();
         }
     
         public int ProductID { get; set; }
@@ -48,8 +55,26 @@ namespace Test2.A
         public System.DateTime ModifiedDate { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ShoppingCartItem> ShoppingCartItems { get; set; }
+        public virtual ICollection<BillOfMaterial> BillOfMaterials { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SpecialOfferProduct> SpecialOfferProducts { get; set; }
+        public virtual ICollection<BillOfMaterial> BillOfMaterials1 { get; set; }
+        public virtual ProductModel ProductModel { get; set; }
+        public virtual ProductSubcategory ProductSubcategory { get; set; }
+        public virtual UnitMeasure UnitMeasure { get; set; }
+        public virtual UnitMeasure UnitMeasure1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ProductCostHistory> ProductCostHistories { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ProductInventory> ProductInventories { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ProductListPriceHistory> ProductListPriceHistories { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ProductProductPhoto> ProductProductPhotoes { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ProductReview> ProductReviews { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TransactionHistory> TransactionHistories { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<WorkOrder> WorkOrders { get; set; }
     }
 }

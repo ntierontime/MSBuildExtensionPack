@@ -34,5 +34,6 @@ namespace Test2.A
         public virtual ICollection<ProductVendor> ProductVendors { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PurchaseOrderHeader> PurchaseOrderHeaders { get; set; }
+        public virtual BusinessEntity BusinessEntity { get; set; }
     }
 }

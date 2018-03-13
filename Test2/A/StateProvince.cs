@@ -17,7 +17,6 @@ namespace Test2.A
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public StateProvince()
         {
-            this.SalesTaxRates = new HashSet<SalesTaxRate>();
             this.Addresses = new HashSet<Address>();
         }
     
@@ -30,11 +29,8 @@ namespace Test2.A
         public System.Guid rowguid { get; set; }
         public System.DateTime ModifiedDate { get; set; }
     
-        public virtual CountryRegion CountryRegion { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SalesTaxRate> SalesTaxRates { get; set; }
-        public virtual SalesTerritory SalesTerritory { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Address> Addresses { get; set; }
+        public virtual CountryRegion CountryRegion { get; set; }
     }
 }

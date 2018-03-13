@@ -27,5 +27,6 @@ namespace Test2.A
         public System.DateTime ModifiedDate { get; set; }
     
         public virtual Vendor Vendor { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

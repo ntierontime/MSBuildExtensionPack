@@ -18,8 +18,6 @@ namespace Test2.A
         public Address()
         {
             this.BusinessEntityAddresses = new HashSet<BusinessEntityAddress>();
-            this.SalesOrderHeaders = new HashSet<SalesOrderHeader>();
-            this.SalesOrderHeaders1 = new HashSet<SalesOrderHeader>();
         }
     
         public int AddressID { get; set; }
@@ -34,9 +32,5 @@ namespace Test2.A
         public virtual StateProvince StateProvince { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BusinessEntityAddress> BusinessEntityAddresses { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SalesOrderHeader> SalesOrderHeaders { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SalesOrderHeader> SalesOrderHeaders1 { get; set; }
     }
 }

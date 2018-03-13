@@ -38,5 +38,6 @@ namespace Test2.A
         public virtual ICollection<PurchaseOrderDetail> PurchaseOrderDetails { get; set; }
         public virtual ShipMethod ShipMethod { get; set; }
         public virtual Vendor Vendor { get; set; }
+        public virtual Employee Employee { get; set; }
     }
 }

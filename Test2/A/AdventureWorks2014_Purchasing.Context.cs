@@ -30,5 +30,23 @@ namespace Test2.A
         public virtual DbSet<PurchaseOrderHeader> PurchaseOrderHeaders { get; set; }
         public virtual DbSet<ShipMethod> ShipMethods { get; set; }
         public virtual DbSet<Vendor> Vendors { get; set; }
+        public virtual DbSet<Department> Departments { get; set; }
+        public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<EmployeeDepartmentHistory> EmployeeDepartmentHistories { get; set; }
+        public virtual DbSet<Shift> Shifts { get; set; }
+        public virtual DbSet<Address> Addresses { get; set; }
+        public virtual DbSet<AddressType> AddressTypes { get; set; }
+        public virtual DbSet<BusinessEntity> BusinessEntities { get; set; }
+        public virtual DbSet<BusinessEntityAddress> BusinessEntityAddresses { get; set; }
+        public virtual DbSet<BusinessEntityContact> BusinessEntityContacts { get; set; }
+        public virtual DbSet<ContactType> ContactTypes { get; set; }
+        public virtual DbSet<CountryRegion> CountryRegions { get; set; }
+        public virtual DbSet<EmailAddress> EmailAddresses { get; set; }
+        public virtual DbSet<Password> Passwords { get; set; }
+        public virtual DbSet<Person> People { get; set; }
+        public virtual DbSet<PersonPhone> PersonPhones { get; set; }
+        public virtual DbSet<PhoneNumberType> PhoneNumberTypes { get; set; }
+        public virtual DbSet<StateProvince> StateProvinces { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
     }
 }

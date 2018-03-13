@@ -18,6 +18,7 @@ namespace Test2.A
         public Employee()
         {
             this.EmployeeDepartmentHistories = new HashSet<EmployeeDepartmentHistory>();
+            this.PurchaseOrderHeaders = new HashSet<PurchaseOrderHeader>();
         }
     
         public int BusinessEntityID { get; set; }
@@ -36,8 +37,9 @@ namespace Test2.A
         public System.DateTime ModifiedDate { get; set; }
     
         public virtual Person Person { get; set; }
-        public virtual SalesPerson SalesPerson { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<EmployeeDepartmentHistory> EmployeeDepartmentHistories { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PurchaseOrderHeader> PurchaseOrderHeaders { get; set; }
     }
 }

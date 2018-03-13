@@ -53,10 +53,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="A\Address.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
+      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
     </Compile>
     <Compile Include="A\AddressType.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
+      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
     </Compile>
     <Compile Include="A\AdventureWorks2014_HumanResources.Context.cs">
       <AutoGen>True</AutoGen>
@@ -137,19 +137,19 @@
       <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
     </Compile>
     <Compile Include="A\BusinessEntity.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
+      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
     </Compile>
     <Compile Include="A\BusinessEntityAddress.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
+      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
     </Compile>
     <Compile Include="A\BusinessEntityContact.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
+      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
     </Compile>
     <Compile Include="A\ContactType.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
+      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
     </Compile>
     <Compile Include="A\CountryRegion.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
+      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
     </Compile>
     <Compile Include="A\CountryRegionCurrency.cs">
       <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
@@ -170,16 +170,16 @@
       <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
     </Compile>
     <Compile Include="A\Department.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
+      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
     </Compile>
     <Compile Include="A\EmailAddress.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
+      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
     </Compile>
     <Compile Include="A\Employee.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
+      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
     </Compile>
     <Compile Include="A\EmployeeDepartmentHistory.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
+      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
     </Compile>
     <Compile Include="A\EmployeePayHistory.cs">
       <DependentUpon>AdventureWorks2014_HumanResources.tt</DependentUpon>
@@ -194,22 +194,22 @@
       <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
     </Compile>
     <Compile Include="A\Password.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
+      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
     </Compile>
     <Compile Include="A\Person.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
+      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
     </Compile>
     <Compile Include="A\PersonCreditCard.cs">
       <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
     </Compile>
     <Compile Include="A\PersonPhone.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
+      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
     </Compile>
     <Compile Include="A\PhoneNumberType.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
+      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
     </Compile>
     <Compile Include="A\Product.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
+      <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
     </Compile>
     <Compile Include="A\ProductCategory.cs">
       <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
@@ -287,7 +287,7 @@
       <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
     </Compile>
     <Compile Include="A\Shift.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
+      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
     </Compile>
     <Compile Include="A\ShipMethod.cs">
       <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
@@ -302,7 +302,7 @@
       <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
     </Compile>
     <Compile Include="A\StateProvince.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
+      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
     </Compile>
     <Compile Include="A\Store.cs">
       <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
@@ -324,6 +324,41 @@
     </Compile>
     <Compile Include="A\WorkOrderRouting.cs">
       <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbml\dbo.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbo.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="dbml\HumanResources.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HumanResources.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="dbml\Person.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Person.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="dbml\Production.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Production.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="dbml\Purchasing.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Purchasing.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="dbml\Purchasing1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Purchasing.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="dbml\Sales.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sales.dbml</DependentUpon>
     </Compile>
     <Compile Include="MSBuildExtensionPack.designer.cs">
       <AutoGen>True</AutoGen>
@@ -373,6 +408,36 @@
     </EntityDeploy>
     <None Include="A\AdventureWorks2014_Sales.edmx.diagram">
       <DependentUpon>AdventureWorks2014_Sales.edmx</DependentUpon>
+    </None>
+    <None Include="dbml\dbo.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>dbo.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbml\HumanResources.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>HumanResources.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbml\Person.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Person.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbml\Production.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Production.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbml\Purchasing.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Purchasing1.designer.cs</LastGenOutput>
+    </None>
+    <None Include="dbml\Sales.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Sales.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
     <None Include="MSBuildExtensionPack.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
@@ -446,6 +511,36 @@
       <LastGenOutput>AdventureWorks2014_Sales.cs</LastGenOutput>
     </Content>
     <Content Include="ModifiyDatabase.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dbml\dbo.dbml.layout">
+      <DependentUpon>dbo.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dbml\HumanResources.dbml.layout">
+      <DependentUpon>HumanResources.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dbml\Person.dbml.layout">
+      <DependentUpon>Person.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dbml\Production.dbml.layout">
+      <DependentUpon>Production.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dbml\Purchasing.dbml.layout">
+      <DependentUpon>Purchasing.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dbml\Sales.dbml.layout">
+      <DependentUpon>Sales.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

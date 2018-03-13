@@ -30,6 +30,6 @@ namespace Test2.A
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BusinessEntityContact> BusinessEntityContacts { get; set; }
         public virtual Person Person { get; set; }
-        public virtual Store Store { get; set; }
+        public virtual Vendor Vendor { get; set; }
     }
 }

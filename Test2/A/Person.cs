@@ -19,8 +19,6 @@ namespace Test2.A
         {
             this.BusinessEntityContacts = new HashSet<BusinessEntityContact>();
             this.EmailAddresses = new HashSet<EmailAddress>();
-            this.Customers = new HashSet<Customer>();
-            this.PersonCreditCards = new HashSet<PersonCreditCard>();
             this.PersonPhones = new HashSet<PersonPhone>();
         }
     
@@ -38,6 +36,7 @@ namespace Test2.A
         public System.Guid rowguid { get; set; }
         public System.DateTime ModifiedDate { get; set; }
     
+        public virtual Employee Employee { get; set; }
         public virtual BusinessEntity BusinessEntity { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BusinessEntityContact> BusinessEntityContacts { get; set; }
@@ -45,11 +44,6 @@ namespace Test2.A
         public virtual ICollection<EmailAddress> EmailAddresses { get; set; }
         public virtual Password Password { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Customer> Customers { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PersonCreditCard> PersonCreditCards { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PersonPhone> PersonPhones { get; set; }
-        public virtual Employee Employee { get; set; }
     }
 }

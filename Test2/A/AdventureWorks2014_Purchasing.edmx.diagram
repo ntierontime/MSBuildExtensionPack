@@ -5,15 +5,54 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="3baed33806df4e3aac95a4342d673b60" Name="Diagram1">
-        <EntityTypeShape EntityType="AdventureWorks2014Model3.ProductVendor" Width="1.5" PointX="3.75" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="AdventureWorks2014Model3.PurchaseOrderDetail" Width="1.5" PointX="8.125" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="AdventureWorks2014Model3.PurchaseOrderHeader" Width="1.5" PointX="6" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="AdventureWorks2014Model3.ShipMethod" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AdventureWorks2014Model3.Vendor" Width="1.5" PointX="3.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorks2014Model3.ProductVendor" Width="1.5" PointX="2" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorks2014Model3.PurchaseOrderDetail" Width="1.5" PointX="8" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorks2014Model3.PurchaseOrderHeader" Width="1.5" PointX="7.25" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorks2014Model3.ShipMethod" Width="1.5" PointX="9.625" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorks2014Model3.Vendor" Width="1.5" PointX="7.25" PointY="11.375" IsExpanded="true" />
         <AssociationConnector Association="AdventureWorks2014Model3.FK_ProductVendor_Vendor_BusinessEntityID" ManuallyRouted="false" />
         <AssociationConnector Association="AdventureWorks2014Model3.FK_PurchaseOrderDetail_PurchaseOrderHeader_PurchaseOrderID" ManuallyRouted="false" />
         <AssociationConnector Association="AdventureWorks2014Model3.FK_PurchaseOrderHeader_ShipMethod_ShipMethodID" ManuallyRouted="false" />
         <AssociationConnector Association="AdventureWorks2014Model3.FK_PurchaseOrderHeader_Vendor_VendorID" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AdventureWorks2014Model3.Department" Width="1.5" PointX="15.25" PointY="21.375" />
+        <EntityTypeShape EntityType="AdventureWorks2014Model3.Employee" Width="1.5" PointX="10.625" PointY="18.125" />
+        <EntityTypeShape EntityType="AdventureWorks2014Model3.EmployeeDepartmentHistory" Width="1.5" PointX="13.25" PointY="19.625" />
+        <EntityTypeShape EntityType="AdventureWorks2014Model3.Shift" Width="1.5" PointX="15.25" PointY="18.625" />
+        <EntityTypeShape EntityType="AdventureWorks2014Model3.Address" Width="1.5" PointX="5" PointY="3.625" />
+        <EntityTypeShape EntityType="AdventureWorks2014Model3.AddressType" Width="1.5" PointX="0.625" PointY="7.875" />
+        <EntityTypeShape EntityType="AdventureWorks2014Model3.BusinessEntity" Width="1.5" PointX="6.5" PointY="8.375" />
+        <EntityTypeShape EntityType="AdventureWorks2014Model3.BusinessEntityAddress" Width="1.5" PointX="2.5" PointY="7.625" />
+        <EntityTypeShape EntityType="AdventureWorks2014Model3.BusinessEntityContact" Width="1.5" PointX="9.5" PointY="9.625" />
+        <EntityTypeShape EntityType="AdventureWorks2014Model3.ContactType" Width="1.5" PointX="9.5" PointY="12.625" />
+        <EntityTypeShape EntityType="AdventureWorks2014Model3.CountryRegion" Width="1.5" PointX="0.5" PointY="4.25" />
+        <EntityTypeShape EntityType="AdventureWorks2014Model3.EmailAddress" Width="1.5" PointX="14.125" PointY="6.875" />
+        <EntityTypeShape EntityType="AdventureWorks2014Model3.Password" Width="1.5" PointX="9.25" PointY="4.375" />
+        <EntityTypeShape EntityType="AdventureWorks2014Model3.Person" Width="1.5" PointX="11.75" PointY="6.875" />
+        <EntityTypeShape EntityType="AdventureWorks2014Model3.PersonPhone" Width="1.5" PointX="11.75" PointY="4" />
+        <EntityTypeShape EntityType="AdventureWorks2014Model3.PhoneNumberType" Width="1.5" PointX="11.75" PointY="1.75" />
+        <EntityTypeShape EntityType="AdventureWorks2014Model3.StateProvince" Width="1.5" PointX="2.75" PointY="3.625" />
+        <EntityTypeShape EntityType="AdventureWorks2014Model3.Product" Width="1.5" PointX="5.25" PointY="15.25" />
+        <AssociationConnector Association="AdventureWorks2014Model3.FK_EmployeeDepartmentHistory_Department_DepartmentID" />
+        <AssociationConnector Association="AdventureWorks2014Model3.FK_Employee_Person_BusinessEntityID" />
+        <AssociationConnector Association="AdventureWorks2014Model3.FK_EmployeeDepartmentHistory_Employee_BusinessEntityID" />
+        <AssociationConnector Association="AdventureWorks2014Model3.FK_PurchaseOrderHeader_Employee_EmployeeID" />
+        <AssociationConnector Association="AdventureWorks2014Model3.FK_EmployeeDepartmentHistory_Shift_ShiftID" />
+        <AssociationConnector Association="AdventureWorks2014Model3.FK_Address_StateProvince_StateProvinceID" />
+        <AssociationConnector Association="AdventureWorks2014Model3.FK_BusinessEntityAddress_Address_AddressID" />
+        <AssociationConnector Association="AdventureWorks2014Model3.FK_BusinessEntityAddress_AddressType_AddressTypeID" />
+        <AssociationConnector Association="AdventureWorks2014Model3.FK_BusinessEntityAddress_BusinessEntity_BusinessEntityID" />
+        <AssociationConnector Association="AdventureWorks2014Model3.FK_BusinessEntityContact_BusinessEntity_BusinessEntityID" />
+        <AssociationConnector Association="AdventureWorks2014Model3.FK_Person_BusinessEntity_BusinessEntityID" />
+        <AssociationConnector Association="AdventureWorks2014Model3.FK_Vendor_BusinessEntity_BusinessEntityID" />
+        <AssociationConnector Association="AdventureWorks2014Model3.FK_BusinessEntityContact_ContactType_ContactTypeID" />
+        <AssociationConnector Association="AdventureWorks2014Model3.FK_BusinessEntityContact_Person_PersonID" />
+        <AssociationConnector Association="AdventureWorks2014Model3.FK_StateProvince_CountryRegion_CountryRegionCode" />
+        <AssociationConnector Association="AdventureWorks2014Model3.FK_EmailAddress_Person_BusinessEntityID" />
+        <AssociationConnector Association="AdventureWorks2014Model3.FK_Password_Person_BusinessEntityID" />
+        <AssociationConnector Association="AdventureWorks2014Model3.FK_PersonPhone_Person_BusinessEntityID" />
+        <AssociationConnector Association="AdventureWorks2014Model3.FK_PersonPhone_PhoneNumberType_PhoneNumberTypeID" />
+        <AssociationConnector Association="AdventureWorks2014Model3.FK_ProductVendor_Product_ProductID" />
+        <AssociationConnector Association="AdventureWorks2014Model3.FK_PurchaseOrderDetail_Product_ProductID" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
