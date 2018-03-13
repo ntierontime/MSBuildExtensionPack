@@ -178,21 +178,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of RssItemByAll
 
-        #region Query Methods Of NameValuePairByFKOnly
-
-        /// <summary>
-        /// Gets the collection of entity of "FKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfFKOnly request)
-        {
-            return base.Channel.GetCollectionOfNameValuePairByFKOnly(request);
-        }
-
-        #endregion Query Methods Of NameValuePairByFKOnly
-
         #region Query Methods Of DefaultByFKOnly
 
         /// <summary>
@@ -222,6 +207,21 @@ namespace MSBuildExtensionPack.WcfClientBLL
         }
 
         #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
+
+        #region Query Methods Of NameValuePairByFKOnly
+
+        /// <summary>
+        /// Gets the collection of entity of "FKOnly".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfFKOnly request)
+        {
+            return base.Channel.GetCollectionOfNameValuePairByFKOnly(request);
+        }
+
+        #endregion Query Methods Of NameValuePairByFKOnly
 
         #region Query Methods Of EntityByIdentifier
 
@@ -301,79 +301,7 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of KeyInformationByIdentifier
 
-        #region Query Methods Of AncestorAndKeyInfo
-
-        /// <summary>
-        /// Exists the of entity of "FKStringContains".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfAncestorAndKeyInfo(
-            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfFKStringContains request)
-        {
-            return base.Channel.ExistsOfAncestorAndKeyInfo(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "FKStringContains".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation GetCollectionOfAncestorAndKeyInfo(
-            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfFKStringContains request)
-        {
-            return base.Channel.GetCollectionOfAncestorAndKeyInfo(request);
-        }
-
-        #endregion Query Methods Of AncestorAndKeyInfo
-
-        #region Query Methods Of KeyInformationByID
-
-        /// <summary>
-        /// Exists the of entity of "Identifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns>true if exists any, otherwise false</returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationByID(
-            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfIdentifier request)
-        {
-            return base.Channel.ExistsOfKeyInformationByID(request);
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of "Identifier".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest GetCollectionOfKeyInformationByID(
-            MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedOfIdentifier request)
-        {
-            return base.Channel.GetCollectionOfKeyInformationByID(request);
-        }
-
-        #endregion Query Methods Of KeyInformationByID
-
             // DataQueryPerQuerySettingCollection -- MethodDataQuery -- End
-
-        #region DataActionMethod -- UpdateName
-
-        // EntityUpdateActionSetting - UpdateName
-        public MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest UpdateName(MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedUpdateName request)
-        {
-            return base.Channel.UpdateName(request);
-        }
-
-        #endregion DataActionMethod -- UpdateName
-
-        #region DataActionMethod -- InsertName
-
-        // EntityUpdateActionSetting - InsertName
-        public MSBuildExtensionPack.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest InsertName(MSBuildExtensionPack.CommonBLLEntities.BuildRequestMessageUserDefinedInsertName request)
-        {
-            return base.Channel.InsertName(request);
-        }
-
-        #endregion DataActionMethod -- InsertName
 
 #if WINDOWS_PHONE
         protected override MSBuildExtensionPack.WcfContracts.IBuildService CreateChannel()

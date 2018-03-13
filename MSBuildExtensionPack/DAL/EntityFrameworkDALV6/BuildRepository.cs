@@ -363,8 +363,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (description.IsToCompare == false || description.IsToCompare && t.Description.Contains(description.ValueToBeContained))
                             )
                         )
-                    select new MSBuildExtensionPack.DataSourceEntities.Build.Default { Solution_1_Name = Solution_1.Name, Id = t.Id, Organization_1Id = Organization_1.Id, Organization_1_UniqueIdentifier = Organization_1.UniqueIdentifier, Organization_1_UniqueidentifierColumn = Organization_1.UniqueidentifierColumn, Organization_1_Name = Organization_1.Name, Organization_2Id = Organization_2.Id, Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_UniqueidentifierColumn = Organization_2.UniqueidentifierColumn, Organization_2_Name = Organization_2.Name, SolutionId = t.SolutionId, Name = t.Name, Description = t.Description, BuildStartTime = t.BuildStartTime } into vD2
-                    select vD2
+                    select new MSBuildExtensionPack.DataSourceEntities.Build.Default { Solution_1_Name = Solution_1.Name, Id = t.Id, Organization_1Id = Organization_1.Id, Organization_1_UniqueIdentifier = Organization_1.UniqueIdentifier, Organization_1_Name = Organization_1.Name, Organization_2Id = Organization_2.Id, Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_Name = Organization_2.Name, SolutionId = t.SolutionId, Name = t.Name, Description = t.Description, BuildStartTime = t.BuildStartTime } into vD0
+                    select vD0
                 );
             var _retval = _ResultFromDataSource;
             IQueryable<MSBuildExtensionPack.DataSourceEntities.Build.Default> _retval1;
@@ -621,8 +621,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                     join Solution_1 in this.LinqContext.Solutions on t.SolutionId equals Solution_1.Id
                     join Organization_1 in this.LinqContext.Organizations on Solution_1.OrganizationId equals Organization_1.Id
                     join Organization_2 in this.LinqContext.Organizations on Organization_1.ParentId equals Organization_2.Id
-                    select new Framework.RssItem { IdentifierInString = t.Id.ToString(), Title = t.Name, Description = t.Name, PubDate = t.BuildStartTime } into vD1
-                    select vD1
+                    select new Framework.RssItem { IdentifierInString = t.Id.ToString(), Title = t.Name, Description = t.Name, PubDate = t.BuildStartTime } into vD4
+                    select vD4
                 );
             var _retval = _ResultFromDataSource;
             IQueryable<Framework.RssItem> _retval1;
@@ -799,244 +799,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
 
         #endregion Query Methods Of RssItemByAll
 
-        #region Query Methods Of NameValuePairByFKOnly
-
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<Framework.NameValuePair> _GetQueryOfNameValuePairByFKOnly(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria solutionId
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_1Id
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            )
-        {
-            var _ResultFromDataSource =
-                (
-                    from t in this.LinqContext.Builds
-                    join Solution_1 in this.LinqContext.Solutions on t.SolutionId equals Solution_1.Id
-                    join Organization_1 in this.LinqContext.Organizations on Solution_1.OrganizationId equals Organization_1.Id
-                    join Organization_2 in this.LinqContext.Organizations on Organization_1.ParentId equals Organization_2.Id
-                    where
-                        (
-                            (
-                            (solutionId.IsToCompare == false || solutionId.IsToCompare && Solution_1.Id == solutionId.ValueToCompare)
-                            &&
-                            (organization_1Id.IsToCompare == false || organization_1Id.IsToCompare && Organization_1.Id == organization_1Id.ValueToCompare)
-                            &&
-                            (organization_2Id.IsToCompare == false || organization_2Id.IsToCompare && Organization_2.Id == organization_2Id.ValueToCompare)
-                            )
-                        )
-                    select new Framework.NameValuePair { Value = t.Id.ToString(), Name = t.Name } into vD0
-                    select vD0
-                );
-            var _retval = _ResultFromDataSource;
-            IQueryable<Framework.NameValuePair> _retval1;
-            if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
-            {
-                _retval1 = _retval;
-            }
-            else
-            {
-                _retval1 = _retval.AsQueryable().OrderBy(queryOrderBySettingCollection.GetOrderByExpression());
-            }
-            return _retval1;
-        }
-
-        private bool _ExistsOfNameValuePairByFKOnly(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria solutionId
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_1Id
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            )
-        {
-            IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairByFKOnly(
-                solutionId
-                ,organization_1Id
-                ,organization_2Id
-                ,queryOrderBySettingCollection
-            );
-            bool result;
-            if (currentIndex == -1 || pageSize == -1)
-            {
-                result = _Query.Any();
-            }
-            else
-            {
-                result = _Query.Skip(currentIndex).Take(pageSize).Any();
-            }
-            return result;
-        }
-
-        private int _GetCountOfNameValuePairByFKOnly(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria solutionId
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_1Id
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            )
-
-        {
-            IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairByFKOnly(
-                solutionId
-                ,organization_1Id
-                ,organization_2Id
-                ,queryOrderBySettingCollection
-            );
-            int _Count;
-            if (currentIndex == -1 || pageSize == -1)
-            {
-                _Count = _Query.Count();
-            }
-            else
-            {
-                _Count = _Query.Skip(currentIndex).Take(pageSize).Count();
-            }
-            return _Count;
-        }
-
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfNameValuePairByFKOnly(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria solutionId
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_1Id
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            )
-        {
-            log.Info(string.Format("{0}: GetCountOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
-            try
-            {
-                int _retval = _GetCountOfNameValuePairByFKOnly(
-                solutionId
-                ,organization_1Id
-                ,organization_2Id
-                ,currentIndex
-                ,pageSize
-                ,queryOrderBySettingCollection
-                    );
-                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                _retMessage.Result = _retval;
-            }
-            catch(Exception ex)
-            {
-                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
-                _retMessage.Result = 0;
-                _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
-            }
-            log.Info(string.Format("{0}: GetCountOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
-            return _retMessage;
-        }
-
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfNameValuePairByFKOnly(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria solutionId
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_1Id
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            )
-        {
-            log.Info(string.Format("{0}: ExistsOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
-            try
-            {
-                bool _retval = _ExistsOfNameValuePairByFKOnly(
-                solutionId
-                ,organization_1Id
-                ,organization_2Id
-                ,currentIndex
-                ,pageSize
-                ,queryOrderBySettingCollection
-                    );
-                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                _retMessage.Result = _retval;
-            }
-            catch (Exception ex)
-            {
-                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
-                _retMessage.Result = false;
-                _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
-            }
-            log.Info(string.Format("{0}: ExistsOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
-            return _retMessage;
-        }
-
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection GetCollectionOfNameValuePairByFKOnly(
-            Framework.EntityContracts.QuerySystemInt32EqualsCriteria solutionId
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_1Id
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            )
-        {
-            log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
-
-            Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection();
-            try
-            {
-                bool _Exists = _ExistsOfNameValuePairByFKOnly(
-                solutionId
-                ,organization_1Id
-                ,organization_2Id
-                ,currentIndex
-                ,pageSize
-                ,queryOrderBySettingCollection
-            );
-
-                if (_Exists)
-                {
-                    IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairByFKOnly(
-                solutionId
-                ,organization_1Id
-                ,organization_2Id
-                ,queryOrderBySettingCollection
-            );
-
-                    IEnumerable<Framework.NameValuePair> _retval;
-
-                    if (currentIndex == -1 || pageSize == -1)
-                    {
-                        _retval = _Query;
-                    }
-                    else
-                    {
-                        _retval = _Query.Skip(currentIndex).Take(pageSize);
-                    }
-                    _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
-                    _retMessage.QueryPagingResult.PageSize = pageSize;
-                    _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
-                    _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;
-                    _retMessage.QueryPagingResult.CountOfRecords = _Query.Count();
-                    _retMessage.Result = new Framework.NameValueCollection();
-                    _retMessage.Result.AddRange(_retval);
-                }
-                else
-                {
-                    _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.SuccessButNoResult;
-                    _retMessage.Result = null;
-                }
-            }
-            catch (Exception ex)
-            {
-                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
-                _retMessage.Result = null;
-                _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
-            }
-            log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
-            return _retMessage;
-        }
-
-        #endregion Query Methods Of NameValuePairByFKOnly
-
         #region Query Methods Of DefaultByFKOnly
 
         /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
@@ -1064,8 +826,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (organization_2Id.IsToCompare == false || organization_2Id.IsToCompare && Organization_2.Id == organization_2Id.ValueToCompare)
                             )
                         )
-                    select new MSBuildExtensionPack.DataSourceEntities.Build.Default { Solution_1_Name = Solution_1.Name, Id = t.Id, Organization_1Id = Organization_1.Id, Organization_1_UniqueIdentifier = Organization_1.UniqueIdentifier, Organization_1_UniqueidentifierColumn = Organization_1.UniqueidentifierColumn, Organization_1_Name = Organization_1.Name, Organization_2Id = Organization_2.Id, Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_UniqueidentifierColumn = Organization_2.UniqueidentifierColumn, Organization_2_Name = Organization_2.Name, SolutionId = t.SolutionId, Name = t.Name, Description = t.Description, BuildStartTime = t.BuildStartTime } into vD2
-                    select vD2
+                    select new MSBuildExtensionPack.DataSourceEntities.Build.Default { Solution_1_Name = Solution_1.Name, Id = t.Id, Organization_1Id = Organization_1.Id, Organization_1_UniqueIdentifier = Organization_1.UniqueIdentifier, Organization_1_Name = Organization_1.Name, Organization_2Id = Organization_2.Id, Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_Name = Organization_2.Name, SolutionId = t.SolutionId, Name = t.Name, Description = t.Description, BuildStartTime = t.BuildStartTime } into vD0
+                    select vD0
                 );
             var _retval = _ResultFromDataSource;
             IQueryable<MSBuildExtensionPack.DataSourceEntities.Build.Default> _retval1;
@@ -1304,8 +1066,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                         )
                     group t by new { SolutionId = t.SolutionId } into tG
                     let _CountPerFK = tG.Count()
-                    select new MSBuildExtensionPack.DataSourceEntities.Build.DefaultGroupedDataView { SolutionId = tG.Key.SolutionId, CountPerFK = _CountPerFK } into vD3
-                    select vD3
+                    select new MSBuildExtensionPack.DataSourceEntities.Build.DefaultGroupedDataView { SolutionId = tG.Key.SolutionId, CountPerFK = _CountPerFK } into vD1
+                    select vD1
                 );
             var _ResultFromDataSourceWithName =
                 from t in _ResultFromDataSource
@@ -1519,6 +1281,244 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         }
 
         #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
+
+        #region Query Methods Of NameValuePairByFKOnly
+
+        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
+        /// <returns>IQueryable&lt;...&gt; of Common</returns>
+        internal IQueryable<Framework.NameValuePair> _GetQueryOfNameValuePairByFKOnly(
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria solutionId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_1Id
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
+        {
+            var _ResultFromDataSource =
+                (
+                    from t in this.LinqContext.Builds
+                    join Solution_1 in this.LinqContext.Solutions on t.SolutionId equals Solution_1.Id
+                    join Organization_1 in this.LinqContext.Organizations on Solution_1.OrganizationId equals Organization_1.Id
+                    join Organization_2 in this.LinqContext.Organizations on Organization_1.ParentId equals Organization_2.Id
+                    where
+                        (
+                            (
+                            (solutionId.IsToCompare == false || solutionId.IsToCompare && Solution_1.Id == solutionId.ValueToCompare)
+                            &&
+                            (organization_1Id.IsToCompare == false || organization_1Id.IsToCompare && Organization_1.Id == organization_1Id.ValueToCompare)
+                            &&
+                            (organization_2Id.IsToCompare == false || organization_2Id.IsToCompare && Organization_2.Id == organization_2Id.ValueToCompare)
+                            )
+                        )
+                    select new Framework.NameValuePair { Value = t.Id.ToString(), Name = t.Name } into vD3
+                    select vD3
+                );
+            var _retval = _ResultFromDataSource;
+            IQueryable<Framework.NameValuePair> _retval1;
+            if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
+            {
+                _retval1 = _retval;
+            }
+            else
+            {
+                _retval1 = _retval.AsQueryable().OrderBy(queryOrderBySettingCollection.GetOrderByExpression());
+            }
+            return _retval1;
+        }
+
+        private bool _ExistsOfNameValuePairByFKOnly(
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria solutionId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_1Id
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
+        {
+            IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairByFKOnly(
+                solutionId
+                ,organization_1Id
+                ,organization_2Id
+                ,queryOrderBySettingCollection
+            );
+            bool result;
+            if (currentIndex == -1 || pageSize == -1)
+            {
+                result = _Query.Any();
+            }
+            else
+            {
+                result = _Query.Skip(currentIndex).Take(pageSize).Any();
+            }
+            return result;
+        }
+
+        private int _GetCountOfNameValuePairByFKOnly(
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria solutionId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_1Id
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
+
+        {
+            IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairByFKOnly(
+                solutionId
+                ,organization_1Id
+                ,organization_2Id
+                ,queryOrderBySettingCollection
+            );
+            int _Count;
+            if (currentIndex == -1 || pageSize == -1)
+            {
+                _Count = _Query.Count();
+            }
+            else
+            {
+                _Count = _Query.Skip(currentIndex).Take(pageSize).Count();
+            }
+            return _Count;
+        }
+
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfNameValuePairByFKOnly(
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria solutionId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_1Id
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
+        {
+            log.Info(string.Format("{0}: GetCountOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
+            try
+            {
+                int _retval = _GetCountOfNameValuePairByFKOnly(
+                solutionId
+                ,organization_1Id
+                ,organization_2Id
+                ,currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+                    );
+                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
+                _retMessage.Result = _retval;
+            }
+            catch(Exception ex)
+            {
+                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
+                _retMessage.Result = 0;
+                _retMessage.Message = ex.Message;
+                log.Error(string.Format("{0}: GetCountOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+            }
+            log.Info(string.Format("{0}: GetCountOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            return _retMessage;
+        }
+
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfNameValuePairByFKOnly(
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria solutionId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_1Id
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
+        {
+            log.Info(string.Format("{0}: ExistsOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
+            try
+            {
+                bool _retval = _ExistsOfNameValuePairByFKOnly(
+                solutionId
+                ,organization_1Id
+                ,organization_2Id
+                ,currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+                    );
+                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
+                _retMessage.Result = _retval;
+            }
+            catch (Exception ex)
+            {
+                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
+                _retMessage.Result = false;
+                _retMessage.Message = ex.Message;
+                log.Error(string.Format("{0}: ExistsOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+            }
+            log.Info(string.Format("{0}: ExistsOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            return _retMessage;
+        }
+
+        public Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection GetCollectionOfNameValuePairByFKOnly(
+            Framework.EntityContracts.QuerySystemInt32EqualsCriteria solutionId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_1Id
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            )
+        {
+            log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
+
+            Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection();
+            try
+            {
+                bool _Exists = _ExistsOfNameValuePairByFKOnly(
+                solutionId
+                ,organization_1Id
+                ,organization_2Id
+                ,currentIndex
+                ,pageSize
+                ,queryOrderBySettingCollection
+            );
+
+                if (_Exists)
+                {
+                    IQueryable<Framework.NameValuePair> _Query = _GetQueryOfNameValuePairByFKOnly(
+                solutionId
+                ,organization_1Id
+                ,organization_2Id
+                ,queryOrderBySettingCollection
+            );
+
+                    IEnumerable<Framework.NameValuePair> _retval;
+
+                    if (currentIndex == -1 || pageSize == -1)
+                    {
+                        _retval = _Query;
+                    }
+                    else
+                    {
+                        _retval = _Query.Skip(currentIndex).Take(pageSize);
+                    }
+                    _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
+                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
+                    _retMessage.QueryPagingResult.PageSize = pageSize;
+                    _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
+                    _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;
+                    _retMessage.QueryPagingResult.CountOfRecords = _Query.Count();
+                    _retMessage.Result = new Framework.NameValueCollection();
+                    _retMessage.Result.AddRange(_retval);
+                }
+                else
+                {
+                    _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.SuccessButNoResult;
+                    _retMessage.Result = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
+                _retMessage.Result = null;
+                _retMessage.Message = ex.Message;
+                log.Error(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
+            }
+            log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
+            return _retMessage;
+        }
+
+        #endregion Query Methods Of NameValuePairByFKOnly
 
         #region Query Methods Of EntityByIdentifier
 
@@ -1751,8 +1751,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (id.IsToCompare == false || id.IsToCompare && t.Id == id.ValueToCompare)
                             )
                         )
-                    select new MSBuildExtensionPack.DataSourceEntities.Build.Default { Solution_1_Name = Solution_1.Name, Id = t.Id, Organization_1Id = Organization_1.Id, Organization_1_UniqueIdentifier = Organization_1.UniqueIdentifier, Organization_1_UniqueidentifierColumn = Organization_1.UniqueidentifierColumn, Organization_1_Name = Organization_1.Name, Organization_2Id = Organization_2.Id, Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_UniqueidentifierColumn = Organization_2.UniqueidentifierColumn, Organization_2_Name = Organization_2.Name, SolutionId = t.SolutionId, Name = t.Name, Description = t.Description, BuildStartTime = t.BuildStartTime } into vD2
-                    select vD2
+                    select new MSBuildExtensionPack.DataSourceEntities.Build.Default { Solution_1_Name = Solution_1.Name, Id = t.Id, Organization_1Id = Organization_1.Id, Organization_1_UniqueIdentifier = Organization_1.UniqueIdentifier, Organization_1_Name = Organization_1.Name, Organization_2Id = Organization_2.Id, Organization_2_UniqueIdentifier = Organization_2.UniqueIdentifier, Organization_2_Name = Organization_2.Name, SolutionId = t.SolutionId, Name = t.Name, Description = t.Description, BuildStartTime = t.BuildStartTime } into vD0
+                    select vD0
                 );
             var _retval = _ResultFromDataSource;
             IQueryable<MSBuildExtensionPack.DataSourceEntities.Build.Default> _retval1;
@@ -1961,8 +1961,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (id.IsToCompare == false || id.IsToCompare && t.Id == id.ValueToCompare)
                             )
                         )
-                    select new MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation { Id = t.Id, Name = t.Name } into vD4
-                    select vD4
+                    select new MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation { Id = t.Id, Name = t.Name } into vD2
+                    select vD2
                 );
             var _retval = _ResultFromDataSource;
             IQueryable<MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation> _retval1;
@@ -2149,625 +2149,6 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
         }
 
         #endregion Query Methods Of KeyInformationByIdentifier
-
-        #region Query Methods Of AncestorAndKeyInfo
-
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation> _GetQueryOfAncestorAndKeyInfo(
-            Framework.EntityContracts.QuerySystemStringContainsCriteria solutionName
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria solutionDescription
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria organization_1Name
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria organization_2Name
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria buildName
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria buildDescription
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            )
-        {
-            var _ResultFromDataSource =
-                (
-                    from t in this.LinqContext.Builds
-                    join Solution_1 in this.LinqContext.Solutions on t.SolutionId equals Solution_1.Id
-                    join Organization_1 in this.LinqContext.Organizations on Solution_1.OrganizationId equals Organization_1.Id
-                    join Organization_2 in this.LinqContext.Organizations on Organization_1.ParentId equals Organization_2.Id
-                    where
-                        (
-                            (
-                            (solutionName.IsToCompare == false || solutionName.IsToCompare && Solution_1.Name.Contains(solutionName.ValueToBeContained))
-                            ||
-                            (solutionDescription.IsToCompare == false || solutionDescription.IsToCompare && Solution_1.Description.Contains(solutionDescription.ValueToBeContained))
-                            ||
-                            (organization_1Name.IsToCompare == false || organization_1Name.IsToCompare && Organization_1.Name.Contains(organization_1Name.ValueToBeContained))
-                            ||
-                            (organization_2Name.IsToCompare == false || organization_2Name.IsToCompare && Organization_2.Name.Contains(organization_2Name.ValueToBeContained))
-                            )
-                        ||
-                            (
-                            (buildName.IsToCompare == false || buildName.IsToCompare && t.Name.Contains(buildName.ValueToBeContained))
-                            ||
-                            (buildDescription.IsToCompare == false || buildDescription.IsToCompare && t.Description.Contains(buildDescription.ValueToBeContained))
-                            )
-                        )
-                    select new MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation { Id = t.Id, Name = t.Name } into vD4
-                    select vD4
-                );
-            var _retval = _ResultFromDataSource;
-            IQueryable<MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation> _retval1;
-            if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
-            {
-                _retval1 = _retval;
-            }
-            else
-            {
-                _retval1 = _retval.AsQueryable().OrderBy(queryOrderBySettingCollection.GetOrderByExpression());
-            }
-            return _retval1;
-        }
-
-        private bool _ExistsOfAncestorAndKeyInfo(
-            Framework.EntityContracts.QuerySystemStringContainsCriteria solutionName
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria solutionDescription
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria organization_1Name
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria organization_2Name
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria buildName
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria buildDescription
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            )
-        {
-            IQueryable<MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation> _Query = _GetQueryOfAncestorAndKeyInfo(
-                solutionName
-                ,solutionDescription
-                ,organization_1Name
-                ,organization_2Name
-                ,buildName
-                ,buildDescription
-                ,queryOrderBySettingCollection
-            );
-            bool result;
-            if (currentIndex == -1 || pageSize == -1)
-            {
-                result = _Query.Any();
-            }
-            else
-            {
-                result = _Query.Skip(currentIndex).Take(pageSize).Any();
-            }
-            return result;
-        }
-
-        private int _GetCountOfAncestorAndKeyInfo(
-            Framework.EntityContracts.QuerySystemStringContainsCriteria solutionName
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria solutionDescription
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria organization_1Name
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria organization_2Name
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria buildName
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria buildDescription
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            )
-
-        {
-            IQueryable<MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation> _Query = _GetQueryOfAncestorAndKeyInfo(
-                solutionName
-                ,solutionDescription
-                ,organization_1Name
-                ,organization_2Name
-                ,buildName
-                ,buildDescription
-                ,queryOrderBySettingCollection
-            );
-            int _Count;
-            if (currentIndex == -1 || pageSize == -1)
-            {
-                _Count = _Query.Count();
-            }
-            else
-            {
-                _Count = _Query.Skip(currentIndex).Take(pageSize).Count();
-            }
-            return _Count;
-        }
-
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfAncestorAndKeyInfo(
-            Framework.EntityContracts.QuerySystemStringContainsCriteria solutionName
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria solutionDescription
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria organization_1Name
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria organization_2Name
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria buildName
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria buildDescription
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            )
-        {
-            log.Info(string.Format("{0}: GetCountOfAncestorAndKeyInfo", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
-            try
-            {
-                int _retval = _GetCountOfAncestorAndKeyInfo(
-                solutionName
-                ,solutionDescription
-                ,organization_1Name
-                ,organization_2Name
-                ,buildName
-                ,buildDescription
-                ,currentIndex
-                ,pageSize
-                ,queryOrderBySettingCollection
-                    );
-                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                _retMessage.Result = _retval;
-            }
-            catch(Exception ex)
-            {
-                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
-                _retMessage.Result = 0;
-                _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfAncestorAndKeyInfo", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
-            }
-            log.Info(string.Format("{0}: GetCountOfAncestorAndKeyInfo", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
-            return _retMessage;
-        }
-
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfAncestorAndKeyInfo(
-            Framework.EntityContracts.QuerySystemStringContainsCriteria solutionName
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria solutionDescription
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria organization_1Name
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria organization_2Name
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria buildName
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria buildDescription
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            )
-        {
-            log.Info(string.Format("{0}: ExistsOfAncestorAndKeyInfo", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
-            try
-            {
-                bool _retval = _ExistsOfAncestorAndKeyInfo(
-                solutionName
-                ,solutionDescription
-                ,organization_1Name
-                ,organization_2Name
-                ,buildName
-                ,buildDescription
-                ,currentIndex
-                ,pageSize
-                ,queryOrderBySettingCollection
-                    );
-                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                _retMessage.Result = _retval;
-            }
-            catch (Exception ex)
-            {
-                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
-                _retMessage.Result = false;
-                _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfAncestorAndKeyInfo", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
-            }
-            log.Info(string.Format("{0}: ExistsOfAncestorAndKeyInfo", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
-            return _retMessage;
-        }
-
-        public MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfKeyInformationCollection GetCollectionOfAncestorAndKeyInfo(
-            Framework.EntityContracts.QuerySystemStringContainsCriteria solutionName
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria solutionDescription
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria organization_1Name
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria organization_2Name
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria buildName
-            ,Framework.EntityContracts.QuerySystemStringContainsCriteria buildDescription
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            )
-        {
-            log.Info(string.Format("{0}: GetCollectionOfAncestorAndKeyInfo", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
-
-            MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfKeyInformationCollection _retMessage = new MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfKeyInformationCollection();
-            try
-            {
-                bool _Exists = _ExistsOfAncestorAndKeyInfo(
-                solutionName
-                ,solutionDescription
-                ,organization_1Name
-                ,organization_2Name
-                ,buildName
-                ,buildDescription
-                ,currentIndex
-                ,pageSize
-                ,queryOrderBySettingCollection
-            );
-
-                if (_Exists)
-                {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation> _Query = _GetQueryOfAncestorAndKeyInfo(
-                solutionName
-                ,solutionDescription
-                ,organization_1Name
-                ,organization_2Name
-                ,buildName
-                ,buildDescription
-                ,queryOrderBySettingCollection
-            );
-
-                    IEnumerable<MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation> _retval;
-
-                    if (currentIndex == -1 || pageSize == -1)
-                    {
-                        _retval = _Query;
-                    }
-                    else
-                    {
-                        _retval = _Query.Skip(currentIndex).Take(pageSize);
-                    }
-                    _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
-                    _retMessage.QueryPagingResult.PageSize = pageSize;
-                    _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
-                    _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;
-                    _retMessage.QueryPagingResult.CountOfRecords = _Query.Count();
-                    _retMessage.Result = new MSBuildExtensionPack.DataSourceEntities.Build.KeyInformationCollection();
-                    _retMessage.Result.AddRange(_retval);
-                }
-                else
-                {
-                    _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.SuccessButNoResult;
-                    _retMessage.Result = null;
-                }
-            }
-            catch (Exception ex)
-            {
-                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
-                _retMessage.Result = null;
-                _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfAncestorAndKeyInfo", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
-            }
-            log.Info(string.Format("{0}: GetCollectionOfAncestorAndKeyInfo", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
-            return _retMessage;
-        }
-
-        #endregion Query Methods Of AncestorAndKeyInfo
-
-        #region Query Methods Of KeyInformationByID
-
-        /// <param name="queryOrderBySettingCollection">query OrderBy setting</param>
-        /// <returns>IQueryable&lt;...&gt; of Common</returns>
-        internal IQueryable<MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest> _GetQueryOfKeyInformationByID(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            )
-        {
-            var _ResultFromDataSource =
-                (
-                    from t in this.LinqContext.Builds
-                    join Solution_1 in this.LinqContext.Solutions on t.SolutionId equals Solution_1.Id
-                    join Organization_1 in this.LinqContext.Organizations on Solution_1.OrganizationId equals Organization_1.Id
-                    join Organization_2 in this.LinqContext.Organizations on Organization_1.ParentId equals Organization_2.Id
-                    where
-                        (
-                            (
-                            (id.IsToCompare == false || id.IsToCompare && t.Id == id.ValueToCompare)
-                            )
-                        )
-                    select new MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest { Name = t.Name, Id = t.Id } into vD5
-                    select vD5
-                );
-            var _retval = _ResultFromDataSource;
-            IQueryable<MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest> _retval1;
-            if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
-            {
-                _retval1 = _retval;
-            }
-            else
-            {
-                _retval1 = _retval.AsQueryable().OrderBy(queryOrderBySettingCollection.GetOrderByExpression());
-            }
-            return _retval1;
-        }
-
-        private bool _ExistsOfKeyInformationByID(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            )
-        {
-            IQueryable<MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest> _Query = _GetQueryOfKeyInformationByID(
-                id
-                ,queryOrderBySettingCollection
-            );
-            bool result;
-            if (currentIndex == -1 || pageSize == -1)
-            {
-                result = _Query.Any();
-            }
-            else
-            {
-                result = _Query.Skip(currentIndex).Take(pageSize).Any();
-            }
-            return result;
-        }
-
-        private int _GetCountOfKeyInformationByID(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            )
-
-        {
-            IQueryable<MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest> _Query = _GetQueryOfKeyInformationByID(
-                id
-                ,queryOrderBySettingCollection
-            );
-            int _Count;
-            if (currentIndex == -1 || pageSize == -1)
-            {
-                _Count = _Query.Count();
-            }
-            else
-            {
-                _Count = _Query.Skip(currentIndex).Take(pageSize).Count();
-            }
-            return _Count;
-        }
-
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfKeyInformationByID(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            )
-        {
-            log.Info(string.Format("{0}: GetCountOfKeyInformationByID", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfInteger _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfInteger();
-            try
-            {
-                int _retval = _GetCountOfKeyInformationByID(
-                id
-                ,currentIndex
-                ,pageSize
-                ,queryOrderBySettingCollection
-                    );
-                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                _retMessage.Result = _retval;
-            }
-            catch(Exception ex)
-            {
-                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
-                _retMessage.Result = 0;
-                _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCountOfKeyInformationByID", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
-            }
-            log.Info(string.Format("{0}: GetCountOfKeyInformationByID", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
-            return _retMessage;
-        }
-
-        public Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfKeyInformationByID(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            )
-        {
-            log.Info(string.Format("{0}: ExistsOfKeyInformationByID", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
-            Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean _retMessage = new Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean();
-            try
-            {
-                bool _retval = _ExistsOfKeyInformationByID(
-                id
-                ,currentIndex
-                ,pageSize
-                ,queryOrderBySettingCollection
-                    );
-                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                _retMessage.Result = _retval;
-            }
-            catch (Exception ex)
-            {
-                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
-                _retMessage.Result = false;
-                _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: ExistsOfKeyInformationByID", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
-            }
-            log.Info(string.Format("{0}: ExistsOfKeyInformationByID", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
-            return _retMessage;
-        }
-
-        public MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfUpdateNameRequestCollection GetCollectionOfKeyInformationByID(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria id
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            )
-        {
-            log.Info(string.Format("{0}: GetCollectionOfKeyInformationByID", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
-
-            MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfUpdateNameRequestCollection _retMessage = new MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfUpdateNameRequestCollection();
-            try
-            {
-                bool _Exists = _ExistsOfKeyInformationByID(
-                id
-                ,currentIndex
-                ,pageSize
-                ,queryOrderBySettingCollection
-            );
-
-                if (_Exists)
-                {
-                    IQueryable<MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest> _Query = _GetQueryOfKeyInformationByID(
-                id
-                ,queryOrderBySettingCollection
-            );
-
-                    IEnumerable<MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest> _retval;
-
-                    if (currentIndex == -1 || pageSize == -1)
-                    {
-                        _retval = _Query;
-                    }
-                    else
-                    {
-                        _retval = _Query.Skip(currentIndex).Take(pageSize);
-                    }
-                    _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
-                    _retMessage.QueryPagingResult.PageSize = pageSize;
-                    _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
-                    _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;
-                    _retMessage.QueryPagingResult.CountOfRecords = _Query.Count();
-                    _retMessage.Result = new MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequestCollection();
-                    _retMessage.Result.AddRange(_retval);
-                }
-                else
-                {
-                    _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.SuccessButNoResult;
-                    _retMessage.Result = null;
-                }
-            }
-            catch (Exception ex)
-            {
-                _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
-                _retMessage.Result = null;
-                _retMessage.Message = ex.Message;
-                log.Error(string.Format("{0}: GetCollectionOfKeyInformationByID", Framework.LoggingOptions.Data_Access_Layer_Process_Failed.ToString()), ex);
-            }
-            log.Info(string.Format("{0}: GetCollectionOfKeyInformationByID", Framework.LoggingOptions.Data_Access_Layer_Process_Ended.ToString()));
-            return _retMessage;
-        }
-
-        #endregion Query Methods Of KeyInformationByID
-
-        #region Query Methods Of UpdateName
-
-        /// <summary>
-        /// UpdateName
-        /// Description:
-        /// </summary>
-        /// <param name="input"></param>
-        public MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfUpdateNameRequestCollection UpdateName(MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequestCollection input)
-        {
-            log.Info(string.Format("{0}: UpdateName", Framework.LoggingOptions.Data_Access_Layer_Process_Started.ToString()));
-
-            MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfUpdateNameRequestCollection _retval = new MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfUpdateNameRequestCollection();
-            _retval.OriginalValue = input;
-            try
-            {
-                if (input != null)
-                {
-                    _retval.Result = new MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequestCollection();
-
-                    foreach (var item in input)
-                    {
-                        var _LinqItem = GetLinqObjectByIdentifier(item);
-                        if (_LinqItem != null)
-                        {
-                            _retval.Result.Add(item);
-                            _LinqItem.Name = item.Name;
-                            _LinqItem.Id = item.Id;
-                        }
-                    }
-                    if(_retval.Result.Count > 0)
-                    {
-                        this.LinqContext.SaveChanges();
-                        _retval.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                    }
-                    else
-                    {
-                        _retval.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
-                        _retval.Message = "UpdateName: input data is wrong.";
-                    }
-                }
-                else
-                {
-                    _retval.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
-                    _retval.Message = "UpdateName: input data is wrong.";
-                }
-            }
-            catch (Exception ex)
-            {
-                if(_retval.Result != null)
-                {
-                    _retval.Result.Clear();
-                }
-                _retval.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
-                _retval.Message = ex.Message;
-            }
-            log.Info(string.Format("{0}: UpdateName", Framework.LoggingOptions.Business_Logic_Layer_Process_Ended.ToString()));
-            return _retval;
-        }
-        /// <summary>
-        /// UpdateName
-        /// Description:
-        /// </summary>
-        /// <param name="input"></param>
-        public MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfUpdateNameRequestCollection UpdateName(MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest input)
-        {
-            var collection = new MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequestCollection();
-            collection.Add(input);
-            return UpdateName(collection);
-        }
-
-        #endregion Query Methods Of UpdateName
-
-        #region Query Methods Of InsertName
-
-        /// <summary>
-        /// InsertName
-        /// Description:
-        /// </summary>
-        /// <param name="input"></param>
-        public MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfUpdateNameRequestCollection InsertName(MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequestCollection input)
-        {
-            if (input != null)
-            {
-                MSBuildExtensionPack.DataSourceEntities.BuildCollection convertedList = new MSBuildExtensionPack.DataSourceEntities.BuildCollection();
-                foreach (var item in input)
-                {
-                    MSBuildExtensionPack.DataSourceEntities.Build _LinqItem = default(MSBuildExtensionPack.DataSourceEntities.Build);
-                            _LinqItem.Name = item.Name;
-                            _LinqItem.Id = item.Id;
-                    convertedList.Add(_LinqItem);
-                }
-                var response = BatchInsert(convertedList);
-
-                MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfUpdateNameRequestCollection response1 = new MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfUpdateNameRequestCollection();
-                response1.DataAccessLayerMessageStatus = response.DataAccessLayerMessageStatus;
-                response1.MessageSourceComponent = response.MessageSourceComponent;
-                response1.MessageSourceFunction = response.MessageSourceFunction;
-                response1.OriginalValue = input;
-                if(response.DataAccessLayerMessageStatus == Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success)
-                {
-                    response1.Result = input;
-                }
-                return response1;
-            }
-            else
-            {
-                MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfUpdateNameRequestCollection response1 = new MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfUpdateNameRequestCollection();
-                response1.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Fail;
-                response1.Message = " InsertName: input data is wrong.";
-                return response1;
-            }
-        }
-
-        /// <summary>
-        /// InsertName
-        /// Description:
-        /// </summary>
-        /// <param name="input"></param>
-        public MSBuildExtensionPack.DataSourceEntities.Build.DataAccessLayerMessageOfUpdateNameRequestCollection InsertName(MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest input)
-        {
-            var collection = new MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequestCollection();
-            collection.Add(input);
-            return InsertName(collection);
-        }
-
-        #endregion Query Methods Of InsertName
 
     }
 }

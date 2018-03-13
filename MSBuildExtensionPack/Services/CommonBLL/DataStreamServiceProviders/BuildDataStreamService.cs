@@ -73,9 +73,6 @@ namespace MSBuildExtensionPack.CommonBLL
             worksheet.Cell(cellKey).Value = "Organization_1_UniqueIdentifier";
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
-            worksheet.Cell(cellKey).Value = "Organization_1_UniqueidentifierColumn";
-
-            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = "Organization_1_Name";
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
@@ -83,9 +80,6 @@ namespace MSBuildExtensionPack.CommonBLL
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = "Organization_2_UniqueIdentifier";
-
-            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
-            worksheet.Cell(cellKey).Value = "Organization_2_UniqueidentifierColumn";
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = "Organization_2_Name";
@@ -122,9 +116,6 @@ namespace MSBuildExtensionPack.CommonBLL
             worksheet.Cell(cellKey).Value = dataItem.Organization_1_UniqueIdentifier;
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
-            worksheet.Cell(cellKey).Value = dataItem.Organization_1_UniqueidentifierColumn;
-
-            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.Organization_1_Name;
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
@@ -132,9 +123,6 @@ namespace MSBuildExtensionPack.CommonBLL
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.Organization_2_UniqueIdentifier;
-
-            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
-            worksheet.Cell(cellKey).Value = dataItem.Organization_2_UniqueidentifierColumn;
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.Organization_2_Name;
@@ -216,36 +204,6 @@ namespace MSBuildExtensionPack.CommonBLL
 
             cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
             worksheet.Cell(cellKey).Value = dataItem.Name;
-
-            }
-        }
-
-        public class UpdateNameRequest
-            : Framework.Services.DataStreamServiceProviderBase<MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequestCollection, MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest>
-        {
-            public override void WriteHeaderLineToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, int row)
-            {
-                char cell = 'A';
-
-                string cellKey;
-                cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
-            worksheet.Cell(cellKey).Value = "Name";
-
-            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
-            worksheet.Cell(cellKey).Value = "Id";
-
-            }
-
-            public override void WriteDataItemToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, MSBuildExtensionPack.DataSourceEntities.Build.UpdateNameRequest dataItem, int row)
-            {
-                char cell = 'A';
-
-                string cellKey;
-                cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
-            worksheet.Cell(cellKey).Value = dataItem.Name;
-
-            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
-            worksheet.Cell(cellKey).Value = dataItem.Id;
 
             }
         }

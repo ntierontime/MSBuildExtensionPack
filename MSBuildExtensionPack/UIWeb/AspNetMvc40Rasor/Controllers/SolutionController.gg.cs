@@ -132,7 +132,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Solution_Import)]
         public ActionResult Import(HttpPostedFileBase file)
         {
-            ViewBag.FileFormat = "Organization_1_UniqueIdentifier,Organization_1_UniqueidentifierColumn,Organization_1_Name,Id,Organization_2Id,Organization_2_UniqueIdentifier,Organization_2_UniqueidentifierColumn,Organization_2_Name,ExternalParentId,Name,Description,OrganizationId";
+            ViewBag.FileFormat = "Organization_1_UniqueIdentifier,Organization_1_Name,Id,Organization_2Id,Organization_2_UniqueIdentifier,Organization_2_Name,ExternalParentId,Name,Description,OrganizationId";
             if (file != null && file.ContentLength > 0 && !string.IsNullOrWhiteSpace(file.FileName))
             {
                 log.Info(string.Format("{0}: Import", Framework.LoggingOptions.UI_Process_Started.ToString()));

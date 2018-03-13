@@ -1,23 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="MSBuildExtensionPack.BuildEventCode">
-  <DataView Key="NameValuePair" DataViewKnownCategory="NameValuePair" IsGroupByResult="false">
-    <Description>NameValuePair</Description>
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemString)Value=Id.ToString();(SystemString)Name=EventCode~Name</Properties>
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-  </DataView>
-  <DataView Key="RssItem" DataViewKnownCategory="RssItem" IsGroupByResult="false">
-    <Description>RssItem</Description>
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemString)IdentifierInString=Id.ToString();(SystemString)Title=EventCode;(SystemString)Description=EventCode</Properties>
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-  </DataView>
-  <DataView Key="KeyInformation" DataViewKnownCategory="KeyInformation" IsGroupByResult="false">
-    <Description>KeyInformation</Description>
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemInt32)Id=Id~Identifier;(SystemString)EventCode=EventCode</Properties>
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-    <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-  </DataView>
   <Criteria Key="Common" SourceTypeFullName="MSBuildExtensionPack.BuildEventCode">
     <Description>Query by EntityReference, String, Bool, Order By DateTime</Description>
     <Queries>Common</Queries>

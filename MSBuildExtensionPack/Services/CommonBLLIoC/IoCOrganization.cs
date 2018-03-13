@@ -649,30 +649,12 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
         /// <returns></returns>
-        private static MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintByUC_Organization_UniqueIdentifier _GetOrganizationChainedQueryCriteriaUniqueConstraintByUC_Organization_UniqueIdentifier(
+        private static MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintByUC _GetOrganizationChainedQueryCriteriaUniqueConstraintByUC(
             bool isToCompareUniqueIdentifier, System.Guid? uniqueIdentifier
             )
         {
-            var criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintByUC_Organization_UniqueIdentifier();
-            criteria.UniqueConstraintByUC_Organization_UniqueIdentifier.UniqueIdentifier = new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifier, uniqueIdentifier);
-            return criteria;
-        }
-
-        /// <summary>
-        /// Gets the collection of entity of common.
-        /// </summary>
-        /// <param name="isToCompareUniqueidentifierColumn">will compare/filter uniqueidentifierColumn property/field/column if true, otherwise false</param>
-        /// <param name="uniqueidentifierColumn">value to compare/filter with uniqueidentifierColumn property/field/column</param>
-        /// <param name="currentIndex">Index of the current.</param>
-        /// <param name="pageSize">Size of the page.</param>
-        /// <param name="queryOrderByExpression">The query order by expression.</param>
-        /// <returns></returns>
-        private static MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintByUC_Organization_UniqueidentifierColumn _GetOrganizationChainedQueryCriteriaUniqueConstraintByUC_Organization_UniqueidentifierColumn(
-            bool isToCompareUniqueidentifierColumn, System.Guid? uniqueidentifierColumn
-            )
-        {
-            var criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintByUC_Organization_UniqueidentifierColumn();
-            criteria.UniqueConstraintByUC_Organization_UniqueidentifierColumn.UniqueidentifierColumn = new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumn, uniqueidentifierColumn);
+            var criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaUniqueConstraintByUC();
+            criteria.UniqueConstraintByUC.UniqueIdentifier = new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifier, uniqueIdentifier);
             return criteria;
         }
 
@@ -683,8 +665,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="isToCompareUniqueIdentifier">will compare/filter uniqueIdentifier property/field/column if true, otherwise false</param>
         /// <param name="uniqueIdentifier">value to compare/filter with uniqueIdentifier property/field/column</param>
-        /// <param name="isToCompareUniqueidentifierColumn">will compare/filter uniqueidentifierColumn property/field/column if true, otherwise false</param>
-        /// <param name="uniqueidentifierColumn">value to compare/filter with uniqueidentifierColumn property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
@@ -692,13 +672,11 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         private static MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
             bool isToCompareId, System.Int64? id
             , bool isToCompareUniqueIdentifier, System.Guid? uniqueIdentifier
-            , bool isToCompareUniqueidentifierColumn, System.Guid? uniqueidentifierColumn
             )
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint();
             criteria.IdentifierAndUniqueConstraint.Id = new QuerySystemInt64EqualsCriteria(isToCompareId, id);
             criteria.IdentifierAndUniqueConstraint.UniqueIdentifier = new QuerySystemGuidEqualsCriteria(isToCompareUniqueIdentifier, uniqueIdentifier);
-            criteria.IdentifierAndUniqueConstraint.UniqueidentifierColumn = new QuerySystemGuidEqualsCriteria(isToCompareUniqueidentifierColumn, uniqueidentifierColumn);
             return criteria;
         }
 
@@ -1370,184 +1348,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of RssItemByAll
 
-        #region Query Methods Of NameValuePairByFKOnly
-
-        /// <summary>
-        /// Gets the collection of entity of common.
-        /// </summary>
-        /// <param name="criteria"></param>
-        /// <param name="queryPagingSetting"></param>
-        /// <param name="queryOrderBySettingCollection"></param>
-        /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        public static Framework.NameValueCollection GetCollectionOfNameValuePairByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaFKOnly criteria
-            , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
-            , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
-        {
-            //log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
-            MSBuildExtensionPack.WcfContracts.IOrganizationService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceOrganization();
-            var _Request = new MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly(
-                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfNameValuePairByFKOnly"
-                , Guid.NewGuid().ToString()
-                );
-            _Request.Criteria = criteria;
-            _Request.QueryPagingSetting = queryPagingSetting;
-            if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
-            {
-                _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-                _Request.QueryOrderBySettingCollection.Add("Value", "Ascending");
-            }
-            else
-            {
-                _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
-            }
-
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairByFKOnly(_Request);
-            if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
-            {
-                //log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
-                return _Response.Message;
-            }
-            else
-            {
-                //log.Error(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Gets message of the collection of entity of common.
-        /// </summary>
-        /// <param name="criteria"></param>
-        /// <param name="queryPagingSetting"></param>
-        /// <param name="queryOrderBySettingCollection"></param>
-        /// <returns>business layer built-in message <see cref="Framework.NameValueCollection"/></returns>
-        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaFKOnly criteria
-            , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
-            , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
-        {
-            return GetMessageOfNameValuePairByFKOnly(
-                criteria
-                , queryPagingSetting
-                , queryOrderBySettingCollection
-                , Framework.DataServiceTypes.DataSourceResult);
-        }
-
-        /// <summary>
-        /// Gets message of the collection of entity of common.
-        /// </summary>
-        /// <param name="criteria"></param>
-        /// <param name="queryPagingSetting"></param>
-        /// <param name="queryOrderBySettingCollection"></param>
-        /// <returns>business layer built-in message <see cref="Framework.NameValueCollection"/></returns>
-        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaFKOnly criteria
-            , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
-            , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            , Framework.DataServiceTypes dataServiceType)
-        {
-            //log.Info(string.Format("{0}: GetMessageOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
-            MSBuildExtensionPack.WcfContracts.IOrganizationService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceOrganization();
-            var _Request = new MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly(
-                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetMessageOfNameValuePairByFKOnly"
-                , Guid.NewGuid().ToString()
-                );
-            _Request.Criteria = criteria;
-            _Request.QueryPagingSetting = queryPagingSetting;
-            if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
-            {
-                _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-                _Request.QueryOrderBySettingCollection.Add("Value", "Ascending");
-            }
-            else
-            {
-                _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
-            }
-            _Request.DataServiceType = dataServiceType;
-
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairByFKOnly(_Request);
-            return _Response;
-        }
-
-       /// <summary>
-        /// Gets the collection of entity of common.
-        /// </summary>
-        /// <param name="isToCompareParentId">will compare/filter parentId property/field/column if true, otherwise false</param>
-        /// <param name="parentId">value to compare/filter with parentId property/field/column</param>
-        /// <param name="currentIndex">Index of the current.</param>
-        /// <param name="pageSize">Size of the page.</param>
-        /// <param name="queryOrderByExpression">The query order by expression.</param>
-        /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        public static Framework.NameValueCollection GetCollectionOfNameValuePairByFKOnly(
-            bool isToCompareParentId, System.Int64? parentId
-            , int currentIndex
-            , int pageSize
-            , string queryOrderByExpression
-            )
-        {
-            //log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
-            MSBuildExtensionPack.WcfContracts.IOrganizationService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceOrganization();
-            var _Request = new MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly(
-                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfNameValuePairByFKOnly"
-                , Guid.NewGuid().ToString()
-                , currentIndex
-                , pageSize
-                , queryOrderByExpression
-                );
-            _Request.Criteria = _GetOrganizationChainedQueryCriteriaFKOnly(
-                isToCompareParentId, parentId
-                );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairByFKOnly(_Request);
-            if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
-            {
-                //log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
-                return _Response.Message;
-            }
-            else
-            {
-                //log.Error(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Gets message of the collection of entity of common.
-        /// </summary>
-        /// <param name="isToCompareParentId">will compare/filter parentId property/field/column if true, otherwise false</param>
-        /// <param name="parentId">value to compare/filter with parentId property/field/column</param>
-        /// <param name="currentIndex">Index of the current.</param>
-        /// <param name="pageSize">Size of the page.</param>
-        /// <param name="queryOrderByExpression">The query order by expression.</param>
-        /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
-        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairByFKOnly(
-            bool isToCompareParentId, System.Int64? parentId
-            , int currentIndex
-            , int pageSize
-            , string queryOrderByExpression        )
-
-        {
-            MSBuildExtensionPack.WcfContracts.IOrganizationService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceOrganization();
-            var _Request = new MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly(
-                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfNameValuePairByFKOnly"
-                , Guid.NewGuid().ToString()
-                , currentIndex
-                , pageSize
-                , queryOrderByExpression
-                );
-            _Request.Criteria = _GetOrganizationChainedQueryCriteriaFKOnly(
-                isToCompareParentId, parentId
-                );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairByFKOnly(_Request);
-            return _Response;
-        }
-
-        #endregion Query Methods Of NameValuePairByFKOnly
-
         #region Query Methods Of DefaultByFKOnly
 
         /// <summary>
@@ -1903,6 +1703,184 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         }
 
         #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
+
+        #region Query Methods Of NameValuePairByFKOnly
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="criteria"></param>
+        /// <param name="queryPagingSetting"></param>
+        /// <param name="queryOrderBySettingCollection"></param>
+        /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
+        public static Framework.NameValueCollection GetCollectionOfNameValuePairByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaFKOnly criteria
+            , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
+            , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
+        {
+            //log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            MSBuildExtensionPack.WcfContracts.IOrganizationService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceOrganization();
+            var _Request = new MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly(
+                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
+                , "GetCollectionOfNameValuePairByFKOnly"
+                , Guid.NewGuid().ToString()
+                );
+            _Request.Criteria = criteria;
+            _Request.QueryPagingSetting = queryPagingSetting;
+            if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
+            {
+                _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
+                _Request.QueryOrderBySettingCollection.Add("Value", "Ascending");
+            }
+            else
+            {
+                _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
+            }
+
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairByFKOnly(_Request);
+            if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+            {
+                //log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                return _Response.Message;
+            }
+            else
+            {
+                //log.Error(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Gets message of the collection of entity of common.
+        /// </summary>
+        /// <param name="criteria"></param>
+        /// <param name="queryPagingSetting"></param>
+        /// <param name="queryOrderBySettingCollection"></param>
+        /// <returns>business layer built-in message <see cref="Framework.NameValueCollection"/></returns>
+        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaFKOnly criteria
+            , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
+            , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
+        {
+            return GetMessageOfNameValuePairByFKOnly(
+                criteria
+                , queryPagingSetting
+                , queryOrderBySettingCollection
+                , Framework.DataServiceTypes.DataSourceResult);
+        }
+
+        /// <summary>
+        /// Gets message of the collection of entity of common.
+        /// </summary>
+        /// <param name="criteria"></param>
+        /// <param name="queryPagingSetting"></param>
+        /// <param name="queryOrderBySettingCollection"></param>
+        /// <returns>business layer built-in message <see cref="Framework.NameValueCollection"/></returns>
+        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaFKOnly criteria
+            , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
+            , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            , Framework.DataServiceTypes dataServiceType)
+        {
+            //log.Info(string.Format("{0}: GetMessageOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            MSBuildExtensionPack.WcfContracts.IOrganizationService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceOrganization();
+            var _Request = new MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly(
+                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
+                , "GetMessageOfNameValuePairByFKOnly"
+                , Guid.NewGuid().ToString()
+                );
+            _Request.Criteria = criteria;
+            _Request.QueryPagingSetting = queryPagingSetting;
+            if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
+            {
+                _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
+                _Request.QueryOrderBySettingCollection.Add("Value", "Ascending");
+            }
+            else
+            {
+                _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
+            }
+            _Request.DataServiceType = dataServiceType;
+
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairByFKOnly(_Request);
+            return _Response;
+        }
+
+       /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareParentId">will compare/filter parentId property/field/column if true, otherwise false</param>
+        /// <param name="parentId">value to compare/filter with parentId property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
+        public static Framework.NameValueCollection GetCollectionOfNameValuePairByFKOnly(
+            bool isToCompareParentId, System.Int64? parentId
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
+        {
+            //log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            MSBuildExtensionPack.WcfContracts.IOrganizationService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceOrganization();
+            var _Request = new MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly(
+                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
+                , "GetCollectionOfNameValuePairByFKOnly"
+                , Guid.NewGuid().ToString()
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression
+                );
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaFKOnly(
+                isToCompareParentId, parentId
+                );
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairByFKOnly(_Request);
+            if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+            {
+                //log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                return _Response.Message;
+            }
+            else
+            {
+                //log.Error(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Gets message of the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareParentId">will compare/filter parentId property/field/column if true, otherwise false</param>
+        /// <param name="parentId">value to compare/filter with parentId property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
+        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairByFKOnly(
+            bool isToCompareParentId, System.Int64? parentId
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression        )
+
+        {
+            MSBuildExtensionPack.WcfContracts.IOrganizationService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceOrganization();
+            var _Request = new MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly(
+                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
+                , "GetCollectionOfNameValuePairByFKOnly"
+                , Guid.NewGuid().ToString()
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression
+                );
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaFKOnly(
+                isToCompareParentId, parentId
+                );
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairByFKOnly(_Request);
+            return _Response;
+        }
+
+        #endregion Query Methods Of NameValuePairByFKOnly
 
         #region Query Methods Of EntityByIdentifier
 
@@ -2749,8 +2727,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="isToCompareUniqueIdentifier">will compare/filter uniqueIdentifier property/field/column if true, otherwise false</param>
         /// <param name="uniqueIdentifier">value to compare/filter with uniqueIdentifier property/field/column</param>
-        /// <param name="isToCompareUniqueidentifierColumn">will compare/filter uniqueidentifierColumn property/field/column if true, otherwise false</param>
-        /// <param name="uniqueidentifierColumn">value to compare/filter with uniqueidentifierColumn property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
@@ -2758,7 +2734,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         public static bool ExistsOfEntityByIdentifierAndUniqueConstraint(
             bool isToCompareId, System.Int64? id
             , bool isToCompareUniqueIdentifier, System.Guid? uniqueIdentifier
-            , bool isToCompareUniqueidentifierColumn, System.Guid? uniqueidentifierColumn
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -2777,7 +2752,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
                 isToCompareId, id
                 , isToCompareUniqueIdentifier, uniqueIdentifier
-                , isToCompareUniqueidentifierColumn, uniqueidentifierColumn
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfEntityByIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -2899,8 +2873,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="isToCompareUniqueIdentifier">will compare/filter uniqueIdentifier property/field/column if true, otherwise false</param>
         /// <param name="uniqueIdentifier">value to compare/filter with uniqueIdentifier property/field/column</param>
-        /// <param name="isToCompareUniqueidentifierColumn">will compare/filter uniqueidentifierColumn property/field/column if true, otherwise false</param>
-        /// <param name="uniqueidentifierColumn">value to compare/filter with uniqueidentifierColumn property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
@@ -2908,7 +2880,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         public static MSBuildExtensionPack.DataSourceEntities.OrganizationCollection GetCollectionOfEntityByIdentifierAndUniqueConstraint(
             bool isToCompareId, System.Int64? id
             , bool isToCompareUniqueIdentifier, System.Guid? uniqueIdentifier
-            , bool isToCompareUniqueidentifierColumn, System.Guid? uniqueidentifierColumn
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -2927,7 +2898,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
                 isToCompareId, id
                 , isToCompareUniqueIdentifier, uniqueIdentifier
-                , isToCompareUniqueidentifierColumn, uniqueidentifierColumn
                 );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityByIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -2949,8 +2919,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="isToCompareUniqueIdentifier">will compare/filter uniqueIdentifier property/field/column if true, otherwise false</param>
         /// <param name="uniqueIdentifier">value to compare/filter with uniqueIdentifier property/field/column</param>
-        /// <param name="isToCompareUniqueidentifierColumn">will compare/filter uniqueidentifierColumn property/field/column if true, otherwise false</param>
-        /// <param name="uniqueidentifierColumn">value to compare/filter with uniqueidentifierColumn property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
@@ -2958,7 +2926,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         public static MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn GetMessageOfEntityByIdentifierAndUniqueConstraint(
             bool isToCompareId, System.Int64? id
             , bool isToCompareUniqueIdentifier, System.Guid? uniqueIdentifier
-            , bool isToCompareUniqueidentifierColumn, System.Guid? uniqueidentifierColumn
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression        )
@@ -2976,7 +2943,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
                 isToCompareId, id
                 , isToCompareUniqueIdentifier, uniqueIdentifier
-                , isToCompareUniqueidentifierColumn, uniqueidentifierColumn
                 );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn _Response = _BusinessLogicLayerInstance.GetCollectionOfEntityByIdentifierAndUniqueConstraint(_Request);
             return _Response;
@@ -3037,8 +3003,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="isToCompareUniqueIdentifier">will compare/filter uniqueIdentifier property/field/column if true, otherwise false</param>
         /// <param name="uniqueIdentifier">value to compare/filter with uniqueIdentifier property/field/column</param>
-        /// <param name="isToCompareUniqueidentifierColumn">will compare/filter uniqueidentifierColumn property/field/column if true, otherwise false</param>
-        /// <param name="uniqueidentifierColumn">value to compare/filter with uniqueidentifierColumn property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
@@ -3046,7 +3010,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         public static bool ExistsOfDefaultByIdentifierAndUniqueConstraint(
             bool isToCompareId, System.Int64? id
             , bool isToCompareUniqueIdentifier, System.Guid? uniqueIdentifier
-            , bool isToCompareUniqueidentifierColumn, System.Guid? uniqueidentifierColumn
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -3065,7 +3028,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
                 isToCompareId, id
                 , isToCompareUniqueIdentifier, uniqueIdentifier
-                , isToCompareUniqueidentifierColumn, uniqueidentifierColumn
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfDefaultByIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -3187,8 +3149,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="isToCompareUniqueIdentifier">will compare/filter uniqueIdentifier property/field/column if true, otherwise false</param>
         /// <param name="uniqueIdentifier">value to compare/filter with uniqueIdentifier property/field/column</param>
-        /// <param name="isToCompareUniqueidentifierColumn">will compare/filter uniqueidentifierColumn property/field/column if true, otherwise false</param>
-        /// <param name="uniqueidentifierColumn">value to compare/filter with uniqueidentifierColumn property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
@@ -3196,7 +3156,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         public static MSBuildExtensionPack.DataSourceEntities.Organization.DefaultCollection GetCollectionOfDefaultByIdentifierAndUniqueConstraint(
             bool isToCompareId, System.Int64? id
             , bool isToCompareUniqueIdentifier, System.Guid? uniqueIdentifier
-            , bool isToCompareUniqueidentifierColumn, System.Guid? uniqueidentifierColumn
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -3215,7 +3174,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
                 isToCompareId, id
                 , isToCompareUniqueIdentifier, uniqueIdentifier
-                , isToCompareUniqueidentifierColumn, uniqueidentifierColumn
                 );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultByIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -3237,8 +3195,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="isToCompareUniqueIdentifier">will compare/filter uniqueIdentifier property/field/column if true, otherwise false</param>
         /// <param name="uniqueIdentifier">value to compare/filter with uniqueIdentifier property/field/column</param>
-        /// <param name="isToCompareUniqueidentifierColumn">will compare/filter uniqueidentifierColumn property/field/column if true, otherwise false</param>
-        /// <param name="uniqueidentifierColumn">value to compare/filter with uniqueidentifierColumn property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
@@ -3246,7 +3202,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         public static MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default GetMessageOfDefaultByIdentifierAndUniqueConstraint(
             bool isToCompareId, System.Int64? id
             , bool isToCompareUniqueIdentifier, System.Guid? uniqueIdentifier
-            , bool isToCompareUniqueidentifierColumn, System.Guid? uniqueidentifierColumn
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression        )
@@ -3264,7 +3219,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
                 isToCompareId, id
                 , isToCompareUniqueIdentifier, uniqueIdentifier
-                , isToCompareUniqueidentifierColumn, uniqueidentifierColumn
                 );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.Default _Response = _BusinessLogicLayerInstance.GetCollectionOfDefaultByIdentifierAndUniqueConstraint(_Request);
             return _Response;
@@ -3325,8 +3279,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="isToCompareUniqueIdentifier">will compare/filter uniqueIdentifier property/field/column if true, otherwise false</param>
         /// <param name="uniqueIdentifier">value to compare/filter with uniqueIdentifier property/field/column</param>
-        /// <param name="isToCompareUniqueidentifierColumn">will compare/filter uniqueidentifierColumn property/field/column if true, otherwise false</param>
-        /// <param name="uniqueidentifierColumn">value to compare/filter with uniqueidentifierColumn property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
@@ -3334,7 +3286,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         public static bool ExistsOfKeyInformationByIdentifierAndUniqueConstraint(
             bool isToCompareId, System.Int64? id
             , bool isToCompareUniqueIdentifier, System.Guid? uniqueIdentifier
-            , bool isToCompareUniqueidentifierColumn, System.Guid? uniqueidentifierColumn
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -3353,7 +3304,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
                 isToCompareId, id
                 , isToCompareUniqueIdentifier, uniqueIdentifier
-                , isToCompareUniqueidentifierColumn, uniqueidentifierColumn
                 );
             Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _Response = _BusinessLogicLayerInstance.ExistsOfKeyInformationByIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -3475,8 +3425,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="isToCompareUniqueIdentifier">will compare/filter uniqueIdentifier property/field/column if true, otherwise false</param>
         /// <param name="uniqueIdentifier">value to compare/filter with uniqueIdentifier property/field/column</param>
-        /// <param name="isToCompareUniqueidentifierColumn">will compare/filter uniqueidentifierColumn property/field/column if true, otherwise false</param>
-        /// <param name="uniqueidentifierColumn">value to compare/filter with uniqueidentifierColumn property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
@@ -3484,7 +3432,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         public static MSBuildExtensionPack.DataSourceEntities.Organization.KeyInformationCollection GetCollectionOfKeyInformationByIdentifierAndUniqueConstraint(
             bool isToCompareId, System.Int64? id
             , bool isToCompareUniqueIdentifier, System.Guid? uniqueIdentifier
-            , bool isToCompareUniqueidentifierColumn, System.Guid? uniqueidentifierColumn
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression
@@ -3503,7 +3450,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
                 isToCompareId, id
                 , isToCompareUniqueIdentifier, uniqueIdentifier
-                , isToCompareUniqueidentifierColumn, uniqueidentifierColumn
                 );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetCollectionOfKeyInformationByIdentifierAndUniqueConstraint(_Request);
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -3525,8 +3471,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         /// <param name="id">value to compare/filter with id property/field/column</param>
         /// <param name="isToCompareUniqueIdentifier">will compare/filter uniqueIdentifier property/field/column if true, otherwise false</param>
         /// <param name="uniqueIdentifier">value to compare/filter with uniqueIdentifier property/field/column</param>
-        /// <param name="isToCompareUniqueidentifierColumn">will compare/filter uniqueidentifierColumn property/field/column if true, otherwise false</param>
-        /// <param name="uniqueidentifierColumn">value to compare/filter with uniqueidentifierColumn property/field/column</param>
         /// <param name="currentIndex">Index of the current.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <param name="queryOrderByExpression">The query order by expression.</param>
@@ -3534,7 +3478,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         public static MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation GetMessageOfKeyInformationByIdentifierAndUniqueConstraint(
             bool isToCompareId, System.Int64? id
             , bool isToCompareUniqueIdentifier, System.Guid? uniqueIdentifier
-            , bool isToCompareUniqueidentifierColumn, System.Guid? uniqueidentifierColumn
             , int currentIndex
             , int pageSize
             , string queryOrderByExpression        )
@@ -3552,7 +3495,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
             _Request.Criteria = _GetOrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint(
                 isToCompareId, id
                 , isToCompareUniqueIdentifier, uniqueIdentifier
-                , isToCompareUniqueidentifierColumn, uniqueidentifierColumn
                 );
             MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.KeyInformation _Response = _BusinessLogicLayerInstance.GetCollectionOfKeyInformationByIdentifierAndUniqueConstraint(_Request);
             return _Response;

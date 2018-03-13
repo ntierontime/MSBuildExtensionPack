@@ -39,8 +39,7 @@ CREATE TABLE [dbo].[Organization] (
 	    REFERENCES [dbo].[Organization] (Id) 
 		ON DELETE NO ACTION
 		ON UPDATE NO ACTION
-	, CONSTRAINT [UC_Organization_UniqueIdentifier] UNIQUE NONCLUSTERED(UniqueIdentifier)
-	, CONSTRAINT [UC_Organization_UniqueidentifierColumn] UNIQUE NONCLUSTERED(UniqueidentifierColumn)
+	, CONSTRAINT [UC] UNIQUE NONCLUSTERED(UniqueIdentifier)
 );
 
 

@@ -2158,159 +2158,6 @@ namespace MSBuildExtensionPack.Resx {
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Value"".
-        /// </summary>
-        public static string Value {
-            get {
-                return ResourceManager.GetString("Value", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Required Field Error Message of property Value of MSBuildExtensionPack.Organization"".
-        /// </summary>
-        public static string Required_Field_Error_Message_of_property_Value_of_MSBuildExtensionPack_Organization {
-            get {
-                return ResourceManager.GetString("Required_Field_Error_Message_of_property_Value_of_MSBuildExtensionPack_Organization", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Value Validation Error Message of property Value of MSBuildExtensionPack.Organization"".
-        /// </summary>
-        public static string Value_Validation_Error_Message_of_property_Value_of_MSBuildExtensionPack_Organization {
-            get {
-                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Value_of_MSBuildExtensionPack_Organization", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Required Field Error Message of property Name of MSBuildExtensionPack.Organization"".
-        /// </summary>
-        public static string Required_Field_Error_Message_of_property_Name_of_MSBuildExtensionPack_Organization {
-            get {
-                return ResourceManager.GetString("Required_Field_Error_Message_of_property_Name_of_MSBuildExtensionPack_Organization", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Value Validation Error Message of property Name of MSBuildExtensionPack.Organization"".
-        /// </summary>
-        public static string Value_Validation_Error_Message_of_property_Name_of_MSBuildExtensionPack_Organization {
-            get {
-                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Name_of_MSBuildExtensionPack_Organization", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "IdentifierInString"".
-        /// </summary>
-        public static string IdentifierInString {
-            get {
-                return ResourceManager.GetString("IdentifierInString", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Required Field Error Message of property IdentifierInString of MSBuildExtensionPack.Organization"".
-        /// </summary>
-        public static string Required_Field_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Organization {
-            get {
-                return ResourceManager.GetString("Required_Field_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Organization", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Value Validation Error Message of property IdentifierInString of MSBuildExtensionPack.Organization"".
-        /// </summary>
-        public static string Value_Validation_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Organization {
-            get {
-                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Organization", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Title"".
-        /// </summary>
-        public static string Title {
-            get {
-                return ResourceManager.GetString("Title", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Required Field Error Message of property Title of MSBuildExtensionPack.Organization"".
-        /// </summary>
-        public static string Required_Field_Error_Message_of_property_Title_of_MSBuildExtensionPack_Organization {
-            get {
-                return ResourceManager.GetString("Required_Field_Error_Message_of_property_Title_of_MSBuildExtensionPack_Organization", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Value Validation Error Message of property Title of MSBuildExtensionPack.Organization"".
-        /// </summary>
-        public static string Value_Validation_Error_Message_of_property_Title_of_MSBuildExtensionPack_Organization {
-            get {
-                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Title_of_MSBuildExtensionPack_Organization", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description"".
-        /// </summary>
-        public static string Description {
-            get {
-                return ResourceManager.GetString("Description", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Required Field Error Message of property Description of MSBuildExtensionPack.Organization"".
-        /// </summary>
-        public static string Required_Field_Error_Message_of_property_Description_of_MSBuildExtensionPack_Organization {
-            get {
-                return ResourceManager.GetString("Required_Field_Error_Message_of_property_Description_of_MSBuildExtensionPack_Organization", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Value Validation Error Message of property Description of MSBuildExtensionPack.Organization"".
-        /// </summary>
-        public static string Value_Validation_Error_Message_of_property_Description_of_MSBuildExtensionPack_Organization {
-            get {
-                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Description_of_MSBuildExtensionPack_Organization", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "PubDate"".
-        /// </summary>
-        public static string PubDate {
-            get {
-                return ResourceManager.GetString("PubDate", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Required Field Error Message of property PubDate of MSBuildExtensionPack.Organization"".
-        /// </summary>
-        public static string Required_Field_Error_Message_of_property_PubDate_of_MSBuildExtensionPack_Organization {
-            get {
-                return ResourceManager.GetString("Required_Field_Error_Message_of_property_PubDate_of_MSBuildExtensionPack_Organization", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Value Validation Error Message of property PubDate of MSBuildExtensionPack.Organization"".
-        /// </summary>
-        public static string Value_Validation_Error_Message_of_property_PubDate_of_MSBuildExtensionPack_Organization {
-            get {
-                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_PubDate_of_MSBuildExtensionPack_Organization", resourceCulture);
-            }
-        }
-
-        /// <summary>
         ///   Looks up a localized string similar to "Organization"".
         /// </summary>
         public static string Organization_2_UniqueIdentifier {
@@ -2334,33 +2181,6 @@ namespace MSBuildExtensionPack.Resx {
         public static string Value_Validation_Error_Message_of_property_Organization_2_UniqueIdentifier_of_MSBuildExtensionPack_Organization {
             get {
                 return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Organization_2_UniqueIdentifier_of_MSBuildExtensionPack_Organization", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Organization"".
-        /// </summary>
-        public static string Organization_2_UniqueidentifierColumn {
-            get {
-                return ResourceManager.GetString("Organization_2_UniqueidentifierColumn", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Required Field Error Message of property Organization_2_UniqueidentifierColumn of MSBuildExtensionPack.Organization"".
-        /// </summary>
-        public static string Required_Field_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization {
-            get {
-                return ResourceManager.GetString("Required_Field_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Value Validation Error Message of property Organization_2_UniqueidentifierColumn of MSBuildExtensionPack.Organization"".
-        /// </summary>
-        public static string Value_Validation_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization {
-            get {
-                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization", resourceCulture);
             }
         }
 
@@ -2424,6 +2244,24 @@ namespace MSBuildExtensionPack.Resx {
         public static string Value_Validation_Error_Message_of_property_ParentId_of_MSBuildExtensionPack_Organization {
             get {
                 return ResourceManager.GetString("Value_Validation_Error_Message_of_property_ParentId_of_MSBuildExtensionPack_Organization", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Required Field Error Message of property Name of MSBuildExtensionPack.Organization"".
+        /// </summary>
+        public static string Required_Field_Error_Message_of_property_Name_of_MSBuildExtensionPack_Organization {
+            get {
+                return ResourceManager.GetString("Required_Field_Error_Message_of_property_Name_of_MSBuildExtensionPack_Organization", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Value Validation Error Message of property Name of MSBuildExtensionPack.Organization"".
+        /// </summary>
+        public static string Value_Validation_Error_Message_of_property_Name_of_MSBuildExtensionPack_Organization {
+            get {
+                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Name_of_MSBuildExtensionPack_Organization", resourceCulture);
             }
         }
 
@@ -2950,6 +2788,33 @@ namespace MSBuildExtensionPack.Resx {
         }
 
         /// <summary>
+        ///   Looks up a localized string similar to "CountPerFK"".
+        /// </summary>
+        public static string CountPerFK {
+            get {
+                return ResourceManager.GetString("CountPerFK", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Required Field Error Message of property CountPerFK of MSBuildExtensionPack.Organization"".
+        /// </summary>
+        public static string Required_Field_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Organization {
+            get {
+                return ResourceManager.GetString("Required_Field_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Organization", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Value Validation Error Message of property CountPerFK of MSBuildExtensionPack.Organization"".
+        /// </summary>
+        public static string Value_Validation_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Organization {
+            get {
+                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Organization", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to "RecursivePath__"".
         /// </summary>
         public static string RecursivePath__ {
@@ -2977,29 +2842,137 @@ namespace MSBuildExtensionPack.Resx {
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "CountPerFK"".
+        ///   Looks up a localized string similar to "Value"".
         /// </summary>
-        public static string CountPerFK {
+        public static string Value {
             get {
-                return ResourceManager.GetString("CountPerFK", resourceCulture);
+                return ResourceManager.GetString("Value", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Required Field Error Message of property CountPerFK of MSBuildExtensionPack.Organization"".
+        ///   Looks up a localized string similar to "Required Field Error Message of property Value of MSBuildExtensionPack.Organization"".
         /// </summary>
-        public static string Required_Field_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Organization {
+        public static string Required_Field_Error_Message_of_property_Value_of_MSBuildExtensionPack_Organization {
             get {
-                return ResourceManager.GetString("Required_Field_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Organization", resourceCulture);
+                return ResourceManager.GetString("Required_Field_Error_Message_of_property_Value_of_MSBuildExtensionPack_Organization", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Value Validation Error Message of property CountPerFK of MSBuildExtensionPack.Organization"".
+        ///   Looks up a localized string similar to "Value Validation Error Message of property Value of MSBuildExtensionPack.Organization"".
         /// </summary>
-        public static string Value_Validation_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Organization {
+        public static string Value_Validation_Error_Message_of_property_Value_of_MSBuildExtensionPack_Organization {
             get {
-                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Organization", resourceCulture);
+                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Value_of_MSBuildExtensionPack_Organization", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "IdentifierInString"".
+        /// </summary>
+        public static string IdentifierInString {
+            get {
+                return ResourceManager.GetString("IdentifierInString", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Required Field Error Message of property IdentifierInString of MSBuildExtensionPack.Organization"".
+        /// </summary>
+        public static string Required_Field_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Organization {
+            get {
+                return ResourceManager.GetString("Required_Field_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Organization", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Value Validation Error Message of property IdentifierInString of MSBuildExtensionPack.Organization"".
+        /// </summary>
+        public static string Value_Validation_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Organization {
+            get {
+                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Organization", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Title"".
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Required Field Error Message of property Title of MSBuildExtensionPack.Organization"".
+        /// </summary>
+        public static string Required_Field_Error_Message_of_property_Title_of_MSBuildExtensionPack_Organization {
+            get {
+                return ResourceManager.GetString("Required_Field_Error_Message_of_property_Title_of_MSBuildExtensionPack_Organization", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Value Validation Error Message of property Title of MSBuildExtensionPack.Organization"".
+        /// </summary>
+        public static string Value_Validation_Error_Message_of_property_Title_of_MSBuildExtensionPack_Organization {
+            get {
+                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Title_of_MSBuildExtensionPack_Organization", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description"".
+        /// </summary>
+        public static string Description {
+            get {
+                return ResourceManager.GetString("Description", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Required Field Error Message of property Description of MSBuildExtensionPack.Organization"".
+        /// </summary>
+        public static string Required_Field_Error_Message_of_property_Description_of_MSBuildExtensionPack_Organization {
+            get {
+                return ResourceManager.GetString("Required_Field_Error_Message_of_property_Description_of_MSBuildExtensionPack_Organization", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Value Validation Error Message of property Description of MSBuildExtensionPack.Organization"".
+        /// </summary>
+        public static string Value_Validation_Error_Message_of_property_Description_of_MSBuildExtensionPack_Organization {
+            get {
+                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Description_of_MSBuildExtensionPack_Organization", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "PubDate"".
+        /// </summary>
+        public static string PubDate {
+            get {
+                return ResourceManager.GetString("PubDate", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Required Field Error Message of property PubDate of MSBuildExtensionPack.Organization"".
+        /// </summary>
+        public static string Required_Field_Error_Message_of_property_PubDate_of_MSBuildExtensionPack_Organization {
+            get {
+                return ResourceManager.GetString("Required_Field_Error_Message_of_property_PubDate_of_MSBuildExtensionPack_Organization", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Value Validation Error Message of property PubDate of MSBuildExtensionPack.Organization"".
+        /// </summary>
+        public static string Value_Validation_Error_Message_of_property_PubDate_of_MSBuildExtensionPack_Organization {
+            get {
+                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_PubDate_of_MSBuildExtensionPack_Organization", resourceCulture);
             }
         }
 
@@ -4329,108 +4302,54 @@ namespace MSBuildExtensionPack.Resx {
         /// <summary>
         ///   Looks up a localized string similar to "UniqueIdentifier"".
         /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier {
+        public static string IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC {
             get {
-                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier", resourceCulture);
+                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Description of UniqueIdentifier"".
         /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier {
+        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC {
             get {
-                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier", resourceCulture);
+                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Tooltip of UniqueIdentifier"".
         /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier {
+        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC {
             get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier", resourceCulture);
+                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "UniqueIdentifier of Organization"".
         /// </summary>
-        public static string ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier {
+        public static string ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC {
             get {
-                return ResourceManager.GetString("ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier", resourceCulture);
+                return ResourceManager.GetString("ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Description of UniqueIdentifier of Organization"".
         /// </summary>
-        public static string Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier {
+        public static string Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC {
             get {
-                return ResourceManager.GetString("Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier", resourceCulture);
+                return ResourceManager.GetString("Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC", resourceCulture);
             }
         }
 
         /// <summary>
         ///   Looks up a localized string similar to "Tooltip of UniqueIdentifier of Organization"".
         /// </summary>
-        public static string Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier {
+        public static string Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC {
             get {
-                return ResourceManager.GetString("Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "UniqueidentifierColumn"".
-        /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn {
-            get {
-                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of UniqueidentifierColumn"".
-        /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of UniqueidentifierColumn"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "UniqueidentifierColumn of Organization"".
-        /// </summary>
-        public static string ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn {
-            get {
-                return ResourceManager.GetString("ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of UniqueidentifierColumn of Organization"".
-        /// </summary>
-        public static string Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn {
-            get {
-                return ResourceManager.GetString("Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of UniqueidentifierColumn of Organization"".
-        /// </summary>
-        public static string Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn {
-            get {
-                return ResourceManager.GetString("Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn", resourceCulture);
+                return ResourceManager.GetString("Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC", resourceCulture);
             }
         }
 
@@ -4539,60 +4458,6 @@ namespace MSBuildExtensionPack.Resx {
         public static string Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint {
             get {
                 return ResourceManager.GetString("Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "UniqueidentifierColumn"".
-        /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint {
-            get {
-                return ResourceManager.GetString("IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of UniqueidentifierColumn"".
-        /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint {
-            get {
-                return ResourceManager.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of UniqueidentifierColumn"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint {
-            get {
-                return ResourceManager.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "UniqueidentifierColumn of Organization"".
-        /// </summary>
-        public static string ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint {
-            get {
-                return ResourceManager.GetString("ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of UniqueidentifierColumn of Organization"".
-        /// </summary>
-        public static string Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint {
-            get {
-                return ResourceManager.GetString("Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of UniqueidentifierColumn of Organization"".
-        /// </summary>
-        public static string Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint {
-            get {
-                return ResourceManager.GetString("Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint", resourceCulture);
             }
         }
 

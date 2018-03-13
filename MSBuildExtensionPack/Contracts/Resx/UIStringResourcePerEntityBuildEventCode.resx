@@ -211,6 +211,18 @@
   <data name="The_length_of_Description_should_be_0_to_1500" xml:space="preserve">
     <value>The length of Description should be 0 to 1500</value>
   </data>
+  <data name="Required_Field_Error_Message_of_property_Id_of_MSBuildExtensionPack_BuildEventCode" xml:space="preserve">
+    <value>Required Field Error Message of property Id of MSBuildExtensionPack.BuildEventCode</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Id_of_MSBuildExtensionPack_BuildEventCode" xml:space="preserve">
+    <value>Value Validation Error Message of property Id of MSBuildExtensionPack.BuildEventCode</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_EventCode_of_MSBuildExtensionPack_BuildEventCode" xml:space="preserve">
+    <value>Required Field Error Message of property EventCode of MSBuildExtensionPack.BuildEventCode</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_EventCode_of_MSBuildExtensionPack_BuildEventCode" xml:space="preserve">
+    <value>Value Validation Error Message of property EventCode of MSBuildExtensionPack.BuildEventCode</value>
+  </data>
   <data name="Value" xml:space="preserve">
     <value>Value</value>
   </data>
@@ -252,18 +264,6 @@
   </data>
   <data name="Value_Validation_Error_Message_of_property_Description_of_MSBuildExtensionPack_BuildEventCode" xml:space="preserve">
     <value>Value Validation Error Message of property Description of MSBuildExtensionPack.BuildEventCode</value>
-  </data>
-  <data name="Required_Field_Error_Message_of_property_Id_of_MSBuildExtensionPack_BuildEventCode" xml:space="preserve">
-    <value>Required Field Error Message of property Id of MSBuildExtensionPack.BuildEventCode</value>
-  </data>
-  <data name="Value_Validation_Error_Message_of_property_Id_of_MSBuildExtensionPack_BuildEventCode" xml:space="preserve">
-    <value>Value Validation Error Message of property Id of MSBuildExtensionPack.BuildEventCode</value>
-  </data>
-  <data name="Required_Field_Error_Message_of_property_EventCode_of_MSBuildExtensionPack_BuildEventCode" xml:space="preserve">
-    <value>Required Field Error Message of property EventCode of MSBuildExtensionPack.BuildEventCode</value>
-  </data>
-  <data name="Value_Validation_Error_Message_of_property_EventCode_of_MSBuildExtensionPack_BuildEventCode" xml:space="preserve">
-    <value>Value Validation Error Message of property EventCode of MSBuildExtensionPack.BuildEventCode</value>
   </data>
   <data name="IsToCompare_ID_CheckBox_Search_isToCompareEventCodeCommonOftOfCommon" xml:space="preserve">
     <value>EventCode</value>

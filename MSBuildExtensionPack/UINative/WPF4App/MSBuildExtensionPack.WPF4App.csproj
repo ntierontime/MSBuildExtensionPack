@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -39,14 +39,6 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="OxyPlot">
-      <HintPath>..\..\..\packages\OxyPlot.Core.1.0.0\lib\net45\OxyPlot.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="OxyPlot.Wpf">
-      <HintPath>..\..\..\packages\OxyPlot.Wpf.1.0.0\lib\net45\OxyPlot.Wpf.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -390,13 +382,6 @@
     <Compile Include="Pages\Build\WPCommonOfBuild.xaml.cs">
       <DependentUpon>WPCommonOfBuild.xaml</DependentUpon>
     </Compile>
-    <Page Include="Pages\Build\WPsomethingOfBuild.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="Pages\Build\WPsomethingOfBuild.xaml.cs">
-      <DependentUpon>WPsomethingOfBuild.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\BuildEventCode\WPCommonOfBuildEventCode.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -431,13 +416,6 @@
     </Page>
     <Compile Include="UserControls\Build\UCCommonOfBuild.xaml.cs">
       <DependentUpon>UCCommonOfBuild.xaml</DependentUpon>
-    </Compile>
-    <Page Include="UserControls\Build\UCsomethingOfBuild.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="UserControls\Build\UCsomethingOfBuild.xaml.cs">
-      <DependentUpon>UCsomethingOfBuild.xaml</DependentUpon>
     </Compile>
     <Page Include="UserControls\BuildEventCode\UCCommonOfBuildEventCode.xaml">
       <Generator>MSBuild:Compile</Generator>

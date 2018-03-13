@@ -56,17 +56,5 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         public BuildQueryCriteriaIdentifier Identifier { get; set; } = new BuildQueryCriteriaIdentifier();
     }
 
-    /// <summary>
-    /// BusinessLogicLayerChainedQueryCriteria, key=FKStringContains
-    /// </summary>
-    public class BuildChainedQueryCriteriaFKStringContains
-    {
-        public BuildChainedQueryCriteriaFKStringContains()
-        {
-        }
-
-        public BuildQueryCriteriaFKStringContains FKStringContains { get; set; } = new BuildQueryCriteriaFKStringContains();
-    }
-
 }
 

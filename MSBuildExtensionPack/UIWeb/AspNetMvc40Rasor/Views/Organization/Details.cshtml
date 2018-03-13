@@ -26,7 +26,7 @@
                 </div>
                 <div class="form-group" >
                     @Html.LabelFor(model => model.Item.ParentId, new { @class = "control-label" })
-                        @Html.ActionLink(Model.Item.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Item.ParentId, uniqueIdentifier = Model.Item.Organization_2_UniqueIdentifier, uniqueidentifierColumn = Model.Item.Organization_2_UniqueidentifierColumn }, null)
+                        @Html.ActionLink(Model.Item.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Item.ParentId, uniqueIdentifier = Model.Item.Organization_2_UniqueIdentifier }, null)
                 </div>
                 <div class="form-group" >
                         <div class="form-control">
@@ -204,12 +204,12 @@
             <div class="panel-footer nopadding">
                 <div class="btn-group btn-group-justified" role="group" aria-label="...">
                     <div class="btn-group">
-                        <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Edit, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = default(System.Guid), isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = default(System.Guid) })" class="btn btn-default" role="button" type="button">
+                        <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Edit, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = default(System.Guid) })" class="btn btn-default" role="button" type="button">
                             <span class="glyphicon glyphicon-edit"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.Edit</span>
                         </a>
                     </div>
                     <div class="btn-group">
-                        <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Delete, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = default(System.Guid), isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = default(System.Guid) })" class="btn btn-default" role="button" type="button">
+                        <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Delete, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = default(System.Guid) })" class="btn btn-default" role="button" type="button">
                             <span class="glyphicon glyphicon-trash"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.Delete</span>
                         </a>
                     </div>
@@ -219,7 +219,7 @@
                         </a>
                     </div>
                     <div class="btn-group">
-                        <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Copy, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = default(System.Guid), isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = default(System.Guid) })" class="btn btn-default" role="button" type="button">
+                        <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Copy, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Item.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = default(System.Guid) })" class="btn btn-default" role="button" type="button">
                             <span class="glyphicon glyphicon-copy"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resx.UIStringResource.Copy</span>
                         </a>
                     </div>

@@ -97,34 +97,6 @@ namespace MSBuildExtensionPack.DALContracts
 
         #endregion Query Methods Of RssItemByAll
 
-        #region Query Methods Of NameValuePairByFKOnly
-
-        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfNameValuePairByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            );
-
-        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfNameValuePairByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            );
-
-        Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection GetCollectionOfNameValuePairByFKOnly(
-            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
-            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
-            ,int currentIndex
-            ,int pageSize
-            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            );
-
-        #endregion Query Methods Of NameValuePairByFKOnly
-
         #region Query Methods Of DefaultByFKOnly
 
         Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfDefaultByFKOnly(
@@ -180,6 +152,34 @@ namespace MSBuildExtensionPack.DALContracts
             );
 
         #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
+
+        #region Query Methods Of NameValuePairByFKOnly
+
+        Framework.DataSourceEntities.DataAccessLayerMessageOfInteger GetCountOfNameValuePairByFKOnly(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            );
+
+        Framework.DataSourceEntities.DataAccessLayerMessageOfBoolean ExistsOfNameValuePairByFKOnly(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            );
+
+        Framework.DataSourceEntities.DataAccessLayerMessageOfNameValuePairEntityCollection GetCollectionOfNameValuePairByFKOnly(
+            Framework.EntityContracts.QuerySystemInt64EqualsCriteria organizationId
+            ,Framework.EntityContracts.QuerySystemInt64EqualsCriteria organization_2Id
+            ,int currentIndex
+            ,int pageSize
+            ,Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            );
+
+        #endregion Query Methods Of NameValuePairByFKOnly
 
         #region Query Methods Of EntityByIdentifier
 

@@ -213,7 +213,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         #endregion Method of Build GetAClone()
 
-        #region Nested Views classes and their collection classes 4
+        #region Nested Views classes and their collection classes 3
 
         /// <summary>
         /// View "Default" class of <see cref="Build"/>, used across the solution.
@@ -231,15 +231,11 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         System.Guid m_Organization_1_UniqueIdentifier;
 
-        System.Guid m_Organization_1_UniqueidentifierColumn;
-
         System.String m_Organization_1_Name;
 
         System.Int64 m_Organization_2Id;
 
         System.Guid m_Organization_2_UniqueIdentifier;
-
-        System.Guid m_Organization_2_UniqueidentifierColumn;
 
         System.String m_Organization_2_Name;
 
@@ -265,11 +261,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
                 this.Id = default(long);
                 this.Organization_1Id = default(long);
                 this.Organization_1_UniqueIdentifier = new Guid();
-                this.Organization_1_UniqueidentifierColumn = new Guid();
                 this.Organization_1_Name = null;
                 this.Organization_2Id = default(long);
                 this.Organization_2_UniqueIdentifier = new Guid();
-                this.Organization_2_UniqueidentifierColumn = new Guid();
                 this.Organization_2_Name = null;
                 this.SolutionId = default(int);
                 this.Name = null;
@@ -348,20 +342,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
                     [DataMember]
-        [Display(Name = "Organization_1_UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild))]        public System.Guid Organization_1_UniqueidentifierColumn
-        {
-            get
-            {
-                return m_Organization_1_UniqueidentifierColumn;
-            }
-            set
-            {
-                m_Organization_1_UniqueidentifierColumn = value;
-                RaisePropertyChanged("Organization_1_UniqueidentifierColumn");
-            }
-        }
-
-                    [DataMember]
         [Display(Name = "Organization_1_Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild))]        public System.String Organization_1_Name
         {
             get
@@ -400,20 +380,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
             {
                 m_Organization_2_UniqueIdentifier = value;
                 RaisePropertyChanged("Organization_2_UniqueIdentifier");
-            }
-        }
-
-                    [DataMember]
-        [Display(Name = "Organization_2_UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild))]        public System.Guid Organization_2_UniqueidentifierColumn
-        {
-            get
-            {
-                return m_Organization_2_UniqueidentifierColumn;
-            }
-            set
-            {
-                m_Organization_2_UniqueidentifierColumn = value;
-                RaisePropertyChanged("Organization_2_UniqueidentifierColumn");
             }
         }
 
@@ -508,11 +474,9 @@ namespace MSBuildExtensionPack.DataSourceEntities
             cloned.m_Id = m_Id;
             cloned.m_Organization_1Id = m_Organization_1Id;
             cloned.m_Organization_1_UniqueIdentifier = m_Organization_1_UniqueIdentifier;
-            cloned.m_Organization_1_UniqueidentifierColumn = m_Organization_1_UniqueidentifierColumn;
             cloned.m_Organization_1_Name = m_Organization_1_Name;
             cloned.m_Organization_2Id = m_Organization_2Id;
             cloned.m_Organization_2_UniqueIdentifier = m_Organization_2_UniqueIdentifier;
-            cloned.m_Organization_2_UniqueidentifierColumn = m_Organization_2_UniqueidentifierColumn;
             cloned.m_Organization_2_Name = m_Organization_2_Name;
             cloned.m_SolutionId = m_SolutionId;
             cloned.m_Name = m_Name;
@@ -828,133 +792,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         {
         }
 
-        /// <summary>
-        /// View "UpdateNameRequest" class of <see cref="Build"/>, used across the solution.
-        /// </summary>
-        public partial class UpdateNameRequest :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IBuildIdentifier, Framework.EntityContracts.IClone<UpdateNameRequest>
-        {
-
-            #region Storage Fields
-
-        System.String m_Name;
-
-        System.Int64 m_Id;
-
-            #endregion Storage Fields
-
-            #region Constructors
-
-            /// <summary>
-            /// Initializes/clone a new instance of the <see cref=" Build"/> class.
-            /// </summary>
-            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IBuild"/></param>
-            public UpdateNameRequest()
-            {
-                this.Name = null;
-                this.Id = default(long);
-            }
-            /*
-            /// <summary>
-            /// Initializes/clone a new instance of the <see cref=" Build"/> class.
-            /// </summary>
-            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IBuild"/></param>
-            public UpdateNameRequest(MSBuildExtensionPack.EntityContracts.IBuild item)
-            {
-                MSBuildExtensionPack.EntityContracts.IBuildHelper.Copy<MSBuildExtensionPack.EntityContracts.IBuild, UpdateNameRequest>(item, this);
-            }
-            */
-            #endregion Constructors
-
-            #region properties
-
-                    [DataMember]
-        [Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild))]
-        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild), ErrorMessageResourceName="Name_is_required")]
-        [StringLengthAttribute(100, ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_100")]        public System.String Name
-        {
-            get
-            {
-                return m_Name;
-            }
-            set
-            {
-                m_Name = value;
-                RaisePropertyChanged("Name");
-            }
-        }
-
-                    [DataMember]
-        [Display(Name = "Id", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild))]
-        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild), ErrorMessageResourceName="Id_is_required")]        public System.Int64 Id
-        {
-            get
-            {
-                return m_Id;
-            }
-            set
-            {
-                m_Id = value;
-                RaisePropertyChanged("Id");
-            }
-        }
-
-            #endregion properties
-
-            #region Method of Build.UpdateNameRequest  GetAClone()
-
-            /// <summary>
-            /// Gets the A clone.
-            /// </summary>
-            /// <returns>a new instance with same value</returns>
-            public UpdateNameRequest GetAClone()
-            {
-                UpdateNameRequest cloned = new UpdateNameRequest();
-
-            cloned.m_Name = m_Name;
-            cloned.m_Id = m_Id;
-
-                return cloned;
-            }
-
-            /// <summary>
-            /// Gets the A clone.
-            /// </summary>
-            /// <returns>a new instance with same value</returns>
-            public UpdateNameRequest GetACloneWithoutIdentifier()
-            {
-                UpdateNameRequest cloned = GetAClone();
-
-                return cloned;
-            }
-
-            #endregion Method of Build.UpdateNameRequest  GetAClone()
-        }
-
-        /// <summary>
-        /// View "UpdateNameRequest" class of <see cref="Build"/>, used across the solution.
-        /// </summary>
-        public partial class UpdateNameRequestCollection
-            :  List<UpdateNameRequest>
-        {
-        }
-
-        /// <summary>
-        /// message definition of "UpdateNameRequest", pass single entry, from database, to business logic layer. <see cref="Build"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
-        /// </summary>
-        public class DataAccessLayerMessageOfUpdateNameRequest
-            : Framework.DataSourceEntities.DataAccessLayerMessageBase<UpdateNameRequest>
-        {
-        }
-
-        /// <summary>
-        /// message definition of "UpdateNameRequest", pass a collection of instances, from database, to business logic layer. <see cref="Build"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
-        /// </summary>
-        public class DataAccessLayerMessageOfUpdateNameRequestCollection
-            : Framework.DataSourceEntities.DataAccessLayerMessageBase<UpdateNameRequestCollection>
-        {
-        }
-
-        #endregion Nested Views classes and their collection classes 4
+        #endregion Nested Views classes and their collection classes 3
     }
 
     /// <summary>

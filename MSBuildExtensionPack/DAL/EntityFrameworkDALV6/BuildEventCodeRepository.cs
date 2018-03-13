@@ -553,8 +553,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             var _ResultFromDataSource =
                 (
                     from t in this.LinqContext.BuildEventCodes
-                    select new Framework.NameValuePair { Value = t.Id.ToString(), Name = t.EventCode } into vD0
-                    select vD0
+                    select new Framework.NameValuePair { Value = t.Id.ToString(), Name = t.EventCode } into vD1
+                    select vD1
                 );
             var _retval = _ResultFromDataSource;
             IQueryable<Framework.NameValuePair> _retval1;
@@ -742,8 +742,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
             var _ResultFromDataSource =
                 (
                     from t in this.LinqContext.BuildEventCodes
-                    select new Framework.RssItem { IdentifierInString = t.Id.ToString(), Title = t.EventCode, Description = t.EventCode } into vD1
-                    select vD1
+                    select new Framework.RssItem { IdentifierInString = t.Id.ToString(), Title = t.EventCode, Description = t.EventCode } into vD2
+                    select vD2
                 );
             var _retval = _ResultFromDataSource;
             IQueryable<Framework.RssItem> _retval1;
@@ -1145,8 +1145,8 @@ namespace MSBuildExtensionPack.EntityFrameworkDAL
                             (id.IsToCompare == false || id.IsToCompare && t.Id == id.ValueToCompare)
                             )
                         )
-                    select new MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation { Id = t.Id, EventCode = t.EventCode } into vD2
-                    select vD2
+                    select new MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation { Id = t.Id, EventCode = t.EventCode } into vD0
+                    select vD0
                 );
             var _retval = _ResultFromDataSource;
             IQueryable<MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation> _retval1;

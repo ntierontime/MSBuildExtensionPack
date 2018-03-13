@@ -224,8 +224,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         System.Guid m_Organization_1_UniqueIdentifier;
 
-        System.Guid m_Organization_1_UniqueidentifierColumn;
-
         System.String m_Organization_1_Name;
 
         System.Int32 m_Id;
@@ -233,8 +231,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
         System.Int64 m_Organization_2Id;
 
         System.Guid m_Organization_2_UniqueIdentifier;
-
-        System.Guid m_Organization_2_UniqueidentifierColumn;
 
         System.String m_Organization_2_Name;
 
@@ -257,12 +253,10 @@ namespace MSBuildExtensionPack.DataSourceEntities
             public Default()
             {
                 this.Organization_1_UniqueIdentifier = new Guid();
-                this.Organization_1_UniqueidentifierColumn = new Guid();
                 this.Organization_1_Name = null;
                 this.Id = default(int);
                 this.Organization_2Id = default(long);
                 this.Organization_2_UniqueIdentifier = new Guid();
-                this.Organization_2_UniqueidentifierColumn = new Guid();
                 this.Organization_2_Name = null;
                 this.ExternalParentId = null;
                 this.Name = null;
@@ -294,20 +288,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
             {
                 m_Organization_1_UniqueIdentifier = value;
                 RaisePropertyChanged("Organization_1_UniqueIdentifier");
-            }
-        }
-
-                    [DataMember]
-        [Display(Name = "Organization_1_UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.Guid Organization_1_UniqueidentifierColumn
-        {
-            get
-            {
-                return m_Organization_1_UniqueidentifierColumn;
-            }
-            set
-            {
-                m_Organization_1_UniqueidentifierColumn = value;
-                RaisePropertyChanged("Organization_1_UniqueidentifierColumn");
             }
         }
 
@@ -365,20 +345,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
             {
                 m_Organization_2_UniqueIdentifier = value;
                 RaisePropertyChanged("Organization_2_UniqueIdentifier");
-            }
-        }
-
-                    [DataMember]
-        [Display(Name = "Organization_2_UniqueidentifierColumn", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution))]        public System.Guid Organization_2_UniqueidentifierColumn
-        {
-            get
-            {
-                return m_Organization_2_UniqueidentifierColumn;
-            }
-            set
-            {
-                m_Organization_2_UniqueidentifierColumn = value;
-                RaisePropertyChanged("Organization_2_UniqueidentifierColumn");
             }
         }
 
@@ -469,12 +435,10 @@ namespace MSBuildExtensionPack.DataSourceEntities
                 Default cloned = new Default();
 
             cloned.m_Organization_1_UniqueIdentifier = m_Organization_1_UniqueIdentifier;
-            cloned.m_Organization_1_UniqueidentifierColumn = m_Organization_1_UniqueidentifierColumn;
             cloned.m_Organization_1_Name = m_Organization_1_Name;
             cloned.m_Id = m_Id;
             cloned.m_Organization_2Id = m_Organization_2Id;
             cloned.m_Organization_2_UniqueIdentifier = m_Organization_2_UniqueIdentifier;
-            cloned.m_Organization_2_UniqueidentifierColumn = m_Organization_2_UniqueidentifierColumn;
             cloned.m_Organization_2_Name = m_Organization_2_Name;
             cloned.m_ExternalParentId = m_ExternalParentId;
             cloned.m_Name = m_Name;

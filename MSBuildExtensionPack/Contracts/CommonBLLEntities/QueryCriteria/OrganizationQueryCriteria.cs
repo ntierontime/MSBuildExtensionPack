@@ -70,27 +70,15 @@ namespace MSBuildExtensionPack.CommonBLLEntities
     }
 
     /// <summary>
-    /// BusinessLogicLayerQueryCriteria, key=UniqueConstraintByUC_Organization_UniqueIdentifier
+    /// BusinessLogicLayerQueryCriteria, key=UniqueConstraintByUC
     /// </summary>
-    public partial class OrganizationQueryCriteriaUniqueConstraintByUC_Organization_UniqueIdentifier
+    public partial class OrganizationQueryCriteriaUniqueConstraintByUC
     {
-        public OrganizationQueryCriteriaUniqueConstraintByUC_Organization_UniqueIdentifier()
+        public OrganizationQueryCriteriaUniqueConstraintByUC()
         {
         }
 
         public QuerySystemGuidEqualsCriteria UniqueIdentifier { get; set; } = new QuerySystemGuidEqualsCriteria();
-    }
-
-    /// <summary>
-    /// BusinessLogicLayerQueryCriteria, key=UniqueConstraintByUC_Organization_UniqueidentifierColumn
-    /// </summary>
-    public partial class OrganizationQueryCriteriaUniqueConstraintByUC_Organization_UniqueidentifierColumn
-    {
-        public OrganizationQueryCriteriaUniqueConstraintByUC_Organization_UniqueidentifierColumn()
-        {
-        }
-
-        public QuerySystemGuidEqualsCriteria UniqueidentifierColumn { get; set; } = new QuerySystemGuidEqualsCriteria();
     }
 
     /// <summary>
@@ -104,7 +92,6 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 
         public QuerySystemInt64EqualsCriteria Id { get; set; } = new QuerySystemInt64EqualsCriteria();
         public QuerySystemGuidEqualsCriteria UniqueIdentifier { get; set; } = new QuerySystemGuidEqualsCriteria();
-        public QuerySystemGuidEqualsCriteria UniqueidentifierColumn { get; set; } = new QuerySystemGuidEqualsCriteria();
     }
 
 }

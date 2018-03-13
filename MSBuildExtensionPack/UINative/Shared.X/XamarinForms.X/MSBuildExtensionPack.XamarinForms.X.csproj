@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -215,97 +215,6 @@
     <Compile Include="Pages\Build\WPTabbedCommonOfBuild.xaml.cs">
       <DependentUpon>WPTabbedCommonOfBuild.xaml</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Pages\Build\WPsomethingSearchOfBuild.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Pages\Build\WPsomethingSearchOfBuild.xaml.cs">
-      <DependentUpon>WPsomethingSearchOfBuild.xaml</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Pages\Build\WPsomethingResultOfBuild.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Pages\Build\WPsomethingResultOfBuild.xaml.cs">
-      <DependentUpon>WPsomethingResultOfBuild.xaml</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Pages\Build\WPsomethingTabOfBuild.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Pages\Build\WPsomethingTabOfBuild.xaml.cs">
-      <DependentUpon>WPsomethingTabOfBuild.xaml</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Pages\Build\WPxTabSomethingSearchOfBuild.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Pages\Build\WPxTabSomethingSearchOfBuild.xaml.cs">
-      <DependentUpon>WPxTabSomethingSearchOfBuild.xaml</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Pages\Build\WPxTabSomethingResultsOfBuild.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Pages\Build\WPxTabSomethingResultsOfBuild.xaml.cs">
-      <DependentUpon>WPxTabSomethingResultsOfBuild.xaml</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Pages\Build\WPxTabSomethingTabContainerOfBuild.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Pages\Build\WPxTabSomethingTabContainerOfBuild.xaml.cs">
-      <DependentUpon>WPxTabSomethingTabContainerOfBuild.xaml</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Pages\Build\WPxTabFullDetailsMasterViewOfBuild.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Pages\Build\WPxTabFullDetailsMasterViewOfBuild.xaml.cs">
-      <DependentUpon>WPxTabFullDetailsMasterViewOfBuild.xaml</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Pages\Build\WPxTabFullDetailsAncestorsSolution_1OfBuild.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Pages\Build\WPxTabFullDetailsAncestorsSolution_1OfBuild.xaml.cs">
-      <DependentUpon>WPxTabFullDetailsAncestorsSolution_1OfBuild.xaml</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Pages\Build\WPxTabFullDetailsAncestorsOrganization_1OfBuild.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Pages\Build\WPxTabFullDetailsAncestorsOrganization_1OfBuild.xaml.cs">
-      <DependentUpon>WPxTabFullDetailsAncestorsOrganization_1OfBuild.xaml</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Pages\Build\WPxTabFullDetailsAncestorsOrganization_2OfBuild.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Pages\Build\WPxTabFullDetailsAncestorsOrganization_2OfBuild.xaml.cs">
-      <DependentUpon>WPxTabFullDetailsAncestorsOrganization_2OfBuild.xaml</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Pages\Build\WPxTabFullDetailsFK_BuildLog_BuildOfBuild.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Pages\Build\WPxTabFullDetailsFK_BuildLog_BuildOfBuild.xaml.cs">
-      <DependentUpon>WPxTabFullDetailsFK_BuildLog_BuildOfBuild.xaml</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Pages\Build\WPxTabFullDetailsTabContainerOfBuild.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Pages\Build\WPxTabFullDetailsTabContainerOfBuild.xaml.cs">
-      <DependentUpon>WPxTabFullDetailsTabContainerOfBuild.xaml</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Pages\Build\WPelseA1AsomethingOfBuild.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Pages\Build\WPelseA1AsomethingOfBuild.xaml.cs">
-      <DependentUpon>WPelseA1AsomethingOfBuild.xaml</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Pages\BuildEventCode\WPCommonSearchViewOfBuildEventCode.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
@@ -473,14 +382,6 @@
     </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
-    </Reference>
-    <Reference Include="OxyPlot">
-      <HintPath>..\..\..\..\packages\OxyPlot.Core.1.0.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1+Xamarin.iOS10\OxyPlot.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="OxyPlot.Xamarin.Forms">
-      <HintPath>..\..\..\..\packages\OxyPlot.Xamarin.Forms.1.0.0\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10\OxyPlot.Xamarin.Forms.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="PCLAppConfig, Version=0.2.0.0, Culture=neutral, PublicKeyToken=7dc9bc9afb3fa588, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\PCLAppConfig.0.3.2\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\PCLAppConfig.dll</HintPath>

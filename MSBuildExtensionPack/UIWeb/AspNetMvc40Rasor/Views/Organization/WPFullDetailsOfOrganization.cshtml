@@ -65,12 +65,12 @@
             <tr>
 <td><div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.FK_Organization_ParentId[i].Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.FK_Organization_ParentId[i].UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.FK_Organization_ParentId[i].UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetails">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.FK_Organization_ParentId[i].Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.FK_Organization_ParentId[i].UniqueIdentifier })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetails">
         <span class="glyphicon glyphicon-briefcase"></span>
     </a>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Edit, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.FK_Organization_ParentId[i].Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.FK_Organization_ParentId[i].UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.FK_Organization_ParentId[i].UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="EditToolBarRightInList" title="@Framework.Resx.UIStringResource.Edit">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Edit, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.FK_Organization_ParentId[i].Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.FK_Organization_ParentId[i].UniqueIdentifier })" class="btn btn-default" role="button" type="button" name="EditToolBarRightInList" title="@Framework.Resx.UIStringResource.Edit">
         <span class="glyphicon glyphicon-edit"></span>
     </a>
 </div>
@@ -78,7 +78,7 @@
 </td>
 <td class="hidden-sm">@Html.DisplayFor(model => model.FK_Organization_ParentId[i].Id)</td>
 <td>@Html.DisplayFor(model => model.FK_Organization_ParentId[i].CreatedDateTime)</td>
-<td>@Html.ActionLink(Model.FK_Organization_ParentId[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.FK_Organization_ParentId[i].ParentId, uniqueIdentifier = Model.FK_Organization_ParentId[i].Organization_2_UniqueIdentifier, uniqueidentifierColumn = Model.FK_Organization_ParentId[i].Organization_2_UniqueidentifierColumn }, null)</td>
+<td>@Html.ActionLink(Model.FK_Organization_ParentId[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.FK_Organization_ParentId[i].ParentId, uniqueIdentifier = Model.FK_Organization_ParentId[i].Organization_2_UniqueIdentifier }, null)</td>
 <td>@Html.DisplayFor(model => model.FK_Organization_ParentId[i].IsSystemBuiltIn)</td>
 <td class="hidden-xs">@Html.DisplayFor(model => model.FK_Organization_ParentId[i].BitColumn)</td>
 <td class="hidden-xs">@Html.DisplayFor(model => model.FK_Organization_ParentId[i].Name)</td>
@@ -159,8 +159,8 @@
 </div>
 </td>
 <td class="hidden-sm">@Html.DisplayFor(model => model.FK_Solution_OrganizationId[i].Id)</td>
-<td>@Html.ActionLink(Model.FK_Solution_OrganizationId[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.FK_Solution_OrganizationId[i].Organization_2Id, uniqueIdentifier = Model.FK_Solution_OrganizationId[i].Organization_2_UniqueIdentifier, uniqueidentifierColumn = Model.FK_Solution_OrganizationId[i].Organization_2_UniqueidentifierColumn }, null)</td>
-<td>@Html.ActionLink(Model.FK_Solution_OrganizationId[i].Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.FK_Solution_OrganizationId[i].OrganizationId, uniqueIdentifier = Model.FK_Solution_OrganizationId[i].Organization_1_UniqueIdentifier, uniqueidentifierColumn = Model.FK_Solution_OrganizationId[i].Organization_1_UniqueidentifierColumn }, null)</td>
+<td>@Html.ActionLink(Model.FK_Solution_OrganizationId[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.FK_Solution_OrganizationId[i].Organization_2Id, uniqueIdentifier = Model.FK_Solution_OrganizationId[i].Organization_2_UniqueIdentifier }, null)</td>
+<td>@Html.ActionLink(Model.FK_Solution_OrganizationId[i].Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.FK_Solution_OrganizationId[i].OrganizationId, uniqueIdentifier = Model.FK_Solution_OrganizationId[i].Organization_1_UniqueIdentifier }, null)</td>
 <td>@Html.DisplayFor(model => model.FK_Solution_OrganizationId[i].ExternalParentId)</td>
 <td class="hidden-xs">@Html.DisplayFor(model => model.FK_Solution_OrganizationId[i].Name)</td>
 <td class="hidden-xs">@Html.DisplayFor(model => model.FK_Solution_OrganizationId[i].Description)</td>
@@ -192,7 +192,7 @@
 { // Item
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Edit, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="EditToolBarUp" title="@Framework.Resx.UIStringResource.Edit">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Edit, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.UniqueIdentifier })" class="btn btn-default" role="button" type="button" name="EditToolBarUp" title="@Framework.Resx.UIStringResource.Edit">
         <span class="glyphicon glyphicon-edit"></span>
     </a>
 </div>
@@ -202,12 +202,12 @@
     </a>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Copy, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="CopyToolBarUp" title="@Framework.Resx.UIStringResource.Copy">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Copy, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.UniqueIdentifier })" class="btn btn-default" role="button" type="button" name="CopyToolBarUp" title="@Framework.Resx.UIStringResource.Copy">
         <span class="glyphicon glyphicon-copy"></span>
     </a>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Details, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="DetailsToolBarUp" title="@Framework.Resx.UIStringResource.Details">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_Details, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.UniqueIdentifier })" class="btn btn-default" role="button" type="button" name="DetailsToolBarUp" title="@Framework.Resx.UIStringResource.Details">
         <span class="glyphicon glyphicon-file"></span>
     </a>
 </div>
@@ -232,7 +232,7 @@
                 </div>
                 <div class="form-group" >
                     @Html.LabelFor(model => model.MasterEntity.ParentId, new { @class = "control-label" })
-                        @Html.ActionLink(Model.MasterEntity.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.MasterEntity.ParentId, uniqueIdentifier = Model.MasterEntity.Organization_2_UniqueIdentifier, uniqueidentifierColumn = Model.MasterEntity.Organization_2_UniqueidentifierColumn }, null)
+                        @Html.ActionLink(Model.MasterEntity.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.MasterEntity.ParentId, uniqueIdentifier = Model.MasterEntity.Organization_2_UniqueIdentifier }, null)
                 </div>
                 <div class="form-group" >
                         <div class="form-control">
@@ -417,7 +417,7 @@
     </a>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetails">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.MasterEntity.UniqueIdentifier })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetails">
         <span class="glyphicon glyphicon-briefcase"></span>
     </a>
 </div>
@@ -450,7 +450,7 @@
     </a>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetails">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.UniqueIdentifier })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetails">
         <span class="glyphicon glyphicon-briefcase"></span>
     </a>
 </div>
@@ -484,12 +484,6 @@
                             @Html.DisplayFor(model => model.Organization_2.UniqueIdentifier)
                         </div>
                 </div>
-                <div class="form-group" >
-                    @Html.LabelFor(model => model.Organization_2.UniqueidentifierColumn, new { @class = "control-label" })
-                        <div class="form-control">
-                            @Html.DisplayFor(model => model.Organization_2.UniqueidentifierColumn)
-                        </div>
-                </div>
         </div>
 }
 @if (Model.StatusOfOrganization_2 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady && Model.StatusOfOrganization_2 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -501,7 +495,7 @@
     </a>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.UniqueIdentifier, isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.UniqueidentifierColumn })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetails">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.Organization_2.UniqueIdentifier })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resx.UIStringResource.FullDetails">
         <span class="glyphicon glyphicon-briefcase"></span>
     </a>
 </div>

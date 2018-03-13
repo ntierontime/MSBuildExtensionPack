@@ -113,13 +113,11 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_WPFullDetailsOfOrganization)]
         public ActionResult WPFullDetailsOfOrganization(System.Int64? id
-            , System.Guid? uniqueIdentifier
-            , System.Guid? uniqueidentifierColumn)
+            , System.Guid? uniqueIdentifier)
         {
             var criteria = new MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaIdentifierAndUniqueConstraint();
             criteria.IdentifierAndUniqueConstraint.Id.NullableValueToCompare = id;
             criteria.IdentifierAndUniqueConstraint.UniqueIdentifier.NullableValueToCompare = uniqueIdentifier;
-            criteria.IdentifierAndUniqueConstraint.UniqueidentifierColumn.NullableValueToCompare = uniqueidentifierColumn;
             MSBuildExtensionPack.AspNetMvc40ViewModel.WPFullDetailsOfOrganizationVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.WPFullDetailsOfOrganizationVM(criteria);
             vm.LoadData();
 
@@ -136,7 +134,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Import)]
         public ActionResult Import(HttpPostedFileBase file)
         {
-            ViewBag.FileFormat = "Organization_2_UniqueIdentifier,Organization_2_UniqueidentifierColumn,Organization_2_Name,Id,ParentId,Name,IsSystemBuiltIn,UniqueIdentifier,CreatedDateTime,CharColumn,VarcharColumn,TextColumn,NcharColumn,NvarcharColumn,NtextColumn,BitColumn,BinaryColumn,VarbinaryColumn,ImageColumn,TinyintColumn,SmallintColumn,IntColumn,BigintColumn,DecimalColumn,NumericColumn,SmallmoneyColumn,MoneyColumn,FloatColumn,RealColumn,DatetimeColumn,Datetime2Column,SmalldatetimeColumn,DateColumn,TimeColumn,UniqueidentifierColumn";
+            ViewBag.FileFormat = "Organization_2_UniqueIdentifier,Organization_2_Name,Id,ParentId,Name,IsSystemBuiltIn,UniqueIdentifier,CreatedDateTime,CharColumn,VarcharColumn,TextColumn,NcharColumn,NvarcharColumn,NtextColumn,BitColumn,BinaryColumn,VarbinaryColumn,ImageColumn,TinyintColumn,SmallintColumn,IntColumn,BigintColumn,DecimalColumn,NumericColumn,SmallmoneyColumn,MoneyColumn,FloatColumn,RealColumn,DatetimeColumn,Datetime2Column,SmalldatetimeColumn,DateColumn,TimeColumn,UniqueidentifierColumn";
             if (file != null && file.ContentLength > 0 && !string.IsNullOrWhiteSpace(file.FileName))
             {
                 log.Info(string.Format("{0}: Import", Framework.LoggingOptions.UI_Process_Started.ToString()));
@@ -184,7 +182,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 
         #endregion Index()
 
-        #region ActionResult Details(System.Int64? id            , System.Guid? uniqueIdentifier            , System.Guid? uniqueidentifierColumn)
+        #region ActionResult Details(System.Int64? id            , System.Guid? uniqueIdentifier)
 
         /// <summary>
         /// GET method of details page, based on identifier or unique constraint, this entity only, no related entities.
@@ -193,19 +191,18 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Details)]
         public ActionResult Details(System.Int64? id
-            , System.Guid? uniqueIdentifier
-            , System.Guid? uniqueidentifierColumn)
+            , System.Guid? uniqueIdentifier)
         {
             Framework.UIAction uiAction = Framework.UIAction.ViewDetails;
             MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM();
-            vm.Load(id.HasValue, id, uniqueIdentifier.HasValue, uniqueIdentifier, uniqueidentifierColumn.HasValue, uniqueidentifierColumn, uiAction);
+            vm.Load(id.HasValue, id, uniqueIdentifier.HasValue, uniqueIdentifier, uiAction);
             vm.ContentData.Title = Framework.Resx.UIStringResource.Details;
             vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Details_Organization;
 
             return View(vm);
         }
 
-        #endregion ActionResult Details(System.Int64? id            , System.Guid? uniqueIdentifier            , System.Guid? uniqueidentifierColumn)
+        #endregion ActionResult Details(System.Int64? id            , System.Guid? uniqueIdentifier)
 
         #region ActionResult AddNew()
 
@@ -269,11 +266,10 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Copy)]
         public ActionResult Copy(System.Int64? id
-            , System.Guid? uniqueIdentifier
-            , System.Guid? uniqueidentifierColumn)
+            , System.Guid? uniqueIdentifier)
         {
             var _Response =
-                MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfDefaultByIdentifierAndUniqueConstraint(id.HasValue, id, uniqueIdentifier.HasValue, uniqueIdentifier, uniqueidentifierColumn.HasValue, uniqueidentifierColumn, -1, -1, null);
+                MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.GetMessageOfDefaultByIdentifierAndUniqueConstraint(id.HasValue, id, uniqueIdentifier.HasValue, uniqueIdentifier, -1, -1, null);
 
             if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
             {
@@ -286,7 +282,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 
         #endregion ActionResult AddNew()
 
-        #region ActionResult Edit(System.Int64? id            , System.Guid? uniqueIdentifier            , System.Guid? uniqueidentifierColumn)
+        #region ActionResult Edit(System.Int64? id            , System.Guid? uniqueIdentifier)
 
         /// <summary>
         /// GET method of editing page of <see cref="MSBuildExtensionPack.Organization"/>.
@@ -295,12 +291,11 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Edit)]
         public ActionResult Edit(System.Int64? id
-            , System.Guid? uniqueIdentifier
-            , System.Guid? uniqueidentifierColumn)
+            , System.Guid? uniqueIdentifier)
         {
             Framework.UIAction uiAction = Framework.UIAction.Update;
             MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM();
-            vm.Load(id.HasValue, id, uniqueIdentifier.HasValue, uniqueIdentifier, uniqueidentifierColumn.HasValue, uniqueidentifierColumn, uiAction);
+            vm.Load(id.HasValue, id, uniqueIdentifier.HasValue, uniqueIdentifier, uiAction);
             vm.ContentData.Title = Framework.Resx.UIStringResource.Edit;
             vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Edit_Organization;
 
@@ -340,9 +335,9 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             }
         }
 
-        #endregion ActionResult Edit(System.Int64? id            , System.Guid? uniqueIdentifier            , System.Guid? uniqueidentifierColumn)
+        #endregion ActionResult Edit(System.Int64? id            , System.Guid? uniqueIdentifier)
 
-        #region ActionResult Delete(System.Int64? id            , System.Guid? uniqueIdentifier            , System.Guid? uniqueidentifierColumn)
+        #region ActionResult Delete(System.Int64? id            , System.Guid? uniqueIdentifier)
 
         /// <summary>
         /// GET method of delete page of <see cref="MSBuildExtensionPack.Organization"/>
@@ -351,12 +346,11 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Delete)]
         public ActionResult Delete(System.Int64? id
-            , System.Guid? uniqueIdentifier
-            , System.Guid? uniqueidentifierColumn)
+            , System.Guid? uniqueIdentifier)
         {
             Framework.UIAction uiAction = Framework.UIAction.Delete;
             MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM vm = new MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM();
-            vm.Load(id.HasValue, id, uniqueIdentifier.HasValue, uniqueIdentifier, uniqueidentifierColumn.HasValue, uniqueidentifierColumn, uiAction);
+            vm.Load(id.HasValue, id, uniqueIdentifier.HasValue, uniqueIdentifier, uiAction);
             vm.ContentData.Title = Framework.Resx.UIStringResource.Delete;
             vm.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Delete_Organization;
             return View(vm);
@@ -370,13 +364,12 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
         [HttpPost]
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_Delete)]
         public ActionResult Delete(System.Int64? id
-            , System.Guid? uniqueIdentifier
-            , System.Guid? uniqueidentifierColumn, MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM vm, FormCollection collection)
+            , System.Guid? uniqueIdentifier, MSBuildExtensionPack.AspNetMvc40ViewModel.OrganizationItemVM vm, FormCollection collection)
         {
             try
             {
                 log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Started.ToString()));
-                var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.ExistsOfDefaultByIdentifierAndUniqueConstraint(id.HasValue, id, uniqueIdentifier.HasValue, uniqueIdentifier, uniqueidentifierColumn.HasValue, uniqueidentifierColumn, -1, -1, null);
+                var _Response = MSBuildExtensionPack.CommonBLLIoC.IoCOrganization.ExistsOfDefaultByIdentifierAndUniqueConstraint(id.HasValue, id, uniqueIdentifier.HasValue, uniqueIdentifier, -1, -1, null);
                 if (_Response)
                 {
                     MSBuildExtensionPack.DataSourceEntities.Organization entity = MSBuildExtensionPack.EntityContracts.IOrganizationHelper.Clone<MSBuildExtensionPack.DataSourceEntities.Organization.Default, MSBuildExtensionPack.DataSourceEntities.Organization>(vm.Item);
@@ -404,7 +397,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
             }
         }
 
-        #endregion ActionResult Delete(System.Int64? id            , System.Guid? uniqueIdentifier            , System.Guid? uniqueidentifierColumn)
+        #endregion ActionResult Delete(System.Int64? id            , System.Guid? uniqueIdentifier)
 
         #region Binary Columns
 

@@ -817,57 +817,6 @@
   <data name="UniqueidentifierColumn_is_required" xml:space="preserve">
     <value>UniqueidentifierColumn is required</value>
   </data>
-  <data name="Value" xml:space="preserve">
-    <value>Value</value>
-  </data>
-  <data name="Required_Field_Error_Message_of_property_Value_of_MSBuildExtensionPack_Organization" xml:space="preserve">
-    <value>Required Field Error Message of property Value of MSBuildExtensionPack.Organization</value>
-  </data>
-  <data name="Value_Validation_Error_Message_of_property_Value_of_MSBuildExtensionPack_Organization" xml:space="preserve">
-    <value>Value Validation Error Message of property Value of MSBuildExtensionPack.Organization</value>
-  </data>
-  <data name="Required_Field_Error_Message_of_property_Name_of_MSBuildExtensionPack_Organization" xml:space="preserve">
-    <value>Required Field Error Message of property Name of MSBuildExtensionPack.Organization</value>
-  </data>
-  <data name="Value_Validation_Error_Message_of_property_Name_of_MSBuildExtensionPack_Organization" xml:space="preserve">
-    <value>Value Validation Error Message of property Name of MSBuildExtensionPack.Organization</value>
-  </data>
-  <data name="IdentifierInString" xml:space="preserve">
-    <value>IdentifierInString</value>
-  </data>
-  <data name="Required_Field_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Organization" xml:space="preserve">
-    <value>Required Field Error Message of property IdentifierInString of MSBuildExtensionPack.Organization</value>
-  </data>
-  <data name="Value_Validation_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Organization" xml:space="preserve">
-    <value>Value Validation Error Message of property IdentifierInString of MSBuildExtensionPack.Organization</value>
-  </data>
-  <data name="Title" xml:space="preserve">
-    <value>Title</value>
-  </data>
-  <data name="Required_Field_Error_Message_of_property_Title_of_MSBuildExtensionPack_Organization" xml:space="preserve">
-    <value>Required Field Error Message of property Title of MSBuildExtensionPack.Organization</value>
-  </data>
-  <data name="Value_Validation_Error_Message_of_property_Title_of_MSBuildExtensionPack_Organization" xml:space="preserve">
-    <value>Value Validation Error Message of property Title of MSBuildExtensionPack.Organization</value>
-  </data>
-  <data name="Description" xml:space="preserve">
-    <value>Description</value>
-  </data>
-  <data name="Required_Field_Error_Message_of_property_Description_of_MSBuildExtensionPack_Organization" xml:space="preserve">
-    <value>Required Field Error Message of property Description of MSBuildExtensionPack.Organization</value>
-  </data>
-  <data name="Value_Validation_Error_Message_of_property_Description_of_MSBuildExtensionPack_Organization" xml:space="preserve">
-    <value>Value Validation Error Message of property Description of MSBuildExtensionPack.Organization</value>
-  </data>
-  <data name="PubDate" xml:space="preserve">
-    <value>PubDate</value>
-  </data>
-  <data name="Required_Field_Error_Message_of_property_PubDate_of_MSBuildExtensionPack_Organization" xml:space="preserve">
-    <value>Required Field Error Message of property PubDate of MSBuildExtensionPack.Organization</value>
-  </data>
-  <data name="Value_Validation_Error_Message_of_property_PubDate_of_MSBuildExtensionPack_Organization" xml:space="preserve">
-    <value>Value Validation Error Message of property PubDate of MSBuildExtensionPack.Organization</value>
-  </data>
   <data name="Organization_2_UniqueIdentifier" xml:space="preserve">
     <value>Organization</value>
   </data>
@@ -876,15 +825,6 @@
   </data>
   <data name="Value_Validation_Error_Message_of_property_Organization_2_UniqueIdentifier_of_MSBuildExtensionPack_Organization" xml:space="preserve">
     <value>Value Validation Error Message of property Organization_2_UniqueIdentifier of MSBuildExtensionPack.Organization</value>
-  </data>
-  <data name="Organization_2_UniqueidentifierColumn" xml:space="preserve">
-    <value>Organization</value>
-  </data>
-  <data name="Required_Field_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
-    <value>Required Field Error Message of property Organization_2_UniqueidentifierColumn of MSBuildExtensionPack.Organization</value>
-  </data>
-  <data name="Value_Validation_Error_Message_of_property_Organization_2_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
-    <value>Value Validation Error Message of property Organization_2_UniqueidentifierColumn of MSBuildExtensionPack.Organization</value>
   </data>
   <data name="Organization_2_Name" xml:space="preserve">
     <value>Organization</value>
@@ -906,6 +846,12 @@
   </data>
   <data name="Value_Validation_Error_Message_of_property_ParentId_of_MSBuildExtensionPack_Organization" xml:space="preserve">
     <value>Value Validation Error Message of property ParentId of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Name_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property Name of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Name_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property Name of MSBuildExtensionPack.Organization</value>
   </data>
   <data name="Required_Field_Error_Message_of_property_IsSystemBuiltIn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
     <value>Required Field Error Message of property IsSystemBuiltIn of MSBuildExtensionPack.Organization</value>
@@ -1081,6 +1027,15 @@
   <data name="Value_Validation_Error_Message_of_property_UniqueidentifierColumn_of_MSBuildExtensionPack_Organization" xml:space="preserve">
     <value>Value Validation Error Message of property UniqueidentifierColumn of MSBuildExtensionPack.Organization</value>
   </data>
+  <data name="CountPerFK" xml:space="preserve">
+    <value>CountPerFK</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property CountPerFK of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property CountPerFK of MSBuildExtensionPack.Organization</value>
+  </data>
   <data name="RecursivePath__" xml:space="preserve">
     <value>RecursivePath__</value>
   </data>
@@ -1090,14 +1045,50 @@
   <data name="Value_Validation_Error_Message_of_property_RecursivePath___of_MSBuildExtensionPack_Organization" xml:space="preserve">
     <value>Value Validation Error Message of property RecursivePath__ of MSBuildExtensionPack.Organization</value>
   </data>
-  <data name="CountPerFK" xml:space="preserve">
-    <value>CountPerFK</value>
+  <data name="Value" xml:space="preserve">
+    <value>Value</value>
   </data>
-  <data name="Required_Field_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Organization" xml:space="preserve">
-    <value>Required Field Error Message of property CountPerFK of MSBuildExtensionPack.Organization</value>
+  <data name="Required_Field_Error_Message_of_property_Value_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property Value of MSBuildExtensionPack.Organization</value>
   </data>
-  <data name="Value_Validation_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Organization" xml:space="preserve">
-    <value>Value Validation Error Message of property CountPerFK of MSBuildExtensionPack.Organization</value>
+  <data name="Value_Validation_Error_Message_of_property_Value_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property Value of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="IdentifierInString" xml:space="preserve">
+    <value>IdentifierInString</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property IdentifierInString of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property IdentifierInString of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Title_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property Title of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Title_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property Title of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Description_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property Description of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Description_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property Description of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="PubDate" xml:space="preserve">
+    <value>PubDate</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_PubDate_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Required Field Error Message of property PubDate of MSBuildExtensionPack.Organization</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_PubDate_of_MSBuildExtensionPack_Organization" xml:space="preserve">
+    <value>Value Validation Error Message of property PubDate of MSBuildExtensionPack.Organization</value>
   </data>
   <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_2OfCommon" xml:space="preserve">
     <value>Organization</value>
@@ -1540,41 +1531,23 @@
   <data name="Tooltip_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdIdentifierOftOfIdentifier" xml:space="preserve">
     <value>Tooltip of Id of Organization</value>
   </data>
-  <data name="IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier" xml:space="preserve">
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC" xml:space="preserve">
     <value>UniqueIdentifier</value>
   </data>
-  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier" xml:space="preserve">
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC" xml:space="preserve">
     <value>Description of UniqueIdentifier</value>
   </data>
-  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier" xml:space="preserve">
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC" xml:space="preserve">
     <value>Tooltip of UniqueIdentifier</value>
   </data>
-  <data name="ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier" xml:space="preserve">
+  <data name="ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC" xml:space="preserve">
     <value>UniqueIdentifier of Organization</value>
   </data>
-  <data name="Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier" xml:space="preserve">
+  <data name="Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC" xml:space="preserve">
     <value>Description of UniqueIdentifier of Organization</value>
   </data>
-  <data name="Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUC_Organization_UniqueIdentifierOftOfUniqueConstraintByUC_Organization_UniqueIdentifier" xml:space="preserve">
+  <data name="Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierUniqueConstraintOfUCOftOfUniqueConstraintByUC" xml:space="preserve">
     <value>Tooltip of UniqueIdentifier of Organization</value>
-  </data>
-  <data name="IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn" xml:space="preserve">
-    <value>UniqueidentifierColumn</value>
-  </data>
-  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn" xml:space="preserve">
-    <value>Description of UniqueidentifierColumn</value>
-  </data>
-  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn" xml:space="preserve">
-    <value>Tooltip of UniqueidentifierColumn</value>
-  </data>
-  <data name="ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn" xml:space="preserve">
-    <value>UniqueidentifierColumn of Organization</value>
-  </data>
-  <data name="Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn" xml:space="preserve">
-    <value>Description of UniqueidentifierColumn of Organization</value>
-  </data>
-  <data name="Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnUniqueConstraintOfUC_Organization_UniqueidentifierColumnOftOfUniqueConstraintByUC_Organization_UniqueidentifierColumn" xml:space="preserve">
-    <value>Tooltip of UniqueidentifierColumn of Organization</value>
   </data>
   <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
     <value>Id</value>
@@ -1611,24 +1584,6 @@
   </data>
   <data name="Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
     <value>Tooltip of UniqueIdentifier of Organization</value>
-  </data>
-  <data name="IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
-    <value>UniqueidentifierColumn</value>
-  </data>
-  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
-    <value>Description of UniqueidentifierColumn</value>
-  </data>
-  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
-    <value>Tooltip of UniqueidentifierColumn</value>
-  </data>
-  <data name="ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
-    <value>UniqueidentifierColumn of Organization</value>
-  </data>
-  <data name="Description_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
-    <value>Description of UniqueidentifierColumn of Organization</value>
-  </data>
-  <data name="Tooltip_of_ValueToCompare_ID_TextBox_Search_valueToCompareUniqueidentifierColumnIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint" xml:space="preserve">
-    <value>Tooltip of UniqueidentifierColumn of Organization</value>
   </data>
 
 </root>

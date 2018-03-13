@@ -270,39 +270,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of RssItemByAll
 
-        #region Query Methods Of NameValuePairByFKOnly
-
-        [System.Diagnostics.DebuggerStepThroughAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class GetCollectionOfNameValuePairByFKOnlyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
-        {
-
-            private object[] results;
-
-            public GetCollectionOfNameValuePairByFKOnlyCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
-                base(exception, cancelled, userState)
-            {
-                this.results = results;
-            }
-
-            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection Result
-            {
-                get
-                {
-                    base.RaiseExceptionIfNecessary();
-                    return ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection)(this.results[0]));
-                }
-            }
-        }
-
-        private BeginOperationDelegate onBeginGetCollectionOfNameValuePairByFKOnlyDelegate;
-
-        private EndOperationDelegate onEndGetCollectionOfNameValuePairByFKOnlyDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCollectionOfNameValuePairByFKOnlyCompletedDelegate;
-
-        #endregion Query Methods Of NameValuePairByFKOnly
-
         #region Query Methods Of DefaultByFKOnly
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -368,6 +335,39 @@ namespace MSBuildExtensionPack.WcfClientBLL
         private System.Threading.SendOrPostCallback onGetCollectionOfDefaultGroupedDataViewByFKOnlyCompletedDelegate;
 
         #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
+
+        #region Query Methods Of NameValuePairByFKOnly
+
+        [System.Diagnostics.DebuggerStepThroughAttribute()]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+        public partial class GetCollectionOfNameValuePairByFKOnlyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        {
+
+            private object[] results;
+
+            public GetCollectionOfNameValuePairByFKOnlyCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+                base(exception, cancelled, userState)
+            {
+                this.results = results;
+            }
+
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection Result
+            {
+                get
+                {
+                    base.RaiseExceptionIfNecessary();
+                    return ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection)(this.results[0]));
+                }
+            }
+        }
+
+        private BeginOperationDelegate onBeginGetCollectionOfNameValuePairByFKOnlyDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfNameValuePairByFKOnlyDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfNameValuePairByFKOnlyCompletedDelegate;
+
+        #endregion Query Methods Of NameValuePairByFKOnly
 
         #region Query Methods Of EntityByIdentifier
 
@@ -673,12 +673,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of RssItemByAll
 
-        #region Query Methods Of NameValuePairByFKOnly
-
-        public event System.EventHandler<GetCollectionOfNameValuePairByFKOnlyCompletedEventArgs> GetCollectionOfNameValuePairByFKOnlyCompleted;
-
-        #endregion Query Methods Of NameValuePairByFKOnly
-
         #region Query Methods Of DefaultByFKOnly
 
         public event System.EventHandler<GetCollectionOfDefaultByFKOnlyCompletedEventArgs> GetCollectionOfDefaultByFKOnlyCompleted;
@@ -690,6 +684,12 @@ namespace MSBuildExtensionPack.WcfClientBLL
         public event System.EventHandler<GetCollectionOfDefaultGroupedDataViewByFKOnlyCompletedEventArgs> GetCollectionOfDefaultGroupedDataViewByFKOnlyCompleted;
 
         #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
+
+        #region Query Methods Of NameValuePairByFKOnly
+
+        public event System.EventHandler<GetCollectionOfNameValuePairByFKOnlyCompletedEventArgs> GetCollectionOfNameValuePairByFKOnlyCompleted;
+
+        #endregion Query Methods Of NameValuePairByFKOnly
 
         #region Query Methods Of EntityByIdentifier
 
@@ -1352,78 +1352,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of RssItemByAll
 
-        #region Query Methods Of NameValuePairByFKOnly
-
-        /// <summary>
-        /// Gets the collection of entity of "FKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request)
-        {
-            return base.Channel.GetCollectionOfNameValuePairByFKOnly(request);
-        }
-
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.ISolutionServiceAsyn.BeginGetCollectionOfNameValuePairByFKOnly(MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request, System.AsyncCallback callback, object asyncState)
-        {
-            return base.Channel.BeginGetCollectionOfNameValuePairByFKOnly(request, callback, asyncState);
-        }
-
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection MSBuildExtensionPack.WcfContracts.ISolutionServiceAsyn.EndGetCollectionOfNameValuePairByFKOnly(System.IAsyncResult result)
-        {
-            return base.Channel.EndGetCollectionOfNameValuePairByFKOnly(result);
-        }
-
-        private System.IAsyncResult OnBeginGetCollectionOfNameValuePairByFKOnly(object[] inValues, System.AsyncCallback callback, object asyncState)
-        {
-            MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request = ((MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.ISolutionServiceAsyn)(this)).BeginGetCollectionOfNameValuePairByFKOnly(request, callback, asyncState);
-        }
-
-        private object[] OnEndGetCollectionOfNameValuePairByFKOnly(System.IAsyncResult result)
-        {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection retVal = ((MSBuildExtensionPack.WcfContracts.ISolutionServiceAsyn)(this)).EndGetCollectionOfNameValuePairByFKOnly(result);
-            return new object[] {
-                    retVal};
-        }
-
-        private void OnGetCollectionOfNameValuePairByFKOnlyCompleted(object state)
-        {
-            if ((this.GetCollectionOfNameValuePairByFKOnlyCompleted != null))
-            {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetCollectionOfNameValuePairByFKOnlyCompleted(this, new GetCollectionOfNameValuePairByFKOnlyCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-
-        public void GetCollectionOfNameValuePairByFKOnlyAsync(MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request)
-        {
-            this.GetCollectionOfNameValuePairByFKOnlyAsync(request, null);
-        }
-
-        public void GetCollectionOfNameValuePairByFKOnlyAsync(MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request, object userState)
-        {
-            if ((this.onBeginGetCollectionOfNameValuePairByFKOnlyDelegate == null))
-            {
-                this.onBeginGetCollectionOfNameValuePairByFKOnlyDelegate = new BeginOperationDelegate(this.OnBeginGetCollectionOfNameValuePairByFKOnly);
-            }
-            if ((this.onEndGetCollectionOfNameValuePairByFKOnlyDelegate == null))
-            {
-                this.onEndGetCollectionOfNameValuePairByFKOnlyDelegate = new EndOperationDelegate(this.OnEndGetCollectionOfNameValuePairByFKOnly);
-            }
-            if ((this.onGetCollectionOfNameValuePairByFKOnlyCompletedDelegate == null))
-            {
-                this.onGetCollectionOfNameValuePairByFKOnlyCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCollectionOfNameValuePairByFKOnlyCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetCollectionOfNameValuePairByFKOnlyDelegate, new object[] {
-                        request}, this.onEndGetCollectionOfNameValuePairByFKOnlyDelegate, this.onGetCollectionOfNameValuePairByFKOnlyCompletedDelegate, userState);
-        }
-
-        #endregion Query Methods Of NameValuePairByFKOnly
-
         #region Query Methods Of DefaultByFKOnly
 
         /// <summary>
@@ -1567,6 +1495,78 @@ namespace MSBuildExtensionPack.WcfClientBLL
         }
 
         #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
+
+        #region Query Methods Of NameValuePairByFKOnly
+
+        /// <summary>
+        /// Gets the collection of entity of "FKOnly".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request)
+        {
+            return base.Channel.GetCollectionOfNameValuePairByFKOnly(request);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.ISolutionServiceAsyn.BeginGetCollectionOfNameValuePairByFKOnly(MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request, System.AsyncCallback callback, object asyncState)
+        {
+            return base.Channel.BeginGetCollectionOfNameValuePairByFKOnly(request, callback, asyncState);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection MSBuildExtensionPack.WcfContracts.ISolutionServiceAsyn.EndGetCollectionOfNameValuePairByFKOnly(System.IAsyncResult result)
+        {
+            return base.Channel.EndGetCollectionOfNameValuePairByFKOnly(result);
+        }
+
+        private System.IAsyncResult OnBeginGetCollectionOfNameValuePairByFKOnly(object[] inValues, System.AsyncCallback callback, object asyncState)
+        {
+            MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request = ((MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly )(inValues[0]));
+            return ((MSBuildExtensionPack.WcfContracts.ISolutionServiceAsyn)(this)).BeginGetCollectionOfNameValuePairByFKOnly(request, callback, asyncState);
+        }
+
+        private object[] OnEndGetCollectionOfNameValuePairByFKOnly(System.IAsyncResult result)
+        {
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection retVal = ((MSBuildExtensionPack.WcfContracts.ISolutionServiceAsyn)(this)).EndGetCollectionOfNameValuePairByFKOnly(result);
+            return new object[] {
+                    retVal};
+        }
+
+        private void OnGetCollectionOfNameValuePairByFKOnlyCompleted(object state)
+        {
+            if ((this.GetCollectionOfNameValuePairByFKOnlyCompleted != null))
+            {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.GetCollectionOfNameValuePairByFKOnlyCompleted(this, new GetCollectionOfNameValuePairByFKOnlyCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+
+        public void GetCollectionOfNameValuePairByFKOnlyAsync(MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request)
+        {
+            this.GetCollectionOfNameValuePairByFKOnlyAsync(request, null);
+        }
+
+        public void GetCollectionOfNameValuePairByFKOnlyAsync(MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request, object userState)
+        {
+            if ((this.onBeginGetCollectionOfNameValuePairByFKOnlyDelegate == null))
+            {
+                this.onBeginGetCollectionOfNameValuePairByFKOnlyDelegate = new BeginOperationDelegate(this.OnBeginGetCollectionOfNameValuePairByFKOnly);
+            }
+            if ((this.onEndGetCollectionOfNameValuePairByFKOnlyDelegate == null))
+            {
+                this.onEndGetCollectionOfNameValuePairByFKOnlyDelegate = new EndOperationDelegate(this.OnEndGetCollectionOfNameValuePairByFKOnly);
+            }
+            if ((this.onGetCollectionOfNameValuePairByFKOnlyCompletedDelegate == null))
+            {
+                this.onGetCollectionOfNameValuePairByFKOnlyCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCollectionOfNameValuePairByFKOnlyCompleted);
+            }
+            base.InvokeAsync(this.onBeginGetCollectionOfNameValuePairByFKOnlyDelegate, new object[] {
+                        request}, this.onEndGetCollectionOfNameValuePairByFKOnlyDelegate, this.onGetCollectionOfNameValuePairByFKOnlyCompletedDelegate, userState);
+        }
+
+        #endregion Query Methods Of NameValuePairByFKOnly
 
         #region Query Methods Of EntityByIdentifier
 
@@ -2254,25 +2254,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of RssItemByAll
 
-        #region Query Methods Of NameValuePairByFKOnly
-
-            public System.IAsyncResult BeginGetCollectionOfNameValuePairByFKOnly(MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request, System.AsyncCallback callback, object asyncState)
-            {
-                object[] _args = new object[1];
-                _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("GetCollectionOfNameValuePairByFKOnly", _args, callback, asyncState);
-                return _result;
-            }
-
-            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection EndGetCollectionOfNameValuePairByFKOnly(System.IAsyncResult result)
-            {
-                object[] _args = new object[0];
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection)(base.EndInvoke("GetCollectionOfNameValuePairByFKOnly", _args, result)));
-                return _result;
-            }
-
-        #endregion Query Methods Of NameValuePairByFKOnly
-
         #region Query Methods Of DefaultByFKOnly
 
             public System.IAsyncResult BeginGetCollectionOfDefaultByFKOnly(MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request, System.AsyncCallback callback, object asyncState)
@@ -2310,6 +2291,25 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
 
         #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
+
+        #region Query Methods Of NameValuePairByFKOnly
+
+            public System.IAsyncResult BeginGetCollectionOfNameValuePairByFKOnly(MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request, System.AsyncCallback callback, object asyncState)
+            {
+                object[] _args = new object[1];
+                _args[0] = request;
+                System.IAsyncResult _result = base.BeginInvoke("GetCollectionOfNameValuePairByFKOnly", _args, callback, asyncState);
+                return _result;
+            }
+
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection EndGetCollectionOfNameValuePairByFKOnly(System.IAsyncResult result)
+            {
+                object[] _args = new object[0];
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection)(base.EndInvoke("GetCollectionOfNameValuePairByFKOnly", _args, result)));
+                return _result;
+            }
+
+        #endregion Query Methods Of NameValuePairByFKOnly
 
         #region Query Methods Of EntityByIdentifier
 

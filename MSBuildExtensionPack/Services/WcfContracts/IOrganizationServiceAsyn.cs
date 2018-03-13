@@ -182,26 +182,6 @@ namespace MSBuildExtensionPack.WcfContracts
 
         #endregion Query Methods Of RssItemByAll
 
-        #region Query Methods Of NameValuePairByFKOnly
-
-#if (XAMARIN)
-#else
-        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IOrganizationService/GetCollectionOfNameValuePairByFKOnly",
-            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IOrganizationService/GetCollectionOfNameValuePairByFKOnlyResponse")]
-#endif
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly request);
-
-#if (XAMARIN)
-#else
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IOrganizationService/GetCollectionOfNameValuePairByFKOnly",
-            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IOrganizationService/GetCollectionOfNameValuePairByFKOnlyResponse")]
-#endif
-        System.IAsyncResult BeginGetCollectionOfNameValuePairByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly request, System.AsyncCallback callback, object asyncState);
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection EndGetCollectionOfNameValuePairByFKOnly(System.IAsyncResult result);
-
-        #endregion Query Methods Of NameValuePairByFKOnly
-
         #region Query Methods Of DefaultByFKOnly
 
 #if (XAMARIN)
@@ -241,6 +221,26 @@ namespace MSBuildExtensionPack.WcfContracts
         MSBuildExtensionPack.CommonBLLEntities.OrganizationResponseMessageBuiltIn.DefaultGroupedDataView EndGetCollectionOfDefaultGroupedDataViewByFKOnly(System.IAsyncResult result);
 
         #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
+
+        #region Query Methods Of NameValuePairByFKOnly
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IOrganizationService/GetCollectionOfNameValuePairByFKOnly",
+            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IOrganizationService/GetCollectionOfNameValuePairByFKOnlyResponse")]
+#endif
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly request);
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IOrganizationService/GetCollectionOfNameValuePairByFKOnly",
+            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IOrganizationService/GetCollectionOfNameValuePairByFKOnlyResponse")]
+#endif
+        System.IAsyncResult BeginGetCollectionOfNameValuePairByFKOnly(MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly request, System.AsyncCallback callback, object asyncState);
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection EndGetCollectionOfNameValuePairByFKOnly(System.IAsyncResult result);
+
+        #endregion Query Methods Of NameValuePairByFKOnly
 
         #region Query Methods Of EntityByIdentifier
 

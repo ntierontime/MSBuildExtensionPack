@@ -90,18 +90,6 @@ namespace MSBuildExtensionPack.WcfContracts
 
         #endregion Query Methods Of RssItemByAll
 
-        #region Query Methods Of NameValuePairByFKOnly
-
-#if (XAMARIN)
-#else
-        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildLogService/GetCollectionOfNameValuePairByFKOnly",
-            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildLogService/GetCollectionOfNameValuePairByFKOnlyResponse")]
-#endif
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request);
-
-        #endregion Query Methods Of NameValuePairByFKOnly
-
         #region Query Methods Of DefaultByFKOnly
 
 #if (XAMARIN)
@@ -125,6 +113,18 @@ namespace MSBuildExtensionPack.WcfContracts
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request);
 
         #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
+
+        #region Query Methods Of NameValuePairByFKOnly
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildLogService/GetCollectionOfNameValuePairByFKOnly",
+            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildLogService/GetCollectionOfNameValuePairByFKOnlyResponse")]
+#endif
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request);
+
+        #endregion Query Methods Of NameValuePairByFKOnly
 
         #region Query Methods Of EntityByIdentifier
 
@@ -185,46 +185,6 @@ namespace MSBuildExtensionPack.WcfContracts
             MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfIdentifier request);
 
         #endregion Query Methods Of KeyInformationByIdentifier
-
-        #region Query Methods Of KeyInformationByFKOnly
-
-#if (XAMARIN)
-#else
-        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildLogService/ExistsOfKeyInformationByFKOnly",
-            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildLogService/ExistsOfKeyInformationByFKOnlyResponse")]
-#endif
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request);
-
-#if (XAMARIN)
-#else
-        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildLogService/GetCollectionOfKeyInformationByFKOnly",
-            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildLogService/GetCollectionOfKeyInformationByFKOnlyResponse")]
-#endif
-        MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.KeyInformation GetCollectionOfKeyInformationByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request);
-
-        #endregion Query Methods Of KeyInformationByFKOnly
-
-        #region Query Methods Of BuildLogSummaryPerBuild
-
-#if (XAMARIN)
-#else
-        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildLogService/ExistsOfBuildLogSummaryPerBuild",
-            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildLogService/ExistsOfBuildLogSummaryPerBuildResponse")]
-#endif
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfBuildLogSummaryPerBuild(
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request);
-
-#if (XAMARIN)
-#else
-        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildLogService/GetCollectionOfBuildLogSummaryPerBuild",
-            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IBuildLogService/GetCollectionOfBuildLogSummaryPerBuildResponse")]
-#endif
-        MSBuildExtensionPack.CommonBLLEntities.BuildLogResponseMessageBuiltIn.BuildLogSummaryPerBuild GetCollectionOfBuildLogSummaryPerBuild(
-            MSBuildExtensionPack.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfFKOnly request);
-
-        #endregion Query Methods Of BuildLogSummaryPerBuild
 
     }
 }
