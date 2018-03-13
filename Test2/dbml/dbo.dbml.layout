@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="dbo">
+  <DataContextMoniker Name="/dboDataContext" />
+  <nestedChildShapes>
+    <classShape Id="54da675d-754c-4d4e-b032-c65ea9df727c" absoluteBounds="0.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/dboDataContext/AWBuildVersion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9393100e-3985-4742-bdef-0ad9abadc558" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9eb81d21-21f8-4490-b8f6-c0b90da359c6" absoluteBounds="3.75, 0.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/dboDataContext/ErrorLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fd33c525-90c7-4a86-8a48-5de3a2b017cc" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6ce0fa19-f874-49d4-8049-47a0ee4867ab" absoluteBounds="0.75, 4.75, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/dboDataContext/DatabaseLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d30f573d-6df5-42e5-ab7a-31e81a068eb3" absoluteBounds="0.765, 5.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
