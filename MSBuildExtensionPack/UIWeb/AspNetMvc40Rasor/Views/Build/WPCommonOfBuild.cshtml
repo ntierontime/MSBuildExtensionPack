@@ -237,6 +237,28 @@
             $('input[name="Criteria.Common.BuildStartTimeRange.NullableLowerBound"]').prop('disabled', true);
             $('input[name="Criteria.Common.BuildStartTimeRange.NullableUpperBound"]').prop('disabled', true);
         }));
+        function FetchOrganization_1() {
+            var url = "/api/OrganizationApi/GetCollectionOfNameValuePairByFKOnly";
+            try {
+                var params = BuildCriteriaForFetchOrganization_1();
+                $.getJSON(url, params, function (data) {
+                    objVM.selectListOfOrganization_1(data);
+                    objVM.selectedOrganization_1('@Model.Criteria.Common.Organization_1Id.ValueToCompare');
+                });
+            }
+            catch (e) {
+            }
+        }
+        function BuildCriteriaForFetchOrganization_1() {
+            var selectedvalueOrganization_2Id = $('select[name="Criteria.Common.Organization_2Id.NullableValueToCompare"]').val();
+            var params = {
+                parentId: selectedvalueOrganization_2Id,
+                currentIndex: -1,
+                pageSize: -1,
+                queryOrderByExpression: null
+            };
+            return params;
+        }
         function FetchSolution_1() {
             var url = "/api/SolutionApi/GetCollectionOfNameValuePairByFKOnly";
             try {
@@ -264,6 +286,8 @@
         //cascaded dropdownlist by knockoutjs
         function CascadingDDLViewModel() {
             var self = this;
+            self.selectListOfOrganization_1 = ko.observableArray([]);
+            self.selectedvalueOrganization_1 = ko.observable();
             self.selectListOfSolution_1 = ko.observableArray([]);
             self.selectedvalueSolution_1 = ko.observable();
         }
