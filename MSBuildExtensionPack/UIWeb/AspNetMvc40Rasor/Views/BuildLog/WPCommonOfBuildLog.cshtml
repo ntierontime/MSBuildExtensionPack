@@ -128,7 +128,7 @@
 <table id="MasterDataControl1" name="MasterDataControl1" class="table table-hover table-bordered table-striped">
 <thead>
     <tr>
-<th style="min-width:100px" class="hidden-xs visible-sm"></th>
+<th style="width:100px"></th>
 <th class="hidden-sm">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Id</th>
 <th>@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.EventTime</th>
 <th>@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Organization_2_Name</th>
@@ -145,7 +145,7 @@
         for (var i = 0; i < Model.Result.Count; i ++)
         {
             <tr>
-<td><div class="btn-group btn-group-justified" role="group" aria-label="...">
+<td style="width:100px"><div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
     <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPFullDetailsOfBuildLog, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdIdentifierOftOfIdentifier=true, valueToCompareIdIdentifierOftOfIdentifier = Model.Result[i].Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetails">
         <span class="glyphicon glyphicon-briefcase"></span>

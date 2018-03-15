@@ -22,7 +22,7 @@
 <table id="MasterDataControl0" name="MasterDataControl0" class="table table-hover table-bordered table-striped">
 <thead>
     <tr>
-<th style="min-width:100px" class="hidden-xs visible-sm"></th>
+<th style="width:100px"></th>
 <th class="hidden-sm">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Id</th>
 <th>@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.CreatedDateTime</th>
 <th>@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Organization_2_Name</th>
@@ -63,7 +63,7 @@
         for (var i = 0; i < Model.FK_Organization_ParentId.Count; i ++)
         {
             <tr>
-<td><div class="btn-group btn-group-justified" role="group" aria-label="...">
+<td style="width:100px"><div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
     <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.FK_Organization_ParentId[i].Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.FK_Organization_ParentId[i].UniqueIdentifier })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetails">
         <span class="glyphicon glyphicon-briefcase"></span>
@@ -131,7 +131,7 @@
 <table id="MasterDataControl1" name="MasterDataControl1" class="table table-hover table-bordered table-striped">
 <thead>
     <tr>
-<th style="min-width:100px" class="hidden-xs visible-sm"></th>
+<th style="width:100px"></th>
 <th class="hidden-sm">@MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Id</th>
 <th>@MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Organization_2_Name</th>
 <th>@MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Organization_1_Name</th>
@@ -146,7 +146,7 @@
         for (var i = 0; i < Model.FK_Solution_OrganizationId.Count; i ++)
         {
             <tr>
-<td><div class="btn-group btn-group-justified" role="group" aria-label="...">
+<td style="width:100px"><div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
     <a href="@Url.Action(UrlStringsAlias.ActionName_Solution_WPFullDetailsOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdIdentifierOftOfIdentifier=true, valueToCompareIdIdentifierOftOfIdentifier = Model.FK_Solution_OrganizationId[i].Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetails">
         <span class="glyphicon glyphicon-briefcase"></span>
