@@ -55,13 +55,8 @@
 <td>@Html.ActionLink(Model.FK_Build_Solution[i].Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.FK_Build_Solution[i].Organization_1Id, uniqueIdentifier = Model.FK_Build_Solution[i].Organization_1_UniqueIdentifier }, null)</td>
 <td>@Html.ActionLink(Model.FK_Build_Solution[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.FK_Build_Solution[i].Organization_2Id, uniqueIdentifier = Model.FK_Build_Solution[i].Organization_2_UniqueIdentifier }, null)</td>
 <td>@Html.DisplayFor(model => model.FK_Build_Solution[i].BuildStartTime)</td>
-<td class="hidden-xs">@Html.ActionLink(Model.FK_Build_Solution[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.FK_Build_Solution[i].Organization_2Id, uniqueIdentifier = Model.FK_Build_Solution[i].Organization_2_UniqueIdentifier }, null)</td>
-<td class="hidden-xs">@Html.ActionLink(Model.FK_Build_Solution[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.FK_Build_Solution[i].Organization_2Id, uniqueIdentifier = Model.FK_Build_Solution[i].Organization_2_UniqueIdentifier }, null)</td>
-<td class="hidden-sm">@Html.ActionLink(Model.FK_Build_Solution[i].Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.FK_Build_Solution[i].Organization_1Id, uniqueIdentifier = Model.FK_Build_Solution[i].Organization_1_UniqueIdentifier }, null)</td>
-<td class="hidden-sm">@Html.ActionLink(Model.FK_Build_Solution[i].Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.FK_Build_Solution[i].Organization_1Id, uniqueIdentifier = Model.FK_Build_Solution[i].Organization_1_UniqueIdentifier }, null)</td>
-<td class="hidden-md">@Html.ActionLink(Model.FK_Build_Solution[i].Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPFullDetailsOfSolution, UrlStringsAlias.ControllerName_Solution, new {  }, null)</td>
-<td class="hidden-md">@Html.DisplayFor(model => model.FK_Build_Solution[i].Name)</td>
-<td>@Html.DisplayFor(model => model.FK_Build_Solution[i].Description)</td>
+<td class="hidden-xs">@Html.DisplayFor(model => model.FK_Build_Solution[i].Name)</td>
+<td class="hidden-xs">@Html.DisplayFor(model => model.FK_Build_Solution[i].Description)</td>
             </tr>
         }
     }
@@ -125,22 +120,6 @@
                 <div class="form-group" >
                     @Html.LabelFor(model => model.MasterEntity.Organization_2Id, new { @class = "control-label" })
                         @Html.ActionLink(Model.MasterEntity.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.MasterEntity.Organization_2Id, uniqueIdentifier = Model.MasterEntity.Organization_2_UniqueIdentifier }, null)
-                </div>
-                <div class="form-group" >
-                    @Html.LabelFor(model => model.MasterEntity.Organization_2_UniqueIdentifier, new { @class = "control-label" })
-                        @Html.ActionLink(Model.MasterEntity.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.MasterEntity.Organization_2Id, uniqueIdentifier = Model.MasterEntity.Organization_2_UniqueIdentifier }, null)
-                </div>
-                <div class="form-group" >
-                    @Html.LabelFor(model => model.MasterEntity.Organization_2_Name, new { @class = "control-label" })
-                        @Html.ActionLink(Model.MasterEntity.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.MasterEntity.Organization_2Id, uniqueIdentifier = Model.MasterEntity.Organization_2_UniqueIdentifier }, null)
-                </div>
-                <div class="form-group" >
-                    @Html.LabelFor(model => model.MasterEntity.Organization_1_UniqueIdentifier, new { @class = "control-label" })
-                        @Html.ActionLink(Model.MasterEntity.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { uniqueIdentifier = Model.MasterEntity.Organization_1_UniqueIdentifier }, null)
-                </div>
-                <div class="form-group" >
-                    @Html.LabelFor(model => model.MasterEntity.Organization_1_Name, new { @class = "control-label" })
-                        @Html.ActionLink(Model.MasterEntity.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { uniqueIdentifier = Model.MasterEntity.Organization_1_UniqueIdentifier }, null)
                 </div>
                 <div class="form-group" >
                     @Html.LabelFor(model => model.MasterEntity.ExternalParentId, new { @class = "control-label" })

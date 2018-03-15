@@ -157,13 +157,8 @@
 <td>@Html.ActionLink(Model.Result[i].Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].Organization_1Id, uniqueIdentifier = Model.Result[i].Organization_1_UniqueIdentifier }, null)</td>
 <td>@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].Organization_2Id, uniqueIdentifier = Model.Result[i].Organization_2_UniqueIdentifier }, null)</td>
 <td>@Html.DisplayFor(model => model.Result[i].BuildStartTime)</td>
-<td class="hidden-xs">@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].Organization_2Id, uniqueIdentifier = Model.Result[i].Organization_2_UniqueIdentifier }, null)</td>
-<td class="hidden-xs">@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].Organization_2Id, uniqueIdentifier = Model.Result[i].Organization_2_UniqueIdentifier }, null)</td>
-<td class="hidden-sm">@Html.ActionLink(Model.Result[i].Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].Organization_1Id, uniqueIdentifier = Model.Result[i].Organization_1_UniqueIdentifier }, null)</td>
-<td class="hidden-sm">@Html.ActionLink(Model.Result[i].Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].Organization_1Id, uniqueIdentifier = Model.Result[i].Organization_1_UniqueIdentifier }, null)</td>
-<td class="hidden-md">@Html.ActionLink(Model.Result[i].Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPFullDetailsOfSolution, UrlStringsAlias.ControllerName_Solution, new {  }, null)</td>
-<td class="hidden-md">@Html.DisplayFor(model => model.Result[i].Name)</td>
-<td>@Html.DisplayFor(model => model.Result[i].Description)</td>
+<td class="hidden-xs">@Html.DisplayFor(model => model.Result[i].Name)</td>
+<td class="hidden-xs">@Html.DisplayFor(model => model.Result[i].Description)</td>
             </tr>
         }
     }

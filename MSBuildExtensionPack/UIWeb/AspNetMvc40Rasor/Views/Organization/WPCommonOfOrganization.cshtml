@@ -216,16 +216,14 @@
 </td>
 <td class="hidden-sm">@Html.DisplayFor(model => model.Result[i].Id)</td>
 <td>@Html.DisplayFor(model => model.Result[i].CreatedDateTime)</td>
-<td>@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { uniqueIdentifier = Model.Result[i].Organization_2_UniqueIdentifier }, null)</td>
-<td>@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { uniqueIdentifier = Model.Result[i].Organization_2_UniqueIdentifier }, null)</td>
-<td class="hidden-xs">@Html.DisplayFor(model => model.Result[i].IsSystemBuiltIn)</td>
-<td class="hidden-xs">@Html.DisplayFor(model => model.Result[i].BitColumn)</td>
-<td class="hidden-sm">@Html.DisplayFor(model => model.Result[i].Name)</td>
-<td class="hidden-sm">@Html.DisplayFor(model => model.Result[i].UniqueIdentifier)</td>
-<td class="hidden-md">@Html.DisplayFor(model => model.Result[i].CharColumn)</td>
-<td class="hidden-md">@Html.DisplayFor(model => model.Result[i].VarcharColumn)</td>
-<td>@Html.DisplayFor(model => model.Result[i].TextColumn)</td>
-<td>@Html.DisplayFor(model => model.Result[i].NcharColumn)</td>
+<td>@Html.DisplayFor(model => model.Result[i].IsSystemBuiltIn)</td>
+<td>@Html.DisplayFor(model => model.Result[i].BitColumn)</td>
+<td class="hidden-xs">@Html.DisplayFor(model => model.Result[i].Name)</td>
+<td class="hidden-xs">@Html.DisplayFor(model => model.Result[i].UniqueIdentifier)</td>
+<td class="hidden-sm">@Html.DisplayFor(model => model.Result[i].CharColumn)</td>
+<td class="hidden-sm">@Html.DisplayFor(model => model.Result[i].VarcharColumn)</td>
+<td class="hidden-md">@Html.DisplayFor(model => model.Result[i].TextColumn)</td>
+<td class="hidden-md">@Html.DisplayFor(model => model.Result[i].NcharColumn)</td>
 <td>@Html.DisplayFor(model => model.Result[i].NvarcharColumn)</td>
 <td>@Html.DisplayFor(model => model.Result[i].NtextColumn)</td>
 <td>@Html.DisplayFor(model => model.Result[i].BinaryColumn)</td>
