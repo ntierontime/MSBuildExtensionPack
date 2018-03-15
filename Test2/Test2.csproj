@@ -520,6 +520,7 @@
     <Compile Include="B\ShoppingCartItem.cs">
       <DependentUpon>AdventureWorks2014.tt</DependentUpon>
     </Compile>
+    <Compile Include="B\Something.cs" />
     <Compile Include="B\SpecialOffer.cs">
       <DependentUpon>AdventureWorks2014.tt</DependentUpon>
     </Compile>
