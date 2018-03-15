@@ -27,7 +27,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 
         public const string TempDataKey_WPCommonOfSolution = "TempDataKey_WPCommonOfSolution";
         /// <summary>
-        /// Controller Method of View WPCommonOfSolution : Description Of MSBuildExtensionPack_Solution_Common
+        /// Controller Method of View WPCommonOfSolution
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Solution_WPCommonOfSolution)]
@@ -67,8 +67,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
                 ViewBag.StaticPagedResult = new PagedList.StaticPagedList<MSBuildExtensionPack.DataSourceEntities.Solution.Default>(viewModel.Result, viewModel.QueryPagingSetting.CurrentPage, viewModel.QueryPagingSetting.PageSize, viewModel.QueryPagingSetting.CountOfRecords);
             }
 
-            viewModel.ContentData.Title = MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Solution;
-            viewModel.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Description;
+            viewModel.ContentData.Title = MSBuildExtensionPack.Resx.UIStringResourcePerApp.MSBuildExtensionPack_Solution_Common_Title;
+            viewModel.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerApp.MSBuildExtensionPack_Solution_Common_Summary;
 
             return View(viewModel);
         }

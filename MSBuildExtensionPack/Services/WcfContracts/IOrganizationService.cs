@@ -102,6 +102,18 @@ namespace MSBuildExtensionPack.WcfContracts
 
         #endregion Query Methods Of RssItemByAll
 
+        #region Query Methods Of NameValuePairByFKOnly
+
+#if (XAMARIN)
+#else
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IOrganizationService/GetCollectionOfNameValuePairByFKOnly",
+            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IOrganizationService/GetCollectionOfNameValuePairByFKOnlyResponse")]
+#endif
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly request);
+
+        #endregion Query Methods Of NameValuePairByFKOnly
+
         #region Query Methods Of DefaultByFKOnly
 
 #if (XAMARIN)
@@ -125,18 +137,6 @@ namespace MSBuildExtensionPack.WcfContracts
             MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly request);
 
         #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
-
-        #region Query Methods Of NameValuePairByFKOnly
-
-#if (XAMARIN)
-#else
-        [System.ServiceModel.OperationContractAttribute(Action="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IOrganizationService/GetCollectionOfNameValuePairByFKOnly",
-            ReplyAction="http://www.ntier.com/MSBuildExtensionPack/WcfContracts/IOrganizationService/GetCollectionOfNameValuePairByFKOnlyResponse")]
-#endif
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly request);
-
-        #endregion Query Methods Of NameValuePairByFKOnly
 
         #region Query Methods Of EntityByIdentifier
 

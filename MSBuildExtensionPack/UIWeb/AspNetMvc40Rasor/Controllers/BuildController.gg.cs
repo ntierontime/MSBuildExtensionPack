@@ -27,7 +27,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 
         public const string TempDataKey_WPCommonOfBuild = "TempDataKey_WPCommonOfBuild";
         /// <summary>
-        /// Controller Method of View WPCommonOfBuild : Description Of MSBuildExtensionPack_Build_Common
+        /// Controller Method of View WPCommonOfBuild
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Build_WPCommonOfBuild)]
@@ -67,8 +67,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
                 ViewBag.StaticPagedResult = new PagedList.StaticPagedList<MSBuildExtensionPack.DataSourceEntities.Build.Default>(viewModel.Result, viewModel.QueryPagingSetting.CurrentPage, viewModel.QueryPagingSetting.PageSize, viewModel.QueryPagingSetting.CountOfRecords);
             }
 
-            viewModel.ContentData.Title = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Build;
-            viewModel.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild.Description;
+            viewModel.ContentData.Title = MSBuildExtensionPack.Resx.UIStringResourcePerApp.MSBuildExtensionPack_Build_Common_Title;
+            viewModel.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerApp.MSBuildExtensionPack_Build_Common_Summary;
 
             return View(viewModel);
         }

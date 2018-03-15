@@ -178,6 +178,21 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of RssItemByAll
 
+        #region Query Methods Of NameValuePairByFKOnly
+
+        /// <summary>
+        /// Gets the collection of entity of "FKOnly".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request)
+        {
+            return base.Channel.GetCollectionOfNameValuePairByFKOnly(request);
+        }
+
+        #endregion Query Methods Of NameValuePairByFKOnly
+
         #region Query Methods Of DefaultByFKOnly
 
         /// <summary>
@@ -207,21 +222,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
         }
 
         #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
-
-        #region Query Methods Of NameValuePairByFKOnly
-
-        /// <summary>
-        /// Gets the collection of entity of "FKOnly".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.SolutionRequestMessageUserDefinedOfFKOnly request)
-        {
-            return base.Channel.GetCollectionOfNameValuePairByFKOnly(request);
-        }
-
-        #endregion Query Methods Of NameValuePairByFKOnly
 
         #region Query Methods Of EntityByIdentifier
 

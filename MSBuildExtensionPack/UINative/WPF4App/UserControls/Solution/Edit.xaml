@@ -24,30 +24,27 @@
             <RowDefinition   Height="35" />
             <RowDefinition   Height="35" />
             <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
         </Grid.RowDefinitions>
         <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="1" />
         <TextBlock Text="{Binding Path=Id, Mode=OneWay}" Grid.Column="1" Grid.Row="1" />
         <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.Organization_2Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="2" />
-        <ComboBox Name="ID_DropDownList_Organization_2Id" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.Organization_2_Name, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="2" ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.DropDownContentsOfOrganization_2, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Organization_2Id, Mode=TwoWay}" IsEditable="False" IsSynchronizedWithCurrentItem="True" >
-            <i:Interaction.Triggers>
-                <i:EventTrigger EventName="Loading">
-                    <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.GetDropDownContentsOfOrganization_2Command, Source={StaticResource Locator}}" PassEventArgsToCommand="false" ></cmd:EventToCommand>
-                </i:EventTrigger>
-            </i:Interaction.Triggers>
-        </ComboBox>
-        <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.OrganizationId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="3" />
-        <ComboBox Name="ID_DropDownList_OrganizationId" ToolTip="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.Organization_1_Name, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="3" SelectedValue="{Binding Path=OrganizationId, Mode=TwoWay}" ItemsSource="{Binding Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.DropDownContentsOfOrganization_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value">
-            <i:Interaction.Triggers>
-                <i:EventTrigger EventName="Loading">
-                    <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.GetDropDownContentsOfOrganization_1Command, Source={StaticResource Locator}}" PassEventArgsToCommand="True"></cmd:EventToCommand>
-                </i:EventTrigger>
-            </i:Interaction.Triggers>
-        </ComboBox>
-        <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.ExternalParentId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
-        <TextBox Text="{Binding Path=ExternalParentId, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="4" />
-        <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
-        <TextBox Text="{Binding Path=Name, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="5" />
-        <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.Description, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="6" />
-        <TextBox Text="{Binding Path=Description, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="6" />
+        <Button Style="{StaticResource LinkButton}" Content="{Binding Path=Organization_2_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization.LaunchOrganization_2DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" Grid.Column="1" Grid.Row="2" />
+        <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.Organization_2_UniqueIdentifier, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="3" />
+        <Button Style="{StaticResource LinkButton}" Content="{Binding Path=Organization_2_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization.LaunchOrganization_2DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" Grid.Column="1" Grid.Row="3" />
+        <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.Organization_2_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
+        <Button Style="{StaticResource LinkButton}" Content="{Binding Path=Organization_2_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMOrganization.LaunchOrganization_2DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" Grid.Column="1" Grid.Row="4" />
+        <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.Organization_1_UniqueIdentifier, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
+            <Button Style="{StaticResource LinkButton}" Content="{Binding Path=Organization_1_UniqueIdentifier}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.LaunchOrganization_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" Grid.Column="1" Grid.Row="5" />
+        <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.Organization_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="6" />
+            <Button Style="{StaticResource LinkButton}" Content="{Binding Path=Organization_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMSolution.LaunchOrganization_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" Grid.Column="1" Grid.Row="6" />
+        <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.ExternalParentId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="7" />
+        <TextBox Text="{Binding Path=ExternalParentId, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="7" />
+        <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="8" />
+        <TextBox Text="{Binding Path=Name, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="8" />
+        <TextBlock Text="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntitySolution.Description, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="9" />
+        <TextBox Text="{Binding Path=Description, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="9" />
     </Grid>
 </UserControl>

@@ -1348,6 +1348,184 @@ namespace MSBuildExtensionPack.CommonBLLIoC
 
         #endregion Query Methods Of RssItemByAll
 
+        #region Query Methods Of NameValuePairByFKOnly
+
+        /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="criteria"></param>
+        /// <param name="queryPagingSetting"></param>
+        /// <param name="queryOrderBySettingCollection"></param>
+        /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
+        public static Framework.NameValueCollection GetCollectionOfNameValuePairByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaFKOnly criteria
+            , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
+            , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
+        {
+            //log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            MSBuildExtensionPack.WcfContracts.IOrganizationService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceOrganization();
+            var _Request = new MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly(
+                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
+                , "GetCollectionOfNameValuePairByFKOnly"
+                , Guid.NewGuid().ToString()
+                );
+            _Request.Criteria = criteria;
+            _Request.QueryPagingSetting = queryPagingSetting;
+            if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
+            {
+                _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
+                _Request.QueryOrderBySettingCollection.Add("Value", "Ascending");
+            }
+            else
+            {
+                _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
+            }
+
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairByFKOnly(_Request);
+            if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+            {
+                //log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                return _Response.Message;
+            }
+            else
+            {
+                //log.Error(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Gets message of the collection of entity of common.
+        /// </summary>
+        /// <param name="criteria"></param>
+        /// <param name="queryPagingSetting"></param>
+        /// <param name="queryOrderBySettingCollection"></param>
+        /// <returns>business layer built-in message <see cref="Framework.NameValueCollection"/></returns>
+        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaFKOnly criteria
+            , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
+            , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
+        {
+            return GetMessageOfNameValuePairByFKOnly(
+                criteria
+                , queryPagingSetting
+                , queryOrderBySettingCollection
+                , Framework.DataServiceTypes.DataSourceResult);
+        }
+
+        /// <summary>
+        /// Gets message of the collection of entity of common.
+        /// </summary>
+        /// <param name="criteria"></param>
+        /// <param name="queryPagingSetting"></param>
+        /// <param name="queryOrderBySettingCollection"></param>
+        /// <returns>business layer built-in message <see cref="Framework.NameValueCollection"/></returns>
+        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairByFKOnly(
+            MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaFKOnly criteria
+            , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
+            , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
+            , Framework.DataServiceTypes dataServiceType)
+        {
+            //log.Info(string.Format("{0}: GetMessageOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            MSBuildExtensionPack.WcfContracts.IOrganizationService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceOrganization();
+            var _Request = new MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly(
+                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
+                , "GetMessageOfNameValuePairByFKOnly"
+                , Guid.NewGuid().ToString()
+                );
+            _Request.Criteria = criteria;
+            _Request.QueryPagingSetting = queryPagingSetting;
+            if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
+            {
+                _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
+                _Request.QueryOrderBySettingCollection.Add("Value", "Ascending");
+            }
+            else
+            {
+                _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
+            }
+            _Request.DataServiceType = dataServiceType;
+
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairByFKOnly(_Request);
+            return _Response;
+        }
+
+       /// <summary>
+        /// Gets the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareParentId">will compare/filter parentId property/field/column if true, otherwise false</param>
+        /// <param name="parentId">value to compare/filter with parentId property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
+        public static Framework.NameValueCollection GetCollectionOfNameValuePairByFKOnly(
+            bool isToCompareParentId, System.Int64? parentId
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression
+            )
+        {
+            //log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
+            MSBuildExtensionPack.WcfContracts.IOrganizationService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceOrganization();
+            var _Request = new MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly(
+                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
+                , "GetCollectionOfNameValuePairByFKOnly"
+                , Guid.NewGuid().ToString()
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression
+                );
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaFKOnly(
+                isToCompareParentId, parentId
+                );
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairByFKOnly(_Request);
+            if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+            {
+                //log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                return _Response.Message;
+            }
+            else
+            {
+                //log.Error(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Gets message of the collection of entity of common.
+        /// </summary>
+        /// <param name="isToCompareParentId">will compare/filter parentId property/field/column if true, otherwise false</param>
+        /// <param name="parentId">value to compare/filter with parentId property/field/column</param>
+        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <param name="queryOrderByExpression">The query order by expression.</param>
+        /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
+        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairByFKOnly(
+            bool isToCompareParentId, System.Int64? parentId
+            , int currentIndex
+            , int pageSize
+            , string queryOrderByExpression        )
+
+        {
+            MSBuildExtensionPack.WcfContracts.IOrganizationService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceOrganization();
+            var _Request = new MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly(
+                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
+                , "GetCollectionOfNameValuePairByFKOnly"
+                , Guid.NewGuid().ToString()
+                , currentIndex
+                , pageSize
+                , queryOrderByExpression
+                );
+            _Request.Criteria = _GetOrganizationChainedQueryCriteriaFKOnly(
+                isToCompareParentId, parentId
+                );
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairByFKOnly(_Request);
+            return _Response;
+        }
+
+        #endregion Query Methods Of NameValuePairByFKOnly
+
         #region Query Methods Of DefaultByFKOnly
 
         /// <summary>
@@ -1703,184 +1881,6 @@ namespace MSBuildExtensionPack.CommonBLLIoC
         }
 
         #endregion Query Methods Of DefaultGroupedDataViewByFKOnly
-
-        #region Query Methods Of NameValuePairByFKOnly
-
-        /// <summary>
-        /// Gets the collection of entity of common.
-        /// </summary>
-        /// <param name="criteria"></param>
-        /// <param name="queryPagingSetting"></param>
-        /// <param name="queryOrderBySettingCollection"></param>
-        /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        public static Framework.NameValueCollection GetCollectionOfNameValuePairByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaFKOnly criteria
-            , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
-            , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
-        {
-            //log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
-            MSBuildExtensionPack.WcfContracts.IOrganizationService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceOrganization();
-            var _Request = new MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly(
-                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfNameValuePairByFKOnly"
-                , Guid.NewGuid().ToString()
-                );
-            _Request.Criteria = criteria;
-            _Request.QueryPagingSetting = queryPagingSetting;
-            if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
-            {
-                _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-                _Request.QueryOrderBySettingCollection.Add("Value", "Ascending");
-            }
-            else
-            {
-                _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
-            }
-
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairByFKOnly(_Request);
-            if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
-            {
-                //log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
-                return _Response.Message;
-            }
-            else
-            {
-                //log.Error(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Gets message of the collection of entity of common.
-        /// </summary>
-        /// <param name="criteria"></param>
-        /// <param name="queryPagingSetting"></param>
-        /// <param name="queryOrderBySettingCollection"></param>
-        /// <returns>business layer built-in message <see cref="Framework.NameValueCollection"/></returns>
-        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaFKOnly criteria
-            , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
-            , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection)
-        {
-            return GetMessageOfNameValuePairByFKOnly(
-                criteria
-                , queryPagingSetting
-                , queryOrderBySettingCollection
-                , Framework.DataServiceTypes.DataSourceResult);
-        }
-
-        /// <summary>
-        /// Gets message of the collection of entity of common.
-        /// </summary>
-        /// <param name="criteria"></param>
-        /// <param name="queryPagingSetting"></param>
-        /// <param name="queryOrderBySettingCollection"></param>
-        /// <returns>business layer built-in message <see cref="Framework.NameValueCollection"/></returns>
-        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairByFKOnly(
-            MSBuildExtensionPack.CommonBLLEntities.OrganizationChainedQueryCriteriaFKOnly criteria
-            , Framework.EntityContracts.QueryPagingSetting queryPagingSetting
-            , Framework.EntityContracts.QueryOrderBySettingCollection queryOrderBySettingCollection
-            , Framework.DataServiceTypes dataServiceType)
-        {
-            //log.Info(string.Format("{0}: GetMessageOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
-            MSBuildExtensionPack.WcfContracts.IOrganizationService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceOrganization();
-            var _Request = new MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly(
-                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetMessageOfNameValuePairByFKOnly"
-                , Guid.NewGuid().ToString()
-                );
-            _Request.Criteria = criteria;
-            _Request.QueryPagingSetting = queryPagingSetting;
-            if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
-            {
-                _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-                _Request.QueryOrderBySettingCollection.Add("Value", "Ascending");
-            }
-            else
-            {
-                _Request.QueryOrderBySettingCollection = queryOrderBySettingCollection;
-            }
-            _Request.DataServiceType = dataServiceType;
-
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairByFKOnly(_Request);
-            return _Response;
-        }
-
-       /// <summary>
-        /// Gets the collection of entity of common.
-        /// </summary>
-        /// <param name="isToCompareParentId">will compare/filter parentId property/field/column if true, otherwise false</param>
-        /// <param name="parentId">value to compare/filter with parentId property/field/column</param>
-        /// <param name="currentIndex">Index of the current.</param>
-        /// <param name="pageSize">Size of the page.</param>
-        /// <param name="queryOrderByExpression">The query order by expression.</param>
-        /// <returns>the collection of type <see cref="Framework.NameValueCollection"/></returns>
-        public static Framework.NameValueCollection GetCollectionOfNameValuePairByFKOnly(
-            bool isToCompareParentId, System.Int64? parentId
-            , int currentIndex
-            , int pageSize
-            , string queryOrderByExpression
-            )
-        {
-            //log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Started.ToString()));
-            MSBuildExtensionPack.WcfContracts.IOrganizationService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceOrganization();
-            var _Request = new MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly(
-                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfNameValuePairByFKOnly"
-                , Guid.NewGuid().ToString()
-                , currentIndex
-                , pageSize
-                , queryOrderByExpression
-                );
-            _Request.Criteria = _GetOrganizationChainedQueryCriteriaFKOnly(
-                isToCompareParentId, parentId
-                );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairByFKOnly(_Request);
-            if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
-            {
-                //log.Info(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
-                return _Response.Message;
-            }
-            else
-            {
-                //log.Error(string.Format("{0}: GetCollectionOfNameValuePairByFKOnly", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Gets message of the collection of entity of common.
-        /// </summary>
-        /// <param name="isToCompareParentId">will compare/filter parentId property/field/column if true, otherwise false</param>
-        /// <param name="parentId">value to compare/filter with parentId property/field/column</param>
-        /// <param name="currentIndex">Index of the current.</param>
-        /// <param name="pageSize">Size of the page.</param>
-        /// <param name="queryOrderByExpression">The query order by expression.</param>
-        /// <returns>business layer built-in message <see cref="Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection"/></returns>
-        public static Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetMessageOfNameValuePairByFKOnly(
-            bool isToCompareParentId, System.Int64? parentId
-            , int currentIndex
-            , int pageSize
-            , string queryOrderByExpression        )
-
-        {
-            MSBuildExtensionPack.WcfContracts.IOrganizationService _BusinessLogicLayerInstance = MSBuildExtensionPack.WcfContracts.WcfServiceResolver.ResolveWcfServiceOrganization();
-            var _Request = new MSBuildExtensionPack.CommonBLLEntities.OrganizationRequestMessageUserDefinedOfFKOnly(
-                Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search
-                , "GetCollectionOfNameValuePairByFKOnly"
-                , Guid.NewGuid().ToString()
-                , currentIndex
-                , pageSize
-                , queryOrderByExpression
-                );
-            _Request.Criteria = _GetOrganizationChainedQueryCriteriaFKOnly(
-                isToCompareParentId, parentId
-                );
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _Response = _BusinessLogicLayerInstance.GetCollectionOfNameValuePairByFKOnly(_Request);
-            return _Response;
-        }
-
-        #endregion Query Methods Of NameValuePairByFKOnly
 
         #region Query Methods Of EntityByIdentifier
 

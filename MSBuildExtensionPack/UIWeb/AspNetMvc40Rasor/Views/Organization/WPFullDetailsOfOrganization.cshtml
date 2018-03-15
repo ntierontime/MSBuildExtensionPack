@@ -22,7 +22,7 @@
 <table id="MasterDataControl0" name="MasterDataControl0" class="table table-hover table-bordered table-striped">
 <thead>
     <tr>
-<th style="min-width:100px" class="hidden-xs visible-sm"></th>
+<th style="width:100px"></th>
 <th class="hidden-sm">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Id</th>
 <th>@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.CreatedDateTime</th>
 <th>@MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Organization_2_Name</th>
@@ -63,7 +63,7 @@
         for (var i = 0; i < Model.FK_Organization_ParentId.Count; i ++)
         {
             <tr>
-<td><div class="btn-group btn-group-justified" role="group" aria-label="...">
+<td style="width:100px"><div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
     <a href="@Url.Action(UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { isToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=false, valueToCompareIdIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.FK_Organization_ParentId[i].Id, isToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint=true, valueToCompareUniqueIdentifierIdentifierAndUniqueConstraintOftOfIdentifierAndUniqueConstraint = Model.FK_Organization_ParentId[i].UniqueIdentifier })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetails">
         <span class="glyphicon glyphicon-briefcase"></span>
@@ -78,15 +78,14 @@
 </td>
 <td class="hidden-sm">@Html.DisplayFor(model => model.FK_Organization_ParentId[i].Id)</td>
 <td>@Html.DisplayFor(model => model.FK_Organization_ParentId[i].CreatedDateTime)</td>
-<td>@Html.ActionLink(Model.FK_Organization_ParentId[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.FK_Organization_ParentId[i].ParentId, uniqueIdentifier = Model.FK_Organization_ParentId[i].Organization_2_UniqueIdentifier }, null)</td>
 <td>@Html.DisplayFor(model => model.FK_Organization_ParentId[i].IsSystemBuiltIn)</td>
-<td class="hidden-xs">@Html.DisplayFor(model => model.FK_Organization_ParentId[i].BitColumn)</td>
+<td>@Html.DisplayFor(model => model.FK_Organization_ParentId[i].BitColumn)</td>
 <td class="hidden-xs">@Html.DisplayFor(model => model.FK_Organization_ParentId[i].Name)</td>
-<td class="hidden-sm">@Html.DisplayFor(model => model.FK_Organization_ParentId[i].UniqueIdentifier)</td>
+<td class="hidden-xs">@Html.DisplayFor(model => model.FK_Organization_ParentId[i].UniqueIdentifier)</td>
 <td class="hidden-sm">@Html.DisplayFor(model => model.FK_Organization_ParentId[i].CharColumn)</td>
-<td class="hidden-md">@Html.DisplayFor(model => model.FK_Organization_ParentId[i].VarcharColumn)</td>
+<td class="hidden-sm">@Html.DisplayFor(model => model.FK_Organization_ParentId[i].VarcharColumn)</td>
 <td class="hidden-md">@Html.DisplayFor(model => model.FK_Organization_ParentId[i].TextColumn)</td>
-<td>@Html.DisplayFor(model => model.FK_Organization_ParentId[i].NcharColumn)</td>
+<td class="hidden-md">@Html.DisplayFor(model => model.FK_Organization_ParentId[i].NcharColumn)</td>
 <td>@Html.DisplayFor(model => model.FK_Organization_ParentId[i].NvarcharColumn)</td>
 <td>@Html.DisplayFor(model => model.FK_Organization_ParentId[i].NtextColumn)</td>
 <td>@Html.DisplayFor(model => model.FK_Organization_ParentId[i].BinaryColumn)</td>
@@ -130,7 +129,7 @@
 <table id="MasterDataControl1" name="MasterDataControl1" class="table table-hover table-bordered table-striped">
 <thead>
     <tr>
-<th style="min-width:100px" class="hidden-xs visible-sm"></th>
+<th style="width:100px"></th>
 <th class="hidden-sm">@MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Id</th>
 <th>@MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Organization_2_Name</th>
 <th>@MSBuildExtensionPack.Resx.UIStringResourcePerEntitySolution.Organization_1_Name</th>
@@ -145,7 +144,7 @@
         for (var i = 0; i < Model.FK_Solution_OrganizationId.Count; i ++)
         {
             <tr>
-<td><div class="btn-group btn-group-justified" role="group" aria-label="...">
+<td style="width:100px"><div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
     <a href="@Url.Action(UrlStringsAlias.ActionName_Solution_WPFullDetailsOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdIdentifierOftOfIdentifier=true, valueToCompareIdIdentifierOftOfIdentifier = Model.FK_Solution_OrganizationId[i].Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetails">
         <span class="glyphicon glyphicon-briefcase"></span>
@@ -160,9 +159,8 @@
 </td>
 <td class="hidden-sm">@Html.DisplayFor(model => model.FK_Solution_OrganizationId[i].Id)</td>
 <td>@Html.ActionLink(Model.FK_Solution_OrganizationId[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.FK_Solution_OrganizationId[i].Organization_2Id, uniqueIdentifier = Model.FK_Solution_OrganizationId[i].Organization_2_UniqueIdentifier }, null)</td>
-<td>@Html.ActionLink(Model.FK_Solution_OrganizationId[i].Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.FK_Solution_OrganizationId[i].OrganizationId, uniqueIdentifier = Model.FK_Solution_OrganizationId[i].Organization_1_UniqueIdentifier }, null)</td>
 <td>@Html.DisplayFor(model => model.FK_Solution_OrganizationId[i].ExternalParentId)</td>
-<td class="hidden-xs">@Html.DisplayFor(model => model.FK_Solution_OrganizationId[i].Name)</td>
+<td>@Html.DisplayFor(model => model.FK_Solution_OrganizationId[i].Name)</td>
 <td class="hidden-xs">@Html.DisplayFor(model => model.FK_Solution_OrganizationId[i].Description)</td>
             </tr>
         }
@@ -229,10 +227,6 @@
                         <div class="form-control">
                             @Html.DisplayFor(model => model.MasterEntity.CreatedDateTime)
                         </div>
-                </div>
-                <div class="form-group" >
-                    @Html.LabelFor(model => model.MasterEntity.ParentId, new { @class = "control-label" })
-                        @Html.ActionLink(Model.MasterEntity.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.MasterEntity.ParentId, uniqueIdentifier = Model.MasterEntity.Organization_2_UniqueIdentifier }, null)
                 </div>
                 <div class="form-group" >
                         <div class="form-control">

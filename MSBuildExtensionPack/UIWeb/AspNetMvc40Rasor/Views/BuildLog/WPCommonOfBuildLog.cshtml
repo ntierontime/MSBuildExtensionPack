@@ -128,7 +128,7 @@
 <table id="MasterDataControl1" name="MasterDataControl1" class="table table-hover table-bordered table-striped">
 <thead>
     <tr>
-<th style="min-width:100px" class="hidden-xs visible-sm"></th>
+<th style="width:100px"></th>
 <th class="hidden-sm">@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Id</th>
 <th>@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.EventTime</th>
 <th>@MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Organization_2_Name</th>
@@ -145,7 +145,7 @@
         for (var i = 0; i < Model.Result.Count; i ++)
         {
             <tr>
-<td><div class="btn-group btn-group-justified" role="group" aria-label="...">
+<td style="width:100px"><div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
     <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPFullDetailsOfBuildLog, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdIdentifierOftOfIdentifier=true, valueToCompareIdIdentifierOftOfIdentifier = Model.Result[i].Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resx.UIStringResource.FullDetails">
         <span class="glyphicon glyphicon-briefcase"></span>
@@ -159,13 +159,11 @@
 </div>
 </td>
 <td class="hidden-sm">@Html.DisplayFor(model => model.Result[i].Id)</td>
-<td>@Html.DisplayFor(model => model.Result[i].EventTime)</td>
-<td>@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].Organization_2Id, uniqueIdentifier = Model.Result[i].Organization_2_UniqueIdentifier }, null)</td>
+<td>@Html.ActionLink(Model.Result[i].Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPFullDetailsOfSolution, UrlStringsAlias.ControllerName_Solution, new { id = Model.Result[i].Solution_1Id }, null)</td>
 <td>@Html.ActionLink(Model.Result[i].Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].Organization_1Id, uniqueIdentifier = Model.Result[i].Organization_1_UniqueIdentifier }, null)</td>
-<td class="hidden-xs">@Html.ActionLink(Model.Result[i].Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPFullDetailsOfSolution, UrlStringsAlias.ControllerName_Solution, new { id = Model.Result[i].Solution_1Id }, null)</td>
-<td class="hidden-xs">@Html.ActionLink(Model.Result[i].Build_1_Name, UrlStringsAlias.ActionName_Build_WPFullDetailsOfBuild, UrlStringsAlias.ControllerName_Build, new { id = Model.Result[i].BuildId }, null)</td>
-<td class="hidden-sm">@Html.ActionLink(Model.Result[i].BuildEventCode_1_Name, UrlStringsAlias.ActionName_BuildEventCode_WPFullDetailsOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { id = Model.Result[i].BuildEventCodeId }, null)</td>
-<td class="hidden-sm">@Html.DisplayFor(model => model.Result[i].Message)</td>
+<td>@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].Organization_2Id, uniqueIdentifier = Model.Result[i].Organization_2_UniqueIdentifier }, null)</td>
+<td class="hidden-xs">@Html.DisplayFor(model => model.Result[i].EventTime)</td>
+<td class="hidden-xs">@Html.DisplayFor(model => model.Result[i].Message)</td>
             </tr>
         }
     }

@@ -131,6 +131,34 @@
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn Width="140">
+                        <GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.Organization_1_Name, Source={StaticResource LocalizedStrings}}" Tag="Organization_1_Name" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Button Style="{StaticResource LinkButton}" Content="{Binding Path=Organization_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.LaunchOrganization_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+                                    <!--<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_1_Name}" ToolTip="" />
+                                    <TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_1_Name}" ToolTip="" />-->
+                                    <!-- You can un-comment to enable editing in list -->
+                                    <!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Organization_1_Name}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Width="140">
+                        <GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.Organization_2_Name, Source={StaticResource LocalizedStrings}}" Tag="Organization_2_Name" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Button Style="{StaticResource LinkButton}" Content="{Binding Path=Organization_2_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.LaunchOrganization_2DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+                                    <!--<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_2_Name}" ToolTip="" />
+                                    <TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_2_Name}" ToolTip="" />-->
+                                    <!-- You can un-comment to enable editing in list -->
+                                    <!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Organization_2_Name}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Width="140">
                         <GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.BuildStartTime, Source={StaticResource LocalizedStrings}}" Tag="BuildStartTime" />
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
@@ -153,6 +181,34 @@
                                     <TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_2_Name}" ToolTip="" />-->
                                     <!-- You can un-comment to enable editing in list -->
                                     <!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Organization_2_Name}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Width="140">
+                        <GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.Organization_2_Name, Source={StaticResource LocalizedStrings}}" Tag="Organization_2_Name" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Button Style="{StaticResource LinkButton}" Content="{Binding Path=Organization_2_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.LaunchOrganization_2DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+                                    <!--<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_2_Name}" ToolTip="" />
+                                    <TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_2_Name}" ToolTip="" />-->
+                                    <!-- You can un-comment to enable editing in list -->
+                                    <!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Organization_2_Name}" />-->
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Width="140">
+                        <GridViewColumnHeader Content="{Binding Path=MSBuildExtensionPack_Resx_UIStringResourcePerEntityBuild.Organization_1_Name, Source={StaticResource LocalizedStrings}}" Tag="Organization_1_Name" />
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Button Style="{StaticResource LinkButton}" Content="{Binding Path=Organization_1_Name}"  Command="{Binding MSBuildExtensionPack_MVVMLightViewModels_ExtendedVMBuild.LaunchOrganization_1DetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+                                    <!--<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_1_Name}" ToolTip="" />
+                                    <TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Organization_1_Name}" ToolTip="" />-->
+                                    <!-- You can un-comment to enable editing in list -->
+                                    <!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Organization_1_Name}" />-->
                                 </Grid>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>

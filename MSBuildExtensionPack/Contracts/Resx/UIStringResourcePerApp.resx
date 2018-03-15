@@ -121,230 +121,230 @@
   <data name="Application_Title" xml:space="preserve">
     <value>MSBuildExtensionPack</value>
   </data>
-  <data name="Description_Of_MSBuildExtensionPack_Build_Common" xml:space="preserve">
-    <value>Description Of MSBuildExtensionPack_Build_Common</value>
+  <data name="MSBuildExtensionPack_Build_Common_Title" xml:space="preserve">
+    <value>Search Build</value>
   </data>
-  <data name="MSBuildExtensionPack_Build_Common" xml:space="preserve">
-    <value>MSBuildExtensionPack_Build_Common</value>
+  <data name="MSBuildExtensionPack_Build_Common_ShortTitle" xml:space="preserve">
+    <value>Search</value>
   </data>
-  <data name="ToolTip_Of_MSBuildExtensionPack_Build_Common" xml:space="preserve">
-    <value>ToolTip Of MSBuildExtensionPack_Build_Common</value>
+  <data name="MSBuildExtensionPack_Build_Common_Summary" xml:space="preserve">
+    <value>Summary of Build:MSBuildExtensionPack_Build_Common</value>
   </data>
-  <data name="Description_Of_MSBuildExtensionPack_Build_FullDetails" xml:space="preserve">
-    <value>Description Of MSBuildExtensionPack_Build_FullDetails</value>
+  <data name="MSBuildExtensionPack_Build_FullDetails_Title" xml:space="preserve">
+    <value>Full Details</value>
   </data>
-  <data name="MSBuildExtensionPack_Build_FullDetails" xml:space="preserve">
-    <value>MSBuildExtensionPack_Build_FullDetails</value>
+  <data name="MSBuildExtensionPack_Build_FullDetails_ShortTitle" xml:space="preserve">
+    <value>Full</value>
   </data>
-  <data name="ToolTip_Of_MSBuildExtensionPack_Build_FullDetails" xml:space="preserve">
-    <value>ToolTip Of MSBuildExtensionPack_Build_FullDetails</value>
+  <data name="MSBuildExtensionPack_Build_FullDetails_Summary" xml:space="preserve">
+    <value>Summary of Build:MSBuildExtensionPack_Build_FullDetails</value>
   </data>
-  <data name="Description_Of_MSBuildExtensionPack_Build_CommonSearchView" xml:space="preserve">
-    <value>Description Of MSBuildExtensionPack_Build_CommonSearchView</value>
+  <data name="MSBuildExtensionPack_Build_CommonSearchView_Title" xml:space="preserve">
+    <value>Common Search View</value>
   </data>
-  <data name="MSBuildExtensionPack_Build_CommonSearchView" xml:space="preserve">
-    <value>MSBuildExtensionPack_Build_CommonSearchView</value>
+  <data name="MSBuildExtensionPack_Build_CommonSearchView_ShortTitle" xml:space="preserve">
+    <value>Common</value>
   </data>
-  <data name="ToolTip_Of_MSBuildExtensionPack_Build_CommonSearchView" xml:space="preserve">
-    <value>ToolTip Of MSBuildExtensionPack_Build_CommonSearchView</value>
+  <data name="MSBuildExtensionPack_Build_CommonSearchView_Summary" xml:space="preserve">
+    <value>Summary of Build:MSBuildExtensionPack_Build_CommonSearchView</value>
   </data>
-  <data name="Description_Of_MSBuildExtensionPack_Build_CommonResultView" xml:space="preserve">
-    <value>Description Of MSBuildExtensionPack_Build_CommonResultView</value>
+  <data name="MSBuildExtensionPack_Build_CommonResultView_Title" xml:space="preserve">
+    <value>Common Result View</value>
   </data>
-  <data name="MSBuildExtensionPack_Build_CommonResultView" xml:space="preserve">
-    <value>MSBuildExtensionPack_Build_CommonResultView</value>
+  <data name="MSBuildExtensionPack_Build_CommonResultView_ShortTitle" xml:space="preserve">
+    <value>Common</value>
   </data>
-  <data name="ToolTip_Of_MSBuildExtensionPack_Build_CommonResultView" xml:space="preserve">
-    <value>ToolTip Of MSBuildExtensionPack_Build_CommonResultView</value>
+  <data name="MSBuildExtensionPack_Build_CommonResultView_Summary" xml:space="preserve">
+    <value>Summary of Build:MSBuildExtensionPack_Build_CommonResultView</value>
   </data>
-  <data name="Description_Of_MSBuildExtensionPack_Build_TabbedCommon" xml:space="preserve">
-    <value>Description Of MSBuildExtensionPack_Build_TabbedCommon</value>
+  <data name="MSBuildExtensionPack_Build_TabbedCommon_Title" xml:space="preserve">
+    <value>Tabbed Common</value>
   </data>
-  <data name="MSBuildExtensionPack_Build_TabbedCommon" xml:space="preserve">
-    <value>MSBuildExtensionPack_Build_TabbedCommon</value>
+  <data name="MSBuildExtensionPack_Build_TabbedCommon_ShortTitle" xml:space="preserve">
+    <value>Tabbed</value>
   </data>
-  <data name="ToolTip_Of_MSBuildExtensionPack_Build_TabbedCommon" xml:space="preserve">
-    <value>ToolTip Of MSBuildExtensionPack_Build_TabbedCommon</value>
+  <data name="MSBuildExtensionPack_Build_TabbedCommon_Summary" xml:space="preserve">
+    <value>Summary of Build:MSBuildExtensionPack_Build_TabbedCommon</value>
   </data>
-  <data name="Description_Of_MSBuildExtensionPack_BuildEventCode_Common" xml:space="preserve">
-    <value>Description Of MSBuildExtensionPack_BuildEventCode_Common</value>
+  <data name="MSBuildExtensionPack_BuildEventCode_Common_Title" xml:space="preserve">
+    <value>Search BuildEventCode</value>
   </data>
-  <data name="MSBuildExtensionPack_BuildEventCode_Common" xml:space="preserve">
-    <value>MSBuildExtensionPack_BuildEventCode_Common</value>
+  <data name="MSBuildExtensionPack_BuildEventCode_Common_ShortTitle" xml:space="preserve">
+    <value>Search</value>
   </data>
-  <data name="ToolTip_Of_MSBuildExtensionPack_BuildEventCode_Common" xml:space="preserve">
-    <value>ToolTip Of MSBuildExtensionPack_BuildEventCode_Common</value>
+  <data name="MSBuildExtensionPack_BuildEventCode_Common_Summary" xml:space="preserve">
+    <value>Summary of BuildEventCode:MSBuildExtensionPack_BuildEventCode_Common</value>
   </data>
-  <data name="Description_Of_MSBuildExtensionPack_BuildEventCode_FullDetails" xml:space="preserve">
-    <value>Description Of MSBuildExtensionPack_BuildEventCode_FullDetails</value>
+  <data name="MSBuildExtensionPack_BuildEventCode_FullDetails_Title" xml:space="preserve">
+    <value>Full Details</value>
   </data>
-  <data name="MSBuildExtensionPack_BuildEventCode_FullDetails" xml:space="preserve">
-    <value>MSBuildExtensionPack_BuildEventCode_FullDetails</value>
+  <data name="MSBuildExtensionPack_BuildEventCode_FullDetails_ShortTitle" xml:space="preserve">
+    <value>Full</value>
   </data>
-  <data name="ToolTip_Of_MSBuildExtensionPack_BuildEventCode_FullDetails" xml:space="preserve">
-    <value>ToolTip Of MSBuildExtensionPack_BuildEventCode_FullDetails</value>
+  <data name="MSBuildExtensionPack_BuildEventCode_FullDetails_Summary" xml:space="preserve">
+    <value>Summary of BuildEventCode:MSBuildExtensionPack_BuildEventCode_FullDetails</value>
   </data>
-  <data name="Description_Of_MSBuildExtensionPack_BuildEventCode_CommonSearchView" xml:space="preserve">
-    <value>Description Of MSBuildExtensionPack_BuildEventCode_CommonSearchView</value>
+  <data name="MSBuildExtensionPack_BuildEventCode_CommonSearchView_Title" xml:space="preserve">
+    <value>Common Search View</value>
   </data>
-  <data name="MSBuildExtensionPack_BuildEventCode_CommonSearchView" xml:space="preserve">
-    <value>MSBuildExtensionPack_BuildEventCode_CommonSearchView</value>
+  <data name="MSBuildExtensionPack_BuildEventCode_CommonSearchView_ShortTitle" xml:space="preserve">
+    <value>Common</value>
   </data>
-  <data name="ToolTip_Of_MSBuildExtensionPack_BuildEventCode_CommonSearchView" xml:space="preserve">
-    <value>ToolTip Of MSBuildExtensionPack_BuildEventCode_CommonSearchView</value>
+  <data name="MSBuildExtensionPack_BuildEventCode_CommonSearchView_Summary" xml:space="preserve">
+    <value>Summary of BuildEventCode:MSBuildExtensionPack_BuildEventCode_CommonSearchView</value>
   </data>
-  <data name="Description_Of_MSBuildExtensionPack_BuildEventCode_CommonResultView" xml:space="preserve">
-    <value>Description Of MSBuildExtensionPack_BuildEventCode_CommonResultView</value>
+  <data name="MSBuildExtensionPack_BuildEventCode_CommonResultView_Title" xml:space="preserve">
+    <value>Common Result View</value>
   </data>
-  <data name="MSBuildExtensionPack_BuildEventCode_CommonResultView" xml:space="preserve">
-    <value>MSBuildExtensionPack_BuildEventCode_CommonResultView</value>
+  <data name="MSBuildExtensionPack_BuildEventCode_CommonResultView_ShortTitle" xml:space="preserve">
+    <value>Common</value>
   </data>
-  <data name="ToolTip_Of_MSBuildExtensionPack_BuildEventCode_CommonResultView" xml:space="preserve">
-    <value>ToolTip Of MSBuildExtensionPack_BuildEventCode_CommonResultView</value>
+  <data name="MSBuildExtensionPack_BuildEventCode_CommonResultView_Summary" xml:space="preserve">
+    <value>Summary of BuildEventCode:MSBuildExtensionPack_BuildEventCode_CommonResultView</value>
   </data>
-  <data name="Description_Of_MSBuildExtensionPack_BuildEventCode_TabbedCommon" xml:space="preserve">
-    <value>Description Of MSBuildExtensionPack_BuildEventCode_TabbedCommon</value>
+  <data name="MSBuildExtensionPack_BuildEventCode_TabbedCommon_Title" xml:space="preserve">
+    <value>Tabbed Common</value>
   </data>
-  <data name="MSBuildExtensionPack_BuildEventCode_TabbedCommon" xml:space="preserve">
-    <value>MSBuildExtensionPack_BuildEventCode_TabbedCommon</value>
+  <data name="MSBuildExtensionPack_BuildEventCode_TabbedCommon_ShortTitle" xml:space="preserve">
+    <value>Tabbed</value>
   </data>
-  <data name="ToolTip_Of_MSBuildExtensionPack_BuildEventCode_TabbedCommon" xml:space="preserve">
-    <value>ToolTip Of MSBuildExtensionPack_BuildEventCode_TabbedCommon</value>
+  <data name="MSBuildExtensionPack_BuildEventCode_TabbedCommon_Summary" xml:space="preserve">
+    <value>Summary of BuildEventCode:MSBuildExtensionPack_BuildEventCode_TabbedCommon</value>
   </data>
-  <data name="Description_Of_MSBuildExtensionPack_BuildLog_Common" xml:space="preserve">
-    <value>Description Of MSBuildExtensionPack_BuildLog_Common</value>
+  <data name="MSBuildExtensionPack_BuildLog_Common_Title" xml:space="preserve">
+    <value>Search BuildLog</value>
   </data>
-  <data name="MSBuildExtensionPack_BuildLog_Common" xml:space="preserve">
-    <value>MSBuildExtensionPack_BuildLog_Common</value>
+  <data name="MSBuildExtensionPack_BuildLog_Common_ShortTitle" xml:space="preserve">
+    <value>Search</value>
   </data>
-  <data name="ToolTip_Of_MSBuildExtensionPack_BuildLog_Common" xml:space="preserve">
-    <value>ToolTip Of MSBuildExtensionPack_BuildLog_Common</value>
+  <data name="MSBuildExtensionPack_BuildLog_Common_Summary" xml:space="preserve">
+    <value>Summary of BuildLog:MSBuildExtensionPack_BuildLog_Common</value>
   </data>
-  <data name="Description_Of_MSBuildExtensionPack_BuildLog_FullDetails" xml:space="preserve">
-    <value>Description Of MSBuildExtensionPack_BuildLog_FullDetails</value>
+  <data name="MSBuildExtensionPack_BuildLog_FullDetails_Title" xml:space="preserve">
+    <value>Full Details</value>
   </data>
-  <data name="MSBuildExtensionPack_BuildLog_FullDetails" xml:space="preserve">
-    <value>MSBuildExtensionPack_BuildLog_FullDetails</value>
+  <data name="MSBuildExtensionPack_BuildLog_FullDetails_ShortTitle" xml:space="preserve">
+    <value>Full</value>
   </data>
-  <data name="ToolTip_Of_MSBuildExtensionPack_BuildLog_FullDetails" xml:space="preserve">
-    <value>ToolTip Of MSBuildExtensionPack_BuildLog_FullDetails</value>
+  <data name="MSBuildExtensionPack_BuildLog_FullDetails_Summary" xml:space="preserve">
+    <value>Summary of BuildLog:MSBuildExtensionPack_BuildLog_FullDetails</value>
   </data>
-  <data name="Description_Of_MSBuildExtensionPack_BuildLog_CommonSearchView" xml:space="preserve">
-    <value>Description Of MSBuildExtensionPack_BuildLog_CommonSearchView</value>
+  <data name="MSBuildExtensionPack_BuildLog_CommonSearchView_Title" xml:space="preserve">
+    <value>Common Search View</value>
   </data>
-  <data name="MSBuildExtensionPack_BuildLog_CommonSearchView" xml:space="preserve">
-    <value>MSBuildExtensionPack_BuildLog_CommonSearchView</value>
+  <data name="MSBuildExtensionPack_BuildLog_CommonSearchView_ShortTitle" xml:space="preserve">
+    <value>Common</value>
   </data>
-  <data name="ToolTip_Of_MSBuildExtensionPack_BuildLog_CommonSearchView" xml:space="preserve">
-    <value>ToolTip Of MSBuildExtensionPack_BuildLog_CommonSearchView</value>
+  <data name="MSBuildExtensionPack_BuildLog_CommonSearchView_Summary" xml:space="preserve">
+    <value>Summary of BuildLog:MSBuildExtensionPack_BuildLog_CommonSearchView</value>
   </data>
-  <data name="Description_Of_MSBuildExtensionPack_BuildLog_CommonResultView" xml:space="preserve">
-    <value>Description Of MSBuildExtensionPack_BuildLog_CommonResultView</value>
+  <data name="MSBuildExtensionPack_BuildLog_CommonResultView_Title" xml:space="preserve">
+    <value>Common Result View</value>
   </data>
-  <data name="MSBuildExtensionPack_BuildLog_CommonResultView" xml:space="preserve">
-    <value>MSBuildExtensionPack_BuildLog_CommonResultView</value>
+  <data name="MSBuildExtensionPack_BuildLog_CommonResultView_ShortTitle" xml:space="preserve">
+    <value>Common</value>
   </data>
-  <data name="ToolTip_Of_MSBuildExtensionPack_BuildLog_CommonResultView" xml:space="preserve">
-    <value>ToolTip Of MSBuildExtensionPack_BuildLog_CommonResultView</value>
+  <data name="MSBuildExtensionPack_BuildLog_CommonResultView_Summary" xml:space="preserve">
+    <value>Summary of BuildLog:MSBuildExtensionPack_BuildLog_CommonResultView</value>
   </data>
-  <data name="Description_Of_MSBuildExtensionPack_BuildLog_TabbedCommon" xml:space="preserve">
-    <value>Description Of MSBuildExtensionPack_BuildLog_TabbedCommon</value>
+  <data name="MSBuildExtensionPack_BuildLog_TabbedCommon_Title" xml:space="preserve">
+    <value>Tabbed Common</value>
   </data>
-  <data name="MSBuildExtensionPack_BuildLog_TabbedCommon" xml:space="preserve">
-    <value>MSBuildExtensionPack_BuildLog_TabbedCommon</value>
+  <data name="MSBuildExtensionPack_BuildLog_TabbedCommon_ShortTitle" xml:space="preserve">
+    <value>Tabbed</value>
   </data>
-  <data name="ToolTip_Of_MSBuildExtensionPack_BuildLog_TabbedCommon" xml:space="preserve">
-    <value>ToolTip Of MSBuildExtensionPack_BuildLog_TabbedCommon</value>
+  <data name="MSBuildExtensionPack_BuildLog_TabbedCommon_Summary" xml:space="preserve">
+    <value>Summary of BuildLog:MSBuildExtensionPack_BuildLog_TabbedCommon</value>
   </data>
-  <data name="Description_Of_MSBuildExtensionPack_Organization_Common" xml:space="preserve">
-    <value>Description Of MSBuildExtensionPack_Organization_Common</value>
+  <data name="MSBuildExtensionPack_Organization_Common_Title" xml:space="preserve">
+    <value>Search Organization</value>
   </data>
-  <data name="MSBuildExtensionPack_Organization_Common" xml:space="preserve">
-    <value>MSBuildExtensionPack_Organization_Common</value>
+  <data name="MSBuildExtensionPack_Organization_Common_ShortTitle" xml:space="preserve">
+    <value>Search</value>
   </data>
-  <data name="ToolTip_Of_MSBuildExtensionPack_Organization_Common" xml:space="preserve">
-    <value>ToolTip Of MSBuildExtensionPack_Organization_Common</value>
+  <data name="MSBuildExtensionPack_Organization_Common_Summary" xml:space="preserve">
+    <value>Summary of Organization:MSBuildExtensionPack_Organization_Common</value>
   </data>
-  <data name="Description_Of_MSBuildExtensionPack_Organization_FullDetails" xml:space="preserve">
-    <value>Description Of MSBuildExtensionPack_Organization_FullDetails</value>
+  <data name="MSBuildExtensionPack_Organization_FullDetails_Title" xml:space="preserve">
+    <value>Full Details</value>
   </data>
-  <data name="MSBuildExtensionPack_Organization_FullDetails" xml:space="preserve">
-    <value>MSBuildExtensionPack_Organization_FullDetails</value>
+  <data name="MSBuildExtensionPack_Organization_FullDetails_ShortTitle" xml:space="preserve">
+    <value>Full</value>
   </data>
-  <data name="ToolTip_Of_MSBuildExtensionPack_Organization_FullDetails" xml:space="preserve">
-    <value>ToolTip Of MSBuildExtensionPack_Organization_FullDetails</value>
+  <data name="MSBuildExtensionPack_Organization_FullDetails_Summary" xml:space="preserve">
+    <value>Summary of Organization:MSBuildExtensionPack_Organization_FullDetails</value>
   </data>
-  <data name="Description_Of_MSBuildExtensionPack_Organization_CommonSearchView" xml:space="preserve">
-    <value>Description Of MSBuildExtensionPack_Organization_CommonSearchView</value>
+  <data name="MSBuildExtensionPack_Organization_CommonSearchView_Title" xml:space="preserve">
+    <value>Common Search View</value>
   </data>
-  <data name="MSBuildExtensionPack_Organization_CommonSearchView" xml:space="preserve">
-    <value>MSBuildExtensionPack_Organization_CommonSearchView</value>
+  <data name="MSBuildExtensionPack_Organization_CommonSearchView_ShortTitle" xml:space="preserve">
+    <value>Common</value>
   </data>
-  <data name="ToolTip_Of_MSBuildExtensionPack_Organization_CommonSearchView" xml:space="preserve">
-    <value>ToolTip Of MSBuildExtensionPack_Organization_CommonSearchView</value>
+  <data name="MSBuildExtensionPack_Organization_CommonSearchView_Summary" xml:space="preserve">
+    <value>Summary of Organization:MSBuildExtensionPack_Organization_CommonSearchView</value>
   </data>
-  <data name="Description_Of_MSBuildExtensionPack_Organization_CommonResultView" xml:space="preserve">
-    <value>Description Of MSBuildExtensionPack_Organization_CommonResultView</value>
+  <data name="MSBuildExtensionPack_Organization_CommonResultView_Title" xml:space="preserve">
+    <value>Common Result View</value>
   </data>
-  <data name="MSBuildExtensionPack_Organization_CommonResultView" xml:space="preserve">
-    <value>MSBuildExtensionPack_Organization_CommonResultView</value>
+  <data name="MSBuildExtensionPack_Organization_CommonResultView_ShortTitle" xml:space="preserve">
+    <value>Common</value>
   </data>
-  <data name="ToolTip_Of_MSBuildExtensionPack_Organization_CommonResultView" xml:space="preserve">
-    <value>ToolTip Of MSBuildExtensionPack_Organization_CommonResultView</value>
+  <data name="MSBuildExtensionPack_Organization_CommonResultView_Summary" xml:space="preserve">
+    <value>Summary of Organization:MSBuildExtensionPack_Organization_CommonResultView</value>
   </data>
-  <data name="Description_Of_MSBuildExtensionPack_Organization_TabbedCommon" xml:space="preserve">
-    <value>Description Of MSBuildExtensionPack_Organization_TabbedCommon</value>
+  <data name="MSBuildExtensionPack_Organization_TabbedCommon_Title" xml:space="preserve">
+    <value>Tabbed Common</value>
   </data>
-  <data name="MSBuildExtensionPack_Organization_TabbedCommon" xml:space="preserve">
-    <value>MSBuildExtensionPack_Organization_TabbedCommon</value>
+  <data name="MSBuildExtensionPack_Organization_TabbedCommon_ShortTitle" xml:space="preserve">
+    <value>Tabbed</value>
   </data>
-  <data name="ToolTip_Of_MSBuildExtensionPack_Organization_TabbedCommon" xml:space="preserve">
-    <value>ToolTip Of MSBuildExtensionPack_Organization_TabbedCommon</value>
+  <data name="MSBuildExtensionPack_Organization_TabbedCommon_Summary" xml:space="preserve">
+    <value>Summary of Organization:MSBuildExtensionPack_Organization_TabbedCommon</value>
   </data>
-  <data name="Description_Of_MSBuildExtensionPack_Solution_Common" xml:space="preserve">
-    <value>Description Of MSBuildExtensionPack_Solution_Common</value>
+  <data name="MSBuildExtensionPack_Solution_Common_Title" xml:space="preserve">
+    <value>Search Solution</value>
   </data>
-  <data name="MSBuildExtensionPack_Solution_Common" xml:space="preserve">
-    <value>MSBuildExtensionPack_Solution_Common</value>
+  <data name="MSBuildExtensionPack_Solution_Common_ShortTitle" xml:space="preserve">
+    <value>Search</value>
   </data>
-  <data name="ToolTip_Of_MSBuildExtensionPack_Solution_Common" xml:space="preserve">
-    <value>ToolTip Of MSBuildExtensionPack_Solution_Common</value>
+  <data name="MSBuildExtensionPack_Solution_Common_Summary" xml:space="preserve">
+    <value>Summary of Solution:MSBuildExtensionPack_Solution_Common</value>
   </data>
-  <data name="Description_Of_MSBuildExtensionPack_Solution_FullDetails" xml:space="preserve">
-    <value>Description Of MSBuildExtensionPack_Solution_FullDetails</value>
+  <data name="MSBuildExtensionPack_Solution_FullDetails_Title" xml:space="preserve">
+    <value>Full Details</value>
   </data>
-  <data name="MSBuildExtensionPack_Solution_FullDetails" xml:space="preserve">
-    <value>MSBuildExtensionPack_Solution_FullDetails</value>
+  <data name="MSBuildExtensionPack_Solution_FullDetails_ShortTitle" xml:space="preserve">
+    <value>Full</value>
   </data>
-  <data name="ToolTip_Of_MSBuildExtensionPack_Solution_FullDetails" xml:space="preserve">
-    <value>ToolTip Of MSBuildExtensionPack_Solution_FullDetails</value>
+  <data name="MSBuildExtensionPack_Solution_FullDetails_Summary" xml:space="preserve">
+    <value>Summary of Solution:MSBuildExtensionPack_Solution_FullDetails</value>
   </data>
-  <data name="Description_Of_MSBuildExtensionPack_Solution_CommonSearchView" xml:space="preserve">
-    <value>Description Of MSBuildExtensionPack_Solution_CommonSearchView</value>
+  <data name="MSBuildExtensionPack_Solution_CommonSearchView_Title" xml:space="preserve">
+    <value>Common Search View</value>
   </data>
-  <data name="MSBuildExtensionPack_Solution_CommonSearchView" xml:space="preserve">
-    <value>MSBuildExtensionPack_Solution_CommonSearchView</value>
+  <data name="MSBuildExtensionPack_Solution_CommonSearchView_ShortTitle" xml:space="preserve">
+    <value>Common</value>
   </data>
-  <data name="ToolTip_Of_MSBuildExtensionPack_Solution_CommonSearchView" xml:space="preserve">
-    <value>ToolTip Of MSBuildExtensionPack_Solution_CommonSearchView</value>
+  <data name="MSBuildExtensionPack_Solution_CommonSearchView_Summary" xml:space="preserve">
+    <value>Summary of Solution:MSBuildExtensionPack_Solution_CommonSearchView</value>
   </data>
-  <data name="Description_Of_MSBuildExtensionPack_Solution_CommonResultView" xml:space="preserve">
-    <value>Description Of MSBuildExtensionPack_Solution_CommonResultView</value>
+  <data name="MSBuildExtensionPack_Solution_CommonResultView_Title" xml:space="preserve">
+    <value>Common Result View</value>
   </data>
-  <data name="MSBuildExtensionPack_Solution_CommonResultView" xml:space="preserve">
-    <value>MSBuildExtensionPack_Solution_CommonResultView</value>
+  <data name="MSBuildExtensionPack_Solution_CommonResultView_ShortTitle" xml:space="preserve">
+    <value>Common</value>
   </data>
-  <data name="ToolTip_Of_MSBuildExtensionPack_Solution_CommonResultView" xml:space="preserve">
-    <value>ToolTip Of MSBuildExtensionPack_Solution_CommonResultView</value>
+  <data name="MSBuildExtensionPack_Solution_CommonResultView_Summary" xml:space="preserve">
+    <value>Summary of Solution:MSBuildExtensionPack_Solution_CommonResultView</value>
   </data>
-  <data name="Description_Of_MSBuildExtensionPack_Solution_TabbedCommon" xml:space="preserve">
-    <value>Description Of MSBuildExtensionPack_Solution_TabbedCommon</value>
+  <data name="MSBuildExtensionPack_Solution_TabbedCommon_Title" xml:space="preserve">
+    <value>Tabbed Common</value>
   </data>
-  <data name="MSBuildExtensionPack_Solution_TabbedCommon" xml:space="preserve">
-    <value>MSBuildExtensionPack_Solution_TabbedCommon</value>
+  <data name="MSBuildExtensionPack_Solution_TabbedCommon_ShortTitle" xml:space="preserve">
+    <value>Tabbed</value>
   </data>
-  <data name="ToolTip_Of_MSBuildExtensionPack_Solution_TabbedCommon" xml:space="preserve">
-    <value>ToolTip Of MSBuildExtensionPack_Solution_TabbedCommon</value>
+  <data name="MSBuildExtensionPack_Solution_TabbedCommon_Summary" xml:space="preserve">
+    <value>Summary of Solution:MSBuildExtensionPack_Solution_TabbedCommon</value>
   </data>
 
 </root>

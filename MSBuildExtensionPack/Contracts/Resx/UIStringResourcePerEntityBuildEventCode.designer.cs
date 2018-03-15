@@ -340,42 +340,6 @@ namespace MSBuildExtensionPack.Resx {
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Required Field Error Message of property Id of MSBuildExtensionPack.BuildEventCode"".
-        /// </summary>
-        public static string Required_Field_Error_Message_of_property_Id_of_MSBuildExtensionPack_BuildEventCode {
-            get {
-                return ResourceManager.GetString("Required_Field_Error_Message_of_property_Id_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Value Validation Error Message of property Id of MSBuildExtensionPack.BuildEventCode"".
-        /// </summary>
-        public static string Value_Validation_Error_Message_of_property_Id_of_MSBuildExtensionPack_BuildEventCode {
-            get {
-                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Id_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Required Field Error Message of property EventCode of MSBuildExtensionPack.BuildEventCode"".
-        /// </summary>
-        public static string Required_Field_Error_Message_of_property_EventCode_of_MSBuildExtensionPack_BuildEventCode {
-            get {
-                return ResourceManager.GetString("Required_Field_Error_Message_of_property_EventCode_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Value Validation Error Message of property EventCode of MSBuildExtensionPack.BuildEventCode"".
-        /// </summary>
-        public static string Value_Validation_Error_Message_of_property_EventCode_of_MSBuildExtensionPack_BuildEventCode {
-            get {
-                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_EventCode_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
-            }
-        }
-
-        /// <summary>
         ///   Looks up a localized string similar to "Value"".
         /// </summary>
         public static string Value {
@@ -498,6 +462,42 @@ namespace MSBuildExtensionPack.Resx {
         public static string Value_Validation_Error_Message_of_property_Description_of_MSBuildExtensionPack_BuildEventCode {
             get {
                 return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Description_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Required Field Error Message of property Id of MSBuildExtensionPack.BuildEventCode"".
+        /// </summary>
+        public static string Required_Field_Error_Message_of_property_Id_of_MSBuildExtensionPack_BuildEventCode {
+            get {
+                return ResourceManager.GetString("Required_Field_Error_Message_of_property_Id_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Value Validation Error Message of property Id of MSBuildExtensionPack.BuildEventCode"".
+        /// </summary>
+        public static string Value_Validation_Error_Message_of_property_Id_of_MSBuildExtensionPack_BuildEventCode {
+            get {
+                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Id_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Required Field Error Message of property EventCode of MSBuildExtensionPack.BuildEventCode"".
+        /// </summary>
+        public static string Required_Field_Error_Message_of_property_EventCode_of_MSBuildExtensionPack_BuildEventCode {
+            get {
+                return ResourceManager.GetString("Required_Field_Error_Message_of_property_EventCode_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Value Validation Error Message of property EventCode of MSBuildExtensionPack.BuildEventCode"".
+        /// </summary>
+        public static string Value_Validation_Error_Message_of_property_EventCode_of_MSBuildExtensionPack_BuildEventCode {
+            get {
+                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_EventCode_of_MSBuildExtensionPack_BuildEventCode", resourceCulture);
             }
         }
 

@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="MSBuildExtensionPack.BuildEventCode">
+  <DataView Key="NameValuePair" DataViewKnownCategory="NameValuePair" IsGroupByResult="false">
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemString)Value=Id.ToString();(SystemString)Name=EventCode~Name</Properties>
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
+  </DataView>
+  <DataView Key="RssItem" DataViewKnownCategory="RssItem" IsGroupByResult="false">
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemString)IdentifierInString=Id.ToString();(SystemString)Title=EventCode;(SystemString)Description=EventCode</Properties>
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
+  </DataView>
+  <DataView Key="KeyInformation" DataViewKnownCategory="KeyInformation" IsGroupByResult="false">
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemInt32)Id=Id~Identifier;(SystemString)EventCode=EventCode</Properties>
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
+    <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
+  </DataView>
   <Criteria Key="Common" SourceTypeFullName="MSBuildExtensionPack.BuildEventCode">
     <Description>Query by EntityReference, String, Bool, Order By DateTime</Description>
     <Queries>Common</Queries>
@@ -13,17 +28,14 @@
     <Queries>Identifier</Queries>
   </Criteria>
   <Query Key="Common" DataQueryPerQueryKnownKey="Common" SourceTypeDeclarationFullName="MSBuildExtensionPack.BuildEventCode" ConditionOperator="AND">
-    <Description>Query by EntityReference, String, Bool, Order By DateTime</Description>
-    <QueryUnits Key="Common" ConditionOperator="AND" Description="Query by EntityReference, Bool, DateTime" />
-    <QueryUnits Key="Common" ConditionOperator="AND" Description="Query by String">EventCode=:EventCode.Contains;Description=:Description.Contains</QueryUnits>
+    <QueryUnits Key="Common" ConditionOperator="AND" Value="" />
+    <QueryUnits Key="Common" ConditionOperator="AND" Value="EventCode=:EventCode.Contains;Description=:Description.Contains" />
   </Query>
   <Query Key="All" DataQueryPerQueryKnownKey="All" SourceTypeDeclarationFullName="MSBuildExtensionPack.BuildEventCode" ConditionOperator="AND">
-    <Description>Without condition, Order By DateTime</Description>
-    <QueryUnits Key="All" ConditionOperator="AND" Description="Without condition, Order By DateTime" />
+    <QueryUnits Key="All" ConditionOperator="AND" Value="" />
   </Query>
   <Query Key="Identifier" DataQueryPerQueryKnownKey="Identifier" SourceTypeDeclarationFullName="MSBuildExtensionPack.BuildEventCode" ConditionOperator="AND">
-    <Description>Query by Identifier</Description>
-    <QueryUnits Key="Identifier" ConditionOperator="AND" Description="Query by Identifier">Id=:Id.Equals</QueryUnits>
+    <QueryUnits Key="Identifier" ConditionOperator="AND" Value="Id=:Id.Equals" />
   </Query>
   <QueryResult Key="EntityByCommon" CriteriaKey="Common">
     <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
@@ -47,32 +59,16 @@
     <DALMethodSetting HasCountMethod="true" HasExistsMethod="true" HasGetCollectionMethod="true" />
     <BLLMethodSetting HasExistsMethod="true" HasGetCollectionMethod="true" />
   </QueryResult>
-  <UIView MasterTypeFullName="MSBuildExtensionPack.BuildEventCode" Key="Common" UIViewType="SearchResult" CriteriaKey="Common" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
-    <Description>Workspace of Common</Description>
-  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.BuildEventCode" Key="Common" UIViewType="SearchResult" CriteriaKey="Common" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false" />
   <UIView MasterTypeFullName="MSBuildExtensionPack.BuildEventCode" Key="FullDetails" UIViewType="FullDetails" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
-    <Description>Workspace of Identifier</Description>
-    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.BuildLog" Group="Article" Key="V_BuildLog_Via_BuildEventCodeId" UIViewType="RelatedEntityWhenMasterViewIsPKEntity" CriteriaKey="FKOnly" DataViewKey="Default" EntityReferenceName="FK_BuildLog_BuildEventCode" Name="View of MSBuildExtensionPack.BuildLog via BuildEventCodeId">
-      <Description>View of MSBuildExtensionPack.BuildLog via BuildEventCodeId</Description>
-    </PartialView>
-    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.BuildEventCode" Group="Aside" Key="V_BuildEventCode_Via_This" UIViewType="MasterViewAsideKeyInformation" CriteriaKey="Identifier" EntityReferenceSimpleFullPath="" EntityReferenceName="" Name="View of MSBuildExtensionPack.BuildEventCode via This">
-      <Description>View of MSBuildExtensionPack.BuildEventCode via This</Description>
-    </PartialView>
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.BuildLog" Group="Article" Key="V_BuildLog_Via_BuildEventCodeId" UIViewType="RelatedEntityWhenMasterViewIsPKEntity" CriteriaKey="FKOnly" DataViewKey="Default" EntityReferenceName="FK_BuildLog_BuildEventCode" Name="View of MSBuildExtensionPack.BuildLog via BuildEventCodeId" />
+    <PartialView SourceTypeDeclarationFullName="MSBuildExtensionPack.BuildEventCode" Group="Aside" Key="V_BuildEventCode_Via_This" UIViewType="MasterViewAsideKeyInformation" CriteriaKey="Identifier" EntityReferenceSimpleFullPath="" EntityReferenceName="" Name="View of MSBuildExtensionPack.BuildEventCode via This" />
   </UIView>
-  <UIView MasterTypeFullName="MSBuildExtensionPack.BuildEventCode" Key="CommonSearchView" UIViewType="Search" CriteriaKey="Common" KeyReferencedViewModel="Common" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
-    <Description>Workspace of CommonSearchView</Description>
-  </UIView>
-  <UIView MasterTypeFullName="MSBuildExtensionPack.BuildEventCode" Key="CommonResultView" UIViewType="Results" CriteriaKey="Common" KeyReferencedViewModel="Common" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
-    <Description>Workspace of CommonResultView</Description>
-  </UIView>
+  <UIView MasterTypeFullName="MSBuildExtensionPack.BuildEventCode" Key="CommonSearchView" UIViewType="Search" CriteriaKey="Common" KeyReferencedViewModel="Common" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false" />
+  <UIView MasterTypeFullName="MSBuildExtensionPack.BuildEventCode" Key="CommonResultView" UIViewType="Results" CriteriaKey="Common" KeyReferencedViewModel="Common" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false" />
   <UIView MasterTypeFullName="MSBuildExtensionPack.BuildEventCode" Key="TabbedCommon" UIViewType="TabContainer" DataViewKey="" CriteriaKey="" KeyReferencedViewModel="Common" HasCreateUI="false" HasEditUI="false" HasDeleteUI="false" HasDetailsUI="false">
-    <Description>Workspace of TabbedCommon</Description>
-    <PartialViewReference Group="OnlyOneArticle" Key="WSI_TabbedCommon" ReferencedKeyOfUIWorkspace="CommonSearchView" Name="WorkspaceItem of TabbedCommon">
-      <Description>WorkspaceItem of TabbedCommon</Description>
-    </PartialViewReference>
-    <PartialViewReference Group="OnlyOneArticle" Key="WSI_TabbedCommon" ReferencedKeyOfUIWorkspace="CommonResultView" Name="WorkspaceItem of TabbedCommon">
-      <Description>WorkspaceItem of TabbedCommon</Description>
-    </PartialViewReference>
+    <PartialViewReference Group="OnlyOneArticle" Key="WSI_TabbedCommon" ReferencedKeyOfUIWorkspace="CommonSearchView" Name="WorkspaceItem of TabbedCommon" />
+    <PartialViewReference Group="OnlyOneArticle" Key="WSI_TabbedCommon" ReferencedKeyOfUIWorkspace="CommonResultView" Name="WorkspaceItem of TabbedCommon" />
   </UIView>
   <ForeignKeyPersistList />
 </Entity>

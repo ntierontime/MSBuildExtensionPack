@@ -92,6 +92,44 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         #endregion AssignEnityReferenceIDs(...)
 
+        #region CreateNameValuePair(...)
+
+        /// <summary>
+        /// Creates a new instance of view NameValuePair.
+        /// </summary>
+        /// <returns>an instance of <see cref="Framework.NameValuePair"/></returns>
+        public static Framework.NameValuePair CreateNameValuePair(
+System.String value, System.String name
+            )
+        {
+            Framework.NameValuePair _retval = new Framework.NameValuePair();
+                _retval.Value = value;
+                _retval.Name = name;
+            return _retval;
+        }
+
+        #endregion CreateNameValuePair(...)
+
+        #region CreateRssItem(...)
+
+        /// <summary>
+        /// Creates a new instance of view RssItem.
+        /// </summary>
+        /// <returns>an instance of <see cref="Framework.RssItem"/></returns>
+        public static Framework.RssItem CreateRssItem(
+System.String identifierInString, System.String title, System.String description, System.DateTime pubDate
+            )
+        {
+            Framework.RssItem _retval = new Framework.RssItem();
+                _retval.IdentifierInString = identifierInString;
+                _retval.Title = title;
+                _retval.Description = description;
+                _retval.PubDate = pubDate;
+            return _retval;
+        }
+
+        #endregion CreateRssItem(...)
+
         #region CreateDefault(...)
 
         /// <summary>
@@ -156,44 +194,6 @@ System.Int64 id, System.String name
         }
 
         #endregion CreateKeyInformation(...)
-
-        #region CreateNameValuePair(...)
-
-        /// <summary>
-        /// Creates a new instance of view NameValuePair.
-        /// </summary>
-        /// <returns>an instance of <see cref="Framework.NameValuePair"/></returns>
-        public static Framework.NameValuePair CreateNameValuePair(
-System.String value, System.String name
-            )
-        {
-            Framework.NameValuePair _retval = new Framework.NameValuePair();
-                _retval.Value = value;
-                _retval.Name = name;
-            return _retval;
-        }
-
-        #endregion CreateNameValuePair(...)
-
-        #region CreateRssItem(...)
-
-        /// <summary>
-        /// Creates a new instance of view RssItem.
-        /// </summary>
-        /// <returns>an instance of <see cref="Framework.RssItem"/></returns>
-        public static Framework.RssItem CreateRssItem(
-System.String identifierInString, System.String title, System.String description, System.DateTime pubDate
-            )
-        {
-            Framework.RssItem _retval = new Framework.RssItem();
-                _retval.IdentifierInString = identifierInString;
-                _retval.Title = title;
-                _retval.Description = description;
-                _retval.PubDate = pubDate;
-            return _retval;
-        }
-
-        #endregion CreateRssItem(...)
 
     }
 

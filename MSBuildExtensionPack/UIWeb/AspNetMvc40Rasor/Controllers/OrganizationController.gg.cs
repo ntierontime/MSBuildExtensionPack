@@ -27,7 +27,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 
         public const string TempDataKey_WPCommonOfOrganization = "TempDataKey_WPCommonOfOrganization";
         /// <summary>
-        /// Controller Method of View WPCommonOfOrganization : Description Of MSBuildExtensionPack_Organization_Common
+        /// Controller Method of View WPCommonOfOrganization
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Organization_WPCommonOfOrganization)]
@@ -67,8 +67,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
                 ViewBag.StaticPagedResult = new PagedList.StaticPagedList<MSBuildExtensionPack.DataSourceEntities.Organization.Default>(viewModel.Result, viewModel.QueryPagingSetting.CurrentPage, viewModel.QueryPagingSetting.PageSize, viewModel.QueryPagingSetting.CountOfRecords);
             }
 
-            viewModel.ContentData.Title = MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Organization;
-            viewModel.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Description;
+            viewModel.ContentData.Title = MSBuildExtensionPack.Resx.UIStringResourcePerApp.MSBuildExtensionPack_Organization_Common_Title;
+            viewModel.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerApp.MSBuildExtensionPack_Organization_Common_Summary;
 
             return View(viewModel);
         }
