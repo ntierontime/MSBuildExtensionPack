@@ -237,6 +237,72 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of EntityByCommon
 
+        #region Query Methods Of NameValuePairByAll
+
+        [System.Diagnostics.DebuggerStepThroughAttribute()]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+        public partial class GetCollectionOfNameValuePairByAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        {
+
+            private object[] results;
+
+            public GetCollectionOfNameValuePairByAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+                base(exception, cancelled, userState)
+            {
+                this.results = results;
+            }
+
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection Result
+            {
+                get
+                {
+                    base.RaiseExceptionIfNecessary();
+                    return ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection)(this.results[0]));
+                }
+            }
+        }
+
+        private BeginOperationDelegate onBeginGetCollectionOfNameValuePairByAllDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfNameValuePairByAllDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfNameValuePairByAllCompletedDelegate;
+
+        #endregion Query Methods Of NameValuePairByAll
+
+        #region Query Methods Of RssItemByAll
+
+        [System.Diagnostics.DebuggerStepThroughAttribute()]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+        public partial class GetCollectionOfRssItemByAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        {
+
+            private object[] results;
+
+            public GetCollectionOfRssItemByAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+                base(exception, cancelled, userState)
+            {
+                this.results = results;
+            }
+
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection Result
+            {
+                get
+                {
+                    base.RaiseExceptionIfNecessary();
+                    return ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection)(this.results[0]));
+                }
+            }
+        }
+
+        private BeginOperationDelegate onBeginGetCollectionOfRssItemByAllDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfRssItemByAllDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfRssItemByAllCompletedDelegate;
+
+        #endregion Query Methods Of RssItemByAll
+
         #region Query Methods Of EntityByIdentifier
 
         [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -361,72 +427,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of KeyInformationByIdentifier
 
-        #region Query Methods Of NameValuePairByAll
-
-        [System.Diagnostics.DebuggerStepThroughAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class GetCollectionOfNameValuePairByAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
-        {
-
-            private object[] results;
-
-            public GetCollectionOfNameValuePairByAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
-                base(exception, cancelled, userState)
-            {
-                this.results = results;
-            }
-
-            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection Result
-            {
-                get
-                {
-                    base.RaiseExceptionIfNecessary();
-                    return ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection)(this.results[0]));
-                }
-            }
-        }
-
-        private BeginOperationDelegate onBeginGetCollectionOfNameValuePairByAllDelegate;
-
-        private EndOperationDelegate onEndGetCollectionOfNameValuePairByAllDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCollectionOfNameValuePairByAllCompletedDelegate;
-
-        #endregion Query Methods Of NameValuePairByAll
-
-        #region Query Methods Of RssItemByAll
-
-        [System.Diagnostics.DebuggerStepThroughAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class GetCollectionOfRssItemByAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
-        {
-
-            private object[] results;
-
-            public GetCollectionOfRssItemByAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
-                base(exception, cancelled, userState)
-            {
-                this.results = results;
-            }
-
-            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection Result
-            {
-                get
-                {
-                    base.RaiseExceptionIfNecessary();
-                    return ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection)(this.results[0]));
-                }
-            }
-        }
-
-        private BeginOperationDelegate onBeginGetCollectionOfRssItemByAllDelegate;
-
-        private EndOperationDelegate onEndGetCollectionOfRssItemByAllDelegate;
-
-        private System.Threading.SendOrPostCallback onGetCollectionOfRssItemByAllCompletedDelegate;
-
-        #endregion Query Methods Of RssItemByAll
-
         // DataQueryPerQuerySettingCollection -- EventArg Classes And EventHandlers -- end
 
         #region GetAscendantAndDescendant
@@ -539,6 +539,18 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of EntityByCommon
 
+        #region Query Methods Of NameValuePairByAll
+
+        public event System.EventHandler<GetCollectionOfNameValuePairByAllCompletedEventArgs> GetCollectionOfNameValuePairByAllCompleted;
+
+        #endregion Query Methods Of NameValuePairByAll
+
+        #region Query Methods Of RssItemByAll
+
+        public event System.EventHandler<GetCollectionOfRssItemByAllCompletedEventArgs> GetCollectionOfRssItemByAllCompleted;
+
+        #endregion Query Methods Of RssItemByAll
+
         #region Query Methods Of EntityByIdentifier
 
         public event System.EventHandler<ExistsOfEntityByIdentifierCompletedEventArgs> ExistsOfEntityByIdentifierCompleted;
@@ -554,18 +566,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
         public event System.EventHandler<GetCollectionOfKeyInformationByIdentifierCompletedEventArgs> GetCollectionOfKeyInformationByIdentifierCompleted;
 
         #endregion Query Methods Of KeyInformationByIdentifier
-
-        #region Query Methods Of NameValuePairByAll
-
-        public event System.EventHandler<GetCollectionOfNameValuePairByAllCompletedEventArgs> GetCollectionOfNameValuePairByAllCompleted;
-
-        #endregion Query Methods Of NameValuePairByAll
-
-        #region Query Methods Of RssItemByAll
-
-        public event System.EventHandler<GetCollectionOfRssItemByAllCompletedEventArgs> GetCollectionOfRssItemByAllCompleted;
-
-        #endregion Query Methods Of RssItemByAll
 
         // DataQueryPerQuerySettingCollection -- EventHandlers -- End
 
@@ -1132,6 +1132,150 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of EntityByCommon
 
+        #region Query Methods Of NameValuePairByAll
+
+        /// <summary>
+        /// Gets the collection of entity of "All".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByAll(
+            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
+        {
+            return base.Channel.GetCollectionOfNameValuePairByAll(request);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginGetCollectionOfNameValuePairByAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+        {
+            return base.Channel.BeginGetCollectionOfNameValuePairByAll(request, callback, asyncState);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndGetCollectionOfNameValuePairByAll(System.IAsyncResult result)
+        {
+            return base.Channel.EndGetCollectionOfNameValuePairByAll(result);
+        }
+
+        private System.IAsyncResult OnBeginGetCollectionOfNameValuePairByAll(object[] inValues, System.AsyncCallback callback, object asyncState)
+        {
+            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll )(inValues[0]));
+            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginGetCollectionOfNameValuePairByAll(request, callback, asyncState);
+        }
+
+        private object[] OnEndGetCollectionOfNameValuePairByAll(System.IAsyncResult result)
+        {
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndGetCollectionOfNameValuePairByAll(result);
+            return new object[] {
+                    retVal};
+        }
+
+        private void OnGetCollectionOfNameValuePairByAllCompleted(object state)
+        {
+            if ((this.GetCollectionOfNameValuePairByAllCompleted != null))
+            {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.GetCollectionOfNameValuePairByAllCompleted(this, new GetCollectionOfNameValuePairByAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+
+        public void GetCollectionOfNameValuePairByAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
+        {
+            this.GetCollectionOfNameValuePairByAllAsync(request, null);
+        }
+
+        public void GetCollectionOfNameValuePairByAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
+        {
+            if ((this.onBeginGetCollectionOfNameValuePairByAllDelegate == null))
+            {
+                this.onBeginGetCollectionOfNameValuePairByAllDelegate = new BeginOperationDelegate(this.OnBeginGetCollectionOfNameValuePairByAll);
+            }
+            if ((this.onEndGetCollectionOfNameValuePairByAllDelegate == null))
+            {
+                this.onEndGetCollectionOfNameValuePairByAllDelegate = new EndOperationDelegate(this.OnEndGetCollectionOfNameValuePairByAll);
+            }
+            if ((this.onGetCollectionOfNameValuePairByAllCompletedDelegate == null))
+            {
+                this.onGetCollectionOfNameValuePairByAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCollectionOfNameValuePairByAllCompleted);
+            }
+            base.InvokeAsync(this.onBeginGetCollectionOfNameValuePairByAllDelegate, new object[] {
+                        request}, this.onEndGetCollectionOfNameValuePairByAllDelegate, this.onGetCollectionOfNameValuePairByAllCompletedDelegate, userState);
+        }
+
+        #endregion Query Methods Of NameValuePairByAll
+
+        #region Query Methods Of RssItemByAll
+
+        /// <summary>
+        /// Gets the collection of entity of "All".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetCollectionOfRssItemByAll(
+            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
+        {
+            return base.Channel.GetCollectionOfRssItemByAll(request);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginGetCollectionOfRssItemByAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+        {
+            return base.Channel.BeginGetCollectionOfRssItemByAll(request, callback, asyncState);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndGetCollectionOfRssItemByAll(System.IAsyncResult result)
+        {
+            return base.Channel.EndGetCollectionOfRssItemByAll(result);
+        }
+
+        private System.IAsyncResult OnBeginGetCollectionOfRssItemByAll(object[] inValues, System.AsyncCallback callback, object asyncState)
+        {
+            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll )(inValues[0]));
+            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginGetCollectionOfRssItemByAll(request, callback, asyncState);
+        }
+
+        private object[] OnEndGetCollectionOfRssItemByAll(System.IAsyncResult result)
+        {
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndGetCollectionOfRssItemByAll(result);
+            return new object[] {
+                    retVal};
+        }
+
+        private void OnGetCollectionOfRssItemByAllCompleted(object state)
+        {
+            if ((this.GetCollectionOfRssItemByAllCompleted != null))
+            {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.GetCollectionOfRssItemByAllCompleted(this, new GetCollectionOfRssItemByAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+
+        public void GetCollectionOfRssItemByAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
+        {
+            this.GetCollectionOfRssItemByAllAsync(request, null);
+        }
+
+        public void GetCollectionOfRssItemByAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
+        {
+            if ((this.onBeginGetCollectionOfRssItemByAllDelegate == null))
+            {
+                this.onBeginGetCollectionOfRssItemByAllDelegate = new BeginOperationDelegate(this.OnBeginGetCollectionOfRssItemByAll);
+            }
+            if ((this.onEndGetCollectionOfRssItemByAllDelegate == null))
+            {
+                this.onEndGetCollectionOfRssItemByAllDelegate = new EndOperationDelegate(this.OnEndGetCollectionOfRssItemByAll);
+            }
+            if ((this.onGetCollectionOfRssItemByAllCompletedDelegate == null))
+            {
+                this.onGetCollectionOfRssItemByAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCollectionOfRssItemByAllCompleted);
+            }
+            base.InvokeAsync(this.onBeginGetCollectionOfRssItemByAllDelegate, new object[] {
+                        request}, this.onEndGetCollectionOfRssItemByAllDelegate, this.onGetCollectionOfRssItemByAllCompletedDelegate, userState);
+        }
+
+        #endregion Query Methods Of RssItemByAll
+
         #region Query Methods Of EntityByIdentifier
 
         /// <summary>
@@ -1412,150 +1556,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of KeyInformationByIdentifier
 
-        #region Query Methods Of NameValuePairByAll
-
-        /// <summary>
-        /// Gets the collection of entity of "All".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairByAll(
-            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
-        {
-            return base.Channel.GetCollectionOfNameValuePairByAll(request);
-        }
-
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginGetCollectionOfNameValuePairByAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
-        {
-            return base.Channel.BeginGetCollectionOfNameValuePairByAll(request, callback, asyncState);
-        }
-
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndGetCollectionOfNameValuePairByAll(System.IAsyncResult result)
-        {
-            return base.Channel.EndGetCollectionOfNameValuePairByAll(result);
-        }
-
-        private System.IAsyncResult OnBeginGetCollectionOfNameValuePairByAll(object[] inValues, System.AsyncCallback callback, object asyncState)
-        {
-            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginGetCollectionOfNameValuePairByAll(request, callback, asyncState);
-        }
-
-        private object[] OnEndGetCollectionOfNameValuePairByAll(System.IAsyncResult result)
-        {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndGetCollectionOfNameValuePairByAll(result);
-            return new object[] {
-                    retVal};
-        }
-
-        private void OnGetCollectionOfNameValuePairByAllCompleted(object state)
-        {
-            if ((this.GetCollectionOfNameValuePairByAllCompleted != null))
-            {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetCollectionOfNameValuePairByAllCompleted(this, new GetCollectionOfNameValuePairByAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-
-        public void GetCollectionOfNameValuePairByAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
-        {
-            this.GetCollectionOfNameValuePairByAllAsync(request, null);
-        }
-
-        public void GetCollectionOfNameValuePairByAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
-        {
-            if ((this.onBeginGetCollectionOfNameValuePairByAllDelegate == null))
-            {
-                this.onBeginGetCollectionOfNameValuePairByAllDelegate = new BeginOperationDelegate(this.OnBeginGetCollectionOfNameValuePairByAll);
-            }
-            if ((this.onEndGetCollectionOfNameValuePairByAllDelegate == null))
-            {
-                this.onEndGetCollectionOfNameValuePairByAllDelegate = new EndOperationDelegate(this.OnEndGetCollectionOfNameValuePairByAll);
-            }
-            if ((this.onGetCollectionOfNameValuePairByAllCompletedDelegate == null))
-            {
-                this.onGetCollectionOfNameValuePairByAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCollectionOfNameValuePairByAllCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetCollectionOfNameValuePairByAllDelegate, new object[] {
-                        request}, this.onEndGetCollectionOfNameValuePairByAllDelegate, this.onGetCollectionOfNameValuePairByAllCompletedDelegate, userState);
-        }
-
-        #endregion Query Methods Of NameValuePairByAll
-
-        #region Query Methods Of RssItemByAll
-
-        /// <summary>
-        /// Gets the collection of entity of "All".
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <returns></returns>
-        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetCollectionOfRssItemByAll(
-            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
-        {
-            return base.Channel.GetCollectionOfRssItemByAll(request);
-        }
-
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.BeginGetCollectionOfRssItemByAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
-        {
-            return base.Channel.BeginGetCollectionOfRssItemByAll(request, callback, asyncState);
-        }
-
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn.EndGetCollectionOfRssItemByAll(System.IAsyncResult result)
-        {
-            return base.Channel.EndGetCollectionOfRssItemByAll(result);
-        }
-
-        private System.IAsyncResult OnBeginGetCollectionOfRssItemByAll(object[] inValues, System.AsyncCallback callback, object asyncState)
-        {
-            MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request = ((MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll )(inValues[0]));
-            return ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).BeginGetCollectionOfRssItemByAll(request, callback, asyncState);
-        }
-
-        private object[] OnEndGetCollectionOfRssItemByAll(System.IAsyncResult result)
-        {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection retVal = ((MSBuildExtensionPack.WcfContracts.IBuildEventCodeServiceAsyn)(this)).EndGetCollectionOfRssItemByAll(result);
-            return new object[] {
-                    retVal};
-        }
-
-        private void OnGetCollectionOfRssItemByAllCompleted(object state)
-        {
-            if ((this.GetCollectionOfRssItemByAllCompleted != null))
-            {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetCollectionOfRssItemByAllCompleted(this, new GetCollectionOfRssItemByAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-
-        public void GetCollectionOfRssItemByAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request)
-        {
-            this.GetCollectionOfRssItemByAllAsync(request, null);
-        }
-
-        public void GetCollectionOfRssItemByAllAsync(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, object userState)
-        {
-            if ((this.onBeginGetCollectionOfRssItemByAllDelegate == null))
-            {
-                this.onBeginGetCollectionOfRssItemByAllDelegate = new BeginOperationDelegate(this.OnBeginGetCollectionOfRssItemByAll);
-            }
-            if ((this.onEndGetCollectionOfRssItemByAllDelegate == null))
-            {
-                this.onEndGetCollectionOfRssItemByAllDelegate = new EndOperationDelegate(this.OnEndGetCollectionOfRssItemByAll);
-            }
-            if ((this.onGetCollectionOfRssItemByAllCompletedDelegate == null))
-            {
-                this.onGetCollectionOfRssItemByAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCollectionOfRssItemByAllCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetCollectionOfRssItemByAllDelegate, new object[] {
-                        request}, this.onEndGetCollectionOfRssItemByAllDelegate, this.onGetCollectionOfRssItemByAllCompletedDelegate, userState);
-        }
-
-        #endregion Query Methods Of RssItemByAll
-
         // DataQueryPerQuerySettingCollection -- InClient -- End
 
         #region GetAscendantAndDescendant
@@ -1803,6 +1803,44 @@ namespace MSBuildExtensionPack.WcfClientBLL
 
         #endregion Query Methods Of EntityByCommon
 
+        #region Query Methods Of NameValuePairByAll
+
+            public System.IAsyncResult BeginGetCollectionOfNameValuePairByAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+            {
+                object[] _args = new object[1];
+                _args[0] = request;
+                System.IAsyncResult _result = base.BeginInvoke("GetCollectionOfNameValuePairByAll", _args, callback, asyncState);
+                return _result;
+            }
+
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection EndGetCollectionOfNameValuePairByAll(System.IAsyncResult result)
+            {
+                object[] _args = new object[0];
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection)(base.EndInvoke("GetCollectionOfNameValuePairByAll", _args, result)));
+                return _result;
+            }
+
+        #endregion Query Methods Of NameValuePairByAll
+
+        #region Query Methods Of RssItemByAll
+
+            public System.IAsyncResult BeginGetCollectionOfRssItemByAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
+            {
+                object[] _args = new object[1];
+                _args[0] = request;
+                System.IAsyncResult _result = base.BeginInvoke("GetCollectionOfRssItemByAll", _args, callback, asyncState);
+                return _result;
+            }
+
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection EndGetCollectionOfRssItemByAll(System.IAsyncResult result)
+            {
+                object[] _args = new object[0];
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection)(base.EndInvoke("GetCollectionOfRssItemByAll", _args, result)));
+                return _result;
+            }
+
+        #endregion Query Methods Of RssItemByAll
+
         #region Query Methods Of EntityByIdentifier
 
             public System.IAsyncResult BeginExistsOfEntityByIdentifier(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfIdentifier request, System.AsyncCallback callback, object asyncState)
@@ -1870,44 +1908,6 @@ namespace MSBuildExtensionPack.WcfClientBLL
             }
 
         #endregion Query Methods Of KeyInformationByIdentifier
-
-        #region Query Methods Of NameValuePairByAll
-
-            public System.IAsyncResult BeginGetCollectionOfNameValuePairByAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
-            {
-                object[] _args = new object[1];
-                _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("GetCollectionOfNameValuePairByAll", _args, callback, asyncState);
-                return _result;
-            }
-
-            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection EndGetCollectionOfNameValuePairByAll(System.IAsyncResult result)
-            {
-                object[] _args = new object[0];
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection)(base.EndInvoke("GetCollectionOfNameValuePairByAll", _args, result)));
-                return _result;
-            }
-
-        #endregion Query Methods Of NameValuePairByAll
-
-        #region Query Methods Of RssItemByAll
-
-            public System.IAsyncResult BeginGetCollectionOfRssItemByAll(MSBuildExtensionPack.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
-            {
-                object[] _args = new object[1];
-                _args[0] = request;
-                System.IAsyncResult _result = base.BeginInvoke("GetCollectionOfRssItemByAll", _args, callback, asyncState);
-                return _result;
-            }
-
-            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection EndGetCollectionOfRssItemByAll(System.IAsyncResult result)
-            {
-                object[] _args = new object[0];
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection)(base.EndInvoke("GetCollectionOfRssItemByAll", _args, result)));
-                return _result;
-            }
-
-        #endregion Query Methods Of RssItemByAll
 
             // DataQueryPerQuerySettingCollection -- InChannelForWINDOWS_PHONE -- End
 

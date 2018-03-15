@@ -9,17 +9,6 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 {
 
     /// <summary>
-    /// BusinessLogicLayerQueryCriteria, key=All
-    /// </summary>
-    public partial class OrganizationQueryCriteriaAll
-    {
-        public OrganizationQueryCriteriaAll()
-        {
-        }
-
-    }
-
-    /// <summary>
     /// BusinessLogicLayerQueryCriteria, key=Common
     /// </summary>
     public partial class OrganizationQueryCriteriaCommon
@@ -43,6 +32,17 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         public QuerySystemStringContainsCriteria NcharColumn { get; set; } = new QuerySystemStringContainsCriteria();
         public QuerySystemStringContainsCriteria NvarcharColumn { get; set; } = new QuerySystemStringContainsCriteria();
         public QuerySystemStringContainsCriteria NtextColumn { get; set; } = new QuerySystemStringContainsCriteria();
+    }
+
+    /// <summary>
+    /// BusinessLogicLayerQueryCriteria, key=All
+    /// </summary>
+    public partial class OrganizationQueryCriteriaAll
+    {
+        public OrganizationQueryCriteriaAll()
+        {
+        }
+
     }
 
     /// <summary>
@@ -70,6 +70,18 @@ namespace MSBuildExtensionPack.CommonBLLEntities
     }
 
     /// <summary>
+    /// BusinessLogicLayerQueryCriteria, key=UniqueConstraintByUC
+    /// </summary>
+    public partial class OrganizationQueryCriteriaUniqueConstraintByUC
+    {
+        public OrganizationQueryCriteriaUniqueConstraintByUC()
+        {
+        }
+
+        public QuerySystemGuidEqualsCriteria UniqueIdentifier { get; set; } = new QuerySystemGuidEqualsCriteria();
+    }
+
+    /// <summary>
     /// BusinessLogicLayerQueryCriteria, key=IdentifierAndUniqueConstraint
     /// </summary>
     public partial class OrganizationQueryCriteriaIdentifierAndUniqueConstraint
@@ -79,18 +91,6 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         }
 
         public QuerySystemInt64EqualsCriteria Id { get; set; } = new QuerySystemInt64EqualsCriteria();
-        public QuerySystemGuidEqualsCriteria UniqueIdentifier { get; set; } = new QuerySystemGuidEqualsCriteria();
-    }
-
-    /// <summary>
-    /// BusinessLogicLayerQueryCriteria, key=UniqueConstraintByUC
-    /// </summary>
-    public partial class OrganizationQueryCriteriaUniqueConstraintByUC
-    {
-        public OrganizationQueryCriteriaUniqueConstraintByUC()
-        {
-        }
-
         public QuerySystemGuidEqualsCriteria UniqueIdentifier { get; set; } = new QuerySystemGuidEqualsCriteria();
     }
 

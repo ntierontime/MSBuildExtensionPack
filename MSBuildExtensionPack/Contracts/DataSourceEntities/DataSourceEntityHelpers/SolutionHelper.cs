@@ -87,50 +87,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         #endregion AssignEnityReferenceIDs(...)
 
-        #region CreateDefault(...)
-
-        /// <summary>
-        /// Creates a new instance of view Default.
-        /// </summary>
-        /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.Solution.Default"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.Solution.Default CreateDefault(
-System.Guid organization_1_UniqueIdentifier, System.String organization_1_Name, System.Int32 id, System.Int64 organization_2Id, System.Guid organization_2_UniqueIdentifier, System.String organization_2_Name, System.String externalParentId, System.String name, System.String description, System.Int64 organizationId
-            )
-        {
-            MSBuildExtensionPack.DataSourceEntities.Solution.Default _retval = new MSBuildExtensionPack.DataSourceEntities.Solution.Default();
-                _retval.Organization_1_UniqueIdentifier = organization_1_UniqueIdentifier;
-                _retval.Organization_1_Name = organization_1_Name;
-                _retval.Id = id;
-                _retval.Organization_2Id = organization_2Id;
-                _retval.Organization_2_UniqueIdentifier = organization_2_UniqueIdentifier;
-                _retval.Organization_2_Name = organization_2_Name;
-                _retval.ExternalParentId = externalParentId;
-                _retval.Name = name;
-                _retval.Description = description;
-                _retval.OrganizationId = organizationId;
-            return _retval;
-        }
-
-        #endregion CreateDefault(...)
-
-        #region CreateKeyInformation(...)
-
-        /// <summary>
-        /// Creates a new instance of view KeyInformation.
-        /// </summary>
-        /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.Solution.KeyInformation"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.Solution.KeyInformation CreateKeyInformation(
-System.Int32 id, System.String name
-            )
-        {
-            MSBuildExtensionPack.DataSourceEntities.Solution.KeyInformation _retval = new MSBuildExtensionPack.DataSourceEntities.Solution.KeyInformation();
-                _retval.Id = id;
-                _retval.Name = name;
-            return _retval;
-        }
-
-        #endregion CreateKeyInformation(...)
-
         #region CreateNameValuePair(...)
 
         /// <summary>
@@ -167,6 +123,69 @@ System.String identifierInString, System.String title, System.String description
         }
 
         #endregion CreateRssItem(...)
+
+        #region CreateDefault(...)
+
+        /// <summary>
+        /// Creates a new instance of view Default.
+        /// </summary>
+        /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.Solution.Default"/></returns>
+        public static MSBuildExtensionPack.DataSourceEntities.Solution.Default CreateDefault(
+System.Guid organization_1_UniqueIdentifier, System.String organization_1_Name, System.Int32 id, System.Int64 organization_2Id, System.Guid organization_2_UniqueIdentifier, System.String organization_2_Name, System.String externalParentId, System.String name, System.String description, System.Int64 organizationId
+            )
+        {
+            MSBuildExtensionPack.DataSourceEntities.Solution.Default _retval = new MSBuildExtensionPack.DataSourceEntities.Solution.Default();
+                _retval.Organization_1_UniqueIdentifier = organization_1_UniqueIdentifier;
+                _retval.Organization_1_Name = organization_1_Name;
+                _retval.Id = id;
+                _retval.Organization_2Id = organization_2Id;
+                _retval.Organization_2_UniqueIdentifier = organization_2_UniqueIdentifier;
+                _retval.Organization_2_Name = organization_2_Name;
+                _retval.ExternalParentId = externalParentId;
+                _retval.Name = name;
+                _retval.Description = description;
+                _retval.OrganizationId = organizationId;
+            return _retval;
+        }
+
+        #endregion CreateDefault(...)
+
+        #region CreateDefaultGroupedDataView(...)
+
+        /// <summary>
+        /// Creates a new instance of view DefaultGroupedDataView.
+        /// </summary>
+        /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataView"/></returns>
+        public static MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataView CreateDefaultGroupedDataView(
+System.Int64 organizationId, System.Int64 countPerFK, System.String name
+            )
+        {
+            MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataView _retval = new MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataView();
+                _retval.OrganizationId = organizationId;
+                _retval.CountPerFK = countPerFK;
+                _retval.Name = name;
+            return _retval;
+        }
+
+        #endregion CreateDefaultGroupedDataView(...)
+
+        #region CreateKeyInformation(...)
+
+        /// <summary>
+        /// Creates a new instance of view KeyInformation.
+        /// </summary>
+        /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.Solution.KeyInformation"/></returns>
+        public static MSBuildExtensionPack.DataSourceEntities.Solution.KeyInformation CreateKeyInformation(
+System.Int32 id, System.String name
+            )
+        {
+            MSBuildExtensionPack.DataSourceEntities.Solution.KeyInformation _retval = new MSBuildExtensionPack.DataSourceEntities.Solution.KeyInformation();
+                _retval.Id = id;
+                _retval.Name = name;
+            return _retval;
+        }
+
+        #endregion CreateKeyInformation(...)
 
     }
 

@@ -213,7 +213,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         #endregion Method of Build GetAClone()
 
-        #region Nested Views classes and their collection classes 2
+        #region Nested Views classes and their collection classes 3
 
         /// <summary>
         /// View "Default" class of <see cref="Build"/>, used across the solution.
@@ -525,6 +525,148 @@ namespace MSBuildExtensionPack.DataSourceEntities
         }
 
         /// <summary>
+        /// View "DefaultGroupedDataView" class of <see cref="Build"/>, used across the solution.
+        /// </summary>
+        public partial class DefaultGroupedDataView :Framework.PropertyChangedNotifier, Framework.EntityContracts.IClone<DefaultGroupedDataView>
+        {
+
+            #region Storage Fields
+
+        System.Int32 m_SolutionId;
+
+        System.Int64 m_CountPerFK;
+
+        System.String m_Name;
+
+            #endregion Storage Fields
+
+            #region Constructors
+
+            /// <summary>
+            /// Initializes/clone a new instance of the <see cref=" Build"/> class.
+            /// </summary>
+            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IBuild"/></param>
+            public DefaultGroupedDataView()
+            {
+                this.SolutionId = default(int);
+                this.CountPerFK = default(long);
+                this.Name = null;
+            }
+            /*
+            /// <summary>
+            /// Initializes/clone a new instance of the <see cref=" Build"/> class.
+            /// </summary>
+            /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IBuild"/></param>
+            public DefaultGroupedDataView(MSBuildExtensionPack.EntityContracts.IBuild item)
+            {
+                MSBuildExtensionPack.EntityContracts.IBuildHelper.Copy<MSBuildExtensionPack.EntityContracts.IBuild, DefaultGroupedDataView>(item, this);
+            }
+            */
+            #endregion Constructors
+
+            #region properties
+
+                    [DataMember]
+        [Display(Name = "SolutionId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild), ErrorMessageResourceName="SolutionId_is_required")]        public System.Int32 SolutionId
+        {
+            get
+            {
+                return m_SolutionId;
+            }
+            set
+            {
+                m_SolutionId = value;
+                RaisePropertyChanged("SolutionId");
+            }
+        }
+
+                    [DataMember]
+        [Display(Name = "CountPerFK", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild))]        public System.Int64 CountPerFK
+        {
+            get
+            {
+                return m_CountPerFK;
+            }
+            set
+            {
+                m_CountPerFK = value;
+                RaisePropertyChanged("CountPerFK");
+            }
+        }
+
+                    [DataMember]
+        [Display(Name = "Name", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuild))]        public System.String Name
+        {
+            get
+            {
+                return m_Name;
+            }
+            set
+            {
+                m_Name = value;
+                RaisePropertyChanged("Name");
+            }
+        }
+
+            #endregion properties
+
+            #region Method of Build.DefaultGroupedDataView  GetAClone()
+
+            /// <summary>
+            /// Gets the A clone.
+            /// </summary>
+            /// <returns>a new instance with same value</returns>
+            public DefaultGroupedDataView GetAClone()
+            {
+                DefaultGroupedDataView cloned = new DefaultGroupedDataView();
+
+            cloned.m_SolutionId = m_SolutionId;
+            cloned.m_CountPerFK = m_CountPerFK;
+            cloned.m_Name = m_Name;
+
+                return cloned;
+            }
+
+            /// <summary>
+            /// Gets the A clone.
+            /// </summary>
+            /// <returns>a new instance with same value</returns>
+            public DefaultGroupedDataView GetACloneWithoutIdentifier()
+            {
+                DefaultGroupedDataView cloned = GetAClone();
+
+                return cloned;
+            }
+
+            #endregion Method of Build.DefaultGroupedDataView  GetAClone()
+        }
+
+        /// <summary>
+        /// View "DefaultGroupedDataView" class of <see cref="Build"/>, used across the solution.
+        /// </summary>
+        public partial class DefaultGroupedDataViewCollection
+            :  List<DefaultGroupedDataView>
+        {
+        }
+
+        /// <summary>
+        /// message definition of "DefaultGroupedDataView", pass single entry, from database, to business logic layer. <see cref="Build"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
+        /// </summary>
+        public class DataAccessLayerMessageOfDefaultGroupedDataView
+            : Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultGroupedDataView>
+        {
+        }
+
+        /// <summary>
+        /// message definition of "DefaultGroupedDataView", pass a collection of instances, from database, to business logic layer. <see cref="Build"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
+        /// </summary>
+        public class DataAccessLayerMessageOfDefaultGroupedDataViewCollection
+            : Framework.DataSourceEntities.DataAccessLayerMessageBase<DefaultGroupedDataViewCollection>
+        {
+        }
+
+        /// <summary>
         /// View "KeyInformation" class of <see cref="Build"/>, used across the solution.
         /// </summary>
         public partial class KeyInformation :Framework.PropertyChangedNotifier, MSBuildExtensionPack.EntityContracts.IBuildIdentifier, Framework.EntityContracts.IClone<KeyInformation>
@@ -650,7 +792,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
         {
         }
 
-        #endregion Nested Views classes and their collection classes 2
+        #endregion Nested Views classes and their collection classes 3
     }
 
     /// <summary>

@@ -92,52 +92,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         #endregion AssignEnityReferenceIDs(...)
 
-        #region CreateDefault(...)
-
-        /// <summary>
-        /// Creates a new instance of view Default.
-        /// </summary>
-        /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.Build.Default"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.Build.Default CreateDefault(
-System.String solution_1_Name, System.Int64 id, System.Int64 organization_1Id, System.Guid organization_1_UniqueIdentifier, System.String organization_1_Name, System.Int64 organization_2Id, System.Guid organization_2_UniqueIdentifier, System.String organization_2_Name, System.Int32 solutionId, System.String name, System.String description, System.DateTime buildStartTime
-            )
-        {
-            MSBuildExtensionPack.DataSourceEntities.Build.Default _retval = new MSBuildExtensionPack.DataSourceEntities.Build.Default();
-                _retval.Solution_1_Name = solution_1_Name;
-                _retval.Id = id;
-                _retval.Organization_1Id = organization_1Id;
-                _retval.Organization_1_UniqueIdentifier = organization_1_UniqueIdentifier;
-                _retval.Organization_1_Name = organization_1_Name;
-                _retval.Organization_2Id = organization_2Id;
-                _retval.Organization_2_UniqueIdentifier = organization_2_UniqueIdentifier;
-                _retval.Organization_2_Name = organization_2_Name;
-                _retval.SolutionId = solutionId;
-                _retval.Name = name;
-                _retval.Description = description;
-                _retval.BuildStartTime = buildStartTime;
-            return _retval;
-        }
-
-        #endregion CreateDefault(...)
-
-        #region CreateKeyInformation(...)
-
-        /// <summary>
-        /// Creates a new instance of view KeyInformation.
-        /// </summary>
-        /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation CreateKeyInformation(
-System.Int64 id, System.String name
-            )
-        {
-            MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation _retval = new MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation();
-                _retval.Id = id;
-                _retval.Name = name;
-            return _retval;
-        }
-
-        #endregion CreateKeyInformation(...)
-
         #region CreateNameValuePair(...)
 
         /// <summary>
@@ -175,6 +129,71 @@ System.String identifierInString, System.String title, System.String description
         }
 
         #endregion CreateRssItem(...)
+
+        #region CreateDefault(...)
+
+        /// <summary>
+        /// Creates a new instance of view Default.
+        /// </summary>
+        /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.Build.Default"/></returns>
+        public static MSBuildExtensionPack.DataSourceEntities.Build.Default CreateDefault(
+System.String solution_1_Name, System.Int64 id, System.Int64 organization_1Id, System.Guid organization_1_UniqueIdentifier, System.String organization_1_Name, System.Int64 organization_2Id, System.Guid organization_2_UniqueIdentifier, System.String organization_2_Name, System.Int32 solutionId, System.String name, System.String description, System.DateTime buildStartTime
+            )
+        {
+            MSBuildExtensionPack.DataSourceEntities.Build.Default _retval = new MSBuildExtensionPack.DataSourceEntities.Build.Default();
+                _retval.Solution_1_Name = solution_1_Name;
+                _retval.Id = id;
+                _retval.Organization_1Id = organization_1Id;
+                _retval.Organization_1_UniqueIdentifier = organization_1_UniqueIdentifier;
+                _retval.Organization_1_Name = organization_1_Name;
+                _retval.Organization_2Id = organization_2Id;
+                _retval.Organization_2_UniqueIdentifier = organization_2_UniqueIdentifier;
+                _retval.Organization_2_Name = organization_2_Name;
+                _retval.SolutionId = solutionId;
+                _retval.Name = name;
+                _retval.Description = description;
+                _retval.BuildStartTime = buildStartTime;
+            return _retval;
+        }
+
+        #endregion CreateDefault(...)
+
+        #region CreateDefaultGroupedDataView(...)
+
+        /// <summary>
+        /// Creates a new instance of view DefaultGroupedDataView.
+        /// </summary>
+        /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.Build.DefaultGroupedDataView"/></returns>
+        public static MSBuildExtensionPack.DataSourceEntities.Build.DefaultGroupedDataView CreateDefaultGroupedDataView(
+System.Int32 solutionId, System.Int64 countPerFK, System.String name
+            )
+        {
+            MSBuildExtensionPack.DataSourceEntities.Build.DefaultGroupedDataView _retval = new MSBuildExtensionPack.DataSourceEntities.Build.DefaultGroupedDataView();
+                _retval.SolutionId = solutionId;
+                _retval.CountPerFK = countPerFK;
+                _retval.Name = name;
+            return _retval;
+        }
+
+        #endregion CreateDefaultGroupedDataView(...)
+
+        #region CreateKeyInformation(...)
+
+        /// <summary>
+        /// Creates a new instance of view KeyInformation.
+        /// </summary>
+        /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation"/></returns>
+        public static MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation CreateKeyInformation(
+System.Int64 id, System.String name
+            )
+        {
+            MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation _retval = new MSBuildExtensionPack.DataSourceEntities.Build.KeyInformation();
+                _retval.Id = id;
+                _retval.Name = name;
+            return _retval;
+        }
+
+        #endregion CreateKeyInformation(...)
 
     }
 

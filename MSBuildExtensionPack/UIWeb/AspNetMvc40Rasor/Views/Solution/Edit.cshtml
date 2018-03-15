@@ -25,15 +25,23 @@
                 </div>
                 <div class="form-group">
                     @Html.LabelFor(model => model.Item.Organization_2Id, new { @class = "control-label" })
-                        @Html.HiddenFor(model => model.Item.Organization_2Id)
-                        @Html.HiddenFor(model => model.Item.Organization_2_UniqueIdentifier)
-                        @Html.DropDownListFor(model => model.Item.Organization_2Id, (List<SelectListItem>)Model.SelectListOfMSBuildExtensionPack_Organization, MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "onchange", "FetchOrganization_1();" }, { "class", "form-control" } })
+                        @Html.ActionLink(Model.Item.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Item.Organization_2Id, uniqueIdentifier = Model.Item.Organization_2_UniqueIdentifier }, null)
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(model => model.Item.OrganizationId, new { @class = "control-label" })
-                        @Html.HiddenFor(model => model.Item.Organization_1_UniqueIdentifier)
-                        @Html.HiddenFor(model => model.Item.OrganizationId)
-                        @Html.DropDownListFor(model => model.Item.OrganizationId, Enumerable.Empty<SelectListItem>(), MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____, new Dictionary<string,Object>{ { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfOrganization_1,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedOrganization_1", MSBuildExtensionPack.Resx.UIStringResourcePerEntityOrganization.Please_select_Organization____) } })
+                    @Html.LabelFor(model => model.Item.Organization_2_UniqueIdentifier, new { @class = "control-label" })
+                        @Html.ActionLink(Model.Item.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Item.Organization_2Id, uniqueIdentifier = Model.Item.Organization_2_UniqueIdentifier }, null)
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Item.Organization_2_Name, new { @class = "control-label" })
+                        @Html.ActionLink(Model.Item.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Item.Organization_2Id, uniqueIdentifier = Model.Item.Organization_2_UniqueIdentifier }, null)
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Item.Organization_1_UniqueIdentifier, new { @class = "control-label" })
+                        @Html.ActionLink(Model.Item.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { uniqueIdentifier = Model.Item.Organization_1_UniqueIdentifier }, null)
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Item.Organization_1_Name, new { @class = "control-label" })
+                        @Html.ActionLink(Model.Item.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { uniqueIdentifier = Model.Item.Organization_1_UniqueIdentifier }, null)
                 </div>
                 <div class="form-group">
                     @Html.LabelFor(model => model.Item.ExternalParentId, new { @class = "control-label" })
@@ -75,38 +83,3 @@
         </div>
     </div>
 </div>
-@section Scripts {
-   <script type="text/javascript">
-        function FetchOrganization_1() {
-            var url = "/api/OrganizationApi/GetCollectionOfNameValuePairByFKOnly";
-            try {
-                var params = BuildCriteriaForFetchOrganization_1();
-                $.getJSON(url, params, function (data) {
-                    objVM.selectListOfOrganization_1(data);
-                    objVM.selectedOrganization_1(@Model.Item.OrganizationId);
-                });
-            }
-            catch (e) {
-            }
-        }
-        function BuildCriteriaForFetchOrganization_1() {
-            var selectedvalueParentId = $('select[name="Item.Organization_2Id"]').val();
-            var params = {
-                parentId: selectedvalueParentId,
-                currentIndex: -1,
-                pageSize: -1,
-                queryOrderByExpression: null
-            };
-            return params;
-        }
-        //cascaded dropdownlist by knockoutjs
-        function CascadingDDLViewModel() {
-            var self = this;
-            self.selectListOfOrganization_1 = ko.observableArray([]);
-            self.selectedOrganization_1 = ko.observable();
-        }
-        var objVM = new CascadingDDLViewModel();
-        ko.applyBindings(objVM);
-        $('select[name="Item.Organization_2Id"]').change();
-    </script>
-}

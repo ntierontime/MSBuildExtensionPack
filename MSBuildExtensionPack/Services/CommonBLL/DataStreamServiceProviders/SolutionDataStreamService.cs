@@ -130,6 +130,42 @@ namespace MSBuildExtensionPack.CommonBLL
             }
         }
 
+        public class DefaultGroupedDataView
+            : Framework.Services.DataStreamServiceProviderBase<MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataViewCollection, MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataView>
+        {
+            public override void WriteHeaderLineToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, int row)
+            {
+                char cell = 'A';
+
+                string cellKey;
+                cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = "OrganizationId";
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = "CountPerFK";
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = "Name";
+
+            }
+
+            public override void WriteDataItemToClosedXmlWorkSheet(ClosedXML.Excel.IXLWorksheet worksheet, MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataView dataItem, int row)
+            {
+                char cell = 'A';
+
+                string cellKey;
+                cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = dataItem.OrganizationId;
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = dataItem.CountPerFK;
+
+            cellKey = Framework.Services.ClosedXmlHelper.GetCellKey(row, cell ++);
+            worksheet.Cell(cellKey).Value = dataItem.Name;
+
+            }
+        }
+
         public class KeyInformation
             : Framework.Services.DataStreamServiceProviderBase<MSBuildExtensionPack.DataSourceEntities.Solution.KeyInformationCollection, MSBuildExtensionPack.DataSourceEntities.Solution.KeyInformation>
         {

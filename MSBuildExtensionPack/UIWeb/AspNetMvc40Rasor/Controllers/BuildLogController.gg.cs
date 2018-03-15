@@ -27,7 +27,7 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
 
         public const string TempDataKey_WPCommonOfBuildLog = "TempDataKey_WPCommonOfBuildLog";
         /// <summary>
-        /// Controller Method of View WPCommonOfBuildLog : Description Of MSBuildExtensionPack_BuildLog_Common
+        /// Controller Method of View WPCommonOfBuildLog
         /// </summary>
         /// <returns></returns>
         [MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildExtensionPack.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_WPCommonOfBuildLog)]
@@ -67,8 +67,8 @@ namespace MSBuildExtensionPack.AspNetMvc40Rasor.Controllers
                 ViewBag.StaticPagedResult = new PagedList.StaticPagedList<MSBuildExtensionPack.DataSourceEntities.BuildLog.Default>(viewModel.Result, viewModel.QueryPagingSetting.CurrentPage, viewModel.QueryPagingSetting.PageSize, viewModel.QueryPagingSetting.CountOfRecords);
             }
 
-            viewModel.ContentData.Title = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.BuildLog;
-            viewModel.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog.Description;
+            viewModel.ContentData.Title = MSBuildExtensionPack.Resx.UIStringResourcePerApp.MSBuildExtensionPack_BuildLog_Common_Title;
+            viewModel.ContentData.Summary = MSBuildExtensionPack.Resx.UIStringResourcePerApp.MSBuildExtensionPack_BuildLog_Common_Summary;
 
             return View(viewModel);
         }

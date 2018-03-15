@@ -584,6 +584,8 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
             #region Storage Fields
 
+        System.Int64 m_BuildId;
+
         System.Int32 m_BuildEventCodeId;
 
         System.Int64 m_CountPerFK;
@@ -600,6 +602,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
             /// <param name="item">an entity instance with same contract of <see cref=" MSBuildExtensionPack.EntityContracts.IBuildLog"/></param>
             public DefaultGroupedDataView()
             {
+                this.BuildId = default(long);
                 this.BuildEventCodeId = default(int);
                 this.CountPerFK = default(long);
                 this.Name = null;
@@ -617,6 +620,21 @@ namespace MSBuildExtensionPack.DataSourceEntities
             #endregion Constructors
 
             #region properties
+
+                    [DataMember]
+        [Display(Name = "BuildId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
+        [RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog), ErrorMessageResourceName="BuildId_is_required")]        public System.Int64 BuildId
+        {
+            get
+            {
+                return m_BuildId;
+            }
+            set
+            {
+                m_BuildId = value;
+                RaisePropertyChanged("BuildId");
+            }
+        }
 
                     [DataMember]
         [Display(Name = "BuildEventCodeId", ResourceType = typeof(MSBuildExtensionPack.Resx.UIStringResourcePerEntityBuildLog))]
@@ -673,6 +691,7 @@ namespace MSBuildExtensionPack.DataSourceEntities
             {
                 DefaultGroupedDataView cloned = new DefaultGroupedDataView();
 
+            cloned.m_BuildId = m_BuildId;
             cloned.m_BuildEventCodeId = m_BuildEventCodeId;
             cloned.m_CountPerFK = m_CountPerFK;
             cloned.m_Name = m_Name;

@@ -93,6 +93,44 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         #endregion AssignEnityReferenceIDs(...)
 
+        #region CreateNameValuePair(...)
+
+        /// <summary>
+        /// Creates a new instance of view NameValuePair.
+        /// </summary>
+        /// <returns>an instance of <see cref="Framework.NameValuePair"/></returns>
+        public static Framework.NameValuePair CreateNameValuePair(
+System.String value, System.String name
+            )
+        {
+            Framework.NameValuePair _retval = new Framework.NameValuePair();
+                _retval.Value = value;
+                _retval.Name = name;
+            return _retval;
+        }
+
+        #endregion CreateNameValuePair(...)
+
+        #region CreateRssItem(...)
+
+        /// <summary>
+        /// Creates a new instance of view RssItem.
+        /// </summary>
+        /// <returns>an instance of <see cref="Framework.RssItem"/></returns>
+        public static Framework.RssItem CreateRssItem(
+System.String identifierInString, System.String title, System.String description, System.DateTime pubDate
+            )
+        {
+            Framework.RssItem _retval = new Framework.RssItem();
+                _retval.IdentifierInString = identifierInString;
+                _retval.Title = title;
+                _retval.Description = description;
+                _retval.PubDate = pubDate;
+            return _retval;
+        }
+
+        #endregion CreateRssItem(...)
+
         #region CreateDefault(...)
 
         /// <summary>
@@ -131,10 +169,11 @@ System.String build_1_Name, System.Int64 id, System.Int32 solution_1Id, System.S
         /// </summary>
         /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataView"/></returns>
         public static MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataView CreateDefaultGroupedDataView(
-System.Int32 buildEventCodeId, System.Int64 countPerFK, System.String name
+System.Int64 buildId, System.Int32 buildEventCodeId, System.Int64 countPerFK, System.String name
             )
         {
             MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataView _retval = new MSBuildExtensionPack.DataSourceEntities.BuildLog.DefaultGroupedDataView();
+                _retval.BuildId = buildId;
                 _retval.BuildEventCodeId = buildEventCodeId;
                 _retval.CountPerFK = countPerFK;
                 _retval.Name = name;
@@ -160,44 +199,6 @@ System.Int64 id, System.Int32 buildEventCodeId
         }
 
         #endregion CreateKeyInformation(...)
-
-        #region CreateNameValuePair(...)
-
-        /// <summary>
-        /// Creates a new instance of view NameValuePair.
-        /// </summary>
-        /// <returns>an instance of <see cref="Framework.NameValuePair"/></returns>
-        public static Framework.NameValuePair CreateNameValuePair(
-System.String value, System.String name
-            )
-        {
-            Framework.NameValuePair _retval = new Framework.NameValuePair();
-                _retval.Value = value;
-                _retval.Name = name;
-            return _retval;
-        }
-
-        #endregion CreateNameValuePair(...)
-
-        #region CreateRssItem(...)
-
-        /// <summary>
-        /// Creates a new instance of view RssItem.
-        /// </summary>
-        /// <returns>an instance of <see cref="Framework.RssItem"/></returns>
-        public static Framework.RssItem CreateRssItem(
-System.String identifierInString, System.String title, System.String description, System.DateTime pubDate
-            )
-        {
-            Framework.RssItem _retval = new Framework.RssItem();
-                _retval.IdentifierInString = identifierInString;
-                _retval.Title = title;
-                _retval.Description = description;
-                _retval.PubDate = pubDate;
-            return _retval;
-        }
-
-        #endregion CreateRssItem(...)
 
     }
 

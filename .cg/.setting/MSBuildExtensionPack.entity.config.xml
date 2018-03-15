@@ -1,129 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Table Name="dbo.Build" Member="Builds">
-    <Type Name="Build">
-      <DataView Key="Default" DataViewKnownCategory="Default" IsGroupByResult="false">
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemString)Solution_1_Name=\SolutionId:Name~Name;(SystemInt64)Id=Id~Identifier;(SystemInt64)Organization_1Id=\SolutionId\OrganizationId:Id~ForeignKey;(SystemGuid)Organization_1_UniqueIdentifier=\SolutionId\OrganizationId:UniqueIdentifier~ParentUniqueConstraint;(SystemString)Organization_1_Name=\SolutionId\OrganizationId:Name~Name;(SystemInt64)Organization_2Id=\SolutionId\OrganizationId\ParentId:Id~ForeignKey;(SystemGuid)Organization_2_UniqueIdentifier=\SolutionId\OrganizationId\ParentId:UniqueIdentifier~ParentUniqueConstraint;(SystemString)Organization_2_Name=\SolutionId\OrganizationId\ParentId:Name~Name;(SystemInt32)SolutionId=SolutionId~ForeignKey;(SystemString)Name=Name;(SystemString?)Description=Description;(SystemDateTime)BuildStartTime=BuildStartTime</Properties>
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-      </DataView>
-      <DataView Key="KeyInformation" DataViewKnownCategory="KeyInformation" IsGroupByResult="false">
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemInt64)Id=Id~Identifier;(SystemString)Name=Name</Properties>
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-      </DataView>
-      <DataView Key="NameValuePair" DataViewKnownCategory="NameValuePair" IsGroupByResult="false">
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemString)Value=Id.ToString();(SystemString)Name=Name~Name</Properties>
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-      </DataView>
-      <DataView Key="RssItem" DataViewKnownCategory="RssItem" IsGroupByResult="false">
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemString)IdentifierInString=Id.ToString();(SystemString)Title=Name;(SystemString)Description=Name;(SystemDateTime)PubDate=BuildStartTime</Properties>
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-      </DataView>
-    </Type>
+    <Type Name="Build" />
   </Table>
   <Table Name="dbo.BuildEventCode" Member="BuildEventCodes">
-    <Type Name="BuildEventCode">
-      <DataView Key="KeyInformation" DataViewKnownCategory="KeyInformation" IsGroupByResult="false">
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemInt32)Id=Id~Identifier;(SystemString)EventCode=EventCode</Properties>
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-      </DataView>
-      <DataView Key="NameValuePair" DataViewKnownCategory="NameValuePair" IsGroupByResult="false">
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemString)Value=Id.ToString();(SystemString)Name=EventCode~Name</Properties>
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-      </DataView>
-      <DataView Key="RssItem" DataViewKnownCategory="RssItem" IsGroupByResult="false">
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemString)IdentifierInString=Id.ToString();(SystemString)Title=EventCode;(SystemString)Description=EventCode</Properties>
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-      </DataView>
-    </Type>
+    <Type Name="BuildEventCode" />
   </Table>
   <Table Name="dbo.BuildLog" Member="BuildLogs">
-    <Type Name="BuildLog">
-      <DataView Key="Default" DataViewKnownCategory="Default" IsGroupByResult="false">
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemString)Build_1_Name=\BuildId:Name~Name;(SystemInt64)Id=Id~Identifier;(SystemInt32)Solution_1Id=\BuildId\SolutionId:Id~ForeignKey;(SystemString)Solution_1_Name=\BuildId\SolutionId:Name~Name;(SystemInt64)Organization_1Id=\BuildId\SolutionId\OrganizationId:Id~ForeignKey;(SystemGuid)Organization_1_UniqueIdentifier=\BuildId\SolutionId\OrganizationId:UniqueIdentifier~ParentUniqueConstraint;(SystemString)Organization_1_Name=\BuildId\SolutionId\OrganizationId:Name~Name;(SystemInt64)Organization_2Id=\BuildId\SolutionId\OrganizationId\ParentId:Id~ForeignKey;(SystemGuid)Organization_2_UniqueIdentifier=\BuildId\SolutionId\OrganizationId\ParentId:UniqueIdentifier~ParentUniqueConstraint;(SystemString)Organization_2_Name=\BuildId\SolutionId\OrganizationId\ParentId:Name~Name;(SystemString)BuildEventCode_1_Name=\BuildEventCodeId:EventCode~Name;(SystemInt64)BuildId=BuildId~ForeignKey;(SystemInt32)BuildEventCodeId=BuildEventCodeId~ForeignKey;(SystemString?)Message=Message;(SystemDateTime)EventTime=EventTime</Properties>
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-      </DataView>
-      <DataView Key="DefaultGroupedDataView" DataViewKnownCategory="DefaultGroupedDataView" IsGroupByResult="true">
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemInt32)BuildEventCodeId^=BuildEventCodeId</Properties>
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting">(SystemInt64)CountPerFK=#Count[];(SystemString)Name*=#StringConcat[\BuildEventCodeId:EventCode]</Properties>
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-      </DataView>
-      <DataView Key="KeyInformation" DataViewKnownCategory="KeyInformation" IsGroupByResult="false">
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemInt64)Id=Id~Identifier;(SystemInt32)BuildEventCodeId=BuildEventCodeId~ForeignKey</Properties>
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-      </DataView>
-      <DataView Key="NameValuePair" DataViewKnownCategory="NameValuePair" IsGroupByResult="false">
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemString)Value=Id.ToString();(SystemString)Name=Message~Name</Properties>
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-      </DataView>
-      <DataView Key="RssItem" DataViewKnownCategory="RssItem" IsGroupByResult="false">
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemString)IdentifierInString=Id.ToString();(SystemString)Title=Message;(SystemString)Description=Message;(SystemDateTime)PubDate=EventTime</Properties>
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-      </DataView>
-    </Type>
+    <Type Name="BuildLog" />
   </Table>
   <Table Name="dbo.Organization" Member="Organizations">
     <Type Name="Organization">
       <UniqueConstraint Name="UC" PropertyNameList="UniqueIdentifier" />
-      <DataView Key="Default" DataViewKnownCategory="Default" IsGroupByResult="false">
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemGuid)Organization_2_UniqueIdentifier=\ParentId:UniqueIdentifier~ParentUniqueConstraint;(SystemString)Organization_2_Name=\ParentId:Name~Name;(SystemInt64)Id=Id~Identifier;(SystemInt64)ParentId=ParentId~ForeignKey;(SystemString)Name=Name;(SystemBoolean)IsSystemBuiltIn=IsSystemBuiltIn;(SystemGuid)UniqueIdentifier=UniqueIdentifier;(SystemDateTime)CreatedDateTime=CreatedDateTime;(SystemString)CharColumn=CharColumn;(SystemString)VarcharColumn=VarcharColumn;(SystemString)TextColumn=TextColumn;(SystemString)NcharColumn=NcharColumn;(SystemString)NvarcharColumn=NvarcharColumn;(SystemString)NtextColumn=NtextColumn;(SystemBoolean)BitColumn=BitColumn;(SystemByteArray?)BinaryColumn=BinaryColumn;(SystemByteArray?)VarbinaryColumn=VarbinaryColumn;(SystemByteArray?)ImageColumn=ImageColumn;(SystemByte)TinyintColumn=TinyintColumn;(SystemInt16)SmallintColumn=SmallintColumn;(SystemInt32)IntColumn=IntColumn;(SystemInt64)BigintColumn=BigintColumn;(SystemDecimal)DecimalColumn=DecimalColumn;(SystemDecimal)NumericColumn=NumericColumn;(SystemDecimal)SmallmoneyColumn=SmallmoneyColumn;(SystemDecimal)MoneyColumn=MoneyColumn;(SystemSingle)FloatColumn=FloatColumn;(SystemSingle)RealColumn=RealColumn;(SystemDateTime)DatetimeColumn=DatetimeColumn;(SystemDateTime)Datetime2Column=Datetime2Column;(SystemDateTime)SmalldatetimeColumn=SmalldatetimeColumn;(SystemDateTime)DateColumn=DateColumn;(SystemTimeSpan)TimeColumn=TimeColumn;(SystemGuid)UniqueidentifierColumn=UniqueidentifierColumn</Properties>
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-      </DataView>
-      <DataView Key="DefaultWithPath" DataViewKnownCategory="DefaultWithPath" IsGroupByResult="false">
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting" />
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting">(SystemInt64)Id=Id~Identifier;(SystemString)RecursivePath__=RecursivePath__;(SystemInt64)ParentId=ParentId~ForeignKey;(SystemString)Name=Name;(SystemBoolean)IsSystemBuiltIn=IsSystemBuiltIn;(SystemGuid)UniqueIdentifier=UniqueIdentifier;(SystemDateTime)CreatedDateTime=CreatedDateTime;(SystemString)CharColumn=CharColumn;(SystemString)VarcharColumn=VarcharColumn;(SystemString)TextColumn=TextColumn;(SystemString)NcharColumn=NcharColumn;(SystemString)NvarcharColumn=NvarcharColumn;(SystemString)NtextColumn=NtextColumn;(SystemBoolean)BitColumn=BitColumn;(SystemByteArray?)BinaryColumn=BinaryColumn;(SystemByteArray?)VarbinaryColumn=VarbinaryColumn;(SystemByteArray?)ImageColumn=ImageColumn;(SystemByte)TinyintColumn=TinyintColumn;(SystemInt16)SmallintColumn=SmallintColumn;(SystemInt32)IntColumn=IntColumn;(SystemInt64)BigintColumn=BigintColumn;(SystemDecimal)DecimalColumn=DecimalColumn;(SystemDecimal)NumericColumn=NumericColumn;(SystemDecimal)SmallmoneyColumn=SmallmoneyColumn;(SystemDecimal)MoneyColumn=MoneyColumn;(SystemSingle)FloatColumn=FloatColumn;(SystemSingle)RealColumn=RealColumn;(SystemDateTime)DatetimeColumn=DatetimeColumn;(SystemDateTime)Datetime2Column=Datetime2Column;(SystemDateTime)SmalldatetimeColumn=SmalldatetimeColumn;(SystemDateTime)DateColumn=DateColumn;(SystemTimeSpan)TimeColumn=TimeColumn;(SystemGuid)UniqueidentifierColumn=UniqueidentifierColumn</Properties>
-      </DataView>
-      <DataView Key="KeyInformation" DataViewKnownCategory="KeyInformation" IsGroupByResult="false">
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemInt64)Id=Id~Identifier;(SystemString)Name=Name;(SystemBoolean)IsSystemBuiltIn=IsSystemBuiltIn;(SystemGuid)UniqueIdentifier=UniqueIdentifier;(SystemBoolean)BitColumn=BitColumn</Properties>
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-      </DataView>
-      <DataView Key="NameValuePair" DataViewKnownCategory="NameValuePair" IsGroupByResult="false">
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemString)Value=Id.ToString();(SystemString)Name=Name~Name</Properties>
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-      </DataView>
-      <DataView Key="RssItem" DataViewKnownCategory="RssItem" IsGroupByResult="false">
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemString)IdentifierInString=Id.ToString();(SystemString)Title=Name;(SystemString)Description=Name;(SystemDateTime)PubDate=CreatedDateTime</Properties>
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-      </DataView>
     </Type>
   </Table>
   <Table Name="dbo.Solution" Member="Solutions">
-    <Type Name="Solution">
-      <DataView Key="Default" DataViewKnownCategory="Default" IsGroupByResult="false">
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemGuid)Organization_1_UniqueIdentifier=\OrganizationId:UniqueIdentifier~ParentUniqueConstraint;(SystemString)Organization_1_Name=\OrganizationId:Name~Name;(SystemInt32)Id=Id~Identifier;(SystemInt64)Organization_2Id=\OrganizationId\ParentId:Id~ForeignKey;(SystemGuid)Organization_2_UniqueIdentifier=\OrganizationId\ParentId:UniqueIdentifier~ParentUniqueConstraint;(SystemString)Organization_2_Name=\OrganizationId\ParentId:Name~Name;(SystemString?)ExternalParentId=ExternalParentId;(SystemString)Name=Name;(SystemString?)Description=Description;(SystemInt64?)OrganizationId=OrganizationId~ForeignKey</Properties>
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-      </DataView>
-      <DataView Key="KeyInformation" DataViewKnownCategory="KeyInformation" IsGroupByResult="false">
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemInt32)Id=Id~Identifier;(SystemString)Name=Name</Properties>
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-      </DataView>
-      <DataView Key="NameValuePair" DataViewKnownCategory="NameValuePair" IsGroupByResult="false">
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemString)Value=Id.ToString();(SystemString)Name=Name~Name</Properties>
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-      </DataView>
-      <DataView Key="RssItem" DataViewKnownCategory="RssItem" IsGroupByResult="false">
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewProjectionColumnSetting">(SystemString)IdentifierInString=Id.ToString();(SystemString)Title=Name;(SystemString)Description=ExternalParentId</Properties>
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewCalculatedColumnWithValueTypeInputSetting" />
-        <Properties Key="nTierCraft.CodeGen.Settings.DataViewDatabaseQueryResultColumnSetting" />
-      </DataView>
-    </Type>
+    <Type Name="Solution" />
   </Table>
 </Database>

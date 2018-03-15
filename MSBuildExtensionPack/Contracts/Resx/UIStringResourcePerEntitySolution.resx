@@ -250,6 +250,45 @@
   <data name="OrganizationIdValueValidationExpression" xml:space="preserve">
     <value>Please input Organization Id validation regular expression</value>
   </data>
+  <data name="Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Value_of_MSBuildExtensionPack_Solution" xml:space="preserve">
+    <value>Required Field Error Message of property Value of MSBuildExtensionPack.Solution</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Value_of_MSBuildExtensionPack_Solution" xml:space="preserve">
+    <value>Value Validation Error Message of property Value of MSBuildExtensionPack.Solution</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Name_of_MSBuildExtensionPack_Solution" xml:space="preserve">
+    <value>Required Field Error Message of property Name of MSBuildExtensionPack.Solution</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Name_of_MSBuildExtensionPack_Solution" xml:space="preserve">
+    <value>Value Validation Error Message of property Name of MSBuildExtensionPack.Solution</value>
+  </data>
+  <data name="IdentifierInString" xml:space="preserve">
+    <value>IdentifierInString</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Solution" xml:space="preserve">
+    <value>Required Field Error Message of property IdentifierInString of MSBuildExtensionPack.Solution</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Solution" xml:space="preserve">
+    <value>Value Validation Error Message of property IdentifierInString of MSBuildExtensionPack.Solution</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Title_of_MSBuildExtensionPack_Solution" xml:space="preserve">
+    <value>Required Field Error Message of property Title of MSBuildExtensionPack.Solution</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Title_of_MSBuildExtensionPack_Solution" xml:space="preserve">
+    <value>Value Validation Error Message of property Title of MSBuildExtensionPack.Solution</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Description_of_MSBuildExtensionPack_Solution" xml:space="preserve">
+    <value>Required Field Error Message of property Description of MSBuildExtensionPack.Solution</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Description_of_MSBuildExtensionPack_Solution" xml:space="preserve">
+    <value>Value Validation Error Message of property Description of MSBuildExtensionPack.Solution</value>
+  </data>
   <data name="Organization_1_UniqueIdentifier" xml:space="preserve">
     <value>Organization</value>
   </data>
@@ -307,50 +346,20 @@
   <data name="Value_Validation_Error_Message_of_property_ExternalParentId_of_MSBuildExtensionPack_Solution" xml:space="preserve">
     <value>Value Validation Error Message of property ExternalParentId of MSBuildExtensionPack.Solution</value>
   </data>
-  <data name="Required_Field_Error_Message_of_property_Name_of_MSBuildExtensionPack_Solution" xml:space="preserve">
-    <value>Required Field Error Message of property Name of MSBuildExtensionPack.Solution</value>
-  </data>
-  <data name="Value_Validation_Error_Message_of_property_Name_of_MSBuildExtensionPack_Solution" xml:space="preserve">
-    <value>Value Validation Error Message of property Name of MSBuildExtensionPack.Solution</value>
-  </data>
-  <data name="Required_Field_Error_Message_of_property_Description_of_MSBuildExtensionPack_Solution" xml:space="preserve">
-    <value>Required Field Error Message of property Description of MSBuildExtensionPack.Solution</value>
-  </data>
-  <data name="Value_Validation_Error_Message_of_property_Description_of_MSBuildExtensionPack_Solution" xml:space="preserve">
-    <value>Value Validation Error Message of property Description of MSBuildExtensionPack.Solution</value>
-  </data>
   <data name="Required_Field_Error_Message_of_property_OrganizationId_of_MSBuildExtensionPack_Solution" xml:space="preserve">
     <value>Required Field Error Message of property OrganizationId of MSBuildExtensionPack.Solution</value>
   </data>
   <data name="Value_Validation_Error_Message_of_property_OrganizationId_of_MSBuildExtensionPack_Solution" xml:space="preserve">
     <value>Value Validation Error Message of property OrganizationId of MSBuildExtensionPack.Solution</value>
   </data>
-  <data name="Value" xml:space="preserve">
-    <value>Value</value>
+  <data name="CountPerFK" xml:space="preserve">
+    <value>CountPerFK</value>
   </data>
-  <data name="Required_Field_Error_Message_of_property_Value_of_MSBuildExtensionPack_Solution" xml:space="preserve">
-    <value>Required Field Error Message of property Value of MSBuildExtensionPack.Solution</value>
+  <data name="Required_Field_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Solution" xml:space="preserve">
+    <value>Required Field Error Message of property CountPerFK of MSBuildExtensionPack.Solution</value>
   </data>
-  <data name="Value_Validation_Error_Message_of_property_Value_of_MSBuildExtensionPack_Solution" xml:space="preserve">
-    <value>Value Validation Error Message of property Value of MSBuildExtensionPack.Solution</value>
-  </data>
-  <data name="IdentifierInString" xml:space="preserve">
-    <value>IdentifierInString</value>
-  </data>
-  <data name="Required_Field_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Solution" xml:space="preserve">
-    <value>Required Field Error Message of property IdentifierInString of MSBuildExtensionPack.Solution</value>
-  </data>
-  <data name="Value_Validation_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Solution" xml:space="preserve">
-    <value>Value Validation Error Message of property IdentifierInString of MSBuildExtensionPack.Solution</value>
-  </data>
-  <data name="Title" xml:space="preserve">
-    <value>Title</value>
-  </data>
-  <data name="Required_Field_Error_Message_of_property_Title_of_MSBuildExtensionPack_Solution" xml:space="preserve">
-    <value>Required Field Error Message of property Title of MSBuildExtensionPack.Solution</value>
-  </data>
-  <data name="Value_Validation_Error_Message_of_property_Title_of_MSBuildExtensionPack_Solution" xml:space="preserve">
-    <value>Value Validation Error Message of property Title of MSBuildExtensionPack.Solution</value>
+  <data name="Value_Validation_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Solution" xml:space="preserve">
+    <value>Value Validation Error Message of property CountPerFK of MSBuildExtensionPack.Solution</value>
   </data>
   <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfOrganization_1OfCommon" xml:space="preserve">
     <value>Organization</value>

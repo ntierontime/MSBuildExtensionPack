@@ -9,17 +9,6 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 {
 
     /// <summary>
-    /// BusinessLogicLayerQueryCriteria, key=All
-    /// </summary>
-    public partial class BuildEventCodeQueryCriteriaAll
-    {
-        public BuildEventCodeQueryCriteriaAll()
-        {
-        }
-
-    }
-
-    /// <summary>
     /// BusinessLogicLayerQueryCriteria, key=Common
     /// </summary>
     public partial class BuildEventCodeQueryCriteriaCommon
@@ -30,6 +19,17 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 
         public QuerySystemStringContainsCriteria EventCode { get; set; } = new QuerySystemStringContainsCriteria();
         public QuerySystemStringContainsCriteria Description { get; set; } = new QuerySystemStringContainsCriteria();
+    }
+
+    /// <summary>
+    /// BusinessLogicLayerQueryCriteria, key=All
+    /// </summary>
+    public partial class BuildEventCodeQueryCriteriaAll
+    {
+        public BuildEventCodeQueryCriteriaAll()
+        {
+        }
+
     }
 
     /// <summary>

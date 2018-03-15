@@ -59,30 +59,50 @@
                         </div>
                 </div>
                 <div class="form-group" >
-                    @Html.LabelFor(model => model.MasterEntity.EventTime, new { @class = "control-label" })
-                        <div class="form-control">
-                            @Html.DisplayFor(model => model.MasterEntity.EventTime)
-                        </div>
-                </div>
-                <div class="form-group" >
-                    @Html.LabelFor(model => model.MasterEntity.Organization_2Id, new { @class = "control-label" })
-                        @Html.ActionLink(Model.MasterEntity.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.MasterEntity.Organization_2Id, uniqueIdentifier = Model.MasterEntity.Organization_2_UniqueIdentifier }, null)
+                    @Html.LabelFor(model => model.MasterEntity.Solution_1Id, new { @class = "control-label" })
+                        @Html.ActionLink(Model.MasterEntity.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPFullDetailsOfSolution, UrlStringsAlias.ControllerName_Solution, new { id = Model.MasterEntity.Solution_1Id }, null)
                 </div>
                 <div class="form-group" >
                     @Html.LabelFor(model => model.MasterEntity.Organization_1Id, new { @class = "control-label" })
                         @Html.ActionLink(Model.MasterEntity.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.MasterEntity.Organization_1Id, uniqueIdentifier = Model.MasterEntity.Organization_1_UniqueIdentifier }, null)
                 </div>
                 <div class="form-group" >
-                    @Html.LabelFor(model => model.MasterEntity.Solution_1Id, new { @class = "control-label" })
+                    @Html.LabelFor(model => model.MasterEntity.Organization_2Id, new { @class = "control-label" })
+                        @Html.ActionLink(Model.MasterEntity.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.MasterEntity.Organization_2Id, uniqueIdentifier = Model.MasterEntity.Organization_2_UniqueIdentifier }, null)
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.MasterEntity.EventTime, new { @class = "control-label" })
+                        <div class="form-control">
+                            @Html.DisplayFor(model => model.MasterEntity.EventTime)
+                        </div>
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.MasterEntity.Organization_2_UniqueIdentifier, new { @class = "control-label" })
+                        @Html.ActionLink(Model.MasterEntity.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.MasterEntity.Organization_2Id, uniqueIdentifier = Model.MasterEntity.Organization_2_UniqueIdentifier }, null)
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.MasterEntity.Organization_2_Name, new { @class = "control-label" })
+                        @Html.ActionLink(Model.MasterEntity.Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.MasterEntity.Organization_2Id, uniqueIdentifier = Model.MasterEntity.Organization_2_UniqueIdentifier }, null)
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.MasterEntity.Organization_1_UniqueIdentifier, new { @class = "control-label" })
+                        @Html.ActionLink(Model.MasterEntity.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.MasterEntity.Organization_1Id, uniqueIdentifier = Model.MasterEntity.Organization_1_UniqueIdentifier }, null)
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.MasterEntity.Organization_1_Name, new { @class = "control-label" })
+                        @Html.ActionLink(Model.MasterEntity.Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.MasterEntity.Organization_1Id, uniqueIdentifier = Model.MasterEntity.Organization_1_UniqueIdentifier }, null)
+                </div>
+                <div class="form-group" >
+                    @Html.LabelFor(model => model.MasterEntity.Solution_1_Name, new { @class = "control-label" })
                         @Html.ActionLink(Model.MasterEntity.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPFullDetailsOfSolution, UrlStringsAlias.ControllerName_Solution, new { id = Model.MasterEntity.Solution_1Id }, null)
                 </div>
                 <div class="form-group" >
-                    @Html.LabelFor(model => model.MasterEntity.BuildId, new { @class = "control-label" })
-                        @Html.ActionLink(Model.MasterEntity.Build_1_Name, UrlStringsAlias.ActionName_Build_WPFullDetailsOfBuild, UrlStringsAlias.ControllerName_Build, new { id = Model.MasterEntity.BuildId }, null)
+                    @Html.LabelFor(model => model.MasterEntity.Build_1_Name, new { @class = "control-label" })
+                        @Html.ActionLink(Model.MasterEntity.Build_1_Name, UrlStringsAlias.ActionName_Build_WPFullDetailsOfBuild, UrlStringsAlias.ControllerName_Build, new {  }, null)
                 </div>
                 <div class="form-group" >
-                    @Html.LabelFor(model => model.MasterEntity.BuildEventCodeId, new { @class = "control-label" })
-                        @Html.ActionLink(Model.MasterEntity.BuildEventCode_1_Name, UrlStringsAlias.ActionName_BuildEventCode_WPFullDetailsOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { id = Model.MasterEntity.BuildEventCodeId }, null)
+                    @Html.LabelFor(model => model.MasterEntity.BuildEventCode_1_Name, new { @class = "control-label" })
+                        @Html.ActionLink(Model.MasterEntity.BuildEventCode_1_Name, UrlStringsAlias.ActionName_BuildEventCode_WPFullDetailsOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new {  }, null)
                 </div>
                 <div class="form-group" >
                     @Html.LabelFor(model => model.MasterEntity.Message, new { @class = "control-label" })

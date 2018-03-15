@@ -83,24 +83,6 @@ namespace MSBuildExtensionPack.DataSourceEntities
 
         #endregion AssignEnityReferenceIDs(...)
 
-        #region CreateKeyInformation(...)
-
-        /// <summary>
-        /// Creates a new instance of view KeyInformation.
-        /// </summary>
-        /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation"/></returns>
-        public static MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation CreateKeyInformation(
-System.Int32 id, System.String eventCode
-            )
-        {
-            MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation _retval = new MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation();
-                _retval.Id = id;
-                _retval.EventCode = eventCode;
-            return _retval;
-        }
-
-        #endregion CreateKeyInformation(...)
-
         #region CreateNameValuePair(...)
 
         /// <summary>
@@ -137,6 +119,24 @@ System.String identifierInString, System.String title, System.String description
         }
 
         #endregion CreateRssItem(...)
+
+        #region CreateKeyInformation(...)
+
+        /// <summary>
+        /// Creates a new instance of view KeyInformation.
+        /// </summary>
+        /// <returns>an instance of <see cref="MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation"/></returns>
+        public static MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation CreateKeyInformation(
+System.Int32 id, System.String eventCode
+            )
+        {
+            MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation _retval = new MSBuildExtensionPack.DataSourceEntities.BuildEventCode.KeyInformation();
+                _retval.Id = id;
+                _retval.EventCode = eventCode;
+            return _retval;
+        }
+
+        #endregion CreateKeyInformation(...)
 
     }
 

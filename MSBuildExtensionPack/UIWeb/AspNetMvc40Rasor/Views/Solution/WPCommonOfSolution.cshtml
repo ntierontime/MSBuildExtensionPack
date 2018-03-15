@@ -150,10 +150,13 @@
 </td>
 <td class="hidden-sm">@Html.DisplayFor(model => model.Result[i].Id)</td>
 <td>@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].Organization_2Id, uniqueIdentifier = Model.Result[i].Organization_2_UniqueIdentifier }, null)</td>
-<td>@Html.ActionLink(Model.Result[i].Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].OrganizationId, uniqueIdentifier = Model.Result[i].Organization_1_UniqueIdentifier }, null)</td>
-<td>@Html.DisplayFor(model => model.Result[i].ExternalParentId)</td>
-<td class="hidden-xs">@Html.DisplayFor(model => model.Result[i].Name)</td>
-<td class="hidden-xs">@Html.DisplayFor(model => model.Result[i].Description)</td>
+<td>@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].Organization_2Id, uniqueIdentifier = Model.Result[i].Organization_2_UniqueIdentifier }, null)</td>
+<td>@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].Organization_2Id, uniqueIdentifier = Model.Result[i].Organization_2_UniqueIdentifier }, null)</td>
+<td class="hidden-xs">@Html.ActionLink(Model.Result[i].Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { uniqueIdentifier = Model.Result[i].Organization_1_UniqueIdentifier }, null)</td>
+<td class="hidden-xs">@Html.ActionLink(Model.Result[i].Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { uniqueIdentifier = Model.Result[i].Organization_1_UniqueIdentifier }, null)</td>
+<td class="hidden-sm">@Html.DisplayFor(model => model.Result[i].ExternalParentId)</td>
+<td class="hidden-sm">@Html.DisplayFor(model => model.Result[i].Name)</td>
+<td class="hidden-md">@Html.DisplayFor(model => model.Result[i].Description)</td>
             </tr>
         }
     }
@@ -179,36 +182,6 @@
  </div>
 @section Scripts {
    <script type="text/javascript">
-        function FetchOrganization_1() {
-            var url = "/api/OrganizationApi/GetCollectionOfNameValuePairByFKOnly";
-            try {
-                var params = BuildCriteriaForFetchOrganization_1();
-                $.getJSON(url, params, function (data) {
-                    objVM.selectListOfOrganization_1(data);
-                    objVM.selectedOrganization_1('@Model.Criteria.Common.OrganizationId.ValueToCompare');
-                });
-            }
-            catch (e) {
-            }
-        }
-        function BuildCriteriaForFetchOrganization_1() {
-            var selectedvalueOrganization_2Id = $('select[name="Criteria.Common.Organization_2Id.NullableValueToCompare"]').val();
-            var params = {
-                parentId: selectedvalueOrganization_2Id,
-                currentIndex: -1,
-                pageSize: -1,
-                queryOrderByExpression: null
-            };
-            return params;
-        }
-        //cascaded dropdownlist by knockoutjs
-        function CascadingDDLViewModel() {
-            var self = this;
-            self.selectListOfOrganization_1 = ko.observableArray([]);
-            self.selectedvalueOrganization_1 = ko.observable();
-        }
-        var objVM = new CascadingDDLViewModel();
-        ko.applyBindings(objVM);
         $('select[name="Criteria.Common.Organization_2Id.NullableValueToCompare"]').change();
     </script>
 }

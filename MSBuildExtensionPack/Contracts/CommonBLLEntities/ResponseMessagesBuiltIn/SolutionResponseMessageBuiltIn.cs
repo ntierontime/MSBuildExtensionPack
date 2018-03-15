@@ -12,13 +12,21 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         : Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBase<MSBuildExtensionPack.DataSourceEntities.SolutionCollection>
     {
 
-        #region Nested Views classes and their collection classes 2
+        #region Nested Views classes and their collection classes 3
 
         /// <summary>
         /// BusinessLogicLayerResponseMessage of of view Default of entity MSBuildExtensionPack.Solution
         /// </summary>
         public partial class Default
             : Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBase<MSBuildExtensionPack.DataSourceEntities.Solution.DefaultCollection>
+        {
+        }
+
+        /// <summary>
+        /// BusinessLogicLayerResponseMessage of of view DefaultGroupedDataView of entity MSBuildExtensionPack.Solution
+        /// </summary>
+        public partial class DefaultGroupedDataView
+            : Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBase<MSBuildExtensionPack.DataSourceEntities.Solution.DefaultGroupedDataViewCollection>
         {
         }
 
@@ -30,7 +38,7 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         {
         }
 
-        #endregion Nested Views classes and their collection classes 2
+        #endregion Nested Views classes and their collection classes 3
     }
 }
 

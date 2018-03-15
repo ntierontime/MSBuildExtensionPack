@@ -9,17 +9,6 @@ namespace MSBuildExtensionPack.CommonBLLEntities
 {
 
     /// <summary>
-    /// BusinessLogicLayerQueryCriteria, key=All
-    /// </summary>
-    public partial class BuildQueryCriteriaAll
-    {
-        public BuildQueryCriteriaAll()
-        {
-        }
-
-    }
-
-    /// <summary>
     /// BusinessLogicLayerQueryCriteria, key=Common
     /// </summary>
     public partial class BuildQueryCriteriaCommon
@@ -34,6 +23,17 @@ namespace MSBuildExtensionPack.CommonBLLEntities
         public QuerySystemDateTimeRangeCriteria BuildStartTimeRange { get; set; } = new QuerySystemDateTimeRangeCriteria();
         public QuerySystemStringContainsCriteria Name { get; set; } = new QuerySystemStringContainsCriteria();
         public QuerySystemStringContainsCriteria Description { get; set; } = new QuerySystemStringContainsCriteria();
+    }
+
+    /// <summary>
+    /// BusinessLogicLayerQueryCriteria, key=All
+    /// </summary>
+    public partial class BuildQueryCriteriaAll
+    {
+        public BuildQueryCriteriaAll()
+        {
+        }
+
     }
 
     /// <summary>

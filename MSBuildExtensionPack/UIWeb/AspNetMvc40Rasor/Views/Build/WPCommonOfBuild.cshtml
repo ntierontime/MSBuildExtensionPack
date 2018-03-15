@@ -154,12 +154,16 @@
 </div>
 </td>
 <td class="hidden-sm">@Html.DisplayFor(model => model.Result[i].Id)</td>
-<td>@Html.DisplayFor(model => model.Result[i].BuildStartTime)</td>
-<td>@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].Organization_2Id, uniqueIdentifier = Model.Result[i].Organization_2_UniqueIdentifier }, null)</td>
 <td>@Html.ActionLink(Model.Result[i].Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].Organization_1Id, uniqueIdentifier = Model.Result[i].Organization_1_UniqueIdentifier }, null)</td>
-<td class="hidden-xs">@Html.ActionLink(Model.Result[i].Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPFullDetailsOfSolution, UrlStringsAlias.ControllerName_Solution, new { id = Model.Result[i].SolutionId }, null)</td>
-<td class="hidden-xs">@Html.DisplayFor(model => model.Result[i].Name)</td>
-<td class="hidden-sm">@Html.DisplayFor(model => model.Result[i].Description)</td>
+<td>@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].Organization_2Id, uniqueIdentifier = Model.Result[i].Organization_2_UniqueIdentifier }, null)</td>
+<td>@Html.DisplayFor(model => model.Result[i].BuildStartTime)</td>
+<td class="hidden-xs">@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].Organization_2Id, uniqueIdentifier = Model.Result[i].Organization_2_UniqueIdentifier }, null)</td>
+<td class="hidden-xs">@Html.ActionLink(Model.Result[i].Organization_2_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].Organization_2Id, uniqueIdentifier = Model.Result[i].Organization_2_UniqueIdentifier }, null)</td>
+<td class="hidden-sm">@Html.ActionLink(Model.Result[i].Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].Organization_1Id, uniqueIdentifier = Model.Result[i].Organization_1_UniqueIdentifier }, null)</td>
+<td class="hidden-sm">@Html.ActionLink(Model.Result[i].Organization_1_Name, UrlStringsAlias.ActionName_Organization_WPFullDetailsOfOrganization, UrlStringsAlias.ControllerName_Organization, new { id = Model.Result[i].Organization_1Id, uniqueIdentifier = Model.Result[i].Organization_1_UniqueIdentifier }, null)</td>
+<td class="hidden-md">@Html.ActionLink(Model.Result[i].Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPFullDetailsOfSolution, UrlStringsAlias.ControllerName_Solution, new {  }, null)</td>
+<td class="hidden-md">@Html.DisplayFor(model => model.Result[i].Name)</td>
+<td>@Html.DisplayFor(model => model.Result[i].Description)</td>
             </tr>
         }
     }
@@ -233,28 +237,6 @@
             $('input[name="Criteria.Common.BuildStartTimeRange.NullableLowerBound"]').prop('disabled', true);
             $('input[name="Criteria.Common.BuildStartTimeRange.NullableUpperBound"]').prop('disabled', true);
         }));
-        function FetchOrganization_1() {
-            var url = "/api/OrganizationApi/GetCollectionOfNameValuePairByFKOnly";
-            try {
-                var params = BuildCriteriaForFetchOrganization_1();
-                $.getJSON(url, params, function (data) {
-                    objVM.selectListOfOrganization_1(data);
-                    objVM.selectedOrganization_1('@Model.Criteria.Common.Organization_1Id.ValueToCompare');
-                });
-            }
-            catch (e) {
-            }
-        }
-        function BuildCriteriaForFetchOrganization_1() {
-            var selectedvalueOrganization_2Id = $('select[name="Criteria.Common.Organization_2Id.NullableValueToCompare"]').val();
-            var params = {
-                parentId: selectedvalueOrganization_2Id,
-                currentIndex: -1,
-                pageSize: -1,
-                queryOrderByExpression: null
-            };
-            return params;
-        }
         function FetchSolution_1() {
             var url = "/api/SolutionApi/GetCollectionOfNameValuePairByFKOnly";
             try {
@@ -282,8 +264,6 @@
         //cascaded dropdownlist by knockoutjs
         function CascadingDDLViewModel() {
             var self = this;
-            self.selectListOfOrganization_1 = ko.observableArray([]);
-            self.selectedvalueOrganization_1 = ko.observable();
             self.selectListOfSolution_1 = ko.observableArray([]);
             self.selectedvalueSolution_1 = ko.observable();
         }

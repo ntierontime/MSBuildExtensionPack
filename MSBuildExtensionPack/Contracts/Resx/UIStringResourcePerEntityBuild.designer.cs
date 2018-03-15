@@ -466,6 +466,150 @@ namespace MSBuildExtensionPack.Resx {
         }
 
         /// <summary>
+        ///   Looks up a localized string similar to "Value"".
+        /// </summary>
+        public static string Value {
+            get {
+                return ResourceManager.GetString("Value", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Required Field Error Message of property Value of MSBuildExtensionPack.Build"".
+        /// </summary>
+        public static string Required_Field_Error_Message_of_property_Value_of_MSBuildExtensionPack_Build {
+            get {
+                return ResourceManager.GetString("Required_Field_Error_Message_of_property_Value_of_MSBuildExtensionPack_Build", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Value Validation Error Message of property Value of MSBuildExtensionPack.Build"".
+        /// </summary>
+        public static string Value_Validation_Error_Message_of_property_Value_of_MSBuildExtensionPack_Build {
+            get {
+                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Value_of_MSBuildExtensionPack_Build", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Required Field Error Message of property Name of MSBuildExtensionPack.Build"".
+        /// </summary>
+        public static string Required_Field_Error_Message_of_property_Name_of_MSBuildExtensionPack_Build {
+            get {
+                return ResourceManager.GetString("Required_Field_Error_Message_of_property_Name_of_MSBuildExtensionPack_Build", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Value Validation Error Message of property Name of MSBuildExtensionPack.Build"".
+        /// </summary>
+        public static string Value_Validation_Error_Message_of_property_Name_of_MSBuildExtensionPack_Build {
+            get {
+                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Name_of_MSBuildExtensionPack_Build", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "IdentifierInString"".
+        /// </summary>
+        public static string IdentifierInString {
+            get {
+                return ResourceManager.GetString("IdentifierInString", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Required Field Error Message of property IdentifierInString of MSBuildExtensionPack.Build"".
+        /// </summary>
+        public static string Required_Field_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Build {
+            get {
+                return ResourceManager.GetString("Required_Field_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Build", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Value Validation Error Message of property IdentifierInString of MSBuildExtensionPack.Build"".
+        /// </summary>
+        public static string Value_Validation_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Build {
+            get {
+                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Build", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Title"".
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Required Field Error Message of property Title of MSBuildExtensionPack.Build"".
+        /// </summary>
+        public static string Required_Field_Error_Message_of_property_Title_of_MSBuildExtensionPack_Build {
+            get {
+                return ResourceManager.GetString("Required_Field_Error_Message_of_property_Title_of_MSBuildExtensionPack_Build", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Value Validation Error Message of property Title of MSBuildExtensionPack.Build"".
+        /// </summary>
+        public static string Value_Validation_Error_Message_of_property_Title_of_MSBuildExtensionPack_Build {
+            get {
+                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Title_of_MSBuildExtensionPack_Build", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Required Field Error Message of property Description of MSBuildExtensionPack.Build"".
+        /// </summary>
+        public static string Required_Field_Error_Message_of_property_Description_of_MSBuildExtensionPack_Build {
+            get {
+                return ResourceManager.GetString("Required_Field_Error_Message_of_property_Description_of_MSBuildExtensionPack_Build", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Value Validation Error Message of property Description of MSBuildExtensionPack.Build"".
+        /// </summary>
+        public static string Value_Validation_Error_Message_of_property_Description_of_MSBuildExtensionPack_Build {
+            get {
+                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Description_of_MSBuildExtensionPack_Build", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "PubDate"".
+        /// </summary>
+        public static string PubDate {
+            get {
+                return ResourceManager.GetString("PubDate", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Required Field Error Message of property PubDate of MSBuildExtensionPack.Build"".
+        /// </summary>
+        public static string Required_Field_Error_Message_of_property_PubDate_of_MSBuildExtensionPack_Build {
+            get {
+                return ResourceManager.GetString("Required_Field_Error_Message_of_property_PubDate_of_MSBuildExtensionPack_Build", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Value Validation Error Message of property PubDate of MSBuildExtensionPack.Build"".
+        /// </summary>
+        public static string Value_Validation_Error_Message_of_property_PubDate_of_MSBuildExtensionPack_Build {
+            get {
+                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_PubDate_of_MSBuildExtensionPack_Build", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to "Solution"".
         /// </summary>
         public static string Solution_1_Name {
@@ -691,42 +835,6 @@ namespace MSBuildExtensionPack.Resx {
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Required Field Error Message of property Name of MSBuildExtensionPack.Build"".
-        /// </summary>
-        public static string Required_Field_Error_Message_of_property_Name_of_MSBuildExtensionPack_Build {
-            get {
-                return ResourceManager.GetString("Required_Field_Error_Message_of_property_Name_of_MSBuildExtensionPack_Build", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Value Validation Error Message of property Name of MSBuildExtensionPack.Build"".
-        /// </summary>
-        public static string Value_Validation_Error_Message_of_property_Name_of_MSBuildExtensionPack_Build {
-            get {
-                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Name_of_MSBuildExtensionPack_Build", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Required Field Error Message of property Description of MSBuildExtensionPack.Build"".
-        /// </summary>
-        public static string Required_Field_Error_Message_of_property_Description_of_MSBuildExtensionPack_Build {
-            get {
-                return ResourceManager.GetString("Required_Field_Error_Message_of_property_Description_of_MSBuildExtensionPack_Build", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Value Validation Error Message of property Description of MSBuildExtensionPack.Build"".
-        /// </summary>
-        public static string Value_Validation_Error_Message_of_property_Description_of_MSBuildExtensionPack_Build {
-            get {
-                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Description_of_MSBuildExtensionPack_Build", resourceCulture);
-            }
-        }
-
-        /// <summary>
         ///   Looks up a localized string similar to "Required Field Error Message of property BuildStartTime of MSBuildExtensionPack.Build"".
         /// </summary>
         public static string Required_Field_Error_Message_of_property_BuildStartTime_of_MSBuildExtensionPack_Build {
@@ -745,110 +853,29 @@ namespace MSBuildExtensionPack.Resx {
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Value"".
+        ///   Looks up a localized string similar to "CountPerFK"".
         /// </summary>
-        public static string Value {
+        public static string CountPerFK {
             get {
-                return ResourceManager.GetString("Value", resourceCulture);
+                return ResourceManager.GetString("CountPerFK", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Required Field Error Message of property Value of MSBuildExtensionPack.Build"".
+        ///   Looks up a localized string similar to "Required Field Error Message of property CountPerFK of MSBuildExtensionPack.Build"".
         /// </summary>
-        public static string Required_Field_Error_Message_of_property_Value_of_MSBuildExtensionPack_Build {
+        public static string Required_Field_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Build {
             get {
-                return ResourceManager.GetString("Required_Field_Error_Message_of_property_Value_of_MSBuildExtensionPack_Build", resourceCulture);
+                return ResourceManager.GetString("Required_Field_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Build", resourceCulture);
             }
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Value Validation Error Message of property Value of MSBuildExtensionPack.Build"".
+        ///   Looks up a localized string similar to "Value Validation Error Message of property CountPerFK of MSBuildExtensionPack.Build"".
         /// </summary>
-        public static string Value_Validation_Error_Message_of_property_Value_of_MSBuildExtensionPack_Build {
+        public static string Value_Validation_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Build {
             get {
-                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Value_of_MSBuildExtensionPack_Build", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "IdentifierInString"".
-        /// </summary>
-        public static string IdentifierInString {
-            get {
-                return ResourceManager.GetString("IdentifierInString", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Required Field Error Message of property IdentifierInString of MSBuildExtensionPack.Build"".
-        /// </summary>
-        public static string Required_Field_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Build {
-            get {
-                return ResourceManager.GetString("Required_Field_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Build", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Value Validation Error Message of property IdentifierInString of MSBuildExtensionPack.Build"".
-        /// </summary>
-        public static string Value_Validation_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Build {
-            get {
-                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_IdentifierInString_of_MSBuildExtensionPack_Build", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Title"".
-        /// </summary>
-        public static string Title {
-            get {
-                return ResourceManager.GetString("Title", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Required Field Error Message of property Title of MSBuildExtensionPack.Build"".
-        /// </summary>
-        public static string Required_Field_Error_Message_of_property_Title_of_MSBuildExtensionPack_Build {
-            get {
-                return ResourceManager.GetString("Required_Field_Error_Message_of_property_Title_of_MSBuildExtensionPack_Build", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Value Validation Error Message of property Title of MSBuildExtensionPack.Build"".
-        /// </summary>
-        public static string Value_Validation_Error_Message_of_property_Title_of_MSBuildExtensionPack_Build {
-            get {
-                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Title_of_MSBuildExtensionPack_Build", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "PubDate"".
-        /// </summary>
-        public static string PubDate {
-            get {
-                return ResourceManager.GetString("PubDate", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Required Field Error Message of property PubDate of MSBuildExtensionPack.Build"".
-        /// </summary>
-        public static string Required_Field_Error_Message_of_property_PubDate_of_MSBuildExtensionPack_Build {
-            get {
-                return ResourceManager.GetString("Required_Field_Error_Message_of_property_PubDate_of_MSBuildExtensionPack_Build", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Value Validation Error Message of property PubDate of MSBuildExtensionPack.Build"".
-        /// </summary>
-        public static string Value_Validation_Error_Message_of_property_PubDate_of_MSBuildExtensionPack_Build {
-            get {
-                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_PubDate_of_MSBuildExtensionPack_Build", resourceCulture);
+                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_CountPerFK_of_MSBuildExtensionPack_Build", resourceCulture);
             }
         }
 
