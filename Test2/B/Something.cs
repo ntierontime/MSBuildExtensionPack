@@ -108,6 +108,7 @@ namespace Test2.B
 
     /// <summary>
     /// https://www.databasejournal.com/features/oracle/article.php/3616476/Types-of-Tables-in-Oracle.htm
+    /// TODO: the following category of AdventureWorks2014 may not correct.
     /// </summary>
     public enum TableTypes
     {
