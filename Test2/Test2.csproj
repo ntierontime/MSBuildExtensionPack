@@ -38,6 +38,10 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -52,279 +56,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="A\Address.cs">
-      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\AddressType.cs">
-      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\AdventureWorks2014_HumanResources.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorks2014_HumanResources.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\AdventureWorks2014_HumanResources.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorks2014_HumanResources.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\AdventureWorks2014_HumanResources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorks2014_HumanResources.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="A\AdventureWorks2014_Person.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorks2014_Person.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\AdventureWorks2014_Person.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorks2014_Person.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\AdventureWorks2014_Person.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorks2014_Person.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="A\AdventureWorks2014_Production.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorks2014_Production.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\AdventureWorks2014_Production.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\AdventureWorks2014_Production.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorks2014_Production.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="A\AdventureWorks2014_Purchasing.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorks2014_Purchasing.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\AdventureWorks2014_Purchasing.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\AdventureWorks2014_Purchasing.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorks2014_Purchasing.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="A\AdventureWorks2014_Sales.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorks2014_Sales.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\AdventureWorks2014_Sales.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\AdventureWorks2014_Sales.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorks2014_Sales.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="A\BillOfMaterial.cs">
-      <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\BusinessEntity.cs">
-      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\BusinessEntityAddress.cs">
-      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\BusinessEntityContact.cs">
-      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\ContactType.cs">
-      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\CountryRegion.cs">
-      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\CountryRegionCurrency.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\CreditCard.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\Culture.cs">
-      <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\Currency.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\CurrencyRate.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\Customer.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\Department.cs">
-      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\EmailAddress.cs">
-      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\Employee.cs">
-      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\EmployeeDepartmentHistory.cs">
-      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\EmployeePayHistory.cs">
-      <DependentUpon>AdventureWorks2014_HumanResources.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\Illustration.cs">
-      <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\JobCandidate.cs">
-      <DependentUpon>AdventureWorks2014_HumanResources.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\Location.cs">
-      <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\Password.cs">
-      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\Person.cs">
-      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\PersonCreditCard.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\PersonPhone.cs">
-      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\PhoneNumberType.cs">
-      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\Product.cs">
-      <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\ProductCategory.cs">
-      <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\ProductCostHistory.cs">
-      <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\ProductDescription.cs">
-      <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\ProductInventory.cs">
-      <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\ProductListPriceHistory.cs">
-      <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\ProductModel.cs">
-      <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\ProductModelIllustration.cs">
-      <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\ProductModelProductDescriptionCulture.cs">
-      <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\ProductPhoto.cs">
-      <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\ProductProductPhoto.cs">
-      <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\ProductReview.cs">
-      <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\ProductSubcategory.cs">
-      <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\ProductVendor.cs">
-      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\PurchaseOrderDetail.cs">
-      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\PurchaseOrderHeader.cs">
-      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\SalesOrderDetail.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\SalesOrderHeader.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\SalesOrderHeaderSalesReason.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\SalesPerson.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\SalesPersonQuotaHistory.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\SalesReason.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\SalesTaxRate.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\SalesTerritory.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\SalesTerritoryHistory.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\ScrapReason.cs">
-      <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\Shift.cs">
-      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\ShipMethod.cs">
-      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\ShoppingCartItem.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\SpecialOffer.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\SpecialOfferProduct.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\StateProvince.cs">
-      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\Store.cs">
-      <DependentUpon>AdventureWorks2014_Sales.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\TransactionHistory.cs">
-      <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\TransactionHistoryArchive.cs">
-      <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\UnitMeasure.cs">
-      <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\Vendor.cs">
-      <DependentUpon>AdventureWorks2014_Purchasing.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\WorkOrder.cs">
-      <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
-    </Compile>
-    <Compile Include="A\WorkOrderRouting.cs">
-      <DependentUpon>AdventureWorks2014_Production.tt</DependentUpon>
-    </Compile>
     <Compile Include="B\Address.cs">
       <DependentUpon>AdventureWorks2014.tt</DependentUpon>
     </Compile>
@@ -621,41 +352,6 @@
     <Compile Include="C\Vendor.cs" />
     <Compile Include="C\WorkOrder.cs" />
     <Compile Include="C\WorkOrderRouting.cs" />
-    <Compile Include="dbml\dbo.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dbo.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="dbml\HumanResources.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HumanResources.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="dbml\Person.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Person.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="dbml\Production.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Production.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="dbml\Purchasing.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Purchasing.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="dbml\Purchasing1.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Purchasing.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="dbml\Sales.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Sales.dbml</DependentUpon>
-    </Compile>
     <Compile Include="MSBuildExtensionPack.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -667,80 +363,16 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <EntityDeploy Include="A\AdventureWorks2014_Person.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>AdventureWorks2014_Person.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <EntityDeploy Include="A\AdventureWorks2014_HumanResources.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>AdventureWorks2014_HumanResources.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="A\AdventureWorks2014_HumanResources.edmx.diagram">
-      <DependentUpon>AdventureWorks2014_HumanResources.edmx</DependentUpon>
-    </None>
-    <None Include="A\AdventureWorks2014_Person.edmx.diagram">
-      <DependentUpon>AdventureWorks2014_Person.edmx</DependentUpon>
-    </None>
-    <EntityDeploy Include="A\AdventureWorks2014_Production.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>AdventureWorks2014_Production.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="A\AdventureWorks2014_Production.edmx.diagram">
-      <DependentUpon>AdventureWorks2014_Production.edmx</DependentUpon>
-    </None>
-    <EntityDeploy Include="A\AdventureWorks2014_Purchasing.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>AdventureWorks2014_Purchasing.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="A\AdventureWorks2014_Purchasing.edmx.diagram">
-      <DependentUpon>AdventureWorks2014_Purchasing.edmx</DependentUpon>
-    </None>
-    <EntityDeploy Include="A\AdventureWorks2014_Sales.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>AdventureWorks2014_Sales.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="A\AdventureWorks2014_Sales.edmx.diagram">
-      <DependentUpon>AdventureWorks2014_Sales.edmx</DependentUpon>
-    </None>
     <EntityDeploy Include="B\AdventureWorks2014.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>AdventureWorks2014.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <None Include="B\AdventureWorks2014.edmx.diagram">
       <DependentUpon>AdventureWorks2014.edmx</DependentUpon>
-    </None>
-    <None Include="dbml\dbo.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>dbo.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dbml\HumanResources.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>HumanResources.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dbml\Person.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>Person.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dbml\Production.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>Production.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dbml\Purchasing.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <SubType>Designer</SubType>
-      <LastGenOutput>Purchasing1.designer.cs</LastGenOutput>
-    </None>
-    <None Include="dbml\Sales.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>Sales.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </None>
     <None Include="MSBuildExtensionPack.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
@@ -763,56 +395,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="A\AdventureWorks2014_HumanResources.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AdventureWorks2014_HumanResources.edmx</DependentUpon>
-      <LastGenOutput>AdventureWorks2014_HumanResources.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="A\AdventureWorks2014_HumanResources.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AdventureWorks2014_HumanResources.edmx</DependentUpon>
-      <LastGenOutput>AdventureWorks2014_HumanResources.cs</LastGenOutput>
-    </Content>
-    <Content Include="A\AdventureWorks2014_Person.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AdventureWorks2014_Person.edmx</DependentUpon>
-      <LastGenOutput>AdventureWorks2014_Person.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="A\AdventureWorks2014_Person.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AdventureWorks2014_Person.edmx</DependentUpon>
-      <LastGenOutput>AdventureWorks2014_Person.cs</LastGenOutput>
-    </Content>
-    <Content Include="A\AdventureWorks2014_Production.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AdventureWorks2014_Production.edmx</DependentUpon>
-      <LastGenOutput>AdventureWorks2014_Production.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="A\AdventureWorks2014_Production.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AdventureWorks2014_Production.edmx</DependentUpon>
-      <LastGenOutput>AdventureWorks2014_Production.cs</LastGenOutput>
-    </Content>
-    <Content Include="A\AdventureWorks2014_Purchasing.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AdventureWorks2014_Purchasing.edmx</DependentUpon>
-      <LastGenOutput>AdventureWorks2014_Purchasing.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="A\AdventureWorks2014_Purchasing.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AdventureWorks2014_Purchasing.edmx</DependentUpon>
-      <LastGenOutput>AdventureWorks2014_Purchasing.cs</LastGenOutput>
-    </Content>
-    <Content Include="A\AdventureWorks2014_Sales.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AdventureWorks2014_Sales.edmx</DependentUpon>
-      <LastGenOutput>AdventureWorks2014_Sales.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="A\AdventureWorks2014_Sales.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AdventureWorks2014_Sales.edmx</DependentUpon>
-      <LastGenOutput>AdventureWorks2014_Sales.cs</LastGenOutput>
-    </Content>
     <Content Include="B\AdventureWorks2014.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>AdventureWorks2014.edmx</DependentUpon>
@@ -824,36 +406,19 @@
       <LastGenOutput>AdventureWorks2014.cs</LastGenOutput>
     </Content>
     <Content Include="ModifiyDatabase.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="dbml\dbo.dbml.layout">
-      <DependentUpon>dbo.dbml</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="dbml\HumanResources.dbml.layout">
-      <DependentUpon>HumanResources.dbml</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="dbml\Person.dbml.layout">
-      <DependentUpon>Person.dbml</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="dbml\Production.dbml.layout">
-      <DependentUpon>Production.dbml</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="dbml\Purchasing.dbml.layout">
-      <DependentUpon>Purchasing.dbml</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="dbml\Sales.dbml.layout">
-      <DependentUpon>Sales.dbml</DependentUpon>
-    </None>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

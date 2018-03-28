@@ -36,7 +36,7 @@ namespace Test2.C
         [StringLength(15)]
         public string PostalCode { get; set; }
 
-        public DbGeography SpatialLocation { get; set; }
+        public DbGeography ____SpatialLocation { get; set; }
 
         public Guid rowguid { get; set; }
 
